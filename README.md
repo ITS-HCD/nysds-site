@@ -1,2 +1,3 @@
-# excelsior-site
-Reference website for Excelsior — New York State's Design System
+# Excelsior Reference Website
+
+Reference website for New York State's Design System
