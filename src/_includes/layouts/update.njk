@@ -1,0 +1,33 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set previousUpdate = collections.updates | getPreviousCollectionItem(page) %}
+
+<section>
+
+  <time datetime="{{ page.date | dateISO }}">
+    {{ page.date | dateFull }}
+  </time>
+  
+  <h1>{{ title }}</h1>
+
+
+  {{ content | safe }}
+
+
+  <div>
+    <p>{{ content | timeToRead ('200 words a minute') }} read time</p>
+    {% if tags %}
+      <ul>
+        {% for tag in tags %}
+          <li>#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+  <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
+
+</section>
+
+{% endblock %}

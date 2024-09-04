@@ -1,0 +1,38 @@
+---json
+{
+  "permalink": "/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Excelsior, New York State's Design System Reference Website",
+    "subtitle": "Guidelines, components, and tools for building digital services in New York State.",
+    "language": "en",
+    "url": "https://excelsior.ny.gov/updates/",
+    "author": {
+      "name": "NYS ITS Design System Team",
+      "email": "designsystem@its.ny.gov"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ metadata.title }}</title>
+    <link>{{ metadata.url }}</link>
+    <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
+    <description>{{ metadata.subtitle }}</description>
+    <language>{{ metadata.language }}</language>
+    {%- for update in collections.updates | reverse %}
+    {%- set absoluteUpdateUrl = update.url | absoluteUrl(metadata.url) %}
+    <item>
+      <title>{{ update.data.title }}</title>
+      <link>{{ absoluteUpdateUrl }}</link>
+      <description><![CDATA[{{ update.templateContent | htmlToAbsoluteUrls(absoluteUpdateUrl) | safe }}]]></description>
+      <content><![CDATA[{{ update.templateContent | htmlToAbsoluteUrls(absoluteUpdateUrl) | safe }}]]></content>
+      <pubDate>{{ update.date | dateToRfc822 }}</pubDate>
+      <dc:creator>{{ metadata.author.name }}</dc:creator>
+      <guid>{{ absoluteUpdateUrl }}</guid>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

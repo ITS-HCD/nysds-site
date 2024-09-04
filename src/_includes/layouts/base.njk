@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "partials/head-meta.njk" %}
+    {% if crawl == 'false' %}
+    <meta name=”robots” content=”noindex”>
+    {% endif %}
+    {% block styles %}{% endblock %}
+    <!-- Latest Build: {{ site.buildDate | dateISO }} -->
+    
+  </head>
+  <body class="{% if section  %}single-page page-{{ page.fileSlug }}{% else %}home{% endif %}">
+
+      {% include "partials/site-header.njk" %}
+
+      <main role="main">
+        {% block content %}
+        {{ content | safe }}
+        {% endblock %}
+      </main>
+
+      {% include "partials/site-footer.njk" %}
+
+  </body>
+
+  {% include "partials/site-js-global.njk" %}
+  {% block scripts %}{% endblock %}
+</html>

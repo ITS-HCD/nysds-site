@@ -1,0 +1,14 @@
+# Generated files
+public*
+
+# Ignore installed npm modules
+node_modules/
+
+# Ignore folders from source code editors
+.vscode
+.idea
+
+package-lock.json
+
+# Ignore test files
+.cache
