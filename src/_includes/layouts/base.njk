@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {# <link
+      rel="modulepreload"
+      href="/node_modules/@lit-labs/ssr-client/lit-element-hydrate-support.js"
+    />
+        <link rel="modulepreload" href="/assets/js/nys-alert/nys-alert.js" />
+ #}
     {% include "partials/head-meta.njk" %}
     {% if crawl == 'false' %}
     <meta name=”robots” content=”noindex”>
@@ -12,6 +18,7 @@
   <body class="{% if section  %}single-page page-{{ page.fileSlug }}{% else %}home{% endif %}">
 
       {% include "partials/site-header.njk" %}
+      {% include "partials/site-nav.njk" %}
 
       <main role="main">
         {% block content %}
@@ -25,4 +32,27 @@
 
   {% include "partials/site-js-global.njk" %}
   {% block scripts %}{% endblock %}
+  {# Script is commented out because it is not working on the 11ty server, needs to be a referenced, or rolled-up  #}
+  {# <script type="module">
+      (async () => {
+        // Start fetching the Lit hydration support module (note the absence
+        // of "await" -- we don't want to block yet).
+        const litHydrateSupportInstalled = import(
+          '/node_modules/@lit-labs/ssr-client/lit-element-hydrate-support.js'
+        );
+
+        // The Lit hydration support module must be installed before we can
+        // load any component definitions. Wait until it's ready.
+        await litHydrateSupportInstalled;
+
+        // Load component definitions. As each component definition loads, your
+        // pre-rendered components will come to life and become interactive.
+        //
+        // You may also prefer to bundle your components into fewer JS modules.
+        // See https://lit.dev/docs/tools/production/#building-with-rollup for
+        // more details.
+        import('/assets/js/nys-alert/nys-alert.js');
+      
+      })();
+    </script> #}
 </html>
