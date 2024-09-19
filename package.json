@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "ELEVENTY_ENV=development eleventy --serve",
-        "build": "ELEVENTY_ENV=production eleventy --pathprefix 'excelsior-site'",
+        "build": "ELEVENTY_ENV=development eleventy",
         "build:prod": "ELEVENTY_ENV=production eleventy",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
