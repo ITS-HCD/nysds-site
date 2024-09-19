@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+            <loc>http://localhost:8080/components/</loc>
+            <lastmod>2024-09-19T15:45:56.555Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>http://localhost:8080/</loc>
+            <lastmod>2024-09-19T15:45:56.555Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>http://localhost:8080/privacy/</loc>
+            <lastmod>2024-09-19T15:45:56.555Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url>
+</urlset>

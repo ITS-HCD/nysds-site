@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://excelsior.ny.gov/updates/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excelsior, New York State&#39;s Design System Reference Website</title>
+    <link>https://excelsior.ny.gov/updates/</link>
+    <atom:link href="https://excelsior.ny.gov/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Guidelines, components, and tools for building digital services in New York State.</description>
+    <language>en</language>
+  </channel>
+</rss>
