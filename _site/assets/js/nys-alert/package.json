@@ -1,0 +1,7 @@
+{
+    "name": "Excelsior Design System Reference Website",
+    "version": "0.1.0",
+    "description": "Guidance for using New York State's design system.",
+    "main": "index.js",
+    "type": "module"
+}

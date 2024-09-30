@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Excelsior, New York State's Design System - 🔴 Excelsior Design System</title>
+    <meta name="description" content="Excelsior makes it easier to build accessible, usable websites for New York State.">   
+    <link rel="canonical" href="http://localhost:8080/components/button/">
+
+    <meta property="og:title" content="Excelsior, New York State's Design System">
+    <meta property="og:site_name" content="🔴 Excelsior Design System">
+    <meta property="og:url" content="http://localhost:8080/components/button/">
+    <meta property="og:description" content="Excelsior makes it easier to build accessible, usable websites for New York State.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+
+    <link rel="stylesheet" href="http://localhost:8080/assets/css/global.css">    
+
+
+    
+    
+
+    <!-- Latest Build: 2024-09-27T11:55:51.979-04:00 -->
+    
+  </head>
+  <body class="home">
+
+      <section>
+  <div>
+    <div>
+      <div>
+        <a href="http://localhost:8080" title="Home">
+          🔴 Excelsior Design System
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+      <nav role="navigation" aria-label="Site Navigation">
+  <ul>
+    <li><a href="/how-to-use" title="Home">How To Use</a></li>
+    <li><a href="/components" title="Components">Components</a></li>
+    <li><a href="/patterns" title="Patterns">Patterns</a></li>
+    <li><a href="/design-tokens" title="Design Tokens">Design Tokens</a></li>
+    <li><a href="/about" title="About">About</a></li>
+  </ul>
+</nav>
+
+      <main role="main">
+        
+
+
+<h1>Button</h1>
+<nys-button  variant="primary"><template shadowroot="open" shadowrootmode="open"><style>
+    :host {}
+
+    /* Base Button Style */
+    button {
+      /* Color */
+      color: var(--color-text-inverted); /* white */
+      background-color: var(--color-bg-primary-default);
+      border: solid 2px var(--color-border-primary-default);
+      /* Space */
+      padding: var(--space-inset-stretch-s);
+      /* Layout */
+      /* display: flex; */
+      align-items: center;
+      position: relative;
+      /* Typography */
+      font-family: var(--font-family-sans);
+      font-size: var(--font-size-md);
+      /* Everything Else */
+      border-radius: var(--radius-md);
+      cursor: pointer; 
+    }
+    button:focus,
+    button.focus {
+      outline-style: solid;
+      outline-color: var(--color-focus-default);
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
+
+    /* Primary */
+    .primary {
+      background-color: var(--color-bg-primary-default);
+      border-color: var(--color-border-primary-default);
+    }
+    .primary:hover {
+      background-color: var(--color-bg-primary-hovered);
+      border-color: var(--color-border-primary-hovered);
+    }
+    .primary:focus {
+      outline-style: solid;
+      outline-color: var(--color-focus-default);
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
+    .primary:active {
+      background-color: var(--color-bg-primary-pressed);
+      border-color: var(--color-border-primary-pressed);
+    }
+
+    /* Secondary */
+    .secondary {
+      color: var(--color-text-secondary-default);
+      background-color: var(--color-bg-secondary-default);
+      border-color: var(--color-border-secondary-default);
+    }
+    .secondary:hover {
+      background-color: var(--color-bg-secondary-hovered);
+      border-color: var(--color-border-secondary-hovered);
+    }
+    .secondary:active {
+      background-color: var(--color-bg-secondary-pressed);
+      border-color: var(--color-border-secondary-pressed);
+    }
+
+    /* Outline */
+    .outline {
+      color: var(--color-text-outline-default);
+      background-color: var(--color-bg-outline-default);
+    }
+    .outline:hover {
+      color: var(--color-text-outline-hovered);
+      background-color: var(--color-bg-outline-hovered);
+    }
+    .outline:active {
+      color: var(--color-text-outline-pressed);
+      background-color: var(--color-bg-outline-pressed);
+    }
+
+    /* Disabled */
+    button[disabled],
+    button:disabled {
+      color: var(--color-text-disabled);
+      background-color: var(--color-bg-disabled);
+      border-color: var(--color-border-disabled);
+      cursor: default;
+    }
+
+    .icon {
+      margin-right: var(--space-inline-default);
+    }
+  </style><!--lit-part 0dCUJ6Q3p9g=-->
+      <!--lit-node 0--><button
+        class="button primary"
+        
+        type="button"
+        form=""
+        formaction=""
+        formenctype=""
+        formmethod=""
+        
+        formtarget=""
+        
+      >
+        <!--lit-part--><!--/lit-part-->
+        <span class="label"><slot></slot></span>
+      </button>
+    <!--/lit-part--></template>
+  I'm a button from Lit
+</nys-button>
+<nys-button  variant="secondary"><template shadowroot="open" shadowrootmode="open"><style>
+    :host {}
+
+    /* Base Button Style */
+    button {
+      /* Color */
+      color: var(--color-text-inverted); /* white */
+      background-color: var(--color-bg-primary-default);
+      border: solid 2px var(--color-border-primary-default);
+      /* Space */
+      padding: var(--space-inset-stretch-s);
+      /* Layout */
+      /* display: flex; */
+      align-items: center;
+      position: relative;
+      /* Typography */
+      font-family: var(--font-family-sans);
+      font-size: var(--font-size-md);
+      /* Everything Else */
+      border-radius: var(--radius-md);
+      cursor: pointer; 
+    }
+    button:focus,
+    button.focus {
+      outline-style: solid;
+      outline-color: var(--color-focus-default);
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
+
+    /* Primary */
+    .primary {
+      background-color: var(--color-bg-primary-default);
+      border-color: var(--color-border-primary-default);
+    }
+    .primary:hover {
+      background-color: var(--color-bg-primary-hovered);
+      border-color: var(--color-border-primary-hovered);
+    }
+    .primary:focus {
+      outline-style: solid;
+      outline-color: var(--color-focus-default);
+      outline-width: 2px;
+      outline-offset: 2px;
+    }
+    .primary:active {
+      background-color: var(--color-bg-primary-pressed);
+      border-color: var(--color-border-primary-pressed);
+    }
+
+    /* Secondary */
+    .secondary {
+      color: var(--color-text-secondary-default);
+      background-color: var(--color-bg-secondary-default);
+      border-color: var(--color-border-secondary-default);
+    }
+    .secondary:hover {
+      background-color: var(--color-bg-secondary-hovered);
+      border-color: var(--color-border-secondary-hovered);
+    }
+    .secondary:active {
+      background-color: var(--color-bg-secondary-pressed);
+      border-color: var(--color-border-secondary-pressed);
+    }
+
+    /* Outline */
+    .outline {
+      color: var(--color-text-outline-default);
+      background-color: var(--color-bg-outline-default);
+    }
+    .outline:hover {
+      color: var(--color-text-outline-hovered);
+      background-color: var(--color-bg-outline-hovered);
+    }
+    .outline:active {
+      color: var(--color-text-outline-pressed);
+      background-color: var(--color-bg-outline-pressed);
+    }
+
+    /* Disabled */
+    button[disabled],
+    button:disabled {
+      color: var(--color-text-disabled);
+      background-color: var(--color-bg-disabled);
+      border-color: var(--color-border-disabled);
+      cursor: default;
+    }
+
+    .icon {
+      margin-right: var(--space-inline-default);
+    }
+  </style><!--lit-part 0dCUJ6Q3p9g=-->
+      <!--lit-node 0--><button
+        class="button secondary"
+        
+        type="button"
+        form=""
+        formaction=""
+        formenctype=""
+        formmethod=""
+        
+        formtarget=""
+        
+      >
+        <!--lit-part--><!--/lit-part-->
+        <span class="label"><slot></slot></span>
+      </button>
+    <!--/lit-part--></template>
+  I was generated by 11ty as a web component with a Lit dependency
+</nys-button>
+
+<h2>Usage Guidelines</h2>
+
+<h2>Accessibility Guidelines</h2>
+
+<h2>Changelog</h2>
+
+      </main>
+
+      
+<ul>
+  <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
+  <li><a href="/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+  <li><a href="/about/#contact" title="Contact the Excelsior team.">Contact</a></li>
+</ul>
+
+
+
+  </body>
+
+  <!-- Only include if needed... -->
+<!-- <script src="http://localhost:8080/assets/js/global.js"></script> -->
+  
+
+  
+  
+</html>
