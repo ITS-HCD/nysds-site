@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Excelsior, New York State's Design System - Excelsior Design System</title>
     <meta name="description" content="Excelsior makes it easier to build accessible, usable websites for New York State.">   
     <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//design-tokens/">
+
+    <meta name=”robots” content=”noindex”>
 
     <meta property="og:title" content="Excelsior, New York State's Design System">
     <meta property="og:site_name" content="Excelsior Design System">
@@ -20,29 +21,43 @@
 
     <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/global.css">    
 
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css" rel="stylesheet">
+    <script src="/assets/js/excelsior.js"></script>
 
     
     <meta name=”robots” content=”noindex”>
     
     
 
-    <!-- Latest Build: 2024-12-12T15:16:57.591+00:00 -->
-    
+    <!-- Latest Build: 2024-12-27T16:30:59.064+00:00 -->
   </head>
   <body class="home">
+<!-- NYS UNAV HEADER -->	
+<div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
+  <script type="text/javascript">
+    var _NY = {
+      HOST: "static-assets.ny.gov",
+      hideSearch: true,
+      showLanguageHeader: false,
+      showLanguageFooter: false,
+    };
+    (function (document, bundle, head) {
+        head = document.getElementsByTagName('head')[0];
+        bundle = document.createElement('script');
+        bundle.type = 'text/javascript';
+        bundle.async = true;
+        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+        head.appendChild(bundle);
+    }(document));
+  </script>
+</div>
+<div class="content">
+  <a href="https://its-hcd.github.io/excelsior-site/" title="Home">Excelsior New York State's Design System</a>
+<div id="search" class="search"></div>
 
-      <section>
-  <div>
-    <div>
-      <div>
-        <a href="https://its-hcd.github.io/excelsior-site/" title="Home">
-          Excelsior Design System
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-      <nav role="navigation" aria-label="Site Navigation">
+<script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+  <nav role="navigation" aria-label="Site Navigation">
   <ul>
     <li><a href="/excelsior-site/how-to-use" title="Home">How To Use</a></li>
     <li><a href="/excelsior-site/components" title="Components">Components</a></li>
@@ -52,16 +67,16 @@
   </ul>
 </nav>
 
-      <main role="main">
-        
+  <main role="main" data-pagefind-body>
+    
 
 <h1>Design Tokens</h1>
 
 
 
-      </main>
+  </main>
 
-      
+  
 <ul>
   <li><a href="/excelsior-site/privacy/" title="Review our privacy policy.">Privacy</a></li>
   <li><a href="/excelsior-site/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
@@ -69,8 +84,9 @@
 </ul>
 
 
-
-  </body>
+</div>
+<!-- NYS UNAV FOOTER -->
+  <div id="nygov-universal-footer" class="nygov-universal-container"></div>
 
   <!-- Only include if needed... -->
 <!-- <script src="https://its-hcd.github.io/excelsior-site//assets/js/global.js"></script> -->
@@ -78,4 +94,5 @@
 
   
   
+  </body>
 </html>
