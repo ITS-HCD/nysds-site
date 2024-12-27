@@ -1,10 +1,12 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 
+
 // plugins
 const eleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const eleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const timeToRead = require('eleventy-plugin-time-to-read');
-const litPlugin = require('@lit-labs/eleventy-plugin-lit');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { execSync } = require('child_process')
 
 // filters
 const limit = require("./src/_11ty/filters/limit.js");
@@ -41,17 +43,18 @@ module.exports = (eleventyConfig) => {
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);
     eleventyConfig.addPlugin(eleventyPluginRss);
+    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(timeToRead, {
         style: 'short'
     });
     // Plugin for Lit and 11ty to print the components to the screen, does not hydrate
-    eleventyConfig.addPlugin(litPlugin, {
-        mode: 'worker',
-        componentModules: [
-            './src/assets/js/nys-alert/nys-alert.js',
-            './src/assets/js/nys-button/nys-button.js',
-        ],
-      });
+    // eleventyConfig.addPlugin(litPlugin, {
+    //     mode: 'worker',
+    //     componentModules: [
+    //         './src/assets/js/nys-alert/nys-alert.js',
+    //         './src/assets/js/nys-button/nys-button.js',
+    //     ],
+    //   });
 
     // watch for changes to css
     eleventyConfig.addWatchTarget("./src/css/");
@@ -65,8 +68,10 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addPassthroughCopy("./src/admin/"); // Decap CMS
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); // Decap CMS
-    eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
-    
+    // eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
+    eleventyConfig.on('eleventy.after', () => {
+        execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+      })
 
     // base config
     return {

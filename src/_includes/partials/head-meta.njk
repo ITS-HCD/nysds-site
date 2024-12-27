@@ -1,9 +1,11 @@
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{% if section != 'home' %}{% if title %}{{ title | safe }} - {% endif %}{% endif %}{{ site.title }}</title>
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}   
     <link rel="canonical" href="{{ site.url }}{{page.url}}">
+
+    <meta name=”robots” content=”noindex”>
 
     <meta property="og:title" content="{{ title | safe }}">
     <meta property="og:site_name" content="{{ site.title }}">
@@ -20,3 +22,6 @@
 
     <link rel="stylesheet" href="{{ site.url }}/assets/css/global.css">    
 
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css" rel="stylesheet">
+    <script src="/assets/js/excelsior.js"></script>
