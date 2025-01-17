@@ -6,15 +6,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-font-bold);
 }
+
 .nygov-universal-container {
     height: 60px;
 }
-body {}
 
 .content {
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 1rem;
+    /* max-width: 1280px;
+    padding: 1rem; */
 }
 
 /* Syntax highlighting plugin tweaks */

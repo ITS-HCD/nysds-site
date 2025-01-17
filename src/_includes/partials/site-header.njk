@@ -1,4 +1,22 @@
-<a href="{{site.url}}" title="Home">Excelsior New York State's Design System</a>
-<div id="search" class="search"></div>
+<div class="nys-grid-row">
+    <div class="nys-grid-col-auto">
+        <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/Group.svg' | url }}"></a>
+    </div>
+    <div class="nys-grid-col nys-flex-align-self-center nys-flex-justify-center
+">
+        <a href="{{ '/components' | url }}" title="Components" class=" nys-display-flex nys-flex-justify-center">Components</a>
+    </div>
+    <div class="nys-grid-col nys-flex-align-self-center">
+        <a href="{{ '/patterns' | url }}" title="Patterns" class=" nys-display-flex nys-flex-justify-center">Patterns</a>
+    </div>
+    <div class="nys-grid-col nys-flex-align-self-center">
+        <a href="{{ '/design-tokens' | url }}" title="Design Tokens" class=" nys-display-flex nys-flex-justify-center">Design Tokens</a>
+    </div>
+    <div class="nys-grid-col nys-flex-align-self-center">
+        <a href="{{ '/about' | url }}" title="About" class=" nys-display-flex nys-flex-justify-center">About</a>
+    </div>
+</div>
 
-<script src="{{ site.url }}/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+{# <div id="search" class="search"></div>
+
+<script src="{{ site.url }}/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script> #}
