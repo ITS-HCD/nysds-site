@@ -1,19 +1,24 @@
 body {
     margin: 0;
-    font-family: var(--primary-font);
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--primary-font), "Helvetica Neue", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-font-bold);
 }
 
-.nygov-universal-container {
+/* .nygov-universal-container {
     height: 60px;
+} */
+
+nav a, nav a:visited {
+    text-decoration: none;
+    color: var(--nys-color-ink)
 }
 
-.content {
-    /* max-width: 1280px;
-    padding: 1rem; */
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Syntax highlighting plugin tweaks */
