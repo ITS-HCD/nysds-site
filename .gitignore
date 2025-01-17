@@ -4,7 +4,7 @@ _site
 
 # Ignore installed npm modules
 node_modules/
-src/assets/vendor/
+src/assets/*/vendor/
 
 # Ignore folders from source code editors
 .vscode
