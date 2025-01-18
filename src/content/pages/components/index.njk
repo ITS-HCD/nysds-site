@@ -9,12 +9,45 @@ description: "Excelsior makes it easier to build accessible, usable websites for
 {% block content %}
 
 <h1>Components</h1>
-<p>Click a component to learn more about it.</p>
-{%- for post in collections.component -%}
-  <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-{%- endfor -%}
-<h2><a href="alert/">Alert</a></h2>
-<h2><a href="checkbox/">Checkbox</a></h2>
+
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-8">
+    <div class="content-intro">
+      <div class="content-intro__inner">  
+        <p>Components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
+        <ul>
+          <li><b>Standards-Based:</b> Built on W3C custom element standards using Lit, ensuring compatibility across platforms and frameworks.</li>
+          <li><b>Accessible:</b> Designed with WCAG 2.2 AA compliance to meet diverse user needs.</li>
+          <li><b>Flexible:</b> Integrates with any framework and customizable with design tokens.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="nys-tablet:nys-grid-col-4">
+    <ul>
+      <li><a href="#">How to Use</a></li>
+      <li><a href="#">GitHub Issues</a></li>
+      <li><a href="#">NPM Components</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="nys-grid-row nys-grid-gap">
+  {%- for post in collections.components -%}
+  <div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        {% if post.data.image %}
+        <div class="card__media"><img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+        {% endif %}
+        <div class="card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
+        <div class="card__desc">{{ post.data.description }}</div>
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
+
+</div>
 
 {% endblock %}
 

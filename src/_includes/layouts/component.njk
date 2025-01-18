@@ -1,0 +1,23 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<section>
+
+  <h1>{{ title }}</h1>
+
+  {{ content | safe }}
+
+  <div> 
+    {% if tags %}
+      <ul>
+        {% for tag in tags %}
+          <li>#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+</section>
+
+{% endblock %}
