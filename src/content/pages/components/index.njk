@@ -9,12 +9,19 @@ description: "Excelsior makes it easier to build accessible, usable websites for
 {% block content %}
 
 <h1>Components</h1>
-<p>Click a component to learn more about it.</p>
-{%- for post in collections.component -%}
+
+<p>Excelsior components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
+
+<ul>
+<li><b>Standards-Based:</b> Built on W3C custom element standards using Lit, ensuring compatibility across platforms and frameworks.</li>
+<li><b>Accessible:</b> Designed with WCAG 2.2 AA compliance to meet diverse user needs.</li>
+<li><b>Flexible:</b> Integrates with any framework and customizable with design tokens.</li>
+</ul>
+
+{%- for post in collections.components -%}
   <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+  
 {%- endfor -%}
-<h2><a href="alert/">Alert</a></h2>
-<h2><a href="checkbox/">Checkbox</a></h2>
 
 {% endblock %}
 
