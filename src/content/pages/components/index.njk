@@ -8,13 +8,13 @@ description: "Excelsior makes it easier to build accessible, usable websites for
 
 {% block content %}
 
-<h1>Excelsior Components</h1>
+<h1>Components</h1>
 
-<div class="nys-grid-row">
+<div class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-8">
-    <div class="exc-content-intro">
-      <div class="exc-content-intro__inner">  
-        <p>Excelsior components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
+    <div class="content-intro">
+      <div class="content-intro__inner">  
+        <p>Components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
         <ul>
           <li><b>Standards-Based:</b> Built on W3C custom element standards using Lit, ensuring compatibility across platforms and frameworks.</li>
           <li><b>Accessible:</b> Designed with WCAG 2.2 AA compliance to meet diverse user needs.</li>
@@ -23,8 +23,7 @@ description: "Excelsior makes it easier to build accessible, usable websites for
       </div>
     </div>
   </div>
-  <div class="nys-tablet:nys-grid-col-1"></div>
-  <div class="nys-tablet:nys-grid-col-3">
+  <div class="nys-tablet:nys-grid-col-4">
     <ul>
       <li><a href="#">How to Use</a></li>
       <li><a href="#">GitHub Issues</a></li>
@@ -33,17 +32,22 @@ description: "Excelsior makes it easier to build accessible, usable websites for
   </div>
 </div>
 
-{%- for post in collections.components -%}
-  <div class="exc-card">
-    <div class="exc-card__inner">
-      {% if post.data.image %}
-      <div class="exc-card__media"><img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
-      {% endif %}
-      <div class="exc-card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
-      <div class="exc-card__desc">{{ post.data.description }}</div>
+<div class="nys-grid-row nys-grid-gap">
+  {%- for post in collections.components -%}
+  <div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        {% if post.data.image %}
+        <div class="card__media"><img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+        {% endif %}
+        <div class="card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
+        <div class="card__desc">{{ post.data.description }}</div>
+      </div>
     </div>
   </div>
-{%- endfor -%}
+  {%- endfor -%}
+
+</div>
 
 {% endblock %}
 

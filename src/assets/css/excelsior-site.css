@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: var(--primary-font), "Helvetica Neue", sans-serif;
+    color: var(--nys-color-ink)
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,23 +31,25 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
 
 /* Custom Components */
 
-.exc-content-intro {
+.content-intro {
     padding: var(--nys-space-100) 0;
     border-top: solid 1px var(--nys-color-theme-mid);
     border-bottom: solid 1px var(--nys-color-theme-mid);
+    margin-bottom: var(--nys-space-250);
 }
-.exc-card {
-    border: solid var(--nys-size-1px) var(--nys-color-theme-mid);
+.card {
+    border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-lg);
-    padding: var(--nys-space-150);
+    padding: var(--nys-space-200);
     margin-bottom: var(--nys-space-200);
+    align-items: stretch; 
 }
-.exc-card__inner {
+.card__inner {
 }
-.exc-card__media {
+.card__media {
     margin-bottom: var(--nys-space-100);
 }
-.exc-card__title {
+.card__title {
     font-size: var(--nys-size-200);
     margin-bottom: var(--nys-space-100);
     font-weight: bold;
