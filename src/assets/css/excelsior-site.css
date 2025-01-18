@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: var(--primary-font), "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font-bold);
+}
+
+.nygov-universal-container {
+    border-bottom: solid 1px #ddd;
+    margin-bottom: 1rem;
+}
+
+nav a, nav a:visited {
+    text-decoration: none;
+    color: var(--nys-color-ink)
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Syntax highlighting plugin tweaks */
+
+/* Remove the curly "peel" shadows from the bottom of code snippets */
+pre[class*="language-"]:before, pre[class*="language-"]:after {
+    box-shadow: none !important;
+}
+
+/* Custom Components */
+
+.exc-content-intro {
+    padding: var(--nys-space-100) 0;
+    border-top: solid 1px var(--nys-color-theme-mid);
+    border-bottom: solid 1px var(--nys-color-theme-mid);
+}
+.exc-card {
+    border: solid var(--nys-size-1px) var(--nys-color-theme-mid);
+    border-radius: var(--nys-radius-lg);
+    padding: var(--nys-space-150);
+    margin-bottom: var(--nys-space-200);
+}
+.exc-card__inner {
+}
+.exc-card__media {
+    margin-bottom: var(--nys-space-100);
+}
+.exc-card__title {
+    font-size: var(--nys-size-200);
+    margin-bottom: var(--nys-space-100);
+    font-weight: bold;
+}

@@ -8,19 +8,41 @@ description: "Excelsior makes it easier to build accessible, usable websites for
 
 {% block content %}
 
-<h1>Components</h1>
+<h1>Excelsior Components</h1>
 
-<p>Excelsior components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
-
-<ul>
-<li><b>Standards-Based:</b> Built on W3C custom element standards using Lit, ensuring compatibility across platforms and frameworks.</li>
-<li><b>Accessible:</b> Designed with WCAG 2.2 AA compliance to meet diverse user needs.</li>
-<li><b>Flexible:</b> Integrates with any framework and customizable with design tokens.</li>
-</ul>
+<div class="nys-grid-row">
+  <div class="nys-tablet:nys-grid-col-8">
+    <div class="exc-content-intro">
+      <div class="exc-content-intro__inner">  
+        <p>Excelsior components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
+        <ul>
+          <li><b>Standards-Based:</b> Built on W3C custom element standards using Lit, ensuring compatibility across platforms and frameworks.</li>
+          <li><b>Accessible:</b> Designed with WCAG 2.2 AA compliance to meet diverse user needs.</li>
+          <li><b>Flexible:</b> Integrates with any framework and customizable with design tokens.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="nys-tablet:nys-grid-col-1"></div>
+  <div class="nys-tablet:nys-grid-col-3">
+    <ul>
+      <li><a href="#">How to Use</a></li>
+      <li><a href="#">GitHub Issues</a></li>
+      <li><a href="#">NPM Components</a></li>
+    </ul>
+  </div>
+</div>
 
 {%- for post in collections.components -%}
-  <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-  
+  <div class="exc-card">
+    <div class="exc-card__inner">
+      {% if post.data.image %}
+      <div class="exc-card__media"><img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+      {% endif %}
+      <div class="exc-card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
+      <div class="exc-card__desc">{{ post.data.description }}</div>
+    </div>
+  </div>
 {%- endfor -%}
 
 {% endblock %}
