@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: var(--primary-font), "Helvetica Neue", sans-serif;
+    font-family: "Proxima Nova", "Helvetica Neue", sans-serif;
     color: var(--nys-color-ink)
 }
 
@@ -8,9 +8,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-font-bold);
 }
 
-.nygov-universal-container {
+#nygov-universal-navigation {
+    min-height: 95px;
     border-bottom: solid 1px #ddd;
     margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    #nygov-universal-navigation {
+        min-height: 60px;
+    }
+}
+.nys-unav {
+    
 }
 
 nav a, nav a:visited {
@@ -29,7 +38,9 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
 }
 
-/* Custom Components */
+/* === Custom Components */
+
+/* Content Intro */
 
 .content-intro {
     padding: var(--nys-space-100) 0;
@@ -37,14 +48,15 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
     border-bottom: solid 1px var(--nys-color-theme-mid);
     margin-bottom: var(--nys-space-250);
 }
+
+/* Card */
+
 .card {
     border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-lg);
     padding: var(--nys-space-200);
     margin-bottom: var(--nys-space-200);
     align-items: stretch; 
-}
-.card__inner {
 }
 .card__media {
     margin-bottom: var(--nys-space-100);
