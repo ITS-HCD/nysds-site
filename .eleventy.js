@@ -68,9 +68,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
 
     // eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
-    // eleventyConfig.on('eleventy.after', () => {
-    //     execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
-    // })
+    eleventyConfig.on('eleventy.after', () => {
+        execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    })
 
     // base config
     return {
