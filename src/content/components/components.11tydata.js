@@ -1,7 +1,7 @@
 const todaysDate = new Date();
 
 module.exports = {
-  layout: "layouts/component.njk", // Default layout for all components
+  layout: "layouts/base.njk", // Default layout for all components
 
   eleventyComputed: {
       permalink: (data) => {
