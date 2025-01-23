@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Excelsior, New York State's Design System - Excelsior Design System</title>
-    <meta name="description" content="Excelsior makes it easier to build accessible, usable websites for New York State.">   
+    <meta name="description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">   
     <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//components/">
 
     <meta name=”robots” content=”noindex”>
@@ -13,24 +13,25 @@
     <meta property="og:title" content="Excelsior, New York State's Design System">
     <meta property="og:site_name" content="Excelsior Design System">
     <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//components/">
-    <meta property="og:description" content="Excelsior makes it easier to build accessible, usable websites for New York State.">
+    <meta property="og:description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
     
-    <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/global.css">    
-
-    <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css">    
-
+    <link rel="preload" href="https://its-hcd.github.io/excelsior-site//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/excelsior-fonts.css">    
     <link href="https://its-hcd.github.io/excelsior-site//pagefind/pagefind-ui.css" rel="stylesheet">
-    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css">    
+    <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/excelsior-site.css">    
+
 
     
     <meta name=”robots” content=”noindex”>
     
     
 
-    <!-- Latest Build: 2025-01-17T21:35:17.914+00:00 -->
+    <!-- Latest Build: 2025-01-23T18:25:23.164+00:00 -->
   </head>
   <body class="home">
   <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
@@ -54,7 +55,7 @@
   <div class="nys-grid-container content">
   <nav class="nys-grid-row">
     <div class="nys-grid-col-auto">
-        <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/Group.svg"></a>
+        <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg"></a>
     </div>
     <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/getting-started" title="Getting Started" class=" nys-display-flex nys-flex-justify-center">Getting Started</a>
@@ -75,9 +76,128 @@
   <main role="main" data-pagefind-body>
     
 
+
+
+
 <h1>Components</h1>
-<p>Click a component to learn more about it.</p><h2><a href="/excelsior-site/components/alert/">Alert</a></h2><h2><a href="/excelsior-site/components/checkbox/">Checkbox</a></h2><h2><a href="alert/">Alert</a></h2>
-<h2><a href="checkbox/">Checkbox</a></h2>
+
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-8">
+    <div class="content-intro">
+      <div class="content-intro__inner">  
+        <p>Excelsior offers a library of reusable building blocks for creating consistent, accessible, scalable digital experiences across New York State government sites. They are designed and tested to meet WCAG 2.2 AA compliance so they're accessible. They are styled with design tokens for flexibility. And they are built with web components so they work across platforms and frameworks.</p>
+      </div>
+    </div>
+  </div>
+  <div class="nys-tablet:nys-grid-col-4">
+    <ul>
+      <li><a href="#">How to Use</a></li>
+      <li><a href="#">GitHub Issues</a></li>
+      <li><a href="#">NPM Components</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="nys-grid-row nys-grid-gap"><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/alert.svg" alt="Alert"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/alert/">Alert</a></div>
+        <div class="card__desc">Alert cards are designed to display critical information, updates, or warnings that require the user&#39;s attention.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/avatar.svg" alt="Avatar"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/avatar/">Avatar</a></div>
+        <div class="card__desc">Avatars represent a user visually through an image, initials, or an icon and typically identify user-specific actions.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/checkbox.svg" alt="Checkbox"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/checkbox/">Checkbox</a></div>
+        <div class="card__desc">A checkbox is a form input that allows users to select multiple options independently from a list.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/placeholder.svg" alt="Icon"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/icon/">Icon</a></div>
+        <div class="card__desc">Visual symbols used to convey meaning or action.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/placeholder.svg" alt="Radiobutton"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/radiobutton/">Radiobutton</a></div>
+        <div class="card__desc">Form input for selecting one option from a group.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/placeholder.svg" alt="Select"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/select/">Select</a></div>
+        <div class="card__desc">Dropdown menu for selecting a single option.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/placeholder.svg" alt="Textarea"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/textarea/">Textarea</a></div>
+        <div class="card__desc">Field for entering multiple lines of text.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/placeholder.svg" alt="Textinput"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/textinput/">Textinput</a></div>
+        <div class="card__desc">Field for entering short text strings, like email, number, password, and more.</div>
+      </div>
+    </div>
+  </div><div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          
+            <img src="/assets/img/components/placeholder.svg" alt="Toggle"></div>
+          
+        <div class="card__title"><a href="/excelsior-site/content/components/toggle/">Toggle</a></div>
+        <div class="card__desc">Switch component for enabling or disabling a setting.</div>
+      </div>
+    </div>
+  </div></div>
 
 
   </main>

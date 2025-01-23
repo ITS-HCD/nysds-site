@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toggle - Excelsior Design System</title>
+    <meta name="description" content="Switch component for enabling or disabling a setting.">   
+    <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//content/components/toggle/">
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Toggle">
+    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//content/components/toggle/">
+    <meta property="og:description" content="Switch component for enabling or disabling a setting.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <link rel="preload" href="https://its-hcd.github.io/excelsior-site//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/excelsior-fonts.css">    
+    <link href="https://its-hcd.github.io/excelsior-site//pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css">    
+    <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/excelsior-site.css">    
+
+
+    
+    <meta name=”robots” content=”noindex”>
+    
+    
+    <!-- Latest Build: 2025-01-23T18:25:23.164+00:00 -->
+  </head>
+  <body class="home">
+  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
+  <script type="text/javascript">
+    var _NY = {
+      HOST: "static-assets.ny.gov",
+      hideSearch: true,
+      showLanguageHeader: false,
+      showLanguageFooter: false,
+    };
+    (function (document, bundle, head) {
+        head = document.getElementsByTagName('head')[0];
+        bundle = document.createElement('script');
+        bundle.type = 'text/javascript';
+        bundle.async = true;
+        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+        head.appendChild(bundle);
+    }(document));
+  </script>
+</div>
+  <div class="nys-grid-container content">
+  <nav class="nys-grid-row">
+    <div class="nys-grid-col-auto">
+        <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg"></a>
+    </div>
+    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+        <a href="/excelsior-site/getting-started" title="Getting Started" class=" nys-display-flex nys-flex-justify-center">Getting Started</a>
+    </div>
+    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+        <a href="/excelsior-site/foundations" title="Foundations" class=" nys-display-flex nys-flex-justify-center">Foundations</a>
+    </div>
+    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center nys-flex-justify-center">
+        <a href="/excelsior-site/components" title="Components" class=" nys-display-flex nys-flex-justify-center">Components</a>
+    </div>
+    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+        <a href="/excelsior-site/about" title="About" class=" nys-display-flex nys-flex-justify-center">About</a>
+    </div>
+</nav>
+
+
+
+  <main role="main" data-pagefind-body>
+    
+    <section>
+  <h1 style="font-size: var(--nys-font-size-display-md)">Toggle</h1>
+</section>
+<p>The <code class="language-js">nys-toggle</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch &quot;on&quot; or &quot;off&quot;.</p>
+<h2>Example</h2>
+<p><nys-toggle 
+    label="Dark Mode"
+    description="Enable dark mode for a more comfortable viewing experience."
+    name="toggle-switch"
+    value="access">
+</nys-toggle></p>
+<h2>Example Code</h2>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-toggle</span> 
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Dark Mode<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enable dark mode for a more comfortable viewing experience.<span class="token punctuation">"</span></span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle-switch<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>access<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-toggle</span><span class="token punctuation">></span></span></code></pre>
+<h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>Consider using nys-toggle when expecting immediate UI effects when turning switch on/off.</li>
+<li>Ideal for settings pages, feature toggles, or user preferences.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>Consider using nys-checkbox or nys-radiobutton to select one or more options from a list where the selections</li>
+<li>Use nys-checkbox for forms, especially when you're not expecting immediate action.</li>
+</ul>
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-6">
+    <div class="card">
+      <h3 class="card__title"><nys-icon name="check_circle" size="xl"></nys-icon> Do</h3>
+<ul>
+<li>
+<p>Provide a clear label and optional description to explain the toggle's purpose.</p>
+</li>
+<li>
+<p>Show the UI for toggle’s state is visually distinct for on/off positions.</p>
+</div>
+</li>
+</ul>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6">
+    <div class="card">
+      <h3 class="card__title"><nys-icon name="warning" size="xl"></nys-icon> Don't</h3>
+<ul>
+<li>
+<p>Use toggles for complex multi-state options.</p>
+</li>
+<li>
+<p>Overuse toggles for trivial settings that do not impact user experience significantly.</p>
+</li>
+<li>
+<p>Hide labels entirely unless another accessible method of describing the toggle exists.</p>
+</div>
+</li>
+</ul>
+  </div>
+</div>
+<h2>Accessibility</h2>
+<p>The <code class="language-js">nys-toggle</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
+<li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+</ul>
+<h2>Options</h2>
+<h3>Sizes</h3>
+<p><nys-toggle label='Small (size="sm")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="sm"></nys-toggle>
+</br>
+<nys-toggle label='Medium (size="md")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="md"></nys-toggle></p>
+<h3>Disable Icon</h3>
+<p><nys-toggle label="No Icon on the toggle" name="toggle-switch" value="access" noIcon></nys-toggle></p>
+<h2>Properties</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>label</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>noIcon</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td>string (sm, md)</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>string</td>
+    </tr>
+  </tbody>
+  </table>
+<h2>CSS Variables</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--nys-toggle-width</code></td>
+      <td>Width of the toggle switch.</td>
+    </tr>
+    <tr>
+      <td><code>--nys-toggle-height</code></td>
+      <td>Height of the toggle switch.</td>
+    </tr>
+    <tr>
+      <td><code>--nys-toggle-border-radius</code></td>
+      <td>Border radius of the toggle switch.</td>
+    </tr>
+    <tr>
+      <td><code>--nys-toggle-background-color</code></td>
+      <td>Background color of the toggle switch when it is off.</td>
+    </tr>
+    <tr>
+      <td><code>--nys-toggle-checked-background-color</code></td>
+      <td>Background color of the toggle switch when it is on.</td>
+    </tr>
+  </tbody>
+  </table>
+<h2>Events</h2>
+<p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
+<ol>
+<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
+<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
+<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
+<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
+</ol>
+<p>You can listen to these events using JavaScript:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Select the toggle component</span>
+  <span class="token keyword">const</span> toggle <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-toggle'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Listen for the 'change' event</span>
+  toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+    
+  </main>
+
+  
+<ul>
+  <li><a href="/excelsior-site/privacy/" title="Review our privacy policy.">Privacy</a></li>
+  <li><a href="/excelsior-site/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+  <li><a href="/excelsior-site/about/#contact" title="Contact the Excelsior team.">Contact</a></li>
+</ul>
+
+
+</div>
+    <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+
+
+  <script src="https://its-hcd.github.io/excelsior-site//assets/js/vendor/excelsior.js"></script>
+  
+  </body>
+</html>
