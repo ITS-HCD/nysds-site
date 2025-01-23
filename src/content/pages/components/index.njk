@@ -1,12 +1,26 @@
 ---
 permalink: /components/
-title: "Excelsior, New York State's Design System"
-description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+title: Excelsior, New York State's Design System
+description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+
+
+{# <div class="ex-header">
+  <div class="ex-header__inner">
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-grid-col-4">
+        <div class="ex-header__title">Components</div>
+      </div>
+      <div class="nys-grid-col-8">
+        <div class="ex-header__media"><img src="/assets/img/header-components.svg" alt="Components"></div>
+      </div>
+    </div>
+  </div>
+</div> #}
 
 <h1>Components</h1>
 
@@ -14,12 +28,7 @@ description: "Excelsior makes it easier to build accessible, usable websites for
   <div class="nys-tablet:nys-grid-col-8">
     <div class="content-intro">
       <div class="content-intro__inner">  
-        <p>Components are reusable building blocks for quickly creating consistent, accessible, and scalable digital experiences for New York State residents.</p>
-        <ul>
-          <li><b>Standards-Based:</b> Built on W3C custom element standards using Lit, ensuring compatibility across platforms and frameworks.</li>
-          <li><b>Accessible:</b> Designed with WCAG 2.2 AA compliance to meet diverse user needs.</li>
-          <li><b>Flexible:</b> Integrates with any framework and customizable with design tokens.</li>
-        </ul>
+        <p>Excelsior offers a library of reusable building blocks for creating consistent, accessible, scalable digital experiences across New York State government sites. They are designed and tested to meet WCAG 2.2 AA compliance so they're accessible. They are styled with design tokens for flexibility. And they are built with web components so they work across platforms and frameworks.</p>
       </div>
     </div>
   </div>
@@ -37,9 +46,12 @@ description: "Excelsior makes it easier to build accessible, usable websites for
   <div class="nys-mobile-lg:nys-grid-col-4">
     <div class="card">
       <div class="card__inner">
-        {% if post.data.image %}
-        <div class="card__media"><img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
-        {% endif %}
+        <div class="card__media">
+          {% if post.data.image %}
+            <img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+          {% else %}
+            <img src="/assets/img/components/placeholder.svg" alt="{{ post.data.title }}"></div>
+          {% endif %}
         <div class="card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
         <div class="card__desc">{{ post.data.description }}</div>
       </div>

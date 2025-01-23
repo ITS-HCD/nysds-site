@@ -1,6 +1,7 @@
 ---
 title: Checkbox
-description: Form input for selecting multiple options.
+description: A checkbox is a form input that allows users to select multiple options independently from a list.
+image: /assets/img/components/checkbox.svg
 ---
 
 

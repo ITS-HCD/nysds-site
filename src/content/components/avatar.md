@@ -1,6 +1,7 @@
 ---
 title: Avatar
-description: Represents a user with an image, initials, or icon.
+description: Avatars represent a user visually through an image, initials, or an icon and typically identify user-specific actions.
+image: /assets/img/components/avatar.svg
 ---
 
 <nys-avatar
