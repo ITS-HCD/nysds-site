@@ -37,6 +37,10 @@ nav a:hover {
 pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
 }
+code[class*="language-"] {
+    font-family: var(--primary-font-mono);
+    padding: 1em;
+}
 
 /* === Custom Components */
 
@@ -62,7 +66,7 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
     margin-bottom: var(--nys-space-100);
 }
 .card__title {
-    font-size: var(--nys-size-200);
+    font-size: var(--nys-size-300);
     margin-bottom: var(--nys-space-100);
     font-weight: bold;
 }
