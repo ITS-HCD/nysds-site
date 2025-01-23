@@ -48,9 +48,9 @@ description: Excelsior makes it easier to build usable, accessible, mobile-frien
       <div class="card__inner">
         <div class="card__media">
           {% if post.data.image %}
-            <img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+            <img src="{{ post.data.image | url }}" alt="{{ post.data.title }}"></div>
           {% else %}
-            <img src="/assets/img/components/placeholder.svg" alt="{{ post.data.title }}"></div>
+            <img src="../assets/img/components/placeholder.svg" alt="{{ post.data.title }}"></div>
           {% endif %}
         <div class="card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
         <div class="card__desc">{{ post.data.description }}</div>
