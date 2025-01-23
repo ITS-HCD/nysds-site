@@ -1,6 +1,6 @@
 module.exports = function(collection) {
     return collection
-        .getFilteredByGlob("./src/content/updates/*.md")
+        .getFilteredByGlob("./src/content/updates/*.{md,njk}")
         // Exclude drafts
         .filter((item) => !item.data.draft)
         // Updates are sorted by year, descending
