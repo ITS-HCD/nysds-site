@@ -1,12 +1,4 @@
-body {
-    margin: 0;
-    font-family: "Proxima Nova", "Helvetica Neue", sans-serif;
-    color: var(--nys-color-ink)
-}
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--primary-font-bold);
-}
 
 #nygov-universal-navigation {
     min-height: 95px;
@@ -38,6 +30,63 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
 }
 
+/* === Global Styles */
+/* These really need to be defined in excelsior.css */
+
+/* === Typography */
+
+body {
+    margin: 0;
+    font-family: var(--nys-font-family-body);
+    color: var(--nys-color-ink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--nys-font-family-heading);
+}
+h1 {
+    font-size: var(--nys-font-size-h1);
+    line-height: var(--nys-font-lineheight-h1);
+}
+h2 {
+    font-size: var(--nys-font-size-h2);
+    line-height: var(--nys-font-lineheight-h2);
+}
+h3 {
+    font-size: var(--nys-font-size-h3);
+    line-height: var(--nys-font-lineheight-h3);
+}
+h4 {
+    font-size: var(--nys-font-size-h4);
+    line-height: var(--nys-font-lineheight-h4);
+}
+h5 {
+    font-size: var(--nys-font-size-h5);
+    line-height: var(--nys-font-lineheight-h5);
+}
+h6 {
+    font-size: var(--nys-font-size-h6);
+    line-height: var(--nys-font-lineheight-h6);
+}
+
+p, ul, ol, dl, blockquote {
+    line-height: var(--nys-font-lineheight-body-md);   
+}
+
+a {
+    color: var(--nys-color-link);
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: var(--nys-color-link-strong);
+    text-decoration: underline;
+}
+a:active {
+    color: var(--nys-color-link-strongest);
+}
+
+
 /* === Custom Components */
 
 /* Content Intro */
@@ -47,6 +96,15 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
     border-top: solid 1px var(--nys-color-theme-mid);
     border-bottom: solid 1px var(--nys-color-theme-mid);
     margin-bottom: var(--nys-space-250);
+}
+
+/* Excelsior Subheader */
+.ex-header {
+    margin-bottom: var(--nys-space-200);
+    background-color: var(--nys-color-theme-strong);
+}
+ex-header__title {
+    color: white;
 }
 
 /* Card */
@@ -59,10 +117,20 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
     align-items: stretch; 
 }
 .card__media {
+    aspect-ratio: 2 / 1;
     margin-bottom: var(--nys-space-100);
 }
+.card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--nys-radius-md);
+}
 .card__title {
-    font-size: var(--nys-size-200);
+    font-size: var(--nys-font-size-h3);
     margin-bottom: var(--nys-space-100);
     font-weight: bold;
+}
+.card__title a {
+    color: var(--nys-color-ink);
 }
