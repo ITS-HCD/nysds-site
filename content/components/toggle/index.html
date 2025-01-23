@@ -30,7 +30,7 @@
     <meta name=”robots” content=”noindex”>
     
     
-    <!-- Latest Build: 2025-01-23T19:26:59.007+00:00 -->
+    <!-- Latest Build: 2025-01-23T22:01:14.916+00:00 -->
   </head>
   <body class="home">
   <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
@@ -53,19 +53,19 @@
 </div>
   <div class="nys-grid-container content">
   <nav class="nys-grid-row">
-    <div class="nys-grid-col-auto">
+    <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
         <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg"></a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/getting-started" title="Getting Started" class=" nys-display-flex nys-flex-justify-center">Getting Started</a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/foundations" title="Foundations" class=" nys-display-flex nys-flex-justify-center">Foundations</a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center nys-flex-justify-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center nys-flex-justify-center">
         <a href="/excelsior-site/components" title="Components" class=" nys-display-flex nys-flex-justify-center">Components</a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/about" title="About" class=" nys-display-flex nys-flex-justify-center">About</a>
     </div>
 </nav>
@@ -74,25 +74,39 @@
 
   <main role="main" data-pagefind-body>
     
-    <section>
+    <div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-3">
+    <p><strong>On this page</strong></p>
+    <ul>
+      <li><a href="#example">Example</a></li>
+      <li><a href="#examplecode">Example Code</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#options">Options</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#cssvariables">CSS Variables</a></li>
+      <li><a href="#events">Events</a></li>
+  </div>
+  <div class="nys-tablet:nys-grid-col-9">
+<section>
   <h1 style="font-size: var(--nys-font-size-display-md)">Toggle</h1>
 </section>
 <p>The <code class="language-js">nys-toggle</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch &quot;on&quot; or &quot;off&quot;.</p>
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 <p><nys-toggle 
     label="Dark Mode"
     description="Enable dark mode for a more comfortable viewing experience."
     name="toggle-switch"
     value="access">
 </nys-toggle></p>
-<h2>Example Code</h2>
+<h2 id="examplecode">Example Code</h2>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-toggle</span> 
     <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Dark Mode<span class="token punctuation">"</span></span>
     <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enable dark mode for a more comfortable viewing experience.<span class="token punctuation">"</span></span>
     <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle-switch<span class="token punctuation">"</span></span>
     <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>access<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-toggle</span><span class="token punctuation">></span></span></code></pre>
-<h2>Usage</h2>
+<h2 id="usage">Usage</h2>
 <h3>When to use this component</h3>
 <ul>
 <li>Consider using nys-toggle when expecting immediate UI effects when turning switch on/off.</li>
@@ -134,7 +148,7 @@
 </ul>
   </div>
 </div>
-<h2>Accessibility</h2>
+<h2 id="accessibility">Accessibility</h2>
 <p>The <code class="language-js">nys-toggle</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
@@ -142,14 +156,14 @@
 <li>Visual focus indicators to help users navigate the component.</li>
 <li>Include a label property to provide accessible text for screen readers.</li>
 </ul>
-<h2>Options</h2>
+<h2 id="options">Options</h2>
 <h3>Sizes</h3>
 <p><nys-toggle label='Small (size="sm")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="sm"></nys-toggle>
 </br>
 <nys-toggle label='Medium (size="md")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="md"></nys-toggle></p>
 <h3>Disable Icon</h3>
 <p><nys-toggle label="No Icon on the toggle" name="toggle-switch" value="access" noIcon></nys-toggle></p>
-<h2>Properties</h2>
+<h2 id="properties">Properties</h2>
 <table>
   <thead>
     <tr>
@@ -196,7 +210,7 @@
     </tr>
   </tbody>
   </table>
-<h2>CSS Variables</h2>
+<h2 id="cssvariables">CSS Variables</h2>
 <table>
   <thead>
     <tr>
@@ -227,7 +241,7 @@
     </tr>
   </tbody>
   </table>
-<h2>Events</h2>
+<h2 id="events">Events</h2>
 <p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
@@ -243,7 +257,7 @@
   toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
+</div>
     
   </main>
 

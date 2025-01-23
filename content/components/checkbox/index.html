@@ -30,7 +30,7 @@
     <meta name=”robots” content=”noindex”>
     
     
-    <!-- Latest Build: 2025-01-23T19:26:59.007+00:00 -->
+    <!-- Latest Build: 2025-01-23T22:01:14.916+00:00 -->
   </head>
   <body class="home">
   <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
@@ -53,19 +53,19 @@
 </div>
   <div class="nys-grid-container content">
   <nav class="nys-grid-row">
-    <div class="nys-grid-col-auto">
+    <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
         <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg"></a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/getting-started" title="Getting Started" class=" nys-display-flex nys-flex-justify-center">Getting Started</a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/foundations" title="Foundations" class=" nys-display-flex nys-flex-justify-center">Foundations</a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center nys-flex-justify-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center nys-flex-justify-center">
         <a href="/excelsior-site/components" title="Components" class=" nys-display-flex nys-flex-justify-center">Components</a>
     </div>
-    <div class="nys-desktop:nys-grid-col nys-flex-align-self-center">
+    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
         <a href="/excelsior-site/about" title="About" class=" nys-display-flex nys-flex-justify-center">About</a>
     </div>
 </nav>
@@ -74,112 +74,137 @@
 
   <main role="main" data-pagefind-body>
     
-    <p>The <code class="language-js">nys-checkbox</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to toggle a binary state (checked/unchecked).</p>
-<p>Stable</p>
-<p><a href="#">Get the UI kit</a></p>
-<div class="component-demo">
-    <nys-checkbox
-    label="Join our Monthly Newsletter"
-    description="Receive the latest news and updates in your inbox."
-    name="subscribe"
-    value="monthly-news"
-    ></nys-checkbox>
-</div>
-<h2>Variants</h2>
-<h3>Disabled</h3>
-<div class="component-demo">
-    <nys-checkbox
-    disabled
-    label="Register for Early Voting"
-    description="This option is currently unavailable."
-    name="earlyVoting"
-    value="early-voting"
-    ></nys-checkbox>
-</div>
-<h2>Use Cases</h2>
+    <div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-3">
+    <p><strong>On this page</strong></p>
+    <ul>
+      <li><a href="#example">Example</a></li>
+      <li><a href="#examplecode">Example Code</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#options">Options</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#cssvariables">CSS Variables</a></li>
+      <li><a href="#events">Events</a></li>
+  </div>
+  <div class="nys-tablet:nys-grid-col-9">
+<section>
+  <h1 style="font-size: var(--nys-font-size-display-md)">Checkbox</h1>
+</section>
+<h2 id="example">Example</h2>
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below">
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup>
+<h2 id="examplecode">Example Code</h2>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkboxgroup</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select your favorite New York landmarks<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Choose from the options below<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Adirondacks<span class="token punctuation">"</span></span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adirondacks<span class="token punctuation">"</span></span>
+    <span class="token attr-name">errorMessage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You must select this box to continue<span class="token punctuation">"</span></span>
+    <span class="token attr-name">checked</span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>finger-lakes<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Finger Lakes<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>catskills<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Catskills<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>niagara-falls<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Niagara Falls<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>coney-island<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Coney Island<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Mount Greylock<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is disabled because it's not in New York.<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkboxgroup</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="usage">Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-    <li>When should you use this?</li>
-    <li>What is its purpose</li>
+<li>point 1</li>
+<li>point 2</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-    <li>What guidance should we display for when to NOT use this component</li>
+<li>point 1</li>
+<li>point 2</li>
 </ul>
-<h2>Usage</h2>
-<p>Primary usage guidelines for a component in a short and sweet paragraph</p>
-<h3>Usage do's and don'ts</h3>
-<div class="usagedos do">
-<h4>Do</h4>
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-6">
+    <div class="card">
+      <h3 class="card__title"><nys-icon name="check_circle" size="xl"></nys-icon> Do</h3>
 <ul>
-    <li>Do this thing</li>
-    <li>This other thing</li>
-</ul>
+<li>
+<p>point 1</p>
+</li>
+<li>
+<p>point 2</p>
 </div>
-<div class="usagedos dont">
-<h4>Don't</h4>
+</li>
+</ul>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6">
+    <div class="card">
+      <h3 class="card__title"><nys-icon name="warning" size="xl"></nys-icon> Don't</h3>
 <ul>
-    <li>Do NOT do this thing</li> 
-    <li>Or use it this way</li>
-</ul>
+<li>
+<p>point 1</p>
+</li>
+<li>
+<p>point 2</p>
 </div>
-<h2>Accessibility</h2>
-<p>Short description of a11y features</p>
-<table border="1">
+</li>
+</ul>
+  </div>
+</div>
+<h2 id="accessibility">Accessibility</h2>
+<p>The <code class="language-js">nys-</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
+<li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+</ul>
+<h2 id="options">Options</h2>
+<h3>Option 1</h3>
+<h3>Option 2</h3>
+<h2 id="properties">Properties</h2>
+<table>
   <thead>
     <tr>
-      <th><strong>ARIA Role</strong></th>
-      <th><strong>Attribute</strong></th>
-      <th><strong>Use Case</strong></th>
+      <th>Property</th>
+      <th>Type</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>`role="alert"`</td>
-      <td>Important messages that demand the user's immediate attention.</td>
-      <td>Example: Error and Emergency alert</td>
-    </tr>
-    <tr>
-      <td>`role="status"`</td>
-      <td>Messages that provide advisory information but do not have the same urgency as alerts.</td>
-      <td>Example: Success alert</td>
-    </tr>
-    <tr>
-      <td>`role="region"`</td>
-      <td>Messages that provide information the user would want to be able to easily find, but are not important enough to interrupt user workflow.</td>
-      <td>Information and Warning alert (An `aria-label`will be added for this role.)</td>
+      <td><code>label</code></td>
+      <td>string</td>
     </tr>
   </tbody>
 </table>
-<h2>CSS Properties</h2>
+<h2 id="cssvariables">CSS Variables</h2>
 <table>
-    <thead>
+  <thead>
     <tr>
-        <th>Variable</th>
-        <th>CSS Property</th>
-        <th>Description</th>
+      <th>Variable</th>
+      <th>Description</th>
     </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
     <tr>
-        <td>`boxShadow`</td>
-        <td>box-shadow</td>
-        <td>box-shadow</td>
+      <td><code>--nys-toggle-width</code></td>
+      <td>Width of the toggle switch.</td>
     </tr>
-    <tr>
-        <td>`textShadow`</td>
-        <td>text-shadow</td>
-        <td>text-shadow</td>
-    </tr>
-    </tbody>
-</table>
-<h2>Events</h2>
-<p>The nys-toggle component emits three custom events:</p>
+  </tbody>
+  </table>
+<h2 id="events">Events</h2>
+<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
-<li>change – Fired when the toggle state changes (checked/unchecked).
-<li>focus – Fired when the toggle gains focus.</li>
-<li>blur – Fired when the toggle loses focus.</li>
-<li>keydown – Fired when a key is pressed while the toggle is focused.</li>
+<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
+<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
+<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
+<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
 </ol>
 <p>You can listen to these events using JavaScript:</p>
 <pre class="language-js"><code class="language-js"><span class="token comment">// Select the toggle component</span>
@@ -188,68 +213,8 @@
   <span class="token comment">// Listen for the 'change' event</span>
   toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// Listen for the 'focus' event</span>
-  toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox is focused'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// Listen for the 'blur' event</span>
-  toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'blur'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox lost focus'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// Listen for the 'keydown' event</span>
-  toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'keydown'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Key pressed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2>Slots</h2>
-<table>
-    <thead>
-    <tr>
-        <th>Slot name</th>
-        <th>Description</th>
-        <th>Default value</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>`boxShadow`</td>
-        <td>box-shadow</td>
-        <td>box-shadow</td>
-    </tr>
-    <tr>
-        <td>`textShadow`</td>
-        <td>text-shadow</td>
-        <td>text-shadow</td>
-    </tr>
-    </tbody>
-</table>
-<h2>Parts</h2>
-<table>
-    <thead>
-    <tr>
-        <th>Part name</th>
-        <th>Description</th>
-        <th>Default value</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>`boxShadow`</td>
-        <td>box-shadow</td>
-        <td>box-shadow</td>
-    </tr>
-    <tr>
-        <td>`textShadow`</td>
-        <td>text-shadow</td>
-        <td>text-shadow</td>
-    </tr>
-    </tbody>
-</table>
-<h2>Changelog</h2>
-
+</div>
     
   </main>
 
