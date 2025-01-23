@@ -68,24 +68,55 @@ The <code class="language-js">nys-toggle</code> component includes the following
 {% endblock %}
 
 {% block properties %}
-label -	string 	
 
-name - string
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>label</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>noIcon</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td>string (sm, md)</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>string</td>
+    </tr>
 
-value	- string
+  </tbody>
 
-description	- string
-
-checked	- boolean
-
-disabled - boolean
-
-noIcon - boolean
-
-size - string
-
-form - string
-
+  </table>
 
 {% endblock %}
 
