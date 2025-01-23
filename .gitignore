@@ -14,3 +14,26 @@ package-lock.json
 
 # Ignore test files
 .cache
+
+# Ignore VSCode directories
+*.code-workspace
+./vscode
+.vscode-test
+.vscode/
+
+# Ignore environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Ignore logs
+logs
+*.log
+*storybook.log
+npm-debug.log*
+
+# Ignore temporary and system files
+.DS_Store
+Thumbs.db

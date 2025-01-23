@@ -1,6 +1,5 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 
-
 // plugins
 const eleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const eleventyPluginRss = require("@11ty/eleventy-plugin-rss");
@@ -22,6 +21,7 @@ const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 
 // collections
 const updates = require("./src/_11ty/collections/updates.js");
+const components = require("./src/_11ty/collections/components.js");
 
 module.exports = (eleventyConfig) => {
 
@@ -39,14 +39,13 @@ module.exports = (eleventyConfig) => {
 
     // collections
     eleventyConfig.addCollection("updates", updates);
+    eleventyConfig.addCollection("components", components);
 
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);
     eleventyConfig.addPlugin(eleventyPluginRss);
     eleventyConfig.addPlugin(syntaxHighlight);
-    eleventyConfig.addPlugin(timeToRead, {
-        style: 'short'
-    });
+    eleventyConfig.addPlugin(timeToRead, { style: 'short' });
     // Plugin for Lit and 11ty to print the components to the screen, does not hydrate
     // eleventyConfig.addPlugin(litPlugin, {
     //     mode: 'worker',
@@ -66,12 +65,12 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
     eleventyConfig.addPassthroughCopy("./src/assets/css/");
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
-    eleventyConfig.addPassthroughCopy("./src/admin/"); // Decap CMS
-    eleventyConfig.addPassthroughCopy("./src/robots.txt"); // Decap CMS
+    eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
+
     // eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
-    eleventyConfig.on('eleventy.after', () => {
-        execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
-      })
+    // eleventyConfig.on('eleventy.after', () => {
+    //     execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    // })
 
     // base config
     return {

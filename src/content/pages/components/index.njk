@@ -1,20 +1,65 @@
 ---
 permalink: /components/
-title: "Excelsior, New York State's Design System"
-description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+title: Excelsior, New York State's Design System
+description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 
+
+{# <div class="ex-header">
+  <div class="ex-header__inner">
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-grid-col-4">
+        <div class="ex-header__title">Components</div>
+      </div>
+      <div class="nys-grid-col-8">
+        <div class="ex-header__media"><img src="/assets/img/header-components.svg" alt="Components"></div>
+      </div>
+    </div>
+  </div>
+</div> #}
+
 <h1>Components</h1>
-<p>Click a component to learn more about it.</p>
-{%- for post in collections.component -%}
-  <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-{%- endfor -%}
-<h2><a href="alert/">Alert</a></h2>
-<h2><a href="checkbox/">Checkbox</a></h2>
+
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-tablet:nys-grid-col-8">
+    <div class="content-intro">
+      <div class="content-intro__inner">  
+        <p>Excelsior offers a library of reusable building blocks for creating consistent, accessible, scalable digital experiences across New York State government sites. They are designed and tested to meet WCAG 2.2 AA compliance so they're accessible. They are styled with design tokens for flexibility. And they are built with web components so they work across platforms and frameworks.</p>
+      </div>
+    </div>
+  </div>
+  <div class="nys-tablet:nys-grid-col-4">
+    <ul>
+      <li><a href="#">How to Use</a></li>
+      <li><a href="#">GitHub Issues</a></li>
+      <li><a href="#">NPM Components</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="nys-grid-row nys-grid-gap">
+  {%- for post in collections.components -%}
+  <div class="nys-mobile-lg:nys-grid-col-4">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__media">
+          {% if post.data.image %}
+            <img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+          {% else %}
+            <img src="/assets/img/components/placeholder.svg" alt="{{ post.data.title }}"></div>
+          {% endif %}
+        <div class="card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
+        <div class="card__desc">{{ post.data.description }}</div>
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
+
+</div>
 
 {% endblock %}
 

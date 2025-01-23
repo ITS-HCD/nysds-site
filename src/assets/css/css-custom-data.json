@@ -1,0 +1,208 @@
+{
+  "properties": {
+    "--nys-color-theme": {
+      "description": "Primary brand color. Used for primary actions and interactive elements like buttons, checkboxes, and agency-specific headers and footers. Overridden by agency-specific themes."
+    },
+    "--nys-color-theme-strong": {
+      "description": "Stronger shade of theme color, used for hover state on interactive elements. Overridden by agency-specific themes."
+    },
+    "--nys-color-theme-stronger": {
+      "description": "Strongest shade of theme color, used for pressed state on interactive elements. Overridden by agency-specific themes."
+    },
+    "--nys-color-theme-mid": {
+      "description": "Mid-range shade of theme color. Use sparingly, since text contrast against this color is problematic. Overridden by agency-specific themes."
+    },
+    "--nys-color-theme-weak": {
+      "description": "Slightly lighter shade of theme color. Overridden by agency-specific themes."
+    },
+    "--nys-color-theme-weaker": {
+      "description": "Lighter shade of theme color, used to subtly convey brand in places with a lot of text, like the global agency footer. Overridden by agency-specific themes."
+    },
+    "--nys-color-theme-faint": {
+      "description": "Faint shade of the theme color. Good for subtle accents or backgrounds. Overridden by agency-specific themes."
+    },
+    "--nys-color-accent": {
+      "description": "Bold accent color for highlighting or emphasis. Use sparingly, especially in application contexts where it can be confused with warning or error colors."
+    },
+    "--nys-color-info": {
+      "description": "Informational color for neutral messages."
+    },
+    "--nys-color-info-weak": {
+      "description": "Used as a background for informational contexts with a lot of text, like alerts."
+    },
+    "--nys-color-success": {
+      "description": "Used to communicate successful actions or states."
+    },
+    "--nys-color-success-weak": {
+      "description": "Used as a background for success contexts with a lot of text, like alerts."
+    },
+    "--nys-color-warning": {
+      "description": "Used as a warning color for non-critical alerts."
+    },
+    "--nys-color-warning-weak": {
+      "description": "Used as a background for warning contexts with a lot of text, like alerts."
+    },
+    "--nys-color-danger": {
+      "description": "Used to indicate destructive actions or failures."
+    },
+    "--nys-color-danger-weak": {
+      "description": "Used as a background in destructive or error contexts with a lot of text, like alerts."
+    },
+    "--nys-color-emergency": {
+      "description": "Emergency color for critical alerts or actions. Use sparingly."
+    },
+    "--nys-color-ink": {
+      "description": "Default text color. Provides good legibility."
+    },
+    "--nys-color-ink-reverse": {
+      "description": "Reverse text color for dark backgrounds."
+    },
+    "--nys-color-link": {
+      "description": "Standard color for text links."
+    },
+    "--nys-color-link-strong": {
+      "description": "Used for hover and active states on text links."
+    },
+    "--nys-color-link-strongest": {
+      "description": "Used for pressed states on text links."
+    },
+    "--nys-color-focus": {
+      "description": "Used to color focus rings on interactive elements."
+    },
+    "--nys-color-neutral-10": {
+      "description": "Subtle neutral shade for faint accents."
+    },
+    "--nys-color-neutral-50": {
+      "description": "Faint neutral shade for background contrast."
+    },
+    "--nys-color-neutral-100": {
+      "description": "Near-white neutral for soft backgrounds."
+    },
+    "--nys-color-neutral-200": {
+      "description": "Very light neutral tone for minimal elements."
+    },
+    "--nys-color-neutral-300": {
+      "description": "Light neutral tone for subtle backgrounds."
+    },
+    "--nys-color-neutral-400": {
+      "description": "Light-medium neutral tone for soft elements."
+    },
+    "--nys-color-neutral-500": {
+      "description": "Medium neutral tone for balanced emphasis."
+    },
+    "--nys-color-neutral-600": {
+      "description": "Medium-dark neutral tone for UI elements."
+    },
+    "--nys-color-neutral-700": {
+      "description": "Dark neutral tone for text or muted accents."
+    },
+    "--nys-color-neutral-800": {
+      "description": "Very dark neutral shade for subdued elements."
+    },
+    "--nys-color-neutral-900": {
+      "description": "Darkest neutral shade for text or backgrounds."
+    },
+    "--nys-space-1px": {
+      "description": "Spacing tokens standardize margins, padding, and gaps in layouts. This is ultra-thin for fine detail, like borders or dividers."
+    },
+    "--nys-space-2px": {
+      "description": "Very small spacing for micro-adjustments or compact layouts."
+    },
+    "--nys-space-50": {
+      "description": "Extra-small spacing, typically used for tight content spacing."
+    },
+    "--nys-space-100": {
+      "description": "Small spacing, often used for compact layouts or minimal margins."
+    },
+    "--nys-space-150": {
+      "description": "Small-medium spacing for general UI elements."
+    },
+    "--nys-space-200": {
+      "description": "Medium spacing, commonly used for standard element separation."
+    },
+    "--nys-space-250": {
+      "description": "Medium-large spacing for container padding or visual balance."
+    },
+    "--nys-space-300": {
+      "description": "Standard spacing for layouts with moderate separation."
+    },
+    "--nys-space-400": {
+      "description": "Large spacing for separating sections or creating visual breaks."
+    },
+    "--nys-space-500": {
+      "description": "Extra-large spacing for major sections or wide gaps."
+    },
+    "--nys-space-600": {
+      "description": "Very large spacing, often used for section padding or layouts."
+    },
+    "--nys-space-700": {
+      "description": "Generous spacing for wide content separation."
+    },
+    "--nys-space-800": {
+      "description": "Maximum spacing for highly open designs or major layouts."
+    },
+    "--nys-space-1200": {
+      "description": "Largest spacing token for creating significant visual separation."
+    },
+    "--nys-size-1px": {
+      "description": "Size tokens standardize the width and height of elements, like icons, typography, and UI components."
+    },
+    "--nys-size-2px": {
+      "description": "Slightly thicker size for minimal elements, such as borders."
+    },
+    "--nys-size-50": {
+      "description": "Extra-small size for compact UI elements or icons."
+    },
+    "--nys-size-100": {
+      "description": "Small size for UI elements or containers."
+    },
+    "--nys-size-150": {
+      "description": "Small-medium size for buttons or small containers."
+    },
+    "--nys-size-200": {
+      "description": "Medium size, often used for inputs or cards."
+    },
+    "--nys-size-250": {
+      "description": "Medium-large size for slightly larger UI elements."
+    },
+    "--nys-size-300": {
+      "description": "Standard size for larger UI controls or containers."
+    },
+    "--nys-size-400": {
+      "description": "Large size for buttons, modals, or prominent elements."
+    },
+    "--nys-size-500": {
+      "description": "Very large size for main containers or sections."
+    },
+    "--nys-size-600": {
+      "description": "Extra-large size for significant UI containers or elements."
+    },
+    "--nys-size-700": {
+      "description": "Massive size for prominent layout features."
+    },
+    "--nys-size-800": {
+      "description": "Largest size for visual anchors or major elements."
+    },
+    "--nys-size-1200": {
+      "description": "Maximum size for expansive layouts or hero elements."
+    },
+    "--nys-radius-xs": {
+      "description": "Extra-small radius for subtle rounding."
+    },
+    "--nys-radius-sm": {
+      "description": "Small radius for slightly rounded elements."
+    },
+    "--nys-radius-md": {
+      "description": "Medium radius input elements like text fields, checkboxes, and select dropdowns."
+    },
+    "--nys-radius-lg": {
+      "description": "Larger radius for a more pronounced rounding."
+    },
+    "--nys-radius-xl": {
+      "description": "Extra-large radius for buttons, to quickly indicate interactivity."
+    },
+    "--nys-radius-round": {
+      "description": "Fully rounded elements. Used for avatars and icons."
+    }
+  }
+}

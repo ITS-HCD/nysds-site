@@ -1,28 +1,13 @@
 ---
-permalink: /components/alert/
-tags: component
-title: "Alert"
-description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+title: Alert
+description: Alert cards are designed to display critical information, updates, or warnings that require the user's attention.
+image: /assets/img/components/alert.svg
 ---
-
-{% extends "layouts/base.njk" %}
-
-{% block content %}
-
-<style>
-.nys-grid-col-* {
-  background-color: #eee;
-}
-.ex-component-description {
-  padding: 0 var(--nys-spacing-400);
-  border: 1px solid var(--nys-color-theme);
-}
-</style>
 
 <div class="nys-grid-container">
   <div class="nys-grid-row">
     <div class="nys-tablet:nys-grid-col-9">
-      <h1>Alert</h1>
+      
 
       <div class="ex-component-description">
         <p>Alerts are used to communicate important information to users. They can be used to inform users of a successful action, a warning, or an error. Alerts can be dismissible, meaning users can close them.</p>      
@@ -57,8 +42,6 @@ description: "Excelsior makes it easier to build accessible, usable websites for
 
 
 
-<h2>Changelog</h2>
-{% endblock %}
 
 {% block styles %}
 {% endblock %}

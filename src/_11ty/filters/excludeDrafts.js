@@ -7,8 +7,9 @@
  **/
 
 module.exports = function(collection) {
-    return collection.getFilteredByGlob("src/updates/*.md").filter(function(item) {
-        // Exclude updates with draft: true in front matter or in 'drafts' folder
-        return !(item.inputPath.includes("drafts") || item.data.draft);
+    return collection.filter((item) => {
+        const isDraft = item.data.draft === true; // Exclude if draft: true in front matter
+        const isInDraftFolder = item.inputPath.includes("/drafts/"); // Exclude if in drafts folder
+        return !isDraft && !isInDraftFolder; // Include only items that are not drafts
     });
-}
+};

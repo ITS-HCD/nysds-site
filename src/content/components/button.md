@@ -1,13 +1,10 @@
 ---
-permalink: /components/button/
-title: "Excelsior, New York State's Design System"
+title: Button
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+draft: true
 ---
 
-{% extends "layouts/base.njk" %}
-
 {% block content %}
-
 
 <h1>Button</h1>
 <nys-button variant="primary">
