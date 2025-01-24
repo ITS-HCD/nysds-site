@@ -7,6 +7,10 @@ image: /assets/img/components/checkbox.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+The <code class="language-js">nys-checkbox</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to toggle a binary state (checked/unchecked).
+
+ - Optional: <code class="language-js">nys-checkboxgroup</code> can be used to group multiple checkboxes so they function as a single form control.
+
 {% endblock %}
 
 {% block example %}
@@ -29,7 +33,6 @@ image: /assets/img/components/checkbox.svg
     label="Adirondacks"
     name="landmarks"
     value="adirondacks"
-    errorMessage="You must select this box to continue"
     checked
   ></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>

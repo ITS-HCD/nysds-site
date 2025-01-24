@@ -13,6 +13,7 @@
 .nys-unav {
     
 }
+html { scroll-behavior: smooth; }
 
 nav a, nav a:visited {
     text-decoration: none;
@@ -28,6 +29,11 @@ nav a:hover {
 /* Remove the curly "peel" shadows from the bottom of code snippets */
 pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
+}
+
+/* Add some vertical padding to the code blocks */
+pre[class*="language-"] > code {
+    padding: 1em;
 }
 
 /* === Global Styles */
@@ -131,6 +137,6 @@ ex-header__title {
     margin-bottom: var(--nys-space-100);
     font-weight: bold;
 }
-.card__title a {
+.card a {
     color: var(--nys-color-ink);
 }

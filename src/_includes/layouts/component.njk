@@ -1,4 +1,10 @@
 <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col">
+
+    </div>
+</div>
+
+  <div class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-3">
     <p><strong>On this page</strong></p>
     <ul>
@@ -15,19 +21,7 @@
   <div class="nys-tablet:nys-grid-col-9">
 {% block content %}
 
-<section>
   <h1 style="font-size: var(--nys-font-size-display-md)">{{ title }}</h1>
-  {# {{ content | safe }} #}
-  {# <div> 
-    {% if tags %}
-      <ul>
-        {% for tag in tags %}
-          <li>#{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </div> #}
-</section>
 
 {% endblock %}
 
@@ -45,17 +39,17 @@
 {% block usage %}{% endblock %}
 
 <div class="nys-grid-row nys-grid-gap">
-  <div class="nys-tablet:nys-grid-col-6">
-    <div class="card">
-      <h3 class="card__title"><nys-icon name="check_circle" size="xl"></nys-icon> Do</h3>
-  {% block usagedo %}{% endblock %}
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+        {% block usagedo %}{% endblock %}
     </div>
   </div>
 
-  <div class="nys-tablet:nys-grid-col-6">
-    <div class="card">
-      <h3 class="card__title"><nys-icon name="warning" size="xl"></nys-icon> Don't</h3>
-  {% block usagedont %}{% endblock %}
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        {% block usagedont %}{% endblock %}
     </div>
   </div>
 </div>
