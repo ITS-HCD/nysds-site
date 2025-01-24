@@ -24,6 +24,29 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.inpagenav ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    padding: 0.5rem 0;
+}
+
+.inpagenav li {
+    list-style: none;
+    margin: 0;
+    border-left: 3px solid transparent;
+}
+
+.inpagenav a {
+    display: block;
+    padding: 0.25rem;
+}
+
+.inpagenav li.active {
+    font-weight: bold;
+    border-left: 3px solid var(--nys-color-ink);
+}
+
 /* Syntax highlighting plugin tweaks */
 
 /* Remove the curly "peel" shadows from the bottom of code snippets */

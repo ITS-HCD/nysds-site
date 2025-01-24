@@ -5,15 +5,16 @@ description: Field for entering short text strings, like email, number, password
 
 {% extends "layouts/component.njk" %}
 
-<nys-textinput width="lg" label="This is a humble text input:"></nys-textinput>
 
 {% block longdescription %}
 {% endblock %}
 
 {% block example %}
+<nys-textinput width="lg" label="This is a text input:"></nys-textinput>
 {% endblock %}
 
 {% block examplecode %}
+<nys-textinput width="lg" label="This is a text input:"></nys-textinput>
 {% endblock %}
 
 {% block usage %}
