@@ -4,12 +4,9 @@ description: Avatars represent a user visually through an image, initials, or an
 image: /assets/img/components/avatar.svg
 ---
 
-<nys-avatar
-  label="User avatar"
-  initials="NY"
-  shape="circle"
-  color="var(--nys-color-theme)"
-></nys-avatar>
+{% block content %}
+<nys-avatar label="User avatar" initials="NY" color="var(--nys-color-theme)"></nys-avatar>
+{% endblock %}
 
 {% block styles %}
 {% endblock %}
