@@ -22,7 +22,7 @@ const showAlert = () => {
   
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop ) {
+      if (scrollY >= sectionTop ) {
         current = section.getAttribute("id"); }
     });
   
