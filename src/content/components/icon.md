@@ -1,6 +1,7 @@
 ---
 title: Icon
 description: Visual symbols used to convey meaning or action.
+image: /assets/img/components/icon.svg
 ---
 
 {% extends "layouts/component.njk" %}
