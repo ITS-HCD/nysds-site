@@ -115,7 +115,7 @@ Errors can be assigned to both <code class="language-js">nys-checkboxgroup</code
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>
 
-### Sloted Description
+### Slotted Description
 
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
@@ -205,7 +205,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block events %}
-<p>The <code class="language-js">nys-checkbox</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>
 <li><strong><code>focus</code></strong> – Fired when the checkbox gains focus.</li>

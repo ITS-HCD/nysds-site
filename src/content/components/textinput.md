@@ -7,40 +7,42 @@ description: Field for entering short text strings, like email, number, password
 
 
 {% block longdescription %}
+The `nys-textinput` is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
 {% endblock %}
 
 {% block example %}
-<nys-textinput width="lg" label="This is a text input:"></nys-textinput>
+<nys-textinput label="This is a text input"></nys-textinput>
 {% endblock %}
 
 {% block examplecode %}
-<nys-textinput width="lg" label="This is a text input:"></nys-textinput>
+<nys-textinput label="This is a text input"></nys-textinput>
 {% endblock %}
 
 {% block usage %}
 ### When to use this component
-  - point 1
-  - point 2
+  - To collect short, single-line text input from the user (e.g., names, email addresses, or short descriptions).
+  - For open-ended, user-specific input.
 ### When to consider something else
-  - point 1
-  - point 2
+  - If you need to collect multiple lines of input, use textarea instead.
+  - If the input can be chosen from predefined options, use select, radiobutton, or checkbox.
 {% endblock %}
 
 {% block usagedo %}
-  - point 1
-  - point 2
+  - Use clear and concise labels to describe the input required.
+  - Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.
+  - Validate input in real-time to catch errors early (e.g., invalid email formats).
 {% endblock %}
 
 {% block usagedont %}
-  - point 1
-  - point 2
+  - Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).
+  - Don't overwhelm users with too many single-line inputs; group similar fields when possible.
 {% endblock %}
 
 {% block accessibility %}
-The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
+The <code class="language-js">nys-textinput</code> component includes the following accessibility-focused features:
 
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
-  - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
+  - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
+  - Keyboard navigation support, allowing users to tab into the input using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
 {% endblock %}
@@ -72,8 +74,9 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 {% endblock %}
 
-{% block cssvariables %}
 
+{% block cssvariables %}
+[[TODO]]
 <table>
   <thead>
     <tr>
@@ -92,23 +95,22 @@ The <code class="language-js">nys-</code> component includes the following acces
 {% endblock %}
 
 {% block events %}
-<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code class="language-js">nys-textinput</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
+<li><strong><code>nys-checkValidity</code></strong> – Fired when the textinput state changes.</li>
+<li><strong><code>focus</code></strong> – Fired when the textinput gains focus.</li>
+<li><strong><code>blur</code></strong> – Fired when the textinput loses focus.</li>
 </ol>
 
 You can listen to these events using JavaScript:
 {% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
+// Select the textinput component
+const textinput = document.querySelector('nys-textinput');
 
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
+// Listen for the 'nys-checkValidity' event
+textinput.addEventListener('nys-checkValidity', (event) => {
+  console.log('Text input changed:', event.target.value);
+});
 {% endhighlight %}
 {% endblock %}
 

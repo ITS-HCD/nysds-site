@@ -132,7 +132,7 @@ The <code class="language-js">nys-icon</code> component is a reusable web compon
 {% endblock %}
 
 {% block accessibility %}
-The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
+The <code class="language-js">nys-icon</code> component includes the following accessibility-focused features:
 
 **ARIA Hidden by Default**: If no label is provided, the icon is hidden from screen readers by setting aria-hidden="true".
 
@@ -173,15 +173,15 @@ You can override the color of an icon by setting a `color` prop. You can use CSS
       <nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
 
 ### Rotate
-Set the icon's rotation by passing the angle as a number, like rotate="20" (without "deg").
+You can `rotate` an icon by passing the angle as a number, like rotate="20" (without "deg").
 
       <nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
 
 
 ### Flip
-Set an icon to flip horizontally, vertically, or in both directions by using the flip property. Available values are horizontal, vertical, and both.
+Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`.
 
-
+<nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon>
 
 
 
@@ -198,8 +198,28 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   </thead>
   <tbody>
     <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td>string (2xs, xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 12, 16, 24, 32, 48, 64)</td>
+    </tr>
+    <tr>
+      <td><code>color</code></td>
+      <td>string (CSS HEX, CSS color name, or CSS variable)</td>
+    </tr>
+    <tr>
       <td><code>label</code></td>
       <td>string</td>
+    </tr>
+    <tr>
+      <td><code>rotate</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>flip</code></td>
+      <td>string (horizontal, vertical, both)</td>
     </tr>
   </tbody>
 </table>
@@ -207,7 +227,7 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 {% endblock %}
 
 {% block cssvariables %}
-
+[[TODO]]
 <table>
   <thead>
     <tr>
@@ -226,6 +246,7 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 {% endblock %}
 
 {% block events %}
+[[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
