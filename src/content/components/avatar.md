@@ -7,53 +7,89 @@ image: /assets/img/components/avatar.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+The <code class="language-js">nys-avatar</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.
+
+By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.
 {% endblock %}
 
 {% block example %}
-<nys-avatar label="User avatar" initials="NY" shape="circle"></nys-avatar>
+<nys-avatar label="User avatar"></nys-avatar>
 {% endblock %}
 
 {% block examplecode %}
 <nys-avatar
   label="User avatar"
-  initials="NY"
-  shape="circle"
 ></nys-avatar>
 {% endblock %}
 
 {% block usage %}
 ### When to use this component
-  - point 1
-  - point 2
+
+  - To visually represent users, objects, or entities in a UI.
+  - Ideal for profiles, account settings, or comment threads.
+
 ### When to consider something else
-  - point 1
-  - point 2
+
+  - If the avatar doesn’t add value to the context.
+  - When a simple label or text works better.
 {% endblock %}
 
 {% block usagedo %}
-  - point 1
-  - point 2
+  - Use for clear, simple user or entity representation.
+  - Use appropriate shapes, sizes, and images to fit the overall page design.
+  - Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.
 {% endblock %}
 
 {% block usagedont %}
-  - point 1
-  - point 2
+  - Don't overload the avatar with unnecessary customizations.
+  - Don't skip the <code class="language-js">label</code> attribute for screen reader users.
+  - Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.
 {% endblock %}
 
 {% block accessibility %}
 The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
 
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
-  - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
-  - Visual focus indicators to help users navigate the component.
-  - Include a label property to provide accessible text for screen readers.
+  - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
+  - A label property to provide accessible text for screen readers.
 {% endblock %}
 
 {% block options %}
-### Option 1
+### Images
+<p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
 
+<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
 
-### Option 2
+## Initials
+
+<p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
+
+<nys-avatar label="User avatar" initials="NY"></nys-avatar>
+
+### Custom Icons
+
+<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
+
+<nys-avatar label="User avatar"></nys-avatar>
+<nys-avatar label="User avatar">
+  <nys-icon slot="icon" label="youtube icon" name="social_youtube"></nys-icon>
+</nys-avatar>
+<nys-avatar label="User avatar">
+  <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
+</nys-avatar>
+
+## Shapes
+
+<p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
+
+<nys-avatar label="User avatar" shape="circle"></nys-avatar>
+<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
+<nys-avatar label="User avatar" shape="square"></nys-avatar>
+
+### Background Color
+
+You can change the background color of an Avatar. Note that images will naturally cover over the background color.
+
+<nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
 
 {% endblock %}
 
@@ -71,13 +107,41 @@ The <code class="language-js">nys-</code> component includes the following acces
       <td><code>label</code></td>
       <td>string</td>
     </tr>
+    <tr>
+      <td><code>image</code></td>
+      <td>URL</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>initials</code></td>
+      <td>string (2 letters)</td>
+    </tr>
+    <tr>
+      <td><code>icon</code></td>
+      <td>string (&lt;nys-icon&gt;)</td>
+    </tr>
+    <tr>
+      <td><code>shape</code></td>
+      <td>string (square, roundedd, circle)</td>
+    </tr>
+    <tr>
+      <td><code>color</code></td>
+      <td>#HEXVAL</td>
+    </tr>
+    <tr>
+      <td><code>lazy</code></td>
+      <td>boolean</td>
+    </tr>
   </tbody>
 </table>
 
 {% endblock %}
 
 {% block cssvariables %}
-
+[[TODO]]
 <table>
   <thead>
     <tr>
@@ -96,7 +160,8 @@ The <code class="language-js">nys-</code> component includes the following acces
 {% endblock %}
 
 {% block events %}
-<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
+[[TODO]]
+<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
 <li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
