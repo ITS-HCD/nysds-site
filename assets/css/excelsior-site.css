@@ -13,6 +13,7 @@
 .nys-unav {
     
 }
+html { scroll-behavior: smooth; }
 
 nav a, nav a:visited {
     text-decoration: none;
@@ -23,11 +24,39 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.inpagenav ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    padding: 0.5rem 0;
+}
+
+.inpagenav li {
+    list-style: none;
+    margin: 0;
+    border-left: 3px solid transparent;
+}
+
+.inpagenav a {
+    display: block;
+    padding: 0.25rem;
+}
+
+.inpagenav li.active {
+    font-weight: bold;
+    border-left: 3px solid var(--nys-color-ink);
+}
+
 /* Syntax highlighting plugin tweaks */
 
 /* Remove the curly "peel" shadows from the bottom of code snippets */
 pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
+}
+
+/* Add some vertical padding to the code blocks */
+pre[class*="language-"] > code {
+    padding: 1em;
 }
 
 /* === Global Styles */
@@ -131,6 +160,6 @@ ex-header__title {
     margin-bottom: var(--nys-space-100);
     font-weight: bold;
 }
-.card__title a {
+.card a {
     color: var(--nys-color-ink);
 }

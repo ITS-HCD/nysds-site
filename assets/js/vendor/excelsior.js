@@ -1,4 +1,4 @@
-(function(i,Z){typeof exports=="object"&&typeof module<"u"?Z(exports):typeof define=="function"&&define.amd?define(["exports"],Z):(i=typeof globalThis<"u"?globalThis:i||self,Z(i.Excelsior={}))})(this,function(i){"use strict";/*!
+(function(i,z){typeof exports=="object"&&typeof module<"u"?z(exports):typeof define=="function"&&define.amd?define(["exports"],z):(i=typeof globalThis<"u"?globalThis:i||self,z(i.Excelsior={}))})(this,function(i){"use strict";/*!
    * 
    * ░█▀▀▀ ▀▄░▄▀ ░█▀▀█ ░█▀▀▀ ░█─── ░█▀▀▀█ ▀█▀ ░█▀▀▀█ ░█▀▀█ 
    * ░█▀▀▀ ─░█── ░█─── ░█▀▀▀ ░█─── ─▀▀▀▄▄ ░█─ ░█──░█ ░█▄▄▀ 
@@ -12,33 +12,33 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */var U1,S;const Z=globalThis,a1=Z.ShadowRoot&&(Z.ShadyCSS===void 0||Z.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,C1=Symbol(),b1=new WeakMap;let w1=class{constructor(e,t,o){if(this._$cssResult$=!0,o!==C1)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e,this.t=t}get styleSheet(){let e=this.o;const t=this.t;if(a1&&e===void 0){const o=t!==void 0&&t.length===1;o&&(e=b1.get(t)),e===void 0&&((this.o=e=new CSSStyleSheet).replaceSync(this.cssText),o&&b1.set(t,e))}return e}toString(){return this.cssText}};const j1=r=>new w1(typeof r=="string"?r:r+"",void 0,C1),x=(r,...e)=>{const t=r.length===1?r[0]:e.reduce((o,s,n)=>o+(l=>{if(l._$cssResult$===!0)return l.cssText;if(typeof l=="number")return l;throw Error("Value passed to 'css' function must be a 'css' function result: "+l+". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.")})(s)+r[n+1],r[0]);return new w1(t,r,C1)},G1=(r,e)=>{if(a1)r.adoptedStyleSheets=e.map(t=>t instanceof CSSStyleSheet?t:t.styleSheet);else for(const t of e){const o=document.createElement("style"),s=Z.litNonce;s!==void 0&&o.setAttribute("nonce",s),o.textContent=t.cssText,r.appendChild(o)}},m1=a1?r=>r:r=>r instanceof CSSStyleSheet?(e=>{let t="";for(const o of e.cssRules)t+=o.cssText;return j1(t)})(r):r;/**
+ */var K1,N;const z=globalThis,d1=z.ShadowRoot&&(z.ShadyCSS===void 0||z.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,y1=Symbol(),$1=new WeakMap;let M1=class{constructor(e,t,s){if(this._$cssResult$=!0,s!==y1)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e,this.t=t}get styleSheet(){let e=this.o;const t=this.t;if(d1&&e===void 0){const s=t!==void 0&&t.length===1;s&&(e=$1.get(t)),e===void 0&&((this.o=e=new CSSStyleSheet).replaceSync(this.cssText),s&&$1.set(t,e))}return e}toString(){return this.cssText}};const X1=r=>new M1(typeof r=="string"?r:r+"",void 0,y1),M=(r,...e)=>{const t=r.length===1?r[0]:e.reduce((s,o,n)=>s+(l=>{if(l._$cssResult$===!0)return l.cssText;if(typeof l=="number")return l;throw Error("Value passed to 'css' function must be a 'css' function result: "+l+". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.")})(o)+r[n+1],r[0]);return new M1(t,r,y1)},Q1=(r,e)=>{if(d1)r.adoptedStyleSheets=e.map(t=>t instanceof CSSStyleSheet?t:t.styleSheet);else for(const t of e){const s=document.createElement("style"),o=z.litNonce;o!==void 0&&s.setAttribute("nonce",o),s.textContent=t.cssText,r.appendChild(s)}},k1=d1?r=>r:r=>r instanceof CSSStyleSheet?(e=>{let t="";for(const s of e.cssRules)t+=s.cssText;return X1(t)})(r):r;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:F1,defineProperty:W1,getOwnPropertyDescriptor:K1,getOwnPropertyNames:Y1,getOwnPropertySymbols:J1,getPrototypeOf:X1}=Object,H=globalThis,x1=H.trustedTypes,Q1=x1?x1.emptyScript:"",c1=H.reactiveElementPolyfillSupport,F=(r,e)=>r,o1={toAttribute(r,e){switch(e){case Boolean:r=r?Q1:null;break;case Object:case Array:r=r==null?r:JSON.stringify(r)}return r},fromAttribute(r,e){let t=r;switch(e){case Boolean:t=r!==null;break;case Number:t=r===null?null:Number(r);break;case Object:case Array:try{t=JSON.parse(r)}catch{t=null}}return t}},h1=(r,e)=>!F1(r,e),L1={attribute:!0,type:String,converter:o1,reflect:!1,hasChanged:h1};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),H.litPropertyMetadata??(H.litPropertyMetadata=new WeakMap);class O extends HTMLElement{static addInitializer(e){this._$Ei(),(this.l??(this.l=[])).push(e)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(e,t=L1){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(e,t),!t.noAccessor){const o=Symbol(),s=this.getPropertyDescriptor(e,o,t);s!==void 0&&W1(this.prototype,e,s)}}static getPropertyDescriptor(e,t,o){const{get:s,set:n}=K1(this.prototype,e)??{get(){return this[t]},set(l){this[t]=l}};return{get(){return s==null?void 0:s.call(this)},set(l){const c=s==null?void 0:s.call(this);n.call(this,l),this.requestUpdate(e,c,o)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this.elementProperties.get(e)??L1}static _$Ei(){if(this.hasOwnProperty(F("elementProperties")))return;const e=X1(this);e.finalize(),e.l!==void 0&&(this.l=[...e.l]),this.elementProperties=new Map(e.elementProperties)}static finalize(){if(this.hasOwnProperty(F("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(F("properties"))){const t=this.properties,o=[...Y1(t),...J1(t)];for(const s of o)this.createProperty(s,t[s])}const e=this[Symbol.metadata];if(e!==null){const t=litPropertyMetadata.get(e);if(t!==void 0)for(const[o,s]of t)this.elementProperties.set(o,s)}this._$Eh=new Map;for(const[t,o]of this.elementProperties){const s=this._$Eu(t,o);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(e){const t=[];if(Array.isArray(e)){const o=new Set(e.flat(1/0).reverse());for(const s of o)t.unshift(m1(s))}else e!==void 0&&t.push(m1(e));return t}static _$Eu(e,t){const o=t.attribute;return o===!1?void 0:typeof o=="string"?o:typeof e=="string"?e.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var e;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(e=this.constructor.l)==null||e.forEach(t=>t(this))}addController(e){var t;(this._$EO??(this._$EO=new Set)).add(e),this.renderRoot!==void 0&&this.isConnected&&((t=e.hostConnected)==null||t.call(e))}removeController(e){var t;(t=this._$EO)==null||t.delete(e)}_$E_(){const e=new Map,t=this.constructor.elementProperties;for(const o of t.keys())this.hasOwnProperty(o)&&(e.set(o,this[o]),delete this[o]);e.size>0&&(this._$Ep=e)}createRenderRoot(){const e=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return G1(e,this.constructor.elementStyles),e}connectedCallback(){var e;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(e=this._$EO)==null||e.forEach(t=>{var o;return(o=t.hostConnected)==null?void 0:o.call(t)})}enableUpdating(e){}disconnectedCallback(){var e;(e=this._$EO)==null||e.forEach(t=>{var o;return(o=t.hostDisconnected)==null?void 0:o.call(t)})}attributeChangedCallback(e,t,o){this._$AK(e,o)}_$EC(e,t){var n;const o=this.constructor.elementProperties.get(e),s=this.constructor._$Eu(e,o);if(s!==void 0&&o.reflect===!0){const l=(((n=o.converter)==null?void 0:n.toAttribute)!==void 0?o.converter:o1).toAttribute(t,o.type);this._$Em=e,l==null?this.removeAttribute(s):this.setAttribute(s,l),this._$Em=null}}_$AK(e,t){var n;const o=this.constructor,s=o._$Eh.get(e);if(s!==void 0&&this._$Em!==s){const l=o.getPropertyOptions(s),c=typeof l.converter=="function"?{fromAttribute:l.converter}:((n=l.converter)==null?void 0:n.fromAttribute)!==void 0?l.converter:o1;this._$Em=s,this[s]=c.fromAttribute(t,l.type),this._$Em=null}}requestUpdate(e,t,o){if(e!==void 0){if(o??(o=this.constructor.getPropertyOptions(e)),!(o.hasChanged??h1)(this[e],t))return;this.P(e,t,o)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(e,t,o){this._$AL.has(e)||this._$AL.set(e,t),o.reflect===!0&&this._$Em!==e&&(this._$Ej??(this._$Ej=new Set)).add(e)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const e=this.scheduleUpdate();return e!=null&&await e,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,l]of this._$Ep)this[n]=l;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[n,l]of s)l.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],l)}let e=!1;const t=this._$AL;try{e=this.shouldUpdate(t),e?(this.willUpdate(t),(o=this._$EO)==null||o.forEach(s=>{var n;return(n=s.hostUpdate)==null?void 0:n.call(s)}),this.update(t)):this._$EU()}catch(s){throw e=!1,this._$EU(),s}e&&this._$AE(t)}willUpdate(e){}_$AE(e){var t;(t=this._$EO)==null||t.forEach(o=>{var s;return(s=o.hostUpdated)==null?void 0:s.call(o)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(e)),this.updated(e)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(e){return!0}update(e){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(e){}firstUpdated(e){}}O.elementStyles=[],O.shadowRootOptions={mode:"open"},O[F("elementProperties")]=new Map,O[F("finalized")]=new Map,c1==null||c1({ReactiveElement:O}),(H.reactiveElementVersions??(H.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:e5,defineProperty:t5,getOwnPropertyDescriptor:o5,getOwnPropertyNames:s5,getOwnPropertySymbols:r5,getPrototypeOf:i5}=Object,E=globalThis,Z1=E.trustedTypes,n5=Z1?Z1.emptyScript:"",p1=E.reactiveElementPolyfillSupport,J=(r,e)=>r,n1={toAttribute(r,e){switch(e){case Boolean:r=r?n5:null;break;case Object:case Array:r=r==null?r:JSON.stringify(r)}return r},fromAttribute(r,e){let t=r;switch(e){case Boolean:t=r!==null;break;case Number:t=r===null?null:Number(r);break;case Object:case Array:try{t=JSON.parse(r)}catch{t=null}}return t}},v1=(r,e)=>!e5(r,e),H1={attribute:!0,type:String,converter:n1,reflect:!1,hasChanged:v1};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),E.litPropertyMetadata??(E.litPropertyMetadata=new WeakMap);class q extends HTMLElement{static addInitializer(e){this._$Ei(),(this.l??(this.l=[])).push(e)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(e,t=H1){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(e,t),!t.noAccessor){const s=Symbol(),o=this.getPropertyDescriptor(e,s,t);o!==void 0&&t5(this.prototype,e,o)}}static getPropertyDescriptor(e,t,s){const{get:o,set:n}=o5(this.prototype,e)??{get(){return this[t]},set(l){this[t]=l}};return{get(){return o==null?void 0:o.call(this)},set(l){const h=o==null?void 0:o.call(this);n.call(this,l),this.requestUpdate(e,h,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this.elementProperties.get(e)??H1}static _$Ei(){if(this.hasOwnProperty(J("elementProperties")))return;const e=i5(this);e.finalize(),e.l!==void 0&&(this.l=[...e.l]),this.elementProperties=new Map(e.elementProperties)}static finalize(){if(this.hasOwnProperty(J("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(J("properties"))){const t=this.properties,s=[...s5(t),...r5(t)];for(const o of s)this.createProperty(o,t[o])}const e=this[Symbol.metadata];if(e!==null){const t=litPropertyMetadata.get(e);if(t!==void 0)for(const[s,o]of t)this.elementProperties.set(s,o)}this._$Eh=new Map;for(const[t,s]of this.elementProperties){const o=this._$Eu(t,s);o!==void 0&&this._$Eh.set(o,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(e){const t=[];if(Array.isArray(e)){const s=new Set(e.flat(1/0).reverse());for(const o of s)t.unshift(k1(o))}else e!==void 0&&t.push(k1(e));return t}static _$Eu(e,t){const s=t.attribute;return s===!1?void 0:typeof s=="string"?s:typeof e=="string"?e.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var e;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(e=this.constructor.l)==null||e.forEach(t=>t(this))}addController(e){var t;(this._$EO??(this._$EO=new Set)).add(e),this.renderRoot!==void 0&&this.isConnected&&((t=e.hostConnected)==null||t.call(e))}removeController(e){var t;(t=this._$EO)==null||t.delete(e)}_$E_(){const e=new Map,t=this.constructor.elementProperties;for(const s of t.keys())this.hasOwnProperty(s)&&(e.set(s,this[s]),delete this[s]);e.size>0&&(this._$Ep=e)}createRenderRoot(){const e=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return Q1(e,this.constructor.elementStyles),e}connectedCallback(){var e;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(e=this._$EO)==null||e.forEach(t=>{var s;return(s=t.hostConnected)==null?void 0:s.call(t)})}enableUpdating(e){}disconnectedCallback(){var e;(e=this._$EO)==null||e.forEach(t=>{var s;return(s=t.hostDisconnected)==null?void 0:s.call(t)})}attributeChangedCallback(e,t,s){this._$AK(e,s)}_$EC(e,t){var n;const s=this.constructor.elementProperties.get(e),o=this.constructor._$Eu(e,s);if(o!==void 0&&s.reflect===!0){const l=(((n=s.converter)==null?void 0:n.toAttribute)!==void 0?s.converter:n1).toAttribute(t,s.type);this._$Em=e,l==null?this.removeAttribute(o):this.setAttribute(o,l),this._$Em=null}}_$AK(e,t){var n;const s=this.constructor,o=s._$Eh.get(e);if(o!==void 0&&this._$Em!==o){const l=s.getPropertyOptions(o),h=typeof l.converter=="function"?{fromAttribute:l.converter}:((n=l.converter)==null?void 0:n.fromAttribute)!==void 0?l.converter:n1;this._$Em=o,this[o]=h.fromAttribute(t,l.type),this._$Em=null}}requestUpdate(e,t,s){if(e!==void 0){if(s??(s=this.constructor.getPropertyOptions(e)),!(s.hasChanged??v1)(this[e],t))return;this.P(e,t,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(e,t,s){this._$AL.has(e)||this._$AL.set(e,t),s.reflect===!0&&this._$Em!==e&&(this._$Ej??(this._$Ej=new Set)).add(e)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const e=this.scheduleUpdate();return e!=null&&await e,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var s;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,l]of this._$Ep)this[n]=l;this._$Ep=void 0}const o=this.constructor.elementProperties;if(o.size>0)for(const[n,l]of o)l.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],l)}let e=!1;const t=this._$AL;try{e=this.shouldUpdate(t),e?(this.willUpdate(t),(s=this._$EO)==null||s.forEach(o=>{var n;return(n=o.hostUpdate)==null?void 0:n.call(o)}),this.update(t)):this._$EU()}catch(o){throw e=!1,this._$EU(),o}e&&this._$AE(t)}willUpdate(e){}_$AE(e){var t;(t=this._$EO)==null||t.forEach(s=>{var o;return(o=s.hostUpdated)==null?void 0:o.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(e)),this.updated(e)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(e){return!0}update(e){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(e){}firstUpdated(e){}}q.elementStyles=[],q.shadowRootOptions={mode:"open"},q[J("elementProperties")]=new Map,q[J("finalized")]=new Map,p1==null||p1({ReactiveElement:q}),(E.reactiveElementVersions??(E.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const W=globalThis,s1=W.trustedTypes,$1=s1?s1.createPolicy("lit-html",{createHTML:r=>r}):void 0,M1="$lit$",k=`lit$${Math.random().toFixed(9).slice(2)}$`,Z1="?"+k,e5=`<${Z1}>`,E=document,K=()=>E.createComment(""),Y=r=>r===null||typeof r!="object"&&typeof r!="function",d1=Array.isArray,t5=r=>d1(r)||typeof(r==null?void 0:r[Symbol.iterator])=="function",y1=`[ 	
-\f\r]`,J=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,H1=/-->/g,k1=/>/g,A=RegExp(`>|${y1}(?:([^\\s"'>=/]+)(${y1}*=${y1}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`,"g"),V1=/'/g,S1=/"/g,z1=/^(?:script|style|textarea|title)$/i,o5=r=>(e,...t)=>({_$litType$:r,strings:e,values:t}),h=o5(1),D=Symbol.for("lit-noChange"),v=Symbol.for("lit-nothing"),E1=new WeakMap,N=E.createTreeWalker(E,129);function A1(r,e){if(!d1(r)||!r.hasOwnProperty("raw"))throw Error("invalid template strings array");return $1!==void 0?$1.createHTML(e):e}const s5=(r,e)=>{const t=r.length-1,o=[];let s,n=e===2?"<svg>":e===3?"<math>":"",l=J;for(let c=0;c<t;c++){const C=r[c];let p,u,d=-1,M=0;for(;M<C.length&&(l.lastIndex=M,u=l.exec(C),u!==null);)M=l.lastIndex,l===J?u[1]==="!--"?l=H1:u[1]!==void 0?l=k1:u[2]!==void 0?(z1.test(u[2])&&(s=RegExp("</"+u[2],"g")),l=A):u[3]!==void 0&&(l=A):l===A?u[0]===">"?(l=s??J,d=-1):u[1]===void 0?d=-2:(d=l.lastIndex-u[2].length,p=u[1],l=u[3]===void 0?A:u[3]==='"'?S1:V1):l===S1||l===V1?l=A:l===H1||l===k1?l=J:(l=A,s=void 0);const z=l===A&&r[c+1].startsWith("/>")?" ":"";n+=l===J?C+e5:d>=0?(o.push(p),C.slice(0,d)+M1+C.slice(d)+k+z):C+k+(d===-2?c:z)}return[A1(r,n+(r[t]||"<?>")+(e===2?"</svg>":e===3?"</math>":"")),o]};let v1=class I1{constructor({strings:e,_$litType$:t},o){let s;this.parts=[];let n=0,l=0;const c=e.length-1,C=this.parts,[p,u]=s5(e,t);if(this.el=I1.createElement(p,o),N.currentNode=this.el.content,t===2||t===3){const d=this.el.content.firstChild;d.replaceWith(...d.childNodes)}for(;(s=N.nextNode())!==null&&C.length<c;){if(s.nodeType===1){if(s.hasAttributes())for(const d of s.getAttributeNames())if(d.endsWith(M1)){const M=u[l++],z=s.getAttribute(d).split(k),l1=/([.?@])?(.*)/.exec(M);C.push({type:1,index:n,name:l1[2],strings:z,ctor:l1[1]==="."?i5:l1[1]==="?"?n5:l1[1]==="@"?l5:r1}),s.removeAttribute(d)}else d.startsWith(k)&&(C.push({type:6,index:n}),s.removeAttribute(d));if(z1.test(s.tagName)){const d=s.textContent.split(k),M=d.length-1;if(M>0){s.textContent=s1?s1.emptyScript:"";for(let z=0;z<M;z++)s.append(d[z],K()),N.nextNode(),C.push({type:2,index:++n});s.append(d[M],K())}}}else if(s.nodeType===8)if(s.data===Z1)C.push({type:2,index:n});else{let d=-1;for(;(d=s.data.indexOf(k,d+1))!==-1;)C.push({type:7,index:n}),d+=k.length-1}n++}}static createElement(e,t){const o=E.createElement("template");return o.innerHTML=e,o}};function R(r,e,t=r,o){var l,c;if(e===D)return e;let s=o!==void 0?(l=t._$Co)==null?void 0:l[o]:t._$Cl;const n=Y(e)?void 0:e._$litDirective$;return(s==null?void 0:s.constructor)!==n&&((c=s==null?void 0:s._$AO)==null||c.call(s,!1),n===void 0?s=void 0:(s=new n(r),s._$AT(r,t,o)),o!==void 0?(t._$Co??(t._$Co=[]))[o]=s:t._$Cl=s),s!==void 0&&(e=R(r,s._$AS(r,e.values),s,o)),e}let r5=class{constructor(e,t){this._$AV=[],this._$AN=void 0,this._$AD=e,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(e){const{el:{content:t},parts:o}=this._$AD,s=((e==null?void 0:e.creationScope)??E).importNode(t,!0);N.currentNode=s;let n=N.nextNode(),l=0,c=0,C=o[0];for(;C!==void 0;){if(l===C.index){let p;C.type===2?p=new p1(n,n.nextSibling,this,e):C.type===1?p=new C.ctor(n,C.name,C.strings,this,e):C.type===6&&(p=new a5(n,this,e)),this._$AV.push(p),C=o[++c]}l!==(C==null?void 0:C.index)&&(n=N.nextNode(),l++)}return N.currentNode=E,s}p(e){let t=0;for(const o of this._$AV)o!==void 0&&(o.strings!==void 0?(o._$AI(e,o,t),t+=o.strings.length-2):o._$AI(e[t])),t++}},p1=class q1{get _$AU(){var e;return((e=this._$AM)==null?void 0:e._$AU)??this._$Cv}constructor(e,t,o,s){this.type=2,this._$AH=v,this._$AN=void 0,this._$AA=e,this._$AB=t,this._$AM=o,this.options=s,this._$Cv=(s==null?void 0:s.isConnected)??!0}get parentNode(){let e=this._$AA.parentNode;const t=this._$AM;return t!==void 0&&(e==null?void 0:e.nodeType)===11&&(e=t.parentNode),e}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(e,t=this){e=R(this,e,t),Y(e)?e===v||e==null||e===""?(this._$AH!==v&&this._$AR(),this._$AH=v):e!==this._$AH&&e!==D&&this._(e):e._$litType$!==void 0?this.$(e):e.nodeType!==void 0?this.T(e):t5(e)?this.k(e):this._(e)}O(e){return this._$AA.parentNode.insertBefore(e,this._$AB)}T(e){this._$AH!==e&&(this._$AR(),this._$AH=this.O(e))}_(e){this._$AH!==v&&Y(this._$AH)?this._$AA.nextSibling.data=e:this.T(E.createTextNode(e)),this._$AH=e}$(e){var n;const{values:t,_$litType$:o}=e,s=typeof o=="number"?this._$AC(e):(o.el===void 0&&(o.el=v1.createElement(A1(o.h,o.h[0]),this.options)),o);if(((n=this._$AH)==null?void 0:n._$AD)===s)this._$AH.p(t);else{const l=new r5(s,this),c=l.u(this.options);l.p(t),this.T(c),this._$AH=l}}_$AC(e){let t=E1.get(e.strings);return t===void 0&&E1.set(e.strings,t=new v1(e)),t}k(e){d1(this._$AH)||(this._$AH=[],this._$AR());const t=this._$AH;let o,s=0;for(const n of e)s===t.length?t.push(o=new q1(this.O(K()),this.O(K()),this,this.options)):o=t[s],o._$AI(n),s++;s<t.length&&(this._$AR(o&&o._$AB.nextSibling,s),t.length=s)}_$AR(e=this._$AA.nextSibling,t){var o;for((o=this._$AP)==null?void 0:o.call(this,!1,!0,t);e&&e!==this._$AB;){const s=e.nextSibling;e.remove(),e=s}}setConnected(e){var t;this._$AM===void 0&&(this._$Cv=e,(t=this._$AP)==null||t.call(this,e))}},r1=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(e,t,o,s,n){this.type=1,this._$AH=v,this._$AN=void 0,this.element=e,this.name=t,this._$AM=s,this.options=n,o.length>2||o[0]!==""||o[1]!==""?(this._$AH=Array(o.length-1).fill(new String),this.strings=o):this._$AH=v}_$AI(e,t=this,o,s){const n=this.strings;let l=!1;if(n===void 0)e=R(this,e,t,0),l=!Y(e)||e!==this._$AH&&e!==D,l&&(this._$AH=e);else{const c=e;let C,p;for(e=n[0],C=0;C<n.length-1;C++)p=R(this,c[o+C],t,C),p===D&&(p=this._$AH[C]),l||(l=!Y(p)||p!==this._$AH[C]),p===v?e=v:e!==v&&(e+=(p??"")+n[C+1]),this._$AH[C]=p}l&&!s&&this.j(e)}j(e){e===v?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,e??"")}},i5=class extends r1{constructor(){super(...arguments),this.type=3}j(e){this.element[this.name]=e===v?void 0:e}},n5=class extends r1{constructor(){super(...arguments),this.type=4}j(e){this.element.toggleAttribute(this.name,!!e&&e!==v)}};class l5 extends r1{constructor(e,t,o,s,n){super(e,t,o,s,n),this.type=5}_$AI(e,t=this){if((e=R(this,e,t,0)??v)===D)return;const o=this._$AH,s=e===v&&o!==v||e.capture!==o.capture||e.once!==o.once||e.passive!==o.passive,n=e!==v&&(o===v||s);s&&this.element.removeEventListener(this.name,this,o),n&&this.element.addEventListener(this.name,this,e),this._$AH=e}handleEvent(e){var t;typeof this._$AH=="function"?this._$AH.call(((t=this.options)==null?void 0:t.host)??this.element,e):this._$AH.handleEvent(e)}}let a5=class{constructor(e,t,o){this.element=e,this.type=6,this._$AN=void 0,this._$AM=t,this.options=o}get _$AU(){return this._$AM._$AU}_$AI(e){R(this,e)}};const g1=W.litHtmlPolyfillSupport;g1==null||g1(v1,p1),(W.litHtmlVersions??(W.litHtmlVersions=[])).push("3.2.1");const C5=(r,e,t)=>{const o=(t==null?void 0:t.renderBefore)??e;let s=o._$litPart$;if(s===void 0){const n=(t==null?void 0:t.renderBefore)??null;o._$litPart$=s=new p1(e.insertBefore(K(),n),n,void 0,t??{})}return s._$AI(r),s};/**
+ */const X=globalThis,l1=X.trustedTypes,V1=l1?l1.createPolicy("lit-html",{createHTML:r=>r}):void 0,S1="$lit$",A=`lit$${Math.random().toFixed(9).slice(2)}$`,z1="?"+A,l5=`<${z1}>`,P=document,Q=()=>P.createComment(""),e1=r=>r===null||typeof r!="object"&&typeof r!="function",g1=Array.isArray,a5=r=>g1(r)||typeof(r==null?void 0:r[Symbol.iterator])=="function",u1=`[ 	
+\f\r]`,t1=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,E1=/-->/g,A1=/>/g,T=RegExp(`>|${u1}(?:([^\\s"'>=/]+)(${u1}*=${u1}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`,"g"),N1=/'/g,B1=/"/g,P1=/^(?:script|style|textarea|title)$/i,C5=r=>(e,...t)=>({_$litType$:r,strings:e,values:t}),c=C5(1),U=Symbol.for("lit-noChange"),p=Symbol.for("lit-nothing"),T1=new WeakMap,O=P.createTreeWalker(P,129);function O1(r,e){if(!g1(r)||!r.hasOwnProperty("raw"))throw Error("invalid template strings array");return V1!==void 0?V1.createHTML(e):e}const c5=(r,e)=>{const t=r.length-1,s=[];let o,n=e===2?"<svg>":e===3?"<math>":"",l=t1;for(let h=0;h<t;h++){const C=r[h];let v,_,d=-1,S=0;for(;S<C.length&&(l.lastIndex=S,_=l.exec(C),_!==null);)S=l.lastIndex,l===t1?_[1]==="!--"?l=E1:_[1]!==void 0?l=A1:_[2]!==void 0?(P1.test(_[2])&&(o=RegExp("</"+_[2],"g")),l=T):_[3]!==void 0&&(l=T):l===T?_[0]===">"?(l=o??t1,d=-1):_[1]===void 0?d=-2:(d=l.lastIndex-_[2].length,v=_[1],l=_[3]===void 0?T:_[3]==='"'?B1:N1):l===B1||l===N1?l=T:l===E1||l===A1?l=t1:(l=T,o=void 0);const B=l===T&&r[h+1].startsWith("/>")?" ":"";n+=l===t1?C+l5:d>=0?(s.push(v),C.slice(0,d)+S1+C.slice(d)+A+B):C+A+(d===-2?h:B)}return[O1(r,n+(r[t]||"<?>")+(e===2?"</svg>":e===3?"</math>":"")),s]};let _1=class Y1{constructor({strings:e,_$litType$:t},s){let o;this.parts=[];let n=0,l=0;const h=e.length-1,C=this.parts,[v,_]=c5(e,t);if(this.el=Y1.createElement(v,s),O.currentNode=this.el.content,t===2||t===3){const d=this.el.content.firstChild;d.replaceWith(...d.childNodes)}for(;(o=O.nextNode())!==null&&C.length<h;){if(o.nodeType===1){if(o.hasAttributes())for(const d of o.getAttributeNames())if(d.endsWith(S1)){const S=_[l++],B=o.getAttribute(d).split(A),h1=/([.?@])?(.*)/.exec(S);C.push({type:1,index:n,name:h1[2],strings:B,ctor:h1[1]==="."?d5:h1[1]==="?"?y5:h1[1]==="@"?p5:a1}),o.removeAttribute(d)}else d.startsWith(A)&&(C.push({type:6,index:n}),o.removeAttribute(d));if(P1.test(o.tagName)){const d=o.textContent.split(A),S=d.length-1;if(S>0){o.textContent=l1?l1.emptyScript:"";for(let B=0;B<S;B++)o.append(d[B],Q()),O.nextNode(),C.push({type:2,index:++n});o.append(d[S],Q())}}}else if(o.nodeType===8)if(o.data===z1)C.push({type:2,index:n});else{let d=-1;for(;(d=o.data.indexOf(A,d+1))!==-1;)C.push({type:7,index:n}),d+=A.length-1}n++}}static createElement(e,t){const s=P.createElement("template");return s.innerHTML=e,s}};function j(r,e,t=r,s){var l,h;if(e===U)return e;let o=s!==void 0?(l=t._$Co)==null?void 0:l[s]:t._$Cl;const n=e1(e)?void 0:e._$litDirective$;return(o==null?void 0:o.constructor)!==n&&((h=o==null?void 0:o._$AO)==null||h.call(o,!1),n===void 0?o=void 0:(o=new n(r),o._$AT(r,t,s)),s!==void 0?(t._$Co??(t._$Co=[]))[s]=o:t._$Cl=o),o!==void 0&&(e=j(r,o._$AS(r,e.values),o,s)),e}let h5=class{constructor(e,t){this._$AV=[],this._$AN=void 0,this._$AD=e,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(e){const{el:{content:t},parts:s}=this._$AD,o=((e==null?void 0:e.creationScope)??P).importNode(t,!0);O.currentNode=o;let n=O.nextNode(),l=0,h=0,C=s[0];for(;C!==void 0;){if(l===C.index){let v;C.type===2?v=new b1(n,n.nextSibling,this,e):C.type===1?v=new C.ctor(n,C.name,C.strings,this,e):C.type===6&&(v=new v5(n,this,e)),this._$AV.push(v),C=s[++h]}l!==(C==null?void 0:C.index)&&(n=O.nextNode(),l++)}return O.currentNode=P,o}p(e){let t=0;for(const s of this._$AV)s!==void 0&&(s.strings!==void 0?(s._$AI(e,s,t),t+=s.strings.length-2):s._$AI(e[t])),t++}},b1=class J1{get _$AU(){var e;return((e=this._$AM)==null?void 0:e._$AU)??this._$Cv}constructor(e,t,s,o){this.type=2,this._$AH=p,this._$AN=void 0,this._$AA=e,this._$AB=t,this._$AM=s,this.options=o,this._$Cv=(o==null?void 0:o.isConnected)??!0}get parentNode(){let e=this._$AA.parentNode;const t=this._$AM;return t!==void 0&&(e==null?void 0:e.nodeType)===11&&(e=t.parentNode),e}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(e,t=this){e=j(this,e,t),e1(e)?e===p||e==null||e===""?(this._$AH!==p&&this._$AR(),this._$AH=p):e!==this._$AH&&e!==U&&this._(e):e._$litType$!==void 0?this.$(e):e.nodeType!==void 0?this.T(e):a5(e)?this.k(e):this._(e)}O(e){return this._$AA.parentNode.insertBefore(e,this._$AB)}T(e){this._$AH!==e&&(this._$AR(),this._$AH=this.O(e))}_(e){this._$AH!==p&&e1(this._$AH)?this._$AA.nextSibling.data=e:this.T(P.createTextNode(e)),this._$AH=e}$(e){var n;const{values:t,_$litType$:s}=e,o=typeof s=="number"?this._$AC(e):(s.el===void 0&&(s.el=_1.createElement(O1(s.h,s.h[0]),this.options)),s);if(((n=this._$AH)==null?void 0:n._$AD)===o)this._$AH.p(t);else{const l=new h5(o,this),h=l.u(this.options);l.p(t),this.T(h),this._$AH=l}}_$AC(e){let t=T1.get(e.strings);return t===void 0&&T1.set(e.strings,t=new _1(e)),t}k(e){g1(this._$AH)||(this._$AH=[],this._$AR());const t=this._$AH;let s,o=0;for(const n of e)o===t.length?t.push(s=new J1(this.O(Q()),this.O(Q()),this,this.options)):s=t[o],s._$AI(n),o++;o<t.length&&(this._$AR(s&&s._$AB.nextSibling,o),t.length=o)}_$AR(e=this._$AA.nextSibling,t){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,t);e&&e!==this._$AB;){const o=e.nextSibling;e.remove(),e=o}}setConnected(e){var t;this._$AM===void 0&&(this._$Cv=e,(t=this._$AP)==null||t.call(this,e))}},a1=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(e,t,s,o,n){this.type=1,this._$AH=p,this._$AN=void 0,this.element=e,this.name=t,this._$AM=o,this.options=n,s.length>2||s[0]!==""||s[1]!==""?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=p}_$AI(e,t=this,s,o){const n=this.strings;let l=!1;if(n===void 0)e=j(this,e,t,0),l=!e1(e)||e!==this._$AH&&e!==U,l&&(this._$AH=e);else{const h=e;let C,v;for(e=n[0],C=0;C<n.length-1;C++)v=j(this,h[s+C],t,C),v===U&&(v=this._$AH[C]),l||(l=!e1(v)||v!==this._$AH[C]),v===p?e=p:e!==p&&(e+=(v??"")+n[C+1]),this._$AH[C]=v}l&&!o&&this.j(e)}j(e){e===p?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,e??"")}},d5=class extends a1{constructor(){super(...arguments),this.type=3}j(e){this.element[this.name]=e===p?void 0:e}},y5=class extends a1{constructor(){super(...arguments),this.type=4}j(e){this.element.toggleAttribute(this.name,!!e&&e!==p)}};class p5 extends a1{constructor(e,t,s,o,n){super(e,t,s,o,n),this.type=5}_$AI(e,t=this){if((e=j(this,e,t,0)??p)===U)return;const s=this._$AH,o=e===p&&s!==p||e.capture!==s.capture||e.once!==s.once||e.passive!==s.passive,n=e!==p&&(s===p||o);o&&this.element.removeEventListener(this.name,this,s),n&&this.element.addEventListener(this.name,this,e),this._$AH=e}handleEvent(e){var t;typeof this._$AH=="function"?this._$AH.call(((t=this.options)==null?void 0:t.host)??this.element,e):this._$AH.handleEvent(e)}}let v5=class{constructor(e,t,s){this.element=e,this.type=6,this._$AN=void 0,this._$AM=t,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(e){j(this,e)}};const f1=X.litHtmlPolyfillSupport;f1==null||f1(_1,b1),(X.litHtmlVersions??(X.litHtmlVersions=[])).push("3.2.1");const g5=(r,e,t)=>{const s=(t==null?void 0:t.renderBefore)??e;let o=s._$litPart$;if(o===void 0){const n=(t==null?void 0:t.renderBefore)??null;s._$litPart$=o=new b1(e.insertBefore(Q(),n),n,void 0,t??{})}return o._$AI(r),o};/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */let _=class extends O{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){var t;const e=super.createRenderRoot();return(t=this.renderOptions).renderBefore??(t.renderBefore=e.firstChild),e}update(e){const t=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(e),this._$Do=C5(t,this.renderRoot,this.renderOptions)}connectedCallback(){var e;super.connectedCallback(),(e=this._$Do)==null||e.setConnected(!0)}disconnectedCallback(){var e;super.disconnectedCallback(),(e=this._$Do)==null||e.setConnected(!1)}render(){return D}};_._$litElement$=!0,_.finalized=!0,(U1=globalThis.litElementHydrateSupport)==null||U1.call(globalThis,{LitElement:_});const u1=globalThis.litElementPolyfillSupport;u1==null||u1({LitElement:_}),(globalThis.litElementVersions??(globalThis.litElementVersions=[])).push("4.1.1");/**
+ */let g=class extends q{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){var t;const e=super.createRenderRoot();return(t=this.renderOptions).renderBefore??(t.renderBefore=e.firstChild),e}update(e){const t=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(e),this._$Do=g5(t,this.renderRoot,this.renderOptions)}connectedCallback(){var e;super.connectedCallback(),(e=this._$Do)==null||e.setConnected(!0)}disconnectedCallback(){var e;super.disconnectedCallback(),(e=this._$Do)==null||e.setConnected(!1)}render(){return U}};g._$litElement$=!0,g.finalized=!0,(K1=globalThis.litElementHydrateSupport)==null||K1.call(globalThis,{LitElement:g});const w1=globalThis.litElementPolyfillSupport;w1==null||w1({LitElement:g}),(globalThis.litElementVersions??(globalThis.litElementVersions=[])).push("4.1.1");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const V=r=>(e,t)=>{t!==void 0?t.addInitializer(()=>{customElements.define(r,e)}):customElements.define(r,e)};/**
+ */const k=r=>(e,t)=>{t!==void 0?t.addInitializer(()=>{customElements.define(r,e)}):customElements.define(r,e)};/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const c5={attribute:!0,type:String,converter:o1,reflect:!1,hasChanged:h1},h5=(r=c5,e,t)=>{const{kind:o,metadata:s}=t;let n=globalThis.litPropertyMetadata.get(s);if(n===void 0&&globalThis.litPropertyMetadata.set(s,n=new Map),n.set(t.name,r),o==="accessor"){const{name:l}=t;return{set(c){const C=e.get.call(this);e.set.call(this,c),this.requestUpdate(l,C,r)},init(c){return c!==void 0&&this.P(l,void 0,r),c}}}if(o==="setter"){const{name:l}=t;return function(c){const C=this[l];e.call(this,c),this.requestUpdate(l,C,r)}}throw Error("Unsupported decorator location: "+o)};function a(r){return(e,t)=>typeof t=="object"?h5(r,e,t):((o,s,n)=>{const l=s.hasOwnProperty(n);return s.constructor.createProperty(n,l?{...o,wrapped:!0}:o),l?Object.getOwnPropertyDescriptor(s,n):void 0})(r,e,t)}/**
+ */const u5={attribute:!0,type:String,converter:n1,reflect:!1,hasChanged:v1},_5=(r=u5,e,t)=>{const{kind:s,metadata:o}=t;let n=globalThis.litPropertyMetadata.get(o);if(n===void 0&&globalThis.litPropertyMetadata.set(o,n=new Map),n.set(t.name,r),s==="accessor"){const{name:l}=t;return{set(h){const C=e.get.call(this);e.set.call(this,h),this.requestUpdate(l,C,r)},init(h){return h!==void 0&&this.P(l,void 0,r),h}}}if(s==="setter"){const{name:l}=t;return function(h){const C=this[l];e.call(this,h),this.requestUpdate(l,C,r)}}throw Error("Unsupported decorator location: "+s)};function a(r){return(e,t)=>typeof t=="object"?_5(r,e,t):((s,o,n)=>{const l=o.hasOwnProperty(n);return o.constructor.createProperty(n,l?{...s,wrapped:!0}:s),l?Object.getOwnPropertyDescriptor(o,n):void 0})(r,e,t)}/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */function d5(r){return a({...r,state:!0,attribute:!1})}const y5=x`
+ */function m1(r){return a({...r,state:!0,attribute:!1})}const b5=M`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
@@ -70,7 +70,7 @@
     --_nys-font-weight-regular: var(--nys-font-weight-regular, 400);
     --_nys-font-weight-semibold: var(--nys-font-weight-semibold, 600);
 
-    /* Dissmiss button */
+    /* Dismiss button */
     --_nys-alert-close-button-size: var(--nys-font-size-2xl, 22px);
     --_nys-alert-hover-button-color: var(
       --nys-color-black-transparent-100,
@@ -126,7 +126,8 @@
   /* Links */
   a,
   a:active,
-  a:hover {
+  a:hover,
+  a:visited {
     font-weight: var(--_nys-font-weight-semibold);
     font-size: var(--_nys-alert-font-size);
     color: var(--_nys-alert-link-color);
@@ -205,28 +206,59 @@
   .nys-alert__actions {
     display: flex;
     gap: var(--_nys-alert-gap-space-150);
+    flex-wrap: wrap;
   }
 
   /* Alert Types */
   :host([theme="info"]) {
-    --_nys-alert-color-border-left: var(--nys-color-info, #154973);
-    --_nys-alert-color-bg: var(--nys-color-info-weak, #154973);
+    --_nys-alert-color-border-left: var(
+      --nys-color-info,
+      var(--nys-color-blue-600, #004dd1)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-info-weak,
+      var(--nys-color-blue-50, #e5effa)
+    );
   }
   :host([theme="success"]) {
-    --_nys-alert-color-border-left: var(--nys-color-success, #00a91c);
-    --_nys-alert-color-bg: var(--nys-color-success-weak, #00a91c);
+    --_nys-alert-color-border-left: var(
+      --nys-color-success,
+      var(--nys-color-green-600, #1e752e)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-success-weak,
+      var(--nys-color-green-50, #e8f1ea)
+    );
   }
   :host([theme="warning"]) {
-    --_nys-alert-color-border-left: var(--nys-color-warning, #ffbe2e);
-    --_nys-alert-color-bg: var(--nys-color-warning-weak, #ffbe2e);
+    --_nys-alert-color-border-left: var(
+      --nys-color-warning,
+      var(--nys-color-yellow-400, #face00)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-warning-weak,
+      var(--nys-color-yellow-50, #fefae5)
+    );
   }
   :host([theme="danger"]) {
-    --_nys-alert-color-border-left: var(--nys-color-danger, #b52c2c);
-    --_nys-alert-color-bg: var(--nys-color-danger-weak, #b52c2c);
+    --_nys-alert-color-border-left: var(
+      --nys-color-danger,
+      var(--nys-color-red-600, #b52c2c)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-danger-weak,
+      var(--nys-color-red-50, #f7eaea)
+    );
   }
   :host([theme="emergency"]) {
-    --_nys-alert-color-border-left: var(--nys-color-emergency, #d54309);
-    --_nys-alert-color-bg: var(--nys-color-emergency, #d54309);
+    --_nys-alert-color-border-left: var(
+      --nys-color-emergency,
+      var(--nys-color-red-800, #721c1c)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-emergency,
+      var(--nys-color-red-800, #721c1c)
+    );
     --_nys-alert-color: #fff;
     --_nys-alert-hover-button-color: var(
       --nys-color-white-transparent-100,
@@ -247,7 +279,7 @@
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const U=r=>r??v;/*!
+ */const G=r=>r??p;/*!
    * 
    * ░█▀▀▀ ▀▄░▄▀ ░█▀▀█ ░█▀▀▀ ░█─── ░█▀▀▀█ ▀█▀ ░█▀▀▀█ ░█▀▀█ 
    * ░█▀▀▀ ─░█── ░█─── ░█▀▀▀ ░█─── ─▀▀▀▄▄ ░█─ ░█──░█ ░█▄▄▀ 
@@ -262,15 +294,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const i1=globalThis,_1=i1.ShadowRoot&&(i1.ShadyCSS===void 0||i1.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,N1=Symbol(),B1=new WeakMap;let v5=class{constructor(r,e,t){if(this._$cssResult$=!0,t!==N1)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=r,this.t=e}get styleSheet(){let r=this.o;const e=this.t;if(_1&&r===void 0){const t=e!==void 0&&e.length===1;t&&(r=B1.get(e)),r===void 0&&((this.o=r=new CSSStyleSheet).replaceSync(this.cssText),t&&B1.set(e,r))}return r}toString(){return this.cssText}};const p5=r=>new v5(typeof r=="string"?r:r+"",void 0,N1),g5=(r,e)=>{if(_1)r.adoptedStyleSheets=e.map(t=>t instanceof CSSStyleSheet?t:t.styleSheet);else for(const t of e){const o=document.createElement("style"),s=i1.litNonce;s!==void 0&&o.setAttribute("nonce",s),o.textContent=t.cssText,r.appendChild(o)}},P1=_1?r=>r:r=>r instanceof CSSStyleSheet?(e=>{let t="";for(const o of e.cssRules)t+=o.cssText;return p5(t)})(r):r;/**
+ */const C1=globalThis,x1=C1.ShadowRoot&&(C1.ShadyCSS===void 0||C1.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,D1=Symbol(),R1=new WeakMap;let f5=class{constructor(r,e,t){if(this._$cssResult$=!0,t!==D1)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=r,this.t=e}get styleSheet(){let r=this.o;const e=this.t;if(x1&&r===void 0){const t=e!==void 0&&e.length===1;t&&(r=R1.get(e)),r===void 0&&((this.o=r=new CSSStyleSheet).replaceSync(this.cssText),t&&R1.set(e,r))}return r}toString(){return this.cssText}};const w5=r=>new f5(typeof r=="string"?r:r+"",void 0,D1),m5=(r,e)=>{if(x1)r.adoptedStyleSheets=e.map(t=>t instanceof CSSStyleSheet?t:t.styleSheet);else for(const t of e){const s=document.createElement("style"),o=C1.litNonce;o!==void 0&&s.setAttribute("nonce",o),s.textContent=t.cssText,r.appendChild(s)}},I1=x1?r=>r:r=>r instanceof CSSStyleSheet?(e=>{let t="";for(const s of e.cssRules)t+=s.cssText;return w5(t)})(r):r;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:u5,defineProperty:_5,getOwnPropertyDescriptor:f5,getOwnPropertyNames:b5,getOwnPropertySymbols:w5,getPrototypeOf:m5}=Object,I=globalThis,T1=I.trustedTypes,x5=T1?T1.emptyScript:"",O1=I.reactiveElementPolyfillSupport,X=(r,e)=>r,n1={toAttribute(r,e){switch(e){case Boolean:r=r?x5:null;break;case Object:case Array:r=r==null?r:JSON.stringify(r)}return r},fromAttribute(r,e){let t=r;switch(e){case Boolean:t=r!==null;break;case Number:t=r===null?null:Number(r);break;case Object:case Array:try{t=JSON.parse(r)}catch{t=null}}return t}},f1=(r,e)=>!u5(r,e),D1={attribute:!0,type:String,converter:n1,reflect:!1,hasChanged:f1};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),I.litPropertyMetadata??(I.litPropertyMetadata=new WeakMap);class Q extends HTMLElement{static addInitializer(e){this._$Ei(),(this.l??(this.l=[])).push(e)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(e,t=D1){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(e,t),!t.noAccessor){const o=Symbol(),s=this.getPropertyDescriptor(e,o,t);s!==void 0&&_5(this.prototype,e,s)}}static getPropertyDescriptor(e,t,o){const{get:s,set:n}=f5(this.prototype,e)??{get(){return this[t]},set(l){this[t]=l}};return{get(){return s==null?void 0:s.call(this)},set(l){const c=s==null?void 0:s.call(this);n.call(this,l),this.requestUpdate(e,c,o)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this.elementProperties.get(e)??D1}static _$Ei(){if(this.hasOwnProperty(X("elementProperties")))return;const e=m5(this);e.finalize(),e.l!==void 0&&(this.l=[...e.l]),this.elementProperties=new Map(e.elementProperties)}static finalize(){if(this.hasOwnProperty(X("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(X("properties"))){const t=this.properties,o=[...b5(t),...w5(t)];for(const s of o)this.createProperty(s,t[s])}const e=this[Symbol.metadata];if(e!==null){const t=litPropertyMetadata.get(e);if(t!==void 0)for(const[o,s]of t)this.elementProperties.set(o,s)}this._$Eh=new Map;for(const[t,o]of this.elementProperties){const s=this._$Eu(t,o);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(e){const t=[];if(Array.isArray(e)){const o=new Set(e.flat(1/0).reverse());for(const s of o)t.unshift(P1(s))}else e!==void 0&&t.push(P1(e));return t}static _$Eu(e,t){const o=t.attribute;return o===!1?void 0:typeof o=="string"?o:typeof e=="string"?e.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var e;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(e=this.constructor.l)==null||e.forEach(t=>t(this))}addController(e){var t;(this._$EO??(this._$EO=new Set)).add(e),this.renderRoot!==void 0&&this.isConnected&&((t=e.hostConnected)==null||t.call(e))}removeController(e){var t;(t=this._$EO)==null||t.delete(e)}_$E_(){const e=new Map,t=this.constructor.elementProperties;for(const o of t.keys())this.hasOwnProperty(o)&&(e.set(o,this[o]),delete this[o]);e.size>0&&(this._$Ep=e)}createRenderRoot(){const e=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return g5(e,this.constructor.elementStyles),e}connectedCallback(){var e;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(e=this._$EO)==null||e.forEach(t=>{var o;return(o=t.hostConnected)==null?void 0:o.call(t)})}enableUpdating(e){}disconnectedCallback(){var e;(e=this._$EO)==null||e.forEach(t=>{var o;return(o=t.hostDisconnected)==null?void 0:o.call(t)})}attributeChangedCallback(e,t,o){this._$AK(e,o)}_$EC(e,t){var o;const s=this.constructor.elementProperties.get(e),n=this.constructor._$Eu(e,s);if(n!==void 0&&s.reflect===!0){const l=(((o=s.converter)==null?void 0:o.toAttribute)!==void 0?s.converter:n1).toAttribute(t,s.type);this._$Em=e,l==null?this.removeAttribute(n):this.setAttribute(n,l),this._$Em=null}}_$AK(e,t){var o;const s=this.constructor,n=s._$Eh.get(e);if(n!==void 0&&this._$Em!==n){const l=s.getPropertyOptions(n),c=typeof l.converter=="function"?{fromAttribute:l.converter}:((o=l.converter)==null?void 0:o.fromAttribute)!==void 0?l.converter:n1;this._$Em=n,this[n]=c.fromAttribute(t,l.type),this._$Em=null}}requestUpdate(e,t,o){if(e!==void 0){if(o??(o=this.constructor.getPropertyOptions(e)),!(o.hasChanged??f1)(this[e],t))return;this.P(e,t,o)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(e,t,o){this._$AL.has(e)||this._$AL.set(e,t),o.reflect===!0&&this._$Em!==e&&(this._$Ej??(this._$Ej=new Set)).add(e)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const e=this.scheduleUpdate();return e!=null&&await e,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var e;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,l]of this._$Ep)this[n]=l;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[n,l]of s)l.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],l)}let t=!1;const o=this._$AL;try{t=this.shouldUpdate(o),t?(this.willUpdate(o),(e=this._$EO)==null||e.forEach(s=>{var n;return(n=s.hostUpdate)==null?void 0:n.call(s)}),this.update(o)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(o)}willUpdate(e){}_$AE(e){var t;(t=this._$EO)==null||t.forEach(o=>{var s;return(s=o.hostUpdated)==null?void 0:s.call(o)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(e)),this.updated(e)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(e){return!0}update(e){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(e){}firstUpdated(e){}}Q.elementStyles=[],Q.shadowRootOptions={mode:"open"},Q[X("elementProperties")]=new Map,Q[X("finalized")]=new Map,O1==null||O1({ReactiveElement:Q}),(I.reactiveElementVersions??(I.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:x5,defineProperty:L5,getOwnPropertyDescriptor:$5,getOwnPropertyNames:M5,getOwnPropertySymbols:k5,getPrototypeOf:Z5}=Object,F=globalThis,q1=F.trustedTypes,H5=q1?q1.emptyScript:"",U1=F.reactiveElementPolyfillSupport,o1=(r,e)=>r,c1={toAttribute(r,e){switch(e){case Boolean:r=r?H5:null;break;case Object:case Array:r=r==null?r:JSON.stringify(r)}return r},fromAttribute(r,e){let t=r;switch(e){case Boolean:t=r!==null;break;case Number:t=r===null?null:Number(r);break;case Object:case Array:try{t=JSON.parse(r)}catch{t=null}}return t}},L1=(r,e)=>!x5(r,e),j1={attribute:!0,type:String,converter:c1,reflect:!1,hasChanged:L1};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),F.litPropertyMetadata??(F.litPropertyMetadata=new WeakMap);class s1 extends HTMLElement{static addInitializer(e){this._$Ei(),(this.l??(this.l=[])).push(e)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(e,t=j1){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(e,t),!t.noAccessor){const s=Symbol(),o=this.getPropertyDescriptor(e,s,t);o!==void 0&&L5(this.prototype,e,o)}}static getPropertyDescriptor(e,t,s){const{get:o,set:n}=$5(this.prototype,e)??{get(){return this[t]},set(l){this[t]=l}};return{get(){return o==null?void 0:o.call(this)},set(l){const h=o==null?void 0:o.call(this);n.call(this,l),this.requestUpdate(e,h,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this.elementProperties.get(e)??j1}static _$Ei(){if(this.hasOwnProperty(o1("elementProperties")))return;const e=Z5(this);e.finalize(),e.l!==void 0&&(this.l=[...e.l]),this.elementProperties=new Map(e.elementProperties)}static finalize(){if(this.hasOwnProperty(o1("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(o1("properties"))){const t=this.properties,s=[...M5(t),...k5(t)];for(const o of s)this.createProperty(o,t[o])}const e=this[Symbol.metadata];if(e!==null){const t=litPropertyMetadata.get(e);if(t!==void 0)for(const[s,o]of t)this.elementProperties.set(s,o)}this._$Eh=new Map;for(const[t,s]of this.elementProperties){const o=this._$Eu(t,s);o!==void 0&&this._$Eh.set(o,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(e){const t=[];if(Array.isArray(e)){const s=new Set(e.flat(1/0).reverse());for(const o of s)t.unshift(I1(o))}else e!==void 0&&t.push(I1(e));return t}static _$Eu(e,t){const s=t.attribute;return s===!1?void 0:typeof s=="string"?s:typeof e=="string"?e.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var e;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(e=this.constructor.l)==null||e.forEach(t=>t(this))}addController(e){var t;(this._$EO??(this._$EO=new Set)).add(e),this.renderRoot!==void 0&&this.isConnected&&((t=e.hostConnected)==null||t.call(e))}removeController(e){var t;(t=this._$EO)==null||t.delete(e)}_$E_(){const e=new Map,t=this.constructor.elementProperties;for(const s of t.keys())this.hasOwnProperty(s)&&(e.set(s,this[s]),delete this[s]);e.size>0&&(this._$Ep=e)}createRenderRoot(){const e=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return m5(e,this.constructor.elementStyles),e}connectedCallback(){var e;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(e=this._$EO)==null||e.forEach(t=>{var s;return(s=t.hostConnected)==null?void 0:s.call(t)})}enableUpdating(e){}disconnectedCallback(){var e;(e=this._$EO)==null||e.forEach(t=>{var s;return(s=t.hostDisconnected)==null?void 0:s.call(t)})}attributeChangedCallback(e,t,s){this._$AK(e,s)}_$EC(e,t){var s;const o=this.constructor.elementProperties.get(e),n=this.constructor._$Eu(e,o);if(n!==void 0&&o.reflect===!0){const l=(((s=o.converter)==null?void 0:s.toAttribute)!==void 0?o.converter:c1).toAttribute(t,o.type);this._$Em=e,l==null?this.removeAttribute(n):this.setAttribute(n,l),this._$Em=null}}_$AK(e,t){var s;const o=this.constructor,n=o._$Eh.get(e);if(n!==void 0&&this._$Em!==n){const l=o.getPropertyOptions(n),h=typeof l.converter=="function"?{fromAttribute:l.converter}:((s=l.converter)==null?void 0:s.fromAttribute)!==void 0?l.converter:c1;this._$Em=n,this[n]=h.fromAttribute(t,l.type),this._$Em=null}}requestUpdate(e,t,s){if(e!==void 0){if(s??(s=this.constructor.getPropertyOptions(e)),!(s.hasChanged??L1)(this[e],t))return;this.P(e,t,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(e,t,s){this._$AL.has(e)||this._$AL.set(e,t),s.reflect===!0&&this._$Em!==e&&(this._$Ej??(this._$Ej=new Set)).add(e)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const e=this.scheduleUpdate();return e!=null&&await e,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var e;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,l]of this._$Ep)this[n]=l;this._$Ep=void 0}const o=this.constructor.elementProperties;if(o.size>0)for(const[n,l]of o)l.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],l)}let t=!1;const s=this._$AL;try{t=this.shouldUpdate(s),t?(this.willUpdate(s),(e=this._$EO)==null||e.forEach(o=>{var n;return(n=o.hostUpdate)==null?void 0:n.call(o)}),this.update(s)):this._$EU()}catch(o){throw t=!1,this._$EU(),o}t&&this._$AE(s)}willUpdate(e){}_$AE(e){var t;(t=this._$EO)==null||t.forEach(s=>{var o;return(o=s.hostUpdated)==null?void 0:o.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(e)),this.updated(e)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(e){return!0}update(e){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(e){}firstUpdated(e){}}s1.elementStyles=[],s1.shadowRootOptions={mode:"open"},s1[o1("elementProperties")]=new Map,s1[o1("finalized")]=new Map,U1==null||U1({ReactiveElement:s1}),(F.reactiveElementVersions??(F.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const L5={attribute:!0,type:String,converter:n1,reflect:!1,hasChanged:f1},$5=(r=L5,e,t)=>{const{kind:o,metadata:s}=t;let n=globalThis.litPropertyMetadata.get(s);if(n===void 0&&globalThis.litPropertyMetadata.set(s,n=new Map),n.set(t.name,r),o==="accessor"){const{name:l}=t;return{set(c){const C=e.get.call(this);e.set.call(this,c),this.requestUpdate(l,C,r)},init(c){return c!==void 0&&this.P(l,void 0,r),c}}}if(o==="setter"){const{name:l}=t;return function(c){const C=this[l];e.call(this,c),this.requestUpdate(l,C,r)}}throw Error("Unsupported decorator location: "+o)};function q(r){return(e,t)=>typeof t=="object"?$5(r,e,t):((o,s,n)=>{const l=s.hasOwnProperty(n);return s.constructor.createProperty(n,l?{...o,wrapped:!0}:o),l?Object.getOwnPropertyDescriptor(s,n):void 0})(r,e,t)}const M5={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+ */const V5={attribute:!0,type:String,converter:c1,reflect:!1,hasChanged:L1},S5=(r=V5,e,t)=>{const{kind:s,metadata:o}=t;let n=globalThis.litPropertyMetadata.get(o);if(n===void 0&&globalThis.litPropertyMetadata.set(o,n=new Map),n.set(t.name,r),s==="accessor"){const{name:l}=t;return{set(h){const C=e.get.call(this);e.set.call(this,h),this.requestUpdate(l,C,r)},init(h){return h!==void 0&&this.P(l,void 0,r),h}}}if(s==="setter"){const{name:l}=t;return function(h){const C=this[l];e.call(this,h),this.requestUpdate(l,C,r)}}throw Error("Unsupported decorator location: "+s)};function W(r){return(e,t)=>typeof t=="object"?S5(r,e,t):((s,o,n)=>{const l=o.hasOwnProperty(n);return o.constructor.createProperty(n,l?{...s,wrapped:!0}:s),l?Object.getOwnPropertyDescriptor(o,n):void 0})(r,e,t)}const z5={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -316,6 +348,8 @@
   <path d="M11 12.5C12.25 12.5 13.3125 12.0625 14.1875 11.1875C15.0625 10.3125 15.5 9.25 15.5 8C15.5 6.75 15.0625 5.6875 14.1875 4.8125C13.3125 3.9375 12.25 3.5 11 3.5C9.75 3.5 8.6875 3.9375 7.8125 4.8125C6.9375 5.6875 6.5 6.75 6.5 8C6.5 9.25 6.9375 10.3125 7.8125 11.1875C8.6875 12.0625 9.75 12.5 11 12.5ZM11 10.7C10.25 10.7 9.6125 10.4375 9.0875 9.9125C8.5625 9.3875 8.3 8.75 8.3 8C8.3 7.25 8.5625 6.6125 9.0875 6.0875C9.6125 5.5625 10.25 5.3 11 5.3C11.75 5.3 12.3875 5.5625 12.9125 6.0875C13.4375 6.6125 13.7 7.25 13.7 8C13.7 8.75 13.4375 9.3875 12.9125 9.9125C12.3875 10.4375 11.75 10.7 11 10.7ZM11 15.5C8.56667 15.5 6.35 14.8208 4.35 13.4625C2.35 12.1042 0.9 10.2833 0 8C0.9 5.71667 2.35 3.89583 4.35 2.5375C6.35 1.17917 8.56667 0.5 11 0.5C13.4333 0.5 15.65 1.17917 17.65 2.5375C19.65 3.89583 21.1 5.71667 22 8C21.1 10.2833 19.65 12.1042 17.65 13.4625C15.65 14.8208 13.4333 15.5 11 15.5ZM11 13.5C12.8833 13.5 14.6125 13.0042 16.1875 12.0125C17.7625 11.0208 18.9667 9.68333 19.8 8C18.9667 6.31667 17.7625 4.97917 16.1875 3.9875C14.6125 2.99583 12.8833 2.5 11 2.5C9.11667 2.5 7.3875 2.99583 5.8125 3.9875C4.2375 4.97917 3.03333 6.31667 2.2 8C3.03333 9.68333 4.2375 11.0208 5.8125 12.0125C7.3875 13.0042 9.11667 13.5 11 13.5Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,visibility_off:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
   <path d="M15.1 10.6L13.65 9.15C13.8 8.36667 13.575 7.63333 12.975 6.95C12.375 6.26667 11.6 6 10.65 6.15L9.2 4.7C9.48333 4.56667 9.77083 4.46667 10.0625 4.4C10.3542 4.33333 10.6667 4.3 11 4.3C12.25 4.3 13.3125 4.7375 14.1875 5.6125C15.0625 6.4875 15.5 7.55 15.5 8.8C15.5 9.13333 15.4667 9.44583 15.4 9.7375C15.3333 10.0292 15.2333 10.3167 15.1 10.6ZM18.3 13.75L16.85 12.35C17.4833 11.8667 18.0458 11.3375 18.5375 10.7625C19.0292 10.1875 19.45 9.53333 19.8 8.8C18.9667 7.11667 17.7708 5.77917 16.2125 4.7875C14.6542 3.79583 12.9167 3.3 11 3.3C10.5167 3.3 10.0417 3.33333 9.575 3.4C9.10833 3.46667 8.65 3.56667 8.2 3.7L6.65 2.15C7.33333 1.86667 8.03333 1.65417 8.75 1.5125C9.46667 1.37083 10.2167 1.3 11 1.3C13.5167 1.3 15.7583 1.99583 17.725 3.3875C19.6917 4.77917 21.1167 6.58333 22 8.8C21.6167 9.78333 21.1125 10.6958 20.4875 11.5375C19.8625 12.3792 19.1333 13.1167 18.3 13.75ZM18.8 19.9L14.6 15.75C14.0167 15.9333 13.4292 16.0708 12.8375 16.1625C12.2458 16.2542 11.6333 16.3 11 16.3C8.48333 16.3 6.24167 15.6042 4.275 14.2125C2.30833 12.8208 0.883333 11.0167 0 8.8C0.35 7.91667 0.791667 7.09583 1.325 6.3375C1.85833 5.57917 2.46667 4.9 3.15 4.3L0.4 1.5L1.8 0.0999985L20.2 18.5L18.8 19.9ZM4.55 5.7C4.06667 6.13333 3.625 6.60833 3.225 7.125C2.825 7.64167 2.48333 8.2 2.2 8.8C3.03333 10.4833 4.22917 11.8208 5.7875 12.8125C7.34583 13.8042 9.08333 14.3 11 14.3C11.3333 14.3 11.6583 14.2792 11.975 14.2375C12.2917 14.1958 12.6167 14.15 12.95 14.1L12.05 13.15C11.8667 13.2 11.6917 13.2375 11.525 13.2625C11.3583 13.2875 11.1833 13.3 11 13.3C9.75 13.3 8.6875 12.8625 7.8125 11.9875C6.9375 11.1125 6.5 10.05 6.5 8.8C6.5 8.61667 6.5125 8.44167 6.5375 8.275C6.5625 8.10833 6.6 7.93333 6.65 7.75L4.55 5.7Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </svg>`,notifications:`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+  <path d="M1 17C0.716667 17 0.479167 16.9042 0.2875 16.7125C0.0958333 16.5208 0 16.2833 0 16C0 15.7167 0.0958333 15.4792 0.2875 15.2875C0.479167 15.0958 0.716667 15 1 15H2V8C2 6.61667 2.41667 5.3875 3.25 4.3125C4.08333 3.2375 5.16667 2.53333 6.5 2.2V1.5C6.5 1.08333 6.64583 0.729167 6.9375 0.4375C7.22917 0.145833 7.58333 0 8 0C8.41667 0 8.77083 0.145833 9.0625 0.4375C9.35417 0.729167 9.5 1.08333 9.5 1.5V2.2C10.8333 2.53333 11.9167 3.2375 12.75 4.3125C13.5833 5.3875 14 6.61667 14 8V15H15C15.2833 15 15.5208 15.0958 15.7125 15.2875C15.9042 15.4792 16 15.7167 16 16C16 16.2833 15.9042 16.5208 15.7125 16.7125C15.5208 16.9042 15.2833 17 15 17H1ZM8 20C7.45 20 6.97917 19.8042 6.5875 19.4125C6.19583 19.0208 6 18.55 6 18H10C10 18.55 9.80417 19.0208 9.4125 19.4125C9.02083 19.8042 8.55 20 8 20ZM4 15H12V8C12 6.9 11.6083 5.95833 10.825 5.175C10.0417 4.39167 9.1 4 8 4C6.9 4 5.95833 4.39167 5.175 5.175C4.39167 5.95833 4 6.9 4 8V15Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,arrow_back:`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M3.6125 8.9935L8.5125 13.8935C8.7125 14.0935 8.80834 14.3268 8.8 14.5935C8.79167 14.8602 8.6875 15.0935 8.4875 15.2935C8.2875 15.4768 8.05417 15.5727 7.7875 15.581C7.52083 15.5893 7.2875 15.4935 7.0875 15.2935L0.487502 8.6935C0.387502 8.5935 0.316668 8.48517 0.275002 8.3685C0.233335 8.25184 0.212502 8.12684 0.212502 7.9935C0.212502 7.86017 0.233335 7.73517 0.275002 7.6185C0.316668 7.50184 0.387502 7.3935 0.487502 7.2935L7.0875 0.693503C7.27083 0.510169 7.5 0.418503 7.775 0.418503C8.05 0.418503 8.2875 0.510169 8.4875 0.693503C8.6875 0.893503 8.7875 1.131 8.7875 1.406C8.7875 1.681 8.6875 1.9185 8.4875 2.1185L3.6125 6.9935H14.7875C15.0708 6.9935 15.3083 7.08934 15.5 7.281C15.6917 7.47267 15.7875 7.71017 15.7875 7.9935C15.7875 8.27684 15.6917 8.51434 15.5 8.706C15.3083 8.89767 15.0708 8.9935 14.7875 8.9935H3.6125Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,chevron_down:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
@@ -393,15 +427,15 @@
   <path d="M17.4256 0H20.8185L13.4062 8.47179L22.1262 20H15.2985L9.95077 13.0082L3.83179 20H0.436923L8.36513 10.9385L0 0H7.00103L11.8349 6.39077L17.4256 0ZM16.2349 17.9692H18.1149L5.97949 1.9241H3.96205L16.2349 17.9692Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,social_youtube:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
   <path d="M19.8008 3.03516C19.8008 3.03516 19.6055 1.65625 19.0039 1.05078C18.2422 0.253906 17.3906 0.25 17 0.203125C14.2031 -1.11759e-07 10.0039 0 10.0039 0H9.99609C9.99609 0 5.79688 -1.11759e-07 3 0.203125C2.60938 0.25 1.75781 0.253906 0.996094 1.05078C0.394531 1.65625 0.203125 3.03516 0.203125 3.03516C0.203125 3.03516 0 4.65625 0 6.27344V7.78906C0 9.40625 0.199219 11.0273 0.199219 11.0273C0.199219 11.0273 0.394531 12.4062 0.992187 13.0117C1.75391 13.8086 2.75391 13.7812 3.19922 13.8672C4.80078 14.0195 10 14.0664 10 14.0664C10 14.0664 14.2031 14.0586 17 13.8594C17.3906 13.8125 18.2422 13.8086 19.0039 13.0117C19.6055 12.4062 19.8008 11.0273 19.8008 11.0273C19.8008 11.0273 20 9.41016 20 7.78906V6.27344C20 4.65625 19.8008 3.03516 19.8008 3.03516ZM7.93359 9.62891V4.00781L13.3359 6.82812L7.93359 9.62891Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`,account_balance:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+</svg>`,account_balance_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M3.22502 15.875V11.65C3.22502 11.2666 3.36252 10.9416 3.63752 10.675C3.91252 10.4083 4.24169 10.275 4.62502 10.275C5.00836 10.275 5.33336 10.4083 5.60002 10.675C5.86669 10.9416 6.00002 11.2666 6.00002 11.65V15.9C6.00002 16.2833 5.86669 16.6083 5.60002 16.875C5.33336 17.1416 5.00836 17.275 4.62502 17.275C4.24169 17.275 3.91252 17.1375 3.63752 16.8625C3.36252 16.5875 3.22502 16.2583 3.22502 15.875ZM9.62502 15.9V11.65C9.62502 11.2666 9.75836 10.9416 10.025 10.675C10.2917 10.4083 10.6167 10.275 11 10.275C11.3834 10.275 11.7084 10.4083 11.975 10.675C12.2417 10.9416 12.375 11.2666 12.375 11.65V15.9C12.375 16.2833 12.2417 16.6083 11.975 16.875C11.7084 17.1416 11.3834 17.275 11 17.275C10.6167 17.275 10.2917 17.1416 10.025 16.875C9.75836 16.6083 9.62502 16.2833 9.62502 15.9ZM1.72502 21.65C1.29169 21.65 0.920858 21.4958 0.612524 21.1875C0.304191 20.8791 0.150024 20.5083 0.150024 20.075C0.150024 19.6416 0.304191 19.2708 0.612524 18.9625C0.920858 18.6541 1.29169 18.5 1.72502 18.5H20.275C20.7084 18.5 21.0792 18.6541 21.3875 18.9625C21.6959 19.2708 21.85 19.6416 21.85 20.075C21.85 20.5083 21.6959 20.8791 21.3875 21.1875C21.0792 21.4958 20.7084 21.65 20.275 21.65H1.72502ZM16 15.875V11.65C16 11.2666 16.1375 10.9416 16.4125 10.675C16.6875 10.4083 17.0167 10.275 17.4 10.275C17.7834 10.275 18.1084 10.4083 18.375 10.675C18.6417 10.9416 18.775 11.2666 18.775 11.65V15.9C18.775 16.2833 18.6417 16.6083 18.375 16.875C18.1084 17.1416 17.7834 17.275 17.4 17.275C17.0167 17.275 16.6875 17.1375 16.4125 16.8625C16.1375 16.5875 16 16.2583 16 15.875ZM20.175 9.02495H1.65002C1.23336 9.02495 0.879191 8.87912 0.587524 8.58745C0.295858 8.29578 0.150024 7.94162 0.150024 7.52495V6.57495C0.150024 6.29162 0.225024 6.02912 0.375024 5.78745C0.525024 5.54578 0.725024 5.35828 0.975024 5.22495L9.60002 0.924951C10.0334 0.691618 10.5 0.574951 11 0.574951C11.5 0.574951 11.9667 0.691618 12.4 0.924951L20.925 5.17495C21.2084 5.30828 21.4334 5.51245 21.6 5.78745C21.7667 6.06245 21.85 6.36662 21.85 6.69995V7.32495C21.85 7.79162 21.6875 8.19162 21.3625 8.52495C21.0375 8.85828 20.6417 9.02495 20.175 9.02495Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,cancel_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
   <path d="M10.9242 12.3032L13.8242 15.2032C14.0075 15.3866 14.2408 15.4782 14.5242 15.4782C14.8075 15.4782 15.0408 15.3866 15.2242 15.2032C15.4075 15.0199 15.4992 14.7866 15.4992 14.5032C15.4992 14.2199 15.4075 13.9866 15.2242 13.8032L12.3242 10.9032L15.2242 8.00324C15.4075 7.81991 15.4992 7.58658 15.4992 7.30324C15.4992 7.01991 15.4075 6.78658 15.2242 6.60324C15.0408 6.41991 14.8075 6.32824 14.5242 6.32824C14.2408 6.32824 14.0075 6.41991 13.8242 6.60324L10.9242 9.50324L8.02416 6.60324C7.84083 6.41991 7.6075 6.32824 7.32416 6.32824C7.04083 6.32824 6.8075 6.41991 6.62416 6.60324C6.44083 6.78658 6.34916 7.01991 6.34916 7.30324C6.34916 7.58658 6.44083 7.81991 6.62416 8.00324L9.52416 10.9032L6.62416 13.8032C6.44083 13.9866 6.34916 14.2199 6.34916 14.5032C6.34916 14.7866 6.44083 15.0199 6.62416 15.2032C6.8075 15.3866 7.04083 15.4782 7.32416 15.4782C7.6075 15.4782 7.84083 15.3866 8.02416 15.2032L10.9242 12.3032ZM10.9242 20.9032C9.54083 20.9032 8.24083 20.6407 7.02416 20.1157C5.8075 19.5907 4.74916 18.8782 3.84916 17.9782C2.94916 17.0782 2.23666 16.0199 1.71166 14.8032C1.18666 13.5866 0.924164 12.2866 0.924164 10.9032C0.924164 9.51991 1.18666 8.21991 1.71166 7.00324C2.23666 5.78658 2.94916 4.72824 3.84916 3.82824C4.74916 2.92824 5.8075 2.21574 7.02416 1.69074C8.24083 1.16574 9.54083 0.903244 10.9242 0.903244C12.3075 0.903244 13.6075 1.16574 14.8242 1.69074C16.0408 2.21574 17.0992 2.92824 17.9992 3.82824C18.8992 4.72824 19.6117 5.78658 20.1367 7.00324C20.6617 8.21991 20.9242 9.51991 20.9242 10.9032C20.9242 12.2866 20.6617 13.5866 20.1367 14.8032C19.6117 16.0199 18.8992 17.0782 17.9992 17.9782C17.0992 18.8782 16.0408 19.5907 14.8242 20.1157C13.6075 20.6407 12.3075 20.9032 10.9242 20.9032Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,language_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`,lock:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+</svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},Z5=x`
+</svg>`},E5=M`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -497,12 +531,12 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var H5=Object.defineProperty,k5=Object.getOwnPropertyDescriptor,j=(r,e,t,o)=>{for(var s=o>1?void 0:o?k5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&H5(e,t,s),s},e1;const B=(e1=class extends _{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(r){this._size=e1.VALID_TYPES.includes(r)?r:"sm"}getIcon(){const r=M5[this.name],e=!!this.label;if(!r)return null;const t=new DOMParser().parseFromString(r,"image/svg+xml").documentElement;return t instanceof SVGElement?(t.setAttribute("role","img"),t.setAttribute("aria-label",e?this.label:""),t.setAttribute("aria-hidden",e?"false":"true"),t.style.rotate=`${this.rotate}deg`,t.style.color=this.color||"currentcolor",t.classList.add(`nys-icon--${this.size}`),t.classList.add("nys-icon--svg"),this.flip&&t.classList.add(`nys-icon--flip-${this.flip}`),t):null}render(){const r=this.getIcon();return r?h`${r}`:null}},e1.styles=Z5,e1.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],e1);j([q({type:String})],B.prototype,"name",2),j([q({type:String})],B.prototype,"label",2),j([q({type:String})],B.prototype,"rotate",2),j([q({type:String})],B.prototype,"flip",2),j([q({type:String})],B.prototype,"color",2),j([q({reflect:!0})],B.prototype,"size",1);let V5=B;customElements.get("nys-icon")||customElements.define("nys-icon",V5);var S5=Object.defineProperty,z5=Object.getOwnPropertyDescriptor,f=(r,e,t,o)=>{for(var s=o>1?void 0:o?z5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&S5(e,t,s),s};let E5=0;i.NysAlert=class extends _{constructor(){super(...arguments),this.id="",this.heading="",this.icon="",this.dismissible=!1,this.duration=0,this.text="",this.primaryAction="",this.secondaryAction="",this.primaryLabel="Learn more",this.secondaryLabel="Dismiss",this._alertClosed=!1,this._theme="info",this._timeoutId=null}get theme(){return this._theme}set theme(e){this._theme=i.NysAlert.VALID_TYPES.includes(e)?e:"base"}get ariaAttributes(){const e=this.theme==="danger"||this.theme==="emergency"?"alert":this.theme==="success"?"status":"region",t=e==="region"?`${this.theme} alert`:"";return{role:e,ariaLabel:t}}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId()),this.duration>0&&(this._timeoutId=setTimeout(()=>{this._closeAlert()},this.duration))}disconnectedCallback(){this._timeoutId&&clearTimeout(this._timeoutId),super.disconnectedCallback()}_generateUniqueId(){return`nys-alert-${Date.now()}-${E5++}`}_getIconName(){return this.icon?this.icon:this._checkAltNaming()}_checkAltNaming(){return this.theme==="success"?"check_circle":this.theme==="base"?"info":this.theme==="danger"?"error":this.theme==="emergency"?"emergency_home":this.theme}_closeAlert(){this._alertClosed=!0,this.dispatchEvent(new CustomEvent("nys-alertClosed",{detail:{theme:this.theme,label:this.heading},bubbles:!0,composed:!0}))}hasSlotContent(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector('slot[name="text"]');return e!==null?e.assignedNodes().length>0:!1}render(){const{role:e,ariaLabel:t}=this.ariaAttributes,o=typeof this.text=="string"&&this.text.trim()===""&&!this.hasSlotContent();return h`
-      ${this._alertClosed?"":h` <div
+`;var A5=Object.defineProperty,N5=Object.getOwnPropertyDescriptor,K=(r,e,t,s)=>{for(var o=s>1?void 0:s?N5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&A5(e,t,o),o},r1;const D=(r1=class extends g{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(r){this._size=r1.VALID_TYPES.includes(r)?r:"sm"}getIcon(){const r=z5[this.name],e=!!this.label;if(!r)return null;const t=new DOMParser().parseFromString(r,"image/svg+xml").documentElement;return t instanceof SVGElement?(t.setAttribute("role","img"),t.setAttribute("aria-label",e?this.label:""),t.setAttribute("aria-hidden",e?"false":"true"),t.style.rotate=`${this.rotate}deg`,t.style.color=this.color||"currentcolor",t.classList.add(`nys-icon--${this.size}`),t.classList.add("nys-icon--svg"),this.flip&&t.classList.add(`nys-icon--flip-${this.flip}`),t):null}render(){const r=this.getIcon();return r?c`${r}`:null}},r1.styles=E5,r1.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],r1);K([W({type:String})],D.prototype,"name",2),K([W({type:String})],D.prototype,"label",2),K([W({type:String})],D.prototype,"rotate",2),K([W({type:String})],D.prototype,"flip",2),K([W({type:String})],D.prototype,"color",2),K([W({reflect:!0})],D.prototype,"size",1);let B5=D;customElements.get("nys-icon")||customElements.define("nys-icon",B5);var P5=Object.defineProperty,T5=Object.getOwnPropertyDescriptor,f=(r,e,t,s)=>{for(var o=s>1?void 0:s?T5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&P5(e,t,o),o};let O5=0;i.NysAlert=class extends g{constructor(){super(...arguments),this.id="",this.heading="",this.icon="",this.dismissible=!1,this.duration=0,this.text="",this.primaryAction="",this.secondaryAction="",this.primaryLabel="Learn more",this.secondaryLabel="Dismiss",this._alertClosed=!1,this._theme="info",this._timeoutId=null}get theme(){return this._theme}set theme(e){this._theme=i.NysAlert.VALID_TYPES.includes(e)?e:"base"}get ariaAttributes(){const e=this.theme==="danger"||this.theme==="emergency"?"alert":this.theme==="success"?"status":"region",t=e==="region"?`${this.theme} alert`:"";return{role:e,ariaLabel:t}}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId()),this.duration>0&&(this._timeoutId=setTimeout(()=>{this._closeAlert()},this.duration))}disconnectedCallback(){this._timeoutId&&clearTimeout(this._timeoutId),super.disconnectedCallback()}_generateUniqueId(){return`nys-alert-${Date.now()}-${O5++}`}_getIconName(){return this.icon?this.icon:this._checkAltNaming()}_checkAltNaming(){return this.theme==="success"?"check_circle":this.theme==="base"?"info":this.theme==="danger"?"error":this.theme==="emergency"?"emergency_home":this.theme}_closeAlert(){this._alertClosed=!0,this.dispatchEvent(new CustomEvent("nys-alertClosed",{detail:{theme:this.theme,label:this.heading},bubbles:!0,composed:!0}))}hasSlotContent(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector('slot[name="text"]');return e!==null?e.assignedNodes().length>0:!1}render(){const{role:e,ariaLabel:t}=this.ariaAttributes,s=typeof this.text=="string"&&this.text.trim()===""&&!this.hasSlotContent();return c`
+      ${this._alertClosed?"":c` <div
             id=${this.id}
-            class="nys-alert__container ${o?"nys-alert--centered":""}"
+            class="nys-alert__container ${s?"nys-alert--centered":""}"
             role=${e}
-            aria-label=${U(t.trim()!==""?t:void 0)}
+            aria-label=${G(t.trim()!==""?t:void 0)}
           >
             <div part="nys-alert__icon" class="nys-alert__icon">
               <nys-icon
@@ -513,23 +547,23 @@
             </div>
             <div class="nys-alert__texts">
               <h4 class="nys-alert__header">${this.heading}</h4>
-              ${o?"":h`<slot name="text">${this.text}</slot>`}
-              ${this.primaryAction||this.secondaryAction?h`<div class="nys-alert__actions">
-                    ${this.primaryAction?h`<a
-                          href=${U(this.primaryAction||void 0)}
+              ${s?"":c`<slot name="text">${this.text}</slot>`}
+              ${this.primaryAction||this.secondaryAction?c`<div class="nys-alert__actions">
+                    ${this.primaryAction?c`<a
+                          href=${G(this.primaryAction||void 0)}
                           class="nys-alert__action nys-alert__primary"
                         >
                           ${this.primaryLabel}
                         </a>`:""}
-                    ${this.secondaryAction?h`<a
-                          href=${U(this.secondaryAction||void 0)}
+                    ${this.secondaryAction?c`<a
+                          href=${G(this.secondaryAction||void 0)}
                           class="nys-alert__action nys-alert__secondary"
                         >
                           ${this.secondaryLabel}
                         </a>`:""}
                   </div> `:""}
             </div>
-            ${this.dismissible?h`<div class="close-container">
+            ${this.dismissible?c`<div class="close-container">
                   <button class="close-button" @click=${this._closeAlert}>
                     <nys-icon
                       name="close"
@@ -539,7 +573,7 @@
                   </button>
                 </div>`:""}
           </div>`}
-    `}},i.NysAlert.styles=y5,i.NysAlert.VALID_TYPES=["base","info","success","warning","danger","emergency"],f([a({type:String})],i.NysAlert.prototype,"id",2),f([a({type:String})],i.NysAlert.prototype,"heading",2),f([a({type:String})],i.NysAlert.prototype,"icon",2),f([a({type:Boolean})],i.NysAlert.prototype,"dismissible",2),f([a({type:Number})],i.NysAlert.prototype,"duration",2),f([a({type:String})],i.NysAlert.prototype,"text",2),f([a({type:String})],i.NysAlert.prototype,"primaryAction",2),f([a({type:String})],i.NysAlert.prototype,"secondaryAction",2),f([a({type:String})],i.NysAlert.prototype,"primaryLabel",2),f([a({type:String})],i.NysAlert.prototype,"secondaryLabel",2),f([d5()],i.NysAlert.prototype,"_alertClosed",2),f([a({reflect:!0})],i.NysAlert.prototype,"theme",1),i.NysAlert=f([V("nys-alert")],i.NysAlert);const A5=x`
+    `}},i.NysAlert.styles=b5,i.NysAlert.VALID_TYPES=["base","info","success","warning","danger","emergency"],f([a({type:String})],i.NysAlert.prototype,"id",2),f([a({type:String})],i.NysAlert.prototype,"heading",2),f([a({type:String})],i.NysAlert.prototype,"icon",2),f([a({type:Boolean})],i.NysAlert.prototype,"dismissible",2),f([a({type:Number})],i.NysAlert.prototype,"duration",2),f([a({type:String})],i.NysAlert.prototype,"text",2),f([a({type:String})],i.NysAlert.prototype,"primaryAction",2),f([a({type:String})],i.NysAlert.prototype,"secondaryAction",2),f([a({type:String})],i.NysAlert.prototype,"primaryLabel",2),f([a({type:String})],i.NysAlert.prototype,"secondaryLabel",2),f([m1()],i.NysAlert.prototype,"_alertClosed",2),f([a({reflect:!0})],i.NysAlert.prototype,"theme",1),i.NysAlert=f([k("nys-alert")],i.NysAlert);const D5=M`
   :host {
     /* Global Avatar Styles */
     --_nys-avatar-shape: var(--nys-radius-md, var(--nys-space-50, 4px));
@@ -602,7 +636,7 @@
     height: 100%;
     fill: currentColor;
   }
-`;var N5=Object.defineProperty,B5=Object.getOwnPropertyDescriptor,$=(r,e,t,o)=>{for(var s=o>1?void 0:o?B5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&N5(e,t,s),s};let P5=0;i.NysAvatar=class extends _{constructor(){super(...arguments),this.id="",this.label="",this.image="",this.initials="",this.icon="",this.color="#555",this.lazy=!1,this._shape="rounded"}get shape(){return this._shape}set shape(e){this._shape=i.NysAvatar.VALID_SHAPES.includes(e)?e:"circle",this.requestUpdate("shape")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${P5++}`)}render(){var e,t,o,s;return h`
+`;var R5=Object.defineProperty,I5=Object.getOwnPropertyDescriptor,H=(r,e,t,s)=>{for(var o=s>1?void 0:s?I5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&R5(e,t,o),o};let q5=0;i.NysAvatar=class extends g{constructor(){super(...arguments),this.id="",this.label="",this.image="",this.initials="",this.icon="",this.color="#555",this.lazy=!1,this._shape="rounded"}get shape(){return this._shape}set shape(e){this._shape=i.NysAvatar.VALID_SHAPES.includes(e)?e:"circle",this.requestUpdate("shape")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${q5++}`)}render(){var e,t,s,o;return c`
       <label class="nys-avatar" id=${this.id}>
         <div class="nys-avatar__content">
           <div
@@ -612,24 +646,24 @@
             role="img"
             aria-label=${this.label}
           >
-            ${((t=this.image)==null?void 0:t.length)>0?h`<img
+            ${((t=this.image)==null?void 0:t.length)>0?c`<img
                   part="nys-avatar__image"
                   class="nys-avatar__image"
                   src=${this.image}
                   alt=${this.label}
                   loading=${this.lazy?"lazy":"eager"}
-                />`:((o=this.initials)==null?void 0:o.length)>0?h`<span
+                />`:((s=this.initials)==null?void 0:s.length)>0?c`<span
                     part="nys-avatar__initials"
                     class="nys-avatar__initials"
                     aria-hidden="true"
                     >${this.initials}</span
-                  >`:((s=this.icon)==null?void 0:s.length)>0?h`<div part="nys-avatar__icon">
+                  >`:((o=this.icon)==null?void 0:o.length)>0?c`<div part="nys-avatar__icon">
                       <nys-icon
                         label="nys-avatar__icon"
                         name=${this.icon}
                         size="md"
                       ></nys-icon>
-                    </div>`:h`<div part="nys-avatar__icon">
+                    </div>`:c`<div part="nys-avatar__icon">
                       <slot name="icon">
                         <nys-icon
                           label="nys-avatar__icon"
@@ -641,7 +675,7 @@
           </div>
         </div>
       </label>
-    `}},i.NysAvatar.styles=A5,i.NysAvatar.VALID_SHAPES=["square","rounded","circle"],$([a({type:String})],i.NysAvatar.prototype,"id",2),$([a({type:String})],i.NysAvatar.prototype,"label",2),$([a({type:String})],i.NysAvatar.prototype,"image",2),$([a({type:String})],i.NysAvatar.prototype,"initials",2),$([a({type:String})],i.NysAvatar.prototype,"icon",2),$([a({type:String})],i.NysAvatar.prototype,"color",2),$([a({type:Boolean})],i.NysAvatar.prototype,"lazy",2),$([a({reflect:!0})],i.NysAvatar.prototype,"shape",1),i.NysAvatar=$([V("nys-avatar")],i.NysAvatar);const T5=x`
+    `}},i.NysAvatar.styles=D5,i.NysAvatar.VALID_SHAPES=["square","rounded","circle"],H([a({type:String})],i.NysAvatar.prototype,"id",2),H([a({type:String})],i.NysAvatar.prototype,"label",2),H([a({type:String})],i.NysAvatar.prototype,"image",2),H([a({type:String})],i.NysAvatar.prototype,"initials",2),H([a({type:String})],i.NysAvatar.prototype,"icon",2),H([a({type:String})],i.NysAvatar.prototype,"color",2),H([a({type:Boolean})],i.NysAvatar.prototype,"lazy",2),H([a({reflect:!0})],i.NysAvatar.prototype,"shape",1),i.NysAvatar=H([k("nys-avatar")],i.NysAvatar);const G1=M`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -651,10 +685,43 @@
     --_nys-checkbox-width-border: var(--nys-border-width-md, 2px);
     --_nys-checkbox-color-focus: var(--nys-color-focus, #004dd1);
     --_nys-checkbox-width-focus: var(--nys-border-width-md, 2px);
+    --_nys-checkbox-offset-focus: var(--nys-space-2px, 2px);
     --_nys-checkbox-transition-duration: var(
       --nys-transition-duration-sm,
       0.1s
     );
+    /* space between checkbox and it's label */
+    --_nys-checkbox-gap: var(--nys-space-150, 12px);
+    /* space between checkboxes */
+    --_nys-checkboxgroup-gap: var(--nys-space-200, 16px);
+
+    /* Typography */
+    --_nys-checkbox-font-family: var(
+      --nys-font-family-ui,
+      var(
+        --nys-font-family-sans,
+        "Proxima Nova",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif
+      )
+    );
+    --_nys-checkbox-font-size: var(--nys-font-size-ui-md, 16px);
+    --_nys-checkbox-font-weight-400: var(--nys-font-weight-regular, 400);
+    --_nys-checkbox-font-weight-600: var(--nys-font-weight-semibold, 600);
+    --_nys-checkbox-line-height: var(--nys-font-lineheight-ui-md, 24px);
+
+    /* Global Checkbox Colors */
+    --_nys-checkbox-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-checkbox-error-color: var(
+      --nys-color-danger,
+      var(--nys-color-red-600, #b52c2c)
+    );
+
     /* Default (Empty) */
     --_nys-checkbox-color-bg: var(--nys-color-ink-reverse, #ffffff);
     --_nys-checkbox-color-border: var(--nys-color-neutral-600, #62666a);
@@ -691,14 +758,15 @@
       --nys-color-neutral-400,
       #757575
     );
+    --_nys-checkbox-disabled-color-text: var(--nys-color-neutral-500, #797c7f);
     /* Disabled Checked */
     --_nys-checkbox-disabled-checked-color-bg: var(
-      --nys-color-neutral-200,
-      #757575
+      --nys-color-neutral-100,
+      #d0d0ce
     );
     --_nys-checkbox-disabled-checked-color-border: var(
-      --nys-color-neutral-200,
-      #757575
+      --nys-color-neutral-100,
+      #d0d0ce
     );
   }
 
@@ -706,84 +774,45 @@
   :host([size="sm"]) {
     --_nys-checkbox-size: var(--nys-size-300, 24px);
     --_nys-checkbox-radius: var(--nys-border-radius-sm, 2px);
+    --_nys-checkboxgroup-gap: var(--nys-space-100, 8px);
+    --_nys-checkbox-gap: var(--nys-space-100, 8px);
+  }
+  /* Medium Variant */
+  :host([size="md"]) {
+    --_nys-checkbox-size: var(--nys-size-400, 32px);
+    --_nys-checkbox-radius: var(--nys-border-radius-md, 4px);
+  }
+
+  .nys-checkboxgroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-spacing-50, 4px);
+    font-family: var(--_nys-checkbox-font-family);
+    font-size: var(--_nys-checkbox-font-size);
+    line-height: var(--_nys-checkbox-line-height);
+  }
+
+  .nys-checkboxgroup__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--_nys-checkboxgroup-gap);
   }
 
   .nys-checkbox {
-    align-items: center;
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--_nys-checkbox-font-family);
+    font-size: var(--_nys-checkbox-font-size);
+    line-height: var(--_nys-checkbox-line-height);
   }
 
+  /* wraps the single checkbox */
   .nys-checkbox__content {
     display: flex;
+    gap: var(--_nys-checkbox-gap);
   }
 
-  .nys-checkbox__checkbox {
-    appearance: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    outline-offset: var(--_nys-checkbox-width-border);
-    width: var(--_nys-checkbox-size);
-    height: var(--_nys-checkbox-size);
-    border: solid var(--_nys-checkbox-width-border)
-      var(--_nys-checkbox-color-border);
-    background-color: var(--_nys-checkbox-color-bg);
-    cursor: pointer;
-    border-radius: var(--_nys-checkbox-radius);
-
-    transition:
-      background-color var(--_nys-checkbox-transition-duration),
-      border-color var(--_nys-checkbox-transition-duration);
-  }
-
-  /* Focused */
-  .nys-checkbox__checkbox:focus {
-    outline: solid var(--_nys-checkbox-width-focus)
-      var(--_nys-checkbox-color-focus, #004dd1);
-  }
-
-  /* Hovered */
-  .nys-checkbox__checkbox:hover {
-    background-color: var(--_nys-checkbox-hover-color-bg);
-    border-color: var(--_nys-checkbox-hover-color-border);
-  }
-
-  /* Pressed */
-  .nys-checkbox__checkbox:active {
-    background-color: var(--_nys-checkbox-pressed-color-bg);
-    border-color: var(--_nys-checkbox-pressed-color-border);
-  }
-
-  /* Checked */
-  .nys-checkbox__checkbox:not(:disabled):checked {
-    background-color: var(--_nys-checkbox-checked-color-bg);
-    border-color: var(--_nys-checkbox-checked-color-border);
-  }
-
-  /* Checked + Hovered */
-  .nys-checkbox__checkbox:checked:hover {
-    background-color: var(--_nys-checkbox-checked-hover-color-bg);
-    border-color: var(--_nys-checkbox-checked-hover-color-border);
-  }
-
-  /* Checked + Pressed */
-  .nys-checkbox__checkbox:checked:active {
-    background-color: var(--_nys-checkbox-checked-pressed-color-bg);
-    border-color: var(--_nys-checkbox-checked-pressed-color-border);
-  }
-
-  /* Disabled */
-  .nys-checkbox__checkbox:disabled {
-    background-color: var(--_nys-checkbox-disabled-color-bg);
-    border-color: var(--_nys-checkbox-disabled-color-border);
-    cursor: not-allowed;
-  }
-
-  /* Checked + Disabled */
-  .nys-checkbox__checkbox:disabled:checked {
-    background-color: var(--_nys-checkbox-disabled-checked-color-bg);
-    border-color: var(--_nys-checkbox-disabled-checked-color-border);
-  }
-
+  /* wraps the native checkbox and it's icon */
   .nys-checkbox__checkboxwrapper {
     position: relative;
     display: inline-block;
@@ -799,73 +828,157 @@
     color: white;
   }
 
+  .nys-checkbox__checkbox {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline-offset: var(--_nys-checkbox-offset-focus);
+    width: var(--_nys-checkbox-size);
+    min-width: var(--_nys-checkbox-size);
+    min-height: var(--_nys-checkbox-size);
+    height: var(--_nys-checkbox-size);
+    max-width: var(--_nys-checkbox-size);
+    max-height: var(--_nys-checkbox-size);
+    border: solid var(--_nys-checkbox-width-border)
+      var(--_nys-checkbox-color-border);
+    background-color: var(--_nys-checkbox-color-bg);
+    border-radius: var(--_nys-checkbox-radius);
+  }
+
+  /* Pointer cursor for unchecked checkbox */
+  .nys-checkbox:hover * {
+    cursor: pointer;
+  }
+
+  /* Checked */
+  .nys-checkbox__checkbox:not(:disabled):checked {
+    background-color: var(--_nys-checkbox-checked-color-bg);
+    border-color: var(--_nys-checkbox-checked-color-border);
+  }
+
+  /* Checked + Disabled */
+  .nys-checkbox__checkbox:disabled:checked {
+    background-color: var(--_nys-checkbox-disabled-checked-color-bg);
+    border-color: var(--_nys-checkbox-disabled-checked-color-border);
+  }
+
+  /* Disabled */
+  .nys-checkbox__checkbox:disabled {
+    background-color: var(--_nys-checkbox-disabled-color-bg);
+    border-color: var(--_nys-checkbox-disabled-color-border);
+    cursor: not-allowed;
+  }
+  .nys-checkbox__content:has(.nys-checkbox__checkbox:disabled)
+    .nys-checkbox__text
+    * {
+    color: var(--_nys-checkbox-disabled-color-text);
+    cursor: not-allowed;
+  }
+
+  /* Hover - only allow hover on unchecked */
+  .nys-checkbox__checkbox:hover:not(:disabled):not(:checked) {
+    background-color: var(--_nys-checkbox-hover-color-bg);
+    border-color: var(--_nys-checkbox-hover-color-border);
+  }
+
+  /* Pressed - only allow pressed on unchecked */
+  .nys-checkbox__checkbox:active:not(:disabled):not(:checked) {
+    background-color: var(--_nys-checkbox-pressed-color-bg);
+    border-color: var(--_nys-checkbox-pressed-color-border);
+  }
+
+  /* Focused */
+  .nys-checkbox__checkbox:focus {
+    outline: solid var(--_nys-checkbox-width-focus)
+      var(--_nys-checkbox-color-focus);
+  }
+
+  /* Checkbox Label Holder */
+  .nys-checkbox__text {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0; /* Center text if single line label */
+  }
+
+  /* Label styling */
+  .nys-checkboxgroup__label {
+    font-weight: var(--_nys-checkbox-font-weight-600);
+    color: var(--_nys-checkbox-color);
+  }
+  .nys-checkbox__label {
+    font-weight: var(--_nys-checkbox-font-weight-400);
+    color: var(--_nys-checkbox-color);
+  }
+
+  /* Description styling */
+  .nys-checkbox__description,
+  .nys-checkboxgroup__description {
+    font-weight: var(--_nys-checkbox-font-weight-400);
+    font-style: italic;
+  }
+
   /* Required */
   .nys-checkbox__required {
-    color: var(--nys-color-danger, #b52c2c);
-    margin-left: var(--nys-space-2px, 2px);
+    color: var(--_nys-checkbox-error-color);
+    margin-left: var(--_nys-select-margin);
   }
 
   .nys-checkbox__requiredwrapper {
     display: inline;
   }
 
-  /* Checkbox Label Holder */
-  .nys-checkbox__text {
-    margin: auto 0 auto var(--nys-space-150, 12px);
-  }
-
-  /* Label styling */
-  .nys-checkbox__label {
-    font-size: var(--nys-font-size-ui-md, 16px);
-    font-weight: var(--nys-font-weight-regular, 400);
-    color: var(--nys-color-ink, #1b1b1b);
-  }
-
-  /* Description styling */
-  .nys-checkbox__description {
-    font-size: var(--nys-font-size-sm, 14px);
-    font-weight: var(--nys-font-weight-light, 300);
-    color: var(--nys-color-neutral-700, #4a4d4f);
-  }
-
-  /* Disabled label */
-  .nys-checkbox__checkbox:disabled + .nys-checkbox__text .nys-checkbox__label,
-  .nys-checkbox__checkbox:disabled
-    + .nys-checkbox__text
-    .nys-checkbox__description {
-    color: var(--form-label-color-disabled, #757575);
-  }
-
   /* Error Message Styling */
   .nys-checkbox__error {
-    border-top: 1px solid var(--nys-color-danger, #b52c2c);
-    margin-top: var(--nys-space-150, 12px);
-    padding-top: var(--nys-space-100, 8px);
-    color: var(--nys-color-danger, #b52c2c);
-    margin-left: 0.25rem;
-  }
-
-  /* Checkbox Group Styling */
-  .nys-checkboxgroup {
     display: flex;
-    flex-direction: column;
-  }
+    align-items: center;
+    gap: var(--nys-space-100, 8px);
+    color: var(--_nys-checkbox-error-color);
 
-  .nys-checkboxgroup__content {
+    /* add divider line */
+    border-top: 1px solid var(--_nys-checkbox-error-color);
     padding-top: var(--nys-space-50, 4px);
-    display: flex;
-    flex-direction: column;
-    gap: var(--nys-space-200, 16px);
+    margin-top: var(--nys-space-100, 8px);
   }
-`;var O5=Object.defineProperty,D5=Object.getOwnPropertyDescriptor,w=(r,e,t,o)=>{for(var s=o>1?void 0:o?D5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&O5(e,t,s),s};let R5=0;i.NysCheckbox=class extends _{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.showError=!1,this.errorMessage=""}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${R5++}`)}_handleChange(e){const{checked:t}=e.target;this.checked=t,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(e){e.code==="Space"&&(e.preventDefault(),this.disabled||(this.checked=!this.checked,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))))}render(){return h`
+
+  /* Error Icon Styling */
+  nys-icon[name="error"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+    box-sizing: border-box;
+    height: var(--_nys-checkbox-line-height);
+    text-align: center;
+  }
+`;var U5=Object.defineProperty,j5=Object.getOwnPropertyDescriptor,V=(r,e,t,s)=>{for(var o=s>1?void 0:s?j5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&U5(e,t,o),o};let G5=0,w=class extends g{constructor(){super(...arguments),this.id="",this.name="",this.required=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this._size="md"}get size(){return this._size}set size(r){this._size=w.VALID_SIZES.includes(r)?r:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${G5++}`)}updated(r){r.has("size")&&this.updateCheckboxSize()}updateCheckboxSize(){this.querySelectorAll("nys-checkbox").forEach(e=>{e.setAttribute("size",this.size)})}render(){return c` <div class="nys-checkboxgroup">
+      ${this.label&&c` <div class="nys-checkbox__text">
+        <div class="nys-checkbox__requiredwrapper">
+          <label for=${this.id} class="nys-checkboxgroup__label"
+            >${this.label}</label
+          >
+          ${this.required?c`<label class="nys-checkbox__required">*</label>`:""}
+        </div>
+        <label for=${this.id} class="nys-checkboxgroup__description">
+          ${this.description}
+          <slot name="description"></slot>
+        </label>
+      </div>`}
+      <div class="nys-checkboxgroup__content">
+        <slot></slot>
+      </div>
+      ${this.showError&&this.errorMessage?c`<div class="nys-checkbox__error">
+            <nys-icon name="error" size="xl"></nys-icon>
+            ${this.errorMessage}
+          </div>`:""}
+    </div>`}};w.VALID_SIZES=["sm","md"],w.styles=G1,V([a({type:String})],w.prototype,"id",2),V([a({type:String})],w.prototype,"name",2),V([a({type:Boolean})],w.prototype,"required",2),V([a({type:Boolean})],w.prototype,"showError",2),V([a({type:String})],w.prototype,"errorMessage",2),V([a({type:String})],w.prototype,"label",2),V([a({type:String})],w.prototype,"description",2),V([a({reflect:!0})],w.prototype,"size",1),w=V([k("nys-checkboxgroup")],w);var F5=Object.defineProperty,W5=Object.getOwnPropertyDescriptor,m=(r,e,t,s)=>{for(var o=s>1?void 0:s?W5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&F5(e,t,o),o};let K5=0;i.NysCheckbox=class extends g{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.showError=!1,this.errorMessage="",this._size="md"}get size(){return this._size}set size(e){this._size=i.NysCheckbox.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${K5++}`)}_handleChange(e){const{checked:t}=e.target;this.checked=t,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(e){e.code==="Space"&&(e.preventDefault(),this.disabled||(this.checked=!this.checked,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))))}render(){return c`
       <div class="nys-checkbox">
-        <div class="nys-checkbox__content">
+        <label class="nys-checkbox__content">
           <div class="nys-checkbox__checkboxwrapper">
             <input
               id="${this.id}"
               class="nys-checkbox__checkbox"
               type="checkbox"
-              name="${U(this.name?this.name:void 0)}"
+              name="${G(this.name?this.name:void 0)}"
               .checked=${this.checked}
               ?disabled=${this.disabled}
               .value=${this.value}
@@ -878,32 +991,32 @@
               @blur="${this._handleBlur}"
               @keydown="${this._handleKeydown}"
             />
-            ${this.checked?h`<nys-icon
+            ${this.checked?c`<nys-icon
                   for="${this.id}"
                   name="check"
-                  size="2xl"
+                  size="${this.size==="md"?"2xl":this.size==="sm"?"sm":"md"}"
                   class="nys-checkbox__icon"
                 ></nys-icon>`:""}
           </div>
-          ${this.label&&h` <div class="nys-checkbox__text">
+          ${this.label&&c` <div class="nys-checkbox__text">
             <div class="nys-checkbox__requiredwrapper">
               <label for=${this.id} class="nys-checkbox__label"
                 >${this.label}</label
               >
-              ${this.required?h`<label class="nys-checkbox__required">*</label>`:""}
+              ${this.required?c`<label class="nys-checkbox__required">*</label>`:""}
             </div>
-            <div for=${this.id} class="nys-checkbox__description">
+            <label for=${this.id} class="nys-checkbox__description">
               ${this.description}
               <slot name="description"></slot>
-            </div>
+            </label>
           </div>`}
-        </div>
-        ${this.showError&&this.errorMessage?h`<div class="nys-checkbox__error">
-              <nys-icon name="error"></nys-icon>
+        </label>
+        ${this.showError&&this.errorMessage?c`<div class="nys-checkbox__error">
+              <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>`:""}
       </div>
-    `}},i.NysCheckbox.styles=T5,w([a({type:Boolean})],i.NysCheckbox.prototype,"checked",2),w([a({type:Boolean})],i.NysCheckbox.prototype,"disabled",2),w([a({type:Boolean})],i.NysCheckbox.prototype,"required",2),w([a({type:String})],i.NysCheckbox.prototype,"label",2),w([a({type:String})],i.NysCheckbox.prototype,"description",2),w([a({type:String})],i.NysCheckbox.prototype,"id",2),w([a({type:String})],i.NysCheckbox.prototype,"name",2),w([a({type:String})],i.NysCheckbox.prototype,"value",2),w([a({type:Boolean})],i.NysCheckbox.prototype,"showError",2),w([a({type:String})],i.NysCheckbox.prototype,"errorMessage",2),i.NysCheckbox=w([V("nys-checkbox")],i.NysCheckbox);const U5={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+    `}},i.NysCheckbox.VALID_SIZES=["sm","md"],i.NysCheckbox.styles=G1,m([a({type:Boolean})],i.NysCheckbox.prototype,"checked",2),m([a({type:Boolean})],i.NysCheckbox.prototype,"disabled",2),m([a({type:Boolean})],i.NysCheckbox.prototype,"required",2),m([a({type:String})],i.NysCheckbox.prototype,"label",2),m([a({type:String})],i.NysCheckbox.prototype,"description",2),m([a({type:String})],i.NysCheckbox.prototype,"id",2),m([a({type:String})],i.NysCheckbox.prototype,"name",2),m([a({type:String})],i.NysCheckbox.prototype,"value",2),m([a({type:Boolean})],i.NysCheckbox.prototype,"showError",2),m([a({type:String})],i.NysCheckbox.prototype,"errorMessage",2),m([a({reflect:!0})],i.NysCheckbox.prototype,"size",1),i.NysCheckbox=m([k("nys-checkbox")],i.NysCheckbox);const Y5={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -949,6 +1062,8 @@
   <path d="M11 12.5C12.25 12.5 13.3125 12.0625 14.1875 11.1875C15.0625 10.3125 15.5 9.25 15.5 8C15.5 6.75 15.0625 5.6875 14.1875 4.8125C13.3125 3.9375 12.25 3.5 11 3.5C9.75 3.5 8.6875 3.9375 7.8125 4.8125C6.9375 5.6875 6.5 6.75 6.5 8C6.5 9.25 6.9375 10.3125 7.8125 11.1875C8.6875 12.0625 9.75 12.5 11 12.5ZM11 10.7C10.25 10.7 9.6125 10.4375 9.0875 9.9125C8.5625 9.3875 8.3 8.75 8.3 8C8.3 7.25 8.5625 6.6125 9.0875 6.0875C9.6125 5.5625 10.25 5.3 11 5.3C11.75 5.3 12.3875 5.5625 12.9125 6.0875C13.4375 6.6125 13.7 7.25 13.7 8C13.7 8.75 13.4375 9.3875 12.9125 9.9125C12.3875 10.4375 11.75 10.7 11 10.7ZM11 15.5C8.56667 15.5 6.35 14.8208 4.35 13.4625C2.35 12.1042 0.9 10.2833 0 8C0.9 5.71667 2.35 3.89583 4.35 2.5375C6.35 1.17917 8.56667 0.5 11 0.5C13.4333 0.5 15.65 1.17917 17.65 2.5375C19.65 3.89583 21.1 5.71667 22 8C21.1 10.2833 19.65 12.1042 17.65 13.4625C15.65 14.8208 13.4333 15.5 11 15.5ZM11 13.5C12.8833 13.5 14.6125 13.0042 16.1875 12.0125C17.7625 11.0208 18.9667 9.68333 19.8 8C18.9667 6.31667 17.7625 4.97917 16.1875 3.9875C14.6125 2.99583 12.8833 2.5 11 2.5C9.11667 2.5 7.3875 2.99583 5.8125 3.9875C4.2375 4.97917 3.03333 6.31667 2.2 8C3.03333 9.68333 4.2375 11.0208 5.8125 12.0125C7.3875 13.0042 9.11667 13.5 11 13.5Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,visibility_off:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
   <path d="M15.1 10.6L13.65 9.15C13.8 8.36667 13.575 7.63333 12.975 6.95C12.375 6.26667 11.6 6 10.65 6.15L9.2 4.7C9.48333 4.56667 9.77083 4.46667 10.0625 4.4C10.3542 4.33333 10.6667 4.3 11 4.3C12.25 4.3 13.3125 4.7375 14.1875 5.6125C15.0625 6.4875 15.5 7.55 15.5 8.8C15.5 9.13333 15.4667 9.44583 15.4 9.7375C15.3333 10.0292 15.2333 10.3167 15.1 10.6ZM18.3 13.75L16.85 12.35C17.4833 11.8667 18.0458 11.3375 18.5375 10.7625C19.0292 10.1875 19.45 9.53333 19.8 8.8C18.9667 7.11667 17.7708 5.77917 16.2125 4.7875C14.6542 3.79583 12.9167 3.3 11 3.3C10.5167 3.3 10.0417 3.33333 9.575 3.4C9.10833 3.46667 8.65 3.56667 8.2 3.7L6.65 2.15C7.33333 1.86667 8.03333 1.65417 8.75 1.5125C9.46667 1.37083 10.2167 1.3 11 1.3C13.5167 1.3 15.7583 1.99583 17.725 3.3875C19.6917 4.77917 21.1167 6.58333 22 8.8C21.6167 9.78333 21.1125 10.6958 20.4875 11.5375C19.8625 12.3792 19.1333 13.1167 18.3 13.75ZM18.8 19.9L14.6 15.75C14.0167 15.9333 13.4292 16.0708 12.8375 16.1625C12.2458 16.2542 11.6333 16.3 11 16.3C8.48333 16.3 6.24167 15.6042 4.275 14.2125C2.30833 12.8208 0.883333 11.0167 0 8.8C0.35 7.91667 0.791667 7.09583 1.325 6.3375C1.85833 5.57917 2.46667 4.9 3.15 4.3L0.4 1.5L1.8 0.0999985L20.2 18.5L18.8 19.9ZM4.55 5.7C4.06667 6.13333 3.625 6.60833 3.225 7.125C2.825 7.64167 2.48333 8.2 2.2 8.8C3.03333 10.4833 4.22917 11.8208 5.7875 12.8125C7.34583 13.8042 9.08333 14.3 11 14.3C11.3333 14.3 11.6583 14.2792 11.975 14.2375C12.2917 14.1958 12.6167 14.15 12.95 14.1L12.05 13.15C11.8667 13.2 11.6917 13.2375 11.525 13.2625C11.3583 13.2875 11.1833 13.3 11 13.3C9.75 13.3 8.6875 12.8625 7.8125 11.9875C6.9375 11.1125 6.5 10.05 6.5 8.8C6.5 8.61667 6.5125 8.44167 6.5375 8.275C6.5625 8.10833 6.6 7.93333 6.65 7.75L4.55 5.7Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </svg>`,notifications:`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+  <path d="M1 17C0.716667 17 0.479167 16.9042 0.2875 16.7125C0.0958333 16.5208 0 16.2833 0 16C0 15.7167 0.0958333 15.4792 0.2875 15.2875C0.479167 15.0958 0.716667 15 1 15H2V8C2 6.61667 2.41667 5.3875 3.25 4.3125C4.08333 3.2375 5.16667 2.53333 6.5 2.2V1.5C6.5 1.08333 6.64583 0.729167 6.9375 0.4375C7.22917 0.145833 7.58333 0 8 0C8.41667 0 8.77083 0.145833 9.0625 0.4375C9.35417 0.729167 9.5 1.08333 9.5 1.5V2.2C10.8333 2.53333 11.9167 3.2375 12.75 4.3125C13.5833 5.3875 14 6.61667 14 8V15H15C15.2833 15 15.5208 15.0958 15.7125 15.2875C15.9042 15.4792 16 15.7167 16 16C16 16.2833 15.9042 16.5208 15.7125 16.7125C15.5208 16.9042 15.2833 17 15 17H1ZM8 20C7.45 20 6.97917 19.8042 6.5875 19.4125C6.19583 19.0208 6 18.55 6 18H10C10 18.55 9.80417 19.0208 9.4125 19.4125C9.02083 19.8042 8.55 20 8 20ZM4 15H12V8C12 6.9 11.6083 5.95833 10.825 5.175C10.0417 4.39167 9.1 4 8 4C6.9 4 5.95833 4.39167 5.175 5.175C4.39167 5.95833 4 6.9 4 8V15Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,arrow_back:`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
   <path d="M3.6125 8.9935L8.5125 13.8935C8.7125 14.0935 8.80834 14.3268 8.8 14.5935C8.79167 14.8602 8.6875 15.0935 8.4875 15.2935C8.2875 15.4768 8.05417 15.5727 7.7875 15.581C7.52083 15.5893 7.2875 15.4935 7.0875 15.2935L0.487502 8.6935C0.387502 8.5935 0.316668 8.48517 0.275002 8.3685C0.233335 8.25184 0.212502 8.12684 0.212502 7.9935C0.212502 7.86017 0.233335 7.73517 0.275002 7.6185C0.316668 7.50184 0.387502 7.3935 0.487502 7.2935L7.0875 0.693503C7.27083 0.510169 7.5 0.418503 7.775 0.418503C8.05 0.418503 8.2875 0.510169 8.4875 0.693503C8.6875 0.893503 8.7875 1.131 8.7875 1.406C8.7875 1.681 8.6875 1.9185 8.4875 2.1185L3.6125 6.9935H14.7875C15.0708 6.9935 15.3083 7.08934 15.5 7.281C15.6917 7.47267 15.7875 7.71017 15.7875 7.9935C15.7875 8.27684 15.6917 8.51434 15.5 8.706C15.3083 8.89767 15.0708 8.9935 14.7875 8.9935H3.6125Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,chevron_down:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
@@ -1026,15 +1141,15 @@
   <path d="M17.4256 0H20.8185L13.4062 8.47179L22.1262 20H15.2985L9.95077 13.0082L3.83179 20H0.436923L8.36513 10.9385L0 0H7.00103L11.8349 6.39077L17.4256 0ZM16.2349 17.9692H18.1149L5.97949 1.9241H3.96205L16.2349 17.9692Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,social_youtube:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
   <path d="M19.8008 3.03516C19.8008 3.03516 19.6055 1.65625 19.0039 1.05078C18.2422 0.253906 17.3906 0.25 17 0.203125C14.2031 -1.11759e-07 10.0039 0 10.0039 0H9.99609C9.99609 0 5.79688 -1.11759e-07 3 0.203125C2.60938 0.25 1.75781 0.253906 0.996094 1.05078C0.394531 1.65625 0.203125 3.03516 0.203125 3.03516C0.203125 3.03516 0 4.65625 0 6.27344V7.78906C0 9.40625 0.199219 11.0273 0.199219 11.0273C0.199219 11.0273 0.394531 12.4062 0.992187 13.0117C1.75391 13.8086 2.75391 13.7812 3.19922 13.8672C4.80078 14.0195 10 14.0664 10 14.0664C10 14.0664 14.2031 14.0586 17 13.8594C17.3906 13.8125 18.2422 13.8086 19.0039 13.0117C19.6055 12.4062 19.8008 11.0273 19.8008 11.0273C19.8008 11.0273 20 9.41016 20 7.78906V6.27344C20 4.65625 19.8008 3.03516 19.8008 3.03516ZM7.93359 9.62891V4.00781L13.3359 6.82812L7.93359 9.62891Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`,account_balance:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+</svg>`,account_balance_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M3.22502 15.875V11.65C3.22502 11.2666 3.36252 10.9416 3.63752 10.675C3.91252 10.4083 4.24169 10.275 4.62502 10.275C5.00836 10.275 5.33336 10.4083 5.60002 10.675C5.86669 10.9416 6.00002 11.2666 6.00002 11.65V15.9C6.00002 16.2833 5.86669 16.6083 5.60002 16.875C5.33336 17.1416 5.00836 17.275 4.62502 17.275C4.24169 17.275 3.91252 17.1375 3.63752 16.8625C3.36252 16.5875 3.22502 16.2583 3.22502 15.875ZM9.62502 15.9V11.65C9.62502 11.2666 9.75836 10.9416 10.025 10.675C10.2917 10.4083 10.6167 10.275 11 10.275C11.3834 10.275 11.7084 10.4083 11.975 10.675C12.2417 10.9416 12.375 11.2666 12.375 11.65V15.9C12.375 16.2833 12.2417 16.6083 11.975 16.875C11.7084 17.1416 11.3834 17.275 11 17.275C10.6167 17.275 10.2917 17.1416 10.025 16.875C9.75836 16.6083 9.62502 16.2833 9.62502 15.9ZM1.72502 21.65C1.29169 21.65 0.920858 21.4958 0.612524 21.1875C0.304191 20.8791 0.150024 20.5083 0.150024 20.075C0.150024 19.6416 0.304191 19.2708 0.612524 18.9625C0.920858 18.6541 1.29169 18.5 1.72502 18.5H20.275C20.7084 18.5 21.0792 18.6541 21.3875 18.9625C21.6959 19.2708 21.85 19.6416 21.85 20.075C21.85 20.5083 21.6959 20.8791 21.3875 21.1875C21.0792 21.4958 20.7084 21.65 20.275 21.65H1.72502ZM16 15.875V11.65C16 11.2666 16.1375 10.9416 16.4125 10.675C16.6875 10.4083 17.0167 10.275 17.4 10.275C17.7834 10.275 18.1084 10.4083 18.375 10.675C18.6417 10.9416 18.775 11.2666 18.775 11.65V15.9C18.775 16.2833 18.6417 16.6083 18.375 16.875C18.1084 17.1416 17.7834 17.275 17.4 17.275C17.0167 17.275 16.6875 17.1375 16.4125 16.8625C16.1375 16.5875 16 16.2583 16 15.875ZM20.175 9.02495H1.65002C1.23336 9.02495 0.879191 8.87912 0.587524 8.58745C0.295858 8.29578 0.150024 7.94162 0.150024 7.52495V6.57495C0.150024 6.29162 0.225024 6.02912 0.375024 5.78745C0.525024 5.54578 0.725024 5.35828 0.975024 5.22495L9.60002 0.924951C10.0334 0.691618 10.5 0.574951 11 0.574951C11.5 0.574951 11.9667 0.691618 12.4 0.924951L20.925 5.17495C21.2084 5.30828 21.4334 5.51245 21.6 5.78745C21.7667 6.06245 21.85 6.36662 21.85 6.69995V7.32495C21.85 7.79162 21.6875 8.19162 21.3625 8.52495C21.0375 8.85828 20.6417 9.02495 20.175 9.02495Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,cancel_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
   <path d="M10.9242 12.3032L13.8242 15.2032C14.0075 15.3866 14.2408 15.4782 14.5242 15.4782C14.8075 15.4782 15.0408 15.3866 15.2242 15.2032C15.4075 15.0199 15.4992 14.7866 15.4992 14.5032C15.4992 14.2199 15.4075 13.9866 15.2242 13.8032L12.3242 10.9032L15.2242 8.00324C15.4075 7.81991 15.4992 7.58658 15.4992 7.30324C15.4992 7.01991 15.4075 6.78658 15.2242 6.60324C15.0408 6.41991 14.8075 6.32824 14.5242 6.32824C14.2408 6.32824 14.0075 6.41991 13.8242 6.60324L10.9242 9.50324L8.02416 6.60324C7.84083 6.41991 7.6075 6.32824 7.32416 6.32824C7.04083 6.32824 6.8075 6.41991 6.62416 6.60324C6.44083 6.78658 6.34916 7.01991 6.34916 7.30324C6.34916 7.58658 6.44083 7.81991 6.62416 8.00324L9.52416 10.9032L6.62416 13.8032C6.44083 13.9866 6.34916 14.2199 6.34916 14.5032C6.34916 14.7866 6.44083 15.0199 6.62416 15.2032C6.8075 15.3866 7.04083 15.4782 7.32416 15.4782C7.6075 15.4782 7.84083 15.3866 8.02416 15.2032L10.9242 12.3032ZM10.9242 20.9032C9.54083 20.9032 8.24083 20.6407 7.02416 20.1157C5.8075 19.5907 4.74916 18.8782 3.84916 17.9782C2.94916 17.0782 2.23666 16.0199 1.71166 14.8032C1.18666 13.5866 0.924164 12.2866 0.924164 10.9032C0.924164 9.51991 1.18666 8.21991 1.71166 7.00324C2.23666 5.78658 2.94916 4.72824 3.84916 3.82824C4.74916 2.92824 5.8075 2.21574 7.02416 1.69074C8.24083 1.16574 9.54083 0.903244 10.9242 0.903244C12.3075 0.903244 13.6075 1.16574 14.8242 1.69074C16.0408 2.21574 17.0992 2.92824 17.9992 3.82824C18.8992 4.72824 19.6117 5.78658 20.1367 7.00324C20.6617 8.21991 20.9242 9.51991 20.9242 10.9032C20.9242 12.2866 20.6617 13.5866 20.1367 14.8032C19.6117 16.0199 18.8992 17.0782 17.9992 17.9782C17.0992 18.8782 16.0408 19.5907 14.8242 20.1157C13.6075 20.6407 12.3075 20.9032 10.9242 20.9032Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,language_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`,lock:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+</svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},I5=x`
+</svg>`},J5=M`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -1130,13 +1245,13 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var q5=Object.defineProperty,j5=Object.getOwnPropertyDescriptor,G=(r,e,t,o)=>{for(var s=o>1?void 0:o?j5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&q5(e,t,s),s};const P=(S=class extends _{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(e){this._size=S.VALID_TYPES.includes(e)?e:"sm"}getIcon(){const e=U5[this.name],t=!!this.label;if(!e)return null;const n=new DOMParser().parseFromString(e,"image/svg+xml").documentElement;return n instanceof SVGElement?(n.setAttribute("role","img"),n.setAttribute("aria-label",t?this.label:""),n.setAttribute("aria-hidden",t?"false":"true"),n.style.rotate=`${this.rotate}deg`,n.style.color=this.color||"currentcolor",n.classList.add(`nys-icon--${this.size}`),n.classList.add("nys-icon--svg"),this.flip&&n.classList.add(`nys-icon--flip-${this.flip}`),n):null}render(){const e=this.getIcon();return e?h`${e}`:null}},S.styles=I5,S.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],S);G([a({type:String})],P.prototype,"name",2),G([a({type:String})],P.prototype,"label",2),G([a({type:String})],P.prototype,"rotate",2),G([a({type:String})],P.prototype,"flip",2),G([a({type:String})],P.prototype,"color",2),G([a({reflect:!0})],P.prototype,"size",1);let R1=P;customElements.get("nys-icon")||customElements.define("nys-icon",R1);const G5=x`
+`;var X5=Object.defineProperty,Q5=Object.getOwnPropertyDescriptor,Y=(r,e,t,s)=>{for(var o=s>1?void 0:s?Q5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&X5(e,t,o),o};const R=(N=class extends g{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(e){this._size=N.VALID_TYPES.includes(e)?e:"sm"}getIcon(){const e=Y5[this.name],t=!!this.label;if(!e)return null;const n=new DOMParser().parseFromString(e,"image/svg+xml").documentElement;return n instanceof SVGElement?(n.setAttribute("role","img"),n.setAttribute("aria-label",t?this.label:""),n.setAttribute("aria-hidden",t?"false":"true"),n.style.rotate=`${this.rotate}deg`,n.style.color=this.color||"currentcolor",n.classList.add(`nys-icon--${this.size}`),n.classList.add("nys-icon--svg"),this.flip&&n.classList.add(`nys-icon--flip-${this.flip}`),n):null}render(){const e=this.getIcon();return e?c`${e}`:null}},N.styles=J5,N.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],N);Y([a({type:String})],R.prototype,"name",2),Y([a({type:String})],R.prototype,"label",2),Y([a({type:String})],R.prototype,"rotate",2),Y([a({type:String})],R.prototype,"flip",2),Y([a({type:String})],R.prototype,"color",2),Y([a({reflect:!0})],R.prototype,"size",1);let F1=R;customElements.get("nys-icon")||customElements.define("nys-icon",F1);const W1=M`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
     --_nys-radiobutton-radius: var(--nys-border-radius-md, 4px);
     --_nys-radiobutton-width-border: var(--nys-border-width-md, 2px);
-    --_nys-radiobutton-color-focus: var(--nys-color-focus, #286ad8);
+    --_nys-radiobutton-color-focus: var(--nys-color-focus, #004dd1);
     --_nys-radiobutton-width-focus: var(--nys-border-width-md, 2px);
     --_nys-radiobutton-offset-focus: var(--nys-space-2px, 2px);
     --_nys-radiobutton-transition-duration: var(
@@ -1148,8 +1263,8 @@
       12px
     ); /* space between radio and it's label */
     --_nys-radiogroup-gap: var(
-      --nys-space-50,
-      4px
+      --nys-space-200,
+      16px
     ); /* space between radio buttons */
 
     /* Typography */
@@ -1210,18 +1325,22 @@
     );
     /* Disabled */
     --_nys-radiobutton-disabled-color-bg: var(--nys-color-ink-reverse, #f0f0f0);
+    --_nys-radiobutton-disabled-color-text: var(
+      --nys-color-neutral-500,
+      #797c7f
+    );
     --_nys-radiobutton-disabled-color-border: var(
-      --nys-color-neutral-200,
-      #bec0c1
+      --nys-color-neutral-100,
+      #d0d0ce
     );
     /* Disabled Checked */
     --_nys-radiobutton-disabled-checked-color-bg: var(
-      --nys-color-neutral-200,
-      #bec0c1
+      --nys-color-neutral-100,
+      #d0d0ce
     );
     --_nys-radiobutton-disabled-checked-color-border: var(
-      --nys-color-neutral-200,
-      #bec0c1
+      --nys-color-neutral-100,
+      #d0d0ce
     );
   }
 
@@ -1236,12 +1355,14 @@
   :host([size="md"]) {
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
     --_nys-radiobutton-radius: var(--nys-border-radius-md, 4px);
+    --_nys-radiogroup-gap: var(--nys-space-200, 16px);
+    --_nys-radiobutton-gap: var(--nys-space-150, 12px);
   }
 
   .nys-radiogroup {
     display: flex;
     flex-direction: column;
-    gap: var(--_nys-radiogroup-gap);
+    gap: var(--nys-spacing-50, 4px);
     font-family: var(--_nys-radiobutton-font-family);
     font-size: var(--_nys-radiobutton-font-size);
     line-height: var(--_nys-radiobutton-line-height);
@@ -1360,7 +1481,8 @@
   .nys-radiobutton__radio:disabled
     + .nys-radiobutton__text
     .nys-radiobutton__description {
-    color: var(--form-label-color-disabled, #757575);
+    color: var(--_nys-radiobutton-disabled-color-text);
+    cursor: not-allowed;
   }
 
   /* Required */
@@ -1396,13 +1518,33 @@
     height: var(--_nys-radiobutton-line-height);
     text-align: center;
   }
-`;var F5=Object.defineProperty,W5=Object.getOwnPropertyDescriptor,L=(r,e,t,o)=>{for(var s=o>1?void 0:o?W5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&F5(e,t,s),s};let K5=0;i.NysRadiobutton=class extends _{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this._size="md"}get size(){return this._size}set size(e){this._size=i.NysRadiobutton.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiobutton-${Date.now()}-${K5++}`),this.checked&&(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this)}updated(e){e.has("checked")&&this.checked&&i.NysRadiobutton.buttonGroup[this.name]!==this&&(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this)}_handleChange(){this.checked||(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0})))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(e){e.code==="Space"&&(e.preventDefault(),!this.disabled&&!this.checked&&(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))))}render(){return h`
+`;var e2=Object.defineProperty,t2=Object.getOwnPropertyDescriptor,L=(r,e,t,s)=>{for(var o=s>1?void 0:s?t2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&e2(e,t,o),o};let o2=0,b=class extends g{constructor(){super(...arguments),this.id="",this.name="",this.required=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.selectedName=null,this.selectedValue=null,this._size="md"}get size(){return this._size}set size(r){this._size=b.VALID_SIZES.includes(r)?r:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${o2++}`),this.addEventListener("change",this._handleRadioButtonChange)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("change",this._handleRadioButtonChange)}updated(r){r.has("required")&&this.updateRadioButtonsRequire(),r.has("size")&&this.updateRadioButtonsSize()}updateRadioButtonsRequire(){this.querySelectorAll("nys-radiobutton").forEach((e,t)=>{this.required&&t===0&&e.setAttribute("required","required")})}updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(e=>{e.setAttribute("size",this.size)})}_handleRadioButtonChange(r){const e=r,{name:t,value:s}=e.detail;this.selectedName=t,this.selectedValue=s,console.log("you have selected:",this.selectedName,this.selectedValue)}render(){return c` <div role="radiogroup" class="nys-radiogroup">
+      ${this.label&&c` <div class="nys-radiobutton__text">
+        <div class="nys-radiobutton__requiredwrapper">
+          <label for=${this.id} class="nys-radiogroup__label"
+            >${this.label}</label
+          >
+          ${this.required?c`<label class="nys-radiobutton__required">*</label>`:""}
+        </div>
+        <div class="nys-radiogroup__description">
+          ${this.description}
+          <slot name="description"></slot>
+        </div>
+      </div>`}
+      <div class="nys-radiogroup__content">
+        <slot></slot>
+      </div>
+      ${this.showError&&this.errorMessage?c`<div class="nys-radiobutton__error">
+            <nys-icon name="error" size="xl"></nys-icon>
+            ${this.errorMessage}
+          </div>`:""}
+    </div>`}};b.VALID_SIZES=["sm","md"],b.styles=W1,L([a({type:String})],b.prototype,"id",2),L([a({type:String})],b.prototype,"name",2),L([a({type:Boolean})],b.prototype,"required",2),L([a({type:Boolean})],b.prototype,"showError",2),L([a({type:String})],b.prototype,"errorMessage",2),L([a({type:String})],b.prototype,"label",2),L([a({type:String})],b.prototype,"description",2),L([m1()],b.prototype,"selectedName",2),L([m1()],b.prototype,"selectedValue",2),L([a({reflect:!0})],b.prototype,"size",1),b=L([k("nys-radiogroup")],b);var s2=Object.defineProperty,r2=Object.getOwnPropertyDescriptor,Z=(r,e,t,s)=>{for(var o=s>1?void 0:s?r2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&s2(e,t,o),o};let i2=0;i.NysRadiobutton=class extends g{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this._size="md"}get size(){return this._size}set size(e){this._size=i.NysRadiobutton.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiobutton-${Date.now()}-${i2++}`),this.checked&&(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this)}updated(e){e.has("checked")&&this.checked&&i.NysRadiobutton.buttonGroup[this.name]!==this&&(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this)}_handleChange(){this.checked||(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0})))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(e){e.code==="Space"&&(e.preventDefault(),!this.disabled&&!this.checked&&(i.NysRadiobutton.buttonGroup[this.name]&&(i.NysRadiobutton.buttonGroup[this.name].checked=!1,i.NysRadiobutton.buttonGroup[this.name].requestUpdate()),i.NysRadiobutton.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))))}render(){return c`
       <label class="nys-radiobutton">
         <input
           id="${this.id}"
           class="nys-radiobutton__radio"
           type="radio"
-          name="${U(this.name?this.name:void 0)}"
+          name="${G(this.name?this.name:void 0)}"
           .checked=${this.checked}
           ?disabled=${this.disabled}
           .value=${this.value}
@@ -1415,7 +1557,7 @@
           @blur="${this._handleBlur}"
           @keydown="${this._handleKeydown}"
         />
-        ${this.label&&h` <div class="nys-radiobutton__text">
+        ${this.label&&c` <div class="nys-radiobutton__text">
           <div class="nys-radiobutton__requiredwrapper">
             <label for=${this.id} class="nys-radiobutton__label"
               >${this.label}</label
@@ -1427,7 +1569,7 @@
           </label>
         </div>`}
       </label>
-    `}},i.NysRadiobutton.VALID_SIZES=["sm","md"],i.NysRadiobutton.buttonGroup={},i.NysRadiobutton.styles=G5,L([a({type:Boolean})],i.NysRadiobutton.prototype,"checked",2),L([a({type:Boolean})],i.NysRadiobutton.prototype,"disabled",2),L([a({type:Boolean})],i.NysRadiobutton.prototype,"required",2),L([a({type:String})],i.NysRadiobutton.prototype,"label",2),L([a({type:String})],i.NysRadiobutton.prototype,"description",2),L([a({type:String})],i.NysRadiobutton.prototype,"id",2),L([a({type:String})],i.NysRadiobutton.prototype,"name",2),L([a({type:String})],i.NysRadiobutton.prototype,"value",2),L([a({reflect:!0})],i.NysRadiobutton.prototype,"size",1),i.NysRadiobutton=L([V("nys-radiobutton")],i.NysRadiobutton);const Y5=x`
+    `}},i.NysRadiobutton.VALID_SIZES=["sm","md"],i.NysRadiobutton.buttonGroup={},i.NysRadiobutton.styles=W1,Z([a({type:Boolean})],i.NysRadiobutton.prototype,"checked",2),Z([a({type:Boolean})],i.NysRadiobutton.prototype,"disabled",2),Z([a({type:Boolean})],i.NysRadiobutton.prototype,"required",2),Z([a({type:String})],i.NysRadiobutton.prototype,"label",2),Z([a({type:String})],i.NysRadiobutton.prototype,"description",2),Z([a({type:String})],i.NysRadiobutton.prototype,"id",2),Z([a({type:String})],i.NysRadiobutton.prototype,"name",2),Z([a({type:String})],i.NysRadiobutton.prototype,"value",2),Z([a({reflect:!0})],i.NysRadiobutton.prototype,"size",1),i.NysRadiobutton=Z([k("nys-radiobutton")],i.NysRadiobutton);const n2=M`
   :host {
     /* Global Select Styles */
     --_nys-select-form-width: var(--nys-form-width-md, 200px);
@@ -1533,6 +1675,7 @@
 
   :host([width="full"]) {
     --_nys-select-form-width: 100%;
+    flex: 1; /* stretches width for flex container */
   }
 
   /* Hover */
@@ -1601,7 +1744,7 @@
     --_nys-select-border-default: var(--nys-border-width-sm, 1px) solid
       var(--_nys-select-error-color);
   }
-`;var J5=Object.defineProperty,t1=(r,e,t,o)=>{for(var s=void 0,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=l(e,t,s)||s);return s&&J5(e,t,s),s};class T extends _{constructor(){super(...arguments),this.disabled=!1,this.selected=!1,this.value="",this.label="",this.hidden=!1}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e&&e.addEventListener("slotchange",()=>{var s;const o=e.assignedNodes({flatten:!0});o.length>0&&(this.label=((s=o[0].textContent)==null?void 0:s.trim())||"")})}render(){return h`
+`;var l2=Object.defineProperty,i1=(r,e,t,s)=>{for(var o=void 0,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=l(e,t,o)||o);return o&&l2(e,t,o),o};class I extends g{constructor(){super(...arguments),this.disabled=!1,this.selected=!1,this.value="",this.label="",this.hidden=!1}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e&&e.addEventListener("slotchange",()=>{var o;const s=e.assignedNodes({flatten:!0});s.length>0&&(this.label=((o=s[0].textContent)==null?void 0:o.trim())||"")})}render(){return c`
       <option
         ?disabled=${this.disabled}
         ?selected=${this.selected}
@@ -1611,14 +1754,14 @@
       >
         <slot>${this.label}</slot>
       </option>
-    `}}t1([a({type:Boolean})],T.prototype,"disabled"),t1([a({type:Boolean})],T.prototype,"selected"),t1([a({type:String})],T.prototype,"value"),t1([a({type:String})],T.prototype,"label"),t1([a({type:Boolean})],T.prototype,"hidden"),customElements.define("nys-option",T);var X5=Object.defineProperty,Q5=Object.getOwnPropertyDescriptor,b=(r,e,t,o)=>{for(var s=o>1?void 0:o?Q5(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&X5(e,t,s),s};i.NysSelect=class extends _{constructor(){super(...arguments),this.id="",this.name="",this.label="",this.description="",this.value="",this.disabled=!1,this.required=!1,this.form="",this.showError=!1,this.errorMessage="",this._width="md"}get width(){return this._width}set width(e){this._width=i.NysSelect.VALID_WIDTHS.includes(e)?e:"full"}_handleSlotChange(){var t,o;const e=(t=this.shadowRoot)==null?void 0:t.querySelector('slot:not([name="description"])');if(e){const s=e.assignedElements({flatten:!0}),n=(o=this.shadowRoot)==null?void 0:o.querySelector("select");n&&s.forEach(l=>{var c;if(l instanceof T){const C=document.createElement("option");C.value=l.value,C.textContent=l.label||((c=l.textContent)==null?void 0:c.trim())||"",C.disabled=l.disabled,C.selected=l.selected,n.appendChild(C)}})}}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}updated(e){var t;if(super.updated(e),e.has("value")){const o=(t=this.shadowRoot)==null?void 0:t.querySelector("select");o&&(o.value=this.value)}}render(){return h`
+    `}}i1([a({type:Boolean})],I.prototype,"disabled"),i1([a({type:Boolean})],I.prototype,"selected"),i1([a({type:String})],I.prototype,"value"),i1([a({type:String})],I.prototype,"label"),i1([a({type:Boolean})],I.prototype,"hidden"),customElements.define("nys-option",I);var a2=Object.defineProperty,C2=Object.getOwnPropertyDescriptor,x=(r,e,t,s)=>{for(var o=s>1?void 0:s?C2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&a2(e,t,o),o};i.NysSelect=class extends g{constructor(){super(...arguments),this.id="",this.name="",this.label="",this.description="",this.value="",this.disabled=!1,this.required=!1,this.form="",this.showError=!1,this.errorMessage="",this._width="md"}get width(){return this._width}set width(e){this._width=i.NysSelect.VALID_WIDTHS.includes(e)?e:"full"}_handleSlotChange(){var t,s;const e=(t=this.shadowRoot)==null?void 0:t.querySelector('slot:not([name="description"])');if(e){const o=e.assignedElements({flatten:!0}),n=(s=this.shadowRoot)==null?void 0:s.querySelector("select");n&&o.forEach(l=>{var h;if(l instanceof I){const C=document.createElement("option");C.value=l.value,C.textContent=l.label||((h=l.textContent)==null?void 0:h.trim())||"",C.disabled=l.disabled,C.selected=l.selected,n.appendChild(C)}})}}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}updated(e){var t;if(super.updated(e),e.has("value")){const s=(t=this.shadowRoot)==null?void 0:t.querySelector("select");s&&(s.value=this.value)}}render(){return c`
       <div class="nys-select">
-        ${this.label&&h` <div class="nys-select__text">
+        ${this.label&&c` <div class="nys-select__text">
           <div class="nys-select__requiredwrapper">
             <label for=${this.id} class="nys-select__label"
               >${this.label}</label
             >
-            ${this.required?h`<label class="nys-select__required">*</label>`:""}
+            ${this.required?c`<label class="nys-select__required">*</label>`:""}
           </div>
           <div class="nys-select__description">
             ${this.description}
@@ -1650,12 +1793,12 @@
             class="nys-select__icon"
           ></nys-icon>
         </div>
-        ${this.showError&&this.errorMessage?h`<div class="nys-select__error">
+        ${this.showError&&this.errorMessage?c`<div class="nys-select__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>`:""}
       </div>
-    `}},i.NysSelect.VALID_WIDTHS=["sm","md","lg","full"],i.NysSelect.styles=Y5,b([a({type:String})],i.NysSelect.prototype,"id",2),b([a({type:String})],i.NysSelect.prototype,"name",2),b([a({type:String})],i.NysSelect.prototype,"label",2),b([a({type:String})],i.NysSelect.prototype,"description",2),b([a({type:String})],i.NysSelect.prototype,"value",2),b([a({type:Boolean})],i.NysSelect.prototype,"disabled",2),b([a({type:Boolean})],i.NysSelect.prototype,"required",2),b([a({type:String})],i.NysSelect.prototype,"form",2),b([a({type:Boolean,reflect:!0})],i.NysSelect.prototype,"showError",2),b([a({type:String})],i.NysSelect.prototype,"errorMessage",2),b([a({reflect:!0})],i.NysSelect.prototype,"width",1),i.NysSelect=b([V("nys-select")],i.NysSelect);const e2=x`
+    `}},i.NysSelect.VALID_WIDTHS=["sm","md","lg","full"],i.NysSelect.styles=n2,x([a({type:String})],i.NysSelect.prototype,"id",2),x([a({type:String})],i.NysSelect.prototype,"name",2),x([a({type:String})],i.NysSelect.prototype,"label",2),x([a({type:String})],i.NysSelect.prototype,"description",2),x([a({type:String})],i.NysSelect.prototype,"value",2),x([a({type:Boolean})],i.NysSelect.prototype,"disabled",2),x([a({type:Boolean})],i.NysSelect.prototype,"required",2),x([a({type:String})],i.NysSelect.prototype,"form",2),x([a({type:Boolean,reflect:!0})],i.NysSelect.prototype,"showError",2),x([a({type:String})],i.NysSelect.prototype,"errorMessage",2),x([a({reflect:!0})],i.NysSelect.prototype,"width",1),i.NysSelect=x([k("nys-select")],i.NysSelect);const c2=M`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1723,6 +1866,7 @@
 
   :host([width="full"]) {
     --_nys-textarea-width: 100%;
+    flex: 1; /* stretches width for flex container */
   }
 
   :host([showError]) {
@@ -1811,14 +1955,14 @@
     line-height: var(--_nys-textarea-lineheight-ui);
     align-items: center;
   }
-`;var t2=Object.defineProperty,o2=Object.getOwnPropertyDescriptor,g=(r,e,t,o)=>{for(var s=o>1?void 0:o?o2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&t2(e,t,s),s};i.NysTextarea=class extends _{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.maxlength=null,this.width="full",this.rows=null,this._resize="vertical",this.showError=!1,this.errorMessage=""}updated(e){e.has("width")&&(this.width=i.NysTextarea.VALID_WIDTHS.includes(this.width)?this.width:"full")}get resize(){return this._resize}set resize(e){this._resize=i.NysTextarea.VALID_RESIZE.includes(e)?e:"vertical"}_handleInput(e){const o=e.target.checkValidity();this.dispatchEvent(new CustomEvent("nys-checkValidity",{detail:{checkValidity:o},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}render(){return h`
+`;var h2=Object.defineProperty,d2=Object.getOwnPropertyDescriptor,u=(r,e,t,s)=>{for(var o=s>1?void 0:s?d2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&h2(e,t,o),o};i.NysTextarea=class extends g{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.maxlength=null,this.width="full",this.rows=null,this._resize="vertical",this.showError=!1,this.errorMessage=""}updated(e){e.has("width")&&(this.width=i.NysTextarea.VALID_WIDTHS.includes(this.width)?this.width:"full")}get resize(){return this._resize}set resize(e){this._resize=i.NysTextarea.VALID_RESIZE.includes(e)?e:"vertical"}_handleInput(e){const s=e.target.checkValidity();this.dispatchEvent(new CustomEvent("nys-checkValidity",{detail:{checkValidity:s},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}render(){return c`
       <label class="nys-textarea">
-        ${this.label&&h` <div class="nys-textarea__text">
+        ${this.label&&c` <div class="nys-textarea__text">
           <div class="nys-textarea__requiredwrapper">
             <label for=${this.id} class="nys-textarea__label"
               >${this.label}</label
             >
-            ${this.required?h`<label class="nys-textarea__required">*</label>`:""}
+            ${this.required?c`<label class="nys-textarea__required">*</label>`:""}
           </div>
           <div class="nys-textarea__description">
             ${this.description}
@@ -1842,12 +1986,12 @@
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
         ></textarea>
-        ${this.showError&&this.errorMessage?h`<div class="nys-textarea__error">
+        ${this.showError&&this.errorMessage?c`<div class="nys-textarea__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>`:""}
       </label>
-    `}},i.NysTextarea.VALID_WIDTHS=["sm","md","lg","full"],i.NysTextarea.VALID_RESIZE=["vertical","none"],i.NysTextarea.styles=e2,g([a({type:String})],i.NysTextarea.prototype,"id",2),g([a({type:String})],i.NysTextarea.prototype,"name",2),g([a({type:String})],i.NysTextarea.prototype,"label",2),g([a({type:String})],i.NysTextarea.prototype,"description",2),g([a({type:String})],i.NysTextarea.prototype,"placeholder",2),g([a({type:String})],i.NysTextarea.prototype,"value",2),g([a({type:Boolean})],i.NysTextarea.prototype,"disabled",2),g([a({type:Boolean})],i.NysTextarea.prototype,"readonly",2),g([a({type:Boolean})],i.NysTextarea.prototype,"required",2),g([a({type:String})],i.NysTextarea.prototype,"form",2),g([a({type:Number})],i.NysTextarea.prototype,"maxlength",2),g([a({reflect:!0})],i.NysTextarea.prototype,"width",2),g([a({type:Number})],i.NysTextarea.prototype,"rows",2),g([a({reflect:!0})],i.NysTextarea.prototype,"resize",1),g([a({type:Boolean,reflect:!0})],i.NysTextarea.prototype,"showError",2),g([a({type:String})],i.NysTextarea.prototype,"errorMessage",2),i.NysTextarea=g([V("nys-textarea")],i.NysTextarea);const s2=x`
+    `}},i.NysTextarea.VALID_WIDTHS=["sm","md","lg","full"],i.NysTextarea.VALID_RESIZE=["vertical","none"],i.NysTextarea.styles=c2,u([a({type:String})],i.NysTextarea.prototype,"id",2),u([a({type:String})],i.NysTextarea.prototype,"name",2),u([a({type:String})],i.NysTextarea.prototype,"label",2),u([a({type:String})],i.NysTextarea.prototype,"description",2),u([a({type:String})],i.NysTextarea.prototype,"placeholder",2),u([a({type:String})],i.NysTextarea.prototype,"value",2),u([a({type:Boolean})],i.NysTextarea.prototype,"disabled",2),u([a({type:Boolean})],i.NysTextarea.prototype,"readonly",2),u([a({type:Boolean})],i.NysTextarea.prototype,"required",2),u([a({type:String})],i.NysTextarea.prototype,"form",2),u([a({type:Number})],i.NysTextarea.prototype,"maxlength",2),u([a({reflect:!0})],i.NysTextarea.prototype,"width",2),u([a({type:Number})],i.NysTextarea.prototype,"rows",2),u([a({reflect:!0})],i.NysTextarea.prototype,"resize",1),u([a({type:Boolean,reflect:!0})],i.NysTextarea.prototype,"showError",2),u([a({type:String})],i.NysTextarea.prototype,"errorMessage",2),i.NysTextarea=u([k("nys-textarea")],i.NysTextarea);const y2=M`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1915,6 +2059,7 @@
 
   :host([width="full"]) {
     --_nys-textinput-width: 100%;
+    flex: 1; /* stretches width for flex container */
   }
 
   :host([showError]) {
@@ -1995,14 +2140,14 @@
     line-height: var(--_nys-textinput-lineheight-ui);
     align-items: center;
   }
-`;var r2=Object.defineProperty,i2=Object.getOwnPropertyDescriptor,y=(r,e,t,o)=>{for(var s=o>1?void 0:o?i2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&r2(e,t,s),s};i.NysTextinput=class extends _{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.showError=!1,this.errorMessage=""}get type(){return this._type}set type(e){this._type=i.NysTextinput.VALID_TYPES.includes(e)?e:"text"}updated(e){e.has("width")&&(this.width=i.NysTextinput.VALID_WIDTHS.includes(this.width)?this.width:"full")}_handleInput(e){const o=e.target.checkValidity();this.dispatchEvent(new CustomEvent("nys-checkValidity",{detail:{checkValidity:o},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}render(){return h`
+`;var p2=Object.defineProperty,v2=Object.getOwnPropertyDescriptor,y=(r,e,t,s)=>{for(var o=s>1?void 0:s?v2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&p2(e,t,o),o};i.NysTextinput=class extends g{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.showError=!1,this.errorMessage=""}get type(){return this._type}set type(e){this._type=i.NysTextinput.VALID_TYPES.includes(e)?e:"text"}updated(e){e.has("width")&&(this.width=i.NysTextinput.VALID_WIDTHS.includes(this.width)?this.width:"full")}_handleInput(e){const s=e.target.checkValidity();this.dispatchEvent(new CustomEvent("nys-checkValidity",{detail:{checkValidity:s},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}render(){return c`
       <div class="nys-textinput">
-        ${this.label&&h` <div class="nys-textinput__text">
+        ${this.label&&c` <div class="nys-textinput__text">
           <div class="nys-textinput__requiredwrapper">
             <label for=${this.id} class="nys-textinput__label"
               >${this.label}</label
             >
-            ${this.required?h`<label class="nys-textinput__required">*</label>`:""}
+            ${this.required?c`<label class="nys-textinput__required">*</label>`:""}
           </div>
 
           <div class="nys-textinput__description">
@@ -2032,12 +2177,12 @@
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
         />
-        ${this.showError&&this.errorMessage?h`<div class="nys-textinput__error">
+        ${this.showError&&this.errorMessage?c`<div class="nys-textinput__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>`:""}
       </div>
-    `}},i.NysTextinput.VALID_TYPES=["email","number","password","search","tel","text","url"],i.NysTextinput.VALID_WIDTHS=["sm","md","lg","full"],i.NysTextinput.styles=s2,y([a({type:String})],i.NysTextinput.prototype,"id",2),y([a({type:String})],i.NysTextinput.prototype,"name",2),y([a({reflect:!0})],i.NysTextinput.prototype,"type",1),y([a({type:String})],i.NysTextinput.prototype,"label",2),y([a({type:String})],i.NysTextinput.prototype,"description",2),y([a({type:String})],i.NysTextinput.prototype,"placeholder",2),y([a({type:String})],i.NysTextinput.prototype,"value",2),y([a({type:Boolean})],i.NysTextinput.prototype,"disabled",2),y([a({type:Boolean})],i.NysTextinput.prototype,"readonly",2),y([a({type:Boolean})],i.NysTextinput.prototype,"required",2),y([a({type:String})],i.NysTextinput.prototype,"form",2),y([a({type:String})],i.NysTextinput.prototype,"pattern",2),y([a({type:Number})],i.NysTextinput.prototype,"maxlength",2),y([a({reflect:!0})],i.NysTextinput.prototype,"width",2),y([a({type:Number})],i.NysTextinput.prototype,"step",2),y([a({type:Number})],i.NysTextinput.prototype,"min",2),y([a({type:Number})],i.NysTextinput.prototype,"max",2),y([a({type:Boolean,reflect:!0})],i.NysTextinput.prototype,"showError",2),y([a({type:String})],i.NysTextinput.prototype,"errorMessage",2),i.NysTextinput=y([V("nys-textinput")],i.NysTextinput);const n2=x`
+    `}},i.NysTextinput.VALID_TYPES=["email","number","password","search","tel","text","url"],i.NysTextinput.VALID_WIDTHS=["sm","md","lg","full"],i.NysTextinput.styles=y2,y([a({type:String})],i.NysTextinput.prototype,"id",2),y([a({type:String})],i.NysTextinput.prototype,"name",2),y([a({reflect:!0})],i.NysTextinput.prototype,"type",1),y([a({type:String})],i.NysTextinput.prototype,"label",2),y([a({type:String})],i.NysTextinput.prototype,"description",2),y([a({type:String})],i.NysTextinput.prototype,"placeholder",2),y([a({type:String})],i.NysTextinput.prototype,"value",2),y([a({type:Boolean})],i.NysTextinput.prototype,"disabled",2),y([a({type:Boolean})],i.NysTextinput.prototype,"readonly",2),y([a({type:Boolean})],i.NysTextinput.prototype,"required",2),y([a({type:String})],i.NysTextinput.prototype,"form",2),y([a({type:String})],i.NysTextinput.prototype,"pattern",2),y([a({type:Number})],i.NysTextinput.prototype,"maxlength",2),y([a({reflect:!0})],i.NysTextinput.prototype,"width",2),y([a({type:Number})],i.NysTextinput.prototype,"step",2),y([a({type:Number})],i.NysTextinput.prototype,"min",2),y([a({type:Number})],i.NysTextinput.prototype,"max",2),y([a({type:Boolean,reflect:!0})],i.NysTextinput.prototype,"showError",2),y([a({type:String})],i.NysTextinput.prototype,"errorMessage",2),i.NysTextinput=y([k("nys-textinput")],i.NysTextinput);const g2=M`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -2054,6 +2199,9 @@
         ) -
         2px
     );
+    /* space between toggle and it's label */
+    --_nys-toggle-gap: var(--nys-space-150, 12px);
+
     --_nys-toggle-font-family: var(
       --nys-font-family-ui,
       var(
@@ -2065,6 +2213,10 @@
         sans-serif
       )
     );
+    --_nys-toggle-font-size: var(--nys-font-size-ui-md, 16px);
+    --_nys-toggle-font-weight: var(--nys-font-weight-regular, 400);
+    --_nys-toggle-line-height: var(--nys-font-lineheight-ui-md, 24px);
+
     --_nys-toggle-transition-duration: 0.3s;
 
     /* Focus outline */
@@ -2094,8 +2246,6 @@
     );
 
     /* Font sizes and spacing for labels, descriptions, and icons */
-    --_nys-toggle-label-font-size: var(--nys-font-size-sm, 14px);
-    --_nys-toggle-description-font-size: var(--nys-font-size-xs, 12px);
     --_nys-toggle-icon-font-size-xs: var(
       --nys-font-size-body-xs,
       var(--nys-font-size-xs, 12px)
@@ -2108,33 +2258,32 @@
 
   /* Slotted styling (e.g. HTML <p> tags for descriptions) */
   ::slotted([slot^="description"]) {
-    font-size: var(--_nys-toggle-description-font-size);
-    color: gray;
+    font-style: italic;
     margin: 0;
   }
   slot[name="description"] {
-    font-size: var(--_nys-toggle-description-font-size);
-    color: gray;
-    margin: 0;
+    font-style: italic;
   }
 
   /* Toggle switch overall container */
   .nys-toggle__content {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: var(--_nys-toggle-gap);
   }
 
   /* Label & description text container */
   .nys-toggle__text {
     display: flex;
     flex-direction: column;
-    font-size: var(--_nys-toggle-label-font-size);
+    font-size: var(--_nys-toggle-font-size);
     font-family: var(--_nys-toggle-font-family);
+    font-weight: var(--_nys-toggle-font-weight);
+    line-height: var(--_nys-toggle-line-height);
   }
 
-  .nys-toggle__text.disabled {
-    color: var(--_nys-toggle-color-base, #797c7f);
+  .nys-toggle__content:has(input:disabled) .nys-toggle__text * {
+    color: var(--_nys-toggle-color-base);
+    cursor: not-allowed;
   }
 
   /* Toggle Switch component */
@@ -2142,7 +2291,11 @@
     position: relative;
     display: inline-block;
     width: var(--_nys-toggle-width);
+    min-width: var(--_nys-toggle-width);
+    max-width: var(--_nys-toggle-width);
     height: var(--_nys-toggle-height);
+    min-height: var(--_nys-toggle-height);
+    max-height: var(--_nys-toggle-height);
   }
 
   .nys-toggle__toggle input {
@@ -2207,7 +2360,7 @@
   }
 
   /* Switch BG: Active */
-  input:active + .slider {
+  input:active:not(:disabled) + .slider {
     background-color: var(--_nys-toggle-color-neutral-700, #4a4d4f);
     outline: solid var(--_nys-toggle-border-width-focus)
       var(--_nys-toggle-border-focus-color);
@@ -2276,17 +2429,14 @@
     --_nys-toggle-width: var(--nys-toggle-font-size-6xl, 36px);
     --_nys-toggle-height: var(--nys-toggle-size-250, 20px);
     --_nys-toggle-slider-diameter: var(--nys-toggle--font-size-md, 16px);
-    --_nys-label-font-size: var(--nys-toggle-font-size-xs, 12px);
-    --_nys-description-font-size: var(--nys-toggle-font-size-2xs, 10px);
     --_nys-icon-font-size: var(--nys-toggle-font-size-sm, 14px);
+    --_nys-toggle-gap: var(--nys-space-100, 8px);
   }
 
   :host([size="md"]) {
     --_nys-toggle-width: var(--nys-toggle-font-size-8xl, 44px);
     --_nys-toggle-height: var(--nys-toggle-size-300, 24px);
     --_nys-toggle-slider-diameter: var(--nys-toggle-font-size-xl, 20px);
-    --_nys-label-font-size: var(--nys-toggle-font-size-sm, 14px);
-    --_nys-description-font-size: var(--nys-toggle-font-size-xs, 12px);
     --_nys-icon-font-size: var(--nys-toggle-font-size-md, 16px);
   }
 
@@ -2295,14 +2445,14 @@
       --toggle-transition-duration: 0s; /* Disable animation */
     }
   }
-`;var l2=Object.defineProperty,a2=Object.getOwnPropertyDescriptor,m=(r,e,t,o)=>{for(var s=o>1?void 0:o?a2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(o?l(e,t,s):l(s))||s);return o&&s&&l2(e,t,s),s};let C2=0;i.NysToggle=class extends _{constructor(){super(...arguments),this.id="",this.name="",this.value="",this.checked=!1,this.disabled=!1,this.noIcon=!1,this.label="",this.description="",this._size="md",this.form=""}get size(){return this._size}set size(e){this._size=i.NysToggle.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-toggle-${Date.now()}-${C2++}`)}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleChange(e){const{checked:t}=e.target;this.checked=t,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleKeyDown(e){!this.disabled&&(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this.checked=!this.checked,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0})))}render(){return h`
+`;var u2=Object.defineProperty,_2=Object.getOwnPropertyDescriptor,$=(r,e,t,s)=>{for(var o=s>1?void 0:s?_2(e,t):e,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(s?l(e,t,o):l(o))||o);return s&&o&&u2(e,t,o),o};let b2=0;i.NysToggle=class extends g{constructor(){super(...arguments),this.id="",this.name="",this.value="",this.checked=!1,this.disabled=!1,this.noIcon=!1,this.label="",this.description="",this._size="md",this.form=""}get size(){return this._size}set size(e){this._size=i.NysToggle.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-toggle-${Date.now()}-${b2++}`)}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleChange(e){const{checked:t}=e.target;this.checked=t,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleKeyDown(e){!this.disabled&&(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this.checked=!this.checked,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0})))}render(){return c`
       <label class="nys-toggle">
         <div class="nys-toggle__content">
           <div class="nys-toggle__toggle">
             <input
               id="${this.id}"
               type="checkbox"
-              name="${U(this.name?this.name:void 0)}"
+              name="${G(this.name?this.name:void 0)}"
               .value=${this.value}
               form=${this.form}
               .checked=${this.checked}
@@ -2317,18 +2467,18 @@
             />
             <span class="slider">
               <div class="knob">
-                ${this.noIcon?"":h`<nys-icon
+                ${this.noIcon?"":c`<nys-icon
                       class="toggle-icon"
                       name="${this.checked?"check":"close"}"
                     ></nys-icon>`}
               </div>
             </span>
           </div>
-          <div class="nys-toggle__text ${this.disabled?"disabled":""}">
+          <div class="nys-toggle__text">
             <div class="nys-toggle__label">${this.label}</div>
             <slot name="description">${this.description}</slot>
           </div>
         </div>
       </label>
-    `}},i.NysToggle.styles=n2,i.NysToggle.VALID_SIZES=["sm","md"],m([a({type:String})],i.NysToggle.prototype,"id",2),m([a({type:String})],i.NysToggle.prototype,"name",2),m([a({type:String})],i.NysToggle.prototype,"value",2),m([a({type:Boolean})],i.NysToggle.prototype,"checked",2),m([a({type:Boolean})],i.NysToggle.prototype,"disabled",2),m([a({type:Boolean})],i.NysToggle.prototype,"noIcon",2),m([a({type:String})],i.NysToggle.prototype,"label",2),m([a({type:String})],i.NysToggle.prototype,"description",2),m([a({reflect:!0})],i.NysToggle.prototype,"size",1),m([a({type:String})],i.NysToggle.prototype,"form",2),i.NysToggle=m([V("nys-toggle")],i.NysToggle),i.NysIcon=R1,Object.defineProperty(i,Symbol.toStringTag,{value:"Module"})});
+    `}},i.NysToggle.styles=g2,i.NysToggle.VALID_SIZES=["sm","md"],$([a({type:String})],i.NysToggle.prototype,"id",2),$([a({type:String})],i.NysToggle.prototype,"name",2),$([a({type:String})],i.NysToggle.prototype,"value",2),$([a({type:Boolean})],i.NysToggle.prototype,"checked",2),$([a({type:Boolean})],i.NysToggle.prototype,"disabled",2),$([a({type:Boolean})],i.NysToggle.prototype,"noIcon",2),$([a({type:String})],i.NysToggle.prototype,"label",2),$([a({type:String})],i.NysToggle.prototype,"description",2),$([a({reflect:!0})],i.NysToggle.prototype,"size",1),$([a({type:String})],i.NysToggle.prototype,"form",2),i.NysToggle=$([k("nys-toggle")],i.NysToggle),i.NysIcon=F1,Object.defineProperty(i,Symbol.toStringTag,{value:"Module"})});
 //# sourceMappingURL=excelsior.js.map

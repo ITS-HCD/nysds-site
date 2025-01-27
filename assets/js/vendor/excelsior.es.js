@@ -1,6 +1,6 @@
-import { css as M, LitElement as x, html as l } from "lit";
-import { property as n, state as Q, customElement as V } from "lit/decorators.js";
-import { ifDefined as E } from "lit/directives/if-defined.js";
+import { css as H, LitElement as x, html as C } from "lit";
+import { property as n, state as K, customElement as V } from "lit/decorators.js";
+import { ifDefined as A } from "lit/directives/if-defined.js";
 /*!
    * 
    * ░█▀▀▀ ▀▄░▄▀ ░█▀▀█ ░█▀▀▀ ░█─── ░█▀▀▀█ ▀█▀ ░█▀▀▀█ ░█▀▀█ 
@@ -12,7 +12,7 @@ import { ifDefined as E } from "lit/directives/if-defined.js";
    * Repository: https://github.com/its-hcd/excelsior
    * License: MIT
  */
-const e1 = M`
+const i1 = H`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
@@ -44,7 +44,7 @@ const e1 = M`
     --_nys-font-weight-regular: var(--nys-font-weight-regular, 400);
     --_nys-font-weight-semibold: var(--nys-font-weight-semibold, 600);
 
-    /* Dissmiss button */
+    /* Dismiss button */
     --_nys-alert-close-button-size: var(--nys-font-size-2xl, 22px);
     --_nys-alert-hover-button-color: var(
       --nys-color-black-transparent-100,
@@ -100,7 +100,8 @@ const e1 = M`
   /* Links */
   a,
   a:active,
-  a:hover {
+  a:hover,
+  a:visited {
     font-weight: var(--_nys-font-weight-semibold);
     font-size: var(--_nys-alert-font-size);
     color: var(--_nys-alert-link-color);
@@ -179,28 +180,59 @@ const e1 = M`
   .nys-alert__actions {
     display: flex;
     gap: var(--_nys-alert-gap-space-150);
+    flex-wrap: wrap;
   }
 
   /* Alert Types */
   :host([theme="info"]) {
-    --_nys-alert-color-border-left: var(--nys-color-info, #154973);
-    --_nys-alert-color-bg: var(--nys-color-info-weak, #154973);
+    --_nys-alert-color-border-left: var(
+      --nys-color-info,
+      var(--nys-color-blue-600, #004dd1)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-info-weak,
+      var(--nys-color-blue-50, #e5effa)
+    );
   }
   :host([theme="success"]) {
-    --_nys-alert-color-border-left: var(--nys-color-success, #00a91c);
-    --_nys-alert-color-bg: var(--nys-color-success-weak, #00a91c);
+    --_nys-alert-color-border-left: var(
+      --nys-color-success,
+      var(--nys-color-green-600, #1e752e)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-success-weak,
+      var(--nys-color-green-50, #e8f1ea)
+    );
   }
   :host([theme="warning"]) {
-    --_nys-alert-color-border-left: var(--nys-color-warning, #ffbe2e);
-    --_nys-alert-color-bg: var(--nys-color-warning-weak, #ffbe2e);
+    --_nys-alert-color-border-left: var(
+      --nys-color-warning,
+      var(--nys-color-yellow-400, #face00)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-warning-weak,
+      var(--nys-color-yellow-50, #fefae5)
+    );
   }
   :host([theme="danger"]) {
-    --_nys-alert-color-border-left: var(--nys-color-danger, #b52c2c);
-    --_nys-alert-color-bg: var(--nys-color-danger-weak, #b52c2c);
+    --_nys-alert-color-border-left: var(
+      --nys-color-danger,
+      var(--nys-color-red-600, #b52c2c)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-danger-weak,
+      var(--nys-color-red-50, #f7eaea)
+    );
   }
   :host([theme="emergency"]) {
-    --_nys-alert-color-border-left: var(--nys-color-emergency, #d54309);
-    --_nys-alert-color-bg: var(--nys-color-emergency, #d54309);
+    --_nys-alert-color-border-left: var(
+      --nys-color-emergency,
+      var(--nys-color-red-800, #721c1c)
+    );
+    --_nys-alert-color-bg: var(
+      --nys-color-emergency,
+      var(--nys-color-red-800, #721c1c)
+    );
     --_nys-alert-color: #fff;
     --_nys-alert-hover-button-color: var(
       --nys-color-white-transparent-100,
@@ -235,18 +267,18 @@ const e1 = M`
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const T = globalThis, G = T.ShadowRoot && (T.ShadyCSS === void 0 || T.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, X = Symbol(), F = /* @__PURE__ */ new WeakMap();
-let t1 = class {
+const G = globalThis, W = G.ShadowRoot && (G.ShadyCSS === void 0 || G.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, r1 = Symbol(), X = /* @__PURE__ */ new WeakMap();
+let l1 = class {
   constructor(o, e, t) {
-    if (this._$cssResult$ = !0, t !== X) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    if (this._$cssResult$ = !0, t !== r1) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = o, this.t = e;
   }
   get styleSheet() {
     let o = this.o;
     const e = this.t;
-    if (G && o === void 0) {
+    if (W && o === void 0) {
       const t = e !== void 0 && e.length === 1;
-      t && (o = F.get(e)), o === void 0 && ((this.o = o = new CSSStyleSheet()).replaceSync(this.cssText), t && F.set(e, o));
+      t && (o = X.get(e)), o === void 0 && ((this.o = o = new CSSStyleSheet()).replaceSync(this.cssText), t && X.set(e, o));
     }
     return o;
   }
@@ -254,26 +286,26 @@ let t1 = class {
     return this.cssText;
   }
 };
-const o1 = (o) => new t1(typeof o == "string" ? o : o + "", void 0, X), r1 = (o, e) => {
-  if (G) o.adoptedStyleSheets = e.map((t) => t instanceof CSSStyleSheet ? t : t.styleSheet);
+const C1 = (o) => new l1(typeof o == "string" ? o : o + "", void 0, r1), a1 = (o, e) => {
+  if (W) o.adoptedStyleSheets = e.map((t) => t instanceof CSSStyleSheet ? t : t.styleSheet);
   else for (const t of e) {
-    const s = document.createElement("style"), r = T.litNonce;
+    const s = document.createElement("style"), r = G.litNonce;
     r !== void 0 && s.setAttribute("nonce", r), s.textContent = t.cssText, o.appendChild(s);
   }
-}, Y = G ? (o) => o : (o) => o instanceof CSSStyleSheet ? ((e) => {
+}, Q = W ? (o) => o : (o) => o instanceof CSSStyleSheet ? ((e) => {
   let t = "";
   for (const s of e.cssRules) t += s.cssText;
-  return o1(t);
+  return C1(t);
 })(o) : o;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: s1, defineProperty: n1, getOwnPropertyDescriptor: i1, getOwnPropertyNames: C1, getOwnPropertySymbols: l1, getPrototypeOf: a1 } = Object, B = globalThis, K = B.trustedTypes, c1 = K ? K.emptyScript : "", W = B.reactiveElementPolyfillSupport, O = (o, e) => o, N = { toAttribute(o, e) {
+const { is: c1, defineProperty: h1, getOwnPropertyDescriptor: d1, getOwnPropertyNames: y1, getOwnPropertySymbols: p1, getPrototypeOf: v1 } = Object, q = globalThis, e1 = q.trustedTypes, g1 = e1 ? e1.emptyScript : "", t1 = q.reactiveElementPolyfillSupport, j = (o, e) => o, F = { toAttribute(o, e) {
   switch (e) {
     case Boolean:
-      o = o ? c1 : null;
+      o = o ? g1 : null;
       break;
     case Object:
     case Array:
@@ -298,46 +330,46 @@ const { is: s1, defineProperty: n1, getOwnPropertyDescriptor: i1, getOwnProperty
       }
   }
   return t;
-} }, R = (o, e) => !s1(o, e), J = { attribute: !0, type: String, converter: N, reflect: !1, hasChanged: R };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), B.litPropertyMetadata ?? (B.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
-class q extends HTMLElement {
+} }, J = (o, e) => !c1(o, e), o1 = { attribute: !0, type: String, converter: F, reflect: !1, hasChanged: J };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), q.litPropertyMetadata ?? (q.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+class R extends HTMLElement {
   static addInitializer(e) {
     this._$Ei(), (this.l ?? (this.l = [])).push(e);
   }
   static get observedAttributes() {
     return this.finalize(), this._$Eh && [...this._$Eh.keys()];
   }
-  static createProperty(e, t = J) {
+  static createProperty(e, t = o1) {
     if (t.state && (t.attribute = !1), this._$Ei(), this.elementProperties.set(e, t), !t.noAccessor) {
       const s = Symbol(), r = this.getPropertyDescriptor(e, s, t);
-      r !== void 0 && n1(this.prototype, e, r);
+      r !== void 0 && h1(this.prototype, e, r);
     }
   }
   static getPropertyDescriptor(e, t, s) {
-    const { get: r, set: i } = i1(this.prototype, e) ?? { get() {
+    const { get: r, set: i } = d1(this.prototype, e) ?? { get() {
       return this[t];
-    }, set(C) {
-      this[t] = C;
+    }, set(l) {
+      this[t] = l;
     } };
     return { get() {
       return r == null ? void 0 : r.call(this);
-    }, set(C) {
-      const p = r == null ? void 0 : r.call(this);
-      i.call(this, C), this.requestUpdate(e, p, s);
+    }, set(l) {
+      const v = r == null ? void 0 : r.call(this);
+      i.call(this, l), this.requestUpdate(e, v, s);
     }, configurable: !0, enumerable: !0 };
   }
   static getPropertyOptions(e) {
-    return this.elementProperties.get(e) ?? J;
+    return this.elementProperties.get(e) ?? o1;
   }
   static _$Ei() {
-    if (this.hasOwnProperty(O("elementProperties"))) return;
-    const e = a1(this);
+    if (this.hasOwnProperty(j("elementProperties"))) return;
+    const e = v1(this);
     e.finalize(), e.l !== void 0 && (this.l = [...e.l]), this.elementProperties = new Map(e.elementProperties);
   }
   static finalize() {
-    if (this.hasOwnProperty(O("finalized"))) return;
-    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(O("properties"))) {
-      const t = this.properties, s = [...C1(t), ...l1(t)];
+    if (this.hasOwnProperty(j("finalized"))) return;
+    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(j("properties"))) {
+      const t = this.properties, s = [...y1(t), ...p1(t)];
       for (const r of s) this.createProperty(r, t[r]);
     }
     const e = this[Symbol.metadata];
@@ -356,8 +388,8 @@ class q extends HTMLElement {
     const t = [];
     if (Array.isArray(e)) {
       const s = new Set(e.flat(1 / 0).reverse());
-      for (const r of s) t.unshift(Y(r));
-    } else e !== void 0 && t.push(Y(e));
+      for (const r of s) t.unshift(Q(r));
+    } else e !== void 0 && t.push(Q(e));
     return t;
   }
   static _$Eu(e, t) {
@@ -386,7 +418,7 @@ class q extends HTMLElement {
   }
   createRenderRoot() {
     const e = this.shadowRoot ?? this.attachShadow(this.constructor.shadowRootOptions);
-    return r1(e, this.constructor.elementStyles), e;
+    return a1(e, this.constructor.elementStyles), e;
   }
   connectedCallback() {
     var e;
@@ -411,21 +443,21 @@ class q extends HTMLElement {
     var s;
     const r = this.constructor.elementProperties.get(e), i = this.constructor._$Eu(e, r);
     if (i !== void 0 && r.reflect === !0) {
-      const C = (((s = r.converter) == null ? void 0 : s.toAttribute) !== void 0 ? r.converter : N).toAttribute(t, r.type);
-      this._$Em = e, C == null ? this.removeAttribute(i) : this.setAttribute(i, C), this._$Em = null;
+      const l = (((s = r.converter) == null ? void 0 : s.toAttribute) !== void 0 ? r.converter : F).toAttribute(t, r.type);
+      this._$Em = e, l == null ? this.removeAttribute(i) : this.setAttribute(i, l), this._$Em = null;
     }
   }
   _$AK(e, t) {
     var s;
     const r = this.constructor, i = r._$Eh.get(e);
     if (i !== void 0 && this._$Em !== i) {
-      const C = r.getPropertyOptions(i), p = typeof C.converter == "function" ? { fromAttribute: C.converter } : ((s = C.converter) == null ? void 0 : s.fromAttribute) !== void 0 ? C.converter : N;
-      this._$Em = i, this[i] = p.fromAttribute(t, C.type), this._$Em = null;
+      const l = r.getPropertyOptions(i), v = typeof l.converter == "function" ? { fromAttribute: l.converter } : ((s = l.converter) == null ? void 0 : s.fromAttribute) !== void 0 ? l.converter : F;
+      this._$Em = i, this[i] = v.fromAttribute(t, l.type), this._$Em = null;
     }
   }
   requestUpdate(e, t, s) {
     if (e !== void 0) {
-      if (s ?? (s = this.constructor.getPropertyOptions(e)), !(s.hasChanged ?? R)(this[e], t)) return;
+      if (s ?? (s = this.constructor.getPropertyOptions(e)), !(s.hasChanged ?? J)(this[e], t)) return;
       this.P(e, t, s);
     }
     this.isUpdatePending === !1 && (this._$ES = this._$ET());
@@ -451,11 +483,11 @@ class q extends HTMLElement {
     if (!this.isUpdatePending) return;
     if (!this.hasUpdated) {
       if (this.renderRoot ?? (this.renderRoot = this.createRenderRoot()), this._$Ep) {
-        for (const [i, C] of this._$Ep) this[i] = C;
+        for (const [i, l] of this._$Ep) this[i] = l;
         this._$Ep = void 0;
       }
       const r = this.constructor.elementProperties;
-      if (r.size > 0) for (const [i, C] of r) C.wrapped !== !0 || this._$AL.has(i) || this[i] === void 0 || this.P(i, this[i], C);
+      if (r.size > 0) for (const [i, l] of r) l.wrapped !== !0 || this._$AL.has(i) || this[i] === void 0 || this.P(i, this[i], l);
     }
     let t = !1;
     const s = this._$AL;
@@ -498,40 +530,40 @@ class q extends HTMLElement {
   firstUpdated(e) {
   }
 }
-q.elementStyles = [], q.shadowRootOptions = { mode: "open" }, q[O("elementProperties")] = /* @__PURE__ */ new Map(), q[O("finalized")] = /* @__PURE__ */ new Map(), W == null || W({ ReactiveElement: q }), (B.reactiveElementVersions ?? (B.reactiveElementVersions = [])).push("2.0.4");
+R.elementStyles = [], R.shadowRootOptions = { mode: "open" }, R[j("elementProperties")] = /* @__PURE__ */ new Map(), R[j("finalized")] = /* @__PURE__ */ new Map(), t1 == null || t1({ ReactiveElement: R }), (q.reactiveElementVersions ?? (q.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const h1 = { attribute: !0, type: String, converter: N, reflect: !1, hasChanged: R }, d1 = (o = h1, e, t) => {
+const u1 = { attribute: !0, type: String, converter: F, reflect: !1, hasChanged: J }, _1 = (o = u1, e, t) => {
   const { kind: s, metadata: r } = t;
   let i = globalThis.litPropertyMetadata.get(r);
   if (i === void 0 && globalThis.litPropertyMetadata.set(r, i = /* @__PURE__ */ new Map()), i.set(t.name, o), s === "accessor") {
-    const { name: C } = t;
-    return { set(p) {
-      const j = e.get.call(this);
-      e.set.call(this, p), this.requestUpdate(C, j, o);
-    }, init(p) {
-      return p !== void 0 && this.P(C, void 0, o), p;
+    const { name: l } = t;
+    return { set(v) {
+      const Y = e.get.call(this);
+      e.set.call(this, v), this.requestUpdate(l, Y, o);
+    }, init(v) {
+      return v !== void 0 && this.P(l, void 0, o), v;
     } };
   }
   if (s === "setter") {
-    const { name: C } = t;
-    return function(p) {
-      const j = this[C];
-      e.call(this, p), this.requestUpdate(C, j, o);
+    const { name: l } = t;
+    return function(v) {
+      const Y = this[l];
+      e.call(this, v), this.requestUpdate(l, Y, o);
     };
   }
   throw Error("Unsupported decorator location: " + s);
 };
-function P(o) {
-  return (e, t) => typeof t == "object" ? d1(o, e, t) : ((s, r, i) => {
-    const C = r.hasOwnProperty(i);
-    return r.constructor.createProperty(i, C ? { ...s, wrapped: !0 } : s), C ? Object.getOwnPropertyDescriptor(r, i) : void 0;
+function I(o) {
+  return (e, t) => typeof t == "object" ? _1(o, e, t) : ((s, r, i) => {
+    const l = r.hasOwnProperty(i);
+    return r.constructor.createProperty(i, l ? { ...s, wrapped: !0 } : s), l ? Object.getOwnPropertyDescriptor(r, i) : void 0;
   })(o, e, t);
 }
-const y1 = {
+const b1 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -602,6 +634,9 @@ const y1 = {
   </svg>`,
   visibility_off: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
   <path d="M15.1 10.6L13.65 9.15C13.8 8.36667 13.575 7.63333 12.975 6.95C12.375 6.26667 11.6 6 10.65 6.15L9.2 4.7C9.48333 4.56667 9.77083 4.46667 10.0625 4.4C10.3542 4.33333 10.6667 4.3 11 4.3C12.25 4.3 13.3125 4.7375 14.1875 5.6125C15.0625 6.4875 15.5 7.55 15.5 8.8C15.5 9.13333 15.4667 9.44583 15.4 9.7375C15.3333 10.0292 15.2333 10.3167 15.1 10.6ZM18.3 13.75L16.85 12.35C17.4833 11.8667 18.0458 11.3375 18.5375 10.7625C19.0292 10.1875 19.45 9.53333 19.8 8.8C18.9667 7.11667 17.7708 5.77917 16.2125 4.7875C14.6542 3.79583 12.9167 3.3 11 3.3C10.5167 3.3 10.0417 3.33333 9.575 3.4C9.10833 3.46667 8.65 3.56667 8.2 3.7L6.65 2.15C7.33333 1.86667 8.03333 1.65417 8.75 1.5125C9.46667 1.37083 10.2167 1.3 11 1.3C13.5167 1.3 15.7583 1.99583 17.725 3.3875C19.6917 4.77917 21.1167 6.58333 22 8.8C21.6167 9.78333 21.1125 10.6958 20.4875 11.5375C19.8625 12.3792 19.1333 13.1167 18.3 13.75ZM18.8 19.9L14.6 15.75C14.0167 15.9333 13.4292 16.0708 12.8375 16.1625C12.2458 16.2542 11.6333 16.3 11 16.3C8.48333 16.3 6.24167 15.6042 4.275 14.2125C2.30833 12.8208 0.883333 11.0167 0 8.8C0.35 7.91667 0.791667 7.09583 1.325 6.3375C1.85833 5.57917 2.46667 4.9 3.15 4.3L0.4 1.5L1.8 0.0999985L20.2 18.5L18.8 19.9ZM4.55 5.7C4.06667 6.13333 3.625 6.60833 3.225 7.125C2.825 7.64167 2.48333 8.2 2.2 8.8C3.03333 10.4833 4.22917 11.8208 5.7875 12.8125C7.34583 13.8042 9.08333 14.3 11 14.3C11.3333 14.3 11.6583 14.2792 11.975 14.2375C12.2917 14.1958 12.6167 14.15 12.95 14.1L12.05 13.15C11.8667 13.2 11.6917 13.2375 11.525 13.2625C11.3583 13.2875 11.1833 13.3 11 13.3C9.75 13.3 8.6875 12.8625 7.8125 11.9875C6.9375 11.1125 6.5 10.05 6.5 8.8C6.5 8.61667 6.5125 8.44167 6.5375 8.275C6.5625 8.10833 6.6 7.93333 6.65 7.75L4.55 5.7Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </svg>`,
+  notifications: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+  <path d="M1 17C0.716667 17 0.479167 16.9042 0.2875 16.7125C0.0958333 16.5208 0 16.2833 0 16C0 15.7167 0.0958333 15.4792 0.2875 15.2875C0.479167 15.0958 0.716667 15 1 15H2V8C2 6.61667 2.41667 5.3875 3.25 4.3125C4.08333 3.2375 5.16667 2.53333 6.5 2.2V1.5C6.5 1.08333 6.64583 0.729167 6.9375 0.4375C7.22917 0.145833 7.58333 0 8 0C8.41667 0 8.77083 0.145833 9.0625 0.4375C9.35417 0.729167 9.5 1.08333 9.5 1.5V2.2C10.8333 2.53333 11.9167 3.2375 12.75 4.3125C13.5833 5.3875 14 6.61667 14 8V15H15C15.2833 15 15.5208 15.0958 15.7125 15.2875C15.9042 15.4792 16 15.7167 16 16C16 16.2833 15.9042 16.5208 15.7125 16.7125C15.5208 16.9042 15.2833 17 15 17H1ZM8 20C7.45 20 6.97917 19.8042 6.5875 19.4125C6.19583 19.0208 6 18.55 6 18H10C10 18.55 9.80417 19.0208 9.4125 19.4125C9.02083 19.8042 8.55 20 8 20ZM4 15H12V8C12 6.9 11.6083 5.95833 10.825 5.175C10.0417 4.39167 9.1 4 8 4C6.9 4 5.95833 4.39167 5.175 5.175C4.39167 5.95833 4 6.9 4 8V15Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,
   // *** Arrows *** //
   arrow_back: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -715,7 +750,7 @@ const y1 = {
   <path d="M19.8008 3.03516C19.8008 3.03516 19.6055 1.65625 19.0039 1.05078C18.2422 0.253906 17.3906 0.25 17 0.203125C14.2031 -1.11759e-07 10.0039 0 10.0039 0H9.99609C9.99609 0 5.79688 -1.11759e-07 3 0.203125C2.60938 0.25 1.75781 0.253906 0.996094 1.05078C0.394531 1.65625 0.203125 3.03516 0.203125 3.03516C0.203125 3.03516 0 4.65625 0 6.27344V7.78906C0 9.40625 0.199219 11.0273 0.199219 11.0273C0.199219 11.0273 0.394531 12.4062 0.992187 13.0117C1.75391 13.8086 2.75391 13.7812 3.19922 13.8672C4.80078 14.0195 10 14.0664 10 14.0664C10 14.0664 14.2031 14.0586 17 13.8594C17.3906 13.8125 18.2422 13.8086 19.0039 13.0117C19.6055 12.4062 19.8008 11.0273 19.8008 11.0273C19.8008 11.0273 20 9.41016 20 7.78906V6.27344C20 4.65625 19.8008 3.03516 19.8008 3.03516ZM7.93359 9.62891V4.00781L13.3359 6.82812L7.93359 9.62891Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
   // *** Filled *** //
-  account_balance: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+  account_balance_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M3.22502 15.875V11.65C3.22502 11.2666 3.36252 10.9416 3.63752 10.675C3.91252 10.4083 4.24169 10.275 4.62502 10.275C5.00836 10.275 5.33336 10.4083 5.60002 10.675C5.86669 10.9416 6.00002 11.2666 6.00002 11.65V15.9C6.00002 16.2833 5.86669 16.6083 5.60002 16.875C5.33336 17.1416 5.00836 17.275 4.62502 17.275C4.24169 17.275 3.91252 17.1375 3.63752 16.8625C3.36252 16.5875 3.22502 16.2583 3.22502 15.875ZM9.62502 15.9V11.65C9.62502 11.2666 9.75836 10.9416 10.025 10.675C10.2917 10.4083 10.6167 10.275 11 10.275C11.3834 10.275 11.7084 10.4083 11.975 10.675C12.2417 10.9416 12.375 11.2666 12.375 11.65V15.9C12.375 16.2833 12.2417 16.6083 11.975 16.875C11.7084 17.1416 11.3834 17.275 11 17.275C10.6167 17.275 10.2917 17.1416 10.025 16.875C9.75836 16.6083 9.62502 16.2833 9.62502 15.9ZM1.72502 21.65C1.29169 21.65 0.920858 21.4958 0.612524 21.1875C0.304191 20.8791 0.150024 20.5083 0.150024 20.075C0.150024 19.6416 0.304191 19.2708 0.612524 18.9625C0.920858 18.6541 1.29169 18.5 1.72502 18.5H20.275C20.7084 18.5 21.0792 18.6541 21.3875 18.9625C21.6959 19.2708 21.85 19.6416 21.85 20.075C21.85 20.5083 21.6959 20.8791 21.3875 21.1875C21.0792 21.4958 20.7084 21.65 20.275 21.65H1.72502ZM16 15.875V11.65C16 11.2666 16.1375 10.9416 16.4125 10.675C16.6875 10.4083 17.0167 10.275 17.4 10.275C17.7834 10.275 18.1084 10.4083 18.375 10.675C18.6417 10.9416 18.775 11.2666 18.775 11.65V15.9C18.775 16.2833 18.6417 16.6083 18.375 16.875C18.1084 17.1416 17.7834 17.275 17.4 17.275C17.0167 17.275 16.6875 17.1375 16.4125 16.8625C16.1375 16.5875 16 16.2583 16 15.875ZM20.175 9.02495H1.65002C1.23336 9.02495 0.879191 8.87912 0.587524 8.58745C0.295858 8.29578 0.150024 7.94162 0.150024 7.52495V6.57495C0.150024 6.29162 0.225024 6.02912 0.375024 5.78745C0.525024 5.54578 0.725024 5.35828 0.975024 5.22495L9.60002 0.924951C10.0334 0.691618 10.5 0.574951 11 0.574951C11.5 0.574951 11.9667 0.691618 12.4 0.924951L20.925 5.17495C21.2084 5.30828 21.4334 5.51245 21.6 5.78745C21.7667 6.06245 21.85 6.36662 21.85 6.69995V7.32495C21.85 7.79162 21.6875 8.19162 21.3625 8.52495C21.0375 8.85828 20.6417 9.02495 20.175 9.02495Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
   cancel_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -724,10 +759,10 @@ const y1 = {
   language_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
-  lock: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+  lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, v1 = M`
+}, w1 = H`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -824,12 +859,12 @@ const y1 = {
     transform: scale(-1, -1);
   }
 `;
-var p1 = Object.defineProperty, g1 = Object.getOwnPropertyDescriptor, D = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? g1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && p1(e, t, r), r;
-}, I;
-const $ = (I = class extends x {
+var f1 = Object.defineProperty, x1 = Object.getOwnPropertyDescriptor, O = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? x1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && f1(e, t, r), r;
+}, U;
+const B = (U = class extends x {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -837,21 +872,21 @@ const $ = (I = class extends x {
     return this._size;
   }
   set size(o) {
-    this._size = I.VALID_TYPES.includes(
+    this._size = U.VALID_TYPES.includes(
       o
     ) ? o : "sm";
   }
   getIcon() {
-    const o = y1[this.name], e = !!this.label;
+    const o = b1[this.name], e = !!this.label;
     if (!o) return null;
     const t = new DOMParser().parseFromString(o, "image/svg+xml").documentElement;
     return t instanceof SVGElement ? (t.setAttribute("role", "img"), t.setAttribute("aria-label", e ? this.label : ""), t.setAttribute("aria-hidden", e ? "false" : "true"), t.style.rotate = `${this.rotate}deg`, t.style.color = this.color || "currentcolor", t.classList.add(`nys-icon--${this.size}`), t.classList.add("nys-icon--svg"), this.flip && t.classList.add(`nys-icon--flip-${this.flip}`), t) : null;
   }
   render() {
     const o = this.getIcon();
-    return o ? l`${o}` : null;
+    return o ? C`${o}` : null;
   }
-}, I.styles = v1, I.VALID_TYPES = [
+}, U.styles = w1, U.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -867,33 +902,33 @@ const $ = (I = class extends x {
   "32",
   "48",
   "64"
-], I);
-D([
-  P({ type: String })
-], $.prototype, "name", 2);
-D([
-  P({ type: String })
-], $.prototype, "label", 2);
-D([
-  P({ type: String })
-], $.prototype, "rotate", 2);
-D([
-  P({ type: String })
-], $.prototype, "flip", 2);
-D([
-  P({ type: String })
-], $.prototype, "color", 2);
-D([
-  P({ reflect: !0 })
-], $.prototype, "size", 1);
-let u1 = $;
-customElements.get("nys-icon") || customElements.define("nys-icon", u1);
-var w1 = Object.defineProperty, _1 = Object.getOwnPropertyDescriptor, b = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? _1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && w1(e, t, r), r;
+], U);
+O([
+  I({ type: String })
+], B.prototype, "name", 2);
+O([
+  I({ type: String })
+], B.prototype, "label", 2);
+O([
+  I({ type: String })
+], B.prototype, "rotate", 2);
+O([
+  I({ type: String })
+], B.prototype, "flip", 2);
+O([
+  I({ type: String })
+], B.prototype, "color", 2);
+O([
+  I({ reflect: !0 })
+], B.prototype, "size", 1);
+let m1 = B;
+customElements.get("nys-icon") || customElements.define("nys-icon", m1);
+var L1 = Object.defineProperty, M1 = Object.getOwnPropertyDescriptor, m = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? M1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && L1(e, t, r), r;
 };
-let b1 = 0, y = class extends x {
+let Z1 = 0, y = class extends x {
   constructor() {
     super(...arguments), this.id = "", this.heading = "", this.icon = "", this.dismissible = !1, this.duration = 0, this.text = "", this.primaryAction = "", this.secondaryAction = "", this.primaryLabel = "Learn more", this.secondaryLabel = "Dismiss", this._alertClosed = !1, this._theme = "info", this._timeoutId = null;
   }
@@ -921,7 +956,7 @@ let b1 = 0, y = class extends x {
   }
   /******************** Functions ********************/
   _generateUniqueId() {
-    return `nys-alert-${Date.now()}-${b1++}`;
+    return `nys-alert-${Date.now()}-${Z1++}`;
   }
   // Helper function for overriding default icons or checking special naming cases (e.g. theme=success)
   _getIconName() {
@@ -946,12 +981,12 @@ let b1 = 0, y = class extends x {
   }
   render() {
     const { role: o, ariaLabel: e } = this.ariaAttributes, t = typeof this.text == "string" && this.text.trim() === "" && !this.hasSlotContent();
-    return l`
-      ${this._alertClosed ? "" : l` <div
+    return C`
+      ${this._alertClosed ? "" : C` <div
             id=${this.id}
             class="nys-alert__container ${t ? "nys-alert--centered" : ""}"
             role=${o}
-            aria-label=${E(
+            aria-label=${A(
       e.trim() !== "" ? e : void 0
     )}
           >
@@ -964,23 +999,23 @@ let b1 = 0, y = class extends x {
             </div>
             <div class="nys-alert__texts">
               <h4 class="nys-alert__header">${this.heading}</h4>
-              ${t ? "" : l`<slot name="text">${this.text}</slot>`}
-              ${this.primaryAction || this.secondaryAction ? l`<div class="nys-alert__actions">
-                    ${this.primaryAction ? l`<a
-                          href=${E(this.primaryAction || void 0)}
+              ${t ? "" : C`<slot name="text">${this.text}</slot>`}
+              ${this.primaryAction || this.secondaryAction ? C`<div class="nys-alert__actions">
+                    ${this.primaryAction ? C`<a
+                          href=${A(this.primaryAction || void 0)}
                           class="nys-alert__action nys-alert__primary"
                         >
                           ${this.primaryLabel}
                         </a>` : ""}
-                    ${this.secondaryAction ? l`<a
-                          href=${E(this.secondaryAction || void 0)}
+                    ${this.secondaryAction ? C`<a
+                          href=${A(this.secondaryAction || void 0)}
                           class="nys-alert__action nys-alert__secondary"
                         >
                           ${this.secondaryLabel}
                         </a>` : ""}
                   </div> ` : ""}
             </div>
-            ${this.dismissible ? l`<div class="close-container">
+            ${this.dismissible ? C`<div class="close-container">
                   <button class="close-button" @click=${this._closeAlert}>
                     <nys-icon
                       name="close"
@@ -993,7 +1028,7 @@ let b1 = 0, y = class extends x {
     `;
   }
 };
-y.styles = e1;
+y.styles = i1;
 y.VALID_TYPES = [
   "base",
   "info",
@@ -1002,46 +1037,46 @@ y.VALID_TYPES = [
   "danger",
   "emergency"
 ];
-b([
+m([
   n({ type: String })
 ], y.prototype, "id", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "heading", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "icon", 2);
-b([
+m([
   n({ type: Boolean })
 ], y.prototype, "dismissible", 2);
-b([
+m([
   n({ type: Number })
 ], y.prototype, "duration", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "text", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "primaryAction", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "secondaryAction", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "primaryLabel", 2);
-b([
+m([
   n({ type: String })
 ], y.prototype, "secondaryLabel", 2);
-b([
-  Q()
+m([
+  K()
 ], y.prototype, "_alertClosed", 2);
-b([
+m([
   n({ reflect: !0 })
 ], y.prototype, "theme", 1);
-y = b([
+y = m([
   V("nys-alert")
 ], y);
-const f1 = M`
+const k1 = H`
   :host {
     /* Global Avatar Styles */
     --_nys-avatar-shape: var(--nys-radius-md, var(--nys-space-50, 4px));
@@ -1105,12 +1140,12 @@ const f1 = M`
     fill: currentColor;
   }
 `;
-var x1 = Object.defineProperty, m1 = Object.getOwnPropertyDescriptor, H = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? m1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && x1(e, t, r), r;
+var H1 = Object.defineProperty, V1 = Object.getOwnPropertyDescriptor, z = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? V1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && H1(e, t, r), r;
 };
-let L1 = 0, w = class extends x {
+let $1 = 0, w = class extends x {
   constructor() {
     super(...arguments), this.id = "", this.label = "", this.image = "", this.initials = "", this.icon = "", this.color = "#555", this.lazy = !1, this._shape = "rounded";
   }
@@ -1126,11 +1161,11 @@ let L1 = 0, w = class extends x {
   /******************** Functions ********************/
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-avatar-${Date.now()}-${L1++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-avatar-${Date.now()}-${$1++}`);
   }
   render() {
     var o, e, t, s;
-    return l`
+    return C`
       <label class="nys-avatar" id=${this.id}>
         <div class="nys-avatar__content">
           <div
@@ -1140,24 +1175,24 @@ let L1 = 0, w = class extends x {
             role="img"
             aria-label=${this.label}
           >
-            ${((e = this.image) == null ? void 0 : e.length) > 0 ? l`<img
+            ${((e = this.image) == null ? void 0 : e.length) > 0 ? C`<img
                   part="nys-avatar__image"
                   class="nys-avatar__image"
                   src=${this.image}
                   alt=${this.label}
                   loading=${this.lazy ? "lazy" : "eager"}
-                />` : ((t = this.initials) == null ? void 0 : t.length) > 0 ? l`<span
+                />` : ((t = this.initials) == null ? void 0 : t.length) > 0 ? C`<span
                     part="nys-avatar__initials"
                     class="nys-avatar__initials"
                     aria-hidden="true"
                     >${this.initials}</span
-                  >` : ((s = this.icon) == null ? void 0 : s.length) > 0 ? l`<div part="nys-avatar__icon">
+                  >` : ((s = this.icon) == null ? void 0 : s.length) > 0 ? C`<div part="nys-avatar__icon">
                       <nys-icon
                         label="nys-avatar__icon"
                         name=${this.icon}
                         size="md"
                       ></nys-icon>
-                    </div>` : l`<div part="nys-avatar__icon">
+                    </div>` : C`<div part="nys-avatar__icon">
                       <slot name="icon">
                         <nys-icon
                           label="nys-avatar__icon"
@@ -1172,40 +1207,40 @@ let L1 = 0, w = class extends x {
     `;
   }
 };
-w.styles = f1;
+w.styles = k1;
 w.VALID_SHAPES = [
   "square",
   "rounded",
   "circle"
 ];
-H([
+z([
   n({ type: String })
 ], w.prototype, "id", 2);
-H([
+z([
   n({ type: String })
 ], w.prototype, "label", 2);
-H([
+z([
   n({ type: String })
 ], w.prototype, "image", 2);
-H([
+z([
   n({ type: String })
 ], w.prototype, "initials", 2);
-H([
+z([
   n({ type: String })
 ], w.prototype, "icon", 2);
-H([
+z([
   n({ type: String })
 ], w.prototype, "color", 2);
-H([
+z([
   n({ type: Boolean })
 ], w.prototype, "lazy", 2);
-H([
+z([
   n({ reflect: !0 })
 ], w.prototype, "shape", 1);
-w = H([
+w = z([
   V("nys-avatar")
 ], w);
-const M1 = M`
+const s1 = H`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1215,10 +1250,43 @@ const M1 = M`
     --_nys-checkbox-width-border: var(--nys-border-width-md, 2px);
     --_nys-checkbox-color-focus: var(--nys-color-focus, #004dd1);
     --_nys-checkbox-width-focus: var(--nys-border-width-md, 2px);
+    --_nys-checkbox-offset-focus: var(--nys-space-2px, 2px);
     --_nys-checkbox-transition-duration: var(
       --nys-transition-duration-sm,
       0.1s
     );
+    /* space between checkbox and it's label */
+    --_nys-checkbox-gap: var(--nys-space-150, 12px);
+    /* space between checkboxes */
+    --_nys-checkboxgroup-gap: var(--nys-space-200, 16px);
+
+    /* Typography */
+    --_nys-checkbox-font-family: var(
+      --nys-font-family-ui,
+      var(
+        --nys-font-family-sans,
+        "Proxima Nova",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif
+      )
+    );
+    --_nys-checkbox-font-size: var(--nys-font-size-ui-md, 16px);
+    --_nys-checkbox-font-weight-400: var(--nys-font-weight-regular, 400);
+    --_nys-checkbox-font-weight-600: var(--nys-font-weight-semibold, 600);
+    --_nys-checkbox-line-height: var(--nys-font-lineheight-ui-md, 24px);
+
+    /* Global Checkbox Colors */
+    --_nys-checkbox-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-checkbox-error-color: var(
+      --nys-color-danger,
+      var(--nys-color-red-600, #b52c2c)
+    );
+
     /* Default (Empty) */
     --_nys-checkbox-color-bg: var(--nys-color-ink-reverse, #ffffff);
     --_nys-checkbox-color-border: var(--nys-color-neutral-600, #62666a);
@@ -1255,14 +1323,15 @@ const M1 = M`
       --nys-color-neutral-400,
       #757575
     );
+    --_nys-checkbox-disabled-color-text: var(--nys-color-neutral-500, #797c7f);
     /* Disabled Checked */
     --_nys-checkbox-disabled-checked-color-bg: var(
-      --nys-color-neutral-200,
-      #757575
+      --nys-color-neutral-100,
+      #d0d0ce
     );
     --_nys-checkbox-disabled-checked-color-border: var(
-      --nys-color-neutral-200,
-      #757575
+      --nys-color-neutral-100,
+      #d0d0ce
     );
   }
 
@@ -1270,84 +1339,45 @@ const M1 = M`
   :host([size="sm"]) {
     --_nys-checkbox-size: var(--nys-size-300, 24px);
     --_nys-checkbox-radius: var(--nys-border-radius-sm, 2px);
+    --_nys-checkboxgroup-gap: var(--nys-space-100, 8px);
+    --_nys-checkbox-gap: var(--nys-space-100, 8px);
+  }
+  /* Medium Variant */
+  :host([size="md"]) {
+    --_nys-checkbox-size: var(--nys-size-400, 32px);
+    --_nys-checkbox-radius: var(--nys-border-radius-md, 4px);
+  }
+
+  .nys-checkboxgroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-spacing-50, 4px);
+    font-family: var(--_nys-checkbox-font-family);
+    font-size: var(--_nys-checkbox-font-size);
+    line-height: var(--_nys-checkbox-line-height);
+  }
+
+  .nys-checkboxgroup__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--_nys-checkboxgroup-gap);
   }
 
   .nys-checkbox {
-    align-items: center;
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--_nys-checkbox-font-family);
+    font-size: var(--_nys-checkbox-font-size);
+    line-height: var(--_nys-checkbox-line-height);
   }
 
+  /* wraps the single checkbox */
   .nys-checkbox__content {
     display: flex;
+    gap: var(--_nys-checkbox-gap);
   }
 
-  .nys-checkbox__checkbox {
-    appearance: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    outline-offset: var(--_nys-checkbox-width-border);
-    width: var(--_nys-checkbox-size);
-    height: var(--_nys-checkbox-size);
-    border: solid var(--_nys-checkbox-width-border)
-      var(--_nys-checkbox-color-border);
-    background-color: var(--_nys-checkbox-color-bg);
-    cursor: pointer;
-    border-radius: var(--_nys-checkbox-radius);
-
-    transition:
-      background-color var(--_nys-checkbox-transition-duration),
-      border-color var(--_nys-checkbox-transition-duration);
-  }
-
-  /* Focused */
-  .nys-checkbox__checkbox:focus {
-    outline: solid var(--_nys-checkbox-width-focus)
-      var(--_nys-checkbox-color-focus, #004dd1);
-  }
-
-  /* Hovered */
-  .nys-checkbox__checkbox:hover {
-    background-color: var(--_nys-checkbox-hover-color-bg);
-    border-color: var(--_nys-checkbox-hover-color-border);
-  }
-
-  /* Pressed */
-  .nys-checkbox__checkbox:active {
-    background-color: var(--_nys-checkbox-pressed-color-bg);
-    border-color: var(--_nys-checkbox-pressed-color-border);
-  }
-
-  /* Checked */
-  .nys-checkbox__checkbox:not(:disabled):checked {
-    background-color: var(--_nys-checkbox-checked-color-bg);
-    border-color: var(--_nys-checkbox-checked-color-border);
-  }
-
-  /* Checked + Hovered */
-  .nys-checkbox__checkbox:checked:hover {
-    background-color: var(--_nys-checkbox-checked-hover-color-bg);
-    border-color: var(--_nys-checkbox-checked-hover-color-border);
-  }
-
-  /* Checked + Pressed */
-  .nys-checkbox__checkbox:checked:active {
-    background-color: var(--_nys-checkbox-checked-pressed-color-bg);
-    border-color: var(--_nys-checkbox-checked-pressed-color-border);
-  }
-
-  /* Disabled */
-  .nys-checkbox__checkbox:disabled {
-    background-color: var(--_nys-checkbox-disabled-color-bg);
-    border-color: var(--_nys-checkbox-disabled-color-border);
-    cursor: not-allowed;
-  }
-
-  /* Checked + Disabled */
-  .nys-checkbox__checkbox:disabled:checked {
-    background-color: var(--_nys-checkbox-disabled-checked-color-bg);
-    border-color: var(--_nys-checkbox-disabled-checked-color-border);
-  }
-
+  /* wraps the native checkbox and it's icon */
   .nys-checkbox__checkboxwrapper {
     position: relative;
     display: inline-block;
@@ -1363,77 +1393,232 @@ const M1 = M`
     color: white;
   }
 
+  .nys-checkbox__checkbox {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline-offset: var(--_nys-checkbox-offset-focus);
+    width: var(--_nys-checkbox-size);
+    min-width: var(--_nys-checkbox-size);
+    min-height: var(--_nys-checkbox-size);
+    height: var(--_nys-checkbox-size);
+    max-width: var(--_nys-checkbox-size);
+    max-height: var(--_nys-checkbox-size);
+    border: solid var(--_nys-checkbox-width-border)
+      var(--_nys-checkbox-color-border);
+    background-color: var(--_nys-checkbox-color-bg);
+    border-radius: var(--_nys-checkbox-radius);
+  }
+
+  /* Pointer cursor for unchecked checkbox */
+  .nys-checkbox:hover * {
+    cursor: pointer;
+  }
+
+  /* Checked */
+  .nys-checkbox__checkbox:not(:disabled):checked {
+    background-color: var(--_nys-checkbox-checked-color-bg);
+    border-color: var(--_nys-checkbox-checked-color-border);
+  }
+
+  /* Checked + Disabled */
+  .nys-checkbox__checkbox:disabled:checked {
+    background-color: var(--_nys-checkbox-disabled-checked-color-bg);
+    border-color: var(--_nys-checkbox-disabled-checked-color-border);
+  }
+
+  /* Disabled */
+  .nys-checkbox__checkbox:disabled {
+    background-color: var(--_nys-checkbox-disabled-color-bg);
+    border-color: var(--_nys-checkbox-disabled-color-border);
+    cursor: not-allowed;
+  }
+  .nys-checkbox__content:has(.nys-checkbox__checkbox:disabled)
+    .nys-checkbox__text
+    * {
+    color: var(--_nys-checkbox-disabled-color-text);
+    cursor: not-allowed;
+  }
+
+  /* Hover - only allow hover on unchecked */
+  .nys-checkbox__checkbox:hover:not(:disabled):not(:checked) {
+    background-color: var(--_nys-checkbox-hover-color-bg);
+    border-color: var(--_nys-checkbox-hover-color-border);
+  }
+
+  /* Pressed - only allow pressed on unchecked */
+  .nys-checkbox__checkbox:active:not(:disabled):not(:checked) {
+    background-color: var(--_nys-checkbox-pressed-color-bg);
+    border-color: var(--_nys-checkbox-pressed-color-border);
+  }
+
+  /* Focused */
+  .nys-checkbox__checkbox:focus {
+    outline: solid var(--_nys-checkbox-width-focus)
+      var(--_nys-checkbox-color-focus);
+  }
+
+  /* Checkbox Label Holder */
+  .nys-checkbox__text {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0; /* Center text if single line label */
+  }
+
+  /* Label styling */
+  .nys-checkboxgroup__label {
+    font-weight: var(--_nys-checkbox-font-weight-600);
+    color: var(--_nys-checkbox-color);
+  }
+  .nys-checkbox__label {
+    font-weight: var(--_nys-checkbox-font-weight-400);
+    color: var(--_nys-checkbox-color);
+  }
+
+  /* Description styling */
+  .nys-checkbox__description,
+  .nys-checkboxgroup__description {
+    font-weight: var(--_nys-checkbox-font-weight-400);
+    font-style: italic;
+  }
+
   /* Required */
   .nys-checkbox__required {
-    color: var(--nys-color-danger, #b52c2c);
-    margin-left: var(--nys-space-2px, 2px);
+    color: var(--_nys-checkbox-error-color);
+    margin-left: var(--_nys-select-margin);
   }
 
   .nys-checkbox__requiredwrapper {
     display: inline;
   }
 
-  /* Checkbox Label Holder */
-  .nys-checkbox__text {
-    margin: auto 0 auto var(--nys-space-150, 12px);
-  }
-
-  /* Label styling */
-  .nys-checkbox__label {
-    font-size: var(--nys-font-size-ui-md, 16px);
-    font-weight: var(--nys-font-weight-regular, 400);
-    color: var(--nys-color-ink, #1b1b1b);
-  }
-
-  /* Description styling */
-  .nys-checkbox__description {
-    font-size: var(--nys-font-size-sm, 14px);
-    font-weight: var(--nys-font-weight-light, 300);
-    color: var(--nys-color-neutral-700, #4a4d4f);
-  }
-
-  /* Disabled label */
-  .nys-checkbox__checkbox:disabled + .nys-checkbox__text .nys-checkbox__label,
-  .nys-checkbox__checkbox:disabled
-    + .nys-checkbox__text
-    .nys-checkbox__description {
-    color: var(--form-label-color-disabled, #757575);
-  }
-
   /* Error Message Styling */
   .nys-checkbox__error {
-    border-top: 1px solid var(--nys-color-danger, #b52c2c);
-    margin-top: var(--nys-space-150, 12px);
-    padding-top: var(--nys-space-100, 8px);
-    color: var(--nys-color-danger, #b52c2c);
-    margin-left: 0.25rem;
-  }
-
-  /* Checkbox Group Styling */
-  .nys-checkboxgroup {
     display: flex;
-    flex-direction: column;
-  }
+    align-items: center;
+    gap: var(--nys-space-100, 8px);
+    color: var(--_nys-checkbox-error-color);
 
-  .nys-checkboxgroup__content {
+    /* add divider line */
+    border-top: 1px solid var(--_nys-checkbox-error-color);
     padding-top: var(--nys-space-50, 4px);
+    margin-top: var(--nys-space-100, 8px);
+  }
+
+  /* Error Icon Styling */
+  nys-icon[name="error"] {
     display: flex;
-    flex-direction: column;
-    gap: var(--nys-space-200, 16px);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+    box-sizing: border-box;
+    height: var(--_nys-checkbox-line-height);
+    text-align: center;
   }
 `;
-var Z1 = Object.defineProperty, H1 = Object.getOwnPropertyDescriptor, m = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? H1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && Z1(e, t, r), r;
+var z1 = Object.defineProperty, S1 = Object.getOwnPropertyDescriptor, S = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? S1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && z1(e, t, r), r;
 };
-let k1 = 0, _ = class extends x {
+let E1 = 0, f = class extends x {
   constructor() {
-    super(...arguments), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this.showError = !1, this.errorMessage = "";
+    super(...arguments), this.id = "", this.name = "", this.required = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this._size = "md";
+  }
+  get size() {
+    return this._size;
+  }
+  set size(o) {
+    this._size = f.VALID_SIZES.includes(
+      o
+    ) ? o : "md";
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${k1++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${E1++}`);
+  }
+  updated(o) {
+    o.has("size") && this.updateCheckboxSize();
+  }
+  // Updates the size of each checkbox in the group
+  updateCheckboxSize() {
+    this.querySelectorAll("nys-checkbox").forEach((e) => {
+      e.setAttribute("size", this.size);
+    });
+  }
+  render() {
+    return C` <div class="nys-checkboxgroup">
+      ${this.label && C` <div class="nys-checkbox__text">
+        <div class="nys-checkbox__requiredwrapper">
+          <label for=${this.id} class="nys-checkboxgroup__label"
+            >${this.label}</label
+          >
+          ${this.required ? C`<label class="nys-checkbox__required">*</label>` : ""}
+        </div>
+        <label for=${this.id} class="nys-checkboxgroup__description">
+          ${this.description}
+          <slot name="description"></slot>
+        </label>
+      </div>`}
+      <div class="nys-checkboxgroup__content">
+        <slot></slot>
+      </div>
+      ${this.showError && this.errorMessage ? C`<div class="nys-checkbox__error">
+            <nys-icon name="error" size="xl"></nys-icon>
+            ${this.errorMessage}
+          </div>` : ""}
+    </div>`;
+  }
+};
+f.VALID_SIZES = ["sm", "md"];
+f.styles = s1;
+S([
+  n({ type: String })
+], f.prototype, "id", 2);
+S([
+  n({ type: String })
+], f.prototype, "name", 2);
+S([
+  n({ type: Boolean })
+], f.prototype, "required", 2);
+S([
+  n({ type: Boolean })
+], f.prototype, "showError", 2);
+S([
+  n({ type: String })
+], f.prototype, "errorMessage", 2);
+S([
+  n({ type: String })
+], f.prototype, "label", 2);
+S([
+  n({ type: String })
+], f.prototype, "description", 2);
+S([
+  n({ reflect: !0 })
+], f.prototype, "size", 1);
+f = S([
+  V("nys-checkboxgroup")
+], f);
+var B1 = Object.defineProperty, P1 = Object.getOwnPropertyDescriptor, L = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? P1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && B1(e, t, r), r;
+};
+let D1 = 0, g = class extends x {
+  constructor() {
+    super(...arguments), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this.showError = !1, this.errorMessage = "", this._size = "md";
+  }
+  get size() {
+    return this._size;
+  }
+  set size(o) {
+    this._size = g.VALID_SIZES.includes(
+      o
+    ) ? o : "md";
+  }
+  // Generate a unique ID if one is not provided
+  connectedCallback() {
+    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${D1++}`);
   }
   // Handle checkbox change event
   _handleChange(o) {
@@ -1465,15 +1650,15 @@ let k1 = 0, _ = class extends x {
     )));
   }
   render() {
-    return l`
+    return C`
       <div class="nys-checkbox">
-        <div class="nys-checkbox__content">
+        <label class="nys-checkbox__content">
           <div class="nys-checkbox__checkboxwrapper">
             <input
               id="${this.id}"
               class="nys-checkbox__checkbox"
               type="checkbox"
-              name="${E(this.name ? this.name : void 0)}"
+              name="${A(this.name ? this.name : void 0)}"
               .checked=${this.checked}
               ?disabled=${this.disabled}
               .value=${this.value}
@@ -1486,69 +1671,73 @@ let k1 = 0, _ = class extends x {
               @blur="${this._handleBlur}"
               @keydown="${this._handleKeydown}"
             />
-            ${this.checked ? l`<nys-icon
+            ${this.checked ? C`<nys-icon
                   for="${this.id}"
                   name="check"
-                  size="2xl"
+                  size="${this.size === "md" ? "2xl" : this.size === "sm" ? "sm" : "md"}"
                   class="nys-checkbox__icon"
                 ></nys-icon>` : ""}
           </div>
-          ${this.label && l` <div class="nys-checkbox__text">
+          ${this.label && C` <div class="nys-checkbox__text">
             <div class="nys-checkbox__requiredwrapper">
               <label for=${this.id} class="nys-checkbox__label"
                 >${this.label}</label
               >
-              ${this.required ? l`<label class="nys-checkbox__required">*</label>` : ""}
+              ${this.required ? C`<label class="nys-checkbox__required">*</label>` : ""}
             </div>
-            <div for=${this.id} class="nys-checkbox__description">
+            <label for=${this.id} class="nys-checkbox__description">
               ${this.description}
               <slot name="description"></slot>
-            </div>
+            </label>
           </div>`}
-        </div>
-        ${this.showError && this.errorMessage ? l`<div class="nys-checkbox__error">
-              <nys-icon name="error"></nys-icon>
+        </label>
+        ${this.showError && this.errorMessage ? C`<div class="nys-checkbox__error">
+              <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
       </div>
     `;
   }
 };
-_.styles = M1;
-m([
+g.VALID_SIZES = ["sm", "md"];
+g.styles = s1;
+L([
   n({ type: Boolean })
-], _.prototype, "checked", 2);
-m([
+], g.prototype, "checked", 2);
+L([
   n({ type: Boolean })
-], _.prototype, "disabled", 2);
-m([
+], g.prototype, "disabled", 2);
+L([
   n({ type: Boolean })
-], _.prototype, "required", 2);
-m([
+], g.prototype, "required", 2);
+L([
   n({ type: String })
-], _.prototype, "label", 2);
-m([
+], g.prototype, "label", 2);
+L([
   n({ type: String })
-], _.prototype, "description", 2);
-m([
+], g.prototype, "description", 2);
+L([
   n({ type: String })
-], _.prototype, "id", 2);
-m([
+], g.prototype, "id", 2);
+L([
   n({ type: String })
-], _.prototype, "name", 2);
-m([
+], g.prototype, "name", 2);
+L([
   n({ type: String })
-], _.prototype, "value", 2);
-m([
+], g.prototype, "value", 2);
+L([
   n({ type: Boolean })
-], _.prototype, "showError", 2);
-m([
+], g.prototype, "showError", 2);
+L([
   n({ type: String })
-], _.prototype, "errorMessage", 2);
-_ = m([
+], g.prototype, "errorMessage", 2);
+L([
+  n({ reflect: !0 })
+], g.prototype, "size", 1);
+g = L([
   V("nys-checkbox")
-], _);
-const V1 = {
+], g);
+const A1 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -1619,6 +1808,9 @@ const V1 = {
   </svg>`,
   visibility_off: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
   <path d="M15.1 10.6L13.65 9.15C13.8 8.36667 13.575 7.63333 12.975 6.95C12.375 6.26667 11.6 6 10.65 6.15L9.2 4.7C9.48333 4.56667 9.77083 4.46667 10.0625 4.4C10.3542 4.33333 10.6667 4.3 11 4.3C12.25 4.3 13.3125 4.7375 14.1875 5.6125C15.0625 6.4875 15.5 7.55 15.5 8.8C15.5 9.13333 15.4667 9.44583 15.4 9.7375C15.3333 10.0292 15.2333 10.3167 15.1 10.6ZM18.3 13.75L16.85 12.35C17.4833 11.8667 18.0458 11.3375 18.5375 10.7625C19.0292 10.1875 19.45 9.53333 19.8 8.8C18.9667 7.11667 17.7708 5.77917 16.2125 4.7875C14.6542 3.79583 12.9167 3.3 11 3.3C10.5167 3.3 10.0417 3.33333 9.575 3.4C9.10833 3.46667 8.65 3.56667 8.2 3.7L6.65 2.15C7.33333 1.86667 8.03333 1.65417 8.75 1.5125C9.46667 1.37083 10.2167 1.3 11 1.3C13.5167 1.3 15.7583 1.99583 17.725 3.3875C19.6917 4.77917 21.1167 6.58333 22 8.8C21.6167 9.78333 21.1125 10.6958 20.4875 11.5375C19.8625 12.3792 19.1333 13.1167 18.3 13.75ZM18.8 19.9L14.6 15.75C14.0167 15.9333 13.4292 16.0708 12.8375 16.1625C12.2458 16.2542 11.6333 16.3 11 16.3C8.48333 16.3 6.24167 15.6042 4.275 14.2125C2.30833 12.8208 0.883333 11.0167 0 8.8C0.35 7.91667 0.791667 7.09583 1.325 6.3375C1.85833 5.57917 2.46667 4.9 3.15 4.3L0.4 1.5L1.8 0.0999985L20.2 18.5L18.8 19.9ZM4.55 5.7C4.06667 6.13333 3.625 6.60833 3.225 7.125C2.825 7.64167 2.48333 8.2 2.2 8.8C3.03333 10.4833 4.22917 11.8208 5.7875 12.8125C7.34583 13.8042 9.08333 14.3 11 14.3C11.3333 14.3 11.6583 14.2792 11.975 14.2375C12.2917 14.1958 12.6167 14.15 12.95 14.1L12.05 13.15C11.8667 13.2 11.6917 13.2375 11.525 13.2625C11.3583 13.2875 11.1833 13.3 11 13.3C9.75 13.3 8.6875 12.8625 7.8125 11.9875C6.9375 11.1125 6.5 10.05 6.5 8.8C6.5 8.61667 6.5125 8.44167 6.5375 8.275C6.5625 8.10833 6.6 7.93333 6.65 7.75L4.55 5.7Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </svg>`,
+  notifications: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+  <path d="M1 17C0.716667 17 0.479167 16.9042 0.2875 16.7125C0.0958333 16.5208 0 16.2833 0 16C0 15.7167 0.0958333 15.4792 0.2875 15.2875C0.479167 15.0958 0.716667 15 1 15H2V8C2 6.61667 2.41667 5.3875 3.25 4.3125C4.08333 3.2375 5.16667 2.53333 6.5 2.2V1.5C6.5 1.08333 6.64583 0.729167 6.9375 0.4375C7.22917 0.145833 7.58333 0 8 0C8.41667 0 8.77083 0.145833 9.0625 0.4375C9.35417 0.729167 9.5 1.08333 9.5 1.5V2.2C10.8333 2.53333 11.9167 3.2375 12.75 4.3125C13.5833 5.3875 14 6.61667 14 8V15H15C15.2833 15 15.5208 15.0958 15.7125 15.2875C15.9042 15.4792 16 15.7167 16 16C16 16.2833 15.9042 16.5208 15.7125 16.7125C15.5208 16.9042 15.2833 17 15 17H1ZM8 20C7.45 20 6.97917 19.8042 6.5875 19.4125C6.19583 19.0208 6 18.55 6 18H10C10 18.55 9.80417 19.0208 9.4125 19.4125C9.02083 19.8042 8.55 20 8 20ZM4 15H12V8C12 6.9 11.6083 5.95833 10.825 5.175C10.0417 4.39167 9.1 4 8 4C6.9 4 5.95833 4.39167 5.175 5.175C4.39167 5.95833 4 6.9 4 8V15Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,
   // *** Arrows *** //
   arrow_back: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -1732,7 +1924,7 @@ const V1 = {
   <path d="M19.8008 3.03516C19.8008 3.03516 19.6055 1.65625 19.0039 1.05078C18.2422 0.253906 17.3906 0.25 17 0.203125C14.2031 -1.11759e-07 10.0039 0 10.0039 0H9.99609C9.99609 0 5.79688 -1.11759e-07 3 0.203125C2.60938 0.25 1.75781 0.253906 0.996094 1.05078C0.394531 1.65625 0.203125 3.03516 0.203125 3.03516C0.203125 3.03516 0 4.65625 0 6.27344V7.78906C0 9.40625 0.199219 11.0273 0.199219 11.0273C0.199219 11.0273 0.394531 12.4062 0.992187 13.0117C1.75391 13.8086 2.75391 13.7812 3.19922 13.8672C4.80078 14.0195 10 14.0664 10 14.0664C10 14.0664 14.2031 14.0586 17 13.8594C17.3906 13.8125 18.2422 13.8086 19.0039 13.0117C19.6055 12.4062 19.8008 11.0273 19.8008 11.0273C19.8008 11.0273 20 9.41016 20 7.78906V6.27344C20 4.65625 19.8008 3.03516 19.8008 3.03516ZM7.93359 9.62891V4.00781L13.3359 6.82812L7.93359 9.62891Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
   // *** Filled *** //
-  account_balance: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+  account_balance_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M3.22502 15.875V11.65C3.22502 11.2666 3.36252 10.9416 3.63752 10.675C3.91252 10.4083 4.24169 10.275 4.62502 10.275C5.00836 10.275 5.33336 10.4083 5.60002 10.675C5.86669 10.9416 6.00002 11.2666 6.00002 11.65V15.9C6.00002 16.2833 5.86669 16.6083 5.60002 16.875C5.33336 17.1416 5.00836 17.275 4.62502 17.275C4.24169 17.275 3.91252 17.1375 3.63752 16.8625C3.36252 16.5875 3.22502 16.2583 3.22502 15.875ZM9.62502 15.9V11.65C9.62502 11.2666 9.75836 10.9416 10.025 10.675C10.2917 10.4083 10.6167 10.275 11 10.275C11.3834 10.275 11.7084 10.4083 11.975 10.675C12.2417 10.9416 12.375 11.2666 12.375 11.65V15.9C12.375 16.2833 12.2417 16.6083 11.975 16.875C11.7084 17.1416 11.3834 17.275 11 17.275C10.6167 17.275 10.2917 17.1416 10.025 16.875C9.75836 16.6083 9.62502 16.2833 9.62502 15.9ZM1.72502 21.65C1.29169 21.65 0.920858 21.4958 0.612524 21.1875C0.304191 20.8791 0.150024 20.5083 0.150024 20.075C0.150024 19.6416 0.304191 19.2708 0.612524 18.9625C0.920858 18.6541 1.29169 18.5 1.72502 18.5H20.275C20.7084 18.5 21.0792 18.6541 21.3875 18.9625C21.6959 19.2708 21.85 19.6416 21.85 20.075C21.85 20.5083 21.6959 20.8791 21.3875 21.1875C21.0792 21.4958 20.7084 21.65 20.275 21.65H1.72502ZM16 15.875V11.65C16 11.2666 16.1375 10.9416 16.4125 10.675C16.6875 10.4083 17.0167 10.275 17.4 10.275C17.7834 10.275 18.1084 10.4083 18.375 10.675C18.6417 10.9416 18.775 11.2666 18.775 11.65V15.9C18.775 16.2833 18.6417 16.6083 18.375 16.875C18.1084 17.1416 17.7834 17.275 17.4 17.275C17.0167 17.275 16.6875 17.1375 16.4125 16.8625C16.1375 16.5875 16 16.2583 16 15.875ZM20.175 9.02495H1.65002C1.23336 9.02495 0.879191 8.87912 0.587524 8.58745C0.295858 8.29578 0.150024 7.94162 0.150024 7.52495V6.57495C0.150024 6.29162 0.225024 6.02912 0.375024 5.78745C0.525024 5.54578 0.725024 5.35828 0.975024 5.22495L9.60002 0.924951C10.0334 0.691618 10.5 0.574951 11 0.574951C11.5 0.574951 11.9667 0.691618 12.4 0.924951L20.925 5.17495C21.2084 5.30828 21.4334 5.51245 21.6 5.78745C21.7667 6.06245 21.85 6.36662 21.85 6.69995V7.32495C21.85 7.79162 21.6875 8.19162 21.3625 8.52495C21.0375 8.85828 20.6417 9.02495 20.175 9.02495Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
   cancel_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -1741,10 +1933,10 @@ const V1 = {
   language_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
-  lock: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+  lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, $1 = M`
+}, q1 = H`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -1841,12 +2033,12 @@ const V1 = {
     transform: scale(-1, -1);
   }
 `;
-var z1 = Object.defineProperty, S1 = Object.getOwnPropertyDescriptor, A = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? S1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && z1(e, t, r), r;
-}, k;
-const z = (k = class extends x {
+var I1 = Object.defineProperty, O1 = Object.getOwnPropertyDescriptor, N = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? O1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && I1(e, t, r), r;
+}, E;
+const P = (E = class extends x {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -1854,21 +2046,21 @@ const z = (k = class extends x {
     return this._size;
   }
   set size(e) {
-    this._size = k.VALID_TYPES.includes(
+    this._size = E.VALID_TYPES.includes(
       e
     ) ? e : "sm";
   }
   getIcon() {
-    const e = V1[this.name], t = !!this.label;
+    const e = A1[this.name], t = !!this.label;
     if (!e) return null;
     const i = new DOMParser().parseFromString(e, "image/svg+xml").documentElement;
     return i instanceof SVGElement ? (i.setAttribute("role", "img"), i.setAttribute("aria-label", t ? this.label : ""), i.setAttribute("aria-hidden", t ? "false" : "true"), i.style.rotate = `${this.rotate}deg`, i.style.color = this.color || "currentcolor", i.classList.add(`nys-icon--${this.size}`), i.classList.add("nys-icon--svg"), this.flip && i.classList.add(`nys-icon--flip-${this.flip}`), i) : null;
   }
   render() {
     const e = this.getIcon();
-    return e ? l`${e}` : null;
+    return e ? C`${e}` : null;
   }
-}, k.styles = $1, k.VALID_TYPES = [
+}, E.styles = q1, E.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -1884,34 +2076,34 @@ const z = (k = class extends x {
   "32",
   "48",
   "64"
-], k);
-A([
+], E);
+N([
   n({ type: String })
-], z.prototype, "name", 2);
-A([
+], P.prototype, "name", 2);
+N([
   n({ type: String })
-], z.prototype, "label", 2);
-A([
+], P.prototype, "label", 2);
+N([
   n({ type: String })
-], z.prototype, "rotate", 2);
-A([
+], P.prototype, "rotate", 2);
+N([
   n({ type: String })
-], z.prototype, "flip", 2);
-A([
+], P.prototype, "flip", 2);
+N([
   n({ type: String })
-], z.prototype, "color", 2);
-A([
+], P.prototype, "color", 2);
+N([
   n({ reflect: !0 })
-], z.prototype, "size", 1);
-let E1 = z;
-customElements.get("nys-icon") || customElements.define("nys-icon", E1);
-const B1 = M`
+], P.prototype, "size", 1);
+let N1 = P;
+customElements.get("nys-icon") || customElements.define("nys-icon", N1);
+const n1 = H`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
     --_nys-radiobutton-radius: var(--nys-border-radius-md, 4px);
     --_nys-radiobutton-width-border: var(--nys-border-width-md, 2px);
-    --_nys-radiobutton-color-focus: var(--nys-color-focus, #286ad8);
+    --_nys-radiobutton-color-focus: var(--nys-color-focus, #004dd1);
     --_nys-radiobutton-width-focus: var(--nys-border-width-md, 2px);
     --_nys-radiobutton-offset-focus: var(--nys-space-2px, 2px);
     --_nys-radiobutton-transition-duration: var(
@@ -1923,8 +2115,8 @@ const B1 = M`
       12px
     ); /* space between radio and it's label */
     --_nys-radiogroup-gap: var(
-      --nys-space-50,
-      4px
+      --nys-space-200,
+      16px
     ); /* space between radio buttons */
 
     /* Typography */
@@ -1985,18 +2177,22 @@ const B1 = M`
     );
     /* Disabled */
     --_nys-radiobutton-disabled-color-bg: var(--nys-color-ink-reverse, #f0f0f0);
+    --_nys-radiobutton-disabled-color-text: var(
+      --nys-color-neutral-500,
+      #797c7f
+    );
     --_nys-radiobutton-disabled-color-border: var(
-      --nys-color-neutral-200,
-      #bec0c1
+      --nys-color-neutral-100,
+      #d0d0ce
     );
     /* Disabled Checked */
     --_nys-radiobutton-disabled-checked-color-bg: var(
-      --nys-color-neutral-200,
-      #bec0c1
+      --nys-color-neutral-100,
+      #d0d0ce
     );
     --_nys-radiobutton-disabled-checked-color-border: var(
-      --nys-color-neutral-200,
-      #bec0c1
+      --nys-color-neutral-100,
+      #d0d0ce
     );
   }
 
@@ -2011,12 +2207,14 @@ const B1 = M`
   :host([size="md"]) {
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
     --_nys-radiobutton-radius: var(--nys-border-radius-md, 4px);
+    --_nys-radiogroup-gap: var(--nys-space-200, 16px);
+    --_nys-radiobutton-gap: var(--nys-space-150, 12px);
   }
 
   .nys-radiogroup {
     display: flex;
     flex-direction: column;
-    gap: var(--_nys-radiogroup-gap);
+    gap: var(--nys-spacing-50, 4px);
     font-family: var(--_nys-radiobutton-font-family);
     font-size: var(--_nys-radiobutton-font-size);
     line-height: var(--_nys-radiobutton-line-height);
@@ -2135,7 +2333,8 @@ const B1 = M`
   .nys-radiobutton__radio:disabled
     + .nys-radiobutton__text
     .nys-radiobutton__description {
-    color: var(--form-label-color-disabled, #757575);
+    color: var(--_nys-radiobutton-disabled-color-text);
+    cursor: not-allowed;
   }
 
   /* Required */
@@ -2172,12 +2371,115 @@ const B1 = M`
     text-align: center;
   }
 `;
-var P1 = Object.defineProperty, D1 = Object.getOwnPropertyDescriptor, Z = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? D1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && P1(e, t, r), r;
+var R1 = Object.defineProperty, U1 = Object.getOwnPropertyDescriptor, Z = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? U1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && R1(e, t, r), r;
 };
-let A1 = 0, a = class extends x {
+let j1 = 0, _ = class extends x {
+  constructor() {
+    super(...arguments), this.id = "", this.name = "", this.required = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this.selectedName = null, this.selectedValue = null, this._size = "md";
+  }
+  get size() {
+    return this._size;
+  }
+  set size(o) {
+    this._size = _.VALID_SIZES.includes(
+      o
+    ) ? o : "md";
+  }
+  // Generate a unique ID if one is not provided
+  connectedCallback() {
+    super.connectedCallback(), this.id || (this.id = `nys-radiogroup-${Date.now()}-${j1++}`), this.addEventListener("change", this._handleRadioButtonChange);
+  }
+  disconnectedCallback() {
+    super.disconnectedCallback(), this.removeEventListener("change", this._handleRadioButtonChange);
+  }
+  updated(o) {
+    o.has("required") && this.updateRadioButtonsRequire(), o.has("size") && this.updateRadioButtonsSize();
+  }
+  // Updates the "require" attribute of a radiobutton underneath a radiogroup to ensure requirement for all radiobutton under the same name/group
+  updateRadioButtonsRequire() {
+    this.querySelectorAll("nys-radiobutton").forEach((e, t) => {
+      this.required && t === 0 && e.setAttribute("required", "required");
+    });
+  }
+  // Updates the size of each radiobutton underneath a radiogroup to ensure size standardization
+  updateRadioButtonsSize() {
+    this.querySelectorAll("nys-radiobutton").forEach((e) => {
+      e.setAttribute("size", this.size);
+    });
+  }
+  // Keeps radiogroup informed of the name and value of its current selected radiobutton
+  _handleRadioButtonChange(o) {
+    const e = o, { name: t, value: s } = e.detail;
+    this.selectedName = t, this.selectedValue = s, console.log("you have selected:", this.selectedName, this.selectedValue);
+  }
+  render() {
+    return C` <div role="radiogroup" class="nys-radiogroup">
+      ${this.label && C` <div class="nys-radiobutton__text">
+        <div class="nys-radiobutton__requiredwrapper">
+          <label for=${this.id} class="nys-radiogroup__label"
+            >${this.label}</label
+          >
+          ${this.required ? C`<label class="nys-radiobutton__required">*</label>` : ""}
+        </div>
+        <div class="nys-radiogroup__description">
+          ${this.description}
+          <slot name="description"></slot>
+        </div>
+      </div>`}
+      <div class="nys-radiogroup__content">
+        <slot></slot>
+      </div>
+      ${this.showError && this.errorMessage ? C`<div class="nys-radiobutton__error">
+            <nys-icon name="error" size="xl"></nys-icon>
+            ${this.errorMessage}
+          </div>` : ""}
+    </div>`;
+  }
+};
+_.VALID_SIZES = ["sm", "md"];
+_.styles = n1;
+Z([
+  n({ type: String })
+], _.prototype, "id", 2);
+Z([
+  n({ type: String })
+], _.prototype, "name", 2);
+Z([
+  n({ type: Boolean })
+], _.prototype, "required", 2);
+Z([
+  n({ type: Boolean })
+], _.prototype, "showError", 2);
+Z([
+  n({ type: String })
+], _.prototype, "errorMessage", 2);
+Z([
+  n({ type: String })
+], _.prototype, "label", 2);
+Z([
+  n({ type: String })
+], _.prototype, "description", 2);
+Z([
+  K()
+], _.prototype, "selectedName", 2);
+Z([
+  K()
+], _.prototype, "selectedValue", 2);
+Z([
+  n({ reflect: !0 })
+], _.prototype, "size", 1);
+_ = Z([
+  V("nys-radiogroup")
+], _);
+var T1 = Object.defineProperty, G1 = Object.getOwnPropertyDescriptor, $ = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? G1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && T1(e, t, r), r;
+};
+let F1 = 0, a = class extends x {
   constructor() {
     super(...arguments), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this._size = "md";
   }
@@ -2191,7 +2493,7 @@ let A1 = 0, a = class extends x {
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-radiobutton-${Date.now()}-${A1++}`), this.checked && (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this);
+    super.connectedCallback(), this.id || (this.id = `nys-radiobutton-${Date.now()}-${F1++}`), this.checked && (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this);
   }
   updated(o) {
     o.has("checked") && this.checked && a.buttonGroup[this.name] !== this && (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this);
@@ -2229,13 +2531,13 @@ let A1 = 0, a = class extends x {
     )));
   }
   render() {
-    return l`
+    return C`
       <label class="nys-radiobutton">
         <input
           id="${this.id}"
           class="nys-radiobutton__radio"
           type="radio"
-          name="${E(this.name ? this.name : void 0)}"
+          name="${A(this.name ? this.name : void 0)}"
           .checked=${this.checked}
           ?disabled=${this.disabled}
           .value=${this.value}
@@ -2248,7 +2550,7 @@ let A1 = 0, a = class extends x {
           @blur="${this._handleBlur}"
           @keydown="${this._handleKeydown}"
         />
-        ${this.label && l` <div class="nys-radiobutton__text">
+        ${this.label && C` <div class="nys-radiobutton__text">
           <div class="nys-radiobutton__requiredwrapper">
             <label for=${this.id} class="nys-radiobutton__label"
               >${this.label}</label
@@ -2265,38 +2567,38 @@ let A1 = 0, a = class extends x {
 };
 a.VALID_SIZES = ["sm", "md"];
 a.buttonGroup = {};
-a.styles = B1;
-Z([
+a.styles = n1;
+$([
   n({ type: Boolean })
 ], a.prototype, "checked", 2);
-Z([
+$([
   n({ type: Boolean })
 ], a.prototype, "disabled", 2);
-Z([
+$([
   n({ type: Boolean })
 ], a.prototype, "required", 2);
-Z([
+$([
   n({ type: String })
 ], a.prototype, "label", 2);
-Z([
+$([
   n({ type: String })
 ], a.prototype, "description", 2);
-Z([
+$([
   n({ type: String })
 ], a.prototype, "id", 2);
-Z([
+$([
   n({ type: String })
 ], a.prototype, "name", 2);
-Z([
+$([
   n({ type: String })
 ], a.prototype, "value", 2);
-Z([
+$([
   n({ reflect: !0 })
 ], a.prototype, "size", 1);
-a = Z([
+a = $([
   V("nys-radiobutton")
 ], a);
-const q1 = M`
+const Y1 = H`
   :host {
     /* Global Select Styles */
     --_nys-select-form-width: var(--nys-form-width-md, 200px);
@@ -2402,6 +2704,7 @@ const q1 = M`
 
   :host([width="full"]) {
     --_nys-select-form-width: 100%;
+    flex: 1; /* stretches width for flex container */
   }
 
   /* Hover */
@@ -2471,12 +2774,12 @@ const q1 = M`
       var(--_nys-select-error-color);
   }
 `;
-var I1 = Object.defineProperty, U = (o, e, t, s) => {
-  for (var r = void 0, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = C(e, t, r) || r);
-  return r && I1(e, t, r), r;
+var K1 = Object.defineProperty, T = (o, e, t, s) => {
+  for (var r = void 0, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = l(e, t, r) || r);
+  return r && K1(e, t, r), r;
 };
-class S extends x {
+class D extends x {
   constructor() {
     super(...arguments), this.disabled = !1, this.selected = !1, this.value = "", this.label = "", this.hidden = !1;
   }
@@ -2490,7 +2793,7 @@ class S extends x {
     });
   }
   render() {
-    return l`
+    return C`
       <option
         ?disabled=${this.disabled}
         ?selected=${this.selected}
@@ -2503,28 +2806,28 @@ class S extends x {
     `;
   }
 }
-U([
+T([
   n({ type: Boolean })
-], S.prototype, "disabled");
-U([
+], D.prototype, "disabled");
+T([
   n({ type: Boolean })
-], S.prototype, "selected");
-U([
+], D.prototype, "selected");
+T([
   n({ type: String })
-], S.prototype, "value");
-U([
+], D.prototype, "value");
+T([
   n({ type: String })
-], S.prototype, "label");
-U([
+], D.prototype, "label");
+T([
   n({ type: Boolean })
-], S.prototype, "hidden");
-customElements.define("nys-option", S);
-var O1 = Object.defineProperty, U1 = Object.getOwnPropertyDescriptor, f = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? U1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && O1(e, t, r), r;
+], D.prototype, "hidden");
+customElements.define("nys-option", D);
+var W1 = Object.defineProperty, J1 = Object.getOwnPropertyDescriptor, M = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? J1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && W1(e, t, r), r;
 };
-let g = class extends x {
+let u = class extends x {
   constructor() {
     super(...arguments), this.id = "", this.name = "", this.label = "", this.description = "", this.value = "", this.disabled = !1, this.required = !1, this.form = "", this.showError = !1, this.errorMessage = "", this._width = "md";
   }
@@ -2532,7 +2835,7 @@ let g = class extends x {
     return this._width;
   }
   set width(o) {
-    this._width = g.VALID_WIDTHS.includes(
+    this._width = u.VALID_WIDTHS.includes(
       o
     ) ? o : "full";
   }
@@ -2544,10 +2847,10 @@ let g = class extends x {
     if (o) {
       const s = o.assignedElements({ flatten: !0 }), r = (t = this.shadowRoot) == null ? void 0 : t.querySelector("select");
       r && s.forEach((i) => {
-        var C;
-        if (i instanceof S) {
-          const p = document.createElement("option");
-          p.value = i.value, p.textContent = i.label || ((C = i.textContent) == null ? void 0 : C.trim()) || "", p.disabled = i.disabled, p.selected = i.selected, r.appendChild(p);
+        var l;
+        if (i instanceof D) {
+          const v = document.createElement("option");
+          v.value = i.value, v.textContent = i.label || ((l = i.textContent) == null ? void 0 : l.trim()) || "", v.disabled = i.disabled, v.selected = i.selected, r.appendChild(v);
         }
       });
     }
@@ -2569,14 +2872,14 @@ let g = class extends x {
     }
   }
   render() {
-    return l`
+    return C`
       <div class="nys-select">
-        ${this.label && l` <div class="nys-select__text">
+        ${this.label && C` <div class="nys-select__text">
           <div class="nys-select__requiredwrapper">
             <label for=${this.id} class="nys-select__label"
               >${this.label}</label
             >
-            ${this.required ? l`<label class="nys-select__required">*</label>` : ""}
+            ${this.required ? C`<label class="nys-select__required">*</label>` : ""}
           </div>
           <div class="nys-select__description">
             ${this.description}
@@ -2608,7 +2911,7 @@ let g = class extends x {
             class="nys-select__icon"
           ></nys-icon>
         </div>
-        ${this.showError && this.errorMessage ? l`<div class="nys-select__error">
+        ${this.showError && this.errorMessage ? C`<div class="nys-select__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -2616,45 +2919,45 @@ let g = class extends x {
     `;
   }
 };
-g.VALID_WIDTHS = ["sm", "md", "lg", "full"];
-g.styles = q1;
-f([
+u.VALID_WIDTHS = ["sm", "md", "lg", "full"];
+u.styles = Y1;
+M([
   n({ type: String })
-], g.prototype, "id", 2);
-f([
+], u.prototype, "id", 2);
+M([
   n({ type: String })
-], g.prototype, "name", 2);
-f([
+], u.prototype, "name", 2);
+M([
   n({ type: String })
-], g.prototype, "label", 2);
-f([
+], u.prototype, "label", 2);
+M([
   n({ type: String })
-], g.prototype, "description", 2);
-f([
+], u.prototype, "description", 2);
+M([
   n({ type: String })
-], g.prototype, "value", 2);
-f([
+], u.prototype, "value", 2);
+M([
   n({ type: Boolean })
-], g.prototype, "disabled", 2);
-f([
+], u.prototype, "disabled", 2);
+M([
   n({ type: Boolean })
-], g.prototype, "required", 2);
-f([
+], u.prototype, "required", 2);
+M([
   n({ type: String })
-], g.prototype, "form", 2);
-f([
+], u.prototype, "form", 2);
+M([
   n({ type: Boolean, reflect: !0 })
-], g.prototype, "showError", 2);
-f([
+], u.prototype, "showError", 2);
+M([
   n({ type: String })
-], g.prototype, "errorMessage", 2);
-f([
+], u.prototype, "errorMessage", 2);
+M([
   n({ reflect: !0 })
-], g.prototype, "width", 1);
-g = f([
+], u.prototype, "width", 1);
+u = M([
   V("nys-select")
-], g);
-const T1 = M`
+], u);
+const X1 = H`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -2722,6 +3025,7 @@ const T1 = M`
 
   :host([width="full"]) {
     --_nys-textarea-width: 100%;
+    flex: 1; /* stretches width for flex container */
   }
 
   :host([showError]) {
@@ -2811,10 +3115,10 @@ const T1 = M`
     align-items: center;
   }
 `;
-var N1 = Object.defineProperty, j1 = Object.getOwnPropertyDescriptor, v = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? j1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && N1(e, t, r), r;
+var Q1 = Object.defineProperty, e5 = Object.getOwnPropertyDescriptor, p = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? e5(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && Q1(e, t, r), r;
 };
 let h = class extends x {
   constructor() {
@@ -2852,14 +3156,14 @@ let h = class extends x {
     this.dispatchEvent(new Event("blur"));
   }
   render() {
-    return l`
+    return C`
       <label class="nys-textarea">
-        ${this.label && l` <div class="nys-textarea__text">
+        ${this.label && C` <div class="nys-textarea__text">
           <div class="nys-textarea__requiredwrapper">
             <label for=${this.id} class="nys-textarea__label"
               >${this.label}</label
             >
-            ${this.required ? l`<label class="nys-textarea__required">*</label>` : ""}
+            ${this.required ? C`<label class="nys-textarea__required">*</label>` : ""}
           </div>
           <div class="nys-textarea__description">
             ${this.description}
@@ -2883,7 +3187,7 @@ let h = class extends x {
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
         ></textarea>
-        ${this.showError && this.errorMessage ? l`<div class="nys-textarea__error">
+        ${this.showError && this.errorMessage ? C`<div class="nys-textarea__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -2893,59 +3197,59 @@ let h = class extends x {
 };
 h.VALID_WIDTHS = ["sm", "md", "lg", "full"];
 h.VALID_RESIZE = ["vertical", "none"];
-h.styles = T1;
-v([
+h.styles = X1;
+p([
   n({ type: String })
 ], h.prototype, "id", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "name", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "label", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "description", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "placeholder", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "value", 2);
-v([
+p([
   n({ type: Boolean })
 ], h.prototype, "disabled", 2);
-v([
+p([
   n({ type: Boolean })
 ], h.prototype, "readonly", 2);
-v([
+p([
   n({ type: Boolean })
 ], h.prototype, "required", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "form", 2);
-v([
+p([
   n({ type: Number })
 ], h.prototype, "maxlength", 2);
-v([
+p([
   n({ reflect: !0 })
 ], h.prototype, "width", 2);
-v([
+p([
   n({ type: Number })
 ], h.prototype, "rows", 2);
-v([
+p([
   n({ reflect: !0 })
 ], h.prototype, "resize", 1);
-v([
+p([
   n({ type: Boolean, reflect: !0 })
 ], h.prototype, "showError", 2);
-v([
+p([
   n({ type: String })
 ], h.prototype, "errorMessage", 2);
-h = v([
+h = p([
   V("nys-textarea")
 ], h);
-const G1 = M`
+const t5 = H`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3013,6 +3317,7 @@ const G1 = M`
 
   :host([width="full"]) {
     --_nys-textinput-width: 100%;
+    flex: 1; /* stretches width for flex container */
   }
 
   :host([showError]) {
@@ -3094,10 +3399,10 @@ const G1 = M`
     align-items: center;
   }
 `;
-var R1 = Object.defineProperty, F1 = Object.getOwnPropertyDescriptor, d = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? F1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && R1(e, t, r), r;
+var o5 = Object.defineProperty, r5 = Object.getOwnPropertyDescriptor, d = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? r5(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && o5(e, t, r), r;
 };
 let c = class extends x {
   constructor() {
@@ -3135,14 +3440,14 @@ let c = class extends x {
     this.dispatchEvent(new Event("blur"));
   }
   render() {
-    return l`
+    return C`
       <div class="nys-textinput">
-        ${this.label && l` <div class="nys-textinput__text">
+        ${this.label && C` <div class="nys-textinput__text">
           <div class="nys-textinput__requiredwrapper">
             <label for=${this.id} class="nys-textinput__label"
               >${this.label}</label
             >
-            ${this.required ? l`<label class="nys-textinput__required">*</label>` : ""}
+            ${this.required ? C`<label class="nys-textinput__required">*</label>` : ""}
           </div>
 
           <div class="nys-textinput__description">
@@ -3172,7 +3477,7 @@ let c = class extends x {
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
         />
-        ${this.showError && this.errorMessage ? l`<div class="nys-textinput__error">
+        ${this.showError && this.errorMessage ? C`<div class="nys-textinput__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -3190,7 +3495,7 @@ c.VALID_TYPES = [
   "url"
 ];
 c.VALID_WIDTHS = ["sm", "md", "lg", "full"];
-c.styles = G1;
+c.styles = t5;
 d([
   n({ type: String })
 ], c.prototype, "id", 2);
@@ -3251,7 +3556,7 @@ d([
 c = d([
   V("nys-textinput")
 ], c);
-const Y1 = M`
+const s5 = H`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -3268,6 +3573,9 @@ const Y1 = M`
         ) -
         2px
     );
+    /* space between toggle and it's label */
+    --_nys-toggle-gap: var(--nys-space-150, 12px);
+
     --_nys-toggle-font-family: var(
       --nys-font-family-ui,
       var(
@@ -3279,6 +3587,10 @@ const Y1 = M`
         sans-serif
       )
     );
+    --_nys-toggle-font-size: var(--nys-font-size-ui-md, 16px);
+    --_nys-toggle-font-weight: var(--nys-font-weight-regular, 400);
+    --_nys-toggle-line-height: var(--nys-font-lineheight-ui-md, 24px);
+
     --_nys-toggle-transition-duration: 0.3s;
 
     /* Focus outline */
@@ -3308,8 +3620,6 @@ const Y1 = M`
     );
 
     /* Font sizes and spacing for labels, descriptions, and icons */
-    --_nys-toggle-label-font-size: var(--nys-font-size-sm, 14px);
-    --_nys-toggle-description-font-size: var(--nys-font-size-xs, 12px);
     --_nys-toggle-icon-font-size-xs: var(
       --nys-font-size-body-xs,
       var(--nys-font-size-xs, 12px)
@@ -3322,33 +3632,32 @@ const Y1 = M`
 
   /* Slotted styling (e.g. HTML <p> tags for descriptions) */
   ::slotted([slot^="description"]) {
-    font-size: var(--_nys-toggle-description-font-size);
-    color: gray;
+    font-style: italic;
     margin: 0;
   }
   slot[name="description"] {
-    font-size: var(--_nys-toggle-description-font-size);
-    color: gray;
-    margin: 0;
+    font-style: italic;
   }
 
   /* Toggle switch overall container */
   .nys-toggle__content {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: var(--_nys-toggle-gap);
   }
 
   /* Label & description text container */
   .nys-toggle__text {
     display: flex;
     flex-direction: column;
-    font-size: var(--_nys-toggle-label-font-size);
+    font-size: var(--_nys-toggle-font-size);
     font-family: var(--_nys-toggle-font-family);
+    font-weight: var(--_nys-toggle-font-weight);
+    line-height: var(--_nys-toggle-line-height);
   }
 
-  .nys-toggle__text.disabled {
-    color: var(--_nys-toggle-color-base, #797c7f);
+  .nys-toggle__content:has(input:disabled) .nys-toggle__text * {
+    color: var(--_nys-toggle-color-base);
+    cursor: not-allowed;
   }
 
   /* Toggle Switch component */
@@ -3356,7 +3665,11 @@ const Y1 = M`
     position: relative;
     display: inline-block;
     width: var(--_nys-toggle-width);
+    min-width: var(--_nys-toggle-width);
+    max-width: var(--_nys-toggle-width);
     height: var(--_nys-toggle-height);
+    min-height: var(--_nys-toggle-height);
+    max-height: var(--_nys-toggle-height);
   }
 
   .nys-toggle__toggle input {
@@ -3421,7 +3734,7 @@ const Y1 = M`
   }
 
   /* Switch BG: Active */
-  input:active + .slider {
+  input:active:not(:disabled) + .slider {
     background-color: var(--_nys-toggle-color-neutral-700, #4a4d4f);
     outline: solid var(--_nys-toggle-border-width-focus)
       var(--_nys-toggle-border-focus-color);
@@ -3490,17 +3803,14 @@ const Y1 = M`
     --_nys-toggle-width: var(--nys-toggle-font-size-6xl, 36px);
     --_nys-toggle-height: var(--nys-toggle-size-250, 20px);
     --_nys-toggle-slider-diameter: var(--nys-toggle--font-size-md, 16px);
-    --_nys-label-font-size: var(--nys-toggle-font-size-xs, 12px);
-    --_nys-description-font-size: var(--nys-toggle-font-size-2xs, 10px);
     --_nys-icon-font-size: var(--nys-toggle-font-size-sm, 14px);
+    --_nys-toggle-gap: var(--nys-space-100, 8px);
   }
 
   :host([size="md"]) {
     --_nys-toggle-width: var(--nys-toggle-font-size-8xl, 44px);
     --_nys-toggle-height: var(--nys-toggle-size-300, 24px);
     --_nys-toggle-slider-diameter: var(--nys-toggle-font-size-xl, 20px);
-    --_nys-label-font-size: var(--nys-toggle-font-size-sm, 14px);
-    --_nys-description-font-size: var(--nys-toggle-font-size-xs, 12px);
     --_nys-icon-font-size: var(--nys-toggle-font-size-md, 16px);
   }
 
@@ -3510,12 +3820,12 @@ const Y1 = M`
     }
   }
 `;
-var K1 = Object.defineProperty, W1 = Object.getOwnPropertyDescriptor, L = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? W1(e, t) : e, i = o.length - 1, C; i >= 0; i--)
-    (C = o[i]) && (r = (s ? C(e, t, r) : C(r)) || r);
-  return s && r && K1(e, t, r), r;
+var n5 = Object.defineProperty, i5 = Object.getOwnPropertyDescriptor, k = (o, e, t, s) => {
+  for (var r = s > 1 ? void 0 : s ? i5(e, t) : e, i = o.length - 1, l; i >= 0; i--)
+    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
+  return s && r && n5(e, t, r), r;
 };
-let J1 = 0, u = class extends x {
+let l5 = 0, b = class extends x {
   constructor() {
     super(...arguments), this.id = "", this.name = "", this.value = "", this.checked = !1, this.disabled = !1, this.noIcon = !1, this.label = "", this.description = "", this._size = "md", this.form = "";
   }
@@ -3523,14 +3833,14 @@ let J1 = 0, u = class extends x {
     return this._size;
   }
   set size(o) {
-    this._size = u.VALID_SIZES.includes(
+    this._size = b.VALID_SIZES.includes(
       o
     ) ? o : "md";
   }
   /******************** Functions ********************/
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${J1++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${l5++}`);
   }
   // Handle focus event
   _handleFocus() {
@@ -3560,14 +3870,14 @@ let J1 = 0, u = class extends x {
     ));
   }
   render() {
-    return l`
+    return C`
       <label class="nys-toggle">
         <div class="nys-toggle__content">
           <div class="nys-toggle__toggle">
             <input
               id="${this.id}"
               type="checkbox"
-              name="${E(this.name ? this.name : void 0)}"
+              name="${A(this.name ? this.name : void 0)}"
               .value=${this.value}
               form=${this.form}
               .checked=${this.checked}
@@ -3582,14 +3892,14 @@ let J1 = 0, u = class extends x {
             />
             <span class="slider">
               <div class="knob">
-                ${this.noIcon ? "" : l`<nys-icon
+                ${this.noIcon ? "" : C`<nys-icon
                       class="toggle-icon"
                       name="${this.checked ? "check" : "close"}"
                     ></nys-icon>`}
               </div>
             </span>
           </div>
-          <div class="nys-toggle__text ${this.disabled ? "disabled" : ""}">
+          <div class="nys-toggle__text">
             <div class="nys-toggle__label">${this.label}</div>
             <slot name="description">${this.description}</slot>
           </div>
@@ -3598,50 +3908,50 @@ let J1 = 0, u = class extends x {
     `;
   }
 };
-u.styles = Y1;
-u.VALID_SIZES = ["sm", "md"];
-L([
+b.styles = s5;
+b.VALID_SIZES = ["sm", "md"];
+k([
   n({ type: String })
-], u.prototype, "id", 2);
-L([
+], b.prototype, "id", 2);
+k([
   n({ type: String })
-], u.prototype, "name", 2);
-L([
+], b.prototype, "name", 2);
+k([
   n({ type: String })
-], u.prototype, "value", 2);
-L([
+], b.prototype, "value", 2);
+k([
   n({ type: Boolean })
-], u.prototype, "checked", 2);
-L([
+], b.prototype, "checked", 2);
+k([
   n({ type: Boolean })
-], u.prototype, "disabled", 2);
-L([
+], b.prototype, "disabled", 2);
+k([
   n({ type: Boolean })
-], u.prototype, "noIcon", 2);
-L([
+], b.prototype, "noIcon", 2);
+k([
   n({ type: String })
-], u.prototype, "label", 2);
-L([
+], b.prototype, "label", 2);
+k([
   n({ type: String })
-], u.prototype, "description", 2);
-L([
+], b.prototype, "description", 2);
+k([
   n({ reflect: !0 })
-], u.prototype, "size", 1);
-L([
+], b.prototype, "size", 1);
+k([
   n({ type: String })
-], u.prototype, "form", 2);
-u = L([
+], b.prototype, "form", 2);
+b = k([
   V("nys-toggle")
-], u);
+], b);
 export {
   y as NysAlert,
   w as NysAvatar,
-  _ as NysCheckbox,
-  E1 as NysIcon,
+  g as NysCheckbox,
+  N1 as NysIcon,
   a as NysRadiobutton,
-  g as NysSelect,
+  u as NysSelect,
   h as NysTextarea,
   c as NysTextinput,
-  u as NysToggle
+  b as NysToggle
 };
 //# sourceMappingURL=excelsior.es.js.map
