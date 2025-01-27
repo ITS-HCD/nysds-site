@@ -49,10 +49,57 @@ The <code class="language-js">nys-textinput</code> component includes the follow
 {% endblock %}
 
 {% block options %}
-### Option 1
+### Width
+If no `width` is provided, the `nys-textinput` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+
+Width full will take up the full width of the parent container.
+
+If an invalid option is assigned to `width`, it will be ignored and default to `full`.
+
+<nys-textinput width="sm" label="This label is sm"></nys-textinput>
 
 
-### Option 2
+### Type
+Accepted types are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
+
+Any other input defaults to `type="text"`
+
+<nys-textinput type="password" label="Password"></nys-textinput>
+
+### Placeholder
+
+<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
+
+### Disabled
+
+<nys-textinput label="Disabled" disabled></nys-textinput>
+
+
+### Readonly
+
+<nys-textinput label="Readonly" value="Read only value" readonly></nys-textinput>
+
+
+### Min Max and step
+
+`max`, `min`, and `step` only apply when `type="number"`
+
+<nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput>
+
+### Maxlength
+
+<nys-textinput label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textinput>
+
+### Pattern
+
+Takes any valid regex value.
+
+<nys-textinput placeholder="N00000000" label="Please enter your Employee number" description="include the N prefix" maxlength="9" pattern="N[0-9]{8}" id="nID"></nys-textinput>
+
+### Error Message
+Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
+
+<nys-textinput label="Full Name" showError errorMessage="Cannot be left blank"></nys-textinput>
 
 {% endblock %}
 
@@ -68,6 +115,79 @@ The <code class="language-js">nys-textinput</code> component includes the follow
   <tbody>
     <tr>
       <td><code>label</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td>string ("email", "number", "password", "search", "tel", "text", "url")</td>
+      </td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>placeholder</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>readonly</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>pattern</code></td>
+      <td>REGEX</td>
+    </tr>
+    <tr>
+      <td><code>maxlength</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td>string ('sm", "md", "lg", "full")</td>
+    </tr>
+    <tr>
+      <td><code>step</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>min</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>max</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
       <td>string</td>
     </tr>
   </tbody>
