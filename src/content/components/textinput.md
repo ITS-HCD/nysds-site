@@ -35,8 +35,10 @@ The `nys-textinput` is a reusable web component for use in New York State digita
 {% endblock %}
 
 {% block usagedont %}
-  - Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).
-  - Don't overwhelm users with too many single-line inputs; group similar fields when possible.
+<ul>
+  <li><p>Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).</p></li>
+  <li><p>Don't overwhelm users with too many single-line inputs; group similar fields when possible.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}

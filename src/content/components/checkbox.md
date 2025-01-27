@@ -59,8 +59,10 @@ The <code class="language-js">nys-checkbox</code> component is a reusable web co
 {% endblock %}
 
 {% block usagedont %}
-  - Avoid using when you have more than 10 options to choose from.
-  - Don't change status of another checkbox when another one is clicked.
+<ul>
+<li><p>Avoid using when you have more than 10 options to choose from.</p></li>
+<li><p>Don't change status of another checkbox when another one is clicked.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}

@@ -41,9 +41,11 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 {% endblock %}
 
 {% block usagedont %}
-  - Don't overload the avatar with unnecessary customizations.
-  - Don't skip the <code class="language-js">label</code> attribute for screen reader users.
-  - Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.
+<ul>
+<li><p>Don't overload the avatar with unnecessary customizations.</p></li>
+<li><p>Don't skip the <code class="language-js">label</code> attribute for screen reader users.</p></li>
+<li><p>Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}

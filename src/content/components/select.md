@@ -43,7 +43,9 @@ The `nys-select` is a reusable web component for use in New York State digital p
 {% endblock %}
 
 {% block usagedont %}
- - Don't use the native `&lt;option&gt;` element in the `nys-select` component
+<ul>
+<li><p>Don't use the native `&lt;option&gt;` element in the `nys-select` component</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}
