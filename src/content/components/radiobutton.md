@@ -57,9 +57,11 @@ The <code class="language-js">nys-radiobutton</code> component is a reusable web
 {% endblock %}
 
 {% block usagedont %}
-  - Use radio buttons for yes/no questions (consider a toggle or checkbox).
-  - Overload the user with too many radio button options; simplify or use a dropdown if needed.
-  - Leave all radio buttons unselected if a default selection would help guide users.
+<ul>
+<li><p>Use radio buttons for yes/no questions (consider a toggle or checkbox).</p></li>
+<li><p>Overload the user with too many radio button options; simplify or use a dropdown if needed.</p></li>
+<li><p>Leave all radio buttons unselected if a default selection would help guide users.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}

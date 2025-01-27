@@ -73,8 +73,10 @@ The <code class="language-js">nys-alert</code> component is a reusable web compo
 {% endblock %}
 
 {% block usagedont %}
-  - Overuse alerts for non-critical information, as this can desensitize users to important messages.
-  - Use icons or themes that don’t clearly communicate the purpose of the alert.
+<ul>
+<li><p>Overuse alerts for non-critical information, as this can desensitize users to important messages.</p></li>
+<li><p>Use icons or themes that don’t clearly communicate the purpose of the alert.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}

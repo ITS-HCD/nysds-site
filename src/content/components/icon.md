@@ -127,9 +127,11 @@ The <code class="language-js">nys-icon</code> component is a reusable web compon
 {% endblock %}
 
 {% block usagedont %}
-  - Use icons that lack clarity or context for their intended purpose.
-  - Use excessive customization that distracts from UI and established design patterns.
-  - Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.
+<ul>
+<li><p>Use icons that lack clarity or context for their intended purpose.</p></li>
+<li><p>Use excessive customization that distracts from UI and established design patterns.</p></li>
+<li><p>Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}

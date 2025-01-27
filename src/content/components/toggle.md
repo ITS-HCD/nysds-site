@@ -42,9 +42,11 @@ image: /assets/img/components/toggle.svg
 {% endblock %}
 
 {% block usagedont %}
-  - Use toggles for complex multi-state options.
-  - Overuse toggles for trivial settings that do not impact user experience significantly.
-  - Hide labels entirely unless another accessible method of describing the toggle exists.
+<ul>
+<li><p>Use toggles for complex multi-state options.</p></li>
+<li><p>Overuse toggles for trivial settings that do not impact user experience significantly.</p></li>
+<li><p>Hide labels entirely unless another accessible method of describing the toggle exists.</p></li>
+</ul>
 {% endblock %}
 
 {% block accessibility %}
