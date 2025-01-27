@@ -43,18 +43,20 @@ description: Excelsior makes it easier to build usable, accessible, mobile-frien
 
 <div class="nys-grid-row nys-grid-gap">
   {%- for post in collections.components -%}
-  <div class="nys-mobile-lg:nys-grid-col-4">
-    <div class="card">
-      <div class="card__inner">
-        <div class="card__media">
-          {% if post.data.image %}
-            <img src="{{ post.data.image | url }}" alt="{{ post.data.title }}"></div>
-          {% else %}
-            <img src="../assets/img/components/placeholder.svg" alt="{{ post.data.title }}"></div>
-          {% endif %}
-        <div class="card__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
-        <div class="card__desc">{{ post.data.description }}</div>
-      </div>
+  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <a href="{{ post.url | url }}">
+        <div class="card__inner">
+          <div class="card__media">
+            {% if post.data.image %}
+              <img src="{{ post.data.image | url }}" alt="{{ post.data.title }}"></div>
+            {% else %}
+              <img src="../assets/img/components/placeholder.svg" alt="{{ post.data.title }}"></div>
+            {% endif %}
+          <div class="card__title">{{ post.data.title }}</div>
+          <div class="card__desc">{{ post.data.description }}</div>
+        </div>
+      </a>
     </div>
   </div>
   {%- endfor -%}
