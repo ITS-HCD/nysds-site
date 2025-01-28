@@ -7,7 +7,7 @@ image: /assets/img/components/toggle.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-  The <code class="language-js">nys-toggle</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+  The <code class="language-js">&lt;nys-toggle&gt;</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
 {% endblock %}
 
 {% block example %}

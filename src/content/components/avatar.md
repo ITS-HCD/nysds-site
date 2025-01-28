@@ -7,7 +7,7 @@ image: /assets/img/components/avatar.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">nys-avatar</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.
+The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.
 
 By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.
 {% endblock %}
