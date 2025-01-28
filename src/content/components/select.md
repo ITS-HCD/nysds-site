@@ -7,7 +7,7 @@ image: /assets/img/components/select.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The `nys-select` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element `nys-option` to define the options in the dropdown.
+The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.
 {% endblock %}
 
 {% block example %}

@@ -7,7 +7,7 @@ image: /assets/img/components/textarea.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The `nys-textarea` is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
+The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
 {% endblock %}
 
 {% block example %}
