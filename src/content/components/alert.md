@@ -8,26 +8,26 @@ image: /assets/img/components/alert.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">nys-alert</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to keep users informed of important and sometimes time-sensitive changes.
+The <code class="language-js">&lt;nys-alert&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to keep users informed of important and sometimes time-sensitive changes.
 {% endblock %}
 
 {% block example %}
-<nys-alert theme="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
-<nys-alert theme="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
-<nys-alert theme="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
-<nys-alert theme="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
-<nys-alert theme="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
-<nys-alert theme="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 {% endblock %}
 
 {% block examplecode %}
 <nys-alert
-  theme="base"
+  type="base"
   heading="Default status"
   text="This is an example of an neutral base alert."
   primaryLabel="Learn more on ny.gov"
@@ -37,7 +37,7 @@ The <code class="language-js">nys-alert</code> component is a reusable web compo
   dismissible
 ></nys-alert>
 <nys-alert
-  theme="info"
+  type="info"
   heading="Info status"
   text="This is an example of an info alert."
   primaryLabel="Learn more on ny.gov"
@@ -46,10 +46,10 @@ The <code class="language-js">nys-alert</code> component is a reusable web compo
   secondaryAction="https://www.ny.gov/"
   dismissible
 ></nys-alert>
-<nys-alert theme="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert theme="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert theme="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert theme="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 {% endblock %}
 
 {% block usage %}
@@ -127,10 +127,8 @@ The <code class="language-js">nys-alert</code> component includes the following 
 {% block options %}
 ### Custom text description
 
-<nys-alert theme="success" heading="Custom Descriptions">
-  <p slot="text">This is a custom alert with <strong>HTML content</strong>.</p>
-  <a slot="text" href="https://www.ny.gov/" target="_blank">Learn more</a>
-</nys-alert>
+<nys-alert type="success" heading="Custom Descriptions">
+<p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
 
 
 ### Dismissible
@@ -139,7 +137,7 @@ Use the <code class="language-js">dismissible</code> property to make the alert 
 
 The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
-<nys-alert theme="info" heading="Information status" dismissible>
+<nys-alert type="info" heading="Information status" dismissible>
   <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
 </nys-alert>
 
@@ -156,7 +154,7 @@ Set the <code class="language-js">duration</code> property to automatically hide
 Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.
 
 <nys-alert 
-  theme="emergency" 
+  type="emergency" 
   heading="Winter storm warning: Dec 10th, 2024."
   text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
   icon="ac_unit">
@@ -167,7 +165,7 @@ Override the default theme icon by setting the <code class="language-js">icon</c
 You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
 
 <nys-alert 
-  theme="info"
+  type="info"
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert>
 
@@ -184,7 +182,7 @@ You may find having just a heading without description as a good compact version
   </thead>
   <tbody>
     <tr>
-      <td><code>theme</code></td>
+      <td><code>type</code></td>
       <td>string (base, info, success, warning, danger, emergency)</td>
     </tr>
     <tr>

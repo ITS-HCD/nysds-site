@@ -7,7 +7,7 @@ image: /assets/img/components/icon.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">nys-icon</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose a specific svg icon to use.
+The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose a specific svg icon to use.
 {% endblock %}
 
 {% block example %}

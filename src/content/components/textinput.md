@@ -8,7 +8,7 @@ image: /assets/img/components/textinput.svg
 
 
 {% block longdescription %}
-The `nys-textinput` is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
+The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
 {% endblock %}
 
 {% block example %}

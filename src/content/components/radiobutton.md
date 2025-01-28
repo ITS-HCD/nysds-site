@@ -7,7 +7,9 @@ image: /assets/img/components/radiobutton.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">nys-radiobutton</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
+The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
+ - NOTE: <code class="language-js">&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.
+
 {% endblock %}
 
 {% block example %}
