@@ -1,17 +1,32 @@
 <div class="site-header">
     <div class="site-header__inner nys-grid-container">
-        <div class="nys-grid-row">
-            <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
-                <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-excelsior.svg' | url }}" title="Excelsior Logo"></a>
+        <div class="site-header__logo">
+            <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-excelsior.svg' | url }}" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul>
+                <li><a href="{{ '/getting-started' | url }}" title="Getting Started">Getting Started</a></li>
+                <li><a href="{{ '/foundations' | url }}" title="Foundations">Foundations</a></li>
+                <li><a href="{{ '/components' | url }}" title="Components">Components</a></li>
+                <li><a href="{{ '/about' | url }}" title="About">About</a></li>
+            </ul>
+        </nav>
+
+        
+    </div>
+</div>
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="nys-grid-row nys-flex-align-center">
+            <div class="section-header__title nys-tablet:nys-grid-col-9">
+                Components
             </div>
-            <nav class="nys-tablet:nys-grid-col nys-flex-align-self-center">
-                <ul class="nys-display-flex nys-flex-justify-center">
-                    <li><a href="{{ '/getting-started' | url }}" title="Getting Started">Getting Started</a></li>
-                    <li><a href="{{ '/foundations' | url }}" title="Foundations">Foundations</a></li>
-                    <li><a href="{{ '/components' | url }}" title="Components">Components</a></li>
-                    <li><a href="{{ '/about' | url }}" title="About">About</a></li>
-                </ul>
-            </nav>
+            <div class="section-header__media nys-tablet:nys-grid-col-3">
+                {% if image_shape %}
+                    <img src="{{ image_shape | url }}" alt="{{ title }}">
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>

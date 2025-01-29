@@ -1,28 +1,3 @@
-/* UNav Hacks - REMOVE BEFORE LAUNCH */
-#nygov-universal-navigation {
-    min-height: 95px;
-    border-bottom: solid 1px #ddd;
-    margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-    #nygov-universal-navigation {
-        min-height: 60px;
-    }
-}
-html { scroll-behavior: smooth; }
-
-/* Syntax highlighting plugin tweaks */
-
-/* Remove the curly "peel" shadows from the bottom of code snippets */
-pre[class*="language-"]:before, pre[class*="language-"]:after {
-    box-shadow: none !important;
-}
-
-/* Add some vertical padding to the code blocks */
-pre[class*="language-"] > code {
-    padding: 1em;
-}
-
 /* === Selective Resets */
 
 /* Box Model */
@@ -52,6 +27,8 @@ ul, ol {
 /* These really need to be defined in excelsior.css */
 
 /* === Typography */
+
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -180,7 +157,6 @@ li {
 
 li::marker {
     color: var(--nys-color-theme-primary, #000);
-    font-size: 90%;
 }
 
 /* Links */
@@ -200,25 +176,92 @@ a:active {
 
 /* Site Header */
 
-.site-header nav ul {
+/* --- Site Header Layout --- */
+
+.site-header {
+    padding: var(--nys-space-200) 0;
+}
+
+.site-header__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--nys-space-150);
+}
+
+.site-header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.site-header__logo img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.site-header__nav {
+    width: 100%;
+}
+
+.site-header__nav ul {
+    font-size: var(--nys-font-size-body-sm);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.site-header__nav li {
     margin: 0;
     padding: 0;
-    list-style: none;
+    line-height: 1;
 }
 
-.site-header nav li {
-    display: inline;
-    margin-right: var(--nys-space-400);
-}
-
-.site-header nav a, .site-header nav a:visited {
+.site-header__nav a {
     text-decoration: none;
-    color: var(--nys-color-ink)
+    color: var(--nys-color-ink);
+    padding: var(--nys-space-100);
+    display: inline-block;
 }
 
-.site-header nav a:hover {
+.site-header__nav a:hover,
+.site-header__nav a:focus {
+    color: var(--nys-color-theme);
     text-decoration: underline;
 }
+@media (min-width: 768px) {
+    .site-header__nav ul {
+        font-size: var(--nys-font-size-body-md);
+    }
+    .site-header__nav a {
+        padding: var(--nys-space-100) var(--nys-space-200);
+    }
+}
+@media (min-width: 1024px) {
+    .site-header__logo img {
+        max-width: 350px;
+        height: auto;
+    }
+    .site-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site-header__nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .site-header__nav ul {
+        justify-content: flex-end;
+    }
+}
+
 
 /* In-Page Navigation */
 
@@ -255,6 +298,22 @@ a:active {
     border-left: 3px solid var(--nys-color-ink);
 }
 
+/* Section Header */
+
+.section-header {
+    background-color: var(--nys-color-theme-strong);
+    color: var(--nys-color-theme-weak, #fff);
+}
+.section-header__inner {
+    padding-top: var(--nys-space-1200);
+    padding-bottom: var(--nys-space-200);
+    display: flex;
+}
+.section-header__title {
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 5px;
+}   
 
 /* Site Footer */
 
@@ -354,4 +413,29 @@ a.card:focus {
     border-color: var(--nys-color-focus, #004dd1);
     outline: var(--nys-border-width-sm, 1px) solid var(--nys-color-focus, #004dd1);
     outline-offset: 0;
+}
+
+/* Additional Tweaks */
+
+/* UNav Hacks - REMOVE BEFORE LAUNCH */
+#nygov-universal-navigation {
+    min-height: 95px;
+    border-bottom: solid 1px #ddd;
+}
+@media (min-width: 768px) {
+    #nygov-universal-navigation {
+        min-height: 60px;
+    }
+}
+
+/* Syntax highlighting plugin tweaks */
+
+/* Remove the curly "peel" shadows from the bottom of code snippets */
+pre[class*="language-"]:before, pre[class*="language-"]:after {
+    box-shadow: none !important;
+}
+
+/* Add some vertical padding to the code blocks */
+pre[class*="language-"] > code {
+    padding: 1em;
 }
