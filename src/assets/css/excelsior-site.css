@@ -200,17 +200,32 @@ a:active {
 
 /* Site Header */
 
-nav a, nav a:visited {
+.site-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header nav li {
+    display: inline;
+    margin-right: var(--nys-space-400);
+}
+
+.site-header nav a, .site-header nav a:visited {
     text-decoration: none;
     color: var(--nys-color-ink)
 }
 
-nav a:hover {
+.site-header nav a:hover {
     text-decoration: underline;
 }
 
 /* In-Page Navigation */
 
+.inpagenav {
+    position:sticky; top:1rem;
+    padding-top: var(--nys-space-600);
+}
 .inpagenav ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -227,6 +242,12 @@ nav a:hover {
 .inpagenav a {
     display: block;
     padding: 0.25rem;
+    text-decoration: none;
+    color: var(--nys-color-ink);
+}
+
+.inpagenav a:hover {
+    text-decoration: underline;
 }
 
 .inpagenav li.active {
