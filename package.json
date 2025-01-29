@@ -4,10 +4,11 @@
     "description": "Guidance for using New York State's design system.",
     "main": "index.js",
     "scripts": {
-        "start": "npm run copy:assets && ELEVENTY_ENV=development eleventy --serve",
+        "start": "npm run clean:site && npm run copy:assets && ELEVENTY_ENV=development eleventy --serve",
         "build": "npm run copy:assets && ELEVENTY_ENV=production eleventy --pathprefix 'excelsior-site'",
         "build:prod": "npm run copy:assets && ELEVENTY_ENV=production eleventy",
         "copy:assets": "mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nys-excelsior/components/dist/excelsior.* src/assets/js/vendor && cp -r node_modules/@nys-excelsior/styles/dist/* src/assets/css/vendor",
+        "clean:site": "rm -rf _site",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
