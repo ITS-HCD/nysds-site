@@ -151,6 +151,19 @@ li::marker {
 .site-footer {
     background-color: var(--nys-color-neutral-50);
     color: var(--nys-color-ink);
+    padding: var(--nys-space-400) 0;
+    font-size: var(--nys-font-size-body-md);
+}
+.site-footer__list-header {
+    padding-bottom: var(--nys-space-100);
+    margin-bottom: var(--nys-space-200);
+    border-bottom: solid 1px var(--nys-color-black);
+}
+.site-footer li {
+    padding-bottom: var(--nys-space-200);
+}
+.site-footer a {
+    color: var(--nys-color-ink);
 }
 
 /* Content Intro */
