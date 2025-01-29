@@ -9,18 +9,19 @@
     <!-- Latest Build: {{ site.buildDate | dateISO }} -->
   </head>
   <body class="{% if section  %}single-page page-{{ page.fileSlug }}{% else %}home{% endif %}">
+
   {% include "partials/unav-header.njk" %}
-  <div class="nys-grid-container content">
   {% include "partials/site-header.njk" %}
 
   <main role="main" data-pagefind-body>
-    {% block content %}
-    {{ content | safe }}
-    {% endblock %}
+    <div class="nys-grid-container">
+      {% block content %}
+      {{ content | safe }}
+      {% endblock %}
+    </div>
   </main>
 
   {% include "partials/site-footer.njk" %}
-</div>
   {% include "partials/unav-footer.njk" %}
 
   {% include "partials/site-js-global.njk" %}

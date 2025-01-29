@@ -115,8 +115,56 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
+/* === Selective Resets */
+
+/* Box Model */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin/Padding for Text Elements */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure, pre {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Lists */
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}  
+
+li::marker {
+    content: none;
+}
 
 /* === Custom Components */
+
+/* Site Footer */
+
+.site-footer {
+    background-color: var(--nys-color-neutral-50);
+    color: var(--nys-color-ink);
+    padding: var(--nys-space-400) 0;
+    font-size: var(--nys-font-size-body-md);
+}
+.site-footer__list-header {
+    padding-bottom: var(--nys-space-100);
+    margin-bottom: var(--nys-space-200);
+    border-bottom: solid 1px var(--nys-color-black);
+}
+.site-footer li {
+    padding-bottom: var(--nys-space-200);
+}
+.site-footer a {
+    color: var(--nys-color-ink);
+}
 
 /* Content Intro */
 
