@@ -115,7 +115,24 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
-/* === List Reset */
+/* === Selective Resets */
+
+/* Box Model */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin/Padding for Text Elements */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure, pre {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Lists */
 
 ul, ol {
     margin: 0;
