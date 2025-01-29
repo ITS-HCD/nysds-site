@@ -1,5 +1,4 @@
-
-
+/* UNav Hacks - REMOVE BEFORE LAUNCH */
 #nygov-universal-navigation {
     min-height: 95px;
     border-bottom: solid 1px #ddd;
@@ -10,42 +9,7 @@
         min-height: 60px;
     }
 }
-.nys-unav {
-    
-}
 html { scroll-behavior: smooth; }
-
-nav a, nav a:visited {
-    text-decoration: none;
-    color: var(--nys-color-ink)
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.inpagenav ul {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
-    padding: 0.5rem 0;
-}
-
-.inpagenav li {
-    list-style: none;
-    margin: 0;
-    border-left: 3px solid transparent;
-}
-
-.inpagenav a {
-    display: block;
-    padding: 0.25rem;
-}
-
-.inpagenav li.active {
-    font-weight: bold;
-    border-left: 3px solid var(--nys-color-ink);
-}
 
 /* Syntax highlighting plugin tweaks */
 
@@ -57,62 +21,6 @@ pre[class*="language-"]:before, pre[class*="language-"]:after {
 /* Add some vertical padding to the code blocks */
 pre[class*="language-"] > code {
     padding: 1em;
-}
-
-/* === Global Styles */
-/* These really need to be defined in excelsior.css */
-
-/* === Typography */
-
-body {
-    margin: 0;
-    font-family: var(--nys-font-family-body);
-    color: var(--nys-color-ink);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--nys-font-family-heading);
-}
-h1 {
-    font-size: var(--nys-font-size-h1);
-    line-height: var(--nys-font-lineheight-h1);
-}
-h2 {
-    font-size: var(--nys-font-size-h2);
-    line-height: var(--nys-font-lineheight-h2);
-}
-h3 {
-    font-size: var(--nys-font-size-h3);
-    line-height: var(--nys-font-lineheight-h3);
-}
-h4 {
-    font-size: var(--nys-font-size-h4);
-    line-height: var(--nys-font-lineheight-h4);
-}
-h5 {
-    font-size: var(--nys-font-size-h5);
-    line-height: var(--nys-font-lineheight-h5);
-}
-h6 {
-    font-size: var(--nys-font-size-h6);
-    line-height: var(--nys-font-lineheight-h6);
-}
-
-p, ul, ol, dl, blockquote {
-    line-height: var(--nys-font-lineheight-body-md);   
-}
-
-a {
-    color: var(--nys-color-link);
-    text-decoration: none;
-}
-a:hover,
-a:focus {
-    color: var(--nys-color-link-strong);
-    text-decoration: underline;
-}
-a:active {
-    color: var(--nys-color-link-strongest);
 }
 
 /* === Selective Resets */
@@ -140,11 +48,186 @@ ul, ol {
     list-style: none;
 }  
 
+/* === Global Styles */
+/* These really need to be defined in excelsior.css */
+
+/* === Typography */
+
+body {
+    margin: 0;
+    font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
+    color: var(--nys-color-ink);
+}
+small {
+    font: var(--nys-font-size-xs) / var(--nys-font-lineheight-xs) var(--nys-font-family-body);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--nys-font-family-heading);
+}
+h1 {
+    font: var(--nys-font-weight-h1, bold) var(--nys-font-size-h1) / var(--nys-font-lineheight-h1) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-700);
+    margin-bottom: var(--nys-space-300);
+}
+
+h2 {
+    font: var(--nys-font-weight-h2, bold) var(--nys-font-size-h2) / var(--nys-font-lineheight-h2) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-600);
+    margin-bottom: var(--nys-space-250);
+}
+
+h3 {
+    font: var(--nys-font-weight-h3, bold) var(--nys-font-size-h3) / var(--nys-font-lineheight-h3) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-500);
+    margin-bottom: var(--nys-space-200);
+}
+
+h4 {
+    font: var(--nys-font-weight-h4, bold) var(--nys-font-size-h4) / var(--nys-font-lineheight-h4) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-400);
+    margin-bottom: var(--nys-space-150);
+}
+
+h5 {
+    font: var(--nys-font-weight-h5, bold) var(--nys-font-size-h5) / var(--nys-font-lineheight-h5) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-300);
+    margin-bottom: var(--nys-space-100);
+}
+
+h6 {
+    font: var(--nys-font-weight-h6, bold) var(--nys-font-size-h6) / var(--nys-font-lineheight-h6) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-250);
+    margin-bottom: var(--nys-space-100);
+}
+
+p, ul, ol, dl, blockquote {
+    font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
+    margin-bottom: var(--nys-space-150);
+}
+
+small {
+    margin-bottom: var(--nys-space-100);
+}
+
+/* Adjust for specific scenarios */
+
+h1 + h2, 
+h2 + h3, 
+h3 + h4, 
+h4 + h5, 
+h5 + h6 {
+    margin-top: var(--nys-space-150);
+}
+
+p + p {
+    margin-top: var(--nys-space-150);
+}
+
+/* --- Lists --- */
+
+ul, ol {
+    margin-top: 0;
+    padding-left: var(--nys-space-200);
+}
+
+blockquote > ul, blockquote > ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Unordered Lists (Bullets) */
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+    padding-left: var(--nys-space-200);
+}
+
+ul ul ul {
+    list-style-type: square;
+    padding-left: var(--nys-space-200);
+}
+
+/* Ordered Lists (Numbers) */
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+    padding-left: var(--nys-space-200);
+}
+
+ol ol ol {
+    list-style-type: lower-roman;
+    padding-left: var(--nys-space-200);
+}
+
+/* Lists Items */
+
+li {
+    margin-bottom: var(--nys-space-100);
+}
+
 li::marker {
-    content: none;
+    color: var(--nys-color-theme-primary, #000);
+    font-size: 90%;
+}
+
+/* Links */
+
+a {
+    color: var(--nys-color-link);
+}
+a:hover,
+a:focus {
+    color: var(--nys-color-link-strong);
+}
+a:active {
+    color: var(--nys-color-link-strongest);
 }
 
 /* === Custom Components */
+
+/* Site Header */
+
+nav a, nav a:visited {
+    text-decoration: none;
+    color: var(--nys-color-ink)
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* In-Page Navigation */
+
+.inpagenav ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    padding: 0.5rem 0;
+}
+
+.inpagenav li {
+    list-style: none;
+    margin: 0;
+    border-left: 3px solid transparent;
+}
+
+.inpagenav a {
+    display: block;
+    padding: 0.25rem;
+}
+
+.inpagenav li.active {
+    font-weight: bold;
+    border-left: 3px solid var(--nys-color-ink);
+}
+
 
 /* Site Footer */
 
@@ -159,11 +242,20 @@ li::marker {
     margin-bottom: var(--nys-space-200);
     border-bottom: solid 1px var(--nys-color-black);
 }
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 .site-footer li {
-    padding-bottom: var(--nys-space-200);
+    margin-bottom: var(--nys-space-200);
 }
 .site-footer a {
     color: var(--nys-color-ink);
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
 }
 
 /* Content Intro */
