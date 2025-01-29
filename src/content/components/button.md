@@ -23,7 +23,9 @@ A button is used for actions that have an immediate result inside an application
   - Use for the most important actions you want users to take on your site, such as Download, Sign up or Log out.
   - Use Fill for the primary action on the page; use sparingly, there should be only one primary action on each page.
   - Use Outline for secondary actions; should be placed next to the primary action / Fill button.
-  - Use Text buttons are used when there are additional actions beyond primary and secondary.
+  - Use Ghost buttons when there are additional actions beyond primary and secondary.
+  - Use Text buttons when an action needs to appear within a text block.
+
 ### When to consider something else
   - Text Buttons do something, whereas Links go somewhere. Use a Link instead of a text button if clicking the element takes the user somewhere else.
 {% endblock %}
