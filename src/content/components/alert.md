@@ -1,7 +1,7 @@
 ---
 title: Alert
 description: Alert cards are designed to display critical information, updates, or warnings that require the user's attention.
-image: /assets/img/components/alert.svg
+image: /assets/img/header-components.svg
 ---
 
 
