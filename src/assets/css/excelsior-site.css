@@ -290,6 +290,10 @@ ex-header__title {
     padding: var(--nys-space-200);
     margin-bottom: var(--nys-space-200);
     align-items: stretch; 
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .card__media {
     aspect-ratio: 2 / 1;
@@ -303,8 +307,28 @@ ex-header__title {
 }
 .card__title {
     font-size: var(--nys-font-size-h3);
+    font-weight: var(--nys-font-weight-h3, bold);
     margin-top: var(--nys-space-100);
+    margin-bottom: var(--nys-space-150);
 }
-.card a {
-    color: var(--nys-color-ink);
+.card__title, .card__desc {
+    text-decoration: none;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
+}
+a.card {
+    color: inherit;
+    text-decoration: none;
+}
+a.card:hover .card__title,
+a.card:focus .card__title {
+    text-decoration: underline;
+}
+a.card:focus {
+    outline: 2px var(--nys-border-width-sm, 1px) var(--nys-color-focus, #004dd1);
 }
