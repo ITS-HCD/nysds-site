@@ -330,5 +330,7 @@ a.card:focus .card__title {
     text-decoration: underline;
 }
 a.card:focus {
-    outline: 2px var(--nys-border-width-sm, 1px) var(--nys-color-focus, #004dd1);
+    border-color: var(--nys-color-focus, #004dd1);
+    outline: var(--nys-border-width-sm, 1px) solid var(--nys-color-focus, #004dd1);
+    outline-offset: 0;
 }
