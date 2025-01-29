@@ -115,8 +115,26 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
+/* === List Reset */
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}  
+
+li::marker {
+    content: none;
+}
 
 /* === Custom Components */
+
+/* Site Footer */
+
+.site-footer {
+    background-color: var(--nys-color-neutral-50);
+    color: var(--nys-color-ink);
+}
 
 /* Content Intro */
 
