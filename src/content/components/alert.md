@@ -71,8 +71,8 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block usagedo %}
-  - Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.
   - Keep the alert content concise and focused on the message.
+  - Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.
   - Make alerts dismissible unless they contain critical information or an important step users need to take.
   - Limit alerts to one per page; if more than one alert is needed, prefer Base alerts if possible to not overwhelm users.
   - Use Success type to confirm a positive system status to users such as saving a form.
