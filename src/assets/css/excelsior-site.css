@@ -64,41 +64,43 @@ small {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--nys-font-family-heading);
 }
+
 h1 {
     font: var(--nys-font-weight-h1, bold) var(--nys-font-size-h1) / var(--nys-font-lineheight-h1) var(--nys-font-family-heading);
-    margin-top: var(--nys-space-700);
-    margin-bottom: var(--nys-space-300);
-}
-
-h2 {
-    font: var(--nys-font-weight-h2, bold) var(--nys-font-size-h2) / var(--nys-font-lineheight-h2) var(--nys-font-family-heading);
     margin-top: var(--nys-space-600);
     margin-bottom: var(--nys-space-250);
 }
 
-h3 {
-    font: var(--nys-font-weight-h3, bold) var(--nys-font-size-h3) / var(--nys-font-lineheight-h3) var(--nys-font-family-heading);
+h2 {
+    font: var(--nys-font-weight-h2, bold) var(--nys-font-size-h2) / var(--nys-font-lineheight-h2) var(--nys-font-family-heading);
     margin-top: var(--nys-space-500);
     margin-bottom: var(--nys-space-200);
 }
 
-h4 {
-    font: var(--nys-font-weight-h4, bold) var(--nys-font-size-h4) / var(--nys-font-lineheight-h4) var(--nys-font-family-heading);
+h3 {
+    font: var(--nys-font-weight-h3, bold) var(--nys-font-size-h3) / var(--nys-font-lineheight-h3) var(--nys-font-family-heading);
     margin-top: var(--nys-space-400);
     margin-bottom: var(--nys-space-150);
 }
 
+h4 {
+    font: var(--nys-font-weight-h4, bold) var(--nys-font-size-h4) / var(--nys-font-lineheight-h4) var(--nys-font-family-heading);
+    margin-top: var(--nys-space-300);
+    margin-bottom: var(--nys-space-100);
+}
+
 h5 {
     font: var(--nys-font-weight-h5, bold) var(--nys-font-size-h5) / var(--nys-font-lineheight-h5) var(--nys-font-family-heading);
-    margin-top: var(--nys-space-300);
+    margin-top: var(--nys-space-250);
     margin-bottom: var(--nys-space-100);
 }
 
 h6 {
     font: var(--nys-font-weight-h6, bold) var(--nys-font-size-h6) / var(--nys-font-lineheight-h6) var(--nys-font-family-heading);
-    margin-top: var(--nys-space-250);
+    margin-top: var(--nys-space-200);
     margin-bottom: var(--nys-space-100);
 }
+
 
 p, ul, ol, dl, blockquote {
     font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
@@ -121,6 +123,10 @@ h5 + h6 {
 
 p + p {
     margin-top: var(--nys-space-150);
+}
+
+section {
+    margin-bottom: var(--nys-space-400);
 }
 
 /* --- Lists --- */
@@ -297,8 +303,7 @@ ex-header__title {
 }
 .card__title {
     font-size: var(--nys-font-size-h3);
-    margin-bottom: var(--nys-space-100);
-    font-weight: bold;
+    margin-top: var(--nys-space-100);
 }
 .card a {
     color: var(--nys-color-ink);
