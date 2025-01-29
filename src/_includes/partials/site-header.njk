@@ -1,20 +1,20 @@
-<nav class="nys-grid-row">
-    <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
-        <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-excelsior.svg' | url }}"></a>
+<div class="site-header">
+    <div class="site-header__inner nys-grid-container">
+        <div class="nys-grid-row">
+            <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
+                <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-excelsior.svg' | url }}" title="Excelsior Logo"></a>
+            </div>
+            <nav class="nys-tablet:nys-grid-col nys-flex-align-self-center">
+                <ul class="nys-display-flex nys-flex-justify-center">
+                    <li><a href="{{ '/getting-started' | url }}" title="Getting Started">Getting Started</a></li>
+                    <li><a href="{{ '/foundations' | url }}" title="Foundations">Foundations</a></li>
+                    <li><a href="{{ '/components' | url }}" title="Components">Components</a></li>
+                    <li><a href="{{ '/about' | url }}" title="About">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
-        <a href="{{ '/getting-started' | url }}" title="Getting Started" class=" nys-display-flex nys-flex-justify-center">Getting Started</a>
-    </div>
-    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
-        <a href="{{ '/foundations' | url }}" title="Foundations" class=" nys-display-flex nys-flex-justify-center">Foundations</a>
-    </div>
-    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center nys-flex-justify-center">
-        <a href="{{ '/components' | url }}" title="Components" class=" nys-display-flex nys-flex-justify-center">Components</a>
-    </div>
-    <div class="nys-tablet:nys-grid-col nys-flex-align-self-center">
-        <a href="{{ '/about' | url }}" title="About" class=" nys-display-flex nys-flex-justify-center">About</a>
-    </div>
-</nav>
+</div>
 
 {# <div id="search" class="search"></div>
 

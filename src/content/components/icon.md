@@ -2,6 +2,7 @@
 title: Icon
 description: Visual symbols used to convey meaning or action.
 image: /assets/img/components/icon.svg
+image_alt: An illustration of an icon.
 ---
 
 {% extends "layouts/component.njk" %}

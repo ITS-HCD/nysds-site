@@ -3,15 +3,15 @@
       Components
     </div>
     <div class="nys-tablet:nys-grid-col-3">
-      {% if image %}<img src="{{ image | url }}" alt="{{ title }}">{% endif %}
+      {% if image_shape %}<img src="{{ image_shape | url }}" alt="{{ title }}">{% endif %}
     </div>
 </div>
 
   <div class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-3">
-    <div  style="position:sticky; top:1rem;">
+    <div class="inpagenav">
     <p><strong>On this page</strong></p>
-    <nav class="inpagenav">
+    <nav>
       <ul>
         <li class="example"><a href="#example">Example</a></li>
         <li class="examplecode"><a href="#examplecode">Example Code</a></li>
@@ -28,17 +28,16 @@
 
 <div class="nys-tablet:nys-grid-col-9">
 
-  <h1 style="font-size: var(--nys-font-size-display-md)">{{ title }}</h1>
-
-  {% block longdescription %}{% endblock %}
+  <section id="header">
+    <h1>{{ title }}</h1>
+    {% block longdescription %}{% endblock %}
+  </section>
 
   <section id="example">
-    <h2>Example</h2>
     {% block example %}{% endblock %}
   </section>
 
   <section id="examplecode">
-    <h2>Example Code</h2>
     {% highlight "html" %}
     {% block examplecode %}{% endblock %}
     {% endhighlight %}

@@ -2,6 +2,7 @@
 title: Select
 description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
+image_alt: An illustration of a select dropdown.
 ---
 
 {% extends "layouts/component.njk" %}

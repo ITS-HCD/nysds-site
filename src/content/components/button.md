@@ -2,6 +2,8 @@
 title: Button
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
 draft: true
+image: 
+image_alt: An illustration of an button.
 ---
 
 {% extends "layouts/component.njk" %}

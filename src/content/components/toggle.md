@@ -2,6 +2,7 @@
 title: Toggle
 description: Switch component for enabling or disabling a setting.
 image: /assets/img/components/toggle.svg
+image_alt: An illustration of a toggle switch.
 ---
 
 {% extends "layouts/component.njk" %}

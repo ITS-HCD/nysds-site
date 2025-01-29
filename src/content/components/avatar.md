@@ -2,6 +2,7 @@
 title: Avatar
 description: Avatars represent a user visually through an image, initials, or an icon and typically identify user-specific actions.
 image: /assets/img/components/avatar.svg
+image_alt: An illustration of an avatar icon.
 ---
 
 {% extends "layouts/component.njk" %}
@@ -25,13 +26,13 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 {% block usage %}
 ### When to use this component
 
-  - To visually represent users, objects, or entities in a UI.
-  - Ideal for profiles, account settings, or comment threads.
+- To visually represent users, objects, or entities in a UI.
+- Ideal for profiles, account settings, or comment threads.
 
 ### When to consider something else
 
-  - If the avatar doesn’t add value to the context.
-  - When a simple label or text works better.
+- If the avatar doesn’t add value to the context.
+- When a simple label or text works better.
 {% endblock %}
 
 {% block usagedo %}
