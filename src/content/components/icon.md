@@ -8,14 +8,17 @@ image_alt: An illustration of an icon.
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose a specific svg icon to use.
 {% endblock %}
 
 {% block example %}
+
 <nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)"></nys-icon>
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-icon
   name="check_circle"
   size="4xl"
@@ -25,10 +28,9 @@ The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable we
 
 
 {% block usage %}
+
 ### General
 <div class="nys-grid-row nys-grid-gap-2">
-
-
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="account_circle"></nys-icon></div><div class="card__desc"> account_circle</div></div></div>
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="calendar_month"></nys-icon></div><div class="card__desc"> calendar_month</div></div></div>
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="cancel"></nys-icon></div><div class="card__desc"> cancel</div></div></div>
@@ -121,6 +123,7 @@ The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable we
 {% endblock %}
 
 {% block usagedo %}
+
   - Use icons to enhance user interfaces with clear, recognizable icons.
   - Use appropriate icons align with the purpose and context of the UI elements they accompany.
   - Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).
@@ -128,14 +131,15 @@ The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable we
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Use icons that lack clarity or context for their intended purpose.</p></li>
-<li><p>Use excessive customization that distracts from UI and established design patterns.</p></li>
-<li><p>Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.</p></li>
-</ul>
+
+  - Use icons that lack clarity or context for their intended purpose.
+  - Use excessive customization that distracts from UI and established design patterns.
+  - Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.
+
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-icon</code> component includes the following accessibility-focused features:
 
 **ARIA Hidden by Default**: If no label is provided, the icon is hidden from screen readers by setting aria-hidden="true".
@@ -144,6 +148,7 @@ The <code class="language-js">nys-icon</code> component includes the following a
 {% endblock %}
 
 {% block options %}
+
 ### Size
 You can scale icons either relatively (based on the parent element’s font size) or literally (with predefined size values). The icons support two sizing systems: relative sizes and literal sizes.
 
@@ -187,8 +192,6 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 <nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon>
 
-
-
 {% endblock %}
 
 {% block properties %}
@@ -231,6 +234,7 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -250,6 +254,7 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 {% endblock %}
 
 {% block events %}
+
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>

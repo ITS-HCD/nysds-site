@@ -375,7 +375,7 @@ ex-header__title {
     border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-lg);
     padding: var(--nys-space-200);
-    margin-bottom: var(--nys-space-200);
+    margin-bottom: var(--nys-space-400);
     align-items: stretch; 
     position: relative;
     text-decoration: none;
@@ -397,9 +397,11 @@ ex-header__title {
     font-weight: var(--nys-font-weight-h3, bold);
     margin-top: var(--nys-space-100);
     margin-bottom: var(--nys-space-150);
+    margin-left: var(--nys-space-100);
 }
 .card__title, .card__desc {
     text-decoration: none;
+    margin-left: var(--nys-space-100);
 }
 .card::after {
     content: "";
