@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = Array.from(document.querySelectorAll("section[id]"))
     .filter(section => section.id !== "header");
   const navItems = Array.from(document.querySelectorAll(".navigator__item"));
-  let ticking = false; // Debouncing flag for better performance
+  let ticking = false; // This is a performanc thing
 
   function updateActiveNav() {
     if (ticking) return;
@@ -25,10 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     requestAnimationFrame(() => {
       let current = "";
+      const viewportOffset = 50; // section offset from top of viewport to be considered "in view"
 
-      // Find the last section in view
+      // Find the "in view" section
       for (let i = 0; i < sections.length; i++) {
-        if (window.scrollY >= sections[i].offsetTop - 100) {
+        if (window.scrollY + viewportOffset >= sections[i].offsetTop) {
           current = sections[i].getAttribute("id");
         }
       }
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         current = navItems[0].querySelector(".navigator__link").getAttribute("href").substring(1);
       }
 
-      // Update navigation items
+      // Update active state and aria role
       navItems.forEach((item) => {
         const link = item.querySelector(".navigator__link");
         const sectionId = link.getAttribute("href").substring(1);
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Run on page load and scroll, debounced via requestAnimationFrame
+  // Run on page load and scroll (debounced, though, for better performance)
   updateActiveNav();
   window.addEventListener("scroll", updateActiveNav, { passive: true });
 });
