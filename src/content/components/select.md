@@ -2,15 +2,18 @@
 title: Select
 description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
+image_alt: An illustration of a select dropdown.
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.
 {% endblock %}
 
 {% block example %}
+
 <nys-select label="Select your favorite borough" id="borough">
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
@@ -21,6 +24,7 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-select label="Select your favorite borough" id="borough">
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
@@ -31,6 +35,7 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - When you need to collect data from a dropdown
   - When you need to provide a list of options for users to select a single option from
@@ -39,16 +44,18 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 {% endblock %}
 
 {% block usagedo %}
+
   - Use the `nys-option` component to define the options in the dropdown
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Don't use the native `&lt;option&gt;` element in the `nys-select` component</p></li>
-</ul>
+
+  - Don't use the native `<option>` element in the `nys-select` component
+
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.
@@ -58,6 +65,7 @@ The <code class="language-js">nys-select</code> component includes the following
 {% endblock %}
 
 {% block options %}
+
 ### Disabled
 
 <nys-select label="Select your favorite borough" disabled>
@@ -90,7 +98,6 @@ The following width options are available:
   - `lg` (Large): 384px, suitable for displaying longer content.
   - `full` (Full Width): default size. Expands to fill the available space.
 
-
 <nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
   <nys-option value="sm" label="sm"></nys-option>
   <nys-option value="md" label="md"></nys-option>
@@ -98,12 +105,8 @@ The following width options are available:
   <nys-option value="full" label="full"></nys-option>
 </nys-select>
 
-
-
-
 ### Error Message
 To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
-
 
 <nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
   <nys-option value="bronx" label="The Bronx"></nys-option>
@@ -112,7 +115,6 @@ To display an error message, pass in the `showError` property to the `nys-select
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>  
 </nys-select>
-
 
 {% endblock %}
 
@@ -176,6 +178,7 @@ To display an error message, pass in the `showError` property to the `nys-select
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -195,6 +198,7 @@ To display an error message, pass in the `showError` property to the `nys-select
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-select</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>

@@ -2,19 +2,23 @@
 title: Textarea
 description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
+image_alt: An illustration of a textarea field.
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
 {% endblock %}
 
 {% block example %}
+
 <nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities."></nys-textarea>
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-textarea
   id="quote"
   label="Enter your favorite quote:"
@@ -23,6 +27,7 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - To collect multiple lines of text input from the user (e.g., comments, descriptions).
   - For open-ended input specific to the user (e.g., personal notes, feedback).
@@ -32,18 +37,20 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 {% endblock %}
 
 {% block usagedo %}
+
   - Use the nys-textarea for long-form text like descriptions or detailed feedback.
   - Use the nys-textarea when precise user input is required in multiple lines.
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Don't use the nys-textarea for short or single-line inputs (use nys-input instead).</p></li>
-<li><p>Don't use the nys-textarea for data selection tasks (e.g., dropdowns or predefined options).</p></li>
-</ul>
+
+  - Don't use the nys-textarea for short or single-line inputs (use nys-input instead).
+  - Don't use the nys-textarea for data selection tasks (e.g., dropdowns or predefined options).
+
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-textarea</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
@@ -53,12 +60,13 @@ The <code class="language-js">nys-textarea</code> component includes the followi
 {% endblock %}
 
 {% block options %}
+
 ### Rows
 The `rows` attribute specifies the visible height of a text area, in number of lines.
 
-The default value is `2`
+The default value is `4`
 
-<nys-textarea label="This textarea renders with 4 rows" rows="4"></nys-textarea>
+<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
 
 ### Width
 If no `width` is provided, the `nys-textarea` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
@@ -69,7 +77,6 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 
 <nys-textarea width="md" label="This textarea is md"></nys-textarea>
 
-
 ### Resize
 By default a user can resize the `nys-textarea` vertically. If you want to disallow resizing altogether add `resize="none"`
 
@@ -77,21 +84,18 @@ Note: `resize` is not affected by setting `nys-textarea` to `disabled` or `reado
 
 <nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea>
 
-
 ### Description
 You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.
 
 <nys-textarea label="Label" description="description property"></nys-textarea>
-[[👇TODO FIX THIS DEMO 👇]]
+
 <nys-textarea label="Label">
   <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
 </nys-textarea>
-[[👆TODO FIX THIS DEMO description slot not working in 0.0.8-alpha👆]]
 
 ### Disabled 
 
 <nys-textarea label="Disabled textarea" disabled></nys-textarea>
-
 
 ### Readonly
 
@@ -190,6 +194,7 @@ To display an error message, pass in the `showError` property to the `nys-select
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -209,6 +214,7 @@ To display an error message, pass in the `showError` property to the `nys-select
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-textarea</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-checkValidity</code></strong> – Fired when the textarea state changes.</li>

@@ -2,15 +2,18 @@
 title: Toggle
 description: Switch component for enabling or disabling a setting.
 image: /assets/img/components/toggle.svg
+image_alt: An illustration of a toggle switch.
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
   The <code class="language-js">&lt;nys-toggle&gt;</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
 {% endblock %}
 
 {% block example %}
+
   <nys-toggle 
     label="Dark Mode"
     description="Enable dark mode for a more comfortable viewing experience."
@@ -20,6 +23,7 @@ image: /assets/img/components/toggle.svg
 {% endblock %}
 
 {% block examplecode %}
+
   <nys-toggle 
     label="Dark Mode"
     description="Enable dark mode for a more comfortable viewing experience."
@@ -29,27 +33,32 @@ image: /assets/img/components/toggle.svg
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - Consider using nys-toggle when expecting immediate UI effects when turning switch on/off.
   - Ideal for settings pages, feature toggles, or user preferences.
 ### When to consider something else
   - Consider using nys-checkbox or nys-radiobutton to select one or more options from a list where the selections
-  - Use nys-checkbox for forms, especially when you're not expecting immediate action.{% endblock %}
+  - Use nys-checkbox for forms, especially when you're not expecting immediate action.
+{% endblock %}
 
 {% block usagedo %}
+
   - Provide a clear label and optional description to explain the toggle's purpose.
   - Show the UI for toggle’s state is visually distinct for on/off positions.
+
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Use toggles for complex multi-state options.</p></li>
-<li><p>Overuse toggles for trivial settings that do not impact user experience significantly.</p></li>
-<li><p>Hide labels entirely unless another accessible method of describing the toggle exists.</p></li>
-</ul>
+
+  - Use toggles for complex multi-state options.
+  - Overuse toggles for trivial settings that do not impact user experience significantly.
+  - Hide labels entirely unless another accessible method of describing the toggle exists.
+
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-toggle</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
@@ -59,6 +68,7 @@ The <code class="language-js">nys-toggle</code> component includes the following
 {% endblock %}
 
 {% block options %}
+
 ### Sizes
 
 <nys-toggle label='Small (size="sm")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="sm"></nys-toggle>
@@ -159,6 +169,7 @@ The <code class="language-js">nys-toggle</code> component includes the following
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>

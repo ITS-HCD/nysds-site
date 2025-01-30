@@ -2,6 +2,8 @@
 title: Button
 description: "Used primarily for actions that have an immediate result like 'Save', 'Close', or 'Add'."
 draft: true
+image: 
+image_alt: An illustration of an button.
 ---
 
 {% extends "layouts/component.njk" %}

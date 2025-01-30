@@ -2,24 +2,29 @@
 title: Textinput
 description: Field for entering short text strings, like email, number, password, and more.
 image: /assets/img/components/textinput.svg
+image_alt: An illustration of a text input field.
 ---
 
 {% extends "layouts/component.njk" %}
 
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
 {% endblock %}
 
 {% block example %}
+
 <nys-textinput label="This is a text input"></nys-textinput>
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-textinput label="This is a text input"></nys-textinput>
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - To collect short, single-line text input from the user (e.g., names, email addresses, or short descriptions).
   - For open-ended, user-specific input.
@@ -29,19 +34,21 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web com
 {% endblock %}
 
 {% block usagedo %}
+
   - Use clear and concise labels to describe the input required.
   - Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.
   - Validate input in real-time to catch errors early (e.g., invalid email formats).
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-  <li><p>Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).</p></li>
-  <li><p>Don't overwhelm users with too many single-line inputs; group similar fields when possible.</p></li>
-</ul>
+
+  - Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).
+  - Don't overwhelm users with too many single-line inputs; group similar fields when possible.
+
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-textinput</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
@@ -51,6 +58,7 @@ The <code class="language-js">nys-textinput</code> component includes the follow
 {% endblock %}
 
 {% block options %}
+
 ### Width
 If no `width` is provided, the `nys-textinput` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 
@@ -59,7 +67,6 @@ Width full will take up the full width of the parent container.
 If an invalid option is assigned to `width`, it will be ignored and default to `full`.
 
 <nys-textinput width="sm" label="This label is sm"></nys-textinput>
-
 
 ### Type
 Accepted types are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
@@ -199,6 +206,7 @@ Set an error message and choose to activate it. The error message will appear ON
 
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -218,6 +226,7 @@ Set an error message and choose to activate it. The error message will appear ON
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-textinput</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-checkValidity</code></strong> – Fired when the textinput state changes.</li>

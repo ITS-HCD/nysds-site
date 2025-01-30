@@ -2,6 +2,7 @@
 title: Alert
 description: An alert displays a prominent message, with optional links, at the top of the screen.
 image: /assets/img/components/alert.svg
+image_alt: An illustration of an alert message.
 ---
 
 

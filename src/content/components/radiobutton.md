@@ -2,17 +2,21 @@
 title: Radiobutton
 description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
+image_alt: An illustration of a radiobutton.
+image_header: /assets/img/components/radiobutton-header.svg
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
  - NOTE: <code class="language-js">&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.
 
 {% endblock %}
 
 {% block example %}
+
 <nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" checked></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
@@ -20,6 +24,7 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-radiogroup 
   label="What is your primary work location?"
   description="This is the location you use for your in office days."
@@ -41,6 +46,7 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - When the user needs to select only one option from a list.
   - When there are 7 or fewer options to choose from (for better usability).
@@ -51,6 +57,7 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 {% endblock %}
 
 {% block usagedo %}
+
   - Always wrap a set of `nys-radiobutton`s with a `nys-radiogroup`
   - Group radio buttons vertically for easier scanning, especially when labels are lengthy.
   - Use a clear default selection if applicable (e.g., the most common or recommended choice).
@@ -59,14 +66,15 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Use radio buttons for yes/no questions (consider a toggle or checkbox).</p></li>
-<li><p>Overload the user with too many radio button options; simplify or use a dropdown if needed.</p></li>
-<li><p>Leave all radio buttons unselected if a default selection would help guide users.</p></li>
-</ul>
+
+  - Use radio buttons for yes/no questions (consider a toggle or checkbox).
+  - Overload the user with too many radio button options; simplify or use a dropdown if needed.
+  - Leave all radio buttons unselected if a default selection would help guide users.
+
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-radiobutton</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the radiobutton correctly.
@@ -79,6 +87,7 @@ The <code class="language-js">nys-radiobutton</code> component includes the foll
 {% endblock %}
 
 {% block options %}
+
 ### Disabled
 
 <nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
@@ -109,7 +118,6 @@ To display an error message, pass in the `showError` property to the `nys-radiog
 
 
 ### Slotted Description
-
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
 Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
@@ -190,6 +198,7 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -209,6 +218,7 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-radiobutton</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>

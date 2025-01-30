@@ -2,6 +2,8 @@
 title: Checkbox
 description: A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.
 image: /assets/img/components/checkbox.svg
+image_alt: An illustration of a checkbox.
+image_header: /assets/img/components/checkbox-header.svg
 ---
 
 {% extends "layouts/component.njk" %}

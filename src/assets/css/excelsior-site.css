@@ -1,129 +1,362 @@
+/* === Selective Resets */
 
+/* Box Model */
 
-#nygov-universal-navigation {
-    min-height: 95px;
-    border-bottom: solid 1px #ddd;
-    margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-    #nygov-universal-navigation {
-        min-height: 60px;
-    }
-}
-.nys-unav {
-    
-}
-html { scroll-behavior: smooth; }
-
-nav a, nav a:visited {
-    text-decoration: none;
-    color: var(--nys-color-ink)
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
+/* Margin/Padding for Text Elements */
 
-.inpagenav ul {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
-    padding: 0.5rem 0;
-}
-
-.inpagenav li {
-    list-style: none;
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure, pre {
     margin: 0;
-    border-left: 3px solid transparent;
-}
+    padding: 0;
+  }
 
-.inpagenav a {
-    display: block;
-    padding: 0.25rem;
-}
+/* Lists */
 
-.inpagenav li.active {
-    font-weight: bold;
-    border-left: 3px solid var(--nys-color-ink);
-}
-
-/* Syntax highlighting plugin tweaks */
-
-/* Remove the curly "peel" shadows from the bottom of code snippets */
-pre[class*="language-"]:before, pre[class*="language-"]:after {
-    box-shadow: none !important;
-}
-
-/* Add some vertical padding to the code blocks */
-pre[class*="language-"] > code {
-    padding: 1em;
-}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}  
 
 /* === Global Styles */
 /* These really need to be defined in excelsior.css */
 
 /* === Typography */
 
+html { scroll-behavior: smooth; }
+
 body {
     margin: 0;
-    font-family: var(--nys-font-family-body);
+    font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
     color: var(--nys-color-ink);
 }
-
+small {
+    font: var(--nys-font-size-xs) / var(--nys-font-lineheight-xs) var(--nys-font-family-body);
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--nys-font-family-heading);
+    font-weight: 800;
 }
+
 h1 {
     font-size: var(--nys-font-size-h1);
     line-height: var(--nys-font-lineheight-h1);
+    margin-top: var(--nys-space-600);
+    margin-bottom: var(--nys-space-250);
 }
+
 h2 {
     font-size: var(--nys-font-size-h2);
     line-height: var(--nys-font-lineheight-h2);
+    margin-top: var(--nys-space-500);
+    margin-bottom: var(--nys-space-200);
 }
+
 h3 {
     font-size: var(--nys-font-size-h3);
     line-height: var(--nys-font-lineheight-h3);
+    margin-top: var(--nys-space-400);
+    margin-bottom: var(--nys-space-150);
 }
+
 h4 {
     font-size: var(--nys-font-size-h4);
     line-height: var(--nys-font-lineheight-h4);
+    margin-top: var(--nys-space-300);
+    margin-bottom: var(--nys-space-100);
 }
+
 h5 {
     font-size: var(--nys-font-size-h5);
     line-height: var(--nys-font-lineheight-h5);
+    margin-top: var(--nys-space-250);
+    margin-bottom: var(--nys-space-100);
 }
+
 h6 {
     font-size: var(--nys-font-size-h6);
     line-height: var(--nys-font-lineheight-h6);
+    margin-top: var(--nys-space-200);
+    margin-bottom: var(--nys-space-100);
 }
 
+
 p, ul, ol, dl, blockquote {
-    line-height: var(--nys-font-lineheight-body-md);   
+    font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
+    margin-bottom: var(--nys-space-150);
 }
+
+small {
+    margin-bottom: var(--nys-space-100);
+}
+
+/* Adjust for specific scenarios */
+
+h1 + h2, 
+h2 + h3, 
+h3 + h4, 
+h4 + h5, 
+h5 + h6 {
+    margin-top: var(--nys-space-150);
+}
+
+p + p {
+    margin-top: var(--nys-space-150);
+}
+
+section + section {
+    margin-top: var(--nys-space-300);
+}
+
+@media (min-width: 768px) {
+    section + section {
+        margin-bottom: var(--nys-space-600);
+    }
+}
+
+/* --- Lists --- */
+
+ul, ol {
+    margin-top: 0;
+    padding-left: var(--nys-space-200);
+}
+
+blockquote > ul, blockquote > ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Unordered Lists (Bullets) */
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+    padding-left: var(--nys-space-200);
+}
+
+ul ul ul {
+    list-style-type: square;
+    padding-left: var(--nys-space-200);
+}
+
+/* Ordered Lists (Numbers) */
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+    padding-left: var(--nys-space-200);
+}
+
+ol ol ol {
+    list-style-type: lower-roman;
+    padding-left: var(--nys-space-200);
+}
+
+/* Lists Items */
+
+li {
+    margin-bottom: var(--nys-space-100);
+}
+
+li::marker {
+    color: var(--nys-color-theme-primary, #000);
+}
+
+/* Links */
 
 a {
     color: var(--nys-color-link);
-    text-decoration: none;
 }
 a:hover,
 a:focus {
     color: var(--nys-color-link-strong);
-    text-decoration: underline;
 }
 a:active {
     color: var(--nys-color-link-strongest);
 }
 
-
 /* === Custom Components */
+
+/* Site Header */
+
+/* --- Site Header Layout --- */
+
+.site-header {
+    padding: var(--nys-space-200) 0;
+}
+
+.site-header__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--nys-space-150);
+}
+
+.site-header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.site-header__logo img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.site-header__nav {
+    width: 100%;
+}
+
+.site-header__list {
+    font-size: var(--nys-font-size-body-sm);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.site-header__item {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.site-header__item--active {
+    font-weight: bold;
+}
+
+.site-header__link {
+    text-decoration: none;
+    color: var(--nys-color-ink);
+    padding: var(--nys-space-100);
+    display: inline-block;
+}
+
+.site-header__link:hover,
+.site-header__link:focus {
+    color: var(--nys-color-theme);
+    text-decoration: underline;
+}
+@media (min-width: 768px) {
+    .site-header__list {
+        font-size: var(--nys-font-size-body-md);
+    }
+    .site-header__link {
+        padding: var(--nys-space-100) var(--nys-space-200);
+    }
+}
+@media (min-width: 1024px) {
+    .site-header__logo img {
+        max-width: 350px;
+        height: auto;
+    }
+    .site-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site-header__nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .site-header__list {
+        justify-content: flex-end;
+    }
+}
+
+/* Section Header */
+
+.section-header {
+    background-color: var(--nys-color-theme-strong);
+    color: var(--nys-color-theme-weak, #fff);
+}
+.section-header__inner {
+    padding-top: var(--nys-space-200);
+    padding-bottom: var(--nys-space-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+.section-header__title {
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin-top: var(--nys-space-200);
+}
+.section-header__media {
+    margin-top: var(--nys-space-50);
+    overflow: hidden;;
+}
+.section-header__media img {
+    max-width: 100%;    
+    display: block;
+    width: clamp(200px, 50vw, 550px);
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .section-header__inner {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .section-header__media {
+        margin-top: 0;
+    }
+}
+
+/* Site Footer */
+
+.site-footer {
+    margin-top: var(--nys-space-600);
+    background-color: var(--nys-color-neutral-50);
+    color: var(--nys-color-ink);
+    padding: var(--nys-space-400) 0;
+    font-size: var(--nys-font-size-body-md);
+}
+.site-footer__list-header {
+    padding-bottom: var(--nys-space-100);
+    margin-bottom: var(--nys-space-200);
+    border-bottom: solid 1px var(--nys-color-theme);
+}
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-footer li {
+    margin-bottom: var(--nys-space-200);
+}
+.site-footer a {
+    color: var(--nys-color-ink);
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
 
 /* Content Intro */
 
 .content-intro {
-    padding: var(--nys-space-100) 0;
-    border-top: solid 1px var(--nys-color-theme-mid);
-    border-bottom: solid 1px var(--nys-color-theme-mid);
+    padding: var(--nys-space-150) 0 0;
+    border-top: solid 1px var(--nys-color-theme-weak);
+    border-bottom: solid 1px var(--nys-color-theme-weak);
     margin-bottom: var(--nys-space-250);
 }
 
@@ -142,8 +375,12 @@ ex-header__title {
     border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-lg);
     padding: var(--nys-space-200);
-    margin-bottom: var(--nys-space-200);
+    margin-bottom: var(--nys-space-400);
     align-items: stretch; 
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .card__media {
     aspect-ratio: 2 / 1;
@@ -157,9 +394,197 @@ ex-header__title {
 }
 .card__title {
     font-size: var(--nys-font-size-h3);
-    margin-bottom: var(--nys-space-100);
+    font-weight: var(--nys-font-weight-h3, bold);
+    margin-top: var(--nys-space-100);
+    margin-bottom: var(--nys-space-150);
+    margin-left: var(--nys-space-100);
+}
+.card__title, .card__desc {
+    text-decoration: none;
+    margin-left: var(--nys-space-100);
+}
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
+}
+a.card {
+    color: inherit;
+    text-decoration: none;
+}
+a.card:hover .card__title,
+a.card:focus .card__title {
+    text-decoration: underline;
+}
+a.card:focus {
+    border-color: var(--nys-color-focus, #004dd1);
+    outline: var(--nys-border-width-sm, 1px) solid var(--nys-color-focus, #004dd1);
+    outline-offset: 0;
+}
+
+
+/* On-Page Navigator */
+.navigator {
+    position: sticky;
+    padding-top: var(--nys-space-500);
+    padding-bottom: var(--nys-space-200);
+    top: var(--nys-space-300);
+    display: none;
+}
+
+.navigator__title {
+    font-size: var(--nys-font-size-sm);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: var(--nys-space-200);
+}
+
+.navigator__list {
+    position: relative;
+    margin-left: 0;
+    padding: 0;
+}
+
+.navigator__list::before {
+    content: '';
+    background: var(--nys-color-neutral-50);
+    width: var(--nys-border-width-lg);
+    border-radius: var(--nys-radius-round);
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.navigator__item {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: var(--nys-space-100) var(--nys-space-200);
+}
+
+.navigator__link {
+    display: block;
+    text-decoration: none;
+    color: var(--nys-color-neutral-600);
+}
+
+.navigator__link:hover {
+    color: var(--nys-color-theme);
+    text-decoration: underline;
+}
+
+/* Active State */
+.navigator__item--active {
+    position: relative;
     font-weight: bold;
 }
-.card a {
+.navigator__item--active::before {
+    content: '';
+    background: var(--nys-color-theme);
+    width: var(--nys-border-width-lg);
+    border-radius: var(--nys-radius-round);
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.navigator__item--active .navigator__link {
+    color: var(--nys-color-theme);
+}
+
+@media screen and (min-width: 1024px) {
+    .navigator { display: block; }
+}
+
+/* Home Hero */
+.hero {
+    padding: var(--nys-space-600) 0;
     color: var(--nys-color-ink);
+}
+.hero--home {
+    background-color: var(--nys-color-theme-weaker);
+}
+.hero__media {
+    margin-bottom: var(--nys-space-300);
+    overflow: hidden;
+}
+
+/* Additional Tweaks */
+
+/* UNav Hacks - REMOVE BEFORE LAUNCH */
+#nygov-universal-navigation {
+    min-height: 95px;
+    border-bottom: solid 1px #ddd;
+}
+@media (min-width: 768px) {
+    #nygov-universal-navigation {
+        min-height: 60px;
+    }
+}
+
+
+/* NYS Button */
+
+.nys-button {
+    display: inline-block;
+    padding: var(--nys-space-150) var(--nys-space-250);
+    font-size: var(--nys-font-size-ui-md);
+    line-height: var(--nys-font-lineheight-ui-md);
+    color: var(--nys-color-ink-reverse);
+    background-color: var(--nys-color-theme);
+    border-radius: var(--nys-radius-xl);
+    border: solid var(--nys-border-width-md) var(--nys-color-theme);
+    text-decoration: none;
+    text-align: center;
+    outline-width: var(--nys-border-width-md, 2px);
+    outline-offset: var(--nys-space-2px, 2px);
+    outline-color: var(--nys-color-focus, #004dd1);
+}
+
+.nys-button:hover, .nys-button:focus {
+    color: var(--nys-color-ink-reverse);
+    background-color: var(--nys-color-theme-strong);
+    border-color: var(--nys-color-theme-strong);
+}
+.nys-button:active {
+    color: var(--nys-color-ink-reverse);
+    background-color: var(--nys-color-theme-stronger);
+    border-color: var(--nys-color-theme-stronger);
+}
+
+.nys-button--outline {
+    color: var(--nys-color-theme);
+    background-color: transparent;
+    border: solid var(--nys-border-width-md) var(--nys-color-theme);
+}
+.nys-button--outline:hover, .nys-button--outline:focus {
+    color: var(--nys-color-theme-strong);
+    background-color: var(--nys-color-theme-weaker);
+}
+.nys-button--outline:active {
+    color: var(--nys-color-theme-stronger);
+    background-color: var(--nys-color-theme-weak);
+}
+
+.nys-button--fullwidth {
+    display: block;
+    width: 100%;
+}
+.nys-button + .nys-button {
+    margin-left: var(--nys-space-150);
+}
+
+
+/* Syntax highlighting plugin tweaks */
+
+/* Remove the curly "peel" shadows from the bottom of code snippets */
+pre[class*="language-"]:before, pre[class*="language-"]:after {
+    box-shadow: none !important;
+}
+
+/* Add some vertical padding to the code blocks */
+pre[class*="language-"] > code {
+    padding: 1em;
 }
