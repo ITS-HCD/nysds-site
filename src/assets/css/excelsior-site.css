@@ -496,6 +496,19 @@ a.card:focus {
     .navigator { display: block; }
 }
 
+/* Home Hero */
+.hero {
+    padding: var(--nys-space-600) 0;
+    color: var(--nys-color-ink);
+}
+.hero--home {
+    background-color: var(--nys-color-theme-weaker);
+}
+.hero__media {
+    margin-bottom: var(--nys-space-300);
+    overflow: hidden;
+}
+
 /* Additional Tweaks */
 
 /* UNav Hacks - REMOVE BEFORE LAUNCH */
