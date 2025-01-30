@@ -3,14 +3,37 @@ permalink: /
 title: "Excelsior, New York State's Design System"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
 crawl: false
+site_nav: false
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 
+<section class="hero hero--home">
+  <div class="hero__inner nys-grid-container">
+    <div class="nys-grid-row">
+      <div class="nys-tablet:nys-grid-col-3"></div>
+      
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex nys-flex-column nys-flex-align-center nys-flex-justify-center nys-flex-fill">
+        <div class="hero__media">
+          <img src="{{ '/assets/img/logo-excelsior-tall.svg' | url }}" width="268" height="138" alt="Excelsior, New York State's Design System"> 
+        </div>
+        <div class="hero__copy">
+          Excelsior is New York State's design system. It provides a consistent set of design standards, principles, and practices to help teams create accessible, user-friendly digital experiences for New Yorkers.
+        </div>
+      </div>
+      
+      <div class="nys-tablet:nys-grid-col-3"></div>
+    </div>
+  </div>
+</section>
+
+
+<section>
 <h1>A design system for New York State websites.</h1>
 <p>Tools, resources, and guidance for building accessible, usable New York State government websites.</p>
+</section>
 {% endblock %}
 
 {% block styles %}

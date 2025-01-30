@@ -1,20 +1,38 @@
+{# {% if site_nav != false %} #}
 <div class="site-header">
     <div class="site-header__inner nys-grid-container">
-        <div class="nys-grid-row">
-            <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
-                <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-excelsior.svg' | url }}" title="Excelsior Logo"></a>
-            </div>
-            <nav class="nys-tablet:nys-grid-col nys-flex-align-self-center">
-                <ul class="nys-display-flex nys-flex-justify-center">
-                    <li><a href="{{ '/getting-started' | url }}" title="Getting Started">Getting Started</a></li>
-                    <li><a href="{{ '/foundations' | url }}" title="Foundations">Foundations</a></li>
-                    <li><a href="{{ '/components' | url }}" title="Components">Components</a></li>
-                    <li><a href="{{ '/about' | url }}" title="About">About</a></li>
-                </ul>
-            </nav>
+        <div class="site-header__logo">
+            <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-excelsior.svg' | url }}" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item{% if section == 'Getting Started' %} site-header__item--active{% endif %}"><a href="{{ '/getting-started' | url }}" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item{% if section == 'Foundations' %} site-header__item--active{% endif %}"><a href="{{ '/foundations' | url }}" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item{% if section == 'Components' %} site-header__item--active{% endif %}"><a href="{{ '/components' | url }}" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item{% if section == 'About' %} site-header__item--active{% endif %}"><a href="{{ '/about' | url }}" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+{# {% endif %} #}
+
+{% if section %}
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            {{ section }}
+        </div>
+        <div class="section-header__media">
+            {% if image_header %}
+                <img src="{{ image_header | url }}" alt="{{ title }}">
+            {% else %}
+                <img src="/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+            {% endif %}
         </div>
     </div>
 </div>
+{% endif %}
 
 {# <div id="search" class="search"></div>
 

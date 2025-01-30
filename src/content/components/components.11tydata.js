@@ -4,6 +4,7 @@ module.exports = {
   layout: "layouts/base.njk", // Default layout for all components
 
   eleventyComputed: {
+      section: "Components",
       permalink: (data) => {
           if (data.draft) { return false; }
           // Use existing permalink or default to file path stem
