@@ -9,20 +9,19 @@ section: Components
 
 {% block content %}
 
+<h1>Web Components</h1>
+
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-8">
     <div class="content-intro">
       <div class="content-intro__inner">  
-        <p>Excelsior offers a library of reusable building blocks for creating consistent, accessible, scalable digital experiences across New York State government sites. They are designed and tested to meet WCAG 2.2 AA compliance so they're accessible. They are styled with design tokens for flexibility. And they are built with web components so they work across platforms and frameworks.</p>
+        <p>
+          Excelsior offers a library of web components. These building blocks help designers and developers create consistent digital products for New York State. Each component includes examples, guidance, accessibility considerations, and options.
+        </p>
       </div>
     </div>
   </div>
   <div class="nys-tablet:nys-grid-col-4">
-    <ul>
-      <li><a href="#">How to Use</a></li>
-      <li><a href="#">GitHub Issues</a></li>
-      <li><a href="#">NPM Components</a></li>
-    </ul>
   </div>
 </div>
 
@@ -43,8 +42,22 @@ section: Components
     </a>
   </div>
   {%- endfor -%}
-
 </div>
+
+<!-- Section for linking people to GitHub discussion to suggest new components -->
+<section class="nys-section">
+  <h2>Suggest a New Component</h2>
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-8">
+      <p>
+        Do you have an idea for a new Excelsior web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+      </p>
+    </div>
+    <div class="nys-tablet:nys-grid-col-4 nys-display-flex nys-flex-align-items-start nys-justify-center">
+      <a class="nys-button nys-flex-align-self-start" href="https://github.com/ITS-HCD/excelsior/discussions/categories/component-proposals">Review Component Proposals</a>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
 

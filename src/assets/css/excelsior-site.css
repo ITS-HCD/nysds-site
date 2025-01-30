@@ -343,9 +343,9 @@ a:active {
 /* Content Intro */
 
 .content-intro {
-    padding: var(--nys-space-100) 0;
-    border-top: solid 1px var(--nys-color-theme-mid);
-    border-bottom: solid 1px var(--nys-color-theme-mid);
+    padding: var(--nys-space-150) 0 0;
+    border-top: solid 1px var(--nys-color-theme-weak);
+    border-bottom: solid 1px var(--nys-color-theme-weak);
     margin-bottom: var(--nys-space-250);
 }
 
@@ -494,7 +494,31 @@ a.card:focus {
 }
 
 
+/* NYS Button */
 
+.nys-button {
+    display: inline-block;
+    padding: var(--nys-space-100) var(--nys-space-200);
+    font-size: var(--nys-font-size-ui-md);
+    line-height: var(--nys-font-lineheight-ui-md);
+    color: var(--nys-color-ink-reverse);
+    background-color: var(--nys-color-theme);
+    border: none;
+    border-radius: var(--nys-radius-xl);
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+.nys-button:hover, .nys-button:focus {
+    color: var(--nys-color-ink-reverse);
+    background-color: var(--nys-color-theme-strong);
+    outline-offset: 2px;
+    outline-color: var(--nys-color-link);
+}
+.nys-button:active {
+    color: var(--nys-color-ink-reverse);
+    background-color: var(--nys-color-theme-stronger);
+}
 
 
 /* Syntax highlighting plugin tweaks */
