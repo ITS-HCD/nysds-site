@@ -498,26 +498,51 @@ a.card:focus {
 
 .nys-button {
     display: inline-block;
-    padding: var(--nys-space-100) var(--nys-space-200);
+    padding: var(--nys-space-150) var(--nys-space-250);
     font-size: var(--nys-font-size-ui-md);
     line-height: var(--nys-font-lineheight-ui-md);
     color: var(--nys-color-ink-reverse);
     background-color: var(--nys-color-theme);
-    border: none;
     border-radius: var(--nys-radius-xl);
+    border: solid var(--nys-border-width-md) var(--nys-color-theme);
     text-decoration: none;
     text-align: center;
-    width: 100%;
+    outline-width: var(--nys-border-width-md, 2px);
+    outline-offset: var(--nys-space-2px, 2px);
+    outline-color: var(--nys-color-focus, #004dd1);
 }
+
 .nys-button:hover, .nys-button:focus {
     color: var(--nys-color-ink-reverse);
     background-color: var(--nys-color-theme-strong);
-    outline-offset: 2px;
-    outline-color: var(--nys-color-link);
+    border-color: var(--nys-color-theme-strong);
 }
 .nys-button:active {
     color: var(--nys-color-ink-reverse);
     background-color: var(--nys-color-theme-stronger);
+    border-color: var(--nys-color-theme-stronger);
+}
+
+.nys-button--outline {
+    color: var(--nys-color-theme);
+    background-color: transparent;
+    border: solid var(--nys-border-width-md) var(--nys-color-theme);
+}
+.nys-button--outline:hover, .nys-button--outline:focus {
+    color: var(--nys-color-theme-strong);
+    background-color: var(--nys-color-theme-weaker);
+}
+.nys-button--outline:active {
+    color: var(--nys-color-theme-stronger);
+    background-color: var(--nys-color-theme-weak);
+}
+
+.nys-button--fullwidth {
+    display: block;
+    width: 100%;
+}
+.nys-button + .nys-button {
+    margin-left: var(--nys-space-150);
 }
 
 
