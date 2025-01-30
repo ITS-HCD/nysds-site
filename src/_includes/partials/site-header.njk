@@ -16,20 +16,22 @@
     </div>
 </div>
 
+{% if section %}
 <div class="section-header">
     <div class="section-header__inner nys-grid-container">
-        <div class="nys-grid-row nys-flex-align-center">
-            <div class="section-header__title nys-tablet:nys-grid-col-9">
-                Components
-            </div>
-            <div class="section-header__media nys-tablet:nys-grid-col-3">
-                {% if image_shape %}
-                    <img src="{{ image_shape | url }}" alt="{{ title }}">
-                {% endif %}
-            </div>
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            {% if image_header %}
+                <img src="{{ image_header | url }}" alt="{{ title }}">
+            {% else %}
+                <img src="/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+            {% endif %}
         </div>
     </div>
 </div>
+{% endif %}
 
 {# <div id="search" class="search"></div>
 
