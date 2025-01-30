@@ -30,7 +30,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-01-30T14:59:55.174+00:00 -->
+    <!-- Latest Build: 2025-01-30T21:06:45.918+00:00 -->
   </head>
   <body class="single-page page-avatar">
 
@@ -93,117 +93,101 @@
       
       <div class="nys-grid-row nys-grid-gap-lg">
   <div class="nys-desktop:nys-grid-col-3">
-<p><div class="navigator">
-<div class="navigator__inner">
-<div id="navigator-title" class="navigator__title">On this page</div>
-<nav class="navigator__nav" aria-labelledby="navigator-title">
-<ul class="navigator__list">
-<li class="navigator__item navigator__item--overview navigator__item--active">
-<a class="navigator__link" href="#overview">Overview</a>
-</li>
-<li class="navigator__item navigator__item--example">
-<a class="navigator__link" href="#example">Example</a>
-</li>
-<li class="navigator__item navigator__item--examplecode">
-<a class="navigator__link" href="#examplecode">Example Code</a>
-</li>
-<li class="navigator__item navigator__item--usage">
-<a class="navigator__link" href="#usage">Usage</a>
-</li>
-<li class="navigator__item navigator__item--accessibility">
-<a class="navigator__link" href="#accessibility">Accessibility</a>
-</li>
-<li class="navigator__item navigator__item--options">
-<a class="navigator__link" href="#options">Options</a>
-</li>
-<li class="navigator__item navigator__item--properties">
-<a class="navigator__link" href="#properties">Properties</a>
-</li>
-<li class="navigator__item navigator__item--cssvariables">
-<a class="navigator__link" href="#cssvariables">CSS Variables</a>
-</li>
-<li class="navigator__item navigator__item--events">
-<a class="navigator__link" href="#events">Events</a>
-</li>
-</ul>
-</nav>
-</div>
-</div></p>
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <nav class="navigator__nav" aria-labelledby="navigator-title">
+          <ul class="navigator__list">
+            <li class="navigator__item navigator__item--overview navigator__item--active">
+              <a class="navigator__link" href="#overview">Overview</a>
+            </li>
+            <li class="navigator__item navigator__item--example">
+              <a class="navigator__link" href="#example">Example</a>
+            </li>
+            <li class="navigator__item navigator__item--examplecode">
+              <a class="navigator__link" href="#examplecode">Example Code</a>
+            </li>
+            <li class="navigator__item navigator__item--usage">
+              <a class="navigator__link" href="#usage">Usage</a>
+            </li>
+            <li class="navigator__item navigator__item--accessibility">
+              <a class="navigator__link" href="#accessibility">Accessibility</a>
+            </li>
+            <li class="navigator__item navigator__item--options">
+              <a class="navigator__link" href="#options">Options</a>
+            </li>
+            <li class="navigator__item navigator__item--properties">
+              <a class="navigator__link" href="#properties">Properties</a>
+            </li>
+            <li class="navigator__item navigator__item--cssvariables">
+              <a class="navigator__link" href="#cssvariables">CSS Variables</a>
+            </li>
+            <li class="navigator__item navigator__item--events">
+              <a class="navigator__link" href="#events">Events</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
   <div class="nys-desktop:nys-grid-col-9">
-<p><section id="overview">
-<h1>Avatar</h1></p>
-<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.</p>
+    <section id="overview">
+      <h1>Avatar</h1>
+The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.
 <p>By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.</p>
-<p></section></p>
-<p><section id="example"></p>
-<p><nys-avatar label="User avatar"></nys-avatar></p>
-<p></section></p>
-<p><section id="examplecode">
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span>
-<span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>User avatar<span class="token punctuation">&quot;</span></span>
-<span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">&gt;</span></span></code></pre>
-</section></p>
-<p><section id="usage">
-<h2>Usage</h2></p>
-<h3>When to use this component</h3>
+</section>
+    <section id="example">
+<nys-avatar label="User avatar"></nys-avatar>
+</section>
+    <section id="examplecode">
+      <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+    </section>
+    <section id="usage">
+      <h2>Usage</h2>
+### When to use this component
 <ul>
 <li>To visually represent users, objects, or entities in a UI.</li>
 <li>Ideal for profiles, account settings, or comment threads.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-<li>
-<p>If the avatar doesn’t add value to the context.</p>
-</li>
-<li>
-<p>When a simple label or text works better.</p>
-  </section>
-  <div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-      <div class="card nys-flex-fill">
-        <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>
-<p>Use for clear, simple user or entity representation.</p>
-</li>
-<li>
-<p>Use appropriate shapes, sizes, and images to fit the overall page design.</p>
-</li>
-<li>
-<p>Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.</p>
-<p></div></p>
-  </div>
-  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-    <div class="card nys-flex-fill">
-      <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-</li>
+<li>If the avatar doesn’t add value to the context.</li>
+<li>When a simple label or text works better.</li>
 </ul>
-</li>
-</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+  - Use for clear, simple user or entity representation.
+  - Use appropriate shapes, sizes, and images to fit the overall page design.
+  - Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li><p>Don't overload the avatar with unnecessary customizations.</p></li>
 <li><p>Don't skip the <code class="language-js">label</code> attribute for screen reader users.</p></li>
 <li><p>Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.</p></li>
 </ul>
-<p></div>
 </div>
-</div></p>
-<p><section id="accessibility">
-<h2>Accessibility</h2></p>
-<p>The <code class="language-js">nys-</code> component includes the following accessibility-focused features:</p>
+      </div>
+    </div>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
 <ul>
-<li>
-<p>Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.</p>
-</li>
-<li>
-<p>A label property to provide accessible text for screen readers.</p>
-</section>
-<section id="options">
-  <h2>Options</h2>
-</li>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.</li>
+<li>A label property to provide accessible text for screen readers.</li>
 </ul>
-<h3>Images</h3>
+</section>
+    <section id="options">
+      <h2>Options</h2>
+### Images
 <p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
 <p><nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar></p>
 <h2>Initials</h2>
@@ -226,9 +210,9 @@
 <h3>Background Color</h3>
 <p>You can change the background color of an Avatar. Note that images will naturally cover over the background color.</p>
 <p><nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar></p>
-<p></section></p>
-<p><section id="properties">
-<h2>Properties</h2></p>
+</section>
+    <section id="properties">
+      <h2>Properties</h2>
 <table>
   <thead>
     <tr>
@@ -271,10 +255,10 @@
     </tr>
   </tbody>
 </table>
-<p></section></p>
-<p><section id="cssvariables">
-<h2>CSS Variables</h2></p>
-<p>[[TODO]]</p>
+</section>
+    <section id="cssvariables">
+      <h2>CSS Variables</h2>
+[[TODO]]
 <table>
   <thead>
     <tr>
@@ -289,10 +273,10 @@
     </tr>
   </tbody>
   </table>
-<p></section></p>
-<p><section id="events">
-<h2>Events</h2></p>
-<p>[[TODO]]</p>
+</section>
+    <section id="events">
+      <h2>Events</h2>
+[[TODO]]
 <p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
@@ -308,7 +292,7 @@
   toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p></section></p>
+</section>
   </div>
 </div>
       

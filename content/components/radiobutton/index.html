@@ -30,7 +30,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-01-30T14:59:55.174+00:00 -->
+    <!-- Latest Build: 2025-01-30T21:06:45.918+00:00 -->
   </head>
   <body class="single-page page-radiobutton">
 
@@ -93,81 +93,79 @@
       
       <div class="nys-grid-row nys-grid-gap-lg">
   <div class="nys-desktop:nys-grid-col-3">
-<p><div class="navigator">
-<div class="navigator__inner">
-<div id="navigator-title" class="navigator__title">On this page</div>
-<nav class="navigator__nav" aria-labelledby="navigator-title">
-<ul class="navigator__list">
-<li class="navigator__item navigator__item--overview navigator__item--active">
-<a class="navigator__link" href="#overview">Overview</a>
-</li>
-<li class="navigator__item navigator__item--example">
-<a class="navigator__link" href="#example">Example</a>
-</li>
-<li class="navigator__item navigator__item--examplecode">
-<a class="navigator__link" href="#examplecode">Example Code</a>
-</li>
-<li class="navigator__item navigator__item--usage">
-<a class="navigator__link" href="#usage">Usage</a>
-</li>
-<li class="navigator__item navigator__item--accessibility">
-<a class="navigator__link" href="#accessibility">Accessibility</a>
-</li>
-<li class="navigator__item navigator__item--options">
-<a class="navigator__link" href="#options">Options</a>
-</li>
-<li class="navigator__item navigator__item--properties">
-<a class="navigator__link" href="#properties">Properties</a>
-</li>
-<li class="navigator__item navigator__item--cssvariables">
-<a class="navigator__link" href="#cssvariables">CSS Variables</a>
-</li>
-<li class="navigator__item navigator__item--events">
-<a class="navigator__link" href="#events">Events</a>
-</li>
-</ul>
-</nav>
-</div>
-</div></p>
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <nav class="navigator__nav" aria-labelledby="navigator-title">
+          <ul class="navigator__list">
+            <li class="navigator__item navigator__item--overview navigator__item--active">
+              <a class="navigator__link" href="#overview">Overview</a>
+            </li>
+            <li class="navigator__item navigator__item--example">
+              <a class="navigator__link" href="#example">Example</a>
+            </li>
+            <li class="navigator__item navigator__item--examplecode">
+              <a class="navigator__link" href="#examplecode">Example Code</a>
+            </li>
+            <li class="navigator__item navigator__item--usage">
+              <a class="navigator__link" href="#usage">Usage</a>
+            </li>
+            <li class="navigator__item navigator__item--accessibility">
+              <a class="navigator__link" href="#accessibility">Accessibility</a>
+            </li>
+            <li class="navigator__item navigator__item--options">
+              <a class="navigator__link" href="#options">Options</a>
+            </li>
+            <li class="navigator__item navigator__item--properties">
+              <a class="navigator__link" href="#properties">Properties</a>
+            </li>
+            <li class="navigator__item navigator__item--cssvariables">
+              <a class="navigator__link" href="#cssvariables">CSS Variables</a>
+            </li>
+            <li class="navigator__item navigator__item--events">
+              <a class="navigator__link" href="#events">Events</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
   <div class="nys-desktop:nys-grid-col-9">
-<p><section id="overview">
-<h1>Radiobutton</h1></p>
+    <section id="overview">
+      <h1>Radiobutton</h1>
 <p>The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.</p>
 <ul>
-<li>
-<p>NOTE: <code class="language-js">&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.</p>
- </section>
- <section id="example">
-</li>
+<li>NOTE: <code class="language-js">&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.</li>
 </ul>
+</section>
+    <section id="example">
 <nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" checked></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>
-<p></section></p>
-<p><section id="examplecode">
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiogroup</span>
-<span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>What is your primary work location?<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>This is the location you use for your in office days.<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>md<span class="token punctuation">&quot;</span></span>
-<span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
-<span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>office<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Albany<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Upstate New York<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>albany<span class="token punctuation">&quot;</span></span>
-<span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
-<span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>office<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Manhattan<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>New York City<span class="token punctuation">&quot;</span></span>
-<span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>manhattan<span class="token punctuation">&quot;</span></span>
-<span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiogroup</span><span class="token punctuation">&gt;</span></span></code></pre>
-</section></p>
-<p><section id="usage">
-<h2>Usage</h2></p>
+</section>
+    <section id="examplecode">
+      <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiogroup</span> 
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>What is your primary work location?<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is the location you use for your in office days.<span class="token punctuation">"</span></span>
+  <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Albany<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upstate New York<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>albany<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Manhattan<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>New York City<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manhattan<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiogroup</span><span class="token punctuation">></span></span></code></pre>
+    </section>
+    <section id="usage">
+      <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
 <li>When the user needs to select only one option from a list.</li>
@@ -175,71 +173,52 @@
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-<li>
-<p>When users need to select multiple options (consider checkboxes instead).</p>
-</li>
-<li>
-<p>When there are more than 7 options (consider a dropdown for better space utilization).</p>
+<li>When users need to select multiple options (consider checkboxes instead).</li>
+<li>When there are more than 7 options (consider a dropdown for better space utilization).</li>
+</ul>
 </section>
-<div class="nys-grid-row nys-grid-gap">
-  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-    <div class="card nys-flex-fill">
-      <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-</li>
-<li>
-<p>Always wrap a set of <code>nys-radiobutton</code>s with a <code>nys-radiogroup</code></p>
-</li>
-<li>
-<p>Group radio buttons vertically for easier scanning, especially when labels are lengthy.</p>
-</li>
-<li>
-<p>Use a clear default selection if applicable (e.g., the most common or recommended choice).</p>
-</li>
-<li>
-<p>Provide descriptive and concise labels for each option.</p>
-</li>
-<li>
-<p>Group related radio buttons with a heading or contextual instructions to clarify the choice.</p>
-<p></div></p>
-  </div>
-  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-    <div class="card nys-flex-fill">
-      <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-</li>
-</ul>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li><p>Use radio buttons for yes/no questions (consider a toggle or checkbox).</p></li>
-<li><p>Overload the user with too many radio button options; simplify or use a dropdown if needed.</p></li>
-<li><p>Leave all radio buttons unselected if a default selection would help guide users.</p></li>
+<li>Always wrap a set of <code>nys-radiobutton</code>s with a <code>nys-radiogroup</code></li>
+<li>Group radio buttons vertically for easier scanning, especially when labels are lengthy.</li>
+<li>Use a clear default selection if applicable (e.g., the most common or recommended choice).</li>
+<li>Provide descriptive and concise labels for each option.</li>
+<li>Group related radio buttons with a heading or contextual instructions to clarify the choice.</li>
 </ul>
-<p></div>
 </div>
-</div></p>
-<p><section id="accessibility">
-<h2>Accessibility</h2></p>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Use radio buttons for yes/no questions (consider a toggle or checkbox).</li>
+<li>Overload the user with too many radio button options; simplify or use a dropdown if needed.</li>
+<li>Leave all radio buttons unselected if a default selection would help guide users.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
 <p>The <code class="language-js">nys-radiobutton</code> component includes the following accessibility-focused features:</p>
 <ul>
-<li>
-<p>Proper ARIA roles and attributes to ensure screen readers can interpret the radiobutton correctly.</p>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the radiobutton correctly.
 <ul>
 <li><code class="language-js">aria-checked</code></li>
 <li><code class="language-js">aria-disabled</code></li>
 <li><code class="language-js">aria-required</code></li>
 </ul>
 </li>
-<li>
-<p>Keyboard navigation support, allowing users to toggle the radiobutton using the keyboard.</p>
-</li>
-<li>
-<p>Visual focus indicators to help users navigate the component.</p>
-</li>
-<li>
-<p>Include a label property to provide accessible text for screen readers.</p>
-</section>
-<section id="options">
-  <h2>Options</h2>
-</li>
+<li>Keyboard navigation support, allowing users to toggle the radiobutton using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
 </ul>
+</section>
+    <section id="options">
+      <h2>Options</h2>
 <h3>Disabled</h3>
 <nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
   <nys-radiobutton name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked disabled></nys-radiobutton>
@@ -274,9 +253,9 @@
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
   </nys-radiobutton>
 </nys-radiogroup>
-<p></section></p>
-<p><section id="properties">
-<h2>Properties</h2></p>
+</section>
+    <section id="properties">
+      <h2>Properties</h2>
 <table>
   <thead>
     <tr>
@@ -335,9 +314,9 @@
     </tr>
   </tbody>
 </table>
-<p></section></p>
-<p><section id="cssvariables">
-<h2>CSS Variables</h2></p>
+</section>
+    <section id="cssvariables">
+      <h2>CSS Variables</h2>
 <p>[[TODO]]</p>
 <table>
   <thead>
@@ -353,9 +332,9 @@
     </tr>
   </tbody>
   </table>
-<p></section></p>
-<p><section id="events">
-<h2>Events</h2></p>
+</section>
+    <section id="events">
+      <h2>Events</h2>
 <p>The <code class="language-js">nys-radiobutton</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>
@@ -371,7 +350,7 @@
   radiobutton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Radio Button changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p></section></p>
+</section>
   </div>
 </div>
       
