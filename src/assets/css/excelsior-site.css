@@ -40,40 +40,47 @@ small {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--nys-font-family-heading);
+    font-weight: 800;
 }
 
 h1 {
-    font: var(--nys-font-weight-h1, bold) var(--nys-font-size-h1) / var(--nys-font-lineheight-h1) var(--nys-font-family-heading);
+    font-size: var(--nys-font-size-h1);
+    line-height: var(--nys-font-lineheight-h1);
     margin-top: var(--nys-space-600);
     margin-bottom: var(--nys-space-250);
 }
 
 h2 {
-    font: var(--nys-font-weight-h2, bold) var(--nys-font-size-h2) / var(--nys-font-lineheight-h2) var(--nys-font-family-heading);
+    font-size: var(--nys-font-size-h2);
+    line-height: var(--nys-font-lineheight-h2);
     margin-top: var(--nys-space-500);
     margin-bottom: var(--nys-space-200);
 }
 
 h3 {
-    font: var(--nys-font-weight-h3, bold) var(--nys-font-size-h3) / var(--nys-font-lineheight-h3) var(--nys-font-family-heading);
+    font-size: var(--nys-font-size-h3);
+    line-height: var(--nys-font-lineheight-h3);
     margin-top: var(--nys-space-400);
     margin-bottom: var(--nys-space-150);
 }
 
 h4 {
-    font: var(--nys-font-weight-h4, bold) var(--nys-font-size-h4) / var(--nys-font-lineheight-h4) var(--nys-font-family-heading);
+    font-size: var(--nys-font-size-h4);
+    line-height: var(--nys-font-lineheight-h4);
     margin-top: var(--nys-space-300);
     margin-bottom: var(--nys-space-100);
 }
 
 h5 {
-    font: var(--nys-font-weight-h5, bold) var(--nys-font-size-h5) / var(--nys-font-lineheight-h5) var(--nys-font-family-heading);
+    font-size: var(--nys-font-size-h5);
+    line-height: var(--nys-font-lineheight-h5);
     margin-top: var(--nys-space-250);
     margin-bottom: var(--nys-space-100);
 }
 
 h6 {
-    font: var(--nys-font-weight-h6, bold) var(--nys-font-size-h6) / var(--nys-font-lineheight-h6) var(--nys-font-family-heading);
+    font-size: var(--nys-font-size-h6);
+    line-height: var(--nys-font-lineheight-h6);
     margin-top: var(--nys-space-200);
     margin-bottom: var(--nys-space-100);
 }
@@ -103,7 +110,7 @@ p + p {
 }
 
 section {
-    margin-bottom: var(--nys-space-400);
+    margin-bottom: var(--nys-space-600);
 }
 
 /* --- Lists --- */
@@ -262,42 +269,6 @@ a:active {
     }
 }
 
-
-/* In-Page Navigation */
-
-.inpagenav {
-    position:sticky; top:1rem;
-    padding-top: var(--nys-space-600);
-}
-.inpagenav ul {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
-    padding: 0.5rem 0;
-}
-
-.inpagenav li {
-    list-style: none;
-    margin: 0;
-    border-left: 3px solid transparent;
-}
-
-.inpagenav a {
-    display: block;
-    padding: 0.25rem;
-    text-decoration: none;
-    color: var(--nys-color-ink);
-}
-
-.inpagenav a:hover {
-    text-decoration: underline;
-}
-
-.inpagenav li.active {
-    font-weight: bold;
-    border-left: 3px solid var(--nys-color-ink);
-}
-
 /* Section Header */
 
 .section-header {
@@ -440,6 +411,75 @@ a.card:focus {
     outline-offset: 0;
 }
 
+
+/* On-Page Navigator */
+.navigator {
+    position: sticky;
+    padding-top: var(--nys-space-600);
+    padding-bottom: var(--nys-space-200);
+    top: var(--nys-space-300);
+}
+
+.navigator__title {
+    font-size: var(--nys-font-size-sm);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: var(--nys-space-200);
+}
+
+.navigator__list {
+    position: relative;
+    margin-left: 0;
+    padding: 0;
+}
+
+.navigator__list::before {
+    content: '';
+    background: var(--nys-color-neutral-50);
+    width: var(--nys-border-width-lg);
+    border-radius: var(--nys-radius-round);
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.navigator__item {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: var(--nys-space-100) var(--nys-space-200);
+}
+
+.navigator__link {
+    display: block;
+    text-decoration: none;
+    color: var(--nys-color-neutral-600);
+}
+
+.navigator__link:hover {
+    color: var(--nys-color-theme);
+    text-decoration: underline;
+}
+
+/* Active State */
+.navigator__item--active {
+    position: relative;
+    font-weight: bold;
+}
+.navigator__item--active::before {
+    content: '';
+    background: var(--nys-color-theme);
+    width: var(--nys-border-width-lg);
+    border-radius: var(--nys-radius-round);
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.navigator__item--active .navigator__link {
+    color: var(--nys-color-theme);
+}
+
 /* Additional Tweaks */
 
 /* UNav Hacks - REMOVE BEFORE LAUNCH */
@@ -452,6 +492,10 @@ a.card:focus {
         min-height: 60px;
     }
 }
+
+
+
+
 
 /* Syntax highlighting plugin tweaks */
 
