@@ -109,8 +109,14 @@ p + p {
     margin-top: var(--nys-space-150);
 }
 
-section {
-    margin-bottom: var(--nys-space-600);
+section + section {
+    margin-top: var(--nys-space-300);
+}
+
+@media (min-width: 768px) {
+    section + section {
+        margin-bottom: var(--nys-space-600);
+    }
 }
 
 /* --- Lists --- */
@@ -211,7 +217,7 @@ a:active {
     width: 100%;
 }
 
-.site-header__nav ul {
+.site-header__list {
     font-size: var(--nys-font-size-body-sm);
     display: flex;
     flex-wrap: wrap;
@@ -222,29 +228,33 @@ a:active {
     text-align: center;
 }
 
-.site-header__nav li {
+.site-header__item {
     margin: 0;
     padding: 0;
     line-height: 1;
 }
 
-.site-header__nav a {
+.site-header__item--active {
+    font-weight: bold;
+}
+
+.site-header__link {
     text-decoration: none;
     color: var(--nys-color-ink);
     padding: var(--nys-space-100);
     display: inline-block;
 }
 
-.site-header__nav a:hover,
-.site-header__nav a:focus {
+.site-header__link:hover,
+.site-header__link:focus {
     color: var(--nys-color-theme);
     text-decoration: underline;
 }
 @media (min-width: 768px) {
-    .site-header__nav ul {
+    .site-header__list {
         font-size: var(--nys-font-size-body-md);
     }
-    .site-header__nav a {
+    .site-header__link {
         padding: var(--nys-space-100) var(--nys-space-200);
     }
 }
@@ -264,7 +274,7 @@ a:active {
         justify-content: flex-end;
     }
 
-    .site-header__nav ul {
+    .site-header__list {
         justify-content: flex-end;
     }
 }
@@ -314,6 +324,7 @@ a:active {
 /* Site Footer */
 
 .site-footer {
+    margin-top: var(--nys-space-600);
     background-color: var(--nys-color-neutral-50);
     color: var(--nys-color-ink);
     padding: var(--nys-space-400) 0;
@@ -415,9 +426,10 @@ a.card:focus {
 /* On-Page Navigator */
 .navigator {
     position: sticky;
-    padding-top: var(--nys-space-600);
+    padding-top: var(--nys-space-500);
     padding-bottom: var(--nys-space-200);
     top: var(--nys-space-300);
+    display: none;
 }
 
 .navigator__title {
@@ -478,6 +490,10 @@ a.card:focus {
 }
 .navigator__item--active .navigator__link {
     color: var(--nys-color-theme);
+}
+
+@media screen and (min-width: 1024px) {
+    .navigator { display: block; }
 }
 
 /* Additional Tweaks */
