@@ -1,26 +1,27 @@
 ---
 title: Checkbox
-description: A checkbox is a form input that allows users to select multiple options independently from a list.
+description: A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.
 image: /assets/img/components/checkbox.svg
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to toggle a binary state (checked/unchecked).
+The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
  - Optional: <code class="language-js">&lt;nys-checkboxgroup&gt;</code> can be used to group multiple checkboxes so they function as a single form control.
 
 {% endblock %}
 
 {% block example %}
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below">
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
+  <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year."></nys-checkbox>
+
 </nys-checkboxgroup>
 {% endblock %}
 
