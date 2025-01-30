@@ -1,13 +1,13 @@
 ---
 title: Avatar
-description: Avatars represent a user visually through an image, initials, or an icon and typically identify user-specific actions.
+description: Avatars visually represent a user or entity as initials, a photo, or an icon.
 image: /assets/img/components/avatar.svg
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.
+The <code class="language-js">&lt;nys-avatar&gt;</code> component is used to visually represent a user or entity.
 
 By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.
 {% endblock %}
@@ -30,27 +30,30 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 
 ### When to consider something else
 
-  - If the avatar doesn’t add value to the context.
+  - If you need to show a large visual representation of a user or entity, use a photo.
   - When a simple label or text works better.
 {% endblock %}
 
 {% block usagedo %}
   - Use for clear, simple user or entity representation.
-  - Use appropriate shapes, sizes, and images to fit the overall page design.
+  - On Tablet and above, prefer showing the full name of the user or entity.
+  - Place the full name of the user or entity to the right of the avatar.
+  - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
   - Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Don't overload the avatar with unnecessary customizations.</p></li>
-<li><p>Don't skip the <code class="language-js">label</code> attribute for screen reader users.</p></li>
-<li><p>Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.</p></li>
-</ul>
+  - Don't overload the avatar with unnecessary customizations.
+  - Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.
+  - [Dev] Don't skip the <code class="language-js">label</code> attribute for screen reader users.
+  - [Dev] Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.
 {% endblock %}
 
 {% block accessibility %}
 The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
 
+  - For intial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
+  - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
   - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
   - A label property to provide accessible text for screen readers.
 {% endblock %}
