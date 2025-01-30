@@ -48,12 +48,13 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 
 {% block usage %}
 ### When to use this component
-  - When collecting yes/no answers.
+  - When collecting binary answers in a form.
   - When obtaining confirmation from users.
   - When allowing users to select multiple options from a list.
 
 ### When to consider something else
-  - When users need to select only one option (consider a radio button instead).
+  - Use a toggle when changing the state of a binary input immediately changes the system's state; such as enabling Dark Mode.
+  - When users need to select only one option consider a radio button (1-6 choices) or select (7 or more choice) instead.
 {% endblock %}
 
 {% block usagedo %}
@@ -62,10 +63,8 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Avoid using when you have more than 10 options to choose from.</p></li>
-<li><p>Don't change status of another checkbox when another one is clicked.</p></li>
-</ul>
+ - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).
+ - Don't change status of another checkbox when another one is clicked.
 {% endblock %}
 
 {% block accessibility %}
