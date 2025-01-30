@@ -27,7 +27,7 @@
             {% if image_header %}
                 <img src="{{ image_header | url }}" alt="{{ title }}">
             {% else %}
-                <img src="/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+                <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
             {% endif %}
         </div>
     </div>
