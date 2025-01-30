@@ -11,7 +11,7 @@ section: Components
 
 <h1>Web Components</h1>
 
-<div class="nys-grid-row nys-grid-gap">
+<section class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-8">
     <div class="content-intro">
       <div class="content-intro__inner">  
@@ -23,9 +23,9 @@ section: Components
   </div>
   <div class="nys-tablet:nys-grid-col-4">
   </div>
-</div>
+</section>
 
-<div class="nys-grid-row nys-grid-gap">
+<section class="nys-grid-row nys-grid-gap">
   {%- for post in collections.components -%}
   <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
     <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
@@ -42,7 +42,7 @@ section: Components
     </a>
   </div>
   {%- endfor -%}
-</div>
+</section>
 
 <!-- Section for linking people to GitHub discussion to suggest new components -->
 <section class="nys-section">
