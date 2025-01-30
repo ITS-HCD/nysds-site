@@ -31,9 +31,9 @@
     
     
 
-    <!-- Latest Build: 2025-01-29T20:06:43.630+00:00 -->
+    <!-- Latest Build: 2025-01-30T07:27:24.676+00:00 -->
   </head>
-  <body class="home">
+  <body class="single-page page-components">
 
   <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
   <script type="text/javascript">
@@ -53,23 +53,39 @@
     }(document));
   </script>
 </div>
-  <div class="site-header">
+  
+<div class="site-header">
     <div class="site-header__inner nys-grid-container">
-        <div class="nys-grid-row">
-            <div class="nys-desktop:nys-grid-col-auto nys-tablet:nys-grid-col-12">
-                <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
-            </div>
-            <nav class="nys-tablet:nys-grid-col nys-flex-align-self-center">
-                <ul class="nys-display-flex nys-flex-justify-center">
-                    <li><a href="/excelsior-site/getting-started" title="Getting Started">Getting Started</a></li>
-                    <li><a href="/excelsior-site/foundations" title="Foundations">Foundations</a></li>
-                    <li><a href="/excelsior-site/components" title="Components">Components</a></li>
-                    <li><a href="/excelsior-site/about" title="About">About</a></li>
-                </ul>
-            </nav>
+        <div class="site-header__logo">
+            <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/excelsior-site/components" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/about" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="/assets/img/sections/section-components.svg" alt="Components section header">
+            
         </div>
     </div>
 </div>
+
 
 
 
@@ -77,29 +93,23 @@
     <div class="nys-grid-container">
       
 
+<h1>Web Components</h1>
 
-
-
-<h1>Components</h1>
-
-<div class="nys-grid-row nys-grid-gap">
+<section class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-8">
     <div class="content-intro">
       <div class="content-intro__inner">  
-        <p>Excelsior offers a library of reusable building blocks for creating consistent, accessible, scalable digital experiences across New York State government sites. They are designed and tested to meet WCAG 2.2 AA compliance so they're accessible. They are styled with design tokens for flexibility. And they are built with web components so they work across platforms and frameworks.</p>
+        <p>
+          Excelsior offers a library of web components. These building blocks help designers and developers create consistent digital products for New York State. Each component includes examples, guidance, accessibility considerations, and options.
+        </p>
       </div>
     </div>
   </div>
   <div class="nys-tablet:nys-grid-col-4">
-    <ul>
-      <li><a href="#">How to Use</a></li>
-      <li><a href="#">GitHub Issues</a></li>
-      <li><a href="#">NPM Components</a></li>
-    </ul>
   </div>
-</div>
+</section>
 
-<div class="nys-grid-row nys-grid-gap"><div class="nys-tablet:nys-grid-col-4 nys-display-flex">
+<section class="nys-grid-row nys-grid-gap"><div class="nys-tablet:nys-grid-col-4 nys-display-flex">
     <a class="card nys-flex-fill" href="/excelsior-site/content/components/alert/" title="Alert Component">
       <div class="card__inner">
         <div class="card__media">
@@ -198,7 +208,22 @@
         <div class="card__desc">Switch component for enabling or disabling a setting.</div>
       </div>
     </a>
-  </div></div>
+  </div></section>
+
+<!-- Section for linking people to GitHub discussion to suggest new components -->
+<section class="nys-section">
+  <h2>Suggest a New Component</h2>
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-8">
+      <p>
+        Do you have an idea for a new Excelsior web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+      </p>
+    </div>
+    <div class="nys-tablet:nys-grid-col-4 nys-display-flex nys-flex-align-items-start nys-justify-center">
+      <a class="nys-button nys-button--fullwidth nys-flex-align-self-start" href="https://github.com/ITS-HCD/excelsior/discussions/categories/component-proposals">Review Component Proposals</a>
+    </div>
+  </div>
+</section>
 
 
     </div>

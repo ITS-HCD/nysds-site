@@ -1,18 +1,18 @@
-import { css as H, LitElement as x, html as C } from "lit";
-import { property as n, state as K, customElement as V } from "lit/decorators.js";
-import { ifDefined as A } from "lit/directives/if-defined.js";
+import { css as L, LitElement as b, html as a } from "lit";
+import { property as n, state as N, customElement as M } from "lit/decorators.js";
+import { ifDefined as D } from "lit/directives/if-defined.js";
 /*!
    * 
    * ░█▀▀▀ ▀▄░▄▀ ░█▀▀█ ░█▀▀▀ ░█─── ░█▀▀▀█ ▀█▀ ░█▀▀▀█ ░█▀▀█ 
    * ░█▀▀▀ ─░█── ░█─── ░█▀▀▀ ░█─── ─▀▀▀▄▄ ░█─ ░█──░█ ░█▄▄▀ 
    * ░█▄▄▄ ▄▀░▀▄ ░█▄▄█ ░█▄▄▄ ░█▄▄█ ░█▄▄▄█ ▄█▄ ░█▄▄▄█ ░█─░█
    * 
-   * New York State's Excelsior Design System (v0.0.7-alpha)
+   * New York State's Excelsior Design System (v0.0.9-alpha)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/excelsior
    * License: MIT
  */
-const i1 = H`
+const d1 = L`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
@@ -40,9 +40,12 @@ const i1 = H`
     );
     --_nys-alert-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-alert-lineheight: var(--nys-font-lineheight-ui-md, 24px);
-    --_nys-alert-letterspacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-font-weight-regular: var(--nys-font-weight-regular, 400);
-    --_nys-font-weight-semibold: var(--nys-font-weight-semibold, 600);
+    --_nys-alert-letterspacing: var(
+      --nys-font-letterspacing-ui-md,
+      var(--nys-font-letterspacing-400, 0.044px)
+    );
+    --_nys-alert-font-weight-regular: var(--nys-font-weight-regular, 400);
+    --_nys-alert-font-weight-semibold: var(--nys-font-weight-semibold, 600);
 
     /* Dismiss button */
     --_nys-alert-close-button-size: var(--nys-font-size-2xl, 22px);
@@ -65,7 +68,7 @@ const i1 = H`
       var(--nys-color-neutral-600, #62666a)
     );
 
-    /* Background theme specifics */
+    /* Background type specifics */
     --_nys-alert-color-bg: var(
       --nys-color-neutral-weak,
       var(--nys-color-neutral-10, #f6f6f6)
@@ -102,7 +105,7 @@ const i1 = H`
   a:active,
   a:hover,
   a:visited {
-    font-weight: var(--_nys-font-weight-semibold);
+    font-weight: var(--_nys-alert-font-weight-semibold);
     font-size: var(--_nys-alert-font-size);
     color: var(--_nys-alert-link-color);
   }
@@ -112,6 +115,7 @@ const i1 = H`
     color: var(--_nys-alert-link-color);
   }
 
+  /* Handles both header and description text */
   .nys-alert__texts {
     position: relative;
     display: flex;
@@ -122,17 +126,17 @@ const i1 = H`
 
   .nys-alert__header {
     margin: 0;
-    font-weight: var(--_nys-font-weight-semibold);
+    font-weight: var(--_nys-alert-font-weight-semibold);
   }
 
-  /* For descriptions made with "text" prop that populated in the slot */
-  slot[name="text"] {
-    font-weight: var(--_nys-font-weight-regular);
+  .nys-alert__text {
+    font-weight: var(--_nys-alert-font-weight-regular);
     margin: 0;
   }
+
   /* For HTML elements put into the slot */
   ::slotted(p) {
-    font-weight: var(--_nys-font-weight-regular);
+    font-weight: var(--_nys-alert-font-weight-regular);
     margin: 0;
   }
 
@@ -184,7 +188,7 @@ const i1 = H`
   }
 
   /* Alert Types */
-  :host([theme="info"]) {
+  :host([type="info"]) {
     --_nys-alert-color-border-left: var(
       --nys-color-info,
       var(--nys-color-blue-600, #004dd1)
@@ -194,7 +198,7 @@ const i1 = H`
       var(--nys-color-blue-50, #e5effa)
     );
   }
-  :host([theme="success"]) {
+  :host([type="success"]) {
     --_nys-alert-color-border-left: var(
       --nys-color-success,
       var(--nys-color-green-600, #1e752e)
@@ -204,7 +208,7 @@ const i1 = H`
       var(--nys-color-green-50, #e8f1ea)
     );
   }
-  :host([theme="warning"]) {
+  :host([type="warning"]) {
     --_nys-alert-color-border-left: var(
       --nys-color-warning,
       var(--nys-color-yellow-400, #face00)
@@ -214,7 +218,7 @@ const i1 = H`
       var(--nys-color-yellow-50, #fefae5)
     );
   }
-  :host([theme="danger"]) {
+  :host([type="danger"]) {
     --_nys-alert-color-border-left: var(
       --nys-color-danger,
       var(--nys-color-red-600, #b52c2c)
@@ -224,7 +228,7 @@ const i1 = H`
       var(--nys-color-red-50, #f7eaea)
     );
   }
-  :host([theme="emergency"]) {
+  :host([type="emergency"]) {
     --_nys-alert-color-border-left: var(
       --nys-color-emergency,
       var(--nys-color-red-800, #721c1c)
@@ -256,7 +260,7 @@ const i1 = H`
    * ░█▀▀▀ ─░█── ░█─── ░█▀▀▀ ░█─── ─▀▀▀▄▄ ░█─ ░█──░█ ░█▄▄▀ 
    * ░█▄▄▄ ▄▀░▀▄ ░█▄▄█ ░█▄▄▄ ░█▄▄█ ░█▄▄▄█ ▄█▄ ░█▄▄▄█ ░█─░█
    * 
-   * Icon Component v0.0.7-alpha
+   * Icon Component v0.0.9-alpha
    * Part of New York State's Excelsior Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/excelsior
@@ -267,133 +271,133 @@ const i1 = H`
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const G = globalThis, W = G.ShadowRoot && (G.ShadyCSS === void 0 || G.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, r1 = Symbol(), X = /* @__PURE__ */ new WeakMap();
-let l1 = class {
-  constructor(o, e, t) {
-    if (this._$cssResult$ = !0, t !== r1) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
-    this.cssText = o, this.t = e;
+const W = globalThis, Q = W.ShadowRoot && (W.ShadyCSS === void 0 || W.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, l1 = Symbol(), o1 = /* @__PURE__ */ new WeakMap();
+let y1 = class {
+  constructor(t, e, o) {
+    if (this._$cssResult$ = !0, o !== l1) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    this.cssText = t, this.t = e;
   }
   get styleSheet() {
-    let o = this.o;
+    let t = this.o;
     const e = this.t;
-    if (W && o === void 0) {
-      const t = e !== void 0 && e.length === 1;
-      t && (o = X.get(e)), o === void 0 && ((this.o = o = new CSSStyleSheet()).replaceSync(this.cssText), t && X.set(e, o));
+    if (Q && t === void 0) {
+      const o = e !== void 0 && e.length === 1;
+      o && (t = o1.get(e)), t === void 0 && ((this.o = t = new CSSStyleSheet()).replaceSync(this.cssText), o && o1.set(e, t));
     }
-    return o;
+    return t;
   }
   toString() {
     return this.cssText;
   }
 };
-const C1 = (o) => new l1(typeof o == "string" ? o : o + "", void 0, r1), a1 = (o, e) => {
-  if (W) o.adoptedStyleSheets = e.map((t) => t instanceof CSSStyleSheet ? t : t.styleSheet);
-  else for (const t of e) {
-    const s = document.createElement("style"), r = G.litNonce;
-    r !== void 0 && s.setAttribute("nonce", r), s.textContent = t.cssText, o.appendChild(s);
+const p1 = (t) => new y1(typeof t == "string" ? t : t + "", void 0, l1), g1 = (t, e) => {
+  if (Q) t.adoptedStyleSheets = e.map((o) => o instanceof CSSStyleSheet ? o : o.styleSheet);
+  else for (const o of e) {
+    const s = document.createElement("style"), r = W.litNonce;
+    r !== void 0 && s.setAttribute("nonce", r), s.textContent = o.cssText, t.appendChild(s);
   }
-}, Q = W ? (o) => o : (o) => o instanceof CSSStyleSheet ? ((e) => {
-  let t = "";
-  for (const s of e.cssRules) t += s.cssText;
-  return C1(t);
-})(o) : o;
+}, r1 = Q ? (t) => t : (t) => t instanceof CSSStyleSheet ? ((e) => {
+  let o = "";
+  for (const s of e.cssRules) o += s.cssText;
+  return p1(o);
+})(t) : t;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: c1, defineProperty: h1, getOwnPropertyDescriptor: d1, getOwnPropertyNames: y1, getOwnPropertySymbols: p1, getPrototypeOf: v1 } = Object, q = globalThis, e1 = q.trustedTypes, g1 = e1 ? e1.emptyScript : "", t1 = q.reactiveElementPolyfillSupport, j = (o, e) => o, F = { toAttribute(o, e) {
+const { is: v1, defineProperty: u1, getOwnPropertyDescriptor: _1, getOwnPropertyNames: f1, getOwnPropertySymbols: b1, getPrototypeOf: w1 } = Object, q = globalThis, s1 = q.trustedTypes, m1 = s1 ? s1.emptyScript : "", n1 = q.reactiveElementPolyfillSupport, U = (t, e) => t, X = { toAttribute(t, e) {
   switch (e) {
     case Boolean:
-      o = o ? g1 : null;
+      t = t ? m1 : null;
       break;
     case Object:
     case Array:
-      o = o == null ? o : JSON.stringify(o);
+      t = t == null ? t : JSON.stringify(t);
   }
-  return o;
-}, fromAttribute(o, e) {
-  let t = o;
+  return t;
+}, fromAttribute(t, e) {
+  let o = t;
   switch (e) {
     case Boolean:
-      t = o !== null;
+      o = t !== null;
       break;
     case Number:
-      t = o === null ? null : Number(o);
+      o = t === null ? null : Number(t);
       break;
     case Object:
     case Array:
       try {
-        t = JSON.parse(o);
+        o = JSON.parse(t);
       } catch {
-        t = null;
+        o = null;
       }
   }
-  return t;
-} }, J = (o, e) => !c1(o, e), o1 = { attribute: !0, type: String, converter: F, reflect: !1, hasChanged: J };
+  return o;
+} }, e1 = (t, e) => !v1(t, e), i1 = { attribute: !0, type: String, converter: X, reflect: !1, hasChanged: e1 };
 Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), q.litPropertyMetadata ?? (q.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
-class R extends HTMLElement {
+class j extends HTMLElement {
   static addInitializer(e) {
     this._$Ei(), (this.l ?? (this.l = [])).push(e);
   }
   static get observedAttributes() {
     return this.finalize(), this._$Eh && [...this._$Eh.keys()];
   }
-  static createProperty(e, t = o1) {
-    if (t.state && (t.attribute = !1), this._$Ei(), this.elementProperties.set(e, t), !t.noAccessor) {
-      const s = Symbol(), r = this.getPropertyDescriptor(e, s, t);
-      r !== void 0 && h1(this.prototype, e, r);
+  static createProperty(e, o = i1) {
+    if (o.state && (o.attribute = !1), this._$Ei(), this.elementProperties.set(e, o), !o.noAccessor) {
+      const s = Symbol(), r = this.getPropertyDescriptor(e, s, o);
+      r !== void 0 && u1(this.prototype, e, r);
     }
   }
-  static getPropertyDescriptor(e, t, s) {
-    const { get: r, set: i } = d1(this.prototype, e) ?? { get() {
-      return this[t];
+  static getPropertyDescriptor(e, o, s) {
+    const { get: r, set: i } = _1(this.prototype, e) ?? { get() {
+      return this[o];
     }, set(l) {
-      this[t] = l;
+      this[o] = l;
     } };
     return { get() {
       return r == null ? void 0 : r.call(this);
     }, set(l) {
-      const v = r == null ? void 0 : r.call(this);
-      i.call(this, l), this.requestUpdate(e, v, s);
+      const y = r == null ? void 0 : r.call(this);
+      i.call(this, l), this.requestUpdate(e, y, s);
     }, configurable: !0, enumerable: !0 };
   }
   static getPropertyOptions(e) {
-    return this.elementProperties.get(e) ?? o1;
+    return this.elementProperties.get(e) ?? i1;
   }
   static _$Ei() {
-    if (this.hasOwnProperty(j("elementProperties"))) return;
-    const e = v1(this);
+    if (this.hasOwnProperty(U("elementProperties"))) return;
+    const e = w1(this);
     e.finalize(), e.l !== void 0 && (this.l = [...e.l]), this.elementProperties = new Map(e.elementProperties);
   }
   static finalize() {
-    if (this.hasOwnProperty(j("finalized"))) return;
-    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(j("properties"))) {
-      const t = this.properties, s = [...y1(t), ...p1(t)];
-      for (const r of s) this.createProperty(r, t[r]);
+    if (this.hasOwnProperty(U("finalized"))) return;
+    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(U("properties"))) {
+      const o = this.properties, s = [...f1(o), ...b1(o)];
+      for (const r of s) this.createProperty(r, o[r]);
     }
     const e = this[Symbol.metadata];
     if (e !== null) {
-      const t = litPropertyMetadata.get(e);
-      if (t !== void 0) for (const [s, r] of t) this.elementProperties.set(s, r);
+      const o = litPropertyMetadata.get(e);
+      if (o !== void 0) for (const [s, r] of o) this.elementProperties.set(s, r);
     }
     this._$Eh = /* @__PURE__ */ new Map();
-    for (const [t, s] of this.elementProperties) {
-      const r = this._$Eu(t, s);
-      r !== void 0 && this._$Eh.set(r, t);
+    for (const [o, s] of this.elementProperties) {
+      const r = this._$Eu(o, s);
+      r !== void 0 && this._$Eh.set(r, o);
     }
     this.elementStyles = this.finalizeStyles(this.styles);
   }
   static finalizeStyles(e) {
-    const t = [];
+    const o = [];
     if (Array.isArray(e)) {
       const s = new Set(e.flat(1 / 0).reverse());
-      for (const r of s) t.unshift(Q(r));
-    } else e !== void 0 && t.push(Q(e));
-    return t;
+      for (const r of s) o.unshift(r1(r));
+    } else e !== void 0 && o.push(r1(e));
+    return o;
   }
-  static _$Eu(e, t) {
-    const s = t.attribute;
+  static _$Eu(e, o) {
+    const s = o.attribute;
     return s === !1 ? void 0 : typeof s == "string" ? s : typeof e == "string" ? e.toLowerCase() : void 0;
   }
   constructor() {
@@ -401,76 +405,76 @@ class R extends HTMLElement {
   }
   _$Ev() {
     var e;
-    this._$ES = new Promise((t) => this.enableUpdating = t), this._$AL = /* @__PURE__ */ new Map(), this._$E_(), this.requestUpdate(), (e = this.constructor.l) == null || e.forEach((t) => t(this));
+    this._$ES = new Promise((o) => this.enableUpdating = o), this._$AL = /* @__PURE__ */ new Map(), this._$E_(), this.requestUpdate(), (e = this.constructor.l) == null || e.forEach((o) => o(this));
   }
   addController(e) {
-    var t;
-    (this._$EO ?? (this._$EO = /* @__PURE__ */ new Set())).add(e), this.renderRoot !== void 0 && this.isConnected && ((t = e.hostConnected) == null || t.call(e));
+    var o;
+    (this._$EO ?? (this._$EO = /* @__PURE__ */ new Set())).add(e), this.renderRoot !== void 0 && this.isConnected && ((o = e.hostConnected) == null || o.call(e));
   }
   removeController(e) {
-    var t;
-    (t = this._$EO) == null || t.delete(e);
+    var o;
+    (o = this._$EO) == null || o.delete(e);
   }
   _$E_() {
-    const e = /* @__PURE__ */ new Map(), t = this.constructor.elementProperties;
-    for (const s of t.keys()) this.hasOwnProperty(s) && (e.set(s, this[s]), delete this[s]);
+    const e = /* @__PURE__ */ new Map(), o = this.constructor.elementProperties;
+    for (const s of o.keys()) this.hasOwnProperty(s) && (e.set(s, this[s]), delete this[s]);
     e.size > 0 && (this._$Ep = e);
   }
   createRenderRoot() {
     const e = this.shadowRoot ?? this.attachShadow(this.constructor.shadowRootOptions);
-    return a1(e, this.constructor.elementStyles), e;
+    return g1(e, this.constructor.elementStyles), e;
   }
   connectedCallback() {
     var e;
-    this.renderRoot ?? (this.renderRoot = this.createRenderRoot()), this.enableUpdating(!0), (e = this._$EO) == null || e.forEach((t) => {
+    this.renderRoot ?? (this.renderRoot = this.createRenderRoot()), this.enableUpdating(!0), (e = this._$EO) == null || e.forEach((o) => {
       var s;
-      return (s = t.hostConnected) == null ? void 0 : s.call(t);
+      return (s = o.hostConnected) == null ? void 0 : s.call(o);
     });
   }
   enableUpdating(e) {
   }
   disconnectedCallback() {
     var e;
-    (e = this._$EO) == null || e.forEach((t) => {
+    (e = this._$EO) == null || e.forEach((o) => {
       var s;
-      return (s = t.hostDisconnected) == null ? void 0 : s.call(t);
+      return (s = o.hostDisconnected) == null ? void 0 : s.call(o);
     });
   }
-  attributeChangedCallback(e, t, s) {
+  attributeChangedCallback(e, o, s) {
     this._$AK(e, s);
   }
-  _$EC(e, t) {
+  _$EC(e, o) {
     var s;
     const r = this.constructor.elementProperties.get(e), i = this.constructor._$Eu(e, r);
     if (i !== void 0 && r.reflect === !0) {
-      const l = (((s = r.converter) == null ? void 0 : s.toAttribute) !== void 0 ? r.converter : F).toAttribute(t, r.type);
+      const l = (((s = r.converter) == null ? void 0 : s.toAttribute) !== void 0 ? r.converter : X).toAttribute(o, r.type);
       this._$Em = e, l == null ? this.removeAttribute(i) : this.setAttribute(i, l), this._$Em = null;
     }
   }
-  _$AK(e, t) {
+  _$AK(e, o) {
     var s;
     const r = this.constructor, i = r._$Eh.get(e);
     if (i !== void 0 && this._$Em !== i) {
-      const l = r.getPropertyOptions(i), v = typeof l.converter == "function" ? { fromAttribute: l.converter } : ((s = l.converter) == null ? void 0 : s.fromAttribute) !== void 0 ? l.converter : F;
-      this._$Em = i, this[i] = v.fromAttribute(t, l.type), this._$Em = null;
+      const l = r.getPropertyOptions(i), y = typeof l.converter == "function" ? { fromAttribute: l.converter } : ((s = l.converter) == null ? void 0 : s.fromAttribute) !== void 0 ? l.converter : X;
+      this._$Em = i, this[i] = y.fromAttribute(o, l.type), this._$Em = null;
     }
   }
-  requestUpdate(e, t, s) {
+  requestUpdate(e, o, s) {
     if (e !== void 0) {
-      if (s ?? (s = this.constructor.getPropertyOptions(e)), !(s.hasChanged ?? J)(this[e], t)) return;
-      this.P(e, t, s);
+      if (s ?? (s = this.constructor.getPropertyOptions(e)), !(s.hasChanged ?? e1)(this[e], o)) return;
+      this.P(e, o, s);
     }
     this.isUpdatePending === !1 && (this._$ES = this._$ET());
   }
-  P(e, t, s) {
-    this._$AL.has(e) || this._$AL.set(e, t), s.reflect === !0 && this._$Em !== e && (this._$Ej ?? (this._$Ej = /* @__PURE__ */ new Set())).add(e);
+  P(e, o, s) {
+    this._$AL.has(e) || this._$AL.set(e, o), s.reflect === !0 && this._$Em !== e && (this._$Ej ?? (this._$Ej = /* @__PURE__ */ new Set())).add(e);
   }
   async _$ET() {
     this.isUpdatePending = !0;
     try {
       await this._$ES;
-    } catch (t) {
-      Promise.reject(t);
+    } catch (o) {
+      Promise.reject(o);
     }
     const e = this.scheduleUpdate();
     return e != null && await e, !this.isUpdatePending;
@@ -489,23 +493,23 @@ class R extends HTMLElement {
       const r = this.constructor.elementProperties;
       if (r.size > 0) for (const [i, l] of r) l.wrapped !== !0 || this._$AL.has(i) || this[i] === void 0 || this.P(i, this[i], l);
     }
-    let t = !1;
+    let o = !1;
     const s = this._$AL;
     try {
-      t = this.shouldUpdate(s), t ? (this.willUpdate(s), (e = this._$EO) == null || e.forEach((r) => {
+      o = this.shouldUpdate(s), o ? (this.willUpdate(s), (e = this._$EO) == null || e.forEach((r) => {
         var i;
         return (i = r.hostUpdate) == null ? void 0 : i.call(r);
       }), this.update(s)) : this._$EU();
     } catch (r) {
-      throw t = !1, this._$EU(), r;
+      throw o = !1, this._$EU(), r;
     }
-    t && this._$AE(s);
+    o && this._$AE(s);
   }
   willUpdate(e) {
   }
   _$AE(e) {
-    var t;
-    (t = this._$EO) == null || t.forEach((s) => {
+    var o;
+    (o = this._$EO) == null || o.forEach((s) => {
       var r;
       return (r = s.hostUpdated) == null ? void 0 : r.call(s);
     }), this.hasUpdated || (this.hasUpdated = !0, this.firstUpdated(e)), this.updated(e);
@@ -523,47 +527,47 @@ class R extends HTMLElement {
     return !0;
   }
   update(e) {
-    this._$Ej && (this._$Ej = this._$Ej.forEach((t) => this._$EC(t, this[t]))), this._$EU();
+    this._$Ej && (this._$Ej = this._$Ej.forEach((o) => this._$EC(o, this[o]))), this._$EU();
   }
   updated(e) {
   }
   firstUpdated(e) {
   }
 }
-R.elementStyles = [], R.shadowRootOptions = { mode: "open" }, R[j("elementProperties")] = /* @__PURE__ */ new Map(), R[j("finalized")] = /* @__PURE__ */ new Map(), t1 == null || t1({ ReactiveElement: R }), (q.reactiveElementVersions ?? (q.reactiveElementVersions = [])).push("2.0.4");
+j.elementStyles = [], j.shadowRootOptions = { mode: "open" }, j[U("elementProperties")] = /* @__PURE__ */ new Map(), j[U("finalized")] = /* @__PURE__ */ new Map(), n1 == null || n1({ ReactiveElement: j }), (q.reactiveElementVersions ?? (q.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const u1 = { attribute: !0, type: String, converter: F, reflect: !1, hasChanged: J }, _1 = (o = u1, e, t) => {
-  const { kind: s, metadata: r } = t;
+const x1 = { attribute: !0, type: String, converter: X, reflect: !1, hasChanged: e1 }, L1 = (t = x1, e, o) => {
+  const { kind: s, metadata: r } = o;
   let i = globalThis.litPropertyMetadata.get(r);
-  if (i === void 0 && globalThis.litPropertyMetadata.set(r, i = /* @__PURE__ */ new Map()), i.set(t.name, o), s === "accessor") {
-    const { name: l } = t;
-    return { set(v) {
-      const Y = e.get.call(this);
-      e.set.call(this, v), this.requestUpdate(l, Y, o);
-    }, init(v) {
-      return v !== void 0 && this.P(l, void 0, o), v;
+  if (i === void 0 && globalThis.litPropertyMetadata.set(r, i = /* @__PURE__ */ new Map()), i.set(o.name, t), s === "accessor") {
+    const { name: l } = o;
+    return { set(y) {
+      const K = e.get.call(this);
+      e.set.call(this, y), this.requestUpdate(l, K, t);
+    }, init(y) {
+      return y !== void 0 && this.P(l, void 0, t), y;
     } };
   }
   if (s === "setter") {
-    const { name: l } = t;
-    return function(v) {
-      const Y = this[l];
-      e.call(this, v), this.requestUpdate(l, Y, o);
+    const { name: l } = o;
+    return function(y) {
+      const K = this[l];
+      e.call(this, y), this.requestUpdate(l, K, t);
     };
   }
   throw Error("Unsupported decorator location: " + s);
 };
-function I(o) {
-  return (e, t) => typeof t == "object" ? _1(o, e, t) : ((s, r, i) => {
+function I(t) {
+  return (e, o) => typeof o == "object" ? L1(t, e, o) : ((s, r, i) => {
     const l = r.hasOwnProperty(i);
     return r.constructor.createProperty(i, l ? { ...s, wrapped: !0 } : s), l ? Object.getOwnPropertyDescriptor(r, i) : void 0;
-  })(o, e, t);
+  })(t, e, o);
 }
-const b1 = {
+const M1 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -673,7 +677,7 @@ const b1 = {
 </svg>`,
   // *** Intent *** //
   check_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M8.6 14.6L15.65 7.55L14.25 6.15L8.6 11.8L5.75 8.95L4.35 10.35L8.6 14.6ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z" fill="var(--nys-icon-color, currentcolor)"/>
+<path d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23333 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
   emergency_home: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M11 21.025C10.7333 21.025 10.4791 20.975 10.2375 20.875C9.99581 20.775 9.77498 20.6333 9.57498 20.45L1.54998 12.425C1.36664 12.225 1.22498 12.0041 1.12498 11.7625C1.02498 11.5208 0.974976 11.2666 0.974976 11C0.974976 10.7333 1.02498 10.475 1.12498 10.225C1.22498 9.97498 1.36664 9.75831 1.54998 9.57498L9.57498 1.54998C9.77498 1.34998 9.99581 1.20414 10.2375 1.11248C10.4791 1.02081 10.7333 0.974976 11 0.974976C11.2666 0.974976 11.525 1.02081 11.775 1.11248C12.025 1.20414 12.2416 1.34998 12.425 1.54998L20.45 9.57498C20.65 9.75831 20.7958 9.97498 20.8875 10.225C20.9791 10.475 21.025 10.7333 21.025 11C21.025 11.2666 20.9791 11.5208 20.8875 11.7625C20.7958 12.0041 20.65 12.225 20.45 12.425L12.425 20.45C12.2416 20.6333 12.025 20.775 11.775 20.875C11.525 20.975 11.2666 21.025 11 21.025ZM11 19.025L19.025 11L11 2.97498L2.97498 11L11 19.025ZM9.99998 12H12V5.99998H9.99998V12ZM11 15C11.2833 15 11.5208 14.9041 11.7125 14.7125C11.9041 14.5208 12 14.2833 12 14C12 13.7166 11.9041 13.4791 11.7125 13.2875C11.5208 13.0958 11.2833 13 11 13C10.7166 13 10.4791 13.0958 10.2875 13.2875C10.0958 13.4791 9.99998 13.7166 9.99998 14C9.99998 14.2833 10.0958 14.5208 10.2875 14.7125C10.4791 14.9041 10.7166 15 11 15Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -762,7 +766,7 @@ const b1 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, w1 = H`
+}, k1 = L`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -859,34 +863,34 @@ const b1 = {
     transform: scale(-1, -1);
   }
 `;
-var f1 = Object.defineProperty, x1 = Object.getOwnPropertyDescriptor, O = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? x1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && f1(e, t, r), r;
-}, U;
-const B = (U = class extends x {
+var Z1 = Object.defineProperty, H1 = Object.getOwnPropertyDescriptor, T = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? H1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && Z1(e, o, r), r;
+}, G;
+const B = (G = class extends b {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
   get size() {
     return this._size;
   }
-  set size(o) {
-    this._size = U.VALID_TYPES.includes(
-      o
-    ) ? o : "sm";
+  set size(t) {
+    this._size = G.VALID_TYPES.includes(
+      t
+    ) ? t : "sm";
   }
   getIcon() {
-    const o = b1[this.name], e = !!this.label;
-    if (!o) return null;
-    const t = new DOMParser().parseFromString(o, "image/svg+xml").documentElement;
-    return t instanceof SVGElement ? (t.setAttribute("role", "img"), t.setAttribute("aria-label", e ? this.label : ""), t.setAttribute("aria-hidden", e ? "false" : "true"), t.style.rotate = `${this.rotate}deg`, t.style.color = this.color || "currentcolor", t.classList.add(`nys-icon--${this.size}`), t.classList.add("nys-icon--svg"), this.flip && t.classList.add(`nys-icon--flip-${this.flip}`), t) : null;
+    const t = M1[this.name], e = !!this.label;
+    if (!t) return null;
+    const o = new DOMParser().parseFromString(t, "image/svg+xml").documentElement;
+    return o instanceof SVGElement ? (o.setAttribute("role", "img"), o.setAttribute("aria-label", e ? this.label : ""), o.setAttribute("aria-hidden", e ? "false" : "true"), o.style.rotate = `${this.rotate}deg`, o.style.color = this.color || "currentcolor", o.classList.add(`nys-icon--${this.size}`), o.classList.add("nys-icon--svg"), this.flip && o.classList.add(`nys-icon--flip-${this.flip}`), o) : null;
   }
   render() {
-    const o = this.getIcon();
-    return o ? C`${o}` : null;
+    const t = this.getIcon();
+    return t ? a`${t}` : null;
   }
-}, U.styles = w1, U.VALID_TYPES = [
+}, G.styles = k1, G.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -902,48 +906,48 @@ const B = (U = class extends x {
   "32",
   "48",
   "64"
-], U);
-O([
+], G);
+T([
   I({ type: String })
 ], B.prototype, "name", 2);
-O([
+T([
   I({ type: String })
 ], B.prototype, "label", 2);
-O([
+T([
   I({ type: String })
 ], B.prototype, "rotate", 2);
-O([
+T([
   I({ type: String })
 ], B.prototype, "flip", 2);
-O([
+T([
   I({ type: String })
 ], B.prototype, "color", 2);
-O([
+T([
   I({ reflect: !0 })
 ], B.prototype, "size", 1);
-let m1 = B;
-customElements.get("nys-icon") || customElements.define("nys-icon", m1);
-var L1 = Object.defineProperty, M1 = Object.getOwnPropertyDescriptor, m = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? M1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && L1(e, t, r), r;
+let V1 = B;
+customElements.get("nys-icon") || customElements.define("nys-icon", V1);
+var $1 = Object.defineProperty, z1 = Object.getOwnPropertyDescriptor, w = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? z1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && $1(e, o, r), r;
 };
-let Z1 = 0, y = class extends x {
+let S1 = 0, p = class extends b {
   constructor() {
-    super(...arguments), this.id = "", this.heading = "", this.icon = "", this.dismissible = !1, this.duration = 0, this.text = "", this.primaryAction = "", this.secondaryAction = "", this.primaryLabel = "Learn more", this.secondaryLabel = "Dismiss", this._alertClosed = !1, this._theme = "info", this._timeoutId = null;
+    super(...arguments), this.id = "", this.heading = "", this.icon = "", this.dismissible = !1, this.duration = 0, this.text = "", this.primaryAction = "", this.secondaryAction = "", this.primaryLabel = "Learn more", this.secondaryLabel = "Dismiss", this._alertClosed = !1, this._slotHasContent = !0, this._type = "info", this._timeoutId = null;
   }
-  get theme() {
-    return this._theme;
+  get type() {
+    return this._type;
   }
-  set theme(o) {
-    this._theme = y.VALID_TYPES.includes(
-      o
-    ) ? o : "base";
+  set type(t) {
+    this._type = p.VALID_TYPES.includes(
+      t
+    ) ? t : "base";
   }
-  // Aria attributes based on the theme
+  // Aria attributes based on the type
   get ariaAttributes() {
-    const o = this.theme === "danger" || this.theme === "emergency" ? "alert" : this.theme === "success" ? "status" : "region", e = o === "region" ? `${this.theme} alert` : "";
-    return { role: o, ariaLabel: e };
+    const t = this.type === "danger" || this.type === "emergency" ? "alert" : this.type === "success" ? "status" : "region", e = t === "region" ? `${this.type} alert` : "";
+    return { role: t, ariaLabel: e };
   }
   // For alerts that have durations, we set a timer to close them.
   connectedCallback() {
@@ -954,39 +958,52 @@ let Z1 = 0, y = class extends x {
   disconnectedCallback() {
     this._timeoutId && clearTimeout(this._timeoutId), super.disconnectedCallback();
   }
+  firstUpdated() {
+    this._checkSlotContent();
+  }
   /******************** Functions ********************/
   _generateUniqueId() {
-    return `nys-alert-${Date.now()}-${Z1++}`;
+    return `nys-alert-${Date.now()}-${S1++}`;
   }
-  // Helper function for overriding default icons or checking special naming cases (e.g. theme=success)
+  // Helper function for overriding default icons or checking special naming cases (e.g. type=success)
   _getIconName() {
     return this.icon ? this.icon : this._checkAltNaming();
   }
   _checkAltNaming() {
-    return this.theme === "success" ? "check_circle" : this.theme === "base" ? "info" : this.theme === "danger" ? "error" : this.theme === "emergency" ? "emergency_home" : this.theme;
+    return this.type === "success" ? "check_circle" : this.type === "base" ? "info" : this.type === "danger" ? "error" : this.type === "emergency" ? "emergency_home" : this.type;
   }
   _closeAlert() {
     this._alertClosed = !0, this.dispatchEvent(
       new CustomEvent("nys-alertClosed", {
-        detail: { theme: this.theme, label: this.heading },
+        detail: { type: this.type, label: this.heading },
         bubbles: !0,
         composed: !0
       })
     );
   }
-  hasSlotContent() {
+  _checkSlotContent() {
     var e;
-    const o = (e = this.shadowRoot) == null ? void 0 : e.querySelector('slot[name="text"]');
-    return o !== null ? o.assignedNodes().length > 0 : !1;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("slot");
+    if (t) {
+      const o = t.assignedNodes({ flatten: !0 }).filter(
+        (s) => {
+          var r;
+          return s.nodeType === Node.ELEMENT_NODE || s.nodeType === Node.TEXT_NODE && ((r = s.textContent) == null ? void 0 : r.trim());
+        }
+      );
+      this._slotHasContent = o.length > 0;
+    } else
+      this._slotHasContent = !1;
   }
   render() {
-    const { role: o, ariaLabel: e } = this.ariaAttributes, t = typeof this.text == "string" && this.text.trim() === "" && !this.hasSlotContent();
-    return C`
-      ${this._alertClosed ? "" : C` <div
+    var o, s;
+    const { role: t, ariaLabel: e } = this.ariaAttributes;
+    return a`
+      ${this._alertClosed ? "" : a` <div
             id=${this.id}
-            class="nys-alert__container ${t ? "nys-alert--centered" : ""}"
-            role=${o}
-            aria-label=${A(
+            class="nys-alert__container ${this._slotHasContent || ((o = this.text) == null ? void 0 : o.trim().length) > 0 ? "" : "nys-alert--centered"}"
+            role=${t}
+            aria-label=${D(
       e.trim() !== "" ? e : void 0
     )}
           >
@@ -994,28 +1011,28 @@ let Z1 = 0, y = class extends x {
               <nys-icon
                 name="${this._getIconName()}"
                 size="2xl"
-                label="${this.theme} icon"
+                label="${this.type} icon"
               ></nys-icon>
             </div>
             <div class="nys-alert__texts">
               <h4 class="nys-alert__header">${this.heading}</h4>
-              ${t ? "" : C`<slot name="text">${this.text}</slot>`}
-              ${this.primaryAction || this.secondaryAction ? C`<div class="nys-alert__actions">
-                    ${this.primaryAction ? C`<a
-                          href=${A(this.primaryAction || void 0)}
+              ${this._slotHasContent ? a`<slot></slot>` : ((s = this.text) == null ? void 0 : s.trim().length) > 0 ? a`<p class="nys-alert__text">${this.text}</p>` : ""}
+              ${this.primaryAction || this.secondaryAction ? a`<div class="nys-alert__actions">
+                    ${this.primaryAction ? a`<a
+                          href=${D(this.primaryAction || void 0)}
                           class="nys-alert__action nys-alert__primary"
                         >
                           ${this.primaryLabel}
                         </a>` : ""}
-                    ${this.secondaryAction ? C`<a
-                          href=${A(this.secondaryAction || void 0)}
+                    ${this.secondaryAction ? a`<a
+                          href=${D(this.secondaryAction || void 0)}
                           class="nys-alert__action nys-alert__secondary"
                         >
                           ${this.secondaryLabel}
                         </a>` : ""}
                   </div> ` : ""}
             </div>
-            ${this.dismissible ? C`<div class="close-container">
+            ${this.dismissible ? a`<div class="close-container">
                   <button class="close-button" @click=${this._closeAlert}>
                     <nys-icon
                       name="close"
@@ -1028,8 +1045,8 @@ let Z1 = 0, y = class extends x {
     `;
   }
 };
-y.styles = i1;
-y.VALID_TYPES = [
+p.styles = d1;
+p.VALID_TYPES = [
   "base",
   "info",
   "success",
@@ -1037,51 +1054,58 @@ y.VALID_TYPES = [
   "danger",
   "emergency"
 ];
-m([
+w([
   n({ type: String })
-], y.prototype, "id", 2);
-m([
+], p.prototype, "id", 2);
+w([
   n({ type: String })
-], y.prototype, "heading", 2);
-m([
+], p.prototype, "heading", 2);
+w([
   n({ type: String })
-], y.prototype, "icon", 2);
-m([
+], p.prototype, "icon", 2);
+w([
   n({ type: Boolean })
-], y.prototype, "dismissible", 2);
-m([
+], p.prototype, "dismissible", 2);
+w([
   n({ type: Number })
-], y.prototype, "duration", 2);
-m([
+], p.prototype, "duration", 2);
+w([
   n({ type: String })
-], y.prototype, "text", 2);
-m([
+], p.prototype, "text", 2);
+w([
   n({ type: String })
-], y.prototype, "primaryAction", 2);
-m([
+], p.prototype, "primaryAction", 2);
+w([
   n({ type: String })
-], y.prototype, "secondaryAction", 2);
-m([
+], p.prototype, "secondaryAction", 2);
+w([
   n({ type: String })
-], y.prototype, "primaryLabel", 2);
-m([
+], p.prototype, "primaryLabel", 2);
+w([
   n({ type: String })
-], y.prototype, "secondaryLabel", 2);
-m([
-  K()
-], y.prototype, "_alertClosed", 2);
-m([
+], p.prototype, "secondaryLabel", 2);
+w([
+  N()
+], p.prototype, "_alertClosed", 2);
+w([
+  N()
+], p.prototype, "_slotHasContent", 2);
+w([
   n({ reflect: !0 })
-], y.prototype, "theme", 1);
-y = m([
-  V("nys-alert")
-], y);
-const k1 = H`
+], p.prototype, "type", 1);
+p = w([
+  M("nys-alert")
+], p);
+const E1 = L`
   :host {
     /* Global Avatar Styles */
     --_nys-avatar-shape: var(--nys-radius-md, var(--nys-space-50, 4px));
     --_nys-avatar-border: var(--nys-font-size-6xl, 36px);
     --_nys-avatar-size: var(--nys-font-size-6xl, 36px);
+  }
+
+  .nys-avatar {
+    display: inline-block;
   }
 
   .nys-component__component {
@@ -1123,7 +1147,7 @@ const k1 = H`
     justify-content: center;
     width: 100%;
     height: 100%;
-    font-size: calc(var(--_nys-avatar-size, 36px) * 0.5);
+    font-size: calc(var(--_nys-avatar-size) * 0.5);
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -1140,59 +1164,59 @@ const k1 = H`
     fill: currentColor;
   }
 `;
-var H1 = Object.defineProperty, V1 = Object.getOwnPropertyDescriptor, z = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? V1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && H1(e, t, r), r;
+var B1 = Object.defineProperty, P1 = Object.getOwnPropertyDescriptor, z = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? P1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && B1(e, o, r), r;
 };
-let $1 = 0, w = class extends x {
+let A1 = 0, m = class extends b {
   constructor() {
-    super(...arguments), this.id = "", this.label = "", this.image = "", this.initials = "", this.icon = "", this.color = "#555", this.lazy = !1, this._shape = "rounded";
+    super(...arguments), this.id = "", this.label = "", this.image = "", this.initials = "", this.icon = "", this.color = "#555", this.lazy = !1, this._shape = "circle";
   }
   get shape() {
     return this._shape;
   }
   // Setter for the `shape` property.
-  set shape(o) {
-    this._shape = w.VALID_SHAPES.includes(
-      o
-    ) ? o : "circle", this.requestUpdate("shape");
+  set shape(t) {
+    this._shape = m.VALID_SHAPES.includes(
+      t
+    ) ? t : "circle", this.requestUpdate("shape");
   }
   /******************** Functions ********************/
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-avatar-${Date.now()}-${$1++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-avatar-${Date.now()}-${A1++}`);
   }
   render() {
-    var o, e, t, s;
-    return C`
+    var t, e, o, s;
+    return a`
       <label class="nys-avatar" id=${this.id}>
         <div class="nys-avatar__content">
           <div
             part="nys-avatar"
             class="nys-component__component"
-            style="background-color: ${((o = this.color) == null ? void 0 : o.length) > 0 ? this.color : "#555"};"
+            style="background-color: ${((t = this.color) == null ? void 0 : t.length) > 0 ? this.color : "#555"};"
             role="img"
             aria-label=${this.label}
           >
-            ${((e = this.image) == null ? void 0 : e.length) > 0 ? C`<img
+            ${((e = this.image) == null ? void 0 : e.length) > 0 ? a`<img
                   part="nys-avatar__image"
                   class="nys-avatar__image"
                   src=${this.image}
                   alt=${this.label}
                   loading=${this.lazy ? "lazy" : "eager"}
-                />` : ((t = this.initials) == null ? void 0 : t.length) > 0 ? C`<span
+                />` : ((o = this.initials) == null ? void 0 : o.length) > 0 ? a`<span
                     part="nys-avatar__initials"
                     class="nys-avatar__initials"
                     aria-hidden="true"
                     >${this.initials}</span
-                  >` : ((s = this.icon) == null ? void 0 : s.length) > 0 ? C`<div part="nys-avatar__icon">
+                  >` : ((s = this.icon) == null ? void 0 : s.length) > 0 ? a`<div part="nys-avatar__icon">
                       <nys-icon
                         label="nys-avatar__icon"
                         name=${this.icon}
                         size="md"
                       ></nys-icon>
-                    </div>` : C`<div part="nys-avatar__icon">
+                    </div>` : a`<div part="nys-avatar__icon">
                       <slot name="icon">
                         <nys-icon
                           label="nys-avatar__icon"
@@ -1207,40 +1231,40 @@ let $1 = 0, w = class extends x {
     `;
   }
 };
-w.styles = k1;
-w.VALID_SHAPES = [
+m.styles = E1;
+m.VALID_SHAPES = [
   "square",
   "rounded",
   "circle"
 ];
 z([
   n({ type: String })
-], w.prototype, "id", 2);
+], m.prototype, "id", 2);
 z([
   n({ type: String })
-], w.prototype, "label", 2);
+], m.prototype, "label", 2);
 z([
   n({ type: String })
-], w.prototype, "image", 2);
+], m.prototype, "image", 2);
 z([
   n({ type: String })
-], w.prototype, "initials", 2);
+], m.prototype, "initials", 2);
 z([
   n({ type: String })
-], w.prototype, "icon", 2);
+], m.prototype, "icon", 2);
 z([
   n({ type: String })
-], w.prototype, "color", 2);
+], m.prototype, "color", 2);
 z([
   n({ type: Boolean })
-], w.prototype, "lazy", 2);
+], m.prototype, "lazy", 2);
 z([
   n({ reflect: !0 })
-], w.prototype, "shape", 1);
-w = z([
-  V("nys-avatar")
-], w);
-const s1 = H`
+], m.prototype, "shape", 1);
+m = z([
+  M("nys-avatar")
+], m);
+const a1 = L`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1516,29 +1540,29 @@ const s1 = H`
     text-align: center;
   }
 `;
-var z1 = Object.defineProperty, S1 = Object.getOwnPropertyDescriptor, S = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? S1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && z1(e, t, r), r;
+var D1 = Object.defineProperty, q1 = Object.getOwnPropertyDescriptor, S = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? q1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && D1(e, o, r), r;
 };
-let E1 = 0, f = class extends x {
+let O1 = 0, x = class extends b {
   constructor() {
     super(...arguments), this.id = "", this.name = "", this.required = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this._size = "md";
   }
   get size() {
     return this._size;
   }
-  set size(o) {
-    this._size = f.VALID_SIZES.includes(
-      o
-    ) ? o : "md";
+  set size(t) {
+    this._size = x.VALID_SIZES.includes(
+      t
+    ) ? t : "md";
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${E1++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${O1++}`);
   }
-  updated(o) {
-    o.has("size") && this.updateCheckboxSize();
+  updated(t) {
+    t.has("size") && this.updateCheckboxSize();
   }
   // Updates the size of each checkbox in the group
   updateCheckboxSize() {
@@ -1547,13 +1571,13 @@ let E1 = 0, f = class extends x {
     });
   }
   render() {
-    return C` <div class="nys-checkboxgroup">
-      ${this.label && C` <div class="nys-checkbox__text">
+    return a` <div class="nys-checkboxgroup">
+      ${this.label && a` <div class="nys-checkbox__text">
         <div class="nys-checkbox__requiredwrapper">
           <label for=${this.id} class="nys-checkboxgroup__label"
             >${this.label}</label
           >
-          ${this.required ? C`<label class="nys-checkbox__required">*</label>` : ""}
+          ${this.required ? a`<label class="nys-checkbox__required">*</label>` : ""}
         </div>
         <label for=${this.id} class="nys-checkboxgroup__description">
           ${this.description}
@@ -1563,66 +1587,66 @@ let E1 = 0, f = class extends x {
       <div class="nys-checkboxgroup__content">
         <slot></slot>
       </div>
-      ${this.showError && this.errorMessage ? C`<div class="nys-checkbox__error">
+      ${this.showError && this.errorMessage ? a`<div class="nys-checkbox__error">
             <nys-icon name="error" size="xl"></nys-icon>
             ${this.errorMessage}
           </div>` : ""}
     </div>`;
   }
 };
-f.VALID_SIZES = ["sm", "md"];
-f.styles = s1;
+x.VALID_SIZES = ["sm", "md"];
+x.styles = a1;
 S([
   n({ type: String })
-], f.prototype, "id", 2);
+], x.prototype, "id", 2);
 S([
   n({ type: String })
-], f.prototype, "name", 2);
+], x.prototype, "name", 2);
 S([
   n({ type: Boolean })
-], f.prototype, "required", 2);
+], x.prototype, "required", 2);
 S([
   n({ type: Boolean })
-], f.prototype, "showError", 2);
+], x.prototype, "showError", 2);
 S([
   n({ type: String })
-], f.prototype, "errorMessage", 2);
+], x.prototype, "errorMessage", 2);
 S([
   n({ type: String })
-], f.prototype, "label", 2);
+], x.prototype, "label", 2);
 S([
   n({ type: String })
-], f.prototype, "description", 2);
+], x.prototype, "description", 2);
 S([
   n({ reflect: !0 })
-], f.prototype, "size", 1);
-f = S([
-  V("nys-checkboxgroup")
-], f);
-var B1 = Object.defineProperty, P1 = Object.getOwnPropertyDescriptor, L = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? P1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && B1(e, t, r), r;
+], x.prototype, "size", 1);
+x = S([
+  M("nys-checkboxgroup")
+], x);
+var N1 = Object.defineProperty, I1 = Object.getOwnPropertyDescriptor, k = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? I1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && N1(e, o, r), r;
 };
-let D1 = 0, g = class extends x {
+let T1 = 0, v = class extends b {
   constructor() {
     super(...arguments), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this.showError = !1, this.errorMessage = "", this._size = "md";
   }
   get size() {
     return this._size;
   }
-  set size(o) {
-    this._size = g.VALID_SIZES.includes(
-      o
-    ) ? o : "md";
+  set size(t) {
+    this._size = v.VALID_SIZES.includes(
+      t
+    ) ? t : "md";
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${D1++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${T1++}`);
   }
   // Handle checkbox change event
-  _handleChange(o) {
-    const { checked: e } = o.target;
+  _handleChange(t) {
+    const { checked: e } = t.target;
     this.checked = e, this.dispatchEvent(
       new CustomEvent("change", {
         detail: { checked: this.checked },
@@ -1640,8 +1664,8 @@ let D1 = 0, g = class extends x {
     this.dispatchEvent(new Event("blur"));
   }
   // Handle keydown for keyboard accessibility
-  _handleKeydown(o) {
-    o.code === "Space" && (o.preventDefault(), this.disabled || (this.checked = !this.checked, this.dispatchEvent(
+  _handleKeydown(t) {
+    t.code === "Space" && (t.preventDefault(), this.disabled || (this.checked = !this.checked, this.dispatchEvent(
       new CustomEvent("change", {
         detail: { checked: this.checked },
         bubbles: !0,
@@ -1650,7 +1674,7 @@ let D1 = 0, g = class extends x {
     )));
   }
   render() {
-    return C`
+    return a`
       <div class="nys-checkbox">
         <label class="nys-checkbox__content">
           <div class="nys-checkbox__checkboxwrapper">
@@ -1658,7 +1682,7 @@ let D1 = 0, g = class extends x {
               id="${this.id}"
               class="nys-checkbox__checkbox"
               type="checkbox"
-              name="${A(this.name ? this.name : void 0)}"
+              name="${D(this.name ? this.name : void 0)}"
               .checked=${this.checked}
               ?disabled=${this.disabled}
               .value=${this.value}
@@ -1671,19 +1695,19 @@ let D1 = 0, g = class extends x {
               @blur="${this._handleBlur}"
               @keydown="${this._handleKeydown}"
             />
-            ${this.checked ? C`<nys-icon
+            ${this.checked ? a`<nys-icon
                   for="${this.id}"
                   name="check"
                   size="${this.size === "md" ? "2xl" : this.size === "sm" ? "sm" : "md"}"
                   class="nys-checkbox__icon"
                 ></nys-icon>` : ""}
           </div>
-          ${this.label && C` <div class="nys-checkbox__text">
+          ${this.label && a` <div class="nys-checkbox__text">
             <div class="nys-checkbox__requiredwrapper">
               <label for=${this.id} class="nys-checkbox__label"
                 >${this.label}</label
               >
-              ${this.required ? C`<label class="nys-checkbox__required">*</label>` : ""}
+              ${this.required ? a`<label class="nys-checkbox__required">*</label>` : ""}
             </div>
             <label for=${this.id} class="nys-checkbox__description">
               ${this.description}
@@ -1691,7 +1715,7 @@ let D1 = 0, g = class extends x {
             </label>
           </div>`}
         </label>
-        ${this.showError && this.errorMessage ? C`<div class="nys-checkbox__error">
+        ${this.showError && this.errorMessage ? a`<div class="nys-checkbox__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -1699,45 +1723,45 @@ let D1 = 0, g = class extends x {
     `;
   }
 };
-g.VALID_SIZES = ["sm", "md"];
-g.styles = s1;
-L([
+v.VALID_SIZES = ["sm", "md"];
+v.styles = a1;
+k([
   n({ type: Boolean })
-], g.prototype, "checked", 2);
-L([
+], v.prototype, "checked", 2);
+k([
   n({ type: Boolean })
-], g.prototype, "disabled", 2);
-L([
+], v.prototype, "disabled", 2);
+k([
   n({ type: Boolean })
-], g.prototype, "required", 2);
-L([
+], v.prototype, "required", 2);
+k([
   n({ type: String })
-], g.prototype, "label", 2);
-L([
+], v.prototype, "label", 2);
+k([
   n({ type: String })
-], g.prototype, "description", 2);
-L([
+], v.prototype, "description", 2);
+k([
   n({ type: String })
-], g.prototype, "id", 2);
-L([
+], v.prototype, "id", 2);
+k([
   n({ type: String })
-], g.prototype, "name", 2);
-L([
+], v.prototype, "name", 2);
+k([
   n({ type: String })
-], g.prototype, "value", 2);
-L([
+], v.prototype, "value", 2);
+k([
   n({ type: Boolean })
-], g.prototype, "showError", 2);
-L([
+], v.prototype, "showError", 2);
+k([
   n({ type: String })
-], g.prototype, "errorMessage", 2);
-L([
+], v.prototype, "errorMessage", 2);
+k([
   n({ reflect: !0 })
-], g.prototype, "size", 1);
-g = L([
-  V("nys-checkbox")
-], g);
-const A1 = {
+], v.prototype, "size", 1);
+v = k([
+  M("nys-checkbox")
+], v);
+const R1 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -1847,7 +1871,7 @@ const A1 = {
 </svg>`,
   // *** Intent *** //
   check_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M8.6 14.6L15.65 7.55L14.25 6.15L8.6 11.8L5.75 8.95L4.35 10.35L8.6 14.6ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z" fill="var(--nys-icon-color, currentcolor)"/>
+<path d="M8.6 11.8L6.45 9.65C6.26667 9.46667 6.03333 9.375 5.75 9.375C5.46667 9.375 5.23333 9.46667 5.05 9.65C4.86667 9.83333 4.775 10.0667 4.775 10.35C4.775 10.6333 4.86667 10.8667 5.05 11.05L7.9 13.9C8.1 14.1 8.33333 14.2 8.6 14.2C8.86667 14.2 9.1 14.1 9.3 13.9L14.95 8.25C15.1333 8.06667 15.225 7.83333 15.225 7.55C15.225 7.26667 15.1333 7.03333 14.95 6.85C14.7667 6.66667 14.5333 6.575 14.25 6.575C13.9667 6.575 13.7333 6.66667 13.55 6.85L8.6 11.8ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20ZM10 18C12.2333 18 14.125 17.225 15.675 15.675C17.225 14.125 18 12.2333 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C7.76667 2 5.875 2.775 4.325 4.325C2.775 5.875 2 7.76667 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,
   emergency_home: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M11 21.025C10.7333 21.025 10.4791 20.975 10.2375 20.875C9.99581 20.775 9.77498 20.6333 9.57498 20.45L1.54998 12.425C1.36664 12.225 1.22498 12.0041 1.12498 11.7625C1.02498 11.5208 0.974976 11.2666 0.974976 11C0.974976 10.7333 1.02498 10.475 1.12498 10.225C1.22498 9.97498 1.36664 9.75831 1.54998 9.57498L9.57498 1.54998C9.77498 1.34998 9.99581 1.20414 10.2375 1.11248C10.4791 1.02081 10.7333 0.974976 11 0.974976C11.2666 0.974976 11.525 1.02081 11.775 1.11248C12.025 1.20414 12.2416 1.34998 12.425 1.54998L20.45 9.57498C20.65 9.75831 20.7958 9.97498 20.8875 10.225C20.9791 10.475 21.025 10.7333 21.025 11C21.025 11.2666 20.9791 11.5208 20.8875 11.7625C20.7958 12.0041 20.65 12.225 20.45 12.425L12.425 20.45C12.2416 20.6333 12.025 20.775 11.775 20.875C11.525 20.975 11.2666 21.025 11 21.025ZM11 19.025L19.025 11L11 2.97498L2.97498 11L11 19.025ZM9.99998 12H12V5.99998H9.99998V12ZM11 15C11.2833 15 11.5208 14.9041 11.7125 14.7125C11.9041 14.5208 12 14.2833 12 14C12 13.7166 11.9041 13.4791 11.7125 13.2875C11.5208 13.0958 11.2833 13 11 13C10.7166 13 10.4791 13.0958 10.2875 13.2875C10.0958 13.4791 9.99998 13.7166 9.99998 14C9.99998 14.2833 10.0958 14.5208 10.2875 14.7125C10.4791 14.9041 10.7166 15 11 15Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -1936,7 +1960,7 @@ const A1 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, q1 = H`
+}, j1 = L`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -2033,12 +2057,12 @@ const A1 = {
     transform: scale(-1, -1);
   }
 `;
-var I1 = Object.defineProperty, O1 = Object.getOwnPropertyDescriptor, N = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? O1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && I1(e, t, r), r;
+var G1 = Object.defineProperty, U1 = Object.getOwnPropertyDescriptor, R = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? U1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && G1(e, o, r), r;
 }, E;
-const P = (E = class extends x {
+const P = (E = class extends b {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -2051,16 +2075,16 @@ const P = (E = class extends x {
     ) ? e : "sm";
   }
   getIcon() {
-    const e = A1[this.name], t = !!this.label;
+    const e = R1[this.name], o = !!this.label;
     if (!e) return null;
     const i = new DOMParser().parseFromString(e, "image/svg+xml").documentElement;
-    return i instanceof SVGElement ? (i.setAttribute("role", "img"), i.setAttribute("aria-label", t ? this.label : ""), i.setAttribute("aria-hidden", t ? "false" : "true"), i.style.rotate = `${this.rotate}deg`, i.style.color = this.color || "currentcolor", i.classList.add(`nys-icon--${this.size}`), i.classList.add("nys-icon--svg"), this.flip && i.classList.add(`nys-icon--flip-${this.flip}`), i) : null;
+    return i instanceof SVGElement ? (i.setAttribute("role", "img"), i.setAttribute("aria-label", o ? this.label : ""), i.setAttribute("aria-hidden", o ? "false" : "true"), i.style.rotate = `${this.rotate}deg`, i.style.color = this.color || "currentcolor", i.classList.add(`nys-icon--${this.size}`), i.classList.add("nys-icon--svg"), this.flip && i.classList.add(`nys-icon--flip-${this.flip}`), i) : null;
   }
   render() {
     const e = this.getIcon();
-    return e ? C`${e}` : null;
+    return e ? a`${e}` : null;
   }
-}, E.styles = q1, E.VALID_TYPES = [
+}, E.styles = j1, E.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -2077,27 +2101,27 @@ const P = (E = class extends x {
   "48",
   "64"
 ], E);
-N([
+R([
   n({ type: String })
 ], P.prototype, "name", 2);
-N([
+R([
   n({ type: String })
 ], P.prototype, "label", 2);
-N([
+R([
   n({ type: String })
 ], P.prototype, "rotate", 2);
-N([
+R([
   n({ type: String })
 ], P.prototype, "flip", 2);
-N([
+R([
   n({ type: String })
 ], P.prototype, "color", 2);
-N([
+R([
   n({ reflect: !0 })
 ], P.prototype, "size", 1);
-let N1 = P;
-customElements.get("nys-icon") || customElements.define("nys-icon", N1);
-const n1 = H`
+let F1 = P;
+customElements.get("nys-icon") || customElements.define("nys-icon", F1);
+const C1 = L`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
@@ -2371,37 +2395,37 @@ const n1 = H`
     text-align: center;
   }
 `;
-var R1 = Object.defineProperty, U1 = Object.getOwnPropertyDescriptor, Z = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? U1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && R1(e, t, r), r;
+var Y1 = Object.defineProperty, K1 = Object.getOwnPropertyDescriptor, H = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? K1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && Y1(e, o, r), r;
 };
-let j1 = 0, _ = class extends x {
+let W1 = 0, _ = class extends b {
   constructor() {
     super(...arguments), this.id = "", this.name = "", this.required = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this.selectedName = null, this.selectedValue = null, this._size = "md";
   }
   get size() {
     return this._size;
   }
-  set size(o) {
+  set size(t) {
     this._size = _.VALID_SIZES.includes(
-      o
-    ) ? o : "md";
+      t
+    ) ? t : "md";
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-radiogroup-${Date.now()}-${j1++}`), this.addEventListener("change", this._handleRadioButtonChange);
+    super.connectedCallback(), this.id || (this.id = `nys-radiogroup-${Date.now()}-${W1++}`), this.addEventListener("change", this._handleRadioButtonChange);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this.removeEventListener("change", this._handleRadioButtonChange);
   }
-  updated(o) {
-    o.has("required") && this.updateRadioButtonsRequire(), o.has("size") && this.updateRadioButtonsSize();
+  updated(t) {
+    t.has("required") && this.updateRadioButtonsRequire(), t.has("size") && this.updateRadioButtonsSize();
   }
   // Updates the "require" attribute of a radiobutton underneath a radiogroup to ensure requirement for all radiobutton under the same name/group
   updateRadioButtonsRequire() {
-    this.querySelectorAll("nys-radiobutton").forEach((e, t) => {
-      this.required && t === 0 && e.setAttribute("required", "required");
+    this.querySelectorAll("nys-radiobutton").forEach((e, o) => {
+      this.required && o === 0 && e.setAttribute("required", "required");
     });
   }
   // Updates the size of each radiobutton underneath a radiogroup to ensure size standardization
@@ -2411,18 +2435,18 @@ let j1 = 0, _ = class extends x {
     });
   }
   // Keeps radiogroup informed of the name and value of its current selected radiobutton
-  _handleRadioButtonChange(o) {
-    const e = o, { name: t, value: s } = e.detail;
-    this.selectedName = t, this.selectedValue = s, console.log("you have selected:", this.selectedName, this.selectedValue);
+  _handleRadioButtonChange(t) {
+    const e = t, { name: o, value: s } = e.detail;
+    this.selectedName = o, this.selectedValue = s, console.log("you have selected:", this.selectedName, this.selectedValue);
   }
   render() {
-    return C` <div role="radiogroup" class="nys-radiogroup">
-      ${this.label && C` <div class="nys-radiobutton__text">
+    return a` <div role="radiogroup" class="nys-radiogroup">
+      ${this.label && a` <div class="nys-radiobutton__text">
         <div class="nys-radiobutton__requiredwrapper">
           <label for=${this.id} class="nys-radiogroup__label"
             >${this.label}</label
           >
-          ${this.required ? C`<label class="nys-radiobutton__required">*</label>` : ""}
+          ${this.required ? a`<label class="nys-radiobutton__required">*</label>` : ""}
         </div>
         <div class="nys-radiogroup__description">
           ${this.description}
@@ -2432,7 +2456,7 @@ let j1 = 0, _ = class extends x {
       <div class="nys-radiogroup__content">
         <slot></slot>
       </div>
-      ${this.showError && this.errorMessage ? C`<div class="nys-radiobutton__error">
+      ${this.showError && this.errorMessage ? a`<div class="nys-radiobutton__error">
             <nys-icon name="error" size="xl"></nys-icon>
             ${this.errorMessage}
           </div>` : ""}
@@ -2440,67 +2464,67 @@ let j1 = 0, _ = class extends x {
   }
 };
 _.VALID_SIZES = ["sm", "md"];
-_.styles = n1;
-Z([
+_.styles = C1;
+H([
   n({ type: String })
 ], _.prototype, "id", 2);
-Z([
+H([
   n({ type: String })
 ], _.prototype, "name", 2);
-Z([
+H([
   n({ type: Boolean })
 ], _.prototype, "required", 2);
-Z([
+H([
   n({ type: Boolean })
 ], _.prototype, "showError", 2);
-Z([
+H([
   n({ type: String })
 ], _.prototype, "errorMessage", 2);
-Z([
+H([
   n({ type: String })
 ], _.prototype, "label", 2);
-Z([
+H([
   n({ type: String })
 ], _.prototype, "description", 2);
-Z([
-  K()
+H([
+  N()
 ], _.prototype, "selectedName", 2);
-Z([
-  K()
+H([
+  N()
 ], _.prototype, "selectedValue", 2);
-Z([
+H([
   n({ reflect: !0 })
 ], _.prototype, "size", 1);
-_ = Z([
-  V("nys-radiogroup")
+_ = H([
+  M("nys-radiogroup")
 ], _);
-var T1 = Object.defineProperty, G1 = Object.getOwnPropertyDescriptor, $ = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? G1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && T1(e, t, r), r;
+var X1 = Object.defineProperty, J1 = Object.getOwnPropertyDescriptor, $ = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? J1(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && X1(e, o, r), r;
 };
-let F1 = 0, a = class extends x {
+let Q1 = 0, C = class extends b {
   constructor() {
     super(...arguments), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this._size = "md";
   }
   get size() {
     return this._size;
   }
-  set size(o) {
-    this._size = a.VALID_SIZES.includes(
-      o
-    ) ? o : "md";
+  set size(t) {
+    this._size = C.VALID_SIZES.includes(
+      t
+    ) ? t : "md";
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-radiobutton-${Date.now()}-${F1++}`), this.checked && (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this);
+    super.connectedCallback(), this.id || (this.id = `nys-radiobutton-${Date.now()}-${Q1++}`), this.checked && (C.buttonGroup[this.name] && (C.buttonGroup[this.name].checked = !1, C.buttonGroup[this.name].requestUpdate()), C.buttonGroup[this.name] = this);
   }
-  updated(o) {
-    o.has("checked") && this.checked && a.buttonGroup[this.name] !== this && (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this);
+  updated(t) {
+    t.has("checked") && this.checked && C.buttonGroup[this.name] !== this && (C.buttonGroup[this.name] && (C.buttonGroup[this.name].checked = !1, C.buttonGroup[this.name].requestUpdate()), C.buttonGroup[this.name] = this);
   }
   // Handle radiobutton change event & unselection of other options in group
   _handleChange() {
-    this.checked || (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this, this.checked = !0, this.dispatchEvent(
+    this.checked || (C.buttonGroup[this.name] && (C.buttonGroup[this.name].checked = !1, C.buttonGroup[this.name].requestUpdate()), C.buttonGroup[this.name] = this, this.checked = !0, this.dispatchEvent(
       new CustomEvent("change", {
         detail: { checked: this.checked, name: this.name, value: this.value },
         bubbles: !0,
@@ -2517,8 +2541,8 @@ let F1 = 0, a = class extends x {
     this.dispatchEvent(new Event("blur"));
   }
   // Handle keydown for keyboard accessibility
-  _handleKeydown(o) {
-    o.code === "Space" && (o.preventDefault(), !this.disabled && !this.checked && (a.buttonGroup[this.name] && (a.buttonGroup[this.name].checked = !1, a.buttonGroup[this.name].requestUpdate()), a.buttonGroup[this.name] = this, this.checked = !0, this.dispatchEvent(
+  _handleKeydown(t) {
+    t.code === "Space" && (t.preventDefault(), !this.disabled && !this.checked && (C.buttonGroup[this.name] && (C.buttonGroup[this.name].checked = !1, C.buttonGroup[this.name].requestUpdate()), C.buttonGroup[this.name] = this, this.checked = !0, this.dispatchEvent(
       new CustomEvent("change", {
         detail: {
           checked: this.checked,
@@ -2531,13 +2555,13 @@ let F1 = 0, a = class extends x {
     )));
   }
   render() {
-    return C`
+    return a`
       <label class="nys-radiobutton">
         <input
           id="${this.id}"
           class="nys-radiobutton__radio"
           type="radio"
-          name="${A(this.name ? this.name : void 0)}"
+          name="${D(this.name ? this.name : void 0)}"
           .checked=${this.checked}
           ?disabled=${this.disabled}
           .value=${this.value}
@@ -2550,7 +2574,7 @@ let F1 = 0, a = class extends x {
           @blur="${this._handleBlur}"
           @keydown="${this._handleKeydown}"
         />
-        ${this.label && C` <div class="nys-radiobutton__text">
+        ${this.label && a` <div class="nys-radiobutton__text">
           <div class="nys-radiobutton__requiredwrapper">
             <label for=${this.id} class="nys-radiobutton__label"
               >${this.label}</label
@@ -2565,40 +2589,40 @@ let F1 = 0, a = class extends x {
     `;
   }
 };
-a.VALID_SIZES = ["sm", "md"];
-a.buttonGroup = {};
-a.styles = n1;
+C.VALID_SIZES = ["sm", "md"];
+C.buttonGroup = {};
+C.styles = C1;
 $([
   n({ type: Boolean })
-], a.prototype, "checked", 2);
+], C.prototype, "checked", 2);
 $([
   n({ type: Boolean })
-], a.prototype, "disabled", 2);
+], C.prototype, "disabled", 2);
 $([
   n({ type: Boolean })
-], a.prototype, "required", 2);
+], C.prototype, "required", 2);
 $([
   n({ type: String })
-], a.prototype, "label", 2);
+], C.prototype, "label", 2);
 $([
   n({ type: String })
-], a.prototype, "description", 2);
+], C.prototype, "description", 2);
 $([
   n({ type: String })
-], a.prototype, "id", 2);
+], C.prototype, "id", 2);
 $([
   n({ type: String })
-], a.prototype, "name", 2);
+], C.prototype, "name", 2);
 $([
   n({ type: String })
-], a.prototype, "value", 2);
+], C.prototype, "value", 2);
 $([
   n({ reflect: !0 })
-], a.prototype, "size", 1);
-a = $([
-  V("nys-radiobutton")
-], a);
-const Y1 = H`
+], C.prototype, "size", 1);
+C = $([
+  M("nys-radiobutton")
+], C);
+const e5 = L`
   :host {
     /* Global Select Styles */
     --_nys-select-form-width: var(--nys-form-width-md, 200px);
@@ -2774,18 +2798,18 @@ const Y1 = H`
       var(--_nys-select-error-color);
   }
 `;
-var K1 = Object.defineProperty, T = (o, e, t, s) => {
-  for (var r = void 0, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = l(e, t, r) || r);
-  return r && K1(e, t, r), r;
+var t5 = Object.defineProperty, Y = (t, e, o, s) => {
+  for (var r = void 0, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = l(e, o, r) || r);
+  return r && t5(e, o, r), r;
 };
-class D extends x {
+class A extends b {
   constructor() {
     super(...arguments), this.disabled = !1, this.selected = !1, this.value = "", this.label = "", this.hidden = !1;
   }
   firstUpdated() {
-    var t;
-    const e = (t = this.shadowRoot) == null ? void 0 : t.querySelector("slot");
+    var o;
+    const e = (o = this.shadowRoot) == null ? void 0 : o.querySelector("slot");
     e && e.addEventListener("slotchange", () => {
       var r;
       const s = e.assignedNodes({ flatten: !0 });
@@ -2793,7 +2817,7 @@ class D extends x {
     });
   }
   render() {
-    return C`
+    return a`
       <option
         ?disabled=${this.disabled}
         ?selected=${this.selected}
@@ -2806,51 +2830,51 @@ class D extends x {
     `;
   }
 }
-T([
+Y([
   n({ type: Boolean })
-], D.prototype, "disabled");
-T([
+], A.prototype, "disabled");
+Y([
   n({ type: Boolean })
-], D.prototype, "selected");
-T([
+], A.prototype, "selected");
+Y([
   n({ type: String })
-], D.prototype, "value");
-T([
+], A.prototype, "value");
+Y([
   n({ type: String })
-], D.prototype, "label");
-T([
+], A.prototype, "label");
+Y([
   n({ type: Boolean })
-], D.prototype, "hidden");
-customElements.define("nys-option", D);
-var W1 = Object.defineProperty, J1 = Object.getOwnPropertyDescriptor, M = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? J1(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && W1(e, t, r), r;
+], A.prototype, "hidden");
+customElements.define("nys-option", A);
+var o5 = Object.defineProperty, r5 = Object.getOwnPropertyDescriptor, Z = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? r5(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && o5(e, o, r), r;
 };
-let u = class extends x {
+let u = class extends b {
   constructor() {
     super(...arguments), this.id = "", this.name = "", this.label = "", this.description = "", this.value = "", this.disabled = !1, this.required = !1, this.form = "", this.showError = !1, this.errorMessage = "", this._width = "md";
   }
   get width() {
     return this._width;
   }
-  set width(o) {
+  set width(t) {
     this._width = u.VALID_WIDTHS.includes(
-      o
-    ) ? o : "full";
+      t
+    ) ? t : "full";
   }
   _handleSlotChange() {
-    var e, t;
-    const o = (e = this.shadowRoot) == null ? void 0 : e.querySelector(
+    var e, o;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector(
       'slot:not([name="description"])'
     );
-    if (o) {
-      const s = o.assignedElements({ flatten: !0 }), r = (t = this.shadowRoot) == null ? void 0 : t.querySelector("select");
+    if (t) {
+      const s = t.assignedElements({ flatten: !0 }), r = (o = this.shadowRoot) == null ? void 0 : o.querySelector("select");
       r && s.forEach((i) => {
         var l;
-        if (i instanceof D) {
-          const v = document.createElement("option");
-          v.value = i.value, v.textContent = i.label || ((l = i.textContent) == null ? void 0 : l.trim()) || "", v.disabled = i.disabled, v.selected = i.selected, r.appendChild(v);
+        if (i instanceof A) {
+          const y = document.createElement("option");
+          y.value = i.value, y.textContent = i.label || ((l = i.textContent) == null ? void 0 : l.trim()) || "", y.disabled = i.disabled, y.selected = i.selected, r.appendChild(y);
         }
       });
     }
@@ -2863,23 +2887,45 @@ let u = class extends x {
   _handleBlur() {
     this.dispatchEvent(new Event("blur"));
   }
+  // Handle change event to bubble up selected value
+  _handleChange(t) {
+    const e = t.target;
+    this.value = e.value, this.dispatchEvent(
+      new CustomEvent("change", {
+        detail: { value: this.value },
+        bubbles: !0,
+        composed: !0
+      })
+    );
+  }
+  // Handle input changes by update the value as input changes
+  _handleInput(t) {
+    const e = t.target;
+    this.value = e.value, this.dispatchEvent(
+      new CustomEvent("input", {
+        detail: { value: this.value },
+        bubbles: !0,
+        composed: !0
+      })
+    );
+  }
   // Check if the current value matches any option, and if so, set it as selected
-  updated(o) {
+  updated(t) {
     var e;
-    if (super.updated(o), o.has("value")) {
-      const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("select");
-      t && (t.value = this.value);
+    if (super.updated(t), t.has("value")) {
+      const o = (e = this.shadowRoot) == null ? void 0 : e.querySelector("select");
+      o && (o.value = this.value);
     }
   }
   render() {
-    return C`
+    return a`
       <div class="nys-select">
-        ${this.label && C` <div class="nys-select__text">
+        ${this.label && a` <div class="nys-select__text">
           <div class="nys-select__requiredwrapper">
             <label for=${this.id} class="nys-select__label"
               >${this.label}</label
             >
-            ${this.required ? C`<label class="nys-select__required">*</label>` : ""}
+            ${this.required ? a`<label class="nys-select__required">*</label>` : ""}
           </div>
           <div class="nys-select__description">
             ${this.description}
@@ -2898,6 +2944,8 @@ let u = class extends x {
             value=${this.value}
             @focus="${this._handleFocus}"
             @blur="${this._handleBlur}"
+            @change="${this._handleChange}"
+            @input="${this._handleInput}"
           >
             <option hidden disabled selected value></option>
           </select>
@@ -2911,7 +2959,7 @@ let u = class extends x {
             class="nys-select__icon"
           ></nys-icon>
         </div>
-        ${this.showError && this.errorMessage ? C`<div class="nys-select__error">
+        ${this.showError && this.errorMessage ? a`<div class="nys-select__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -2920,44 +2968,44 @@ let u = class extends x {
   }
 };
 u.VALID_WIDTHS = ["sm", "md", "lg", "full"];
-u.styles = Y1;
-M([
+u.styles = e5;
+Z([
   n({ type: String })
 ], u.prototype, "id", 2);
-M([
+Z([
   n({ type: String })
 ], u.prototype, "name", 2);
-M([
+Z([
   n({ type: String })
 ], u.prototype, "label", 2);
-M([
+Z([
   n({ type: String })
 ], u.prototype, "description", 2);
-M([
+Z([
   n({ type: String })
 ], u.prototype, "value", 2);
-M([
+Z([
   n({ type: Boolean })
 ], u.prototype, "disabled", 2);
-M([
+Z([
   n({ type: Boolean })
 ], u.prototype, "required", 2);
-M([
+Z([
   n({ type: String })
 ], u.prototype, "form", 2);
-M([
+Z([
   n({ type: Boolean, reflect: !0 })
 ], u.prototype, "showError", 2);
-M([
+Z([
   n({ type: String })
 ], u.prototype, "errorMessage", 2);
-M([
+Z([
   n({ reflect: !0 })
 ], u.prototype, "width", 1);
-u = M([
-  V("nys-select")
+u = Z([
+  M("nys-select")
 ], u);
-const X1 = H`
+const s5 = L`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3006,7 +3054,7 @@ const X1 = H`
     --_nys-textarea-lineheight-ui: var(--nys-font-lineheight-ui-md, 24px);
     --nys-textarea-letterspacing-ui: var(
       --nys-font-letterspacing-ui-md,
-      0.044px
+      var(--nys-font-letterspacing-400, 0.044px)
     );
     --_nys-textarea-color-ui: var(--nys-color-ink, #1b1b1b);
   }
@@ -3115,33 +3163,41 @@ const X1 = H`
     align-items: center;
   }
 `;
-var Q1 = Object.defineProperty, e5 = Object.getOwnPropertyDescriptor, p = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? e5(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && Q1(e, t, r), r;
+var n5 = Object.defineProperty, i5 = Object.getOwnPropertyDescriptor, g = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? i5(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && n5(e, o, r), r;
 };
-let h = class extends x {
+let h = class extends b {
   constructor() {
     super(), this.id = "", this.name = "", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.form = "", this.maxlength = null, this.width = "full", this.rows = null, this._resize = "vertical", this.showError = !1, this.errorMessage = "";
   }
   // Ensure the "width" property is valid after updates
-  updated(o) {
-    o.has("width") && (this.width = h.VALID_WIDTHS.includes(this.width) ? this.width : "full");
+  updated(t) {
+    t.has("width") && (this.width = h.VALID_WIDTHS.includes(this.width) ? this.width : "full");
   }
   get resize() {
     return this._resize;
   }
-  set resize(o) {
+  set resize(t) {
     this._resize = h.VALID_RESIZE.includes(
-      o
-    ) ? o : "vertical";
+      t
+    ) ? t : "vertical";
   }
   // Handle input event to check pattern validity
-  _handleInput(o) {
-    const t = o.target.checkValidity();
+  _handleInput(t) {
+    const e = t.target;
+    this.dispatchEvent(
+      new CustomEvent("input", {
+        detail: { value: this.value },
+        bubbles: !0,
+        composed: !0
+      })
+    );
+    const o = e.checkValidity();
     this.dispatchEvent(
       new CustomEvent("nys-checkValidity", {
-        detail: { checkValidity: t },
+        detail: { checkValidity: o },
         bubbles: !0,
         composed: !0
       })
@@ -3155,15 +3211,24 @@ let h = class extends x {
   _handleBlur() {
     this.dispatchEvent(new Event("blur"));
   }
+  _handleChange() {
+    this.dispatchEvent(new Event("change"));
+  }
+  _handleSelect() {
+    this.dispatchEvent(new Event("select"));
+  }
+  _handleSelectionChange() {
+    this.dispatchEvent(new Event("selectionchange"));
+  }
   render() {
-    return C`
+    return a`
       <label class="nys-textarea">
-        ${this.label && C` <div class="nys-textarea__text">
+        ${this.label && a` <div class="nys-textarea__text">
           <div class="nys-textarea__requiredwrapper">
             <label for=${this.id} class="nys-textarea__label"
               >${this.label}</label
             >
-            ${this.required ? C`<label class="nys-textarea__required">*</label>` : ""}
+            ${this.required ? a`<label class="nys-textarea__required">*</label>` : ""}
           </div>
           <div class="nys-textarea__description">
             ${this.description}
@@ -3186,8 +3251,11 @@ let h = class extends x {
           @input=${this._handleInput}
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
+          @change="${this._handleChange}"
+          @select="${this._handleSelect}"
+          @selectionchange="${this._handleSelectionChange}"
         ></textarea>
-        ${this.showError && this.errorMessage ? C`<div class="nys-textarea__error">
+        ${this.showError && this.errorMessage ? a`<div class="nys-textarea__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -3197,59 +3265,59 @@ let h = class extends x {
 };
 h.VALID_WIDTHS = ["sm", "md", "lg", "full"];
 h.VALID_RESIZE = ["vertical", "none"];
-h.styles = X1;
-p([
+h.styles = s5;
+g([
   n({ type: String })
 ], h.prototype, "id", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "name", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "label", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "description", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "placeholder", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "value", 2);
-p([
+g([
   n({ type: Boolean })
 ], h.prototype, "disabled", 2);
-p([
+g([
   n({ type: Boolean })
 ], h.prototype, "readonly", 2);
-p([
+g([
   n({ type: Boolean })
 ], h.prototype, "required", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "form", 2);
-p([
+g([
   n({ type: Number })
 ], h.prototype, "maxlength", 2);
-p([
+g([
   n({ reflect: !0 })
 ], h.prototype, "width", 2);
-p([
+g([
   n({ type: Number })
 ], h.prototype, "rows", 2);
-p([
+g([
   n({ reflect: !0 })
 ], h.prototype, "resize", 1);
-p([
+g([
   n({ type: Boolean, reflect: !0 })
 ], h.prototype, "showError", 2);
-p([
+g([
   n({ type: String })
 ], h.prototype, "errorMessage", 2);
-h = p([
-  V("nys-textarea")
+h = g([
+  M("nys-textarea")
 ], h);
-const t5 = H`
+const l5 = L`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3298,7 +3366,7 @@ const t5 = H`
     --_nys-textinput-lineheight-ui: var(--nys-font-lineheight-ui-md, 24px);
     --nys-textinput-letterspacing-ui: var(
       --nys-font-letterspacing-ui-md,
-      0.044px
+      var(--nys-font-letterspacing-400, 0.044px)
     );
     --_nys-textinput-color-ui: var(--nys-color-ink, #1b1b1b);
   }
@@ -3399,33 +3467,41 @@ const t5 = H`
     align-items: center;
   }
 `;
-var o5 = Object.defineProperty, r5 = Object.getOwnPropertyDescriptor, d = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? r5(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && o5(e, t, r), r;
+var a5 = Object.defineProperty, C5 = Object.getOwnPropertyDescriptor, d = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? C5(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && a5(e, o, r), r;
 };
-let c = class extends x {
+let c = class extends b {
   constructor() {
     super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "";
   }
   get type() {
     return this._type;
   }
-  set type(o) {
+  set type(t) {
     this._type = c.VALID_TYPES.includes(
-      o
-    ) ? o : "text";
+      t
+    ) ? t : "text";
   }
   // Ensure the "width" property is valid after updates
-  updated(o) {
-    o.has("width") && (this.width = c.VALID_WIDTHS.includes(this.width) ? this.width : "full");
+  updated(t) {
+    t.has("width") && (this.width = c.VALID_WIDTHS.includes(this.width) ? this.width : "full");
   }
   // Handle input event to check pattern validity
-  _handleInput(o) {
-    const t = o.target.checkValidity();
+  _handleInput(t) {
+    const e = t.target;
+    this.dispatchEvent(
+      new CustomEvent("input", {
+        detail: { value: this.value },
+        bubbles: !0,
+        composed: !0
+      })
+    );
+    const o = e.checkValidity();
     this.dispatchEvent(
       new CustomEvent("nys-checkValidity", {
-        detail: { checkValidity: t },
+        detail: { checkValidity: o },
         bubbles: !0,
         composed: !0
       })
@@ -3439,15 +3515,19 @@ let c = class extends x {
   _handleBlur() {
     this.dispatchEvent(new Event("blur"));
   }
+  // Handle change event
+  _handleChange() {
+    this.dispatchEvent(new Event("change"));
+  }
   render() {
-    return C`
+    return a`
       <div class="nys-textinput">
-        ${this.label && C` <div class="nys-textinput__text">
+        ${this.label && a` <div class="nys-textinput__text">
           <div class="nys-textinput__requiredwrapper">
             <label for=${this.id} class="nys-textinput__label"
               >${this.label}</label
             >
-            ${this.required ? C`<label class="nys-textinput__required">*</label>` : ""}
+            ${this.required ? a`<label class="nys-textinput__required">*</label>` : ""}
           </div>
 
           <div class="nys-textinput__description">
@@ -3476,8 +3556,9 @@ let c = class extends x {
           @input=${this._handleInput}
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
+          @change="${this._handleChange}"
         />
-        ${this.showError && this.errorMessage ? C`<div class="nys-textinput__error">
+        ${this.showError && this.errorMessage ? a`<div class="nys-textinput__error">
               <nys-icon name="error" size="xl"></nys-icon>
               ${this.errorMessage}
             </div>` : ""}
@@ -3495,7 +3576,7 @@ c.VALID_TYPES = [
   "url"
 ];
 c.VALID_WIDTHS = ["sm", "md", "lg", "full"];
-c.styles = t5;
+c.styles = l5;
 d([
   n({ type: String })
 ], c.prototype, "id", 2);
@@ -3554,9 +3635,9 @@ d([
   n({ type: String })
 ], c.prototype, "errorMessage", 2);
 c = d([
-  V("nys-textinput")
+  M("nys-textinput")
 ], c);
-const s5 = H`
+const c5 = L`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -3601,22 +3682,22 @@ const s5 = H`
     --_nys-toggle-color-base: var(--nys-color-neutral-500, #797c7f);
     --_nys-toggle-color-base-weak: var(--nys-color-neutral-100, #d0d0ce);
     --_nys-toggle-color-theme: var(
-      --nys-toggle-color-theme,
+      --nys-color-theme,
       var(--nys-color-state-blue-700, #154973)
     );
     --_nys-toggle-color-neutral: var(--nys-color-neutral-600, #62666a);
     --_nys-toggle-color-neutral-700: var(--nys-color-neutral-700, #4a4d4f);
     --_nys-toggle-color-theme-strong: var(
-      --nys-toggle-color-theme-strong,
-      var(--nys-toggle-color-state-blue-800, #0e324f)
+      --nys-color-theme-strong,
+      var(--nys-color-state-blue-800, #0e324f)
     );
     --_nys-toggle-color-theme-stronger: var(
-      --nys-toggle-color-theme-stronger,
-      var(--nys-toggle-color-state-blue-900, #081b2b)
+      --nys-color-theme-stronger,
+      var(--nys-color-state-blue-900, #081b2b)
     );
     --_nys-toggle-color-ink-reverse: var(
-      --nys-toggle-color-ink-reverse,
-      var(--nys-toggle-color-white, #fff)
+      --nys-color-ink-reverse,
+      var(--nys-color-white, #fff)
     );
 
     /* Font sizes and spacing for labels, descriptions, and icons */
@@ -3820,27 +3901,27 @@ const s5 = H`
     }
   }
 `;
-var n5 = Object.defineProperty, i5 = Object.getOwnPropertyDescriptor, k = (o, e, t, s) => {
-  for (var r = s > 1 ? void 0 : s ? i5(e, t) : e, i = o.length - 1, l; i >= 0; i--)
-    (l = o[i]) && (r = (s ? l(e, t, r) : l(r)) || r);
-  return s && r && n5(e, t, r), r;
+var h5 = Object.defineProperty, d5 = Object.getOwnPropertyDescriptor, V = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? d5(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && h5(e, o, r), r;
 };
-let l5 = 0, b = class extends x {
+let y5 = 0, f = class extends b {
   constructor() {
     super(...arguments), this.id = "", this.name = "", this.value = "", this.checked = !1, this.disabled = !1, this.noIcon = !1, this.label = "", this.description = "", this._size = "md", this.form = "";
   }
   get size() {
     return this._size;
   }
-  set size(o) {
-    this._size = b.VALID_SIZES.includes(
-      o
-    ) ? o : "md";
+  set size(t) {
+    this._size = f.VALID_SIZES.includes(
+      t
+    ) ? t : "md";
   }
   /******************** Functions ********************/
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${l5++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${y5++}`);
   }
   // Handle focus event
   _handleFocus() {
@@ -3850,8 +3931,8 @@ let l5 = 0, b = class extends x {
   _handleBlur() {
     this.dispatchEvent(new Event("blur"));
   }
-  _handleChange(o) {
-    const { checked: e } = o.target;
+  _handleChange(t) {
+    const { checked: e } = t.target;
     this.checked = e, this.dispatchEvent(
       new CustomEvent("change", {
         detail: { checked: this.checked },
@@ -3860,8 +3941,8 @@ let l5 = 0, b = class extends x {
       })
     );
   }
-  _handleKeyDown(o) {
-    !this.disabled && (o.key === " " || o.key === "Enter") && (o.preventDefault(), this.checked = !this.checked, this.dispatchEvent(
+  _handleKeyDown(t) {
+    !this.disabled && (t.key === " " || t.key === "Enter") && (t.preventDefault(), this.checked = !this.checked, this.dispatchEvent(
       new CustomEvent("change", {
         detail: { checked: this.checked },
         bubbles: !0,
@@ -3870,14 +3951,14 @@ let l5 = 0, b = class extends x {
     ));
   }
   render() {
-    return C`
+    return a`
       <label class="nys-toggle">
         <div class="nys-toggle__content">
           <div class="nys-toggle__toggle">
             <input
               id="${this.id}"
               type="checkbox"
-              name="${A(this.name ? this.name : void 0)}"
+              name="${D(this.name ? this.name : void 0)}"
               .value=${this.value}
               form=${this.form}
               .checked=${this.checked}
@@ -3892,7 +3973,7 @@ let l5 = 0, b = class extends x {
             />
             <span class="slider">
               <div class="knob">
-                ${this.noIcon ? "" : C`<nys-icon
+                ${this.noIcon ? "" : a`<nys-icon
                       class="toggle-icon"
                       name="${this.checked ? "check" : "close"}"
                     ></nys-icon>`}
@@ -3908,50 +3989,464 @@ let l5 = 0, b = class extends x {
     `;
   }
 };
-b.styles = s5;
-b.VALID_SIZES = ["sm", "md"];
-k([
+f.styles = c5;
+f.VALID_SIZES = ["sm", "md"];
+V([
   n({ type: String })
-], b.prototype, "id", 2);
-k([
+], f.prototype, "id", 2);
+V([
   n({ type: String })
-], b.prototype, "name", 2);
-k([
+], f.prototype, "name", 2);
+V([
   n({ type: String })
-], b.prototype, "value", 2);
-k([
+], f.prototype, "value", 2);
+V([
   n({ type: Boolean })
-], b.prototype, "checked", 2);
-k([
+], f.prototype, "checked", 2);
+V([
   n({ type: Boolean })
-], b.prototype, "disabled", 2);
-k([
+], f.prototype, "disabled", 2);
+V([
   n({ type: Boolean })
-], b.prototype, "noIcon", 2);
-k([
+], f.prototype, "noIcon", 2);
+V([
   n({ type: String })
-], b.prototype, "label", 2);
-k([
+], f.prototype, "label", 2);
+V([
   n({ type: String })
-], b.prototype, "description", 2);
-k([
+], f.prototype, "description", 2);
+V([
   n({ reflect: !0 })
-], b.prototype, "size", 1);
-k([
+], f.prototype, "size", 1);
+V([
   n({ type: String })
-], b.prototype, "form", 2);
-b = k([
-  V("nys-toggle")
-], b);
+], f.prototype, "form", 2);
+f = V([
+  M("nys-toggle")
+], f);
+const p5 = L`
+  :host {
+    /* Global Header Styles */
+    --_nys-globalheader-color: var(
+      --nys-color-ink-reverse,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-globalheader-background: var(
+      --nys-color-theme,
+      var(--nys-color-state-blue-700, #154973)
+    );
+    --_nys-globalheader-gap-spacing: var(--nys-space-100, 8px);
+    --_nys-globalheader-padding: var(--nys-space-200, 16px);
+    --_nys-globalheader-gutter: var(--nys-gutter-sm, 20px);
+    --_nys-gutter: var(--nys-gutter-md, 32px);
+    --_nys-globalheader-font-family: var(
+      --nys-font-family-ui,
+      var(
+        --nys-font-family-sans,
+        "Proxima Nova",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif
+      )
+    );
+    --_nys-globalheader-lineheight: normal;
+    --_nys-globalheader-letterspacing: var(
+      --nys-font-letterspacing-h2,
+      var(--nys-font-letterspacing-100, 0.013px;)
+    );
+    --_nys-globalheader-font-weight-bold: var(--nys-font-weight-bold, 700);
+    --_nys-globalheader-font-weight-semibold: var(
+      --nys-font-weight-semibold,
+      600
+    );
+
+    /* Agency and App Name Styling */
+    --_nys-globalheader-font-size-main-name: var(
+      --nys-font-size-agency-xl,
+      var(--nys-font-size-2xl, 22px)
+    );
+    --_nys-globalheader-font-size-sub-name: var(
+      --nys-font-size-agency-md,
+      var(--nys-font-size-md, 16px)
+    );
+    --_nys-globalheader-font-family-agency: var(
+      --nys-font-family-agency,
+      "D Sari",
+      Arial,
+      sans-serif
+    );
+
+    /* Menu Content Styling */
+    --_nys-globalheader-font-size-links: var(
+      --nys-font-size-body-md,
+      var(--nys-font-size-md, 16px)
+    );
+    --_nys-globalheader-link-gap-spacing: var(--nys-space-600, 48px);
+  }
+
+  .nys-globalheader {
+    display: flex;
+    padding: var(--_nys-globalheader-padding) var(--_nys-globalheader-gutter);
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--_nys-globalheader-background);
+    color: var(--_nys-globalheader-color);
+    gap: var(--_nys-globalheader-gap-spacing);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Left-hand side Agency and App names */
+  .nys-globalheader__name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--_nys-globalheader-gap-spacing);
+  }
+  .nys-globalheader__name {
+    margin: 0;
+    color: var(--_nys-globalheader-color);
+    font-family: var(--_nys-globalheader-font-family-agency);
+    font-size: var(--_nys-globalheader-font-size-main-name);
+    font-style: normal;
+    font-weight: var(--_nys-globalheader-font-weight-semibold);
+    line-height: var(--_nys-globalheader-lineheight);
+    letter-spacing: var(--_nys-globalheader-letterspacing);
+    text-wrap: wrap;
+  }
+
+  .nys-globalheader__agencyName {
+    font-size: var(--_nys-globalheader-font-size-sub-name);
+  }
+
+  /* Set the font size for the agency to be the main font if appName is not defined */
+  .nys-globalheader__agencyName.main {
+    font-size: var(--_nys-globalheader-font-size-main-name);
+  }
+
+  /* Slotted content */
+  .nys-globalheader__content {
+    font-family: var(--_nys-globalheader-font-family);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_nys-globalheader-link-gap-spacing);
+    width: 100%;
+  }
+
+  ::slotted(a) {
+    color: var(--_nys-globalheader-color);
+    text-decoration: none;
+    font-size: var(--_nys-globalheader-font-size-links);
+    font-style: normal;
+    font-weight: var(--_nys-globalheader-font-weight-semibold);
+    line-height: var(--nys-font-lineheight-ui-md, 24px); /* 150% */
+    letter-spacing: var(--nys-font-letterspacing-ui-md, 0.005em);
+  }
+
+  /* Breakpoints using Excelsior Grid Guidelines */
+  @media (min-width: 768px) {
+    /* md */
+    .nys-globalheader__content {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+    :host() {
+      --_nys-globalheader-gap-spacing: var(--nys-space-400, 32px);
+      --_nys-globalheader-gutter: var(--nys-gutter-lg, 32px);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    /* Large Desktop (XL - Above 1280px) */
+    :host {
+      --_nys-globalheader-gutter: var(--nys-gutter-xl, 64px);
+    }
+  }
+`;
+var g5 = Object.defineProperty, v5 = Object.getOwnPropertyDescriptor, J = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? v5(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && g5(e, o, r), r;
+};
+let O = class extends b {
+  constructor() {
+    super(...arguments), this.appName = "", this.agencyName = "", this.slotHasContent = !0;
+  }
+  /**************** Lifecycle Methods ****************/
+  firstUpdated() {
+    var e;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector('slot[name="text"]');
+    t == null || t.addEventListener("slotchange", () => this._checkSlotContent()), this._checkSlotContent();
+  }
+  /******************** Functions ********************/
+  _checkSlotContent() {
+    var e;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector('slot[name="text"]');
+    if (t) {
+      const o = t.assignedNodes({
+        flatten: !0
+      });
+      this.slotHasContent = o.length > 0;
+    } else
+      this.slotHasContent = !1;
+  }
+  render() {
+    var t, e, o;
+    return a`
+      <header class="nys-globalheader">
+        <div class="nys-globalheader__name-container">
+          ${((t = this.appName) == null ? void 0 : t.trim().length) > 0 ? a`<div
+                class="nys-globalheader__appName nys-globalheader__name"
+              >
+                ${this.appName}
+              </div>` : ""}
+          ${((e = this.agencyName) == null ? void 0 : e.trim().length) > 0 ? a`<div
+                class="nys-globalheader__agencyName nys-globalheader__name ${((o = this.appName) == null ? void 0 : o.trim().length) > 0 ? "" : "main"}"
+              >
+                ${this.agencyName}
+              </div>` : ""}
+        </div>
+        ${this.slotHasContent ? a`<div class="nys-globalheader__content">
+              <slot name="text"></slot>
+            </div>` : ""}
+      </header>
+    `;
+  }
+};
+O.styles = p5;
+J([
+  n({ type: String })
+], O.prototype, "appName", 2);
+J([
+  n({ type: String })
+], O.prototype, "agencyName", 2);
+J([
+  N()
+], O.prototype, "slotHasContent", 2);
+O = J([
+  M("nys-globalheader")
+], O);
+const u5 = L`
+  :host {
+    /* Global Footer Styles */
+    --_nys-globalfooter-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-globalfooter-background: var(
+      --nys-color-theme-weaker,
+      var(--nys-color-state-blue-50, #eff6fb)
+    );
+    --_nys-globalfooter-gap-spacing: var(--nys-space-300, 24px);
+    --_nys-globalfooter-padding: var(--nys-space-400, 32px);
+    --_nys-globalfooter-gutter: var(--nys-gutter-sm, 20px);
+    --_nys-globalfooter-font-size: var(
+      --nys-font-size-agency-xl,
+      var(--nys-font-size-2xl, 22px)
+    );
+    --_nys-globalfooter-font-size-links: var(
+      --nys-font-size-body-md,
+      var(--nys-font-size-md, 16px)
+    );
+    --_nys-globalfooter-lineheight: normal;
+    --_nys-globalfooter-letterspacing: var(
+      --nys-font-letterspacing-h2,
+      var(--nys-font-letterspacing-100, 0.013px)
+    );
+    --_nys-globalfooter-font-weight-semibold: var(
+      --nys-font-weight-semibold,
+      600
+    );
+
+    /* Agency Name */
+    --_nys-globalfooter-font-family-agency: var(
+      --nys-font-family-agency,
+      "D Sari",
+      Arial,
+      sans-serif
+    );
+
+    /* Links */
+    --_nys-globalfooter-link-gap-spacing-row: var(--nys-space-400, 32px);
+    --_nys-globalfooter-link-gap-spacing-column: var(--nys-space-600, 48px);
+    --_nys-globalfooter-lineheight-links: var(
+      --nys-font-lineheight-ui-md,
+      24px
+    );
+    --_nys-globalfooter-letterspacing: var(
+      --nys-font-letterspacing-ui-md,
+      var(--nys-font-letterspacing-400, 0.044px)
+    );
+    --_nys-globalfooter-font-family: var(
+      --nys-font-family-ui,
+      var(
+        --nys-font-family-sans,
+        "Proxima Nova",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif
+      )
+    );
+  }
+
+  .nys-globalfooter {
+    display: flex;
+    padding: var(--_nys-globalfooter-padding) var(--_nys-globalfooter-gutter);
+    gap: var(--_nys-globalfooter-gap-spacing);
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--_nys-globalfooter-background);
+    color: var(--_nys-globalfooter-color);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* The Agency Name */
+  .nys-globalfooter__name {
+    margin: 0;
+    color: var(--_nys-globalfooter-color);
+    font-family: var(--_nys-globalfooter-font-family-agency);
+    font-size: var(--_nys-globalfooter-font-size);
+    font-style: normal;
+    font-weight: var(--_nys-globalfooter-font-weight-semibold);
+    line-height: var(--_nys-globalfooter-lineheight);
+    letter-spacing: var(--_nys-globalfooter-letterspacing);
+  }
+
+  /* Slotted content (menu links) basic resets */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--_nys-globalfooter-color);
+    text-decoration: none;
+    font-family: var(--_nys-globalfooter-font-family);
+    font-size: var(--_nys-globalfooter-font-size-links);
+    font-style: normal;
+    font-weight: var(--_nys-globalfooter-font-weight-semibold);
+    line-height: var(--_nys-globalfooter-lineheight-links);
+    letter-spacing: var(--nys-font-letterspacing-ui-md, 0.005em);
+  }
+
+  /* Specific layout for menu links (grouped or singular list of menus) */
+  .nys-globalfooter__content {
+    width: 100%;
+  }
+
+  .nys-globalfooter__content ul {
+    display: grid;
+    gap: var(--_nys-globalfooter-link-gap-spacing-row)
+      var(--_nys-globalfooter-link-gap-spacing-column);
+    grid-template-columns: repeat(1, 1fr); /* One columns */
+  }
+
+  /* Breakpoints using Excelsior Grid Guidelines (Menu Links) */
+  @media (min-width: 768px) {
+    /* Tablet (MD - Above 768px) */
+    .nys-globalfooter__content ul {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+    :host {
+      --_nys-globalfooter-gutter: var(--nys-gutter-lg, 32px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Large Desktop (LG - Above 1024px) */
+    .nys-globalfooter__content ul {
+      gap: var(--_nys-globalfooter-link-gap-spacing-column);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    /* Large Desktop (XL - Above 1280px) */
+    .nys-globalfooter__content ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    :host {
+      --_nys-globalfooter-gutter: var(--nys-gutter-xl, 64px);
+    }
+  }
+`;
+var _5 = Object.defineProperty, f5 = Object.getOwnPropertyDescriptor, t1 = (t, e, o, s) => {
+  for (var r = s > 1 ? void 0 : s ? f5(e, o) : e, i = t.length - 1, l; i >= 0; i--)
+    (l = t[i]) && (r = (s ? l(e, o, r) : l(r)) || r);
+  return s && r && _5(e, o, r), r;
+};
+let F = class extends b {
+  constructor() {
+    super(...arguments), this.agencyName = "", this.slotHasContent = !0;
+  }
+  /**************** Lifecycle Methods ****************/
+  firstUpdated() {
+    var e;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("slot");
+    t == null || t.addEventListener("slotchange", () => this._handleSlotChange()), this._handleSlotChange();
+  }
+  _handleSlotChange() {
+    var r, i;
+    const t = (r = this.shadowRoot) == null ? void 0 : r.querySelector("slot"), e = t == null ? void 0 : t.assignedNodes({ flatten: !0 }).filter((l) => l.nodeType === Node.ELEMENT_NODE);
+    this.slotHasContent = e.length > 0;
+    const o = (i = this.shadowRoot) == null ? void 0 : i.querySelector(
+      ".nys-globalfooter__content"
+    ), s = e == null ? void 0 : e.some(
+      (l) => l.tagName === "H4"
+    );
+    o && (o.classList.toggle("columns", s), o.classList.toggle("small", !s), o.innerHTML = "", e.forEach((l) => {
+      if (l.nodeType === Node.ELEMENT_NODE) {
+        const y = l.cloneNode(!0);
+        ["script", "iframe", "object", "embed"].forEach((c1) => {
+          y.querySelectorAll(c1).forEach((h1) => h1.remove());
+        }), o.appendChild(y), l.remove();
+      }
+    }));
+  }
+  render() {
+    return a`
+      <footer class="nys-globalfooter">
+        <h1 class="nys-globalfooter__name">${this.agencyName}</h1>
+        ${this.slotHasContent ? a`<div class="nys-globalfooter__content">
+              <slot
+                style="display: hidden"
+                @slotchange="${this._handleSlotChange}"
+              ></slot>
+            </div>` : ""}
+      </footer>
+    `;
+  }
+};
+F.styles = u5;
+t1([
+  n({ type: String })
+], F.prototype, "agencyName", 2);
+t1([
+  N()
+], F.prototype, "slotHasContent", 2);
+F = t1([
+  M("nys-globalfooter")
+], F);
 export {
-  y as NysAlert,
-  w as NysAvatar,
-  g as NysCheckbox,
-  N1 as NysIcon,
-  a as NysRadiobutton,
+  F as NyGlobalFooter,
+  p as NysAlert,
+  m as NysAvatar,
+  v as NysCheckbox,
+  O as NysGlobalHeader,
+  F1 as NysIcon,
+  C as NysRadiobutton,
   u as NysSelect,
   h as NysTextarea,
   c as NysTextinput,
-  b as NysToggle
+  f as NysToggle
 };
 //# sourceMappingURL=excelsior.es.js.map
