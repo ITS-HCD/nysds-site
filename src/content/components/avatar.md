@@ -1,4 +1,5 @@
 ---
+permalink: /components/avatar/
 title: Avatar
 description: Avatars visually represent a user or entity as initials, a photo, or an icon.
 image: /assets/img/components/avatar.svg
