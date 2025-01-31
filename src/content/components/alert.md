@@ -70,9 +70,10 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
   - If the information is not time-sensitive or critical, consider using a less intrusive component, such as a tooltip or inline message.
   - Avoid using alerts for repetitive or non-actionable content that could frustrate users.
-%% Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. %%
-%% - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component) %%
-%%  - For notifications outside the page context, consider using a toast or modal component instead. %%
+
+<!-- Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. -->
+<!-- - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component)  -->
+<!-- - For notifications outside the page context, consider using a toast or modal component instead.  -->
 {% endblock %}
 
 {% block usagedo %}
