@@ -1,6 +1,6 @@
 ---
 title: Checkbox
-description: A checkbox is a form input that allows users to select multiple options independently from a list.
+description: A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.
 image: /assets/img/components/checkbox.svg
 image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
@@ -9,24 +9,28 @@ image_header: /assets/img/components/checkbox-header.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to toggle a binary state (checked/unchecked).
+
+The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
  - Optional: <code class="language-js">&lt;nys-checkboxgroup&gt;</code> can be used to group multiple checkboxes so they function as a single form control.
 
 {% endblock %}
 
 {% block example %}
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below">
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
+  <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year."></nys-checkbox>
+
 </nys-checkboxgroup>
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-checkboxgroup
   label="Select your favorite New York landmarks"
   description="Choose from the options below"
@@ -46,28 +50,31 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a reusabl
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
-  - When collecting yes/no answers.
+  - When collecting binary answers in a form.
   - When obtaining confirmation from users.
   - When allowing users to select multiple options from a list.
 
 ### When to consider something else
-  - When users need to select only one option (consider a radio button instead).
+  - Use a toggle when changing the state of a binary input immediately changes the system's state; such as enabling Dark Mode.
+  - When users need to select only one option consider a radio button (1-6 choices) or select (7 or more choice) instead.
 {% endblock %}
 
 {% block usagedo %}
+
   - Use checkboxes for binary decisions (agree/disagree).
   - Use checkboxes for multi-select lists (like selecting interests).
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Avoid using when you have more than 10 options to choose from.</p></li>
-<li><p>Don't change status of another checkbox when another one is clicked.</p></li>
-</ul>
+
+ - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).
+ - Don't change status of another checkbox when another one is clicked.
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.
@@ -77,6 +84,7 @@ The <code class="language-js">nys-checkbox</code> component includes the followi
 {% endblock %}
 
 {% block options %}
+
 ### Checkbox group
 
 The <code class="language-js">nys-checkboxgroup</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
@@ -190,6 +198,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -209,6 +218,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>

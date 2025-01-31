@@ -1,6 +1,6 @@
 ---
 title: Alert
-description: Alert cards are designed to display critical information, updates, or warnings that require the user's attention.
+description: An alert displays a prominent message, with optional links, at the top of the screen.
 image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
 ---
@@ -9,10 +9,14 @@ image_alt: An illustration of an alert message.
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-The <code class="language-js">&lt;nys-alert&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to keep users informed of important and sometimes time-sensitive changes.
+
+Alert banners are designed to display critical information, updates, or warnings that require the user's attention.
+
+The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
 {% endblock %}
 
 {% block example %}
+
 <nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
 <nys-alert type="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
@@ -27,6 +31,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a reusable w
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-alert
   type="base"
   heading="Default status"
@@ -54,6 +59,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a reusable w
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
 
   - Use nys-alert to communicate important, time-sensitive information to users in a visually prominent way.
@@ -64,25 +70,41 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a reusable w
 
   - If the information is not time-sensitive or critical, consider using a less intrusive component, such as a tooltip or inline message.
   - Avoid using alerts for repetitive or non-actionable content that could frustrate users.
-  - For notifications outside the page context, consider using a toast or modal component instead.
+%% Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. %%
+%% - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component) %%
+%%  - For notifications outside the page context, consider using a toast or modal component instead. %%
 {% endblock %}
 
 {% block usagedo %}
+
   - Keep the alert content concise and focused on the message.
-  - Use the appropriate <code class="language-js">theme</code> (e.g., <code class="language-js">info</code>, <code class="language-js">success</code>, <code class="language-js">warning</code>, or <code class="language-js">danger</code>) to match the intent of the alert.
-  - Use the <code class="language-js">dismissible</code> property for non-critical alerts, allowing users to clear them from the screen.
+  - Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.
+  - Make alerts dismissible unless they contain critical information or an important step users need to take.
+  - Limit alerts to one per page; if more than one alert is needed, prefer Base alerts if possible to not overwhelm users.
+  - Use Success type to confirm a positive system status to users such as saving a form.
+  - Use Danger type to display system status error messages.
+  - Only use Emergency type for actual emergencies such as a mission person, weather, or power outage; consider switching the left icon to a relevant icon if one exists.
+  - [Dev] Use the appropriate <code class="language-js">theme</code> (e.g., <code class="language-js">info</code>, <code class="language-js">success</code>, <code class="language-js">warning</code>, or <code class="language-js">danger</code>) to match the intent of the alert.
+  - [Dev] Use the <code class="language-js">dismissible</code> property for non-critical alerts, allowing users to clear them from the screen.
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Overuse alerts for non-critical information, as this can desensitize users to important messages.</p></li>
-<li><p>Use icons or themes that don’t clearly communicate the purpose of the alert.</p></li>
+
+- Don't remove the left icon; the icon is required for accessibility.
+- Do not use an alert to call attention to what a user needs to do in a screen instead of making the action clear in the screen itself.
+- Do not use error messages to communicate form field validation issues; use field error states instead.
+- Don't include more than two link actions in an alert.
+- Don't overuse alerts for non-critical information, as this can desensitize users to important messages.
+- Don't use alerts as toasts. alerts should be placed directly on the page at the top of the screen content.
+- Don't add any shadows to alerts.
 </ul>
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-alert</code> component includes the following accessibility-focused features:
 
+  - Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
   - Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.
@@ -126,11 +148,11 @@ The <code class="language-js">nys-alert</code> component includes the following 
 {% endblock %}
 
 {% block options %}
+
 ### Custom text description
 
 <nys-alert type="success" heading="Custom Descriptions">
 <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
-
 
 ### Dismissible
 
@@ -220,6 +242,7 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -239,6 +262,7 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block events %}
+
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -261,14 +285,3 @@ You can listen to these events using JavaScript:
 {% endblock %}
 
 {% block updates %}{% endblock %}
-
-
-
-
-
-
-{% block styles %}
-{% endblock %}
-
-{% block scripts %}
-{% endblock %}
