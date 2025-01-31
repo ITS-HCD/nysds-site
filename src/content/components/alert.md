@@ -9,12 +9,14 @@ image_alt: An illustration of an alert message.
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 Alert banners are designed to display critical information, updates, or warnings that require the user's attention.
 
 The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
 {% endblock %}
 
 {% block example %}
+
 <nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
 <nys-alert type="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
@@ -29,6 +31,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-alert
   type="base"
   heading="Default status"
@@ -56,6 +59,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
 
   - Use nys-alert to communicate important, time-sensitive information to users in a visually prominent way.
@@ -72,6 +76,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block usagedo %}
+
   - Keep the alert content concise and focused on the message.
   - Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.
   - Make alerts dismissible unless they contain critical information or an important step users need to take.
@@ -84,6 +89,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block usagedont %}
+
 - Don't remove the left icon; the icon is required for accessibility.
 - Do not use an alert to call attention to what a user needs to do in a screen instead of making the action clear in the screen itself.
 - Do not use error messages to communicate form field validation issues; use field error states instead.
@@ -95,6 +101,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-alert</code> component includes the following accessibility-focused features:
 
   - Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
@@ -141,11 +148,11 @@ The <code class="language-js">nys-alert</code> component includes the following 
 {% endblock %}
 
 {% block options %}
+
 ### Custom text description
 
 <nys-alert type="success" heading="Custom Descriptions">
 <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
-
 
 ### Dismissible
 
@@ -235,6 +242,7 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -254,6 +262,7 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block events %}
+
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -276,14 +285,3 @@ You can listen to these events using JavaScript:
 {% endblock %}
 
 {% block updates %}{% endblock %}
-
-
-
-
-
-
-{% block styles %}
-{% endblock %}
-
-{% block scripts %}
-{% endblock %}

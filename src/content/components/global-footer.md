@@ -1,5 +1,5 @@
 ---
-title: Global Header
+title: Global Footer
 description: 
 image: 
 draft: true

@@ -13,14 +13,17 @@ A button is used for actions that have an immediate result inside an application
 {% endblock %}
 
 {% block example %}
+
 <nys-button></nys-button>
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-button></nys-button>
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - Use for the most important actions you want users to take on your site, such as Download, Sign up or Log out.
   - Use Fill for the primary action on the page; use sparingly, there should be only one primary action on each page.
@@ -33,18 +36,21 @@ A button is used for actions that have an immediate result inside an application
 {% endblock %}
 
 {% block usagedo %}
+
   - Use sentence-case capitalization for button labels.
   - For buttons that open a dropdown use a Cheveron Down icon on the right side of the button label.
   - [Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.
 {% endblock %}
 
 {% block usagedont %}
+
   - Don't use buttons for external navigation. Use an HTML link (<a>) or Text button if the result of clicking the element is opening a link of an external page.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
   - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the Excelsior Design System team.
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
@@ -55,6 +61,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 {% endblock %}
 
 {% block content %}
+
 Button labels need to be clear and predictable. Users should be able to anticipate what will happen when they select a button. Never mislead someone by mislabeling a button.
 
 - Verbs like “View” or “Go” or “Read” are often unnecessary since the button itself already conveys these actions
@@ -68,6 +75,7 @@ Don't: Add a Menu Item
 {% endblock %}
 
 {% block options %}
+
 ### Option 1
 
 
@@ -114,6 +122,7 @@ Don't: Add a Menu Item
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
