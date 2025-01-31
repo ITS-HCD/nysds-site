@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkbox - Excelsior Design System</title>
+    <meta name="description" content="A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.">   
+    <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//components/checkbox/">
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Checkbox">
+    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//components/checkbox/">
+    <meta property="og:description" content="A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <link rel="preload" href="https://its-hcd.github.io/excelsior-site//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://its-hcd.github.io/excelsior-site//assets/fonts/excelsior-fonts.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/excelsior-site.css" rel="stylesheet">    
+
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-01-31T20:56:51.976+00:00 -->
+  </head>
+  <body class="single-page page-checkbox">
+
+  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
+  <script type="text/javascript">
+    var _NY = {
+      HOST: "static-assets.ny.gov",
+      hideSearch: true,
+      showLanguageHeader: false,
+      showLanguageFooter: false,
+    };
+    (function (document, bundle, head) {
+        head = document.getElementsByTagName('head')[0];
+        bundle = document.createElement('script');
+        bundle.type = 'text/javascript';
+        bundle.async = true;
+        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+        head.appendChild(bundle);
+    }(document));
+  </script>
+</div>
+  
+<div class="site-header">
+    <div class="site-header__inner nys-grid-container">
+        <div class="site-header__logo">
+            <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/excelsior-site/components" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/about" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="/excelsior-site/assets/img/components/checkbox-header.svg" alt="Checkbox">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+  <main role="main" data-pagefind-body>
+    <div class="nys-grid-container">
+      
+      <div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <nav class="navigator__nav" aria-labelledby="navigator-title">
+          <ul class="navigator__list">
+            <li class="navigator__item navigator__item--overview navigator__item--active">
+              <a class="navigator__link" href="#overview">Overview</a>
+            </li>
+            <li class="navigator__item navigator__item--example">
+              <a class="navigator__link" href="#example">Example</a>
+            </li>
+            <li class="navigator__item navigator__item--examplecode">
+              <a class="navigator__link" href="#examplecode">Example Code</a>
+            </li>
+            <li class="navigator__item navigator__item--usage">
+              <a class="navigator__link" href="#usage">Usage</a>
+            </li>
+            <li class="navigator__item navigator__item--accessibility">
+              <a class="navigator__link" href="#accessibility">Accessibility</a>
+            </li>
+            <li class="navigator__item navigator__item--options">
+              <a class="navigator__link" href="#options">Options</a>
+            </li>
+            <li class="navigator__item navigator__item--properties">
+              <a class="navigator__link" href="#properties">Properties</a>
+            </li>
+            <li class="navigator__item navigator__item--cssvariables">
+              <a class="navigator__link" href="#cssvariables">CSS Variables</a>
+            </li>
+            <li class="navigator__item navigator__item--events">
+              <a class="navigator__link" href="#events">Events</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
+    <section id="overview">
+      <h1>Checkbox</h1>
+<p>The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.</p>
+<ul>
+<li>Optional: <code class="language-js">&lt;nys-checkboxgroup&gt;</code> can be used to group multiple checkboxes so they function as a single form control.</li>
+</ul>
+</section>
+    <section id="example">
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
+  <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year."></nys-checkbox>
+</nys-checkboxgroup>
+</section>
+    <section id="examplecode">
+      <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkboxgroup</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select your favorite New York landmarks<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Choose from the options below<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Adirondacks<span class="token punctuation">"</span></span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adirondacks<span class="token punctuation">"</span></span>
+    <span class="token attr-name">checked</span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>finger-lakes<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Finger Lakes<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>catskills<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Catskills<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>niagara-falls<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Niagara Falls<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>coney-island<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Coney Island<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Mount Greylock<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is disabled because it's not in New York.<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkboxgroup</span><span class="token punctuation">></span></span></code></pre>
+    </section>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>When collecting binary answers in a form.</li>
+<li>When obtaining confirmation from users.</li>
+<li>When allowing users to select multiple options from a list.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>Use a toggle when changing the state of a binary input immediately changes the system's state; such as enabling Dark Mode.</li>
+<li>When users need to select only one option consider a radio button (1-6 choices) or select (7 or more choice) instead.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use checkboxes for binary decisions (agree/disagree).</li>
+<li>Use checkboxes for multi-select lists (like selecting interests).</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).</li>
+<li>Don't change status of another checkbox when another one is clicked.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.</li>
+<li>Keyboard navigation support, allowing users to toggle the checkbox using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+</ul>
+</section>
+    <section id="options">
+      <h2>Options</h2>
+<h3>Checkbox group</h3>
+<p>The <code class="language-js">nys-checkboxgroup</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.</p>
+<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
+  <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
+  <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
+</nys-checkboxgroup>
+<h3>Disabled</h3>
+<p><nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox></p>
+<h3>Size</h3>
+<p>Set the size property of the <code class="language-js">nys-checkboxgroup</code> to have all <code class="language-js">nys-checkbox</code> be the same size. Our current sizes are:</p>
+<p><code class="language-js">sm</code> : Set to 24px in width and height</p>
+<p><code class="language-js">md</code> : The <code class="language-js">default</code> size. Set to 32px in width and height.</p>
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup>
+<h3>Error</h3>
+<p>Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.</p>
+<p>Errors can be assigned to both <code class="language-js">nys-checkboxgroup</code> and individual <code class="language-js">nys-checkbox</code> components.</p>
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
+</nys-checkboxgroup>
+<h3>Slotted Description</h3>
+<p>When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.</p>
+<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
+  <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
+</nys-checkbox>
+</section>
+    <section id="properties">
+      <h2>Properties</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td>string (sm, md)</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+    <section id="cssvariables">
+      <h2>CSS Variables</h2>
+<p>[[TODO]]</p>
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--nys-toggle-width</code></td>
+      <td>Width of the toggle switch.</td>
+    </tr>
+  </tbody>
+  </table>
+</section>
+    <section id="events">
+      <h2>Events</h2>
+<p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>
+<ol>
+<li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>
+<li><strong><code>focus</code></strong> – Fired when the checkbox gains focus.</li>
+<li><strong><code>blur</code></strong> – Fired when the checkbox loses focus.</li>
+<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the checkbox is focused.</li>
+</ol>
+<p>You can listen to these events using JavaScript:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Select the checkbox component</span>
+  <span class="token keyword">const</span> checkbox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-checkbox'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Listen for the 'change' event</span>
+  checkbox<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Checkbox changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</section>
+  </div>
+</div>
+      
+    </div>
+  </main>
+
+  <div class="site-footer">
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-6">
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Quick Links</h6>
+        <ul>
+            <li><a href="/excelsior-site/getting-started/" title="How you can use Excelsior.">Getting Started</a></li>
+            <li><a href="/excelsior-site/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/excelsior-site/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/excelsior-site/about/" title="Learn more about our team and the mission of this project.">About Excelsior</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Support</h6>
+        <ul>
+          <li><a href="/excelsior-site/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/excelsior-site/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/excelsior-site/about/" title="Contact the Excelsior team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Resources</h6>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/excelsior" title="Visit the Excelsior Core GitHub repository.">Excelsior GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/excelsior-fonts" title="Visit the Excelsior Fonts GitHub repository.">Excelsior Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nys-excelsior" title="Explore Excelsior NPM packages.">Excelsior NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYS-%2F-Excelsior-Components-(Alpha)?node-id=20-40&t=Qcrbt459q9JgdW9E-1" title="Access the Excelsior Figma library.">Excelsior Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+
+
+  <script type="module" src="https://its-hcd.github.io/excelsior-site//assets/js/vendor/excelsior.js"></script>
+<script src="https://its-hcd.github.io/excelsior-site//assets/js/excelsior-site.js"></script>
+  
+  </body>
+</html>

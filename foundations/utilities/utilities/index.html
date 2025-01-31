@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Utilities - Excelsior, New York State's Design System - Excelsior Design System</title>
+    <meta name="description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">   
+    <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//foundations/utilities/utilities/">
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Utilities - Excelsior, New York State's Design System">
+    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//foundations/utilities/utilities/">
+    <meta property="og:description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <link rel="preload" href="https://its-hcd.github.io/excelsior-site//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://its-hcd.github.io/excelsior-site//assets/fonts/excelsior-fonts.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/excelsior-site.css" rel="stylesheet">    
+
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-01-31T20:56:51.976+00:00 -->
+  </head>
+  <body class="single-page page-utilities">
+
+  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
+  <script type="text/javascript">
+    var _NY = {
+      HOST: "static-assets.ny.gov",
+      hideSearch: true,
+      showLanguageHeader: false,
+      showLanguageFooter: false,
+    };
+    (function (document, bundle, head) {
+        head = document.getElementsByTagName('head')[0];
+        bundle = document.createElement('script');
+        bundle.type = 'text/javascript';
+        bundle.async = true;
+        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+        head.appendChild(bundle);
+    }(document));
+  </script>
+</div>
+  
+<div class="site-header">
+    <div class="site-header__inner nys-grid-container">
+        <div class="site-header__logo">
+            <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/excelsior-site/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/components" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/about" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Foundations
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://its-hcd.github.io/excelsior-site//assets/img/sections/section-foundations.svg" alt="Foundations section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+  <main role="main" data-pagefind-body>
+    <div class="nys-grid-container">
+      
+      <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/utilities.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navContainer = document.createElement('nav');
+    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
+
+  const navList = document.createElement('ul');
+  navList.classList.add('navigator__list');
+  navContainer.appendChild(navList);
+
+  document.querySelectorAll('h2').forEach((heading) => {
+    const navItem = document.createElement('li');
+    const navLink = document.createElement('a');
+    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+    
+    const section = document.createElement('section');
+    section.id = `${headingId}`;
+    heading.parentNode.insertBefore(section, heading);
+    section.appendChild(heading);
+
+    heading.id = headingId;
+    navLink.href = `#${headingId}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add('navigator__link');
+    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
+   
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  });
+
+  const rootNav = document.getElementById('rootnav');
+  if (rootNav) {
+    rootNav.appendChild(navContainer);
+  }});
+</script>
+<h1>Utilities</h1>
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <div id="rootnav"></div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
+<section class="utility-examples" id="nys-display">
+<h2>nys-display</h2>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-block</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">block</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-block"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-flex</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">flex</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-flex"></div>
+      </div>
+    </div>
+  </div>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-inline</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">inline</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-inline"></div>
+      </div>
+    </div>
+  </div>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-inline-block</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">inline-block</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-inline-block"></div>
+      </div>
+    </div>
+  </div>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-inline-flex</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">inline-flex</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-inline-flex"></div>
+      </div>
+    </div>
+  </div>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-none</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">none</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-none"></div>
+      </div>
+    </div>
+  </div>
+  <div class="utility-example-container">
+    <div class="nys-grid-row flex-justify">
+      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
+        <span class="utility-class">.nys-display-table-cell</span>
+      </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">table-cell</span>
+      </div>
+      <div class="nys-grid-col utility-example">
+        <div class="nys-display-table">
+          <div class="nys-display-table-row">
+            <div class="nys-display-table-cell border-1px border-white bg-secondary-light padding-x-5 padding-y-3"></div>
+            <div class="nys-display-table-cell border-1px border-white bg-secondary-light padding-x-5 padding-y-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2>nys-opacity</h2>
+<section class="utility" id="nys-opacity">
+    <section class="utility-examples">
+        <div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-0
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-0 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-0 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+        <div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-10
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.1
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-10 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-10 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-20
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.2
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-20 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-20 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-30
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.3
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-30 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-30 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-40
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.4
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-40 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-40 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-50
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.5
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-50 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-50 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-60
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.6
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-60 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-60 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-70
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.7
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-70 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-70 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-80
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.8
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-80 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-80 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-90
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          0.9
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-90 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-90 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="utility-example-container">
+  <div class="nys-grid-row flex-no-wrap">
+    <div class="nys-grid-col utility-example-class">
+      <span class="utility-class">
+          .nys-opacity-100
+        </span>
+    </div>
+      <div class="nys-grid-col utility-example-value">
+        <span class="utility-value">
+          1
+        </span>
+      </div>
+      <div class="utility-example nys-grid-col-6">
+          <div class="bg-primary nys-grid-row radius-sm height-4 padding-x-1 flex-align-center">
+            <div class="nys-grid-col nys-opacity-100 height-05 bg-white"></div>
+            <div class="nys-grid-col nys-opacity-100 height-05 bg-black"></div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+</section>
+<h2>nys-z-index</h2>
+<section class="utility nys-z-0 position-relative" id="nys-z-index">
+  <section class="utility-examples position-relative padding-bottom-1">
+    <div class="bg-white border-ink radius-lg width-card-lg padding-2  minh-10 margin-left-0 nys-display-flex nys-flex-justify nys-flex-align-start nys-z-auto">
+      <span class="utility-class">.nys-z-auto</span>
+      <span class="utility-value">auto</span>
+    </div>
+    <div class="bg-white border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-top position-relative shadow-3">
+      <span class="utility-class">.nys-z-top</span>
+      <span class="utility-value">99999</span>
+    </div>
+    <div class="bg-gray-1 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-500 position-relative shadow-3">
+      <span class="utility-class">.nys-z-500</span>
+      <span class="utility-value">500</span>
+    </div>
+    <div class="bg-gray-10 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-400 position-relative shadow-3">
+      <span class="utility-class">.nys-z-400</span>
+      <span class="utility-value">400</span>
+    </div>
+    <div class="bg-gray-30 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-300 position-relative shadow-3">
+      <span class="utility-class">.nys-z-300</span>
+      <span class="utility-value">300</span>
+    </div>
+    <div class="bg-gray-50 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-200 position-relative shadow-3">
+      <span class="utility-class">.nys-z-200</span>
+      <span class="utility-value">200</span>
+    </div>
+    <div class="bg-gray-70 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-100 position-relative shadow-3">
+      <span class="utility-class">.nys-z-100</span>
+      <span class="utility-value">100</span>
+    </div>
+    <div class="bg-gray-90 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-0 position-relative shadow-3">
+      <span class="utility-class">.nys-z-0</span>
+      <span class="utility-value">0</span>
+    </div>
+    <div class="bg-black border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-bottom position-relative shadow-3">
+      <span class="utility-class">.nys-z-bottom</span>
+      <span class="utility-value">-100</span>
+    </div>
+  </section>
+</section>
+<h2>nys-float</h2>
+<section class="utility-examples" id="nys-float>
+        <p class="nys-float-none bg-base-lighter padding-2"><span class="utility-class">.nys-float-none</span></p>
+        <p class="nys-float-left bg-base-lighter padding-2"><span class="utility-class">.nys-float-left</span></p>
+        <p class="nys-float-right bg-base-lighter padding-2"><span class="utility-class">.nys-float-right</span></p>
+</section>
+</div>
+      
+    </div>
+  </main>
+
+  <div class="site-footer">
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-6">
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Quick Links</h6>
+        <ul>
+            <li><a href="/excelsior-site/getting-started/" title="How you can use Excelsior.">Getting Started</a></li>
+            <li><a href="/excelsior-site/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/excelsior-site/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/excelsior-site/about/" title="Learn more about our team and the mission of this project.">About Excelsior</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Support</h6>
+        <ul>
+          <li><a href="/excelsior-site/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/excelsior-site/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/excelsior-site/about/" title="Contact the Excelsior team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Resources</h6>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/excelsior" title="Visit the Excelsior Core GitHub repository.">Excelsior GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/excelsior-fonts" title="Visit the Excelsior Fonts GitHub repository.">Excelsior Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nys-excelsior" title="Explore Excelsior NPM packages.">Excelsior NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYS-%2F-Excelsior-Components-(Alpha)?node-id=20-40&t=Qcrbt459q9JgdW9E-1" title="Access the Excelsior Figma library.">Excelsior Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+
+
+  <script type="module" src="https://its-hcd.github.io/excelsior-site//assets/js/vendor/excelsior.js"></script>
+<script src="https://its-hcd.github.io/excelsior-site//assets/js/excelsior-site.js"></script>
+  
+  </body>
+</html>

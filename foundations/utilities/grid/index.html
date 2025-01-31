@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Layout grid - Excelsior, New York State's Design System - Excelsior Design System</title>
+    <meta name="description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">   
+    <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//foundations/utilities/grid/">
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Layout grid - Excelsior, New York State's Design System">
+    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//foundations/utilities/grid/">
+    <meta property="og:description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <link rel="preload" href="https://its-hcd.github.io/excelsior-site//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://its-hcd.github.io/excelsior-site//assets/fonts/excelsior-fonts.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/excelsior-site.css" rel="stylesheet">    
+
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-01-31T20:56:51.976+00:00 -->
+  </head>
+  <body class="single-page page-grid">
+
+  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
+  <script type="text/javascript">
+    var _NY = {
+      HOST: "static-assets.ny.gov",
+      hideSearch: true,
+      showLanguageHeader: false,
+      showLanguageFooter: false,
+    };
+    (function (document, bundle, head) {
+        head = document.getElementsByTagName('head')[0];
+        bundle = document.createElement('script');
+        bundle.type = 'text/javascript';
+        bundle.async = true;
+        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+        head.appendChild(bundle);
+    }(document));
+  </script>
+</div>
+  
+<div class="site-header">
+    <div class="site-header__inner nys-grid-container">
+        <div class="site-header__logo">
+            <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/excelsior-site/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/components" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/about" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Foundations
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://its-hcd.github.io/excelsior-site//assets/img/sections/section-foundations.svg" alt="Foundations section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+  <main role="main" data-pagefind-body>
+    <div class="nys-grid-container">
+      
+      <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/utilities.css">
+<h1>Layout Grid</h1>
+<p>Use our flexible grid system to structure website content. The grid is mobile-first, powered by flexbox, and based on a 12-column system.</p>
+<h2>How it works</h2>
+<p>The grid system uses a series of containers, rows, and columns to lay out and align content. The following row and corresponding code are an example of and  in-depth look at how the grid comes together.</p>
+<div class="docs-grid-example">
+  <div class="nys-grid-container">
+    <div class="nys-grid-row">
+      <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
+      <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
+      <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
+    </div>
+  </div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<p>This example code creates three equal-width columns on tablet, desktop, and widescreen devices by using our predefined grid classes. Those columns are centered in the page with the parent <code>nys-grid-container</code> container.</p>
+<p>The following sections break the layout grid down and describe how it works.</p>
+<h3 id="containers-rows-and-columns"><a id="containers-rows-and-columns-2" ></a>Containers, rows, and columns</h3>
+  <p><strong>Containers:</strong> <code>nys-grid-container</code> centers the container and gives it a maximum width of <code>nys-desktop</code> (1024px). If you would like the grid to span the full width of the page, do not use <code>nys-grid-container</code>.</p>
+    <ul>
+      <li><code>nys-grid-container</code> can also accept any breakpoint width: <code>nys-mobile-lg</code>, <code>nys-tablet</code>, and <code>nys-desktop</code>.</li>
+      <li>By default, <code>nys-grid-container</code> has a <code>padding-x</code> of 2 at narrow widths, and a <code>padding-x</code> of 4 at <code>nys-desktop</code> and wider.</li>
+    </ul>
+  <p><strong>Rows:</strong> Columns must have a <code>nys-grid-row</code> as a parent.</p>
+  <p><strong>Columns:</strong> <code>nys-grid-col-[1-12]</code> indicates the number of columns the item spans out of a possible 12 per row. So, if you want three equal-width columns across, use <code>nys-grid-col-4</code> for each item.</p>
+<h3 id="additional-functionality"><a id="additional-functionality-2" ></a>Additional functionality</h3>
+<ul>
+  <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code >grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
+  <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code >grid-gap-sm</code>, <code >grid-gap</code>, or <code >grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
+  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-variants">responsive variants</a> for a full list.</li>
+</ul>
+<h2 id="auto-layout-columns"><a id="auto-layout-columns-2" ></a>Auto layout columns</h2>
+<h3><a id="variable-width-content" ></a>Variable-width content</h3>
+<p><code>.nys-grid-col-auto</code> items fit the natural width of their content.</p>
+<p><code>.nys-grid-col</code> and <code>.nys-grid-col-fill</code> items flex to fill the available space as illustrated in the following example row and code.</p>
+<div class="docs-grid-example">
+<div class="nys-grid-container">
+  <div class="nys-grid-row">
+    <div class="nys-grid-col-auto">.nys-grid-col-auto</div>
+    <div class="nys-grid-col">.nys-grid-col</div>
+    <div class="nys-grid-col-fill">.nys-grid-col-fill</div>
+    <div class="nys-grid-col-auto">.nys-grid-col-auto</div>
+  </div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-auto<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-fill<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-fill<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-auto<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="responsive-variants">Responsive classes</h2>
+<h3><a id="same-at-all-breakpoints"></a>Same at all breakpoints</h3>
+<p>For columns that should maintain the same proportion at any viewport width, use the <code>.nys-grid-col</code> and <code>.nys-grid-col-*</code> classes. Specify a numbered class when you need a column of a specific width; otherwise, use <code>.nys-grid-col</code>.</p>
+<p><code>.nys-grid-col-[1-12]</code> sets a fixed width of [n] grid columns in a 12-column grid.</p>
+<div class="nys-grid-row border-left">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example">
+<div class="nys-grid-row">
+  <div class="nys-grid-col-1">.nys-grid-col-1</div>
+  <div class="nys-grid-col-2">.nys-grid-col-2</div>
+  <div class="nys-grid-col-3">.nys-grid-col-3</div>
+  <div class="nys-grid-col-4">.nys-grid-col-4</div>
+  <div class="nys-grid-col-2">.nys-grid-col-2</div>
+</div>
+<div class="nys-grid-row">
+  <div class="nys-grid-col-8">.nys-grid-col-8</div>
+  <div class="nys-grid-col-2">.nys-grid-col-2</div>
+  <div class="nys-grid-col-2">.nys-grid-col-2</div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h3><a id="stacked-columns-at-narrow-widths"></a>Stacked columns at narrow widths</h3>
+<p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>tablet:grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>tablet:</code>) as illustrated in the following rows and corresponding code.</p>
+<div class="docs-grid-example">
+<div class="nys-grid-row">
+  <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
+  <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
+  <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
+</div>
+<div class="nys-grid-row">
+  <div class="nys-tablet:nys-grid-col-4">.nys-tablet:nys-grid-col-4</div>
+  <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col-8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h3><a id="mix-and-match"></a>Mix and match</h3>
+<p>Don't want your columns to simply stack in some breakpoints? Use a combination of different classes for each breakpoint as needed. See the following example rows and corresponding code for a better idea of how it all works.</p>
+<div class="nys-grid-row border-left">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example">
+<div class="nys-grid-row">
+  <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
+  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
+</div>
+<p>Stack the columns on mobile by making one full-width and the other half-width</p>
+<div class="nys-grid-row">
+  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
+  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
+  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
+</div>
+<p>Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop</p>
+<div class="nys-grid-row">
+  <div class="nys-grid-col-6">.nys-grid-col-6</div>
+  <div class="nys-grid-col-6">.nys-grid-col-6</div>
+</div>
+<p>Columns are always 50% wide, on mobile and desktop</p>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-tablet:nys-grid-col-8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-6 nys-tablet:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-6 .nys-tablet:nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-6 nys-tablet:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-6 .nys-tablet:nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-6 nys-tablet:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-6 .nys-tablet:nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-6 nys-tablet:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-6 .nys-tablet:nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- Columns are always 50% wide, on mobile and desktop --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="offsetting-columns"><a id="offsetting-columns-2"></a>Offsetting columns</h2>
+<p><code>.nys-grid-offset-[1-12]</code> offsets an item by the specified number of grid columns as shown in the following example.</p>
+<div class="nys-grid-row border-left">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example">
+<div class="nys-grid-row">
+  <div class="nys-grid-col-8 nys-grid-offset-4">.nys-grid-col-8.nys-grid-offset-4</div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-8 nys-grid-offset-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-8.nys-grid-offset-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="column-wrapping"><a id="column-wrapping-2"></a>Column wrapping</h2>
+<p>Items wrap when the sum of the grid columns is more than 12 as shown in the following example.</p>
+<div class="nys-grid-row border-left">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example">
+<div class="nys-grid-row">
+  <div class="nys-grid-col-8">.nys-grid-col-8</div>
+  <div class="nys-grid-col-3">.nys-grid-col-3</div>
+  <div class="nys-grid-col-5">.nys-grid-col-5</div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-5<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>.nys-grid-col-5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="gutters"><a id="gutters-2"></a>Gutters</h2>
+<h3 id="default-gutter"><a id="default-gutter-2"></a>Default gutter</h3>
+<p>Add <code>grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
+<div class="nys-grid-row border-left">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example margin-top-2">
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-grid-gap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h3><a id="large-gutter"></a>Large gutter</h3>
+<p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than `nys-grid-gap`. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
+<ul>
+  <li><code>nys-grid-gap-2px</code></li>
+  <li><code>nys-grid-gap-05</code></li>
+  <li><code>nys-grid-gap-1</code></li>
+  <li><code>nys-grid-gap-2</code></li>
+  <li><code>nys-grid-gap-3</code></li>
+  <li><code>nys-grid-gap-4</code></li>
+  <li><code>nys-grid-gap-5</code></li>
+  <li><code>nys-grid-gap-6</code></li>
+</ul>
+<div class="nys-grid-row border-left">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example">
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+</div>
+</div>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-grid-gap-lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+
+      
+    </div>
+  </main>
+
+  <div class="site-footer">
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-6">
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Quick Links</h6>
+        <ul>
+            <li><a href="/excelsior-site/getting-started/" title="How you can use Excelsior.">Getting Started</a></li>
+            <li><a href="/excelsior-site/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/excelsior-site/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/excelsior-site/about/" title="Learn more about our team and the mission of this project.">About Excelsior</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Support</h6>
+        <ul>
+          <li><a href="/excelsior-site/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/excelsior-site/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/excelsior-site/about/" title="Contact the Excelsior team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Resources</h6>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/excelsior" title="Visit the Excelsior Core GitHub repository.">Excelsior GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/excelsior-fonts" title="Visit the Excelsior Fonts GitHub repository.">Excelsior Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nys-excelsior" title="Explore Excelsior NPM packages.">Excelsior NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYS-%2F-Excelsior-Components-(Alpha)?node-id=20-40&t=Qcrbt459q9JgdW9E-1" title="Access the Excelsior Figma library.">Excelsior Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+
+
+  <script type="module" src="https://its-hcd.github.io/excelsior-site//assets/js/vendor/excelsior.js"></script>
+<script src="https://its-hcd.github.io/excelsior-site//assets/js/excelsior-site.js"></script>
+  
+  </body>
+</html>

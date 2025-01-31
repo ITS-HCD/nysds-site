@@ -30,10 +30,9 @@
     <meta name="robots" content="noindex">
     
     
-
-    <!-- Latest Build: 2025-01-31T14:58:33.858+00:00 -->
+    <!-- Latest Build: 2025-01-31T20:56:51.976+00:00 -->
   </head>
-  <body class="home">
+  <body class="single-page page-developers">
 
   <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
   <script type="text/javascript">
@@ -61,7 +60,7 @@
         </div>
         <nav class="site-header__nav">
             <ul class="site-header__list">
-                <li class="site-header__item"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
                 <li class="site-header__item"><a href="/excelsior-site/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
                 <li class="site-header__item"><a href="/excelsior-site/components" class="site-header__link" title="Components">Components</a></li>
                 <li class="site-header__item"><a href="/excelsior-site/about" class="site-header__link" title="About">About</a></li>
@@ -73,18 +72,69 @@
 
 
 
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Getting Started
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://its-hcd.github.io/excelsior-site//assets/img/sections/section-getting-started.svg" alt="Getting Started section header">
+            
+        </div>
+    </div>
+</div>
+
 
 
 
   <main role="main" data-pagefind-body>
     <div class="nys-grid-container">
       
+      <h1>Developers</h1>
+<!-- **Note**: This project is currently in development and not yet ready for production use. The instructions here are for developers who want to evaluate or provide feedback on the Excelsior Design System. -->
+<h2>Install the core libraries in your project:</h2>
+<p>To start using Excelsior in your project, you need to install the core libraries:</p>
+<pre class="language-html"><code class="language-html">npm install @nys-excelsior/components @nys-excelsior/styles</code></pre>
+<h2>Reference the files in your application:</h2>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>If you are not using a package manager</strong>, you can download the files directly from the <a href="https://www.npmjs.com/package/@nys-excelsior/components">Excelsior Components NPM</a> and <a href="https://www.npmjs.com/package/@nys-excelsior/styles">Excelsior Style NPM</a>. Keep in mind, you will need to manually update the files when new versions are released.</p>
+<h2>Start using Excelsior components in your application:</h2>
+<p>All that's left is to start using Excelsior components in your application.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> 
+  <span class="token attr-name">dismissible</span>
+  <span class="token attr-name">theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Application Submitted<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Your application has been submitted. You will receive a confirmation email shortly.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+<h3>Demo</h3>
+<p><nys-alert 
+  dismissible
+  theme="success" 
+  heading="Application Submitted" 
+  text="Your application has been submitted. You will receive a confirmation email shortly.">
+</nys-alert></p>
+<h2>Component documentation</h2>
+<p>Explore the <strong><a href="https://its-hcd.github.io/excelsior-site//components/">Components</a></strong> page to find documentation, usage guidance, and interactive previews for each of the components in the Excelsior Design System.</p>
+<h2>Applying Agency-Specific Themes</h2>
+<p>Excelsior's default theme uses the default New York State blue, but theme stylesheets for NYS agency groups are included with specific agency branding. Components that use themed design tokens like <code>--nys-color-theme</code> will be styled according to the selected theme.</p>
+<p>To use a theme in an application, include a reference to the theme stylesheet after the global stylesheet:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-theme-health.min.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>Every Excelsior component or element using one of the themed design tokens will now reflect that agency grouping's branding.</p>
+<h3>Available Themes</h3>
+<ul>
+<li>Administration: <code>excelsior-theme-admin.min.css</code></li>
+<li>Business: <code>excelsior-theme-business.min.css</code></li>
+<li>Recreation and Environment: <code>excelsior-theme-environment.min.css</code></li>
+<li>Health and Human Services: <code>excelsior-theme-health.min.css</code></li>
+<li>Local and Regional Authorities: <code>excelsior-theme-local.min.css</code></li>
+<li>Public Safety: <code>excelsior-theme-safety.min.css</code></li>
+<li>Transportation and Utilities: <code>excelsior-theme-transportation.min.css</code></li>
+</ul>
 
-<h1>Developers</h1>
-
-
-
-
+      
     </div>
   </main>
 
@@ -126,6 +176,5 @@
   <script type="module" src="https://its-hcd.github.io/excelsior-site//assets/js/vendor/excelsior.js"></script>
 <script src="https://its-hcd.github.io/excelsior-site//assets/js/excelsior-site.js"></script>
   
-
   </body>
 </html>

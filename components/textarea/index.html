@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Textarea - Excelsior Design System</title>
+    <meta name="description" content="Field for entering multiple lines of text.">   
+    <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//components/textarea/">
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Textarea">
+    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//components/textarea/">
+    <meta property="og:description" content="Field for entering multiple lines of text.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <link rel="preload" href="https://its-hcd.github.io/excelsior-site//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://its-hcd.github.io/excelsior-site//assets/fonts/excelsior-fonts.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
+    <link href="https://its-hcd.github.io/excelsior-site//assets/css/excelsior-site.css" rel="stylesheet">    
+
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-01-31T20:56:51.976+00:00 -->
+  </head>
+  <body class="single-page page-textarea">
+
+  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
+  <script type="text/javascript">
+    var _NY = {
+      HOST: "static-assets.ny.gov",
+      hideSearch: true,
+      showLanguageHeader: false,
+      showLanguageFooter: false,
+    };
+    (function (document, bundle, head) {
+        head = document.getElementsByTagName('head')[0];
+        bundle = document.createElement('script');
+        bundle.type = 'text/javascript';
+        bundle.async = true;
+        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+        head.appendChild(bundle);
+    }(document));
+  </script>
+</div>
+  
+<div class="site-header">
+    <div class="site-header__inner nys-grid-container">
+        <div class="site-header__logo">
+            <a href="https://its-hcd.github.io/excelsior-site/" title="Home"><img src="/excelsior-site/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item"><a href="/excelsior-site/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/excelsior-site/components" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item"><a href="/excelsior-site/about" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://its-hcd.github.io/excelsior-site//assets/img/sections/section-components.svg" alt="Components section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+  <main role="main" data-pagefind-body>
+    <div class="nys-grid-container">
+      
+      <div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <nav class="navigator__nav" aria-labelledby="navigator-title">
+          <ul class="navigator__list">
+            <li class="navigator__item navigator__item--overview navigator__item--active">
+              <a class="navigator__link" href="#overview">Overview</a>
+            </li>
+            <li class="navigator__item navigator__item--example">
+              <a class="navigator__link" href="#example">Example</a>
+            </li>
+            <li class="navigator__item navigator__item--examplecode">
+              <a class="navigator__link" href="#examplecode">Example Code</a>
+            </li>
+            <li class="navigator__item navigator__item--usage">
+              <a class="navigator__link" href="#usage">Usage</a>
+            </li>
+            <li class="navigator__item navigator__item--accessibility">
+              <a class="navigator__link" href="#accessibility">Accessibility</a>
+            </li>
+            <li class="navigator__item navigator__item--options">
+              <a class="navigator__link" href="#options">Options</a>
+            </li>
+            <li class="navigator__item navigator__item--properties">
+              <a class="navigator__link" href="#properties">Properties</a>
+            </li>
+            <li class="navigator__item navigator__item--cssvariables">
+              <a class="navigator__link" href="#cssvariables">CSS Variables</a>
+            </li>
+            <li class="navigator__item navigator__item--events">
+              <a class="navigator__link" href="#events">Events</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
+    <section id="overview">
+      <h1>Textarea</h1>
+<p>The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.</p>
+</section>
+    <section id="example">
+<p><nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities."></nys-textarea></p>
+</section>
+    <section id="examplecode">
+      <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>quote<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your favorite quote:<span class="token punctuation">"</span></span>
+  <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Majorities, of course, start with minorities.<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
+    </section>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>To collect multiple lines of text input from the user (e.g., comments, descriptions).</li>
+<li>For open-ended input specific to the user (e.g., personal notes, feedback).</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>If you need to collect a single line of text input, use an input field instead.</li>
+<li>If the input should be selected from predefined options, use a dropdown or radio button.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use the nys-textarea for long-form text like descriptions or detailed feedback.</li>
+<li>Use the nys-textarea when precise user input is required in multiple lines.</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Don't use the nys-textarea for short or single-line inputs (use nys-input instead).</li>
+<li>Don't use the nys-textarea for data selection tasks (e.g., dropdowns or predefined options).</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code class="language-js">nys-textarea</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</li>
+<li>Keyboard navigation support, allowing users to tab into the input using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+</ul>
+</section>
+    <section id="options">
+      <h2>Options</h2>
+<h3>Rows</h3>
+<p>The <code>rows</code> attribute specifies the visible height of a text area, in number of lines.</p>
+<p>The default value is <code>4</code></p>
+<p><nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea></p>
+<h3>Width</h3>
+<p>If no <code>width</code> is provided, the <code>nys-textarea</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.</p>
+<p><code>width=&quot;full&quot;</code> will take up the full width of the parent container.</p>
+<p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
+<p><nys-textarea width="md" label="This textarea is md"></nys-textarea></p>
+<h3>Resize</h3>
+<p>By default a user can resize the <code>nys-textarea</code> vertically. If you want to disallow resizing altogether add <code>resize=&quot;none&quot;</code></p>
+<p>Note: <code>resize</code> is not affected by setting <code>nys-textarea</code> to <code>disabled</code> or <code>readonly</code> and they are independent.</p>
+<p><nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea></p>
+<h3>Description</h3>
+<p>You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.</p>
+<p><nys-textarea label="Label" description="description property"></nys-textarea></p>
+<nys-textarea label="Label">
+  <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
+</nys-textarea>
+<h3>Disabled</h3>
+<p><nys-textarea label="Disabled textarea" disabled></nys-textarea></p>
+<h3>Readonly</h3>
+<p><nys-textarea label="Readonly teextarea" value="This text cannot be changed" readonly></nys-textarea></p>
+<h3>Max length</h3>
+<p><nys-textarea label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textarea></p>
+<h3>Error Message</h3>
+<p>To display an error message, pass in the <code>showError</code> property to the <code>nys-select</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.</p>
+<p><nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea></p>
+</section>
+    <section id="properties">
+      <h2>Properties</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>label</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>placeholder</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>readonly</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>maxLength</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td>string ("sm", "md", "lg", "full")</td>
+    </tr>
+    <tr>
+      <td><code>rows</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>resize</code></td>
+      <td>string ("none")</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+    <section id="cssvariables">
+      <h2>CSS Variables</h2>
+<p>[[TODO]]</p>
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--nys-toggle-width</code></td>
+      <td>Width of the toggle switch.</td>
+    </tr>
+  </tbody>
+  </table>
+</section>
+    <section id="events">
+      <h2>Events</h2>
+<p>The <code class="language-js">nys-textarea</code> component emits <strong>three</strong> custom Javascript events:</p>
+<ol>
+<li><strong><code>nys-checkValidity</code></strong> – Fired when the textarea state changes.</li>
+<li><strong><code>focus</code></strong> – Fired when the textarea gains focus.</li>
+<li><strong><code>blur</code></strong> – Fired when the textarea loses focus.</li>
+</ol>
+<p>You can listen to these events using JavaScript:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Select the textarea component</span>
+<span class="token keyword">const</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-textarea'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Listen for the 'nys-checkValidity' event</span>
+textarea<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-checkValidity'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Text input changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</section>
+  </div>
+</div>
+      
+    </div>
+  </main>
+
+  <div class="site-footer">
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-6">
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Quick Links</h6>
+        <ul>
+            <li><a href="/excelsior-site/getting-started/" title="How you can use Excelsior.">Getting Started</a></li>
+            <li><a href="/excelsior-site/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/excelsior-site/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/excelsior-site/about/" title="Learn more about our team and the mission of this project.">About Excelsior</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Support</h6>
+        <ul>
+          <li><a href="/excelsior-site/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/excelsior-site/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/excelsior-site/about/" title="Contact the Excelsior team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Resources</h6>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/excelsior" title="Visit the Excelsior Core GitHub repository.">Excelsior GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/excelsior-fonts" title="Visit the Excelsior Fonts GitHub repository.">Excelsior Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nys-excelsior" title="Explore Excelsior NPM packages.">Excelsior NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYS-%2F-Excelsior-Components-(Alpha)?node-id=20-40&t=Qcrbt459q9JgdW9E-1" title="Access the Excelsior Figma library.">Excelsior Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="nygov-universal-footer" class="nygov-universal-container"></div>
+
+
+  <script type="module" src="https://its-hcd.github.io/excelsior-site//assets/js/vendor/excelsior.js"></script>
+<script src="https://its-hcd.github.io/excelsior-site//assets/js/excelsior-site.js"></script>
+  
+  </body>
+</html>

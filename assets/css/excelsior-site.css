@@ -382,6 +382,12 @@ ex-header__title {
     color: inherit;
     display: block;
 }
+.card--do {
+    background-color: var(--nys-color-success-weak);
+}
+.card--dont {
+    background-color: var(--nys-color-danger-weak);
+}
 .card__media {
     aspect-ratio: 2 / 1;
     margin-bottom: var(--nys-space-100);

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/alert/</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/alert/</loc>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -10,26 +10,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/avatar/</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site/.</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/checkbox/</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/avatar/</loc>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -38,7 +20,16 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site/.</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/checkbox/</loc>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -47,61 +38,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site/.</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/icon/</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/radiobutton/</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/select/</loc>
-            <lastmod>2025-01-31T14:58:06.184Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/textarea/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/textinput/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/content/components/toggle/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -110,7 +47,61 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site/.</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/icon/</loc>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/radiobutton</loc>
+            <lastmod>2025-01-31T20:56:25.670Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/select/</loc>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/textarea/</loc>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/textinput/</loc>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/toggle/</loc>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -119,7 +110,16 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site/.</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site/.</loc>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -128,7 +128,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/about/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -137,7 +137,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/components/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -146,7 +146,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/design-tokens/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -155,7 +155,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/accessibility/</loc>
-            <lastmod>2025-01-31T14:58:06.185Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -164,7 +164,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/design-guidelines/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -173,7 +173,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/design-tokens/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.671Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -182,7 +182,16 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/utilities/</loc>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -191,7 +200,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/getting-started/designers/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -200,7 +209,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/getting-started/developers/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -209,7 +218,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/getting-started/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -218,7 +227,7 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -227,7 +236,43 @@
             
         </url><url>
             <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/privacy/</loc>
-            <lastmod>2025-01-31T14:58:06.186Z</lastmod>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/utilities/flex/</loc>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/utilities/grid/</loc>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/utilities/typography/</loc>
+            <lastmod>2025-01-31T20:56:25.672Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://its-hcd.github.io/excelsior-site//excelsior-site/foundations/utilities/utilities/</loc>
+            <lastmod>2025-01-31T20:56:25.673Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
