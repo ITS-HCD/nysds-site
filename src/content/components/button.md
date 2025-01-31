@@ -1,4 +1,5 @@
 ---
+permalink: /components/button/
 title: Button
 description: "Used primarily for actions that have an immediate result like 'Save', 'Close', or 'Add'."
 draft: true

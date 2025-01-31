@@ -1,4 +1,5 @@
 ---
+permalink: /components/global-footer/
 title: Global Footer
 description: 
 image: 
