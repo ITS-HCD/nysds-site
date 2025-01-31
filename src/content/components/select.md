@@ -1,4 +1,5 @@
 ---
+permalink: /components/select/
 title: Select
 description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg

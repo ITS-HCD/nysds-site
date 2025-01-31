@@ -1,4 +1,5 @@
 ---
+permalink: /components/alert/
 title: Alert
 description: An alert displays a prominent message, with optional links, at the top of the screen.
 image: /assets/img/components/alert.svg

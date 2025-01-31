@@ -1,4 +1,5 @@
 ---
+permalink: /components/global-header/
 title: Global Header
 description: 
 image: 

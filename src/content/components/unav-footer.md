@@ -1,4 +1,5 @@
 ---
+permalink: /components/unav-footer/
 title: Unav Footer
 description: 
 image: 

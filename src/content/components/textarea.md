@@ -1,4 +1,5 @@
 ---
+permalink: /components/textarea/
 title: Textarea
 description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
