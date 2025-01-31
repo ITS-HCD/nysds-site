@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Avatar - Excelsior Design System</title>
-    <meta name="description" content="Avatars represent a user visually through an image, initials, or an icon and typically identify user-specific actions.">   
+    <meta name="description" content="Avatars visually represent a user or entity as initials, a photo, or an icon.">   
     <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//content/components/avatar/">
 
     <meta name=”robots” content=”noindex”>
@@ -13,7 +13,7 @@
     <meta property="og:title" content="Avatar">
     <meta property="og:site_name" content="Excelsior Design System">
     <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//content/components/avatar/">
-    <meta property="og:description" content="Avatars represent a user visually through an image, initials, or an icon and typically identify user-specific actions.">
+    <meta property="og:description" content="Avatars visually represent a user or entity as initials, a photo, or an icon.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -30,7 +30,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-01-30T21:06:45.918+00:00 -->
+    <!-- Latest Build: 2025-01-31T14:38:20.996+00:00 -->
   </head>
   <body class="single-page page-avatar">
 
@@ -133,11 +133,11 @@
   <div class="nys-desktop:nys-grid-col-9">
     <section id="overview">
       <h1>Avatar</h1>
-The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable web component for use in New York State digital products. It allows you to represent a person or object.
+<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component is used to visually represent a user or entity.</p>
 <p>By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.</p>
 </section>
     <section id="example">
-<nys-avatar label="User avatar"></nys-avatar>
+<p><nys-avatar label="User avatar"></nys-avatar></p>
 </section>
     <section id="examplecode">
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span>
@@ -146,14 +146,14 @@ The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable 
     </section>
     <section id="usage">
       <h2>Usage</h2>
-### When to use this component
+<h3>When to use this component</h3>
 <ul>
 <li>To visually represent users, objects, or entities in a UI.</li>
 <li>Ideal for profiles, account settings, or comment threads.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-<li>If the avatar doesn’t add value to the context.</li>
+<li>If you need to show a large visual representation of a user or entity, use a photo.</li>
 <li>When a simple label or text works better.</li>
 </ul>
 </section>
@@ -161,33 +161,40 @@ The <code class="language-js">&lt;nys-avatar&gt;</code> component is a reusable 
       <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-  - Use for clear, simple user or entity representation.
-  - Use appropriate shapes, sizes, and images to fit the overall page design.
-  - Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.
+<ul>
+<li>Use for clear, simple user or entity representation.</li>
+<li>On Tablet and above, prefer showing the full name of the user or entity.</li>
+<li>Place the full name of the user or entity to the right of the avatar.</li>
+<li>Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.</li>
+<li>Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.</li>
+</ul>
 </div>
       </div>
       <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li><p>Don't overload the avatar with unnecessary customizations.</p></li>
-<li><p>Don't skip the <code class="language-js">label</code> attribute for screen reader users.</p></li>
-<li><p>Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.</p></li>
+<li>Don't overload the avatar with unnecessary customizations.</li>
+<li>Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.</li>
+<li>[Dev] Don't skip the <code class="language-js">label</code> attribute for screen reader users.</li>
+<li>[Dev] Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.</li>
 </ul>
 </div>
       </div>
     </div>
     <section id="accessibility">
       <h2>Accessibility</h2>
-The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
+<p>The <code class="language-js">nys-</code> component includes the following accessibility-focused features:</p>
 <ul>
+<li>For intial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt=&quot;John Smith&quot;</code></li>
+<li>For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt=&quot;Photo of John Smith&quot;</code></li>
 <li>Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.</li>
 <li>A label property to provide accessible text for screen readers.</li>
 </ul>
 </section>
     <section id="options">
       <h2>Options</h2>
-### Images
+<h3>Images</h3>
 <p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
 <p><nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar></p>
 <h2>Initials</h2>
@@ -258,7 +265,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 </section>
     <section id="cssvariables">
       <h2>CSS Variables</h2>
-[[TODO]]
+<p>[[TODO]]</p>
 <table>
   <thead>
     <tr>
@@ -276,7 +283,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 </section>
     <section id="events">
       <h2>Events</h2>
-[[TODO]]
+<p>[[TODO]]</p>
 <p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
