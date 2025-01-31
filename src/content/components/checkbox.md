@@ -9,6 +9,7 @@ image_header: /assets/img/components/checkbox-header.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
  - Optional: <code class="language-js">&lt;nys-checkboxgroup&gt;</code> can be used to group multiple checkboxes so they function as a single form control.
@@ -16,6 +17,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block example %}
+
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
   <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
@@ -28,6 +30,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-checkboxgroup
   label="Select your favorite New York landmarks"
   description="Choose from the options below"
@@ -47,6 +50,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - When collecting binary answers in a form.
   - When obtaining confirmation from users.
@@ -58,16 +62,19 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block usagedo %}
+
   - Use checkboxes for binary decisions (agree/disagree).
   - Use checkboxes for multi-select lists (like selecting interests).
 {% endblock %}
 
 {% block usagedont %}
+
  - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).
  - Don't change status of another checkbox when another one is clicked.
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.
@@ -77,6 +84,7 @@ The <code class="language-js">nys-checkbox</code> component includes the followi
 {% endblock %}
 
 {% block options %}
+
 ### Checkbox group
 
 The <code class="language-js">nys-checkboxgroup</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
@@ -190,6 +198,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -209,6 +218,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>
