@@ -301,7 +301,6 @@ a:active {
     margin-top: var(--nys-space-200);
 }
 .section-header__media {
-    margin-top: var(--nys-space-50);
     overflow: hidden;;
 }
 .section-header__media img {
@@ -318,6 +317,20 @@ a:active {
     }
     .section-header__media {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header__title {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap; /* Prevents line breaks */
+        border: 0;
     }
 }
 
