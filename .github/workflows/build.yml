@@ -25,7 +25,6 @@ jobs:
         run: |
           npm i
           npm run build
-          ls -al
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
