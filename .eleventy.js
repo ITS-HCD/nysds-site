@@ -66,6 +66,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/assets/css/");
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
+    eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
 
     // eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
     eleventyConfig.on('eleventy.after', () => {
