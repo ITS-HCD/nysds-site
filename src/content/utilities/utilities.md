@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLink = document.createElement('a');
     const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
     
-    const section = document.createElement('section');
-    section.id = `${headingId}`;
-    heading.parentNode.insertBefore(section, heading);
-    section.appendChild(heading);
+    // const section = document.createElement('section');
+    // section.id = `${headingId}`;
+    // heading.parentNode.insertBefore(section, heading);
+    // section.appendChild(heading);
 
     heading.id = headingId;
     navLink.href = `#${headingId}`;
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
     navList.appendChild(navItem);
   });
 
-  const rootNav = document.getElementById('rootnav');
-  if (rootNav) {
-    rootNav.appendChild(navContainer);
+  const onPageNav = document.getElementById('on-page-nav');
+  if (onPageNav) {
+    onPageNav.appendChild(navContainer);
   }});
 </script>
 {% endblock %}
@@ -54,14 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="navigator">
       <div class="navigator__inner">
         <div id="navigator-title" class="navigator__title">On this page</div>
-        <div id="rootnav"></div>
+        <div id="on-page-nav"></div>
       </div>
     </div>
   </div>
   <div class="nys-desktop:nys-grid-col-9">
-<section class="utility-examples" id="nys-display">
 
-## nys-display
+## Display
+<section class="utility-examples" id="display">
 
   <div class="utility-example-container">
     <div class="nys-grid-row flex-justify">
@@ -161,9 +161,9 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </section>
 
-## nys-opacity
+## Opacity
 
-<section class="utility" id="nys-opacity">
+<section class="utility" id="opacity">
     <section class="utility-examples">
         <div class="utility-example-container">
   <div class="nys-grid-row flex-no-wrap">
@@ -390,9 +390,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </section>
 
-## nys-z-index
+## Z-index
 
-<section class="utility nys-z-0 position-relative" id="nys-z-index">
+<section class="utility nys-z-0 position-relative" id="z-index">
   <section class="utility-examples position-relative padding-bottom-1">
     <div class="bg-white border-ink radius-lg width-card-lg padding-2  minh-10 margin-left-0 nys-display-flex nys-flex-justify nys-flex-align-start nys-z-auto">
       <span class="utility-class">.nys-z-auto</span>
@@ -433,10 +433,10 @@ document.addEventListener("DOMContentLoaded", function() {
   </section>
 </section>
 
-## nys-float
-<section class="utility-examples" id="nys-float>
-        <p class="nys-float-none bg-base-lighter padding-2"><span class="utility-class">.nys-float-none</span></p>
-        <p class="nys-float-left bg-base-lighter padding-2"><span class="utility-class">.nys-float-left</span></p>
-        <p class="nys-float-right bg-base-lighter padding-2"><span class="utility-class">.nys-float-right</span></p>
+## Float
+<section class="utility-examples" id="float">
+  <p class="nys-float-none bg-base-lighter padding-2"><span class="utility-class">.nys-float-none</span></p>
+  <p class="nys-float-left bg-base-lighter padding-2"><span class="utility-class">.nys-float-left</span></p>
+  <p class="nys-float-right bg-base-lighter padding-2"><span class="utility-class">.nys-float-right</span></p>
 </section>
 </div>

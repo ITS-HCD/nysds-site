@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Update active state and aria role
       navItems.forEach((item) => {
+        console.log(item);
         const link = item.querySelector(".navigator__link");
         const sectionId = link.getAttribute("href").substring(1);
 
