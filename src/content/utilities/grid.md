@@ -9,6 +9,56 @@ section: Foundations
 <link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
 {% endblock %}
 
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navContainer = document.createElement('nav');
+    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
+
+  const navList = document.createElement('ul');
+  navList.classList.add('navigator__list');
+  navContainer.appendChild(navList);
+
+  document.querySelectorAll('h2').forEach((heading) => {
+    const navItem = document.createElement('li');
+    const navLink = document.createElement('a');
+    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+    
+    // const section = document.createElement('section');
+    // section.id = `${headingId}`;
+    // heading.parentNode.insertBefore(section, heading);
+    // section.appendChild(heading);
+
+    heading.id = headingId;
+    navLink.href = `#${headingId}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add('navigator__link');
+    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
+   
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  });
+
+  const onPageNav = document.getElementById('on-page-nav');
+  if (onPageNav) {
+    onPageNav.appendChild(navContainer);
+  }});
+</script>
+{% endblock %}
+
+
+{% block content %}
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <div id="on-page-nav"></div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
+<section id="how-it-works">
 
 # Layout Grid
 
@@ -53,9 +103,12 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 <ul>
   <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code >grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
   <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code >grid-gap-sm</code>, <code >grid-gap</code>, or <code >grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
-  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-variants">responsive variants</a> for a full list.</li>
+  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-classes">responsive classes</a> for a full list.</li>
 </ul>
-<h2 id="auto-layout-columns"><a id="auto-layout-columns-2" ></a>Auto layout columns</h2>
+</section>
+<section id="auto-layout-columns">
+
+<h2>Auto layout columns</h2>
 <h3><a id="variable-width-content" ></a>Variable-width content</h3>
 <p><code>.nys-grid-col-auto</code> items fit the natural width of their content.</p>
 <p><code>.nys-grid-col</code> and <code>.nys-grid-col-fill</code> items flex to fill the available space as illustrated in the following example row and code.</p>
@@ -83,8 +136,10 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   </div>
 </div>
 ```
+</section>
+<section id="responsive-classes">
 
-<h2 id="responsive-variants">Responsive classes</h2>
+<h2>Responsive classes</h2>
 <h3><a id="same-at-all-breakpoints"></a>Same at all breakpoints</h3>
 <p>For columns that should maintain the same proportion at any viewport width, use the <code>.nys-grid-col</code> and <code>.nys-grid-col-*</code> classes. Specify a numbered class when you need a column of a specific width; otherwise, use <code>.nys-grid-col</code>.</p>
 <p><code>.nys-grid-col-[1-12]</code> sets a fixed width of [n] grid columns in a 12-column grid.</p>
@@ -284,8 +339,9 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-col-6">.nys-grid-col-6</div>
 </div>
 ```
-
-<h2 id="offsetting-columns"><a id="offsetting-columns-2"></a>Offsetting columns</h2>
+</section>
+<section id="offsetting-columns">
+<h2>Offsetting columns</h2>
 <p><code>.nys-grid-offset-[1-12]</code> offsets an item by the specified number of grid columns as shown in the following example.</p>
 
 <div class="nys-grid-row border-left">
@@ -340,8 +396,9 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-col-8 nys-grid-offset-4">.nys-grid-col-8.nys-grid-offset-4</div>
 </div>
 ```
-
-<h2 id="column-wrapping"><a id="column-wrapping-2"></a>Column wrapping</h2>
+</section>
+<section id="column-wrapping">
+<h2>Column wrapping</h2>
 <p>Items wrap when the sum of the grid columns is more than 12 as shown in the following example.</p>
 
 <div class="nys-grid-row border-left">
@@ -401,8 +458,9 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-col-5">.nys-grid-col-5</div>
 </div>
 ```
-
-<h2 id="gutters"><a id="gutters-2"></a>Gutters</h2>
+</section>
+<section id="gutters">
+<h2>Gutters</h2>
 <h3 id="default-gutter"><a id="default-gutter-2"></a>Default gutter</h3>
 <p>Add <code>grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
 
@@ -555,3 +613,5 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 ```
+</section>
+{% endblock %}
