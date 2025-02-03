@@ -1,16 +1,12 @@
 ---
-permalink: /foundations/design-tokens/
-title: "Design Tokens - Excelsior, New York State's Design System"
+permalink: /foundations/design-guidelines/
+title: "Design Guidelines - Excelsior, New York State's Design System"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
 ---
 
-{% extends "layouts/base.njk" %}
-
 {% block content %}
 
-<h1>Design Tokens</h1>
-
-
+<h1>Design Guidelines</h1>
 
 {% endblock %}
 

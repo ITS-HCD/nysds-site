@@ -8,11 +8,59 @@ section: Foundations
 <link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
 {% endblock %}
 
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navContainer = document.createElement('nav');
+    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
+
+  const navList = document.createElement('ul');
+  navList.classList.add('navigator__list');
+  navContainer.appendChild(navList);
+
+  document.querySelectorAll('h2').forEach((heading) => {
+    const navItem = document.createElement('li');
+    const navLink = document.createElement('a');
+    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+    
+    // const section = document.createElement('section');
+    // section.id = `${headingId}`;
+    // heading.parentNode.insertBefore(section, heading);
+    // section.appendChild(heading);
+
+    heading.id = headingId;
+    navLink.href = `#${headingId}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add('navigator__link');
+    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
+   
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  });
+
+  const onPageNav = document.getElementById('on-page-nav');
+  if (onPageNav) {
+    onPageNav.appendChild(navContainer);
+  }});
+</script>
+{% endblock %}
+
 # Flexbox
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <div id="on-page-nav"></div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
 
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
 
-<section class="utility" id="utility-flex">
+## Flex
+<section class="utility" id="flex">
     <section class="utility-examples">  
       <div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
         <div class="nys-grid-col nys-flex-1">
@@ -348,9 +396,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 ```
 
-## nys-flex-direction
+## Flex-direction
 
-<section class="utility" id="utility-flex-direction">
+<section class="utility" id="flex-direction">
     <section class="utility-examples">    
       <div class="border padding-1 radius-md margin-bottom-2">
         <span class="utility-class">.nys-flex-column</span>
@@ -411,11 +459,10 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col"></div>
 </div>
 ```
-## nys-flex-wrap
+## Flex-wrap
 
-<section class="utility" id="utility-flex-wrap">
+<section class="utility" id="flex-wrap">
     <section class="utility-examples">
-
       <div class="border padding-1 radius-md margin-bottom-2">
         <span class="utility-class">.nys-flex-wrap</span>
         <div class="nys-grid-row nys-flex-wrap margin-top-2">
@@ -484,9 +531,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 ```
 
-## nys-flex-align
+## Flex-align
 
-<section class="utility" id="utility-flex-align">
+<section class="utility" id="flex-align">
     <section class="utility-examples">
       <div class="border padding-1 radius-md margin-bottom-2">
         <div class="padding-bottom-4 border-bottom margin-bottom-2">
@@ -711,9 +758,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 ```
 
-## nys-flex-align-self
+## Flex-align-self
 
-<section class="utility" id="utility-flex-align-self">
+<section class="utility" id="flex-align-self">
     <section class="utility-examples">
       <div class="border padding-1 radius-md margin-bottom-2">
         <div class="padding-bottom-4 border-bottom margin-bottom-2">
@@ -772,9 +819,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 ```
 
-## nys-flex-justify
+## Flex-justify
 
-<section class="utility" id="utility-flex-justify">
+<section class="utility" id="flex-justify">
     <section class="utility-examples">
       <div class="border padding-1 radius-md margin-bottom-2">
         <div class="padding-bottom-4 border-bottom margin-bottom-2">
@@ -918,9 +965,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 ```
 
-## nys-order
+## Order
 
-<section class="utility" id="utility-order">
+<section class="utility" id="order">
     <section class="utility-examples">
     <div class="nys-grid-row nys-grid-gap-sm">
         <div class="nys-grid-col-auto nys-order-11">
@@ -1036,4 +1083,4 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-first"></div>
 </div>
 ```
-
+</div>
