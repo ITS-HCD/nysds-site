@@ -30,7 +30,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-03T15:12:55.240+00:00 -->
+    <!-- Latest Build: 2025-02-03T20:46:38.131+00:00 -->
   </head>
   <body class="single-page page-flex">
 
@@ -92,9 +92,54 @@
     <div class="nys-grid-container">
       
       <link rel="stylesheet" href="https://its-hcd.github.io/excelsior-site//assets/css/utilities.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navContainer = document.createElement('nav');
+    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
+
+  const navList = document.createElement('ul');
+  navList.classList.add('navigator__list');
+  navContainer.appendChild(navList);
+
+  document.querySelectorAll('h2').forEach((heading) => {
+    const navItem = document.createElement('li');
+    const navLink = document.createElement('a');
+    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+    
+    // const section = document.createElement('section');
+    // section.id = `${headingId}`;
+    // heading.parentNode.insertBefore(section, heading);
+    // section.appendChild(heading);
+
+    heading.id = headingId;
+    navLink.href = `#${headingId}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add('navigator__link');
+    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
+   
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  });
+
+  const onPageNav = document.getElementById('on-page-nav');
+  if (onPageNav) {
+    onPageNav.appendChild(navContainer);
+  }});
+</script>
 <h1>Flexbox</h1>
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <div id="on-page-nav"></div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
 <p>These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.</p>
-<section class="utility" id="utility-flex">
+<h2>Flex</h2>
+<section class="utility" id="flex">
     <section class="utility-examples">  
       <div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
         <div class="nys-grid-col nys-flex-1">
@@ -426,8 +471,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-fill<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   ...
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2>nys-flex-direction</h2>
-<section class="utility" id="utility-flex-direction">
+<h2>Flex-direction</h2>
+<section class="utility" id="flex-direction">
     <section class="utility-examples">    
       <div class="border padding-1 radius-md margin-bottom-2">
         <span class="utility-class">.nys-flex-column</span>
@@ -485,60 +530,60 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2>nys-flex-wrap</h2>
-<section class="utility" id="utility-flex-wrap">
+<h2>Flex-wrap</h2>
+<section class="utility" id="flex-wrap">
     <section class="utility-examples">
-<p><div class="border padding-1 radius-md margin-bottom-2">
-<span class="utility-class">.nys-flex-wrap</span>
-<div class="nys-grid-row nys-flex-wrap margin-top-2">
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-</div>
-</div>
-<div class="border padding-1 radius-md">
-<span class="utility-class">.nys-flex-no-wrap</span>
-<div class="nys-grid-row nys-flex-no-wrap margin-top-2">
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-<div class="nys-grid-col-4 padding-1px">
-<div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
-<span class="utility-class">.nys-grid-col-4</span>
-</div>
-</div>
-</div>
-</div>
-</section></p>
+      <div class="border padding-1 radius-md margin-bottom-2">
+        <span class="utility-class">.nys-flex-wrap</span>
+        <div class="nys-grid-row nys-flex-wrap margin-top-2">
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border padding-1 radius-md">
+        <span class="utility-class">.nys-flex-no-wrap</span>
+        <div class="nys-grid-row nys-flex-no-wrap margin-top-2">
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+          <div class="nys-grid-col-4 padding-1px">
+            <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+              <span class="utility-class">.nys-grid-col-4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-flex-wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -552,8 +597,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2>nys-flex-align</h2>
-<section class="utility" id="utility-flex-align">
+<h2>Flex-align</h2>
+<section class="utility" id="flex-align">
     <section class="utility-examples">
       <div class="border padding-1 radius-md margin-bottom-2">
         <div class="padding-bottom-4 border-bottom margin-bottom-2">
@@ -774,8 +819,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2>nys-flex-align-self</h2>
-<section class="utility" id="utility-flex-align-self">
+<h2>Flex-align-self</h2>
+<section class="utility" id="flex-align-self">
     <section class="utility-examples">
       <div class="border padding-1 radius-md margin-bottom-2">
         <div class="padding-bottom-4 border-bottom margin-bottom-2">
@@ -830,8 +875,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-stretch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2>nys-flex-justify</h2>
-<section class="utility" id="utility-flex-justify">
+<h2>Flex-justify</h2>
+<section class="utility" id="flex-justify">
     <section class="utility-examples">
       <div class="border padding-1 radius-md margin-bottom-2">
         <div class="padding-bottom-4 border-bottom margin-bottom-2">
@@ -971,8 +1016,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<h2>nys-order</h2>
-<section class="utility" id="utility-order">
+<h2>Order</h2>
+<section class="utility" id="order">
     <section class="utility-examples">
     <div class="nys-grid-row nys-grid-gap-sm">
         <div class="nys-grid-col-auto nys-order-11">
@@ -1085,6 +1130,7 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-last<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-first<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+</div>
 
       
     </div>
