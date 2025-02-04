@@ -46,15 +46,6 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(eleventyPluginRss);
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(timeToRead, { style: 'short' });
-    // Plugin for Lit and 11ty to print the components to the screen, does not hydrate
-    // eleventyConfig.addPlugin(litPlugin, {
-    //     mode: 'worker',
-    //     componentModules: [
-    //         './src/assets/js/nys-alert/nys-alert.js',
-    //         './src/assets/js/nys-button/nys-button.js',
-    //     ],
-    //   });
-
     // watch for changes to css
     eleventyConfig.addWatchTarget("./src/css/");
 
@@ -68,7 +59,6 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
     eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
 
-    // eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
     })
@@ -86,11 +76,4 @@ module.exports = (eleventyConfig) => {
         markdownTemplateEngine: "njk"
     };
 
-    // Routes
-    return {
-        dir: {
-            input: "src",
-            output: "public",
-        },
-    };
 };
