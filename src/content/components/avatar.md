@@ -75,11 +75,30 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
+
+```
+</details>
+
 ## Initials
 
 <p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
 
 <nys-avatar label="User avatar" initials="NY"></nys-avatar>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-avatar label="User avatar" initials="NY"></nys-avatar>
+```
+</details>
+
+
 
 ### Custom Icons
 
@@ -93,6 +112,21 @@ The <code class="language-js">nys-</code> component includes the following acces
   <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
 </nys-avatar>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-avatar label="User avatar"></nys-avatar>
+<nys-avatar label="User avatar">
+  <nys-icon slot="icon" label="youtube icon" name="social_youtube"></nys-icon>
+</nys-avatar>
+<nys-avatar label="User avatar">
+  <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
+</nys-avatar>
+```
+</details>
+
+
 ## Shapes
 
 <p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
@@ -101,11 +135,30 @@ The <code class="language-js">nys-</code> component includes the following acces
 <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
 <nys-avatar label="User avatar" shape="square"></nys-avatar>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-avatar label="User avatar" shape="circle"></nys-avatar>
+<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
+<nys-avatar label="User avatar" shape="square"></nys-avatar>
+```
+</details>
+
 ### Background Color
 
 You can change the background color of an Avatar. Note that images will naturally cover over the background color.
 
 <nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
+```
+</details>
+
 
 {% endblock %}
 
