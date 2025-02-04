@@ -178,6 +178,22 @@ To scale an icon relative to the inherited font size, pass a size variant like s
   - <code class="language-js">3xl</code> (triple extra large): 225% of parent font size
   - <code class="language-js">4xl</code> (quadruple extra large): 300% of parent font size
 
+<nys-icon name="upload_file" size="2xs"></nys-icon>
+<nys-icon name="upload_file" size="lg"></nys-icon>
+<nys-icon name="upload_file" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon name="upload_file" size="2xs"></nys-icon>
+<nys-icon name="upload_file" size="lg"></nys-icon>
+<nys-icon name="upload_file" size="4xl"></nys-icon>
+
+```
+
+</details>
+
 #### Literal Sizing
 For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.
 
@@ -188,22 +204,70 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
   - <code class="language-js">48</code>: 3rem = 48px
   - <code class="language-js">64</code>: 4rem = 64px
 
+<nys-icon name="upload_file" size="16"></nys-icon>
+<nys-icon name="upload_file" size="32"></nys-icon>
+<nys-icon name="upload_file" size="64"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon name="upload_file" size="16"></nys-icon>
+<nys-icon name="upload_file" size="32"></nys-icon>
+<nys-icon name="upload_file" size="64"></nys-icon>
+
+```
+
+</details>
+
 ### Color
 
 You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-      <nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
+<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
+
+```
+
+</details>
+
 
 ### Rotate
 You can `rotate` an icon by passing the angle as a number, like rotate="20" (without "deg").
 
-      <nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
+<nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
+
+```
+
+</details>
 
 
 ### Flip
 Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`.
 
 <nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon flip="horizontal" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
+
+```
+
+</details>
+
 
 {% endblock %}
 

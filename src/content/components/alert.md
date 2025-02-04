@@ -156,6 +156,16 @@ The <code class="language-js">nys-alert</code> component includes the following 
 <nys-alert type="success" heading="Custom Descriptions">
 <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert type="success" heading="Custom Descriptions">
+<p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
+```
+
+</details>
+
 ### Dismissible
 
 Use the <code class="language-js">dismissible</code> property to make the alert dismissible.
@@ -166,6 +176,16 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
   <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
 </nys-alert>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert type="info" heading="Information status" dismissible>
+  <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+</nys-alert>
+```
+</details>
+
 ### Duration
 
 Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
@@ -173,6 +193,15 @@ Set the <code class="language-js">duration</code> property to automatically hide
 <button onclick="showAlert()">Open alert</button>
 
 <div class="alert-container"></div>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
+```
+
+</details>
 
 ### Icon Customization
 
@@ -185,6 +214,21 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   icon="ac_unit">
 </nys-alert>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert 
+  type="emergency" 
+  heading="Winter storm warning: Dec 10th, 2024."
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
+  icon="ac_unit">
+</nys-alert>
+```
+</details>
+
+
+
 ### Heading only
 
 You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
@@ -193,6 +237,17 @@ You may find having just a heading without description as a good compact version
   type="info"
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert 
+  type="info"
+  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+</nys-alert>
+```
+</details>
 
 {% endblock %}
 

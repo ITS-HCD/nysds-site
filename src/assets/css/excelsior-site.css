@@ -582,15 +582,30 @@ a.card:focus {
     margin-left: var(--nys-space-150);
 }
 
+code {
+    font-family: "Monaspace Neon";
+}
+
+details {
+    margin-top: var(--nys-space-150);
+    border: 1px solid var(--nys-color-neutral-200);
+    border-radius: var(--nys-radius-md);
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: var(--nys-space-150);
+    border-radius: var(--nys-radius-md);
+}
+
+summary:hover {
+    background-color: var(--nys-color-theme-weaker);
+}
 
 /* Syntax highlighting plugin tweaks */
 
 /* Remove the curly "peel" shadows from the bottom of code snippets */
 pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
-}
-
-/* Add some vertical padding to the code blocks */
-pre[class*="language-"] > code {
-    padding: 1em;
 }

@@ -69,6 +69,17 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 
 <nys-textinput width="sm" label="This label is sm"></nys-textinput>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput width="sm" label="This label is sm"></nys-textinput>
+
+```
+
+</details>
+
+
 ### Type
 Accepted types are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
 
@@ -76,18 +87,60 @@ Any other input defaults to `type="text"`
 
 <nys-textinput type="password" label="Password"></nys-textinput>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput type="password" label="Password"></nys-textinput>
+
+```
+
+</details>
+
+
+
 ### Placeholder
 
 <nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
+
+```
+
+</details>
+
 
 ### Disabled
 
 <nys-textinput label="Disabled" disabled></nys-textinput>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput label="Disabled" disabled></nys-textinput>
+
+```
+
+</details>
 
 ### Readonly
 
 <nys-textinput label="Readonly" value="Read only value" readonly></nys-textinput>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>
+
+```
+
+</details>
 
 
 ### Min Max and step
@@ -96,9 +149,31 @@ Any other input defaults to `type="text"`
 
 <nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>
+
+```
+
+</details>
+
+
 ### Maxlength
 
 <nys-textinput label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textinput>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>
+
+```
+
+</details>
+
 
 ### Pattern
 
@@ -106,10 +181,31 @@ Takes any valid regex value.
 
 <nys-textinput placeholder="N00000000" label="Please enter your Employee number" description="include the N prefix" maxlength="9" pattern="N[0-9]{8}" id="nID"></nys-textinput>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>
+
+```
+
+</details>
+
+
 ### Error Message
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
 
 <nys-textinput label="Full Name" showError errorMessage="Cannot be left blank"></nys-textinput>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
+
+```
+
+</details>
 
 {% endblock %}
 

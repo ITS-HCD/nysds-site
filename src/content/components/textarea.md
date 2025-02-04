@@ -69,6 +69,16 @@ The default value is `4`
 
 <nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
+
+```
+
+</details>
+
 ### Width
 If no `width` is provided, the `nys-textarea` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 
@@ -78,12 +88,32 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 
 <nys-textarea width="md" label="This textarea is md"></nys-textarea>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea width="md" label="This textarea is md"></nys-textarea>
+
+```
+
+</details>
+
 ### Resize
 By default a user can resize the `nys-textarea` vertically. If you want to disallow resizing altogether add `resize="none"`
 
 Note: `resize` is not affected by setting `nys-textarea` to `disabled` or `readonly` and they are independent.
 
 <nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>
+
+```
+
+</details>
 
 ### Description
 You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.
@@ -94,17 +124,64 @@ You can include a description to provide additional context for the user. This i
   <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
 </nys-textarea>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea label="Label" description="description property"></nys-textarea>
+
+<nys-textarea label="Label">
+  <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
+</nys-textarea>
+
+
+```
+
+</details>
+
+
 ### Disabled 
 
 <nys-textarea label="Disabled textarea" disabled></nys-textarea>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea label="Disabled textarea" disabled></nys-textarea>
+
+```
+
+</details>
 
 ### Readonly
 
 <nys-textarea label="Readonly teextarea" value="This text cannot be changed" readonly></nys-textarea>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea readonly label="Readonly teextarea" value="This text cannot be changed"></nys-textarea>
+
+```
+
+</details>
+
+
 ### Max length
 
 <nys-textarea label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textarea>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>
+
+```
+
+</details>
 
 ### Error Message
 To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
@@ -112,6 +189,15 @@ To display an error message, pass in the `showError` property to the `nys-select
 
 <nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
+
+```
+
+</details>
 
 {% endblock %}
 

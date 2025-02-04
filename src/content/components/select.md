@@ -78,7 +78,7 @@ The <code class="language-js">nys-select</code> component includes the following
 </nys-select>
 
 <details>
-  <summary>Code</summary>
+  <summary>Example Code</summary>
   {% highlight "html" %}
 <nys-select label="Select your favorite borough" disabled>
   <nys-option value="bronx" label="The Bronx"></nys-option>
@@ -106,6 +106,19 @@ The following width options are available:
   <nys-option value="full" label="full"></nys-option>
 </nys-select>
 
+<details>
+  <summary>Example Code</summary>
+
+```html
+<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
+  <nys-option value="sm" label="sm"></nys-option>
+  <nys-option value="md" label="md"></nys-option>
+  <nys-option value="lg" label="lg"></nys-option>
+  <nys-option value="full" label="full"></nys-option>
+</nys-select>
+```
+</details>
+
 ### Error Message
 To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
 
@@ -116,6 +129,19 @@ To display an error message, pass in the `showError` property to the `nys-select
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>  
 </nys-select>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
+  <nys-option value="bronx" label="The Bronx"></nys-option>
+  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
+  <nys-option value="manhattan" label="Manhattan"></nys-option>
+  <nys-option value="staten_island" label="Staten Island"></nys-option>
+  <nys-option value="queens" label="Queens"></nys-option>  
+</nys-select>
+```
 
 {% endblock %}
 
