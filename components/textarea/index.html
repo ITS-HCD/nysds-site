@@ -31,7 +31,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-04T17:56:50.879+00:00 -->
+    <!-- Latest Build: 2025-02-04T20:16:33.458+00:00 -->
   </head>
   <body class="single-page page-textarea">
 
@@ -140,11 +140,14 @@
 <p><nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities."></nys-textarea></p>
 </section>
     <section id="examplecode">
+      <details>
+        <summary>Example Code</summary>
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span>
   <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>quote<span class="token punctuation">"</span></span>
   <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your favorite quote:<span class="token punctuation">"</span></span>
   <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Majorities, of course, start with minorities.<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
+      </details>
     </section>
     <section id="usage">
       <h2>Usage</h2>
@@ -195,30 +198,75 @@
 <p>The <code>rows</code> attribute specifies the visible height of a text area, in number of lines.</p>
 <p>The default value is <code>4</code></p>
 <p><nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This textarea renders with 6 rows<span class="token punctuation">"</span></span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Width</h3>
 <p>If no <code>width</code> is provided, the <code>nys-textarea</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.</p>
 <p><code>width=&quot;full&quot;</code> will take up the full width of the parent container.</p>
 <p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
 <p><nys-textarea width="md" label="This textarea is md"></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This textarea is md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Resize</h3>
 <p>By default a user can resize the <code>nys-textarea</code> vertically. If you want to disallow resizing altogether add <code>resize=&quot;none&quot;</code></p>
 <p>Note: <code>resize</code> is not affected by setting <code>nys-textarea</code> to <code>disabled</code> or <code>readonly</code> and they are independent.</p>
 <p><nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This textarea is not resizable<span class="token punctuation">"</span></span> <span class="token attr-name">resize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Description</h3>
 <p>You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.</p>
 <p><nys-textarea label="Label" description="description property"></nys-textarea></p>
 <nys-textarea label="Label">
   <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
 </nys-textarea>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description property<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Description slot <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>providing more options<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+
+</code></pre>
+</details>
 <h3>Disabled</h3>
 <p><nys-textarea label="Disabled textarea" disabled></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Disabled textarea<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Readonly</h3>
 <p><nys-textarea label="Readonly teextarea" value="This text cannot be changed" readonly></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">readonly</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Readonly teextarea<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This text cannot be changed<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Max length</h3>
 <p><nys-textarea label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Max Length<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You cannot type more than 10 characters in the below field<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Error Message</h3>
 <p>To display an error message, pass in the <code>showError</code> property to the <code>nys-select</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.</p>
 <p><nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">showError</span> <span class="token attr-name">errorMessage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You did not provide a value for this field.<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Describe the incident<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 </section>
     <section id="properties">
       <h2>Properties</h2>

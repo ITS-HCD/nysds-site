@@ -31,7 +31,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-04T17:56:50.879+00:00 -->
+    <!-- Latest Build: 2025-02-04T20:16:33.458+00:00 -->
   </head>
   <body class="single-page page-textinput">
 
@@ -140,7 +140,10 @@
 <p><nys-textinput label="This is a text input"></nys-textinput></p>
 </section>
     <section id="examplecode">
+      <details>
+        <summary>Example Code</summary>
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is a text input<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </details>
     </section>
     <section id="usage">
       <h2>Usage</h2>
@@ -193,27 +196,72 @@
 <p>Width full will take up the full width of the parent container.</p>
 <p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
 <p><nys-textinput width="sm" label="This label is sm"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sm<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This label is sm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Type</h3>
 <p>Accepted types are: <code>text</code>, <code>email</code>, <code>number</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code></p>
 <p>Any other input defaults to <code>type=&quot;text&quot;</code></p>
 <p><nys-textinput type="password" label="Password"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Placeholder</h3>
 <p><nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>placeholder<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>this is a placeholder<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Disabled</h3>
 <p><nys-textinput label="Disabled" disabled></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Disabled<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Readonly</h3>
 <p><nys-textinput label="Readonly" value="Read only value" readonly></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">readonly</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Readonly<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Read only value<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Min Max and step</h3>
 <p><code>max</code>, <code>min</code>, and <code>step</code> only apply when <code>type=&quot;number&quot;</code></p>
 <p><nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span>  <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">step</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Max/Min Example<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Must be between 0 and 100<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Maxlength</h3>
 <p><nys-textinput label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Max Length<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You cannot type more than 10 characters in the below field<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Pattern</h3>
 <p>Takes any valid regex value.</p>
 <p><nys-textinput placeholder="N00000000" label="Please enter your Employee number" description="include the N prefix" maxlength="9" pattern="N[0-9]{8}" id="nID"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>N00000000<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>N[0-9]{8}<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Please enter your Employee number<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>include the N prefix<span class="token punctuation">"</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>9<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nID<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Error Message</h3>
 <p>Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.</p>
 <p><nys-textinput label="Full Name" showError errorMessage="Cannot be left blank"></nys-textinput></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">showError</span> <span class="token attr-name">errorMessage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Cannot be left blank<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full Name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 </section>
     <section id="properties">
       <h2>Properties</h2>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Icon - Excelsior Design System</title>
-    <meta name="description" content="Visual symbols used to convey meaning or action.">   
+    <meta name="description" content="Visual symbols used to concisely convey information and increase visual appearance.">   
     <link rel="canonical" href="https://its-hcd.github.io/excelsior-site//components/icon/">
     <link rel="icon" type="image/svg+xml" href="https://its-hcd.github.io/excelsior-site//favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Icon">
     <meta property="og:site_name" content="Excelsior Design System">
     <meta property="og:url" content="https://its-hcd.github.io/excelsior-site//components/icon/">
-    <meta property="og:description" content="Visual symbols used to convey meaning or action.">
+    <meta property="og:description" content="Visual symbols used to concisely convey information and increase visual appearance.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -31,7 +31,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-04T17:56:50.879+00:00 -->
+    <!-- Latest Build: 2025-02-04T20:16:33.458+00:00 -->
   </head>
   <body class="single-page page-icon">
 
@@ -134,17 +134,20 @@
   <div class="nys-desktop:nys-grid-col-9">
     <section id="overview">
       <h1>Icon</h1>
-<p>The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose a specific svg icon to use.</p>
+<p>An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely conveny meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual informaiton. Excelsior includes a curated subset of the Google Material Symbols rounded icon set.</p>
 </section>
     <section id="example">
 <p><nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)"></nys-icon></p>
 </section>
     <section id="examplecode">
+      <details>
+        <summary>Example Code</summary>
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span>
   <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check_circle<span class="token punctuation">"</span></span>
   <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4xl<span class="token punctuation">"</span></span>
   <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>var(--nys-color-success)<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span></code></pre>
+      </details>
     </section>
     <section id="usage">
       <h2>Usage</h2>
@@ -228,11 +231,16 @@
 </div>
 <h3>When to use this component</h3>
 <ul>
-<li>To provide recognizable visual representations for common actions or objects (e.g., search, download, social media links).</li>
+<li>Draw attention to actions. Icons, when paired with text, grab attention and show actions to take. Make sure each icon directly relates to any text it accompanies.</li>
+<li>Help readers find key information. Use icons as scannable, easy-to-understand visual cues for key information, like a phone number or email address.</li>
+<li>To provide recognizable visual representations for <strong>common actions or objects</strong> (e.g., search, download, social media links).</li>
+<li>Enhance an actionable target. Icons increase the size of a button, which makes those buttons easier to click. Use an icon for common actions, like opening a menu or sharing an article.</li>
 <li>Ideal for enhancing navigation menus, buttons, or other interactive elements with visual cues.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
+<li>Ambiguous meaning. Use icons only in a common or conventional way. Icon utility hinges on people quickly recognizing what each icon means. If you suspect that an icon’s intent isn’t perfectly clear, consider removing it.</li>
+<li>Page structure. Don’t rely on an icon to help draw attention to something important that’s otherwise hard to find. Icons don’t fix unclear page hierarchy or confusing content organization.</li>
 <li>If an icon does not add meaningful value to the context or might confuse users.</li>
 <li>When a descriptive label or plain text provides clearer communication.</li>
 </ul>
@@ -242,9 +250,14 @@
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
+<li><strong>Include a visual text label paired with the icon</strong>; only a very few icons are consistently understood universally across the digital-using public of the world; among them a house for home, printer for printing, and magnifying glass for search. Combine icons with text to improve clarity.</li>
+<li><strong>Be consistent with icon meaning.</strong> When an icon appears multiple times within a page or across pages of an application, it should represent the same concept and have identical text descriptions in every instance. For example, if a blank paper icon means &quot;new document&quot; across most screens, don't use it to mean &quot;reformat document&quot; elsewhere. This consistency benefits users with cognitive disabilities, helps those who may be distracted or scanning the page, and improves the overall user experience.</li>
+<li>Align icons vertically with accompanying typography.</li>
+<li>Prefer icons that are included in the Excelsior icon library; use Google Material Symbol rounded unfilled icons if you must use an icon not in the library. If you have a need for an icon not in the library, please contact the Excelsior Design System team in MS Teams Excelsior Troubleshooting channel for advisement on which icon is best for your use case.</li>
+<li>Test icons for recognition and memorability with representative users of your application or website.</li>
 <li>Use icons to enhance user interfaces with clear, recognizable icons.</li>
 <li>Use appropriate icons align with the purpose and context of the UI elements they accompany.</li>
-<li>Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).</li>
+<li>[Dev] Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).</li>
 <li>Customize icon sizes and colors to match the design system.</li>
 </ul>
 </div>
@@ -253,9 +266,12 @@
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Use icons that lack clarity or context for their intended purpose.</li>
-<li>Use excessive customization that distracts from UI and established design patterns.</li>
+<li>Don't overuse icons; too many icons on a page can create visual noise and makes it difficult for the user to focus.</li>
 <li>Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.</li>
+</ul>
+  <!-- - Use icons that lack clarity or context for their intended purpose. -->
+<ul>
+<li>Use excessive customization that distracts from UI and established design patterns.</li>
 </ul>
 </div>
       </div>
@@ -283,6 +299,16 @@
 <li><code class="language-js">3xl</code> (triple extra large): 225% of parent font size</li>
 <li><code class="language-js">4xl</code> (quadruple extra large): 300% of parent font size</li>
 </ul>
+<p><nys-icon name="upload_file" size="2xs"></nys-icon>
+<nys-icon name="upload_file" size="lg"></nys-icon>
+<nys-icon name="upload_file" size="4xl"></nys-icon></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2xs<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h4>Literal Sizing</h4>
 <p>For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.</p>
 <ul>
@@ -293,15 +319,40 @@
 <li><code class="language-js">48</code>: 3rem = 48px</li>
 <li><code class="language-js">64</code>: 4rem = 64px</li>
 </ul>
+<p><nys-icon name="upload_file" size="16"></nys-icon>
+<nys-icon name="upload_file" size="32"></nys-icon>
+<nys-icon name="upload_file" size="64"></nys-icon></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>16<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>64<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Color</h3>
 <p>You can override the color of an icon by setting a <code>color</code> prop. You can use CSS HEX values, CSS color names, or CSS variables</p>
 <p><nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#db117d<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Rotate</h3>
 <p>You can <code>rotate</code> an icon by passing the angle as a number, like rotate=&quot;20&quot; (without &quot;deg&quot;).</p>
 <p><nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">rotate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 <h3>Flip</h3>
 <p>Set an icon to flip horizontally, vertically, or in both directions by using the <code>flip</code> property. Available values are <code>horizontal</code>, <code>vertical</code>, and <code>both</code>.</p>
 <p><nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">flip</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>horizontal<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
 </section>
     <section id="properties">
       <h2>Properties</h2>
