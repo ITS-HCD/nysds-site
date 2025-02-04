@@ -72,13 +72,37 @@ The <code class="language-js">nys-toggle</code> component includes the following
 
 ### Sizes
 
-<nys-toggle label='Small (size="sm")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="sm"></nys-toggle>
+<nys-toggle label='Small (size="sm")' name="toggle-switch" value="access" size="sm"></nys-toggle>
 </br>
-<nys-toggle label='Medium (size="md")' description="The label and description font sizes automatically adjust to match the toggle switch's size." name="toggle-switch" value="access" size="md"></nys-toggle>
+<nys-toggle label='Medium (size="md")' name="toggle-switch" value="access" size="md"></nys-toggle>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
+
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
+
+```
+
+</details>
+
 
 ### Disable Icon
 
 <nys-toggle label="No Icon on the toggle" name="toggle-switch" value="access" noIcon></nys-toggle>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>
+
+```
+
+</details>
+
 {% endblock %}
 
 {% block properties %}

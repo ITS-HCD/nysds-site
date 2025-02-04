@@ -1,7 +1,7 @@
 ---
 permalink: /components/icon/
 title: Icon
-description: Visual symbols used to convey meaning or action.
+description: Visual symbols used to concisely convey information and increase visual appearance.
 image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 ---
@@ -10,7 +10,7 @@ image_alt: An illustration of an icon.
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose a specific svg icon to use.
+An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely conveny meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual informaiton. Excelsior includes a curated subset of the Google Material Symbols rounded icon set.
 {% endblock %}
 
 {% block example %}
@@ -116,26 +116,38 @@ The <code class="language-js">&lt;nys-icon&gt;</code> component is a reusable we
 </div>
 
 ### When to use this component
-  - To provide recognizable visual representations for common actions or objects (e.g., search, download, social media links).
+  - Draw attention to actions. Icons, when paired with text, grab attention and show actions to take. Make sure each icon directly relates to any text it accompanies.
+  - Help readers find key information. Use icons as scannable, easy-to-understand visual cues for key information, like a phone number or email address.
+  - To provide recognizable visual representations for **common actions or objects** (e.g., search, download, social media links).
+  - Enhance an actionable target. Icons increase the size of a button, which makes those buttons easier to click. Use an icon for common actions, like opening a menu or sharing an article.
   - Ideal for enhancing navigation menus, buttons, or other interactive elements with visual cues.
+
 ### When to consider something else
+  - Ambiguous meaning. Use icons only in a common or conventional way. Icon utility hinges on people quickly recognizing what each icon means. If you suspect that an icon’s intent isn’t perfectly clear, consider removing it.
+  - Page structure. Don’t rely on an icon to help draw attention to something important that’s otherwise hard to find. Icons don’t fix unclear page hierarchy or confusing content organization.
   - If an icon does not add meaningful value to the context or might confuse users.
   - When a descriptive label or plain text provides clearer communication.
 {% endblock %}
 
 {% block usagedo %}
 
+  - **Include a visual text label paired with the icon**; only a very few icons are consistently understood universally across the digital-using public of the world; among them a house for home, printer for printing, and magnifying glass for search. Combine icons with text to improve clarity.
+  - **Be consistent with icon meaning.** When an icon appears multiple times within a page or across pages of an application, it should represent the same concept and have identical text descriptions in every instance. For example, if a blank paper icon means "new document" across most screens, don't use it to mean "reformat document" elsewhere. This consistency benefits users with cognitive disabilities, helps those who may be distracted or scanning the page, and improves the overall user experience.
+  - Align icons vertically with accompanying typography.
+  - Prefer icons that are included in the Excelsior icon library; use Google Material Symbol rounded unfilled icons if you must use an icon not in the library. If you have a need for an icon not in the library, please contact the Excelsior Design System team in MS Teams Excelsior Troubleshooting channel for advisement on which icon is best for your use case.
+  - Test icons for recognition and memorability with representative users of your application or website.
   - Use icons to enhance user interfaces with clear, recognizable icons.
   - Use appropriate icons align with the purpose and context of the UI elements they accompany.
-  - Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).
+  - [Dev] Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).
   - Customize icon sizes and colors to match the design system.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Use icons that lack clarity or context for their intended purpose.
-  - Use excessive customization that distracts from UI and established design patterns.
+  - Don't overuse icons; too many icons on a page can create visual noise and makes it difficult for the user to focus.
   - Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.
+  <!-- - Use icons that lack clarity or context for their intended purpose. -->
+  - Use excessive customization that distracts from UI and established design patterns.
 
 {% endblock %}
 
@@ -166,6 +178,22 @@ To scale an icon relative to the inherited font size, pass a size variant like s
   - <code class="language-js">3xl</code> (triple extra large): 225% of parent font size
   - <code class="language-js">4xl</code> (quadruple extra large): 300% of parent font size
 
+<nys-icon name="upload_file" size="2xs"></nys-icon>
+<nys-icon name="upload_file" size="lg"></nys-icon>
+<nys-icon name="upload_file" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon name="upload_file" size="2xs"></nys-icon>
+<nys-icon name="upload_file" size="lg"></nys-icon>
+<nys-icon name="upload_file" size="4xl"></nys-icon>
+
+```
+
+</details>
+
 #### Literal Sizing
 For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.
 
@@ -176,22 +204,70 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
   - <code class="language-js">48</code>: 3rem = 48px
   - <code class="language-js">64</code>: 4rem = 64px
 
+<nys-icon name="upload_file" size="16"></nys-icon>
+<nys-icon name="upload_file" size="32"></nys-icon>
+<nys-icon name="upload_file" size="64"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon name="upload_file" size="16"></nys-icon>
+<nys-icon name="upload_file" size="32"></nys-icon>
+<nys-icon name="upload_file" size="64"></nys-icon>
+
+```
+
+</details>
+
 ### Color
 
 You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-      <nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
+<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
+
+```
+
+</details>
+
 
 ### Rotate
 You can `rotate` an icon by passing the angle as a number, like rotate="20" (without "deg").
 
-      <nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
+<nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
+
+```
+
+</details>
 
 
 ### Flip
 Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`.
 
 <nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-icon flip="horizontal" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
+
+```
+
+</details>
+
 
 {% endblock %}
 
