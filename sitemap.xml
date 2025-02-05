@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/alert/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
+            <loc>https://designsystem.ny.gov//components/alert/</loc>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -10,26 +10,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/avatar/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov/.</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/checkbox/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
+            <loc>https://designsystem.ny.gov//components/avatar/</loc>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -38,7 +20,16 @@
             
         </url><url>
             <loc>https://designsystem.ny.gov/.</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/checkbox/</loc>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -47,61 +38,7 @@
             
         </url><url>
             <loc>https://designsystem.ny.gov/.</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/icon/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/radiobutton/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/select/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/textarea/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/textinput/</loc>
-            <lastmod>2025-02-05T16:16:24.129Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/toggle/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -110,7 +47,61 @@
             
         </url><url>
             <loc>https://designsystem.ny.gov/.</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/icon/</loc>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/radiobutton/</loc>
+            <lastmod>2025-02-05T16:20:02.318Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/select/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/textarea/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/textinput/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//components/toggle/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -119,7 +110,7 @@
             
         </url><url>
             <loc>https://designsystem.ny.gov/.</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -127,8 +118,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/about/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov/.</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -136,8 +127,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/components/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//about/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -145,8 +136,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/design-tokens/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//components/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -154,8 +145,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/accessibility/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//design-tokens/</loc>
+            <lastmod>2025-02-05T16:20:02.319Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -163,8 +154,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/design-guidelines/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/accessibility/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -172,8 +163,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/design-tokens/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/design-guidelines/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -181,8 +172,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/design-tokens/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -190,8 +181,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/utilities/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -199,8 +190,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/getting-started/designers/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/utilities/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -208,8 +199,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/getting-started/developers/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//getting-started/designers/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -217,8 +208,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/getting-started/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//getting-started/developers/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -226,8 +217,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/</loc>
-            <lastmod>2025-02-05T16:16:24.130Z</lastmod>
+            <loc>https://designsystem.ny.gov//getting-started/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -235,8 +226,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/privacy/</loc>
-            <lastmod>2025-02-05T16:16:24.131Z</lastmod>
+            <loc>https://designsystem.ny.gov//</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -244,8 +235,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/utilities/flex/</loc>
-            <lastmod>2025-02-05T16:16:24.131Z</lastmod>
+            <loc>https://designsystem.ny.gov//privacy/</loc>
+            <lastmod>2025-02-05T16:20:02.320Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -253,8 +244,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/utilities/grid/</loc>
-            <lastmod>2025-02-05T16:16:24.131Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/utilities/flex/</loc>
+            <lastmod>2025-02-05T16:20:02.321Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -262,8 +253,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/utilities/typography/</loc>
-            <lastmod>2025-02-05T16:16:24.131Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/utilities/grid/</loc>
+            <lastmod>2025-02-05T16:20:02.321Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -271,8 +262,17 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov//excelsior-site/foundations/utilities/utilities/</loc>
-            <lastmod>2025-02-05T16:16:24.131Z</lastmod>
+            <loc>https://designsystem.ny.gov//foundations/utilities/typography/</loc>
+            <lastmod>2025-02-05T16:20:02.321Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://designsystem.ny.gov//foundations/utilities/utilities/</loc>
+            <lastmod>2025-02-05T16:20:02.321Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
