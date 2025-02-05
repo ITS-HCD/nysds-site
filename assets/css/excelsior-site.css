@@ -553,6 +553,7 @@ a.card:focus {
     color: var(--nys-color-ink-reverse);
     background-color: var(--nys-color-theme-strong);
     border-color: var(--nys-color-theme-strong);
+    cursor: pointer;
 }
 .nys-button:active {
     color: var(--nys-color-ink-reverse);
@@ -560,6 +561,11 @@ a.card:focus {
     border-color: var(--nys-color-theme-stronger);
 }
 
+.nys-button--sm {
+    padding: var(--nys-space-100);
+    font-size: var(--nys-font-size-ui-sm);
+    line-height: var(--nys-font-lineheight-ui-sm);
+}
 .nys-button--outline {
     color: var(--nys-color-theme);
     background-color: transparent;
@@ -590,6 +596,7 @@ details {
     margin-top: var(--nys-space-150);
     border: 1px solid var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-md);
+    position: relative;
 }
 
 summary {
@@ -601,6 +608,13 @@ summary {
 
 summary:hover {
     background-color: var(--nys-color-theme-weaker);
+}
+
+details nys-button {
+    margin: var(--nys-space-150);
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* Syntax highlighting plugin tweaks */

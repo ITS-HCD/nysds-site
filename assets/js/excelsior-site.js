@@ -13,6 +13,7 @@ const showAlert = () => {
   }
 };
 
+// On this page navigation JS
 document.addEventListener("DOMContentLoaded", () => {
   const sections = Array.from(document.querySelectorAll("section[id]"))
     .filter(section => section.id !== "header");
@@ -61,3 +62,22 @@ document.addEventListener("DOMContentLoaded", () => {
   updateActiveNav();
   window.addEventListener("scroll", updateActiveNav, { passive: true });
 });
+
+// Copy to clipboard
+function copyFunction(id) {
+  const copyText = document.getElementById(id).textContent;
+  const textArea = document.createElement('textarea');
+  textArea.classList.add('nys-opacity-0');
+  textArea.style.position = 'absolute'; // Set absolute to remove from DOM order
+  textArea.style.left = '-9999px'; // Move it out of view
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  // Replace execCommand("copy") with Clipboard API
+  navigator.clipboard.writeText(copyText).then(() => {
+    return;
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
+  });
+  document.body.removeChild(textArea); // Clean up
+}
