@@ -58,6 +58,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
     eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
+    eleventyConfig.addPassthroughCopy("./CNAME"); 
 
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
