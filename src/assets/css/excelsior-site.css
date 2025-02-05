@@ -40,7 +40,7 @@ small {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--nys-font-family-heading);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h1 {
@@ -282,8 +282,8 @@ a:active {
 /* Section Header */
 
 .section-header {
-    background-color: var(--nys-color-theme-strong);
-    color: var(--nys-color-theme-weak, #fff);
+    background-color: var(--nys-color-theme-weaker);
+    color: var(--nys-color-theme-strong, #fff);
 }
 .section-header__inner {
     padding-top: var(--nys-space-200);
