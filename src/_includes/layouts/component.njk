@@ -48,9 +48,12 @@
     <section id="examplecode">
       <details>
         <summary>Example Code</summary>
+        <div id="main-example">
       {% highlight "html" %}
       {%- block examplecode %}{% endblock -%}
       {% endhighlight %}
+        </div>
+      <nys-button onClick="copyFunction('main-example');" label="Copy Code" variant="outline" size="sm"></nys-button>
       </details>
     </section>
     <section id="usage">
