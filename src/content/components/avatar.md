@@ -77,14 +77,11 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <details>
 <summary>Example Code</summary>
-<div id="images">
 
 ```html
 <nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
 
 ```
-</div>
-<nys-button onClick="copyFunction('images');" label="Copy Code" variant="outline" size="sm"></nys-button>
 </details>
 
 
@@ -96,13 +93,10 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <details>
 <summary>Example Code</summary>
-<div id="initials">
 
 ```html
 <nys-avatar label="User avatar" initials="NY"></nys-avatar>
 ```
-</div>
-<nys-button onClick="copyFunction('initials');" label="Copy Code" variant="outline" size="sm"></nys-button>
 </details>
 
 
@@ -121,7 +115,6 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <details>
 <summary>Example Code</summary>
-<div id="custom-icon">
 
 ```html
 <nys-avatar label="User avatar"></nys-avatar>
@@ -132,8 +125,6 @@ The <code class="language-js">nys-</code> component includes the following acces
   <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
 </nys-avatar>
 ```
-</div>
-<nys-button onClick="copyFunction('custom-icon');" label="Copy Code" variant="outline" size="sm"></nys-button>
 </details>
 
 
@@ -147,15 +138,12 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <details>
 <summary>Example Code</summary>
-<div id="shapes">
 
 ```html
 <nys-avatar label="User avatar" shape="circle"></nys-avatar>
 <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
 <nys-avatar label="User avatar" shape="square"></nys-avatar>
 ```
-</div>
-<nys-button onClick="copyFunction('shapes');" label="Copy Code" variant="outline" size="sm"></nys-button>
 </details>
 
 ### Background Color
@@ -166,13 +154,11 @@ You can change the background color of an Avatar. Note that images will naturall
 
 <details>
 <summary>Example Code</summary>
-<div id="background-color">
 
 ```html
 <nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
 ```
-</div>
-<nys-button onClick="copyFunction('background-color');" label="Copy Code" variant="outline" size="sm"></nys-button>
+
 </details>
 
 

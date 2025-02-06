@@ -158,14 +158,11 @@ The <code class="language-js">nys-alert</code> component includes the following 
 
 <details>
 <summary>Example Code</summary>
-<div id="custom-description">
 
 ```html
 <nys-alert type="success" heading="Custom Descriptions">
 <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('custom-description');" label="Copy Code" variant="outline" size="sm"></nys-button>
 </details>
 
 ### Dismissible
@@ -180,15 +177,12 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
 
 <details>
 <summary>Example Code</summary>
-<div id="dismissible">
 
 ```html
 <nys-alert type="info" heading="Information status" dismissible>
   <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
 </nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('dismissible');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -202,13 +196,10 @@ Set the <code class="language-js">duration</code> property to automatically hide
 
 <details>
 <summary>Example Code</summary>
-<div id="duration">
 
 ```html
 <nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('duration');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -225,7 +216,6 @@ Override the default theme icon by setting the <code class="language-js">icon</c
 
 <details>
 <summary>Example Code</summary>
-<div id="icon-customization">
 
 ```html
 <nys-alert 
@@ -235,8 +225,6 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   icon="ac_unit">
 </nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('icon-customization');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -253,7 +241,6 @@ You may find having just a heading without description as a good compact version
 
 <details>
 <summary>Example Code</summary>
-<div id="heading-only">
 
 ```html
 <nys-alert 
@@ -261,8 +248,6 @@ You may find having just a heading without description as a good compact version
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('heading-only');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 

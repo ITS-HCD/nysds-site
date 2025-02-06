@@ -617,6 +617,18 @@ details nys-button {
     right: 0;
 }
 
+/* Icon display tweaks */
+
+.icon-examples .card__title,
+.icon-examples .card__desc {
+    text-align: center;
+}
+
+.icon-examples .card__desc {
+    font-size: var(--nys-font-size-sm);
+    margin-left: 0;
+}
+
 /* Syntax highlighting plugin tweaks */
 
 /* Remove the curly "peel" shadows from the bottom of code snippets */
