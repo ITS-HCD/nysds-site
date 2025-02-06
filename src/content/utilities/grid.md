@@ -78,6 +78,9 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   </div>
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-container">
   <div class="nys-grid-row">
@@ -87,6 +90,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   </div>
 </div>
 ```
+</details>
 
 <p>This example code creates three equal-width columns on tablet, desktop, and widescreen devices by using our predefined grid classes. Those columns are centered in the page with the parent <code>nys-grid-container</code> container.</p>
 <p>The following sections break the layout grid down and describe how it works.</p>
@@ -126,6 +130,9 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-container">
   <div class="nys-grid-row">
@@ -136,6 +143,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   </div>
 </div>
 ```
+</details>
 </section>
 <section id="responsive-classes">
 
@@ -202,6 +210,9 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row">
   <div class="nys-grid-col-1">.nys-grid-col-1</div>
@@ -217,6 +228,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   <div class="nys-grid-col-2">.nys-grid-col-2</div>
 </div>
 ```
+</details>
 
 <h3><a id="stacked-columns-at-narrow-widths"></a>Stacked columns at narrow widths</h3>
 <p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>tablet:grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>tablet:</code>) as illustrated in the following rows and corresponding code.</p>
@@ -236,6 +248,9 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row">
   <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
@@ -248,6 +263,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
 </div>
 ```
+</details>
 
 <h3><a id="mix-and-match"></a>Mix and match</h3>
 <p>Don't want your columns to simply stack in some breakpoints? Use a combination of different classes for each breakpoint as needed. See the following example rows and corresponding code for a better idea of how it all works.</p>
@@ -319,6 +335,9 @@ Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
 Columns are always 50% wide, on mobile and desktop
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="nys-grid-row">
@@ -339,6 +358,8 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-col-6">.nys-grid-col-6</div>
 </div>
 ```
+</details>
+
 </section>
 <section id="offsetting-columns">
 <h2>Offsetting columns</h2>
@@ -391,11 +412,16 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row">
   <div class="nys-grid-col-8 nys-grid-offset-4">.nys-grid-col-8.nys-grid-offset-4</div>
 </div>
 ```
+</details>
+
 </section>
 <section id="column-wrapping">
 <h2>Column wrapping</h2>
@@ -451,6 +477,9 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row">
   <div class="nys-grid-col-8">.nys-grid-col-8</div>
@@ -458,6 +487,8 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-col-5">.nys-grid-col-5</div>
 </div>
 ```
+</details>
+
 </section>
 <section id="gutters">
 <h2>Gutters</h2>
@@ -519,6 +550,9 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-grid-col-4">
@@ -532,6 +566,7 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 ```
+</details>
 
 <h3><a id="large-gutter"></a>Large gutter</h3>
 <p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than `nys-grid-gap`. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
@@ -600,6 +635,9 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row nys-grid-gap-lg">
   <div class="nys-grid-col-4">
@@ -613,5 +651,7 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 ```
+</details>
+
 </section>
 {% endblock %}

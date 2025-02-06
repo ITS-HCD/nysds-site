@@ -611,7 +611,7 @@ summary:hover {
 }
 
 details nys-button {
-    margin: var(--nys-space-150);
+    margin-right: var(--nys-space-150);
     position: absolute;
     top: 0;
     right: 0;
