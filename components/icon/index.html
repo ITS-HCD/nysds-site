@@ -31,28 +31,14 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-05T20:56:51.187+00:00 -->
+    <!-- Latest Build: 2025-02-06T21:31:29.064+00:00 -->
   </head>
   <body class="single-page page-icon">
 
-  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
-  <script type="text/javascript">
-    var _NY = {
-      HOST: "static-assets.ny.gov",
-      hideSearch: true,
-      showLanguageHeader: false,
-      showLanguageFooter: false,
-    };
-    (function (document, bundle, head) {
-        head = document.getElementsByTagName('head')[0];
-        bundle = document.createElement('script');
-        bundle.type = 'text/javascript';
-        bundle.async = true;
-        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
-        head.appendChild(bundle);
-    }(document));
-  </script>
-</div>
+  
+
+<nys-unavheader hideTranslate hideSearch></nys-unavheader>
+
   
 <div class="site-header">
     <div class="site-header__inner nys-grid-container">
@@ -144,18 +130,16 @@
     <section id="examplecode">
       <details>
         <summary>Example Code</summary>
-        <div id="main-example">
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span>
   <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check_circle<span class="token punctuation">"</span></span>
   <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4xl<span class="token punctuation">"</span></span>
   <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>var(--nys-color-success)<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span></code></pre>
-        </div>
-      <nys-button onClick="copyFunction('main-example');" label="Copy Code" variant="outline" size="sm"></nys-button>
       </details>
     </section>
     <section id="usage">
       <h2>Usage</h2>
+<div class="icon-examples">
 <h3>General</h3>
 <div class="nys-grid-row nys-grid-gap-2">
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="account_circle"></nys-icon></div><div class="card__desc"> account_circle</div></div></div>
@@ -234,6 +218,7 @@
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="language_filled"></nys-icon></div><div class="card__desc"> language_filled</div></div></div>
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="lock_filled"></nys-icon></div><div class="card__desc"> lock_filled</div></div></div>
 </div>
+</div> <!-- .icon-example -->
 <h3>When to use this component</h3>
 <ul>
 <li>Draw attention to actions. Icons, when paired with text, grab attention and show actions to take. Make sure each icon directly relates to any text it accompanies.</li>

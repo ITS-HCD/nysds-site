@@ -31,28 +31,14 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-05T20:56:51.187+00:00 -->
+    <!-- Latest Build: 2025-02-06T21:31:29.064+00:00 -->
   </head>
   <body class="single-page page-design-tokens">
 
-  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2024-08-26 12:00">
-  <script type="text/javascript">
-    var _NY = {
-      HOST: "static-assets.ny.gov",
-      hideSearch: true,
-      showLanguageHeader: false,
-      showLanguageFooter: false,
-    };
-    (function (document, bundle, head) {
-        head = document.getElementsByTagName('head')[0];
-        bundle = document.createElement('script');
-        bundle.type = 'text/javascript';
-        bundle.async = true;
-        bundle.src = "https://static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
-        head.appendChild(bundle);
-    }(document));
-  </script>
-</div>
+  
+
+<nys-unavheader hideTranslate hideSearch></nys-unavheader>
+
   
 <div class="site-header">
     <div class="site-header__inner nys-grid-container">
@@ -95,6 +81,599 @@
     <div class="nys-grid-container">
       
       <h1>Design Tokens</h1>
+<h2>Space</h2>
+<p>Spacing tokens standardize margins, padding, and gaps in layouts.</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1px</td>
+<td><strong>Space 1px</strong> This is ultra-thin for fine detail, like borders or dividers.</td>
+<td><code>--nys-space-1px</code></td>
+</tr>
+<tr>
+<td>2px</td>
+<td><strong>Space 2px</strong> Very small spacing for micro-adjustments or compact layouts.</td>
+<td><code>--nys-space-2px</code></td>
+</tr>
+<tr>
+<td>4px</td>
+<td><strong>Space 50</strong> Extra-small spacing, typically used for tight content spacing.</td>
+<td><code>--nys-space-50</code></td>
+</tr>
+<tr>
+<td>8px</td>
+<td><strong>Space 100</strong> Small spacing, often used for compact layouts or minimal margins.</td>
+<td><code>--nys-space-100</code></td>
+</tr>
+<tr>
+<td>12px</td>
+<td><strong>Space 150</strong> Small-medium spacing for general UI elements.</td>
+<td><code>--nys-space-150</code></td>
+</tr>
+<tr>
+<td>16px</td>
+<td><strong>Space 200</strong> Medium spacing, commonly used for standard element separation.</td>
+<td><code>--nys-space-200</code></td>
+</tr>
+<tr>
+<td>20px</td>
+<td><strong>Space 250</strong> Medium-large spacing for container padding or visual balance.</td>
+<td><code>--nys-space-250</code></td>
+</tr>
+<tr>
+<td>24px</td>
+<td><strong>Space 300</strong> Standard spacing for layouts with moderate separation.</td>
+<td><code>--nys-space-300</code></td>
+</tr>
+<tr>
+<td>32px</td>
+<td><strong>Space 400</strong> Large spacing for separating sections or creating visual breaks.</td>
+<td><code>--nys-space-400</code></td>
+</tr>
+<tr>
+<td>40px</td>
+<td><strong>Space 500</strong> Extra-large spacing for major sections or wide gaps.</td>
+<td><code>--nys-space-500</code></td>
+</tr>
+<tr>
+<td>48px</td>
+<td><strong>Space 600</strong> Very large spacing, often used for section padding or layouts.</td>
+<td><code>--nys-space-600</code></td>
+</tr>
+<tr>
+<td>56px</td>
+<td><strong>Space 700</strong> Generous spacing for wide content separation.</td>
+<td><code>--nys-space-700</code></td>
+</tr>
+<tr>
+<td>64px</td>
+<td><strong>Space 800</strong> Maximum spacing for highly open designs or major layouts.</td>
+<td><code>--nys-space-800</code></td>
+</tr>
+<tr>
+<td>96px</td>
+<td><strong>Space 1200</strong> Largest spacing token for creating significant visual separation.</td>
+<td><code>--nys-space-1200</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Size</h2>
+<h3>Primitives</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1px</td>
+<td><strong>Space 1px</strong> Spacing tokens standardize margins, padding, and gaps in layouts. This is ultra-thin for fine detail, like borders or dividers.</td>
+<td><code>--nys-size-1px</code></td>
+</tr>
+<tr>
+<td>2px</td>
+<td><strong>Space 2px</strong> Very small spacing for micro-adjustments or compact layouts.</td>
+<td><code>--nys-size-2px</code></td>
+</tr>
+<tr>
+<td>4px</td>
+<td><strong>Space 50</strong> Extra-small spacing, typically used for tight content spacing.</td>
+<td><code>--nys-size-50</code></td>
+</tr>
+<tr>
+<td>8px</td>
+<td><strong>Space 100</strong> Small spacing, often used for compact layouts or minimal margins.</td>
+<td><code>--nys-size-100</code></td>
+</tr>
+<tr>
+<td>12px</td>
+<td><strong>Space 150</strong> Small-medium spacing for general UI elements.</td>
+<td><code>--nys-size-150</code></td>
+</tr>
+<tr>
+<td>16px</td>
+<td><strong>Space 200</strong> Medium spacing, commonly used for standard element separation.</td>
+<td><code>--nys-size-200</code></td>
+</tr>
+<tr>
+<td>20px</td>
+<td><strong>Space 250</strong> Medium-large spacing for container padding or visual balance.</td>
+<td><code>--nys-size-250</code></td>
+</tr>
+<tr>
+<td>24px</td>
+<td><strong>Space 300</strong> Standard spacing for layouts with moderate separation.</td>
+<td><code>--nys-size-300</code></td>
+</tr>
+<tr>
+<td>32px</td>
+<td><strong>Space 400</strong> Large spacing for separating sections or creating visual breaks.</td>
+<td><code>--nys-size-400</code></td>
+</tr>
+<tr>
+<td>36px</td>
+<td><strong>Space 450</strong></td>
+<td><code>--nys-size-450</code></td>
+</tr>
+<tr>
+<td>40px</td>
+<td><strong>Space 500</strong> Extra-large spacing for major sections or wide gaps.</td>
+<td><code>--nys-size-500</code></td>
+</tr>
+<tr>
+<td>44px</td>
+<td><strong>Space 550</strong></td>
+<td><code>--nys-size-550</code></td>
+</tr>
+<tr>
+<td>48px</td>
+<td><strong>Space 600</strong> Very large spacing, often used for section padding or layouts.</td>
+<td><code>--nys-size-600</code></td>
+</tr>
+<tr>
+<td>56px</td>
+<td><strong>Space 700</strong> Generous spacing for wide content separation.</td>
+<td><code>--nys-size-700</code></td>
+</tr>
+<tr>
+<td>64px</td>
+<td><strong>Space 800</strong> Maximum spacing for highly open designs or major layouts.</td>
+<td><code>--nys-size-800</code></td>
+</tr>
+<tr>
+<td>96px</td>
+<td><strong>Space 1200</strong> Largest spacing token for creating significant visual separation.</td>
+<td><code>--nys-size-1200</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Border Width</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1px</td>
+<td><strong>Border Width Small</strong></td>
+<td><code>--nys-border-width-sm</code></td>
+</tr>
+<tr>
+<td>2px</td>
+<td>** Border Width Medium**</td>
+<td><code>--nys-border-width-md</code></td>
+</tr>
+<tr>
+<td>4px</td>
+<td>** Border Width Large**</td>
+<td><code>--nys-border-width-lg</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Radius</h2>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1px</td>
+<td><strong>Radius Extra Small</strong> Creates a sharp, slightly rounded corner.</td>
+<td><code>--nys-radius-xs</code></td>
+</tr>
+<tr>
+<td>2px</td>
+<td><strong>Radius Small</strong> Soft rounding. Used in Checkbox Small.</td>
+<td><code>--nys-radius-sm</code></td>
+</tr>
+<tr>
+<td>4px</td>
+<td><strong>Radius Medium</strong> Default radius. Used for Alert, large Checkbox, and input fields like Text Input, Select, and Text Area.</td>
+<td><code>--nys-radius-md</code></td>
+</tr>
+<tr>
+<td>8px</td>
+<td><strong>Radius Large</strong> Larger radius for a more pronounced rounding.</td>
+<td><code>--nys-radius-lg</code></td>
+</tr>
+<tr>
+<td>12px</td>
+<td><strong>Radius Extra Large</strong> Strong radius. Used for buttons, to quickly indicate interactivity.</td>
+<td><code>--nys-radius-xl</code></td>
+</tr>
+<tr>
+<td>16px</td>
+<td><strong>Radius Extra Extra Large</strong> Very strong rounding. Use sparingly. Used for focus ring of Button.</td>
+<td><code>--nys-radius-xxl</code></td>
+</tr>
+<tr>
+<td>1776</td>
+<td><strong>Radius Round</strong> Creates an oval or circle shape. Used for avatars.</td>
+<td><code>--nys-radius-round</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Color</h2>
+<p><strong>Overridden by agency-specific themes.</strong>
+All of the below colors automatically adapt to the agency when set. In the future additional modes may be supported for each agency such as a dark mode, high contrast mode, or colorblind optimized mode. By making use of Excelsior color variables it will enable quick adoption of future accessibility modes.</p>
+<p>Change the Agency theme above to see how these colors adapt to each agency.</p>
+<p>Do not use the hex value of a color token, use the CSS Variable / Token.</p>
+<h3>Theme</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#154973 (ink-reverse)</td>
+<td><strong>Color Theme</strong> Primary brand color. Used for primary actions and interactive elements like buttons, checkboxes, and agency-specific headers and footers.</td>
+<td><code>--nys-color-theme</code></td>
+</tr>
+<tr>
+<td>#0E324F (ink-reverse)</td>
+<td><strong>Color Theme Strong</strong> Stronger shade of theme color, used for hover state on interactive elements.</td>
+<td><code>--nys-color-strong</code></td>
+</tr>
+<tr>
+<td>#081B2B (ink-reverse)</td>
+<td><strong>Color Theme Stronger</strong> Strongest shade of theme color, used for pressed state on interactive elements.</td>
+<td><code>--nys-color-stronger</code></td>
+</tr>
+<tr>
+<td>#457AA5 (ink-reverse)</td>
+<td><strong>Color Theme Mid</strong> Mid-range shade of theme color. Use sparingly, since text contrast against this color is problematic.</td>
+<td><code>--nys-color-mid</code></td>
+</tr>
+<tr>
+<td>#CDDDE9 (ink)</td>
+<td><strong>Color Theme Weak</strong> Slightly lighter shade of theme color.</td>
+<td><code>--nys-color-weak</code></td>
+</tr>
+<tr>
+<td>#EFF6FB (ink)</td>
+<td><strong>Color Theme Weaker</strong> Lighter shade of theme color, used to subtly convey brand in places with a lot of text, like the global agency footer.</td>
+<td><code>--nys-color-weaker</code></td>
+</tr>
+<tr>
+<td>#F7FAFD (ink)</td>
+<td><strong>Color Theme Faint</strong> Faint shade of the theme color. Good for subtle accents or backgrounds.</td>
+<td><code>--nys-color-faint</code></td>
+</tr>
+<tr>
+<td>#FACE00 (ink-reverse)</td>
+<td><strong>Color Theme Accent</strong> Bold accent color for highlighting or emphasis. Use sparingly, especially in application contexts where it can be confused with warning or error colors.</td>
+<td><code>--nys-color-accent</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Intent</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#004DD1 (ink-reverse)</td>
+<td>** Color Info** Informational color for neutral messages.</td>
+<td><code>--nys-color-info</code></td>
+</tr>
+<tr>
+<td>#E5EFFA (ink)</td>
+<td>** Color Info Weak** Used as a background for informational contexts with a lot of text, like alerts.</td>
+<td><code>--nys-color-info-weak</code></td>
+</tr>
+<tr>
+<td>#1E752E (ink-reverse)</td>
+<td><strong>Color Success</strong> Used to communicate successful actions or states.</td>
+<td><code>--nys-color-success</code></td>
+</tr>
+<tr>
+<td>#E8F1EA (ink)</td>
+<td><strong>Color Success Weak</strong> Used as a background for success contexts with a lot of text, like alerts.</td>
+<td><code>--nys-color-success-weak</code></td>
+</tr>
+<tr>
+<td>#FACE00 (ink-reverse)</td>
+<td><strong>Color Warning</strong> Used as a warning color for non-critical alerts.</td>
+<td><code>--nys-color-warning</code></td>
+</tr>
+<tr>
+<td>#FEFAE5 (ink)</td>
+<td><strong>Color Warning Weak</strong> Used as a background for warning contexts with a lot of text, like alerts.</td>
+<td><code>--nys-color-warning-weak</code></td>
+</tr>
+<tr>
+<td>#B52C2C (ink-reverse)</td>
+<td><strong>Color Danger</strong> Used to indicate destructive actions or failures.</td>
+<td><code>--nys-color-danger</code></td>
+</tr>
+<tr>
+<td>#F7EAEA (ink)</td>
+<td><strong>Color Danger Weak</strong> Used as a background in destructive or error contexts with a lot of text, like alerts.</td>
+<td><code>--nys-color-danger-weak</code></td>
+</tr>
+<tr>
+<td>#721C1C (ink-reverse)</td>
+<td><strong>Color Emergency</strong> Emergency color for critical alerts or actions. Use sparingly.</td>
+<td><code>--nys-color-emergency</code></td>
+</tr>
+<tr>
+<td>#62666A (ink-reverse)</td>
+<td><strong>Color Base</strong> Used for the border of neutral alerts.</td>
+<td><code>--nys-color-base</code></td>
+</tr>
+<tr>
+<td>#F6F6F6 (ink)</td>
+<td><strong>Color Base Weak</strong> Used for the background of neutral alerts.</td>
+<td><code>--nys-color-base-weak</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Neutrals</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#1B1B1B (ink-reverse)</td>
+<td><strong>Color Ink</strong> Default text color. Used as main text color throughout UI. Provides accessible contrast for content.</td>
+<td><code>--nys-color-ink</code></td>
+</tr>
+<tr>
+<td>#FFFFFF (ink)</td>
+<td><strong>Color Ink Reverse</strong> Reverse text color for dark backgrounds.</td>
+<td><code>--nys-color-ink-reverse</code></td>
+</tr>
+<tr>
+<td>#1B1B1B (ink-reverse)</td>
+<td><strong>Color Neutral 900</strong> Darkest neutral shade for text or backgrounds.</td>
+<td><code>--nys-color-neutral-900</code></td>
+</tr>
+<tr>
+<td>#323435 (ink-reverse)</td>
+<td><strong>Color Neutral 800</strong> Very dark neutral shade for subdued elements.</td>
+<td><code>--nys-color-neutral-800</code></td>
+</tr>
+<tr>
+<td>#4A4D4F (ink-reverse)</td>
+<td><strong>Color Neutral 700</strong> Dark neutral tone for text or muted accents.</td>
+<td>````nys-color-neutral-700``</td>
+</tr>
+<tr>
+<td>#62666A (ink-reverse)</td>
+<td><strong>Color Neutral 600</strong> Medium-dark neutral tone for UI elements.</td>
+<td><code>--nys-color-neutral-600</code></td>
+</tr>
+<tr>
+<td>#797C7F</td>
+<td><strong>Color Neutral 500</strong> Medium neutral tone for balanced emphasis.</td>
+<td><code>--nys-color-neutral-500</code></td>
+</tr>
+<tr>
+<td>#909395</td>
+<td><strong>Color Neutral 400</strong> Light-medium neutral tone for soft elements.</td>
+<td><code>--nys-color-neutral-400</code></td>
+</tr>
+<tr>
+<td>#A7A9AB</td>
+<td><strong>Color Neutral 300</strong> Light neutral tone for subtle backgrounds.</td>
+<td><code>--nys-color-neutral-300</code></td>
+</tr>
+<tr>
+<td>#BEC0C1</td>
+<td><strong>Color Neutral 200</strong> Very light neutral tone for minimal elements.</td>
+<td><code>--nys-color-neutral-200</code></td>
+</tr>
+<tr>
+<td>#D0D0CE</td>
+<td><strong>Color Neutral 100</strong> Near-white neutral for soft backgrounds.</td>
+<td><code>--nys-color-neutral-100</code></td>
+</tr>
+<tr>
+<td>#EDEDED</td>
+<td><strong>Color Neutral 50</strong> Faint neutral shade for background contrast.</td>
+<td><code>--nys-color-neutral-50</code></td>
+</tr>
+<tr>
+<td>#F6F6F6</td>
+<td><strong>Color Neutral 10</strong> Subtle neutral shade for faint accents.</td>
+<td><code>--nys-color-neutral-10</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Semantic</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#004DD1</td>
+<td><strong>Color Link</strong> Default color for text links.</td>
+<td><code>--nys-color-link</code></td>
+</tr>
+<tr>
+<td>#003BA1</td>
+<td><strong>Color Link Strong</strong> Used for hover and active states on text links.</td>
+<td><code>--nys-color-link-strong</code></td>
+</tr>
+<tr>
+<td>#002971</td>
+<td><strong>Color Link Strongest</strong> Used for pressed states on text links.</td>
+<td><code>--nys-color-link-strongest</code></td>
+</tr>
+<tr>
+<td>#004DD1</td>
+<td><strong>Color Focus</strong> Used to color focus rings on interactive elements.</td>
+<td><code>--nys-color-focus</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Typography</h2>
+<h3>Family</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>Font Family, Sans</strong> Primary brand font, used for content, headers, and UI text. → Proxima Nova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol</td>
+<td><code>--nys-font-family-sans</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Family, Agency</strong> Brand font used only for agency, program, and initiative titles. → D Sari, Arial, sans-serif</td>
+<td><code>--nys-font-family-agency</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Family, Alternate</strong> Alternate brand font, used sparingly for accent in public-facing sites. → Oswald, Arial, sans-serif</td>
+<td><code>--nys-font-family-alt</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Size</h3>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Description</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>Font Size, 2XS</strong> Extra-extra-small font size. Typically used for fine print or disclaimers</td>
+<td><code>--nys-font-size-2xs</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, XS</strong> Extra-small font size. Used for less prominent labels or captions. → 12px</td>
+<td><code>--nys-font-size-xs</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, SM</strong> Small font size. Commonly used for secondary text or labels. → 14px</td>
+<td><code>--nys-font-size-sm</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, MD</strong> Medium font size. Default body text size. → 16px</td>
+<td><code>--nys-font-size-md</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, LG</strong> Large font size. Used for subheadings or larger labels. → 18px</td>
+<td><code>--nys-font-size-lg</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, XL</strong> Extra-large font size. Used for headings or standout elements. → 20px</td>
+<td><code>--nys-font-size-xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 2XL</strong> Double extra-large font size. Commonly used for secondary headings. → 22px</td>
+<td><code>--nys-font-size-2xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 3XL</strong> Triple extra-large font size. Used for primary headings or key text. → 24px</td>
+<td><code>--nys-font-size-3xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 4XL</strong> Quadruple extra-large font size. Typically used for prominent headlines. → 28px</td>
+<td><code>--nys-font-size-4xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 5XL</strong> Quintuple extra-large font size. Reserved for key marketing or hero sections. → 32px</td>
+<td><code>--nys-font-size-5xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 6XL</strong> Six times extra-large font size. Used for impactful hero text. → 36px</td>
+<td><code>--nys-font-size-6xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 7XL</strong> Seven times extra-large font size. Highly prominent text. → 40px</td>
+<td><code>--nys-font-size-7xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 8XL</strong> Eight times extra-large font size. Typically for titles or splash content. → 44px</td>
+<td><code>--nys-font-size-8xl</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Font Size, 9XL</strong> Nine times extra-large font size. Maximum size for hero content. → 50px</td>
+<td><code>--nys-font-size-9xl</code></td>
+</tr>
+</tbody>
+</table>
 
       
     </div>

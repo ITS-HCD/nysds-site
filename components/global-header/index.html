@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Global Header - Excelsior Design System</title>
+    <meta name="description" content="Provide users with consistent access to key features, branding, and primary navigation across all pages.">   
+    <link rel="canonical" href="https://designsystem.ny.gov//components/global-header/">
+    <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov//favicon.svg" />
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Global Header">
+    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:url" content="https://designsystem.ny.gov//components/global-header/">
+    <meta property="og:description" content="Provide users with consistent access to key features, branding, and primary navigation across all pages.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    
+    <link rel="preload" href="https://designsystem.ny.gov//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="https://designsystem.ny.gov//assets/fonts/excelsior-fonts.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov//pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://designsystem.ny.gov//assets/css/prism-theme.css"rel="stylesheet">
+    <link href="https://designsystem.ny.gov//assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov//assets/css/excelsior-site.css" rel="stylesheet">    
+
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-02-06T21:31:29.064+00:00 -->
+  </head>
+  <body class="single-page page-global-header">
+
+  
+
+<nys-unavheader hideTranslate hideSearch></nys-unavheader>
+
+  
+<div class="site-header">
+    <div class="site-header__inner nys-grid-container">
+        <div class="site-header__logo">
+            <a href="https://designsystem.ny.gov/" title="Home"><img src="/assets/img/logo-excelsior.svg" title="Excelsior Logo"></a>
+        </div>
+        <nav class="site-header__nav">
+            <ul class="site-header__list">
+                <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+                <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+                <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+                <li class="site-header__item"><a href="/about" class="site-header__link" title="About">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov//assets/img/sections/section-components.svg" alt="Components section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+  <main role="main" data-pagefind-body>
+    <div class="nys-grid-container">
+      
+      <div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-3">
+    <div class="navigator">
+      <div class="navigator__inner">
+        <div id="navigator-title" class="navigator__title">On this page</div>
+        <nav class="navigator__nav" aria-labelledby="navigator-title">
+          <ul class="navigator__list">
+            <li class="navigator__item navigator__item--overview navigator__item--active">
+              <a class="navigator__link" href="#overview">Overview</a>
+            </li>
+            <li class="navigator__item navigator__item--example">
+              <a class="navigator__link" href="#example">Example</a>
+            </li>
+            <li class="navigator__item navigator__item--examplecode">
+              <a class="navigator__link" href="#examplecode">Example Code</a>
+            </li>
+            <li class="navigator__item navigator__item--usage">
+              <a class="navigator__link" href="#usage">Usage</a>
+            </li>
+            <li class="navigator__item navigator__item--accessibility">
+              <a class="navigator__link" href="#accessibility">Accessibility</a>
+            </li>
+            <li class="navigator__item navigator__item--options">
+              <a class="navigator__link" href="#options">Options</a>
+            </li>
+            <li class="navigator__item navigator__item--properties">
+              <a class="navigator__link" href="#properties">Properties</a>
+            </li>
+            <li class="navigator__item navigator__item--cssvariables">
+              <a class="navigator__link" href="#cssvariables">CSS Variables</a>
+            </li>
+            <li class="navigator__item navigator__item--events">
+              <a class="navigator__link" href="#events">Events</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="nys-desktop:nys-grid-col-9">
+    <section id="overview">
+      <h1>Global Header</h1>
+<p>The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reusable web component for use in New York State digital products. It helps provide users with consistent access to key features, branding, and primary navigation across all pages.</p>
+</section>
+    <section id="example">
+<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+</nys-globalheader>
+</section>
+    <section id="examplecode">
+      <details>
+        <summary>Example Code</summary>
+      <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">appName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User Registration Form<span class="token punctuation">"</span></span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
+      </details>
+    </section>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>nys-globalheader application header should be used at the top of all agency related sites and applications.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>If an application is not for a single agency, the Agency Name can be removed.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use <code>agencyName</code> as stand alone if public-facing site and not in the context of a specific application.</li>
+<li>Use <code>appName</code> if this is an application</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Don't use <code>appName</code> for an agency name.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code class="language-js">nys-globalfooter</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper use of &lt;header&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.</li>
+<li>Keyboard navigation: Users can tab through all links in the header.</li>
+</ul>
+</section>
+    <section id="options">
+      <h2>Options</h2>
+<h3>Just Agency Name</h3>
+<nys-globalheader agencyName="Office of Information Technology Services">
+</nys-globalheader>
+<details>
+  <summary>Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
+</details>
+<h3>Just Application Name</h3>
+<nys-globalheader appName="NYS Employee Portal">
+</nys-globalheader>
+<details>
+  <summary>Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">appName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Employee Portal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
+</details>
+</section>
+    <section id="properties">
+      <h2>Properties</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>agencyName</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>appName</code></td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+    <section id="cssvariables">
+      <h2>CSS Variables</h2></section>
+    <section id="events">
+      <h2>Events</h2></section>
+  </div>
+</div>
+
+      
+    </div>
+  </main>
+
+  <div class="site-footer">
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-6">
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Quick Links</h6>
+        <ul>
+            <li><a href="/getting-started/" title="How you can use Excelsior.">Getting Started</a></li>
+            <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/about/" title="Learn more about our team and the mission of this project.">About Excelsior</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Support</h6>
+        <ul>
+          <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/about/" title="Contact the Excelsior team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <h6 class="site-footer__list-header">Resources</h6>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/excelsior" title="Visit the Excelsior Core GitHub repository.">Excelsior GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/excelsior-fonts" title="Visit the Excelsior Fonts GitHub repository.">Excelsior Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nys-excelsior" title="Explore Excelsior NPM packages.">Excelsior NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYS-%2F-Excelsior-Components-(Alpha)?node-id=20-40&t=Qcrbt459q9JgdW9E-1" title="Access the Excelsior Figma library.">Excelsior Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/excelsior.js"></script>
+<script src="https://designsystem.ny.gov//assets/js/excelsior-site.js"></script>
+  
+  </body>
+</html>

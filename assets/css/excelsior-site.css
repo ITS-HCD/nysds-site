@@ -611,10 +611,22 @@ summary:hover {
 }
 
 details nys-button {
-    margin: var(--nys-space-150);
+    margin-right: var(--nys-space-150);
     position: absolute;
     top: 0;
     right: 0;
+}
+
+/* Icon display tweaks */
+
+.icon-examples .card__title,
+.icon-examples .card__desc {
+    text-align: center;
+}
+
+.icon-examples .card__desc {
+    font-size: var(--nys-font-size-sm);
+    margin-left: 0;
 }
 
 /* Syntax highlighting plugin tweaks */
