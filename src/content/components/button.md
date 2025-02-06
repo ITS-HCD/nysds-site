@@ -2,7 +2,6 @@
 permalink: /components/button/
 title: Button
 description: "Used primarily for actions that have an immediate result like 'Save', 'Close', or 'Add'."
-draft: true
 image: 
 image_alt: An illustration of an button.
 ---
@@ -15,12 +14,12 @@ A button is used for actions that have an immediate result inside an application
 
 {% block example %}
 
-<nys-button></nys-button>
+<nys-button label="Button"></nys-button>
 {% endblock %}
 
 {% block examplecode %}
 
-<nys-button></nys-button>
+<nys-button label="Button"></nys-button>
 {% endblock %}
 
 {% block usage %}
@@ -45,14 +44,14 @@ A button is used for actions that have an immediate result inside an application
 
 {% block usagedont %}
 
-  - Don't use buttons for external navigation. Use an HTML link (<a>) or Text button if the result of clicking the element is opening a link of an external page.
+  - Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
   - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the Excelsior Design System team.
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
+The <code class="language-js">nys-button</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
@@ -70,17 +69,139 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 - No punctuation
 - Always write button text in sentence case, which means the first word is capitalized and the rest are lowercase (unless a term is a proper noun).
 
-Do: Add menu item
-Don't: Add a Menu Item
-
 {% endblock %}
 
 {% block options %}
 
-### Option 1
+### Size
+<p>Set the <code>size</code> prop of the <strong><code>nys-button</code></strong> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
+<ul>
+<li><code>sm</code>: Set to 40px in height</li>
+<li><code>md</code>: The default size. Set to 48px in height.</li>
+<li><code>lg</code>: Set to 56px in height.</li>
+</ul>
+Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
+
+<nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
+<nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
+<nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
+
+<nys-button id="button4" name="button4" label="Small Full" size="sm" fullWidth></nys-button>
+<nys-button id="button5" name="button5" label="Medium Full" fullWidth></nys-button>
+<nys-button id="button6" name="button6" label="Large Full" size="lg" fullWidth></nys-button>
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
+<nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
+<nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
+<nys-button id="button4" name="button4" label="Small Full" size="sm" fullWidth></nys-button>
+<nys-button id="button5" name="button5" label="Medium Full" fullWidth></nys-button>
+<nys-button id="button6" name="button6" label="Large Full" size="lg" fullWidth></nys-button>
+```
+</details>
+
+### Button Type
+
+Set the type prop of the `nys-button` to define the button's behavior in a form context. The available types are:
+
+ - `button` (default): A standard button that does not submit a form.
+ - `submit`: Submits the nearest form when clicked.
+ - `reset`: Resets all inputs in the nearest form to their default values.
+
+### Variant
+
+Set the variant prop of the `nys-button` to adjust the appearance of the button. Our current variants are:
+
+ - `filled`: The default variant. Use for primary actions.
+ - `outline`: Use for secondary actions.
+ - `ghost`: Use for uncommon actions.
+ - `text`: Use for inline actions.
+
+<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
+<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
+<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
+<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
+<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
+<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
+<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+```
+</details>
+
+### Icons
+Set the `prefixIcon` prop to include an icon in the button. The icon will appear to the left of the label.
+
+Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
+
+<nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button>
+```
+</details>
+
+### Disabled
+
+<nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+<nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+<nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
+```
+</details>
+
+### Link
+Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
 
 
-### Option 2
+<nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button>
+```
+</details>
+
+### Inverted
+Set the `inverted` when the button is on a dark background.
+
+<div style="background-color:var(--nys-color-theme-stronger)">
+<nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+<nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
+</div>
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+<nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
+```
+</details>
+
 
 {% endblock %}
 
@@ -98,12 +219,68 @@ Don't: Add a Menu Item
       <td><code>label</code></td>
       <td>string</td>
     </tr>
+    <tr>
+      <td><code>onClick</code></td>
+      <td>JS function</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td>string ("sm", "md", "lg")</td>
+    </tr>
+    <tr>
+      <td><code>fullWidth</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>variant</code></td>
+      <td>string ("filled", "outline", "ghost", "text")</td>
+    </tr>
+    <tr>
+      <td><code>inverted</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>prefixIcon</code></td>
+      <td>`nys-icon` name</td>
+    </tr>
+    <tr>
+      <td><code>suffixIcon</code></td>
+      <td>`nys-icon` name</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td>strong (URL)</td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td>string ("submit", "reset", "button")</td>
+    </tr>
   </tbody>
 </table>
 
 {% endblock %}
 
-{% block cssvariables %}
+{% block cssvariables %}{% endblock %}
 
 <table>
   <thead>
@@ -120,26 +297,24 @@ Don't: Add a Menu Item
   </tbody>
   </table>
 
-{% endblock %}
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code class="language-js">&lt;nys-button&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
+<li><strong><code>click</code></strong> – Fired when the button is clicked.</li>
+<li><strong><code>focus</code></strong> – Fired when the button gains focus.</li>
+<li><strong><code>blur</code></strong> – Fired when the button loses focus.</li>
 </ol>
 
 You can listen to these events using JavaScript:
 {% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
+// Select the button component
+  const button = document.querySelector('nys-button');
 
   // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
+  button.addEventListener('click', (event) => {
+    console.log('Button Clicked');
   });
 {% endhighlight %}
 {% endblock %}

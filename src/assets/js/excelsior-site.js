@@ -81,3 +81,34 @@ function copyFunction(id) {
   });
   document.body.removeChild(textArea); // Clean up
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("pre code").forEach((codeBlock) => {
+    // Select parent
+    const pre = codeBlock.parentElement;
+    pre.style.position = "relative";
+    // Create butotn
+    const button = document.createElement("nys-button");
+    button.label = "Copy Code";
+    button.size = "sm";
+    button.variant = "outline";
+    button.style.position = "absolute";
+    button.style.top = "0";
+    button.style.right = "0";
+    button.style.display = "flex";
+
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(codeBlock.innerText);
+        button.label = "Copied!";
+        setTimeout(() => (button.label = "Copy Code"), 1500);
+      } catch (err) {
+        console.error("Failed to copy:", err);
+        button.label = "Failed!";
+        setTimeout(() => (button.label = "Copy Code"), 1500);
+      }
+    });
+
+    pre.appendChild(button);
+  });
+});

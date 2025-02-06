@@ -333,6 +333,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
   <div class="nys-grid-row">
   <div class="nys-grid-col nys-flex-1"></div>
@@ -395,6 +398,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   ...
 </div>
 ```
+</details>
 
 ## Flex-direction
 
@@ -445,6 +449,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row nys-flex-column">
   <div class="nys-grid-col"></div>
@@ -459,6 +466,8 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col"></div>
 </div>
 ```
+</details>
+
 ## Flex-wrap
 
 <section class="utility" id="flex-wrap">
@@ -516,6 +525,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row nys-flex-wrap">
   <div class="nys-grid-col-4"></div>
@@ -530,6 +542,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col-4"></div>
 </div>
 ```
+</details>
 
 ## Flex-align
 
@@ -700,6 +713,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-display-flex nys-flex-column nys-flex-align-start">
   <div class="example"></div>
@@ -757,6 +773,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
 </div>
 ```
+</details>
 
 ## Flex-align-self
 
@@ -803,6 +820,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-display-flex nys-flex-column">
   <div class="nys-flex-align-self-start"></div>
@@ -818,6 +838,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-flex-align-self-stretch"></div>
 </div>
 ```
+</details>
 
 ## Flex-justify
 
@@ -907,6 +928,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-display-flex nys-flex-column nys-flex-justify">
   <div class="example"></div>
@@ -964,6 +988,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
 </div>
 ```
+</details>
 
 ## Order
 
@@ -1064,6 +1089,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
+<details>
+<summary>Example Code</summary>
+
 ```html
 <div class="nys-grid-row">
   <div class="nys-grid-col nys-order-11"></div>
@@ -1083,4 +1111,5 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-first"></div>
 </div>
 ```
+</details>
 </div>

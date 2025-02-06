@@ -29,6 +29,7 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 
 
 {% block usage %}
+<div class="icon-examples">
 
 ### General
 <div class="nys-grid-row nys-grid-gap-2">
@@ -114,6 +115,7 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="language_filled"></nys-icon></div><div class="card__desc"> language_filled</div></div></div>
 <div class="nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="lock_filled"></nys-icon></div><div class="card__desc"> lock_filled</div></div></div>
 </div>
+</div> <!-- .icon-example -->
 
 ### When to use this component
   - Draw attention to actions. Icons, when paired with text, grab attention and show actions to take. Make sure each icon directly relates to any text it accompanies.
