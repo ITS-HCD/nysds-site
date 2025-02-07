@@ -106,7 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         await navigator.clipboard.writeText(cardText);
         cardDesc.innerHTML = "Copied!";
-        setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
+        cardDesc.style.color = "var(--nys-color-success)";
+        setTimeout(() => (
+          cardDesc.innerHTML = cardText,
+          cardDesc.style.color = "var(--nys-color-text)"
+        ), 1500);
       } catch (err) {
         cardDesc.innerHTML = "Failed!";
         setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
