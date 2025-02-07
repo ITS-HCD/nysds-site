@@ -48,7 +48,7 @@ The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reu
 
 {% block accessibility %}
 
-The <code class="language-js">nys-globalfooter</code> component includes the following accessibility-focused features:
+The <code class="language-js">nys-globalheader</code> component includes the following accessibility-focused features:
 
  - Proper use of &lt;header&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
  - Keyboard navigation: Users can tab through all links in the header.
@@ -56,16 +56,53 @@ The <code class="language-js">nys-globalfooter</code> component includes the fol
 
 {% block options %}
 
-### Just Agency Name
+### With Links
 
-<nys-globalheader agencyName="Office of Information Technology Services">
+For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (`<ul>`) inside the nys-globalheader slot. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired destination.
+
+Use the prop `homepageLink` to link your `agencyName` to your homepage. If `homepageLink` is not provided, default fallback is `window.location.origin` otherwise (use `disableHomepageLink` to disable the homepage link).
+
+<nys-icon name="info"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.
+
+<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
+  <ul>
+    <li><a href="https://its.ny.gov/services">Services</a></li>
+    <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
+    <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
+    <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
+    <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
+    <li><a href="https://its.ny.gov/about-us">About Us</a></li>
+  </ul>
 </nys-globalheader>
 
 <details>
   <summary>Code</summary>
 
 ```html
-<nys-globalheader agencyName="Office of Information Technology Services">
+<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
+  <ul>
+    <li><a href="https://its.ny.gov/services">Services</a></li>
+    <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
+    <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
+    <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
+    <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
+    <li><a href="https://its.ny.gov/about-us">About Us</a></li>
+  </ul>
+</nys-globalheader>
+```
+
+</details>
+
+### Just Agency Name
+
+<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+</nys-globalheader>
+
+<details>
+  <summary>Code</summary>
+
+```html
+<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
 </nys-globalheader>
 ```
 
@@ -73,14 +110,14 @@ The <code class="language-js">nys-globalfooter</code> component includes the fol
 
 ### Just Application Name
 
-<nys-globalheader appName="NYS Employee Portal">
+<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
 </nys-globalheader>
 
 <details>
   <summary>Code</summary>
 
 ```html
-<nys-globalheader appName="NYS Employee Portal">
+<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
 </nys-globalheader>
 ```
 
@@ -106,6 +143,14 @@ The <code class="language-js">nys-globalfooter</code> component includes the fol
     <tr>
       <td><code>appName</code></td>
       <td>string</td>
+    </tr>
+    <tr>
+      <td><code>homepageLink</code></td>
+      <td>string (URL)</td>
+    </tr>
+    <tr>
+      <td><code>disableHomepageLink</code></td>
+      <td>boolean</td>
     </tr>
   </tbody>
 </table>
