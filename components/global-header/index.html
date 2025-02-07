@@ -31,7 +31,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-07T15:41:30.695+00:00 -->
+    <!-- Latest Build: 2025-02-07T17:38:18.408+00:00 -->
   </head>
   <body class="single-page page-global-header section-components">
 
@@ -39,7 +39,7 @@
 
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 
-  <nys-globalheader agencyName="Excelsior Design System">
+  <nys-globalheader appName="Excelsior Design System">
   <ul>
     <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
     <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
@@ -162,7 +162,7 @@
     </div>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-globalfooter</code> component includes the following accessibility-focused features:</p>
+<p>The <code class="language-js">nys-globalheader</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Proper use of &lt;header&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.</li>
 <li>Keyboard navigation: Users can tab through all links in the header.</li>
@@ -170,20 +170,47 @@
 </section>
     <section id="options">
       <h2>Options</h2>
-<h3>Just Agency Name</h3>
-<nys-globalheader agencyName="Office of Information Technology Services">
+<h3>With Links</h3>
+<p>For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (<code>&lt;ul&gt;</code>) inside the nys-globalheader slot. Each list item (<code>&lt;li&gt;</code>) should contain an anchor (<code>&lt;a href=&quot;&quot;&gt;</code>) linking to the desired destination.</p>
+<p>Use the prop <code>homepageLink</code> to link your <code>agencyName</code> to your homepage. If <code>homepageLink</code> is not provided, default fallback is <code>window.location.origin</code> otherwise (use <code>disableHomepageLink</code> to disable the homepage link).</p>
+<p><nys-icon name="info"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.</p>
+<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
+  <ul>
+    <li><a href="https://its.ny.gov/services">Services</a></li>
+    <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
+    <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
+    <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
+    <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
+    <li><a href="https://its.ny.gov/about-us">About Us</a></li>
+  </ul>
 </nys-globalheader>
 <details>
   <summary>Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">homepageLink</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://ny.gov<span class="token punctuation">"</span></span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/get-help<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Help Center<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/cybersecurity<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Cybersecurity<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/policies<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Policies and Laws<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/procurement<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Procurement<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/about-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>About Us<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
+</details>
+<h3>Just Agency Name</h3>
+<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+</nys-globalheader>
+<details>
+  <summary>Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">disableHomepageLink</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Just Application Name</h3>
-<nys-globalheader appName="NYS Employee Portal">
+<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
 </nys-globalheader>
 <details>
   <summary>Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">appName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Employee Portal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">disableHomepageLink</span> <span class="token attr-name">appName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Employee Portal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
 </details>
 </section>
@@ -204,6 +231,14 @@
     <tr>
       <td><code>appName</code></td>
       <td>string</td>
+    </tr>
+    <tr>
+      <td><code>homepageLink</code></td>
+      <td>string (URL)</td>
+    </tr>
+    <tr>
+      <td><code>disableHomepageLink</code></td>
+      <td>boolean</td>
     </tr>
   </tbody>
 </table>
