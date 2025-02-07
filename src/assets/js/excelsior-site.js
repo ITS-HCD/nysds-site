@@ -95,3 +95,22 @@ document.addEventListener("DOMContentLoaded", function () {
     pre.appendChild(button);
   });
 });
+
+// Add Copy to clipboard to all icon examples
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".icon-examples .card").forEach((card) => {
+    card.addEventListener("click", async () => {
+      let cardDesc = card.querySelector(".card__desc");
+      cardText = cardDesc.textContent;
+      try {
+        await navigator.clipboard.writeText(cardText);
+        cardDesc.innerHTML = "Copied!";
+        setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
+      } catch (err) {
+        cardDesc.innerHTML = "Failed!";
+        setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
+        console.error("Failed to copy:", err);
+      }
+    });
+  });
+});
