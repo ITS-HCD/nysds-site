@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Unav Header - Excelsior Design System</title>
-    <meta name="description" content="Provide users with access to essential NYS links across all pages.">   
+    <meta name="description" content="A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.">   
     <link rel="canonical" href="https://designsystem.ny.gov//components/unav-header/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov//favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Unav Header">
     <meta property="og:site_name" content="Excelsior Design System">
     <meta property="og:url" content="https://designsystem.ny.gov//components/unav-header/">
-    <meta property="og:description" content="Provide users with access to essential NYS links across all pages.">
+    <meta property="og:description" content="A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -31,9 +31,9 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-06T21:31:29.064+00:00 -->
+    <!-- Latest Build: 2025-02-07T14:59:27.692+00:00 -->
   </head>
-  <body class="single-page page-unav-header">
+  <body class="single-page page-unav-header section-components">
 
   
 
@@ -122,7 +122,7 @@
   <div class="nys-desktop:nys-grid-col-9">
     <section id="overview">
       <h1>Unav Header</h1>
-<p>The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.</p>
+<p>The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.</p>
 <p><nys-icon name="info"></nys-icon> The Universal Navigation Header remains consistent across all sites.</p>
 </section>
     <section id="example">
@@ -138,11 +138,11 @@
       <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-<li>Use <code>nys-unavfooter</code> to provide consistent access to essential links across all sites.</li>
+<li>Use <code>nys-unavheader</code> at the top of every page.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-<li>Do not place the <code>nys-unavfooter</code> anywhere other than the bottom of the page as the final footer.</li>
+<li>Do not place the <code>nys-unavheader</code> anywhere other than the top of the page.</li>
 </ul>
 </section>
     <div class="nys-grid-row nys-grid-gap">
@@ -150,7 +150,8 @@
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Place it only at the bottom of the page as the final footer.</li>
+<li>Place it only at the top of the page as the final footer.</li>
+<li>Toggle search and translate on/off depending on your needs</li>
 </ul>
 </div>
       </div>
@@ -158,17 +159,18 @@
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Place it anywhere other than the bottom of the page.</li>
+<li>Don't place it anywhere other than the top of the page.</li>
+<li>Don't modify the header</li>
 </ul>
 </div>
       </div>
     </div>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-unavfooter</code> component includes the following accessibility-focused features:</p>
+<p>The <code class="language-js">nys-unavheader</code> component includes the following accessibility-focused features:</p>
 <ul>
-<li>Proper use of <code>&lt;footer&gt;</code> and <code>&lt;a&gt;</code> elements ensures compatibility with assistive technologies.</li>
-<li>Keyboard navigation: Users can tab through all links in the footer.</li>
+<li>Proper use of <code>&lt;header&gt;</code> and <code>&lt;a&gt;</code> elements ensures compatibility with assistive technologies.</li>
+<li>Keyboard navigation: Users can tab through all links in the header.</li>
 </ul>
 </section>
     <section id="options">

@@ -285,6 +285,10 @@ a:active {
     background-color: var(--nys-color-theme-weaker);
     color: var(--nys-color-theme-strong, #fff);
 }
+.section-components .section-header {
+    background-color: var(--nys-color-theme-strong);
+    color: var(--nys-color-theme-weak, #fff);
+}
 .section-header__inner {
     padding-top: var(--nys-space-200);
     padding-bottom: var(--nys-space-200);
@@ -408,6 +412,7 @@ ex-header__title {
 .card__title, .card__desc {
     text-decoration: none;
     margin-left: var(--nys-space-100);
+    line-height: var(--nys-font-lineheight-sm);
 }
 .card::after {
     content: "";
