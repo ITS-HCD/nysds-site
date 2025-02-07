@@ -619,6 +619,7 @@ summary:hover {
 
 .icon-examples .card:hover {
     cursor: pointer;
+    border-color: var(--nys-color-theme-stronger);
 }
 
 .icon-examples .card__title,
