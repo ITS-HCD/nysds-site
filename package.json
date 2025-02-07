@@ -35,8 +35,8 @@
     },
     "dependencies": {
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-        "@nys-excelsior/components": "^0.0.9-alpha",
-        "@nys-excelsior/styles": "^0.0.9-alpha",
+        "@nys-excelsior/components": "^1.0.0",
+        "@nys-excelsior/styles": "^1.0.0",
         "eleventy-plugin-time-to-read": "^1.3.0"
     }
 }
