@@ -617,6 +617,10 @@ summary:hover {
 
 /* Icon display tweaks */
 
+.icon-examples .card:hover {
+    cursor: pointer;
+}
+
 .icon-examples .card__title,
 .icon-examples .card__desc {
     text-align: center;
