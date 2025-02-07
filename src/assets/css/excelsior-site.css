@@ -615,13 +615,6 @@ summary:hover {
     background-color: var(--nys-color-theme-weaker);
 }
 
-details nys-button {
-    margin-right: var(--nys-space-150);
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 /* Icon display tweaks */
 
 .icon-examples .card__title,
