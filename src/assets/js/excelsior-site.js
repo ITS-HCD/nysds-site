@@ -105,12 +105,16 @@ document.addEventListener("DOMContentLoaded", function () {
     card.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(cardText);
-        cardDesc.innerHTML = "Copied!";
-        cardDesc.style.color = "var(--nys-color-success)";
-        setTimeout(() => (
-          cardDesc.innerHTML = cardText,
-          cardDesc.style.color = "var(--nys-color-text)"
-        ), 1500);
+        const paragraph = document.querySelector(".hover-message");
+        if (paragraph) {
+          paragraph.textContent = "Copied!";
+          paragraph.style.color = "var(--nys-color-success)";
+        }
+        setTimeout(() => {
+          paragraph.style.color = "var(--nys-color-text)";
+          card.parentElement.removeChild(paragraph);
+
+      }, 1500);
       } catch (err) {
         cardDesc.innerHTML = "Failed!";
         setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
