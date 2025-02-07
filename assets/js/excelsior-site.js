@@ -99,18 +99,40 @@ document.addEventListener("DOMContentLoaded", function () {
 // Add Copy to clipboard to all icon examples
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".icon-examples .card").forEach((card) => {
+    const cardDesc = card.querySelector(".card__desc");
+    const cardText = cardDesc.textContent;
+
     card.addEventListener("click", async () => {
-      let cardDesc = card.querySelector(".card__desc");
-      cardText = cardDesc.textContent;
       try {
         await navigator.clipboard.writeText(cardText);
         cardDesc.innerHTML = "Copied!";
-        setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
+        cardDesc.style.color = "var(--nys-color-success)";
+        setTimeout(() => (
+          cardDesc.innerHTML = cardText,
+          cardDesc.style.color = "var(--nys-color-text)"
+        ), 1500);
       } catch (err) {
         cardDesc.innerHTML = "Failed!";
         setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
         console.error("Failed to copy:", err);
       }
+    });
+    card.addEventListener("mouseenter", async () => {
+      const paragraph = document.createElement("p");
+      paragraph.style.position = "absolute";
+      paragraph.style.top = "100px";
+      paragraph.style.width = "90%";
+      paragraph.style.textAlign = "center";
+      paragraph.textContent = "Copy to clipboard";
+      paragraph.classList.add("hover-message");
+      card.parentElement.appendChild(paragraph);
+    });
+    card.addEventListener("mouseleave", async () => {
+      const paragraph = document.querySelector(".hover-message");
+      if (paragraph) {
+        card.parentElement.removeChild(paragraph);
+      }
+      cardDesc.innerHTML = cardText;
     });
   });
 });
