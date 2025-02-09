@@ -449,7 +449,7 @@ a.card:focus {
     top: var(--nys-space-600);
     margin-top: var(--nys-space-600);
     margin-bottom: var(--nys-space-200);
-    border: solid 1px var(--nys-color-neutral-50);
+    border: solid var(--nys-size-2px) var(--nys-color-neutral-50);
     border-radius: var(--nys-radius-md);
     font-size: var(--nys-font-size-ui-md);
     overflow: hidden;
