@@ -8,6 +8,7 @@
     {% block styles %}{% endblock %}
     <!-- Latest Build: {{ site.buildDate | dateISO }} -->
   </head>
+  {% set currentPageUrl = page.url %}
   <body class="{% if section  %}single-page page-{{ page.fileSlug }} section-{{section | slug}}{% else %}home{% endif %}">
 
   {% include "partials/unav-header.njk" %}

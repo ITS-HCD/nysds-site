@@ -1,8 +1,9 @@
 ---
 permalink: /getting-started/
-title: "Getting Started - Excelsior, New York State's Design System"
+title: "Getting Started"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
 section: Getting Started
+navOrder: 1
 ---
 
 {% block content %}

@@ -1,6 +1,6 @@
 ---
 permalink: /getting-started/developers/
-title: "Getting Started: Developers"
+title: "Developers"
 description: "Integrate Excelsior into your project with web components, design tokens, and styles. Learn how to install, customize, and use Excelsior in Angular, .NET, React, and more."
 section: Getting Started
 ---

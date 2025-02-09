@@ -3,7 +3,6 @@ permalink: /about/
 title: "Excelsior, New York State's Design System"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
 section: About
-
 ---
 
 {% extends "layouts/base.njk" %}

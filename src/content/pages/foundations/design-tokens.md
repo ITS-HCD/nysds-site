@@ -1,14 +1,14 @@
 ---
 permalink: /foundations/design-tokens/
-title: "Design Tokens - Excelsior, New York State's Design System"
+title: "Design Tokens"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+section: Foundations
+parent: Foundations
 ---
-
 
 {% block content %}
 
-
-<h1>Design Tokens</h1>
+# Design Tokens
 
 ## Space
 

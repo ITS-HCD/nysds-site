@@ -1,15 +1,15 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<div class="nys-grid-row nys-grid-gap-lg">
-  <div class="nys-desktop:nys-grid-col-3" style="background:var(--nys-color-neutral-10);">
-    SECTION NAVIGATOR HERE
-  </div>
+<div class="nys-grid-row nys-grid-gap-6">
+  <aside class="nys-desktop:nys-grid-col-3">
+    {% include "partials/section-nav.njk" %}
+  </aside>
   <div class="nys-desktop:nys-grid-col-6">  
     {{ content | safe }}
   </div>
-  <div class="nys-desktop:nys-grid-col-3" style="background:var(--nys-color-neutral-10);">
-    ON-PAGE NAVIGATOR HERE
-  </div>
+  <aside class="nys-desktop:nys-grid-col-3" style="margin-top: var(--nys-space-600);">
+    ON-PAGE NAVIGATOR HERE: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </aside>
 </div>
 {% endblock %}

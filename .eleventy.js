@@ -22,6 +22,7 @@ const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 // collections
 const updates = require("./src/_11ty/collections/updates.js");
 const components = require("./src/_11ty/collections/components.js");
+const sections = require("./src/_11ty/collections/sections.js");
 
 module.exports = (eleventyConfig) => {
 
@@ -40,6 +41,7 @@ module.exports = (eleventyConfig) => {
     // collections
     eleventyConfig.addCollection("updates", updates);
     eleventyConfig.addCollection("components", components);
+    eleventyConfig.addCollection("sections", sections);
 
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);

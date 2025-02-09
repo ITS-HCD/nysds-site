@@ -1,7 +1,9 @@
 ---
 permalink: /foundations/utilities/
-title: "Utilities - Excelsior, New York State's Design System"
+title: "Utilities"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+section: Foundations
+parent: Foundations
 ---
 
 {% block content %}

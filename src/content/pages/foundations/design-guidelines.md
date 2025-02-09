@@ -1,12 +1,14 @@
 ---
 permalink: /foundations/design-guidelines/
-title: "Design Guidelines - Excelsior, New York State's Design System"
+title: "Design Guidelines"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+section: Foundations
+parent: Foundations
 ---
 
 {% block content %}
 
-<h1>Design Guidelines</h1>
+# Design Guidelines
 
 {% endblock %}
 

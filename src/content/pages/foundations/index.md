@@ -1,7 +1,9 @@
 ---
 permalink: /foundations/
-title: "Foundations - Excelsior, New York State's Design System"
+title: "Foundations"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+section: Foundations
+parent: Foundations
 ---
 
 {% block content %}
@@ -13,7 +15,7 @@ description: "Excelsior makes it easier to build accessible, usable websites for
     <a class="card nys-flex-fill" href="{{ site.url | url }}/foundations/accessibility">
       <div class="card__inner">
         <div class="card__media">
-          <img src="../assets/img/components/placeholder.svg" alt="Accessibility"></div>
+          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt="Accessibility"></div>
         <div class="card__title">Accessibility</div>
         <div class="card__desc">Accessibility means making digital experiences usable for everyone. This page covers NYS requirements, WCAG guidelines, and best practices.</div>
       </div>

@@ -23,6 +23,12 @@ ul, ol {
     list-style: none;
 }  
 
+/* Tweaking USWDS Defaults */
+
+.nys-grid-container {
+    max-width: 80em;
+}
+
 /* === Global Styles */
 /* These really need to be defined in excelsior.css */
 
@@ -435,6 +441,14 @@ a.card:focus {
     outline-offset: 0;
 }
 
+
+/* Section Navigator */
+.section-navigator {
+    position: sticky;
+    top: var(--nys-space-300);
+    padding-top: var(--nys-space-600);
+    padding-bottom: var(--nys-space-200);
+}
 
 /* On-Page Navigator */
 .navigator {
