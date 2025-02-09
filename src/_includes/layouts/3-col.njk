@@ -1,9 +1,15 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
 <div class="nys-grid-row nys-grid-gap-lg">
-  <div class="nys-desktop:nys-grid-col-3">
+  <div class="nys-desktop:nys-grid-col-3" style="background:var(--nys-color-neutral-10);">
+    SECTION NAVIGATOR HERE
   </div>
-  <div class="nys-desktop:nys-grid-col-9">
-    {% content | safe %}
+  <div class="nys-desktop:nys-grid-col-6">  
+    {{ content | safe }}
   </div>
-  <div class="nys-desktop:nys-grid-col-3">
+  <div class="nys-desktop:nys-grid-col-3" style="background:var(--nys-color-neutral-10);">
+    ON-PAGE NAVIGATOR HERE
   </div>
 </div>
+{% endblock %}
