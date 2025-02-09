@@ -1,18 +1,29 @@
-<nav class="section-navigator">
-  <ul>
+<nav class="section-nav">
+  <ul class="section-nav__list">
+
     {% if section in collections.sections %}
 
-      {# ✅ Loop through only top-level pages (pre-filtered in `sections.js`) #}
+      {# ✅ Loop through only top-level pages (determined in `sections.js`) #}
       {% for page in collections.sections[section].topLevel %}
-        <li class="{% if page.url == page.url %} active{% endif %}">
-          <a href="{{ page.url }}">{{ page.data.title }}</a>
+        {# ✅ First, check if the page itself is active #}
+        {% set isActive = (page.url == currentPageUrl) %}
 
-          {# ✅ Render children under their parent if they exist #}
+        {# ✅ Then, loop through children to check if any child is active #}
+        {% for child in page.children %}
+          {% if child.url == currentPageUrl %}
+            {% set isActive = true %}
+          {% endif %}
+        {% endfor %}
+
+        <li class="section-nav__item{% if isActive %} section-nav__item--active-section{% endif %}{% if page.url == currentPageUrl %} section-nav__item--active{% endif %}">
+          <a class="section-nav__link" href="{{ site.url | url}}{{ page.url }}">{{ page.data.title }}</a>
+
+          {# ✅ Render child pages inside their parent #}
           {% if page.children | length > 0 %}
-            <ul>
+            <ul class="section-nav__list">
               {% for child in page.children %}
-                <li class="{% if child.url == page.url %} active{% endif %}">
-                  <a href="{{ child.url }}">{{ child.data.title }}</a>
+                <li class="section-nav__item{% if child.url == currentPageUrl %} section-nav__item--active{% endif %}">
+                  <a class="section-nav__link" href="{{ site.url | url}}{{ child.url }}">{{ child.data.title }}</a>
                 </li>
               {% endfor %}
             </ul>
