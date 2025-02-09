@@ -1,26 +1,26 @@
 <nav class="section-navigator">
   <ul>
-    
     {% if section in collections.sections %}
-      {# First loop: Show only top-level pages (no parent) #}
 
-      {% for page in collections.sections[section] if page.data.parent == None or page.data.parent == "" %}
+      {# ✅ Loop through only top-level pages (pre-filtered in `sections.js`) #}
+      {% for page in collections.sections[section].topLevel %}
         <li class="{% if page.url == page.url %} active{% endif %}">
           <a href="{{ page.url }}">{{ page.data.title }}</a>
+
+          {# ✅ Render children under their parent if they exist #}
+          {% if page.children | length > 0 %}
+            <ul>
+              {% for child in page.children %}
+                <li class="{% if child.url == page.url %} active{% endif %}">
+                  <a href="{{ child.url }}">{{ child.data.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
         </li>
-
-        {# Second loop: Show children (if any exist) #}
-        {% if page.children.length > 0 %}
-          <ul>
-            {% for child in page.children %}
-              <li class="{% if child.url == page.url %} active{% endif %}">
-                <a href="{{ child.url }}">{{ child.data.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-
       {% endfor %}
+
     {% endif %}
   </ul>
 </nav>

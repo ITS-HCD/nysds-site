@@ -2,7 +2,6 @@
 permalink: /foundations/utilities/typography/
 title: Typography
 description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
-section: Foundations
 parent: Utilities
 ---
 
