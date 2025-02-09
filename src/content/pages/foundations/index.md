@@ -2,6 +2,7 @@
 permalink: /foundations/
 title: Foundations
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+navOrder: 10
 ---
 
 {% block content %}

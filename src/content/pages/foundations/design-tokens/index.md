@@ -2,6 +2,7 @@
 permalink: /foundations/design-tokens/
 title: "Design Tokens"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+navOrder: 40
 ---
 
 {% block content %}
