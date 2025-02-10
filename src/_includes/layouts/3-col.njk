@@ -1,14 +1,14 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<div class="nys-grid-row nys-grid-gap-6">
-  <aside class="nys-desktop:nys-grid-col-3">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
     {% include "partials/section-nav.njk" %}
   </aside>
-  <div class="nys-desktop:nys-grid-col-6">  
+  <div class="nys-desktop:nys-grid-col-8">  
     {{ content | safe }}
   </div>
-  <aside class="nys-desktop:nys-grid-col-3">
+  <aside class="nys-desktop:nys-grid-col-2">
     {% include "partials/onpage-nav.njk" %}
   </aside>
 </div>

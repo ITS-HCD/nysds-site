@@ -479,6 +479,7 @@ a.card:focus {
     margin-left: calc(var(--nys-space-50) * -1);
 }
 
+
 /* Section Nav Link */
 
 .section-nav__link {
@@ -496,11 +497,13 @@ a.card:focus {
 .section-nav__link:active {
     color: var(--nys-color-link-strong);
 }
+.section-nav__list .section-nav__list .section-nav__item:last-child > .section-nav__link{
+    border-bottom: 0;
+}
 .section-nav__list .section-nav__list .section-nav__link {
     font-size: var(--nys-font-size-ui-sm);
     padding-left: var(--nys-space-400);
 }
-
 
 /* On-Page Navigator */
 
