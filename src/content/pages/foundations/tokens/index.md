@@ -1,5 +1,5 @@
 ---
-permalink: /foundations/design-tokens/
+permalink: /foundations/tokens/
 title: "Design Tokens"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
 navOrder: 40

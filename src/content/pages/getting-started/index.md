@@ -46,7 +46,7 @@ Learn best practices for designing clear, accessible user experiences and using 
 
 For teams working within existing applications, our design tokens for colors, typography, spacing, and more help maintain visual consistency without major overhauls.  
 
-**[About Design Tokens →](/foundations/design-tokens/)**
+**[About Design Tokens →](/foundations/tokens/)**
 
 ### 3. Use the Web Component
 
