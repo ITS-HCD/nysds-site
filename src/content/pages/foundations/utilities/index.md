@@ -6,7 +6,7 @@ description: "Excelsior makes it easier to build accessible, usable websites for
 
 {% block content %}
 
-<h1>Utilities</h1>
+# Utilities
 
 <section class="nys-grid-row nys-grid-gap">
   <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
