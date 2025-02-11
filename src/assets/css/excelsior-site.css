@@ -394,10 +394,22 @@ ex-header__title {
 }
 .card--do {
     background-color: var(--nys-color-success-weak);
+    border-color: var(--nys-color-success-weak);
 }
+
+.card--do h3 {
+    color: var(--nys-color-success);
+}
+
 .card--dont {
     background-color: var(--nys-color-danger-weak);
+    border-color: var(--nys-color-danger-weak);
 }
+
+.card--dont h3 {
+    color: var(--nys-color-danger);
+}
+
 .card__media {
     aspect-ratio: 2 / 1;
     margin-bottom: var(--nys-space-100);
