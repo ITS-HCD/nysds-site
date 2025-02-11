@@ -1,65 +1,17 @@
 ---
 permalink: /foundations/utilities/flex/
-title: Flex utility - Excelsior, New York State's Design System
+title: Flexbox
 description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Foundations
+parent: Utilities
 ---
-{% block styles %}
-<link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
-{% endblock %}
-
-{% block scripts %}
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const navContainer = document.createElement('nav');
-    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
-
-  const navList = document.createElement('ul');
-  navList.classList.add('navigator__list');
-  navContainer.appendChild(navList);
-
-  document.querySelectorAll('h2').forEach((heading) => {
-    const navItem = document.createElement('li');
-    const navLink = document.createElement('a');
-    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
-    
-    // const section = document.createElement('section');
-    // section.id = `${headingId}`;
-    // heading.parentNode.insertBefore(section, heading);
-    // section.appendChild(heading);
-
-    heading.id = headingId;
-    navLink.href = `#${headingId}`;
-    navLink.textContent = heading.textContent;
-    navLink.classList.add('navigator__link');
-    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
-   
-    navItem.appendChild(navLink);
-    navList.appendChild(navItem);
-  });
-
-  const onPageNav = document.getElementById('on-page-nav');
-  if (onPageNav) {
-    onPageNav.appendChild(navContainer);
-  }});
-</script>
-{% endblock %}
 
 # Flexbox
-<div class="nys-grid-row nys-grid-gap-lg">
-  <div class="nys-desktop:nys-grid-col-3">
-    <div class="navigator">
-      <div class="navigator__inner">
-        <div id="navigator-title" class="navigator__title">On this page</div>
-        <div id="on-page-nav"></div>
-      </div>
-    </div>
-  </div>
-  <div class="nys-desktop:nys-grid-col-9">
 
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
 
 ## Flex
+
 <section class="utility" id="flex">
     <section class="utility-examples">  
       <div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
@@ -1113,3 +1065,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 ```
 </details>
 </div>
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

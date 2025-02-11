@@ -1,5 +1,5 @@
 module.exports = {
-  layout: "layouts/base.njk", // Default layout for all components
+  layout: "layouts/3-col.njk",
   eleventyComputed: {
       section: "Foundations",
   },
