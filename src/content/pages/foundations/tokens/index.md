@@ -1,16 +1,16 @@
 ---
-permalink: /design-tokens/
-title: "Excelsior, New York State's Design System"
+permalink: /foundations/tokens/
+title: "Design Tokens"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+navOrder: 40
 ---
-
-{% extends "layouts/base.njk" %}
 
 {% block content %}
 
-<h1>Design Tokens</h1>
+# Design Tokens
 
 ## Space
+
 Spacing tokens standardize margins, padding, and gaps in layouts. 
 
 | Example | Description                                                                      | Token              |

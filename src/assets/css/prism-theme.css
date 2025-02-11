@@ -1,0 +1,160 @@
+/**
+ * prism.js Excelsior theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://www.npmjs.com/package/prismjs-coy-theme
+ */
+
+
+/* Monaspace Neon: Regular */
+@font-face {
+    font-family: 'Monaspace Neon';
+    src: url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff') format('woff'),
+        url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Monaspace Neon: Bold */
+@font-face {
+    font-family: 'Monaspace Neon';
+    src: url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff') format('woff'),
+        url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+/*********************************************************
+* General
+*/
+pre[class*="language-"],
+code[class*="language-"] {
+  color: var(--nys-color-ink);
+  font-size: var(--nys-font-size-body-sm);
+  text-shadow: none;
+  font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection,
+pre[class*="language-"]::mozselection,
+code[class*="language-"]::mozselection {
+  text-shadow: none;
+  background: var(--nys-color-neutral-100);
+}
+@media print {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+}
+pre[class*="language-"] {
+  padding: var(--nys-space-200);
+  margin: var(--nys-space-100) 0;
+  overflow: auto;
+  background: var(--nys-color-white);
+}
+:not(pre) > code[class*="language-"] {
+  padding: var(--nys-space-1px) var(--nys-space-2px);
+  border-radius: var(--nys-radius-md);
+  color: var(--nys-color-red-600);
+  background: var(--nys-color-neutral-10);
+}
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: .7;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--nys-color-neutral-400);
+}
+.token.punctuation {
+  color: var(--nys-color-neutral-400);
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--nys-color-neutral-400);
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--nys-color-red-600);
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--nys-color-neutral-500);
+  background: var(--nys-color-white);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--nys-color-blue-600);
+}
+.token.function {
+  color: var(--nys-color-red-600);
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--nys-color-green-500);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+/*********************************************************
+* Line highlighting
+*/
+pre[data-line] {
+  position: relative;
+}
+pre[class*="language-"] > code[class*="language-"] {
+  position: relative;
+  z-index: 1;
+}
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: var(--nys-space-200);
+  background: var(--nys-color-neutral-10);
+  box-shadow: inset 5px 0 0 var(--nys-color-yellow-400);
+  z-index: 0;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}

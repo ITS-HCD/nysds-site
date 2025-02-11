@@ -1,4 +1,5 @@
 ---
+permalink: /components/radiobutton/
 title: Radiobutton
 description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
@@ -97,6 +98,20 @@ The <code class="language-js">nys-radiobutton</code> component includes the foll
 </nys-radiogroup>
 
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
+  <nys-radiobutton disabled name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked ></nys-radiobutton>
+  <nys-radiobutton disabled name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2"></nys-radiobutton>
+  <nys-radiobutton disabled name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3"></nys-radiobutton>
+</nys-radiogroup>
+
+```
+
+</details>
+
 ### Size
 Set the `size` prop of the `nys-radiogroup` to have all `nys-radiobutton` be the same size. Our current sizes are:
 
@@ -109,6 +124,21 @@ Set the `size` prop of the `nys-radiogroup` to have all `nys-radiobutton` be the
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
 </nys-radiogroup>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-radiogroup size="sm" label="Select your agency" description="This is the agency, department, or office you work for.">
+  <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
+  <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
+  <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
+</nys-radiogroup>
+
+```
+
+</details>
+
+
 ### Error
 To display an error message, pass in the `showError` property to the `nys-radiogroup` component. Setting `errorMessage` does not display the message without `showError` set to true.
 
@@ -116,6 +146,18 @@ To display an error message, pass in the `showError` property to the `nys-radiog
   <nys-radiobutton   name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton> <nys-radiobutton   name="office"   label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
 </nys-radiogroup>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-radiogroup required showError errorMessage="You must select one of the above options to continue" label="What is your primary work location?" description="This is the location you use for your in office days." >
+  <nys-radiobutton name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+</nys-radiogroup>
+
+```
+
+</details>
 
 ### Slotted Description
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
@@ -131,6 +173,24 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
   </nys-radiobutton>
 </nys-radiogroup>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-radiogroup label="What is your primary work location?">
+  <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
+  <nys-radiobutton name="office" label="Albany" value="albany">
+    <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">Upstate New York</a></label>      
+  </nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" value="manhattan">
+    <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
+  </nys-radiobutton>
+</nys-radiogroup>
+```
+
+</details>
+
 
 {% endblock %}
 

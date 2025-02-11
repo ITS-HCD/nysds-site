@@ -22,6 +22,7 @@ const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 // collections
 const updates = require("./src/_11ty/collections/updates.js");
 const components = require("./src/_11ty/collections/components.js");
+const sections = require("./src/_11ty/collections/sections.js");
 
 module.exports = (eleventyConfig) => {
 
@@ -40,21 +41,13 @@ module.exports = (eleventyConfig) => {
     // collections
     eleventyConfig.addCollection("updates", updates);
     eleventyConfig.addCollection("components", components);
+    eleventyConfig.addCollection("sections", sections);
 
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);
     eleventyConfig.addPlugin(eleventyPluginRss);
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(timeToRead, { style: 'short' });
-    // Plugin for Lit and 11ty to print the components to the screen, does not hydrate
-    // eleventyConfig.addPlugin(litPlugin, {
-    //     mode: 'worker',
-    //     componentModules: [
-    //         './src/assets/js/nys-alert/nys-alert.js',
-    //         './src/assets/js/nys-button/nys-button.js',
-    //     ],
-    //   });
-
     // watch for changes to css
     eleventyConfig.addWatchTarget("./src/css/");
 
@@ -66,8 +59,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/assets/css/");
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
+    eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
+    eleventyConfig.addPassthroughCopy("./CNAME"); 
 
-    // eleventyConfig.addPassthroughCopy("./node_modules/"); // pull in node_modules for use in lit templating
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
     })
@@ -85,11 +79,4 @@ module.exports = (eleventyConfig) => {
         markdownTemplateEngine: "njk"
     };
 
-    // Routes
-    return {
-        dir: {
-            input: "src",
-            output: "public",
-        },
-    };
 };

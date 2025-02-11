@@ -46,9 +46,12 @@
       {%- block example %}{% endblock -%}
     </section>
     <section id="examplecode">
+      <details>
+        <summary>Example Code</summary>
       {% highlight "html" %}
       {%- block examplecode %}{% endblock -%}
       {% endhighlight %}
+      </details>
     </section>
     <section id="usage">
       <h2>Usage</h2>
@@ -56,13 +59,13 @@
     </section>
     <div class="nys-grid-row nys-grid-gap">
       <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card nys-flex-fill">
+        <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
           {%- block usagedo %}{% endblock -%}
         </div>
       </div>
       <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card nys-flex-fill">
+        <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
           {%- block usagedont %}{% endblock -%}
         </div>

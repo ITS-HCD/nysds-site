@@ -4,6 +4,7 @@
     <title>{% if section != 'home' %}{% if title %}{{ title | safe }} - {% endif %}{% endif %}{{ site.title }}</title>
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}   
     <link rel="canonical" href="{{ site.url }}{{page.url}}">
+    <link rel="icon" type="image/svg+xml" href="{{ site.url }}/favicon.svg" />
 
     <meta name=”robots” content=”noindex”>
 
@@ -22,7 +23,7 @@
     <link rel="preload" href="{{ site.url | url }}/assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="{{ site.url | url}}/assets/fonts/excelsior-fonts.css" rel="stylesheet">    
     <link href="{{ site.url | url}}/pagefind/pagefind-ui.css" rel="stylesheet">
-    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-coy.css"rel="stylesheet">
+    <link href="{{ site.url | url }}/assets/css/prism-theme.css"rel="stylesheet">
     <link href="{{ site.url | url }}/assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
     <link href="{{ site.url | url }}/assets/css/excelsior-site.css" rel="stylesheet">    
 

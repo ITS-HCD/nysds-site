@@ -23,6 +23,12 @@ ul, ol {
     list-style: none;
 }  
 
+/* Tweaking USWDS Defaults */
+
+.nys-grid-container {
+    max-width: 80em;
+}
+
 /* === Global Styles */
 /* These really need to be defined in excelsior.css */
 
@@ -40,7 +46,7 @@ small {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--nys-font-family-heading);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h1 {
@@ -282,6 +288,10 @@ a:active {
 /* Section Header */
 
 .section-header {
+    background-color: var(--nys-color-theme-weaker);
+    color: var(--nys-color-theme-strong, #fff);
+}
+.section-components .section-header {
     background-color: var(--nys-color-theme-strong);
     color: var(--nys-color-theme-weak, #fff);
 }
@@ -382,6 +392,12 @@ ex-header__title {
     color: inherit;
     display: block;
 }
+.card--do {
+    background-color: var(--nys-color-success-weak);
+}
+.card--dont {
+    background-color: var(--nys-color-danger-weak);
+}
 .card__media {
     aspect-ratio: 2 / 1;
     margin-bottom: var(--nys-space-100);
@@ -402,6 +418,7 @@ ex-header__title {
 .card__title, .card__desc {
     text-decoration: none;
     margin-left: var(--nys-space-100);
+    line-height: var(--nys-font-lineheight-sm);
 }
 .card::after {
     content: "";
@@ -425,29 +442,92 @@ a.card:focus {
 }
 
 
-/* On-Page Navigator */
-.navigator {
+/* Section Navigator */
+
+.section-nav {
     position: sticky;
-    padding-top: var(--nys-space-500);
-    padding-bottom: var(--nys-space-200);
-    top: var(--nys-space-300);
-    display: none;
+    top: var(--nys-space-600);
+    margin-top: var(--nys-space-600);
+    margin-bottom: var(--nys-space-200);
+    border: solid var(--nys-size-2px) var(--nys-color-neutral-50);
+    border-radius: var(--nys-radius-md);
+    font-size: var(--nys-font-size-ui-md);
+    overflow: hidden;
+}
+.section-nav__list {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navigator__title {
+/* Section Nav Item */
+.section-nav__item {
+    position: relative;
+    margin: 0;
+}
+.section-nav__item:first-child {
+    border-top: none;
+}
+.section-nav__item--active {
+    font-weight: bold;
+}
+.section-nav__item--active-section {
+    border-left: solid var(--nys-size-50) var(--nys-color-neutral-50);
+}
+.section-nav__item--active-section .section-nav__link {
+    margin-left: calc(var(--nys-space-50) * -1);
+}
+
+
+/* Section Nav Link */
+
+.section-nav__link {
+    display: block;
+    text-decoration: none;
+    color: var(--nys-color-ink);
+    padding: var(--nys-space-100) var(--nys-space-200);
+    border-bottom: solid 1px var(--nys-color-neutral-50);
+}
+.section-nav__link:hover,
+.section-nav__link:focus {
+    color: var(--nys-color-link);
+    text-decoration: underline;
+}
+.section-nav__link:active {
+    color: var(--nys-color-link-strong);
+}
+.section-nav__list .section-nav__list .section-nav__item:last-child > .section-nav__link{
+    border-bottom: 0;
+}
+.section-nav__list .section-nav__list .section-nav__link {
+    font-size: var(--nys-font-size-ui-sm);
+    padding-left: var(--nys-space-400);
+}
+
+/* On-Page Navigator */
+
+.onpage-nav {
+    position: sticky;
+    top: var(--nys-space-600);
+    margin-top: var(--nys-space-600);
+    margin-bottom: var(--nys-space-200);
+}
+
+.onpage-nav__title {
     font-size: var(--nys-font-size-sm);
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: var(--nys-space-200);
 }
 
-.navigator__list {
+.onpage-nav__list {
     position: relative;
     margin-left: 0;
     padding: 0;
 }
 
-.navigator__list::before {
+.onpage-nav__list::before {
     content: '';
     background: var(--nys-color-neutral-50);
     width: var(--nys-border-width-lg);
@@ -457,30 +537,30 @@ a.card:focus {
     position: absolute;
 }
 
-.navigator__item {
+.onpage-nav__item {
     position: relative;
     list-style: none;
     margin: 0;
     padding: var(--nys-space-100) var(--nys-space-200);
 }
 
-.navigator__link {
+.onpage-nav__link {
     display: block;
     text-decoration: none;
     color: var(--nys-color-neutral-600);
 }
 
-.navigator__link:hover {
+.onpage-nav__link:hover {
     color: var(--nys-color-theme);
     text-decoration: underline;
 }
 
 /* Active State */
-.navigator__item--active {
+.onpage-nav__item--active {
     position: relative;
     font-weight: bold;
 }
-.navigator__item--active::before {
+.onpage-nav__item--active::before {
     content: '';
     background: var(--nys-color-theme);
     width: var(--nys-border-width-lg);
@@ -490,7 +570,7 @@ a.card:focus {
     top: 0;
     position: absolute;
 }
-.navigator__item--active .navigator__link {
+.onpage-nav__item--active .onpage-nav__link {
     color: var(--nys-color-theme);
 }
 
@@ -547,6 +627,7 @@ a.card:focus {
     color: var(--nys-color-ink-reverse);
     background-color: var(--nys-color-theme-strong);
     border-color: var(--nys-color-theme-strong);
+    cursor: pointer;
 }
 .nys-button:active {
     color: var(--nys-color-ink-reverse);
@@ -554,6 +635,11 @@ a.card:focus {
     border-color: var(--nys-color-theme-stronger);
 }
 
+.nys-button--sm {
+    padding: var(--nys-space-100);
+    font-size: var(--nys-font-size-ui-sm);
+    line-height: var(--nys-font-lineheight-ui-sm);
+}
 .nys-button--outline {
     color: var(--nys-color-theme);
     background-color: transparent;
@@ -576,15 +662,48 @@ a.card:focus {
     margin-left: var(--nys-space-150);
 }
 
+code {
+    font-family: "Monaspace Neon";
+}
+
+details {
+    margin-top: var(--nys-space-150);
+    border: 1px solid var(--nys-color-neutral-200);
+    border-radius: var(--nys-radius-md);
+    position: relative;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: var(--nys-space-150);
+    border-radius: var(--nys-radius-md);
+}
+
+summary:hover {
+    background-color: var(--nys-color-theme-weaker);
+}
+
+/* Icon display tweaks */
+
+.icon-examples .card:hover {
+    cursor: pointer;
+    border-color: var(--nys-color-theme-stronger);
+}
+
+.icon-examples .card__title,
+.icon-examples .card__desc {
+    text-align: center;
+}
+
+.icon-examples .card__desc {
+    font-size: var(--nys-font-size-sm);
+    margin-left: 0;
+}
 
 /* Syntax highlighting plugin tweaks */
 
 /* Remove the curly "peel" shadows from the bottom of code snippets */
 pre[class*="language-"]:before, pre[class*="language-"]:after {
     box-shadow: none !important;
-}
-
-/* Add some vertical padding to the code blocks */
-pre[class*="language-"] > code {
-    padding: 1em;
 }

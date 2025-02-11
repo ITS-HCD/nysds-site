@@ -1,118 +1,127 @@
 ---
+permalink: /components/global-header/
 title: Global Header
-description: 
+description: Provide users with consistent access to key features, branding, and primary navigation across all pages.
 image: 
-draft: true
 ---
 
 {% extends "layouts/component.njk" %}
 
+
 {% block longdescription %}
-The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.
+
+The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reusable web component for use in New York State digital products. It helps provide users with consistent access to key features, branding, and primary navigation across all pages.
+
 {% endblock %}
 
 {% block example %}
-<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
+
+<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+</nys-globalheader>
 {% endblock %}
 
 {% block examplecode %}
-<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
+
+<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+</nys-globalheader>
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
-  - When you need to collect data from a dropdown
-  - When you need to provide a list of options for users to select a single option from
-### When to consider something else
-  - When you need to collect multiple items from a list
+ - nys-globalheader application header should be used at the top of all agency related sites and applications.
+ ### When to consider something else
+ - If an application is not for a single agency, the Agency Name can be removed.
+
 {% endblock %}
 
 {% block usagedo %}
-  - Use the `nys-option` component to define the options in the dropdown
+
+ - Use `agencyName` as stand alone if public-facing site and not in the context of a specific application.
+ - Use `appName` if this is an application
 {% endblock %}
 
 {% block usagedont %}
-<ul>
-<li><p>Don't use the native `&lt;option&gt;` element in the `nys-select` component</p></li>
-</ul>
+
+  - Don't use `appName` for an agency name.
 {% endblock %}
 
 {% block accessibility %}
-The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:
 
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.
-  - Keyboard navigation support, allowing users to tab to the `nys-select` using the keyboard and spacebar to select an option.
-  - Visual focus indicators to help users navigate the component.
-  - Include a label property to provide accessible text for screen readers.
+The <code class="language-js">nys-globalheader</code> component includes the following accessibility-focused features:
+
+ - Proper use of &lt;header&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
+ - Keyboard navigation: Users can tab through all links in the header.
 {% endblock %}
 
 {% block options %}
-### Disabled
 
-<nys-select label="Select your favorite borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
+### With Links
+
+For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (`<ul>`) inside the nys-globalheader slot. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired destination.
+
+Use the prop `homepageLink` to link your `agencyName` to your homepage. If `homepageLink` is not provided, default fallback is `window.location.origin` otherwise (use `disableHomepageLink` to disable the homepage link).
+
+<nys-icon name="info"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.
+
+<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
+  <ul>
+    <li><a href="https://its.ny.gov/services">Services</a></li>
+    <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
+    <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
+    <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
+    <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
+    <li><a href="https://its.ny.gov/about-us">About Us</a></li>
+  </ul>
+</nys-globalheader>
 
 <details>
   <summary>Code</summary>
-  {% highlight "html" %}
-<nys-select label="Select your favorite borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-{% endhighlight %}
+
+```html
+<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
+  <ul>
+    <li><a href="https://its.ny.gov/services">Services</a></li>
+    <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
+    <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
+    <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
+    <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
+    <li><a href="https://its.ny.gov/about-us">About Us</a></li>
+  </ul>
+</nys-globalheader>
+```
 
 </details>
 
-### Width
-The following width options are available:
+### Just Agency Name
 
-  - `sm` (Small): 88px, ideal for compact layouts.
-  - `md` (Medium): 200px, ideal for balanced designs.
-  - `lg` (Large): 384px, suitable for displaying longer content.
-  - `full` (Full Width): default size. Expands to fill the available space.
+<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+</nys-globalheader>
 
+<details>
+  <summary>Code</summary>
 
-<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
-  <nys-option value="sm" label="sm"></nys-option>
-  <nys-option value="md" label="md"></nys-option>
-  <nys-option value="lg" label="lg"></nys-option>
-  <nys-option value="full" label="full"></nys-option>
-</nys-select>
+```html
+<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+</nys-globalheader>
+```
 
+</details>
 
+### Just Application Name
 
+<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
+</nys-globalheader>
 
-### Error Message
-To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
+<details>
+  <summary>Code</summary>
 
+```html
+<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
+</nys-globalheader>
+```
 
-<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
+</details>
 
 
 {% endblock %}
@@ -128,91 +137,28 @@ To display an error message, pass in the `showError` property to the `nys-select
   </thead>
   <tbody>
     <tr>
-      <td><code>label</code></td>
+      <td><code>agencyName</code></td>
       <td>string</td>
     </tr>
     <tr>
-      <td><code>value</code></td>
+      <td><code>appName</code></td>
       <td>string</td>
     </tr>
     <tr>
-      <td><code>id</code></td>
-      <td>string</td>
+      <td><code>homepageLink</code></td>
+      <td>string (URL)</td>
     </tr>
     <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
+      <td><code>disableHomepageLink</code></td>
       <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ("sm", "md", "lg", "full")</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
     </tr>
   </tbody>
 </table>
 
 {% endblock %}
 
-{% block cssvariables %}
-[[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+{% block cssvariables %}{% endblock %}
 
-{% endblock %}
-
-{% block events %}
-<p>The <code class="language-js">nys-select</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the select gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the select loses focus.</li>
-</ol>
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the select component
-  const select = document.querySelector('nys-select');
-
-  // Listen for the 'change' event
-  select.addEventListener('change', (event) => {
-    console.log('Select changed:', event.target.checked);
-  });
-{% endhighlight %}
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

@@ -1,4 +1,5 @@
 ---
+permalink: /components/alert/
 title: Alert
 description: An alert displays a prominent message, with optional links, at the top of the screen.
 image: /assets/img/components/alert.svg
@@ -9,12 +10,14 @@ image_alt: An illustration of an alert message.
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 Alert banners are designed to display critical information, updates, or warnings that require the user's attention.
 
 The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
 {% endblock %}
 
 {% block example %}
+
 <nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <br>
 <nys-alert type="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
@@ -29,6 +32,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-alert
   type="base"
   heading="Default status"
@@ -56,6 +60,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
 
   - Use nys-alert to communicate important, time-sensitive information to users in a visually prominent way.
@@ -66,12 +71,14 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
   - If the information is not time-sensitive or critical, consider using a less intrusive component, such as a tooltip or inline message.
   - Avoid using alerts for repetitive or non-actionable content that could frustrate users.
-%% Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. %%
-%% - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component) %%
-%%  - For notifications outside the page context, consider using a toast or modal component instead. %%
+
+<!-- Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. -->
+<!-- - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component)  -->
+<!-- - For notifications outside the page context, consider using a toast or modal component instead.  -->
 {% endblock %}
 
 {% block usagedo %}
+
   - Keep the alert content concise and focused on the message.
   - Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.
   - Make alerts dismissible unless they contain critical information or an important step users need to take.
@@ -84,6 +91,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block usagedont %}
+
 - Don't remove the left icon; the icon is required for accessibility.
 - Do not use an alert to call attention to what a user needs to do in a screen instead of making the action clear in the screen itself.
 - Do not use error messages to communicate form field validation issues; use field error states instead.
@@ -95,6 +103,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-alert</code> component includes the following accessibility-focused features:
 
   - Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
@@ -141,11 +150,20 @@ The <code class="language-js">nys-alert</code> component includes the following 
 {% endblock %}
 
 {% block options %}
+
 ### Custom text description
 
 <nys-alert type="success" heading="Custom Descriptions">
 <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert type="success" heading="Custom Descriptions">
+<p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
+```
+</details>
 
 ### Dismissible
 
@@ -157,13 +175,33 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
   <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
 </nys-alert>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert type="info" heading="Information status" dismissible>
+  <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+</nys-alert>
+```
+
+</details>
+
 ### Duration
 
 Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
-<button onclick="showAlert()">Open alert</button>
+<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
 
 <div class="alert-container"></div>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
+```
+
+</details>
 
 ### Icon Customization
 
@@ -176,6 +214,22 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   icon="ac_unit">
 </nys-alert>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert 
+  type="emergency" 
+  heading="Winter storm warning: Dec 10th, 2024."
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
+  icon="ac_unit">
+</nys-alert>
+```
+
+</details>
+
+
+
 ### Heading only
 
 You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
@@ -184,6 +238,18 @@ You may find having just a heading without description as a good compact version
   type="info"
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-alert 
+  type="info"
+  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+</nys-alert>
+```
+
+</details>
 
 {% endblock %}
 
@@ -235,6 +301,7 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -254,6 +321,7 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block events %}
+
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -276,14 +344,3 @@ You can listen to these events using JavaScript:
 {% endblock %}
 
 {% block updates %}{% endblock %}
-
-
-
-
-
-
-{% block styles %}
-{% endblock %}
-
-{% block scripts %}
-{% endblock %}

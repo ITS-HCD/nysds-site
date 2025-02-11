@@ -1,16 +1,18 @@
 ---
 permalink: /foundations/accessibility/
-title: "Accessibility - Excelsior, New York State's Design System"
+title: "Accessibility"
 description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+section: "Foundations"
+navOrder: 20
 ---
-
-{% extends "layouts/base.njk" %}
 
 {% block content %}
 
 <h1>Accessiblilty</h1>
 
-<h2>What Is Web Accessibility?</h2>
+<section id="what-is-web-accessibility">
+
+  <h2>What Is Web Accessibility</h2>
 
 <p>Web accessibility is about making websites, digital services, and online content usable by
 everyone, including people with disabilities. Building with accessibility in mind is about removing
@@ -32,7 +34,8 @@ determining if web content is accessible to all users, no matter the disability 
   "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
 </blockquote>
 <cite>– Sir Tim Berners-Lee</cite>
-
+</section>
+<section id="accessibility-policy">
 <h2>Accessibility Policy</h2>
 <h3>Current ITS Policy</h3>
 <p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
@@ -45,7 +48,8 @@ determining if web content is accessible to all users, no matter the disability 
   <li><strong>Accessibility Testing</strong>: Conduct manual accessibility testing of ICT before production use and prior to any significant changes. Incorporate this testing into a standard development and QA process with key milestones.</li>
   <li><strong>Documentation and Records</strong>: Keep documented testing reports for each ICT and maintain an updated list of all ICTs along with their current compliance status. Clearly display a link labeled “Accessibility” in the footer of the SE's website home page, providing contact information for accessibility inquiries. </li>
 </ul>
-
+</section>
+<section id="learning-resources">
 <h2>Learning Resources</h2>
 <h3>Getting Started</h3>
 <ul>
@@ -92,12 +96,43 @@ determining if web content is accessible to all users, no matter the disability 
   <li><a href="https://www.w3.org/WAI/media/av/">Audio / Video Accessibility – Making audio and video media accessible </a></li>
   <li><a href="https://www.w3.org/WAI/tutorials/images/complex/">Complex Images – Making charts, infographics, and maps accessible </a></li>
 </ul>
+</section>
 
-
-{% endblock %}
-
-{% block styles %}
 {% endblock %}
 
 {% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navContainer = document.createElement('nav');
+    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
+
+  const navList = document.createElement('ul');
+  navList.classList.add('navigator__list');
+  navContainer.appendChild(navList);
+
+  document.querySelectorAll('h2').forEach((heading) => {
+    const navItem = document.createElement('li');
+    const navLink = document.createElement('a');
+    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+    
+    // const section = document.createElement('section');
+    // section.id = `${headingId}`;
+    // heading.parentNode.insertBefore(section, heading);
+    // section.appendChild(heading);
+
+    heading.id = headingId;
+    navLink.href = `#${headingId}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add('navigator__link');
+    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
+   
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  });
+
+  const onPageNav = document.getElementById('on-page-nav');
+  if (onPageNav) {
+    onPageNav.appendChild(navContainer);
+  }});
+</script>
 {% endblock %}

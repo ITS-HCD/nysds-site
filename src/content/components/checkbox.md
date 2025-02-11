@@ -1,4 +1,5 @@
 ---
+permalink: /components/checkbox/
 title: Checkbox
 description: A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.
 image: /assets/img/components/checkbox.svg
@@ -9,6 +10,7 @@ image_header: /assets/img/components/checkbox-header.svg
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
  - Optional: <code class="language-js">&lt;nys-checkboxgroup&gt;</code> can be used to group multiple checkboxes so they function as a single form control.
@@ -16,6 +18,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block example %}
+
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
   <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
@@ -28,6 +31,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block examplecode %}
+
 <nys-checkboxgroup
   label="Select your favorite New York landmarks"
   description="Choose from the options below"
@@ -47,6 +51,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block usage %}
+
 ### When to use this component
   - When collecting binary answers in a form.
   - When obtaining confirmation from users.
@@ -58,16 +63,19 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block usagedo %}
+
   - Use checkboxes for binary decisions (agree/disagree).
   - Use checkboxes for multi-select lists (like selecting interests).
 {% endblock %}
 
 {% block usagedont %}
+
  - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).
  - Don't change status of another checkbox when another one is clicked.
 {% endblock %}
 
 {% block accessibility %}
+
 The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.
@@ -77,6 +85,7 @@ The <code class="language-js">nys-checkbox</code> component includes the followi
 {% endblock %}
 
 {% block options %}
+
 ### Checkbox group
 
 The <code class="language-js">nys-checkboxgroup</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
@@ -86,9 +95,30 @@ The <code class="language-js">nys-checkboxgroup</code> component can be used to 
   <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
 </nys-checkboxgroup>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
+  <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
+  <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
+</nys-checkboxgroup>
+
+```
+</details>
+
 ### Disabled
 
 <nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>
+
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable."></nys-checkbox>
+
+```
+</details>
 
 ### Size
 
@@ -107,6 +137,23 @@ Set the size property of the <code class="language-js">nys-checkboxgroup</code> 
   <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-checkboxgroup size="sm" label="Select your favorite New York landmarks" description="Choose from the options below" >
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup>
+
+```
+</details>
+
+
 ### Error
 
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
@@ -119,6 +166,20 @@ Errors can be assigned to both <code class="language-js">nys-checkboxgroup</code
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-checkboxgroup showError errorMessage="You must select at least one option to continue." label="Select your favorite New York landmarks" description="Choose from the options below" >
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
+</nys-checkboxgroup>
+
+```
+</details>
+
+
 ### Slotted Description
 
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
@@ -127,6 +188,16 @@ When the description requires more complexity than a simple string, use the desc
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>
 
+<details>
+<summary>Example Code</summary>
+
+```html
+<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
+  <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
+</nys-checkbox>
+
+```
+</details>
 
 {% endblock %}
 
@@ -190,6 +261,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block cssvariables %}
+
 [[TODO]]
 <table>
   <thead>
@@ -209,6 +281,7 @@ When the description requires more complexity than a simple string, use the desc
 {% endblock %}
 
 {% block events %}
+
 <p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>
