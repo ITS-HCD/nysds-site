@@ -1,7 +1,7 @@
 ---
 permalink: /foundations/tokens/
 title: "Design Tokens"
-description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+description: "NYSDS makes it easier to build accessible, usable websites for New York State."
 navOrder: 40
 ---
 
@@ -75,7 +75,7 @@ Spacing tokens standardize margins, padding, and gaps in layouts.
 
 ## Color
 **Overridden by agency-specific themes.**
-All of the below colors automatically adapt to the agency when set. In the future additional modes may be supported for each agency such as a dark mode, high contrast mode, or colorblind optimized mode. By making use of Excelsior color variables it will enable quick adoption of future accessibility modes.
+All of the below colors automatically adapt to the agency when set. In the future additional modes may be supported for each agency such as a dark mode, high contrast mode, or colorblind optimized mode. By making use of NYSDS color variables it will enable quick adoption of future accessibility modes.
 
 Change the Agency theme above to see how these colors adapt to each agency.
 

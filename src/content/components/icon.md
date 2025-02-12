@@ -10,7 +10,7 @@ image_alt: An illustration of an icon.
 
 {% block longdescription %}
 
-An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely conveny meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual informaiton. Excelsior includes a curated subset of the Google Material Symbols rounded icon set.
+An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely conveny meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual informaiton. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
 {% endblock %}
 
 {% block example %}
@@ -136,7 +136,7 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
   - **Include a visual text label paired with the icon**; only a very few icons are consistently understood universally across the digital-using public of the world; among them a house for home, printer for printing, and magnifying glass for search. Combine icons with text to improve clarity.
   - **Be consistent with icon meaning.** When an icon appears multiple times within a page or across pages of an application, it should represent the same concept and have identical text descriptions in every instance. For example, if a blank paper icon means "new document" across most screens, don't use it to mean "reformat document" elsewhere. This consistency benefits users with cognitive disabilities, helps those who may be distracted or scanning the page, and improves the overall user experience.
   - Align icons vertically with accompanying typography.
-  - Prefer icons that are included in the Excelsior icon library; use Google Material Symbol rounded unfilled icons if you must use an icon not in the library. If you have a need for an icon not in the library, please contact the Excelsior Design System team in MS Teams Excelsior Troubleshooting channel for advisement on which icon is best for your use case.
+  - Prefer icons that are included in the NYSDS icon library; use Google Material Symbol rounded unfilled icons if you must use an icon not in the library. If you have a need for an icon not in the library, please contact the NYSDS Design System team in MS Teams NYSDS Troubleshooting channel for advisement on which icon is best for your use case.
   - Test icons for recognition and memorability with representative users of your application or website.
   - Use icons to enhance user interfaces with clear, recognizable icons.
   - Use appropriate icons align with the purpose and context of the UI elements they accompany.

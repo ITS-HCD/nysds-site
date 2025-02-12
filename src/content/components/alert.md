@@ -4,8 +4,8 @@ title: Alert
 description: An alert displays a prominent message, with optional links, at the top of the screen.
 image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
+navOrder: 2
 ---
-
 
 {% extends "layouts/component.njk" %}
 
@@ -73,7 +73,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
   - Avoid using alerts for repetitive or non-actionable content that could frustrate users.
 
 <!-- Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. -->
-<!-- - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component)  -->
+<!-- - To communicate a notification such as a change in system status consider using a toast instead (Note: NYSDS does not currently contain a toast component)  -->
 <!-- - For notifications outside the page context, consider using a toast or modal component instead.  -->
 {% endblock %}
 

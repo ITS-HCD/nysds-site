@@ -30,7 +30,7 @@ ul, ol {
 }
 
 /* === Global Styles */
-/* These really need to be defined in excelsior.css */
+/* These really need to be defined in nysds.css */
 
 /* === Typography */
 
@@ -370,7 +370,7 @@ a:active {
     margin-bottom: var(--nys-space-250);
 }
 
-/* Excelsior Subheader */
+/* nysds Subheader */
 .ex-header {
     margin-bottom: var(--nys-space-200);
     background-color: var(--nys-color-theme-strong);

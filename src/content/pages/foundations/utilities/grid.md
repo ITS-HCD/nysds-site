@@ -1,9 +1,10 @@
 ---
 permalink: /foundations/utilities/grid/
 title: Layout Grid
-description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Foundations
 parent: Utilities
+layout: layouts/3-col.njk
 ---
 
 {% block content %}

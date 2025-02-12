@@ -1,9 +1,10 @@
 ---
 permalink: /foundations/utilities/flex/
 title: Flexbox
-description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Foundations
 parent: Utilities
+layout: layouts/3-col.njk
 ---
 
 # Flexbox
@@ -1064,7 +1065,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 ```
 </details>
-</div>
+
 
 
 {% block styles %}

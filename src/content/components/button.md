@@ -46,7 +46,7 @@ A button is used for actions that have an immediate result inside an application
 
   - Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the Excelsior Design System team.
+  - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.
 {% endblock %}
 
 {% block accessibility %}

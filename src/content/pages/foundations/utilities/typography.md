@@ -1,8 +1,9 @@
 ---
 permalink: /foundations/utilities/typography/
 title: Typography
-description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 parent: Utilities
+layout: layouts/3-col.njk
 ---
 
 {% block content %}
@@ -11,25 +12,25 @@ parent: Utilities
 
 # Typography
 
-Typography is a core pillar of the Excelsior Design System, providing a consistent foundation for readability, accessibility, and brand alignment across all New York State digital applications.
+Typography is a core pillar of the New York State Design System, providing a consistent foundation for readability, accessibility, and brand alignment across all New York State digital applications.
 
 ## Overview 
 
-<p>Typography in Excelsior is powered by the core fonts that define the New York State brand. These include:</p>
+<p>Typography in NYSDS is powered by the core fonts that define the New York State brand. These include:</p>
 <ul>
 <li><strong>Proxima Nova</strong>: The primary typeface for body text and UI elements.</li>
 <li><strong>D Sari</strong>: The brand font used for agency, program, and initiative titles.</li>
 <li><strong>Oswald</strong>: A supporting typeface for content-heavy websites (optional).</li>
 </ul>
 
-<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source Excelsior Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/excelsior-fonts" rel="nofollow">Excelsior Fonts</a> <em>(internal)</em>. However, Excelsior provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
+<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYSDS Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow">NYSDS Fonts</a> <em>(internal)</em>. However, NYSDS provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
 
 </section>
 <section id="typography-tokens">
 
 ## Typography Tokens
 
-<p>Excelsior defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
+<p>NYSDS defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
 
 ### Primitive
 
@@ -40,7 +41,7 @@ Typography is a core pillar of the Excelsior Design System, providing a consiste
 
 <p>Semantic tokens map specific properties to specific roles, like headings, body text, and UI elements.</p>
 <p>✅ They <strong>are</strong> meant to be used directly in stylesheets. They help standardize font usage across components and applications.</p>
-<p>Here are a few examples of Excelsior's semantic typography tokens:</p>
+<p>Here are a few examples of NYSDS' semantic typography tokens:</p>
 
 <table>
   <thead>
@@ -81,19 +82,19 @@ Typography is a core pillar of the Excelsior Design System, providing a consiste
 
 <p>To access these fonts:</p>
 <ol>
-<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/excelsior-fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">Excelsior Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
+<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">NYSDS Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
 <li>Extract the fonts into your project.</li>
-<li>Reference the provided <code class="css-1kwwth4">excelsior-fonts.css</code> in the HTML head of your project:</li>
+<li>Reference the provided <code class="css-1kwwth4">nysds-fonts.css</code> in the HTML head of your project:</li>
 </ol>
 
 {% highlight "html" %}
 
-<link rel="stylesheet" href="/assets/fonts/excelsior-fonts.css">
+<link rel="stylesheet" href="/assets/fonts/nysds-fonts.css">
 
 
 {% endhighlight %}
 
-<p>Excelsior web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using Excelsior tokens below.</p>
+<p>NYSDS web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.</p>
 
 ### Preload Critical Fonts (optional)
 
@@ -113,8 +114,8 @@ Typography is a core pillar of the Excelsior Design System, providing a consiste
 
 ## Using Typography in a Project
 
-<p>Excelsior's native web components use the typography tokens.</p>
-<p>If you're not using Excelsior components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.</p>
+<p>NYSDS' native web components use the typography tokens.</p>
+<p>If you're not using NYSDS components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.</p>
 
 ### Tokens
 
@@ -131,12 +132,12 @@ body {
 {% endhighlight %}
 
 <p>Unfortunately, each property must be set individually, as CSS does not support setting multiple properties at once with <code>var()</code>.</p>
-<p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, Excelsior provides utility classes.</p>
+<p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, NYSDS provides utility classes.</p>
 
 ### Utility Classes
 
-<p>Excelsior also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
-<p>For example, Excelsior define several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
+<p>NYSDS also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
+<p>For example, NYSDS defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
 
 {% highlight "css" %}
 .nys-font-h1 {
@@ -152,9 +153,9 @@ body {
 
 {% highlight "html" %}
 
-<h1 class="nys-font-h1">Welcome to Excelsior</h1>
+<h1 class="nys-font-h1">Welcome to NYSDS</h1>
 <div class="nys-font-body">
-  <p>This is a sample paragraph styled using Excelsior typography utilities.</p>
+  <p>This is a sample paragraph styled using NYSDS typography utilities.</p>
   <p>The parent element has the .nys-font-body class applied.</p>
 </div>
 {% endhighlight %}
@@ -174,7 +175,7 @@ body {
   </li>
   <li>
     <p><strong>Use Utilities When Necessary</strong><br>
-    Use the predefined <code class="css-1kwwth4">.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by Excelsior components.</p>
+    Use the predefined <code class="css-1kwwth4">.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by NYSDS components.</p>
   </li>
   <li>
     <p><strong>Preload Critical Fonts</strong><br>
@@ -182,7 +183,7 @@ body {
   </li>
   <li>
     <p><strong>Extend Existing Components</strong><br>
-    Excelsior web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
+    NYSDS web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
   </li>
 </ol>
 </section>
@@ -191,8 +192,8 @@ body {
 ## Resources
 
 <ul>
-  <li><a href="https://github.com/ITS-HCD/excelsior-fonts" rel="nofollow">Excelsior Fonts Repository (Internal)</a></li>
-  <li><a href="#">Excelsior Design System Tokens</a></li>
+  <li><a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow">NYSDS Fonts Repository (Internal)</a></li>
+  <li><a href="#">NYSDS Design System Tokens</a></li>
   <li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts" rel="nofollow">Using Web Fonts</a></li>
 </ul>
 </section>
