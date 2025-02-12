@@ -70,7 +70,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 
 {% block usagedont %}
 
- - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).
+ - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in NYSDS, contact Design System team for guidance).
  - Don't change status of another checkbox when another one is clicked.
 {% endblock %}
 

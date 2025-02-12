@@ -1,7 +1,7 @@
 ---
 permalink: /foundations/
 title: Foundations
-description: "Excelsior makes it easier to build accessible, usable websites for New York State."
+description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
 navOrder: 10
 ---
 
@@ -37,7 +37,7 @@ Building components with a consistent set of color values makes it possible to a
 
 Starting with inclusivity as a requirement (not an afterthought), we've built with WCAG 2.2 AA accessibility standards in mind. Components are built and tested for accessibility, which can help teams avoid costly rework.
 
-Without a strong foundation, a design system becomes just another collection of UI elements. This section helps teams understand how Excelsior components are built and why they work the way they do.
+Without a strong foundation, a design system becomes just another collection of UI elements. This section helps teams understand how NYSDS components are built and why they work the way they do.
 
 ## Explore Foundations
 
@@ -46,7 +46,7 @@ This section covers:
 - [Accessibility](/foundations/accessibility/) – What you should know about accessibility and how the NYS Design System can help.
 - [Design Principles](/foundations/design-principles/) – The core philosophies that guide our design decisions.
 - [Design Tokens](/foundations/tokens/) – The shared language of colors, spacing, typography, and UI styles, available in both design and code.
-- [Utilities](/foundations/utilities) – Practical ways to adapt Excelsior to different needs. Layout, mobile-responsiveness, and agency theming.
+- [Utilities](/foundations/utilities) – Practical ways to adapt NYSDS to different needs. Layout, mobile-responsiveness, and agency theming.
 
 {% endblock %}
 
