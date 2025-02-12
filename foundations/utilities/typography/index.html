@@ -4,34 +4,34 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Typography - Excelsior Design System</title>
-    <meta name="description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">   
+    <title>Typography - New York State Design System</title>
+    <meta name="description" content="The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">   
     <link rel="canonical" href="https://designsystem.ny.gov//foundations/utilities/typography/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov//favicon.svg" />
 
     <meta name=”robots” content=”noindex”>
 
     <meta property="og:title" content="Typography">
-    <meta property="og:site_name" content="Excelsior Design System">
+    <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov//foundations/utilities/typography/">
-    <meta property="og:description" content="Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">
+    <meta property="og:description" content="The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
     
     <link rel="preload" href="https://designsystem.ny.gov//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="https://designsystem.ny.gov//assets/fonts/excelsior-fonts.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov//assets/fonts/nysds-fonts.css" rel="stylesheet">    
     <link href="https://designsystem.ny.gov//pagefind/pagefind-ui.css" rel="stylesheet">
     <link href="https://designsystem.ny.gov//assets/css/prism-theme.css"rel="stylesheet">
-    <link href="https://designsystem.ny.gov//assets/css/vendor/excelsior-full.min.css" rel="stylesheet">    
-    <link href="https://designsystem.ny.gov//assets/css/excelsior-site.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov//assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov//assets/css/nysds-site.css" rel="stylesheet">    
 
 
     
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-11T14:44:14.839+00:00 -->
+    <!-- Latest Build: 2025-02-12T15:15:24.815+00:00 -->
   </head>
   
   <body class="single-page page-typography section-foundations">
@@ -40,7 +40,7 @@
 
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 
-  <nys-globalheader appName="Excelsior Design System">
+  <nys-globalheader appName="NYS Design System">
   <ul>
     <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
     <li class="site-header__item site-header__item--active"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
@@ -178,6 +178,8 @@
             
           
         
+          
+        
 
         
         <li class="section-nav__item section-nav__item--active-section"
@@ -213,6 +215,13 @@
                   </a>
                 </li>
               
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/utilities/"
+                     >
+                    Utilities
+                  </a>
+                </li>
+              
             </ul>
           
 
@@ -227,26 +236,26 @@
   <div class="nys-desktop:nys-grid-col-8">  
     <section id="overview">
 <h1>Typography</h1>
-<p>Typography is a core pillar of the Excelsior Design System, providing a consistent foundation for readability, accessibility, and brand alignment across all New York State digital applications.</p>
+<p>Typography is a core pillar of the New York State Design System, providing a consistent foundation for readability, accessibility, and brand alignment across all New York State digital applications.</p>
 <h2>Overview</h2>
-<p>Typography in Excelsior is powered by the core fonts that define the New York State brand. These include:</p>
+<p>Typography in NYSDS is powered by the core fonts that define the New York State brand. These include:</p>
 <ul>
 <li><strong>Proxima Nova</strong>: The primary typeface for body text and UI elements.</li>
 <li><strong>D Sari</strong>: The brand font used for agency, program, and initiative titles.</li>
 <li><strong>Oswald</strong>: A supporting typeface for content-heavy websites (optional).</li>
 </ul>
-<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source Excelsior Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/excelsior-fonts" rel="nofollow">Excelsior Fonts</a> <em>(internal)</em>. However, Excelsior provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
+<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYSDS Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow">NYSDS Fonts</a> <em>(internal)</em>. However, NYSDS provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
 </section>
 <section id="typography-tokens">
 <h2>Typography Tokens</h2>
-<p>Excelsior defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
+<p>NYSDS defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
 <h3>Primitive</h3>
 <p>Primitive tokens are the raw typographical building blocks: family, size, weight, line height, and letter spacing. These tokens represent a range of sensible default values that can be used to build out interfaces. This includes tokens like <code>--nys-font-family-sans</code>, <code>--nys-font-size-md</code>, and <code>--nys-font-lineheight-lg</code>.</p>
 <p>⛔️ These values <strong>are not</strong> meant to be used directly in your stylesheets. They are used to define the <strong>semantic</strong> tokens.</p>
 <h3>Semantic</h3>
 <p>Semantic tokens map specific properties to specific roles, like headings, body text, and UI elements.</p>
 <p>✅ They <strong>are</strong> meant to be used directly in stylesheets. They help standardize font usage across components and applications.</p>
-<p>Here are a few examples of Excelsior's semantic typography tokens:</p>
+<p>Here are a few examples of NYSDS' semantic typography tokens:</p>
 <table>
   <thead>
     <tr>
@@ -280,12 +289,12 @@
 <h3>Download and Install</h3>
 <p>To access these fonts:</p>
 <ol>
-<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/excelsior-fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">Excelsior Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
+<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">NYSDS Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
 <li>Extract the fonts into your project.</li>
-<li>Reference the provided <code class="css-1kwwth4">excelsior-fonts.css</code> in the HTML head of your project:</li>
+<li>Reference the provided <code class="css-1kwwth4">nysds-fonts.css</code> in the HTML head of your project:</li>
 </ol>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/fonts/excelsior-fonts.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
-<p>Excelsior web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using Excelsior tokens below.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/fonts/nysds-fonts.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>NYSDS web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.</p>
 <h3>Preload Critical Fonts (optional)</h3>
 <p>For better performance, preload critical fonts. This helps reduce the chance of a fallback font loading and then the web font loading later, causing layout reflow and a Flash of Unstyled Text (FOUT):</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -295,8 +304,8 @@
 </section>
 <section id="using-typography-in-a-project">
 <h2>Using Typography in a Project</h2>
-<p>Excelsior's native web components use the typography tokens.</p>
-<p>If you're not using Excelsior components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.</p>
+<p>NYSDS' native web components use the typography tokens.</p>
+<p>If you're not using NYSDS components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.</p>
 <h3>Tokens</h3>
 <p>Apply them using <code>var()</code> in CSS or by using utility classes. Here are some examples:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
@@ -305,10 +314,10 @@
   <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-body-md<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>Unfortunately, each property must be set individually, as CSS does not support setting multiple properties at once with <code>var()</code>.</p>
-<p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, Excelsior provides utility classes.</p>
+<p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, NYSDS provides utility classes.</p>
 <h3>Utility Classes</h3>
-<p>Excelsior also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
-<p>For example, Excelsior define several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
+<p>NYSDS also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
+<p>For example, NYSDS defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">.nys-font-h1</span> <span class="token punctuation">{</span>
   <span class="token property">font</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-size-h1<span class="token punctuation">)</span> / <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-h1<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-family-heading<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token property">letter-spacing</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-letterspacing-h1<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -317,9 +326,9 @@
   <span class="token property">font</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-size-md<span class="token punctuation">)</span> / <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-md<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-family-body<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>You can reference these classes in your HTML:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-h1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome to Excelsior<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-h1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome to NYSDS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-body<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a sample paragraph styled using Excelsior typography utilities.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a sample paragraph styled using NYSDS typography utilities.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>The parent element has the .nys-font-body class applied.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <h3>Full List of Utility Classes</h3>
@@ -334,7 +343,7 @@
   </li>
   <li>
     <p><strong>Use Utilities When Necessary</strong><br>
-    Use the predefined <code class="css-1kwwth4">.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by Excelsior components.</p>
+    Use the predefined <code class="css-1kwwth4">.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by NYSDS components.</p>
   </li>
   <li>
     <p><strong>Preload Critical Fonts</strong><br>
@@ -342,15 +351,15 @@
   </li>
   <li>
     <p><strong>Extend Existing Components</strong><br>
-    Excelsior web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
+    NYSDS web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
   </li>
 </ol>
 </section>
 <section id="resources">
 <h2>Resources</h2>
 <ul>
-  <li><a href="https://github.com/ITS-HCD/excelsior-fonts" rel="nofollow">Excelsior Fonts Repository (Internal)</a></li>
-  <li><a href="#">Excelsior Design System Tokens</a></li>
+  <li><a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow">NYSDS Fonts Repository (Internal)</a></li>
+  <li><a href="#">NYSDS Design System Tokens</a></li>
   <li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts" rel="nofollow">Using Web Fonts</a></li>
 </ul>
 </section>
@@ -430,10 +439,10 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="nys-tablet:nys-grid-col">
         <p class="site-footer__list-header"><strong>Quick Links</strong></p>
         <ul>
-            <li><a href="/getting-started/" title="How you can use Excelsior.">Getting Started</a></li>
+            <li><a href="/getting-started/" title="How you can use NYSDS.">Getting Started</a></li>
             <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
             <li><a href="/components/" title="Explore the web components.">Components</a></li>
-            <li><a href="/about/" title="Learn more about our team and the mission of this project.">About Excelsior</a></li>
+            <li><a href="/about/" title="Learn more about our team and the mission of this project.">About NYSDS</a></li>
         </ul>
       </div>
       <div class="nys-tablet:nys-grid-col">
@@ -441,16 +450,16 @@ document.addEventListener("DOMContentLoaded", function () {
         <ul>
           <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
           <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
-          <li><a href="/about/" title="Contact the Excelsior team.">Contact</a></li>
+          <li><a href="/about/" title="Contact the NYSDS team.">Contact</a></li>
         </ul>
       </div>
       <div class="nys-tablet:nys-grid-col">
         <p class="site-footer__list-header"><strong>Resources</strong></p>
         <ul>
-            <li><a href="https://github.com/ITS-HCD/excelsior" title="Visit the Excelsior Core GitHub repository.">Excelsior GitHub</a></li>
-            <li><a href="https://github.com/ITS-HCD/excelsior-fonts" title="Visit the Excelsior Fonts GitHub repository.">Excelsior Fonts GitHub</a></li>
-            <li><a href="https://www.npmjs.com/org/nys-excelsior" title="Explore Excelsior NPM packages.">Excelsior NPM Packages</a></li>
-            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYS-%2F-Excelsior-Components-(Alpha)?node-id=20-40&t=Qcrbt459q9JgdW9E-1" title="Access the Excelsior Figma library.">Excelsior Figma Library</a></li>
+            <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYSDS Core GitHub repository.">NYSDS GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYSDS Fonts GitHub repository.">NYSDS Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYSDS NPM packages.">NYSDS NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&p=f&t=HxkOUf458bt8bvyn-0" title="Access the NYSDS Figma library.">NYSDS Figma Library</a></li>
         </ul>
       </div>
     </div>
@@ -459,8 +468,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
 <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/excelsior.js"></script>
-<script src="https://designsystem.ny.gov//assets/js/excelsior-site.js"></script>
+  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov//assets/js/nysds-site.js"></script>
   
   </body>
 </html>
