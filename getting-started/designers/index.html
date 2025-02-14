@@ -18,7 +18,10 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
-    
+    <meta property="og:image" content="https://designsystem.ny.gov//assets/img/nysds_og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="preload" href="https://designsystem.ny.gov//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://designsystem.ny.gov//assets/fonts/nysds-fonts.css" rel="stylesheet">    
     <link href="https://designsystem.ny.gov//pagefind/pagefind-ui.css" rel="stylesheet">
@@ -31,7 +34,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-12T15:15:24.815+00:00 -->
+    <!-- Latest Build: 2025-02-14T20:31:30.440+00:00 -->
   </head>
   
   <body class="single-page page-designers section-getting-started">
@@ -74,11 +77,13 @@
 
 
   <main role="main" data-pagefind-body>
-    <div class="nys-grid-container">
+    <div class="nys-grid-container-widescreen">
       
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
-    <nav class="section-nav" aria-label="Section Navigation">
+    
+<nav class="section-nav" aria-label="Section Navigation">
+  <nys-button label="Menu" class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav"></nys-button>
   <ul class="section-nav__list">
 
     
@@ -258,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js"></script>
+  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js" async></script>
 <script src="https://designsystem.ny.gov//assets/js/nysds-site.js"></script>
   
   </body>

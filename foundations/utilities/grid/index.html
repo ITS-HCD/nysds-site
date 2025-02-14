@@ -18,7 +18,10 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
-    
+    <meta property="og:image" content="https://designsystem.ny.gov//assets/img/nysds_og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="preload" href="https://designsystem.ny.gov//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://designsystem.ny.gov//assets/fonts/nysds-fonts.css" rel="stylesheet">    
     <link href="https://designsystem.ny.gov//pagefind/pagefind-ui.css" rel="stylesheet">
@@ -31,7 +34,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-12T15:15:24.815+00:00 -->
+    <!-- Latest Build: 2025-02-14T20:31:30.440+00:00 -->
   </head>
   
   <body class="single-page page-grid section-foundations">
@@ -74,11 +77,13 @@
 
 
   <main role="main" data-pagefind-body>
-    <div class="nys-grid-container">
+    <div class="nys-grid-container-widescreen">
       
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
-    <nav class="section-nav" aria-label="Section Navigation">
+    
+<nav class="section-nav" aria-label="Section Navigation">
+  <nys-button label="Menu" class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav"></nys-button>
   <ul class="section-nav__list">
 
     
@@ -209,16 +214,16 @@
                 </li>
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/typography/"
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/utilities/"
                      >
-                    Typography
+                    Utilities
                   </a>
                 </li>
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/utilities/"
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/typography/"
                      >
-                    Utilities
+                    Typography
                   </a>
                 </li>
               
@@ -270,9 +275,9 @@
   <p><strong>Columns:</strong> <code>nys-grid-col-[1-12]</code> indicates the number of columns the item spans out of a possible 12 per row. So, if you want three equal-width columns across, use <code>nys-grid-col-4</code> for each item.</p>
 <h3 id="additional-functionality"><a id="additional-functionality-2" ></a>Additional functionality</h3>
 <ul>
-  <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code >grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
-  <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code >grid-gap-sm</code>, <code >grid-gap</code>, or <code >grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
-  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-classes">responsive classes</a> for a full list.</li>
+  <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code>nys-grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
+  <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code >nys-grid-gap-sm</code>, <code >nys-grid-gap</code>, or <code >nys-grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
+  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >nys-tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >nys-mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-classes">responsive classes</a> for a full list.</li>
 </ul>
 </section>
 <section id="auto-layout-columns">
@@ -376,7 +381,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3><a id="stacked-columns-at-narrow-widths"></a>Stacked columns at narrow widths</h3>
-<p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>tablet:grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>tablet:</code>) as illustrated in the following rows and corresponding code.</p>
+<p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>nys-tablet:nys-grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>nys-tablet:</code>) as illustrated in the following rows and corresponding code.</p>
 <div class="docs-grid-example">
 <div class="nys-grid-row">
   <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
@@ -594,7 +599,7 @@
 <section id="gutters">
 <h2>Gutters</h2>
 <h3 id="default-gutter"><a id="default-gutter-2"></a>Default gutter</h3>
-<p>Add <code>grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
+<p>Add <code>nys-grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
 <div class="nys-grid-row border-left">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
@@ -661,7 +666,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3><a id="large-gutter"></a>Large gutter</h3>
-<p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than `nys-grid-gap`. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
+<p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than <code>nys-grid-gap</code>. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
 <ul>
   <li><code>nys-grid-gap-2px</code></li>
   <li><code>nys-grid-gap-05</code></li>
@@ -844,7 +849,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js"></script>
+  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js" async></script>
 <script src="https://designsystem.ny.gov//assets/js/nysds-site.js"></script>
   
   </body>

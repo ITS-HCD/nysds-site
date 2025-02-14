@@ -18,7 +18,10 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
-    
+    <meta property="og:image" content="https://designsystem.ny.gov//assets/img/nysds_og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="preload" href="https://designsystem.ny.gov//assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://designsystem.ny.gov//assets/fonts/nysds-fonts.css" rel="stylesheet">    
     <link href="https://designsystem.ny.gov//pagefind/pagefind-ui.css" rel="stylesheet">
@@ -32,7 +35,7 @@
     
     
 
-    <!-- Latest Build: 2025-02-12T15:15:24.815+00:00 -->
+    <!-- Latest Build: 2025-02-14T20:31:30.440+00:00 -->
   </head>
   
   <body class="single-page page-components section-components">
@@ -75,7 +78,7 @@
 
 
   <main role="main" data-pagefind-body>
-    <div class="nys-grid-container">
+    <div class="nys-grid-container-widescreen">
       
 
 <h1>Web Components</h1>
@@ -121,7 +124,7 @@
       <div class="card__inner">
         <div class="card__media">
           
-            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
+            <img src="/assets/img/components/button.svg" alt="An illustration of a button."></div>
           
         <div class="card__title">Button</div>
         <div class="card__desc">Used primarily for actions that have an immediate result like &#39;Save&#39;, &#39;Close&#39;, or &#39;Add&#39;.</div>
@@ -143,7 +146,7 @@
       <div class="card__inner">
         <div class="card__media">
           
-            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
+            <img src="/assets/img/components/global-footer.svg" alt="An illustration of a global footer."></div>
           
         <div class="card__title">Global Footer</div>
         <div class="card__desc">Provide users with essential information, secondary navigation, legal links, and contact details across all pages.</div>
@@ -154,7 +157,7 @@
       <div class="card__inner">
         <div class="card__media">
           
-            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
+            <img src="/assets/img/components/global-header.svg" alt="An illustration of a global header."></div>
           
         <div class="card__title">Global Header</div>
         <div class="card__desc">Provide users with consistent access to key features, branding, and primary navigation across all pages.</div>
@@ -231,7 +234,7 @@
       <div class="card__inner">
         <div class="card__media">
           
-            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
+            <img src="/assets/img/components/unav-footer.svg" alt="An illustration of a unav footer."></div>
           
         <div class="card__title">Unav Footer</div>
         <div class="card__desc">Provide users with access to essential NYS links across all pages.</div>
@@ -242,7 +245,7 @@
       <div class="card__inner">
         <div class="card__media">
           
-            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
+            <img src="/assets/img/components/unav-header.svg" alt="An illustration of a unav header."></div>
           
         <div class="card__title">Unav Header</div>
         <div class="card__desc">A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.</div>
@@ -259,8 +262,9 @@
         Do you have an idea for a new NYSDS web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
       </p>
     </div>
-    <div class="nys-tablet:nys-grid-col-4 nys-display-flex nys-flex-align-items-start nys-justify-center">
-      <a class="nys-button nys-button--fullwidth nys-flex-align-self-start" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Review Component Proposals</a>
+    <div class="nys-tablet:nys-grid-col-4">
+      <nys-button fullWidth label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+       
     </div>
   </div>
 </section>
@@ -304,7 +308,7 @@
     
 <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js"></script>
+  <script type="module" src="https://designsystem.ny.gov//assets/js/vendor/nysds.js" async></script>
 <script src="https://designsystem.ny.gov//assets/js/nysds-site.js"></script>
   
 
