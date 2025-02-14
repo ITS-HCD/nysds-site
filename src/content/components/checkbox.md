@@ -259,9 +259,6 @@ When the description requires more complexity than a simple string, use the desc
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -277,6 +274,9 @@ When the description requires more complexity than a simple string, use the desc
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

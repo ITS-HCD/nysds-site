@@ -210,9 +210,6 @@ You can change the background color of an Avatar. Note that images will naturall
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -229,10 +226,10 @@ You can change the background color of an Avatar. Note that images will naturall
   </tbody>
   </table>
 
+{% block cssvariables %}
+
+
 {% endblock %}
-
-{% block events %}
-
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -252,6 +249,9 @@ You can listen to these events using JavaScript:
     console.log('Checkbox changed:', event.target.checked);
   });
 {% endhighlight %}
+
+{% block events %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -301,9 +301,6 @@ Set an error message and choose to activate it. The error message will appear ON
 
 {% endblock %}
 
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -319,6 +316,9 @@ Set an error message and choose to activate it. The error message will appear ON
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 
