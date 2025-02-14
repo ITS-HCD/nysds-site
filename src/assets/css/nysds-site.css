@@ -288,7 +288,7 @@ a:active {
 /* Section Header */
 
 .section-header {
-    background-color: var(--nys-color-theme-weaker);
+    background-color: var(--nys-color-theme-weak);
     color: var(--nys-color-theme-strong, #fff);
 }
 .section-components .section-header {
@@ -449,8 +449,6 @@ a.card:focus {
     top: var(--nys-space-600);
     margin-top: var(--nys-space-600);
     margin-bottom: var(--nys-space-200);
-    border: solid var(--nys-size-2px) var(--nys-color-neutral-50);
-    border-radius: var(--nys-radius-md);
     font-size: var(--nys-font-size-ui-md);
     overflow: hidden;
 }
@@ -459,6 +457,9 @@ a.card:focus {
     list-style: none;
     margin: 0;
     padding: 0;
+    border: solid var(--nys-size-2px) var(--nys-color-neutral-50);
+    border-radius: var(--nys-radius-md);
+
 }
 
 /* Section Nav Item */
@@ -505,7 +506,42 @@ a.card:focus {
     padding-left: var(--nys-space-400);
 }
 
+/* Section Nav hide button */
+
+@media (max-width: 1023px) {
+    .section-nav__list {
+      display: none;
+    }
+    .section-nav__toggle {
+      display: block;
+    }
+  }
+  .section-nav__toggle {
+    display: block;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    .section-nav__toggle {
+    display: none;
+    }
+}
+
 /* On-Page Navigator */
+
+@media (max-width: 1024px) {
+    .onpage-nav {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+    .onpage-nav {
+        display: block;
+    }
+}
 
 .onpage-nav {
     position: sticky;
@@ -582,6 +618,7 @@ a.card:focus {
 .hero {
     padding: var(--nys-space-600) 0;
     color: var(--nys-color-ink);
+    background-color: var(--nys-color-theme-weak);
 }
 .hero--home {
     background-color: var(--nys-color-theme-weaker);

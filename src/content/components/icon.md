@@ -311,9 +311,6 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -330,10 +327,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   </tbody>
   </table>
 
+{% block cssvariables %}
+
+
 {% endblock %}
-
-{% block events %}
-
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -353,6 +350,9 @@ You can listen to these events using JavaScript:
     console.log('Checkbox changed:', event.target.checked);
   });
 {% endhighlight %}
+
+{% block events %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

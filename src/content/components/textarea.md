@@ -279,9 +279,6 @@ To display an error message, pass in the `showError` property to the `nys-select
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -297,6 +294,9 @@ To display an error message, pass in the `showError` property to the `nys-select
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

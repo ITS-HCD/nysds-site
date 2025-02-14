@@ -2,7 +2,8 @@
 permalink: /components/global-footer/
 title: Global Footer
 description: Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
-image: 
+image: /assets/img/components/global-footer.svg
+image_alt: An illustration of a global footer.
 ---
 
 {% extends "layouts/component.njk" %}

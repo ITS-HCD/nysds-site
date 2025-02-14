@@ -299,9 +299,6 @@ You may find having just a heading without description as a good compact version
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -318,10 +315,10 @@ You may find having just a heading without description as a good compact version
   </tbody>
   </table>
 
+{% block cssvariables %}
+
+
 {% endblock %}
-
-{% block events %}
-
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -341,6 +338,9 @@ You can listen to these events using JavaScript:
     console.log('Checkbox changed:', event.target.checked);
   });
 {% endhighlight %}
+
+{% block events %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

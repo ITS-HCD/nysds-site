@@ -256,9 +256,6 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -274,6 +271,9 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

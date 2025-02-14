@@ -9,5 +9,6 @@ This repository contains the source code and documentation for the NYSDS  refere
 
 The NYSDS reference website is built using 11ty for static site generation. The NYSDS design system (including global styles and components) is included as a node module.
 
-> [!NOTE]
-> _TODO: Add installation instructions here._
+```bash
+npm run start
+```
