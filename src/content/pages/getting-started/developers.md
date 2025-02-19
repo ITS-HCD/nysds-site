@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/developers/
 title: "Developers"
-description: "Integrate Excelsior into your project with web components, design tokens, and styles. Learn how to install, customize, and use Excelsior in Angular, .NET, React, and more."
+description: "Integrate the New York State Design System into your project with web components, design tokens, and styles. Learn how to install, customize, and use it in Angular, .NET, React, and more."
 section: Getting Started
 ---
 
@@ -9,17 +9,17 @@ section: Getting Started
 
 ## Install the libraries
 
-To start using Excelsior in your project, you need to install the core libraries:
+To start using NYSDS in your project, you need to install the core libraries:
 
 ```html
-npm install @nys-excelsior/components @nys-excelsior/styles
+npm install @nysds/components @nysds/styles
 ```
 
 ## Reference the files in your application
 
 ```html
-<script type="module" src="[path-to-dir]/excelsior.js"></script>
-<link rel="stylesheet" href="[path-to-dir]/excelsior-full.min.css" />
+<script type="module" src="[path-to-dir]/nysds.js"></script>
+<link rel="stylesheet" href="[path-to-dir]/nysds-full.min.css" />
 ```
 
 {% block scripts %}

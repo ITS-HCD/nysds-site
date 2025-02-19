@@ -2,13 +2,14 @@
 permalink: /components/button/
 title: Button
 description: "Used primarily for actions that have an immediate result like 'Save', 'Close', or 'Add'."
-image: 
-image_alt: An illustration of an button.
+image: /assets/img/components/button.svg
+image_alt: An illustration of a button.
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 A button is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
 {% endblock %}
 
@@ -46,7 +47,7 @@ A button is used for actions that have an immediate result inside an application
 
   - Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the Excelsior Design System team.
+  - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.
 {% endblock %}
 
 {% block accessibility %}
@@ -82,23 +83,34 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 </ul>
 Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
+<div class="nys-grid-row">
+<div class="nys-grid-col">
 <nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
+</div>
+<div class="nys-grid-col">
 <nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
+</div>
+<div class="nys-grid-col">
 <nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
-
+</div>
+</div>
+<br>
 <nys-button id="button4" name="button4" label="Small Full" size="sm" fullWidth></nys-button>
+<br>
 <nys-button id="button5" name="button5" label="Medium Full" fullWidth></nys-button>
+<br>
 <nys-button id="button6" name="button6" label="Large Full" size="lg" fullWidth></nys-button>
+
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
-<nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
-<nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
-<nys-button id="button4" name="button4" label="Small Full" size="sm" fullWidth></nys-button>
-<nys-button id="button5" name="button5" label="Medium Full" fullWidth></nys-button>
-<nys-button id="button6" name="button6" label="Large Full" size="lg" fullWidth></nys-button>
+<nys-button size="sm" id="button1" name="button1" label="Small"></nys-button>
+<nys-button id="button2" name="button2" label="Medium"></nys-button>
+<nys-button size="lg" id="button3" name="button3" label="Large"></nys-button>
+<nys-button fullWidth size="sm" id="button4" name="button4" label="Small Full"></nys-button>
+<nys-button fullWidth id="button5" name="button5" label="Medium Full"></nys-button>
+<nys-button fullWidth size="lg" id="button6" name="button6" label="Large Full"></nys-button>
 ```
 </details>
 
@@ -119,10 +131,16 @@ Set the variant prop of the `nys-button` to adjust the appearance of the button.
  - `ghost`: Use for uncommon actions.
  - `text`: Use for inline actions.
 
+<div class="nys-grid-row">
+<div class="nys-grid-col">
 <nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+</div></div>
 
 <details>
 <summary>Example Code</summary>
@@ -151,12 +169,16 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 </details>
 
 ### Disabled
-
+<div class="nys-grid-row">
+<div class="nys-grid-col">
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
-
+</div></div>
 <details>
 <summary>Example Code</summary>
 
@@ -184,13 +206,15 @@ Set the `href` prop when using the button to navigate to a different page. This 
 
 ### Inverted
 Set the `inverted` when the button is on a dark background.
-
-<div style="background-color:var(--nys-color-theme-stronger)">
-<nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
+<div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
+<div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+</div><div class="nys-grid-col">
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
-</div>
+</div></div>
 <details>
 <summary>Example Code</summary>
 

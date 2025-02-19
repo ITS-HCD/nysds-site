@@ -2,7 +2,8 @@
 permalink: /components/unav-footer/
 title: UNav Footer
 description: Provide users with access to essential NYS links across all pages.
-image: 
+image: /assets/img/components/unav-footer.svg
+image_alt: An illustration of a unav footer.
 ---
 
 {% extends "layouts/component.njk" %}

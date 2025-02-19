@@ -1,9 +1,10 @@
 ---
 permalink: /foundations/utilities/grid/
 title: Layout Grid
-description: Excelsior makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Foundations
 parent: Utilities
+layout: layouts/3-col.njk
 ---
 
 {% block content %}
@@ -55,9 +56,9 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 <h3 id="additional-functionality"><a id="additional-functionality-2" ></a>Additional functionality</h3>
 <ul>
-  <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code >grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
-  <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code >grid-gap-sm</code>, <code >grid-gap</code>, or <code >grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
-  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-classes">responsive classes</a> for a full list.</li>
+  <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code>nys-grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
+  <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code >nys-grid-gap-sm</code>, <code >nys-grid-gap</code>, or <code >nys-grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
+  <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code >nys-tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code >nys-mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-classes">responsive classes</a> for a full list.</li>
 </ul>
 </section>
 <section id="auto-layout-columns">
@@ -181,7 +182,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 </details>
 
 <h3><a id="stacked-columns-at-narrow-widths"></a>Stacked columns at narrow widths</h3>
-<p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>tablet:grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>tablet:</code>) as illustrated in the following rows and corresponding code.</p>
+<p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>nys-tablet:nys-grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>nys-tablet:</code>) as illustrated in the following rows and corresponding code.</p>
 
 <div class="docs-grid-example">
 
@@ -443,7 +444,7 @@ Columns are always 50% wide, on mobile and desktop
 <section id="gutters">
 <h2>Gutters</h2>
 <h3 id="default-gutter"><a id="default-gutter-2"></a>Default gutter</h3>
-<p>Add <code>grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
+<p>Add <code>nys-grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
 
 <div class="nys-grid-row border-left">
   <div class="nys-grid-col-1 border-right">
@@ -519,7 +520,7 @@ Columns are always 50% wide, on mobile and desktop
 </details>
 
 <h3><a id="large-gutter"></a>Large gutter</h3>
-<p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than `nys-grid-gap`. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
+<p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than <code>nys-grid-gap</code>. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
 <ul>
   <li><code>nys-grid-gap-2px</code></li>
   <li><code>nys-grid-gap-05</code></li>

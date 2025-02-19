@@ -85,7 +85,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 </details>
 
 
-## Initials
+### Initials
 
 <p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
 
@@ -128,7 +128,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 </details>
 
 
-## Shapes
+### Shapes
 
 <p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
 
@@ -210,9 +210,6 @@ You can change the background color of an Avatar. Note that images will naturall
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -229,10 +226,10 @@ You can change the background color of an Avatar. Note that images will naturall
   </tbody>
   </table>
 
+{% block cssvariables %}
+
+
 {% endblock %}
-
-{% block events %}
-
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -252,6 +249,9 @@ You can listen to these events using JavaScript:
     console.log('Checkbox changed:', event.target.checked);
   });
 {% endhighlight %}
+
+{% block events %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

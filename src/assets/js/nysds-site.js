@@ -140,3 +140,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector(".section-nav__toggle");
+  const sectionNav = document.querySelector(".section-nav__list");
+
+  if (toggleButton) {
+    toggleButton.addEventListener("click", function () {
+      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+      toggleButton.setAttribute("aria-expanded", !isExpanded);
+      sectionNav.style.display = isExpanded ? "none" : "block";
+    });
+  };
+});

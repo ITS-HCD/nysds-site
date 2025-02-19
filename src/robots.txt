@@ -6,6 +6,6 @@ Disallow: /cdn-cgi/
 User-agent: GPTBot
 Disallow: /
 
-Host: https://excelsior.ny.gov/
+Host: https://designsystem.ny.gov/
 
-Sitemap: https://excelsior.ny.gov/sitemap.xml
+Sitemap: https://designsystem.ny.gov/sitemap.xml
