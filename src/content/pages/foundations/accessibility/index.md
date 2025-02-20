@@ -10,6 +10,9 @@ navOrder: 20
 
 <h1>Accessiblilty</h1>
 
+<nys-alert type="warning" heading="Upcoming Compliance Deadlines" text="DOJ requires WCAG 2.1 by April 2026 and NYSTL requires WCAG 2.2 by January 2027." primaryLabel="Learn More" primaryAction="/foundations/accessibility/legal/#deadlines"></nys-alert>
+
+
 <section id="what-is-web-accessibility">
 
   <h2>What Is Web Accessibility</h2>

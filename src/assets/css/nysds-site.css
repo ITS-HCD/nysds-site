@@ -488,6 +488,8 @@ a.card:focus {
 .section-nav__item--active-section {
     border-left: solid var(--nys-size-50) var(--nys-color-neutral-50);
 }
+
+
 .section-nav__item--active-section .section-nav__link {
     margin-left: calc(var(--nys-space-50) * -1);
 }
@@ -516,6 +518,14 @@ a.card:focus {
 .section-nav__list .section-nav__list .section-nav__link {
     font-size: var(--nys-font-size-ui-sm);
     padding-left: var(--nys-space-400);
+}
+
+.section-nav .section-nav__list .section-nav__item .section-nav__link {
+    padding-left: 32px;
+}
+
+.section-nav .section-nav__list:first-child .section-nav__item .section-nav__link {
+    padding-left: 0px !important;
 }
 
 /* Section Nav hide button */
