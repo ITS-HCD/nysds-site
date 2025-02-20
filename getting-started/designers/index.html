@@ -34,7 +34,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-20T16:37:11.401+00:00 -->
+    <!-- Latest Build: 2025-02-20T23:28:43.765+00:00 -->
   </head>
   
   <body class="single-page page-designers section-getting-started">
@@ -81,80 +81,72 @@
       
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav" aria-label="Section Navigation">
+  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
+    <label>Components</label>
+    <nys-icon name="chevron_down" size="xl"></nys-icon>
+  </div>
+  <ul class="section-nav__list" id="section-nav" hidden>
     
-<nav class="section-nav" aria-label="Section Navigation">
-  <nys-button label="Menu" class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav"></nys-button>
-  <ul class="section-nav__list">
-
-    
-
       
       
         
         
-
         
         
-
         
-        <li class="section-nav__item"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//getting-started/"
-             >
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//getting-started/" >
             Getting Started
           </a>
-
           
           
-
         </li>
       
         
         
-
         
         
-
         
-        <li class="section-nav__item section-nav__item--active-section section-nav__item--active"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//getting-started/designers/"
-              aria-current="page">
+        <li class="section-nav__item section-nav__item--active-section section-nav__item--active" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//getting-started/designers/"  aria-current="page" >
             Designers
           </a>
-
           
           
-
         </li>
       
         
         
-
         
         
-
         
-        <li class="section-nav__item"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//getting-started/developers/"
-             >
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//getting-started/developers/" >
             Developers
           </a>
-
           
           
-
         </li>
       
-
     
   </ul>
 </nav>
-
+<script>
+  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') == 'false';
+      toggle.setAttribute('aria-expanded', ! expanded);
+      const icon = toggle.querySelector('nys-icon');
+      icon.setAttribute(
+        'name', expanded
+        ? 'chevron_up'
+        : 'chevron_down');
+      const sectionNav = document.getElementById('section-nav');
+      sectionNav.hidden = expanded;
+    });
+  });
+</script>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <h1>Getting Started for Designers</h1>

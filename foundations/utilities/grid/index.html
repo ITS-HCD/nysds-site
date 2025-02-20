@@ -34,7 +34,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-20T16:37:11.401+00:00 -->
+    <!-- Latest Build: 2025-02-20T23:28:43.765+00:00 -->
   </head>
   
   <body class="single-page page-grid section-foundations">
@@ -81,98 +81,69 @@
       
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav" aria-label="Section Navigation">
+  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
+    <label>Components</label>
+    <nys-icon name="chevron_down" size="xl"></nys-icon>
+  </div>
+  <ul class="section-nav__list" id="section-nav" hidden>
     
-<nav class="section-nav" aria-label="Section Navigation">
-  <nys-button label="Menu" class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav"></nys-button>
-  <ul class="section-nav__list">
-
-    
-
       
       
         
         
-
         
         
-
         
-        <li class="section-nav__item"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/"
-             >
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/" >
             Foundations
           </a>
-
           
           
-
         </li>
       
         
         
-
         
         
-
         
-        <li class="section-nav__item"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/accessibility/"
-             >
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/accessibility/" >
             Accessibility
           </a>
-
           
           
-
         </li>
       
         
         
-
         
         
-
         
-        <li class="section-nav__item"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/design-guidelines/"
-             >
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/design-guidelines/" >
             Design Guidelines
           </a>
-
           
           
-
         </li>
       
         
         
-
         
         
-
         
-        <li class="section-nav__item"
-            
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/tokens/"
-             >
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/tokens/" >
             Design Tokens
           </a>
-
           
           
-
         </li>
       
         
         
-
         
         
           
@@ -185,58 +156,61 @@
         
           
         
-
         
-        <li class="section-nav__item section-nav__item--active-section"
-             aria-expanded="true" 
-        >
-          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/"
-             >
+        <li class="section-nav__item section-nav__item--active-section"  aria-expanded="true" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/" >
             Utilities
           </a>
-
           
           
             <ul class="section-nav__list" >
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/flex/"
-                     >
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/flex/" >
                     Flexbox
                   </a>
                 </li>
               
                 <li class="section-nav__item section-nav__item--active">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/grid/"
-                      aria-current="page">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/grid/"  aria-current="page" >
                     Layout Grid
                   </a>
                 </li>
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/utilities/"
-                     >
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/utilities/" >
                     Utilities
                   </a>
                 </li>
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/typography/"
-                     >
+                  <a class="section-nav__link" href="https://designsystem.ny.gov//foundations/utilities/typography/" >
                     Typography
                   </a>
                 </li>
               
             </ul>
           
-
         </li>
       
-
     
   </ul>
 </nav>
-
+<script>
+  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') == 'false';
+      toggle.setAttribute('aria-expanded', ! expanded);
+      const icon = toggle.querySelector('nys-icon');
+      icon.setAttribute(
+        'name', expanded
+        ? 'chevron_up'
+        : 'chevron_down');
+      const sectionNav = document.getElementById('section-nav');
+      sectionNav.hidden = expanded;
+    });
+  });
+</script>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <section id="how-it-works">
