@@ -12,12 +12,12 @@ navOrder: 20
 
 <img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;">
 
-<nys-alert type="warning" heading="Upcoming Compliance Deadlines" text="DOJ requires WCAG 2.1 by April 2026 and NYSTL requires WCAG 2.2 by January 2027." primaryLabel="Learn More" primaryAction="/foundations/accessibility/legal/#deadlines"></nys-alert>
-
-
 <section id="what-is-web-accessibility">
 
 <h2>What Is Web Accessibility</h2>
+
+<nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text=""></nys-alert>
+
 
 <p>Web accessibility is about making websites, digital services, and online content usable by
 everyone, including people with disabilities. Building with accessibility in mind is about removing
@@ -36,16 +36,23 @@ in ways that all users can perceive?</li>
   <li><strong>Understandable</strong>: Is information clear and behavior predictable?</li>
   <li><strong>Robust</strong>: Is the content compatible with assistive technology?</li>
 </ul>
-<blockquote>
-  "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
-</blockquote>
-<cite>– Sir Tim Berners-Lee</cite>
+<div style="border-left: 4px solid var(--nys-color-neutral-100); padding: 16px 32px; margin-top: 16px;">
+  <blockquote>
+    "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
+  </blockquote>
+  <cite>– Sir Tim Berners-Lee</cite>
+</div>
 </section>
 <section id="accessibility-policy">
 <h2>Accessibility Policy</h2>
+
+<nys-alert type="warning" heading="Upcoming Compliance Deadlines" text="DOJ requires WCAG 2.1 by April 2026 and NYSTL requires WCAG 2.2 by January 2027." primaryLabel="Learn More" primaryAction="/foundations/accessibility/legal/#deadlines"></nys-alert>
+
 <h3>Current ITS Policy</h3>
 <p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
 <p><a href="/foundations/accessibility/legal/#current-its-policy">Learn More</a></p>
+
+<HR>
 
 <h3>Recommendations</h3>
 <ul>
@@ -55,30 +62,32 @@ in ways that all users can perceive?</li>
   <li><strong>Documentation and Records</strong>: Keep documented testing reports for each ICT and maintain an updated list of all ICTs along with their current compliance status. Clearly display a link labeled “Accessibility” in the footer of the SE's website home page, providing contact information for accessibility inquiries. </li>
 </ul>
 </section>
-<section id="learning-resources">
-<h2>Learning Resources</h2>
-<h3>Getting Started</h3>
-<ul>
-  <li><a href="https://www.w3.org/WAI/people-use-web/">How People with Disabilities Use the Web </a></li>
-<li><a href="https://www.linkedin.com/learning/ux-foundations-accessibility">LinkedIn's Foundations of Accessibility Online Course </a></li>
-<li><a href="https://web.dev/learn/accessibility">Google's Web Accessibility Online Course (for technical audiences) </a></li>
-<li><a href="https://www.a11yproject.com/">The Accessibility Project </a></li>
-<li><a href="https://on.ny.gov/4d3yuKB">Deque: Accessibility Awareness for Editors and Content Contributors (SLMS login) </a></li>
-<li><a href="https://on.ny.gov/4eksOwH">Deque: Accessibility Awareness for Front-End Developers (SLMS login) </a></li>
-<li><a href="https://on.ny.gov/4elshdX">Deque: Accessibility Awareness for Quality Assurance Professionals (SLMS login) </a></li>
-</ul>
-<h3>Advanced Learning</h3>
-<ul>
-<li><a href="https://webaim.org/articles/">WebAim Accessibility Guide </a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 Quick Reference </a></li>
-<li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 Full Guidelines </a></li>
-</ul>
-<h3>Assessing Compliance</h3>
-<h4>Checklists</h4>
-<ul>
-  <li><a href="https://www.wuhcag.com/wcag-checklist/">WUHCAG WCAG Checklists </a></li>
-  <li><a href="https://a11yproject.com/checklist">A11Y Project Checklist </a></li>
-</ul>
+
+## Our Approach
+
+**How does our team make sure our design system is accessible to all?**
+
+While there are numerous ways to check for accessibility, here are just a few: 
+
+**Color Contrast:** Ensure sufficient contrast between text and background colors using a dedicated checker.
+
+[WebAim](http://webaim.org/resources/contrastchecker/) is recommended.
+
+**Element Sizing:** Larger interactive elements (minimum 44x44 pixels as recommended by WCAG) make it easier for users with limited dexterity or those using assistive technologies to tap or click accurately.
+
+**Focus States:** Ensures interactive elements like buttons and links clearly indicate focus when navigated with a keyboard.
+
+**Keyboard Navigation:** Designing a website or application so users can navigate and interact with it using only a keyboard, without needing a mouse. This is essential for accessibility, especially for people with disabilities.
+
+*It typically includes:*
+- Tab key to move between links, buttons, and form fields.
+- Enter/Spacebar to activate buttons and links.
+- Arrow keys to scroll or navigate within menus.
+- Escape key to close pop-ups or dialogs.
+
+**Screen Reader Testing:**  "Screen reader testing" means checking how well a website or app works for visually impaired users who rely on screen reader software. It ensures that text, images, and interactive elements are properly read aloud and usable with keyboard commands.
+
+Prioritizing accessibility in our design system allows all users, regardless of ability, navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users.
 
 {% endblock %}
 

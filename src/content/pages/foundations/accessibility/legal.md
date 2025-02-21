@@ -4,7 +4,7 @@ title: Legal Requirements
 description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 parent: Accessibility
 layout: layouts/3-col.njk
-navOrder: 3
+navOrder: 4
 ---
 
 {% block content %}
@@ -20,7 +20,7 @@ This policy ensures that all digital tools, including websites and applications 
 - Ensure that each website either owned or maintained by the SE, including those provided by third parties, conform to the Level AA success criteria and conformance requirements of WCAG Version 2.2, or any successor guidelines, by **January 1, 2027**, in accordance with STL Section 103-d.
 
 
-<h2>Current ITS Policy</h2>
+## Current ITS Policy
 
 This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.
 
@@ -36,13 +36,13 @@ To ensure compliance with the requirements of this policy, SEs must:
 
 ## Measurable Standards
 
-Section 508 of the Rehabilitation Act established federal accessibility standards for government sites. However, as web technologies rapidly evolved, Section 508 became outdated. In January 2018, the guidance was revised to recommend “reviewing and prioritizing W3C, WCAG, and ARIA authoring best practices” for compliance, rather than specific web technology guidance that was previously part of the 508 legislation. This shift reflects how W3C governing bodies have kept pace with web evolution, providing updated guidance and compliance measures that both federal and state government agencies can use. https://www.section508.gov/refresh-toolkit 
+Section 508 of the Rehabilitation Act established federal accessibility standards for government sites. However, as web technologies rapidly evolved, Section 508 became outdated. In January 2018, the guidance was revised to recommend “reviewing and prioritizing W3C, WCAG, and ARIA authoring best practices” for compliance, rather than specific web technology guidance that was previously part of the 508 legislation. This shift reflects how W3C governing bodies have kept pace with web evolution, providing updated guidance and compliance measures that both federal and state government agencies can use. [https://www.section508.gov/refresh-toolkit](https://www.section508.gov/refresh-toolkit)
 
-The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web. https://www.w3.org  
+The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web. [https://www.w3.org](https://www.w3.org)
 
-Web Content Accessibility Guidelines (WCAG) are developed through the W3C process in cooperation with individuals and organizations around the world, with a goal of providing a single shared standard for web content accessibility that meets the needs of individuals, organizations, and governments internationally. https://www.w3.org/WAI/intro/wcag  
+Web Content Accessibility Guidelines (WCAG) are developed through the W3C process in cooperation with individuals and organizations around the world, with a goal of providing a single shared standard for web content accessibility that meets the needs of individuals, organizations, and governments internationally. [https://www.w3.org/WAI/intro/wcag](https://www.w3.org/WAI/intro/wcag)
 
-ARIA, the Accessible Rich Internet Applications Suite, defines a way to make web content and web applications more accessible to people with disabilities. ARIA is particularly useful for making accessible dynamic content and complex user interface controls that are built with HTML, JavaScript, and similar technologies. https://www.w3.org/TR/wai-aria-1.1/#usage  
+ARIA, the Accessible Rich Internet Applications Suite, defines a way to make web content and web applications more accessible to people with disabilities. ARIA is particularly useful for making accessible dynamic content and complex user interface controls that are built with HTML, JavaScript, and similar technologies. [https://www.w3.org/TR/wai-aria-1.1/#usage](https://www.w3.org/TR/wai-aria-1.1/#usage)
 
 {% endblock %}
 
