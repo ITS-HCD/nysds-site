@@ -1,6 +1,6 @@
 ---
 permalink: /foundations/accessibility/legal/
-title: Legal
+title: Legal Requirements
 description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 parent: Accessibility
 layout: layouts/3-col.njk
@@ -19,10 +19,8 @@ This policy ensures that all digital tools, including websites and applications 
 - Ensure that all web content and mobile applications conform to the Level AA success criteria and conformance requirements of WCAG Version 2.1 in accordance with the Department of Justice Rule by **June 25, 2026**.
 - Ensure that each website either owned or maintained by the SE, including those provided by third parties, conform to the Level AA success criteria and conformance requirements of WCAG Version 2.2, or any successor guidelines, by **January 1, 2027**, in accordance with STL Section 103-d.
 
-[Additional Information](https://its.ny.gov/document/accessibility-web-based-information-and-applications-compliance-reporting)
 
-
-## Current ITS Policy
+<h2>Current ITS Policy</h2>
 
 This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.
 
@@ -33,7 +31,8 @@ To ensure compliance with the requirements of this policy, SEs must:
 - Maintain documented testing reports for each ICT until the next automated and manual testing is completed.
 - Keep a list of ICTs and the current compliance status of each.
 - Clearly display a link labeled “Accessibility” in the footer of the SE website’s Home Page. The link should direct users to a page with contact information for questions about the site’s accessibility and the accessibility of any other ICT under the control of the SE.
-https://its.ny.gov/document/accessibility-web-based-information-and-applications-compliance-reporting 
+
+[Read Full Policy](https://its.ny.gov/document/accessibility-web-based-information-and-applications-compliance-reporting)
 
 ## Measurable Standards
 

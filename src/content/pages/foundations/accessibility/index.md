@@ -10,12 +10,14 @@ navOrder: 20
 
 <h1>Accessiblilty</h1>
 
+<img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;">
+
 <nys-alert type="warning" heading="Upcoming Compliance Deadlines" text="DOJ requires WCAG 2.1 by April 2026 and NYSTL requires WCAG 2.2 by January 2027." primaryLabel="Learn More" primaryAction="/foundations/accessibility/legal/#deadlines"></nys-alert>
 
 
 <section id="what-is-web-accessibility">
 
-  <h2>What Is Web Accessibility</h2>
+<h2>What Is Web Accessibility</h2>
 
 <p>Web accessibility is about making websites, digital services, and online content usable by
 everyone, including people with disabilities. Building with accessibility in mind is about removing
@@ -28,10 +30,11 @@ Perceivable, Operable, Understandable, and Robust. These principles provide a fr
 determining if web content is accessible to all users, no matter the disability or device:</p>
 
 <ul>
-  <li><strong>Perceivable</strong>: Is information presented in ways that all users can perceive?</li>
+  <li><strong>Perceivable</strong>: Is content presented 
+in ways that all users can perceive?</li>
   <li><strong>Operable</strong>: Are interface elements navigable and usable by all users?</li>
   <li><strong>Understandable</strong>: Is information clear and behavior predictable?</li>
-  <li><strong>Robust</strong>: Is content structured in a way that is compatible with assistive technologies?</li>
+  <li><strong>Robust</strong>: Is the content compatible with assistive technology?</li>
 </ul>
 <blockquote>
   "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
@@ -42,7 +45,7 @@ determining if web content is accessible to all users, no matter the disability 
 <h2>Accessibility Policy</h2>
 <h3>Current ITS Policy</h3>
 <p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
-<p><a href="https://its.ny.gov/document/accessibility-web-based-information-and-applications-compliance-reporting">Read the full accessibility policy</a></p>
+<p><a href="/foundations/accessibility/legal/#current-its-policy">Learn More</a></p>
 
 <h3>Recommendations</h3>
 <ul>
@@ -76,30 +79,6 @@ determining if web content is accessible to all users, no matter the disability 
   <li><a href="https://www.wuhcag.com/wcag-checklist/">WUHCAG WCAG Checklists </a></li>
   <li><a href="https://a11yproject.com/checklist">A11Y Project Checklist </a></li>
 </ul>
-<h4>Websites and Applications</h4>
-<ul>
-  <li><a href="https://webaim.org/techniques/forms/">Creating Accessible Forms – Making forms accessible and understandable for all users </a></li>
-  <li><a href="https://accessibilityinsights.io/">Accessibility Insights (Microsoft) – Accessibility testing and reporting suite </a></li>
-  <li><a href="https://squizlabs.github.io/HTML_CodeSniffer/ ">HTML CodeSniffer – Real-time accessibility checker for code </a></li>
-  <li><a href="https://wave.webaim.org/extension/">Wave – Web accessibility evaluation tool </a></li>
-  <li><a href="https://developers.google.com/web/tools/lighthouse">Google Lighthouse – Web performance and accessibility audit </a></li>
-  <li><a href="https://www.deque.com/axe/">Deque Axe – Chrome extension for accessibility testing </a></li>
-  <li><a href="https://ffoodd.github.io/a11y.css/">A11y CSS – Stylesheet for testing accessibility states </a></li>
-  <li><a href="https://webaim.org/articles/nvda/">NVDA – Screen reader for Windows users </a></li>
-  <li><a href="https://pa11y.org/">Pa11y – Command line accessibility testing tool </a></li>
-  <li><a href="https://www.npmjs.com/package/accessibility-checker">Accessibility-checker – NodeJS module for accessibility scanning </a></li>
-</ul>
-<h4>Electronic Documents</h4>
-<ul>
-  <li><a href="https://webaim.org/techniques/acrobat/">PDF Accessibility – What makes a PDF accessible? </a></li>
-  <li><a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">PDF Accessibility – Exporting accessible PDFs with Adobe Acrobat </a></li>
-  <li><a href="https://helpx.adobe.com/acrobat/using/accessibility-features-pdfs.html">PDF Accessibility Features </a></li>
-  <li><a href="https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-peoplewith-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Document Accessibility – Exporting accessible documents with Microsoft Word </a></li>
-  <li><a href="https://www.w3.org/WAI/tips/writing/">Writing for Web Accessibility – Accessibility guidance for content writers </a></li>
-  <li><a href="https://www.w3.org/WAI/media/av/">Audio / Video Accessibility – Making audio and video media accessible </a></li>
-  <li><a href="https://www.w3.org/WAI/tutorials/images/complex/">Complex Images – Making charts, infographics, and maps accessible </a></li>
-</ul>
-</section>
 
 {% endblock %}
 
