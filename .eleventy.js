@@ -20,9 +20,10 @@ const excludeFuture = require("./src/_11ty/filters/excludeFuture.js");
 const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 
 // collections
-const updates = require("./src/_11ty/collections/updates.js");
-const components = require("./src/_11ty/collections/components.js");
-const sections = require("./src/_11ty/collections/sections.js");
+const updates = require("./src/_11ty/collections/updates");
+const components = require("./src/_11ty/collections/components");
+const sections = require("./src/_11ty/collections/sections");
+const tokens = require("./src/_11ty/collections/tokens");
 
 module.exports = (eleventyConfig) => {
 
@@ -42,6 +43,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addCollection("updates", updates);
     eleventyConfig.addCollection("components", components);
     eleventyConfig.addCollection("sections", sections);
+    eleventyConfig.addCollection("tokens", tokens);
 
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);
