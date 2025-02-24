@@ -20,15 +20,15 @@ navOrder: 40
             <div class="token-list__swatch" style="background-color: var({{ token.name }});">
               {% if token.recommendedtype %}
                 <div class="token-list__text">
-                  {% for textColor, details in token.recommendedtype %}
-                    <span 
-                      class="token-list__text--value" 
-                      style="color: var({{ details.color }});" 
-                      data-color="var({{ details.color }})"
-                    >
-                      {{ details.contrastRatio }}
-                    </span>
-                  {% endfor %}
+                {% for textColor, details in token.recommendedtype %}
+                  <span 
+                    class="token-list__text--value" 
+                    style="color: var({{ details.variableName }});" 
+                    data-color="var({{ details.variableName }})"
+                  >
+                    {{ details.contrastRatio }}
+                  </span>
+                {% endfor %}
                 </div>
               {% endif %}
             </div>
