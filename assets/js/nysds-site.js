@@ -63,38 +63,58 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateActiveNav, { passive: true });
 });
 
-// Add Copy to clipboard to all pre elements
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("pre code").forEach((codeBlock) => {
-    // Select parent
     const pre = codeBlock.parentElement;
+
+    // Opt-out: Skip elements with data-no-copy
+    if (pre.hasAttribute("data-no-copy")) return;
+
     pre.style.position = "relative";
-    // Create butotn
+
+    // Create Copy Button
     const button = document.createElement("nys-button");
     button.label = "Copy Code";
     button.size = "sm";
     button.variant = "outline";
+    button.prefixIcon = "publish";
     button.style.position = "absolute";
     button.style.top = "0";
     button.style.right = "12px";
     button.style.display = "flex";
     button.style.zIndex = "9999";
 
+    // Click event: Copy code to clipboard
     button.addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText(codeBlock.innerText);
-        button.label = "Copied!";
-        setTimeout(() => (button.label = "Copy Code"), 1500);
+        await navigator.clipboard.writeText(codeBlock.innerText.trim());
+        button.setAttribute("label", "Copied!");
+        
+        // Add aria-live region for screen reader feedback
+        const liveRegion = document.createElement("span");
+        liveRegion.setAttribute("aria-live", "polite");
+        liveRegion.style.position = "absolute";
+        liveRegion.style.width = "1px";
+        liveRegion.style.height = "1px";
+        liveRegion.style.overflow = "hidden";
+        liveRegion.innerText = "Code copied to clipboard!";
+        pre.appendChild(liveRegion);
+
+        setTimeout(() => {
+          button.setAttribute("label", "Copy Code");
+          pre.removeChild(liveRegion);
+        }, 1500);
       } catch (err) {
         console.error("Failed to copy:", err);
-        button.label = "Failed!";
-        setTimeout(() => (button.label = "Copy Code"), 1500);
+        button.setAttribute("label", "Failed!");
+        setTimeout(() => button.setAttribute("label", "Copy Code"), 1500);
       }
     });
 
     pre.appendChild(button);
   });
 });
+
 
 // Add Copy to clipboard to all icon examples
 document.addEventListener("DOMContentLoaded", function () {

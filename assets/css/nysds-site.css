@@ -727,84 +727,89 @@ a.card:focus {
     overflow: hidden;
 }
 
-/* Additional Tweaks */
+/* Token List */
 
-/* UNav Hacks - REMOVE BEFORE LAUNCH */
-#nygov-universal-navigation {
-    min-height: 95px;
-    border-bottom: solid 1px #ddd;
+.token-list__item {
+    margin-bottom: var(--nys-space-600);
 }
-
-@media (min-width: 768px) {
-    #nygov-universal-navigation {
-        min-height: 60px;
-    }
+.token-list__name {
+    font-size: var(--nys-font-size-xl);
+    margin: 0;
+    padding: 0;
 }
-
-
-/* NYS Button */
-
-.nys-button {
-    display: inline-block;
-    padding: var(--nys-space-150) var(--nys-space-250);
-    font-size: var(--nys-font-size-ui-md);
-    line-height: var(--nys-font-lineheight-ui-md);
-    color: var(--nys-color-ink-reverse);
-    background-color: var(--nys-color-theme);
-    border-radius: var(--nys-radius-xl);
-    border: solid var(--nys-border-width-md) var(--nys-color-theme);
-    text-decoration: none;
-    text-align: center;
-    outline-width: var(--nys-border-width-md, 2px);
-    outline-offset: var(--nys-space-2px, 2px);
-    outline-color: var(--nys-color-focus, #004dd1);
+.token-list__raw {
+    color: var(--nys-color-neutral-500);
+    font-size: var(--nys-font-size-xs);
 }
-
-.nys-button:hover,
-.nys-button:focus {
-    color: var(--nys-color-ink-reverse);
-    background-color: var(--nys-color-theme-strong);
-    border-color: var(--nys-color-theme-strong);
-    cursor: pointer;
+.token-list__info > div {
+    padding: var(--nys-space-100) var(--nys-space-250);
+    background-color: var(--nys-color-neutral-50);
+    height: auto;
 }
-
-.nys-button:active {
-    color: var(--nys-color-ink-reverse);
-    background-color: var(--nys-color-theme-stronger);
-    border-color: var(--nys-color-theme-stronger);
-}
-
-.nys-button--sm {
-    padding: var(--nys-space-100);
-    font-size: var(--nys-font-size-ui-sm);
-    line-height: var(--nys-font-lineheight-ui-sm);
-}
-
-.nys-button--outline {
-    color: var(--nys-color-theme);
-    background-color: transparent;
-    border: solid var(--nys-border-width-md) var(--nys-color-theme);
-}
-
-.nys-button--outline:hover,
-.nys-button--outline:focus {
-    color: var(--nys-color-theme-strong);
-    background-color: var(--nys-color-theme-weaker);
-}
-
-.nys-button--outline:active {
-    color: var(--nys-color-theme-stronger);
-    background-color: var(--nys-color-theme-weak);
-}
-
-.nys-button--fullwidth {
+.token-list__var {
+    font-size: var(--nys-font-size-xs);
+    word-break: break-all;
     display: block;
+    white-space: pre-wrap;
+    line-height: 1;
+}
+.token-list__swatch {
+    position: relative;
     width: 100%;
+    max-width: calc( var(--nys-space-1200) * 2);
+    height: var(--nys-space-1200);
+    border-radius: var(--nys-radius-md);
+}
+.token-list__text {
+    font-size: var(--nys-font-size-sm);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: var(--nys-space-100) var(--nys-space-150);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+/* Dot before*/
+.token-list__text--value::before {
+    content: '';
+    display: inline-block;
+    width: var(--nys-space-100);
+    height: var(--nys-space-100);
+    border-radius: var(--nys-radius-round);
+    background: currentColor;
 }
 
-.nys-button+.nys-button {
-    margin-left: var(--nys-space-150);
-}
+.token-list__text--value {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Tooltip Styling */
+  .token-list__text--value::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: var(--nys-font-size-xs);
+    padding: var(--nys-space-50) var(--nys-space-100);
+    border-radius: var(--nys-radius-sm);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  
+  /* Show tooltip on hover */
+  .token-list__text--value:hover::after {
+    opacity: 1;
+  }
+  
+
+/* Additional Tweaks */
 
 code {
     font-family: "Monaspace Neon";
