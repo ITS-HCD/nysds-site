@@ -34,7 +34,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-02-27T11:58:20.076+00:00 -->
+    <!-- Latest Build: 2025-02-28T20:40:41.215+00:00 -->
   </head>
   
   <body class="single-page page-foundations section-foundations">
@@ -43,7 +43,7 @@
 
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 
-  <nys-globalheader appName="NYS Design System">
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul>
     <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
     <li class="site-header__item site-header__item--active"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
@@ -60,7 +60,7 @@
 
 
 <div class="section-header">
-    <div class="section-header__inner nys-grid-container">
+    <div class="section-header__inner nys-grid-container-widescreen">
         <div class="section-header__title">
             Foundations
         </div>
@@ -77,8 +77,9 @@
 
 
   <main role="main" data-pagefind-body>
-    <div class="nys-grid-container-widescreen">
+    
       
+<div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
     <nav class="section-nav" aria-label="Section Navigation">
@@ -216,6 +217,48 @@
 <p>What makes a design system unique is the connectedness. Our design libraries use variables, our code library is built on the same variables, the two have parity with each other, and our reference site is built using the same components, variables, and guiding principles. This interconnectedness is what makes a design system a system.</p>
 <p>This connectedness helps brings consistency, accessibility, and efficiency to New York State’s digital experiences. This section will walk you through the system and the core principles, styles, and design tokens that make it flexible and scalable across applications.</p>
 <h2>Defining Foundations</h2>
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/toggle-card.svg" alt="toggle graphic"></div>
+        <div class="card__title">Component Library</div>
+        <div class="card__desc">This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/flex-card.svg" alt="flex"></div>
+        <div class="card__title">Design Libraries</div>
+        <div class="card__desc">This is a library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/4-up-card.svg" alt="4 up graphic"></div>
+        <div class="card__title">Design Tokens</div>
+        <div class="card__desc">A collection design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/font-card.svg" alt="fonts"></div>
+        <div class="card__title">Fonts</div>
+        <div class="card__desc">A collection of standard NYS brand-approved typefaces that need to be used in both design and development product work.</div>
+      </div>
+    </div>
+  </div>
+</div>
 <p>Let's start by defining the parts of the system. The NYS Design System includes:</p>
 <ul>
 <li><strong>Component library:</strong> This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</li>
@@ -305,8 +348,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
   </aside>
 </div>
+</div>
 
-    </div>
   </main>
 
   <div class="site-footer">
