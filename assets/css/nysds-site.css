@@ -549,6 +549,10 @@ a.card:focus {
 
 }
 
+li > .section-nav__list {
+    border: none;
+}
+
 /* Section Nav Item */
 .section-nav__item {
     position: relative;
