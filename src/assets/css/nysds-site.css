@@ -322,7 +322,7 @@ a:active {
 /* Section Header */
 
 .section-header {
-    background-color: var(--nys-color-theme-weak);
+    background-color: var(--nys-color-info-weak);
     color: var(--nys-color-theme-strong, #fff);
 }
 
@@ -430,9 +430,9 @@ ex-header__title {
 
 .card {
     border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
-    border-radius: var(--nys-radius-lg);
+    border-radius: var(--nys-radius-xxl);
     padding: var(--nys-space-200);
-    margin-bottom: var(--nys-space-400);
+    margin-bottom: var(--nys-space-600);
     align-items: stretch;
     position: relative;
     text-decoration: none;
@@ -457,7 +457,7 @@ ex-header__title {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: var(--nys-radius-md);
+    border-radius: var(--nys-radius-lg);
 }
 
 .card__title {
@@ -486,6 +486,8 @@ ex-header__title {
 a.card {
     color: inherit;
     text-decoration: none;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;;
 }
 
 a.card:hover .card__title,
@@ -497,6 +499,32 @@ a.card:focus {
     border-color: var(--nys-color-focus, #004dd1);
     outline: var(--nys-border-width-sm, 1px) solid var(--nys-color-focus, #004dd1);
     outline-offset: 0;
+}
+
+.card__no-border {
+    border: none;
+}
+
+.card__no-border img {
+    object-fit: contain;
+}
+
+.card__no-border .card__media {
+    aspect-ratio: 1.7 / 1;
+    margin: var(--nys-space-200) 0;
+}
+
+.card__no-border .card__title {
+    font-size: var(--nys-font-size-h4);
+}
+
+.card__no-border .card__desc {
+    font-size: var(--nys-font-size-ui-sm);
+    /* line-height: var(--nys-font-lineheight-md); */
+}
+
+.card__flat {
+    background-color: var(--nys-color-theme-weaker);
 }
 
 
@@ -713,9 +741,9 @@ a.card:focus {
 
 /* Home Hero */
 .hero {
-    padding: var(--nys-space-600) 0;
+    padding-top: var(--nys-space-100);
     color: var(--nys-color-ink);
-    background-color: var(--nys-color-theme-weak);
+    background-color: var(--nys-color-info-weak);
 }
 
 .hero--home {
@@ -829,6 +857,20 @@ summary {
 
 summary:hover {
     background-color: var(--nys-color-theme-weaker);
+}
+
+/* Byline on homepage */
+
+.byline {
+    padding-left: var(--nys-space-300);
+}
+
+.byline p {
+    max-width: 85%; /* Limit the width of the byline to align with NYSDS lockup */
+}
+/* Align the logo lockup with the center of the homepage graphic */
+.nys-top-300 {
+    margin-top: var(--nys-space-300);
 }
 
 /* Icon display tweaks */

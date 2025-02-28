@@ -7,6 +7,7 @@ section: About
 ---
 
 {% block content %}
+<div class="nys-grid-container-widescreen">
 
 # About the New York State Design System
 
@@ -25,6 +26,7 @@ A clear repository of best practices reduces confusion and decreases the time it
 ### Accessible by Default
 Built-in accessibility testing and automation means a greater chance that people with disabilities will be able to use our software (and reduced liability for agencies.)​
 
+</div>
 {# <h2>The Future</h2>
 
 

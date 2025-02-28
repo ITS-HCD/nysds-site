@@ -1,6 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+<div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
     {% include "partials/section-nav.njk" %}
@@ -11,5 +12,6 @@
   <aside class="nys-desktop:nys-grid-col-2">
     {% include "partials/onpage-nav.njk" %}
   </aside>
+</div>
 </div>
 {% endblock %}
