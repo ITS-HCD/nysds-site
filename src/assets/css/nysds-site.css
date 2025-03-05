@@ -512,15 +512,16 @@ a.card:focus {
 .card__no-border .card__media {
     aspect-ratio: 1.7 / 1;
     margin: var(--nys-space-200) 0;
+    max-height: 10rem;
 }
 
 .card__no-border .card__title {
-    font-size: var(--nys-font-size-h4);
+    font-size: var(--nys-font-size-h5);
 }
 
 .card__no-border .card__desc {
     font-size: var(--nys-font-size-ui-sm);
-    /* line-height: var(--nys-font-lineheight-md); */
+    max-width: 20rem;
 }
 
 .card__flat {

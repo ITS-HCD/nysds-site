@@ -17,6 +17,8 @@ This connectedness helps brings consistency, accessibility, and efficiency to Ne
 
 ## Defining Foundations
 
+Let's start by defining the parts of the system. The NYS Design System includes:
+
 <div class="nys-grid-row nys-grid-gap-lg">
   <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
     <div class="card card__no-border card__flat nys-flex-fill">
@@ -59,14 +61,6 @@ This connectedness helps brings consistency, accessibility, and efficiency to Ne
     </div>
   </div>
 </div>
-
-Let's start by defining the parts of the system. The NYS Design System includes:
-
-- **Component library:** This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.
-- **Design libraries:** This is a library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.
-- **Design tokens:** A collection design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.
-- **Fonts:** A collection of standard NYS brand-approved typefaces that need to be used in both design and development product work.
-- **Reference site:** You're reading it! This is a place to showcase and explain the design system. It contains guidelines about brand, aesthetics, usability, accessibility, common patterns, governance, contribution, etc.
 
 ## Why Foundations Matter
 
