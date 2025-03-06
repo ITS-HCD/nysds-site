@@ -26,21 +26,21 @@ Designing and prototyping with the NYS Design System is powered by prebuilt Figm
 
 ### How the Libraries Work
 
+<nys-alert type="warning" text="Using these libraries requires an NYS Figma account."></nys-alert>
+
 NYS Design System’s Figma assets are organized into three libraries:
 
 - **NYSDS Components** → The core file containing all UI components with built-in properties, variants, and prototyping features. [NYSDS Component Library](#)
 - **NYSDS Foundations** → A design token library with colors, spacing, typography, and shadows—ensuring consistency across projects. [NYSDS Foundations Library](#)
 - **NYSDS Icons** → A library of NYS-approved icons for use in interfaces. [NYSDS Icon Library](#)
- 
-⚠️ Note: Using these libraries requires an NYS Figma account.
 
 ### How the Libraries Help
 
 NYS Design System is designed to speed up and standardize UI design. Here’s how:
 
-- Design & Code Parity: Components in Figma match the NYS Design System web components 1:1, reducing the need for custom styling. Developers can easily find and implement the same components seen in designs.
-- Auto-Theming for NYS Agencies: NYS Design System adapts to agency branding using built-in Figma theme variables. Project templates automatically apply the correct colors, typography, and design tokens.
-- Built-In Prototyping: Many components have pre-configured interactions (e.g., modals, buttons, and inputs). Click-through prototypes help teams test and refine user flows before development begins.
+- **Design & Code Parity:** Components in Figma match the NYS Design System web components 1:1, reducing the need for custom styling. Developers can easily find and implement the same components seen in designs.
+- **Auto-Theming for NYS Agencies:** NYS Design System adapts to agency branding using built-in Figma theme variables. Project templates automatically apply the correct colors, typography, and design tokens.
+- **Built-In Prototyping:** Many components have pre-configured interactions (e.g., modals, buttons, and inputs). Click-through prototypes help teams test and refine user flows before development begins.
 
 ## How to Start Designing with NYS Design System
 
