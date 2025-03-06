@@ -25,8 +25,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
   <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="niagara-falls" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year."></nys-checkbox>
-
+  <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
 </nys-checkboxgroup>
 {% endblock %}
 
@@ -46,7 +45,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
 </nys-checkboxgroup>
 {% endblock %}
 

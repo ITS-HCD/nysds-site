@@ -9,7 +9,7 @@ navOrder: 1
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-
+<div class="nys-grid-container-widescreen">
 <h1>Web Components</h1>
 
 <section class="nys-grid-row nys-grid-gap">
@@ -26,9 +26,9 @@ navOrder: 1
   </div>
 </section>
 
-<section class="nys-grid-row nys-grid-gap">
+<section class="nys-grid-row nys-grid-gap-6">
   {%- for post in collections.components -%}
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-3 nys-display-flex">
     <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
       <div class="card__inner">
         <div class="card__media">
@@ -60,7 +60,7 @@ navOrder: 1
     </div>
   </div>
 </section>
-
+</div>
 {% endblock %}
 
 {% block styles %}

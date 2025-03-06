@@ -19,11 +19,48 @@ This connectedness helps brings consistency, accessibility, and efficiency to Ne
 
 Let's start by defining the parts of the system. The NYS Design System includes:
 
-- **Component library:** This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.
-- **Design libraries:** This is a library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.
-- **Design tokens:** A collection design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.
-- **Fonts:** A collection of standard NYS brand-approved typefaces that need to be used in both design and development product work.
-- **Reference site:** You're reading it! This is a place to showcase and explain the design system. It contains guidelines about brand, aesthetics, usability, accessibility, common patterns, governance, contribution, etc.
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/toggle-card.svg" alt="toggle graphic"></div>
+        <div class="card__title">Component Library</div>
+        <div class="card__desc">This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/flex-card.svg" alt="flex"></div>
+        <div class="card__title">Design Libraries</div>
+        <div class="card__desc">This is a library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/4-up-card.svg" alt="4 up graphic"></div>
+        <div class="card__title">Design Tokens</div>
+        <div class="card__desc">A collection design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__media">
+            <img src="/assets/img/font-card.svg" alt="fonts"></div>
+        <div class="card__title">Fonts</div>
+        <div class="card__desc">A collection of standard NYS brand-approved typefaces that need to be used in both design and development product work.</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Why Foundations Matter
 
