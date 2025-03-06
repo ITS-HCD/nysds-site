@@ -34,7 +34,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-06T14:48:26.269+00:00 -->
+    <!-- Latest Build: 2025-03-06T18:10:42.618+00:00 -->
   </head>
   
   <body class="single-page page-accessibility section-foundations">
@@ -108,12 +108,48 @@
         
         
         
+          
         
-        <li class="section-nav__item section-nav__item--active-section section-nav__item--active" >
+          
+        
+          
+        
+          
+        
+        
+        <li class="section-nav__item section-nav__item--active-section section-nav__item--active"  aria-expanded="true" >
           <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/"  aria-current="page" >
             Accessibility
           </a>
           
+          
+            <ul class="section-nav__list" >
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/digital-experiences/" >
+                    Digital Experiences
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/documents/" >
+                    Documents
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/learn/" >
+                    Learning Resources
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/legal/" >
+                    Legal Requirements
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
       
@@ -213,8 +249,10 @@
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <h1>Accessiblilty</h1>
+<img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;">
 <section id="what-is-web-accessibility">
-  <h2>What Is Web Accessibility</h2>
+<h2>What Is Web Accessibility</h2>
+<p><nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text=""></nys-alert></p>
 <p>Web accessibility is about making websites, digital services, and online content usable by
 everyone, including people with disabilities. Building with accessibility in mind is about removing
 barriers to access. It helps ensure that people who rely on assistive technologies, like screen
@@ -224,21 +262,26 @@ information.</p>
 Perceivable, Operable, Understandable, and Robust. These principles provide a framework for
 determining if web content is accessible to all users, no matter the disability or device:</p>
 <ul>
-  <li><strong>Perceivable</strong>: Is information presented in ways that all users can perceive?</li>
+  <li><strong>Perceivable</strong>: Is content presented 
+in ways that all users can perceive?</li>
   <li><strong>Operable</strong>: Are interface elements navigable and usable by all users?</li>
   <li><strong>Understandable</strong>: Is information clear and behavior predictable?</li>
-  <li><strong>Robust</strong>: Is content structured in a way that is compatible with assistive technologies?</li>
+  <li><strong>Robust</strong>: Is the content compatible with assistive technology?</li>
 </ul>
-<blockquote>
-  "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
-</blockquote>
-<cite>– Sir Tim Berners-Lee</cite>
+<div style="border-left: 4px solid var(--nys-color-neutral-100); padding: 16px 32px; margin-top: 16px;">
+  <blockquote>
+    "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
+  </blockquote>
+  <cite>– Sir Tim Berners-Lee</cite>
+</div>
 </section>
 <section id="accessibility-policy">
 <h2>Accessibility Policy</h2>
+<p><nys-alert type="warning" heading="Upcoming Compliance Deadlines" text="DOJ requires WCAG 2.1 by April 2026 and NYSTL requires WCAG 2.2 by January 2027." primaryLabel="Learn More" primaryAction="/foundations/accessibility/legal/#deadlines"></nys-alert></p>
 <h3>Current ITS Policy</h3>
 <p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
-<p><a href="https://its.ny.gov/document/accessibility-web-based-information-and-applications-compliance-reporting">Read the full accessibility policy</a></p>
+<p><a href="/foundations/accessibility/legal/#current-its-policy">Learn More</a></p>
+<HR>
 <h3>Recommendations</h3>
 <ul>
   <li><strong>WCAG Compliance</strong>: Target WCAG 2.1 Level AA compliance for all web applications, content, and mobile applications by June 25, 2026, as required by the DOJ Rule. Upgrade web applications to WCAG 2.2 Level AA compliance by January 1, 2027, in accordance with New York State Technology Law (STL) Section 103-d.</li>
@@ -247,54 +290,23 @@ determining if web content is accessible to all users, no matter the disability 
   <li><strong>Documentation and Records</strong>: Keep documented testing reports for each ICT and maintain an updated list of all ICTs along with their current compliance status. Clearly display a link labeled “Accessibility” in the footer of the SE's website home page, providing contact information for accessibility inquiries. </li>
 </ul>
 </section>
-<section id="learning-resources">
-<h2>Learning Resources</h2>
-<h3>Getting Started</h3>
+<h2>Our Approach</h2>
+<p><strong>How does our team make sure our design system is accessible to all?</strong></p>
+<p>While there are numerous ways to check for accessibility, here are just a few:</p>
+<p><strong>Color Contrast:</strong> Ensure sufficient contrast between text and background colors using a dedicated checker.</p>
+<p><a href="http://webaim.org/resources/contrastchecker/">WebAim</a> is recommended.</p>
+<p><strong>Element Sizing:</strong> Larger interactive elements (minimum 44x44 pixels as recommended by WCAG) make it easier for users with limited dexterity or those using assistive technologies to tap or click accurately.</p>
+<p><strong>Focus States:</strong> Ensures interactive elements like buttons and links clearly indicate focus when navigated with a keyboard.</p>
+<p><strong>Keyboard Navigation:</strong> Designing a website or application so users can navigate and interact with it using only a keyboard, without needing a mouse. This is essential for accessibility, especially for people with disabilities.</p>
+<p><em>It typically includes:</em></p>
 <ul>
-  <li><a href="https://www.w3.org/WAI/people-use-web/">How People with Disabilities Use the Web </a></li>
-<li><a href="https://www.linkedin.com/learning/ux-foundations-accessibility">LinkedIn's Foundations of Accessibility Online Course </a></li>
-<li><a href="https://web.dev/learn/accessibility">Google's Web Accessibility Online Course (for technical audiences) </a></li>
-<li><a href="https://www.a11yproject.com/">The Accessibility Project </a></li>
-<li><a href="https://on.ny.gov/4d3yuKB">Deque: Accessibility Awareness for Editors and Content Contributors (SLMS login) </a></li>
-<li><a href="https://on.ny.gov/4eksOwH">Deque: Accessibility Awareness for Front-End Developers (SLMS login) </a></li>
-<li><a href="https://on.ny.gov/4elshdX">Deque: Accessibility Awareness for Quality Assurance Professionals (SLMS login) </a></li>
+<li>Tab key to move between links, buttons, and form fields.</li>
+<li>Enter/Spacebar to activate buttons and links.</li>
+<li>Arrow keys to scroll or navigate within menus.</li>
+<li>Escape key to close pop-ups or dialogs.</li>
 </ul>
-<h3>Advanced Learning</h3>
-<ul>
-<li><a href="https://webaim.org/articles/">WebAim Accessibility Guide </a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 Quick Reference </a></li>
-<li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 Full Guidelines </a></li>
-</ul>
-<h3>Assessing Compliance</h3>
-<h4>Checklists</h4>
-<ul>
-  <li><a href="https://www.wuhcag.com/wcag-checklist/">WUHCAG WCAG Checklists </a></li>
-  <li><a href="https://a11yproject.com/checklist">A11Y Project Checklist </a></li>
-</ul>
-<h4>Websites and Applications</h4>
-<ul>
-  <li><a href="https://webaim.org/techniques/forms/">Creating Accessible Forms – Making forms accessible and understandable for all users </a></li>
-  <li><a href="https://accessibilityinsights.io/">Accessibility Insights (Microsoft) – Accessibility testing and reporting suite </a></li>
-  <li><a href="https://squizlabs.github.io/HTML_CodeSniffer/ ">HTML CodeSniffer – Real-time accessibility checker for code </a></li>
-  <li><a href="https://wave.webaim.org/extension/">Wave – Web accessibility evaluation tool </a></li>
-  <li><a href="https://developers.google.com/web/tools/lighthouse">Google Lighthouse – Web performance and accessibility audit </a></li>
-  <li><a href="https://www.deque.com/axe/">Deque Axe – Chrome extension for accessibility testing </a></li>
-  <li><a href="https://ffoodd.github.io/a11y.css/">A11y CSS – Stylesheet for testing accessibility states </a></li>
-  <li><a href="https://webaim.org/articles/nvda/">NVDA – Screen reader for Windows users </a></li>
-  <li><a href="https://pa11y.org/">Pa11y – Command line accessibility testing tool </a></li>
-  <li><a href="https://www.npmjs.com/package/accessibility-checker">Accessibility-checker – NodeJS module for accessibility scanning </a></li>
-</ul>
-<h4>Electronic Documents</h4>
-<ul>
-  <li><a href="https://webaim.org/techniques/acrobat/">PDF Accessibility – What makes a PDF accessible? </a></li>
-  <li><a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html">PDF Accessibility – Exporting accessible PDFs with Adobe Acrobat </a></li>
-  <li><a href="https://helpx.adobe.com/acrobat/using/accessibility-features-pdfs.html">PDF Accessibility Features </a></li>
-  <li><a href="https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-peoplewith-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Document Accessibility – Exporting accessible documents with Microsoft Word </a></li>
-  <li><a href="https://www.w3.org/WAI/tips/writing/">Writing for Web Accessibility – Accessibility guidance for content writers </a></li>
-  <li><a href="https://www.w3.org/WAI/media/av/">Audio / Video Accessibility – Making audio and video media accessible </a></li>
-  <li><a href="https://www.w3.org/WAI/tutorials/images/complex/">Complex Images – Making charts, infographics, and maps accessible </a></li>
-</ul>
-</section>
+<p><strong>Screen Reader Testing:</strong>  &quot;Screen reader testing&quot; means checking how well a website or app works for visually impaired users who rely on screen reader software. It ensures that text, images, and interactive elements are properly read aloud and usable with keyboard commands.</p>
+<p>Prioritizing accessibility in our design system allows all users, regardless of ability, navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users.</p>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const navContainer = document.createElement('nav');

@@ -442,10 +442,20 @@ ex-header__title {
 
 .card--do {
     background-color: var(--nys-color-success-weak);
+    border-color: var(--nys-color-success-weak);
+}
+
+.card--do h3 {
+    color: var(--nys-color-success);
 }
 
 .card--dont {
     background-color: var(--nys-color-danger-weak);
+    border-color: var(--nys-color-danger-weak);
+}
+
+.card--dont h3 {
+    color: var(--nys-color-danger);
 }
 
 .card__media {
@@ -576,7 +586,6 @@ li > .section-nav__list {
     margin-left: calc(var(--nys-space-50) * -1);
 }
 
-
 /* Section Nav Link */
 
 .section-nav__link {
@@ -604,6 +613,14 @@ li > .section-nav__list {
 .section-nav__list .section-nav__list .section-nav__link {
     font-size: var(--nys-font-size-ui-sm);
     padding-left: var(--nys-space-400);
+}
+
+.section-nav .section-nav__list .section-nav__item .section-nav__link {
+    padding-left: 32px;
+}
+
+.section-nav .section-nav__list:first-child .section-nav__item .section-nav__link {
+    padding-left: 0px !important;
 }
 
 /* Section Nav hide button */
