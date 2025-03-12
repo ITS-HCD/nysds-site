@@ -8,9 +8,9 @@ navOrder: 1
 
 {% block content %}
 
-# Getting Started with the New York State Design System (NYSDS)
+# Getting Started
 
-NYSDS is New York State’s shared design system. It's created to help the people designing and building digital experiences do so in a way that is **consistent**, **user-friendly**, and **accessible**. No matter what role you play in the creation of these digital experiences, NYSDS has value to offer: big-picture framing, clear guidance, and ready-to-use resources.
+New York State Design System (NYSDS) is system for building New York State web applications and content websites. It's created to help the people designing and developing digital experiences to do so in a way that is **consistent**, **user-friendly**, and **accessible**. No matter what role you play in the creation of these digital experiences, NYSDS has value to offer: big-picture framing, clear guidance, and ready-to-use resources.
 
 ## Why NYSDS?
 
