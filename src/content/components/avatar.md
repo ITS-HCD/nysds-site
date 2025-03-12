@@ -4,6 +4,7 @@ title: Avatar
 description: Avatars visually represent a user or entity as initials, a photo, or an icon.
 image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
+image_header: /assets/img/components/avatar-header.svg
 ---
 
 {% extends "layouts/component.njk" %}
