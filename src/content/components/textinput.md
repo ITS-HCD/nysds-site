@@ -196,7 +196,7 @@ Takes any valid regex value.
 ### Error Message
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
 
-<nys-textinput label="Full Name" showError errorMessage="Cannot be left blank"></nys-textinput>
+<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
 
 <details>
 <summary>Example Code</summary>
