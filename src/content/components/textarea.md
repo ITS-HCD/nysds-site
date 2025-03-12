@@ -4,6 +4,7 @@ title: Textarea
 description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.
+image_header: /assets/img/components/textarea-header.svg
 ---
 
 {% extends "layouts/component.njk" %}

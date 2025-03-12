@@ -4,6 +4,7 @@ title: Global Footer
 description: Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
 image: /assets/img/components/global-footer.svg
 image_alt: An illustration of a global footer.
+image_header: /assets/img/components/global-footer-header.svg
 ---
 
 {% extends "layouts/component.njk" %}
