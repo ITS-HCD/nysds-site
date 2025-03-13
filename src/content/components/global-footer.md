@@ -5,6 +5,7 @@ description: Provide users with essential information, secondary navigation, leg
 image: /assets/img/components/global-footer.svg
 image_alt: An illustration of a global footer.
 image_header: /assets/img/components/global-footer-header.svg
+navOrder: 6
 ---
 
 {% extends "layouts/component.njk" %}

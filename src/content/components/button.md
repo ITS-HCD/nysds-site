@@ -5,6 +5,7 @@ description: "Used primarily for actions that have an immediate result like 'Sav
 image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
+navOrder: 4
 ---
 
 {% extends "layouts/component.njk" %}
