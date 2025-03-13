@@ -4,7 +4,7 @@ title: Global Header
 description: Provide users with consistent access to key features, branding, and primary navigation across all pages.
 image: /assets/img/components/global-header.svg
 image_alt: An illustration of a global header.
-image_header: /assets/img/components/global-footer-header.svg
+image_header: /assets/img/components/global-header-header.svg
 ---
 
 {% extends "layouts/component.njk" %}
