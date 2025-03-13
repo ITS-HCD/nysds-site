@@ -1,6 +1,6 @@
 ---
 permalink: /components/unav-header/
-title: Unav Header
+title: UNav Header
 description: A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 image: /assets/img/components/unav-header.svg
 image_alt: An illustration of a unav header.
