@@ -1,25 +1,33 @@
-import { css as u, LitElement as p, html as c } from "lit";
-import { property as C, state as F1 } from "lit/decorators.js";
+import { css as v, LitElement as p, html as c } from "lit";
+import { property as a, state as x1 } from "lit/decorators.js";
 import { ifDefined as g } from "lit/directives/if-defined.js";
 /*!
-   * New York State Design System (v1.1.0)
+   * New York State Design System (v1.1.1)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
  */
-const o0 = u`
+const o0 = v`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
     --_nys-alert-border-radius: var(--nys-radius-md, 4px);
     --_nys-alert-hover-border-radius: var(--nys-radius-sm, 2px);
-    --_nys-alert-color: var(
-      --nys-color-ink,
+    --_nys-alert-text-color: var(
+      --nys-color-text,
       var(--nys-color-neutral-900, #1b1b1b)
     );
     --_nys-alert-link-color: var(
       --nys-color-link,
       var(--nys-color-blue-600, #004dd1)
+    );
+    --_nys-alert-link-hover-color: var(
+      --nys-color-link-strong,
+      var(--nys-color-blue-700, #003ba1)
+    );
+    --_nys-alert-link-active-color: var(
+      --nys-color-link-strongest,
+      var(--nys-color-blue-800, #002971)
     );
     --_nys-alert-spacing: var(--nys-space-250, 20px);
     --_nys-alert-font-family: var(
@@ -44,13 +52,13 @@ const o0 = u`
 
     /* Border specifics */
     --_nys-alert-color-border-left: var(
-      --nys-color-neutral,
+      --nys-color-base,
       var(--nys-color-neutral-600, #62666a)
     );
 
     /* Background type specifics */
     --_nys-alert-color-bg: var(
-      --nys-color-neutral-weak,
+      --nys-color-base-weak,
       var(--nys-color-neutral-10, #f6f6f6)
     );
 
@@ -70,7 +78,7 @@ const o0 = u`
     border-left: var(--_nys-alert-border-width) solid
       var(--_nys-alert-color-border-left);
     border-radius: var(--_nys-alert-border-radius);
-    color: var(--_nys-alert-color);
+    color: var(--_nys-alert-text-color);
     padding: var(--_nys-alert-spacing);
     font-style: normal;
     font-family: var(--_nys-alert-font-family);
@@ -78,16 +86,21 @@ const o0 = u`
     line-height: var(--_nys-alert-lineheight);
     letter-spacing: var(--_nys-alert-letterspacing);
     gap: var(--_nys-alert-gap-space-150);
+    text-align: left;
   }
 
   /* Links */
   a,
-  a:active,
-  a:hover,
   a:visited {
     font-weight: var(--_nys-alert-font-weight-semibold);
     font-size: var(--_nys-alert-font-size);
     color: var(--_nys-alert-link-color);
+  }
+  a:hover {
+    color: var(--_nys-alert-link-hover-color);
+  }
+  a:active {
+    color: var(--_nys-alert-link-active-color);
   }
 
   /* For HTML elements put into the slot */
@@ -204,8 +217,28 @@ const o0 = u`
       --nys-color-emergency,
       var(--nys-color-red-800, #721c1c)
     );
-    --_nys-alert-color: #fff;
-    --_nys-alert-link-color: #fff;
+    --_nys-alert-text-color: var(
+      --nys-color-text-reverse,
+      var(--nys-color-white, #fff)
+    );
+    --_nys-alert-link-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
+    );
+    --_nys-alert-link-hover-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
+    );
+    --_nys-alert-link-active-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
+    );
+  }
+  :host([type="emergency"]) a:hover {
+    text-decoration-thickness: 2px;
+  }
+  :host([type="emergency"]) a:active {
+    text-decoration-thickness: 3px;
   }
 `;
 /*!
@@ -213,7 +246,7 @@ const o0 = u`
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -223,10 +256,10 @@ const o0 = u`
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const T5 = globalThis, k2 = T5.ShadowRoot && (T5.ShadyCSS === void 0 || T5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, H3 = Symbol(), p7 = /* @__PURE__ */ new WeakMap();
+const D5 = globalThis, k2 = D5.ShadowRoot && (D5.ShadyCSS === void 0 || D5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, V3 = Symbol(), p7 = /* @__PURE__ */ new WeakMap();
 let r0 = class {
   constructor(t, e, o) {
-    if (this._$cssResult$ = !0, o !== H3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    if (this._$cssResult$ = !0, o !== V3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = t, this.t = e;
   }
   get styleSheet() {
@@ -242,13 +275,13 @@ let r0 = class {
     return this.cssText;
   }
 };
-const n0 = (s) => new r0(typeof s == "string" ? s : s + "", void 0, H3), i0 = (s, t) => {
+const n0 = (s) => new r0(typeof s == "string" ? s : s + "", void 0, V3), i0 = (s, t) => {
   if (k2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
-    const o = document.createElement("style"), r = T5.litNonce;
+    const o = document.createElement("style"), r = D5.litNonce;
     r !== void 0 && o.setAttribute("nonce", r), o.textContent = e.cssText, s.appendChild(o);
   }
-}, v7 = k2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
+}, u7 = k2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
   return n0(e);
@@ -258,7 +291,7 @@ const n0 = (s) => new r0(typeof s == "string" ? s : s + "", void 0, H3), i0 = (s
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: l0, defineProperty: C0, getOwnPropertyDescriptor: a0, getOwnPropertyNames: c0, getOwnPropertySymbols: h0, getPrototypeOf: d0 } = Object, E1 = globalThis, u7 = E1.trustedTypes, p0 = u7 ? u7.emptyScript : "", y7 = E1.reactiveElementPolyfillSupport, m5 = (s, t) => s, X5 = { toAttribute(s, t) {
+const { is: l0, defineProperty: a0, getOwnPropertyDescriptor: C0, getOwnPropertyNames: c0, getOwnPropertySymbols: h0, getPrototypeOf: d0 } = Object, k1 = globalThis, v7 = k1.trustedTypes, p0 = v7 ? v7.emptyScript : "", y7 = k1.reactiveElementPolyfillSupport, m5 = (s, t) => s, X5 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? p0 : null;
@@ -287,7 +320,7 @@ const { is: l0, defineProperty: C0, getOwnPropertyDescriptor: a0, getOwnProperty
   }
   return e;
 } }, A2 = (s, t) => !l0(s, t), g7 = { attribute: !0, type: String, converter: X5, reflect: !1, hasChanged: A2 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), E1.litPropertyMetadata ?? (E1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), k1.litPropertyMetadata ?? (k1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let r5 = class extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -298,11 +331,11 @@ let r5 = class extends HTMLElement {
   static createProperty(t, e = g7) {
     if (e.state && (e.attribute = !1), this._$Ei(), this.elementProperties.set(t, e), !e.noAccessor) {
       const o = Symbol(), r = this.getPropertyDescriptor(t, o, e);
-      r !== void 0 && C0(this.prototype, t, r);
+      r !== void 0 && a0(this.prototype, t, r);
     }
   }
   static getPropertyDescriptor(t, e, o) {
-    const { get: r, set: n } = a0(this.prototype, t) ?? { get() {
+    const { get: r, set: n } = C0(this.prototype, t) ?? { get() {
       return this[e];
     }, set(i) {
       this[e] = i;
@@ -344,8 +377,8 @@ let r5 = class extends HTMLElement {
     const e = [];
     if (Array.isArray(t)) {
       const o = new Set(t.flat(1 / 0).reverse());
-      for (const r of o) e.unshift(v7(r));
-    } else t !== void 0 && e.push(v7(t));
+      for (const r of o) e.unshift(u7(r));
+    } else t !== void 0 && e.push(u7(t));
     return e;
   }
   static _$Eu(t, e) {
@@ -486,20 +519,20 @@ let r5 = class extends HTMLElement {
   firstUpdated(t) {
   }
 };
-r5.elementStyles = [], r5.shadowRootOptions = { mode: "open" }, r5[m5("elementProperties")] = /* @__PURE__ */ new Map(), r5[m5("finalized")] = /* @__PURE__ */ new Map(), y7 == null || y7({ ReactiveElement: r5 }), (E1.reactiveElementVersions ?? (E1.reactiveElementVersions = [])).push("2.0.4");
+r5.elementStyles = [], r5.shadowRootOptions = { mode: "open" }, r5[m5("elementProperties")] = /* @__PURE__ */ new Map(), r5[m5("finalized")] = /* @__PURE__ */ new Map(), y7 == null || y7({ ReactiveElement: r5 }), (k1.reactiveElementVersions ?? (k1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const v0 = { attribute: !0, type: String, converter: X5, reflect: !1, hasChanged: A2 }, u0 = (s = v0, t, e) => {
+const u0 = { attribute: !0, type: String, converter: X5, reflect: !1, hasChanged: A2 }, v0 = (s = u0, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -507,14 +540,14 @@ const v0 = { attribute: !0, type: String, converter: X5, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
 function G1(s) {
-  return (t, e) => typeof e == "object" ? u0(s, t, e) : ((o, r, n) => {
+  return (t, e) => typeof e == "object" ? v0(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
@@ -718,7 +751,7 @@ const y0 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, g0 = u`
+}, g0 = v`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -820,7 +853,7 @@ var f0 = Object.defineProperty, w0 = Object.getOwnPropertyDescriptor, W1 = (s, t
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && f0(t, e, r), r;
 }, n5;
-const x1 = (n5 = class extends p {
+const L1 = (n5 = class extends p {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -860,24 +893,24 @@ const x1 = (n5 = class extends p {
   "64"
 ], n5);
 W1([
-  G1({ type: String })
-], x1.prototype, "name", 2);
+  G1({ type: String, reflect: !0 })
+], L1.prototype, "name", 2);
 W1([
   G1({ type: String })
-], x1.prototype, "label", 2);
+], L1.prototype, "label", 2);
 W1([
   G1({ type: String })
-], x1.prototype, "rotate", 2);
+], L1.prototype, "rotate", 2);
 W1([
   G1({ type: String })
-], x1.prototype, "flip", 2);
+], L1.prototype, "flip", 2);
 W1([
   G1({ type: String })
-], x1.prototype, "color", 2);
+], L1.prototype, "color", 2);
 W1([
   G1({ reflect: !0 })
-], x1.prototype, "size", 1);
-let _0 = x1;
+], L1.prototype, "size", 1);
+let _0 = L1;
 customElements.get("nys-icon") || customElements.define("nys-icon", _0);
 /*!
    * 
@@ -885,7 +918,7 @@ customElements.get("nys-icon") || customElements.define("nys-icon", _0);
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Button Component v1.1.0
+   * Button Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -895,16 +928,16 @@ customElements.get("nys-icon") || customElements.define("nys-icon", _0);
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const D5 = globalThis, z2 = D5.ShadowRoot && (D5.ShadyCSS === void 0 || D5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, V3 = Symbol(), f7 = /* @__PURE__ */ new WeakMap();
+const T5 = globalThis, P2 = T5.ShadowRoot && (T5.ShadyCSS === void 0 || T5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, H3 = Symbol(), f7 = /* @__PURE__ */ new WeakMap();
 let b0 = class {
   constructor(t, e, o) {
-    if (this._$cssResult$ = !0, o !== V3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    if (this._$cssResult$ = !0, o !== H3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = t, this.t = e;
   }
   get styleSheet() {
     let t = this.o;
     const e = this.t;
-    if (z2 && t === void 0) {
+    if (P2 && t === void 0) {
       const o = e !== void 0 && e.length === 1;
       o && (t = f7.get(e)), t === void 0 && ((this.o = t = new CSSStyleSheet()).replaceSync(this.cssText), o && f7.set(e, t));
     }
@@ -914,13 +947,13 @@ let b0 = class {
     return this.cssText;
   }
 };
-const m0 = (s) => new b0(typeof s == "string" ? s : s + "", void 0, V3), x0 = (s, t) => {
-  if (z2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
+const m0 = (s) => new b0(typeof s == "string" ? s : s + "", void 0, H3), x0 = (s, t) => {
+  if (P2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
-    const o = document.createElement("style"), r = D5.litNonce;
+    const o = document.createElement("style"), r = T5.litNonce;
     r !== void 0 && o.setAttribute("nonce", r), o.textContent = e.cssText, s.appendChild(o);
   }
-}, w7 = z2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
+}, w7 = P2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
   return m0(e);
@@ -930,7 +963,7 @@ const m0 = (s) => new b0(typeof s == "string" ? s : s + "", void 0, V3), x0 = (s
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: L0, defineProperty: $0, getOwnPropertyDescriptor: M0, getOwnPropertyNames: Z0, getOwnPropertySymbols: H0, getPrototypeOf: V0 } = Object, k1 = globalThis, _7 = k1.trustedTypes, S0 = _7 ? _7.emptyScript : "", b7 = k1.reactiveElementPolyfillSupport, x5 = (s, t) => s, Q5 = { toAttribute(s, t) {
+const { is: L0, defineProperty: $0, getOwnPropertyDescriptor: M0, getOwnPropertyNames: Z0, getOwnPropertySymbols: V0, getPrototypeOf: H0 } = Object, A1 = globalThis, _7 = A1.trustedTypes, S0 = _7 ? _7.emptyScript : "", b7 = A1.reactiveElementPolyfillSupport, x5 = (s, t) => s, Q5 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? S0 : null;
@@ -958,8 +991,8 @@ const { is: L0, defineProperty: $0, getOwnPropertyDescriptor: M0, getOwnProperty
       }
   }
   return e;
-} }, P2 = (s, t) => !L0(s, t), m7 = { attribute: !0, type: String, converter: Q5, reflect: !1, hasChanged: P2 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), k1.litPropertyMetadata ?? (k1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+} }, z2 = (s, t) => !L0(s, t), m7 = { attribute: !0, type: String, converter: Q5, reflect: !1, hasChanged: z2 };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), A1.litPropertyMetadata ?? (A1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let i5 = class extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -991,13 +1024,13 @@ let i5 = class extends HTMLElement {
   }
   static _$Ei() {
     if (this.hasOwnProperty(x5("elementProperties"))) return;
-    const t = V0(this);
+    const t = H0(this);
     t.finalize(), t.l !== void 0 && (this.l = [...t.l]), this.elementProperties = new Map(t.elementProperties);
   }
   static finalize() {
     if (this.hasOwnProperty(x5("finalized"))) return;
     if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(x5("properties"))) {
-      const e = this.properties, o = [...Z0(e), ...H0(e)];
+      const e = this.properties, o = [...Z0(e), ...V0(e)];
       for (const r of o) this.createProperty(r, e[r]);
     }
     const t = this[Symbol.metadata];
@@ -1085,7 +1118,7 @@ let i5 = class extends HTMLElement {
   }
   requestUpdate(t, e, o) {
     if (t !== void 0) {
-      if (o ?? (o = this.constructor.getPropertyOptions(t)), !(o.hasChanged ?? P2)(this[t], e)) return;
+      if (o ?? (o = this.constructor.getPropertyOptions(t)), !(o.hasChanged ?? z2)(this[t], e)) return;
       this.P(t, e, o);
     }
     this.isUpdatePending === !1 && (this._$ES = this._$ET());
@@ -1158,20 +1191,20 @@ let i5 = class extends HTMLElement {
   firstUpdated(t) {
   }
 };
-i5.elementStyles = [], i5.shadowRootOptions = { mode: "open" }, i5[x5("elementProperties")] = /* @__PURE__ */ new Map(), i5[x5("finalized")] = /* @__PURE__ */ new Map(), b7 == null || b7({ ReactiveElement: i5 }), (k1.reactiveElementVersions ?? (k1.reactiveElementVersions = [])).push("2.0.4");
+i5.elementStyles = [], i5.shadowRootOptions = { mode: "open" }, i5[x5("elementProperties")] = /* @__PURE__ */ new Map(), i5[x5("finalized")] = /* @__PURE__ */ new Map(), b7 == null || b7({ ReactiveElement: i5 }), (A1.reactiveElementVersions ?? (A1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const E0 = { attribute: !0, type: String, converter: Q5, reflect: !1, hasChanged: P2 }, k0 = (s = E0, t, e) => {
+const E0 = { attribute: !0, type: String, converter: Q5, reflect: !1, hasChanged: z2 }, k0 = (s = E0, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -1179,8 +1212,8 @@ const E0 = { attribute: !0, type: String, converter: Q5, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
@@ -1191,7 +1224,7 @@ function E(s) {
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const A0 = u`
+const A0 = v`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1209,19 +1242,19 @@ const A0 = u`
 
     /* Global Button Colors */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
 
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
 
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
 
     /* Typography */
@@ -1261,67 +1294,55 @@ const A0 = u`
     --_nys-button-width: 100%;
   }
 
-  /* Variants */
+  /* VARIANTS */
+
+  /* Filled */
   :host([variant="filled"]) {
+    /* Filled - Default */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-theme, #154973);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
   }
+
+  /* Outline */
   :host([variant="outline"]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
+    /* Outline - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
     --_nys-button-color-text: var(--nys-color-theme, #154973);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
+    /* Outline - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-weaker, #eff6fb);
     --_nys-button-color-text-hover: var(--nys-color-theme, #154973);
     --_nys-button-color-border-hover: var(--nys-color-theme, #154973);
 
+    /* Outline - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-weak, #cddde9);
     --_nys-button-color-text-active: var(--nys-color-theme, #154973);
     --_nys-button-color-border-active: var(--nys-color-theme, #154973);
 
-    --_nys-button-color-bg-disabled: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    /* Outline - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-100, #d0d0ce);
   }
-  :host([variant="ghost"]) {
-    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink, #000000);
-    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
-    --_nys-button-color-bg-hover: var(
-      --nys-color-black-transparent-100,
-      #0000001a
-    );
-    --_nys-button-color-text-hover: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-active: var(
-      --nys-color-black-transparent-200,
-      #00000033
-    );
-    --_nys-button-color-text-active: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(
-      --nys-color-transparent,
-      #ffffff00
-    );
-  }
+  /* Text */
   :host([variant="text"]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -1330,87 +1351,129 @@ const A0 = u`
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text: var(--nys-color-link, #004dd1);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-hover: var(--nys-color-link-strong, #003ba1);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-active: var(--nys-color-link-strongest, #002971);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
 
-  /* Inverted Variants */
-  :host([variant="filled"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-text-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-text-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-ink, #1b1b1b);
-  }
-  :host([variant="outline"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
-  }
-  :host([variant="ghost"][inverted]) {
+  /* Ghost */
+  :host([variant="ghost"]) {
+    /* Ghost - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Hover */
     --_nys-button-color-bg-hover: var(
-      --nys-color-white-transparent-100,
-      #ffffff1a
+      --nys-color-black-transparent-100,
+      #0000001a
     );
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Active */
     --_nys-button-color-bg-active: var(
-      --nys-color-white-transparent-200,
-      #ffffff33
+      --nys-color-black-transparent-200,
+      #00000033
     );
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
+
+  /* INVERTED VARIANTS */
+
+  /* Filled Inverted */
+  :host([variant="filled"][inverted]) {
+    /* Filled Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Outline Inverted */
+  :host([variant="outline"][inverted]) {
+    /* Outline Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
+
+    /* Outline Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse-weak, #d0d0ce);
+    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
+
+    /* Outline Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-active: var(
+      --nys-color-text-reverse-weaker,
+      #bec0c1
+    );
+    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
+
+    /* Outline Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
+  }
+
+  /* Text Inverted */
   :host([variant="text"][inverted]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -1419,20 +1482,65 @@ const A0 = u`
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text Inverted - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text: var(--nys-color-link-reverse, #a7a9ab);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-50, #ededed);
+    --_nys-button-color-text-hover: var(
+      --nys-color-link-reverse-strong,
+      #ededed
+    );
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(
+      --nys-color-reverse-strongest,
+      #ffffff
+    );
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Ghost Inverted */
+  :host([variant="ghost"][inverted]) {
+    /* Ghost Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Hover */
+    --_nys-button-color-bg-hover: var(
+      --nys-color-white-transparent-100,
+      #ffffff1a
+    );
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(
+      --nys-color-white-transparent-200,
+      #ffffff33
+    );
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
@@ -1521,7 +1629,7 @@ const A0 = u`
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -1532,7 +1640,7 @@ const A0 = u`
  * SPDX-License-Identifier: BSD-3-Clause
  */
 const q5 = globalThis, B2 = q5.ShadowRoot && (q5.ShadyCSS === void 0 || q5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, S3 = Symbol(), x7 = /* @__PURE__ */ new WeakMap();
-let z0 = class {
+let P0 = class {
   constructor(t, e, o) {
     if (this._$cssResult$ = !0, o !== S3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = t, this.t = e;
@@ -1550,7 +1658,7 @@ let z0 = class {
     return this.cssText;
   }
 };
-const P0 = (s) => new z0(typeof s == "string" ? s : s + "", void 0, S3), B0 = (s, t) => {
+const z0 = (s) => new P0(typeof s == "string" ? s : s + "", void 0, S3), B0 = (s, t) => {
   if (B2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = q5.litNonce;
@@ -1559,14 +1667,14 @@ const P0 = (s) => new z0(typeof s == "string" ? s : s + "", void 0, S3), B0 = (s
 }, L7 = B2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
-  return P0(e);
+  return z0(e);
 })(s) : s;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: U0, defineProperty: O0, getOwnPropertyDescriptor: R0, getOwnPropertyNames: I0, getOwnPropertySymbols: T0, getPrototypeOf: D0 } = Object, A1 = globalThis, $7 = A1.trustedTypes, q0 = $7 ? $7.emptyScript : "", M7 = A1.reactiveElementPolyfillSupport, L5 = (s, t) => s, t2 = { toAttribute(s, t) {
+const { is: U0, defineProperty: O0, getOwnPropertyDescriptor: I0, getOwnPropertyNames: R0, getOwnPropertySymbols: D0, getPrototypeOf: T0 } = Object, P1 = globalThis, $7 = P1.trustedTypes, q0 = $7 ? $7.emptyScript : "", M7 = P1.reactiveElementPolyfillSupport, L5 = (s, t) => s, t2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? q0 : null;
@@ -1595,7 +1703,7 @@ const { is: U0, defineProperty: O0, getOwnPropertyDescriptor: R0, getOwnProperty
   }
   return e;
 } }, U2 = (s, t) => !U0(s, t), Z7 = { attribute: !0, type: String, converter: t2, reflect: !1, hasChanged: U2 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), A1.litPropertyMetadata ?? (A1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), P1.litPropertyMetadata ?? (P1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let l5 = class extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -1610,7 +1718,7 @@ let l5 = class extends HTMLElement {
     }
   }
   static getPropertyDescriptor(t, e, o) {
-    const { get: r, set: n } = R0(this.prototype, t) ?? { get() {
+    const { get: r, set: n } = I0(this.prototype, t) ?? { get() {
       return this[e];
     }, set(i) {
       this[e] = i;
@@ -1627,13 +1735,13 @@ let l5 = class extends HTMLElement {
   }
   static _$Ei() {
     if (this.hasOwnProperty(L5("elementProperties"))) return;
-    const t = D0(this);
+    const t = T0(this);
     t.finalize(), t.l !== void 0 && (this.l = [...t.l]), this.elementProperties = new Map(t.elementProperties);
   }
   static finalize() {
     if (this.hasOwnProperty(L5("finalized"))) return;
     if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(L5("properties"))) {
-      const e = this.properties, o = [...I0(e), ...T0(e)];
+      const e = this.properties, o = [...R0(e), ...D0(e)];
       for (const r of o) this.createProperty(r, e[r]);
     }
     const t = this[Symbol.metadata];
@@ -1794,7 +1902,7 @@ let l5 = class extends HTMLElement {
   firstUpdated(t) {
   }
 };
-l5.elementStyles = [], l5.shadowRootOptions = { mode: "open" }, l5[L5("elementProperties")] = /* @__PURE__ */ new Map(), l5[L5("finalized")] = /* @__PURE__ */ new Map(), M7 == null || M7({ ReactiveElement: l5 }), (A1.reactiveElementVersions ?? (A1.reactiveElementVersions = [])).push("2.0.4");
+l5.elementStyles = [], l5.shadowRootOptions = { mode: "open" }, l5[L5("elementProperties")] = /* @__PURE__ */ new Map(), l5[L5("finalized")] = /* @__PURE__ */ new Map(), M7 == null || M7({ ReactiveElement: l5 }), (P1.reactiveElementVersions ?? (P1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -1806,8 +1914,8 @@ const N0 = { attribute: !0, type: String, converter: t2, reflect: !1, hasChanged
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -1815,8 +1923,8 @@ const N0 = { attribute: !0, type: String, converter: t2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
@@ -2026,7 +2134,7 @@ const F0 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, G0 = u`
+}, G0 = v`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -2127,8 +2235,8 @@ var W0 = Object.defineProperty, Y0 = Object.getOwnPropertyDescriptor, K1 = (s, t
   for (var r = o > 1 ? void 0 : o ? Y0(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && W0(t, e, r), r;
-}, C5;
-const L1 = (C5 = class extends p {
+}, a5;
+const $1 = (a5 = class extends p {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -2136,7 +2244,7 @@ const L1 = (C5 = class extends p {
     return this._size;
   }
   set size(s) {
-    this._size = C5.VALID_TYPES.includes(
+    this._size = a5.VALID_TYPES.includes(
       s
     ) ? s : "sm";
   }
@@ -2150,7 +2258,7 @@ const L1 = (C5 = class extends p {
     const s = this.getIcon();
     return s ? c`${s}` : null;
   }
-}, C5.styles = G0, C5.VALID_TYPES = [
+}, a5.styles = G0, a5.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -2166,79 +2274,79 @@ const L1 = (C5 = class extends p {
   "32",
   "48",
   "64"
-], C5);
+], a5);
+K1([
+  Y1({ type: String, reflect: !0 })
+], $1.prototype, "name", 2);
 K1([
   Y1({ type: String })
-], L1.prototype, "name", 2);
+], $1.prototype, "label", 2);
 K1([
   Y1({ type: String })
-], L1.prototype, "label", 2);
+], $1.prototype, "rotate", 2);
 K1([
   Y1({ type: String })
-], L1.prototype, "rotate", 2);
+], $1.prototype, "flip", 2);
 K1([
   Y1({ type: String })
-], L1.prototype, "flip", 2);
-K1([
-  Y1({ type: String })
-], L1.prototype, "color", 2);
+], $1.prototype, "color", 2);
 K1([
   Y1({ reflect: !0 })
-], L1.prototype, "size", 1);
-let K0 = L1;
+], $1.prototype, "size", 1);
+let K0 = $1;
 customElements.get("nys-icon") || customElements.define("nys-icon", K0);
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const e2 = globalThis, s2 = e2.trustedTypes, H7 = s2 ? s2.createPolicy("lit-html", { createHTML: (s) => s }) : void 0, E3 = "$lit$", i1 = `lit$${Math.random().toFixed(9).slice(2)}$`, k3 = "?" + i1, J0 = `<${k3}>`, _1 = document, o2 = () => _1.createComment(""), A5 = (s) => s === null || typeof s != "object" && typeof s != "function", O2 = Array.isArray, X0 = (s) => O2(s) || typeof (s == null ? void 0 : s[Symbol.iterator]) == "function", $2 = `[ 	
-\f\r]`, a5 = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, V7 = /-->/g, S7 = />/g, u1 = RegExp(`>|${$2}(?:([^\\s"'>=/]+)(${$2}*=${$2}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`, "g"), E7 = /'/g, k7 = /"/g, A3 = /^(?:script|style|textarea|title)$/i, z5 = Symbol.for("lit-noChange"), m = Symbol.for("lit-nothing"), A7 = /* @__PURE__ */ new WeakMap(), f1 = _1.createTreeWalker(_1, 129);
-function z3(s, t) {
+const e2 = globalThis, s2 = e2.trustedTypes, V7 = s2 ? s2.createPolicy("lit-html", { createHTML: (s) => s }) : void 0, E3 = "$lit$", a1 = `lit$${Math.random().toFixed(9).slice(2)}$`, k3 = "?" + a1, J0 = `<${k3}>`, _1 = document, o2 = () => _1.createComment(""), A5 = (s) => s === null || typeof s != "object" && typeof s != "function", O2 = Array.isArray, X0 = (s) => O2(s) || typeof (s == null ? void 0 : s[Symbol.iterator]) == "function", $2 = `[ 	
+\f\r]`, C5 = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, H7 = /-->/g, S7 = />/g, v1 = RegExp(`>|${$2}(?:([^\\s"'>=/]+)(${$2}*=${$2}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`, "g"), E7 = /'/g, k7 = /"/g, A3 = /^(?:script|style|textarea|title)$/i, P5 = Symbol.for("lit-noChange"), $ = Symbol.for("lit-nothing"), A7 = /* @__PURE__ */ new WeakMap(), f1 = _1.createTreeWalker(_1, 129);
+function P3(s, t) {
   if (!O2(s) || !s.hasOwnProperty("raw")) throw Error("invalid template strings array");
-  return H7 !== void 0 ? H7.createHTML(t) : t;
+  return V7 !== void 0 ? V7.createHTML(t) : t;
 }
 const Q0 = (s, t) => {
   const e = s.length - 1, o = [];
-  let r, n = t === 2 ? "<svg>" : t === 3 ? "<math>" : "", i = a5;
+  let r, n = t === 2 ? "<svg>" : t === 3 ? "<math>" : "", i = C5;
   for (let l = 0; l < e; l++) {
-    const a = s[l];
-    let v, d, h = -1, f = 0;
-    for (; f < a.length && (i.lastIndex = f, d = i.exec(a), d !== null); ) f = i.lastIndex, i === a5 ? d[1] === "!--" ? i = V7 : d[1] !== void 0 ? i = S7 : d[2] !== void 0 ? (A3.test(d[2]) && (r = RegExp("</" + d[2], "g")), i = u1) : d[3] !== void 0 && (i = u1) : i === u1 ? d[0] === ">" ? (i = r ?? a5, h = -1) : d[1] === void 0 ? h = -2 : (h = i.lastIndex - d[2].length, v = d[1], i = d[3] === void 0 ? u1 : d[3] === '"' ? k7 : E7) : i === k7 || i === E7 ? i = u1 : i === V7 || i === S7 ? i = a5 : (i = u1, r = void 0);
-    const b = i === u1 && s[l + 1].startsWith("/>") ? " " : "";
-    n += i === a5 ? a + J0 : h >= 0 ? (o.push(v), a.slice(0, h) + E3 + a.slice(h) + i1 + b) : a + i1 + (h === -2 ? l : b);
+    const C = s[l];
+    let u, d, h = -1, _ = 0;
+    for (; _ < C.length && (i.lastIndex = _, d = i.exec(C), d !== null); ) _ = i.lastIndex, i === C5 ? d[1] === "!--" ? i = H7 : d[1] !== void 0 ? i = S7 : d[2] !== void 0 ? (A3.test(d[2]) && (r = RegExp("</" + d[2], "g")), i = v1) : d[3] !== void 0 && (i = v1) : i === v1 ? d[0] === ">" ? (i = r ?? C5, h = -1) : d[1] === void 0 ? h = -2 : (h = i.lastIndex - d[2].length, u = d[1], i = d[3] === void 0 ? v1 : d[3] === '"' ? k7 : E7) : i === k7 || i === E7 ? i = v1 : i === H7 || i === S7 ? i = C5 : (i = v1, r = void 0);
+    const L = i === v1 && s[l + 1].startsWith("/>") ? " " : "";
+    n += i === C5 ? C + J0 : h >= 0 ? (o.push(u), C.slice(0, h) + E3 + C.slice(h) + a1 + L) : C + a1 + (h === -2 ? l : L);
   }
-  return [z3(s, n + (s[e] || "<?>") + (t === 2 ? "</svg>" : t === 3 ? "</math>" : "")), o];
+  return [P3(s, n + (s[e] || "<?>") + (t === 2 ? "</svg>" : t === 3 ? "</math>" : "")), o];
 };
-let Z2 = class P3 {
+let Z2 = class z3 {
   constructor({ strings: t, _$litType$: e }, o) {
     let r;
     this.parts = [];
     let n = 0, i = 0;
-    const l = t.length - 1, a = this.parts, [v, d] = Q0(t, e);
-    if (this.el = P3.createElement(v, o), f1.currentNode = this.el.content, e === 2 || e === 3) {
+    const l = t.length - 1, C = this.parts, [u, d] = Q0(t, e);
+    if (this.el = z3.createElement(u, o), f1.currentNode = this.el.content, e === 2 || e === 3) {
       const h = this.el.content.firstChild;
       h.replaceWith(...h.childNodes);
     }
-    for (; (r = f1.nextNode()) !== null && a.length < l; ) {
+    for (; (r = f1.nextNode()) !== null && C.length < l; ) {
       if (r.nodeType === 1) {
         if (r.hasAttributes()) for (const h of r.getAttributeNames()) if (h.endsWith(E3)) {
-          const f = d[i++], b = r.getAttribute(h).split(i1), Y = /([.?@])?(.*)/.exec(f);
-          a.push({ type: 1, index: n, name: Y[2], strings: b, ctor: Y[1] === "." ? e8 : Y[1] === "?" ? s8 : Y[1] === "@" ? o8 : y2 }), r.removeAttribute(h);
-        } else h.startsWith(i1) && (a.push({ type: 6, index: n }), r.removeAttribute(h));
+          const _ = d[i++], L = r.getAttribute(h).split(a1), J = /([.?@])?(.*)/.exec(_);
+          C.push({ type: 1, index: n, name: J[2], strings: L, ctor: J[1] === "." ? e8 : J[1] === "?" ? s8 : J[1] === "@" ? o8 : y2 }), r.removeAttribute(h);
+        } else h.startsWith(a1) && (C.push({ type: 6, index: n }), r.removeAttribute(h));
         if (A3.test(r.tagName)) {
-          const h = r.textContent.split(i1), f = h.length - 1;
-          if (f > 0) {
+          const h = r.textContent.split(a1), _ = h.length - 1;
+          if (_ > 0) {
             r.textContent = s2 ? s2.emptyScript : "";
-            for (let b = 0; b < f; b++) r.append(h[b], o2()), f1.nextNode(), a.push({ type: 2, index: ++n });
-            r.append(h[f], o2());
+            for (let L = 0; L < _; L++) r.append(h[L], o2()), f1.nextNode(), C.push({ type: 2, index: ++n });
+            r.append(h[_], o2());
           }
         }
-      } else if (r.nodeType === 8) if (r.data === k3) a.push({ type: 2, index: n });
+      } else if (r.nodeType === 8) if (r.data === k3) C.push({ type: 2, index: n });
       else {
         let h = -1;
-        for (; (h = r.data.indexOf(i1, h + 1)) !== -1; ) a.push({ type: 7, index: n }), h += i1.length - 1;
+        for (; (h = r.data.indexOf(a1, h + 1)) !== -1; ) C.push({ type: 7, index: n }), h += a1.length - 1;
       }
       n++;
     }
@@ -2250,7 +2358,7 @@ let Z2 = class P3 {
 };
 function z1(s, t, e = s, o) {
   var r, n;
-  if (t === z5) return t;
+  if (t === P5) return t;
   let i = o !== void 0 ? (r = e._$Co) == null ? void 0 : r[o] : e._$Cl;
   const l = A5(t) ? void 0 : t._$litDirective$;
   return (i == null ? void 0 : i.constructor) !== l && ((n = i == null ? void 0 : i._$AO) == null || n.call(i, !1), l === void 0 ? i = void 0 : (i = new l(s), i._$AT(s, e, o)), o !== void 0 ? (e._$Co ?? (e._$Co = []))[o] = i : e._$Cl = i), i !== void 0 && (t = z1(s, i._$AS(s, t.values), i, o)), t;
@@ -2268,13 +2376,13 @@ let t8 = class {
   u(t) {
     const { el: { content: e }, parts: o } = this._$AD, r = ((t == null ? void 0 : t.creationScope) ?? _1).importNode(e, !0);
     f1.currentNode = r;
-    let n = f1.nextNode(), i = 0, l = 0, a = o[0];
-    for (; a !== void 0; ) {
-      if (i === a.index) {
-        let v;
-        a.type === 2 ? v = new B3(n, n.nextSibling, this, t) : a.type === 1 ? v = new a.ctor(n, a.name, a.strings, this, t) : a.type === 6 && (v = new r8(n, this, t)), this._$AV.push(v), a = o[++l];
+    let n = f1.nextNode(), i = 0, l = 0, C = o[0];
+    for (; C !== void 0; ) {
+      if (i === C.index) {
+        let u;
+        C.type === 2 ? u = new B3(n, n.nextSibling, this, t) : C.type === 1 ? u = new C.ctor(n, C.name, C.strings, this, t) : C.type === 6 && (u = new r8(n, this, t)), this._$AV.push(u), C = o[++l];
       }
-      i !== (a == null ? void 0 : a.index) && (n = f1.nextNode(), i++);
+      i !== (C == null ? void 0 : C.index) && (n = f1.nextNode(), i++);
     }
     return f1.currentNode = _1, r;
   }
@@ -2288,7 +2396,7 @@ let t8 = class {
     return ((t = this._$AM) == null ? void 0 : t._$AU) ?? this._$Cv;
   }
   constructor(t, e, o, r) {
-    this.type = 2, this._$AH = m, this._$AN = void 0, this._$AA = t, this._$AB = e, this._$AM = o, this.options = r, this._$Cv = (r == null ? void 0 : r.isConnected) ?? !0;
+    this.type = 2, this._$AH = $, this._$AN = void 0, this._$AA = t, this._$AB = e, this._$AM = o, this.options = r, this._$Cv = (r == null ? void 0 : r.isConnected) ?? !0;
   }
   get parentNode() {
     let t = this._$AA.parentNode;
@@ -2302,7 +2410,7 @@ let t8 = class {
     return this._$AB;
   }
   _$AI(t, e = this) {
-    t = z1(this, t, e), A5(t) ? t === m || t == null || t === "" ? (this._$AH !== m && this._$AR(), this._$AH = m) : t !== this._$AH && t !== z5 && this._(t) : t._$litType$ !== void 0 ? this.$(t) : t.nodeType !== void 0 ? this.T(t) : X0(t) ? this.k(t) : this._(t);
+    t = z1(this, t, e), A5(t) ? t === $ || t == null || t === "" ? (this._$AH !== $ && this._$AR(), this._$AH = $) : t !== this._$AH && t !== P5 && this._(t) : t._$litType$ !== void 0 ? this.$(t) : t.nodeType !== void 0 ? this.T(t) : X0(t) ? this.k(t) : this._(t);
   }
   O(t) {
     return this._$AA.parentNode.insertBefore(t, this._$AB);
@@ -2311,11 +2419,11 @@ let t8 = class {
     this._$AH !== t && (this._$AR(), this._$AH = this.O(t));
   }
   _(t) {
-    this._$AH !== m && A5(this._$AH) ? this._$AA.nextSibling.data = t : this.T(_1.createTextNode(t)), this._$AH = t;
+    this._$AH !== $ && A5(this._$AH) ? this._$AA.nextSibling.data = t : this.T(_1.createTextNode(t)), this._$AH = t;
   }
   $(t) {
     var e;
-    const { values: o, _$litType$: r } = t, n = typeof r == "number" ? this._$AC(t) : (r.el === void 0 && (r.el = Z2.createElement(z3(r.h, r.h[0]), this.options)), r);
+    const { values: o, _$litType$: r } = t, n = typeof r == "number" ? this._$AC(t) : (r.el === void 0 && (r.el = Z2.createElement(P3(r.h, r.h[0]), this.options)), r);
     if (((e = this._$AH) == null ? void 0 : e._$AD) === n) this._$AH.p(o);
     else {
       const i = new t8(n, this), l = i.u(this.options);
@@ -2352,43 +2460,43 @@ let t8 = class {
     return this._$AM._$AU;
   }
   constructor(t, e, o, r, n) {
-    this.type = 1, this._$AH = m, this._$AN = void 0, this.element = t, this.name = e, this._$AM = r, this.options = n, o.length > 2 || o[0] !== "" || o[1] !== "" ? (this._$AH = Array(o.length - 1).fill(new String()), this.strings = o) : this._$AH = m;
+    this.type = 1, this._$AH = $, this._$AN = void 0, this.element = t, this.name = e, this._$AM = r, this.options = n, o.length > 2 || o[0] !== "" || o[1] !== "" ? (this._$AH = Array(o.length - 1).fill(new String()), this.strings = o) : this._$AH = $;
   }
   _$AI(t, e = this, o, r) {
     const n = this.strings;
     let i = !1;
-    if (n === void 0) t = z1(this, t, e, 0), i = !A5(t) || t !== this._$AH && t !== z5, i && (this._$AH = t);
+    if (n === void 0) t = z1(this, t, e, 0), i = !A5(t) || t !== this._$AH && t !== P5, i && (this._$AH = t);
     else {
       const l = t;
-      let a, v;
-      for (t = n[0], a = 0; a < n.length - 1; a++) v = z1(this, l[o + a], e, a), v === z5 && (v = this._$AH[a]), i || (i = !A5(v) || v !== this._$AH[a]), v === m ? t = m : t !== m && (t += (v ?? "") + n[a + 1]), this._$AH[a] = v;
+      let C, u;
+      for (t = n[0], C = 0; C < n.length - 1; C++) u = z1(this, l[o + C], e, C), u === P5 && (u = this._$AH[C]), i || (i = !A5(u) || u !== this._$AH[C]), u === $ ? t = $ : t !== $ && (t += (u ?? "") + n[C + 1]), this._$AH[C] = u;
     }
     i && !r && this.j(t);
   }
   j(t) {
-    t === m ? this.element.removeAttribute(this.name) : this.element.setAttribute(this.name, t ?? "");
+    t === $ ? this.element.removeAttribute(this.name) : this.element.setAttribute(this.name, t ?? "");
   }
 }, e8 = class extends y2 {
   constructor() {
     super(...arguments), this.type = 3;
   }
   j(t) {
-    this.element[this.name] = t === m ? void 0 : t;
+    this.element[this.name] = t === $ ? void 0 : t;
   }
 }, s8 = class extends y2 {
   constructor() {
     super(...arguments), this.type = 4;
   }
   j(t) {
-    this.element.toggleAttribute(this.name, !!t && t !== m);
+    this.element.toggleAttribute(this.name, !!t && t !== $);
   }
 }, o8 = class extends y2 {
   constructor(t, e, o, r, n) {
     super(t, e, o, r, n), this.type = 5;
   }
   _$AI(t, e = this) {
-    if ((t = z1(this, t, e, 0) ?? m) === z5) return;
-    const o = this._$AH, r = t === m && o !== m || t.capture !== o.capture || t.once !== o.once || t.passive !== o.passive, n = t !== m && (o === m || r);
+    if ((t = z1(this, t, e, 0) ?? $) === P5) return;
+    const o = this._$AH, r = t === $ && o !== $ || t.capture !== o.capture || t.once !== o.once || t.passive !== o.passive, n = t !== $ && (o === $ || r);
     r && this.element.removeEventListener(this.name, this, o), n && this.element.addEventListener(this.name, this, t), this._$AH = t;
   }
   handleEvent(t) {
@@ -2406,22 +2514,22 @@ let t8 = class {
     z1(this, t);
   }
 };
-const z7 = e2.litHtmlPolyfillSupport;
-z7 == null || z7(Z2, B3), (e2.litHtmlVersions ?? (e2.litHtmlVersions = [])).push("3.2.1");
+const P7 = e2.litHtmlPolyfillSupport;
+P7 == null || P7(Z2, B3), (e2.litHtmlVersions ?? (e2.litHtmlVersions = [])).push("3.2.1");
 /**
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const r1 = (s) => s ?? m;
+const i1 = (s) => s ?? $;
 var n8 = Object.defineProperty, i8 = Object.getOwnPropertyDescriptor, k = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? i8(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && n8(t, e, r), r;
 };
 let l8 = 0;
-var N;
-const H = (N = class extends p {
+var j;
+const H = (j = class extends p {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this._size = "md", this.fullWidth = !1, this._variant = "filled", this.inverted = !1, this.label = "", this.prefixIcon = "", this.suffixIcon = "", this.disabled = !1, this.form = "", this.value = "", this._type = "button", this.onClick = () => {
@@ -2431,7 +2539,7 @@ const H = (N = class extends p {
     return this._size;
   }
   set size(s) {
-    this._size = N.VALID_SIZES.includes(
+    this._size = j.VALID_SIZES.includes(
       s
     ) ? s : "md";
   }
@@ -2439,7 +2547,7 @@ const H = (N = class extends p {
     return this._variant;
   }
   set variant(s) {
-    this._variant = N.VALID_VARIANTS.includes(
+    this._variant = j.VALID_VARIANTS.includes(
       s
     ) ? s : "filled";
   }
@@ -2447,7 +2555,7 @@ const H = (N = class extends p {
     return this._type;
   }
   set type(s) {
-    this._type = N.VALID_TYPES.includes(
+    this._type = j.VALID_TYPES.includes(
       s
     ) ? s : "button";
   }
@@ -2497,12 +2605,12 @@ const H = (N = class extends p {
             <div class="nys-button__linkwrapper">
               <a
                 class="nys-button"
-                id=${r1(this.id)}
-                name=${r1(this.name ? this.name : void 0)}
+                id=${i1(this.id)}
+                name=${i1(this.name ? this.name : void 0)}
                 ?disabled=${this.disabled}
                 aria-disabled="${this.disabled ? "true" : "false"}"
-                form=${r1(this.form ? this.form : void 0)}
-                value=${r1(this.value ? this.value : void 0)}
+                form=${i1(this.form ? this.form : void 0)}
+                value=${i1(this.value ? this.value : void 0)}
                 href=${this.href}
                 target="_blank"
                 @click=${this._handleClick}
@@ -2521,11 +2629,11 @@ const H = (N = class extends p {
           ` : c`
             <button
               class="nys-button"
-              id=${r1(this.id)}
-              name=${r1(this.name ? this.name : void 0)}
+              id=${i1(this.id)}
+              name=${i1(this.name ? this.name : void 0)}
               ?disabled=${this.disabled}
-              form=${r1(this.form ? this.form : void 0)}
-              value=${r1(this.value ? this.value : void 0)}
+              form=${i1(this.form ? this.form : void 0)}
+              value=${i1(this.value ? this.value : void 0)}
               type=${this.type}
               @click=${this._handleClick}
               @focus="${this._handleFocus}"
@@ -2543,17 +2651,17 @@ const H = (N = class extends p {
           `}
     `;
   }
-}, N.VALID_SIZES = ["sm", "md", "lg"], N.VALID_VARIANTS = [
+}, j.VALID_SIZES = ["sm", "md", "lg"], j.VALID_VARIANTS = [
   "filled",
   "outline",
   "ghost",
   "text"
-], N.VALID_TYPES = ["submit", "reset", "button"], N.styles = A0, N.formAssociated = !0, N);
+], j.VALID_TYPES = ["submit", "reset", "button"], j.styles = A0, j.formAssociated = !0, j);
 k([
   E({ type: String })
 ], H.prototype, "id", 2);
 k([
-  E({ type: String })
+  E({ type: String, reflect: !0 })
 ], H.prototype, "name", 2);
 k([
   E({ reflect: !0 })
@@ -2594,16 +2702,16 @@ k([
 k([
   E({ type: String })
 ], H.prototype, "href", 2);
-let C8 = H;
-customElements.get("nys-button") || customElements.define("nys-button", C8);
-var a8 = Object.defineProperty, c8 = Object.getOwnPropertyDescriptor, B = (s, t, e, o) => {
+let a8 = H;
+customElements.get("nys-button") || customElements.define("nys-button", a8);
+var C8 = Object.defineProperty, c8 = Object.getOwnPropertyDescriptor, B = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? c8(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && a8(t, e, r), r;
+  return o && r && C8(t, e, r), r;
 };
 let h8 = 0;
-var C1;
-const z = (C1 = class extends p {
+var c1;
+const P = (c1 = class extends p {
   constructor() {
     super(...arguments), this.id = "", this.heading = "", this.icon = "", this.dismissible = !1, this.duration = 0, this.text = "", this.primaryAction = "", this.secondaryAction = "", this.primaryLabel = "Learn more", this.secondaryLabel = "Dismiss", this._alertClosed = !1, this._slotHasContent = !0, this._type = "info", this._timeoutId = null;
   }
@@ -2611,7 +2719,7 @@ const z = (C1 = class extends p {
     return this._type;
   }
   set type(t) {
-    this._type = C1.VALID_TYPES.includes(
+    this._type = c1.VALID_TYPES.includes(
       t
     ) ? t : "base";
   }
@@ -2724,56 +2832,56 @@ const z = (C1 = class extends p {
           </div>`}
     `;
   }
-}, C1.styles = o0, C1.VALID_TYPES = [
+}, c1.styles = o0, c1.VALID_TYPES = [
   "base",
   "info",
   "success",
   "warning",
   "danger",
   "emergency"
-], C1);
+], c1);
 B([
-  C({ type: String })
-], z.prototype, "id", 2);
+  a({ type: String })
+], P.prototype, "id", 2);
 B([
-  C({ type: String })
-], z.prototype, "heading", 2);
+  a({ type: String })
+], P.prototype, "heading", 2);
 B([
-  C({ type: String })
-], z.prototype, "icon", 2);
+  a({ type: String })
+], P.prototype, "icon", 2);
 B([
-  C({ type: Boolean, reflect: !0 })
-], z.prototype, "dismissible", 2);
+  a({ type: Boolean, reflect: !0 })
+], P.prototype, "dismissible", 2);
 B([
-  C({ type: Number, reflect: !0 })
-], z.prototype, "duration", 2);
+  a({ type: Number, reflect: !0 })
+], P.prototype, "duration", 2);
 B([
-  C({ type: String })
-], z.prototype, "text", 2);
+  a({ type: String })
+], P.prototype, "text", 2);
 B([
-  C({ type: String })
-], z.prototype, "primaryAction", 2);
+  a({ type: String })
+], P.prototype, "primaryAction", 2);
 B([
-  C({ type: String })
-], z.prototype, "secondaryAction", 2);
+  a({ type: String })
+], P.prototype, "secondaryAction", 2);
 B([
-  C({ type: String })
-], z.prototype, "primaryLabel", 2);
+  a({ type: String })
+], P.prototype, "primaryLabel", 2);
 B([
-  C({ type: String })
-], z.prototype, "secondaryLabel", 2);
+  a({ type: String })
+], P.prototype, "secondaryLabel", 2);
 B([
-  F1()
-], z.prototype, "_alertClosed", 2);
+  x1()
+], P.prototype, "_alertClosed", 2);
 B([
-  F1()
-], z.prototype, "_slotHasContent", 2);
+  x1()
+], P.prototype, "_slotHasContent", 2);
 B([
-  C({ reflect: !0 })
-], z.prototype, "type", 1);
-let d8 = z;
+  a({ reflect: !0 })
+], P.prototype, "type", 1);
+let d8 = P;
 customElements.get("nys-alert") || customElements.define("nys-alert", d8);
-const p8 = u`
+const p8 = v`
   :host {
     /* Global Avatar Styles */
     --_nys-avatar-shape: var(--nys-radius-round, 1776px);
@@ -2841,14 +2949,14 @@ const p8 = u`
     fill: currentColor;
   }
 `;
-var v8 = Object.defineProperty, u8 = Object.getOwnPropertyDescriptor, p1 = (s, t, e, o) => {
-  for (var r = o > 1 ? void 0 : o ? u8(t, e) : t, n = s.length - 1, i; n >= 0; n--)
+var u8 = Object.defineProperty, v8 = Object.getOwnPropertyDescriptor, u1 = (s, t, e, o) => {
+  for (var r = o > 1 ? void 0 : o ? v8(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && v8(t, e, r), r;
+  return o && r && u8(t, e, r), r;
 };
 let y8 = 0;
-var a1;
-const t1 = (a1 = class extends p {
+var h1;
+const o1 = (h1 = class extends p {
   constructor() {
     super(...arguments), this.id = "", this.label = "", this.image = "", this.initials = "", this.icon = "", this.color = "#555", this.lazy = !1, this._shape = "circle";
   }
@@ -2857,7 +2965,7 @@ const t1 = (a1 = class extends p {
   }
   // Setter for the `shape` property.
   set shape(t) {
-    this._shape = a1.VALID_SHAPES.includes(
+    this._shape = h1.VALID_SHAPES.includes(
       t
     ) ? t : "circle", this.requestUpdate("shape");
   }
@@ -2909,38 +3017,38 @@ const t1 = (a1 = class extends p {
       </label>
     `;
   }
-}, a1.styles = p8, a1.VALID_SHAPES = [
+}, h1.styles = p8, h1.VALID_SHAPES = [
   "square",
   "rounded",
   "circle"
-], a1);
-p1([
-  C({ type: String })
-], t1.prototype, "id", 2);
-p1([
-  C({ type: String })
-], t1.prototype, "label", 2);
-p1([
-  C({ type: String })
-], t1.prototype, "image", 2);
-p1([
-  C({ type: String })
-], t1.prototype, "initials", 2);
-p1([
-  C({ type: String })
-], t1.prototype, "icon", 2);
-p1([
-  C({ type: String })
-], t1.prototype, "color", 2);
-p1([
-  C({ type: Boolean, reflect: !0 })
-], t1.prototype, "lazy", 2);
-p1([
-  C({ reflect: !0 })
-], t1.prototype, "shape", 1);
-let g8 = t1;
+], h1);
+u1([
+  a({ type: String })
+], o1.prototype, "id", 2);
+u1([
+  a({ type: String })
+], o1.prototype, "label", 2);
+u1([
+  a({ type: String })
+], o1.prototype, "image", 2);
+u1([
+  a({ type: String })
+], o1.prototype, "initials", 2);
+u1([
+  a({ type: String })
+], o1.prototype, "icon", 2);
+u1([
+  a({ type: String })
+], o1.prototype, "color", 2);
+u1([
+  a({ type: Boolean, reflect: !0 })
+], o1.prototype, "lazy", 2);
+u1([
+  a({ reflect: !0 })
+], o1.prototype, "shape", 1);
+let g8 = o1;
 customElements.get("nys-avatar") || customElements.define("nys-avatar", g8);
-const f8 = u`
+const f8 = v`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -2958,19 +3066,19 @@ const f8 = u`
 
     /* Global Button Colors */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
 
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
 
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
 
     /* Typography */
@@ -3010,67 +3118,55 @@ const f8 = u`
     --_nys-button-width: 100%;
   }
 
-  /* Variants */
+  /* VARIANTS */
+
+  /* Filled */
   :host([variant="filled"]) {
+    /* Filled - Default */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-theme, #154973);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
   }
+
+  /* Outline */
   :host([variant="outline"]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
+    /* Outline - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
     --_nys-button-color-text: var(--nys-color-theme, #154973);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
+    /* Outline - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-weaker, #eff6fb);
     --_nys-button-color-text-hover: var(--nys-color-theme, #154973);
     --_nys-button-color-border-hover: var(--nys-color-theme, #154973);
 
+    /* Outline - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-weak, #cddde9);
     --_nys-button-color-text-active: var(--nys-color-theme, #154973);
     --_nys-button-color-border-active: var(--nys-color-theme, #154973);
 
-    --_nys-button-color-bg-disabled: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    /* Outline - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-100, #d0d0ce);
   }
-  :host([variant="ghost"]) {
-    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink, #000000);
-    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
-    --_nys-button-color-bg-hover: var(
-      --nys-color-black-transparent-100,
-      #0000001a
-    );
-    --_nys-button-color-text-hover: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-active: var(
-      --nys-color-black-transparent-200,
-      #00000033
-    );
-    --_nys-button-color-text-active: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(
-      --nys-color-transparent,
-      #ffffff00
-    );
-  }
+  /* Text */
   :host([variant="text"]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -3079,87 +3175,129 @@ const f8 = u`
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text: var(--nys-color-link, #004dd1);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-hover: var(--nys-color-link-strong, #003ba1);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-active: var(--nys-color-link-strongest, #002971);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
 
-  /* Inverted Variants */
-  :host([variant="filled"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-text-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-text-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-ink, #1b1b1b);
-  }
-  :host([variant="outline"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
-  }
-  :host([variant="ghost"][inverted]) {
+  /* Ghost */
+  :host([variant="ghost"]) {
+    /* Ghost - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Hover */
     --_nys-button-color-bg-hover: var(
-      --nys-color-white-transparent-100,
-      #ffffff1a
+      --nys-color-black-transparent-100,
+      #0000001a
     );
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Active */
     --_nys-button-color-bg-active: var(
-      --nys-color-white-transparent-200,
-      #ffffff33
+      --nys-color-black-transparent-200,
+      #00000033
     );
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
+
+  /* INVERTED VARIANTS */
+
+  /* Filled Inverted */
+  :host([variant="filled"][inverted]) {
+    /* Filled Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Outline Inverted */
+  :host([variant="outline"][inverted]) {
+    /* Outline Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
+
+    /* Outline Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse-weak, #d0d0ce);
+    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
+
+    /* Outline Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-active: var(
+      --nys-color-text-reverse-weaker,
+      #bec0c1
+    );
+    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
+
+    /* Outline Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
+  }
+
+  /* Text Inverted */
   :host([variant="text"][inverted]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -3168,20 +3306,65 @@ const f8 = u`
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text Inverted - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text: var(--nys-color-link-reverse, #a7a9ab);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-50, #ededed);
+    --_nys-button-color-text-hover: var(
+      --nys-color-link-reverse-strong,
+      #ededed
+    );
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(
+      --nys-color-reverse-strongest,
+      #ffffff
+    );
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Ghost Inverted */
+  :host([variant="ghost"][inverted]) {
+    /* Ghost Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Hover */
+    --_nys-button-color-bg-hover: var(
+      --nys-color-white-transparent-100,
+      #ffffff1a
+    );
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(
+      --nys-color-white-transparent-200,
+      #ffffff33
+    );
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
@@ -3271,8 +3454,8 @@ var w8 = Object.defineProperty, _8 = Object.getOwnPropertyDescriptor, A = (s, t,
   return o && r && w8(t, e, r), r;
 };
 let b8 = 0;
-var P;
-const V = (P = class extends p {
+var z;
+const S = (z = class extends p {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this._size = "md", this.fullWidth = !1, this._variant = "filled", this.inverted = !1, this.label = "", this.prefixIcon = "", this.suffixIcon = "", this.disabled = !1, this.form = "", this.value = "", this._type = "button", this.onClick = () => {
@@ -3282,7 +3465,7 @@ const V = (P = class extends p {
     return this._size;
   }
   set size(t) {
-    this._size = P.VALID_SIZES.includes(
+    this._size = z.VALID_SIZES.includes(
       t
     ) ? t : "md";
   }
@@ -3290,7 +3473,7 @@ const V = (P = class extends p {
     return this._variant;
   }
   set variant(t) {
-    this._variant = P.VALID_VARIANTS.includes(
+    this._variant = z.VALID_VARIANTS.includes(
       t
     ) ? t : "filled";
   }
@@ -3298,7 +3481,7 @@ const V = (P = class extends p {
     return this._type;
   }
   set type(t) {
-    this._type = P.VALID_TYPES.includes(
+    this._type = z.VALID_TYPES.includes(
       t
     ) ? t : "button";
   }
@@ -3394,60 +3577,60 @@ const V = (P = class extends p {
           `}
     `;
   }
-}, P.VALID_SIZES = ["sm", "md", "lg"], P.VALID_VARIANTS = [
+}, z.VALID_SIZES = ["sm", "md", "lg"], z.VALID_VARIANTS = [
   "filled",
   "outline",
   "ghost",
   "text"
-], P.VALID_TYPES = ["submit", "reset", "button"], P.styles = f8, P.formAssociated = !0, P);
+], z.VALID_TYPES = ["submit", "reset", "button"], z.styles = f8, z.formAssociated = !0, z);
 A([
-  C({ type: String })
-], V.prototype, "id", 2);
+  a({ type: String })
+], S.prototype, "id", 2);
 A([
-  C({ type: String })
-], V.prototype, "name", 2);
+  a({ type: String, reflect: !0 })
+], S.prototype, "name", 2);
 A([
-  C({ reflect: !0 })
-], V.prototype, "size", 1);
+  a({ reflect: !0 })
+], S.prototype, "size", 1);
 A([
-  C({ type: Boolean, reflect: !0 })
-], V.prototype, "fullWidth", 2);
+  a({ type: Boolean, reflect: !0 })
+], S.prototype, "fullWidth", 2);
 A([
-  C({ reflect: !0 })
-], V.prototype, "variant", 1);
+  a({ reflect: !0 })
+], S.prototype, "variant", 1);
 A([
-  C({ type: Boolean, reflect: !0 })
-], V.prototype, "inverted", 2);
+  a({ type: Boolean, reflect: !0 })
+], S.prototype, "inverted", 2);
 A([
-  C({ type: String })
-], V.prototype, "label", 2);
+  a({ type: String })
+], S.prototype, "label", 2);
 A([
-  C({ type: String })
-], V.prototype, "prefixIcon", 2);
+  a({ type: String })
+], S.prototype, "prefixIcon", 2);
 A([
-  C({ type: String })
-], V.prototype, "suffixIcon", 2);
+  a({ type: String })
+], S.prototype, "suffixIcon", 2);
 A([
-  C({ type: Boolean, reflect: !0 })
-], V.prototype, "disabled", 2);
+  a({ type: Boolean, reflect: !0 })
+], S.prototype, "disabled", 2);
 A([
-  C({ type: String })
-], V.prototype, "form", 2);
+  a({ type: String })
+], S.prototype, "form", 2);
 A([
-  C({ type: String })
-], V.prototype, "value", 2);
+  a({ type: String })
+], S.prototype, "value", 2);
 A([
-  C({ reflect: !0 })
-], V.prototype, "type", 1);
+  a({ reflect: !0 })
+], S.prototype, "type", 1);
 A([
-  C({ type: Function })
-], V.prototype, "onClick", 2);
+  a({ type: Function })
+], S.prototype, "onClick", 2);
 A([
-  C({ type: String })
-], V.prototype, "href", 2);
-let m8 = V;
+  a({ type: String })
+], S.prototype, "href", 2);
+let m8 = S;
 customElements.get("nys-button") || customElements.define("nys-button", m8);
-const O3 = u`
+const O3 = v`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3526,7 +3709,10 @@ const O3 = u`
       --nys-color-neutral-400,
       #757575
     );
-    --_nys-checkbox-disabled-color-text: var(--nys-color-neutral-500, #797c7f);
+    --_nys-checkbox-disabled-color-text: var(
+      --nys-color-text-disabled,
+      #bec0c1
+    );
     /* Disabled Checked */
     --_nys-checkbox-disabled-checked-color-bg: var(
       --nys-color-neutral-100,
@@ -3554,7 +3740,7 @@ const O3 = u`
   .nys-checkboxgroup {
     display: flex;
     flex-direction: column;
-    gap: var(--nys-spacing-50, 4px);
+    gap: var(--nys-space-200, 16px);
     font-family: var(--_nys-checkbox-font-family);
     font-size: var(--_nys-checkbox-font-size);
     line-height: var(--_nys-checkbox-line-height);
@@ -3666,18 +3852,20 @@ const O3 = u`
     display: flex;
     flex-direction: column;
     margin: auto 0; /* Center text if single line label */
+    align-items: flex-start;
   }
 
   /* Label styling */
   .nys-checkbox__label {
     font-weight: var(--_nys-checkbox-font-weight-400);
-    color: var(--_nys-checkbox-color);
+    color: var(--nys-color-text, #1b1b1b);
   }
 
   /* Description styling */
   .nys-checkbox__description {
     font-weight: var(--_nys-checkbox-font-weight-400);
     font-style: italic;
+    text-align: left;
   }
 
   /* Required */
@@ -3690,7 +3878,7 @@ const O3 = u`
   }
 `;
 /*!
-   * Label v1.1.0
+   * Label v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -3701,18 +3889,18 @@ const O3 = u`
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const N5 = globalThis, R2 = N5.ShadowRoot && (N5.ShadyCSS === void 0 || N5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, R3 = Symbol(), P7 = /* @__PURE__ */ new WeakMap();
+const N5 = globalThis, I2 = N5.ShadowRoot && (N5.ShadyCSS === void 0 || N5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, I3 = Symbol(), z7 = /* @__PURE__ */ new WeakMap();
 let x8 = class {
   constructor(t, e, o) {
-    if (this._$cssResult$ = !0, o !== R3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    if (this._$cssResult$ = !0, o !== I3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = t, this.t = e;
   }
   get styleSheet() {
     let t = this.o;
     const e = this.t;
-    if (R2 && t === void 0) {
+    if (I2 && t === void 0) {
       const o = e !== void 0 && e.length === 1;
-      o && (t = P7.get(e)), t === void 0 && ((this.o = t = new CSSStyleSheet()).replaceSync(this.cssText), o && P7.set(e, t));
+      o && (t = z7.get(e)), t === void 0 && ((this.o = t = new CSSStyleSheet()).replaceSync(this.cssText), o && z7.set(e, t));
     }
     return t;
   }
@@ -3720,13 +3908,13 @@ let x8 = class {
     return this.cssText;
   }
 };
-const L8 = (s) => new x8(typeof s == "string" ? s : s + "", void 0, R3), $8 = (s, t) => {
-  if (R2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
+const L8 = (s) => new x8(typeof s == "string" ? s : s + "", void 0, I3), $8 = (s, t) => {
+  if (I2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = N5.litNonce;
     r !== void 0 && o.setAttribute("nonce", r), o.textContent = e.cssText, s.appendChild(o);
   }
-}, B7 = R2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
+}, B7 = I2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
   return L8(e);
@@ -3736,7 +3924,7 @@ const L8 = (s) => new x8(typeof s == "string" ? s : s + "", void 0, R3), $8 = (s
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: M8, defineProperty: Z8, getOwnPropertyDescriptor: H8, getOwnPropertyNames: V8, getOwnPropertySymbols: S8, getPrototypeOf: E8 } = Object, P1 = globalThis, U7 = P1.trustedTypes, k8 = U7 ? U7.emptyScript : "", O7 = P1.reactiveElementPolyfillSupport, $5 = (s, t) => s, r2 = { toAttribute(s, t) {
+const { is: M8, defineProperty: Z8, getOwnPropertyDescriptor: V8, getOwnPropertyNames: H8, getOwnPropertySymbols: S8, getPrototypeOf: E8 } = Object, B1 = globalThis, U7 = B1.trustedTypes, k8 = U7 ? U7.emptyScript : "", O7 = B1.reactiveElementPolyfillSupport, $5 = (s, t) => s, r2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? k8 : null;
@@ -3764,8 +3952,8 @@ const { is: M8, defineProperty: Z8, getOwnPropertyDescriptor: H8, getOwnProperty
       }
   }
   return e;
-} }, I2 = (s, t) => !M8(s, t), R7 = { attribute: !0, type: String, converter: r2, reflect: !1, hasChanged: I2 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), P1.litPropertyMetadata ?? (P1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+} }, R2 = (s, t) => !M8(s, t), I7 = { attribute: !0, type: String, converter: r2, reflect: !1, hasChanged: R2 };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), B1.litPropertyMetadata ?? (B1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let c5 = class extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -3773,14 +3961,14 @@ let c5 = class extends HTMLElement {
   static get observedAttributes() {
     return this.finalize(), this._$Eh && [...this._$Eh.keys()];
   }
-  static createProperty(t, e = R7) {
+  static createProperty(t, e = I7) {
     if (e.state && (e.attribute = !1), this._$Ei(), this.elementProperties.set(t, e), !e.noAccessor) {
       const o = Symbol(), r = this.getPropertyDescriptor(t, o, e);
       r !== void 0 && Z8(this.prototype, t, r);
     }
   }
   static getPropertyDescriptor(t, e, o) {
-    const { get: r, set: n } = H8(this.prototype, t) ?? { get() {
+    const { get: r, set: n } = V8(this.prototype, t) ?? { get() {
       return this[e];
     }, set(i) {
       this[e] = i;
@@ -3793,7 +3981,7 @@ let c5 = class extends HTMLElement {
     }, configurable: !0, enumerable: !0 };
   }
   static getPropertyOptions(t) {
-    return this.elementProperties.get(t) ?? R7;
+    return this.elementProperties.get(t) ?? I7;
   }
   static _$Ei() {
     if (this.hasOwnProperty($5("elementProperties"))) return;
@@ -3803,7 +3991,7 @@ let c5 = class extends HTMLElement {
   static finalize() {
     if (this.hasOwnProperty($5("finalized"))) return;
     if (this.finalized = !0, this._$Ei(), this.hasOwnProperty($5("properties"))) {
-      const e = this.properties, o = [...V8(e), ...S8(e)];
+      const e = this.properties, o = [...H8(e), ...S8(e)];
       for (const r of o) this.createProperty(r, e[r]);
     }
     const t = this[Symbol.metadata];
@@ -3891,7 +4079,7 @@ let c5 = class extends HTMLElement {
   }
   requestUpdate(t, e, o) {
     if (t !== void 0) {
-      if (o ?? (o = this.constructor.getPropertyOptions(t)), !(o.hasChanged ?? I2)(this[t], e)) return;
+      if (o ?? (o = this.constructor.getPropertyOptions(t)), !(o.hasChanged ?? R2)(this[t], e)) return;
       this.P(t, e, o);
     }
     this.isUpdatePending === !1 && (this._$ES = this._$ET());
@@ -3964,20 +4152,20 @@ let c5 = class extends HTMLElement {
   firstUpdated(t) {
   }
 };
-c5.elementStyles = [], c5.shadowRootOptions = { mode: "open" }, c5[$5("elementProperties")] = /* @__PURE__ */ new Map(), c5[$5("finalized")] = /* @__PURE__ */ new Map(), O7 == null || O7({ ReactiveElement: c5 }), (P1.reactiveElementVersions ?? (P1.reactiveElementVersions = [])).push("2.0.4");
+c5.elementStyles = [], c5.shadowRootOptions = { mode: "open" }, c5[$5("elementProperties")] = /* @__PURE__ */ new Map(), c5[$5("finalized")] = /* @__PURE__ */ new Map(), O7 == null || O7({ ReactiveElement: c5 }), (B1.reactiveElementVersions ?? (B1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const A8 = { attribute: !0, type: String, converter: r2, reflect: !1, hasChanged: I2 }, z8 = (s = A8, t, e) => {
+const A8 = { attribute: !0, type: String, converter: r2, reflect: !1, hasChanged: R2 }, P8 = (s = A8, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -3985,19 +4173,19 @@ const A8 = { attribute: !0, type: String, converter: r2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
 function g2(s) {
-  return (t, e) => typeof e == "object" ? z8(s, t, e) : ((o, r, n) => {
+  return (t, e) => typeof e == "object" ? P8(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const P8 = u`
+const z8 = v`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -4015,19 +4203,19 @@ const P8 = u`
     --_nys-label-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);
     --_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-label-font-color: var(--nys-color-ink, #1b1b1b);
+    --_nys-label-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Description */
     --nys-description-font-weight: var(--nys-font-weight-regular, 400);
     --nys-description-font-style: italic;
-    --nys-description-font-color: var(--nys-neutral-900, #1b1b1b);
+    --nys-description-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Required Flag */
     --nys-required-font-color: var(--nys-color-danger, #b52c2c);
 
     /* Optional Flag */
     --nys-optional-font-weight: var(--nys-font-weight-regular, 400);
-    --nys-optional-font-color: var(--nys-color-neutral-700, #4a4d4f);
+    --nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);
 
     /* Spacing */
     --_nys-label-flag-gap: var(--nys-space-2px, 2px);
@@ -4074,7 +4262,7 @@ var B8 = Object.defineProperty, f2 = (s, t, e, o) => {
     (i = s[n]) && (r = i(t, e, r) || r);
   return r && B8(t, e, r), r;
 };
-const I3 = class extends p {
+const R3 = class extends p {
   constructor() {
     super(...arguments), this.id = "", this.label = "", this.description = "", this.flag = "";
   }
@@ -4093,8 +4281,8 @@ const I3 = class extends p {
     `;
   }
 };
-I3.styles = P8;
-let U5 = I3;
+R3.styles = z8;
+let U5 = R3;
 f2([
   g2({ type: String })
 ], U5.prototype, "id");
@@ -4109,7 +4297,7 @@ f2([
 ], U5.prototype, "flag");
 customElements.get("nys-label") || customElements.define("nys-label", U5);
 /*!
-   * Error Message v1.1.0
+   * Error Message v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -4120,18 +4308,18 @@ customElements.get("nys-label") || customElements.define("nys-label", U5);
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const j5 = globalThis, T2 = j5.ShadowRoot && (j5.ShadyCSS === void 0 || j5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, T3 = Symbol(), I7 = /* @__PURE__ */ new WeakMap();
+const j5 = globalThis, D2 = j5.ShadowRoot && (j5.ShadyCSS === void 0 || j5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, D3 = Symbol(), R7 = /* @__PURE__ */ new WeakMap();
 let U8 = class {
   constructor(t, e, o) {
-    if (this._$cssResult$ = !0, o !== T3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    if (this._$cssResult$ = !0, o !== D3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = t, this.t = e;
   }
   get styleSheet() {
     let t = this.o;
     const e = this.t;
-    if (T2 && t === void 0) {
+    if (D2 && t === void 0) {
       const o = e !== void 0 && e.length === 1;
-      o && (t = I7.get(e)), t === void 0 && ((this.o = t = new CSSStyleSheet()).replaceSync(this.cssText), o && I7.set(e, t));
+      o && (t = R7.get(e)), t === void 0 && ((this.o = t = new CSSStyleSheet()).replaceSync(this.cssText), o && R7.set(e, t));
     }
     return t;
   }
@@ -4139,13 +4327,13 @@ let U8 = class {
     return this.cssText;
   }
 };
-const O8 = (s) => new U8(typeof s == "string" ? s : s + "", void 0, T3), R8 = (s, t) => {
-  if (T2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
+const O8 = (s) => new U8(typeof s == "string" ? s : s + "", void 0, D3), I8 = (s, t) => {
+  if (D2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = j5.litNonce;
     r !== void 0 && o.setAttribute("nonce", r), o.textContent = e.cssText, s.appendChild(o);
   }
-}, T7 = T2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
+}, D7 = D2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
   return O8(e);
@@ -4155,7 +4343,7 @@ const O8 = (s) => new U8(typeof s == "string" ? s : s + "", void 0, T3), R8 = (s
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: I8, defineProperty: T8, getOwnPropertyDescriptor: D8, getOwnPropertyNames: q8, getOwnPropertySymbols: N8, getPrototypeOf: j8 } = Object, B1 = globalThis, D7 = B1.trustedTypes, F8 = D7 ? D7.emptyScript : "", q7 = B1.reactiveElementPolyfillSupport, M5 = (s, t) => s, n2 = { toAttribute(s, t) {
+const { is: R8, defineProperty: D8, getOwnPropertyDescriptor: T8, getOwnPropertyNames: q8, getOwnPropertySymbols: N8, getPrototypeOf: j8 } = Object, U1 = globalThis, T7 = U1.trustedTypes, F8 = T7 ? T7.emptyScript : "", q7 = U1.reactiveElementPolyfillSupport, M5 = (s, t) => s, n2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? F8 : null;
@@ -4183,8 +4371,8 @@ const { is: I8, defineProperty: T8, getOwnPropertyDescriptor: D8, getOwnProperty
       }
   }
   return e;
-} }, D2 = (s, t) => !I8(s, t), N7 = { attribute: !0, type: String, converter: n2, reflect: !1, hasChanged: D2 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), B1.litPropertyMetadata ?? (B1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+} }, T2 = (s, t) => !R8(s, t), N7 = { attribute: !0, type: String, converter: n2, reflect: !1, hasChanged: T2 };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), U1.litPropertyMetadata ?? (U1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let h5 = class extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -4195,11 +4383,11 @@ let h5 = class extends HTMLElement {
   static createProperty(t, e = N7) {
     if (e.state && (e.attribute = !1), this._$Ei(), this.elementProperties.set(t, e), !e.noAccessor) {
       const o = Symbol(), r = this.getPropertyDescriptor(t, o, e);
-      r !== void 0 && T8(this.prototype, t, r);
+      r !== void 0 && D8(this.prototype, t, r);
     }
   }
   static getPropertyDescriptor(t, e, o) {
-    const { get: r, set: n } = D8(this.prototype, t) ?? { get() {
+    const { get: r, set: n } = T8(this.prototype, t) ?? { get() {
       return this[e];
     }, set(i) {
       this[e] = i;
@@ -4241,8 +4429,8 @@ let h5 = class extends HTMLElement {
     const e = [];
     if (Array.isArray(t)) {
       const o = new Set(t.flat(1 / 0).reverse());
-      for (const r of o) e.unshift(T7(r));
-    } else t !== void 0 && e.push(T7(t));
+      for (const r of o) e.unshift(D7(r));
+    } else t !== void 0 && e.push(D7(t));
     return e;
   }
   static _$Eu(t, e) {
@@ -4271,7 +4459,7 @@ let h5 = class extends HTMLElement {
   }
   createRenderRoot() {
     const t = this.shadowRoot ?? this.attachShadow(this.constructor.shadowRootOptions);
-    return R8(t, this.constructor.elementStyles), t;
+    return I8(t, this.constructor.elementStyles), t;
   }
   connectedCallback() {
     var t;
@@ -4310,7 +4498,7 @@ let h5 = class extends HTMLElement {
   }
   requestUpdate(t, e, o) {
     if (t !== void 0) {
-      if (o ?? (o = this.constructor.getPropertyOptions(t)), !(o.hasChanged ?? D2)(this[t], e)) return;
+      if (o ?? (o = this.constructor.getPropertyOptions(t)), !(o.hasChanged ?? T2)(this[t], e)) return;
       this.P(t, e, o);
     }
     this.isUpdatePending === !1 && (this._$ES = this._$ET());
@@ -4383,20 +4571,20 @@ let h5 = class extends HTMLElement {
   firstUpdated(t) {
   }
 };
-h5.elementStyles = [], h5.shadowRootOptions = { mode: "open" }, h5[M5("elementProperties")] = /* @__PURE__ */ new Map(), h5[M5("finalized")] = /* @__PURE__ */ new Map(), q7 == null || q7({ ReactiveElement: h5 }), (B1.reactiveElementVersions ?? (B1.reactiveElementVersions = [])).push("2.0.4");
+h5.elementStyles = [], h5.shadowRootOptions = { mode: "open" }, h5[M5("elementProperties")] = /* @__PURE__ */ new Map(), h5[M5("finalized")] = /* @__PURE__ */ new Map(), q7 == null || q7({ ReactiveElement: h5 }), (U1.reactiveElementVersions ?? (U1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const G8 = { attribute: !0, type: String, converter: n2, reflect: !1, hasChanged: D2 }, W8 = (s = G8, t, e) => {
+const G8 = { attribute: !0, type: String, converter: n2, reflect: !1, hasChanged: T2 }, W8 = (s = G8, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -4404,8 +4592,8 @@ const G8 = { attribute: !0, type: String, converter: n2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
@@ -4416,7 +4604,7 @@ function q2(s) {
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const Y8 = u`
+const Y8 = v`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -4471,7 +4659,7 @@ const Y8 = u`
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -4481,10 +4669,10 @@ const Y8 = u`
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const F5 = globalThis, N2 = F5.ShadowRoot && (F5.ShadyCSS === void 0 || F5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, D3 = Symbol(), j7 = /* @__PURE__ */ new WeakMap();
+const F5 = globalThis, N2 = F5.ShadowRoot && (F5.ShadyCSS === void 0 || F5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, T3 = Symbol(), j7 = /* @__PURE__ */ new WeakMap();
 let K8 = class {
   constructor(t, e, o) {
-    if (this._$cssResult$ = !0, o !== D3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
+    if (this._$cssResult$ = !0, o !== T3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = t, this.t = e;
   }
   get styleSheet() {
@@ -4500,7 +4688,7 @@ let K8 = class {
     return this.cssText;
   }
 };
-const J8 = (s) => new K8(typeof s == "string" ? s : s + "", void 0, D3), X8 = (s, t) => {
+const J8 = (s) => new K8(typeof s == "string" ? s : s + "", void 0, T3), X8 = (s, t) => {
   if (N2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = F5.litNonce;
@@ -4516,7 +4704,7 @@ const J8 = (s) => new K8(typeof s == "string" ? s : s + "", void 0, D3), X8 = (s
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: Q8, defineProperty: t6, getOwnPropertyDescriptor: e6, getOwnPropertyNames: s6, getOwnPropertySymbols: o6, getPrototypeOf: r6 } = Object, U1 = globalThis, G7 = U1.trustedTypes, n6 = G7 ? G7.emptyScript : "", W7 = U1.reactiveElementPolyfillSupport, Z5 = (s, t) => s, i2 = { toAttribute(s, t) {
+const { is: Q8, defineProperty: t6, getOwnPropertyDescriptor: e6, getOwnPropertyNames: s6, getOwnPropertySymbols: o6, getPrototypeOf: r6 } = Object, O1 = globalThis, G7 = O1.trustedTypes, n6 = G7 ? G7.emptyScript : "", W7 = O1.reactiveElementPolyfillSupport, Z5 = (s, t) => s, i2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? n6 : null;
@@ -4545,7 +4733,7 @@ const { is: Q8, defineProperty: t6, getOwnPropertyDescriptor: e6, getOwnProperty
   }
   return e;
 } }, j2 = (s, t) => !Q8(s, t), Y7 = { attribute: !0, type: String, converter: i2, reflect: !1, hasChanged: j2 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), U1.litPropertyMetadata ?? (U1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), O1.litPropertyMetadata ?? (O1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 class d5 extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -4744,7 +4932,7 @@ class d5 extends HTMLElement {
   firstUpdated(t) {
   }
 }
-d5.elementStyles = [], d5.shadowRootOptions = { mode: "open" }, d5[Z5("elementProperties")] = /* @__PURE__ */ new Map(), d5[Z5("finalized")] = /* @__PURE__ */ new Map(), W7 == null || W7({ ReactiveElement: d5 }), (U1.reactiveElementVersions ?? (U1.reactiveElementVersions = [])).push("2.0.4");
+d5.elementStyles = [], d5.shadowRootOptions = { mode: "open" }, d5[Z5("elementProperties")] = /* @__PURE__ */ new Map(), d5[Z5("finalized")] = /* @__PURE__ */ new Map(), W7 == null || W7({ ReactiveElement: d5 }), (O1.reactiveElementVersions ?? (O1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -4756,8 +4944,8 @@ const i6 = { attribute: !0, type: String, converter: i2, reflect: !1, hasChanged
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -4765,8 +4953,8 @@ const i6 = { attribute: !0, type: String, converter: i2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
@@ -4777,7 +4965,7 @@ function J1(s) {
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const C6 = {
+const a6 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -4976,7 +5164,7 @@ const C6 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, a6 = u`
+}, C6 = v`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -5078,7 +5266,7 @@ var c6 = Object.defineProperty, h6 = Object.getOwnPropertyDescriptor, X1 = (s, t
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && c6(t, e, r), r;
 }, p5;
-const $1 = (p5 = class extends p {
+const M1 = (p5 = class extends p {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -5091,7 +5279,7 @@ const $1 = (p5 = class extends p {
     ) ? s : "sm";
   }
   getIcon() {
-    const s = C6[this.name], t = !!this.label;
+    const s = a6[this.name], t = !!this.label;
     if (!s) return null;
     const e = new DOMParser().parseFromString(s, "image/svg+xml").documentElement;
     return e instanceof SVGElement ? (e.setAttribute("role", "img"), e.setAttribute("aria-label", t ? this.label : ""), e.setAttribute("aria-hidden", t ? "false" : "true"), e.style.rotate = `${this.rotate}deg`, e.style.color = this.color || "currentcolor", e.classList.add(`nys-icon--${this.size}`), e.classList.add("nys-icon--svg"), this.flip && e.classList.add(`nys-icon--flip-${this.flip}`), e) : null;
@@ -5100,7 +5288,7 @@ const $1 = (p5 = class extends p {
     const s = this.getIcon();
     return s ? c`${s}` : null;
   }
-}, p5.styles = a6, p5.VALID_TYPES = [
+}, p5.styles = C6, p5.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -5118,31 +5306,31 @@ const $1 = (p5 = class extends p {
   "64"
 ], p5);
 X1([
-  J1({ type: String })
-], $1.prototype, "name", 2);
+  J1({ type: String, reflect: !0 })
+], M1.prototype, "name", 2);
 X1([
   J1({ type: String })
-], $1.prototype, "label", 2);
+], M1.prototype, "label", 2);
 X1([
   J1({ type: String })
-], $1.prototype, "rotate", 2);
+], M1.prototype, "rotate", 2);
 X1([
   J1({ type: String })
-], $1.prototype, "flip", 2);
+], M1.prototype, "flip", 2);
 X1([
   J1({ type: String })
-], $1.prototype, "color", 2);
+], M1.prototype, "color", 2);
 X1([
   J1({ reflect: !0 })
-], $1.prototype, "size", 1);
-let d6 = $1;
+], M1.prototype, "size", 1);
+let d6 = M1;
 customElements.get("nys-icon") || customElements.define("nys-icon", d6);
 var p6 = Object.defineProperty, F2 = (s, t, e, o) => {
   for (var r = void 0, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = i(t, e, r) || r);
   return r && p6(t, e, r), r;
 };
-const H2 = class extends p {
+const V2 = class extends p {
   // allows use of elementInternals' API
   constructor() {
     super(), this.showError = !1, this.errorMessage = "", this.showDivider = !1, this._internals = this.attachInternals();
@@ -5154,8 +5342,8 @@ const H2 = class extends p {
         </div>` : ""}`;
   }
 };
-H2.styles = Y8, H2.formAssociated = !0;
-let w2 = H2;
+V2.styles = Y8, V2.formAssociated = !0;
+let w2 = V2;
 F2([
   q2({ type: Boolean })
 ], w2.prototype, "showError");
@@ -5166,42 +5354,65 @@ F2([
   q2({ type: Boolean, reflect: !0 })
 ], w2.prototype, "showDivider");
 customElements.get("nys-errormessage") || customElements.define("nys-errormessage", w2);
-var v6 = Object.defineProperty, u6 = Object.getOwnPropertyDescriptor, v1 = (s, t, e, o) => {
-  for (var r = o > 1 ? void 0 : o ? u6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
+var u6 = Object.defineProperty, v6 = Object.getOwnPropertyDescriptor, r1 = (s, t, e, o) => {
+  for (var r = o > 1 ? void 0 : o ? v6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && v6(t, e, r), r;
+  return o && r && u6(t, e, r), r;
 };
 let y6 = 0;
-var K;
-const e1 = (K = class extends p {
+var X;
+const G = (X = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this.required = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this._size = "md", this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this.required = !1, this.optional = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this._size = "md", this._internals = this.attachInternals();
   }
   get size() {
     return this._size;
   }
   set size(t) {
-    this._size = K.VALID_SIZES.includes(
+    this._size = X.VALID_SIZES.includes(
       t
     ) ? t : "md";
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${y6++}`), this.addEventListener("change", this._manageCheckboxRequired), this.addEventListener("invalid", this._handleInvalid);
+    super.connectedCallback(), this.id || (this.id = `nys-checkbox-${Date.now()}-${y6++}`), this.addEventListener("change", this._handleCheckboxChange), this.addEventListener("invalid", this._handleInvalid);
   }
   disconnectedCallback() {
-    super.disconnectedCallback(), this.removeEventListener("change", this._manageCheckboxRequired), this.removeEventListener("invalid", this._handleInvalid);
+    super.disconnectedCallback(), this.removeEventListener("change", this._handleCheckboxChange), this.removeEventListener("invalid", this._handleInvalid);
+  }
+  firstUpdated() {
+    this._setGroupExist();
   }
   updated(t) {
-    t.has("required") && this.required && this.setupCheckboxRequired(), t.has("size") && this.updateCheckboxSize();
+    t.has("required") && this.required && this._setupCheckboxRequired(), t.has("size") && this.updateCheckboxSize();
   }
   /********************** Functions **********************/
-  _handleInvalid() {
-    this._internals.validity.valueMissing && (this.showError = !0, this._manageCheckboxRequired());
+  _setGroupExist() {
+    this.querySelectorAll("nys-checkbox").forEach((e) => {
+      e.groupExist = !0;
+    });
+  }
+  async _handleInvalid(t) {
+    t.preventDefault(), this.showError = !0, this._manageCheckboxRequired();
+    const e = this.querySelector("nys-checkbox"), o = e ? await e.getInputElement() : null;
+    if (o) {
+      const r = this._internals.form;
+      r ? Array.from(r.elements).find((l) => {
+        if (l.tagName.toLowerCase() === "nys-checkboxgroup") {
+          if (Array.from(
+            this.querySelectorAll("nys-checkbox")
+          ).filter(
+            (d) => d.checked
+          ).length === 0)
+            return l;
+        } else
+          return typeof l.checkValidity == "function" && !l.checkValidity();
+      }) === this && o.focus() : o.focus();
+    }
   }
   // Initial update on checkbox required attribute
-  async setupCheckboxRequired() {
+  async _setupCheckboxRequired() {
     const t = this.querySelector("nys-checkbox"), e = this.errorMessage || "This field is required", o = t ? await t.getInputElement() : null;
     this._internals.setValidity(
       { valueMissing: !0 },
@@ -5209,17 +5420,24 @@ const e1 = (K = class extends p {
       o || this
     );
   }
+  // Similar to how native forms handle multiple same-name fields, we group the selected values into a list for FormData.
+  _handleCheckboxChange(t) {
+    const e = t, { name: o } = e.detail, n = Array.from(this.querySelectorAll("nys-checkbox")).filter((i) => i.checked).map((i) => i.value);
+    this.name = o, this._internals.setFormValue(n.join(", ")), this._manageCheckboxRequired();
+  }
   // Updates the required attribute of each checkbox in the group
   async _manageCheckboxRequired() {
-    const t = this.errorMessage || "Please select at least one option.", e = this.querySelector("nys-checkbox"), o = e ? await e.getInputElement() : null;
-    let r = !1;
-    this.querySelectorAll("nys-checkbox").forEach((i) => {
-      i.checked && (r = !0);
-    }), r ? (this._internals.setValidity({}), this.showError = !1) : (this._internals.setValidity(
-      { valueMissing: !0 },
-      t,
-      o || this
-    ), this.showError = !0);
+    if (this.required) {
+      const t = this.errorMessage || "Please select at least one option.", e = this.querySelector("nys-checkbox"), o = e ? await e.getInputElement() : null;
+      let r = !1;
+      this.querySelectorAll("nys-checkbox").forEach((i) => {
+        i.checked && (r = !0);
+      }), r ? (this._internals.setValidity({}), this.showError = !1) : (this._internals.setValidity(
+        { valueMissing: !0 },
+        t,
+        o || this
+      ), this.showError = !0);
+    }
   }
   // Updates the size of each checkbox in the group
   updateCheckboxSize() {
@@ -5236,7 +5454,7 @@ const e1 = (K = class extends p {
       <nys-label
         label=${this.label}
         description=${this.description}
-        flag=${this.required ? "required" : ""}
+        flag=${this.required ? "required" : this.optional ? "optional" : ""}
       >
         <slot name="description" slot="description">${this.description}</slot>
       </nys-label>
@@ -5250,56 +5468,59 @@ const e1 = (K = class extends p {
       ></nys-errormessage>
     </div>`;
   }
-}, K.VALID_SIZES = ["sm", "md"], K.styles = O3, K.formAssociated = !0, K);
-v1([
-  C({ type: String })
-], e1.prototype, "id", 2);
-v1([
-  C({ type: String })
-], e1.prototype, "name", 2);
-v1([
-  C({ type: Boolean, reflect: !0 })
-], e1.prototype, "required", 2);
-v1([
-  C({ type: Boolean, reflect: !0 })
-], e1.prototype, "showError", 2);
-v1([
-  C({ type: String })
-], e1.prototype, "errorMessage", 2);
-v1([
-  C({ type: String })
-], e1.prototype, "label", 2);
-v1([
-  C({ type: String })
-], e1.prototype, "description", 2);
-v1([
-  C({ reflect: !0 })
-], e1.prototype, "size", 1);
-let g6 = e1;
+}, X.VALID_SIZES = ["sm", "md"], X.styles = O3, X.formAssociated = !0, X);
+r1([
+  a({ type: String })
+], G.prototype, "id", 2);
+r1([
+  a({ type: String, reflect: !0 })
+], G.prototype, "name", 2);
+r1([
+  a({ type: Boolean, reflect: !0 })
+], G.prototype, "required", 2);
+r1([
+  a({ type: Boolean, reflect: !0 })
+], G.prototype, "optional", 2);
+r1([
+  a({ type: Boolean, reflect: !0 })
+], G.prototype, "showError", 2);
+r1([
+  a({ type: String })
+], G.prototype, "errorMessage", 2);
+r1([
+  a({ type: String })
+], G.prototype, "label", 2);
+r1([
+  a({ type: String })
+], G.prototype, "description", 2);
+r1([
+  a({ reflect: !0 })
+], G.prototype, "size", 1);
+let g6 = G;
 customElements.get("nys-checkboxgroup") || customElements.define("nys-checkboxgroup", g6);
-var f6 = Object.defineProperty, w6 = Object.getOwnPropertyDescriptor, T = (s, t, e, o) => {
+var f6 = Object.defineProperty, w6 = Object.getOwnPropertyDescriptor, I = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? w6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && f6(t, e, r), r;
 };
 let _6 = 0;
-var J;
-const U = (J = class extends p {
+var Q;
+const U = (Q = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this.showError = !1, this.errorMessage = "", this._size = "md", this._internals = this.attachInternals();
+    super(), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this.showError = !1, this.errorMessage = "", this.groupExist = !1, this._size = "md", this._internals = this.attachInternals();
   }
   get size() {
     return this._size;
   }
   set size(t) {
-    this._size = J.VALID_SIZES.includes(
+    this._size = Q.VALID_SIZES.includes(
       t
     ) ? t : "md";
   }
   async getInputElement() {
     var t;
-    return await this.updateComplete, (t = this.shadowRoot) == null ? void 0 : t.querySelector("input");
+    return await this.updateComplete, ((t = this.shadowRoot) == null ? void 0 : t.querySelector("input")) || null;
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
@@ -5317,7 +5538,7 @@ const U = (J = class extends p {
   }
   /********************** Form Integration **********************/
   _setValue() {
-    this._internals.setFormValue(this.checked ? this.value : null);
+    this.groupExist || this._internals.setFormValue(this.checked ? this.value : null);
   }
   _manageRequire() {
     var o;
@@ -5341,16 +5562,36 @@ const U = (J = class extends p {
     this._setValidityMessage(e);
   }
   /********************** Functions **********************/
-  _handleInvalid() {
-    this._internals.validity.valueMissing && (this.showError = !0, this._validate());
+  // This helper function is called to perform the element's native validation.
+  checkValidity() {
+    var e;
+    if (this.required && !this.checked)
+      return !1;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("input");
+    return t ? t.checkValidity() : !0;
+  }
+  _handleInvalid(t) {
+    var o;
+    t.preventDefault(), this.showError = !0, this._validate();
+    const e = (o = this.shadowRoot) == null ? void 0 : o.querySelector("input");
+    if (e) {
+      const r = this._internals.form;
+      r ? Array.from(r.elements).find(
+        (l) => typeof l.checkValidity == "function" && !l.checkValidity()
+      ) === this && e.focus() : e.focus();
+    }
   }
   /******************** Event Handlers ********************/
   // Handle checkbox change event
   _handleChange(t) {
     const { checked: e } = t.target;
-    this.checked = e, this._internals.setFormValue(this.checked ? this.value : null), this._validate(), this.dispatchEvent(
+    this.checked = e, this.groupExist || this._internals.setFormValue(this.checked ? this.value : null), this._validate(), this.dispatchEvent(
       new CustomEvent("change", {
-        detail: { checked: this.checked },
+        detail: {
+          checked: this.checked,
+          name: this.name,
+          value: this.value
+        },
         bubbles: !0,
         composed: !0
       })
@@ -5368,7 +5609,11 @@ const U = (J = class extends p {
   _handleKeydown(t) {
     t.code === "Space" && (t.preventDefault(), this.disabled || (this.checked = !this.checked, this._internals.setFormValue(this.checked ? this.value : null), this._manageRequire(), this.dispatchEvent(
       new CustomEvent("change", {
-        detail: { checked: this.checked },
+        detail: {
+          checked: this.checked,
+          name: this.name,
+          value: this.value
+        },
         bubbles: !0,
         composed: !0
       })
@@ -5411,8 +5656,7 @@ const U = (J = class extends p {
               ${this.required ? c`<label class="nys-checkbox__required">*</label>` : ""}
             </div>
             <label for=${this.id} class="nys-checkbox__description">
-              ${this.description}
-              <slot></slot>
+              <slot name="description">${this.description}</slot>
             </label>
           </div>`}
         </label>
@@ -5424,43 +5668,46 @@ const U = (J = class extends p {
       </div>
     `;
   }
-}, J.VALID_SIZES = ["sm", "md"], J.styles = O3, J.formAssociated = !0, J);
-T([
-  C({ type: Boolean, reflect: !0 })
+}, Q.VALID_SIZES = ["sm", "md"], Q.styles = O3, Q.formAssociated = !0, Q);
+I([
+  a({ type: Boolean, reflect: !0 })
 ], U.prototype, "checked", 2);
-T([
-  C({ type: Boolean, reflect: !0 })
+I([
+  a({ type: Boolean, reflect: !0 })
 ], U.prototype, "disabled", 2);
-T([
-  C({ type: Boolean, reflect: !0 })
+I([
+  a({ type: Boolean, reflect: !0 })
 ], U.prototype, "required", 2);
-T([
-  C({ type: String })
+I([
+  a({ type: String })
 ], U.prototype, "label", 2);
-T([
-  C({ type: String })
+I([
+  a({ type: String })
 ], U.prototype, "description", 2);
-T([
-  C({ type: String })
+I([
+  a({ type: String })
 ], U.prototype, "id", 2);
-T([
-  C({ type: String })
+I([
+  a({ type: String, reflect: !0 })
 ], U.prototype, "name", 2);
-T([
-  C({ type: String })
+I([
+  a({ type: String })
 ], U.prototype, "value", 2);
-T([
-  C({ type: Boolean, reflect: !0 })
+I([
+  a({ type: Boolean, reflect: !0 })
 ], U.prototype, "showError", 2);
-T([
-  C({ type: String })
+I([
+  a({ type: String })
 ], U.prototype, "errorMessage", 2);
-T([
-  C({ reflect: !0 })
+I([
+  a({ type: Boolean })
+], U.prototype, "groupExist", 2);
+I([
+  a({ reflect: !0 })
 ], U.prototype, "size", 1);
 let b6 = U;
 customElements.get("nys-checkbox") || customElements.define("nys-checkbox", b6);
-const m6 = u`
+const m6 = v`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -5515,7 +5762,7 @@ var x6 = Object.defineProperty, G2 = (s, t, e, o) => {
     (i = s[n]) && (r = i(t, e, r) || r);
   return r && x6(t, e, r), r;
 };
-const u2 = class u2 extends p {
+const v2 = class v2 extends p {
   // allows use of elementInternals' API
   constructor() {
     super(), this.showError = !1, this.errorMessage = "", this.showDivider = !1, this._internals = this.attachInternals();
@@ -5527,18 +5774,18 @@ const u2 = class u2 extends p {
         </div>` : ""}`;
   }
 };
-u2.styles = m6, u2.formAssociated = !0;
-let O1 = u2;
+v2.styles = m6, v2.formAssociated = !0;
+let I1 = v2;
 G2([
-  C({ type: Boolean })
-], O1.prototype, "showError");
+  a({ type: Boolean })
+], I1.prototype, "showError");
 G2([
-  C({ type: String })
-], O1.prototype, "errorMessage");
+  a({ type: String })
+], I1.prototype, "errorMessage");
 G2([
-  C({ type: Boolean, reflect: !0 })
-], O1.prototype, "showDivider");
-customElements.get("nys-errormessage") || customElements.define("nys-errormessage", O1);
+  a({ type: Boolean, reflect: !0 })
+], I1.prototype, "showDivider");
+customElements.get("nys-errormessage") || customElements.define("nys-errormessage", I1);
 const L6 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
@@ -5738,7 +5985,7 @@ const L6 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, $6 = u`
+}, $6 = v`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -5839,8 +6086,8 @@ var M6 = Object.defineProperty, Z6 = Object.getOwnPropertyDescriptor, Q1 = (s, t
   for (var r = o > 1 ? void 0 : o ? Z6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && M6(t, e, r), r;
-}, c1;
-const M1 = (c1 = class extends p {
+}, d1;
+const Z1 = (d1 = class extends p {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -5848,7 +6095,7 @@ const M1 = (c1 = class extends p {
     return this._size;
   }
   set size(t) {
-    this._size = c1.VALID_TYPES.includes(
+    this._size = d1.VALID_TYPES.includes(
       t
     ) ? t : "sm";
   }
@@ -5862,7 +6109,7 @@ const M1 = (c1 = class extends p {
     const t = this.getIcon();
     return t ? c`${t}` : null;
   }
-}, c1.styles = $6, c1.VALID_TYPES = [
+}, d1.styles = $6, d1.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -5878,28 +6125,28 @@ const M1 = (c1 = class extends p {
   "32",
   "48",
   "64"
-], c1);
+], d1);
 Q1([
-  C({ type: String })
-], M1.prototype, "name", 2);
+  a({ type: String, reflect: !0 })
+], Z1.prototype, "name", 2);
 Q1([
-  C({ type: String })
-], M1.prototype, "label", 2);
+  a({ type: String })
+], Z1.prototype, "label", 2);
 Q1([
-  C({ type: String })
-], M1.prototype, "rotate", 2);
+  a({ type: String })
+], Z1.prototype, "rotate", 2);
 Q1([
-  C({ type: String })
-], M1.prototype, "flip", 2);
+  a({ type: String })
+], Z1.prototype, "flip", 2);
 Q1([
-  C({ type: String })
-], M1.prototype, "color", 2);
+  a({ type: String })
+], Z1.prototype, "color", 2);
 Q1([
-  C({ reflect: !0 })
-], M1.prototype, "size", 1);
-let H6 = M1;
-customElements.get("nys-icon") || customElements.define("nys-icon", H6);
-const V6 = u`
+  a({ reflect: !0 })
+], Z1.prototype, "size", 1);
+let V6 = Z1;
+customElements.get("nys-icon") || customElements.define("nys-icon", V6);
+const H6 = v`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -5917,19 +6164,19 @@ const V6 = u`
     --_nys-label-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);
     --_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-label-font-color: var(--nys-color-ink, #1b1b1b);
+    --_nys-label-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Description */
     --nys-description-font-weight: var(--nys-font-weight-regular, 400);
     --nys-description-font-style: italic;
-    --nys-description-font-color: var(--nys-neutral-900, #1b1b1b);
+    --nys-description-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Required Flag */
     --nys-required-font-color: var(--nys-color-danger, #b52c2c);
 
     /* Optional Flag */
     --nys-optional-font-weight: var(--nys-font-weight-regular, 400);
-    --nys-optional-font-color: var(--nys-color-neutral-700, #4a4d4f);
+    --nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);
 
     /* Spacing */
     --_nys-label-flag-gap: var(--nys-space-2px, 2px);
@@ -5976,7 +6223,7 @@ var S6 = Object.defineProperty, _2 = (s, t, e, o) => {
     (i = s[n]) && (r = i(t, e, r) || r);
   return r && S6(t, e, r), r;
 };
-const C7 = class C7 extends p {
+const a7 = class a7 extends p {
   constructor() {
     super(...arguments), this.id = "", this.label = "", this.description = "", this.flag = "";
   }
@@ -5995,22 +6242,22 @@ const C7 = class C7 extends p {
     `;
   }
 };
-C7.styles = V6;
-let b1 = C7;
+a7.styles = H6;
+let b1 = a7;
 _2([
-  C({ type: String })
+  a({ type: String })
 ], b1.prototype, "id");
 _2([
-  C({ type: String })
+  a({ type: String })
 ], b1.prototype, "label");
 _2([
-  C({ type: String })
+  a({ type: String })
 ], b1.prototype, "description");
 _2([
-  C({ type: String })
+  a({ type: String })
 ], b1.prototype, "flag");
 customElements.get("nys-label") || customElements.define("nys-label", b1);
-const q3 = u`
+const q3 = v`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
@@ -6050,6 +6297,10 @@ const q3 = u`
       --nys-color-ink,
       var(--nys-color-neutral-900, #1b1b1b)
     );
+    --_nys-radiobutton-color-text: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
 
     /* Default (Empty) */
     --_nys-radiobutton-color-bg: var(--nys-color-ink-reverse, #ffffff);
@@ -6083,8 +6334,8 @@ const q3 = u`
     /* Disabled */
     --_nys-radiobutton-disabled-color-bg: var(--nys-color-ink-reverse, #f0f0f0);
     --_nys-radiobutton-disabled-color-text: var(
-      --nys-color-neutral-500,
-      #797c7f
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
     );
     --_nys-radiobutton-disabled-color-border: var(
       --nys-color-neutral-100,
@@ -6119,7 +6370,7 @@ const q3 = u`
   .nys-radiogroup {
     display: flex;
     flex-direction: column;
-    gap: var(--nys-spacing-50, 4px);
+    gap: var(--nys-space-200, 16px);
     font-family: var(--_nys-radiobutton-font-family);
     font-size: var(--_nys-radiobutton-font-size);
     line-height: var(--_nys-radiobutton-line-height);
@@ -6211,13 +6462,14 @@ const q3 = u`
   /* Label styling */
   .nys-radiobutton__label {
     font-weight: var(--_nys-radiobutton-font-weight-400);
-    color: var(--_nys-radiobutton-color);
+    color: var(--_nys-radiobutton-color-text);
   }
 
   /* Description styling */
   .nys-radiobutton__description {
     font-weight: var(--_nys-radiobutton-font-weight-400);
     font-style: italic;
+    text-align: left;
   }
 
   /* gap between radio and it's label */
@@ -6237,23 +6489,23 @@ const q3 = u`
     cursor: not-allowed;
   }
 `;
-var E6 = Object.defineProperty, k6 = Object.getOwnPropertyDescriptor, s1 = (s, t, e, o) => {
+var E6 = Object.defineProperty, k6 = Object.getOwnPropertyDescriptor, W = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? k6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && E6(t, e, r), r;
 };
 let A6 = 0;
-var X;
-const F = (X = class extends p {
+var t1;
+const q = (t1 = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this.required = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this.selectedValue = null, this._size = "md", this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this.required = !1, this.optional = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this.selectedValue = null, this._size = "md", this._internals = this.attachInternals();
   }
   get size() {
     return this._size;
   }
   set size(t) {
-    this._size = X.VALID_SIZES.includes(
+    this._size = t1.VALID_SIZES.includes(
       t
     ) ? t : "md";
   }
@@ -6265,10 +6517,10 @@ const F = (X = class extends p {
     super.disconnectedCallback(), this.removeEventListener("change", this._handleRadioButtonChange), this.removeEventListener("invalid", this._handleInvalid);
   }
   firstUpdated() {
-    this._initializeCheckedState(), this._setValue(), this.setRadioButtonRequire();
+    this._initializeCheckedRadioValue(), this._setValue(), this.setRadioButtonRequire();
   }
   updated(t) {
-    (t.has("required") || t.has("selectedValue")) && this._manageRequire(), t.has("size") && this.updateRadioButtonsSize();
+    (t.has("required") || t.has("selectedValue")) && this._manageRequire(), t.has("size") && this._updateRadioButtonsSize();
   }
   // This callback is automatically called when the parent form is reset.
   formResetCallback() {
@@ -6280,7 +6532,7 @@ const F = (X = class extends p {
   _setValue() {
     this._internals.setFormValue(this.selectedValue);
   }
-  // Updates the "require" attribute of a radiobutton underneath a radiogroup to ensure requirement for all radiobutton under the same name/group
+  // Updates the "require" attribute of the first radiobutton underneath a radiogroup to ensure requirement for all radiobutton under the same name/group
   setRadioButtonRequire() {
     this.querySelectorAll("nys-radiobutton").forEach((e, o) => {
       this.required && o === 0 && e.setAttribute("required", "required");
@@ -6288,29 +6540,44 @@ const F = (X = class extends p {
   }
   async _manageRequire() {
     const t = this.errorMessage || "Please select an option.", e = this.querySelector("nys-radiobutton"), o = e ? await e.getInputElement() : null;
-    this.required && !this.selectedValue ? (this._internals.setValidity(
+    this.required && !this.selectedValue ? this._internals.setValidity(
       { valueMissing: !0 },
       t,
-      o || this
-    ), this.showError = !0) : (this._internals.setValidity({}), this.showError = !1);
+      o
+    ) : (this.showError = !1, this._internals.setValidity({}, "", o));
   }
-  _initializeCheckedState() {
+  // Need to account for if radiogroup already have a radiobutton checked at initialization
+  _initializeCheckedRadioValue() {
     const t = this.querySelector("nys-radiobutton[checked]");
     t && (this.selectedValue = t.getAttribute("value"), this._internals.setFormValue(this.selectedValue));
   }
+  /********************** Functions **********************/
   // Updates the size of each radiobutton underneath a radiogroup to ensure size standardization
-  updateRadioButtonsSize() {
+  _updateRadioButtonsSize() {
     this.querySelectorAll("nys-radiobutton").forEach((e) => {
       e.setAttribute("size", this.size);
     });
   }
-  // Keeps radiogroup informed of the name and value of its current selected radiobutton
+  // Keeps radiogroup informed of the name and value of its current selected radiobutton at each change
   _handleRadioButtonChange(t) {
-    const e = t, { value: o } = e.detail;
-    this.selectedValue = o, this._internals.setFormValue(this.selectedValue);
+    const e = t, { name: o, value: r } = e.detail;
+    this.name = o, this.selectedValue = r, this._internals.setFormValue(this.selectedValue);
   }
-  _handleInvalid() {
-    this._internals.validity.valueMissing && (this.showError = !0, this._manageRequire());
+  async _handleInvalid(t) {
+    if (t.preventDefault(), this._internals.validity.valueMissing) {
+      this.showError = !0, this._manageRequire();
+      const e = this.querySelector("nys-radiobutton"), o = e ? await e.getInputElement() : null;
+      if (o) {
+        const r = this._internals.form;
+        r ? Array.from(r.elements).find((l) => {
+          if (l.tagName.toLowerCase() === "nys-radiogroup") {
+            if (!l.querySelector("nys-radiobutton").checkValidity())
+              return l;
+          } else
+            return typeof l.checkValidity == "function" && !l.checkValidity();
+        }) === this && o.focus() : o.focus();
+      }
+    }
   }
   render() {
     return c` <div
@@ -6322,7 +6589,7 @@ const F = (X = class extends p {
       <nys-label
         label=${this.label}
         description=${this.description}
-        flag=${this.required ? "required" : ""}
+        flag=${this.required ? "required" : this.optional ? "optional" : ""}
       >
         <slot name="description" slot="description">${this.description}</slot>
       </nys-label>
@@ -6336,44 +6603,47 @@ const F = (X = class extends p {
       ></nys-errormessage>
     </div>`;
   }
-}, X.VALID_SIZES = ["sm", "md"], X.styles = q3, X.formAssociated = !0, X);
-s1([
-  C({ type: String })
-], F.prototype, "id", 2);
-s1([
-  C({ type: String })
-], F.prototype, "name", 2);
-s1([
-  C({ type: Boolean, reflect: !0 })
-], F.prototype, "required", 2);
-s1([
-  C({ type: Boolean, reflect: !0 })
-], F.prototype, "showError", 2);
-s1([
-  C({ type: String })
-], F.prototype, "errorMessage", 2);
-s1([
-  C({ type: String })
-], F.prototype, "label", 2);
-s1([
-  C({ type: String })
-], F.prototype, "description", 2);
-s1([
-  F1()
-], F.prototype, "selectedValue", 2);
-s1([
-  C({ reflect: !0 })
-], F.prototype, "size", 1);
-let z6 = F;
-customElements.get("nys-radiogroup") || customElements.define("nys-radiogroup", z6);
-var P6 = Object.defineProperty, B6 = Object.getOwnPropertyDescriptor, o1 = (s, t, e, o) => {
+}, t1.VALID_SIZES = ["sm", "md"], t1.styles = q3, t1.formAssociated = !0, t1);
+W([
+  a({ type: String })
+], q.prototype, "id", 2);
+W([
+  a({ type: String, reflect: !0 })
+], q.prototype, "name", 2);
+W([
+  a({ type: Boolean, reflect: !0 })
+], q.prototype, "required", 2);
+W([
+  a({ type: Boolean, reflect: !0 })
+], q.prototype, "optional", 2);
+W([
+  a({ type: Boolean, reflect: !0 })
+], q.prototype, "showError", 2);
+W([
+  a({ type: String })
+], q.prototype, "errorMessage", 2);
+W([
+  a({ type: String })
+], q.prototype, "label", 2);
+W([
+  a({ type: String })
+], q.prototype, "description", 2);
+W([
+  x1()
+], q.prototype, "selectedValue", 2);
+W([
+  a({ reflect: !0 })
+], q.prototype, "size", 1);
+let P6 = q;
+customElements.get("nys-radiogroup") || customElements.define("nys-radiogroup", P6);
+var z6 = Object.defineProperty, B6 = Object.getOwnPropertyDescriptor, n1 = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? B6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && P6(t, e, r), r;
+  return o && r && z6(t, e, r), r;
 };
 let U6 = 0;
 var y;
-const G = (y = class extends p {
+const Y = (y = class extends p {
   constructor() {
     super(...arguments), this.checked = !1, this.disabled = !1, this.required = !1, this.label = "", this.description = "", this.id = "", this.name = "", this.value = "", this._size = "md";
   }
@@ -6400,6 +6670,15 @@ const G = (y = class extends p {
   }
   updated(t) {
     t.has("checked") && this.checked && y.buttonGroup[this.name] !== this && (y.buttonGroup[this.name] && (y.buttonGroup[this.name].checked = !1, y.buttonGroup[this.name].requestUpdate()), y.buttonGroup[this.name] = this);
+  }
+  /******************** Function ********************/
+  // This helper function is called to perform the element's native validation.
+  checkValidity() {
+    var e;
+    if (this.required && !this.checked)
+      return !1;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("input");
+    return t ? t.checkValidity() : !0;
   }
   /******************** Event Handlers ********************/
   // Handle radiobutton change event & unselection of other options in group
@@ -6459,44 +6738,43 @@ const G = (y = class extends p {
             >${this.label}</label
           >
           <label for=${this.id} class="nys-radiobutton__description">
-            ${this.description}
-            <slot></slot>
+            <slot name="description">${this.description}</slot>
           </label>
         </div>`}
       </label>
     `;
   }
 }, y.VALID_SIZES = ["sm", "md"], y.buttonGroup = {}, y.styles = q3, y);
-o1([
-  C({ type: Boolean, reflect: !0 })
-], G.prototype, "checked", 2);
-o1([
-  C({ type: Boolean, reflect: !0 })
-], G.prototype, "disabled", 2);
-o1([
-  C({ type: Boolean, reflect: !0 })
-], G.prototype, "required", 2);
-o1([
-  C({ type: String })
-], G.prototype, "label", 2);
-o1([
-  C({ type: String })
-], G.prototype, "description", 2);
-o1([
-  C({ type: String })
-], G.prototype, "id", 2);
-o1([
-  C({ type: String })
-], G.prototype, "name", 2);
-o1([
-  C({ type: String })
-], G.prototype, "value", 2);
-o1([
-  C({ reflect: !0 })
-], G.prototype, "size", 1);
-let O6 = G;
+n1([
+  a({ type: Boolean, reflect: !0 })
+], Y.prototype, "checked", 2);
+n1([
+  a({ type: Boolean, reflect: !0 })
+], Y.prototype, "disabled", 2);
+n1([
+  a({ type: Boolean, reflect: !0 })
+], Y.prototype, "required", 2);
+n1([
+  a({ type: String })
+], Y.prototype, "label", 2);
+n1([
+  a({ type: String })
+], Y.prototype, "description", 2);
+n1([
+  a({ type: String })
+], Y.prototype, "id", 2);
+n1([
+  a({ type: String, reflect: !0 })
+], Y.prototype, "name", 2);
+n1([
+  a({ type: String })
+], Y.prototype, "value", 2);
+n1([
+  a({ reflect: !0 })
+], Y.prototype, "size", 1);
+let O6 = Y;
 customElements.get("nys-radiobutton") || customElements.define("nys-radiobutton", O6);
-const R6 = u`
+const I6 = v`
   :host {
     /* Global Select Styles */
     --_nys-select-width: 100%;
@@ -6514,13 +6792,17 @@ const R6 = u`
     --_nys-select-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-select-font-weight: var(--nys-font-weight-regular, 400);
     --_nys-select-line-height: var(--nys-font-lineheight-ui-md, 24px);
-    --_nys-select-gap: var(--nys-space-100, 8px);
+    --_nys-select-gap: var(--nys-space-50, 4px);
     --_nys-select-radius: var(--nys-radius-md, var(--nys-space-50, 4px));
     --_nys-select-padding: var(--nys-space-100, 8px) var(--nys-space-400, 32px)
       var(--nys-space-100, 8px) var(--nys-space-100, 8px);
 
     /* Global Select Colors */
-    --_nys-select-color: var(
+    --_nys-select-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-select-icon-color: var(
       --nys-color-ink,
       var(--nys-color-neutral-900, #1b1b1b)
     );
@@ -6530,7 +6812,11 @@ const R6 = u`
     );
     --_nys-select-bg-color: var(--nys-color-ink-reverse, #fff);
     --_nys-select-bg-disabled-color: var(--nys-color-neutral-50, #ededed);
-    --_nys-select-icon-disabled-color: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-select-text-disabled-color: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
+    --_nys-select-icon-disabled-color: var(--nys-color-neutral-200, #bec0c1);
 
     /* Select Outline & Border States */
     --_nys-select-border-default: var(--nys-border-width-sm, 1px) solid
@@ -6548,10 +6834,10 @@ const R6 = u`
     flex-direction: column;
     gap: var(--_nys-select-gap);
     font-family: var(--_nys-select-font-family);
-    color: var(--_nys-select-color);
   }
 
   .nys-select__select {
+    color: var(--_nys-select-text-color);
     font-weight: var(--_nys-select-font-weight);
     border-radius: var(--_nys-select-radius);
     border: var(--_nys-select-border-default);
@@ -6576,6 +6862,7 @@ const R6 = u`
   }
 
   .nys-select__icon {
+    color: var(--_nys-select-icon-color);
     position: absolute;
     right: 10px;
     top: 50%;
@@ -6624,6 +6911,7 @@ const R6 = u`
     background-color: var(--_nys-select-bg-disabled-color);
     border: var(--_nys-select-border-disabled);
     cursor: not-allowed;
+    color: var(--_nys-select-text-disabled-color);
   }
   .nys-select__select:disabled ~ .nys-select__icon {
     color: var(--_nys-select-icon-disabled-color);
@@ -6634,12 +6922,12 @@ const R6 = u`
       var(--_nys-select-error-color);
   }
 `;
-var I6 = Object.defineProperty, O5 = (s, t, e, o) => {
+var R6 = Object.defineProperty, O5 = (s, t, e, o) => {
   for (var r = void 0, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = i(t, e, r) || r);
-  return r && I6(t, e, r), r;
+  return r && R6(t, e, r), r;
 };
-class Z1 extends p {
+class V1 extends p {
   constructor() {
     super(...arguments), this.disabled = !1, this.selected = !1, this.value = "", this.label = "", this.hidden = !1;
   }
@@ -6667,38 +6955,38 @@ class Z1 extends p {
   }
 }
 O5([
-  C({ type: Boolean, reflect: !0 })
-], Z1.prototype, "disabled");
+  a({ type: Boolean, reflect: !0 })
+], V1.prototype, "disabled");
 O5([
-  C({ type: Boolean, reflect: !0 })
-], Z1.prototype, "selected");
+  a({ type: Boolean, reflect: !0 })
+], V1.prototype, "selected");
 O5([
-  C({ type: String })
-], Z1.prototype, "value");
+  a({ type: String })
+], V1.prototype, "value");
 O5([
-  C({ type: String })
-], Z1.prototype, "label");
+  a({ type: String })
+], V1.prototype, "label");
 O5([
-  C({ type: Boolean, reflect: !0 })
-], Z1.prototype, "hidden");
-customElements.define("nys-option", Z1);
-var T6 = Object.defineProperty, D6 = Object.getOwnPropertyDescriptor, D = (s, t, e, o) => {
-  for (var r = o > 1 ? void 0 : o ? D6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
+  a({ type: Boolean, reflect: !0 })
+], V1.prototype, "hidden");
+customElements.define("nys-option", V1);
+var D6 = Object.defineProperty, T6 = Object.getOwnPropertyDescriptor, R = (s, t, e, o) => {
+  for (var r = o > 1 ? void 0 : o ? T6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && T6(t, e, r), r;
+  return o && r && D6(t, e, r), r;
 };
 let q6 = 0;
-var Q;
-const O = (Q = class extends p {
+var e1;
+const O = (e1 = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this.label = "", this.description = "", this.value = "", this.disabled = !1, this.required = !1, this.form = "", this.showError = !1, this.errorMessage = "", this._width = "md", this._hasUserInteracted = !1, this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this.label = "", this.description = "", this.value = "", this.disabled = !1, this.required = !1, this.optional = !1, this.form = "", this.showError = !1, this.errorMessage = "", this._width = "md", this._hasUserInteracted = !1, this._internals = this.attachInternals();
   }
   get width() {
     return this._width;
   }
   set width(t) {
-    this._width = Q.VALID_WIDTHS.includes(
+    this._width = e1.VALID_WIDTHS.includes(
       t
     ) ? t : "full";
   }
@@ -6724,9 +7012,9 @@ const O = (Q = class extends p {
     if (!t || !e) return;
     e.querySelectorAll("option:not([hidden])").forEach((i) => i.remove()), t.assignedElements({ flatten: !0 }).forEach((i) => {
       var l;
-      if (i instanceof Z1) {
-        const a = document.createElement("option");
-        a.value = i.value, a.textContent = i.label || ((l = i.textContent) == null ? void 0 : l.trim()) || "", a.disabled = i.disabled, a.selected = i.selected, e.appendChild(a);
+      if (i instanceof V1) {
+        const C = document.createElement("option");
+        C.value = i.value, C.textContent = i.label || ((l = i.textContent) == null ? void 0 : l.trim()) || "", C.disabled = i.disabled, C.selected = i.selected, e.appendChild(C);
       }
     });
   }
@@ -6739,7 +7027,7 @@ const O = (Q = class extends p {
     const t = (r = this.shadowRoot) == null ? void 0 : r.querySelector("select");
     if (!t) return;
     const e = this.errorMessage || "Please select an option.";
-    this.required && !this.value ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t), this.showError = !0) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this.showError = !1, this._hasUserInteracted = !1);
+    this.required && !this.value ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t)) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this._hasUserInteracted = !1);
   }
   _setValidityMessage(t = "") {
     var o;
@@ -6758,8 +7046,22 @@ const O = (Q = class extends p {
     this._manageRequire(), this._setValidityMessage(e);
   }
   /********************** Functions **********************/
-  _handleInvalid() {
-    this._hasUserInteracted = !0, this._validate(), this.showError = !0;
+  // This helper function is called to perform the element's native validation.
+  checkValidity() {
+    var e;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("select");
+    return t ? t.checkValidity() : !0;
+  }
+  _handleInvalid(t) {
+    var o;
+    t.preventDefault(), this._hasUserInteracted = !0, this._validate(), this.showError = !0;
+    const e = (o = this.shadowRoot) == null ? void 0 : o.querySelector("select");
+    if (e) {
+      const r = this._internals.form;
+      r ? Array.from(r.elements).find(
+        (l) => typeof l.checkValidity == "function" && !l.checkValidity()
+      ) === this && e.focus() : e.focus();
+    }
   }
   /******************** Event Handlers ********************/
   // Handle change event to bubble up selected value
@@ -6799,7 +7101,7 @@ const O = (Q = class extends p {
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required ? "required" : ""}
+          flag=${this.required ? "required" : this.optional ? "optional" : ""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -6837,43 +7139,46 @@ const O = (Q = class extends p {
       </div>
     `;
   }
-}, Q.VALID_WIDTHS = ["sm", "md", "lg", "full"], Q.styles = R6, Q.formAssociated = !0, Q);
-D([
-  C({ type: String })
+}, e1.VALID_WIDTHS = ["sm", "md", "lg", "full"], e1.styles = I6, e1.formAssociated = !0, e1);
+R([
+  a({ type: String })
 ], O.prototype, "id", 2);
-D([
-  C({ type: String })
+R([
+  a({ type: String, reflect: !0 })
 ], O.prototype, "name", 2);
-D([
-  C({ type: String })
+R([
+  a({ type: String })
 ], O.prototype, "label", 2);
-D([
-  C({ type: String })
+R([
+  a({ type: String })
 ], O.prototype, "description", 2);
-D([
-  C({ type: String })
+R([
+  a({ type: String })
 ], O.prototype, "value", 2);
-D([
-  C({ type: Boolean, reflect: !0 })
+R([
+  a({ type: Boolean, reflect: !0 })
 ], O.prototype, "disabled", 2);
-D([
-  C({ type: Boolean, reflect: !0 })
+R([
+  a({ type: Boolean, reflect: !0 })
 ], O.prototype, "required", 2);
-D([
-  C({ type: String })
+R([
+  a({ type: Boolean, reflect: !0 })
+], O.prototype, "optional", 2);
+R([
+  a({ type: String })
 ], O.prototype, "form", 2);
-D([
-  C({ type: Boolean, reflect: !0 })
+R([
+  a({ type: Boolean, reflect: !0 })
 ], O.prototype, "showError", 2);
-D([
-  C({ type: String })
+R([
+  a({ type: String })
 ], O.prototype, "errorMessage", 2);
-D([
-  C({ reflect: !0 })
+R([
+  a({ reflect: !0 })
 ], O.prototype, "width", 1);
 let N6 = O;
 customElements.get("nys-select") || customElements.define("nys-select", N6);
-const j6 = u`
+const j6 = v`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -6884,6 +7189,14 @@ const j6 = u`
     --_nys-textarea-color-border: var(--nys-color-neutral-400, #909395);
     --_nys-textarea-padding: var(--nys-space-100, 8px);
     --_nys-textarea-gap: var(--nys-space-50, 4px);
+    --_nys-textarea-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-textarea-placeholder-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
 
     /* Hovered */
     --_nys-textarea-hover-color-outline: var(--nys-color-neutral-900, #1b1b1b);
@@ -6894,12 +7207,15 @@ const j6 = u`
     --_nys-textarea-focus-width-outline: var(--nys-border-width-sm, 1px);
 
     /* Disabled */
-    --_nys-textarea-disabled-color: var(--nys-color-neutral-10, #f6f6f6);
+    --_nys-textarea-disabled-bg-color: var(--nys-color-neutral-10, #f6f6f6);
     --_nys-textarea-disabled-color-border: var(
       --nys-color-neutral-200,
       #bec0c1
     );
-    --_nys-textarea-disabled-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-textarea-disabled-color-text: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
 
     /* Global Font Styles */
     --_nys-textarea-family-ui: var(
@@ -6945,7 +7261,6 @@ const j6 = u`
   }
 
   .nys-textarea {
-    font-size: var(--_nys-textarea-size-ui-md);
     font-weight: var(--_nys-textarea-weight-ui);
     font-family: var(--_nys-textarea-family-ui);
     line-height: var(--_nys-textarea-lineheight-ui);
@@ -6957,6 +7272,8 @@ const j6 = u`
   }
 
   .nys-textarea__textarea {
+    color: var(--_nys-textarea-color);
+    font-size: var(--_nys-textarea-size-ui-md);
     border-radius: var(--_nys-textarea-radius);
     border: solid var(--_nys-textarea-color-border)
       var(--_nys-textarea-width-border);
@@ -6968,6 +7285,10 @@ const j6 = u`
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+  }
+
+  .nys-textarea__textarea::placeholder {
+    color: var(--_nys-textarea-placeholder-color);
   }
 
   /* Resize */
@@ -6991,35 +7312,36 @@ const j6 = u`
   }
 
   /* Disabled */
-  .nys-textarea__textarea:disabled {
-    background-color: var(--_nys-textarea-disabled-color);
+  .nys-textarea__textarea:disabled,
+  .nys-textarea__textarea:disabled::placeholder {
+    background-color: var(--_nys-textarea-disabled-bg-color);
     border-color: var(--_nys-textarea-disabled-color-border);
     color: var(--_nys-textarea-disabled-color-text);
     cursor: not-allowed;
   }
 `;
-var F6 = Object.defineProperty, G6 = Object.getOwnPropertyDescriptor, S = (s, t, e, o) => {
+var F6 = Object.defineProperty, G6 = Object.getOwnPropertyDescriptor, V = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? G6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && F6(t, e, r), r;
 };
 let W6 = 0;
-var R;
-const Z = (R = class extends p {
+var D;
+const Z = (D = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.form = "", this.maxlength = null, this.width = "full", this.rows = 4, this._resize = "vertical", this.showError = !1, this.errorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this.form = "", this.maxlength = null, this.width = "full", this.rows = 4, this._resize = "vertical", this.showError = !1, this.errorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
   }
   get resize() {
     return this._resize;
   }
   set resize(t) {
-    this._resize = R.VALID_RESIZE.includes(
+    this._resize = D.VALID_RESIZE.includes(
       t
     ) ? t : "vertical";
   }
   updated(t) {
-    t.has("width") && (this.width = R.VALID_WIDTHS.includes(this.width) ? this.width : "full"), t.has("rows") && (this.rows = this.rows ?? 4);
+    t.has("width") && (this.width = D.VALID_WIDTHS.includes(this.width) ? this.width : "full"), t.has("rows") && (this.rows = this.rows ?? 4);
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
@@ -7044,7 +7366,7 @@ const Z = (R = class extends p {
     const t = (r = this.shadowRoot) == null ? void 0 : r.querySelector("textarea");
     if (!t) return;
     const e = this.errorMessage || "This field is required";
-    this.required && !this.value ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t), this.showError = !0) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this.showError = !1, this._hasUserInteracted = !1);
+    this.required && !this.value ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t)) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this._hasUserInteracted = !1);
   }
   _setValidityMessage(t = "") {
     var o;
@@ -7063,8 +7385,22 @@ const Z = (R = class extends p {
     this._setValidityMessage(e);
   }
   /********************** Functions **********************/
-  _handleInvalid() {
-    this._hasUserInteracted = !0, this._validate();
+  // This helper function is called to perform the element's native validation.
+  checkValidity() {
+    var e;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("textarea");
+    return t ? t.checkValidity() : !0;
+  }
+  _handleInvalid(t) {
+    var o;
+    t.preventDefault(), this._hasUserInteracted = !0, this._validate();
+    const e = (o = this.shadowRoot) == null ? void 0 : o.querySelector("textarea");
+    if (e) {
+      const r = this._internals.form;
+      r ? Array.from(r.elements).find(
+        (l) => typeof l.checkValidity == "function" && !l.checkValidity()
+      ) === this && e.focus() : e.focus();
+    }
   }
   /******************** Event Handlers ********************/
   // Handle input event to check pattern validity
@@ -7116,7 +7452,7 @@ const Z = (R = class extends p {
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required ? "required" : ""}
+          flag=${this.required ? "required" : this.optional ? "optional" : ""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -7151,58 +7487,61 @@ const Z = (R = class extends p {
       </label>
     `;
   }
-}, R.VALID_WIDTHS = ["sm", "md", "lg", "full"], R.VALID_RESIZE = ["vertical", "none"], R.styles = j6, R.formAssociated = !0, R);
-S([
-  C({ type: String })
+}, D.VALID_WIDTHS = ["sm", "md", "lg", "full"], D.VALID_RESIZE = ["vertical", "none"], D.styles = j6, D.formAssociated = !0, D);
+V([
+  a({ type: String })
 ], Z.prototype, "id", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: String, reflect: !0 })
 ], Z.prototype, "name", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: String })
 ], Z.prototype, "label", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: String })
 ], Z.prototype, "description", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: String })
 ], Z.prototype, "placeholder", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: String })
 ], Z.prototype, "value", 2);
-S([
-  C({ type: Boolean, reflect: !0 })
+V([
+  a({ type: Boolean, reflect: !0 })
 ], Z.prototype, "disabled", 2);
-S([
-  C({ type: Boolean, reflect: !0 })
+V([
+  a({ type: Boolean, reflect: !0 })
 ], Z.prototype, "readonly", 2);
-S([
-  C({ type: Boolean, reflect: !0 })
+V([
+  a({ type: Boolean, reflect: !0 })
 ], Z.prototype, "required", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: Boolean, reflect: !0 })
+], Z.prototype, "optional", 2);
+V([
+  a({ type: String })
 ], Z.prototype, "form", 2);
-S([
-  C({ type: Number })
+V([
+  a({ type: Number })
 ], Z.prototype, "maxlength", 2);
-S([
-  C({ reflect: !0 })
+V([
+  a({ reflect: !0 })
 ], Z.prototype, "width", 2);
-S([
-  C({ type: Number })
+V([
+  a({ type: Number })
 ], Z.prototype, "rows", 2);
-S([
-  C({ reflect: !0 })
+V([
+  a({ reflect: !0 })
 ], Z.prototype, "resize", 1);
-S([
-  C({ type: Boolean, reflect: !0 })
+V([
+  a({ type: Boolean, reflect: !0 })
 ], Z.prototype, "showError", 2);
-S([
-  C({ type: String })
+V([
+  a({ type: String })
 ], Z.prototype, "errorMessage", 2);
 let Y6 = Z;
 customElements.get("nys-textarea") || customElements.define("nys-textarea", Y6);
-const K6 = u`
+const K6 = v`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -7211,8 +7550,24 @@ const K6 = u`
     --_nys-textinput-radius: var(--nys-radius-md, 4px);
     --_nys-textinput-width-border: var(--nys-border-width-sm, 1px);
     --_nys-textinput-color-border: var(--nys-color-neutral-400, #909395);
+    --_nys-textinput-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-textinput-placeholder-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
     --_nys-textinput-padding: var(--nys-space-100, 8px);
     --_nys-textinput-gap: var(--nys-space-50, 4px);
+    --_nys-textinput-background-color: var(
+      --nys-color-ink-reverse,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-textinput-icon-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
 
     /* Hovered */
     --_nys-textinput-hover-color-outline: var(--nys-color-neutral-900, #1b1b1b);
@@ -7228,7 +7583,10 @@ const K6 = u`
       --nys-color-neutral-200,
       #bec0c1
     );
-    --_nys-textinput-disabled-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-textinput-disabled-color-text: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
 
     /* Global Font Styles */
     --_nys-textinput-family-ui: var(
@@ -7274,7 +7632,6 @@ const K6 = u`
   }
 
   .nys-textinput {
-    font-size: var(--_nys-textinput-size-ui-md);
     font-weight: var(--_nys-textinput-weight-ui);
     font-family: var(--_nys-textinput-family-ui);
     line-height: var(--_nys-textinput-lineheight-ui);
@@ -7286,6 +7643,8 @@ const K6 = u`
   }
 
   .nys-textinput__input {
+    color: var(--_nys-textinput-text-color);
+    font-size: var(--_nys-textinput-size-ui-md);
     border-radius: var(--_nys-textinput-radius);
     border: solid var(--_nys-textinput-color-border)
       var(--_nys-textinput-width-border);
@@ -7296,6 +7655,24 @@ const K6 = u`
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    background-color: var(--_nys-textinput-background-color);
+  }
+  .nys-textinput__input::placeholder {
+    color: var(--_nys-textinput-placeholder-color);
+  }
+
+  /* This container exist to mainly style the type="password" eye icon */
+  .nys-input-container {
+    position: relative;
+  }
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--_nys-textinput-icon-color);
+    background-color: var(--_nys-textinput-background-color);
   }
 
   /* Hovered */
@@ -7314,40 +7691,43 @@ const K6 = u`
   }
 
   /* Disabled */
-  .nys-textinput__input:disabled {
+  .nys-textinput__input:disabled,
+  .nys-input-container.disabled,
+  .nys-input-container.disabled .eye-icon,
+  .nys-textinput__input:disabled::placeholder {
     background-color: var(--_nys-textinput-disabled-color);
     border-color: var(--_nys-textinput-disabled-color-border);
     color: var(--_nys-textinput-disabled-color-text);
     cursor: not-allowed;
   }
 `;
-var J6 = Object.defineProperty, X6 = Object.getOwnPropertyDescriptor, L = (s, t, e, o) => {
+var J6 = Object.defineProperty, X6 = Object.getOwnPropertyDescriptor, b = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? X6(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && J6(t, e, r), r;
 };
 let Q6 = 0;
-var I;
-const w = (I = class extends p {
+var T;
+const f = (T = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "", this.showPassword = !1, this._originalErrorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
   }
   get type() {
     return this._type;
   }
   set type(t) {
-    this._type = I.VALID_TYPES.includes(
+    this._type = T.VALID_TYPES.includes(
       t
     ) ? t : "text";
   }
   // Ensure the "width" property is valid after updates
   updated(t) {
-    t.has("width") && (this.width = I.VALID_WIDTHS.includes(this.width) ? this.width : "full");
+    t.has("width") && (this.width = T.VALID_WIDTHS.includes(this.width) ? this.width : "full");
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-textinput-${Date.now()}-${Q6++}`), this.addEventListener("invalid", this._handleInvalid);
+    super.connectedCallback(), this.id || (this.id = `nys-textinput-${Date.now()}-${Q6++}`), this._originalErrorMessage = this.errorMessage, this.addEventListener("invalid", this._handleInvalid);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this.removeEventListener("invalid", this._handleInvalid);
@@ -7368,16 +7748,15 @@ const w = (I = class extends p {
     const t = (r = this.shadowRoot) == null ? void 0 : r.querySelector("input");
     if (!t) return;
     const e = this.errorMessage || "This field is required";
-    this.required && (!this.value || this.value.trim() === "") ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t), this.showError = !0) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this.showError = !1, this._hasUserInteracted = !1);
+    this.required && (!this.value || this.value.trim() === "") ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t)) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this._hasUserInteracted = !1);
   }
   _setValidityMessage(t = "") {
-    var o;
-    const e = (o = this.shadowRoot) == null ? void 0 : o.querySelector("input");
-    e && (this.showError = !!t, this.errorMessage.trim() && t !== "" && (t = this.errorMessage), this._internals.setValidity(
-      t ? { customError: !0 } : {},
-      t,
-      e
-    ));
+    var r;
+    const e = (r = this.shadowRoot) == null ? void 0 : r.querySelector("input");
+    if (!e) return;
+    this.showError = !!t, this._originalErrorMessage.trim() && t !== "" ? this.errorMessage = this._originalErrorMessage : this.errorMessage = t;
+    const o = t ? { customError: !0 } : {};
+    this._internals.setValidity(o, this.errorMessage, e);
   }
   _validate() {
     var r;
@@ -7388,8 +7767,25 @@ const w = (I = class extends p {
     e.valueMissing ? o = "This field is required" : e.typeMismatch ? o = "Invalid format for this type" : e.patternMismatch ? o = "Invalid format" : e.tooShort ? o = `Value is too short. Minimum length is ${t.minLength}` : e.tooLong ? o = `Value is too long. Maximum length is ${t.maxLength}` : e.rangeUnderflow ? o = `Value must be at least ${t.min}` : e.rangeOverflow ? o = `Value must be at most ${t.max}` : e.stepMismatch ? o = "Invalid step value" : o = t.validationMessage, this._setValidityMessage(o);
   }
   /********************** Functions **********************/
-  _handleInvalid() {
-    this._hasUserInteracted = !0, this._validate();
+  // This helper function is called to perform the element's native validation.
+  checkValidity() {
+    var e;
+    const t = (e = this.shadowRoot) == null ? void 0 : e.querySelector("input");
+    return t ? t.checkValidity() : !0;
+  }
+  _handleInvalid(t) {
+    var o;
+    t.preventDefault(), this._hasUserInteracted = !0, this._validate();
+    const e = (o = this.shadowRoot) == null ? void 0 : o.querySelector("input");
+    if (e) {
+      const r = this._internals.form;
+      r ? Array.from(r.elements).find(
+        (l) => typeof l.checkValidity == "function" && !l.checkValidity()
+      ) === this && e.focus() : e.focus();
+    }
+  }
+  _togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
   /******************** Event Handlers ********************/
   // Handle input event to check pattern validity
@@ -7421,45 +7817,53 @@ const w = (I = class extends p {
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required ? "required" : ""}
+          flag=${this.required ? "required" : this.optional ? "optional" : ""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
-        <input
-          class="nys-textinput__input"
-          type=${this.type}
-          name=${this.name}
-          id=${this.id}
-          ?disabled=${this.disabled}
-          ?required=${this.required}
-          ?readonly=${this.readonly}
-          aria-disabled="${this.disabled}"
-          aria-label="${this.label} ${this.description}"
-          .value=${this.value}
-          placeholder=${g(
+        <div class="nys-input-container ${this.disabled ? "disabled" : ""}">
+          <input
+            class="nys-textinput__input"
+            type=${this.type === "password" ? this.showPassword ? "text" : "password" : this.type}
+            name=${this.name}
+            id=${this.id}
+            ?disabled=${this.disabled}
+            ?required=${this.required}
+            ?readonly=${this.readonly}
+            aria-disabled="${this.disabled}"
+            aria-label="${this.label} ${this.description}"
+            .value=${this.value}
+            placeholder=${g(
       this.placeholder ? this.placeholder : void 0
     )}
-          pattern=${g(this.pattern ? this.pattern : void 0)}
-          min=${g(this.min !== "" ? this.min : void 0)}
-          maxlength=${g(
+            pattern=${g(this.pattern ? this.pattern : void 0)}
+            min=${g(this.min !== "" ? this.min : void 0)}
+            maxlength=${g(
       this.maxlength !== "" ? this.maxlength : void 0
     )}
-          step=${g(this.step !== "" ? this.step : void 0)}
-          max=${g(this.max !== "" ? this.max : void 0)}
-          form=${g(this.form ? this.form : void 0)}
-          @input=${this._handleInput}
-          @focus="${this._handleFocus}"
-          @blur="${this._handleBlur}"
-          @change="${this._handleChange}"
-        />
+            step=${g(this.step !== "" ? this.step : void 0)}
+            max=${g(this.max !== "" ? this.max : void 0)}
+            form=${g(this.form ? this.form : void 0)}
+            @input=${this._handleInput}
+            @focus="${this._handleFocus}"
+            @blur="${this._handleBlur}"
+            @change="${this._handleChange}"
+          />
+          ${this.type === "password" ? c`<nys-icon
+                class="eye-icon"
+                @click=${() => !this.disabled && this._togglePasswordVisibility()}
+                name=${this.showPassword ? "visibility_off" : "visibility"}
+                size="3xl"
+              ></nys-icon>` : ""}
+        </div>
         <nys-errormessage
           ?showError=${this.showError}
-          errorMessage=${this._internals.validationMessage || this.errorMessage}
+          errorMessage=${this.errorMessage}
         ></nys-errormessage>
       </div>
     `;
   }
-}, I.VALID_TYPES = [
+}, T.VALID_TYPES = [
   "email",
   "number",
   "password",
@@ -7467,67 +7871,73 @@ const w = (I = class extends p {
   "tel",
   "text",
   "url"
-], I.VALID_WIDTHS = ["sm", "md", "lg", "full"], I.styles = K6, I.formAssociated = !0, I);
-L([
-  C({ type: String })
-], w.prototype, "id", 2);
-L([
-  C({ type: String })
-], w.prototype, "name", 2);
-L([
-  C({ reflect: !0 })
-], w.prototype, "type", 1);
-L([
-  C({ type: String })
-], w.prototype, "label", 2);
-L([
-  C({ type: String })
-], w.prototype, "description", 2);
-L([
-  C({ type: String })
-], w.prototype, "placeholder", 2);
-L([
-  C({ type: String })
-], w.prototype, "value", 2);
-L([
-  C({ type: Boolean, reflect: !0 })
-], w.prototype, "disabled", 2);
-L([
-  C({ type: Boolean, reflect: !0 })
-], w.prototype, "readonly", 2);
-L([
-  C({ type: Boolean, reflect: !0 })
-], w.prototype, "required", 2);
-L([
-  C({ type: String })
-], w.prototype, "form", 2);
-L([
-  C({ type: String })
-], w.prototype, "pattern", 2);
-L([
-  C({ type: Number })
-], w.prototype, "maxlength", 2);
-L([
-  C({ reflect: !0 })
-], w.prototype, "width", 2);
-L([
-  C({ type: Number })
-], w.prototype, "step", 2);
-L([
-  C({ type: Number })
-], w.prototype, "min", 2);
-L([
-  C({ type: Number })
-], w.prototype, "max", 2);
-L([
-  C({ type: Boolean, reflect: !0 })
-], w.prototype, "showError", 2);
-L([
-  C({ type: String })
-], w.prototype, "errorMessage", 2);
-let t9 = w;
+], T.VALID_WIDTHS = ["sm", "md", "lg", "full"], T.styles = K6, T.formAssociated = !0, T);
+b([
+  a({ type: String })
+], f.prototype, "id", 2);
+b([
+  a({ type: String, reflect: !0 })
+], f.prototype, "name", 2);
+b([
+  a({ reflect: !0 })
+], f.prototype, "type", 1);
+b([
+  a({ type: String })
+], f.prototype, "label", 2);
+b([
+  a({ type: String })
+], f.prototype, "description", 2);
+b([
+  a({ type: String })
+], f.prototype, "placeholder", 2);
+b([
+  a({ type: String })
+], f.prototype, "value", 2);
+b([
+  a({ type: Boolean, reflect: !0 })
+], f.prototype, "disabled", 2);
+b([
+  a({ type: Boolean, reflect: !0 })
+], f.prototype, "readonly", 2);
+b([
+  a({ type: Boolean, reflect: !0 })
+], f.prototype, "required", 2);
+b([
+  a({ type: Boolean, reflect: !0 })
+], f.prototype, "optional", 2);
+b([
+  a({ type: String })
+], f.prototype, "form", 2);
+b([
+  a({ type: String })
+], f.prototype, "pattern", 2);
+b([
+  a({ type: Number })
+], f.prototype, "maxlength", 2);
+b([
+  a({ reflect: !0 })
+], f.prototype, "width", 2);
+b([
+  a({ type: Number })
+], f.prototype, "step", 2);
+b([
+  a({ type: Number })
+], f.prototype, "min", 2);
+b([
+  a({ type: Number })
+], f.prototype, "max", 2);
+b([
+  a({ type: Boolean, reflect: !0 })
+], f.prototype, "showError", 2);
+b([
+  a({ type: String })
+], f.prototype, "errorMessage", 2);
+b([
+  x1()
+], f.prototype, "showPassword", 2);
+let t9 = f;
 customElements.get("nys-textinput") || customElements.define("nys-textinput", t9);
-const e9 = u`
+const e9 = v`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -7591,7 +8001,15 @@ const e9 = u`
       var(--nys-color-white, #fff)
     );
 
-    /* Font sizes and spacing for labels, descriptions, and icons */
+    /* Font sizes, color, and spacing for labels, descriptions, and icons */
+    --_nys-toggle-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-toggle-disabled-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
     --_nys-toggle-icon-font-size-xs: var(
       --nys-font-size-body-xs,
       var(--nys-font-size-xs, 12px)
@@ -7609,6 +8027,8 @@ const e9 = u`
   }
   slot[name="description"] {
     font-style: italic;
+    text-align: left;
+    display: flex;
   }
 
   /* Toggle switch overall container */
@@ -7619,8 +8039,10 @@ const e9 = u`
 
   /* Label & description text container */
   .nys-toggle__text {
+    color: var(--_nys-toggle-text-color);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     font-size: var(--_nys-toggle-font-size);
     font-family: var(--_nys-toggle-font-family);
     font-weight: var(--_nys-toggle-font-weight);
@@ -7628,7 +8050,7 @@ const e9 = u`
   }
 
   .nys-toggle__content:has(input:disabled) .nys-toggle__text * {
-    color: var(--_nys-toggle-color-base);
+    color: var(--_nys-toggle-disabled-color);
     cursor: not-allowed;
   }
 
@@ -7660,7 +8082,7 @@ const e9 = u`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--_nys-toggle-color-base, #797c7f);
+    background-color: var(--_nys-toggle-color-base);
   }
 
   .knob {
@@ -7731,7 +8153,7 @@ const e9 = u`
   /* Icon Styling */
   .toggle-icon {
     position: absolute;
-    color: var(--_nys-toggle-color-base, #797c7f);
+    color: var(--_nys-toggle-color-base);
   }
   input:checked + .slider .knob .toggle-icon {
     color: var(--_nys-toggle-color-theme, #154973);
@@ -7792,30 +8214,36 @@ const e9 = u`
     }
   }
 `;
-var s9 = Object.defineProperty, o9 = Object.getOwnPropertyDescriptor, W = (s, t, e, o) => {
+var s9 = Object.defineProperty, o9 = Object.getOwnPropertyDescriptor, K = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? o9(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && s9(t, e, r), r;
 };
 let r9 = 0;
-var h1;
-const q = (h1 = class extends p {
+var s1;
+const N = (s1 = class extends p {
+  // allows use of elementInternals' API
   constructor() {
-    super(...arguments), this.id = "", this.name = "", this.value = "", this.checked = !1, this.disabled = !1, this.noIcon = !1, this.label = "", this.description = "", this._size = "md", this.form = "";
+    super(), this.id = "", this.name = "", this.value = "", this.checked = !1, this.disabled = !1, this.noIcon = !1, this.label = "", this.description = "", this._size = "md", this.form = "", this._internals = this.attachInternals();
   }
   get size() {
     return this._size;
   }
   set size(t) {
-    this._size = h1.VALID_SIZES.includes(
+    this._size = s1.VALID_SIZES.includes(
       t
     ) ? t : "md";
   }
-  /******************** Functions ********************/
   // Generate a unique ID if one is not provided
   connectedCallback() {
     super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${r9++}`);
   }
+  /********************** Form Integration **********************/
+  // Update the internals whenever `checked` or `value` changes.
+  updated(t) {
+    (t.has("checked") || t.has("value")) && this._internals.setFormValue(this.checked ? this.value : null);
+  }
+  /********************** Functions **********************/
   // Handle focus event
   _handleFocus() {
     this.dispatchEvent(new Event("focus"));
@@ -7881,42 +8309,57 @@ const q = (h1 = class extends p {
       </label>
     `;
   }
-}, h1.styles = e9, h1.VALID_SIZES = ["sm", "md"], h1);
-W([
-  C({ type: String })
-], q.prototype, "id", 2);
-W([
-  C({ type: String })
-], q.prototype, "name", 2);
-W([
-  C({ type: String })
-], q.prototype, "value", 2);
-W([
-  C({ type: Boolean, reflect: !0 })
-], q.prototype, "checked", 2);
-W([
-  C({ type: Boolean, reflect: !0 })
-], q.prototype, "disabled", 2);
-W([
-  C({ type: Boolean })
-], q.prototype, "noIcon", 2);
-W([
-  C({ type: String })
-], q.prototype, "label", 2);
-W([
-  C({ type: String })
-], q.prototype, "description", 2);
-W([
-  C({ reflect: !0 })
-], q.prototype, "size", 1);
-W([
-  C({ type: String })
-], q.prototype, "form", 2);
-let n9 = q;
+}, s1.VALID_SIZES = ["sm", "md"], s1.styles = e9, s1.formAssociated = !0, s1);
+K([
+  a({ type: String })
+], N.prototype, "id", 2);
+K([
+  a({ type: String, reflect: !0 })
+], N.prototype, "name", 2);
+K([
+  a({ type: String })
+], N.prototype, "value", 2);
+K([
+  a({ type: Boolean, reflect: !0 })
+], N.prototype, "checked", 2);
+K([
+  a({ type: Boolean, reflect: !0 })
+], N.prototype, "disabled", 2);
+K([
+  a({ type: Boolean })
+], N.prototype, "noIcon", 2);
+K([
+  a({ type: String })
+], N.prototype, "label", 2);
+K([
+  a({ type: String })
+], N.prototype, "description", 2);
+K([
+  a({ reflect: !0 })
+], N.prototype, "size", 1);
+K([
+  a({ type: String })
+], N.prototype, "form", 2);
+let n9 = N;
 customElements.get("nys-toggle") || customElements.define("nys-toggle", n9);
-const i9 = u`
+const i9 = v`
   :host {
+    /* Global Unav Header Styles */
     --_nys-unavheader-gutter: var(--nys-gutter-xs, 20px);
+    --_nys-unavheader-bg-color: var(
+      --nys-color-surface,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-unavheader-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+
+    /* Trustbar, Search Bar, and Language */
+    --_nys-unavheader-surface-raised-color: var(
+      --nys-color-surface-raised,
+      var(--nys-color-neutral-10, #f6f6f6)
+    );
 
     /* Typography */
     font-size: var(--nys-font-size-ui-md, 16px);
@@ -7936,8 +8379,8 @@ const i9 = u`
   }
 
   .nys-unavheader {
-    background-color: var(--nys-color-ink-reverse, #ffffff);
-    padding: var(--nys-space-2px, 2px) var(--_nys-unavheader-gutter);
+    background-color: var(--_nys-unavheader-bg-color);
+    padding: var(--nys-space-100, 8px) var(--_nys-unavheader-gutter);
     display: flex;
     justify-content: center;
   }
@@ -7954,9 +8397,10 @@ const i9 = u`
     outline-offset: var(--nys-space-2px, 2px);
   }
 
-  .nys-unavheader__logo {
+  .nys-unavheader__logo svg {
     vertical-align: top;
-    height: var(--nys-space-700, 56px);
+    height: var(--nys-size-500, 40px);
+    width: auto;
   }
 
   .nys-unavheader__toptrustbar {
@@ -8000,6 +8444,7 @@ const i9 = u`
 
   #nys-unavheader__official {
     width: max-content;
+    color: var(--_nys-unavheader-text-color);
   }
 
   #nys-unavheader__know {
@@ -8048,13 +8493,13 @@ const i9 = u`
   }
 
   .nys-unavheader__searchdropdown.show {
-    background-color: var(--nys-color-neutral-50, #ededed);
+    background-color: var(--_nys-unavheader-surface-raised-color);
     padding: var(--nys-space-250, 20px) var(--_nys-unavheader-gutter);
   }
 
   .nys-unavheader__trustbar.show {
-    background-color: var(--nys-color-neutral-50, #ededed);
-    color: var(--nys-color-ink, #1b1b1b);
+    background-color: var(--_nys-unavheader-surface-raised-color);
+    color: var(--_nys-unavheader-text-color);
     display: flex;
     justify-content: center;
     padding: var(--nys-space-400, 32px) var(--_nys-unavheader-gutter);
@@ -8085,7 +8530,7 @@ const i9 = u`
     min-width: 100%;
     width: max-content;
     z-index: 99999;
-    background-color: var(--nys-color-neutral-50, #ededed);
+    background-color: var(--_nys-unavheader-surface-raised-color);
     color: var(--nys-color-state-blue-700, #154973);
     margin-top: var(--nys-space-150, 12px);
     right: 0;
@@ -8192,7 +8637,7 @@ const i9 = u`
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * TextInput Component v1.1.0
+   * TextInput Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -8203,7 +8648,7 @@ const i9 = u`
  * SPDX-License-Identifier: BSD-3-Clause
  */
 const G5 = globalThis, W2 = G5.ShadowRoot && (G5.ShadyCSS === void 0 || G5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, N3 = Symbol(), K7 = /* @__PURE__ */ new WeakMap();
-let C9 = class {
+let a9 = class {
   constructor(s, t, e) {
     if (this._$cssResult$ = !0, e !== N3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = s, this.t = t;
@@ -8221,7 +8666,7 @@ let C9 = class {
     return this.cssText;
   }
 };
-const a9 = (s) => new C9(typeof s == "string" ? s : s + "", void 0, N3), c9 = (s, t) => {
+const C9 = (s) => new a9(typeof s == "string" ? s : s + "", void 0, N3), c9 = (s, t) => {
   if (W2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = G5.litNonce;
@@ -8230,14 +8675,14 @@ const a9 = (s) => new C9(typeof s == "string" ? s : s + "", void 0, N3), c9 = (s
 }, J7 = W2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
-  return a9(e);
+  return C9(e);
 })(s) : s;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: h9, defineProperty: d9, getOwnPropertyDescriptor: p9, getOwnPropertyNames: v9, getOwnPropertySymbols: u9, getPrototypeOf: y9 } = Object, R1 = globalThis, X7 = R1.trustedTypes, g9 = X7 ? X7.emptyScript : "", Q7 = R1.reactiveElementPolyfillSupport, H5 = (s, t) => s, l2 = { toAttribute(s, t) {
+const { is: h9, defineProperty: d9, getOwnPropertyDescriptor: p9, getOwnPropertyNames: u9, getOwnPropertySymbols: v9, getPrototypeOf: y9 } = Object, R1 = globalThis, X7 = R1.trustedTypes, g9 = X7 ? X7.emptyScript : "", Q7 = R1.reactiveElementPolyfillSupport, V5 = (s, t) => s, l2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? g9 : null;
@@ -8267,7 +8712,7 @@ const { is: h9, defineProperty: d9, getOwnPropertyDescriptor: p9, getOwnProperty
   return e;
 } }, Y2 = (s, t) => !h9(s, t), t3 = { attribute: !0, type: String, converter: l2, reflect: !1, hasChanged: Y2 };
 Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), R1.litPropertyMetadata ?? (R1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
-let v5 = class extends HTMLElement {
+let u5 = class extends HTMLElement {
   static addInitializer(s) {
     this._$Ei(), (this.l ?? (this.l = [])).push(s);
   }
@@ -8297,14 +8742,14 @@ let v5 = class extends HTMLElement {
     return this.elementProperties.get(s) ?? t3;
   }
   static _$Ei() {
-    if (this.hasOwnProperty(H5("elementProperties"))) return;
+    if (this.hasOwnProperty(V5("elementProperties"))) return;
     const s = y9(this);
     s.finalize(), s.l !== void 0 && (this.l = [...s.l]), this.elementProperties = new Map(s.elementProperties);
   }
   static finalize() {
-    if (this.hasOwnProperty(H5("finalized"))) return;
-    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(H5("properties"))) {
-      const t = this.properties, e = [...v9(t), ...u9(t)];
+    if (this.hasOwnProperty(V5("finalized"))) return;
+    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(V5("properties"))) {
+      const t = this.properties, e = [...u9(t), ...v9(t)];
       for (const o of e) this.createProperty(o, t[o]);
     }
     const s = this[Symbol.metadata];
@@ -8465,7 +8910,7 @@ let v5 = class extends HTMLElement {
   firstUpdated(s) {
   }
 };
-v5.elementStyles = [], v5.shadowRootOptions = { mode: "open" }, v5[H5("elementProperties")] = /* @__PURE__ */ new Map(), v5[H5("finalized")] = /* @__PURE__ */ new Map(), Q7 == null || Q7({ ReactiveElement: v5 }), (R1.reactiveElementVersions ?? (R1.reactiveElementVersions = [])).push("2.0.4");
+u5.elementStyles = [], u5.shadowRootOptions = { mode: "open" }, u5[V5("elementProperties")] = /* @__PURE__ */ new Map(), u5[V5("finalized")] = /* @__PURE__ */ new Map(), Q7 == null || Q7({ ReactiveElement: u5 }), (R1.reactiveElementVersions ?? (R1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -8477,8 +8922,8 @@ const f9 = { attribute: !0, type: String, converter: l2, reflect: !1, hasChanged
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -8486,19 +8931,27 @@ const f9 = { attribute: !0, type: String, converter: l2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
-function $(s) {
+function m(s) {
   return (t, e) => typeof e == "object" ? w9(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const _9 = u`
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+function _9(s) {
+  return m({ ...s, state: !0, attribute: !1 });
+}
+const b9 = v`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -8507,8 +8960,24 @@ const _9 = u`
     --_nys-textinput-radius: var(--nys-radius-md, 4px);
     --_nys-textinput-width-border: var(--nys-border-width-sm, 1px);
     --_nys-textinput-color-border: var(--nys-color-neutral-400, #909395);
+    --_nys-textinput-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-textinput-placeholder-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
     --_nys-textinput-padding: var(--nys-space-100, 8px);
     --_nys-textinput-gap: var(--nys-space-50, 4px);
+    --_nys-textinput-background-color: var(
+      --nys-color-ink-reverse,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-textinput-icon-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
 
     /* Hovered */
     --_nys-textinput-hover-color-outline: var(--nys-color-neutral-900, #1b1b1b);
@@ -8524,7 +8993,10 @@ const _9 = u`
       --nys-color-neutral-200,
       #bec0c1
     );
-    --_nys-textinput-disabled-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-textinput-disabled-color-text: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
 
     /* Global Font Styles */
     --_nys-textinput-family-ui: var(
@@ -8570,7 +9042,6 @@ const _9 = u`
   }
 
   .nys-textinput {
-    font-size: var(--_nys-textinput-size-ui-md);
     font-weight: var(--_nys-textinput-weight-ui);
     font-family: var(--_nys-textinput-family-ui);
     line-height: var(--_nys-textinput-lineheight-ui);
@@ -8582,6 +9053,8 @@ const _9 = u`
   }
 
   .nys-textinput__input {
+    color: var(--_nys-textinput-text-color);
+    font-size: var(--_nys-textinput-size-ui-md);
     border-radius: var(--_nys-textinput-radius);
     border: solid var(--_nys-textinput-color-border)
       var(--_nys-textinput-width-border);
@@ -8592,6 +9065,24 @@ const _9 = u`
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    background-color: var(--_nys-textinput-background-color);
+  }
+  .nys-textinput__input::placeholder {
+    color: var(--_nys-textinput-placeholder-color);
+  }
+
+  /* This container exist to mainly style the type="password" eye icon */
+  .nys-input-container {
+    position: relative;
+  }
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--_nys-textinput-icon-color);
+    background-color: var(--_nys-textinput-background-color);
   }
 
   /* Hovered */
@@ -8610,7 +9101,10 @@ const _9 = u`
   }
 
   /* Disabled */
-  .nys-textinput__input:disabled {
+  .nys-textinput__input:disabled,
+  .nys-input-container.disabled,
+  .nys-input-container.disabled .eye-icon,
+  .nys-textinput__input:disabled::placeholder {
     background-color: var(--_nys-textinput-disabled-color);
     border-color: var(--_nys-textinput-disabled-color-border);
     color: var(--_nys-textinput-disabled-color-text);
@@ -8622,53 +9116,53 @@ const _9 = u`
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const C2 = globalThis, a2 = C2.trustedTypes, e3 = a2 ? a2.createPolicy("lit-html", { createHTML: (s) => s }) : void 0, j3 = "$lit$", l1 = `lit$${Math.random().toFixed(9).slice(2)}$`, F3 = "?" + l1, b9 = `<${F3}>`, m1 = document, c2 = () => m1.createComment(""), P5 = (s) => s === null || typeof s != "object" && typeof s != "function", K2 = Array.isArray, m9 = (s) => K2(s) || typeof (s == null ? void 0 : s[Symbol.iterator]) == "function", M2 = `[ 	
-\f\r]`, u5 = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, s3 = /-->/g, o3 = />/g, y1 = RegExp(`>|${M2}(?:([^\\s"'>=/]+)(${M2}*=${M2}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`, "g"), r3 = /'/g, n3 = /"/g, G3 = /^(?:script|style|textarea|title)$/i, B5 = Symbol.for("lit-noChange"), x = Symbol.for("lit-nothing"), i3 = /* @__PURE__ */ new WeakMap(), w1 = m1.createTreeWalker(m1, 129);
+const a2 = globalThis, C2 = a2.trustedTypes, e3 = C2 ? C2.createPolicy("lit-html", { createHTML: (s) => s }) : void 0, j3 = "$lit$", C1 = `lit$${Math.random().toFixed(9).slice(2)}$`, F3 = "?" + C1, m9 = `<${F3}>`, m1 = document, c2 = () => m1.createComment(""), z5 = (s) => s === null || typeof s != "object" && typeof s != "function", K2 = Array.isArray, x9 = (s) => K2(s) || typeof (s == null ? void 0 : s[Symbol.iterator]) == "function", M2 = `[ 	
+\f\r]`, v5 = /<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g, s3 = /-->/g, o3 = />/g, y1 = RegExp(`>|${M2}(?:([^\\s"'>=/]+)(${M2}*=${M2}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`, "g"), r3 = /'/g, n3 = /"/g, G3 = /^(?:script|style|textarea|title)$/i, B5 = Symbol.for("lit-noChange"), M = Symbol.for("lit-nothing"), i3 = /* @__PURE__ */ new WeakMap(), w1 = m1.createTreeWalker(m1, 129);
 function W3(s, t) {
   if (!K2(s) || !s.hasOwnProperty("raw")) throw Error("invalid template strings array");
   return e3 !== void 0 ? e3.createHTML(t) : t;
 }
-const x9 = (s, t) => {
+const L9 = (s, t) => {
   const e = s.length - 1, o = [];
-  let r, n = t === 2 ? "<svg>" : t === 3 ? "<math>" : "", i = u5;
+  let r, n = t === 2 ? "<svg>" : t === 3 ? "<math>" : "", i = v5;
   for (let l = 0; l < e; l++) {
-    const a = s[l];
-    let v, d, h = -1, f = 0;
-    for (; f < a.length && (i.lastIndex = f, d = i.exec(a), d !== null); ) f = i.lastIndex, i === u5 ? d[1] === "!--" ? i = s3 : d[1] !== void 0 ? i = o3 : d[2] !== void 0 ? (G3.test(d[2]) && (r = RegExp("</" + d[2], "g")), i = y1) : d[3] !== void 0 && (i = y1) : i === y1 ? d[0] === ">" ? (i = r ?? u5, h = -1) : d[1] === void 0 ? h = -2 : (h = i.lastIndex - d[2].length, v = d[1], i = d[3] === void 0 ? y1 : d[3] === '"' ? n3 : r3) : i === n3 || i === r3 ? i = y1 : i === s3 || i === o3 ? i = u5 : (i = y1, r = void 0);
-    const b = i === y1 && s[l + 1].startsWith("/>") ? " " : "";
-    n += i === u5 ? a + b9 : h >= 0 ? (o.push(v), a.slice(0, h) + j3 + a.slice(h) + l1 + b) : a + l1 + (h === -2 ? l : b);
+    const C = s[l];
+    let u, d, h = -1, _ = 0;
+    for (; _ < C.length && (i.lastIndex = _, d = i.exec(C), d !== null); ) _ = i.lastIndex, i === v5 ? d[1] === "!--" ? i = s3 : d[1] !== void 0 ? i = o3 : d[2] !== void 0 ? (G3.test(d[2]) && (r = RegExp("</" + d[2], "g")), i = y1) : d[3] !== void 0 && (i = y1) : i === y1 ? d[0] === ">" ? (i = r ?? v5, h = -1) : d[1] === void 0 ? h = -2 : (h = i.lastIndex - d[2].length, u = d[1], i = d[3] === void 0 ? y1 : d[3] === '"' ? n3 : r3) : i === n3 || i === r3 ? i = y1 : i === s3 || i === o3 ? i = v5 : (i = y1, r = void 0);
+    const L = i === y1 && s[l + 1].startsWith("/>") ? " " : "";
+    n += i === v5 ? C + m9 : h >= 0 ? (o.push(u), C.slice(0, h) + j3 + C.slice(h) + C1 + L) : C + C1 + (h === -2 ? l : L);
   }
   return [W3(s, n + (s[e] || "<?>") + (t === 2 ? "</svg>" : t === 3 ? "</math>" : "")), o];
 };
-let V2 = class Y3 {
+let H2 = class Y3 {
   constructor({ strings: t, _$litType$: e }, o) {
     let r;
     this.parts = [];
     let n = 0, i = 0;
-    const l = t.length - 1, a = this.parts, [v, d] = x9(t, e);
-    if (this.el = Y3.createElement(v, o), w1.currentNode = this.el.content, e === 2 || e === 3) {
+    const l = t.length - 1, C = this.parts, [u, d] = L9(t, e);
+    if (this.el = Y3.createElement(u, o), w1.currentNode = this.el.content, e === 2 || e === 3) {
       const h = this.el.content.firstChild;
       h.replaceWith(...h.childNodes);
     }
-    for (; (r = w1.nextNode()) !== null && a.length < l; ) {
+    for (; (r = w1.nextNode()) !== null && C.length < l; ) {
       if (r.nodeType === 1) {
         if (r.hasAttributes()) for (const h of r.getAttributeNames()) if (h.endsWith(j3)) {
-          const f = d[i++], b = r.getAttribute(h).split(l1), Y = /([.?@])?(.*)/.exec(f);
-          a.push({ type: 1, index: n, name: Y[2], strings: b, ctor: Y[1] === "." ? $9 : Y[1] === "?" ? M9 : Y[1] === "@" ? Z9 : b2 }), r.removeAttribute(h);
-        } else h.startsWith(l1) && (a.push({ type: 6, index: n }), r.removeAttribute(h));
+          const _ = d[i++], L = r.getAttribute(h).split(C1), J = /([.?@])?(.*)/.exec(_);
+          C.push({ type: 1, index: n, name: J[2], strings: L, ctor: J[1] === "." ? M9 : J[1] === "?" ? Z9 : J[1] === "@" ? V9 : b2 }), r.removeAttribute(h);
+        } else h.startsWith(C1) && (C.push({ type: 6, index: n }), r.removeAttribute(h));
         if (G3.test(r.tagName)) {
-          const h = r.textContent.split(l1), f = h.length - 1;
-          if (f > 0) {
-            r.textContent = a2 ? a2.emptyScript : "";
-            for (let b = 0; b < f; b++) r.append(h[b], c2()), w1.nextNode(), a.push({ type: 2, index: ++n });
-            r.append(h[f], c2());
+          const h = r.textContent.split(C1), _ = h.length - 1;
+          if (_ > 0) {
+            r.textContent = C2 ? C2.emptyScript : "";
+            for (let L = 0; L < _; L++) r.append(h[L], c2()), w1.nextNode(), C.push({ type: 2, index: ++n });
+            r.append(h[_], c2());
           }
         }
-      } else if (r.nodeType === 8) if (r.data === F3) a.push({ type: 2, index: n });
+      } else if (r.nodeType === 8) if (r.data === F3) C.push({ type: 2, index: n });
       else {
         let h = -1;
-        for (; (h = r.data.indexOf(l1, h + 1)) !== -1; ) a.push({ type: 7, index: n }), h += l1.length - 1;
+        for (; (h = r.data.indexOf(C1, h + 1)) !== -1; ) C.push({ type: 7, index: n }), h += C1.length - 1;
       }
       n++;
     }
@@ -8678,14 +9172,14 @@ let V2 = class Y3 {
     return o.innerHTML = t, o;
   }
 };
-function I1(s, t, e = s, o) {
+function D1(s, t, e = s, o) {
   var r, n;
   if (t === B5) return t;
   let i = o !== void 0 ? (r = e._$Co) == null ? void 0 : r[o] : e._$Cl;
-  const l = P5(t) ? void 0 : t._$litDirective$;
-  return (i == null ? void 0 : i.constructor) !== l && ((n = i == null ? void 0 : i._$AO) == null || n.call(i, !1), l === void 0 ? i = void 0 : (i = new l(s), i._$AT(s, e, o)), o !== void 0 ? (e._$Co ?? (e._$Co = []))[o] = i : e._$Cl = i), i !== void 0 && (t = I1(s, i._$AS(s, t.values), i, o)), t;
+  const l = z5(t) ? void 0 : t._$litDirective$;
+  return (i == null ? void 0 : i.constructor) !== l && ((n = i == null ? void 0 : i._$AO) == null || n.call(i, !1), l === void 0 ? i = void 0 : (i = new l(s), i._$AT(s, e, o)), o !== void 0 ? (e._$Co ?? (e._$Co = []))[o] = i : e._$Cl = i), i !== void 0 && (t = D1(s, i._$AS(s, t.values), i, o)), t;
 }
-let L9 = class {
+let $9 = class {
   constructor(s, t) {
     this._$AV = [], this._$AN = void 0, this._$AD = s, this._$AM = t;
   }
@@ -8701,8 +9195,8 @@ let L9 = class {
     let r = w1.nextNode(), n = 0, i = 0, l = e[0];
     for (; l !== void 0; ) {
       if (n === l.index) {
-        let a;
-        l.type === 2 ? a = new K3(r, r.nextSibling, this, s) : l.type === 1 ? a = new l.ctor(r, l.name, l.strings, this, s) : l.type === 6 && (a = new H9(r, this, s)), this._$AV.push(a), l = e[++i];
+        let C;
+        l.type === 2 ? C = new K3(r, r.nextSibling, this, s) : l.type === 1 ? C = new l.ctor(r, l.name, l.strings, this, s) : l.type === 6 && (C = new H9(r, this, s)), this._$AV.push(C), l = e[++i];
       }
       n !== (l == null ? void 0 : l.index) && (r = w1.nextNode(), n++);
     }
@@ -8718,7 +9212,7 @@ let L9 = class {
     return ((t = this._$AM) == null ? void 0 : t._$AU) ?? this._$Cv;
   }
   constructor(t, e, o, r) {
-    this.type = 2, this._$AH = x, this._$AN = void 0, this._$AA = t, this._$AB = e, this._$AM = o, this.options = r, this._$Cv = (r == null ? void 0 : r.isConnected) ?? !0;
+    this.type = 2, this._$AH = M, this._$AN = void 0, this._$AA = t, this._$AB = e, this._$AM = o, this.options = r, this._$Cv = (r == null ? void 0 : r.isConnected) ?? !0;
   }
   get parentNode() {
     let t = this._$AA.parentNode;
@@ -8732,7 +9226,7 @@ let L9 = class {
     return this._$AB;
   }
   _$AI(t, e = this) {
-    t = I1(this, t, e), P5(t) ? t === x || t == null || t === "" ? (this._$AH !== x && this._$AR(), this._$AH = x) : t !== this._$AH && t !== B5 && this._(t) : t._$litType$ !== void 0 ? this.$(t) : t.nodeType !== void 0 ? this.T(t) : m9(t) ? this.k(t) : this._(t);
+    t = D1(this, t, e), z5(t) ? t === M || t == null || t === "" ? (this._$AH !== M && this._$AR(), this._$AH = M) : t !== this._$AH && t !== B5 && this._(t) : t._$litType$ !== void 0 ? this.$(t) : t.nodeType !== void 0 ? this.T(t) : x9(t) ? this.k(t) : this._(t);
   }
   O(t) {
     return this._$AA.parentNode.insertBefore(t, this._$AB);
@@ -8741,20 +9235,20 @@ let L9 = class {
     this._$AH !== t && (this._$AR(), this._$AH = this.O(t));
   }
   _(t) {
-    this._$AH !== x && P5(this._$AH) ? this._$AA.nextSibling.data = t : this.T(m1.createTextNode(t)), this._$AH = t;
+    this._$AH !== M && z5(this._$AH) ? this._$AA.nextSibling.data = t : this.T(m1.createTextNode(t)), this._$AH = t;
   }
   $(t) {
     var e;
-    const { values: o, _$litType$: r } = t, n = typeof r == "number" ? this._$AC(t) : (r.el === void 0 && (r.el = V2.createElement(W3(r.h, r.h[0]), this.options)), r);
+    const { values: o, _$litType$: r } = t, n = typeof r == "number" ? this._$AC(t) : (r.el === void 0 && (r.el = H2.createElement(W3(r.h, r.h[0]), this.options)), r);
     if (((e = this._$AH) == null ? void 0 : e._$AD) === n) this._$AH.p(o);
     else {
-      const i = new L9(n, this), l = i.u(this.options);
+      const i = new $9(n, this), l = i.u(this.options);
       i.p(o), this.T(l), this._$AH = i;
     }
   }
   _$AC(t) {
     let e = i3.get(t.strings);
-    return e === void 0 && i3.set(t.strings, e = new V2(t)), e;
+    return e === void 0 && i3.set(t.strings, e = new H2(t)), e;
   }
   k(t) {
     K2(this._$AH) || (this._$AH = [], this._$AR());
@@ -8782,43 +9276,43 @@ let L9 = class {
     return this._$AM._$AU;
   }
   constructor(s, t, e, o, r) {
-    this.type = 1, this._$AH = x, this._$AN = void 0, this.element = s, this.name = t, this._$AM = o, this.options = r, e.length > 2 || e[0] !== "" || e[1] !== "" ? (this._$AH = Array(e.length - 1).fill(new String()), this.strings = e) : this._$AH = x;
+    this.type = 1, this._$AH = M, this._$AN = void 0, this.element = s, this.name = t, this._$AM = o, this.options = r, e.length > 2 || e[0] !== "" || e[1] !== "" ? (this._$AH = Array(e.length - 1).fill(new String()), this.strings = e) : this._$AH = M;
   }
   _$AI(s, t = this, e, o) {
     const r = this.strings;
     let n = !1;
-    if (r === void 0) s = I1(this, s, t, 0), n = !P5(s) || s !== this._$AH && s !== B5, n && (this._$AH = s);
+    if (r === void 0) s = D1(this, s, t, 0), n = !z5(s) || s !== this._$AH && s !== B5, n && (this._$AH = s);
     else {
       const i = s;
-      let l, a;
-      for (s = r[0], l = 0; l < r.length - 1; l++) a = I1(this, i[e + l], t, l), a === B5 && (a = this._$AH[l]), n || (n = !P5(a) || a !== this._$AH[l]), a === x ? s = x : s !== x && (s += (a ?? "") + r[l + 1]), this._$AH[l] = a;
+      let l, C;
+      for (s = r[0], l = 0; l < r.length - 1; l++) C = D1(this, i[e + l], t, l), C === B5 && (C = this._$AH[l]), n || (n = !z5(C) || C !== this._$AH[l]), C === M ? s = M : s !== M && (s += (C ?? "") + r[l + 1]), this._$AH[l] = C;
     }
     n && !o && this.j(s);
   }
   j(s) {
-    s === x ? this.element.removeAttribute(this.name) : this.element.setAttribute(this.name, s ?? "");
+    s === M ? this.element.removeAttribute(this.name) : this.element.setAttribute(this.name, s ?? "");
   }
-}, $9 = class extends b2 {
+}, M9 = class extends b2 {
   constructor() {
     super(...arguments), this.type = 3;
   }
   j(s) {
-    this.element[this.name] = s === x ? void 0 : s;
+    this.element[this.name] = s === M ? void 0 : s;
   }
-}, M9 = class extends b2 {
+}, Z9 = class extends b2 {
   constructor() {
     super(...arguments), this.type = 4;
   }
   j(s) {
-    this.element.toggleAttribute(this.name, !!s && s !== x);
+    this.element.toggleAttribute(this.name, !!s && s !== M);
   }
-}, Z9 = class extends b2 {
+}, V9 = class extends b2 {
   constructor(s, t, e, o, r) {
     super(s, t, e, o, r), this.type = 5;
   }
   _$AI(s, t = this) {
-    if ((s = I1(this, s, t, 0) ?? x) === B5) return;
-    const e = this._$AH, o = s === x && e !== x || s.capture !== e.capture || s.once !== e.once || s.passive !== e.passive, r = s !== x && (e === x || o);
+    if ((s = D1(this, s, t, 0) ?? M) === B5) return;
+    const e = this._$AH, o = s === M && e !== M || s.capture !== e.capture || s.once !== e.once || s.passive !== e.passive, r = s !== M && (e === M || o);
     o && this.element.removeEventListener(this.name, this, e), r && this.element.addEventListener(this.name, this, s), this._$AH = s;
   }
   handleEvent(s) {
@@ -8833,23 +9327,23 @@ let L9 = class {
     return this._$AM._$AU;
   }
   _$AI(s) {
-    I1(this, s);
+    D1(this, s);
   }
 };
-const l3 = C2.litHtmlPolyfillSupport;
-l3 == null || l3(V2, K3), (C2.litHtmlVersions ?? (C2.litHtmlVersions = [])).push("3.2.1");
+const l3 = a2.litHtmlPolyfillSupport;
+l3 == null || l3(H2, K3), (a2.litHtmlVersions ?? (a2.litHtmlVersions = [])).push("3.2.1");
 /**
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const g1 = (s) => s ?? x;
+const g1 = (s) => s ?? M;
 /*!
    * ▒█▄░▒█ ▒█░░▒█ ▒█▀▀▀█ ▒█▀▀▄ ▒█▀▀▀█ 
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -8859,8 +9353,8 @@ const g1 = (s) => s ?? x;
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const W5 = globalThis, J2 = W5.ShadowRoot && (W5.ShadyCSS === void 0 || W5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, X3 = Symbol(), C3 = /* @__PURE__ */ new WeakMap();
-let V9 = class {
+const W5 = globalThis, J2 = W5.ShadowRoot && (W5.ShadyCSS === void 0 || W5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, X3 = Symbol(), a3 = /* @__PURE__ */ new WeakMap();
+let S9 = class {
   constructor(s, t, e) {
     if (this._$cssResult$ = !0, e !== X3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = s, this.t = t;
@@ -8870,7 +9364,7 @@ let V9 = class {
     const t = this.t;
     if (J2 && s === void 0) {
       const e = t !== void 0 && t.length === 1;
-      e && (s = C3.get(t)), s === void 0 && ((this.o = s = new CSSStyleSheet()).replaceSync(this.cssText), e && C3.set(t, s));
+      e && (s = a3.get(t)), s === void 0 && ((this.o = s = new CSSStyleSheet()).replaceSync(this.cssText), e && a3.set(t, s));
     }
     return s;
   }
@@ -8878,26 +9372,26 @@ let V9 = class {
     return this.cssText;
   }
 };
-const S9 = (s) => new V9(typeof s == "string" ? s : s + "", void 0, X3), E9 = (s, t) => {
+const E9 = (s) => new S9(typeof s == "string" ? s : s + "", void 0, X3), k9 = (s, t) => {
   if (J2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = W5.litNonce;
     r !== void 0 && o.setAttribute("nonce", r), o.textContent = e.cssText, s.appendChild(o);
   }
-}, a3 = J2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
+}, C3 = J2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
-  return S9(e);
+  return E9(e);
 })(s) : s;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: k9, defineProperty: A9, getOwnPropertyDescriptor: z9, getOwnPropertyNames: P9, getOwnPropertySymbols: B9, getPrototypeOf: U9 } = Object, T1 = globalThis, c3 = T1.trustedTypes, O9 = c3 ? c3.emptyScript : "", h3 = T1.reactiveElementPolyfillSupport, V5 = (s, t) => s, h2 = { toAttribute(s, t) {
+const { is: A9, defineProperty: P9, getOwnPropertyDescriptor: z9, getOwnPropertyNames: B9, getOwnPropertySymbols: U9, getPrototypeOf: O9 } = Object, T1 = globalThis, c3 = T1.trustedTypes, I9 = c3 ? c3.emptyScript : "", h3 = T1.reactiveElementPolyfillSupport, H5 = (s, t) => s, h2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
-      s = s ? O9 : null;
+      s = s ? I9 : null;
       break;
     case Object:
     case Array:
@@ -8922,7 +9416,7 @@ const { is: k9, defineProperty: A9, getOwnPropertyDescriptor: z9, getOwnProperty
       }
   }
   return e;
-} }, X2 = (s, t) => !k9(s, t), d3 = { attribute: !0, type: String, converter: h2, reflect: !1, hasChanged: X2 };
+} }, X2 = (s, t) => !A9(s, t), d3 = { attribute: !0, type: String, converter: h2, reflect: !1, hasChanged: X2 };
 Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), T1.litPropertyMetadata ?? (T1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let y5 = class extends HTMLElement {
   static addInitializer(s) {
@@ -8934,7 +9428,7 @@ let y5 = class extends HTMLElement {
   static createProperty(s, t = d3) {
     if (t.state && (t.attribute = !1), this._$Ei(), this.elementProperties.set(s, t), !t.noAccessor) {
       const e = Symbol(), o = this.getPropertyDescriptor(s, e, t);
-      o !== void 0 && A9(this.prototype, s, o);
+      o !== void 0 && P9(this.prototype, s, o);
     }
   }
   static getPropertyDescriptor(s, t, e) {
@@ -8954,14 +9448,14 @@ let y5 = class extends HTMLElement {
     return this.elementProperties.get(s) ?? d3;
   }
   static _$Ei() {
-    if (this.hasOwnProperty(V5("elementProperties"))) return;
-    const s = U9(this);
+    if (this.hasOwnProperty(H5("elementProperties"))) return;
+    const s = O9(this);
     s.finalize(), s.l !== void 0 && (this.l = [...s.l]), this.elementProperties = new Map(s.elementProperties);
   }
   static finalize() {
-    if (this.hasOwnProperty(V5("finalized"))) return;
-    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(V5("properties"))) {
-      const t = this.properties, e = [...P9(t), ...B9(t)];
+    if (this.hasOwnProperty(H5("finalized"))) return;
+    if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(H5("properties"))) {
+      const t = this.properties, e = [...B9(t), ...U9(t)];
       for (const o of e) this.createProperty(o, t[o]);
     }
     const s = this[Symbol.metadata];
@@ -8980,8 +9474,8 @@ let y5 = class extends HTMLElement {
     const t = [];
     if (Array.isArray(s)) {
       const e = new Set(s.flat(1 / 0).reverse());
-      for (const o of e) t.unshift(a3(o));
-    } else s !== void 0 && t.push(a3(s));
+      for (const o of e) t.unshift(C3(o));
+    } else s !== void 0 && t.push(C3(s));
     return t;
   }
   static _$Eu(s, t) {
@@ -9010,7 +9504,7 @@ let y5 = class extends HTMLElement {
   }
   createRenderRoot() {
     const s = this.shadowRoot ?? this.attachShadow(this.constructor.shadowRootOptions);
-    return E9(s, this.constructor.elementStyles), s;
+    return k9(s, this.constructor.elementStyles), s;
   }
   connectedCallback() {
     var s;
@@ -9122,20 +9616,20 @@ let y5 = class extends HTMLElement {
   firstUpdated(s) {
   }
 };
-y5.elementStyles = [], y5.shadowRootOptions = { mode: "open" }, y5[V5("elementProperties")] = /* @__PURE__ */ new Map(), y5[V5("finalized")] = /* @__PURE__ */ new Map(), h3 == null || h3({ ReactiveElement: y5 }), (T1.reactiveElementVersions ?? (T1.reactiveElementVersions = [])).push("2.0.4");
+y5.elementStyles = [], y5.shadowRootOptions = { mode: "open" }, y5[H5("elementProperties")] = /* @__PURE__ */ new Map(), y5[H5("finalized")] = /* @__PURE__ */ new Map(), h3 == null || h3({ ReactiveElement: y5 }), (T1.reactiveElementVersions ?? (T1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const R9 = { attribute: !0, type: String, converter: h2, reflect: !1, hasChanged: X2 }, I9 = (s = R9, t, e) => {
+const R9 = { attribute: !0, type: String, converter: h2, reflect: !1, hasChanged: X2 }, D9 = (s = R9, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -9143,14 +9637,14 @@ const R9 = { attribute: !0, type: String, converter: h2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
 function t5(s) {
-  return (t, e) => typeof e == "object" ? I9(s, t, e) : ((o, r, n) => {
+  return (t, e) => typeof e == "object" ? D9(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
@@ -9354,7 +9848,7 @@ const T9 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, D9 = u`
+}, q9 = v`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -9451,10 +9945,10 @@ const T9 = {
     transform: scale(-1, -1);
   }
 `;
-var q9 = Object.defineProperty, N9 = Object.getOwnPropertyDescriptor, e5 = (s, t, e, o) => {
-  for (var r = o > 1 ? void 0 : o ? N9(t, e) : t, n = s.length - 1, i; n >= 0; n--)
+var N9 = Object.defineProperty, j9 = Object.getOwnPropertyDescriptor, e5 = (s, t, e, o) => {
+  for (var r = o > 1 ? void 0 : o ? j9(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && q9(t, e, r), r;
+  return o && r && N9(t, e, r), r;
 }, g5;
 const H1 = (g5 = class extends p {
   constructor() {
@@ -9478,7 +9972,7 @@ const H1 = (g5 = class extends p {
     const s = this.getIcon();
     return s ? c`${s}` : null;
   }
-}, g5.styles = D9, g5.VALID_TYPES = [
+}, g5.styles = q9, g5.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -9496,7 +9990,7 @@ const H1 = (g5 = class extends p {
   "64"
 ], g5);
 e5([
-  t5({ type: String })
+  t5({ type: String, reflect: !0 })
 ], H1.prototype, "name", 2);
 e5([
   t5({ type: String })
@@ -9513,10 +10007,10 @@ e5([
 e5([
   t5({ reflect: !0 })
 ], H1.prototype, "size", 1);
-let j9 = H1;
-customElements.get("nys-icon") || customElements.define("nys-icon", j9);
+let F9 = H1;
+customElements.get("nys-icon") || customElements.define("nys-icon", F9);
 /*!
-   * Label v1.1.0
+   * Label v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -9528,7 +10022,7 @@ customElements.get("nys-icon") || customElements.define("nys-icon", j9);
  * SPDX-License-Identifier: BSD-3-Clause
  */
 const Y5 = globalThis, Q2 = Y5.ShadowRoot && (Y5.ShadyCSS === void 0 || Y5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, Q3 = Symbol(), p3 = /* @__PURE__ */ new WeakMap();
-let F9 = class {
+let G9 = class {
   constructor(s, t, e) {
     if (this._$cssResult$ = !0, e !== Q3) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = s, this.t = t;
@@ -9546,26 +10040,26 @@ let F9 = class {
     return this.cssText;
   }
 };
-const G9 = (s) => new F9(typeof s == "string" ? s : s + "", void 0, Q3), W9 = (s, t) => {
+const W9 = (s) => new G9(typeof s == "string" ? s : s + "", void 0, Q3), Y9 = (s, t) => {
   if (Q2) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = Y5.litNonce;
     r !== void 0 && o.setAttribute("nonce", r), o.textContent = e.cssText, s.appendChild(o);
   }
-}, v3 = Q2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
+}, u3 = Q2 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
-  return G9(e);
+  return W9(e);
 })(s) : s;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: Y9, defineProperty: K9, getOwnPropertyDescriptor: J9, getOwnPropertyNames: X9, getOwnPropertySymbols: Q9, getPrototypeOf: t4 } = Object, D1 = globalThis, u3 = D1.trustedTypes, e4 = u3 ? u3.emptyScript : "", y3 = D1.reactiveElementPolyfillSupport, S5 = (s, t) => s, d2 = { toAttribute(s, t) {
+const { is: K9, defineProperty: J9, getOwnPropertyDescriptor: X9, getOwnPropertyNames: Q9, getOwnPropertySymbols: t4, getPrototypeOf: e4 } = Object, q1 = globalThis, v3 = q1.trustedTypes, s4 = v3 ? v3.emptyScript : "", y3 = q1.reactiveElementPolyfillSupport, S5 = (s, t) => s, d2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
-      s = s ? e4 : null;
+      s = s ? s4 : null;
       break;
     case Object:
     case Array:
@@ -9590,8 +10084,8 @@ const { is: Y9, defineProperty: K9, getOwnPropertyDescriptor: J9, getOwnProperty
       }
   }
   return e;
-} }, t7 = (s, t) => !Y9(s, t), g3 = { attribute: !0, type: String, converter: d2, reflect: !1, hasChanged: t7 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), D1.litPropertyMetadata ?? (D1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+} }, t7 = (s, t) => !K9(s, t), g3 = { attribute: !0, type: String, converter: d2, reflect: !1, hasChanged: t7 };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), q1.litPropertyMetadata ?? (q1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 let f5 = class extends HTMLElement {
   static addInitializer(s) {
     this._$Ei(), (this.l ?? (this.l = [])).push(s);
@@ -9602,11 +10096,11 @@ let f5 = class extends HTMLElement {
   static createProperty(s, t = g3) {
     if (t.state && (t.attribute = !1), this._$Ei(), this.elementProperties.set(s, t), !t.noAccessor) {
       const e = Symbol(), o = this.getPropertyDescriptor(s, e, t);
-      o !== void 0 && K9(this.prototype, s, o);
+      o !== void 0 && J9(this.prototype, s, o);
     }
   }
   static getPropertyDescriptor(s, t, e) {
-    const { get: o, set: r } = J9(this.prototype, s) ?? { get() {
+    const { get: o, set: r } = X9(this.prototype, s) ?? { get() {
       return this[t];
     }, set(n) {
       this[t] = n;
@@ -9623,13 +10117,13 @@ let f5 = class extends HTMLElement {
   }
   static _$Ei() {
     if (this.hasOwnProperty(S5("elementProperties"))) return;
-    const s = t4(this);
+    const s = e4(this);
     s.finalize(), s.l !== void 0 && (this.l = [...s.l]), this.elementProperties = new Map(s.elementProperties);
   }
   static finalize() {
     if (this.hasOwnProperty(S5("finalized"))) return;
     if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(S5("properties"))) {
-      const t = this.properties, e = [...X9(t), ...Q9(t)];
+      const t = this.properties, e = [...Q9(t), ...t4(t)];
       for (const o of e) this.createProperty(o, t[o]);
     }
     const s = this[Symbol.metadata];
@@ -9648,8 +10142,8 @@ let f5 = class extends HTMLElement {
     const t = [];
     if (Array.isArray(s)) {
       const e = new Set(s.flat(1 / 0).reverse());
-      for (const o of e) t.unshift(v3(o));
-    } else s !== void 0 && t.push(v3(s));
+      for (const o of e) t.unshift(u3(o));
+    } else s !== void 0 && t.push(u3(s));
     return t;
   }
   static _$Eu(s, t) {
@@ -9678,7 +10172,7 @@ let f5 = class extends HTMLElement {
   }
   createRenderRoot() {
     const s = this.shadowRoot ?? this.attachShadow(this.constructor.shadowRootOptions);
-    return W9(s, this.constructor.elementStyles), s;
+    return Y9(s, this.constructor.elementStyles), s;
   }
   connectedCallback() {
     var s;
@@ -9790,20 +10284,20 @@ let f5 = class extends HTMLElement {
   firstUpdated(s) {
   }
 };
-f5.elementStyles = [], f5.shadowRootOptions = { mode: "open" }, f5[S5("elementProperties")] = /* @__PURE__ */ new Map(), f5[S5("finalized")] = /* @__PURE__ */ new Map(), y3 == null || y3({ ReactiveElement: f5 }), (D1.reactiveElementVersions ?? (D1.reactiveElementVersions = [])).push("2.0.4");
+f5.elementStyles = [], f5.shadowRootOptions = { mode: "open" }, f5[S5("elementProperties")] = /* @__PURE__ */ new Map(), f5[S5("finalized")] = /* @__PURE__ */ new Map(), y3 == null || y3({ ReactiveElement: f5 }), (q1.reactiveElementVersions ?? (q1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const s4 = { attribute: !0, type: String, converter: d2, reflect: !1, hasChanged: t7 }, o4 = (s = s4, t, e) => {
+const o4 = { attribute: !0, type: String, converter: d2, reflect: !1, hasChanged: t7 }, r4 = (s = o4, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -9811,19 +10305,19 @@ const s4 = { attribute: !0, type: String, converter: d2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
 function m2(s) {
-  return (t, e) => typeof e == "object" ? o4(s, t, e) : ((o, r, n) => {
+  return (t, e) => typeof e == "object" ? r4(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const r4 = u`
+const n4 = v`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -9841,19 +10335,19 @@ const r4 = u`
     --_nys-label-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);
     --_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-label-font-color: var(--nys-color-ink, #1b1b1b);
+    --_nys-label-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Description */
     --nys-description-font-weight: var(--nys-font-weight-regular, 400);
     --nys-description-font-style: italic;
-    --nys-description-font-color: var(--nys-neutral-900, #1b1b1b);
+    --nys-description-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Required Flag */
     --nys-required-font-color: var(--nys-color-danger, #b52c2c);
 
     /* Optional Flag */
     --nys-optional-font-weight: var(--nys-font-weight-regular, 400);
-    --nys-optional-font-color: var(--nys-color-neutral-700, #4a4d4f);
+    --nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);
 
     /* Spacing */
     --_nys-label-flag-gap: var(--nys-space-2px, 2px);
@@ -9895,10 +10389,10 @@ const r4 = u`
     color: var(--nys-optional-font-color);
   }
 `;
-var n4 = Object.defineProperty, x2 = (s, t, e, o) => {
+var i4 = Object.defineProperty, x2 = (s, t, e, o) => {
   for (var r = void 0, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = i(t, e, r) || r);
-  return r && n4(t, e, r), r;
+  return r && i4(t, e, r), r;
 };
 const t0 = class extends p {
   constructor() {
@@ -9919,23 +10413,23 @@ const t0 = class extends p {
     `;
   }
 };
-t0.styles = r4;
-let R5 = t0;
+t0.styles = n4;
+let I5 = t0;
 x2([
   m2({ type: String })
-], R5.prototype, "id");
+], I5.prototype, "id");
 x2([
   m2({ type: String })
-], R5.prototype, "label");
+], I5.prototype, "label");
 x2([
   m2({ type: String })
-], R5.prototype, "description");
+], I5.prototype, "description");
 x2([
   m2({ type: String })
-], R5.prototype, "flag");
-customElements.get("nys-label") || customElements.define("nys-label", R5);
+], I5.prototype, "flag");
+customElements.get("nys-label") || customElements.define("nys-label", I5);
 /*!
-   * Error Message v1.1.0
+   * Error Message v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -9947,7 +10441,7 @@ customElements.get("nys-label") || customElements.define("nys-label", R5);
  * SPDX-License-Identifier: BSD-3-Clause
  */
 const K5 = globalThis, e7 = K5.ShadowRoot && (K5.ShadyCSS === void 0 || K5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, e0 = Symbol(), f3 = /* @__PURE__ */ new WeakMap();
-let i4 = class {
+let l4 = class {
   constructor(s, t, e) {
     if (this._$cssResult$ = !0, e !== e0) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = s, this.t = t;
@@ -9965,7 +10459,7 @@ let i4 = class {
     return this.cssText;
   }
 };
-const l4 = (s) => new i4(typeof s == "string" ? s : s + "", void 0, e0), C4 = (s, t) => {
+const a4 = (s) => new l4(typeof s == "string" ? s : s + "", void 0, e0), C4 = (s, t) => {
   if (e7) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = K5.litNonce;
@@ -9974,17 +10468,17 @@ const l4 = (s) => new i4(typeof s == "string" ? s : s + "", void 0, e0), C4 = (s
 }, w3 = e7 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
-  return l4(e);
+  return a4(e);
 })(s) : s;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: a4, defineProperty: c4, getOwnPropertyDescriptor: h4, getOwnPropertyNames: d4, getOwnPropertySymbols: p4, getPrototypeOf: v4 } = Object, q1 = globalThis, _3 = q1.trustedTypes, u4 = _3 ? _3.emptyScript : "", b3 = q1.reactiveElementPolyfillSupport, E5 = (s, t) => s, p2 = { toAttribute(s, t) {
+const { is: c4, defineProperty: h4, getOwnPropertyDescriptor: d4, getOwnPropertyNames: p4, getOwnPropertySymbols: u4, getPrototypeOf: v4 } = Object, N1 = globalThis, _3 = N1.trustedTypes, y4 = _3 ? _3.emptyScript : "", b3 = N1.reactiveElementPolyfillSupport, E5 = (s, t) => s, p2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
-      s = s ? u4 : null;
+      s = s ? y4 : null;
       break;
     case Object:
     case Array:
@@ -10009,8 +10503,8 @@ const { is: a4, defineProperty: c4, getOwnPropertyDescriptor: h4, getOwnProperty
       }
   }
   return e;
-} }, s7 = (s, t) => !a4(s, t), m3 = { attribute: !0, type: String, converter: p2, reflect: !1, hasChanged: s7 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), q1.litPropertyMetadata ?? (q1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+} }, s7 = (s, t) => !c4(s, t), m3 = { attribute: !0, type: String, converter: p2, reflect: !1, hasChanged: s7 };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), N1.litPropertyMetadata ?? (N1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 class w5 extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -10021,11 +10515,11 @@ class w5 extends HTMLElement {
   static createProperty(t, e = m3) {
     if (e.state && (e.attribute = !1), this._$Ei(), this.elementProperties.set(t, e), !e.noAccessor) {
       const o = Symbol(), r = this.getPropertyDescriptor(t, o, e);
-      r !== void 0 && c4(this.prototype, t, r);
+      r !== void 0 && h4(this.prototype, t, r);
     }
   }
   static getPropertyDescriptor(t, e, o) {
-    const { get: r, set: n } = h4(this.prototype, t) ?? { get() {
+    const { get: r, set: n } = d4(this.prototype, t) ?? { get() {
       return this[e];
     }, set(i) {
       this[e] = i;
@@ -10048,7 +10542,7 @@ class w5 extends HTMLElement {
   static finalize() {
     if (this.hasOwnProperty(E5("finalized"))) return;
     if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(E5("properties"))) {
-      const e = this.properties, o = [...d4(e), ...p4(e)];
+      const e = this.properties, o = [...p4(e), ...u4(e)];
       for (const r of o) this.createProperty(r, e[r]);
     }
     const t = this[Symbol.metadata];
@@ -10209,20 +10703,20 @@ class w5 extends HTMLElement {
   firstUpdated(t) {
   }
 }
-w5.elementStyles = [], w5.shadowRootOptions = { mode: "open" }, w5[E5("elementProperties")] = /* @__PURE__ */ new Map(), w5[E5("finalized")] = /* @__PURE__ */ new Map(), b3 == null || b3({ ReactiveElement: w5 }), (q1.reactiveElementVersions ?? (q1.reactiveElementVersions = [])).push("2.0.4");
+w5.elementStyles = [], w5.shadowRootOptions = { mode: "open" }, w5[E5("elementProperties")] = /* @__PURE__ */ new Map(), w5[E5("finalized")] = /* @__PURE__ */ new Map(), b3 == null || b3({ ReactiveElement: w5 }), (N1.reactiveElementVersions ?? (N1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const y4 = { attribute: !0, type: String, converter: p2, reflect: !1, hasChanged: s7 }, g4 = (s = y4, t, e) => {
+const g4 = { attribute: !0, type: String, converter: p2, reflect: !1, hasChanged: s7 }, f4 = (s = g4, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -10230,19 +10724,19 @@ const y4 = { attribute: !0, type: String, converter: p2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
 function o7(s) {
-  return (t, e) => typeof e == "object" ? g4(s, t, e) : ((o, r, n) => {
+  return (t, e) => typeof e == "object" ? f4(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const f4 = u`
+const w4 = v`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -10297,7 +10791,7 @@ const f4 = u`
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -10308,7 +10802,7 @@ const f4 = u`
  * SPDX-License-Identifier: BSD-3-Clause
  */
 const J5 = globalThis, r7 = J5.ShadowRoot && (J5.ShadyCSS === void 0 || J5.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, s0 = Symbol(), x3 = /* @__PURE__ */ new WeakMap();
-let w4 = class {
+let _4 = class {
   constructor(s, t, e) {
     if (this._$cssResult$ = !0, e !== s0) throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
     this.cssText = s, this.t = t;
@@ -10326,7 +10820,7 @@ let w4 = class {
     return this.cssText;
   }
 };
-const _4 = (s) => new w4(typeof s == "string" ? s : s + "", void 0, s0), b4 = (s, t) => {
+const b4 = (s) => new _4(typeof s == "string" ? s : s + "", void 0, s0), m4 = (s, t) => {
   if (r7) s.adoptedStyleSheets = t.map((e) => e instanceof CSSStyleSheet ? e : e.styleSheet);
   else for (const e of t) {
     const o = document.createElement("style"), r = J5.litNonce;
@@ -10335,14 +10829,14 @@ const _4 = (s) => new w4(typeof s == "string" ? s : s + "", void 0, s0), b4 = (s
 }, L3 = r7 ? (s) => s : (s) => s instanceof CSSStyleSheet ? ((t) => {
   let e = "";
   for (const o of t.cssRules) e += o.cssText;
-  return _4(e);
+  return b4(e);
 })(s) : s;
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const { is: m4, defineProperty: x4, getOwnPropertyDescriptor: L4, getOwnPropertyNames: $4, getOwnPropertySymbols: M4, getPrototypeOf: Z4 } = Object, N1 = globalThis, $3 = N1.trustedTypes, H4 = $3 ? $3.emptyScript : "", M3 = N1.reactiveElementPolyfillSupport, k5 = (s, t) => s, v2 = { toAttribute(s, t) {
+const { is: x4, defineProperty: L4, getOwnPropertyDescriptor: $4, getOwnPropertyNames: M4, getOwnPropertySymbols: Z4, getPrototypeOf: V4 } = Object, j1 = globalThis, $3 = j1.trustedTypes, H4 = $3 ? $3.emptyScript : "", M3 = j1.reactiveElementPolyfillSupport, k5 = (s, t) => s, u2 = { toAttribute(s, t) {
   switch (t) {
     case Boolean:
       s = s ? H4 : null;
@@ -10370,8 +10864,8 @@ const { is: m4, defineProperty: x4, getOwnPropertyDescriptor: L4, getOwnProperty
       }
   }
   return e;
-} }, n7 = (s, t) => !m4(s, t), Z3 = { attribute: !0, type: String, converter: v2, reflect: !1, hasChanged: n7 };
-Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), N1.litPropertyMetadata ?? (N1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
+} }, n7 = (s, t) => !x4(s, t), Z3 = { attribute: !0, type: String, converter: u2, reflect: !1, hasChanged: n7 };
+Symbol.metadata ?? (Symbol.metadata = Symbol("metadata")), j1.litPropertyMetadata ?? (j1.litPropertyMetadata = /* @__PURE__ */ new WeakMap());
 class _5 extends HTMLElement {
   static addInitializer(t) {
     this._$Ei(), (this.l ?? (this.l = [])).push(t);
@@ -10382,11 +10876,11 @@ class _5 extends HTMLElement {
   static createProperty(t, e = Z3) {
     if (e.state && (e.attribute = !1), this._$Ei(), this.elementProperties.set(t, e), !e.noAccessor) {
       const o = Symbol(), r = this.getPropertyDescriptor(t, o, e);
-      r !== void 0 && x4(this.prototype, t, r);
+      r !== void 0 && L4(this.prototype, t, r);
     }
   }
   static getPropertyDescriptor(t, e, o) {
-    const { get: r, set: n } = L4(this.prototype, t) ?? { get() {
+    const { get: r, set: n } = $4(this.prototype, t) ?? { get() {
       return this[e];
     }, set(i) {
       this[e] = i;
@@ -10403,13 +10897,13 @@ class _5 extends HTMLElement {
   }
   static _$Ei() {
     if (this.hasOwnProperty(k5("elementProperties"))) return;
-    const t = Z4(this);
+    const t = V4(this);
     t.finalize(), t.l !== void 0 && (this.l = [...t.l]), this.elementProperties = new Map(t.elementProperties);
   }
   static finalize() {
     if (this.hasOwnProperty(k5("finalized"))) return;
     if (this.finalized = !0, this._$Ei(), this.hasOwnProperty(k5("properties"))) {
-      const e = this.properties, o = [...$4(e), ...M4(e)];
+      const e = this.properties, o = [...M4(e), ...Z4(e)];
       for (const r of o) this.createProperty(r, e[r]);
     }
     const t = this[Symbol.metadata];
@@ -10458,7 +10952,7 @@ class _5 extends HTMLElement {
   }
   createRenderRoot() {
     const t = this.shadowRoot ?? this.attachShadow(this.constructor.shadowRootOptions);
-    return b4(t, this.constructor.elementStyles), t;
+    return m4(t, this.constructor.elementStyles), t;
   }
   connectedCallback() {
     var t;
@@ -10483,7 +10977,7 @@ class _5 extends HTMLElement {
     var o;
     const r = this.constructor.elementProperties.get(t), n = this.constructor._$Eu(t, r);
     if (n !== void 0 && r.reflect === !0) {
-      const i = (((o = r.converter) == null ? void 0 : o.toAttribute) !== void 0 ? r.converter : v2).toAttribute(e, r.type);
+      const i = (((o = r.converter) == null ? void 0 : o.toAttribute) !== void 0 ? r.converter : u2).toAttribute(e, r.type);
       this._$Em = t, i == null ? this.removeAttribute(n) : this.setAttribute(n, i), this._$Em = null;
     }
   }
@@ -10491,7 +10985,7 @@ class _5 extends HTMLElement {
     var o;
     const r = this.constructor, n = r._$Eh.get(t);
     if (n !== void 0 && this._$Em !== n) {
-      const i = r.getPropertyOptions(n), l = typeof i.converter == "function" ? { fromAttribute: i.converter } : ((o = i.converter) == null ? void 0 : o.fromAttribute) !== void 0 ? i.converter : v2;
+      const i = r.getPropertyOptions(n), l = typeof i.converter == "function" ? { fromAttribute: i.converter } : ((o = i.converter) == null ? void 0 : o.fromAttribute) !== void 0 ? i.converter : u2;
       this._$Em = n, this[n] = l.fromAttribute(e, i.type), this._$Em = null;
     }
   }
@@ -10570,20 +11064,20 @@ class _5 extends HTMLElement {
   firstUpdated(t) {
   }
 }
-_5.elementStyles = [], _5.shadowRootOptions = { mode: "open" }, _5[k5("elementProperties")] = /* @__PURE__ */ new Map(), _5[k5("finalized")] = /* @__PURE__ */ new Map(), M3 == null || M3({ ReactiveElement: _5 }), (N1.reactiveElementVersions ?? (N1.reactiveElementVersions = [])).push("2.0.4");
+_5.elementStyles = [], _5.shadowRootOptions = { mode: "open" }, _5[k5("elementProperties")] = /* @__PURE__ */ new Map(), _5[k5("finalized")] = /* @__PURE__ */ new Map(), M3 == null || M3({ ReactiveElement: _5 }), (j1.reactiveElementVersions ?? (j1.reactiveElementVersions = [])).push("2.0.4");
 /**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const V4 = { attribute: !0, type: String, converter: v2, reflect: !1, hasChanged: n7 }, S4 = (s = V4, t, e) => {
+const S4 = { attribute: !0, type: String, converter: u2, reflect: !1, hasChanged: n7 }, E4 = (s = S4, t, e) => {
   const { kind: o, metadata: r } = e;
   let n = globalThis.litPropertyMetadata.get(r);
   if (n === void 0 && globalThis.litPropertyMetadata.set(r, n = /* @__PURE__ */ new Map()), n.set(e.name, s), o === "accessor") {
     const { name: i } = e;
     return { set(l) {
-      const a = t.get.call(this);
-      t.set.call(this, l), this.requestUpdate(i, a, s);
+      const C = t.get.call(this);
+      t.set.call(this, l), this.requestUpdate(i, C, s);
     }, init(l) {
       return l !== void 0 && this.P(i, void 0, s), l;
     } };
@@ -10591,19 +11085,19 @@ const V4 = { attribute: !0, type: String, converter: v2, reflect: !1, hasChanged
   if (o === "setter") {
     const { name: i } = e;
     return function(l) {
-      const a = this[i];
-      t.call(this, l), this.requestUpdate(i, a, s);
+      const C = this[i];
+      t.call(this, l), this.requestUpdate(i, C, s);
     };
   }
   throw Error("Unsupported decorator location: " + o);
 };
 function s5(s) {
-  return (t, e) => typeof e == "object" ? S4(s, t, e) : ((o, r, n) => {
+  return (t, e) => typeof e == "object" ? E4(s, t, e) : ((o, r, n) => {
     const i = r.hasOwnProperty(n);
     return r.constructor.createProperty(n, i ? { ...o, wrapped: !0 } : o), i ? Object.getOwnPropertyDescriptor(r, n) : void 0;
   })(s, t, e);
 }
-const E4 = {
+const k4 = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -10802,7 +11296,7 @@ const E4 = {
   lock_filled: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`
-}, k4 = u`
+}, A4 = v`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -10899,12 +11393,12 @@ const E4 = {
     transform: scale(-1, -1);
   }
 `;
-var A4 = Object.defineProperty, z4 = Object.getOwnPropertyDescriptor, o5 = (s, t, e, o) => {
+var P4 = Object.defineProperty, z4 = Object.getOwnPropertyDescriptor, o5 = (s, t, e, o) => {
   for (var r = o > 1 ? void 0 : o ? z4(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && A4(t, e, r), r;
+  return o && r && P4(t, e, r), r;
 }, b5;
-const V1 = (b5 = class extends p {
+const S1 = (b5 = class extends p {
   constructor() {
     super(...arguments), this.name = "", this.label = "", this.rotate = "0", this.flip = "", this.color = "", this._size = "sm";
   }
@@ -10917,7 +11411,7 @@ const V1 = (b5 = class extends p {
     ) ? s : "sm";
   }
   getIcon() {
-    const s = E4[this.name], t = !!this.label;
+    const s = k4[this.name], t = !!this.label;
     if (!s) return null;
     const e = new DOMParser().parseFromString(s, "image/svg+xml").documentElement;
     return e instanceof SVGElement ? (e.setAttribute("role", "img"), e.setAttribute("aria-label", t ? this.label : ""), e.setAttribute("aria-hidden", t ? "false" : "true"), e.style.rotate = `${this.rotate}deg`, e.style.color = this.color || "currentcolor", e.classList.add(`nys-icon--${this.size}`), e.classList.add("nys-icon--svg"), this.flip && e.classList.add(`nys-icon--flip-${this.flip}`), e) : null;
@@ -10926,7 +11420,7 @@ const V1 = (b5 = class extends p {
     const s = this.getIcon();
     return s ? c`${s}` : null;
   }
-}, b5.styles = k4, b5.VALID_TYPES = [
+}, b5.styles = A4, b5.VALID_TYPES = [
   "2xs",
   "xs",
   "sm",
@@ -10944,29 +11438,29 @@ const V1 = (b5 = class extends p {
   "64"
 ], b5);
 o5([
-  s5({ type: String })
-], V1.prototype, "name", 2);
+  s5({ type: String, reflect: !0 })
+], S1.prototype, "name", 2);
 o5([
   s5({ type: String })
-], V1.prototype, "label", 2);
+], S1.prototype, "label", 2);
 o5([
   s5({ type: String })
-], V1.prototype, "rotate", 2);
+], S1.prototype, "rotate", 2);
 o5([
   s5({ type: String })
-], V1.prototype, "flip", 2);
+], S1.prototype, "flip", 2);
 o5([
   s5({ type: String })
-], V1.prototype, "color", 2);
+], S1.prototype, "color", 2);
 o5([
   s5({ reflect: !0 })
-], V1.prototype, "size", 1);
-let P4 = V1;
-customElements.get("nys-icon") || customElements.define("nys-icon", P4);
-var B4 = Object.defineProperty, i7 = (s, t, e, o) => {
+], S1.prototype, "size", 1);
+let B4 = S1;
+customElements.get("nys-icon") || customElements.define("nys-icon", B4);
+var U4 = Object.defineProperty, i7 = (s, t, e, o) => {
   for (var r = void 0, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = i(t, e, r) || r);
-  return r && B4(t, e, r), r;
+  return r && U4(t, e, r), r;
 };
 const S2 = class extends p {
   // allows use of elementInternals' API
@@ -10980,7 +11474,7 @@ const S2 = class extends p {
         </div>` : ""}`;
   }
 };
-S2.styles = f4, S2.formAssociated = !0;
+S2.styles = w4, S2.formAssociated = !0;
 let L2 = S2;
 i7([
   o7({ type: Boolean })
@@ -10992,33 +11486,33 @@ i7([
   o7({ type: Boolean, reflect: !0 })
 ], L2.prototype, "showDivider");
 customElements.get("nys-errormessage") || customElements.define("nys-errormessage", L2);
-var U4 = Object.defineProperty, O4 = Object.getOwnPropertyDescriptor, M = (s, t, e, o) => {
-  for (var r = o > 1 ? void 0 : o ? O4(t, e) : t, n = s.length - 1, i; n >= 0; n--)
+var O4 = Object.defineProperty, I4 = Object.getOwnPropertyDescriptor, x = (s, t, e, o) => {
+  for (var r = o > 1 ? void 0 : o ? I4(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
-  return o && r && U4(t, e, r), r;
+  return o && r && O4(t, e, r), r;
 };
 let R4 = 0;
-var n1;
-const _ = (n1 = class extends p {
+var l1;
+const w = (l1 = class extends p {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "", this.showPassword = !1, this._originalErrorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
   }
   get type() {
     return this._type;
   }
   set type(s) {
-    this._type = n1.VALID_TYPES.includes(
+    this._type = l1.VALID_TYPES.includes(
       s
     ) ? s : "text";
   }
   // Ensure the "width" property is valid after updates
   updated(s) {
-    s.has("width") && (this.width = n1.VALID_WIDTHS.includes(this.width) ? this.width : "full");
+    s.has("width") && (this.width = l1.VALID_WIDTHS.includes(this.width) ? this.width : "full");
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-textinput-${Date.now()}-${R4++}`), this.addEventListener("invalid", this._handleInvalid);
+    super.connectedCallback(), this.id || (this.id = `nys-textinput-${Date.now()}-${R4++}`), this._originalErrorMessage = this.errorMessage, this.addEventListener("invalid", this._handleInvalid);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this.removeEventListener("invalid", this._handleInvalid);
@@ -11039,16 +11533,15 @@ const _ = (n1 = class extends p {
     const t = (s = this.shadowRoot) == null ? void 0 : s.querySelector("input");
     if (!t) return;
     const e = this.errorMessage || "This field is required";
-    this.required && (!this.value || this.value.trim() === "") ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t), this.showError = !0) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this.showError = !1, this._hasUserInteracted = !1);
+    this.required && (!this.value || this.value.trim() === "") ? (this._internals.ariaRequired = "true", this._internals.setValidity({ valueMissing: !0 }, e, t)) : (this._internals.ariaRequired = "false", this._internals.setValidity({}), this._hasUserInteracted = !1);
   }
   _setValidityMessage(s = "") {
     var t;
     const e = (t = this.shadowRoot) == null ? void 0 : t.querySelector("input");
-    e && (this.showError = !!s, this.errorMessage.trim() && s !== "" && (s = this.errorMessage), this._internals.setValidity(
-      s ? { customError: !0 } : {},
-      s,
-      e
-    ));
+    if (!e) return;
+    this.showError = !!s, this._originalErrorMessage.trim() && s !== "" ? this.errorMessage = this._originalErrorMessage : this.errorMessage = s;
+    const o = s ? { customError: !0 } : {};
+    this._internals.setValidity(o, this.errorMessage, e);
   }
   _validate() {
     var s;
@@ -11059,8 +11552,25 @@ const _ = (n1 = class extends p {
     e.valueMissing ? o = "This field is required" : e.typeMismatch ? o = "Invalid format for this type" : e.patternMismatch ? o = "Invalid format" : e.tooShort ? o = `Value is too short. Minimum length is ${t.minLength}` : e.tooLong ? o = `Value is too long. Maximum length is ${t.maxLength}` : e.rangeUnderflow ? o = `Value must be at least ${t.min}` : e.rangeOverflow ? o = `Value must be at most ${t.max}` : e.stepMismatch ? o = "Invalid step value" : o = t.validationMessage, this._setValidityMessage(o);
   }
   /********************** Functions **********************/
-  _handleInvalid() {
-    this._hasUserInteracted = !0, this._validate();
+  // This helper function is called to perform the element's native validation.
+  checkValidity() {
+    var s;
+    const t = (s = this.shadowRoot) == null ? void 0 : s.querySelector("input");
+    return t ? t.checkValidity() : !0;
+  }
+  _handleInvalid(s) {
+    var t;
+    s.preventDefault(), this._hasUserInteracted = !0, this._validate();
+    const e = (t = this.shadowRoot) == null ? void 0 : t.querySelector("input");
+    if (e) {
+      const o = this._internals.form;
+      o ? Array.from(o.elements).find(
+        (r) => typeof r.checkValidity == "function" && !r.checkValidity()
+      ) === this && e.focus() : e.focus();
+    }
+  }
+  _togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
   /******************** Event Handlers ********************/
   // Handle input event to check pattern validity
@@ -11092,45 +11602,53 @@ const _ = (n1 = class extends p {
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required ? "required" : ""}
+          flag=${this.required ? "required" : this.optional ? "optional" : ""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
-        <input
-          class="nys-textinput__input"
-          type=${this.type}
-          name=${this.name}
-          id=${this.id}
-          ?disabled=${this.disabled}
-          ?required=${this.required}
-          ?readonly=${this.readonly}
-          aria-disabled="${this.disabled}"
-          aria-label="${this.label} ${this.description}"
-          .value=${this.value}
-          placeholder=${g1(
+        <div class="nys-input-container ${this.disabled ? "disabled" : ""}">
+          <input
+            class="nys-textinput__input"
+            type=${this.type === "password" ? this.showPassword ? "text" : "password" : this.type}
+            name=${this.name}
+            id=${this.id}
+            ?disabled=${this.disabled}
+            ?required=${this.required}
+            ?readonly=${this.readonly}
+            aria-disabled="${this.disabled}"
+            aria-label="${this.label} ${this.description}"
+            .value=${this.value}
+            placeholder=${g1(
       this.placeholder ? this.placeholder : void 0
     )}
-          pattern=${g1(this.pattern ? this.pattern : void 0)}
-          min=${g1(this.min !== "" ? this.min : void 0)}
-          maxlength=${g1(
+            pattern=${g1(this.pattern ? this.pattern : void 0)}
+            min=${g1(this.min !== "" ? this.min : void 0)}
+            maxlength=${g1(
       this.maxlength !== "" ? this.maxlength : void 0
     )}
-          step=${g1(this.step !== "" ? this.step : void 0)}
-          max=${g1(this.max !== "" ? this.max : void 0)}
-          form=${g1(this.form ? this.form : void 0)}
-          @input=${this._handleInput}
-          @focus="${this._handleFocus}"
-          @blur="${this._handleBlur}"
-          @change="${this._handleChange}"
-        />
+            step=${g1(this.step !== "" ? this.step : void 0)}
+            max=${g1(this.max !== "" ? this.max : void 0)}
+            form=${g1(this.form ? this.form : void 0)}
+            @input=${this._handleInput}
+            @focus="${this._handleFocus}"
+            @blur="${this._handleBlur}"
+            @change="${this._handleChange}"
+          />
+          ${this.type === "password" ? c`<nys-icon
+                class="eye-icon"
+                @click=${() => !this.disabled && this._togglePasswordVisibility()}
+                name=${this.showPassword ? "visibility_off" : "visibility"}
+                size="3xl"
+              ></nys-icon>` : ""}
+        </div>
         <nys-errormessage
           ?showError=${this.showError}
-          errorMessage=${this._internals.validationMessage || this.errorMessage}
+          errorMessage=${this.errorMessage}
         ></nys-errormessage>
       </div>
     `;
   }
-}, n1.VALID_TYPES = [
+}, l1.VALID_TYPES = [
   "email",
   "number",
   "password",
@@ -11138,72 +11656,78 @@ const _ = (n1 = class extends p {
   "tel",
   "text",
   "url"
-], n1.VALID_WIDTHS = ["sm", "md", "lg", "full"], n1.styles = _9, n1.formAssociated = !0, n1);
-M([
-  $({ type: String })
-], _.prototype, "id", 2);
-M([
-  $({ type: String })
-], _.prototype, "name", 2);
-M([
-  $({ reflect: !0 })
-], _.prototype, "type", 1);
-M([
-  $({ type: String })
-], _.prototype, "label", 2);
-M([
-  $({ type: String })
-], _.prototype, "description", 2);
-M([
-  $({ type: String })
-], _.prototype, "placeholder", 2);
-M([
-  $({ type: String })
-], _.prototype, "value", 2);
-M([
-  $({ type: Boolean, reflect: !0 })
-], _.prototype, "disabled", 2);
-M([
-  $({ type: Boolean, reflect: !0 })
-], _.prototype, "readonly", 2);
-M([
-  $({ type: Boolean, reflect: !0 })
-], _.prototype, "required", 2);
-M([
-  $({ type: String })
-], _.prototype, "form", 2);
-M([
-  $({ type: String })
-], _.prototype, "pattern", 2);
-M([
-  $({ type: Number })
-], _.prototype, "maxlength", 2);
-M([
-  $({ reflect: !0 })
-], _.prototype, "width", 2);
-M([
-  $({ type: Number })
-], _.prototype, "step", 2);
-M([
-  $({ type: Number })
-], _.prototype, "min", 2);
-M([
-  $({ type: Number })
-], _.prototype, "max", 2);
-M([
-  $({ type: Boolean, reflect: !0 })
-], _.prototype, "showError", 2);
-M([
-  $({ type: String })
-], _.prototype, "errorMessage", 2);
-let I4 = _;
-customElements.get("nys-textinput") || customElements.define("nys-textinput", I4);
-var T4 = Object.defineProperty, D4 = Object.getOwnPropertyDescriptor, S1 = (s, t, e, o) => {
-  for (var r = o > 1 ? void 0 : o ? D4(t, e) : t, n = s.length - 1, i; n >= 0; n--)
+], l1.VALID_WIDTHS = ["sm", "md", "lg", "full"], l1.styles = b9, l1.formAssociated = !0, l1);
+x([
+  m({ type: String })
+], w.prototype, "id", 2);
+x([
+  m({ type: String, reflect: !0 })
+], w.prototype, "name", 2);
+x([
+  m({ reflect: !0 })
+], w.prototype, "type", 1);
+x([
+  m({ type: String })
+], w.prototype, "label", 2);
+x([
+  m({ type: String })
+], w.prototype, "description", 2);
+x([
+  m({ type: String })
+], w.prototype, "placeholder", 2);
+x([
+  m({ type: String })
+], w.prototype, "value", 2);
+x([
+  m({ type: Boolean, reflect: !0 })
+], w.prototype, "disabled", 2);
+x([
+  m({ type: Boolean, reflect: !0 })
+], w.prototype, "readonly", 2);
+x([
+  m({ type: Boolean, reflect: !0 })
+], w.prototype, "required", 2);
+x([
+  m({ type: Boolean, reflect: !0 })
+], w.prototype, "optional", 2);
+x([
+  m({ type: String })
+], w.prototype, "form", 2);
+x([
+  m({ type: String })
+], w.prototype, "pattern", 2);
+x([
+  m({ type: Number })
+], w.prototype, "maxlength", 2);
+x([
+  m({ reflect: !0 })
+], w.prototype, "width", 2);
+x([
+  m({ type: Number })
+], w.prototype, "step", 2);
+x([
+  m({ type: Number })
+], w.prototype, "min", 2);
+x([
+  m({ type: Number })
+], w.prototype, "max", 2);
+x([
+  m({ type: Boolean, reflect: !0 })
+], w.prototype, "showError", 2);
+x([
+  m({ type: String })
+], w.prototype, "errorMessage", 2);
+x([
+  _9()
+], w.prototype, "showPassword", 2);
+let D4 = w;
+customElements.get("nys-textinput") || customElements.define("nys-textinput", D4);
+var T4 = Object.defineProperty, q4 = Object.getOwnPropertyDescriptor, E1 = (s, t, e, o) => {
+  for (var r = o > 1 ? void 0 : o ? q4(t, e) : t, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = (o ? i(t, e, r) : i(r)) || r);
   return o && r && T4(t, e, r), r;
 };
-const a7 = class a7 extends p {
+const C7 = class C7 extends p {
   constructor() {
     super(...arguments), this.trustbarVisible = !1, this.searchDropdownVisible = !1, this.languageVisible = !1, this.isSearchFocused = !1, this.hideTranslate = !1, this.hideSearch = !1, this.languages = [
       ["English", ""],
@@ -11436,36 +11960,40 @@ const a7 = class a7 extends p {
     `;
   }
 };
-a7.styles = i9;
-let j = a7;
-S1([
-  C({ type: Boolean })
-], j.prototype, "trustbarVisible", 2);
-S1([
-  C({ type: Boolean })
-], j.prototype, "searchDropdownVisible", 2);
-S1([
-  C({ type: Boolean })
-], j.prototype, "languageVisible", 2);
-S1([
-  C({ type: Boolean })
-], j.prototype, "isSearchFocused", 2);
-S1([
-  C({ type: Boolean })
-], j.prototype, "hideTranslate", 2);
-S1([
-  C({ type: Boolean })
-], j.prototype, "hideSearch", 2);
-S1([
-  C({ type: String, reflect: !0 })
-], j.prototype, "screenSize", 1);
-customElements.get("nys-unavheader") || customElements.define("nys-unavheader", j);
-const q4 = u`
+C7.styles = i9;
+let F = C7;
+E1([
+  a({ type: Boolean })
+], F.prototype, "trustbarVisible", 2);
+E1([
+  a({ type: Boolean })
+], F.prototype, "searchDropdownVisible", 2);
+E1([
+  a({ type: Boolean })
+], F.prototype, "languageVisible", 2);
+E1([
+  a({ type: Boolean })
+], F.prototype, "isSearchFocused", 2);
+E1([
+  a({ type: Boolean })
+], F.prototype, "hideTranslate", 2);
+E1([
+  a({ type: Boolean })
+], F.prototype, "hideSearch", 2);
+E1([
+  a({ type: String, reflect: !0 })
+], F.prototype, "screenSize", 1);
+customElements.get("nys-unavheader") || customElements.define("nys-unavheader", F);
+const N4 = v`
   :host {
     /* Global Header Styles */
-    --_nys-globalheader-color: var(
-      --nys-color-ink-reverse,
+    --_nys-globalheader-text-color: var(
+      --nys-color-text-reverse,
       var(--nys-color-white, #ffffff)
+    );
+    --_nys-globalheader-link-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
     );
     --_nys-globalheader-background: var(
       --nys-color-theme,
@@ -11558,7 +12086,7 @@ const q4 = u`
   }
 
   a {
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-link-color);
     text-decoration: none;
     font-family: var(--_nys-globalheader-font-family);
     font-size: var(--_nys-globalheader-font-size-links);
@@ -11573,7 +12101,7 @@ const q4 = u`
     justify-content: center;
     padding: var(--_nys-globalheader-padding) var(--_nys-globalheader-gutter);
     background-color: var(--_nys-globalheader-background);
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-text-color);
     width: 100%;
     box-sizing: border-box;
   }
@@ -11596,7 +12124,7 @@ const q4 = u`
   }
   .nys-globalheader__name {
     margin: 0;
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-text-color);
     font-family: var(--_nys-globalheader-font-family-agency);
     font-size: var(--_nys-globalheader-font-size-main-name);
     font-style: normal;
@@ -11659,7 +12187,7 @@ const q4 = u`
     flex-direction: column;
   }
   .nys-globalheader__content-mobile ul li:first-child a {
-    border-top: 1px solid var(--_nys-globalheader-color);
+    border-top: 1px solid var(--_nys-globalheader-text-color);
   }
   .nys-globalheader__content-mobile ul li a {
     display: flex;
@@ -11701,7 +12229,7 @@ const q4 = u`
     justify-content: center;
     align-items: center;
     padding: 0;
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-text-color);
   }
   .nys-globalheader__mobile-menu-button-text {
     font-size: var(--_nys-globalheader-mobile-btn-font-size);
@@ -11737,10 +12265,10 @@ const q4 = u`
     }
   }
 `;
-var N4 = Object.defineProperty, I5 = (s, t, e, o) => {
+var j4 = Object.defineProperty, R5 = (s, t, e, o) => {
   for (var r = void 0, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = i(t, e, r) || r);
-  return r && N4(t, e, r), r;
+  return r && j4(t, e, r), r;
 };
 const c7 = class c7 extends p {
   constructor() {
@@ -11758,19 +12286,19 @@ const c7 = class c7 extends p {
     var n, i, l;
     const t = (n = this.shadowRoot) == null ? void 0 : n.querySelector("slot");
     if (!t) return;
-    const e = t == null ? void 0 : t.assignedNodes({ flatten: !0 }).filter((a) => a.nodeType === Node.ELEMENT_NODE);
+    const e = t == null ? void 0 : t.assignedNodes({ flatten: !0 }).filter((C) => C.nodeType === Node.ELEMENT_NODE);
     this.slotHasContent = e.length > 0;
     const o = (i = this.shadowRoot) == null ? void 0 : i.querySelector(
       ".nys-globalheader__content"
     ), r = (l = this.shadowRoot) == null ? void 0 : l.querySelector(
       ".nys-globalheader__content-mobile"
     );
-    o && r && (o.innerHTML = "", r.innerHTML = "", e.forEach((a) => {
-      if (a.nodeType === Node.ELEMENT_NODE) {
-        const v = a.cloneNode(!0), d = a.cloneNode(!0);
-        ["script", "iframe", "object", "embed"].forEach((f) => {
-          v.querySelectorAll(f).forEach((b) => b.remove());
-        }), o.appendChild(v), r.appendChild(d), a.remove();
+    o && r && (o.innerHTML = "", r.innerHTML = "", e.forEach((C) => {
+      if (C.nodeType === Node.ELEMENT_NODE) {
+        const u = C.cloneNode(!0), d = C.cloneNode(!0);
+        ["script", "iframe", "object", "embed"].forEach((_) => {
+          u.querySelectorAll(_).forEach((L) => L.remove());
+        }), o.appendChild(u), r.appendChild(d), C.remove();
       }
     }));
   }
@@ -11778,7 +12306,7 @@ const c7 = class c7 extends p {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
   render() {
-    var t, e, o, r, n, i, l, a;
+    var t, e, o, r, n, i, l, C;
     return c`
       <header class="nys-globalheader">
         <div class="nys-globalheader__main-container">
@@ -11808,7 +12336,7 @@ const c7 = class c7 extends p {
                         ${this.appName}
                       </div> ` : ""}
                   ${((l = this.agencyName) == null ? void 0 : l.trim().length) > 0 ? c`<div
-                        class="nys-globalheader__agencyName nys-globalheader__name ${((a = this.appName) == null ? void 0 : a.trim().length) > 0 ? "" : "main"}"
+                        class="nys-globalheader__agencyName nys-globalheader__name ${((C = this.appName) == null ? void 0 : C.trim().length) > 0 ? "" : "main"}"
                       >
                         ${this.agencyName}
                       </div> ` : ""}
@@ -11841,29 +12369,33 @@ const c7 = class c7 extends p {
     `;
   }
 };
-c7.styles = q4;
-let d1 = c7;
-I5([
-  C({ type: String })
-], d1.prototype, "appName");
-I5([
-  C({ type: String })
-], d1.prototype, "agencyName");
-I5([
-  C({ type: String })
-], d1.prototype, "homepageLink");
-I5([
-  F1()
-], d1.prototype, "slotHasContent");
-I5([
-  F1()
-], d1.prototype, "isMobileMenuOpen");
-customElements.get("nys-globalheader") || customElements.define("nys-globalheader", d1);
-const j4 = u`
+c7.styles = N4;
+let p1 = c7;
+R5([
+  a({ type: String })
+], p1.prototype, "appName");
+R5([
+  a({ type: String })
+], p1.prototype, "agencyName");
+R5([
+  a({ type: String })
+], p1.prototype, "homepageLink");
+R5([
+  x1()
+], p1.prototype, "slotHasContent");
+R5([
+  x1()
+], p1.prototype, "isMobileMenuOpen");
+customElements.get("nys-globalheader") || customElements.define("nys-globalheader", p1);
+const F4 = v`
   :host {
     /* Global Footer Styles */
-    --_nys-globalfooter-color: var(
-      --nys-color-ink,
+    --_nys-globalfooter-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-globalfooter-link-color: var(
+      --nys-color-link-neutral,
       var(--nys-color-neutral-900, #1b1b1b)
     );
     --_nys-globalfooter-background: var(
@@ -11926,7 +12458,7 @@ const j4 = u`
     padding: var(--_nys-globalfooter-padding) var(--_nys-globalfooter-gutter);
     justify-content: center;
     background-color: var(--_nys-globalfooter-background);
-    color: var(--_nys-globalfooter-color);
+    color: var(--_nys-globalfooter-text-color);
     width: 100%;
     box-sizing: border-box;
   }
@@ -11943,7 +12475,7 @@ const j4 = u`
   /* The Agency Name */
   .nys-globalfooter__name {
     margin: 0;
-    color: var(--_nys-globalfooter-color);
+    color: var(--_nys-globalfooter-text-color);
     font-family: var(--_nys-globalfooter-font-family-agency);
     font-size: var(--_nys-globalfooter-font-size);
     font-style: normal;
@@ -11965,7 +12497,7 @@ const j4 = u`
   }
 
   a {
-    color: var(--_nys-globalfooter-color);
+    color: var(--_nys-globalfooter-link-color);
     text-decoration: none;
     font-family: var(--_nys-globalfooter-link-font-family);
     font-size: var(--_nys-globalfooter-font-size-links);
@@ -12010,10 +12542,10 @@ const j4 = u`
     }
   }
 `;
-var F4 = Object.defineProperty, l7 = (s, t, e, o) => {
+var G4 = Object.defineProperty, l7 = (s, t, e, o) => {
   for (var r = void 0, n = s.length - 1, i; n >= 0; n--)
     (i = s[n]) && (r = i(t, e, r) || r);
-  return r && F4(t, e, r), r;
+  return r && G4(t, e, r), r;
 };
 const h7 = class h7 extends p {
   constructor() {
@@ -12040,10 +12572,10 @@ const h7 = class h7 extends p {
     );
     o && (o.classList.toggle("columns", r), o.classList.toggle("small", !r), o.innerHTML = "", e.forEach((l) => {
       if (l.nodeType === Node.ELEMENT_NODE) {
-        const a = l.cloneNode(!0);
+        const C = l.cloneNode(!0);
         ["script", "iframe", "object", "embed"].forEach((d) => {
-          a.querySelectorAll(d).forEach((h) => h.remove());
-        }), o.appendChild(a), l.remove();
+          C.querySelectorAll(d).forEach((h) => h.remove());
+        }), o.appendChild(C), l.remove();
       }
     }));
   }
@@ -12066,27 +12598,27 @@ const h7 = class h7 extends p {
     `;
   }
 };
-h7.styles = j4;
-let j1 = h7;
+h7.styles = F4;
+let F1 = h7;
 l7([
-  C({ type: String })
-], j1.prototype, "agencyName");
+  a({ type: String })
+], F1.prototype, "agencyName");
 l7([
-  C({ type: String })
-], j1.prototype, "homepageLink");
+  a({ type: String })
+], F1.prototype, "homepageLink");
 l7([
-  F1()
-], j1.prototype, "slotHasContent");
-customElements.get("nys-globalfooter") || customElements.define("nys-globalfooter", j1);
-const G4 = u`
+  x1()
+], F1.prototype, "slotHasContent");
+customElements.get("nys-globalfooter") || customElements.define("nys-globalfooter", F1);
+const W4 = v`
   :host {
     /* Global Footer Styles */
-    --_nys-unavfooter-color: var(
-      --nys-color-ink-reverse,
+    --_nys-unavfooter-link-color: var(
+      --nys-color-link-reverse-neutral,
       var(--nys-color-white, #ffffff)
     );
     --_nys-unavfooter-background: var(
-      --nys-color-ink,
+      --nys-color-surface-reverse,
       var(--nys-color-neutral-900, #1b1b1b)
     );
     --_nys-unavfooter-gap-spacing: var(--nys-space-200, 16px);
@@ -12141,7 +12673,7 @@ const G4 = u`
   }
 
   a {
-    color: var(--_nys-unavfooter-color);
+    color: var(--_nys-unavfooter-link-color);
     text-decoration: none;
     font-family: var(--_nys-unavfooter-font-family);
     font-size: var(--_nys-unavfooter-font-size-links);
@@ -12168,7 +12700,6 @@ const G4 = u`
     gap: var(--_nys-unavfooter-gap-spacing);
     align-items: flex-start;
     background-color: var(--_nys-unavfooter-background);
-    color: var(--_nys-unavfooter-color);
     width: 100%;
     box-sizing: border-box;
   }
@@ -12235,7 +12766,7 @@ const G4 = u`
       --_nys-unavfooter-gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`, W4 = `<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
+`, Y4 = `<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
   <path d="M55.1158 7.50499L58.2905 12.6494V7.5189C58.2905 7.5189 58.6487 7.26356 59.5098 7.26356C60.3708 7.26356 60.7378 7.5189 60.7378 7.5189V16.4327C60.7378 16.4327 60.3942 16.689 59.5215 16.689C58.6487 16.689 58.3295 16.4605 58.3295 16.4605L55.1421 11.3171V16.4337C55.1421 16.4337 54.7848 16.69 53.9111 16.69C53.0374 16.69 52.7065 16.4337 52.7065 16.4337V7.51989C52.7065 7.51989 53.0384 7.26456 53.9248 7.26456C54.8112 7.26456 55.1148 7.50697 55.1148 7.50697L55.1158 7.50499Z" fill="white"/>
   <path d="M67.2209 12.5948H64.9063V14.8709H68.2538C68.2538 14.8709 68.5047 15.1531 68.5047 15.772C68.5047 16.391 68.2538 16.688 68.2538 16.688H62.4589V7.26257H67.9892C67.9892 7.26257 68.2538 7.54572 68.2538 8.17859C68.2538 8.81146 67.9892 9.09362 67.9892 9.09362H64.9063V10.7637H67.2209C67.2209 10.7637 67.4728 11.0598 67.4728 11.6787C67.4728 12.2977 67.2209 12.5948 67.2209 12.5948Z" fill="white"/>
   <path d="M71.4802 16.4327L68.9791 7.5189C68.9791 7.5189 69.3491 7.26356 70.2101 7.26356C71.0711 7.26356 71.4275 7.5189 71.4275 7.5189L72.6839 12.0434C72.7766 12.3802 72.8166 12.6365 72.8557 12.7845C72.8557 12.7428 72.9221 12.3663 73.0011 12.0573L74.0984 7.5189C74.0984 7.5189 74.5211 7.26356 75.1176 7.26356C75.7141 7.26356 76.084 7.5189 76.084 7.5189L77.3004 12.7845C77.3004 12.6623 77.3795 12.3255 77.4586 12.0573L78.756 7.5189C78.7686 7.5189 79.1132 7.26356 79.9596 7.26356C80.806 7.26356 81.1897 7.5189 81.1897 7.5189L78.6496 16.4327C78.6496 16.4327 78.2922 16.6751 77.4859 16.689C76.5468 16.689 76.2158 16.4327 76.2158 16.4327L75.223 12.2987C75.1449 11.9887 75.0902 11.6529 75.0785 11.5844L74.9184 12.2987L73.9266 16.4327C73.9266 16.4327 73.583 16.689 72.7092 16.689C71.8355 16.689 71.4802 16.4327 71.4802 16.4327Z" fill="white"/>
@@ -12254,7 +12785,7 @@ const G4 = u`
 </svg>`, d7 = class d7 extends p {
   /**************** Functions ****************/
   _getNysLogo() {
-    return new DOMParser().parseFromString(W4, "image/svg+xml").documentElement;
+    return new DOMParser().parseFromString(Y4, "image/svg+xml").documentElement;
   }
   render() {
     return c`
@@ -12288,7 +12819,7 @@ const G4 = u`
     `;
   }
 };
-d7.styles = G4;
+d7.styles = W4;
 let E2 = d7;
 customElements.get("nys-unavfooter") || customElements.define("nys-unavfooter", E2);
 export {
@@ -12296,17 +12827,20 @@ export {
   g8 as NysAvatar,
   m8 as NysButton,
   b6 as NysCheckbox,
-  O1 as NysErrorMessage,
-  j1 as NysGlobalFooter,
-  d1 as NysGlobalHeader,
-  H6 as NysIcon,
+  g6 as NysCheckboxgroup,
+  I1 as NysErrorMessage,
+  F1 as NysGlobalFooter,
+  p1 as NysGlobalHeader,
+  V6 as NysIcon,
   b1 as NysLabel,
+  V1 as NysOption,
   O6 as NysRadiobutton,
+  P6 as NysRadiogroup,
   N6 as NysSelect,
   Y6 as NysTextarea,
   t9 as NysTextinput,
   n9 as NysToggle,
   E2 as NysUnavFooter,
-  j as NysUnavHeader
+  F as NysUnavHeader
 };
 //# sourceMappingURL=nysds.es.js.map

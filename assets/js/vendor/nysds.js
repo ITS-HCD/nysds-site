@@ -1,5 +1,5 @@
-(function(w,l1){typeof exports=="object"&&typeof module<"u"?l1(exports):typeof define=="function"&&define.amd?define(["exports"],l1):(w=typeof globalThis<"u"?globalThis:w||self,l1(w.NYSDS={}))})(this,function(w){"use strict";/*!
-   * New York State Design System (v1.1.0)
+(function(w,C1){typeof exports=="object"&&typeof module<"u"?C1(exports):typeof define=="function"&&define.amd?define(["exports"],C1):(w=typeof globalThis<"u"?globalThis:w||self,C1(w.NYSDS={}))})(this,function(w){"use strict";/*!
+   * New York State Design System (v1.1.1)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -7,41 +7,49 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */var Q0,g1,f1,R,o1,r1,_1,n1,_,i1,F,G,w1;const l1=globalThis,j2=l1.ShadowRoot&&(l1.ShadyCSS===void 0||l1.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,F2=Symbol(),D7=new WeakMap;let N7=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==F2)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(j2&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=D7.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&D7.set(e,t))}return t}toString(){return this.cssText}};const i8=o=>new N7(typeof o=="string"?o:o+"",void 0,F2),g=(o,...t)=>{const e=o.length===1?o[0]:t.reduce((s,r,n)=>s+(i=>{if(i._$cssResult$===!0)return i.cssText;if(typeof i=="number")return i;throw Error("Value passed to 'css' function must be a 'css' function result: "+i+". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.")})(r)+o[n+1],o[0]);return new N7(e,o,F2)},l8=(o,t)=>{if(j2)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=l1.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},q7=j2?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return i8(e)})(o):o;/**
+ */var e8,_1,w1,T,r1,n1,b1,i1,_,l1,G,W,a1;const C1=globalThis,j2=C1.ShadowRoot&&(C1.ShadyCSS===void 0||C1.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,F2=Symbol(),D7=new WeakMap;let N7=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==F2)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(j2&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=D7.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&D7.set(e,t))}return t}toString(){return this.cssText}};const a8=o=>new N7(typeof o=="string"?o:o+"",void 0,F2),g=(o,...t)=>{const e=o.length===1?o[0]:t.reduce((s,r,n)=>s+(i=>{if(i._$cssResult$===!0)return i.cssText;if(typeof i=="number")return i;throw Error("Value passed to 'css' function must be a 'css' function result: "+i+". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.")})(r)+o[n+1],o[0]);return new N7(e,o,F2)},C8=(o,t)=>{if(j2)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=C1.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},q7=j2?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return a8(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:a8,defineProperty:C8,getOwnPropertyDescriptor:c8,getOwnPropertyNames:h8,getOwnPropertySymbols:d8,getPrototypeOf:p8}=Object,a1=globalThis,j7=a1.trustedTypes,u8=j7?j7.emptyScript:"",G2=a1.reactiveElementPolyfillSupport,v5=(o,t)=>o,o2={toAttribute(o,t){switch(t){case Boolean:o=o?u8:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},W2=(o,t)=>!a8(o,t),F7={attribute:!0,type:String,converter:o2,reflect:!1,hasChanged:W2};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),a1.litPropertyMetadata??(a1.litPropertyMetadata=new WeakMap);let I1=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=F7){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&C8(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=c8(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??F7}static _$Ei(){if(this.hasOwnProperty(v5("elementProperties")))return;const t=p8(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(v5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(v5("properties"))){const e=this.properties,s=[...h8(e),...d8(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(q7(r))}else t!==void 0&&e.push(q7(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return l8(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var n;const s=this.constructor.elementProperties.get(t),r=this.constructor._$Eu(t,s);if(r!==void 0&&s.reflect===!0){const i=(((n=s.converter)==null?void 0:n.toAttribute)!==void 0?s.converter:o2).toAttribute(e,s.type);this._$Em=t,i==null?this.removeAttribute(r):this.setAttribute(r,i),this._$Em=null}}_$AK(t,e){var n;const s=this.constructor,r=s._$Eh.get(t);if(r!==void 0&&this._$Em!==r){const i=s.getPropertyOptions(r),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((n=i.converter)==null?void 0:n.fromAttribute)!==void 0?i.converter:o2;this._$Em=r,this[r]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??W2)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var s;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(s=this._$EO)==null||s.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(e)):this._$EU()}catch(r){throw t=!1,this._$EU(),r}t&&this._$AE(e)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};I1.elementStyles=[],I1.shadowRootOptions={mode:"open"},I1[v5("elementProperties")]=new Map,I1[v5("finalized")]=new Map,G2==null||G2({ReactiveElement:I1}),(a1.reactiveElementVersions??(a1.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:c8,defineProperty:h8,getOwnPropertyDescriptor:d8,getOwnPropertyNames:p8,getOwnPropertySymbols:u8,getPrototypeOf:v8}=Object,c1=globalThis,j7=c1.trustedTypes,y8=j7?j7.emptyScript:"",G2=c1.reactiveElementPolyfillSupport,v5=(o,t)=>o,o2={toAttribute(o,t){switch(t){case Boolean:o=o?y8:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},W2=(o,t)=>!c8(o,t),F7={attribute:!0,type:String,converter:o2,reflect:!1,hasChanged:W2};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),c1.litPropertyMetadata??(c1.litPropertyMetadata=new WeakMap);let D1=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=F7){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&h8(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=d8(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??F7}static _$Ei(){if(this.hasOwnProperty(v5("elementProperties")))return;const t=v8(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(v5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(v5("properties"))){const e=this.properties,s=[...p8(e),...u8(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(q7(r))}else t!==void 0&&e.push(q7(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return C8(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var n;const s=this.constructor.elementProperties.get(t),r=this.constructor._$Eu(t,s);if(r!==void 0&&s.reflect===!0){const i=(((n=s.converter)==null?void 0:n.toAttribute)!==void 0?s.converter:o2).toAttribute(e,s.type);this._$Em=t,i==null?this.removeAttribute(r):this.setAttribute(r,i),this._$Em=null}}_$AK(t,e){var n;const s=this.constructor,r=s._$Eh.get(t);if(r!==void 0&&this._$Em!==r){const i=s.getPropertyOptions(r),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((n=i.converter)==null?void 0:n.fromAttribute)!==void 0?i.converter:o2;this._$Em=r,this[r]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??W2)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var s;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(s=this._$EO)==null||s.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(e)):this._$EU()}catch(r){throw t=!1,this._$EU(),r}t&&this._$AE(e)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};D1.elementStyles=[],D1.shadowRootOptions={mode:"open"},D1[v5("elementProperties")]=new Map,D1[v5("finalized")]=new Map,G2==null||G2({ReactiveElement:D1}),(c1.reactiveElementVersions??(c1.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const y5=globalThis,r2=y5.trustedTypes,G7=r2?r2.createPolicy("lit-html",{createHTML:o=>o}):void 0,W7="$lit$",C1=`lit$${Math.random().toFixed(9).slice(2)}$`,Y7="?"+C1,v8=`<${Y7}>`,b1=document,g5=()=>b1.createComment(""),f5=o=>o===null||typeof o!="object"&&typeof o!="function",Y2=Array.isArray,y8=o=>Y2(o)||typeof(o==null?void 0:o[Symbol.iterator])=="function",K2=`[ 	
-\f\r]`,_5=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,K7=/-->/g,J7=/>/g,m1=RegExp(`>|${K2}(?:([^\\s"'>=/]+)(${K2}*=${K2}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`,"g"),X7=/'/g,Q7=/"/g,t3=/^(?:script|style|textarea|title)$/i,g8=o=>(t,...e)=>({_$litType$:o,strings:t,values:e}),c=g8(1),D1=Symbol.for("lit-noChange"),x=Symbol.for("lit-nothing"),e3=new WeakMap,x1=b1.createTreeWalker(b1,129);function s3(o,t){if(!Y2(o)||!o.hasOwnProperty("raw"))throw Error("invalid template strings array");return G7!==void 0?G7.createHTML(t):t}const f8=(o,t)=>{const e=o.length-1,s=[];let r,n=t===2?"<svg>":t===3?"<math>":"",i=_5;for(let l=0;l<e;l++){const a=o[l];let p,d,h=-1,v=0;for(;v<a.length&&(i.lastIndex=v,d=i.exec(a),d!==null);)v=i.lastIndex,i===_5?d[1]==="!--"?i=K7:d[1]!==void 0?i=J7:d[2]!==void 0?(t3.test(d[2])&&(r=RegExp("</"+d[2],"g")),i=m1):d[3]!==void 0&&(i=m1):i===m1?d[0]===">"?(i=r??_5,h=-1):d[1]===void 0?h=-2:(h=i.lastIndex-d[2].length,p=d[1],i=d[3]===void 0?m1:d[3]==='"'?Q7:X7):i===Q7||i===X7?i=m1:i===K7||i===J7?i=_5:(i=m1,r=void 0);const y=i===m1&&o[l+1].startsWith("/>")?" ":"";n+=i===_5?a+v8:h>=0?(s.push(p),a.slice(0,h)+W7+a.slice(h)+C1+y):a+C1+(h===-2?l:y)}return[s3(o,n+(o[e]||"<?>")+(t===2?"</svg>":t===3?"</math>":"")),s]};let J2=class t8{constructor({strings:t,_$litType$:e},s){let r;this.parts=[];let n=0,i=0;const l=t.length-1,a=this.parts,[p,d]=f8(t,e);if(this.el=t8.createElement(p,s),x1.currentNode=this.el.content,e===2||e===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(r=x1.nextNode())!==null&&a.length<l;){if(r.nodeType===1){if(r.hasAttributes())for(const h of r.getAttributeNames())if(h.endsWith(W7)){const v=d[i++],y=r.getAttribute(h).split(C1),B=/([.?@])?(.*)/.exec(v);a.push({type:1,index:n,name:B[2],strings:y,ctor:B[1]==="."?w8:B[1]==="?"?b8:B[1]==="@"?m8:n2}),r.removeAttribute(h)}else h.startsWith(C1)&&(a.push({type:6,index:n}),r.removeAttribute(h));if(t3.test(r.tagName)){const h=r.textContent.split(C1),v=h.length-1;if(v>0){r.textContent=r2?r2.emptyScript:"";for(let y=0;y<v;y++)r.append(h[y],g5()),x1.nextNode(),a.push({type:2,index:++n});r.append(h[v],g5())}}}else if(r.nodeType===8)if(r.data===Y7)a.push({type:2,index:n});else{let h=-1;for(;(h=r.data.indexOf(C1,h+1))!==-1;)a.push({type:7,index:n}),h+=C1.length-1}n++}}static createElement(t,e){const s=b1.createElement("template");return s.innerHTML=t,s}};function N1(o,t,e=o,s){var i,l;if(t===D1)return t;let r=s!==void 0?(i=e._$Co)==null?void 0:i[s]:e._$Cl;const n=f5(t)?void 0:t._$litDirective$;return(r==null?void 0:r.constructor)!==n&&((l=r==null?void 0:r._$AO)==null||l.call(r,!1),n===void 0?r=void 0:(r=new n(o),r._$AT(o,e,s)),s!==void 0?(e._$Co??(e._$Co=[]))[s]=r:e._$Cl=r),r!==void 0&&(t=N1(o,r._$AS(o,t.values),r,s)),t}let _8=class{constructor(t,e){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=e}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:e},parts:s}=this._$AD,r=((t==null?void 0:t.creationScope)??b1).importNode(e,!0);x1.currentNode=r;let n=x1.nextNode(),i=0,l=0,a=s[0];for(;a!==void 0;){if(i===a.index){let p;a.type===2?p=new X2(n,n.nextSibling,this,t):a.type===1?p=new a.ctor(n,a.name,a.strings,this,t):a.type===6&&(p=new x8(n,this,t)),this._$AV.push(p),a=s[++l]}i!==(a==null?void 0:a.index)&&(n=x1.nextNode(),i++)}return x1.currentNode=b1,r}p(t){let e=0;for(const s of this._$AV)s!==void 0&&(s.strings!==void 0?(s._$AI(t,s,e),e+=s.strings.length-2):s._$AI(t[e])),e++}},X2=class e8{get _$AU(){var t;return((t=this._$AM)==null?void 0:t._$AU)??this._$Cv}constructor(t,e,s,r){this.type=2,this._$AH=x,this._$AN=void 0,this._$AA=t,this._$AB=e,this._$AM=s,this.options=r,this._$Cv=(r==null?void 0:r.isConnected)??!0}get parentNode(){let t=this._$AA.parentNode;const e=this._$AM;return e!==void 0&&(t==null?void 0:t.nodeType)===11&&(t=e.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,e=this){t=N1(this,t,e),f5(t)?t===x||t==null||t===""?(this._$AH!==x&&this._$AR(),this._$AH=x):t!==this._$AH&&t!==D1&&this._(t):t._$litType$!==void 0?this.$(t):t.nodeType!==void 0?this.T(t):y8(t)?this.k(t):this._(t)}O(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}T(t){this._$AH!==t&&(this._$AR(),this._$AH=this.O(t))}_(t){this._$AH!==x&&f5(this._$AH)?this._$AA.nextSibling.data=t:this.T(b1.createTextNode(t)),this._$AH=t}$(t){var n;const{values:e,_$litType$:s}=t,r=typeof s=="number"?this._$AC(t):(s.el===void 0&&(s.el=J2.createElement(s3(s.h,s.h[0]),this.options)),s);if(((n=this._$AH)==null?void 0:n._$AD)===r)this._$AH.p(e);else{const i=new _8(r,this),l=i.u(this.options);i.p(e),this.T(l),this._$AH=i}}_$AC(t){let e=e3.get(t.strings);return e===void 0&&e3.set(t.strings,e=new J2(t)),e}k(t){Y2(this._$AH)||(this._$AH=[],this._$AR());const e=this._$AH;let s,r=0;for(const n of t)r===e.length?e.push(s=new e8(this.O(g5()),this.O(g5()),this,this.options)):s=e[r],s._$AI(n),r++;r<e.length&&(this._$AR(s&&s._$AB.nextSibling,r),e.length=r)}_$AR(t=this._$AA.nextSibling,e){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,e);t&&t!==this._$AB;){const r=t.nextSibling;t.remove(),t=r}}setConnected(t){var e;this._$AM===void 0&&(this._$Cv=t,(e=this._$AP)==null||e.call(this,t))}},n2=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,e,s,r,n){this.type=1,this._$AH=x,this._$AN=void 0,this.element=t,this.name=e,this._$AM=r,this.options=n,s.length>2||s[0]!==""||s[1]!==""?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=x}_$AI(t,e=this,s,r){const n=this.strings;let i=!1;if(n===void 0)t=N1(this,t,e,0),i=!f5(t)||t!==this._$AH&&t!==D1,i&&(this._$AH=t);else{const l=t;let a,p;for(t=n[0],a=0;a<n.length-1;a++)p=N1(this,l[s+a],e,a),p===D1&&(p=this._$AH[a]),i||(i=!f5(p)||p!==this._$AH[a]),p===x?t=x:t!==x&&(t+=(p??"")+n[a+1]),this._$AH[a]=p}i&&!r&&this.j(t)}j(t){t===x?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}},w8=class extends n2{constructor(){super(...arguments),this.type=3}j(t){this.element[this.name]=t===x?void 0:t}},b8=class extends n2{constructor(){super(...arguments),this.type=4}j(t){this.element.toggleAttribute(this.name,!!t&&t!==x)}},m8=class extends n2{constructor(t,e,s,r,n){super(t,e,s,r,n),this.type=5}_$AI(t,e=this){if((t=N1(this,t,e,0)??x)===D1)return;const s=this._$AH,r=t===x&&s!==x||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,n=t!==x&&(s===x||r);r&&this.element.removeEventListener(this.name,this,s),n&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){var e;typeof this._$AH=="function"?this._$AH.call(((e=this.options)==null?void 0:e.host)??this.element,t):this._$AH.handleEvent(t)}},x8=class{constructor(t,e,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=e,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){N1(this,t)}};const Q2=y5.litHtmlPolyfillSupport;Q2==null||Q2(J2,X2),(y5.litHtmlVersions??(y5.litHtmlVersions=[])).push("3.2.1");const L8=(o,t,e)=>{const s=(e==null?void 0:e.renderBefore)??t;let r=s._$litPart$;if(r===void 0){const n=(e==null?void 0:e.renderBefore)??null;s._$litPart$=r=new X2(t.insertBefore(g5(),n),n,void 0,e??{})}return r._$AI(o),r};/**
+ */const y5=globalThis,r2=y5.trustedTypes,G7=r2?r2.createPolicy("lit-html",{createHTML:o=>o}):void 0,W7="$lit$",h1=`lit$${Math.random().toFixed(9).slice(2)}$`,Y7="?"+h1,g8=`<${Y7}>`,m1=document,g5=()=>m1.createComment(""),f5=o=>o===null||typeof o!="object"&&typeof o!="function",Y2=Array.isArray,f8=o=>Y2(o)||typeof(o==null?void 0:o[Symbol.iterator])=="function",K2=`[ 	
+\f\r]`,_5=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,K7=/-->/g,J7=/>/g,x1=RegExp(`>|${K2}(?:([^\\s"'>=/]+)(${K2}*=${K2}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`,"g"),X7=/'/g,Q7=/"/g,t3=/^(?:script|style|textarea|title)$/i,_8=o=>(t,...e)=>({_$litType$:o,strings:t,values:e}),c=_8(1),N1=Symbol.for("lit-noChange"),M=Symbol.for("lit-nothing"),e3=new WeakMap,L1=m1.createTreeWalker(m1,129);function s3(o,t){if(!Y2(o)||!o.hasOwnProperty("raw"))throw Error("invalid template strings array");return G7!==void 0?G7.createHTML(t):t}const w8=(o,t)=>{const e=o.length-1,s=[];let r,n=t===2?"<svg>":t===3?"<math>":"",i=_5;for(let l=0;l<e;l++){const a=o[l];let p,d,h=-1,v=0;for(;v<a.length&&(i.lastIndex=v,d=i.exec(a),d!==null);)v=i.lastIndex,i===_5?d[1]==="!--"?i=K7:d[1]!==void 0?i=J7:d[2]!==void 0?(t3.test(d[2])&&(r=RegExp("</"+d[2],"g")),i=x1):d[3]!==void 0&&(i=x1):i===x1?d[0]===">"?(i=r??_5,h=-1):d[1]===void 0?h=-2:(h=i.lastIndex-d[2].length,p=d[1],i=d[3]===void 0?x1:d[3]==='"'?Q7:X7):i===Q7||i===X7?i=x1:i===K7||i===J7?i=_5:(i=x1,r=void 0);const y=i===x1&&o[l+1].startsWith("/>")?" ":"";n+=i===_5?a+g8:h>=0?(s.push(p),a.slice(0,h)+W7+a.slice(h)+h1+y):a+h1+(h===-2?l:y)}return[s3(o,n+(o[e]||"<?>")+(t===2?"</svg>":t===3?"</math>":"")),s]};let J2=class s8{constructor({strings:t,_$litType$:e},s){let r;this.parts=[];let n=0,i=0;const l=t.length-1,a=this.parts,[p,d]=w8(t,e);if(this.el=s8.createElement(p,s),L1.currentNode=this.el.content,e===2||e===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(r=L1.nextNode())!==null&&a.length<l;){if(r.nodeType===1){if(r.hasAttributes())for(const h of r.getAttributeNames())if(h.endsWith(W7)){const v=d[i++],y=r.getAttribute(h).split(h1),B=/([.?@])?(.*)/.exec(v);a.push({type:1,index:n,name:B[2],strings:y,ctor:B[1]==="."?m8:B[1]==="?"?x8:B[1]==="@"?L8:n2}),r.removeAttribute(h)}else h.startsWith(h1)&&(a.push({type:6,index:n}),r.removeAttribute(h));if(t3.test(r.tagName)){const h=r.textContent.split(h1),v=h.length-1;if(v>0){r.textContent=r2?r2.emptyScript:"";for(let y=0;y<v;y++)r.append(h[y],g5()),L1.nextNode(),a.push({type:2,index:++n});r.append(h[v],g5())}}}else if(r.nodeType===8)if(r.data===Y7)a.push({type:2,index:n});else{let h=-1;for(;(h=r.data.indexOf(h1,h+1))!==-1;)a.push({type:7,index:n}),h+=h1.length-1}n++}}static createElement(t,e){const s=m1.createElement("template");return s.innerHTML=t,s}};function q1(o,t,e=o,s){var i,l;if(t===N1)return t;let r=s!==void 0?(i=e._$Co)==null?void 0:i[s]:e._$Cl;const n=f5(t)?void 0:t._$litDirective$;return(r==null?void 0:r.constructor)!==n&&((l=r==null?void 0:r._$AO)==null||l.call(r,!1),n===void 0?r=void 0:(r=new n(o),r._$AT(o,e,s)),s!==void 0?(e._$Co??(e._$Co=[]))[s]=r:e._$Cl=r),r!==void 0&&(t=q1(o,r._$AS(o,t.values),r,s)),t}let b8=class{constructor(t,e){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=e}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:e},parts:s}=this._$AD,r=((t==null?void 0:t.creationScope)??m1).importNode(e,!0);L1.currentNode=r;let n=L1.nextNode(),i=0,l=0,a=s[0];for(;a!==void 0;){if(i===a.index){let p;a.type===2?p=new X2(n,n.nextSibling,this,t):a.type===1?p=new a.ctor(n,a.name,a.strings,this,t):a.type===6&&(p=new $8(n,this,t)),this._$AV.push(p),a=s[++l]}i!==(a==null?void 0:a.index)&&(n=L1.nextNode(),i++)}return L1.currentNode=m1,r}p(t){let e=0;for(const s of this._$AV)s!==void 0&&(s.strings!==void 0?(s._$AI(t,s,e),e+=s.strings.length-2):s._$AI(t[e])),e++}},X2=class o8{get _$AU(){var t;return((t=this._$AM)==null?void 0:t._$AU)??this._$Cv}constructor(t,e,s,r){this.type=2,this._$AH=M,this._$AN=void 0,this._$AA=t,this._$AB=e,this._$AM=s,this.options=r,this._$Cv=(r==null?void 0:r.isConnected)??!0}get parentNode(){let t=this._$AA.parentNode;const e=this._$AM;return e!==void 0&&(t==null?void 0:t.nodeType)===11&&(t=e.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,e=this){t=q1(this,t,e),f5(t)?t===M||t==null||t===""?(this._$AH!==M&&this._$AR(),this._$AH=M):t!==this._$AH&&t!==N1&&this._(t):t._$litType$!==void 0?this.$(t):t.nodeType!==void 0?this.T(t):f8(t)?this.k(t):this._(t)}O(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}T(t){this._$AH!==t&&(this._$AR(),this._$AH=this.O(t))}_(t){this._$AH!==M&&f5(this._$AH)?this._$AA.nextSibling.data=t:this.T(m1.createTextNode(t)),this._$AH=t}$(t){var n;const{values:e,_$litType$:s}=t,r=typeof s=="number"?this._$AC(t):(s.el===void 0&&(s.el=J2.createElement(s3(s.h,s.h[0]),this.options)),s);if(((n=this._$AH)==null?void 0:n._$AD)===r)this._$AH.p(e);else{const i=new b8(r,this),l=i.u(this.options);i.p(e),this.T(l),this._$AH=i}}_$AC(t){let e=e3.get(t.strings);return e===void 0&&e3.set(t.strings,e=new J2(t)),e}k(t){Y2(this._$AH)||(this._$AH=[],this._$AR());const e=this._$AH;let s,r=0;for(const n of t)r===e.length?e.push(s=new o8(this.O(g5()),this.O(g5()),this,this.options)):s=e[r],s._$AI(n),r++;r<e.length&&(this._$AR(s&&s._$AB.nextSibling,r),e.length=r)}_$AR(t=this._$AA.nextSibling,e){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,e);t&&t!==this._$AB;){const r=t.nextSibling;t.remove(),t=r}}setConnected(t){var e;this._$AM===void 0&&(this._$Cv=t,(e=this._$AP)==null||e.call(this,t))}},n2=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,e,s,r,n){this.type=1,this._$AH=M,this._$AN=void 0,this.element=t,this.name=e,this._$AM=r,this.options=n,s.length>2||s[0]!==""||s[1]!==""?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=M}_$AI(t,e=this,s,r){const n=this.strings;let i=!1;if(n===void 0)t=q1(this,t,e,0),i=!f5(t)||t!==this._$AH&&t!==N1,i&&(this._$AH=t);else{const l=t;let a,p;for(t=n[0],a=0;a<n.length-1;a++)p=q1(this,l[s+a],e,a),p===N1&&(p=this._$AH[a]),i||(i=!f5(p)||p!==this._$AH[a]),p===M?t=M:t!==M&&(t+=(p??"")+n[a+1]),this._$AH[a]=p}i&&!r&&this.j(t)}j(t){t===M?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}},m8=class extends n2{constructor(){super(...arguments),this.type=3}j(t){this.element[this.name]=t===M?void 0:t}},x8=class extends n2{constructor(){super(...arguments),this.type=4}j(t){this.element.toggleAttribute(this.name,!!t&&t!==M)}},L8=class extends n2{constructor(t,e,s,r,n){super(t,e,s,r,n),this.type=5}_$AI(t,e=this){if((t=q1(this,t,e,0)??M)===N1)return;const s=this._$AH,r=t===M&&s!==M||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,n=t!==M&&(s===M||r);r&&this.element.removeEventListener(this.name,this,s),n&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){var e;typeof this._$AH=="function"?this._$AH.call(((e=this.options)==null?void 0:e.host)??this.element,t):this._$AH.handleEvent(t)}},$8=class{constructor(t,e,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=e,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){q1(this,t)}};const Q2=y5.litHtmlPolyfillSupport;Q2==null||Q2(J2,X2),(y5.litHtmlVersions??(y5.litHtmlVersions=[])).push("3.2.1");const M8=(o,t,e)=>{const s=(e==null?void 0:e.renderBefore)??t;let r=s._$litPart$;if(r===void 0){const n=(e==null?void 0:e.renderBefore)??null;s._$litPart$=r=new X2(t.insertBefore(g5(),n),n,void 0,e??{})}return r._$AI(o),r};/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */let u=class extends I1{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){var e;const t=super.createRenderRoot();return(e=this.renderOptions).renderBefore??(e.renderBefore=t.firstChild),t}update(t){const e=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=L8(e,this.renderRoot,this.renderOptions)}connectedCallback(){var t;super.connectedCallback(),(t=this._$Do)==null||t.setConnected(!0)}disconnectedCallback(){var t;super.disconnectedCallback(),(t=this._$Do)==null||t.setConnected(!1)}render(){return D1}};u._$litElement$=!0,u.finalized=!0,(Q0=globalThis.litElementHydrateSupport)==null||Q0.call(globalThis,{LitElement:u});const t7=globalThis.litElementPolyfillSupport;t7==null||t7({LitElement:u}),(globalThis.litElementVersions??(globalThis.litElementVersions=[])).push("4.1.1");/**
+ */let u=class extends D1{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){var e;const t=super.createRenderRoot();return(e=this.renderOptions).renderBefore??(e.renderBefore=t.firstChild),t}update(t){const e=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(t),this._$Do=M8(e,this.renderRoot,this.renderOptions)}connectedCallback(){var t;super.connectedCallback(),(t=this._$Do)==null||t.setConnected(!0)}disconnectedCallback(){var t;super.disconnectedCallback(),(t=this._$Do)==null||t.setConnected(!1)}render(){return N1}};u._$litElement$=!0,u.finalized=!0,(e8=globalThis.litElementHydrateSupport)==null||e8.call(globalThis,{LitElement:u});const t7=globalThis.litElementPolyfillSupport;t7==null||t7({LitElement:u}),(globalThis.litElementVersions??(globalThis.litElementVersions=[])).push("4.1.1");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const $8={attribute:!0,type:String,converter:o2,reflect:!1,hasChanged:W2},M8=(o=$8,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function C(o){return(t,e)=>typeof e=="object"?M8(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}/**
+ */const S8={attribute:!0,type:String,converter:o2,reflect:!1,hasChanged:W2},Z8=(o=S8,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function C(o){return(t,e)=>typeof e=="object"?Z8(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */function q1(o){return C({...o,state:!0,attribute:!1})}const S8=g`
+ */function $1(o){return C({...o,state:!0,attribute:!1})}const H8=g`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
     --_nys-alert-border-radius: var(--nys-radius-md, 4px);
     --_nys-alert-hover-border-radius: var(--nys-radius-sm, 2px);
-    --_nys-alert-color: var(
-      --nys-color-ink,
+    --_nys-alert-text-color: var(
+      --nys-color-text,
       var(--nys-color-neutral-900, #1b1b1b)
     );
     --_nys-alert-link-color: var(
       --nys-color-link,
       var(--nys-color-blue-600, #004dd1)
+    );
+    --_nys-alert-link-hover-color: var(
+      --nys-color-link-strong,
+      var(--nys-color-blue-700, #003ba1)
+    );
+    --_nys-alert-link-active-color: var(
+      --nys-color-link-strongest,
+      var(--nys-color-blue-800, #002971)
     );
     --_nys-alert-spacing: var(--nys-space-250, 20px);
     --_nys-alert-font-family: var(
@@ -66,13 +74,13 @@
 
     /* Border specifics */
     --_nys-alert-color-border-left: var(
-      --nys-color-neutral,
+      --nys-color-base,
       var(--nys-color-neutral-600, #62666a)
     );
 
     /* Background type specifics */
     --_nys-alert-color-bg: var(
-      --nys-color-neutral-weak,
+      --nys-color-base-weak,
       var(--nys-color-neutral-10, #f6f6f6)
     );
 
@@ -92,7 +100,7 @@
     border-left: var(--_nys-alert-border-width) solid
       var(--_nys-alert-color-border-left);
     border-radius: var(--_nys-alert-border-radius);
-    color: var(--_nys-alert-color);
+    color: var(--_nys-alert-text-color);
     padding: var(--_nys-alert-spacing);
     font-style: normal;
     font-family: var(--_nys-alert-font-family);
@@ -100,16 +108,21 @@
     line-height: var(--_nys-alert-lineheight);
     letter-spacing: var(--_nys-alert-letterspacing);
     gap: var(--_nys-alert-gap-space-150);
+    text-align: left;
   }
 
   /* Links */
   a,
-  a:active,
-  a:hover,
   a:visited {
     font-weight: var(--_nys-alert-font-weight-semibold);
     font-size: var(--_nys-alert-font-size);
     color: var(--_nys-alert-link-color);
+  }
+  a:hover {
+    color: var(--_nys-alert-link-hover-color);
+  }
+  a:active {
+    color: var(--_nys-alert-link-active-color);
   }
 
   /* For HTML elements put into the slot */
@@ -226,19 +239,39 @@
       --nys-color-emergency,
       var(--nys-color-red-800, #721c1c)
     );
-    --_nys-alert-color: #fff;
-    --_nys-alert-link-color: #fff;
+    --_nys-alert-text-color: var(
+      --nys-color-text-reverse,
+      var(--nys-color-white, #fff)
+    );
+    --_nys-alert-link-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
+    );
+    --_nys-alert-link-hover-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
+    );
+    --_nys-alert-link-active-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
+    );
+  }
+  :host([type="emergency"]) a:hover {
+    text-decoration-thickness: 2px;
+  }
+  :host([type="emergency"]) a:active {
+    text-decoration-thickness: 3px;
   }
 `;/**
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const f=o=>o??x;/*!
+ */const f=o=>o??M;/*!
    * ▒█▄░▒█ ▒█░░▒█ ▒█▀▀▀█ ▒█▀▀▄ ▒█▀▀▀█ 
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -246,15 +279,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const i2=globalThis,e7=i2.ShadowRoot&&(i2.ShadyCSS===void 0||i2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,o3=Symbol(),r3=new WeakMap;let Z8=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==o3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(e7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=r3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&r3.set(e,t))}return t}toString(){return this.cssText}};const H8=o=>new Z8(typeof o=="string"?o:o+"",void 0,o3),E8=(o,t)=>{if(e7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=i2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},n3=e7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return H8(e)})(o):o;/**
+ */const i2=globalThis,e7=i2.ShadowRoot&&(i2.ShadyCSS===void 0||i2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,o3=Symbol(),r3=new WeakMap;let E8=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==o3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(e7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=r3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&r3.set(e,t))}return t}toString(){return this.cssText}};const V8=o=>new E8(typeof o=="string"?o:o+"",void 0,o3),k8=(o,t)=>{if(e7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=i2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},n3=e7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return V8(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:V8,defineProperty:k8,getOwnPropertyDescriptor:A8,getOwnPropertyNames:P8,getOwnPropertySymbols:z8,getPrototypeOf:U8}=Object,j1=globalThis,i3=j1.trustedTypes,B8=i3?i3.emptyScript:"",l3=j1.reactiveElementPolyfillSupport,w5=(o,t)=>o,l2={toAttribute(o,t){switch(t){case Boolean:o=o?B8:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},s7=(o,t)=>!V8(o,t),a3={attribute:!0,type:String,converter:l2,reflect:!1,hasChanged:s7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),j1.litPropertyMetadata??(j1.litPropertyMetadata=new WeakMap);let b5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=a3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&k8(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=A8(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??a3}static _$Ei(){if(this.hasOwnProperty(w5("elementProperties")))return;const t=U8(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(w5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(w5("properties"))){const e=this.properties,s=[...P8(e),...z8(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(n3(r))}else t!==void 0&&e.push(n3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return E8(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:l2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:l2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??s7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};b5.elementStyles=[],b5.shadowRootOptions={mode:"open"},b5[w5("elementProperties")]=new Map,b5[w5("finalized")]=new Map,l3==null||l3({ReactiveElement:b5}),(j1.reactiveElementVersions??(j1.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:A8,defineProperty:P8,getOwnPropertyDescriptor:z8,getOwnPropertyNames:U8,getOwnPropertySymbols:B8,getPrototypeOf:O8}=Object,j1=globalThis,i3=j1.trustedTypes,R8=i3?i3.emptyScript:"",l3=j1.reactiveElementPolyfillSupport,w5=(o,t)=>o,l2={toAttribute(o,t){switch(t){case Boolean:o=o?R8:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},s7=(o,t)=>!A8(o,t),a3={attribute:!0,type:String,converter:l2,reflect:!1,hasChanged:s7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),j1.litPropertyMetadata??(j1.litPropertyMetadata=new WeakMap);let b5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=a3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&P8(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=z8(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??a3}static _$Ei(){if(this.hasOwnProperty(w5("elementProperties")))return;const t=O8(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(w5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(w5("properties"))){const e=this.properties,s=[...U8(e),...B8(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(n3(r))}else t!==void 0&&e.push(n3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return k8(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:l2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:l2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??s7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};b5.elementStyles=[],b5.shadowRootOptions={mode:"open"},b5[w5("elementProperties")]=new Map,b5[w5("finalized")]=new Map,l3==null||l3({ReactiveElement:b5}),(j1.reactiveElementVersions??(j1.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const O8={attribute:!0,type:String,converter:l2,reflect:!1,hasChanged:s7},R8=(o=O8,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function F1(o){return(t,e)=>typeof e=="object"?R8(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const T8={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+ */const I8={attribute:!0,type:String,converter:l2,reflect:!1,hasChanged:s7},T8=(o=I8,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function F1(o){return(t,e)=>typeof e=="object"?T8(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const D8={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -387,7 +420,7 @@
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},I8=g`
+</svg>`},N8=g`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -483,13 +516,13 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var D8=Object.defineProperty,N8=Object.getOwnPropertyDescriptor,G1=(o,t,e,s)=>{for(var r=s>1?void 0:s?N8(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&D8(t,e,r),r},m5;const L1=(m5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=m5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=T8[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},m5.styles=I8,m5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],m5);G1([F1({type:String})],L1.prototype,"name",2),G1([F1({type:String})],L1.prototype,"label",2),G1([F1({type:String})],L1.prototype,"rotate",2),G1([F1({type:String})],L1.prototype,"flip",2),G1([F1({type:String})],L1.prototype,"color",2),G1([F1({reflect:!0})],L1.prototype,"size",1);let q8=L1;customElements.get("nys-icon")||customElements.define("nys-icon",q8);/*!
+`;var q8=Object.defineProperty,j8=Object.getOwnPropertyDescriptor,G1=(o,t,e,s)=>{for(var r=s>1?void 0:s?j8(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&q8(t,e,r),r},m5;const M1=(m5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=m5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=D8[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},m5.styles=N8,m5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],m5);G1([F1({type:String,reflect:!0})],M1.prototype,"name",2),G1([F1({type:String})],M1.prototype,"label",2),G1([F1({type:String})],M1.prototype,"rotate",2),G1([F1({type:String})],M1.prototype,"flip",2),G1([F1({type:String})],M1.prototype,"color",2),G1([F1({reflect:!0})],M1.prototype,"size",1);let F8=M1;customElements.get("nys-icon")||customElements.define("nys-icon",F8);/*!
    * 
    * ▒█▄░▒█ ▒█░░▒█ ▒█▀▀▀█ ▒█▀▀▄ ▒█▀▀▀█ 
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Button Component v1.1.0
+   * Button Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -497,15 +530,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const a2=globalThis,o7=a2.ShadowRoot&&(a2.ShadyCSS===void 0||a2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,C3=Symbol(),c3=new WeakMap;let j8=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==C3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(o7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=c3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&c3.set(e,t))}return t}toString(){return this.cssText}};const F8=o=>new j8(typeof o=="string"?o:o+"",void 0,C3),G8=(o,t)=>{if(o7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=a2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},h3=o7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return F8(e)})(o):o;/**
+ */const a2=globalThis,o7=a2.ShadowRoot&&(a2.ShadyCSS===void 0||a2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,C3=Symbol(),c3=new WeakMap;let G8=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==C3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(o7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=c3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&c3.set(e,t))}return t}toString(){return this.cssText}};const W8=o=>new G8(typeof o=="string"?o:o+"",void 0,C3),Y8=(o,t)=>{if(o7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=a2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},h3=o7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return W8(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:W8,defineProperty:Y8,getOwnPropertyDescriptor:K8,getOwnPropertyNames:J8,getOwnPropertySymbols:X8,getPrototypeOf:Q8}=Object,W1=globalThis,d3=W1.trustedTypes,t6=d3?d3.emptyScript:"",p3=W1.reactiveElementPolyfillSupport,x5=(o,t)=>o,C2={toAttribute(o,t){switch(t){case Boolean:o=o?t6:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},r7=(o,t)=>!W8(o,t),u3={attribute:!0,type:String,converter:C2,reflect:!1,hasChanged:r7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),W1.litPropertyMetadata??(W1.litPropertyMetadata=new WeakMap);let L5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=u3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&Y8(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=K8(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??u3}static _$Ei(){if(this.hasOwnProperty(x5("elementProperties")))return;const t=Q8(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(x5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(x5("properties"))){const e=this.properties,s=[...J8(e),...X8(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(h3(r))}else t!==void 0&&e.push(h3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return G8(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:C2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:C2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??r7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};L5.elementStyles=[],L5.shadowRootOptions={mode:"open"},L5[x5("elementProperties")]=new Map,L5[x5("finalized")]=new Map,p3==null||p3({ReactiveElement:L5}),(W1.reactiveElementVersions??(W1.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:K8,defineProperty:J8,getOwnPropertyDescriptor:X8,getOwnPropertyNames:Q8,getOwnPropertySymbols:t6,getPrototypeOf:e6}=Object,W1=globalThis,d3=W1.trustedTypes,s6=d3?d3.emptyScript:"",p3=W1.reactiveElementPolyfillSupport,x5=(o,t)=>o,C2={toAttribute(o,t){switch(t){case Boolean:o=o?s6:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},r7=(o,t)=>!K8(o,t),u3={attribute:!0,type:String,converter:C2,reflect:!1,hasChanged:r7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),W1.litPropertyMetadata??(W1.litPropertyMetadata=new WeakMap);let L5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=u3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&J8(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=X8(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??u3}static _$Ei(){if(this.hasOwnProperty(x5("elementProperties")))return;const t=e6(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(x5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(x5("properties"))){const e=this.properties,s=[...Q8(e),...t6(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(h3(r))}else t!==void 0&&e.push(h3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return Y8(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:C2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:C2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??r7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};L5.elementStyles=[],L5.shadowRootOptions={mode:"open"},L5[x5("elementProperties")]=new Map,L5[x5("finalized")]=new Map,p3==null||p3({ReactiveElement:L5}),(W1.reactiveElementVersions??(W1.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const e6={attribute:!0,type:String,converter:C2,reflect:!1,hasChanged:r7},s6=(o=e6,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function A(o){return(t,e)=>typeof e=="object"?s6(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const o6=g`
+ */const o6={attribute:!0,type:String,converter:C2,reflect:!1,hasChanged:r7},r6=(o=o6,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function A(o){return(t,e)=>typeof e=="object"?r6(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const n6=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -523,19 +556,19 @@
 
     /* Global Button Colors */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
 
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
 
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
 
     /* Typography */
@@ -575,67 +608,55 @@
     --_nys-button-width: 100%;
   }
 
-  /* Variants */
+  /* VARIANTS */
+
+  /* Filled */
   :host([variant="filled"]) {
+    /* Filled - Default */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-theme, #154973);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
   }
+
+  /* Outline */
   :host([variant="outline"]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
+    /* Outline - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
     --_nys-button-color-text: var(--nys-color-theme, #154973);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
+    /* Outline - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-weaker, #eff6fb);
     --_nys-button-color-text-hover: var(--nys-color-theme, #154973);
     --_nys-button-color-border-hover: var(--nys-color-theme, #154973);
 
+    /* Outline - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-weak, #cddde9);
     --_nys-button-color-text-active: var(--nys-color-theme, #154973);
     --_nys-button-color-border-active: var(--nys-color-theme, #154973);
 
-    --_nys-button-color-bg-disabled: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    /* Outline - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-100, #d0d0ce);
   }
-  :host([variant="ghost"]) {
-    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink, #000000);
-    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
-    --_nys-button-color-bg-hover: var(
-      --nys-color-black-transparent-100,
-      #0000001a
-    );
-    --_nys-button-color-text-hover: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-active: var(
-      --nys-color-black-transparent-200,
-      #00000033
-    );
-    --_nys-button-color-text-active: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(
-      --nys-color-transparent,
-      #ffffff00
-    );
-  }
+  /* Text */
   :host([variant="text"]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -644,87 +665,129 @@
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text: var(--nys-color-link, #004dd1);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-hover: var(--nys-color-link-strong, #003ba1);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-active: var(--nys-color-link-strongest, #002971);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
 
-  /* Inverted Variants */
-  :host([variant="filled"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-text-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-text-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-ink, #1b1b1b);
-  }
-  :host([variant="outline"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
-  }
-  :host([variant="ghost"][inverted]) {
+  /* Ghost */
+  :host([variant="ghost"]) {
+    /* Ghost - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Hover */
     --_nys-button-color-bg-hover: var(
-      --nys-color-white-transparent-100,
-      #ffffff1a
+      --nys-color-black-transparent-100,
+      #0000001a
     );
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Active */
     --_nys-button-color-bg-active: var(
-      --nys-color-white-transparent-200,
-      #ffffff33
+      --nys-color-black-transparent-200,
+      #00000033
     );
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
+
+  /* INVERTED VARIANTS */
+
+  /* Filled Inverted */
+  :host([variant="filled"][inverted]) {
+    /* Filled Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Outline Inverted */
+  :host([variant="outline"][inverted]) {
+    /* Outline Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
+
+    /* Outline Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse-weak, #d0d0ce);
+    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
+
+    /* Outline Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-active: var(
+      --nys-color-text-reverse-weaker,
+      #bec0c1
+    );
+    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
+
+    /* Outline Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
+  }
+
+  /* Text Inverted */
   :host([variant="text"][inverted]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -733,20 +796,65 @@
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text Inverted - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text: var(--nys-color-link-reverse, #a7a9ab);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-50, #ededed);
+    --_nys-button-color-text-hover: var(
+      --nys-color-link-reverse-strong,
+      #ededed
+    );
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(
+      --nys-color-reverse-strongest,
+      #ffffff
+    );
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Ghost Inverted */
+  :host([variant="ghost"][inverted]) {
+    /* Ghost Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Hover */
+    --_nys-button-color-bg-hover: var(
+      --nys-color-white-transparent-100,
+      #ffffff1a
+    );
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(
+      --nys-color-white-transparent-200,
+      #ffffff33
+    );
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
@@ -834,7 +942,7 @@
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -842,15 +950,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const c2=globalThis,n7=c2.ShadowRoot&&(c2.ShadyCSS===void 0||c2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,v3=Symbol(),y3=new WeakMap;let r6=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==v3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(n7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=y3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&y3.set(e,t))}return t}toString(){return this.cssText}};const n6=o=>new r6(typeof o=="string"?o:o+"",void 0,v3),i6=(o,t)=>{if(n7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=c2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},g3=n7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return n6(e)})(o):o;/**
+ */const c2=globalThis,n7=c2.ShadowRoot&&(c2.ShadyCSS===void 0||c2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,v3=Symbol(),y3=new WeakMap;let i6=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==v3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(n7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=y3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&y3.set(e,t))}return t}toString(){return this.cssText}};const l6=o=>new i6(typeof o=="string"?o:o+"",void 0,v3),a6=(o,t)=>{if(n7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=c2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},g3=n7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return l6(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:l6,defineProperty:a6,getOwnPropertyDescriptor:C6,getOwnPropertyNames:c6,getOwnPropertySymbols:h6,getPrototypeOf:d6}=Object,Y1=globalThis,f3=Y1.trustedTypes,p6=f3?f3.emptyScript:"",_3=Y1.reactiveElementPolyfillSupport,$5=(o,t)=>o,h2={toAttribute(o,t){switch(t){case Boolean:o=o?p6:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},i7=(o,t)=>!l6(o,t),w3={attribute:!0,type:String,converter:h2,reflect:!1,hasChanged:i7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),Y1.litPropertyMetadata??(Y1.litPropertyMetadata=new WeakMap);let M5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=w3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&a6(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=C6(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??w3}static _$Ei(){if(this.hasOwnProperty($5("elementProperties")))return;const t=d6(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty($5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty($5("properties"))){const e=this.properties,s=[...c6(e),...h6(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(g3(r))}else t!==void 0&&e.push(g3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return i6(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:h2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:h2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??i7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};M5.elementStyles=[],M5.shadowRootOptions={mode:"open"},M5[$5("elementProperties")]=new Map,M5[$5("finalized")]=new Map,_3==null||_3({ReactiveElement:M5}),(Y1.reactiveElementVersions??(Y1.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:C6,defineProperty:c6,getOwnPropertyDescriptor:h6,getOwnPropertyNames:d6,getOwnPropertySymbols:p6,getPrototypeOf:u6}=Object,Y1=globalThis,f3=Y1.trustedTypes,v6=f3?f3.emptyScript:"",_3=Y1.reactiveElementPolyfillSupport,$5=(o,t)=>o,h2={toAttribute(o,t){switch(t){case Boolean:o=o?v6:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},i7=(o,t)=>!C6(o,t),w3={attribute:!0,type:String,converter:h2,reflect:!1,hasChanged:i7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),Y1.litPropertyMetadata??(Y1.litPropertyMetadata=new WeakMap);let M5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=w3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&c6(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=h6(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??w3}static _$Ei(){if(this.hasOwnProperty($5("elementProperties")))return;const t=u6(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty($5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty($5("properties"))){const e=this.properties,s=[...d6(e),...p6(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(g3(r))}else t!==void 0&&e.push(g3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return a6(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:h2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:h2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??i7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};M5.elementStyles=[],M5.shadowRootOptions={mode:"open"},M5[$5("elementProperties")]=new Map,M5[$5("finalized")]=new Map,_3==null||_3({ReactiveElement:M5}),(Y1.reactiveElementVersions??(Y1.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const u6={attribute:!0,type:String,converter:h2,reflect:!1,hasChanged:i7},v6=(o=u6,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function K1(o){return(t,e)=>typeof e=="object"?v6(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const y6={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+ */const y6={attribute:!0,type:String,converter:h2,reflect:!1,hasChanged:i7},g6=(o=y6,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function K1(o){return(t,e)=>typeof e=="object"?g6(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const f6={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -983,7 +1091,7 @@
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},g6=g`
+</svg>`},_6=g`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -1079,27 +1187,27 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var f6=Object.defineProperty,_6=Object.getOwnPropertyDescriptor,J1=(o,t,e,s)=>{for(var r=s>1?void 0:s?_6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&f6(t,e,r),r},S5;const $1=(S5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=S5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=y6[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},S5.styles=g6,S5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],S5);J1([K1({type:String})],$1.prototype,"name",2),J1([K1({type:String})],$1.prototype,"label",2),J1([K1({type:String})],$1.prototype,"rotate",2),J1([K1({type:String})],$1.prototype,"flip",2),J1([K1({type:String})],$1.prototype,"color",2),J1([K1({reflect:!0})],$1.prototype,"size",1);let w6=$1;customElements.get("nys-icon")||customElements.define("nys-icon",w6);/**
+`;var w6=Object.defineProperty,b6=Object.getOwnPropertyDescriptor,J1=(o,t,e,s)=>{for(var r=s>1?void 0:s?b6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&w6(t,e,r),r},S5;const S1=(S5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=S5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=f6[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},S5.styles=_6,S5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],S5);J1([K1({type:String,reflect:!0})],S1.prototype,"name",2),J1([K1({type:String})],S1.prototype,"label",2),J1([K1({type:String})],S1.prototype,"rotate",2),J1([K1({type:String})],S1.prototype,"flip",2),J1([K1({type:String})],S1.prototype,"color",2),J1([K1({reflect:!0})],S1.prototype,"size",1);let m6=S1;customElements.get("nys-icon")||customElements.define("nys-icon",m6);/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const d2=globalThis,p2=d2.trustedTypes,b3=p2?p2.createPolicy("lit-html",{createHTML:o=>o}):void 0,m3="$lit$",c1=`lit$${Math.random().toFixed(9).slice(2)}$`,x3="?"+c1,b6=`<${x3}>`,M1=document,u2=()=>M1.createComment(""),Z5=o=>o===null||typeof o!="object"&&typeof o!="function",l7=Array.isArray,m6=o=>l7(o)||typeof(o==null?void 0:o[Symbol.iterator])=="function",a7=`[ 	
-\f\r]`,H5=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,L3=/-->/g,$3=/>/g,S1=RegExp(`>|${a7}(?:([^\\s"'>=/]+)(${a7}*=${a7}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`,"g"),M3=/'/g,S3=/"/g,Z3=/^(?:script|style|textarea|title)$/i,E5=Symbol.for("lit-noChange"),L=Symbol.for("lit-nothing"),H3=new WeakMap,Z1=M1.createTreeWalker(M1,129);function E3(o,t){if(!l7(o)||!o.hasOwnProperty("raw"))throw Error("invalid template strings array");return b3!==void 0?b3.createHTML(t):t}const x6=(o,t)=>{const e=o.length-1,s=[];let r,n=t===2?"<svg>":t===3?"<math>":"",i=H5;for(let l=0;l<e;l++){const a=o[l];let p,d,h=-1,v=0;for(;v<a.length&&(i.lastIndex=v,d=i.exec(a),d!==null);)v=i.lastIndex,i===H5?d[1]==="!--"?i=L3:d[1]!==void 0?i=$3:d[2]!==void 0?(Z3.test(d[2])&&(r=RegExp("</"+d[2],"g")),i=S1):d[3]!==void 0&&(i=S1):i===S1?d[0]===">"?(i=r??H5,h=-1):d[1]===void 0?h=-2:(h=i.lastIndex-d[2].length,p=d[1],i=d[3]===void 0?S1:d[3]==='"'?S3:M3):i===S3||i===M3?i=S1:i===L3||i===$3?i=H5:(i=S1,r=void 0);const y=i===S1&&o[l+1].startsWith("/>")?" ":"";n+=i===H5?a+b6:h>=0?(s.push(p),a.slice(0,h)+m3+a.slice(h)+c1+y):a+c1+(h===-2?l:y)}return[E3(o,n+(o[e]||"<?>")+(t===2?"</svg>":t===3?"</math>":"")),s]};let C7=class s8{constructor({strings:t,_$litType$:e},s){let r;this.parts=[];let n=0,i=0;const l=t.length-1,a=this.parts,[p,d]=x6(t,e);if(this.el=s8.createElement(p,s),Z1.currentNode=this.el.content,e===2||e===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(r=Z1.nextNode())!==null&&a.length<l;){if(r.nodeType===1){if(r.hasAttributes())for(const h of r.getAttributeNames())if(h.endsWith(m3)){const v=d[i++],y=r.getAttribute(h).split(c1),B=/([.?@])?(.*)/.exec(v);a.push({type:1,index:n,name:B[2],strings:y,ctor:B[1]==="."?$6:B[1]==="?"?M6:B[1]==="@"?S6:v2}),r.removeAttribute(h)}else h.startsWith(c1)&&(a.push({type:6,index:n}),r.removeAttribute(h));if(Z3.test(r.tagName)){const h=r.textContent.split(c1),v=h.length-1;if(v>0){r.textContent=p2?p2.emptyScript:"";for(let y=0;y<v;y++)r.append(h[y],u2()),Z1.nextNode(),a.push({type:2,index:++n});r.append(h[v],u2())}}}else if(r.nodeType===8)if(r.data===x3)a.push({type:2,index:n});else{let h=-1;for(;(h=r.data.indexOf(c1,h+1))!==-1;)a.push({type:7,index:n}),h+=c1.length-1}n++}}static createElement(t,e){const s=M1.createElement("template");return s.innerHTML=t,s}};function X1(o,t,e=o,s){var r,n;if(t===E5)return t;let i=s!==void 0?(r=e._$Co)==null?void 0:r[s]:e._$Cl;const l=Z5(t)?void 0:t._$litDirective$;return(i==null?void 0:i.constructor)!==l&&((n=i==null?void 0:i._$AO)==null||n.call(i,!1),l===void 0?i=void 0:(i=new l(o),i._$AT(o,e,s)),s!==void 0?(e._$Co??(e._$Co=[]))[s]=i:e._$Cl=i),i!==void 0&&(t=X1(o,i._$AS(o,t.values),i,s)),t}let L6=class{constructor(t,e){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=e}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:e},parts:s}=this._$AD,r=((t==null?void 0:t.creationScope)??M1).importNode(e,!0);Z1.currentNode=r;let n=Z1.nextNode(),i=0,l=0,a=s[0];for(;a!==void 0;){if(i===a.index){let p;a.type===2?p=new V3(n,n.nextSibling,this,t):a.type===1?p=new a.ctor(n,a.name,a.strings,this,t):a.type===6&&(p=new Z6(n,this,t)),this._$AV.push(p),a=s[++l]}i!==(a==null?void 0:a.index)&&(n=Z1.nextNode(),i++)}return Z1.currentNode=M1,r}p(t){let e=0;for(const s of this._$AV)s!==void 0&&(s.strings!==void 0?(s._$AI(t,s,e),e+=s.strings.length-2):s._$AI(t[e])),e++}},V3=class o8{get _$AU(){var t;return((t=this._$AM)==null?void 0:t._$AU)??this._$Cv}constructor(t,e,s,r){this.type=2,this._$AH=L,this._$AN=void 0,this._$AA=t,this._$AB=e,this._$AM=s,this.options=r,this._$Cv=(r==null?void 0:r.isConnected)??!0}get parentNode(){let t=this._$AA.parentNode;const e=this._$AM;return e!==void 0&&(t==null?void 0:t.nodeType)===11&&(t=e.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,e=this){t=X1(this,t,e),Z5(t)?t===L||t==null||t===""?(this._$AH!==L&&this._$AR(),this._$AH=L):t!==this._$AH&&t!==E5&&this._(t):t._$litType$!==void 0?this.$(t):t.nodeType!==void 0?this.T(t):m6(t)?this.k(t):this._(t)}O(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}T(t){this._$AH!==t&&(this._$AR(),this._$AH=this.O(t))}_(t){this._$AH!==L&&Z5(this._$AH)?this._$AA.nextSibling.data=t:this.T(M1.createTextNode(t)),this._$AH=t}$(t){var e;const{values:s,_$litType$:r}=t,n=typeof r=="number"?this._$AC(t):(r.el===void 0&&(r.el=C7.createElement(E3(r.h,r.h[0]),this.options)),r);if(((e=this._$AH)==null?void 0:e._$AD)===n)this._$AH.p(s);else{const i=new L6(n,this),l=i.u(this.options);i.p(s),this.T(l),this._$AH=i}}_$AC(t){let e=H3.get(t.strings);return e===void 0&&H3.set(t.strings,e=new C7(t)),e}k(t){l7(this._$AH)||(this._$AH=[],this._$AR());const e=this._$AH;let s,r=0;for(const n of t)r===e.length?e.push(s=new o8(this.O(u2()),this.O(u2()),this,this.options)):s=e[r],s._$AI(n),r++;r<e.length&&(this._$AR(s&&s._$AB.nextSibling,r),e.length=r)}_$AR(t=this._$AA.nextSibling,e){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,e);t&&t!==this._$AB;){const r=t.nextSibling;t.remove(),t=r}}setConnected(t){var e;this._$AM===void 0&&(this._$Cv=t,(e=this._$AP)==null||e.call(this,t))}},v2=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,e,s,r,n){this.type=1,this._$AH=L,this._$AN=void 0,this.element=t,this.name=e,this._$AM=r,this.options=n,s.length>2||s[0]!==""||s[1]!==""?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=L}_$AI(t,e=this,s,r){const n=this.strings;let i=!1;if(n===void 0)t=X1(this,t,e,0),i=!Z5(t)||t!==this._$AH&&t!==E5,i&&(this._$AH=t);else{const l=t;let a,p;for(t=n[0],a=0;a<n.length-1;a++)p=X1(this,l[s+a],e,a),p===E5&&(p=this._$AH[a]),i||(i=!Z5(p)||p!==this._$AH[a]),p===L?t=L:t!==L&&(t+=(p??"")+n[a+1]),this._$AH[a]=p}i&&!r&&this.j(t)}j(t){t===L?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}},$6=class extends v2{constructor(){super(...arguments),this.type=3}j(t){this.element[this.name]=t===L?void 0:t}},M6=class extends v2{constructor(){super(...arguments),this.type=4}j(t){this.element.toggleAttribute(this.name,!!t&&t!==L)}},S6=class extends v2{constructor(t,e,s,r,n){super(t,e,s,r,n),this.type=5}_$AI(t,e=this){if((t=X1(this,t,e,0)??L)===E5)return;const s=this._$AH,r=t===L&&s!==L||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,n=t!==L&&(s===L||r);r&&this.element.removeEventListener(this.name,this,s),n&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){var e;typeof this._$AH=="function"?this._$AH.call(((e=this.options)==null?void 0:e.host)??this.element,t):this._$AH.handleEvent(t)}},Z6=class{constructor(t,e,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=e,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){X1(this,t)}};const k3=d2.litHtmlPolyfillSupport;k3==null||k3(C7,V3),(d2.litHtmlVersions??(d2.litHtmlVersions=[])).push("3.2.1");/**
+ */const d2=globalThis,p2=d2.trustedTypes,b3=p2?p2.createPolicy("lit-html",{createHTML:o=>o}):void 0,m3="$lit$",d1=`lit$${Math.random().toFixed(9).slice(2)}$`,x3="?"+d1,x6=`<${x3}>`,Z1=document,u2=()=>Z1.createComment(""),Z5=o=>o===null||typeof o!="object"&&typeof o!="function",l7=Array.isArray,L6=o=>l7(o)||typeof(o==null?void 0:o[Symbol.iterator])=="function",a7=`[ 	
+\f\r]`,H5=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,L3=/-->/g,$3=/>/g,H1=RegExp(`>|${a7}(?:([^\\s"'>=/]+)(${a7}*=${a7}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`,"g"),M3=/'/g,S3=/"/g,Z3=/^(?:script|style|textarea|title)$/i,E5=Symbol.for("lit-noChange"),S=Symbol.for("lit-nothing"),H3=new WeakMap,E1=Z1.createTreeWalker(Z1,129);function E3(o,t){if(!l7(o)||!o.hasOwnProperty("raw"))throw Error("invalid template strings array");return b3!==void 0?b3.createHTML(t):t}const $6=(o,t)=>{const e=o.length-1,s=[];let r,n=t===2?"<svg>":t===3?"<math>":"",i=H5;for(let l=0;l<e;l++){const a=o[l];let p,d,h=-1,v=0;for(;v<a.length&&(i.lastIndex=v,d=i.exec(a),d!==null);)v=i.lastIndex,i===H5?d[1]==="!--"?i=L3:d[1]!==void 0?i=$3:d[2]!==void 0?(Z3.test(d[2])&&(r=RegExp("</"+d[2],"g")),i=H1):d[3]!==void 0&&(i=H1):i===H1?d[0]===">"?(i=r??H5,h=-1):d[1]===void 0?h=-2:(h=i.lastIndex-d[2].length,p=d[1],i=d[3]===void 0?H1:d[3]==='"'?S3:M3):i===S3||i===M3?i=H1:i===L3||i===$3?i=H5:(i=H1,r=void 0);const y=i===H1&&o[l+1].startsWith("/>")?" ":"";n+=i===H5?a+x6:h>=0?(s.push(p),a.slice(0,h)+m3+a.slice(h)+d1+y):a+d1+(h===-2?l:y)}return[E3(o,n+(o[e]||"<?>")+(t===2?"</svg>":t===3?"</math>":"")),s]};let C7=class r8{constructor({strings:t,_$litType$:e},s){let r;this.parts=[];let n=0,i=0;const l=t.length-1,a=this.parts,[p,d]=$6(t,e);if(this.el=r8.createElement(p,s),E1.currentNode=this.el.content,e===2||e===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(r=E1.nextNode())!==null&&a.length<l;){if(r.nodeType===1){if(r.hasAttributes())for(const h of r.getAttributeNames())if(h.endsWith(m3)){const v=d[i++],y=r.getAttribute(h).split(d1),B=/([.?@])?(.*)/.exec(v);a.push({type:1,index:n,name:B[2],strings:y,ctor:B[1]==="."?S6:B[1]==="?"?Z6:B[1]==="@"?H6:v2}),r.removeAttribute(h)}else h.startsWith(d1)&&(a.push({type:6,index:n}),r.removeAttribute(h));if(Z3.test(r.tagName)){const h=r.textContent.split(d1),v=h.length-1;if(v>0){r.textContent=p2?p2.emptyScript:"";for(let y=0;y<v;y++)r.append(h[y],u2()),E1.nextNode(),a.push({type:2,index:++n});r.append(h[v],u2())}}}else if(r.nodeType===8)if(r.data===x3)a.push({type:2,index:n});else{let h=-1;for(;(h=r.data.indexOf(d1,h+1))!==-1;)a.push({type:7,index:n}),h+=d1.length-1}n++}}static createElement(t,e){const s=Z1.createElement("template");return s.innerHTML=t,s}};function X1(o,t,e=o,s){var r,n;if(t===E5)return t;let i=s!==void 0?(r=e._$Co)==null?void 0:r[s]:e._$Cl;const l=Z5(t)?void 0:t._$litDirective$;return(i==null?void 0:i.constructor)!==l&&((n=i==null?void 0:i._$AO)==null||n.call(i,!1),l===void 0?i=void 0:(i=new l(o),i._$AT(o,e,s)),s!==void 0?(e._$Co??(e._$Co=[]))[s]=i:e._$Cl=i),i!==void 0&&(t=X1(o,i._$AS(o,t.values),i,s)),t}let M6=class{constructor(t,e){this._$AV=[],this._$AN=void 0,this._$AD=t,this._$AM=e}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(t){const{el:{content:e},parts:s}=this._$AD,r=((t==null?void 0:t.creationScope)??Z1).importNode(e,!0);E1.currentNode=r;let n=E1.nextNode(),i=0,l=0,a=s[0];for(;a!==void 0;){if(i===a.index){let p;a.type===2?p=new V3(n,n.nextSibling,this,t):a.type===1?p=new a.ctor(n,a.name,a.strings,this,t):a.type===6&&(p=new E6(n,this,t)),this._$AV.push(p),a=s[++l]}i!==(a==null?void 0:a.index)&&(n=E1.nextNode(),i++)}return E1.currentNode=Z1,r}p(t){let e=0;for(const s of this._$AV)s!==void 0&&(s.strings!==void 0?(s._$AI(t,s,e),e+=s.strings.length-2):s._$AI(t[e])),e++}},V3=class n8{get _$AU(){var t;return((t=this._$AM)==null?void 0:t._$AU)??this._$Cv}constructor(t,e,s,r){this.type=2,this._$AH=S,this._$AN=void 0,this._$AA=t,this._$AB=e,this._$AM=s,this.options=r,this._$Cv=(r==null?void 0:r.isConnected)??!0}get parentNode(){let t=this._$AA.parentNode;const e=this._$AM;return e!==void 0&&(t==null?void 0:t.nodeType)===11&&(t=e.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,e=this){t=X1(this,t,e),Z5(t)?t===S||t==null||t===""?(this._$AH!==S&&this._$AR(),this._$AH=S):t!==this._$AH&&t!==E5&&this._(t):t._$litType$!==void 0?this.$(t):t.nodeType!==void 0?this.T(t):L6(t)?this.k(t):this._(t)}O(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}T(t){this._$AH!==t&&(this._$AR(),this._$AH=this.O(t))}_(t){this._$AH!==S&&Z5(this._$AH)?this._$AA.nextSibling.data=t:this.T(Z1.createTextNode(t)),this._$AH=t}$(t){var e;const{values:s,_$litType$:r}=t,n=typeof r=="number"?this._$AC(t):(r.el===void 0&&(r.el=C7.createElement(E3(r.h,r.h[0]),this.options)),r);if(((e=this._$AH)==null?void 0:e._$AD)===n)this._$AH.p(s);else{const i=new M6(n,this),l=i.u(this.options);i.p(s),this.T(l),this._$AH=i}}_$AC(t){let e=H3.get(t.strings);return e===void 0&&H3.set(t.strings,e=new C7(t)),e}k(t){l7(this._$AH)||(this._$AH=[],this._$AR());const e=this._$AH;let s,r=0;for(const n of t)r===e.length?e.push(s=new n8(this.O(u2()),this.O(u2()),this,this.options)):s=e[r],s._$AI(n),r++;r<e.length&&(this._$AR(s&&s._$AB.nextSibling,r),e.length=r)}_$AR(t=this._$AA.nextSibling,e){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,e);t&&t!==this._$AB;){const r=t.nextSibling;t.remove(),t=r}}setConnected(t){var e;this._$AM===void 0&&(this._$Cv=t,(e=this._$AP)==null||e.call(this,t))}},v2=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(t,e,s,r,n){this.type=1,this._$AH=S,this._$AN=void 0,this.element=t,this.name=e,this._$AM=r,this.options=n,s.length>2||s[0]!==""||s[1]!==""?(this._$AH=Array(s.length-1).fill(new String),this.strings=s):this._$AH=S}_$AI(t,e=this,s,r){const n=this.strings;let i=!1;if(n===void 0)t=X1(this,t,e,0),i=!Z5(t)||t!==this._$AH&&t!==E5,i&&(this._$AH=t);else{const l=t;let a,p;for(t=n[0],a=0;a<n.length-1;a++)p=X1(this,l[s+a],e,a),p===E5&&(p=this._$AH[a]),i||(i=!Z5(p)||p!==this._$AH[a]),p===S?t=S:t!==S&&(t+=(p??"")+n[a+1]),this._$AH[a]=p}i&&!r&&this.j(t)}j(t){t===S?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,t??"")}},S6=class extends v2{constructor(){super(...arguments),this.type=3}j(t){this.element[this.name]=t===S?void 0:t}},Z6=class extends v2{constructor(){super(...arguments),this.type=4}j(t){this.element.toggleAttribute(this.name,!!t&&t!==S)}},H6=class extends v2{constructor(t,e,s,r,n){super(t,e,s,r,n),this.type=5}_$AI(t,e=this){if((t=X1(this,t,e,0)??S)===E5)return;const s=this._$AH,r=t===S&&s!==S||t.capture!==s.capture||t.once!==s.once||t.passive!==s.passive,n=t!==S&&(s===S||r);r&&this.element.removeEventListener(this.name,this,s),n&&this.element.addEventListener(this.name,this,t),this._$AH=t}handleEvent(t){var e;typeof this._$AH=="function"?this._$AH.call(((e=this.options)==null?void 0:e.host)??this.element,t):this._$AH.handleEvent(t)}},E6=class{constructor(t,e,s){this.element=t,this.type=6,this._$AN=void 0,this._$AM=e,this.options=s}get _$AU(){return this._$AM._$AU}_$AI(t){X1(this,t)}};const k3=d2.litHtmlPolyfillSupport;k3==null||k3(C7,V3),(d2.litHtmlVersions??(d2.litHtmlVersions=[])).push("3.2.1");/**
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const h1=o=>o??L;var H6=Object.defineProperty,E6=Object.getOwnPropertyDescriptor,P=(o,t,e,s)=>{for(var r=s>1?void 0:s?E6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&H6(t,e,r),r};let V6=0;var W;const E=(W=class extends u{constructor(){super(),this.id="",this.name="",this._size="md",this.fullWidth=!1,this._variant="filled",this.inverted=!1,this.label="",this.prefixIcon="",this.suffixIcon="",this.disabled=!1,this.form="",this.value="",this._type="button",this.onClick=()=>{},this.href="",this._internals=this.attachInternals()}get size(){return this._size}set size(o){this._size=W.VALID_SIZES.includes(o)?o:"md"}get variant(){return this._variant}set variant(o){this._variant=W.VALID_VARIANTS.includes(o)?o:"filled"}get type(){return this._type}set type(o){this._type=W.VALID_TYPES.includes(o)?o:"button"}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}_generateUniqueId(){return`nys-button-${Date.now()}-${V6++}`}_manageFormAction(o){typeof this.onClick=="function"&&this.onClick(o);const t=this._internals.form;if(t)switch(this.type){case"submit":t.requestSubmit();break;case"reset":t.reset();break}}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleClick(o){if(this.disabled){o.preventDefault();return}this._manageFormAction(o)}_handleKeydown(o){(o.code==="Space"||o.code==="Enter")&&(o.preventDefault(),this.disabled||this._manageFormAction(o))}render(){return c`
+ */const p1=o=>o??S;var V6=Object.defineProperty,k6=Object.getOwnPropertyDescriptor,P=(o,t,e,s)=>{for(var r=s>1?void 0:s?k6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&V6(t,e,r),r};let A6=0;var Y;const V=(Y=class extends u{constructor(){super(),this.id="",this.name="",this._size="md",this.fullWidth=!1,this._variant="filled",this.inverted=!1,this.label="",this.prefixIcon="",this.suffixIcon="",this.disabled=!1,this.form="",this.value="",this._type="button",this.onClick=()=>{},this.href="",this._internals=this.attachInternals()}get size(){return this._size}set size(o){this._size=Y.VALID_SIZES.includes(o)?o:"md"}get variant(){return this._variant}set variant(o){this._variant=Y.VALID_VARIANTS.includes(o)?o:"filled"}get type(){return this._type}set type(o){this._type=Y.VALID_TYPES.includes(o)?o:"button"}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}_generateUniqueId(){return`nys-button-${Date.now()}-${A6++}`}_manageFormAction(o){typeof this.onClick=="function"&&this.onClick(o);const t=this._internals.form;if(t)switch(this.type){case"submit":t.requestSubmit();break;case"reset":t.reset();break}}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleClick(o){if(this.disabled){o.preventDefault();return}this._manageFormAction(o)}_handleKeydown(o){(o.code==="Space"||o.code==="Enter")&&(o.preventDefault(),this.disabled||this._manageFormAction(o))}render(){return c`
       ${this.href?c`
             <div class="nys-button__linkwrapper">
               <a
                 class="nys-button"
-                id=${h1(this.id)}
-                name=${h1(this.name?this.name:void 0)}
+                id=${p1(this.id)}
+                name=${p1(this.name?this.name:void 0)}
                 ?disabled=${this.disabled}
                 aria-disabled="${this.disabled?"true":"false"}"
-                form=${h1(this.form?this.form:void 0)}
-                value=${h1(this.value?this.value:void 0)}
+                form=${p1(this.form?this.form:void 0)}
+                value=${p1(this.value?this.value:void 0)}
                 href=${this.href}
                 target="_blank"
                 @click=${this._handleClick}
@@ -1118,11 +1226,11 @@
           `:c`
             <button
               class="nys-button"
-              id=${h1(this.id)}
-              name=${h1(this.name?this.name:void 0)}
+              id=${p1(this.id)}
+              name=${p1(this.name?this.name:void 0)}
               ?disabled=${this.disabled}
-              form=${h1(this.form?this.form:void 0)}
-              value=${h1(this.value?this.value:void 0)}
+              form=${p1(this.form?this.form:void 0)}
+              value=${p1(this.value?this.value:void 0)}
               type=${this.type}
               @click=${this._handleClick}
               @focus="${this._handleFocus}"
@@ -1138,7 +1246,7 @@
                   </slot>`:""}
             </button>
           `}
-    `}},W.VALID_SIZES=["sm","md","lg"],W.VALID_VARIANTS=["filled","outline","ghost","text"],W.VALID_TYPES=["submit","reset","button"],W.styles=o6,W.formAssociated=!0,W);P([A({type:String})],E.prototype,"id",2),P([A({type:String})],E.prototype,"name",2),P([A({reflect:!0})],E.prototype,"size",1),P([A({type:Boolean,reflect:!0})],E.prototype,"fullWidth",2),P([A({reflect:!0})],E.prototype,"variant",1),P([A({type:Boolean,reflect:!0})],E.prototype,"inverted",2),P([A({type:String})],E.prototype,"label",2),P([A({type:String})],E.prototype,"prefixIcon",2),P([A({type:String})],E.prototype,"suffixIcon",2),P([A({type:Boolean,reflect:!0})],E.prototype,"disabled",2),P([A({type:String})],E.prototype,"form",2),P([A({type:String})],E.prototype,"value",2),P([A({reflect:!0})],E.prototype,"type",1),P([A({type:Function})],E.prototype,"onClick",2),P([A({type:String})],E.prototype,"href",2);let k6=E;customElements.get("nys-button")||customElements.define("nys-button",k6);var A6=Object.defineProperty,P6=Object.getOwnPropertyDescriptor,O=(o,t,e,s)=>{for(var r=s>1?void 0:s?P6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&A6(t,e,r),r};let z6=0;const U=(g1=class extends u{constructor(){super(...arguments),this.id="",this.heading="",this.icon="",this.dismissible=!1,this.duration=0,this.text="",this.primaryAction="",this.secondaryAction="",this.primaryLabel="Learn more",this.secondaryLabel="Dismiss",this._alertClosed=!1,this._slotHasContent=!0,this._type="info",this._timeoutId=null}get type(){return this._type}set type(t){this._type=g1.VALID_TYPES.includes(t)?t:"base"}get ariaAttributes(){const t=this.type==="danger"||this.type==="emergency"?"alert":this.type==="success"?"status":"region",e=t==="region"?`${this.type} alert`:"";return{role:t,ariaLabel:e}}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId()),this.duration>0&&(this._timeoutId=setTimeout(()=>{this._closeAlert()},this.duration))}disconnectedCallback(){this._timeoutId&&clearTimeout(this._timeoutId),super.disconnectedCallback()}firstUpdated(){this._checkSlotContent()}_generateUniqueId(){return`nys-alert-${Date.now()}-${z6++}`}_getIconName(){return this.icon?this.icon:this._checkAltNaming()}_checkAltNaming(){return this.type==="success"?"check_circle":this.type==="base"?"info":this.type==="danger"?"error":this.type==="emergency"?"emergency_home":this.type}_closeAlert(){this._alertClosed=!0,this.dispatchEvent(new CustomEvent("nys-alertClosed",{detail:{type:this.type,label:this.heading},bubbles:!0,composed:!0}))}_checkSlotContent(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");if(t){const s=t.assignedNodes({flatten:!0}).filter(r=>{var n;return r.nodeType===Node.ELEMENT_NODE||r.nodeType===Node.TEXT_NODE&&((n=r.textContent)==null?void 0:n.trim())});this._slotHasContent=s.length>0}else this._slotHasContent=!1}render(){var s,r;const{role:t,ariaLabel:e}=this.ariaAttributes;return c`
+    `}},Y.VALID_SIZES=["sm","md","lg"],Y.VALID_VARIANTS=["filled","outline","ghost","text"],Y.VALID_TYPES=["submit","reset","button"],Y.styles=n6,Y.formAssociated=!0,Y);P([A({type:String})],V.prototype,"id",2),P([A({type:String,reflect:!0})],V.prototype,"name",2),P([A({reflect:!0})],V.prototype,"size",1),P([A({type:Boolean,reflect:!0})],V.prototype,"fullWidth",2),P([A({reflect:!0})],V.prototype,"variant",1),P([A({type:Boolean,reflect:!0})],V.prototype,"inverted",2),P([A({type:String})],V.prototype,"label",2),P([A({type:String})],V.prototype,"prefixIcon",2),P([A({type:String})],V.prototype,"suffixIcon",2),P([A({type:Boolean,reflect:!0})],V.prototype,"disabled",2),P([A({type:String})],V.prototype,"form",2),P([A({type:String})],V.prototype,"value",2),P([A({reflect:!0})],V.prototype,"type",1),P([A({type:Function})],V.prototype,"onClick",2),P([A({type:String})],V.prototype,"href",2);let P6=V;customElements.get("nys-button")||customElements.define("nys-button",P6);var z6=Object.defineProperty,U6=Object.getOwnPropertyDescriptor,O=(o,t,e,s)=>{for(var r=s>1?void 0:s?U6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&z6(t,e,r),r};let B6=0;const U=(_1=class extends u{constructor(){super(...arguments),this.id="",this.heading="",this.icon="",this.dismissible=!1,this.duration=0,this.text="",this.primaryAction="",this.secondaryAction="",this.primaryLabel="Learn more",this.secondaryLabel="Dismiss",this._alertClosed=!1,this._slotHasContent=!0,this._type="info",this._timeoutId=null}get type(){return this._type}set type(t){this._type=_1.VALID_TYPES.includes(t)?t:"base"}get ariaAttributes(){const t=this.type==="danger"||this.type==="emergency"?"alert":this.type==="success"?"status":"region",e=t==="region"?`${this.type} alert`:"";return{role:t,ariaLabel:e}}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId()),this.duration>0&&(this._timeoutId=setTimeout(()=>{this._closeAlert()},this.duration))}disconnectedCallback(){this._timeoutId&&clearTimeout(this._timeoutId),super.disconnectedCallback()}firstUpdated(){this._checkSlotContent()}_generateUniqueId(){return`nys-alert-${Date.now()}-${B6++}`}_getIconName(){return this.icon?this.icon:this._checkAltNaming()}_checkAltNaming(){return this.type==="success"?"check_circle":this.type==="base"?"info":this.type==="danger"?"error":this.type==="emergency"?"emergency_home":this.type}_closeAlert(){this._alertClosed=!0,this.dispatchEvent(new CustomEvent("nys-alertClosed",{detail:{type:this.type,label:this.heading},bubbles:!0,composed:!0}))}_checkSlotContent(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");if(t){const s=t.assignedNodes({flatten:!0}).filter(r=>{var n;return r.nodeType===Node.ELEMENT_NODE||r.nodeType===Node.TEXT_NODE&&((n=r.textContent)==null?void 0:n.trim())});this._slotHasContent=s.length>0}else this._slotHasContent=!1}render(){var s,r;const{role:t,ariaLabel:e}=this.ariaAttributes;return c`
       ${this._alertClosed?"":c` <div
             id=${this.id}
             class="nys-alert__container ${this._slotHasContent||((s=this.text)==null?void 0:s.trim().length)>0?"":"nys-alert--centered"}"
@@ -1189,7 +1297,7 @@
                     ></nys-button>
                   </div>`:""}
           </div>`}
-    `}},g1.styles=S8,g1.VALID_TYPES=["base","info","success","warning","danger","emergency"],g1);O([C({type:String})],U.prototype,"id",2),O([C({type:String})],U.prototype,"heading",2),O([C({type:String})],U.prototype,"icon",2),O([C({type:Boolean,reflect:!0})],U.prototype,"dismissible",2),O([C({type:Number,reflect:!0})],U.prototype,"duration",2),O([C({type:String})],U.prototype,"text",2),O([C({type:String})],U.prototype,"primaryAction",2),O([C({type:String})],U.prototype,"secondaryAction",2),O([C({type:String})],U.prototype,"primaryLabel",2),O([C({type:String})],U.prototype,"secondaryLabel",2),O([q1()],U.prototype,"_alertClosed",2),O([q1()],U.prototype,"_slotHasContent",2),O([C({reflect:!0})],U.prototype,"type",1);let A3=U;customElements.get("nys-alert")||customElements.define("nys-alert",A3);const U6=g`
+    `}},_1.styles=H8,_1.VALID_TYPES=["base","info","success","warning","danger","emergency"],_1);O([C({type:String})],U.prototype,"id",2),O([C({type:String})],U.prototype,"heading",2),O([C({type:String})],U.prototype,"icon",2),O([C({type:Boolean,reflect:!0})],U.prototype,"dismissible",2),O([C({type:Number,reflect:!0})],U.prototype,"duration",2),O([C({type:String})],U.prototype,"text",2),O([C({type:String})],U.prototype,"primaryAction",2),O([C({type:String})],U.prototype,"secondaryAction",2),O([C({type:String})],U.prototype,"primaryLabel",2),O([C({type:String})],U.prototype,"secondaryLabel",2),O([$1()],U.prototype,"_alertClosed",2),O([$1()],U.prototype,"_slotHasContent",2),O([C({reflect:!0})],U.prototype,"type",1);let A3=U;customElements.get("nys-alert")||customElements.define("nys-alert",A3);const O6=g`
   :host {
     /* Global Avatar Styles */
     --_nys-avatar-shape: var(--nys-radius-round, 1776px);
@@ -1256,7 +1364,7 @@
     height: 100%;
     fill: currentColor;
   }
-`;var B6=Object.defineProperty,O6=Object.getOwnPropertyDescriptor,d1=(o,t,e,s)=>{for(var r=s>1?void 0:s?O6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&B6(t,e,r),r};let R6=0;const X=(f1=class extends u{constructor(){super(...arguments),this.id="",this.label="",this.image="",this.initials="",this.icon="",this.color="#555",this.lazy=!1,this._shape="circle"}get shape(){return this._shape}set shape(t){this._shape=f1.VALID_SHAPES.includes(t)?t:"circle",this.requestUpdate("shape")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${R6++}`)}render(){var t,e,s,r;return c`
+`;var R6=Object.defineProperty,I6=Object.getOwnPropertyDescriptor,u1=(o,t,e,s)=>{for(var r=s>1?void 0:s?I6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&R6(t,e,r),r};let T6=0;const t1=(w1=class extends u{constructor(){super(...arguments),this.id="",this.label="",this.image="",this.initials="",this.icon="",this.color="#555",this.lazy=!1,this._shape="circle"}get shape(){return this._shape}set shape(t){this._shape=w1.VALID_SHAPES.includes(t)?t:"circle",this.requestUpdate("shape")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${T6++}`)}render(){var t,e,s,r;return c`
       <label class="nys-avatar" id=${this.id}>
         <div class="nys-avatar__content">
           <div
@@ -1295,7 +1403,7 @@
           </div>
         </div>
       </label>
-    `}},f1.styles=U6,f1.VALID_SHAPES=["square","rounded","circle"],f1);d1([C({type:String})],X.prototype,"id",2),d1([C({type:String})],X.prototype,"label",2),d1([C({type:String})],X.prototype,"image",2),d1([C({type:String})],X.prototype,"initials",2),d1([C({type:String})],X.prototype,"icon",2),d1([C({type:String})],X.prototype,"color",2),d1([C({type:Boolean,reflect:!0})],X.prototype,"lazy",2),d1([C({reflect:!0})],X.prototype,"shape",1);let P3=X;customElements.get("nys-avatar")||customElements.define("nys-avatar",P3);const T6=g`
+    `}},w1.styles=O6,w1.VALID_SHAPES=["square","rounded","circle"],w1);u1([C({type:String})],t1.prototype,"id",2),u1([C({type:String})],t1.prototype,"label",2),u1([C({type:String})],t1.prototype,"image",2),u1([C({type:String})],t1.prototype,"initials",2),u1([C({type:String})],t1.prototype,"icon",2),u1([C({type:String})],t1.prototype,"color",2),u1([C({type:Boolean,reflect:!0})],t1.prototype,"lazy",2),u1([C({reflect:!0})],t1.prototype,"shape",1);let P3=t1;customElements.get("nys-avatar")||customElements.define("nys-avatar",P3);const D6=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1313,19 +1421,19 @@
 
     /* Global Button Colors */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
 
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
     --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
 
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
 
     /* Typography */
@@ -1365,67 +1473,55 @@
     --_nys-button-width: 100%;
   }
 
-  /* Variants */
+  /* VARIANTS */
+
+  /* Filled */
   :host([variant="filled"]) {
+    /* Filled - Default */
     --_nys-button-color-bg: var(--nys-color-theme, #154973);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-theme, #154973);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-strong, #0e324f);
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-hover: var(--nys-color-theme-strong, #0e324f);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-stronger, #081b2b);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border-active: var(--nys-color-theme-stronger, #081b2b);
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Filled - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-neutral-10, #f6f6f6);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-10, #f6f6f6);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
   }
+
+  /* Outline */
   :host([variant="outline"]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
+    /* Outline - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
     --_nys-button-color-text: var(--nys-color-theme, #154973);
     --_nys-button-color-border: var(--nys-color-theme, #154973);
 
+    /* Outline - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-theme-weaker, #eff6fb);
     --_nys-button-color-text-hover: var(--nys-color-theme, #154973);
     --_nys-button-color-border-hover: var(--nys-color-theme, #154973);
 
+    /* Outline - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-theme-weak, #cddde9);
     --_nys-button-color-text-active: var(--nys-color-theme, #154973);
     --_nys-button-color-border-active: var(--nys-color-theme, #154973);
 
-    --_nys-button-color-bg-disabled: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    /* Outline - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(--nys-color-neutral-100, #d0d0ce);
   }
-  :host([variant="ghost"]) {
-    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink, #000000);
-    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
-    --_nys-button-color-bg-hover: var(
-      --nys-color-black-transparent-100,
-      #0000001a
-    );
-    --_nys-button-color-text-hover: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-active: var(
-      --nys-color-black-transparent-200,
-      #00000033
-    );
-    --_nys-button-color-text-active: var(--nys-color-ink, #000000);
-    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-disabled: var(
-      --nys-color-transparent,
-      #ffffff00
-    );
-  }
+  /* Text */
   :host([variant="text"]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -1434,87 +1530,129 @@
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text: var(--nys-color-link, #004dd1);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-hover: var(--nys-color-link-strong, #003ba1);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
     --_nys-button-color-text-active: var(--nys-color-link-strongest, #002971);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
 
-  /* Inverted Variants */
-  :host([variant="filled"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-text: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-text-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-text-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-ink, #1b1b1b);
-  }
-  :host([variant="outline"][inverted]) {
-    --_nys-button-color-bg: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
-    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
-
-    --_nys-button-color-bg-hover: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-100, #d0d0ce);
-    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
-
-    --_nys-button-color-bg-active: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-active: var(--nys-color-neutral-300, #a7a9ab);
-    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
-
-    --_nys-button-color-bg-disabled: var(--nys-color-ink, #1b1b1b);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
-    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
-  }
-  :host([variant="ghost"][inverted]) {
+  /* Ghost */
+  :host([variant="ghost"]) {
+    /* Ghost - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Hover */
     --_nys-button-color-bg-hover: var(
-      --nys-color-white-transparent-100,
-      #ffffff1a
+      --nys-color-black-transparent-100,
+      #0000001a
     );
-    --_nys-button-color-text-hover: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Active */
     --_nys-button-color-bg-active: var(
-      --nys-color-white-transparent-200,
-      #ffffff33
+      --nys-color-black-transparent-200,
+      #00000033
     );
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Ghost - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #bec0c1);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
     );
   }
+
+  /* INVERTED VARIANTS */
+
+  /* Filled Inverted */
+  :host([variant="filled"][inverted]) {
+    /* Filled Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface, #ffffff);
+    --_nys-button-color-text: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-neutral-100, #d0d0ce);
+    --_nys-button-color-text-hover: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text-active: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+
+    /* Filled Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-text, #1b1b1b);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Outline Inverted */
+  :host([variant="outline"][inverted]) {
+    /* Outline Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-ink-reverse, #ffffff);
+
+    /* Outline Inverted - Hover */
+    --_nys-button-color-bg-hover: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse-weak, #d0d0ce);
+    --_nys-button-color-border-hover: var(--nys-color-neutral-100, #d0d0ce);
+
+    /* Outline Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-active: var(
+      --nys-color-text-reverse-weaker,
+      #bec0c1
+    );
+    --_nys-button-color-border-active: var(--nys-color-neutral-300, #a7a9ab);
+
+    /* Outline Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-surface-reverse, #1b1b1b);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(--nys-color-neutral-600, #62666a);
+  }
+
+  /* Text Inverted */
   :host([variant="text"][inverted]) {
     --_nys-button-height: fit-content;
     --_nys-button-radius: var(--nys-border-radius-md, 4px);
@@ -1523,20 +1661,65 @@
     --_nys-button-width-border: 0px;
     --_nys-button-text-decoration: underline;
 
+    /* Text Inverted - Default */
     --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-button-color-text: var(--nys-color-link-reverse, #a7a9ab);
     --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Hover */
     --_nys-button-color-bg-hover: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-hover: var(--nys-color-neutral-50, #ededed);
+    --_nys-button-color-text-hover: var(
+      --nys-color-link-reverse-strong,
+      #ededed
+    );
     --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Pressed/Active */
     --_nys-button-color-bg-active: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-active: var(--nys-color-ink-reverse, #ffffff);
+    --_nys-button-color-text-active: var(
+      --nys-color-reverse-strongest,
+      #ffffff
+    );
     --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
 
+    /* Text Inverted - Disabled */
     --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
-    --_nys-button-color-text-disabled: var(--nys-color-neutral-600, #62666a);
+    --_nys-button-color-text-disabled: var(
+      --nys-color-text-reverse-disabled,
+      #62666a
+    );
+    --_nys-button-color-border-disabled: var(
+      --nys-color-transparent,
+      #ffffff00
+    );
+  }
+
+  /* Ghost Inverted */
+  :host([variant="ghost"][inverted]) {
+    /* Ghost Inverted - Default */
+    --_nys-button-color-bg: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Hover */
+    --_nys-button-color-bg-hover: var(
+      --nys-color-white-transparent-100,
+      #ffffff1a
+    );
+    --_nys-button-color-text-hover: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-hover: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Pressed/Active */
+    --_nys-button-color-bg-active: var(
+      --nys-color-white-transparent-200,
+      #ffffff33
+    );
+    --_nys-button-color-text-active: var(--nys-color-text-reverse, #ffffff);
+    --_nys-button-color-border-active: var(--nys-color-transparent, #ffffff00);
+
+    /* Ghost Inverted - Disabled */
+    --_nys-button-color-bg-disabled: var(--nys-color-transparent, #ffffff00);
+    --_nys-button-color-text-disabled: var(--nys-color-text-disabled, #62666a);
     --_nys-button-color-border-disabled: var(
       --nys-color-transparent,
       #ffffff00
@@ -1619,7 +1802,7 @@
     align-items: center;
     user-select: none;
   }
-`;var I6=Object.defineProperty,D6=Object.getOwnPropertyDescriptor,z=(o,t,e,s)=>{for(var r=s>1?void 0:s?D6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&I6(t,e,r),r};let N6=0;const V=(R=class extends u{constructor(){super(),this.id="",this.name="",this._size="md",this.fullWidth=!1,this._variant="filled",this.inverted=!1,this.label="",this.prefixIcon="",this.suffixIcon="",this.disabled=!1,this.form="",this.value="",this._type="button",this.onClick=()=>{},this.href="",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=R.VALID_SIZES.includes(t)?t:"md"}get variant(){return this._variant}set variant(t){this._variant=R.VALID_VARIANTS.includes(t)?t:"filled"}get type(){return this._type}set type(t){this._type=R.VALID_TYPES.includes(t)?t:"button"}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}_generateUniqueId(){return`nys-button-${Date.now()}-${N6++}`}_manageFormAction(t){typeof this.onClick=="function"&&this.onClick(t);const e=this._internals.form;if(e)switch(this.type){case"submit":e.requestSubmit();break;case"reset":e.reset();break}}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleClick(t){if(this.disabled){t.preventDefault();return}this._manageFormAction(t)}_handleKeydown(t){(t.code==="Space"||t.code==="Enter")&&(t.preventDefault(),this.disabled||this._manageFormAction(t))}render(){return c`
+`;var N6=Object.defineProperty,q6=Object.getOwnPropertyDescriptor,z=(o,t,e,s)=>{for(var r=s>1?void 0:s?q6(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&N6(t,e,r),r};let j6=0;const k=(T=class extends u{constructor(){super(),this.id="",this.name="",this._size="md",this.fullWidth=!1,this._variant="filled",this.inverted=!1,this.label="",this.prefixIcon="",this.suffixIcon="",this.disabled=!1,this.form="",this.value="",this._type="button",this.onClick=()=>{},this.href="",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=T.VALID_SIZES.includes(t)?t:"md"}get variant(){return this._variant}set variant(t){this._variant=T.VALID_VARIANTS.includes(t)?t:"filled"}get type(){return this._type}set type(t){this._type=T.VALID_TYPES.includes(t)?t:"button"}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}_generateUniqueId(){return`nys-button-${Date.now()}-${j6++}`}_manageFormAction(t){typeof this.onClick=="function"&&this.onClick(t);const e=this._internals.form;if(e)switch(this.type){case"submit":e.requestSubmit();break;case"reset":e.reset();break}}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleClick(t){if(this.disabled){t.preventDefault();return}this._manageFormAction(t)}_handleKeydown(t){(t.code==="Space"||t.code==="Enter")&&(t.preventDefault(),this.disabled||this._manageFormAction(t))}render(){return c`
       ${this.href?c`
             <div class="nys-button__linkwrapper">
               <a
@@ -1668,7 +1851,7 @@
                   </slot>`:""}
             </button>
           `}
-    `}},R.VALID_SIZES=["sm","md","lg"],R.VALID_VARIANTS=["filled","outline","ghost","text"],R.VALID_TYPES=["submit","reset","button"],R.styles=T6,R.formAssociated=!0,R);z([C({type:String})],V.prototype,"id",2),z([C({type:String})],V.prototype,"name",2),z([C({reflect:!0})],V.prototype,"size",1),z([C({type:Boolean,reflect:!0})],V.prototype,"fullWidth",2),z([C({reflect:!0})],V.prototype,"variant",1),z([C({type:Boolean,reflect:!0})],V.prototype,"inverted",2),z([C({type:String})],V.prototype,"label",2),z([C({type:String})],V.prototype,"prefixIcon",2),z([C({type:String})],V.prototype,"suffixIcon",2),z([C({type:Boolean,reflect:!0})],V.prototype,"disabled",2),z([C({type:String})],V.prototype,"form",2),z([C({type:String})],V.prototype,"value",2),z([C({reflect:!0})],V.prototype,"type",1),z([C({type:Function})],V.prototype,"onClick",2),z([C({type:String})],V.prototype,"href",2);let z3=V;customElements.get("nys-button")||customElements.define("nys-button",z3);const U3=g`
+    `}},T.VALID_SIZES=["sm","md","lg"],T.VALID_VARIANTS=["filled","outline","ghost","text"],T.VALID_TYPES=["submit","reset","button"],T.styles=D6,T.formAssociated=!0,T);z([C({type:String})],k.prototype,"id",2),z([C({type:String,reflect:!0})],k.prototype,"name",2),z([C({reflect:!0})],k.prototype,"size",1),z([C({type:Boolean,reflect:!0})],k.prototype,"fullWidth",2),z([C({reflect:!0})],k.prototype,"variant",1),z([C({type:Boolean,reflect:!0})],k.prototype,"inverted",2),z([C({type:String})],k.prototype,"label",2),z([C({type:String})],k.prototype,"prefixIcon",2),z([C({type:String})],k.prototype,"suffixIcon",2),z([C({type:Boolean,reflect:!0})],k.prototype,"disabled",2),z([C({type:String})],k.prototype,"form",2),z([C({type:String})],k.prototype,"value",2),z([C({reflect:!0})],k.prototype,"type",1),z([C({type:Function})],k.prototype,"onClick",2),z([C({type:String})],k.prototype,"href",2);let z3=k;customElements.get("nys-button")||customElements.define("nys-button",z3);const U3=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1747,7 +1930,10 @@
       --nys-color-neutral-400,
       #757575
     );
-    --_nys-checkbox-disabled-color-text: var(--nys-color-neutral-500, #797c7f);
+    --_nys-checkbox-disabled-color-text: var(
+      --nys-color-text-disabled,
+      #bec0c1
+    );
     /* Disabled Checked */
     --_nys-checkbox-disabled-checked-color-bg: var(
       --nys-color-neutral-100,
@@ -1775,7 +1961,7 @@
   .nys-checkboxgroup {
     display: flex;
     flex-direction: column;
-    gap: var(--nys-spacing-50, 4px);
+    gap: var(--nys-space-200, 16px);
     font-family: var(--_nys-checkbox-font-family);
     font-size: var(--_nys-checkbox-font-size);
     line-height: var(--_nys-checkbox-line-height);
@@ -1887,18 +2073,20 @@
     display: flex;
     flex-direction: column;
     margin: auto 0; /* Center text if single line label */
+    align-items: flex-start;
   }
 
   /* Label styling */
   .nys-checkbox__label {
     font-weight: var(--_nys-checkbox-font-weight-400);
-    color: var(--_nys-checkbox-color);
+    color: var(--nys-color-text, #1b1b1b);
   }
 
   /* Description styling */
   .nys-checkbox__description {
     font-weight: var(--_nys-checkbox-font-weight-400);
     font-style: italic;
+    text-align: left;
   }
 
   /* Required */
@@ -1910,7 +2098,7 @@
     display: inline;
   }
 `;/*!
-   * Label v1.1.0
+   * Label v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -1919,15 +2107,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const y2=globalThis,c7=y2.ShadowRoot&&(y2.ShadyCSS===void 0||y2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,B3=Symbol(),O3=new WeakMap;let q6=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==B3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(c7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=O3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&O3.set(e,t))}return t}toString(){return this.cssText}};const j6=o=>new q6(typeof o=="string"?o:o+"",void 0,B3),F6=(o,t)=>{if(c7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=y2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},R3=c7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return j6(e)})(o):o;/**
+ */const y2=globalThis,c7=y2.ShadowRoot&&(y2.ShadyCSS===void 0||y2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,B3=Symbol(),O3=new WeakMap;let F6=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==B3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(c7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=O3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&O3.set(e,t))}return t}toString(){return this.cssText}};const G6=o=>new F6(typeof o=="string"?o:o+"",void 0,B3),W6=(o,t)=>{if(c7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=y2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},R3=c7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return G6(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:G6,defineProperty:W6,getOwnPropertyDescriptor:Y6,getOwnPropertyNames:K6,getOwnPropertySymbols:J6,getPrototypeOf:X6}=Object,Q1=globalThis,T3=Q1.trustedTypes,Q6=T3?T3.emptyScript:"",I3=Q1.reactiveElementPolyfillSupport,V5=(o,t)=>o,g2={toAttribute(o,t){switch(t){case Boolean:o=o?Q6:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},h7=(o,t)=>!G6(o,t),D3={attribute:!0,type:String,converter:g2,reflect:!1,hasChanged:h7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),Q1.litPropertyMetadata??(Q1.litPropertyMetadata=new WeakMap);let k5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=D3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&W6(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=Y6(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??D3}static _$Ei(){if(this.hasOwnProperty(V5("elementProperties")))return;const t=X6(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(V5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(V5("properties"))){const e=this.properties,s=[...K6(e),...J6(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(R3(r))}else t!==void 0&&e.push(R3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return F6(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:g2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:g2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??h7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};k5.elementStyles=[],k5.shadowRootOptions={mode:"open"},k5[V5("elementProperties")]=new Map,k5[V5("finalized")]=new Map,I3==null||I3({ReactiveElement:k5}),(Q1.reactiveElementVersions??(Q1.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:Y6,defineProperty:K6,getOwnPropertyDescriptor:J6,getOwnPropertyNames:X6,getOwnPropertySymbols:Q6,getPrototypeOf:t9}=Object,Q1=globalThis,I3=Q1.trustedTypes,e9=I3?I3.emptyScript:"",T3=Q1.reactiveElementPolyfillSupport,V5=(o,t)=>o,g2={toAttribute(o,t){switch(t){case Boolean:o=o?e9:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},h7=(o,t)=>!Y6(o,t),D3={attribute:!0,type:String,converter:g2,reflect:!1,hasChanged:h7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),Q1.litPropertyMetadata??(Q1.litPropertyMetadata=new WeakMap);let k5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=D3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&K6(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=J6(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??D3}static _$Ei(){if(this.hasOwnProperty(V5("elementProperties")))return;const t=t9(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(V5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(V5("properties"))){const e=this.properties,s=[...X6(e),...Q6(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(R3(r))}else t!==void 0&&e.push(R3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return W6(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:g2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:g2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??h7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};k5.elementStyles=[],k5.shadowRootOptions={mode:"open"},k5[V5("elementProperties")]=new Map,k5[V5("finalized")]=new Map,T3==null||T3({ReactiveElement:k5}),(Q1.reactiveElementVersions??(Q1.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const t9={attribute:!0,type:String,converter:g2,reflect:!1,hasChanged:h7},e9=(o=t9,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function f2(o){return(t,e)=>typeof e=="object"?e9(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const s9=g`
+ */const s9={attribute:!0,type:String,converter:g2,reflect:!1,hasChanged:h7},o9=(o=s9,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function f2(o){return(t,e)=>typeof e=="object"?o9(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const r9=g`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -1945,19 +2133,19 @@
     --_nys-label-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);
     --_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-label-font-color: var(--nys-color-ink, #1b1b1b);
+    --_nys-label-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Description */
     --nys-description-font-weight: var(--nys-font-weight-regular, 400);
     --nys-description-font-style: italic;
-    --nys-description-font-color: var(--nys-neutral-900, #1b1b1b);
+    --nys-description-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Required Flag */
     --nys-required-font-color: var(--nys-color-danger, #b52c2c);
 
     /* Optional Flag */
     --nys-optional-font-weight: var(--nys-font-weight-regular, 400);
-    --nys-optional-font-color: var(--nys-color-neutral-700, #4a4d4f);
+    --nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);
 
     /* Spacing */
     --_nys-label-flag-gap: var(--nys-space-2px, 2px);
@@ -1998,7 +2186,7 @@
     font-weight: var(--nys-optional-font-weight);
     color: var(--nys-optional-font-color);
   }
-`;var o9=Object.defineProperty,_2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&o9(t,e,r),r};const N3=class extends u{constructor(){super(...arguments),this.id="",this.label="",this.description="",this.flag=""}render(){return c`
+`;var n9=Object.defineProperty,_2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&n9(t,e,r),r};const N3=class extends u{constructor(){super(...arguments),this.id="",this.label="",this.description="",this.flag=""}render(){return c`
       <div class="nys-label">
         <label for=${this.id} class="nys-label__label"
           >${this.label}
@@ -2009,8 +2197,8 @@
           <slot name="description">${this.description}</slot>
         </label>
       </div>
-    `}};N3.styles=s9;let A5=N3;_2([f2({type:String})],A5.prototype,"id"),_2([f2({type:String})],A5.prototype,"label"),_2([f2({type:String})],A5.prototype,"description"),_2([f2({type:String})],A5.prototype,"flag"),customElements.get("nys-label")||customElements.define("nys-label",A5);/*!
-   * Error Message v1.1.0
+    `}};N3.styles=r9;let A5=N3;_2([f2({type:String})],A5.prototype,"id"),_2([f2({type:String})],A5.prototype,"label"),_2([f2({type:String})],A5.prototype,"description"),_2([f2({type:String})],A5.prototype,"flag"),customElements.get("nys-label")||customElements.define("nys-label",A5);/*!
+   * Error Message v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -2019,15 +2207,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const w2=globalThis,d7=w2.ShadowRoot&&(w2.ShadyCSS===void 0||w2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,q3=Symbol(),j3=new WeakMap;let r9=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==q3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(d7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=j3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&j3.set(e,t))}return t}toString(){return this.cssText}};const n9=o=>new r9(typeof o=="string"?o:o+"",void 0,q3),i9=(o,t)=>{if(d7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=w2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},F3=d7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return n9(e)})(o):o;/**
+ */const w2=globalThis,d7=w2.ShadowRoot&&(w2.ShadyCSS===void 0||w2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,q3=Symbol(),j3=new WeakMap;let i9=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==q3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(d7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=j3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&j3.set(e,t))}return t}toString(){return this.cssText}};const l9=o=>new i9(typeof o=="string"?o:o+"",void 0,q3),a9=(o,t)=>{if(d7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=w2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},F3=d7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return l9(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:l9,defineProperty:a9,getOwnPropertyDescriptor:C9,getOwnPropertyNames:c9,getOwnPropertySymbols:h9,getPrototypeOf:d9}=Object,t5=globalThis,G3=t5.trustedTypes,p9=G3?G3.emptyScript:"",W3=t5.reactiveElementPolyfillSupport,P5=(o,t)=>o,b2={toAttribute(o,t){switch(t){case Boolean:o=o?p9:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},p7=(o,t)=>!l9(o,t),Y3={attribute:!0,type:String,converter:b2,reflect:!1,hasChanged:p7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),t5.litPropertyMetadata??(t5.litPropertyMetadata=new WeakMap);let z5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=Y3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&a9(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=C9(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??Y3}static _$Ei(){if(this.hasOwnProperty(P5("elementProperties")))return;const t=d9(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(P5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(P5("properties"))){const e=this.properties,s=[...c9(e),...h9(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(F3(r))}else t!==void 0&&e.push(F3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return i9(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:b2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:b2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??p7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};z5.elementStyles=[],z5.shadowRootOptions={mode:"open"},z5[P5("elementProperties")]=new Map,z5[P5("finalized")]=new Map,W3==null||W3({ReactiveElement:z5}),(t5.reactiveElementVersions??(t5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:C9,defineProperty:c9,getOwnPropertyDescriptor:h9,getOwnPropertyNames:d9,getOwnPropertySymbols:p9,getPrototypeOf:u9}=Object,t5=globalThis,G3=t5.trustedTypes,v9=G3?G3.emptyScript:"",W3=t5.reactiveElementPolyfillSupport,P5=(o,t)=>o,b2={toAttribute(o,t){switch(t){case Boolean:o=o?v9:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},p7=(o,t)=>!C9(o,t),Y3={attribute:!0,type:String,converter:b2,reflect:!1,hasChanged:p7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),t5.litPropertyMetadata??(t5.litPropertyMetadata=new WeakMap);let z5=class extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=Y3){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&c9(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=h9(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??Y3}static _$Ei(){if(this.hasOwnProperty(P5("elementProperties")))return;const t=u9(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(P5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(P5("properties"))){const e=this.properties,s=[...d9(e),...p9(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(F3(r))}else t!==void 0&&e.push(F3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return a9(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:b2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:b2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??p7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}};z5.elementStyles=[],z5.shadowRootOptions={mode:"open"},z5[P5("elementProperties")]=new Map,z5[P5("finalized")]=new Map,W3==null||W3({ReactiveElement:z5}),(t5.reactiveElementVersions??(t5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const u9={attribute:!0,type:String,converter:b2,reflect:!1,hasChanged:p7},v9=(o=u9,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function u7(o){return(t,e)=>typeof e=="object"?v9(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const y9=g`
+ */const y9={attribute:!0,type:String,converter:b2,reflect:!1,hasChanged:p7},g9=(o=y9,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function u7(o){return(t,e)=>typeof e=="object"?g9(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const f9=g`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -2081,7 +2269,7 @@
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -2089,15 +2277,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const m2=globalThis,v7=m2.ShadowRoot&&(m2.ShadyCSS===void 0||m2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,K3=Symbol(),J3=new WeakMap;let g9=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==K3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(v7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=J3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&J3.set(e,t))}return t}toString(){return this.cssText}};const f9=o=>new g9(typeof o=="string"?o:o+"",void 0,K3),_9=(o,t)=>{if(v7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=m2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},X3=v7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return f9(e)})(o):o;/**
+ */const m2=globalThis,v7=m2.ShadowRoot&&(m2.ShadyCSS===void 0||m2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,K3=Symbol(),J3=new WeakMap;let _9=class{constructor(t,e,s){if(this._$cssResult$=!0,s!==K3)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=t,this.t=e}get styleSheet(){let t=this.o;const e=this.t;if(v7&&t===void 0){const s=e!==void 0&&e.length===1;s&&(t=J3.get(e)),t===void 0&&((this.o=t=new CSSStyleSheet).replaceSync(this.cssText),s&&J3.set(e,t))}return t}toString(){return this.cssText}};const w9=o=>new _9(typeof o=="string"?o:o+"",void 0,K3),b9=(o,t)=>{if(v7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=m2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},X3=v7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return w9(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:w9,defineProperty:b9,getOwnPropertyDescriptor:m9,getOwnPropertyNames:x9,getOwnPropertySymbols:L9,getPrototypeOf:$9}=Object,e5=globalThis,Q3=e5.trustedTypes,M9=Q3?Q3.emptyScript:"",t0=e5.reactiveElementPolyfillSupport,U5=(o,t)=>o,x2={toAttribute(o,t){switch(t){case Boolean:o=o?M9:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},y7=(o,t)=>!w9(o,t),e0={attribute:!0,type:String,converter:x2,reflect:!1,hasChanged:y7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),e5.litPropertyMetadata??(e5.litPropertyMetadata=new WeakMap);class B5 extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=e0){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&b9(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=m9(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??e0}static _$Ei(){if(this.hasOwnProperty(U5("elementProperties")))return;const t=$9(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(U5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(U5("properties"))){const e=this.properties,s=[...x9(e),...L9(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(X3(r))}else t!==void 0&&e.push(X3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return _9(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:x2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:x2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??y7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}}B5.elementStyles=[],B5.shadowRootOptions={mode:"open"},B5[U5("elementProperties")]=new Map,B5[U5("finalized")]=new Map,t0==null||t0({ReactiveElement:B5}),(e5.reactiveElementVersions??(e5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:m9,defineProperty:x9,getOwnPropertyDescriptor:L9,getOwnPropertyNames:$9,getOwnPropertySymbols:M9,getPrototypeOf:S9}=Object,e5=globalThis,Q3=e5.trustedTypes,Z9=Q3?Q3.emptyScript:"",t0=e5.reactiveElementPolyfillSupport,U5=(o,t)=>o,x2={toAttribute(o,t){switch(t){case Boolean:o=o?Z9:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},y7=(o,t)=>!m9(o,t),e0={attribute:!0,type:String,converter:x2,reflect:!1,hasChanged:y7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),e5.litPropertyMetadata??(e5.litPropertyMetadata=new WeakMap);class B5 extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=e0){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&x9(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=L9(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??e0}static _$Ei(){if(this.hasOwnProperty(U5("elementProperties")))return;const t=S9(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(U5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(U5("properties"))){const e=this.properties,s=[...$9(e),...M9(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(X3(r))}else t!==void 0&&e.push(X3(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return b9(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:x2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:x2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??y7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}}B5.elementStyles=[],B5.shadowRootOptions={mode:"open"},B5[U5("elementProperties")]=new Map,B5[U5("finalized")]=new Map,t0==null||t0({ReactiveElement:B5}),(e5.reactiveElementVersions??(e5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const S9={attribute:!0,type:String,converter:x2,reflect:!1,hasChanged:y7},Z9=(o=S9,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function s5(o){return(t,e)=>typeof e=="object"?Z9(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const H9={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+ */const H9={attribute:!0,type:String,converter:x2,reflect:!1,hasChanged:y7},E9=(o=H9,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function s5(o){return(t,e)=>typeof e=="object"?E9(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const V9={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -2230,7 +2418,7 @@
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},E9=g`
+</svg>`},k9=g`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -2326,10 +2514,10 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var V9=Object.defineProperty,k9=Object.getOwnPropertyDescriptor,o5=(o,t,e,s)=>{for(var r=s>1?void 0:s?k9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&V9(t,e,r),r},O5;const H1=(O5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=O5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=H9[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},O5.styles=E9,O5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],O5);o5([s5({type:String})],H1.prototype,"name",2),o5([s5({type:String})],H1.prototype,"label",2),o5([s5({type:String})],H1.prototype,"rotate",2),o5([s5({type:String})],H1.prototype,"flip",2),o5([s5({type:String})],H1.prototype,"color",2),o5([s5({reflect:!0})],H1.prototype,"size",1);let A9=H1;customElements.get("nys-icon")||customElements.define("nys-icon",A9);var P9=Object.defineProperty,g7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&P9(t,e,r),r};const f7=class extends u{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
+`;var A9=Object.defineProperty,P9=Object.getOwnPropertyDescriptor,o5=(o,t,e,s)=>{for(var r=s>1?void 0:s?P9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&A9(t,e,r),r},O5;const V1=(O5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=O5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=V9[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},O5.styles=k9,O5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],O5);o5([s5({type:String,reflect:!0})],V1.prototype,"name",2),o5([s5({type:String})],V1.prototype,"label",2),o5([s5({type:String})],V1.prototype,"rotate",2),o5([s5({type:String})],V1.prototype,"flip",2),o5([s5({type:String})],V1.prototype,"color",2),o5([s5({reflect:!0})],V1.prototype,"size",1);let z9=V1;customElements.get("nys-icon")||customElements.define("nys-icon",z9);var U9=Object.defineProperty,g7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&U9(t,e,r),r};const f7=class extends u{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
           <nys-icon name="error" size="xl"></nys-icon>
           ${this._internals.validationMessage||this.errorMessage}
-        </div>`:""}`}};f7.styles=y9,f7.formAssociated=!0;let L2=f7;g7([u7({type:Boolean})],L2.prototype,"showError"),g7([u7({type:String})],L2.prototype,"errorMessage"),g7([u7({type:Boolean,reflect:!0})],L2.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",L2);var z9=Object.defineProperty,U9=Object.getOwnPropertyDescriptor,p1=(o,t,e,s)=>{for(var r=s>1?void 0:s?U9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&z9(t,e,r),r};let B9=0;const Q=(o1=class extends u{constructor(){super(),this.id="",this.name="",this.required=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=o1.VALID_SIZES.includes(t)?t:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${B9++}`),this.addEventListener("change",this._manageCheckboxRequired),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("change",this._manageCheckboxRequired),this.removeEventListener("invalid",this._handleInvalid)}updated(t){t.has("required")&&this.required&&this.setupCheckboxRequired(),t.has("size")&&this.updateCheckboxSize()}_handleInvalid(){this._internals.validity.valueMissing&&(this.showError=!0,this._manageCheckboxRequired())}async setupCheckboxRequired(){const t=this.querySelector("nys-checkbox"),e=this.errorMessage||"This field is required",s=t?await t.getInputElement():null;this._internals.setValidity({valueMissing:!0},e,s||this)}async _manageCheckboxRequired(){const t=this.errorMessage||"Please select at least one option.",e=this.querySelector("nys-checkbox"),s=e?await e.getInputElement():null;let r=!1;this.querySelectorAll("nys-checkbox").forEach(i=>{i.checked&&(r=!0)}),r?(this._internals.setValidity({}),this.showError=!1):(this._internals.setValidity({valueMissing:!0},t,s||this),this.showError=!0)}updateCheckboxSize(){this.querySelectorAll("nys-checkbox").forEach(e=>{e.setAttribute("size",this.size)})}render(){return c` <div
+        </div>`:""}`}};f7.styles=f9,f7.formAssociated=!0;let L2=f7;g7([u7({type:Boolean})],L2.prototype,"showError"),g7([u7({type:String})],L2.prototype,"errorMessage"),g7([u7({type:Boolean,reflect:!0})],L2.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",L2);var B9=Object.defineProperty,O9=Object.getOwnPropertyDescriptor,e1=(o,t,e,s)=>{for(var r=s>1?void 0:s?O9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&B9(t,e,r),r};let R9=0;const K=(r1=class extends u{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=r1.VALID_SIZES.includes(t)?t:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${R9++}`),this.addEventListener("change",this._handleCheckboxChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("change",this._handleCheckboxChange),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setGroupExist()}updated(t){t.has("required")&&this.required&&this._setupCheckboxRequired(),t.has("size")&&this.updateCheckboxSize()}_setGroupExist(){this.querySelectorAll("nys-checkbox").forEach(e=>{e.groupExist=!0})}async _handleInvalid(t){t.preventDefault(),this.showError=!0,this._manageCheckboxRequired();const e=this.querySelector("nys-checkbox"),s=e?await e.getInputElement():null;if(s){const r=this._internals.form;r?Array.from(r.elements).find(l=>{if(l.tagName.toLowerCase()==="nys-checkboxgroup"){if(Array.from(this.querySelectorAll("nys-checkbox")).filter(d=>d.checked).length===0)return l}else return typeof l.checkValidity=="function"&&!l.checkValidity()})===this&&s.focus():s.focus()}}async _setupCheckboxRequired(){const t=this.querySelector("nys-checkbox"),e=this.errorMessage||"This field is required",s=t?await t.getInputElement():null;this._internals.setValidity({valueMissing:!0},e,s||this)}_handleCheckboxChange(t){const e=t,{name:s}=e.detail,n=Array.from(this.querySelectorAll("nys-checkbox")).filter(i=>i.checked).map(i=>i.value);this.name=s,this._internals.setFormValue(n.join(", ")),this._manageCheckboxRequired()}async _manageCheckboxRequired(){if(this.required){const t=this.errorMessage||"Please select at least one option.",e=this.querySelector("nys-checkbox"),s=e?await e.getInputElement():null;let r=!1;this.querySelectorAll("nys-checkbox").forEach(i=>{i.checked&&(r=!0)}),r?(this._internals.setValidity({}),this.showError=!1):(this._internals.setValidity({valueMissing:!0},t,s||this),this.showError=!0)}}updateCheckboxSize(){this.querySelectorAll("nys-checkbox").forEach(e=>{e.setAttribute("size",this.size)})}render(){return c` <div
       class="nys-checkboxgroup"
       aria-required="${this.required?"true":"false"}"
       role="group"
@@ -2337,7 +2525,7 @@
       <nys-label
         label=${this.label}
         description=${this.description}
-        flag=${this.required?"required":""}
+        flag=${this.required?"required":this.optional?"optional":""}
       >
         <slot name="description" slot="description">${this.description}</slot>
       </nys-label>
@@ -2349,7 +2537,7 @@
         errorMessage=${this._internals.validationMessage||this.errorMessage}
         showDivider
       ></nys-errormessage>
-    </div>`}},o1.VALID_SIZES=["sm","md"],o1.styles=U3,o1.formAssociated=!0,o1);p1([C({type:String})],Q.prototype,"id",2),p1([C({type:String})],Q.prototype,"name",2),p1([C({type:Boolean,reflect:!0})],Q.prototype,"required",2),p1([C({type:Boolean,reflect:!0})],Q.prototype,"showError",2),p1([C({type:String})],Q.prototype,"errorMessage",2),p1([C({type:String})],Q.prototype,"label",2),p1([C({type:String})],Q.prototype,"description",2),p1([C({reflect:!0})],Q.prototype,"size",1);let O9=Q;customElements.get("nys-checkboxgroup")||customElements.define("nys-checkboxgroup",O9);var R9=Object.defineProperty,T9=Object.getOwnPropertyDescriptor,D=(o,t,e,s)=>{for(var r=s>1?void 0:s?T9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&R9(t,e,r),r};let I9=0;const T=(r1=class extends u{constructor(){super(),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.showError=!1,this.errorMessage="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=r1.VALID_SIZES.includes(t)?t:"md"}async getInputElement(){var t;return await this.updateComplete,(t=this.shadowRoot)==null?void 0:t.querySelector("input")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${I9++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.checked=!1}_setValue(){this._internals.setFormValue(this.checked?this.value:null)}_manageRequire(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("input"),e=this.errorMessage||"This field is required";t&&(this.required&&!this.checked?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t)):this._internals.setValidity({}))}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!t)return;let e=t.validationMessage;this._setValidityMessage(e)}_handleInvalid(){this._internals.validity.valueMissing&&(this.showError=!0,this._validate())}_handleChange(t){const{checked:e}=t.target;this.checked=e,this._internals.setFormValue(this.checked?this.value:null),this._validate(),this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(t){t.code==="Space"&&(t.preventDefault(),this.disabled||(this.checked=!this.checked,this._internals.setFormValue(this.checked?this.value:null),this._manageRequire(),this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))))}render(){return c`
+    </div>`}},r1.VALID_SIZES=["sm","md"],r1.styles=U3,r1.formAssociated=!0,r1);e1([C({type:String})],K.prototype,"id",2),e1([C({type:String,reflect:!0})],K.prototype,"name",2),e1([C({type:Boolean,reflect:!0})],K.prototype,"required",2),e1([C({type:Boolean,reflect:!0})],K.prototype,"optional",2),e1([C({type:Boolean,reflect:!0})],K.prototype,"showError",2),e1([C({type:String})],K.prototype,"errorMessage",2),e1([C({type:String})],K.prototype,"label",2),e1([C({type:String})],K.prototype,"description",2),e1([C({reflect:!0})],K.prototype,"size",1);let s0=K;customElements.get("nys-checkboxgroup")||customElements.define("nys-checkboxgroup",s0);var I9=Object.defineProperty,T9=Object.getOwnPropertyDescriptor,D=(o,t,e,s)=>{for(var r=s>1?void 0:s?T9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&I9(t,e,r),r};let D9=0;const R=(n1=class extends u{constructor(){super(),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.showError=!1,this.errorMessage="",this.groupExist=!1,this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=n1.VALID_SIZES.includes(t)?t:"md"}async getInputElement(){var t;return await this.updateComplete,((t=this.shadowRoot)==null?void 0:t.querySelector("input"))||null}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${D9++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.checked=!1}_setValue(){this.groupExist||this._internals.setFormValue(this.checked?this.value:null)}_manageRequire(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("input"),e=this.errorMessage||"This field is required";t&&(this.required&&!this.checked?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t)):this._internals.setValidity({}))}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!t)return;let e=t.validationMessage;this._setValidityMessage(e)}checkValidity(){var e;if(this.required&&!this.checked)return!1;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("input");return t?t.checkValidity():!0}_handleInvalid(t){var s;t.preventDefault(),this.showError=!0,this._validate();const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(e){const r=this._internals.form;r?Array.from(r.elements).find(l=>typeof l.checkValidity=="function"&&!l.checkValidity())===this&&e.focus():e.focus()}}_handleChange(t){const{checked:e}=t.target;this.checked=e,this.groupExist||this._internals.setFormValue(this.checked?this.value:null),this._validate(),this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(t){t.code==="Space"&&(t.preventDefault(),this.disabled||(this.checked=!this.checked,this._internals.setFormValue(this.checked?this.value:null),this._manageRequire(),this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))))}render(){return c`
       <div class="nys-checkbox">
         <label class="nys-checkbox__content">
           <div class="nys-checkbox__checkboxwrapper">
@@ -2385,8 +2573,7 @@
               ${this.required?c`<label class="nys-checkbox__required">*</label>`:""}
             </div>
             <label for=${this.id} class="nys-checkbox__description">
-              ${this.description}
-              <slot></slot>
+              <slot name="description">${this.description}</slot>
             </label>
           </div>`}
         </label>
@@ -2396,7 +2583,7 @@
           showDivider
         ></nys-errormessage>
       </div>
-    `}},r1.VALID_SIZES=["sm","md"],r1.styles=U3,r1.formAssociated=!0,r1);D([C({type:Boolean,reflect:!0})],T.prototype,"checked",2),D([C({type:Boolean,reflect:!0})],T.prototype,"disabled",2),D([C({type:Boolean,reflect:!0})],T.prototype,"required",2),D([C({type:String})],T.prototype,"label",2),D([C({type:String})],T.prototype,"description",2),D([C({type:String})],T.prototype,"id",2),D([C({type:String})],T.prototype,"name",2),D([C({type:String})],T.prototype,"value",2),D([C({type:Boolean,reflect:!0})],T.prototype,"showError",2),D([C({type:String})],T.prototype,"errorMessage",2),D([C({reflect:!0})],T.prototype,"size",1);let s0=T;customElements.get("nys-checkbox")||customElements.define("nys-checkbox",s0);const D9=g`
+    `}},n1.VALID_SIZES=["sm","md"],n1.styles=U3,n1.formAssociated=!0,n1);D([C({type:Boolean,reflect:!0})],R.prototype,"checked",2),D([C({type:Boolean,reflect:!0})],R.prototype,"disabled",2),D([C({type:Boolean,reflect:!0})],R.prototype,"required",2),D([C({type:String})],R.prototype,"label",2),D([C({type:String})],R.prototype,"description",2),D([C({type:String})],R.prototype,"id",2),D([C({type:String,reflect:!0})],R.prototype,"name",2),D([C({type:String})],R.prototype,"value",2),D([C({type:Boolean,reflect:!0})],R.prototype,"showError",2),D([C({type:String})],R.prototype,"errorMessage",2),D([C({type:Boolean})],R.prototype,"groupExist",2),D([C({reflect:!0})],R.prototype,"size",1);let o0=R;customElements.get("nys-checkbox")||customElements.define("nys-checkbox",o0);const N9=g`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -2445,10 +2632,10 @@
     border-top: var(--_nys-errormessage-divider-width) solid
       var(--_nys-errormessage-color);
   }
-`;var N9=Object.defineProperty,_7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&N9(t,e,r),r};const q2=class q2 extends u{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
+`;var q9=Object.defineProperty,_7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&q9(t,e,r),r};const q2=class q2 extends u{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
           <nys-icon name="error" size="xl"></nys-icon>
           ${this._internals.validationMessage||this.errorMessage}
-        </div>`:""}`}};q2.styles=D9,q2.formAssociated=!0;let E1=q2;_7([C({type:Boolean})],E1.prototype,"showError"),_7([C({type:String})],E1.prototype,"errorMessage"),_7([C({type:Boolean,reflect:!0})],E1.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",E1);const q9={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        </div>`:""}`}};q2.styles=N9,q2.formAssociated=!0;let k1=q2;_7([C({type:Boolean})],k1.prototype,"showError"),_7([C({type:String})],k1.prototype,"errorMessage"),_7([C({type:Boolean,reflect:!0})],k1.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",k1);const j9={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -2581,7 +2768,7 @@
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},j9=g`
+</svg>`},F9=g`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -2677,7 +2864,7 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var F9=Object.defineProperty,G9=Object.getOwnPropertyDescriptor,r5=(o,t,e,s)=>{for(var r=s>1?void 0:s?G9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&F9(t,e,r),r};const V1=(_1=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(t){this._size=_1.VALID_TYPES.includes(t)?t:"sm"}getIcon(){const t=q9[this.name],e=!!this.label;if(!t)return null;const n=new DOMParser().parseFromString(t,"image/svg+xml").documentElement;return n instanceof SVGElement?(n.setAttribute("role","img"),n.setAttribute("aria-label",e?this.label:""),n.setAttribute("aria-hidden",e?"false":"true"),n.style.rotate=`${this.rotate}deg`,n.style.color=this.color||"currentcolor",n.classList.add(`nys-icon--${this.size}`),n.classList.add("nys-icon--svg"),this.flip&&n.classList.add(`nys-icon--flip-${this.flip}`),n):null}render(){const t=this.getIcon();return t?c`${t}`:null}},_1.styles=j9,_1.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],_1);r5([C({type:String})],V1.prototype,"name",2),r5([C({type:String})],V1.prototype,"label",2),r5([C({type:String})],V1.prototype,"rotate",2),r5([C({type:String})],V1.prototype,"flip",2),r5([C({type:String})],V1.prototype,"color",2),r5([C({reflect:!0})],V1.prototype,"size",1);let o0=V1;customElements.get("nys-icon")||customElements.define("nys-icon",o0);const W9=g`
+`;var G9=Object.defineProperty,W9=Object.getOwnPropertyDescriptor,r5=(o,t,e,s)=>{for(var r=s>1?void 0:s?W9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&G9(t,e,r),r};const A1=(b1=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(t){this._size=b1.VALID_TYPES.includes(t)?t:"sm"}getIcon(){const t=j9[this.name],e=!!this.label;if(!t)return null;const n=new DOMParser().parseFromString(t,"image/svg+xml").documentElement;return n instanceof SVGElement?(n.setAttribute("role","img"),n.setAttribute("aria-label",e?this.label:""),n.setAttribute("aria-hidden",e?"false":"true"),n.style.rotate=`${this.rotate}deg`,n.style.color=this.color||"currentcolor",n.classList.add(`nys-icon--${this.size}`),n.classList.add("nys-icon--svg"),this.flip&&n.classList.add(`nys-icon--flip-${this.flip}`),n):null}render(){const t=this.getIcon();return t?c`${t}`:null}},b1.styles=F9,b1.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],b1);r5([C({type:String,reflect:!0})],A1.prototype,"name",2),r5([C({type:String})],A1.prototype,"label",2),r5([C({type:String})],A1.prototype,"rotate",2),r5([C({type:String})],A1.prototype,"flip",2),r5([C({type:String})],A1.prototype,"color",2),r5([C({reflect:!0})],A1.prototype,"size",1);let r0=A1;customElements.get("nys-icon")||customElements.define("nys-icon",r0);const Y9=g`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -2695,19 +2882,19 @@
     --_nys-label-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);
     --_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-label-font-color: var(--nys-color-ink, #1b1b1b);
+    --_nys-label-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Description */
     --nys-description-font-weight: var(--nys-font-weight-regular, 400);
     --nys-description-font-style: italic;
-    --nys-description-font-color: var(--nys-neutral-900, #1b1b1b);
+    --nys-description-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Required Flag */
     --nys-required-font-color: var(--nys-color-danger, #b52c2c);
 
     /* Optional Flag */
     --nys-optional-font-weight: var(--nys-font-weight-regular, 400);
-    --nys-optional-font-color: var(--nys-color-neutral-700, #4a4d4f);
+    --nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);
 
     /* Spacing */
     --_nys-label-flag-gap: var(--nys-space-2px, 2px);
@@ -2748,7 +2935,7 @@
     font-weight: var(--nys-optional-font-weight);
     color: var(--nys-optional-font-color);
   }
-`;var Y9=Object.defineProperty,$2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&Y9(t,e,r),r};const B7=class B7 extends u{constructor(){super(...arguments),this.id="",this.label="",this.description="",this.flag=""}render(){return c`
+`;var K9=Object.defineProperty,$2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&K9(t,e,r),r};const B7=class B7 extends u{constructor(){super(...arguments),this.id="",this.label="",this.description="",this.flag=""}render(){return c`
       <div class="nys-label">
         <label for=${this.id} class="nys-label__label"
           >${this.label}
@@ -2759,7 +2946,7 @@
           <slot name="description">${this.description}</slot>
         </label>
       </div>
-    `}};B7.styles=W9;let u1=B7;$2([C({type:String})],u1.prototype,"id"),$2([C({type:String})],u1.prototype,"label"),$2([C({type:String})],u1.prototype,"description"),$2([C({type:String})],u1.prototype,"flag"),customElements.get("nys-label")||customElements.define("nys-label",u1);const r0=g`
+    `}};B7.styles=Y9;let v1=B7;$2([C({type:String})],v1.prototype,"id"),$2([C({type:String})],v1.prototype,"label"),$2([C({type:String})],v1.prototype,"description"),$2([C({type:String})],v1.prototype,"flag"),customElements.get("nys-label")||customElements.define("nys-label",v1);const n0=g`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
@@ -2799,6 +2986,10 @@
       --nys-color-ink,
       var(--nys-color-neutral-900, #1b1b1b)
     );
+    --_nys-radiobutton-color-text: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
 
     /* Default (Empty) */
     --_nys-radiobutton-color-bg: var(--nys-color-ink-reverse, #ffffff);
@@ -2832,8 +3023,8 @@
     /* Disabled */
     --_nys-radiobutton-disabled-color-bg: var(--nys-color-ink-reverse, #f0f0f0);
     --_nys-radiobutton-disabled-color-text: var(
-      --nys-color-neutral-500,
-      #797c7f
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
     );
     --_nys-radiobutton-disabled-color-border: var(
       --nys-color-neutral-100,
@@ -2868,7 +3059,7 @@
   .nys-radiogroup {
     display: flex;
     flex-direction: column;
-    gap: var(--nys-spacing-50, 4px);
+    gap: var(--nys-space-200, 16px);
     font-family: var(--_nys-radiobutton-font-family);
     font-size: var(--_nys-radiobutton-font-size);
     line-height: var(--_nys-radiobutton-line-height);
@@ -2960,13 +3151,14 @@
   /* Label styling */
   .nys-radiobutton__label {
     font-weight: var(--_nys-radiobutton-font-weight-400);
-    color: var(--_nys-radiobutton-color);
+    color: var(--_nys-radiobutton-color-text);
   }
 
   /* Description styling */
   .nys-radiobutton__description {
     font-weight: var(--_nys-radiobutton-font-weight-400);
     font-style: italic;
+    text-align: left;
   }
 
   /* gap between radio and it's label */
@@ -2985,7 +3177,7 @@
     color: var(--_nys-radiobutton-disabled-color-text);
     cursor: not-allowed;
   }
-`;var K9=Object.defineProperty,J9=Object.getOwnPropertyDescriptor,t1=(o,t,e,s)=>{for(var r=s>1?void 0:s?J9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&K9(t,e,r),r};let X9=0;const Y=(n1=class extends u{constructor(){super(),this.id="",this.name="",this.required=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.selectedValue=null,this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=n1.VALID_SIZES.includes(t)?t:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${X9++}`),this.addEventListener("change",this._handleRadioButtonChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("change",this._handleRadioButtonChange),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._initializeCheckedState(),this._setValue(),this.setRadioButtonRequire()}updated(t){(t.has("required")||t.has("selectedValue"))&&this._manageRequire(),t.has("size")&&this.updateRadioButtonsSize()}formResetCallback(){this.querySelectorAll("nys-radiobutton").forEach(e=>{e.formResetUpdate()})}_setValue(){this._internals.setFormValue(this.selectedValue)}setRadioButtonRequire(){this.querySelectorAll("nys-radiobutton").forEach((e,s)=>{this.required&&s===0&&e.setAttribute("required","required")})}async _manageRequire(){const t=this.errorMessage||"Please select an option.",e=this.querySelector("nys-radiobutton"),s=e?await e.getInputElement():null;this.required&&!this.selectedValue?(this._internals.setValidity({valueMissing:!0},t,s||this),this.showError=!0):(this._internals.setValidity({}),this.showError=!1)}_initializeCheckedState(){const t=this.querySelector("nys-radiobutton[checked]");t&&(this.selectedValue=t.getAttribute("value"),this._internals.setFormValue(this.selectedValue))}updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(e=>{e.setAttribute("size",this.size)})}_handleRadioButtonChange(t){const e=t,{value:s}=e.detail;this.selectedValue=s,this._internals.setFormValue(this.selectedValue)}_handleInvalid(){this._internals.validity.valueMissing&&(this.showError=!0,this._manageRequire())}render(){return c` <div
+`;var J9=Object.defineProperty,X9=Object.getOwnPropertyDescriptor,J=(o,t,e,s)=>{for(var r=s>1?void 0:s?X9(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&J9(t,e,r),r};let Q9=0;const q=(i1=class extends u{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.selectedValue=null,this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=i1.VALID_SIZES.includes(t)?t:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${Q9++}`),this.addEventListener("change",this._handleRadioButtonChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("change",this._handleRadioButtonChange),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._initializeCheckedRadioValue(),this._setValue(),this.setRadioButtonRequire()}updated(t){(t.has("required")||t.has("selectedValue"))&&this._manageRequire(),t.has("size")&&this._updateRadioButtonsSize()}formResetCallback(){this.querySelectorAll("nys-radiobutton").forEach(e=>{e.formResetUpdate()})}_setValue(){this._internals.setFormValue(this.selectedValue)}setRadioButtonRequire(){this.querySelectorAll("nys-radiobutton").forEach((e,s)=>{this.required&&s===0&&e.setAttribute("required","required")})}async _manageRequire(){const t=this.errorMessage||"Please select an option.",e=this.querySelector("nys-radiobutton"),s=e?await e.getInputElement():null;this.required&&!this.selectedValue?this._internals.setValidity({valueMissing:!0},t,s):(this.showError=!1,this._internals.setValidity({},"",s))}_initializeCheckedRadioValue(){const t=this.querySelector("nys-radiobutton[checked]");t&&(this.selectedValue=t.getAttribute("value"),this._internals.setFormValue(this.selectedValue))}_updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(e=>{e.setAttribute("size",this.size)})}_handleRadioButtonChange(t){const e=t,{name:s,value:r}=e.detail;this.name=s,this.selectedValue=r,this._internals.setFormValue(this.selectedValue)}async _handleInvalid(t){if(t.preventDefault(),this._internals.validity.valueMissing){this.showError=!0,this._manageRequire();const e=this.querySelector("nys-radiobutton"),s=e?await e.getInputElement():null;if(s){const r=this._internals.form;r?Array.from(r.elements).find(l=>{if(l.tagName.toLowerCase()==="nys-radiogroup"){if(!l.querySelector("nys-radiobutton").checkValidity())return l}else return typeof l.checkValidity=="function"&&!l.checkValidity()})===this&&s.focus():s.focus()}}}render(){return c` <div
       role="radiogroup"
       class="nys-radiogroup"
       aria-required="${this.required?"true":"false"}"
@@ -2994,7 +3186,7 @@
       <nys-label
         label=${this.label}
         description=${this.description}
-        flag=${this.required?"required":""}
+        flag=${this.required?"required":this.optional?"optional":""}
       >
         <slot name="description" slot="description">${this.description}</slot>
       </nys-label>
@@ -3006,7 +3198,7 @@
         errorMessage=${this._internals.validationMessage||this.errorMessage}
         showDivider
       ></nys-errormessage>
-    </div>`}},n1.VALID_SIZES=["sm","md"],n1.styles=r0,n1.formAssociated=!0,n1);t1([C({type:String})],Y.prototype,"id",2),t1([C({type:String})],Y.prototype,"name",2),t1([C({type:Boolean,reflect:!0})],Y.prototype,"required",2),t1([C({type:Boolean,reflect:!0})],Y.prototype,"showError",2),t1([C({type:String})],Y.prototype,"errorMessage",2),t1([C({type:String})],Y.prototype,"label",2),t1([C({type:String})],Y.prototype,"description",2),t1([q1()],Y.prototype,"selectedValue",2),t1([C({reflect:!0})],Y.prototype,"size",1);let Q9=Y;customElements.get("nys-radiogroup")||customElements.define("nys-radiogroup",Q9);var t4=Object.defineProperty,e4=Object.getOwnPropertyDescriptor,e1=(o,t,e,s)=>{for(var r=s>1?void 0:s?e4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&t4(t,e,r),r};let s4=0;const K=(_=class extends u{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this._size="md"}get size(){return this._size}set size(t){this._size=_.VALID_SIZES.includes(t)?t:"md"}async getInputElement(){var t;return await this.updateComplete,((t=this.shadowRoot)==null?void 0:t.querySelector("input"))||null}formResetUpdate(){this.checked=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiobutton-${Date.now()}-${s4++}`),this.checked&&(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this)}updated(t){t.has("checked")&&this.checked&&_.buttonGroup[this.name]!==this&&(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this)}_handleChange(){this.checked||(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0})))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(t){t.code==="Space"&&(t.preventDefault(),!this.disabled&&!this.checked&&(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))))}render(){return c`
+    </div>`}},i1.VALID_SIZES=["sm","md"],i1.styles=n0,i1.formAssociated=!0,i1);J([C({type:String})],q.prototype,"id",2),J([C({type:String,reflect:!0})],q.prototype,"name",2),J([C({type:Boolean,reflect:!0})],q.prototype,"required",2),J([C({type:Boolean,reflect:!0})],q.prototype,"optional",2),J([C({type:Boolean,reflect:!0})],q.prototype,"showError",2),J([C({type:String})],q.prototype,"errorMessage",2),J([C({type:String})],q.prototype,"label",2),J([C({type:String})],q.prototype,"description",2),J([$1()],q.prototype,"selectedValue",2),J([C({reflect:!0})],q.prototype,"size",1);let i0=q;customElements.get("nys-radiogroup")||customElements.define("nys-radiogroup",i0);var t4=Object.defineProperty,e4=Object.getOwnPropertyDescriptor,s1=(o,t,e,s)=>{for(var r=s>1?void 0:s?e4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&t4(t,e,r),r};let s4=0;const X=(_=class extends u{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this._size="md"}get size(){return this._size}set size(t){this._size=_.VALID_SIZES.includes(t)?t:"md"}async getInputElement(){var t;return await this.updateComplete,((t=this.shadowRoot)==null?void 0:t.querySelector("input"))||null}formResetUpdate(){this.checked=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiobutton-${Date.now()}-${s4++}`),this.checked&&(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this)}updated(t){t.has("checked")&&this.checked&&_.buttonGroup[this.name]!==this&&(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this)}checkValidity(){var e;if(this.required&&!this.checked)return!1;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("input");return t?t.checkValidity():!0}_handleChange(){this.checked||(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0})))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleKeydown(t){t.code==="Space"&&(t.preventDefault(),!this.disabled&&!this.checked&&(_.buttonGroup[this.name]&&(_.buttonGroup[this.name].checked=!1,_.buttonGroup[this.name].requestUpdate()),_.buttonGroup[this.name]=this,this.checked=!0,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))))}render(){return c`
       <label class="nys-radiobutton">
         <input
           id="${this.id}"
@@ -3030,12 +3222,11 @@
             >${this.label}</label
           >
           <label for=${this.id} class="nys-radiobutton__description">
-            ${this.description}
-            <slot></slot>
+            <slot name="description">${this.description}</slot>
           </label>
         </div>`}
       </label>
-    `}},_.VALID_SIZES=["sm","md"],_.buttonGroup={},_.styles=r0,_);e1([C({type:Boolean,reflect:!0})],K.prototype,"checked",2),e1([C({type:Boolean,reflect:!0})],K.prototype,"disabled",2),e1([C({type:Boolean,reflect:!0})],K.prototype,"required",2),e1([C({type:String})],K.prototype,"label",2),e1([C({type:String})],K.prototype,"description",2),e1([C({type:String})],K.prototype,"id",2),e1([C({type:String})],K.prototype,"name",2),e1([C({type:String})],K.prototype,"value",2),e1([C({reflect:!0})],K.prototype,"size",1);let n0=K;customElements.get("nys-radiobutton")||customElements.define("nys-radiobutton",n0);const o4=g`
+    `}},_.VALID_SIZES=["sm","md"],_.buttonGroup={},_.styles=n0,_);s1([C({type:Boolean,reflect:!0})],X.prototype,"checked",2),s1([C({type:Boolean,reflect:!0})],X.prototype,"disabled",2),s1([C({type:Boolean,reflect:!0})],X.prototype,"required",2),s1([C({type:String})],X.prototype,"label",2),s1([C({type:String})],X.prototype,"description",2),s1([C({type:String})],X.prototype,"id",2),s1([C({type:String,reflect:!0})],X.prototype,"name",2),s1([C({type:String})],X.prototype,"value",2),s1([C({reflect:!0})],X.prototype,"size",1);let l0=X;customElements.get("nys-radiobutton")||customElements.define("nys-radiobutton",l0);const o4=g`
   :host {
     /* Global Select Styles */
     --_nys-select-width: 100%;
@@ -3053,13 +3244,17 @@
     --_nys-select-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-select-font-weight: var(--nys-font-weight-regular, 400);
     --_nys-select-line-height: var(--nys-font-lineheight-ui-md, 24px);
-    --_nys-select-gap: var(--nys-space-100, 8px);
+    --_nys-select-gap: var(--nys-space-50, 4px);
     --_nys-select-radius: var(--nys-radius-md, var(--nys-space-50, 4px));
     --_nys-select-padding: var(--nys-space-100, 8px) var(--nys-space-400, 32px)
       var(--nys-space-100, 8px) var(--nys-space-100, 8px);
 
     /* Global Select Colors */
-    --_nys-select-color: var(
+    --_nys-select-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-select-icon-color: var(
       --nys-color-ink,
       var(--nys-color-neutral-900, #1b1b1b)
     );
@@ -3069,7 +3264,11 @@
     );
     --_nys-select-bg-color: var(--nys-color-ink-reverse, #fff);
     --_nys-select-bg-disabled-color: var(--nys-color-neutral-50, #ededed);
-    --_nys-select-icon-disabled-color: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-select-text-disabled-color: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
+    --_nys-select-icon-disabled-color: var(--nys-color-neutral-200, #bec0c1);
 
     /* Select Outline & Border States */
     --_nys-select-border-default: var(--nys-border-width-sm, 1px) solid
@@ -3087,10 +3286,10 @@
     flex-direction: column;
     gap: var(--_nys-select-gap);
     font-family: var(--_nys-select-font-family);
-    color: var(--_nys-select-color);
   }
 
   .nys-select__select {
+    color: var(--_nys-select-text-color);
     font-weight: var(--_nys-select-font-weight);
     border-radius: var(--_nys-select-radius);
     border: var(--_nys-select-border-default);
@@ -3115,6 +3314,7 @@
   }
 
   .nys-select__icon {
+    color: var(--_nys-select-icon-color);
     position: absolute;
     right: 10px;
     top: 50%;
@@ -3163,6 +3363,7 @@
     background-color: var(--_nys-select-bg-disabled-color);
     border: var(--_nys-select-border-disabled);
     cursor: not-allowed;
+    color: var(--_nys-select-text-disabled-color);
   }
   .nys-select__select:disabled ~ .nys-select__icon {
     color: var(--_nys-select-icon-disabled-color);
@@ -3172,7 +3373,7 @@
     --_nys-select-border-default: var(--nys-border-width-sm, 1px) solid
       var(--_nys-select-error-color);
   }
-`;var r4=Object.defineProperty,R5=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&r4(t,e,r),r};class k1 extends u{constructor(){super(...arguments),this.disabled=!1,this.selected=!1,this.value="",this.label="",this.hidden=!1}firstUpdated(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");t&&t.addEventListener("slotchange",()=>{var r;const s=t.assignedNodes({flatten:!0});s.length>0&&(this.label=((r=s[0].textContent)==null?void 0:r.trim())||"")})}render(){return c`
+`;var r4=Object.defineProperty,R5=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&r4(t,e,r),r};class y1 extends u{constructor(){super(...arguments),this.disabled=!1,this.selected=!1,this.value="",this.label="",this.hidden=!1}firstUpdated(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");t&&t.addEventListener("slotchange",()=>{var r;const s=t.assignedNodes({flatten:!0});s.length>0&&(this.label=((r=s[0].textContent)==null?void 0:r.trim())||"")})}render(){return c`
       <option
         ?disabled=${this.disabled}
         ?selected=${this.selected}
@@ -3182,12 +3383,12 @@
       >
         <slot>${this.label}</slot>
       </option>
-    `}}R5([C({type:Boolean,reflect:!0})],k1.prototype,"disabled"),R5([C({type:Boolean,reflect:!0})],k1.prototype,"selected"),R5([C({type:String})],k1.prototype,"value"),R5([C({type:String})],k1.prototype,"label"),R5([C({type:Boolean,reflect:!0})],k1.prototype,"hidden"),customElements.define("nys-option",k1);var n4=Object.defineProperty,i4=Object.getOwnPropertyDescriptor,N=(o,t,e,s)=>{for(var r=s>1?void 0:s?i4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&n4(t,e,r),r};let l4=0;const I=(i1=class extends u{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.value="",this.disabled=!1,this.required=!1,this.form="",this.showError=!1,this.errorMessage="",this._width="md",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get width(){return this._width}set width(t){this._width=i1.VALID_WIDTHS.includes(t)?t:"full"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-select-${Date.now()}-${l4++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_handleSlotChange(){var r,n;const t=(r=this.shadowRoot)==null?void 0:r.querySelector('slot:not([name="description"])'),e=(n=this.shadowRoot)==null?void 0:n.querySelector("select");if(!t||!e)return;e.querySelectorAll("option:not([hidden])").forEach(i=>i.remove()),t.assignedElements({flatten:!0}).forEach(i=>{var l;if(i instanceof k1){const a=document.createElement("option");a.value=i.value,a.textContent=i.label||((l=i.textContent)==null?void 0:l.trim())||"",a.disabled=i.disabled,a.selected=i.selected,e.appendChild(a)}})}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("select");if(!t)return;const e=this.errorMessage||"Please select an option.";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t),this.showError=!0):(this._internals.ariaRequired="false",this._internals.setValidity({}),this.showError=!1,this._hasUserInteracted=!1)}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("select");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("select");if(!t)return;let e=t.validationMessage;this._manageRequire(),this._setValidityMessage(e)}_handleInvalid(){this._hasUserInteracted=!0,this._validate(),this.showError=!0}_handleChange(t){const e=t.target;this.value=e.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("change",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleInput(){this.dispatchEvent(new Event("input"))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}updated(t){var e;if(super.updated(t),t.has("value")){const s=(e=this.shadowRoot)==null?void 0:e.querySelector("select");s&&(s.value=this.value)}}render(){return c`
+    `}}R5([C({type:Boolean,reflect:!0})],y1.prototype,"disabled"),R5([C({type:Boolean,reflect:!0})],y1.prototype,"selected"),R5([C({type:String})],y1.prototype,"value"),R5([C({type:String})],y1.prototype,"label"),R5([C({type:Boolean,reflect:!0})],y1.prototype,"hidden"),customElements.define("nys-option",y1);var n4=Object.defineProperty,i4=Object.getOwnPropertyDescriptor,N=(o,t,e,s)=>{for(var r=s>1?void 0:s?i4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&n4(t,e,r),r};let l4=0;const I=(l1=class extends u{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.value="",this.disabled=!1,this.required=!1,this.optional=!1,this.form="",this.showError=!1,this.errorMessage="",this._width="md",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get width(){return this._width}set width(t){this._width=l1.VALID_WIDTHS.includes(t)?t:"full"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-select-${Date.now()}-${l4++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_handleSlotChange(){var r,n;const t=(r=this.shadowRoot)==null?void 0:r.querySelector('slot:not([name="description"])'),e=(n=this.shadowRoot)==null?void 0:n.querySelector("select");if(!t||!e)return;e.querySelectorAll("option:not([hidden])").forEach(i=>i.remove()),t.assignedElements({flatten:!0}).forEach(i=>{var l;if(i instanceof y1){const a=document.createElement("option");a.value=i.value,a.textContent=i.label||((l=i.textContent)==null?void 0:l.trim())||"",a.disabled=i.disabled,a.selected=i.selected,e.appendChild(a)}})}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("select");if(!t)return;const e=this.errorMessage||"Please select an option.";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("select");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("select");if(!t)return;let e=t.validationMessage;this._manageRequire(),this._setValidityMessage(e)}checkValidity(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("select");return t?t.checkValidity():!0}_handleInvalid(t){var s;t.preventDefault(),this._hasUserInteracted=!0,this._validate(),this.showError=!0;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("select");if(e){const r=this._internals.form;r?Array.from(r.elements).find(l=>typeof l.checkValidity=="function"&&!l.checkValidity())===this&&e.focus():e.focus()}}_handleChange(t){const e=t.target;this.value=e.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("change",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleInput(){this.dispatchEvent(new Event("input"))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}updated(t){var e;if(super.updated(t),t.has("value")){const s=(e=this.shadowRoot)==null?void 0:e.querySelector("select");s&&(s.value=this.value)}}render(){return c`
       <div class="nys-select">
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required?"required":""}
+          flag=${this.required?"required":this.optional?"optional":""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -3223,7 +3424,7 @@
           errorMessage=${this._internals.validationMessage||this.errorMessage}
         ></nys-errormessage>
       </div>
-    `}},i1.VALID_WIDTHS=["sm","md","lg","full"],i1.styles=o4,i1.formAssociated=!0,i1);N([C({type:String})],I.prototype,"id",2),N([C({type:String})],I.prototype,"name",2),N([C({type:String})],I.prototype,"label",2),N([C({type:String})],I.prototype,"description",2),N([C({type:String})],I.prototype,"value",2),N([C({type:Boolean,reflect:!0})],I.prototype,"disabled",2),N([C({type:Boolean,reflect:!0})],I.prototype,"required",2),N([C({type:String})],I.prototype,"form",2),N([C({type:Boolean,reflect:!0})],I.prototype,"showError",2),N([C({type:String})],I.prototype,"errorMessage",2),N([C({reflect:!0})],I.prototype,"width",1);let i0=I;customElements.get("nys-select")||customElements.define("nys-select",i0);const a4=g`
+    `}},l1.VALID_WIDTHS=["sm","md","lg","full"],l1.styles=o4,l1.formAssociated=!0,l1);N([C({type:String})],I.prototype,"id",2),N([C({type:String,reflect:!0})],I.prototype,"name",2),N([C({type:String})],I.prototype,"label",2),N([C({type:String})],I.prototype,"description",2),N([C({type:String})],I.prototype,"value",2),N([C({type:Boolean,reflect:!0})],I.prototype,"disabled",2),N([C({type:Boolean,reflect:!0})],I.prototype,"required",2),N([C({type:Boolean,reflect:!0})],I.prototype,"optional",2),N([C({type:String})],I.prototype,"form",2),N([C({type:Boolean,reflect:!0})],I.prototype,"showError",2),N([C({type:String})],I.prototype,"errorMessage",2),N([C({reflect:!0})],I.prototype,"width",1);let a0=I;customElements.get("nys-select")||customElements.define("nys-select",a0);const a4=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3234,6 +3435,14 @@
     --_nys-textarea-color-border: var(--nys-color-neutral-400, #909395);
     --_nys-textarea-padding: var(--nys-space-100, 8px);
     --_nys-textarea-gap: var(--nys-space-50, 4px);
+    --_nys-textarea-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-textarea-placeholder-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
 
     /* Hovered */
     --_nys-textarea-hover-color-outline: var(--nys-color-neutral-900, #1b1b1b);
@@ -3244,12 +3453,15 @@
     --_nys-textarea-focus-width-outline: var(--nys-border-width-sm, 1px);
 
     /* Disabled */
-    --_nys-textarea-disabled-color: var(--nys-color-neutral-10, #f6f6f6);
+    --_nys-textarea-disabled-bg-color: var(--nys-color-neutral-10, #f6f6f6);
     --_nys-textarea-disabled-color-border: var(
       --nys-color-neutral-200,
       #bec0c1
     );
-    --_nys-textarea-disabled-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-textarea-disabled-color-text: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
 
     /* Global Font Styles */
     --_nys-textarea-family-ui: var(
@@ -3295,7 +3507,6 @@
   }
 
   .nys-textarea {
-    font-size: var(--_nys-textarea-size-ui-md);
     font-weight: var(--_nys-textarea-weight-ui);
     font-family: var(--_nys-textarea-family-ui);
     line-height: var(--_nys-textarea-lineheight-ui);
@@ -3307,6 +3518,8 @@
   }
 
   .nys-textarea__textarea {
+    color: var(--_nys-textarea-color);
+    font-size: var(--_nys-textarea-size-ui-md);
     border-radius: var(--_nys-textarea-radius);
     border: solid var(--_nys-textarea-color-border)
       var(--_nys-textarea-width-border);
@@ -3318,6 +3531,10 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+  }
+
+  .nys-textarea__textarea::placeholder {
+    color: var(--_nys-textarea-placeholder-color);
   }
 
   /* Resize */
@@ -3341,18 +3558,19 @@
   }
 
   /* Disabled */
-  .nys-textarea__textarea:disabled {
-    background-color: var(--_nys-textarea-disabled-color);
+  .nys-textarea__textarea:disabled,
+  .nys-textarea__textarea:disabled::placeholder {
+    background-color: var(--_nys-textarea-disabled-bg-color);
     border-color: var(--_nys-textarea-disabled-color-border);
     color: var(--_nys-textarea-disabled-color-text);
     cursor: not-allowed;
   }
-`;var C4=Object.defineProperty,c4=Object.getOwnPropertyDescriptor,k=(o,t,e,s)=>{for(var r=s>1?void 0:s?c4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&C4(t,e,r),r};let h4=0;const H=(F=class extends u{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.maxlength=null,this.width="full",this.rows=4,this._resize="vertical",this.showError=!1,this.errorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get resize(){return this._resize}set resize(t){this._resize=F.VALID_RESIZE.includes(t)?t:"vertical"}updated(t){t.has("width")&&(this.width=F.VALID_WIDTHS.includes(this.width)?this.width:"full"),t.has("rows")&&(this.rows=this.rows??4)}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textarea-${Date.now()}-${h4++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_setValue(){this._manageRequire(),this._internals.setFormValue(this.value)}_manageRequire(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("textarea");if(!t)return;const e=this.errorMessage||"This field is required";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t),this.showError=!0):(this._internals.ariaRequired="false",this._internals.setValidity({}),this.showError=!1,this._hasUserInteracted=!1)}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("textarea");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("textarea");if(!t)return;let e=t.validationMessage;this._setValidityMessage(e)}_handleInvalid(){this._hasUserInteracted=!0,this._validate()}_handleInput(t){const e=t.target;this.value=e.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("input",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}_handleChange(){this.dispatchEvent(new Event("change"))}_handleSelect(t){const e=t.target;this.value=e.value,this.dispatchEvent(new CustomEvent("select",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleSelectionChange(t){const e=t.target;this.value=e.value,this.dispatchEvent(new CustomEvent("selectionchange",{detail:{value:this.value},bubbles:!0,composed:!0}))}render(){return c`
+`;var C4=Object.defineProperty,c4=Object.getOwnPropertyDescriptor,E=(o,t,e,s)=>{for(var r=s>1?void 0:s?c4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&C4(t,e,r),r};let h4=0;const H=(G=class extends u{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this.form="",this.maxlength=null,this.width="full",this.rows=4,this._resize="vertical",this.showError=!1,this.errorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get resize(){return this._resize}set resize(t){this._resize=G.VALID_RESIZE.includes(t)?t:"vertical"}updated(t){t.has("width")&&(this.width=G.VALID_WIDTHS.includes(this.width)?this.width:"full"),t.has("rows")&&(this.rows=this.rows??4)}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textarea-${Date.now()}-${h4++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_setValue(){this._manageRequire(),this._internals.setFormValue(this.value)}_manageRequire(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("textarea");if(!t)return;const e=this.errorMessage||"This field is required";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("textarea");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var s;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("textarea");if(!t)return;let e=t.validationMessage;this._setValidityMessage(e)}checkValidity(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("textarea");return t?t.checkValidity():!0}_handleInvalid(t){var s;t.preventDefault(),this._hasUserInteracted=!0,this._validate();const e=(s=this.shadowRoot)==null?void 0:s.querySelector("textarea");if(e){const r=this._internals.form;r?Array.from(r.elements).find(l=>typeof l.checkValidity=="function"&&!l.checkValidity())===this&&e.focus():e.focus()}}_handleInput(t){const e=t.target;this.value=e.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("input",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}_handleChange(){this.dispatchEvent(new Event("change"))}_handleSelect(t){const e=t.target;this.value=e.value,this.dispatchEvent(new CustomEvent("select",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleSelectionChange(t){const e=t.target;this.value=e.value,this.dispatchEvent(new CustomEvent("selectionchange",{detail:{value:this.value},bubbles:!0,composed:!0}))}render(){return c`
       <label class="nys-textarea">
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required?"required":""}
+          flag=${this.required?"required":this.optional?"optional":""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -3381,7 +3599,7 @@
           errorMessage=${this._internals.validationMessage||this.errorMessage}
         ></nys-errormessage>
       </label>
-    `}},F.VALID_WIDTHS=["sm","md","lg","full"],F.VALID_RESIZE=["vertical","none"],F.styles=a4,F.formAssociated=!0,F);k([C({type:String})],H.prototype,"id",2),k([C({type:String})],H.prototype,"name",2),k([C({type:String})],H.prototype,"label",2),k([C({type:String})],H.prototype,"description",2),k([C({type:String})],H.prototype,"placeholder",2),k([C({type:String})],H.prototype,"value",2),k([C({type:Boolean,reflect:!0})],H.prototype,"disabled",2),k([C({type:Boolean,reflect:!0})],H.prototype,"readonly",2),k([C({type:Boolean,reflect:!0})],H.prototype,"required",2),k([C({type:String})],H.prototype,"form",2),k([C({type:Number})],H.prototype,"maxlength",2),k([C({reflect:!0})],H.prototype,"width",2),k([C({type:Number})],H.prototype,"rows",2),k([C({reflect:!0})],H.prototype,"resize",1),k([C({type:Boolean,reflect:!0})],H.prototype,"showError",2),k([C({type:String})],H.prototype,"errorMessage",2);let l0=H;customElements.get("nys-textarea")||customElements.define("nys-textarea",l0);const d4=g`
+    `}},G.VALID_WIDTHS=["sm","md","lg","full"],G.VALID_RESIZE=["vertical","none"],G.styles=a4,G.formAssociated=!0,G);E([C({type:String})],H.prototype,"id",2),E([C({type:String,reflect:!0})],H.prototype,"name",2),E([C({type:String})],H.prototype,"label",2),E([C({type:String})],H.prototype,"description",2),E([C({type:String})],H.prototype,"placeholder",2),E([C({type:String})],H.prototype,"value",2),E([C({type:Boolean,reflect:!0})],H.prototype,"disabled",2),E([C({type:Boolean,reflect:!0})],H.prototype,"readonly",2),E([C({type:Boolean,reflect:!0})],H.prototype,"required",2),E([C({type:Boolean,reflect:!0})],H.prototype,"optional",2),E([C({type:String})],H.prototype,"form",2),E([C({type:Number})],H.prototype,"maxlength",2),E([C({reflect:!0})],H.prototype,"width",2),E([C({type:Number})],H.prototype,"rows",2),E([C({reflect:!0})],H.prototype,"resize",1),E([C({type:Boolean,reflect:!0})],H.prototype,"showError",2),E([C({type:String})],H.prototype,"errorMessage",2);let C0=H;customElements.get("nys-textarea")||customElements.define("nys-textarea",C0);const d4=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3390,8 +3608,24 @@
     --_nys-textinput-radius: var(--nys-radius-md, 4px);
     --_nys-textinput-width-border: var(--nys-border-width-sm, 1px);
     --_nys-textinput-color-border: var(--nys-color-neutral-400, #909395);
+    --_nys-textinput-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-textinput-placeholder-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
     --_nys-textinput-padding: var(--nys-space-100, 8px);
     --_nys-textinput-gap: var(--nys-space-50, 4px);
+    --_nys-textinput-background-color: var(
+      --nys-color-ink-reverse,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-textinput-icon-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
 
     /* Hovered */
     --_nys-textinput-hover-color-outline: var(--nys-color-neutral-900, #1b1b1b);
@@ -3407,7 +3641,10 @@
       --nys-color-neutral-200,
       #bec0c1
     );
-    --_nys-textinput-disabled-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-textinput-disabled-color-text: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
 
     /* Global Font Styles */
     --_nys-textinput-family-ui: var(
@@ -3453,7 +3690,6 @@
   }
 
   .nys-textinput {
-    font-size: var(--_nys-textinput-size-ui-md);
     font-weight: var(--_nys-textinput-weight-ui);
     font-family: var(--_nys-textinput-family-ui);
     line-height: var(--_nys-textinput-lineheight-ui);
@@ -3465,6 +3701,8 @@
   }
 
   .nys-textinput__input {
+    color: var(--_nys-textinput-text-color);
+    font-size: var(--_nys-textinput-size-ui-md);
     border-radius: var(--_nys-textinput-radius);
     border: solid var(--_nys-textinput-color-border)
       var(--_nys-textinput-width-border);
@@ -3475,6 +3713,24 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    background-color: var(--_nys-textinput-background-color);
+  }
+  .nys-textinput__input::placeholder {
+    color: var(--_nys-textinput-placeholder-color);
+  }
+
+  /* This container exist to mainly style the type="password" eye icon */
+  .nys-input-container {
+    position: relative;
+  }
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--_nys-textinput-icon-color);
+    background-color: var(--_nys-textinput-background-color);
   }
 
   /* Hovered */
@@ -3493,50 +3749,61 @@
   }
 
   /* Disabled */
-  .nys-textinput__input:disabled {
+  .nys-textinput__input:disabled,
+  .nys-input-container.disabled,
+  .nys-input-container.disabled .eye-icon,
+  .nys-textinput__input:disabled::placeholder {
     background-color: var(--_nys-textinput-disabled-color);
     border-color: var(--_nys-textinput-disabled-color-border);
     color: var(--_nys-textinput-disabled-color-text);
     cursor: not-allowed;
   }
-`;var p4=Object.defineProperty,u4=Object.getOwnPropertyDescriptor,$=(o,t,e,s)=>{for(var r=s>1?void 0:s?u4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&p4(t,e,r),r};let v4=0;const b=(G=class extends u{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.showError=!1,this.errorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get type(){return this._type}set type(t){this._type=G.VALID_TYPES.includes(t)?t:"text"}updated(t){t.has("width")&&(this.width=G.VALID_WIDTHS.includes(this.width)?this.width:"full")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textinput-${Date.now()}-${v4++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("input");if(!t)return;const e=this.errorMessage||"This field is required";this.required&&(!this.value||this.value.trim()==="")?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t),this.showError=!0):(this._internals.ariaRequired="false",this._internals.setValidity({}),this.showError=!1,this._hasUserInteracted=!1)}_setValidityMessage(t=""){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");e&&(this.showError=!!t,this.errorMessage.trim()&&t!==""&&(t=this.errorMessage),this._internals.setValidity(t?{customError:!0}:{},t,e))}_validate(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("input");if(!t)return;const e=t.validity;let s="";e.valueMissing?s="This field is required":e.typeMismatch?s="Invalid format for this type":e.patternMismatch?s="Invalid format":e.tooShort?s=`Value is too short. Minimum length is ${t.minLength}`:e.tooLong?s=`Value is too long. Maximum length is ${t.maxLength}`:e.rangeUnderflow?s=`Value must be at least ${t.min}`:e.rangeOverflow?s=`Value must be at most ${t.max}`:e.stepMismatch?s="Invalid step value":s=t.validationMessage,this._setValidityMessage(s)}_handleInvalid(){this._hasUserInteracted=!0,this._validate()}_handleInput(t){const e=t.target;this.value=e.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("input",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}_handleChange(){this.dispatchEvent(new Event("change"))}render(){return c`
+`;var p4=Object.defineProperty,u4=Object.getOwnPropertyDescriptor,x=(o,t,e,s)=>{for(var r=s>1?void 0:s?u4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&p4(t,e,r),r};let v4=0;const b=(W=class extends u{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this.form="",this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.showError=!1,this.errorMessage="",this.showPassword=!1,this._originalErrorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get type(){return this._type}set type(t){this._type=W.VALID_TYPES.includes(t)?t:"text"}updated(t){t.has("width")&&(this.width=W.VALID_WIDTHS.includes(this.width)?this.width:"full")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textinput-${Date.now()}-${v4++}`),this._originalErrorMessage=this.errorMessage,this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("input");if(!t)return;const e=this.errorMessage||"This field is required";this.required&&(!this.value||this.value.trim()==="")?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(t=""){var r;const e=(r=this.shadowRoot)==null?void 0:r.querySelector("input");if(!e)return;this.showError=!!t,this._originalErrorMessage.trim()&&t!==""?this.errorMessage=this._originalErrorMessage:this.errorMessage=t;const s=t?{customError:!0}:{};this._internals.setValidity(s,this.errorMessage,e)}_validate(){var r;const t=(r=this.shadowRoot)==null?void 0:r.querySelector("input");if(!t)return;const e=t.validity;let s="";e.valueMissing?s="This field is required":e.typeMismatch?s="Invalid format for this type":e.patternMismatch?s="Invalid format":e.tooShort?s=`Value is too short. Minimum length is ${t.minLength}`:e.tooLong?s=`Value is too long. Maximum length is ${t.maxLength}`:e.rangeUnderflow?s=`Value must be at least ${t.min}`:e.rangeOverflow?s=`Value must be at most ${t.max}`:e.stepMismatch?s="Invalid step value":s=t.validationMessage,this._setValidityMessage(s)}checkValidity(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("input");return t?t.checkValidity():!0}_handleInvalid(t){var s;t.preventDefault(),this._hasUserInteracted=!0,this._validate();const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(e){const r=this._internals.form;r?Array.from(r.elements).find(l=>typeof l.checkValidity=="function"&&!l.checkValidity())===this&&e.focus():e.focus()}}_togglePasswordVisibility(){this.showPassword=!this.showPassword}_handleInput(t){const e=t.target;this.value=e.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("input",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}_handleChange(){this.dispatchEvent(new Event("change"))}render(){return c`
       <div class="nys-textinput">
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required?"required":""}
+          flag=${this.required?"required":this.optional?"optional":""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
-        <input
-          class="nys-textinput__input"
-          type=${this.type}
-          name=${this.name}
-          id=${this.id}
-          ?disabled=${this.disabled}
-          ?required=${this.required}
-          ?readonly=${this.readonly}
-          aria-disabled="${this.disabled}"
-          aria-label="${this.label} ${this.description}"
-          .value=${this.value}
-          placeholder=${f(this.placeholder?this.placeholder:void 0)}
-          pattern=${f(this.pattern?this.pattern:void 0)}
-          min=${f(this.min!==""?this.min:void 0)}
-          maxlength=${f(this.maxlength!==""?this.maxlength:void 0)}
-          step=${f(this.step!==""?this.step:void 0)}
-          max=${f(this.max!==""?this.max:void 0)}
-          form=${f(this.form?this.form:void 0)}
-          @input=${this._handleInput}
-          @focus="${this._handleFocus}"
-          @blur="${this._handleBlur}"
-          @change="${this._handleChange}"
-        />
+        <div class="nys-input-container ${this.disabled?"disabled":""}">
+          <input
+            class="nys-textinput__input"
+            type=${this.type==="password"?this.showPassword?"text":"password":this.type}
+            name=${this.name}
+            id=${this.id}
+            ?disabled=${this.disabled}
+            ?required=${this.required}
+            ?readonly=${this.readonly}
+            aria-disabled="${this.disabled}"
+            aria-label="${this.label} ${this.description}"
+            .value=${this.value}
+            placeholder=${f(this.placeholder?this.placeholder:void 0)}
+            pattern=${f(this.pattern?this.pattern:void 0)}
+            min=${f(this.min!==""?this.min:void 0)}
+            maxlength=${f(this.maxlength!==""?this.maxlength:void 0)}
+            step=${f(this.step!==""?this.step:void 0)}
+            max=${f(this.max!==""?this.max:void 0)}
+            form=${f(this.form?this.form:void 0)}
+            @input=${this._handleInput}
+            @focus="${this._handleFocus}"
+            @blur="${this._handleBlur}"
+            @change="${this._handleChange}"
+          />
+          ${this.type==="password"?c`<nys-icon
+                class="eye-icon"
+                @click=${()=>!this.disabled&&this._togglePasswordVisibility()}
+                name=${this.showPassword?"visibility_off":"visibility"}
+                size="3xl"
+              ></nys-icon>`:""}
+        </div>
         <nys-errormessage
           ?showError=${this.showError}
-          errorMessage=${this._internals.validationMessage||this.errorMessage}
+          errorMessage=${this.errorMessage}
         ></nys-errormessage>
       </div>
-    `}},G.VALID_TYPES=["email","number","password","search","tel","text","url"],G.VALID_WIDTHS=["sm","md","lg","full"],G.styles=d4,G.formAssociated=!0,G);$([C({type:String})],b.prototype,"id",2),$([C({type:String})],b.prototype,"name",2),$([C({reflect:!0})],b.prototype,"type",1),$([C({type:String})],b.prototype,"label",2),$([C({type:String})],b.prototype,"description",2),$([C({type:String})],b.prototype,"placeholder",2),$([C({type:String})],b.prototype,"value",2),$([C({type:Boolean,reflect:!0})],b.prototype,"disabled",2),$([C({type:Boolean,reflect:!0})],b.prototype,"readonly",2),$([C({type:Boolean,reflect:!0})],b.prototype,"required",2),$([C({type:String})],b.prototype,"form",2),$([C({type:String})],b.prototype,"pattern",2),$([C({type:Number})],b.prototype,"maxlength",2),$([C({reflect:!0})],b.prototype,"width",2),$([C({type:Number})],b.prototype,"step",2),$([C({type:Number})],b.prototype,"min",2),$([C({type:Number})],b.prototype,"max",2),$([C({type:Boolean,reflect:!0})],b.prototype,"showError",2),$([C({type:String})],b.prototype,"errorMessage",2);let a0=b;customElements.get("nys-textinput")||customElements.define("nys-textinput",a0);const y4=g`
+    `}},W.VALID_TYPES=["email","number","password","search","tel","text","url"],W.VALID_WIDTHS=["sm","md","lg","full"],W.styles=d4,W.formAssociated=!0,W);x([C({type:String})],b.prototype,"id",2),x([C({type:String,reflect:!0})],b.prototype,"name",2),x([C({reflect:!0})],b.prototype,"type",1),x([C({type:String})],b.prototype,"label",2),x([C({type:String})],b.prototype,"description",2),x([C({type:String})],b.prototype,"placeholder",2),x([C({type:String})],b.prototype,"value",2),x([C({type:Boolean,reflect:!0})],b.prototype,"disabled",2),x([C({type:Boolean,reflect:!0})],b.prototype,"readonly",2),x([C({type:Boolean,reflect:!0})],b.prototype,"required",2),x([C({type:Boolean,reflect:!0})],b.prototype,"optional",2),x([C({type:String})],b.prototype,"form",2),x([C({type:String})],b.prototype,"pattern",2),x([C({type:Number})],b.prototype,"maxlength",2),x([C({reflect:!0})],b.prototype,"width",2),x([C({type:Number})],b.prototype,"step",2),x([C({type:Number})],b.prototype,"min",2),x([C({type:Number})],b.prototype,"max",2),x([C({type:Boolean,reflect:!0})],b.prototype,"showError",2),x([C({type:String})],b.prototype,"errorMessage",2),x([$1()],b.prototype,"showPassword",2);let c0=b;customElements.get("nys-textinput")||customElements.define("nys-textinput",c0);const y4=g`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -3600,7 +3867,15 @@
       var(--nys-color-white, #fff)
     );
 
-    /* Font sizes and spacing for labels, descriptions, and icons */
+    /* Font sizes, color, and spacing for labels, descriptions, and icons */
+    --_nys-toggle-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-toggle-disabled-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
     --_nys-toggle-icon-font-size-xs: var(
       --nys-font-size-body-xs,
       var(--nys-font-size-xs, 12px)
@@ -3618,6 +3893,8 @@
   }
   slot[name="description"] {
     font-style: italic;
+    text-align: left;
+    display: flex;
   }
 
   /* Toggle switch overall container */
@@ -3628,8 +3905,10 @@
 
   /* Label & description text container */
   .nys-toggle__text {
+    color: var(--_nys-toggle-text-color);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     font-size: var(--_nys-toggle-font-size);
     font-family: var(--_nys-toggle-font-family);
     font-weight: var(--_nys-toggle-font-weight);
@@ -3637,7 +3916,7 @@
   }
 
   .nys-toggle__content:has(input:disabled) .nys-toggle__text * {
-    color: var(--_nys-toggle-color-base);
+    color: var(--_nys-toggle-disabled-color);
     cursor: not-allowed;
   }
 
@@ -3669,7 +3948,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--_nys-toggle-color-base, #797c7f);
+    background-color: var(--_nys-toggle-color-base);
   }
 
   .knob {
@@ -3740,7 +4019,7 @@
   /* Icon Styling */
   .toggle-icon {
     position: absolute;
-    color: var(--_nys-toggle-color-base, #797c7f);
+    color: var(--_nys-toggle-color-base);
   }
   input:checked + .slider .knob .toggle-icon {
     color: var(--_nys-toggle-color-theme, #154973);
@@ -3800,7 +4079,7 @@
       --toggle-transition-duration: 0s; /* Disable animation */
     }
   }
-`;var g4=Object.defineProperty,f4=Object.getOwnPropertyDescriptor,J=(o,t,e,s)=>{for(var r=s>1?void 0:s?f4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&g4(t,e,r),r};let _4=0;const q=(w1=class extends u{constructor(){super(...arguments),this.id="",this.name="",this.value="",this.checked=!1,this.disabled=!1,this.noIcon=!1,this.label="",this.description="",this._size="md",this.form=""}get size(){return this._size}set size(t){this._size=w1.VALID_SIZES.includes(t)?t:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-toggle-${Date.now()}-${_4++}`)}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleChange(t){const{checked:e}=t.target;this.checked=e,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleKeyDown(t){!this.disabled&&(t.key===" "||t.key==="Enter")&&(t.preventDefault(),this.checked=!this.checked,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0})))}render(){return c`
+`;var g4=Object.defineProperty,f4=Object.getOwnPropertyDescriptor,Q=(o,t,e,s)=>{for(var r=s>1?void 0:s?f4(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&g4(t,e,r),r};let _4=0;const j=(a1=class extends u{constructor(){super(),this.id="",this.name="",this.value="",this.checked=!1,this.disabled=!1,this.noIcon=!1,this.label="",this.description="",this._size="md",this.form="",this._internals=this.attachInternals()}get size(){return this._size}set size(t){this._size=a1.VALID_SIZES.includes(t)?t:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-toggle-${Date.now()}-${_4++}`)}updated(t){(t.has("checked")||t.has("value"))&&this._internals.setFormValue(this.checked?this.value:null)}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this.dispatchEvent(new Event("blur"))}_handleChange(t){const{checked:e}=t.target;this.checked=e,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0}))}_handleKeyDown(t){!this.disabled&&(t.key===" "||t.key==="Enter")&&(t.preventDefault(),this.checked=!this.checked,this.dispatchEvent(new CustomEvent("change",{detail:{checked:this.checked},bubbles:!0,composed:!0})))}render(){return c`
       <label class="nys-toggle">
         <div class="nys-toggle__content">
           <div class="nys-toggle__toggle">
@@ -3835,9 +4114,24 @@
           </div>
         </div>
       </label>
-    `}},w1.styles=y4,w1.VALID_SIZES=["sm","md"],w1);J([C({type:String})],q.prototype,"id",2),J([C({type:String})],q.prototype,"name",2),J([C({type:String})],q.prototype,"value",2),J([C({type:Boolean,reflect:!0})],q.prototype,"checked",2),J([C({type:Boolean,reflect:!0})],q.prototype,"disabled",2),J([C({type:Boolean})],q.prototype,"noIcon",2),J([C({type:String})],q.prototype,"label",2),J([C({type:String})],q.prototype,"description",2),J([C({reflect:!0})],q.prototype,"size",1),J([C({type:String})],q.prototype,"form",2);let C0=q;customElements.get("nys-toggle")||customElements.define("nys-toggle",C0);const w4=g`
+    `}},a1.VALID_SIZES=["sm","md"],a1.styles=y4,a1.formAssociated=!0,a1);Q([C({type:String})],j.prototype,"id",2),Q([C({type:String,reflect:!0})],j.prototype,"name",2),Q([C({type:String})],j.prototype,"value",2),Q([C({type:Boolean,reflect:!0})],j.prototype,"checked",2),Q([C({type:Boolean,reflect:!0})],j.prototype,"disabled",2),Q([C({type:Boolean})],j.prototype,"noIcon",2),Q([C({type:String})],j.prototype,"label",2),Q([C({type:String})],j.prototype,"description",2),Q([C({reflect:!0})],j.prototype,"size",1),Q([C({type:String})],j.prototype,"form",2);let h0=j;customElements.get("nys-toggle")||customElements.define("nys-toggle",h0);const w4=g`
   :host {
+    /* Global Unav Header Styles */
     --_nys-unavheader-gutter: var(--nys-gutter-xs, 20px);
+    --_nys-unavheader-bg-color: var(
+      --nys-color-surface,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-unavheader-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+
+    /* Trustbar, Search Bar, and Language */
+    --_nys-unavheader-surface-raised-color: var(
+      --nys-color-surface-raised,
+      var(--nys-color-neutral-10, #f6f6f6)
+    );
 
     /* Typography */
     font-size: var(--nys-font-size-ui-md, 16px);
@@ -3857,8 +4151,8 @@
   }
 
   .nys-unavheader {
-    background-color: var(--nys-color-ink-reverse, #ffffff);
-    padding: var(--nys-space-2px, 2px) var(--_nys-unavheader-gutter);
+    background-color: var(--_nys-unavheader-bg-color);
+    padding: var(--nys-space-100, 8px) var(--_nys-unavheader-gutter);
     display: flex;
     justify-content: center;
   }
@@ -3875,9 +4169,10 @@
     outline-offset: var(--nys-space-2px, 2px);
   }
 
-  .nys-unavheader__logo {
+  .nys-unavheader__logo svg {
     vertical-align: top;
-    height: var(--nys-space-700, 56px);
+    height: var(--nys-size-500, 40px);
+    width: auto;
   }
 
   .nys-unavheader__toptrustbar {
@@ -3921,6 +4216,7 @@
 
   #nys-unavheader__official {
     width: max-content;
+    color: var(--_nys-unavheader-text-color);
   }
 
   #nys-unavheader__know {
@@ -3969,13 +4265,13 @@
   }
 
   .nys-unavheader__searchdropdown.show {
-    background-color: var(--nys-color-neutral-50, #ededed);
+    background-color: var(--_nys-unavheader-surface-raised-color);
     padding: var(--nys-space-250, 20px) var(--_nys-unavheader-gutter);
   }
 
   .nys-unavheader__trustbar.show {
-    background-color: var(--nys-color-neutral-50, #ededed);
-    color: var(--nys-color-ink, #1b1b1b);
+    background-color: var(--_nys-unavheader-surface-raised-color);
+    color: var(--_nys-unavheader-text-color);
     display: flex;
     justify-content: center;
     padding: var(--nys-space-400, 32px) var(--_nys-unavheader-gutter);
@@ -4006,7 +4302,7 @@
     min-width: 100%;
     width: max-content;
     z-index: 99999;
-    background-color: var(--nys-color-neutral-50, #ededed);
+    background-color: var(--_nys-unavheader-surface-raised-color);
     color: var(--nys-color-state-blue-700, #154973);
     margin-top: var(--nys-space-150, 12px);
     right: 0;
@@ -4112,7 +4408,7 @@
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * TextInput Component v1.1.0
+   * TextInput Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -4120,15 +4416,19 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const M2=globalThis,w7=M2.ShadowRoot&&(M2.ShadyCSS===void 0||M2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,c0=Symbol(),h0=new WeakMap;let m4=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==c0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(w7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=h0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&h0.set(t,o))}return o}toString(){return this.cssText}};const x4=o=>new m4(typeof o=="string"?o:o+"",void 0,c0),L4=(o,t)=>{if(w7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=M2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},d0=w7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return x4(e)})(o):o;/**
+ */const M2=globalThis,w7=M2.ShadowRoot&&(M2.ShadyCSS===void 0||M2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,d0=Symbol(),p0=new WeakMap;let m4=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==d0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(w7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=p0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&p0.set(t,o))}return o}toString(){return this.cssText}};const x4=o=>new m4(typeof o=="string"?o:o+"",void 0,d0),L4=(o,t)=>{if(w7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=M2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},u0=w7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return x4(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:$4,defineProperty:M4,getOwnPropertyDescriptor:S4,getOwnPropertyNames:Z4,getOwnPropertySymbols:H4,getPrototypeOf:E4}=Object,n5=globalThis,p0=n5.trustedTypes,V4=p0?p0.emptyScript:"",u0=n5.reactiveElementPolyfillSupport,T5=(o,t)=>o,S2={toAttribute(o,t){switch(t){case Boolean:o=o?V4:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},b7=(o,t)=>!$4(o,t),v0={attribute:!0,type:String,converter:S2,reflect:!1,hasChanged:b7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),n5.litPropertyMetadata??(n5.litPropertyMetadata=new WeakMap);let I5=class extends HTMLElement{static addInitializer(o){this._$Ei(),(this.l??(this.l=[])).push(o)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(o,t=v0){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(o,t),!t.noAccessor){const e=Symbol(),s=this.getPropertyDescriptor(o,e,t);s!==void 0&&M4(this.prototype,o,s)}}static getPropertyDescriptor(o,t,e){const{get:s,set:r}=S4(this.prototype,o)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const i=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(o,i,e)},configurable:!0,enumerable:!0}}static getPropertyOptions(o){return this.elementProperties.get(o)??v0}static _$Ei(){if(this.hasOwnProperty(T5("elementProperties")))return;const o=E4(this);o.finalize(),o.l!==void 0&&(this.l=[...o.l]),this.elementProperties=new Map(o.elementProperties)}static finalize(){if(this.hasOwnProperty(T5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(T5("properties"))){const t=this.properties,e=[...Z4(t),...H4(t)];for(const s of e)this.createProperty(s,t[s])}const o=this[Symbol.metadata];if(o!==null){const t=litPropertyMetadata.get(o);if(t!==void 0)for(const[e,s]of t)this.elementProperties.set(e,s)}this._$Eh=new Map;for(const[t,e]of this.elementProperties){const s=this._$Eu(t,e);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(o){const t=[];if(Array.isArray(o)){const e=new Set(o.flat(1/0).reverse());for(const s of e)t.unshift(d0(s))}else o!==void 0&&t.push(d0(o));return t}static _$Eu(o,t){const e=t.attribute;return e===!1?void 0:typeof e=="string"?e:typeof o=="string"?o.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var o;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(o=this.constructor.l)==null||o.forEach(t=>t(this))}addController(o){var t;(this._$EO??(this._$EO=new Set)).add(o),this.renderRoot!==void 0&&this.isConnected&&((t=o.hostConnected)==null||t.call(o))}removeController(o){var t;(t=this._$EO)==null||t.delete(o)}_$E_(){const o=new Map,t=this.constructor.elementProperties;for(const e of t.keys())this.hasOwnProperty(e)&&(o.set(e,this[e]),delete this[e]);o.size>0&&(this._$Ep=o)}createRenderRoot(){const o=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return L4(o,this.constructor.elementStyles),o}connectedCallback(){var o;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostConnected)==null?void 0:e.call(t)})}enableUpdating(o){}disconnectedCallback(){var o;(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostDisconnected)==null?void 0:e.call(t)})}attributeChangedCallback(o,t,e){this._$AK(o,e)}_$EC(o,t){var e;const s=this.constructor.elementProperties.get(o),r=this.constructor._$Eu(o,s);if(r!==void 0&&s.reflect===!0){const n=(((e=s.converter)==null?void 0:e.toAttribute)!==void 0?s.converter:S2).toAttribute(t,s.type);this._$Em=o,n==null?this.removeAttribute(r):this.setAttribute(r,n),this._$Em=null}}_$AK(o,t){var e;const s=this.constructor,r=s._$Eh.get(o);if(r!==void 0&&this._$Em!==r){const n=s.getPropertyOptions(r),i=typeof n.converter=="function"?{fromAttribute:n.converter}:((e=n.converter)==null?void 0:e.fromAttribute)!==void 0?n.converter:S2;this._$Em=r,this[r]=i.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(o,t,e){if(o!==void 0){if(e??(e=this.constructor.getPropertyOptions(o)),!(e.hasChanged??b7)(this[o],t))return;this.P(o,t,e)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(o,t,e){this._$AL.has(o)||this._$AL.set(o,t),e.reflect===!0&&this._$Em!==o&&(this._$Ej??(this._$Ej=new Set)).add(o)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const o=this.scheduleUpdate();return o!=null&&await o,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(e)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(e)}willUpdate(o){}_$AE(o){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostUpdated)==null?void 0:s.call(e)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(o)),this.updated(o)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(o){return!0}update(o){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(o){}firstUpdated(o){}};I5.elementStyles=[],I5.shadowRootOptions={mode:"open"},I5[T5("elementProperties")]=new Map,I5[T5("finalized")]=new Map,u0==null||u0({ReactiveElement:I5}),(n5.reactiveElementVersions??(n5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:$4,defineProperty:M4,getOwnPropertyDescriptor:S4,getOwnPropertyNames:Z4,getOwnPropertySymbols:H4,getPrototypeOf:E4}=Object,n5=globalThis,v0=n5.trustedTypes,V4=v0?v0.emptyScript:"",y0=n5.reactiveElementPolyfillSupport,I5=(o,t)=>o,S2={toAttribute(o,t){switch(t){case Boolean:o=o?V4:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},b7=(o,t)=>!$4(o,t),g0={attribute:!0,type:String,converter:S2,reflect:!1,hasChanged:b7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),n5.litPropertyMetadata??(n5.litPropertyMetadata=new WeakMap);let T5=class extends HTMLElement{static addInitializer(o){this._$Ei(),(this.l??(this.l=[])).push(o)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(o,t=g0){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(o,t),!t.noAccessor){const e=Symbol(),s=this.getPropertyDescriptor(o,e,t);s!==void 0&&M4(this.prototype,o,s)}}static getPropertyDescriptor(o,t,e){const{get:s,set:r}=S4(this.prototype,o)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const i=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(o,i,e)},configurable:!0,enumerable:!0}}static getPropertyOptions(o){return this.elementProperties.get(o)??g0}static _$Ei(){if(this.hasOwnProperty(I5("elementProperties")))return;const o=E4(this);o.finalize(),o.l!==void 0&&(this.l=[...o.l]),this.elementProperties=new Map(o.elementProperties)}static finalize(){if(this.hasOwnProperty(I5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(I5("properties"))){const t=this.properties,e=[...Z4(t),...H4(t)];for(const s of e)this.createProperty(s,t[s])}const o=this[Symbol.metadata];if(o!==null){const t=litPropertyMetadata.get(o);if(t!==void 0)for(const[e,s]of t)this.elementProperties.set(e,s)}this._$Eh=new Map;for(const[t,e]of this.elementProperties){const s=this._$Eu(t,e);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(o){const t=[];if(Array.isArray(o)){const e=new Set(o.flat(1/0).reverse());for(const s of e)t.unshift(u0(s))}else o!==void 0&&t.push(u0(o));return t}static _$Eu(o,t){const e=t.attribute;return e===!1?void 0:typeof e=="string"?e:typeof o=="string"?o.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var o;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(o=this.constructor.l)==null||o.forEach(t=>t(this))}addController(o){var t;(this._$EO??(this._$EO=new Set)).add(o),this.renderRoot!==void 0&&this.isConnected&&((t=o.hostConnected)==null||t.call(o))}removeController(o){var t;(t=this._$EO)==null||t.delete(o)}_$E_(){const o=new Map,t=this.constructor.elementProperties;for(const e of t.keys())this.hasOwnProperty(e)&&(o.set(e,this[e]),delete this[e]);o.size>0&&(this._$Ep=o)}createRenderRoot(){const o=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return L4(o,this.constructor.elementStyles),o}connectedCallback(){var o;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostConnected)==null?void 0:e.call(t)})}enableUpdating(o){}disconnectedCallback(){var o;(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostDisconnected)==null?void 0:e.call(t)})}attributeChangedCallback(o,t,e){this._$AK(o,e)}_$EC(o,t){var e;const s=this.constructor.elementProperties.get(o),r=this.constructor._$Eu(o,s);if(r!==void 0&&s.reflect===!0){const n=(((e=s.converter)==null?void 0:e.toAttribute)!==void 0?s.converter:S2).toAttribute(t,s.type);this._$Em=o,n==null?this.removeAttribute(r):this.setAttribute(r,n),this._$Em=null}}_$AK(o,t){var e;const s=this.constructor,r=s._$Eh.get(o);if(r!==void 0&&this._$Em!==r){const n=s.getPropertyOptions(r),i=typeof n.converter=="function"?{fromAttribute:n.converter}:((e=n.converter)==null?void 0:e.fromAttribute)!==void 0?n.converter:S2;this._$Em=r,this[r]=i.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(o,t,e){if(o!==void 0){if(e??(e=this.constructor.getPropertyOptions(o)),!(e.hasChanged??b7)(this[o],t))return;this.P(o,t,e)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(o,t,e){this._$AL.has(o)||this._$AL.set(o,t),e.reflect===!0&&this._$Em!==o&&(this._$Ej??(this._$Ej=new Set)).add(o)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const o=this.scheduleUpdate();return o!=null&&await o,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(e)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(e)}willUpdate(o){}_$AE(o){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostUpdated)==null?void 0:s.call(e)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(o)),this.updated(o)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(o){return!0}update(o){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(o){}firstUpdated(o){}};T5.elementStyles=[],T5.shadowRootOptions={mode:"open"},T5[I5("elementProperties")]=new Map,T5[I5("finalized")]=new Map,y0==null||y0({ReactiveElement:T5}),(n5.reactiveElementVersions??(n5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const k4={attribute:!0,type:String,converter:S2,reflect:!1,hasChanged:b7},A4=(o=k4,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function M(o){return(t,e)=>typeof e=="object"?A4(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const P4=g`
+ */const k4={attribute:!0,type:String,converter:S2,reflect:!1,hasChanged:b7},A4=(o=k4,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function L(o){return(t,e)=>typeof e=="object"?A4(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */function P4(o){return L({...o,state:!0,attribute:!1})}const z4=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -4137,8 +4437,24 @@
     --_nys-textinput-radius: var(--nys-radius-md, 4px);
     --_nys-textinput-width-border: var(--nys-border-width-sm, 1px);
     --_nys-textinput-color-border: var(--nys-color-neutral-400, #909395);
+    --_nys-textinput-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-textinput-placeholder-color: var(
+      --nys-color-text-weaker,
+      var(--nys-color-neutral-500, #797c7f)
+    );
     --_nys-textinput-padding: var(--nys-space-100, 8px);
     --_nys-textinput-gap: var(--nys-space-50, 4px);
+    --_nys-textinput-background-color: var(
+      --nys-color-ink-reverse,
+      var(--nys-color-white, #ffffff)
+    );
+    --_nys-textinput-icon-color: var(
+      --nys-color-ink,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
 
     /* Hovered */
     --_nys-textinput-hover-color-outline: var(--nys-color-neutral-900, #1b1b1b);
@@ -4154,7 +4470,10 @@
       --nys-color-neutral-200,
       #bec0c1
     );
-    --_nys-textinput-disabled-color-text: var(--nys-color-neutral-300, #a7a9ab);
+    --_nys-textinput-disabled-color-text: var(
+      --nys-color-text-disabled,
+      var(--nys-color-neutral-200, #bec0c1)
+    );
 
     /* Global Font Styles */
     --_nys-textinput-family-ui: var(
@@ -4200,7 +4519,6 @@
   }
 
   .nys-textinput {
-    font-size: var(--_nys-textinput-size-ui-md);
     font-weight: var(--_nys-textinput-weight-ui);
     font-family: var(--_nys-textinput-family-ui);
     line-height: var(--_nys-textinput-lineheight-ui);
@@ -4212,6 +4530,8 @@
   }
 
   .nys-textinput__input {
+    color: var(--_nys-textinput-text-color);
+    font-size: var(--_nys-textinput-size-ui-md);
     border-radius: var(--_nys-textinput-radius);
     border: solid var(--_nys-textinput-color-border)
       var(--_nys-textinput-width-border);
@@ -4222,6 +4542,24 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    background-color: var(--_nys-textinput-background-color);
+  }
+  .nys-textinput__input::placeholder {
+    color: var(--_nys-textinput-placeholder-color);
+  }
+
+  /* This container exist to mainly style the type="password" eye icon */
+  .nys-input-container {
+    position: relative;
+  }
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--_nys-textinput-icon-color);
+    background-color: var(--_nys-textinput-background-color);
   }
 
   /* Hovered */
@@ -4240,7 +4578,10 @@
   }
 
   /* Disabled */
-  .nys-textinput__input:disabled {
+  .nys-textinput__input:disabled,
+  .nys-input-container.disabled,
+  .nys-input-container.disabled .eye-icon,
+  .nys-textinput__input:disabled::placeholder {
     background-color: var(--_nys-textinput-disabled-color);
     border-color: var(--_nys-textinput-disabled-color-border);
     color: var(--_nys-textinput-disabled-color-text);
@@ -4250,18 +4591,18 @@
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const Z2=globalThis,H2=Z2.trustedTypes,y0=H2?H2.createPolicy("lit-html",{createHTML:o=>o}):void 0,g0="$lit$",v1=`lit$${Math.random().toFixed(9).slice(2)}$`,f0="?"+v1,z4=`<${f0}>`,A1=document,E2=()=>A1.createComment(""),D5=o=>o===null||typeof o!="object"&&typeof o!="function",m7=Array.isArray,U4=o=>m7(o)||typeof(o==null?void 0:o[Symbol.iterator])=="function",x7=`[ 	
-\f\r]`,N5=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,_0=/-->/g,w0=/>/g,P1=RegExp(`>|${x7}(?:([^\\s"'>=/]+)(${x7}*=${x7}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`,"g"),b0=/'/g,m0=/"/g,x0=/^(?:script|style|textarea|title)$/i,q5=Symbol.for("lit-noChange"),S=Symbol.for("lit-nothing"),L0=new WeakMap,z1=A1.createTreeWalker(A1,129);function $0(o,t){if(!m7(o)||!o.hasOwnProperty("raw"))throw Error("invalid template strings array");return y0!==void 0?y0.createHTML(t):t}const B4=(o,t)=>{const e=o.length-1,s=[];let r,n=t===2?"<svg>":t===3?"<math>":"",i=N5;for(let l=0;l<e;l++){const a=o[l];let p,d,h=-1,v=0;for(;v<a.length&&(i.lastIndex=v,d=i.exec(a),d!==null);)v=i.lastIndex,i===N5?d[1]==="!--"?i=_0:d[1]!==void 0?i=w0:d[2]!==void 0?(x0.test(d[2])&&(r=RegExp("</"+d[2],"g")),i=P1):d[3]!==void 0&&(i=P1):i===P1?d[0]===">"?(i=r??N5,h=-1):d[1]===void 0?h=-2:(h=i.lastIndex-d[2].length,p=d[1],i=d[3]===void 0?P1:d[3]==='"'?m0:b0):i===m0||i===b0?i=P1:i===_0||i===w0?i=N5:(i=P1,r=void 0);const y=i===P1&&o[l+1].startsWith("/>")?" ":"";n+=i===N5?a+z4:h>=0?(s.push(p),a.slice(0,h)+g0+a.slice(h)+v1+y):a+v1+(h===-2?l:y)}return[$0(o,n+(o[e]||"<?>")+(t===2?"</svg>":t===3?"</math>":"")),s]};let L7=class r8{constructor({strings:t,_$litType$:e},s){let r;this.parts=[];let n=0,i=0;const l=t.length-1,a=this.parts,[p,d]=B4(t,e);if(this.el=r8.createElement(p,s),z1.currentNode=this.el.content,e===2||e===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(r=z1.nextNode())!==null&&a.length<l;){if(r.nodeType===1){if(r.hasAttributes())for(const h of r.getAttributeNames())if(h.endsWith(g0)){const v=d[i++],y=r.getAttribute(h).split(v1),B=/([.?@])?(.*)/.exec(v);a.push({type:1,index:n,name:B[2],strings:y,ctor:B[1]==="."?R4:B[1]==="?"?T4:B[1]==="@"?I4:V2}),r.removeAttribute(h)}else h.startsWith(v1)&&(a.push({type:6,index:n}),r.removeAttribute(h));if(x0.test(r.tagName)){const h=r.textContent.split(v1),v=h.length-1;if(v>0){r.textContent=H2?H2.emptyScript:"";for(let y=0;y<v;y++)r.append(h[y],E2()),z1.nextNode(),a.push({type:2,index:++n});r.append(h[v],E2())}}}else if(r.nodeType===8)if(r.data===f0)a.push({type:2,index:n});else{let h=-1;for(;(h=r.data.indexOf(v1,h+1))!==-1;)a.push({type:7,index:n}),h+=v1.length-1}n++}}static createElement(t,e){const s=A1.createElement("template");return s.innerHTML=t,s}};function i5(o,t,e=o,s){var r,n;if(t===q5)return t;let i=s!==void 0?(r=e._$Co)==null?void 0:r[s]:e._$Cl;const l=D5(t)?void 0:t._$litDirective$;return(i==null?void 0:i.constructor)!==l&&((n=i==null?void 0:i._$AO)==null||n.call(i,!1),l===void 0?i=void 0:(i=new l(o),i._$AT(o,e,s)),s!==void 0?(e._$Co??(e._$Co=[]))[s]=i:e._$Cl=i),i!==void 0&&(t=i5(o,i._$AS(o,t.values),i,s)),t}let O4=class{constructor(o,t){this._$AV=[],this._$AN=void 0,this._$AD=o,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(o){const{el:{content:t},parts:e}=this._$AD,s=((o==null?void 0:o.creationScope)??A1).importNode(t,!0);z1.currentNode=s;let r=z1.nextNode(),n=0,i=0,l=e[0];for(;l!==void 0;){if(n===l.index){let a;l.type===2?a=new M0(r,r.nextSibling,this,o):l.type===1?a=new l.ctor(r,l.name,l.strings,this,o):l.type===6&&(a=new D4(r,this,o)),this._$AV.push(a),l=e[++i]}n!==(l==null?void 0:l.index)&&(r=z1.nextNode(),n++)}return z1.currentNode=A1,s}p(o){let t=0;for(const e of this._$AV)e!==void 0&&(e.strings!==void 0?(e._$AI(o,e,t),t+=e.strings.length-2):e._$AI(o[t])),t++}},M0=class n8{get _$AU(){var t;return((t=this._$AM)==null?void 0:t._$AU)??this._$Cv}constructor(t,e,s,r){this.type=2,this._$AH=S,this._$AN=void 0,this._$AA=t,this._$AB=e,this._$AM=s,this.options=r,this._$Cv=(r==null?void 0:r.isConnected)??!0}get parentNode(){let t=this._$AA.parentNode;const e=this._$AM;return e!==void 0&&(t==null?void 0:t.nodeType)===11&&(t=e.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,e=this){t=i5(this,t,e),D5(t)?t===S||t==null||t===""?(this._$AH!==S&&this._$AR(),this._$AH=S):t!==this._$AH&&t!==q5&&this._(t):t._$litType$!==void 0?this.$(t):t.nodeType!==void 0?this.T(t):U4(t)?this.k(t):this._(t)}O(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}T(t){this._$AH!==t&&(this._$AR(),this._$AH=this.O(t))}_(t){this._$AH!==S&&D5(this._$AH)?this._$AA.nextSibling.data=t:this.T(A1.createTextNode(t)),this._$AH=t}$(t){var e;const{values:s,_$litType$:r}=t,n=typeof r=="number"?this._$AC(t):(r.el===void 0&&(r.el=L7.createElement($0(r.h,r.h[0]),this.options)),r);if(((e=this._$AH)==null?void 0:e._$AD)===n)this._$AH.p(s);else{const i=new O4(n,this),l=i.u(this.options);i.p(s),this.T(l),this._$AH=i}}_$AC(t){let e=L0.get(t.strings);return e===void 0&&L0.set(t.strings,e=new L7(t)),e}k(t){m7(this._$AH)||(this._$AH=[],this._$AR());const e=this._$AH;let s,r=0;for(const n of t)r===e.length?e.push(s=new n8(this.O(E2()),this.O(E2()),this,this.options)):s=e[r],s._$AI(n),r++;r<e.length&&(this._$AR(s&&s._$AB.nextSibling,r),e.length=r)}_$AR(t=this._$AA.nextSibling,e){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,e);t&&t!==this._$AB;){const r=t.nextSibling;t.remove(),t=r}}setConnected(t){var e;this._$AM===void 0&&(this._$Cv=t,(e=this._$AP)==null||e.call(this,t))}},V2=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(o,t,e,s,r){this.type=1,this._$AH=S,this._$AN=void 0,this.element=o,this.name=t,this._$AM=s,this.options=r,e.length>2||e[0]!==""||e[1]!==""?(this._$AH=Array(e.length-1).fill(new String),this.strings=e):this._$AH=S}_$AI(o,t=this,e,s){const r=this.strings;let n=!1;if(r===void 0)o=i5(this,o,t,0),n=!D5(o)||o!==this._$AH&&o!==q5,n&&(this._$AH=o);else{const i=o;let l,a;for(o=r[0],l=0;l<r.length-1;l++)a=i5(this,i[e+l],t,l),a===q5&&(a=this._$AH[l]),n||(n=!D5(a)||a!==this._$AH[l]),a===S?o=S:o!==S&&(o+=(a??"")+r[l+1]),this._$AH[l]=a}n&&!s&&this.j(o)}j(o){o===S?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,o??"")}},R4=class extends V2{constructor(){super(...arguments),this.type=3}j(o){this.element[this.name]=o===S?void 0:o}},T4=class extends V2{constructor(){super(...arguments),this.type=4}j(o){this.element.toggleAttribute(this.name,!!o&&o!==S)}},I4=class extends V2{constructor(o,t,e,s,r){super(o,t,e,s,r),this.type=5}_$AI(o,t=this){if((o=i5(this,o,t,0)??S)===q5)return;const e=this._$AH,s=o===S&&e!==S||o.capture!==e.capture||o.once!==e.once||o.passive!==e.passive,r=o!==S&&(e===S||s);s&&this.element.removeEventListener(this.name,this,e),r&&this.element.addEventListener(this.name,this,o),this._$AH=o}handleEvent(o){var t;typeof this._$AH=="function"?this._$AH.call(((t=this.options)==null?void 0:t.host)??this.element,o):this._$AH.handleEvent(o)}},D4=class{constructor(o,t,e){this.element=o,this.type=6,this._$AN=void 0,this._$AM=t,this.options=e}get _$AU(){return this._$AM._$AU}_$AI(o){i5(this,o)}};const S0=Z2.litHtmlPolyfillSupport;S0==null||S0(L7,M0),(Z2.litHtmlVersions??(Z2.litHtmlVersions=[])).push("3.2.1");/**
+ */const Z2=globalThis,H2=Z2.trustedTypes,f0=H2?H2.createPolicy("lit-html",{createHTML:o=>o}):void 0,_0="$lit$",g1=`lit$${Math.random().toFixed(9).slice(2)}$`,w0="?"+g1,U4=`<${w0}>`,P1=document,E2=()=>P1.createComment(""),D5=o=>o===null||typeof o!="object"&&typeof o!="function",m7=Array.isArray,B4=o=>m7(o)||typeof(o==null?void 0:o[Symbol.iterator])=="function",x7=`[ 	
+\f\r]`,N5=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,b0=/-->/g,m0=/>/g,z1=RegExp(`>|${x7}(?:([^\\s"'>=/]+)(${x7}*=${x7}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`,"g"),x0=/'/g,L0=/"/g,$0=/^(?:script|style|textarea|title)$/i,q5=Symbol.for("lit-noChange"),Z=Symbol.for("lit-nothing"),M0=new WeakMap,U1=P1.createTreeWalker(P1,129);function S0(o,t){if(!m7(o)||!o.hasOwnProperty("raw"))throw Error("invalid template strings array");return f0!==void 0?f0.createHTML(t):t}const O4=(o,t)=>{const e=o.length-1,s=[];let r,n=t===2?"<svg>":t===3?"<math>":"",i=N5;for(let l=0;l<e;l++){const a=o[l];let p,d,h=-1,v=0;for(;v<a.length&&(i.lastIndex=v,d=i.exec(a),d!==null);)v=i.lastIndex,i===N5?d[1]==="!--"?i=b0:d[1]!==void 0?i=m0:d[2]!==void 0?($0.test(d[2])&&(r=RegExp("</"+d[2],"g")),i=z1):d[3]!==void 0&&(i=z1):i===z1?d[0]===">"?(i=r??N5,h=-1):d[1]===void 0?h=-2:(h=i.lastIndex-d[2].length,p=d[1],i=d[3]===void 0?z1:d[3]==='"'?L0:x0):i===L0||i===x0?i=z1:i===b0||i===m0?i=N5:(i=z1,r=void 0);const y=i===z1&&o[l+1].startsWith("/>")?" ":"";n+=i===N5?a+U4:h>=0?(s.push(p),a.slice(0,h)+_0+a.slice(h)+g1+y):a+g1+(h===-2?l:y)}return[S0(o,n+(o[e]||"<?>")+(t===2?"</svg>":t===3?"</math>":"")),s]};let L7=class i8{constructor({strings:t,_$litType$:e},s){let r;this.parts=[];let n=0,i=0;const l=t.length-1,a=this.parts,[p,d]=O4(t,e);if(this.el=i8.createElement(p,s),U1.currentNode=this.el.content,e===2||e===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(r=U1.nextNode())!==null&&a.length<l;){if(r.nodeType===1){if(r.hasAttributes())for(const h of r.getAttributeNames())if(h.endsWith(_0)){const v=d[i++],y=r.getAttribute(h).split(g1),B=/([.?@])?(.*)/.exec(v);a.push({type:1,index:n,name:B[2],strings:y,ctor:B[1]==="."?I4:B[1]==="?"?T4:B[1]==="@"?D4:V2}),r.removeAttribute(h)}else h.startsWith(g1)&&(a.push({type:6,index:n}),r.removeAttribute(h));if($0.test(r.tagName)){const h=r.textContent.split(g1),v=h.length-1;if(v>0){r.textContent=H2?H2.emptyScript:"";for(let y=0;y<v;y++)r.append(h[y],E2()),U1.nextNode(),a.push({type:2,index:++n});r.append(h[v],E2())}}}else if(r.nodeType===8)if(r.data===w0)a.push({type:2,index:n});else{let h=-1;for(;(h=r.data.indexOf(g1,h+1))!==-1;)a.push({type:7,index:n}),h+=g1.length-1}n++}}static createElement(t,e){const s=P1.createElement("template");return s.innerHTML=t,s}};function i5(o,t,e=o,s){var r,n;if(t===q5)return t;let i=s!==void 0?(r=e._$Co)==null?void 0:r[s]:e._$Cl;const l=D5(t)?void 0:t._$litDirective$;return(i==null?void 0:i.constructor)!==l&&((n=i==null?void 0:i._$AO)==null||n.call(i,!1),l===void 0?i=void 0:(i=new l(o),i._$AT(o,e,s)),s!==void 0?(e._$Co??(e._$Co=[]))[s]=i:e._$Cl=i),i!==void 0&&(t=i5(o,i._$AS(o,t.values),i,s)),t}let R4=class{constructor(o,t){this._$AV=[],this._$AN=void 0,this._$AD=o,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(o){const{el:{content:t},parts:e}=this._$AD,s=((o==null?void 0:o.creationScope)??P1).importNode(t,!0);U1.currentNode=s;let r=U1.nextNode(),n=0,i=0,l=e[0];for(;l!==void 0;){if(n===l.index){let a;l.type===2?a=new Z0(r,r.nextSibling,this,o):l.type===1?a=new l.ctor(r,l.name,l.strings,this,o):l.type===6&&(a=new N4(r,this,o)),this._$AV.push(a),l=e[++i]}n!==(l==null?void 0:l.index)&&(r=U1.nextNode(),n++)}return U1.currentNode=P1,s}p(o){let t=0;for(const e of this._$AV)e!==void 0&&(e.strings!==void 0?(e._$AI(o,e,t),t+=e.strings.length-2):e._$AI(o[t])),t++}},Z0=class l8{get _$AU(){var t;return((t=this._$AM)==null?void 0:t._$AU)??this._$Cv}constructor(t,e,s,r){this.type=2,this._$AH=Z,this._$AN=void 0,this._$AA=t,this._$AB=e,this._$AM=s,this.options=r,this._$Cv=(r==null?void 0:r.isConnected)??!0}get parentNode(){let t=this._$AA.parentNode;const e=this._$AM;return e!==void 0&&(t==null?void 0:t.nodeType)===11&&(t=e.parentNode),t}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(t,e=this){t=i5(this,t,e),D5(t)?t===Z||t==null||t===""?(this._$AH!==Z&&this._$AR(),this._$AH=Z):t!==this._$AH&&t!==q5&&this._(t):t._$litType$!==void 0?this.$(t):t.nodeType!==void 0?this.T(t):B4(t)?this.k(t):this._(t)}O(t){return this._$AA.parentNode.insertBefore(t,this._$AB)}T(t){this._$AH!==t&&(this._$AR(),this._$AH=this.O(t))}_(t){this._$AH!==Z&&D5(this._$AH)?this._$AA.nextSibling.data=t:this.T(P1.createTextNode(t)),this._$AH=t}$(t){var e;const{values:s,_$litType$:r}=t,n=typeof r=="number"?this._$AC(t):(r.el===void 0&&(r.el=L7.createElement(S0(r.h,r.h[0]),this.options)),r);if(((e=this._$AH)==null?void 0:e._$AD)===n)this._$AH.p(s);else{const i=new R4(n,this),l=i.u(this.options);i.p(s),this.T(l),this._$AH=i}}_$AC(t){let e=M0.get(t.strings);return e===void 0&&M0.set(t.strings,e=new L7(t)),e}k(t){m7(this._$AH)||(this._$AH=[],this._$AR());const e=this._$AH;let s,r=0;for(const n of t)r===e.length?e.push(s=new l8(this.O(E2()),this.O(E2()),this,this.options)):s=e[r],s._$AI(n),r++;r<e.length&&(this._$AR(s&&s._$AB.nextSibling,r),e.length=r)}_$AR(t=this._$AA.nextSibling,e){var s;for((s=this._$AP)==null?void 0:s.call(this,!1,!0,e);t&&t!==this._$AB;){const r=t.nextSibling;t.remove(),t=r}}setConnected(t){var e;this._$AM===void 0&&(this._$Cv=t,(e=this._$AP)==null||e.call(this,t))}},V2=class{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(o,t,e,s,r){this.type=1,this._$AH=Z,this._$AN=void 0,this.element=o,this.name=t,this._$AM=s,this.options=r,e.length>2||e[0]!==""||e[1]!==""?(this._$AH=Array(e.length-1).fill(new String),this.strings=e):this._$AH=Z}_$AI(o,t=this,e,s){const r=this.strings;let n=!1;if(r===void 0)o=i5(this,o,t,0),n=!D5(o)||o!==this._$AH&&o!==q5,n&&(this._$AH=o);else{const i=o;let l,a;for(o=r[0],l=0;l<r.length-1;l++)a=i5(this,i[e+l],t,l),a===q5&&(a=this._$AH[l]),n||(n=!D5(a)||a!==this._$AH[l]),a===Z?o=Z:o!==Z&&(o+=(a??"")+r[l+1]),this._$AH[l]=a}n&&!s&&this.j(o)}j(o){o===Z?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,o??"")}},I4=class extends V2{constructor(){super(...arguments),this.type=3}j(o){this.element[this.name]=o===Z?void 0:o}},T4=class extends V2{constructor(){super(...arguments),this.type=4}j(o){this.element.toggleAttribute(this.name,!!o&&o!==Z)}},D4=class extends V2{constructor(o,t,e,s,r){super(o,t,e,s,r),this.type=5}_$AI(o,t=this){if((o=i5(this,o,t,0)??Z)===q5)return;const e=this._$AH,s=o===Z&&e!==Z||o.capture!==e.capture||o.once!==e.once||o.passive!==e.passive,r=o!==Z&&(e===Z||s);s&&this.element.removeEventListener(this.name,this,e),r&&this.element.addEventListener(this.name,this,o),this._$AH=o}handleEvent(o){var t;typeof this._$AH=="function"?this._$AH.call(((t=this.options)==null?void 0:t.host)??this.element,o):this._$AH.handleEvent(o)}},N4=class{constructor(o,t,e){this.element=o,this.type=6,this._$AN=void 0,this._$AM=t,this.options=e}get _$AU(){return this._$AM._$AU}_$AI(o){i5(this,o)}};const H0=Z2.litHtmlPolyfillSupport;H0==null||H0(L7,Z0),(Z2.litHtmlVersions??(Z2.litHtmlVersions=[])).push("3.2.1");/**
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const U1=o=>o??S;/*!
+ */const B1=o=>o??Z;/*!
    * ▒█▄░▒█ ▒█░░▒█ ▒█▀▀▀█ ▒█▀▀▄ ▒█▀▀▀█ 
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -4269,15 +4610,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const k2=globalThis,$7=k2.ShadowRoot&&(k2.ShadyCSS===void 0||k2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,Z0=Symbol(),H0=new WeakMap;let N4=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==Z0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if($7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=H0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&H0.set(t,o))}return o}toString(){return this.cssText}};const q4=o=>new N4(typeof o=="string"?o:o+"",void 0,Z0),j4=(o,t)=>{if($7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=k2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},E0=$7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return q4(e)})(o):o;/**
+ */const k2=globalThis,$7=k2.ShadowRoot&&(k2.ShadyCSS===void 0||k2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,E0=Symbol(),V0=new WeakMap;let q4=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==E0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if($7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=V0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&V0.set(t,o))}return o}toString(){return this.cssText}};const j4=o=>new q4(typeof o=="string"?o:o+"",void 0,E0),F4=(o,t)=>{if($7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=k2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},k0=$7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return j4(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:F4,defineProperty:G4,getOwnPropertyDescriptor:W4,getOwnPropertyNames:Y4,getOwnPropertySymbols:K4,getPrototypeOf:J4}=Object,l5=globalThis,V0=l5.trustedTypes,X4=V0?V0.emptyScript:"",k0=l5.reactiveElementPolyfillSupport,j5=(o,t)=>o,A2={toAttribute(o,t){switch(t){case Boolean:o=o?X4:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},M7=(o,t)=>!F4(o,t),A0={attribute:!0,type:String,converter:A2,reflect:!1,hasChanged:M7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),l5.litPropertyMetadata??(l5.litPropertyMetadata=new WeakMap);let F5=class extends HTMLElement{static addInitializer(o){this._$Ei(),(this.l??(this.l=[])).push(o)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(o,t=A0){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(o,t),!t.noAccessor){const e=Symbol(),s=this.getPropertyDescriptor(o,e,t);s!==void 0&&G4(this.prototype,o,s)}}static getPropertyDescriptor(o,t,e){const{get:s,set:r}=W4(this.prototype,o)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const i=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(o,i,e)},configurable:!0,enumerable:!0}}static getPropertyOptions(o){return this.elementProperties.get(o)??A0}static _$Ei(){if(this.hasOwnProperty(j5("elementProperties")))return;const o=J4(this);o.finalize(),o.l!==void 0&&(this.l=[...o.l]),this.elementProperties=new Map(o.elementProperties)}static finalize(){if(this.hasOwnProperty(j5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(j5("properties"))){const t=this.properties,e=[...Y4(t),...K4(t)];for(const s of e)this.createProperty(s,t[s])}const o=this[Symbol.metadata];if(o!==null){const t=litPropertyMetadata.get(o);if(t!==void 0)for(const[e,s]of t)this.elementProperties.set(e,s)}this._$Eh=new Map;for(const[t,e]of this.elementProperties){const s=this._$Eu(t,e);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(o){const t=[];if(Array.isArray(o)){const e=new Set(o.flat(1/0).reverse());for(const s of e)t.unshift(E0(s))}else o!==void 0&&t.push(E0(o));return t}static _$Eu(o,t){const e=t.attribute;return e===!1?void 0:typeof e=="string"?e:typeof o=="string"?o.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var o;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(o=this.constructor.l)==null||o.forEach(t=>t(this))}addController(o){var t;(this._$EO??(this._$EO=new Set)).add(o),this.renderRoot!==void 0&&this.isConnected&&((t=o.hostConnected)==null||t.call(o))}removeController(o){var t;(t=this._$EO)==null||t.delete(o)}_$E_(){const o=new Map,t=this.constructor.elementProperties;for(const e of t.keys())this.hasOwnProperty(e)&&(o.set(e,this[e]),delete this[e]);o.size>0&&(this._$Ep=o)}createRenderRoot(){const o=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return j4(o,this.constructor.elementStyles),o}connectedCallback(){var o;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostConnected)==null?void 0:e.call(t)})}enableUpdating(o){}disconnectedCallback(){var o;(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostDisconnected)==null?void 0:e.call(t)})}attributeChangedCallback(o,t,e){this._$AK(o,e)}_$EC(o,t){var e;const s=this.constructor.elementProperties.get(o),r=this.constructor._$Eu(o,s);if(r!==void 0&&s.reflect===!0){const n=(((e=s.converter)==null?void 0:e.toAttribute)!==void 0?s.converter:A2).toAttribute(t,s.type);this._$Em=o,n==null?this.removeAttribute(r):this.setAttribute(r,n),this._$Em=null}}_$AK(o,t){var e;const s=this.constructor,r=s._$Eh.get(o);if(r!==void 0&&this._$Em!==r){const n=s.getPropertyOptions(r),i=typeof n.converter=="function"?{fromAttribute:n.converter}:((e=n.converter)==null?void 0:e.fromAttribute)!==void 0?n.converter:A2;this._$Em=r,this[r]=i.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(o,t,e){if(o!==void 0){if(e??(e=this.constructor.getPropertyOptions(o)),!(e.hasChanged??M7)(this[o],t))return;this.P(o,t,e)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(o,t,e){this._$AL.has(o)||this._$AL.set(o,t),e.reflect===!0&&this._$Em!==o&&(this._$Ej??(this._$Ej=new Set)).add(o)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const o=this.scheduleUpdate();return o!=null&&await o,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(e)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(e)}willUpdate(o){}_$AE(o){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostUpdated)==null?void 0:s.call(e)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(o)),this.updated(o)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(o){return!0}update(o){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(o){}firstUpdated(o){}};F5.elementStyles=[],F5.shadowRootOptions={mode:"open"},F5[j5("elementProperties")]=new Map,F5[j5("finalized")]=new Map,k0==null||k0({ReactiveElement:F5}),(l5.reactiveElementVersions??(l5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:G4,defineProperty:W4,getOwnPropertyDescriptor:Y4,getOwnPropertyNames:K4,getOwnPropertySymbols:J4,getPrototypeOf:X4}=Object,l5=globalThis,A0=l5.trustedTypes,Q4=A0?A0.emptyScript:"",P0=l5.reactiveElementPolyfillSupport,j5=(o,t)=>o,A2={toAttribute(o,t){switch(t){case Boolean:o=o?Q4:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},M7=(o,t)=>!G4(o,t),z0={attribute:!0,type:String,converter:A2,reflect:!1,hasChanged:M7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),l5.litPropertyMetadata??(l5.litPropertyMetadata=new WeakMap);let F5=class extends HTMLElement{static addInitializer(o){this._$Ei(),(this.l??(this.l=[])).push(o)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(o,t=z0){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(o,t),!t.noAccessor){const e=Symbol(),s=this.getPropertyDescriptor(o,e,t);s!==void 0&&W4(this.prototype,o,s)}}static getPropertyDescriptor(o,t,e){const{get:s,set:r}=Y4(this.prototype,o)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const i=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(o,i,e)},configurable:!0,enumerable:!0}}static getPropertyOptions(o){return this.elementProperties.get(o)??z0}static _$Ei(){if(this.hasOwnProperty(j5("elementProperties")))return;const o=X4(this);o.finalize(),o.l!==void 0&&(this.l=[...o.l]),this.elementProperties=new Map(o.elementProperties)}static finalize(){if(this.hasOwnProperty(j5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(j5("properties"))){const t=this.properties,e=[...K4(t),...J4(t)];for(const s of e)this.createProperty(s,t[s])}const o=this[Symbol.metadata];if(o!==null){const t=litPropertyMetadata.get(o);if(t!==void 0)for(const[e,s]of t)this.elementProperties.set(e,s)}this._$Eh=new Map;for(const[t,e]of this.elementProperties){const s=this._$Eu(t,e);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(o){const t=[];if(Array.isArray(o)){const e=new Set(o.flat(1/0).reverse());for(const s of e)t.unshift(k0(s))}else o!==void 0&&t.push(k0(o));return t}static _$Eu(o,t){const e=t.attribute;return e===!1?void 0:typeof e=="string"?e:typeof o=="string"?o.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var o;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(o=this.constructor.l)==null||o.forEach(t=>t(this))}addController(o){var t;(this._$EO??(this._$EO=new Set)).add(o),this.renderRoot!==void 0&&this.isConnected&&((t=o.hostConnected)==null||t.call(o))}removeController(o){var t;(t=this._$EO)==null||t.delete(o)}_$E_(){const o=new Map,t=this.constructor.elementProperties;for(const e of t.keys())this.hasOwnProperty(e)&&(o.set(e,this[e]),delete this[e]);o.size>0&&(this._$Ep=o)}createRenderRoot(){const o=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return F4(o,this.constructor.elementStyles),o}connectedCallback(){var o;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostConnected)==null?void 0:e.call(t)})}enableUpdating(o){}disconnectedCallback(){var o;(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostDisconnected)==null?void 0:e.call(t)})}attributeChangedCallback(o,t,e){this._$AK(o,e)}_$EC(o,t){var e;const s=this.constructor.elementProperties.get(o),r=this.constructor._$Eu(o,s);if(r!==void 0&&s.reflect===!0){const n=(((e=s.converter)==null?void 0:e.toAttribute)!==void 0?s.converter:A2).toAttribute(t,s.type);this._$Em=o,n==null?this.removeAttribute(r):this.setAttribute(r,n),this._$Em=null}}_$AK(o,t){var e;const s=this.constructor,r=s._$Eh.get(o);if(r!==void 0&&this._$Em!==r){const n=s.getPropertyOptions(r),i=typeof n.converter=="function"?{fromAttribute:n.converter}:((e=n.converter)==null?void 0:e.fromAttribute)!==void 0?n.converter:A2;this._$Em=r,this[r]=i.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(o,t,e){if(o!==void 0){if(e??(e=this.constructor.getPropertyOptions(o)),!(e.hasChanged??M7)(this[o],t))return;this.P(o,t,e)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(o,t,e){this._$AL.has(o)||this._$AL.set(o,t),e.reflect===!0&&this._$Em!==o&&(this._$Ej??(this._$Ej=new Set)).add(o)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const o=this.scheduleUpdate();return o!=null&&await o,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(e)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(e)}willUpdate(o){}_$AE(o){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostUpdated)==null?void 0:s.call(e)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(o)),this.updated(o)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(o){return!0}update(o){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(o){}firstUpdated(o){}};F5.elementStyles=[],F5.shadowRootOptions={mode:"open"},F5[j5("elementProperties")]=new Map,F5[j5("finalized")]=new Map,P0==null||P0({ReactiveElement:F5}),(l5.reactiveElementVersions??(l5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const Q4={attribute:!0,type:String,converter:A2,reflect:!1,hasChanged:M7},tt=(o=Q4,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function a5(o){return(t,e)=>typeof e=="object"?tt(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const et={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+ */const tt={attribute:!0,type:String,converter:A2,reflect:!1,hasChanged:M7},et=(o=tt,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function a5(o){return(t,e)=>typeof e=="object"?et(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const st={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -4410,7 +4751,7 @@
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},st=g`
+</svg>`},ot=g`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -4506,8 +4847,8 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var ot=Object.defineProperty,rt=Object.getOwnPropertyDescriptor,C5=(o,t,e,s)=>{for(var r=s>1?void 0:s?rt(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&ot(t,e,r),r},G5;const B1=(G5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=G5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=et[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},G5.styles=st,G5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],G5);C5([a5({type:String})],B1.prototype,"name",2),C5([a5({type:String})],B1.prototype,"label",2),C5([a5({type:String})],B1.prototype,"rotate",2),C5([a5({type:String})],B1.prototype,"flip",2),C5([a5({type:String})],B1.prototype,"color",2),C5([a5({reflect:!0})],B1.prototype,"size",1);let nt=B1;customElements.get("nys-icon")||customElements.define("nys-icon",nt);/*!
-   * Label v1.1.0
+`;var rt=Object.defineProperty,nt=Object.getOwnPropertyDescriptor,C5=(o,t,e,s)=>{for(var r=s>1?void 0:s?nt(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&rt(t,e,r),r},G5;const O1=(G5=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=G5.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=st[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},G5.styles=ot,G5.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],G5);C5([a5({type:String,reflect:!0})],O1.prototype,"name",2),C5([a5({type:String})],O1.prototype,"label",2),C5([a5({type:String})],O1.prototype,"rotate",2),C5([a5({type:String})],O1.prototype,"flip",2),C5([a5({type:String})],O1.prototype,"color",2),C5([a5({reflect:!0})],O1.prototype,"size",1);let it=O1;customElements.get("nys-icon")||customElements.define("nys-icon",it);/*!
+   * Label v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -4516,15 +4857,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const P2=globalThis,S7=P2.ShadowRoot&&(P2.ShadyCSS===void 0||P2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,P0=Symbol(),z0=new WeakMap;let it=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==P0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(S7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=z0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&z0.set(t,o))}return o}toString(){return this.cssText}};const lt=o=>new it(typeof o=="string"?o:o+"",void 0,P0),at=(o,t)=>{if(S7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=P2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},U0=S7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return lt(e)})(o):o;/**
+ */const P2=globalThis,S7=P2.ShadowRoot&&(P2.ShadyCSS===void 0||P2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,U0=Symbol(),B0=new WeakMap;let lt=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==U0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(S7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=B0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&B0.set(t,o))}return o}toString(){return this.cssText}};const at=o=>new lt(typeof o=="string"?o:o+"",void 0,U0),Ct=(o,t)=>{if(S7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=P2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},O0=S7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return at(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:Ct,defineProperty:ct,getOwnPropertyDescriptor:ht,getOwnPropertyNames:dt,getOwnPropertySymbols:pt,getPrototypeOf:ut}=Object,c5=globalThis,B0=c5.trustedTypes,vt=B0?B0.emptyScript:"",O0=c5.reactiveElementPolyfillSupport,W5=(o,t)=>o,z2={toAttribute(o,t){switch(t){case Boolean:o=o?vt:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},Z7=(o,t)=>!Ct(o,t),R0={attribute:!0,type:String,converter:z2,reflect:!1,hasChanged:Z7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),c5.litPropertyMetadata??(c5.litPropertyMetadata=new WeakMap);let Y5=class extends HTMLElement{static addInitializer(o){this._$Ei(),(this.l??(this.l=[])).push(o)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(o,t=R0){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(o,t),!t.noAccessor){const e=Symbol(),s=this.getPropertyDescriptor(o,e,t);s!==void 0&&ct(this.prototype,o,s)}}static getPropertyDescriptor(o,t,e){const{get:s,set:r}=ht(this.prototype,o)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const i=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(o,i,e)},configurable:!0,enumerable:!0}}static getPropertyOptions(o){return this.elementProperties.get(o)??R0}static _$Ei(){if(this.hasOwnProperty(W5("elementProperties")))return;const o=ut(this);o.finalize(),o.l!==void 0&&(this.l=[...o.l]),this.elementProperties=new Map(o.elementProperties)}static finalize(){if(this.hasOwnProperty(W5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(W5("properties"))){const t=this.properties,e=[...dt(t),...pt(t)];for(const s of e)this.createProperty(s,t[s])}const o=this[Symbol.metadata];if(o!==null){const t=litPropertyMetadata.get(o);if(t!==void 0)for(const[e,s]of t)this.elementProperties.set(e,s)}this._$Eh=new Map;for(const[t,e]of this.elementProperties){const s=this._$Eu(t,e);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(o){const t=[];if(Array.isArray(o)){const e=new Set(o.flat(1/0).reverse());for(const s of e)t.unshift(U0(s))}else o!==void 0&&t.push(U0(o));return t}static _$Eu(o,t){const e=t.attribute;return e===!1?void 0:typeof e=="string"?e:typeof o=="string"?o.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var o;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(o=this.constructor.l)==null||o.forEach(t=>t(this))}addController(o){var t;(this._$EO??(this._$EO=new Set)).add(o),this.renderRoot!==void 0&&this.isConnected&&((t=o.hostConnected)==null||t.call(o))}removeController(o){var t;(t=this._$EO)==null||t.delete(o)}_$E_(){const o=new Map,t=this.constructor.elementProperties;for(const e of t.keys())this.hasOwnProperty(e)&&(o.set(e,this[e]),delete this[e]);o.size>0&&(this._$Ep=o)}createRenderRoot(){const o=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return at(o,this.constructor.elementStyles),o}connectedCallback(){var o;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostConnected)==null?void 0:e.call(t)})}enableUpdating(o){}disconnectedCallback(){var o;(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostDisconnected)==null?void 0:e.call(t)})}attributeChangedCallback(o,t,e){this._$AK(o,e)}_$EC(o,t){var e;const s=this.constructor.elementProperties.get(o),r=this.constructor._$Eu(o,s);if(r!==void 0&&s.reflect===!0){const n=(((e=s.converter)==null?void 0:e.toAttribute)!==void 0?s.converter:z2).toAttribute(t,s.type);this._$Em=o,n==null?this.removeAttribute(r):this.setAttribute(r,n),this._$Em=null}}_$AK(o,t){var e;const s=this.constructor,r=s._$Eh.get(o);if(r!==void 0&&this._$Em!==r){const n=s.getPropertyOptions(r),i=typeof n.converter=="function"?{fromAttribute:n.converter}:((e=n.converter)==null?void 0:e.fromAttribute)!==void 0?n.converter:z2;this._$Em=r,this[r]=i.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(o,t,e){if(o!==void 0){if(e??(e=this.constructor.getPropertyOptions(o)),!(e.hasChanged??Z7)(this[o],t))return;this.P(o,t,e)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(o,t,e){this._$AL.has(o)||this._$AL.set(o,t),e.reflect===!0&&this._$Em!==o&&(this._$Ej??(this._$Ej=new Set)).add(o)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const o=this.scheduleUpdate();return o!=null&&await o,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(e)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(e)}willUpdate(o){}_$AE(o){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostUpdated)==null?void 0:s.call(e)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(o)),this.updated(o)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(o){return!0}update(o){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(o){}firstUpdated(o){}};Y5.elementStyles=[],Y5.shadowRootOptions={mode:"open"},Y5[W5("elementProperties")]=new Map,Y5[W5("finalized")]=new Map,O0==null||O0({ReactiveElement:Y5}),(c5.reactiveElementVersions??(c5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:ct,defineProperty:ht,getOwnPropertyDescriptor:dt,getOwnPropertyNames:pt,getOwnPropertySymbols:ut,getPrototypeOf:vt}=Object,c5=globalThis,R0=c5.trustedTypes,yt=R0?R0.emptyScript:"",I0=c5.reactiveElementPolyfillSupport,W5=(o,t)=>o,z2={toAttribute(o,t){switch(t){case Boolean:o=o?yt:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},Z7=(o,t)=>!ct(o,t),T0={attribute:!0,type:String,converter:z2,reflect:!1,hasChanged:Z7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),c5.litPropertyMetadata??(c5.litPropertyMetadata=new WeakMap);let Y5=class extends HTMLElement{static addInitializer(o){this._$Ei(),(this.l??(this.l=[])).push(o)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(o,t=T0){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(o,t),!t.noAccessor){const e=Symbol(),s=this.getPropertyDescriptor(o,e,t);s!==void 0&&ht(this.prototype,o,s)}}static getPropertyDescriptor(o,t,e){const{get:s,set:r}=dt(this.prototype,o)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const i=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(o,i,e)},configurable:!0,enumerable:!0}}static getPropertyOptions(o){return this.elementProperties.get(o)??T0}static _$Ei(){if(this.hasOwnProperty(W5("elementProperties")))return;const o=vt(this);o.finalize(),o.l!==void 0&&(this.l=[...o.l]),this.elementProperties=new Map(o.elementProperties)}static finalize(){if(this.hasOwnProperty(W5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(W5("properties"))){const t=this.properties,e=[...pt(t),...ut(t)];for(const s of e)this.createProperty(s,t[s])}const o=this[Symbol.metadata];if(o!==null){const t=litPropertyMetadata.get(o);if(t!==void 0)for(const[e,s]of t)this.elementProperties.set(e,s)}this._$Eh=new Map;for(const[t,e]of this.elementProperties){const s=this._$Eu(t,e);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(o){const t=[];if(Array.isArray(o)){const e=new Set(o.flat(1/0).reverse());for(const s of e)t.unshift(O0(s))}else o!==void 0&&t.push(O0(o));return t}static _$Eu(o,t){const e=t.attribute;return e===!1?void 0:typeof e=="string"?e:typeof o=="string"?o.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var o;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(o=this.constructor.l)==null||o.forEach(t=>t(this))}addController(o){var t;(this._$EO??(this._$EO=new Set)).add(o),this.renderRoot!==void 0&&this.isConnected&&((t=o.hostConnected)==null||t.call(o))}removeController(o){var t;(t=this._$EO)==null||t.delete(o)}_$E_(){const o=new Map,t=this.constructor.elementProperties;for(const e of t.keys())this.hasOwnProperty(e)&&(o.set(e,this[e]),delete this[e]);o.size>0&&(this._$Ep=o)}createRenderRoot(){const o=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return Ct(o,this.constructor.elementStyles),o}connectedCallback(){var o;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostConnected)==null?void 0:e.call(t)})}enableUpdating(o){}disconnectedCallback(){var o;(o=this._$EO)==null||o.forEach(t=>{var e;return(e=t.hostDisconnected)==null?void 0:e.call(t)})}attributeChangedCallback(o,t,e){this._$AK(o,e)}_$EC(o,t){var e;const s=this.constructor.elementProperties.get(o),r=this.constructor._$Eu(o,s);if(r!==void 0&&s.reflect===!0){const n=(((e=s.converter)==null?void 0:e.toAttribute)!==void 0?s.converter:z2).toAttribute(t,s.type);this._$Em=o,n==null?this.removeAttribute(r):this.setAttribute(r,n),this._$Em=null}}_$AK(o,t){var e;const s=this.constructor,r=s._$Eh.get(o);if(r!==void 0&&this._$Em!==r){const n=s.getPropertyOptions(r),i=typeof n.converter=="function"?{fromAttribute:n.converter}:((e=n.converter)==null?void 0:e.fromAttribute)!==void 0?n.converter:z2;this._$Em=r,this[r]=i.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(o,t,e){if(o!==void 0){if(e??(e=this.constructor.getPropertyOptions(o)),!(e.hasChanged??Z7)(this[o],t))return;this.P(o,t,e)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(o,t,e){this._$AL.has(o)||this._$AL.set(o,t),e.reflect===!0&&this._$Em!==o&&(this._$Ej??(this._$Ej=new Set)).add(o)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const o=this.scheduleUpdate();return o!=null&&await o,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let t=!1;const e=this._$AL;try{t=this.shouldUpdate(e),t?(this.willUpdate(e),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(e)):this._$EU()}catch(s){throw t=!1,this._$EU(),s}t&&this._$AE(e)}willUpdate(o){}_$AE(o){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostUpdated)==null?void 0:s.call(e)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(o)),this.updated(o)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(o){return!0}update(o){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(o){}firstUpdated(o){}};Y5.elementStyles=[],Y5.shadowRootOptions={mode:"open"},Y5[W5("elementProperties")]=new Map,Y5[W5("finalized")]=new Map,I0==null||I0({ReactiveElement:Y5}),(c5.reactiveElementVersions??(c5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const yt={attribute:!0,type:String,converter:z2,reflect:!1,hasChanged:Z7},gt=(o=yt,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function U2(o){return(t,e)=>typeof e=="object"?gt(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const ft=g`
+ */const gt={attribute:!0,type:String,converter:z2,reflect:!1,hasChanged:Z7},ft=(o=gt,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function U2(o){return(t,e)=>typeof e=="object"?ft(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const _t=g`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -4542,19 +4883,19 @@
     --_nys-label-font-size: var(--nys-font-size-ui-md, 16px);
     --_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);
     --_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
-    --_nys-label-font-color: var(--nys-color-ink, #1b1b1b);
+    --_nys-label-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Description */
     --nys-description-font-weight: var(--nys-font-weight-regular, 400);
     --nys-description-font-style: italic;
-    --nys-description-font-color: var(--nys-neutral-900, #1b1b1b);
+    --nys-description-font-color: var(--nys-color-text, #1b1b1b);
 
     /* Required Flag */
     --nys-required-font-color: var(--nys-color-danger, #b52c2c);
 
     /* Optional Flag */
     --nys-optional-font-weight: var(--nys-font-weight-regular, 400);
-    --nys-optional-font-color: var(--nys-color-neutral-700, #4a4d4f);
+    --nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);
 
     /* Spacing */
     --_nys-label-flag-gap: var(--nys-space-2px, 2px);
@@ -4595,7 +4936,7 @@
     font-weight: var(--nys-optional-font-weight);
     color: var(--nys-optional-font-color);
   }
-`;var _t=Object.defineProperty,B2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&_t(t,e,r),r};const T0=class extends u{constructor(){super(...arguments),this.id="",this.label="",this.description="",this.flag=""}render(){return c`
+`;var wt=Object.defineProperty,B2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&wt(t,e,r),r};const D0=class extends u{constructor(){super(...arguments),this.id="",this.label="",this.description="",this.flag=""}render(){return c`
       <div class="nys-label">
         <label for=${this.id} class="nys-label__label"
           >${this.label}
@@ -4606,8 +4947,8 @@
           <slot name="description">${this.description}</slot>
         </label>
       </div>
-    `}};T0.styles=ft;let K5=T0;B2([U2({type:String})],K5.prototype,"id"),B2([U2({type:String})],K5.prototype,"label"),B2([U2({type:String})],K5.prototype,"description"),B2([U2({type:String})],K5.prototype,"flag"),customElements.get("nys-label")||customElements.define("nys-label",K5);/*!
-   * Error Message v1.1.0
+    `}};D0.styles=_t;let K5=D0;B2([U2({type:String})],K5.prototype,"id"),B2([U2({type:String})],K5.prototype,"label"),B2([U2({type:String})],K5.prototype,"description"),B2([U2({type:String})],K5.prototype,"flag"),customElements.get("nys-label")||customElements.define("nys-label",K5);/*!
+   * Error Message v1.1.1
    * Part of the New York State Design System
    * A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
@@ -4616,15 +4957,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const O2=globalThis,H7=O2.ShadowRoot&&(O2.ShadyCSS===void 0||O2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,I0=Symbol(),D0=new WeakMap;let wt=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==I0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(H7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=D0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&D0.set(t,o))}return o}toString(){return this.cssText}};const bt=o=>new wt(typeof o=="string"?o:o+"",void 0,I0),mt=(o,t)=>{if(H7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=O2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},N0=H7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return bt(e)})(o):o;/**
+ */const O2=globalThis,H7=O2.ShadowRoot&&(O2.ShadyCSS===void 0||O2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,N0=Symbol(),q0=new WeakMap;let bt=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==N0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(H7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=q0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&q0.set(t,o))}return o}toString(){return this.cssText}};const mt=o=>new bt(typeof o=="string"?o:o+"",void 0,N0),xt=(o,t)=>{if(H7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=O2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},j0=H7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return mt(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:xt,defineProperty:Lt,getOwnPropertyDescriptor:$t,getOwnPropertyNames:Mt,getOwnPropertySymbols:St,getPrototypeOf:Zt}=Object,h5=globalThis,q0=h5.trustedTypes,Ht=q0?q0.emptyScript:"",j0=h5.reactiveElementPolyfillSupport,J5=(o,t)=>o,R2={toAttribute(o,t){switch(t){case Boolean:o=o?Ht:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},E7=(o,t)=>!xt(o,t),F0={attribute:!0,type:String,converter:R2,reflect:!1,hasChanged:E7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),h5.litPropertyMetadata??(h5.litPropertyMetadata=new WeakMap);class X5 extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=F0){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&Lt(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=$t(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??F0}static _$Ei(){if(this.hasOwnProperty(J5("elementProperties")))return;const t=Zt(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(J5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(J5("properties"))){const e=this.properties,s=[...Mt(e),...St(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(N0(r))}else t!==void 0&&e.push(N0(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return mt(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:R2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:R2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??E7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}}X5.elementStyles=[],X5.shadowRootOptions={mode:"open"},X5[J5("elementProperties")]=new Map,X5[J5("finalized")]=new Map,j0==null||j0({ReactiveElement:X5}),(h5.reactiveElementVersions??(h5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:Lt,defineProperty:$t,getOwnPropertyDescriptor:Mt,getOwnPropertyNames:St,getOwnPropertySymbols:Zt,getPrototypeOf:Ht}=Object,h5=globalThis,F0=h5.trustedTypes,Et=F0?F0.emptyScript:"",G0=h5.reactiveElementPolyfillSupport,J5=(o,t)=>o,R2={toAttribute(o,t){switch(t){case Boolean:o=o?Et:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},E7=(o,t)=>!Lt(o,t),W0={attribute:!0,type:String,converter:R2,reflect:!1,hasChanged:E7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),h5.litPropertyMetadata??(h5.litPropertyMetadata=new WeakMap);class X5 extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=W0){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&$t(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=Mt(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??W0}static _$Ei(){if(this.hasOwnProperty(J5("elementProperties")))return;const t=Ht(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(J5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(J5("properties"))){const e=this.properties,s=[...St(e),...Zt(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(j0(r))}else t!==void 0&&e.push(j0(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return xt(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:R2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:R2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??E7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}}X5.elementStyles=[],X5.shadowRootOptions={mode:"open"},X5[J5("elementProperties")]=new Map,X5[J5("finalized")]=new Map,G0==null||G0({ReactiveElement:X5}),(h5.reactiveElementVersions??(h5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const Et={attribute:!0,type:String,converter:R2,reflect:!1,hasChanged:E7},Vt=(o=Et,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function V7(o){return(t,e)=>typeof e=="object"?Vt(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const kt=g`
+ */const Vt={attribute:!0,type:String,converter:R2,reflect:!1,hasChanged:E7},kt=(o=Vt,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function V7(o){return(t,e)=>typeof e=="object"?kt(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const At=g`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -4678,7 +5019,7 @@
    * ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ▒█░▒█ ░▀▀▀▄▄ 
    * ▒█░░▀█ ░░▒█░░ ▒█▄▄▄█ ▒█▄▄▀ ▒█▄▄▄█
    * 
-   * Icon Component v1.1.0
+   * Icon Component v1.1.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -4686,15 +5027,15 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const T2=globalThis,k7=T2.ShadowRoot&&(T2.ShadyCSS===void 0||T2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,G0=Symbol(),W0=new WeakMap;let At=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==G0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(k7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=W0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&W0.set(t,o))}return o}toString(){return this.cssText}};const Pt=o=>new At(typeof o=="string"?o:o+"",void 0,G0),zt=(o,t)=>{if(k7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=T2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},Y0=k7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return Pt(e)})(o):o;/**
+ */const I2=globalThis,k7=I2.ShadowRoot&&(I2.ShadyCSS===void 0||I2.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,Y0=Symbol(),K0=new WeakMap;let Pt=class{constructor(o,t,e){if(this._$cssResult$=!0,e!==Y0)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=o,this.t=t}get styleSheet(){let o=this.o;const t=this.t;if(k7&&o===void 0){const e=t!==void 0&&t.length===1;e&&(o=K0.get(t)),o===void 0&&((this.o=o=new CSSStyleSheet).replaceSync(this.cssText),e&&K0.set(t,o))}return o}toString(){return this.cssText}};const zt=o=>new Pt(typeof o=="string"?o:o+"",void 0,Y0),Ut=(o,t)=>{if(k7)o.adoptedStyleSheets=t.map(e=>e instanceof CSSStyleSheet?e:e.styleSheet);else for(const e of t){const s=document.createElement("style"),r=I2.litNonce;r!==void 0&&s.setAttribute("nonce",r),s.textContent=e.cssText,o.appendChild(s)}},J0=k7?o=>o:o=>o instanceof CSSStyleSheet?(t=>{let e="";for(const s of t.cssRules)e+=s.cssText;return zt(e)})(o):o;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:Ut,defineProperty:Bt,getOwnPropertyDescriptor:Ot,getOwnPropertyNames:Rt,getOwnPropertySymbols:Tt,getPrototypeOf:It}=Object,d5=globalThis,K0=d5.trustedTypes,Dt=K0?K0.emptyScript:"",J0=d5.reactiveElementPolyfillSupport,Q5=(o,t)=>o,I2={toAttribute(o,t){switch(t){case Boolean:o=o?Dt:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},A7=(o,t)=>!Ut(o,t),X0={attribute:!0,type:String,converter:I2,reflect:!1,hasChanged:A7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),d5.litPropertyMetadata??(d5.litPropertyMetadata=new WeakMap);class t2 extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=X0){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&Bt(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=Ot(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??X0}static _$Ei(){if(this.hasOwnProperty(Q5("elementProperties")))return;const t=It(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(Q5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(Q5("properties"))){const e=this.properties,s=[...Rt(e),...Tt(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(Y0(r))}else t!==void 0&&e.push(Y0(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return zt(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:I2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:I2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??A7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}}t2.elementStyles=[],t2.shadowRootOptions={mode:"open"},t2[Q5("elementProperties")]=new Map,t2[Q5("finalized")]=new Map,J0==null||J0({ReactiveElement:t2}),(d5.reactiveElementVersions??(d5.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:Bt,defineProperty:Ot,getOwnPropertyDescriptor:Rt,getOwnPropertyNames:It,getOwnPropertySymbols:Tt,getPrototypeOf:Dt}=Object,d5=globalThis,X0=d5.trustedTypes,Nt=X0?X0.emptyScript:"",Q0=d5.reactiveElementPolyfillSupport,Q5=(o,t)=>o,T2={toAttribute(o,t){switch(t){case Boolean:o=o?Nt:null;break;case Object:case Array:o=o==null?o:JSON.stringify(o)}return o},fromAttribute(o,t){let e=o;switch(t){case Boolean:e=o!==null;break;case Number:e=o===null?null:Number(o);break;case Object:case Array:try{e=JSON.parse(o)}catch{e=null}}return e}},A7=(o,t)=>!Bt(o,t),t8={attribute:!0,type:String,converter:T2,reflect:!1,hasChanged:A7};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),d5.litPropertyMetadata??(d5.litPropertyMetadata=new WeakMap);class t2 extends HTMLElement{static addInitializer(t){this._$Ei(),(this.l??(this.l=[])).push(t)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(t,e=t8){if(e.state&&(e.attribute=!1),this._$Ei(),this.elementProperties.set(t,e),!e.noAccessor){const s=Symbol(),r=this.getPropertyDescriptor(t,s,e);r!==void 0&&Ot(this.prototype,t,r)}}static getPropertyDescriptor(t,e,s){const{get:r,set:n}=Rt(this.prototype,t)??{get(){return this[e]},set(i){this[e]=i}};return{get(){return r==null?void 0:r.call(this)},set(i){const l=r==null?void 0:r.call(this);n.call(this,i),this.requestUpdate(t,l,s)},configurable:!0,enumerable:!0}}static getPropertyOptions(t){return this.elementProperties.get(t)??t8}static _$Ei(){if(this.hasOwnProperty(Q5("elementProperties")))return;const t=Dt(this);t.finalize(),t.l!==void 0&&(this.l=[...t.l]),this.elementProperties=new Map(t.elementProperties)}static finalize(){if(this.hasOwnProperty(Q5("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(Q5("properties"))){const e=this.properties,s=[...It(e),...Tt(e)];for(const r of s)this.createProperty(r,e[r])}const t=this[Symbol.metadata];if(t!==null){const e=litPropertyMetadata.get(t);if(e!==void 0)for(const[s,r]of e)this.elementProperties.set(s,r)}this._$Eh=new Map;for(const[e,s]of this.elementProperties){const r=this._$Eu(e,s);r!==void 0&&this._$Eh.set(r,e)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(t){const e=[];if(Array.isArray(t)){const s=new Set(t.flat(1/0).reverse());for(const r of s)e.unshift(J0(r))}else t!==void 0&&e.push(J0(t));return e}static _$Eu(t,e){const s=e.attribute;return s===!1?void 0:typeof s=="string"?s:typeof t=="string"?t.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var t;this._$ES=new Promise(e=>this.enableUpdating=e),this._$AL=new Map,this._$E_(),this.requestUpdate(),(t=this.constructor.l)==null||t.forEach(e=>e(this))}addController(t){var e;(this._$EO??(this._$EO=new Set)).add(t),this.renderRoot!==void 0&&this.isConnected&&((e=t.hostConnected)==null||e.call(t))}removeController(t){var e;(e=this._$EO)==null||e.delete(t)}_$E_(){const t=new Map,e=this.constructor.elementProperties;for(const s of e.keys())this.hasOwnProperty(s)&&(t.set(s,this[s]),delete this[s]);t.size>0&&(this._$Ep=t)}createRenderRoot(){const t=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return Ut(t,this.constructor.elementStyles),t}connectedCallback(){var t;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostConnected)==null?void 0:s.call(e)})}enableUpdating(t){}disconnectedCallback(){var t;(t=this._$EO)==null||t.forEach(e=>{var s;return(s=e.hostDisconnected)==null?void 0:s.call(e)})}attributeChangedCallback(t,e,s){this._$AK(t,s)}_$EC(t,e){var s;const r=this.constructor.elementProperties.get(t),n=this.constructor._$Eu(t,r);if(n!==void 0&&r.reflect===!0){const i=(((s=r.converter)==null?void 0:s.toAttribute)!==void 0?r.converter:T2).toAttribute(e,r.type);this._$Em=t,i==null?this.removeAttribute(n):this.setAttribute(n,i),this._$Em=null}}_$AK(t,e){var s;const r=this.constructor,n=r._$Eh.get(t);if(n!==void 0&&this._$Em!==n){const i=r.getPropertyOptions(n),l=typeof i.converter=="function"?{fromAttribute:i.converter}:((s=i.converter)==null?void 0:s.fromAttribute)!==void 0?i.converter:T2;this._$Em=n,this[n]=l.fromAttribute(e,i.type),this._$Em=null}}requestUpdate(t,e,s){if(t!==void 0){if(s??(s=this.constructor.getPropertyOptions(t)),!(s.hasChanged??A7)(this[t],e))return;this.P(t,e,s)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(t,e,s){this._$AL.has(t)||this._$AL.set(t,e),s.reflect===!0&&this._$Em!==t&&(this._$Ej??(this._$Ej=new Set)).add(t)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(e){Promise.reject(e)}const t=this.scheduleUpdate();return t!=null&&await t,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var t;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[n,i]of this._$Ep)this[n]=i;this._$Ep=void 0}const r=this.constructor.elementProperties;if(r.size>0)for(const[n,i]of r)i.wrapped!==!0||this._$AL.has(n)||this[n]===void 0||this.P(n,this[n],i)}let e=!1;const s=this._$AL;try{e=this.shouldUpdate(s),e?(this.willUpdate(s),(t=this._$EO)==null||t.forEach(r=>{var n;return(n=r.hostUpdate)==null?void 0:n.call(r)}),this.update(s)):this._$EU()}catch(r){throw e=!1,this._$EU(),r}e&&this._$AE(s)}willUpdate(t){}_$AE(t){var e;(e=this._$EO)==null||e.forEach(s=>{var r;return(r=s.hostUpdated)==null?void 0:r.call(s)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(t)),this.updated(t)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(t){return!0}update(t){this._$Ej&&(this._$Ej=this._$Ej.forEach(e=>this._$EC(e,this[e]))),this._$EU()}updated(t){}firstUpdated(t){}}t2.elementStyles=[],t2.shadowRootOptions={mode:"open"},t2[Q5("elementProperties")]=new Map,t2[Q5("finalized")]=new Map,Q0==null||Q0({ReactiveElement:t2}),(d5.reactiveElementVersions??(d5.reactiveElementVersions=[])).push("2.0.4");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const Nt={attribute:!0,type:String,converter:I2,reflect:!1,hasChanged:A7},qt=(o=Nt,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function p5(o){return(t,e)=>typeof e=="object"?qt(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const jt={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+ */const qt={attribute:!0,type:String,converter:T2,reflect:!1,hasChanged:A7},jt=(o=qt,t,e)=>{const{kind:s,metadata:r}=e;let n=globalThis.litPropertyMetadata.get(r);if(n===void 0&&globalThis.litPropertyMetadata.set(r,n=new Map),n.set(e.name,o),s==="accessor"){const{name:i}=e;return{set(l){const a=t.get.call(this);t.set.call(this,l),this.requestUpdate(i,a,o)},init(l){return l!==void 0&&this.P(i,void 0,o),l}}}if(s==="setter"){const{name:i}=e;return function(l){const a=this[i];t.call(this,l),this.requestUpdate(i,a,o)}}throw Error("Unsupported decorator location: "+s)};function p5(o){return(t,e)=>typeof e=="object"?jt(o,t,e):((s,r,n)=>{const i=r.hasOwnProperty(n);return r.constructor.createProperty(n,i?{...s,wrapped:!0}:s),i?Object.getOwnPropertyDescriptor(r,n):void 0})(o,t,e)}const Ft={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M3.85 15.1C4.7 14.45 5.65 13.9375 6.7 13.5625C7.75 13.1875 8.85 13 10 13C11.15 13 12.25 13.1875 13.3 13.5625C14.35 13.9375 15.3 14.45 16.15 15.1C16.7333 14.4167 17.1875 13.6417 17.5125 12.775C17.8375 11.9083 18 10.9833 18 10C18 7.78333 17.2208 5.89583 15.6625 4.3375C14.1042 2.77917 12.2167 2 10 2C7.78333 2 5.89583 2.77917 4.3375 4.3375C2.77917 5.89583 2 7.78333 2 10C2 10.9833 2.1625 11.9083 2.4875 12.775C2.8125 13.6417 3.26667 14.4167 3.85 15.1ZM10 11C9.01667 11 8.1875 10.6625 7.5125 9.9875C6.8375 9.3125 6.5 8.48333 6.5 7.5C6.5 6.51667 6.8375 5.6875 7.5125 5.0125C8.1875 4.3375 9.01667 4 10 4C10.9833 4 11.8125 4.3375 12.4875 5.0125C13.1625 5.6875 13.5 6.51667 13.5 7.5C13.5 8.48333 13.1625 9.3125 12.4875 9.9875C11.8125 10.6625 10.9833 11 10 11ZM10 20C8.61667 20 7.31667 19.7375 6.1 19.2125C4.88333 18.6875 3.825 17.975 2.925 17.075C2.025 16.175 1.3125 15.1167 0.7875 13.9C0.2625 12.6833 0 11.3833 0 10C0 8.61667 0.2625 7.31667 0.7875 6.1C1.3125 4.88333 2.025 3.825 2.925 2.925C3.825 2.025 4.88333 1.3125 6.1 0.7875C7.31667 0.2625 8.61667 0 10 0C11.3833 0 12.6833 0.2625 13.9 0.7875C15.1167 1.3125 16.175 2.025 17.075 2.925C17.975 3.825 18.6875 4.88333 19.2125 6.1C19.7375 7.31667 20 8.61667 20 10C20 11.3833 19.7375 12.6833 19.2125 13.9C18.6875 15.1167 17.975 16.175 17.075 17.075C16.175 17.975 15.1167 18.6875 13.9 19.2125C12.6833 19.7375 11.3833 20 10 20Z" fill="var(--nys-icon-color, currentcolor)"/>
   </svg>`,calendar_month:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
   <path d="M2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V4C0 3.45 0.195833 2.97917 0.5875 2.5875C0.979167 2.19583 1.45 2 2 2H3V1C3 0.716667 3.09583 0.479167 3.2875 0.2875C3.47917 0.0958333 3.71667 0 4 0C4.28333 0 4.52083 0.0958333 4.7125 0.2875C4.90417 0.479167 5 0.716667 5 1V2H13V1C13 0.716667 13.0958 0.479167 13.2875 0.2875C13.4792 0.0958333 13.7167 0 14 0C14.2833 0 14.5208 0.0958333 14.7125 0.2875C14.9042 0.479167 15 0.716667 15 1V2H16C16.55 2 17.0208 2.19583 17.4125 2.5875C17.8042 2.97917 18 3.45 18 4V18C18 18.55 17.8042 19.0208 17.4125 19.4125C17.0208 19.8042 16.55 20 16 20H2ZM2 18H16V8H2V18ZM2 6H16V4H2V6ZM9 12C8.71667 12 8.47917 11.9042 8.2875 11.7125C8.09583 11.5208 8 11.2833 8 11C8 10.7167 8.09583 10.4792 8.2875 10.2875C8.47917 10.0958 8.71667 10 9 10C9.28333 10 9.52083 10.0958 9.7125 10.2875C9.90417 10.4792 10 10.7167 10 11C10 11.2833 9.90417 11.5208 9.7125 11.7125C9.52083 11.9042 9.28333 12 9 12ZM5 12C4.71667 12 4.47917 11.9042 4.2875 11.7125C4.09583 11.5208 4 11.2833 4 11C4 10.7167 4.09583 10.4792 4.2875 10.2875C4.47917 10.0958 4.71667 10 5 10C5.28333 10 5.52083 10.0958 5.7125 10.2875C5.90417 10.4792 6 10.7167 6 11C6 11.2833 5.90417 11.5208 5.7125 11.7125C5.52083 11.9042 5.28333 12 5 12ZM13 12C12.7167 12 12.4792 11.9042 12.2875 11.7125C12.0958 11.5208 12 11.2833 12 11C12 10.7167 12.0958 10.4792 12.2875 10.2875C12.4792 10.0958 12.7167 10 13 10C13.2833 10 13.5208 10.0958 13.7125 10.2875C13.9042 10.4792 14 10.7167 14 11C14 11.2833 13.9042 11.5208 13.7125 11.7125C13.5208 11.9042 13.2833 12 13 12ZM9 16C8.71667 16 8.47917 15.9042 8.2875 15.7125C8.09583 15.5208 8 15.2833 8 15C8 14.7167 8.09583 14.4792 8.2875 14.2875C8.47917 14.0958 8.71667 14 9 14C9.28333 14 9.52083 14.0958 9.7125 14.2875C9.90417 14.4792 10 14.7167 10 15C10 15.2833 9.90417 15.5208 9.7125 15.7125C9.52083 15.9042 9.28333 16 9 16ZM5 16C4.71667 16 4.47917 15.9042 4.2875 15.7125C4.09583 15.5208 4 15.2833 4 15C4 14.7167 4.09583 14.4792 4.2875 14.2875C4.47917 14.0958 4.71667 14 5 14C5.28333 14 5.52083 14.0958 5.7125 14.2875C5.90417 14.4792 6 14.7167 6 15C6 15.2833 5.90417 15.5208 5.7125 15.7125C5.52083 15.9042 5.28333 16 5 16ZM13 16C12.7167 16 12.4792 15.9042 12.2875 15.7125C12.0958 15.5208 12 15.2833 12 15C12 14.7167 12.0958 14.4792 12.2875 14.2875C12.4792 14.0958 12.7167 14 13 14C13.2833 14 13.5208 14.0958 13.7125 14.2875C13.9042 14.4792 14 14.7167 14 15C14 15.2833 13.9042 15.5208 13.7125 15.7125C13.5208 15.9042 13.2833 16 13 16Z" fill="var(--nys-icon-color, currentcolor)"/>
@@ -4827,7 +5168,7 @@
   <path d="M11 21.8499C9.51669 21.8499 8.11669 21.5624 6.80002 20.9874C5.48336 20.4124 4.33336 19.6332 3.35002 18.6499C2.36669 17.6666 1.58752 16.5166 1.01252 15.1999C0.437524 13.8832 0.150024 12.4832 0.150024 10.9999C0.150024 9.51657 0.437524 8.11657 1.01252 6.7999C1.58752 5.48324 2.36669 4.33324 3.35002 3.3499C4.33336 2.36657 5.48336 1.5874 6.80002 1.0124C8.11669 0.437402 9.51669 0.149902 11 0.149902C12.4834 0.149902 13.8834 0.437402 15.2 1.0124C16.5167 1.5874 17.6667 2.36657 18.65 3.3499C19.6334 4.33324 20.4125 5.48324 20.9875 6.7999C21.5625 8.11657 21.85 9.51657 21.85 10.9999C21.85 12.4832 21.5625 13.8832 20.9875 15.1999C20.4125 16.5166 19.6334 17.6666 18.65 18.6499C17.6667 19.6332 16.5167 20.4124 15.2 20.9874C13.8834 21.5624 12.4834 21.8499 11 21.8499ZM10.95 18.6749C11.3167 18.1082 11.6584 17.5041 11.975 16.8624C12.2917 16.2207 12.55 15.5499 12.75 14.8499H9.22502C9.42502 15.5499 9.67086 16.2207 9.96252 16.8624C10.2542 17.5041 10.5834 18.1082 10.95 18.6749ZM8.47502 18.2749C8.14169 17.7582 7.87919 17.2041 7.68752 16.6124C7.49586 16.0207 7.32502 15.4332 7.17502 14.8499H4.37502C4.80836 15.6499 5.37502 16.3499 6.07502 16.9499C6.77502 17.5499 7.57502 17.9916 8.47502 18.2749ZM13.45 18.2749C14.35 17.9916 15.1584 17.5499 15.875 16.9499C16.5917 16.3499 17.1667 15.6499 17.6 14.8499H14.8C14.65 15.4332 14.4709 16.0207 14.2625 16.6124C14.0542 17.2041 13.7834 17.7582 13.45 18.2749ZM3.55002 12.9249H6.77502C6.72502 12.5916 6.68752 12.2707 6.66252 11.9624C6.63752 11.6541 6.62502 11.3332 6.62502 10.9999C6.62502 10.6499 6.63752 10.3249 6.66252 10.0249C6.68752 9.7249 6.72502 9.40824 6.77502 9.0749H3.55002C3.46669 9.39157 3.40419 9.70407 3.36252 10.0124C3.32086 10.3207 3.30002 10.6499 3.30002 10.9999C3.30002 11.3332 3.32086 11.6582 3.36252 11.9749C3.40419 12.2916 3.46669 12.6082 3.55002 12.9249ZM8.77502 12.9249H13.2C13.25 12.5916 13.2792 12.2707 13.2875 11.9624C13.2959 11.6541 13.3 11.3332 13.3 10.9999C13.3 10.6499 13.2959 10.3249 13.2875 10.0249C13.2792 9.7249 13.25 9.40824 13.2 9.0749H8.77502C8.72502 9.40824 8.68752 9.7249 8.66252 10.0249C8.63752 10.3249 8.62502 10.6499 8.62502 10.9999C8.62502 11.3332 8.63752 11.6541 8.66252 11.9624C8.68752 12.2707 8.72502 12.5916 8.77502 12.9249ZM15.2 12.9249H18.4C18.4834 12.6082 18.5459 12.2916 18.5875 11.9749C18.6292 11.6582 18.65 11.3332 18.65 10.9999C18.65 10.6499 18.6292 10.3207 18.5875 10.0124C18.5459 9.70407 18.4834 9.39157 18.4 9.0749H15.2C15.2334 9.40824 15.2584 9.7249 15.275 10.0249C15.2917 10.3249 15.3 10.6499 15.3 10.9999C15.3 11.3332 15.2917 11.6541 15.275 11.9624C15.2584 12.2707 15.2334 12.5916 15.2 12.9249ZM14.8 7.1249H17.6C17.1667 6.3249 16.5917 5.62907 15.875 5.0374C15.1584 4.44574 14.35 4.00824 13.45 3.7249C13.7834 4.24157 14.0542 4.79157 14.2625 5.3749C14.4709 5.95824 14.65 6.54157 14.8 7.1249ZM9.22502 7.1249H12.75C12.5667 6.4249 12.3167 5.75824 12 5.1249C11.6834 4.49157 11.3334 3.89157 10.95 3.3249C10.5834 3.89157 10.2542 4.49157 9.96252 5.1249C9.67086 5.75824 9.42502 6.4249 9.22502 7.1249ZM4.37502 7.1249H7.17502C7.32502 6.54157 7.49586 5.95824 7.68752 5.3749C7.87919 4.79157 8.14169 4.24157 8.47502 3.7249C7.57502 4.00824 6.77502 4.44574 6.07502 5.0374C5.37502 5.62907 4.80836 6.3249 4.37502 7.1249Z" fill="var(--nys-icon-color, currentcolor)"/>
 </svg>`,lock_filled:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
   <path d="M3.30002 22.7751C2.43369 22.7751 1.69211 22.4667 1.07527 21.8498C0.458441 21.2328 0.150024 20.4913 0.150024 19.6251V10.2251C0.150024 9.35893 0.458441 8.61735 1.07527 8.00035C1.69211 7.38351 2.43369 7.0751 3.30002 7.0751H3.62502V5.8001C3.62502 4.28343 4.14586 2.99593 5.18752 1.9376C6.22919 0.879264 7.50002 0.350098 9.00002 0.350098C10.5 0.350098 11.7709 0.879264 12.8125 1.9376C13.8542 2.99593 14.375 4.28343 14.375 5.8001V7.0751H14.7C15.5662 7.0751 16.3078 7.38351 16.9248 8.00035C17.5416 8.61735 17.85 9.35893 17.85 10.2251V19.6251C17.85 20.4913 17.5416 21.2328 16.9248 21.8498C16.3078 22.4667 15.5662 22.7751 14.7 22.7751H3.30002ZM9.00002 16.9251C9.55002 16.9251 10.0209 16.7293 10.4125 16.3376C10.8042 15.9459 11 15.4751 11 14.9251C11 14.3751 10.8042 13.9043 10.4125 13.5126C10.0209 13.1209 9.55002 12.9251 9.00002 12.9251C8.45002 12.9251 7.97919 13.1209 7.58752 13.5126C7.19586 13.9043 7.00002 14.3751 7.00002 14.9251C7.00002 15.4751 7.19586 15.9459 7.58752 16.3376C7.97919 16.7293 8.45002 16.9251 9.00002 16.9251ZM6.77502 7.0751H11.225V5.8001C11.225 5.16126 11.0125 4.61818 10.5875 4.17085C10.1625 3.72368 9.63336 3.5001 9.00002 3.5001C8.36669 3.5001 7.83752 3.72368 7.41252 4.17085C6.98752 4.61818 6.77502 5.16126 6.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
-</svg>`},Ft=g`
+</svg>`},Gt=g`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -4923,47 +5264,55 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var Gt=Object.defineProperty,Wt=Object.getOwnPropertyDescriptor,u5=(o,t,e,s)=>{for(var r=s>1?void 0:s?Wt(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&Gt(t,e,r),r},e2;const O1=(e2=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=e2.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=jt[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},e2.styles=Ft,e2.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],e2);u5([p5({type:String})],O1.prototype,"name",2),u5([p5({type:String})],O1.prototype,"label",2),u5([p5({type:String})],O1.prototype,"rotate",2),u5([p5({type:String})],O1.prototype,"flip",2),u5([p5({type:String})],O1.prototype,"color",2),u5([p5({reflect:!0})],O1.prototype,"size",1);let Yt=O1;customElements.get("nys-icon")||customElements.define("nys-icon",Yt);var Kt=Object.defineProperty,P7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&Kt(t,e,r),r};const z7=class extends u{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
+`;var Wt=Object.defineProperty,Yt=Object.getOwnPropertyDescriptor,u5=(o,t,e,s)=>{for(var r=s>1?void 0:s?Yt(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&Wt(t,e,r),r},e2;const R1=(e2=class extends u{constructor(){super(...arguments),this.name="",this.label="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(o){this._size=e2.VALID_TYPES.includes(o)?o:"sm"}getIcon(){const o=Ft[this.name],t=!!this.label;if(!o)return null;const e=new DOMParser().parseFromString(o,"image/svg+xml").documentElement;return e instanceof SVGElement?(e.setAttribute("role","img"),e.setAttribute("aria-label",t?this.label:""),e.setAttribute("aria-hidden",t?"false":"true"),e.style.rotate=`${this.rotate}deg`,e.style.color=this.color||"currentcolor",e.classList.add(`nys-icon--${this.size}`),e.classList.add("nys-icon--svg"),this.flip&&e.classList.add(`nys-icon--flip-${this.flip}`),e):null}render(){const o=this.getIcon();return o?c`${o}`:null}},e2.styles=Gt,e2.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","48","64"],e2);u5([p5({type:String,reflect:!0})],R1.prototype,"name",2),u5([p5({type:String})],R1.prototype,"label",2),u5([p5({type:String})],R1.prototype,"rotate",2),u5([p5({type:String})],R1.prototype,"flip",2),u5([p5({type:String})],R1.prototype,"color",2),u5([p5({reflect:!0})],R1.prototype,"size",1);let Kt=R1;customElements.get("nys-icon")||customElements.define("nys-icon",Kt);var Jt=Object.defineProperty,P7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&Jt(t,e,r),r};const z7=class extends u{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
           <nys-icon name="error" size="xl"></nys-icon>
           ${this._internals.validationMessage||this.errorMessage}
-        </div>`:""}`}};z7.styles=kt,z7.formAssociated=!0;let D2=z7;P7([V7({type:Boolean})],D2.prototype,"showError"),P7([V7({type:String})],D2.prototype,"errorMessage"),P7([V7({type:Boolean,reflect:!0})],D2.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",D2);var Jt=Object.defineProperty,Xt=Object.getOwnPropertyDescriptor,Z=(o,t,e,s)=>{for(var r=s>1?void 0:s?Xt(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&Jt(t,e,r),r};let Qt=0;var y1;const m=(y1=class extends u{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.form="",this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.showError=!1,this.errorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get type(){return this._type}set type(o){this._type=y1.VALID_TYPES.includes(o)?o:"text"}updated(o){o.has("width")&&(this.width=y1.VALID_WIDTHS.includes(this.width)?this.width:"full")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textinput-${Date.now()}-${Qt++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var o;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");if(!t)return;const e=this.errorMessage||"This field is required";this.required&&(!this.value||this.value.trim()==="")?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t),this.showError=!0):(this._internals.ariaRequired="false",this._internals.setValidity({}),this.showError=!1,this._hasUserInteracted=!1)}_setValidityMessage(o=""){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");e&&(this.showError=!!o,this.errorMessage.trim()&&o!==""&&(o=this.errorMessage),this._internals.setValidity(o?{customError:!0}:{},o,e))}_validate(){var o;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");if(!t)return;const e=t.validity;let s="";e.valueMissing?s="This field is required":e.typeMismatch?s="Invalid format for this type":e.patternMismatch?s="Invalid format":e.tooShort?s=`Value is too short. Minimum length is ${t.minLength}`:e.tooLong?s=`Value is too long. Maximum length is ${t.maxLength}`:e.rangeUnderflow?s=`Value must be at least ${t.min}`:e.rangeOverflow?s=`Value must be at most ${t.max}`:e.stepMismatch?s="Invalid step value":s=t.validationMessage,this._setValidityMessage(s)}_handleInvalid(){this._hasUserInteracted=!0,this._validate()}_handleInput(o){const t=o.target;this.value=t.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("input",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}_handleChange(){this.dispatchEvent(new Event("change"))}render(){return c`
+        </div>`:""}`}};z7.styles=At,z7.formAssociated=!0;let D2=z7;P7([V7({type:Boolean})],D2.prototype,"showError"),P7([V7({type:String})],D2.prototype,"errorMessage"),P7([V7({type:Boolean,reflect:!0})],D2.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",D2);var Xt=Object.defineProperty,Qt=Object.getOwnPropertyDescriptor,$=(o,t,e,s)=>{for(var r=s>1?void 0:s?Qt(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&Xt(t,e,r),r};let te=0;var f1;const m=(f1=class extends u{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this.form="",this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.showError=!1,this.errorMessage="",this.showPassword=!1,this._originalErrorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get type(){return this._type}set type(o){this._type=f1.VALID_TYPES.includes(o)?o:"text"}updated(o){o.has("width")&&(this.width=f1.VALID_WIDTHS.includes(this.width)?this.width:"full")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textinput-${Date.now()}-${te++}`),this._originalErrorMessage=this.errorMessage,this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire()}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var o;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");if(!t)return;const e=this.errorMessage||"This field is required";this.required&&(!this.value||this.value.trim()==="")?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},e,t)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(o=""){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");if(!e)return;this.showError=!!o,this._originalErrorMessage.trim()&&o!==""?this.errorMessage=this._originalErrorMessage:this.errorMessage=o;const s=o?{customError:!0}:{};this._internals.setValidity(s,this.errorMessage,e)}_validate(){var o;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");if(!t)return;const e=t.validity;let s="";e.valueMissing?s="This field is required":e.typeMismatch?s="Invalid format for this type":e.patternMismatch?s="Invalid format":e.tooShort?s=`Value is too short. Minimum length is ${t.minLength}`:e.tooLong?s=`Value is too long. Maximum length is ${t.maxLength}`:e.rangeUnderflow?s=`Value must be at least ${t.min}`:e.rangeOverflow?s=`Value must be at most ${t.max}`:e.stepMismatch?s="Invalid step value":s=t.validationMessage,this._setValidityMessage(s)}checkValidity(){var o;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");return t?t.checkValidity():!0}_handleInvalid(o){var t;o.preventDefault(),this._hasUserInteracted=!0,this._validate();const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");if(e){const s=this._internals.form;s?Array.from(s.elements).find(r=>typeof r.checkValidity=="function"&&!r.checkValidity())===this&&e.focus():e.focus()}}_togglePasswordVisibility(){this.showPassword=!this.showPassword}_handleInput(o){const t=o.target;this.value=t.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("input",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("blur"))}_handleChange(){this.dispatchEvent(new Event("change"))}render(){return c`
       <div class="nys-textinput">
         <nys-label
           label=${this.label}
           description=${this.description}
-          flag=${this.required?"required":""}
+          flag=${this.required?"required":this.optional?"optional":""}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
-        <input
-          class="nys-textinput__input"
-          type=${this.type}
-          name=${this.name}
-          id=${this.id}
-          ?disabled=${this.disabled}
-          ?required=${this.required}
-          ?readonly=${this.readonly}
-          aria-disabled="${this.disabled}"
-          aria-label="${this.label} ${this.description}"
-          .value=${this.value}
-          placeholder=${U1(this.placeholder?this.placeholder:void 0)}
-          pattern=${U1(this.pattern?this.pattern:void 0)}
-          min=${U1(this.min!==""?this.min:void 0)}
-          maxlength=${U1(this.maxlength!==""?this.maxlength:void 0)}
-          step=${U1(this.step!==""?this.step:void 0)}
-          max=${U1(this.max!==""?this.max:void 0)}
-          form=${U1(this.form?this.form:void 0)}
-          @input=${this._handleInput}
-          @focus="${this._handleFocus}"
-          @blur="${this._handleBlur}"
-          @change="${this._handleChange}"
-        />
+        <div class="nys-input-container ${this.disabled?"disabled":""}">
+          <input
+            class="nys-textinput__input"
+            type=${this.type==="password"?this.showPassword?"text":"password":this.type}
+            name=${this.name}
+            id=${this.id}
+            ?disabled=${this.disabled}
+            ?required=${this.required}
+            ?readonly=${this.readonly}
+            aria-disabled="${this.disabled}"
+            aria-label="${this.label} ${this.description}"
+            .value=${this.value}
+            placeholder=${B1(this.placeholder?this.placeholder:void 0)}
+            pattern=${B1(this.pattern?this.pattern:void 0)}
+            min=${B1(this.min!==""?this.min:void 0)}
+            maxlength=${B1(this.maxlength!==""?this.maxlength:void 0)}
+            step=${B1(this.step!==""?this.step:void 0)}
+            max=${B1(this.max!==""?this.max:void 0)}
+            form=${B1(this.form?this.form:void 0)}
+            @input=${this._handleInput}
+            @focus="${this._handleFocus}"
+            @blur="${this._handleBlur}"
+            @change="${this._handleChange}"
+          />
+          ${this.type==="password"?c`<nys-icon
+                class="eye-icon"
+                @click=${()=>!this.disabled&&this._togglePasswordVisibility()}
+                name=${this.showPassword?"visibility_off":"visibility"}
+                size="3xl"
+              ></nys-icon>`:""}
+        </div>
         <nys-errormessage
           ?showError=${this.showError}
-          errorMessage=${this._internals.validationMessage||this.errorMessage}
+          errorMessage=${this.errorMessage}
         ></nys-errormessage>
       </div>
-    `}},y1.VALID_TYPES=["email","number","password","search","tel","text","url"],y1.VALID_WIDTHS=["sm","md","lg","full"],y1.styles=P4,y1.formAssociated=!0,y1);Z([M({type:String})],m.prototype,"id",2),Z([M({type:String})],m.prototype,"name",2),Z([M({reflect:!0})],m.prototype,"type",1),Z([M({type:String})],m.prototype,"label",2),Z([M({type:String})],m.prototype,"description",2),Z([M({type:String})],m.prototype,"placeholder",2),Z([M({type:String})],m.prototype,"value",2),Z([M({type:Boolean,reflect:!0})],m.prototype,"disabled",2),Z([M({type:Boolean,reflect:!0})],m.prototype,"readonly",2),Z([M({type:Boolean,reflect:!0})],m.prototype,"required",2),Z([M({type:String})],m.prototype,"form",2),Z([M({type:String})],m.prototype,"pattern",2),Z([M({type:Number})],m.prototype,"maxlength",2),Z([M({reflect:!0})],m.prototype,"width",2),Z([M({type:Number})],m.prototype,"step",2),Z([M({type:Number})],m.prototype,"min",2),Z([M({type:Number})],m.prototype,"max",2),Z([M({type:Boolean,reflect:!0})],m.prototype,"showError",2),Z([M({type:String})],m.prototype,"errorMessage",2);let te=m;customElements.get("nys-textinput")||customElements.define("nys-textinput",te);var ee=Object.defineProperty,se=Object.getOwnPropertyDescriptor,R1=(o,t,e,s)=>{for(var r=s>1?void 0:s?se(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&ee(t,e,r),r};const O7=class O7 extends u{constructor(){super(...arguments),this.trustbarVisible=!1,this.searchDropdownVisible=!1,this.languageVisible=!1,this.isSearchFocused=!1,this.hideTranslate=!1,this.hideSearch=!1,this.languages=[["English",""],["Español","es"],["中文","zh"],["繁體中文","zh-traditional"],["Русский","ru"],["יידיש","yi"],["বাংলা","bn"],["한국어","ko"],["Kreyòl Ayisyen","ht"],["Italiano","it"],["العربية","ar"],["Polski","pl"],["Français","fr"],["اردو","ur"]]}get screenSize(){const t=window.innerWidth;return t<480?"xs":t<768?"sm":t<1024?"md":t<1280?"lg":"xl"}_getNysLogo(){return new DOMParser().parseFromString(b4,"image/svg+xml").documentElement}_toggleTrustbar(){this.trustbarVisible=!this.trustbarVisible,this.trustbarVisible&&(this.languageVisible=!1,this.searchDropdownVisible=!1)}_toggleLanguageList(){this.languageVisible=!this.languageVisible,this.languageVisible&&(this.trustbarVisible=!1,this.searchDropdownVisible=!1)}_toggleSearchDropdown(){this.searchDropdownVisible=!this.searchDropdownVisible,this.searchDropdownVisible&&(this.trustbarVisible=!1,this.languageVisible=!1)}_handleSearchFocus(){this.isSearchFocused=!0,this.trustbarVisible=!1,this.languageVisible=!1}_handleSearchBlur(){this.isSearchFocused=!1}_handleSearchKeyup(t){if(t.key==="Escape"&&(this._handleSearchBlur(),t.target.blur()),t.key==="Enter"){const e=t.target.value.trim();e!==""&&(window.location.href=`https://search.its.ny.gov/search/search.html?btnG=Search&client=default_frontend&output=xml_no_dtd&proxystylesheet=default_frontend&ulang=en&sort=date:D:L:d1&entqr=3&entqrm=0&wc=200&wc_mc=1&oe=UTF-8&ie=UTF-8&ud=1&site=default_collection&q=${e}+inurl:${window.location.hostname}&site=default_collection`)}}_updateScreenSize(){this.requestUpdate()}connectedCallback(){super.connectedCallback(),window.addEventListener("resize",this._updateScreenSize.bind(this))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("resize",this._updateScreenSize.bind(this))}render(){return c`
+    `}},f1.VALID_TYPES=["email","number","password","search","tel","text","url"],f1.VALID_WIDTHS=["sm","md","lg","full"],f1.styles=z4,f1.formAssociated=!0,f1);$([L({type:String})],m.prototype,"id",2),$([L({type:String,reflect:!0})],m.prototype,"name",2),$([L({reflect:!0})],m.prototype,"type",1),$([L({type:String})],m.prototype,"label",2),$([L({type:String})],m.prototype,"description",2),$([L({type:String})],m.prototype,"placeholder",2),$([L({type:String})],m.prototype,"value",2),$([L({type:Boolean,reflect:!0})],m.prototype,"disabled",2),$([L({type:Boolean,reflect:!0})],m.prototype,"readonly",2),$([L({type:Boolean,reflect:!0})],m.prototype,"required",2),$([L({type:Boolean,reflect:!0})],m.prototype,"optional",2),$([L({type:String})],m.prototype,"form",2),$([L({type:String})],m.prototype,"pattern",2),$([L({type:Number})],m.prototype,"maxlength",2),$([L({reflect:!0})],m.prototype,"width",2),$([L({type:Number})],m.prototype,"step",2),$([L({type:Number})],m.prototype,"min",2),$([L({type:Number})],m.prototype,"max",2),$([L({type:Boolean,reflect:!0})],m.prototype,"showError",2),$([L({type:String})],m.prototype,"errorMessage",2),$([P4()],m.prototype,"showPassword",2);let ee=m;customElements.get("nys-textinput")||customElements.define("nys-textinput",ee);var se=Object.defineProperty,oe=Object.getOwnPropertyDescriptor,I1=(o,t,e,s)=>{for(var r=s>1?void 0:s?oe(t,e):t,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=(s?i(t,e,r):i(r))||r);return s&&r&&se(t,e,r),r};const O7=class O7 extends u{constructor(){super(...arguments),this.trustbarVisible=!1,this.searchDropdownVisible=!1,this.languageVisible=!1,this.isSearchFocused=!1,this.hideTranslate=!1,this.hideSearch=!1,this.languages=[["English",""],["Español","es"],["中文","zh"],["繁體中文","zh-traditional"],["Русский","ru"],["יידיש","yi"],["বাংলা","bn"],["한국어","ko"],["Kreyòl Ayisyen","ht"],["Italiano","it"],["العربية","ar"],["Polski","pl"],["Français","fr"],["اردو","ur"]]}get screenSize(){const t=window.innerWidth;return t<480?"xs":t<768?"sm":t<1024?"md":t<1280?"lg":"xl"}_getNysLogo(){return new DOMParser().parseFromString(b4,"image/svg+xml").documentElement}_toggleTrustbar(){this.trustbarVisible=!this.trustbarVisible,this.trustbarVisible&&(this.languageVisible=!1,this.searchDropdownVisible=!1)}_toggleLanguageList(){this.languageVisible=!this.languageVisible,this.languageVisible&&(this.trustbarVisible=!1,this.searchDropdownVisible=!1)}_toggleSearchDropdown(){this.searchDropdownVisible=!this.searchDropdownVisible,this.searchDropdownVisible&&(this.trustbarVisible=!1,this.languageVisible=!1)}_handleSearchFocus(){this.isSearchFocused=!0,this.trustbarVisible=!1,this.languageVisible=!1}_handleSearchBlur(){this.isSearchFocused=!1}_handleSearchKeyup(t){if(t.key==="Escape"&&(this._handleSearchBlur(),t.target.blur()),t.key==="Enter"){const e=t.target.value.trim();e!==""&&(window.location.href=`https://search.its.ny.gov/search/search.html?btnG=Search&client=default_frontend&output=xml_no_dtd&proxystylesheet=default_frontend&ulang=en&sort=date:D:L:d1&entqr=3&entqrm=0&wc=200&wc_mc=1&oe=UTF-8&ie=UTF-8&ud=1&site=default_collection&q=${e}+inurl:${window.location.hostname}&site=default_collection`)}}_updateScreenSize(){this.requestUpdate()}connectedCallback(){super.connectedCallback(),window.addEventListener("resize",this._updateScreenSize.bind(this))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("resize",this._updateScreenSize.bind(this))}render(){return c`
       ${this.screenSize==="xs"||this.screenSize==="sm"?c` <div class="nys-unavheader__toptrustbar">
               <div class="nys-unavheader__officialmessage">
                 <label id="nys-unavheader__official"
@@ -5134,12 +5483,16 @@
           @keyup="${this._handleSearchKeyup}"
         ></nys-textinput>
       </div>
-    `}};O7.styles=w4;let j=O7;R1([C({type:Boolean})],j.prototype,"trustbarVisible",2),R1([C({type:Boolean})],j.prototype,"searchDropdownVisible",2),R1([C({type:Boolean})],j.prototype,"languageVisible",2),R1([C({type:Boolean})],j.prototype,"isSearchFocused",2),R1([C({type:Boolean})],j.prototype,"hideTranslate",2),R1([C({type:Boolean})],j.prototype,"hideSearch",2),R1([C({type:String,reflect:!0})],j.prototype,"screenSize",1),customElements.get("nys-unavheader")||customElements.define("nys-unavheader",j);const oe=g`
+    `}};O7.styles=w4;let F=O7;I1([C({type:Boolean})],F.prototype,"trustbarVisible",2),I1([C({type:Boolean})],F.prototype,"searchDropdownVisible",2),I1([C({type:Boolean})],F.prototype,"languageVisible",2),I1([C({type:Boolean})],F.prototype,"isSearchFocused",2),I1([C({type:Boolean})],F.prototype,"hideTranslate",2),I1([C({type:Boolean})],F.prototype,"hideSearch",2),I1([C({type:String,reflect:!0})],F.prototype,"screenSize",1),customElements.get("nys-unavheader")||customElements.define("nys-unavheader",F);const re=g`
   :host {
     /* Global Header Styles */
-    --_nys-globalheader-color: var(
-      --nys-color-ink-reverse,
+    --_nys-globalheader-text-color: var(
+      --nys-color-text-reverse,
       var(--nys-color-white, #ffffff)
+    );
+    --_nys-globalheader-link-color: var(
+      --nys-color-link-reverse-neutral,
+      var(--nys-color-white, #fff)
     );
     --_nys-globalheader-background: var(
       --nys-color-theme,
@@ -5232,7 +5585,7 @@
   }
 
   a {
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-link-color);
     text-decoration: none;
     font-family: var(--_nys-globalheader-font-family);
     font-size: var(--_nys-globalheader-font-size-links);
@@ -5247,7 +5600,7 @@
     justify-content: center;
     padding: var(--_nys-globalheader-padding) var(--_nys-globalheader-gutter);
     background-color: var(--_nys-globalheader-background);
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-text-color);
     width: 100%;
     box-sizing: border-box;
   }
@@ -5270,7 +5623,7 @@
   }
   .nys-globalheader__name {
     margin: 0;
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-text-color);
     font-family: var(--_nys-globalheader-font-family-agency);
     font-size: var(--_nys-globalheader-font-size-main-name);
     font-style: normal;
@@ -5333,7 +5686,7 @@
     flex-direction: column;
   }
   .nys-globalheader__content-mobile ul li:first-child a {
-    border-top: 1px solid var(--_nys-globalheader-color);
+    border-top: 1px solid var(--_nys-globalheader-text-color);
   }
   .nys-globalheader__content-mobile ul li a {
     display: flex;
@@ -5375,7 +5728,7 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-    color: var(--_nys-globalheader-color);
+    color: var(--_nys-globalheader-text-color);
   }
   .nys-globalheader__mobile-menu-button-text {
     font-size: var(--_nys-globalheader-mobile-btn-font-size);
@@ -5410,7 +5763,7 @@
       --_nys-globalheader-gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`;var re=Object.defineProperty,s2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&re(t,e,r),r};const R7=class R7 extends u{constructor(){super(...arguments),this.appName="",this.agencyName="",this.homepageLink="",this.slotHasContent=!0,this.isMobileMenuOpen=!1}firstUpdated(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");t==null||t.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange()}_handleSlotChange(){var n,i,l;const t=(n=this.shadowRoot)==null?void 0:n.querySelector("slot");if(!t)return;const e=t==null?void 0:t.assignedNodes({flatten:!0}).filter(a=>a.nodeType===Node.ELEMENT_NODE);this.slotHasContent=e.length>0;const s=(i=this.shadowRoot)==null?void 0:i.querySelector(".nys-globalheader__content"),r=(l=this.shadowRoot)==null?void 0:l.querySelector(".nys-globalheader__content-mobile");s&&r&&(s.innerHTML="",r.innerHTML="",e.forEach(a=>{if(a.nodeType===Node.ELEMENT_NODE){const p=a.cloneNode(!0),d=a.cloneNode(!0);["script","iframe","object","embed"].forEach(v=>{p.querySelectorAll(v).forEach(y=>y.remove())}),s.appendChild(p),r.appendChild(d),a.remove()}}))}_toggleMobileMenu(){this.isMobileMenuOpen=!this.isMobileMenuOpen}render(){var t,e,s,r,n,i,l,a;return c`
+`;var ne=Object.defineProperty,s2=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&ne(t,e,r),r};const R7=class R7 extends u{constructor(){super(...arguments),this.appName="",this.agencyName="",this.homepageLink="",this.slotHasContent=!0,this.isMobileMenuOpen=!1}firstUpdated(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");t==null||t.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange()}_handleSlotChange(){var n,i,l;const t=(n=this.shadowRoot)==null?void 0:n.querySelector("slot");if(!t)return;const e=t==null?void 0:t.assignedNodes({flatten:!0}).filter(a=>a.nodeType===Node.ELEMENT_NODE);this.slotHasContent=e.length>0;const s=(i=this.shadowRoot)==null?void 0:i.querySelector(".nys-globalheader__content"),r=(l=this.shadowRoot)==null?void 0:l.querySelector(".nys-globalheader__content-mobile");s&&r&&(s.innerHTML="",r.innerHTML="",e.forEach(a=>{if(a.nodeType===Node.ELEMENT_NODE){const p=a.cloneNode(!0),d=a.cloneNode(!0);["script","iframe","object","embed"].forEach(v=>{p.querySelectorAll(v).forEach(y=>y.remove())}),s.appendChild(p),r.appendChild(d),a.remove()}}))}_toggleMobileMenu(){this.isMobileMenuOpen=!this.isMobileMenuOpen}render(){var t,e,s,r,n,i,l,a;return c`
       <header class="nys-globalheader">
         <div class="nys-globalheader__main-container">
           ${this.slotHasContent?c` <div class="nys-globalheader__button-container">
@@ -5469,11 +5822,15 @@
       <div
         class="nys-globalheader__content-mobile ${this.isMobileMenuOpen?"":"close"}"
       ></div>
-    `}};R7.styles=oe;let s1=R7;s2([C({type:String})],s1.prototype,"appName"),s2([C({type:String})],s1.prototype,"agencyName"),s2([C({type:String})],s1.prototype,"homepageLink"),s2([q1()],s1.prototype,"slotHasContent"),s2([q1()],s1.prototype,"isMobileMenuOpen"),customElements.get("nys-globalheader")||customElements.define("nys-globalheader",s1);const ne=g`
+    `}};R7.styles=re;let o1=R7;s2([C({type:String})],o1.prototype,"appName"),s2([C({type:String})],o1.prototype,"agencyName"),s2([C({type:String})],o1.prototype,"homepageLink"),s2([$1()],o1.prototype,"slotHasContent"),s2([$1()],o1.prototype,"isMobileMenuOpen"),customElements.get("nys-globalheader")||customElements.define("nys-globalheader",o1);const ie=g`
   :host {
     /* Global Footer Styles */
-    --_nys-globalfooter-color: var(
-      --nys-color-ink,
+    --_nys-globalfooter-text-color: var(
+      --nys-color-text,
+      var(--nys-color-neutral-900, #1b1b1b)
+    );
+    --_nys-globalfooter-link-color: var(
+      --nys-color-link-neutral,
       var(--nys-color-neutral-900, #1b1b1b)
     );
     --_nys-globalfooter-background: var(
@@ -5536,7 +5893,7 @@
     padding: var(--_nys-globalfooter-padding) var(--_nys-globalfooter-gutter);
     justify-content: center;
     background-color: var(--_nys-globalfooter-background);
-    color: var(--_nys-globalfooter-color);
+    color: var(--_nys-globalfooter-text-color);
     width: 100%;
     box-sizing: border-box;
   }
@@ -5553,7 +5910,7 @@
   /* The Agency Name */
   .nys-globalfooter__name {
     margin: 0;
-    color: var(--_nys-globalfooter-color);
+    color: var(--_nys-globalfooter-text-color);
     font-family: var(--_nys-globalfooter-font-family-agency);
     font-size: var(--_nys-globalfooter-font-size);
     font-style: normal;
@@ -5575,7 +5932,7 @@
   }
 
   a {
-    color: var(--_nys-globalfooter-color);
+    color: var(--_nys-globalfooter-link-color);
     text-decoration: none;
     font-family: var(--_nys-globalfooter-link-font-family);
     font-size: var(--_nys-globalfooter-font-size-links);
@@ -5619,7 +5976,7 @@
       --_nys-globalfooter-gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`;var ie=Object.defineProperty,U7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&ie(t,e,r),r};const T7=class T7 extends u{constructor(){super(...arguments),this.agencyName="",this.homepageLink="",this.slotHasContent=!0}firstUpdated(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");t==null||t.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange()}_handleSlotChange(){var n,i;const t=(n=this.shadowRoot)==null?void 0:n.querySelector("slot");if(!t)return;const e=t==null?void 0:t.assignedNodes({flatten:!0}).filter(l=>l.nodeType===Node.ELEMENT_NODE);this.slotHasContent=e.length>0;const s=(i=this.shadowRoot)==null?void 0:i.querySelector(".nys-globalfooter__content"),r=e==null?void 0:e.some(l=>l.tagName==="H4");s&&(s.classList.toggle("columns",r),s.classList.toggle("small",!r),s.innerHTML="",e.forEach(l=>{if(l.nodeType===Node.ELEMENT_NODE){const a=l.cloneNode(!0);["script","iframe","object","embed"].forEach(d=>{a.querySelectorAll(d).forEach(h=>h.remove())}),s.appendChild(a),l.remove()}}))}render(){var t,e;return c`
+`;var le=Object.defineProperty,U7=(o,t,e,s)=>{for(var r=void 0,n=o.length-1,i;n>=0;n--)(i=o[n])&&(r=i(t,e,r)||r);return r&&le(t,e,r),r};const I7=class I7 extends u{constructor(){super(...arguments),this.agencyName="",this.homepageLink="",this.slotHasContent=!0}firstUpdated(){var e;const t=(e=this.shadowRoot)==null?void 0:e.querySelector("slot");t==null||t.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange()}_handleSlotChange(){var n,i;const t=(n=this.shadowRoot)==null?void 0:n.querySelector("slot");if(!t)return;const e=t==null?void 0:t.assignedNodes({flatten:!0}).filter(l=>l.nodeType===Node.ELEMENT_NODE);this.slotHasContent=e.length>0;const s=(i=this.shadowRoot)==null?void 0:i.querySelector(".nys-globalfooter__content"),r=e==null?void 0:e.some(l=>l.tagName==="H4");s&&(s.classList.toggle("columns",r),s.classList.toggle("small",!r),s.innerHTML="",e.forEach(l=>{if(l.nodeType===Node.ELEMENT_NODE){const a=l.cloneNode(!0);["script","iframe","object","embed"].forEach(d=>{a.querySelectorAll(d).forEach(h=>h.remove())}),s.appendChild(a),l.remove()}}))}render(){var t,e;return c`
       <footer class="nys-globalfooter">
         <div class="nys-globalfooter__main-container">
           ${(t=this.homepageLink)!=null&&t.trim()?c`<a href=${(e=this.homepageLink)==null?void 0:e.trim()}>
@@ -5633,15 +5990,15 @@
               </div>`:""}
         </div>
       </footer>
-    `}};T7.styles=ne;let T1=T7;U7([C({type:String})],T1.prototype,"agencyName"),U7([C({type:String})],T1.prototype,"homepageLink"),U7([q1()],T1.prototype,"slotHasContent"),customElements.get("nys-globalfooter")||customElements.define("nys-globalfooter",T1);const le=g`
+    `}};I7.styles=ie;let T1=I7;U7([C({type:String})],T1.prototype,"agencyName"),U7([C({type:String})],T1.prototype,"homepageLink"),U7([$1()],T1.prototype,"slotHasContent"),customElements.get("nys-globalfooter")||customElements.define("nys-globalfooter",T1);const ae=g`
   :host {
     /* Global Footer Styles */
-    --_nys-unavfooter-color: var(
-      --nys-color-ink-reverse,
+    --_nys-unavfooter-link-color: var(
+      --nys-color-link-reverse-neutral,
       var(--nys-color-white, #ffffff)
     );
     --_nys-unavfooter-background: var(
-      --nys-color-ink,
+      --nys-color-surface-reverse,
       var(--nys-color-neutral-900, #1b1b1b)
     );
     --_nys-unavfooter-gap-spacing: var(--nys-space-200, 16px);
@@ -5696,7 +6053,7 @@
   }
 
   a {
-    color: var(--_nys-unavfooter-color);
+    color: var(--_nys-unavfooter-link-color);
     text-decoration: none;
     font-family: var(--_nys-unavfooter-font-family);
     font-size: var(--_nys-unavfooter-font-size-links);
@@ -5723,7 +6080,6 @@
     gap: var(--_nys-unavfooter-gap-spacing);
     align-items: flex-start;
     background-color: var(--_nys-unavfooter-background);
-    color: var(--_nys-unavfooter-color);
     width: 100%;
     box-sizing: border-box;
   }
@@ -5790,7 +6146,7 @@
       --_nys-unavfooter-gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`,ae=`<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
+`,Ce=`<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
   <path d="M55.1158 7.50499L58.2905 12.6494V7.5189C58.2905 7.5189 58.6487 7.26356 59.5098 7.26356C60.3708 7.26356 60.7378 7.5189 60.7378 7.5189V16.4327C60.7378 16.4327 60.3942 16.689 59.5215 16.689C58.6487 16.689 58.3295 16.4605 58.3295 16.4605L55.1421 11.3171V16.4337C55.1421 16.4337 54.7848 16.69 53.9111 16.69C53.0374 16.69 52.7065 16.4337 52.7065 16.4337V7.51989C52.7065 7.51989 53.0384 7.26456 53.9248 7.26456C54.8112 7.26456 55.1148 7.50697 55.1148 7.50697L55.1158 7.50499Z" fill="white"/>
   <path d="M67.2209 12.5948H64.9063V14.8709H68.2538C68.2538 14.8709 68.5047 15.1531 68.5047 15.772C68.5047 16.391 68.2538 16.688 68.2538 16.688H62.4589V7.26257H67.9892C67.9892 7.26257 68.2538 7.54572 68.2538 8.17859C68.2538 8.81146 67.9892 9.09362 67.9892 9.09362H64.9063V10.7637H67.2209C67.2209 10.7637 67.4728 11.0598 67.4728 11.6787C67.4728 12.2977 67.2209 12.5948 67.2209 12.5948Z" fill="white"/>
   <path d="M71.4802 16.4327L68.9791 7.5189C68.9791 7.5189 69.3491 7.26356 70.2101 7.26356C71.0711 7.26356 71.4275 7.5189 71.4275 7.5189L72.6839 12.0434C72.7766 12.3802 72.8166 12.6365 72.8557 12.7845C72.8557 12.7428 72.9221 12.3663 73.0011 12.0573L74.0984 7.5189C74.0984 7.5189 74.5211 7.26356 75.1176 7.26356C75.7141 7.26356 76.084 7.5189 76.084 7.5189L77.3004 12.7845C77.3004 12.6623 77.3795 12.3255 77.4586 12.0573L78.756 7.5189C78.7686 7.5189 79.1132 7.26356 79.9596 7.26356C80.806 7.26356 81.1897 7.5189 81.1897 7.5189L78.6496 16.4327C78.6496 16.4327 78.2922 16.6751 77.4859 16.689C76.5468 16.689 76.2158 16.4327 76.2158 16.4327L75.223 12.2987C75.1449 11.9887 75.0902 11.6529 75.0785 11.5844L74.9184 12.2987L73.9266 16.4327C73.9266 16.4327 73.583 16.689 72.7092 16.689C71.8355 16.689 71.4802 16.4327 71.4802 16.4327Z" fill="white"/>
@@ -5806,7 +6162,7 @@
   <path d="M51.7107 54.9999C51.577 54.9999 51.4335 54.974 51.2939 54.8965C51.085 54.7803 50.9395 54.5876 50.8858 54.3551C50.8233 54.0868 50.8936 53.7868 51.082 53.5116L51.1426 53.4202C51.2041 53.3268 51.2685 53.2354 51.3407 53.1519C51.4218 53.0595 51.5047 52.995 51.5741 52.9493C51.5243 52.6691 51.5418 52.4267 51.5682 52.2061C51.5877 52.0233 51.6346 51.8683 51.6726 51.7451C51.6892 51.6925 51.7058 51.6388 51.7185 51.5812C51.8201 51.145 51.8855 50.7397 51.9206 50.3453C51.9528 49.9916 51.947 49.9846 51.8864 49.9061C51.7 49.6707 51.3847 49.5018 51.0498 49.3229C50.8878 49.2365 50.7286 49.1491 50.5754 49.0557C49.607 48.4536 48.6376 47.8505 47.6701 47.2465L47.3294 47.0339C47.2513 46.9862 47.1147 46.9156 46.9516 46.8282C45.8817 46.2659 45.172 45.8526 45.0539 45.2595C45.0363 45.173 44.9465 44.9644 44.884 44.864C44.8411 44.8611 44.7307 44.8521 44.6546 44.8471C44.3032 44.8183 43.7711 44.7726 43.3484 44.3196C43.2635 44.2272 43.1786 44.1408 43.1005 44.0583C42.5098 43.4443 42.0003 42.9148 41.9329 41.5993C41.9241 41.4275 41.9251 41.2506 41.928 41.0728C41.9339 40.5283 41.927 40.1836 41.7103 39.962C41.6078 39.8567 41.435 39.7862 41.2349 39.7037C40.9889 39.6034 40.7097 39.4881 40.45 39.2686C40.37 39.2 40.2792 39.1007 40.1776 38.9854C40.0712 38.8602 39.9082 38.6724 39.7969 38.6337C38.974 38.3436 37.986 38.3178 36.96 38.3178L3.07245 38.2909C2.85964 38.2909 2.66927 38.3138 2.48477 38.3347C2.07378 38.3823 1.60812 38.437 1.2313 38.0962C0.866192 37.7664 0.815429 37.2607 0.814452 36.8076L0.8125 34.3993C0.8125 34.2722 0.847644 34.147 0.913051 34.0387C1.22544 33.529 1.83265 33.2558 2.3686 33.0144C2.56872 32.924 2.77666 32.8316 2.88795 32.7571C3.17593 32.5623 3.43561 32.302 3.7109 32.0248C3.91688 31.8182 4.13068 31.6046 4.36887 31.4059C4.69786 31.1317 5.07078 30.931 5.43296 30.7372C5.74535 30.5703 6.03821 30.4124 6.24127 30.2395C6.38575 30.1173 6.49216 29.9146 6.61906 29.6792C6.75476 29.4238 6.90998 29.1337 7.15208 28.8804C7.41273 28.6081 7.7427 28.4194 8.03263 28.2535C8.69744 27.871 8.68182 27.8322 8.57736 27.5769C8.52855 27.4577 8.48072 27.3553 8.43972 27.2639C8.24447 26.8357 8.07754 26.4681 8.19078 25.7051C8.2025 25.6306 8.21616 25.5521 8.22983 25.4706C8.25619 25.3325 8.30305 25.0772 8.27571 25.0037C8.27571 25.0037 8.26204 24.9927 8.23471 24.9778C8.21128 24.9659 8.12928 24.9669 8.06875 24.9679C7.87448 24.9659 7.51914 24.9768 7.2497 24.6689C6.98124 24.3629 6.99686 23.9555 7.03982 23.6356C7.08179 23.3127 7.06032 23.1051 7.03982 22.9223C6.95684 22.1453 7.21358 21.7817 8.10097 21.424C10.7524 20.351 12.901 19.9884 14.8613 20.2805C14.9775 20.2974 15.1356 20.2656 15.3182 20.2269C15.5944 20.1702 15.9351 20.1017 16.312 20.1752L18.3952 20.5766C19.2475 20.7415 19.6653 20.9054 20.3047 21.4995C20.6327 21.8046 20.7655 21.7718 21.3327 21.5661C21.6168 21.4638 21.9399 21.3485 22.3323 21.2949C22.9727 21.2084 23.5731 21.2661 24.153 21.3227C24.4136 21.3475 24.6762 21.3734 24.9408 21.3843C25.2356 21.3952 25.6085 21.2561 25.9717 21.121C26.1318 21.0614 26.2889 21.0028 26.4412 20.9541C26.78 20.8468 27.0973 20.7991 27.4038 20.7514C27.5551 20.7266 27.7064 20.7037 27.8607 20.6729C27.8714 20.6531 27.8821 20.6332 27.8939 20.6113C27.9417 20.5249 27.9944 20.4345 28.0598 20.3411C28.3419 19.9497 28.7471 19.7003 29.0722 19.4966L29.2078 19.4122C29.5564 19.1916 29.8629 18.9879 30.105 18.7386C30.5423 18.2796 31.1232 18.3114 31.5108 18.3312C31.6455 18.3392 31.8495 18.3481 31.91 18.3223C32.1678 18.207 31.9413 17.3993 31.8065 16.9165C31.7119 16.5777 31.6299 16.2846 31.6133 16.0183C31.5664 15.2642 31.9764 14.7317 32.3064 14.3045C32.5651 13.9687 32.7213 13.7481 32.7164 13.5355C32.7164 13.4948 32.7027 13.4382 32.6851 13.3845C32.4587 13.4948 32.0955 13.6369 31.6796 13.4421C31.0129 13.1302 30.6468 12.0264 30.8508 11.3985C31.0197 10.8779 31.54 10.5421 31.9198 10.2957L32.0565 10.2053C32.3806 9.98471 32.7242 9.79792 33.0542 9.6181C33.5159 9.36873 33.9513 9.13227 34.2949 8.82726C34.4404 8.69711 34.5761 8.56994 34.7089 8.44376C35.0076 8.1626 35.3161 7.8715 35.6792 7.61319C35.7056 7.5188 35.728 7.34096 35.7437 7.22571C35.7729 7.00714 35.8022 6.78062 35.8803 6.5849C36.2513 5.64304 37.1592 4.90884 37.9597 4.25908C38.2252 4.04448 38.4771 3.84081 38.6743 3.65602C38.7992 3.53878 38.9222 3.42055 39.0452 3.30332C39.6388 2.73701 40.2509 2.15084 40.9967 1.68289C41.601 1.30536 42.3898 0.833439 43.1249 0.552274C44.0972 0.1807 44.5579 0.208518 45.4766 0.262168L45.6474 0.27111C47.3607 0.371455 49.1384 0.32476 50.8575 0.281045C51.7205 0.258194 52.5796 0.235343 53.4347 0.230376C53.6651 0.230376 54.0156 0.185667 54.3836 0.138972C55.6078 -0.0140291 56.994 -0.188888 57.7818 0.503592C58.1118 0.792705 58.2924 1.19806 58.3031 1.67594C58.311 2.05248 58.1567 2.33464 58.0435 2.54129C58.0064 2.60686 57.9527 2.7082 57.9458 2.74297C57.9488 2.73205 57.9849 2.78768 58.0103 2.82742C58.1362 3.01718 58.3686 3.37088 58.2748 3.89843C58.2397 4.10111 58.1811 4.3167 58.1216 4.53528C58.0464 4.81147 57.9693 5.09761 57.9624 5.31419C57.9498 5.69073 57.6335 5.99376 57.2703 5.97289C56.9013 5.95998 56.6104 5.64603 56.6231 5.26849C56.6367 4.89195 56.7392 4.50944 56.831 4.17264C56.8788 3.9948 56.9276 3.82094 56.9569 3.65502C56.9481 3.65502 56.9218 3.62323 56.8993 3.58746C56.791 3.42254 56.6065 3.14535 56.6065 2.73701C56.6065 2.36345 56.7607 2.08328 56.873 1.87862C56.9072 1.81702 56.9589 1.72462 56.9657 1.69084C56.9608 1.58354 56.9267 1.55274 56.9072 1.53685C56.5694 1.23979 55.2544 1.40372 54.5496 1.49313C54.1386 1.5438 53.752 1.59348 53.4435 1.59547C52.5971 1.60043 51.7439 1.62229 50.8907 1.64315C49.1442 1.68886 47.3382 1.73654 45.5722 1.63421L45.3985 1.62328C44.5345 1.57162 44.3022 1.55871 43.5964 1.82894C42.9618 2.07235 42.2101 2.5244 41.7006 2.84431C41.0699 3.23973 40.533 3.75338 39.9648 4.29683C39.8379 4.41804 39.712 4.53925 39.5831 4.65947C39.3479 4.87804 39.0794 5.09661 38.7953 5.32611C38.1237 5.87056 37.3642 6.48555 37.1231 7.09457C37.1065 7.14425 37.085 7.30221 37.0713 7.40753C37.0147 7.84666 36.9424 8.3931 36.5041 8.69016C36.1927 8.90277 35.9145 9.16704 35.6187 9.44523C35.4771 9.57935 35.3317 9.71546 35.1774 9.85257C34.7186 10.2629 34.1924 10.548 33.6838 10.8222C33.3675 10.9931 33.0698 11.1541 32.8033 11.3369C32.7554 11.3707 32.6978 11.4064 32.6373 11.4462C32.5114 11.5276 32.2332 11.7065 32.1346 11.8217C32.1424 11.8992 32.1726 12.0115 32.2117 12.1009C32.3757 12.0214 32.6041 11.924 32.8804 11.9459C33.6633 12.0135 34.0401 12.8937 34.0558 13.4988C34.0743 14.2191 33.677 14.7337 33.3587 15.145C33.0971 15.4868 32.9351 15.7074 32.9487 15.9319C32.9565 16.0511 33.0288 16.3114 33.0932 16.5419C33.3314 17.3933 33.7746 18.978 32.4479 19.5701C32.0965 19.7281 31.7314 19.7082 31.4375 19.6933C31.3126 19.6864 31.1046 19.6764 31.047 19.7023C30.7171 20.051 30.3227 20.3113 29.9166 20.5706L29.7692 20.663C29.5212 20.816 29.2654 20.976 29.1405 21.1488C29.1083 21.1935 29.0819 21.2412 29.0585 21.2859C28.9345 21.5085 28.7256 21.884 28.174 21.9993C27.9827 22.04 27.7943 22.0708 27.6059 22.0996C27.3364 22.1414 27.0807 22.1811 26.8386 22.2566C26.7087 22.2993 26.5711 22.35 26.4334 22.4017C25.9697 22.5745 25.4435 22.7732 24.8871 22.7474C24.5981 22.7355 24.3131 22.7087 24.027 22.6808C23.4989 22.6282 22.9981 22.5805 22.511 22.6481C22.2572 22.6828 22.0258 22.7653 21.7817 22.8537C21.1716 23.0733 20.3369 23.3733 19.4046 22.508C18.9927 22.1265 18.8267 22.049 18.1473 21.9178L16.065 21.5164C15.942 21.4936 15.775 21.5264 15.5818 21.5651C15.3289 21.6168 15.0136 21.6784 14.6719 21.6297C12.9508 21.3724 11.0218 21.7112 8.59689 22.6928C8.49829 22.7325 8.42703 22.7643 8.37431 22.7891C8.39579 22.9779 8.42312 23.2491 8.39091 23.6217C8.53343 23.6416 8.69353 23.6843 8.86047 23.7737C9.81228 24.2834 9.63461 25.256 9.5487 25.724C9.53601 25.7876 9.52528 25.8511 9.51551 25.9127C9.4628 26.2694 9.49501 26.3429 9.65511 26.6917C9.70392 26.798 9.75664 26.9162 9.81326 27.0543C10.3941 28.4681 9.28415 29.1039 8.68865 29.4447C8.46705 29.5719 8.23764 29.701 8.11268 29.8331C7.99944 29.9524 7.89987 30.1372 7.79541 30.3329C7.62945 30.6448 7.44104 30.9975 7.10522 31.2847C6.79088 31.5529 6.41894 31.7536 6.05871 31.9454C5.74144 32.1153 5.44077 32.2762 5.21623 32.464C5.02782 32.6219 4.84527 32.8048 4.65295 32.9985C4.34252 33.3085 4.02524 33.6294 3.62499 33.8976C3.41901 34.0347 3.17203 34.147 2.9104 34.2652C2.69661 34.3606 2.33443 34.5225 2.14992 34.6626L2.15383 36.8096C2.15383 36.8881 2.15578 36.9527 2.15871 37.0023C2.21533 36.9974 2.27586 36.9904 2.32662 36.9835C2.5287 36.9606 2.77959 36.9308 3.06952 36.9308L36.9581 36.9566C38.0573 36.9566 39.2141 36.9884 40.2304 37.3471C40.6755 37.5021 40.9801 37.8538 41.1812 38.0853C41.2281 38.1399 41.2681 38.1896 41.3052 38.2234C41.4018 38.3048 41.5551 38.3674 41.7328 38.441C42.0129 38.5562 42.3615 38.7003 42.6572 39.0043C43.2811 39.6411 43.2713 40.4469 43.2645 41.0927C43.2606 41.2417 43.2606 41.3897 43.2664 41.5328C43.3084 42.3326 43.5261 42.5581 44.0532 43.1055C44.1372 43.1929 44.2251 43.2853 44.3188 43.3847C44.3842 43.4542 44.5287 43.4701 44.761 43.491C45.0412 43.5138 45.3897 43.5417 45.6953 43.7751C46.0291 44.0275 46.2546 44.5888 46.3376 44.8809C46.5455 45.0846 47.2777 45.4711 47.5647 45.6211C47.7639 45.7264 47.9298 45.8158 48.0265 45.8754L48.3672 46.088C49.3346 46.6891 50.3011 47.2922 51.2705 47.8943C51.3993 47.9727 51.533 48.0463 51.6707 48.1188C52.0924 48.3443 52.5698 48.6006 52.9291 49.0567C53.3215 49.5544 53.2942 50.0045 53.259 50.4029C53.3156 50.2936 53.3781 50.1893 53.4513 50.0879C53.5841 49.8982 53.7393 49.7541 53.877 49.626C54.0136 49.4998 54.1073 49.4104 54.1396 49.3388C54.1132 49.2772 54.0527 49.1739 54.0117 49.1034C53.8487 48.8232 53.6271 48.4387 53.7315 47.9857C53.7725 47.8108 53.8789 47.6588 54.0283 47.5634C54.0849 47.5276 54.205 47.4591 54.3631 47.3717C54.5818 47.2495 55.1373 46.9405 55.475 46.71C54.9723 45.5913 55.1392 44.2163 55.2886 42.9843C55.3345 42.6038 55.3784 42.2451 55.3989 41.9222C55.4204 41.5467 55.7337 41.2606 56.1076 41.2834C56.4776 41.3063 56.7588 41.6301 56.7353 42.0057C56.7148 42.3693 56.667 42.7498 56.6182 43.1522C56.4776 44.3166 56.3165 45.637 56.833 46.3911C56.954 46.5669 56.994 46.7895 56.9452 47.0021C56.8417 47.4502 56.3898 47.7879 55.1958 48.4606C55.352 48.7308 55.5395 49.0904 55.4731 49.5167C55.4623 49.5812 55.4487 49.6428 55.4321 49.7015C55.766 49.5793 56.1154 49.464 56.4845 49.3577C57.8775 48.9543 59.3409 48.7745 61.225 48.7745C62.0587 48.7745 62.8006 48.5053 63.5874 48.2211C64.2103 47.9946 64.8546 47.7621 65.576 47.6508C66.1852 47.5555 66.5005 47.7562 66.7728 47.9688C66.8636 48.0403 66.93 48.09 67.0442 48.1357C67.3625 48.2619 67.7325 48.2211 68.1601 48.1754C68.5925 48.1277 69.0836 48.0731 69.5844 48.2042C69.8821 48.2837 70.09 48.5579 70.0861 48.8709C70.0744 50.0571 68.5076 50.5459 67.7549 50.7814L67.0384 51.0099C66.4985 51.1848 65.9567 51.3586 65.41 51.5176C65.1631 51.5881 64.918 51.6587 64.672 51.7223C64.3889 51.7948 64.099 51.9597 63.7944 52.1316C63.481 52.3094 63.1579 52.4922 62.786 52.6174C62.1426 52.83 61.4837 52.9413 60.6471 52.9761C60.4069 52.987 60.1746 53.0943 59.9295 53.2056C59.5674 53.3735 59.1154 53.5801 58.6107 53.4132C58.3949 53.3864 57.5534 53.6775 57.1502 53.8196C56.832 53.9289 56.5577 54.0242 56.3419 54.0759C55.598 54.2528 54.8415 54.3918 54.1103 54.527L53.5968 54.6223C53.1516 54.7058 52.7035 54.7922 52.2613 54.8926L52.2076 54.9085C52.0797 54.9482 51.9021 55.0038 51.7078 55.0038L51.7107 54.9999ZM53.0735 51.6746C53.0569 51.7471 53.0403 51.8196 53.0237 51.8941C53.0032 51.9806 52.9788 52.064 52.9544 52.1455C52.9281 52.2359 52.9066 52.3055 52.8988 52.3651C52.8793 52.5379 52.8773 52.6313 52.8978 52.7247C52.9495 52.9791 52.9388 53.1907 52.8949 53.3645C53.0482 53.3347 53.2024 53.3049 53.3566 53.2751L53.875 53.1808C54.5896 53.0486 55.3296 52.9125 56.0412 52.7436C56.1906 52.7078 56.4483 52.6194 56.7217 52.525C57.7721 52.1604 58.4994 51.9359 59.0295 52.1127C59.0646 52.1058 59.2559 52.0173 59.3828 51.9597C59.7001 51.8137 60.0945 51.6328 60.5924 51.611C61.3021 51.5812 61.8498 51.4908 62.372 51.3169C62.622 51.2345 62.8748 51.0914 63.1442 50.9374C63.5123 50.7298 63.892 50.5142 64.3469 50.3969C64.5793 50.3373 64.8136 50.2707 65.0459 50.2042C65.5789 50.0482 66.11 49.8773 66.6362 49.7064L67.1253 49.5514C66.9388 49.5246 66.7504 49.4779 66.56 49.4014C66.2672 49.2862 66.0836 49.1411 65.9616 49.0457C65.9313 49.0229 65.906 48.999 65.8757 48.9812C65.8737 48.9851 65.8405 48.9851 65.7781 48.9941C65.1845 49.0855 64.6281 49.2862 64.0394 49.4998C63.1794 49.8107 62.293 50.1326 61.2279 50.1326C59.4717 50.1326 58.1235 50.2966 56.8535 50.6642C55.7142 50.992 54.7868 51.3984 54.0166 51.9031C53.7901 52.0521 53.5001 52.0481 53.2776 51.8951C53.1917 51.8365 53.1214 51.76 53.0735 51.6716V51.6746Z" fill="white"/>
   <path d="M67.6348 51.8019C67.6348 51.8019 67.6173 51.782 67.6173 51.7303C67.6173 51.6787 67.6348 51.6588 67.6348 51.6588H68.5564C68.5564 51.6588 68.5749 51.6806 68.5749 51.7303C68.5749 51.78 68.5564 51.8019 68.5564 51.8019H68.1932V52.9205C68.1932 52.9205 68.1659 52.9404 68.0976 52.9404C68.0292 52.9404 67.998 52.9205 67.998 52.9205V51.8019H67.6348Z" fill="white"/>
   <path d="M69.4282 52.8659C69.4135 52.8748 69.3891 52.8858 69.3471 52.8858C69.3178 52.8858 69.2837 52.8798 69.27 52.8659L68.9889 52.1476C68.9723 52.1088 68.9459 52.0323 68.944 52.0214C68.944 52.0264 68.9371 52.1277 68.9332 52.1565L68.8815 52.9205C68.8815 52.9205 68.8561 52.9404 68.7858 52.9404C68.7155 52.9404 68.6862 52.9205 68.6862 52.9205L68.7839 51.6787C68.7839 51.6787 68.8112 51.6588 68.8776 51.6588C68.9518 51.6588 68.9781 51.6787 68.9781 51.6787L69.3042 52.5162L69.3471 52.6533C69.3481 52.6473 69.3774 52.5559 69.392 52.5162L69.7181 51.6787C69.7181 51.6787 69.7464 51.6588 69.8206 51.6588C69.886 51.6588 69.9124 51.6787 69.9124 51.6787L70.01 52.9205C70.01 52.9205 69.9807 52.9404 69.9104 52.9404C69.8401 52.9404 69.8167 52.9205 69.8167 52.9205L69.763 52.1546L69.7523 52.0194C69.7523 52.0194 69.722 52.1148 69.7093 52.1456L69.4282 52.8659Z" fill="white"/>
-</svg>`,I7=class I7 extends u{_getNysLogo(){return new DOMParser().parseFromString(ae,"image/svg+xml").documentElement}render(){return c`
+</svg>`,T7=class T7 extends u{_getNysLogo(){return new DOMParser().parseFromString(Ce,"image/svg+xml").documentElement}render(){return c`
       <footer class="nys-unavfooter">
         <div class="nys-unavfooter__main-container">
           <div class="nys-unavfooter__container_menu">
@@ -5834,5 +6190,5 @@
           </div>
         </div>
       </footer>
-    `}};I7.styles=le;let N2=I7;customElements.get("nys-unavfooter")||customElements.define("nys-unavfooter",N2),w.NysAlert=A3,w.NysAvatar=P3,w.NysButton=z3,w.NysCheckbox=s0,w.NysErrorMessage=E1,w.NysGlobalFooter=T1,w.NysGlobalHeader=s1,w.NysIcon=o0,w.NysLabel=u1,w.NysRadiobutton=n0,w.NysSelect=i0,w.NysTextarea=l0,w.NysTextinput=a0,w.NysToggle=C0,w.NysUnavFooter=N2,w.NysUnavHeader=j,Object.defineProperty(w,Symbol.toStringTag,{value:"Module"})});
+    `}};T7.styles=ae;let N2=T7;customElements.get("nys-unavfooter")||customElements.define("nys-unavfooter",N2),w.NysAlert=A3,w.NysAvatar=P3,w.NysButton=z3,w.NysCheckbox=o0,w.NysCheckboxgroup=s0,w.NysErrorMessage=k1,w.NysGlobalFooter=T1,w.NysGlobalHeader=o1,w.NysIcon=r0,w.NysLabel=v1,w.NysOption=y1,w.NysRadiobutton=l0,w.NysRadiogroup=i0,w.NysSelect=a0,w.NysTextarea=C0,w.NysTextinput=c0,w.NysToggle=h0,w.NysUnavFooter=N2,w.NysUnavHeader=F,Object.defineProperty(w,Symbol.toStringTag,{value:"Module"})});
 //# sourceMappingURL=nysds.js.map
