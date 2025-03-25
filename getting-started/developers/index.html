@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-25T14:50:20.312+00:00 -->
+    <!-- Latest Build: 2025-03-25T19:31:51.259+00:00 -->
   </head>
   
   <body class="single-page page-developers section-getting-started">
@@ -156,8 +156,15 @@
 <p>To start using NYSDS in your project, you need to install the core libraries:</p>
 <pre class="language-html"><code class="language-html">npm install @nysds/components @nysds/styles</code></pre>
 <h2>Reference the files in your application</h2>
+<p>Once the packages are installed, you need to reference the required files in your HTML or app's entry point:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h2>Copying Assets (Alternative Step)</h2>
+<p>If you prefer to store the assets within your project directory instead of referencing them from node_modules, run this command:</p>
+<pre class="language-html"><code class="language-html">mkdir -p src/assets/css/vendor &amp;&amp; mkdir -p src/assets/js/vendor &amp;&amp; cp -r 
+node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor &amp;&amp; cp -r 
+node_modules/@nysds/styles/dist/* src/assets/css/vendor</code></pre>
+<p>This ensures that the required styles and scripts are available locally, but note that you will need to manually update them when new versions are released.</p>
 
   </div>
   <aside class="nys-desktop:nys-grid-col-2">
