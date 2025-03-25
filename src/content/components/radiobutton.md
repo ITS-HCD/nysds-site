@@ -4,7 +4,8 @@ title: Radiobutton
 description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.
-image_header: /assets/img/components/radiobutton-header.svg
+image_header: /assets/img/components/radio-button-header.svg
+navOrder: 9
 ---
 
 {% extends "layouts/component.njk" %}
@@ -256,9 +257,6 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -274,6 +272,9 @@ Both `nys-radiobutton` and `nys-radiogroup` support the description slot.
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

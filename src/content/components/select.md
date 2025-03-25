@@ -4,6 +4,8 @@ title: Select
 description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
+image_header: /assets/img/components/select-header.svg
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}
@@ -203,9 +205,6 @@ To display an error message, pass in the `showError` property to the `nys-select
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -221,6 +220,9 @@ To display an error message, pass in the `showError` property to the `nys-select
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

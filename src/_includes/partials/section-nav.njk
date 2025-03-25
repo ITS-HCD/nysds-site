@@ -1,0 +1,54 @@
+<nav class="section-nav" aria-label="Section Navigation">
+  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
+    <label>{{ section }}</label>
+    <nys-icon name="chevron_down" size="xl"></nys-icon>
+  </div>
+  <ul class="section-nav__list" id="section-nav" hidden>
+    {% if section in collections.sections %}
+      {# Loop through only top-level pages (set in section.js) #}
+      {% for page in collections.sections[section].topLevel %}
+        {# Is this page active? #}
+        {% set isActive = (page.url == currentPageUrl) %}
+        {# Are any children active? #}
+        {% for child in page.children %}
+          {% if child.url == currentPageUrl %}
+            {% set isActive = true %}
+          {% endif %}
+        {% endfor %}
+        {# If active, use proper ARIA state #}
+        <li class="section-nav__item{% if isActive %} section-nav__item--active-section{% endif %}{% if page.url == currentPageUrl %} section-nav__item--active{% endif %}" {% if page.children | length > 0 %} aria-expanded="{% if isActive %}true{% else %}false{% endif %}" {% endif %}>
+          <a class="section-nav__link" href="{{ site.url | url }}{{ page.url }}" {% if page.url == currentPageUrl %} aria-current="page" {% endif %}>
+            {{ page.data.title }}
+          </a>
+          {# Render child pages inside their parent #}
+          {% if page.children | length > 0 %}
+            <ul class="section-nav__list" {% if not isActive %} hidden {% endif %}>
+              {% for child in page.children %}
+                <li class="section-nav__item{% if child.url == currentPageUrl %} section-nav__item--active{% endif %}">
+                  <a class="section-nav__link" href="{{ site.url | url }}{{ child.url }}" {% if child.url == currentPageUrl %} aria-current="page" {% endif %}>
+                    {{ child.data.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ul>
+</nav>
+<script>
+  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') == 'false';
+      toggle.setAttribute('aria-expanded', ! expanded);
+      const icon = toggle.querySelector('nys-icon');
+      icon.setAttribute(
+        'name', expanded
+        ? 'chevron_up'
+        : 'chevron_down');
+      const sectionNav = document.getElementById('section-nav');
+      sectionNav.hidden = expanded;
+    });
+  });
+</script>

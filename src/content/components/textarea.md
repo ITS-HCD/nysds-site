@@ -4,6 +4,8 @@ title: Textarea
 description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.
+image_header: /assets/img/components/textarea-header.svg
+navOrder: 11
 ---
 
 {% extends "layouts/component.njk" %}
@@ -279,9 +281,6 @@ To display an error message, pass in the `showError` property to the `nys-select
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -297,6 +296,9 @@ To display an error message, pass in the `showError` property to the `nys-select
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

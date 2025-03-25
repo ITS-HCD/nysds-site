@@ -20,8 +20,10 @@ const excludeFuture = require("./src/_11ty/filters/excludeFuture.js");
 const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 
 // collections
-const updates = require("./src/_11ty/collections/updates.js");
-const components = require("./src/_11ty/collections/components.js");
+const updates = require("./src/_11ty/collections/updates");
+const components = require("./src/_11ty/collections/components");
+const sections = require("./src/_11ty/collections/sections");
+const tokens = require("./src/_11ty/collections/tokens");
 
 module.exports = (eleventyConfig) => {
 
@@ -40,6 +42,8 @@ module.exports = (eleventyConfig) => {
     // collections
     eleventyConfig.addCollection("updates", updates);
     eleventyConfig.addCollection("components", components);
+    eleventyConfig.addCollection("sections", sections);
+    eleventyConfig.addCollection("tokens", tokens);
 
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);
@@ -58,6 +62,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
     eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
+    eleventyConfig.addPassthroughCopy("./CNAME"); 
 
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })

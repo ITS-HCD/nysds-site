@@ -5,6 +5,7 @@ description: A checkbox is a form input for users to select options (zero, one, 
 image: /assets/img/components/checkbox.svg
 image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
+navOrder: 5
 ---
 
 {% extends "layouts/component.njk" %}
@@ -25,8 +26,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
   <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="niagara-falls" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year."></nys-checkbox>
-
+  <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
 </nys-checkboxgroup>
 {% endblock %}
 
@@ -46,7 +46,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
 </nys-checkboxgroup>
 {% endblock %}
 
@@ -70,7 +70,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 
 {% block usagedont %}
 
- - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in Excelsior, contact Design System team for guidance).
+ - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in NYSDS, contact Design System team for guidance).
  - Don't change status of another checkbox when another one is clicked.
 {% endblock %}
 
@@ -259,9 +259,6 @@ When the description requires more complexity than a simple string, use the desc
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -277,6 +274,9 @@ When the description requires more complexity than a simple string, use the desc
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

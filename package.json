@@ -1,13 +1,13 @@
 {
-    "name": "excelsior-site",
+    "name": "nysds-site",
     "version": "0.1.0",
     "description": "Guidance for using New York State's design system.",
     "main": "index.js",
     "scripts": {
         "start": "npm run clean:site && npm run copy:assets && ELEVENTY_ENV=development eleventy --serve",
-        "build": "npm run copy:assets && ELEVENTY_ENV=production eleventy --pathprefix 'excelsior-site'",
+        "build": "npm run copy:assets && ELEVENTY_ENV=production eleventy",
         "build:prod": "npm run copy:assets && ELEVENTY_ENV=production eleventy",
-        "copy:assets": "mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nys-excelsior/components/dist/excelsior.* src/assets/js/vendor && cp -r node_modules/@nys-excelsior/styles/dist/* src/assets/css/vendor",
+        "copy:assets": "mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor",
         "clean:site": "rm -rf _site",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -35,8 +35,8 @@
     },
     "dependencies": {
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-        "@nys-excelsior/components": "^0.0.9-alpha",
-        "@nys-excelsior/styles": "^0.0.9-alpha",
+        "@nysds/components": "^1.1.0",
+        "@nysds/styles": "^1.1.0",
         "eleventy-plugin-time-to-read": "^1.3.0"
     }
 }

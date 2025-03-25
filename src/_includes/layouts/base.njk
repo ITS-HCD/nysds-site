@@ -8,17 +8,17 @@
     {% block styles %}{% endblock %}
     <!-- Latest Build: {{ site.buildDate | dateISO }} -->
   </head>
-  <body class="{% if section  %}single-page page-{{ page.fileSlug }}{% else %}home{% endif %}">
+  {% set currentPageUrl = page.url %}
+  <body class="{% if section  %}single-page page-{{ page.fileSlug }} section-{{section | slug}}{% else %}home{% endif %}">
 
   {% include "partials/unav-header.njk" %}
   {% include "partials/site-header.njk" %}
 
   <main role="main" data-pagefind-body>
-    <div class="nys-grid-container">
+    
       {% block content %}
       {{ content | safe }}
       {% endblock %}
-    </div>
   </main>
 
   {% include "partials/site-footer.njk" %}

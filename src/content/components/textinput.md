@@ -4,6 +4,8 @@ title: Textinput
 description: Field for entering short text strings, like email, number, password, and more.
 image: /assets/img/components/textinput.svg
 image_alt: An illustration of a text input field.
+image_header: /assets/img/components/textinput-header.svg
+navOrder: 12
 ---
 
 {% extends "layouts/component.njk" %}
@@ -195,7 +197,7 @@ Takes any valid regex value.
 ### Error Message
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
 
-<nys-textinput label="Full Name" showError errorMessage="Cannot be left blank"></nys-textinput>
+<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
 
 <details>
 <summary>Example Code</summary>
@@ -301,9 +303,6 @@ Set an error message and choose to activate it. The error message will appear ON
 
 {% endblock %}
 
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -319,6 +318,9 @@ Set an error message and choose to activate it. The error message will appear ON
     </tr>
   </tbody>
   </table>
+
+{% block cssvariables %}
+
 
 {% endblock %}
 

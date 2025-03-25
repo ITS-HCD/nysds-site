@@ -1,11 +1,10 @@
 /**
- * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
- * @author Tim  Shedor
+ * prism.js NYSDS theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://www.npmjs.com/package/prismjs-coy-theme
  */
 
 
- /* Monaspace Neon: Regular */
+/* Monaspace Neon: Regular */
 @font-face {
     font-family: 'Monaspace Neon';
     src: url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff') format('woff'),
@@ -15,7 +14,7 @@
     font-display: swap;
 }
 
-/* Proxima Nova: Bold */
+/* Monaspace Neon: Bold */
 @font-face {
     font-family: 'Monaspace Neon';
     src: url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff') format('woff'),
@@ -25,22 +24,13 @@
     font-display: swap;
   }
   
-/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
-/* http://k88hudson.github.io/react-markdocs */
-/**
- * @author k88hudson
- *
- * Based on prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
 /*********************************************************
 * General
 */
 pre[class*="language-"],
 code[class*="language-"] {
-  color: #1b1b1b;
-  font-size: 13px;
+  color: var(--nys-color-ink);
+  font-size: var(--nys-font-size-body-sm);
   text-shadow: none;
   font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
@@ -62,7 +52,7 @@ code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
 code[class*="language-"]::mozselection {
   text-shadow: none;
-  background: #d0d0ce;
+  background: var(--nys-color-neutral-100);
 }
 @media print {
   pre[class*="language-"],
@@ -71,16 +61,16 @@ code[class*="language-"]::mozselection {
   }
 }
 pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
+  padding: var(--nys-space-200);
+  margin: var(--nys-space-100) 0;
   overflow: auto;
-  background: #ffffff;
+  background: var(--nys-color-white);
 }
 :not(pre) > code[class*="language-"] {
-  padding: .1em .3em;
-  border-radius: .3em;
-  color: #b52c2c;
-  background: #f6f6f6;
+  padding: var(--nys-space-1px) var(--nys-space-2px);
+  border-radius: var(--nys-radius-md);
+  color: var(--nys-color-red-600);
+  background: var(--nys-color-neutral-10);
 }
 /*********************************************************
 * Tokens
@@ -92,10 +82,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #909395;
+  color: var(--nys-color-neutral-400);
 }
 .token.punctuation {
-  color: #909395;
+  color: var(--nys-color-neutral-400);
 }
 .token.property,
 .token.tag,
@@ -104,7 +94,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #909395;
+  color: var(--nys-color-neutral-400);
 }
 .token.selector,
 .token.attr-name,
@@ -112,28 +102,28 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #b52c2c;
+  color: var(--nys-color-red-600);
 }
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #888888;
-  background: #ffffff;
+  color: var(--nys-color-neutral-500);
+  background: var(--nys-color-white);
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #004dd1;
+  color: var(--nys-color-blue-600);
 }
 .token.function {
-  color: #b52c2c;
+  color: var(--nys-color-red-600);
 }
 .token.regex,
 .token.important,
 .token.variable {
-  color: #428b4f;
+  color: var(--nys-color-green-500);
 }
 .token.important,
 .token.bold {
@@ -160,9 +150,9 @@ pre[class*="language-"] > code[class*="language-"] {
   left: 0;
   right: 0;
   padding: inherit 0;
-  margin-top: 1em;
-  background: #fefae5;
-  box-shadow: inset 5px 0 0 #face00;
+  margin-top: var(--nys-space-200);
+  background: var(--nys-color-neutral-10);
+  box-shadow: inset 5px 0 0 var(--nys-color-yellow-400);
   z-index: 0;
   pointer-events: none;
   line-height: inherit;

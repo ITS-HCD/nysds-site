@@ -1,120 +1,87 @@
 ---
 permalink: /components/global-footer/
 title: Global Footer
-description: 
-image: 
-draft: true
+description: Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+image: /assets/img/components/global-footer.svg
+image_alt: An illustration of a global footer.
+image_header: /assets/img/components/global-footer-header.svg
+navOrder: 6
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.
+The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reusable web component for use in New York State digital products. It helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+
+
 {% endblock %}
 
 {% block example %}
 
-<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
+<nys-globalfooter agencyName="Office of Information Technology Services">
+ <ul>
+    <li><a href="https://its.ny.gov">ITS Home</a></li>
+    <li><a href="https://its.ny.gov/about">About ITS</a></li>
+  </ul>
+</nys-globalfooter>
 {% endblock %}
 
 {% block examplecode %}
 
-<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
-{% endblock %}
+<nys-globalfooter agencyName="Office of Information Technology Services">
+ <ul>
+    <li><a href="https://its.ny.gov">ITS Home</a></li>
+    <li><a href="https://its.ny.gov/about">About ITS</a></li>
+  </ul>
+</nys-globalfooter>{% endblock %}
 
 {% block usage %}
 
 ### When to use this component
-  - When you need to collect data from a dropdown
-  - When you need to provide a list of options for users to select a single option from
-### When to consider something else
-  - When you need to collect multiple items from a list
+ - Use nys-globalfooter to provide consistent access to essential links like contact details, privacy policies, and terms of use across all pages.
+ - Ideal for displaying organizational information and secondary navigation
+ ### When to consider something else
+ - Don’t use the global footer for primary navigation or highly interactive features.
+ - Avoid adding content that is not relevant or essential for all pages.
 {% endblock %}
 
 {% block usagedo %}
 
-  - Use the `nys-option` component to define the options in the dropdown
+ - Include essential links and information users need site-wide.
+ - Minimize the number of links.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the native `&lt;option&gt;` element in the `nys-select` component
+  - Don't use it for critical alerts or primary navigation.
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:
+The <code class="language-js">nys-globalfooter</code> component includes the following accessibility-focused features:
 
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.
-  - Keyboard navigation support, allowing users to tab to the `nys-select` using the keyboard and spacebar to select an option.
-  - Visual focus indicators to help users navigate the component.
-  - Include a label property to provide accessible text for screen readers.
+ - Proper use of &lt;footer&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
+ - Keyboard navigation: Users can tab through all links in the footer.
 {% endblock %}
 
 {% block options %}
 
-### Disabled
+### Without Links
 
-<nys-select label="Select your favorite borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
+<nys-globalfooter agencyName="Office of Information Technology Services">
+</nys-globalfooter>
 
 <details>
   <summary>Code</summary>
-  {% highlight "html" %}
-<nys-select label="Select your favorite borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-{% endhighlight %}
+
+```html
+<nys-globalfooter agencyName="Office of Information Technology Services">
+</nys-globalfooter>
+```
 
 </details>
 
-### Width
-The following width options are available:
-
-  - `sm` (Small): 88px, ideal for compact layouts.
-  - `md` (Medium): 200px, ideal for balanced designs.
-  - `lg` (Large): 384px, suitable for displaying longer content.
-  - `full` (Full Width): default size. Expands to fill the available space.
-
-<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
-  <nys-option value="sm" label="sm"></nys-option>
-  <nys-option value="md" label="md"></nys-option>
-  <nys-option value="lg" label="lg"></nys-option>
-  <nys-option value="full" label="full"></nys-option>
-</nys-select>
-
-### Error Message
-To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
-
-<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
 
 {% endblock %}
 
@@ -129,47 +96,7 @@ To display an error message, pass in the `showError` property to the `nys-select
   </thead>
   <tbody>
     <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ("sm", "md", "lg", "full")</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
+      <td><code>agencyName</code></td>
       <td>string</td>
     </tr>
   </tbody>
@@ -177,45 +104,8 @@ To display an error message, pass in the `showError` property to the `nys-select
 
 {% endblock %}
 
-{% block cssvariables %}
+{% block cssvariables %}{% endblock %}
 
-[[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
-
-{% endblock %}
-
-{% block events %}
-
-<p>The <code class="language-js">nys-select</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the select gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the select loses focus.</li>
-</ol>
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the select component
-  const select = document.querySelector('nys-select');
-
-  // Listen for the 'change' event
-  select.addEventListener('change', (event) => {
-    console.log('Select changed:', event.target.checked);
-  });
-{% endhighlight %}
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

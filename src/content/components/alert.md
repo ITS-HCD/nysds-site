@@ -4,8 +4,9 @@ title: Alert
 description: An alert displays a prominent message, with optional links, at the top of the screen.
 image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
+image_header: /assets/img/components/alert-header.svg
+navOrder: 2
 ---
-
 
 {% extends "layouts/component.njk" %}
 
@@ -73,7 +74,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
   - Avoid using alerts for repetitive or non-actionable content that could frustrate users.
 
 <!-- Note by Leo: I don't want to direct people to use a toast component as we haven't built it and USWDS has guidance advising against using toasts. -->
-<!-- - To communicate a notification such as a change in system status consider using a toast instead (Note: Excelsior does not currently contain a toast component)  -->
+<!-- - To communicate a notification such as a change in system status consider using a toast instead (Note: NYSDS does not currently contain a toast component)  -->
 <!-- - For notifications outside the page context, consider using a toast or modal component instead.  -->
 {% endblock %}
 
@@ -158,14 +159,11 @@ The <code class="language-js">nys-alert</code> component includes the following 
 
 <details>
 <summary>Example Code</summary>
-<div id="custom-description">
 
 ```html
 <nys-alert type="success" heading="Custom Descriptions">
 <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('custom-description');" label="Copy Code" variant="outline" size="sm"></nys-button>
 </details>
 
 ### Dismissible
@@ -180,15 +178,12 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
 
 <details>
 <summary>Example Code</summary>
-<div id="dismissible">
 
 ```html
 <nys-alert type="info" heading="Information status" dismissible>
   <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
 </nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('dismissible');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -202,13 +197,10 @@ Set the <code class="language-js">duration</code> property to automatically hide
 
 <details>
 <summary>Example Code</summary>
-<div id="duration">
 
 ```html
 <nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('duration');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -225,7 +217,6 @@ Override the default theme icon by setting the <code class="language-js">icon</c
 
 <details>
 <summary>Example Code</summary>
-<div id="icon-customization">
 
 ```html
 <nys-alert 
@@ -235,8 +226,6 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   icon="ac_unit">
 </nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('icon-customization');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -253,7 +242,6 @@ You may find having just a heading without description as a good compact version
 
 <details>
 <summary>Example Code</summary>
-<div id="heading-only">
 
 ```html
 <nys-alert 
@@ -261,8 +249,6 @@ You may find having just a heading without description as a good compact version
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert>
 ```
-</div>
-<nys-button onClick="copyFunction('heading-only');" label="Copy Code" variant="outline" size="sm"></nys-button>
 
 </details>
 
@@ -314,9 +300,6 @@ You may find having just a heading without description as a good compact version
 </table>
 
 {% endblock %}
-
-{% block cssvariables %}
-
 [[TODO]]
 <table>
   <thead>
@@ -333,10 +316,10 @@ You may find having just a heading without description as a good compact version
   </tbody>
   </table>
 
+{% block cssvariables %}
+
+
 {% endblock %}
-
-{% block events %}
-
 [[TODO]]
 <p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
@@ -356,6 +339,9 @@ You can listen to these events using JavaScript:
     console.log('Checkbox changed:', event.target.checked);
   });
 {% endhighlight %}
+
+{% block events %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
