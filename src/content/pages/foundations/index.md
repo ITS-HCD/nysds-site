@@ -81,7 +81,7 @@ Without a strong foundation, a design system becomes just another collection of 
 This section covers:
 
 - [Accessibility](/foundations/accessibility/) – What you should know about accessibility and how the NYS Design System can help.
-- [Design Principles](/foundations/design-principles/) – The core philosophies that guide our design decisions.
+- [Design Guidelines](/foundations/design-guidelines/) – The core philosophies that guide our design decisions.
 - [Design Tokens](/foundations/tokens/) – The shared language of colors, spacing, typography, and UI styles, available in both design and code.
 - [Utilities](/foundations/utilities) – Practical ways to adapt NYSDS to different needs. Layout, mobile-responsiveness, and agency theming.
 
