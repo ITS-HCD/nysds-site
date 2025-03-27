@@ -27,9 +27,7 @@ Once the packages are installed, you need to reference the required files in you
 If you prefer to store the assets within your project directory instead of referencing them from node_modules, run this command:
 
 ```html
-mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r 
-node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r 
-node_modules/@nysds/styles/dist/* src/assets/css/vendor
+mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor
 ```
 This ensures that the required styles and scripts are available locally, but note that you will need to manually update them when new versions are released.
 
