@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = Array.from(document.querySelectorAll("section[id]"))
     .filter(section => section.id !== "header");
   const navItems = Array.from(document.querySelectorAll(".navigator__item"));
-  let ticking = false; // This is a performanc thing
+  let ticking = false; // This is a performance thing
 
   function updateActiveNav() {
     if (ticking) return;
@@ -70,7 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Opt-out: Skip elements with data-no-copy
     if (pre.hasAttribute("data-no-copy")) return;
 
-    pre.style.position = "relative";
+    // Creates a wrapper for the code block (allows for positioning of button)
+    const containerWrapper = document.createElement("div");
+    containerWrapper.style.position = "relative";
+
+    pre.parentNode.insertBefore(containerWrapper, pre);
+    containerWrapper.appendChild(pre);
+    
+    // Make the <pre> scrollable (if content overflows)
+    pre.style.overflow = "auto";
 
     // Create Copy Button
     const button = document.createElement("nys-button");
@@ -111,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    pre.appendChild(button);
+    containerWrapper.appendChild(button);
   });
 });
 
