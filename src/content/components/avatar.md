@@ -108,24 +108,22 @@ The <code class="language-js">nys-</code> component includes the following acces
 <p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
 
 <nys-avatar label="User avatar"></nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="youtube icon" name="social_youtube"></nys-icon>
+<nys-avatar label="Youtube avatar" color="#f2efee">
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="sm"></nys-icon>
 </nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
-</nys-avatar>
+<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
 <nys-avatar label="User avatar"></nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="youtube icon" name="social_youtube"></nys-icon>
+
+<nys-avatar label="Youtube avatar" color="#f2efee">
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="sm"></nys-icon>
 </nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
-</nys-avatar>
+
+<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
 ```
 </details>
 
