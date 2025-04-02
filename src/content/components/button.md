@@ -87,13 +87,13 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 
 <div class="nys-grid-row">
 <div class="nys-grid-col">
-<nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
+<nys-button id="button1" name="button1" label="Small" size="sm"></nys-button>
 </div>
 <div class="nys-grid-col">
-<nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
+<nys-button id="button2" name="button2" label="Medium"></nys-button>
 </div>
 <div class="nys-grid-col">
-<nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
+<nys-button id="button3" name="button3" label="Large" size="lg"></nys-button>
 </div>
 </div>
 <br>
@@ -135,23 +135,23 @@ Set the variant prop of the `nys-button` to adjust the appearance of the button.
 
 <div class="nys-grid-row">
 <div class="nys-grid-col">
-<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
+<nys-button  id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
+<nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
+<nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+<nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
 </div></div>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
-<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
-<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
-<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+<nys-button  id="button1" name="button1" label="Filled"></nys-button>
+<nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
+<nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+<nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
 ```
 </details>
 
@@ -160,13 +160,13 @@ Set the `prefixIcon` prop to include an icon in the button. The icon will appear
 
 Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
 
-<nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button>
+<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button>
+<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
 ```
 </details>
 
@@ -175,7 +175,7 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 <div class="nys-grid-col">
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
@@ -186,7 +186,7 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 
 ```html
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
-<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
 ```
@@ -196,13 +196,13 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
 
 
-<nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button>
+<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button>
+<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
 ```
 </details>
 
@@ -211,7 +211,7 @@ Set the `inverted` when the button is on a dark background.
 <div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
@@ -222,7 +222,7 @@ Set the `inverted` when the button is on a dark background.
 
 ```html
 <nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
-<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
 ```

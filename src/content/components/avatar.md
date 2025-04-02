@@ -109,7 +109,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <nys-avatar label="User avatar"></nys-avatar>
 <nys-avatar label="Youtube avatar" color="#f2efee">
-  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="sm"></nys-icon>
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
 <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
 
@@ -120,7 +120,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 <nys-avatar label="User avatar"></nys-avatar>
 
 <nys-avatar label="Youtube avatar" color="#f2efee">
-  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="sm"></nys-icon>
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
 
 <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
