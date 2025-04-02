@@ -41,7 +41,7 @@ A button is used for actions that have an immediate result inside an application
 {% block usagedo %}
 
   - Use sentence-case capitalization for button labels.
-  - For buttons that open a dropdown use a Cheveron Down icon on the right side of the button label.
+  - For buttons that open a dropdown use a Chevron Down icon on the right side of the button label.
   - [Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.
 {% endblock %}
 
@@ -60,7 +60,7 @@ The <code class="language-js">nys-button</code> component includes the following
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
-  - Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assitive technology. Ensure you use Text buttons for actions and Links for navigation.
+  - Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assistive technology. Ensure you use Text buttons for actions and Links for navigation.
 {% endblock %}
 
 {% block content %}
@@ -68,7 +68,7 @@ The <code class="language-js">nys-button</code> component includes the following
 Button labels need to be clear and predictable. Users should be able to anticipate what will happen when they select a button. Never mislead someone by mislabeling a button.
 
 - Verbs like “View” or “Go” or “Read” are often unnecessary since the button itself already conveys these actions
-- No articles or uncessary words (“a” “an” “the”)
+- No articles or unnecessary words (“a” “an” “the”)
 - No punctuation
 - Always write button text in sentence case, which means the first word is capitalized and the rest are lowercase (unless a term is a proper noun).
 
