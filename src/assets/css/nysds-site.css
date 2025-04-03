@@ -83,6 +83,8 @@ h2 {
     line-height: var(--nys-font-lineheight-h2);
     margin-top: var(--nys-space-500);
     margin-bottom: var(--nys-space-200);
+    padding-bottom: var(--nys-space-100);
+    border-bottom: solid var(--nys-size-1px) var(--nys-color-neutral-300)
 }
 
 h3 {
@@ -918,4 +920,31 @@ summary:hover {
 pre[class*="language-"]:before,
 pre[class*="language-"]:after {
     box-shadow: none !important;
+}
+
+/*** Table ***/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--nys-font-size-md);
+}
+
+th,
+td {
+    padding: var(--nys-space-150);
+    text-align: left;
+}
+
+th {
+    background-color: var(--nys-color-neutral-100);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: var(--nys-color-neutral-50);
+}
+
+tr:hover {
+    background-color: var(--nys-color-neutral-100);
 }
