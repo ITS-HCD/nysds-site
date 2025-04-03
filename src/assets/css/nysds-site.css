@@ -858,6 +858,18 @@ li > .section-nav__list {
 opacity: 1;
 }
   
+/*** Code Previews Container ***/
+.code-preview-container {
+    border: 1px solid var(--nys-color-neutral-200);
+    border-radius: var(--nys-radius-md);
+}
+.code-preview {
+    padding: var(--nys-space-200);
+}
+.code-preview-container details {
+    border: none;
+    background-color: var(--nys-color-theme-faint);
+}
 
 /* Additional Tweaks */
 
