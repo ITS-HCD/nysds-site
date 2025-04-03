@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-31T22:13:57.357+00:00 -->
+    <!-- Latest Build: 2025-04-03T19:26:02.863+00:00 -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -323,6 +323,61 @@
 <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
       </details>
     </section>
+    <br>
+    <section id="options">
+      <h2>Options</h2>
+<h3>Images</h3>
+<p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
+<p><nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">image</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&amp;w=100<span class="token punctuation">"</span></span> <span class="token attr-name">lazy</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+</code></pre>
+</details>
+<h3>Initials</h3>
+<p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
+<p><nys-avatar label="User avatar" initials="NY"></nys-avatar></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">initials</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NY<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+</details>
+<h3>Custom Icons</h3>
+<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
+<p><nys-avatar label="User avatar"></nys-avatar>
+<nys-avatar label="Youtube avatar" color="#f2efee">
+<nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
+</nys-avatar>
+<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Youtube avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#f2efee<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>youtube icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#b2071d<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Snow avatar<span class="token punctuation">"</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ac_unit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+</details>
+<h3>Shapes</h3>
+<p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
+<p><nys-avatar label="User avatar" shape="circle"></nys-avatar>
+<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
+<nys-avatar label="User avatar" shape="square"></nys-avatar></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>square<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+</details>
+<h3>Background Color</h3>
+<p>You can change the background color of an Avatar. Note that images will naturally cover over the background color.</p>
+<p><nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar></p>
+<details>
+<summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rebeccapurple<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+</details>
+</section>
+    <br>
     <section id="usage">
       <h2>Usage</h2>
 <h3>When to use this component</h3>
@@ -361,6 +416,7 @@
 </div>
       </div>
     </div>
+    <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
 <p>The <code class="language-js">nys-</code> component includes the following accessibility-focused features:</p>
@@ -371,59 +427,7 @@
 <li>A label property to provide accessible text for screen readers.</li>
 </ul>
 </section>
-    <section id="options">
-      <h2>Options</h2>
-<h3>Images</h3>
-<p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
-<p><nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">image</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&amp;w=100<span class="token punctuation">"</span></span> <span class="token attr-name">lazy</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-</code></pre>
-</details>
-<h3>Initials</h3>
-<p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
-<p><nys-avatar label="User avatar" initials="NY"></nys-avatar></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">initials</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NY<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Custom Icons</h3>
-<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
-<p><nys-avatar label="User avatar"></nys-avatar>
-<nys-avatar label="Youtube avatar" color="#f2efee">
-<nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="sm"></nys-icon>
-</nys-avatar>
-<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Youtube avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#f2efee<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>youtube icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#b2071d<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Snow avatar<span class="token punctuation">"</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ac_unit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Shapes</h3>
-<p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
-<p><nys-avatar label="User avatar" shape="circle"></nys-avatar>
-<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
-<nys-avatar label="User avatar" shape="square"></nys-avatar></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>square<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Background Color</h3>
-<p>You can change the background color of an Avatar. Note that images will naturally cover over the background color.</p>
-<p><nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rebeccapurple<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
-</details>
-</section>
+    <br>
     <section id="properties">
       <h2>Properties</h2>
 <table>
@@ -469,9 +473,11 @@
   </tbody>
 </table>
 </section>
+    <br>
     <section id="cssvariables">
       <h2>CSS Variables</h2>
 </section>
+    <br>
     <section id="events">
       <h2>Events</h2>
 </section>

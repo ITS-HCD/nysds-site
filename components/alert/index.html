@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-31T22:13:57.357+00:00 -->
+    <!-- Latest Build: 2025-04-03T19:26:02.863+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -354,6 +354,90 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Emergency status<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is an example of an emergency alert.<span class="token punctuation">"</span></span> <span class="token attr-name">dismissible</span> <span class="token attr-name">primaryLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Learn more on ny.gov<span class="token punctuation">"</span></span> <span class="token attr-name">secondaryLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Alternate action link<span class="token punctuation">"</span></span> <span class="token attr-name">primaryAction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">secondaryAction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
       </details>
     </section>
+    <br>
+    <section id="options">
+      <h2>Options</h2>
+<h3>Custom text description</h3>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert type="success" heading="Custom Descriptions">
+    <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+    </nys-alert>
+  </div>
+  <details>
+  <summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Custom Descriptions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Click here: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>https://www.ny.gov/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> for more info.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+  </details>
+</div>
+<h3>Dismissible</h3>
+<p>Use the <code class="language-js">dismissible</code> property to make the alert dismissible.</p>
+<p>The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert type="info" heading="Information status" dismissible>
+      <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+    </nys-alert>
+  </div>
+  <details>
+  <summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Information status<span class="token punctuation">"</span></span> <span class="token attr-name">dismissible</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Click here: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>https://www.ny.gov/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> for more info.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+  </details>
+</div>
+<h3>Duration</h3>
+<p>Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+    <div class="alert-container"></div> 
+  </div>
+  <details>
+  <summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Duration 3sec<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3000<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Auto-dismiss after 3 seconds<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+  </details>
+</div>
+<h3>Icon Customization</h3>
+<p>Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.</p>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert
+      type="emergency"
+      heading="Winter storm warning: Dec 10th, 2024."
+      text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+      icon="ac_unit">
+    </nys-alert>
+  </div>
+  <details>
+  <summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span>
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Winter storm warning: Dec 10th, 2024.<span class="token punctuation">"</span></span>
+  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving.<span class="token punctuation">"</span></span>
+  <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ac_unit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+  </details>
+</div>
+<h3>Heading only</h3>
+<p>You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.</p>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert
+      type="info"
+      heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+    </nys-alert>
+  </div>
+  <details>
+  <summary>Example Code</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span>
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+  </details>
+</div>
+</section>
+    <br>
     <section id="usage">
       <h2>Usage</h2>
 <h3>When to use this component</h3>
@@ -404,6 +488,7 @@
 </div>
       </div>
     </div>
+    <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
 <p>The <code class="language-js">nys-alert</code> component includes the following accessibility-focused features:</p>
@@ -449,67 +534,7 @@
   </tbody>
 </table>
 </section>
-    <section id="options">
-      <h2>Options</h2>
-<h3>Custom text description</h3>
-<nys-alert type="success" heading="Custom Descriptions">
-<p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Custom Descriptions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Click here: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>https://www.ny.gov/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> for more info.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Dismissible</h3>
-<p>Use the <code class="language-js">dismissible</code> property to make the alert dismissible.</p>
-<p>The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
-<nys-alert type="info" heading="Information status" dismissible>
-  <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
-</nys-alert>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Information status<span class="token punctuation">"</span></span> <span class="token attr-name">dismissible</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Click here: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>https://www.ny.gov/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> for more info.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Duration</h3>
-<p>Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
-<p><nys-button onClick="showAlert()" label="Open Alert"></nys-button></p>
-<div class="alert-container"></div>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Duration 3sec<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3000<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Auto-dismiss after 3 seconds<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Icon Customization</h3>
-<p>Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.</p>
-<p><nys-alert 
-  type="emergency" 
-  heading="Winter storm warning: Dec 10th, 2024."
-  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
-  icon="ac_unit">
-</nys-alert></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> 
-  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span> 
-  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Winter storm warning: Dec 10th, 2024.<span class="token punctuation">"</span></span>
-  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving.<span class="token punctuation">"</span></span> 
-  <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ac_unit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
-</details>
-<h3>Heading only</h3>
-<p>You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.</p>
-<p><nys-alert 
-  type="info"
-  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert></p>
-<details>
-<summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> 
-  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span>
-  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
-</details>
-</section>
+    <br>
     <section id="properties">
       <h2>Properties</h2>
 <table>
@@ -555,9 +580,11 @@
   </tbody>
 </table>
 </section>
+    <br>
     <section id="cssvariables">
       <h2>CSS Variables</h2>
 </section>
+    <br>
     <section id="events">
       <h2>Events</h2>
 </section>

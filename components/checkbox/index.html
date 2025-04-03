@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-31T22:13:57.357+00:00 -->
+    <!-- Latest Build: 2025-04-03T19:26:02.863+00:00 -->
   </head>
   
   <body class="single-page page-checkbox section-components">
@@ -345,50 +345,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkboxgroup</span><span class="token punctuation">></span></span></code></pre>
       </details>
     </section>
-    <section id="usage">
-      <h2>Usage</h2>
-<h3>When to use this component</h3>
-<ul>
-<li>When collecting binary answers in a form.</li>
-<li>When obtaining confirmation from users.</li>
-<li>When allowing users to select multiple options from a list.</li>
-</ul>
-<h3>When to consider something else</h3>
-<ul>
-<li>Use a toggle when changing the state of a binary input immediately changes the system's state; such as enabling Dark Mode.</li>
-<li>When users need to select only one option consider a radio button (1-6 choices) or select (7 or more choice) instead.</li>
-</ul>
-</section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Use checkboxes for binary decisions (agree/disagree).</li>
-<li>Use checkboxes for multi-select lists (like selecting interests).</li>
-</ul>
-</div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in NYSDS, contact Design System team for guidance).</li>
-<li>Don't change status of another checkbox when another one is clicked.</li>
-</ul>
-</div>
-      </div>
-    </div>
-    <section id="accessibility">
-      <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.</li>
-<li>Keyboard navigation support, allowing users to toggle the checkbox using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-</ul>
-</section>
+    <br>
     <section id="options">
       <h2>Options</h2>
 <h3>Checkbox group</h3>
@@ -466,6 +423,53 @@
 </code></pre>
 </details>
 </section>
+    <br>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>When collecting binary answers in a form.</li>
+<li>When obtaining confirmation from users.</li>
+<li>When allowing users to select multiple options from a list.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>Use a toggle when changing the state of a binary input immediately changes the system's state; such as enabling Dark Mode.</li>
+<li>When users need to select only one option consider a radio button (1-6 choices) or select (7 or more choice) instead.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use checkboxes for binary decisions (agree/disagree).</li>
+<li>Use checkboxes for multi-select lists (like selecting interests).</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in NYSDS, contact Design System team for guidance).</li>
+<li>Don't change status of another checkbox when another one is clicked.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <br>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.</li>
+<li>Keyboard navigation support, allowing users to toggle the checkbox using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+</ul>
+</section>
+    <br>
     <section id="properties">
       <h2>Properties</h2>
 <table>
@@ -523,9 +527,11 @@
   </tbody>
 </table>
 </section>
+    <br>
     <section id="cssvariables">
       <h2>CSS Variables</h2>
 </section>
+    <br>
     <section id="events">
       <h2>Events</h2>
 <p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>

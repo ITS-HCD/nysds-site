@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-31T22:13:57.357+00:00 -->
+    <!-- Latest Build: 2025-04-03T19:26:02.863+00:00 -->
   </head>
   
   <body class="single-page page-button section-components">
@@ -320,54 +320,7 @@
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
       </details>
     </section>
-    <section id="usage">
-      <h2>Usage</h2>
-<h3>When to use this component</h3>
-<ul>
-<li>Use for the most important actions you want users to take on your site, such as Download, Sign up or Log out.</li>
-<li>Use Fill for the primary action on the page; use sparingly, there should be only one primary action on each page.</li>
-<li>Use Outline for secondary actions; should be placed next to the primary action / Fill button.</li>
-<li>Use Ghost buttons when there are additional actions beyond primary and secondary.</li>
-<li>Use Text buttons when an action needs to appear within a text block.</li>
-</ul>
-<h3>When to consider something else</h3>
-<ul>
-<li>Text Buttons do something, whereas Links go somewhere. Use a Link instead of a text button if clicking the element takes the user somewhere else.</li>
-</ul>
-</section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Use sentence-case capitalization for button labels.</li>
-<li>For buttons that open a dropdown use a Cheveron Down icon on the right side of the button label.</li>
-<li>[Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.</li>
-</ul>
-</div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.</li>
-<li>Don't use icons in buttons without a text label. Very few icons are universally understood.</li>
-<li>Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.</li>
-</ul>
-</div>
-      </div>
-    </div>
-    <section id="accessibility">
-      <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-button</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
-<li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-<li>Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assitive technology. Ensure you use Text buttons for actions and Links for navigation.</li>
-</ul>
-</section>
+    <br>
     <section id="options">
       <h2>Options</h2>
 <h3>Size</h3>
@@ -380,13 +333,13 @@
 Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 <div class="nys-grid-row">
 <div class="nys-grid-col">
-<nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
+<nys-button id="button1" name="button1" label="Small" size="sm"></nys-button>
 </div>
 <div class="nys-grid-col">
-<nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
+<nys-button id="button2" name="button2" label="Medium"></nys-button>
 </div>
 <div class="nys-grid-col">
-<nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
+<nys-button id="button3" name="button3" label="Large" size="lg"></nys-button>
 </div>
 </div>
 <br>
@@ -421,35 +374,35 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 </ul>
 <div class="nys-grid-row">
 <div class="nys-grid-col">
-<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
+<nys-button  id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
+<nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
+<nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+<nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
 </div></div>
 <details>
 <summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span>  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span>  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span>  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span>  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Outline<span class="token punctuation">"</span></span>   <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span>  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span>  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Ghost<span class="token punctuation">"</span></span>  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ghost<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span>  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span>  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Text<span class="token punctuation">"</span></span>  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Outline<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Ghost<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ghost<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Text<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Icons</h3>
 <p>Set the <code>prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.</p>
 <p>Set the <code>suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.</p>
-<p><nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button></p>
+<p><nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button></p>
 <details>
 <summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span>  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span>  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Click Me<span class="token punctuation">"</span></span>  <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chevron_left<span class="token punctuation">"</span></span>  <span class="token attr-name">suffixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chevron_right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Click Me<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chevron_left<span class="token punctuation">"</span></span> <span class="token attr-name">suffixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chevron_right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Disabled</h3>
 <div class="nys-grid-row">
 <div class="nys-grid-col">
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
@@ -458,23 +411,23 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <details>
 <summary>Example Code</summary>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">disabled</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">disabled</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Outline<span class="token punctuation">"</span></span>  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">disabled</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Outline<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">disabled</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Ghost<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ghost<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">disabled</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Text<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Link</h3>
 <p>Set the <code>href</code> prop when using the button to navigate to a different page. This will render the <code>nys-button</code> as an <code>&lt;a&gt;</code> tag.</p>
-<p><nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button></p>
+<p><nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button></p>
 <details>
 <summary>Example Code</summary>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span>  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span>  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit NY.gov<span class="token punctuation">"</span></span>  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit NY.gov<span class="token punctuation">"</span></span>  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Inverted</h3>
 <p>Set the <code>inverted</code> when the button is on a dark background.</p>
 <div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
@@ -483,11 +436,62 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <details>
 <summary>Example Code</summary>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">inverted</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">inverted</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Outline<span class="token punctuation">"</span></span>  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">inverted</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button2<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Outline<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>outline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">inverted</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button3<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Ghost<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ghost<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">inverted</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Text<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 </section>
+    <br>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>Use for the most important actions you want users to take on your site, such as Download, Sign up or Log out.</li>
+<li>Use Fill for the primary action on the page; use sparingly, there should be only one primary action on each page.</li>
+<li>Use Outline for secondary actions; should be placed next to the primary action / Fill button.</li>
+<li>Use Ghost buttons when there are additional actions beyond primary and secondary.</li>
+<li>Use Text buttons when an action needs to appear within a text block.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>Text Buttons do something, whereas Links go somewhere. Use a Link instead of a text button if clicking the element takes the user somewhere else.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use sentence-case capitalization for button labels.</li>
+<li>For buttons that open a dropdown use a Chevron Down icon on the right side of the button label.</li>
+<li>[Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.</li>
+<li>Don't use icons in buttons without a text label. Very few icons are universally understood.</li>
+<li>Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <br>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code class="language-js">nys-button</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
+<li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+<li>Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assistive technology. Ensure you use Text buttons for actions and Links for navigation.</li>
+</ul>
+</section>
+    <br>
     <section id="properties">
       <h2>Properties</h2>
 <table>
@@ -561,8 +565,10 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
   </tbody>
 </table>
 </section>
+    <br>
     <section id="cssvariables">
       <h2>CSS Variables</h2></section>
+    <br>
     <section id="events">
       <h2>Events</h2>
 <p>The <code class="language-js">&lt;nys-button&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>

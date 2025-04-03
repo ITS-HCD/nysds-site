@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-03-31T22:13:57.357+00:00 -->
+    <!-- Latest Build: 2025-04-03T19:26:02.863+00:00 -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -320,50 +320,7 @@
       <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is a text input<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
       </details>
     </section>
-    <section id="usage">
-      <h2>Usage</h2>
-<h3>When to use this component</h3>
-<ul>
-<li>To collect short, single-line text input from the user (e.g., names, email addresses, or short descriptions).</li>
-<li>For open-ended, user-specific input.</li>
-</ul>
-<h3>When to consider something else</h3>
-<ul>
-<li>If you need to collect multiple lines of input, use textarea instead.</li>
-<li>If the input can be chosen from predefined options, use select, radiobutton, or checkbox.</li>
-</ul>
-</section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Use clear and concise labels to describe the input required.</li>
-<li>Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.</li>
-<li>Validate input in real-time to catch errors early (e.g., invalid email formats).</li>
-</ul>
-</div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).</li>
-<li>Don't overwhelm users with too many single-line inputs; group similar fields when possible.</li>
-</ul>
-</div>
-      </div>
-    </div>
-    <section id="accessibility">
-      <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-textinput</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</li>
-<li>Keyboard navigation support, allowing users to tab into the input using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-</ul>
-</section>
+    <br>
     <section id="options">
       <h2>Options</h2>
 <h3>Width</h3>
@@ -438,6 +395,53 @@
 </code></pre>
 </details>
 </section>
+    <br>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>To collect short, single-line text input from the user (e.g., names, email addresses, or short descriptions).</li>
+<li>For open-ended, user-specific input.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>If you need to collect multiple lines of input, use textarea instead.</li>
+<li>If the input can be chosen from predefined options, use select, radiobutton, or checkbox.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use clear and concise labels to describe the input required.</li>
+<li>Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.</li>
+<li>Validate input in real-time to catch errors early (e.g., invalid email formats).</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).</li>
+<li>Don't overwhelm users with too many single-line inputs; group similar fields when possible.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <br>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code class="language-js">nys-textinput</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</li>
+<li>Keyboard navigation support, allowing users to tab into the input using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Include a label property to provide accessible text for screen readers.</li>
+</ul>
+</section>
+    <br>
     <section id="properties">
       <h2>Properties</h2>
 <table>
@@ -528,9 +532,11 @@
   </tbody>
 </table>
 </section>
+    <br>
     <section id="cssvariables">
       <h2>CSS Variables</h2>
 </section>
+    <br>
     <section id="events">
       <h2>Events</h2>
 <p>The <code class="language-js">nys-textinput</code> component emits <strong>three</strong> custom Javascript events:</p>
