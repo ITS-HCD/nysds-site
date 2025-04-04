@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.variant = "outline";
     button.prefixIcon = "publish";
     button.style.position = "absolute";
-    button.style.top = "-40px";
+    button.style.top = "-15px";
     button.style.right = "12px";
     button.style.display = "flex";
     button.style.zIndex = "9999";
