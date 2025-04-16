@@ -64,7 +64,7 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 
 The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
 
-  - For intial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
+  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
   - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
   - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
   - A label property to provide accessible text for screen readers.
