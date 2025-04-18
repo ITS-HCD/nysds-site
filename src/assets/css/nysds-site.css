@@ -541,7 +541,6 @@ a.card:focus {
 }
 
 .card__no-border .card__desc {
-    font-size: var(--nys-font-size-ui-sm);
     max-width: 20rem;
 }
 
@@ -788,6 +787,11 @@ li > .section-nav__list {
     overflow: hidden;
 }
 
+/* Colors */
+.color-theme--weaker {
+    background-color: var(--nys-color-theme-weaker);
+}
+
 /* Token List */
 
 .token-list__item {
@@ -916,6 +920,10 @@ summary:hover {
 /* Align the logo lockup with the center of the homepage graphic */
 .nys-top-300 {
     margin-top: var(--nys-space-300);
+}
+
+.nys-top-800 {
+    margin-top: var(--nys-space-800);
 }
 
 /* Icon display tweaks */
