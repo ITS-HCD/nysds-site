@@ -153,11 +153,15 @@ The <code class="language-js">nys-alert</code> component includes the following 
 {% block options %}
 
 ### Custom text description
+Add descriptive content to your alert using the <code class="language-js">text</code> prop or the our slot feature. 
+
+Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
 
 <div class="code-preview-container">
   <div class="code-preview">
     <nys-alert type="success" heading="Custom Descriptions">
-    <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+      <p>This is a custom alert with <strong>HTML content</strong>.</p>
+      <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
     </nys-alert>
   </div>
   
@@ -166,7 +170,9 @@ The <code class="language-js">nys-alert</code> component includes the following 
   
   ```html
   <nys-alert type="success" heading="Custom Descriptions">
-  <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
+    <p>This is a custom alert with <strong>HTML content</strong>.</p>
+    <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+  </nys-alert>
   ```
   </details>
 </div>
@@ -180,7 +186,7 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
 <div class="code-preview-container">
   <div class="code-preview">
     <nys-alert type="info" heading="Information status" dismissible>
-      <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+      <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
     </nys-alert>
   </div>
   
@@ -202,6 +208,7 @@ Set the <code class="language-js">duration</code> property to automatically hide
 <div class="code-preview-container">
   <div class="code-preview">
     <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+    <br>
     <div class="alert-container"></div> 
   </div>
 
