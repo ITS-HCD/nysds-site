@@ -32,9 +32,9 @@ The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web co
 {% block usage %}
 
 ### When to use this component
-  - Use `nys-unavheader` at the top of every page.
+  - Use <code class="language-js">&lt;nys-unavheader&gt;</code> at the top of every page.
 ### When to consider something else
-  - Do not place the `nys-unavheader` anywhere other than the top of the page.
+  - Do not place the <code class="language-js">&lt;nys-unavheader&gt;</code> anywhere other than the top of the page.
 
 {% endblock %}
 

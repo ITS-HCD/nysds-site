@@ -77,13 +77,13 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 {% block options %}
 
 ### Size
-<p>Set the <code>size</code> prop of the <strong><code>nys-button</code></strong> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
+<p>Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
 <ul>
 <li><code>sm</code>: Set to 40px in height</li>
 <li><code>md</code>: The default size. Set to 48px in height.</li>
 <li><code>lg</code>: Set to 56px in height.</li>
 </ul>
-Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
+Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
 <div class="nys-grid-row">
 <div class="nys-grid-col">
@@ -118,7 +118,7 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 
 ### Button Type
 
-Set the type prop of the `nys-button` to define the button's behavior in a form context. The available types are:
+Set the type prop of the <code class="language-js">&lt;nys-button&gt;</code> to define the button's behavior in a form context. The available types are:
 
  - `button` (default): A standard button that does not submit a form.
  - `submit`: Submits the nearest form when clicked.
@@ -126,7 +126,7 @@ Set the type prop of the `nys-button` to define the button's behavior in a form 
 
 ### Variant
 
-Set the variant prop of the `nys-button` to adjust the appearance of the button. Our current variants are:
+Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the appearance of the button. Our current variants are:
 
  - `filled`: The default variant. Use for primary actions.
  - `outline`: Use for secondary actions.
@@ -156,9 +156,9 @@ Set the variant prop of the `nys-button` to adjust the appearance of the button.
 </details>
 
 ### Icons
-Set the `prefixIcon` prop to include an icon in the button. The icon will appear to the left of the label.
+Set the <code class="language-js">prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.
 
-Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
+Set the <code class="language-js">suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.
 
 <nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
 
@@ -193,7 +193,7 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 </details>
 
 ### Link
-Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
+Set the <code class="language-js">href</code> prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
 
 
 <nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
@@ -207,7 +207,7 @@ Set the `href` prop when using the button to navigate to a different page. This 
 </details>
 
 ### Inverted
-Set the `inverted` when the button is on a dark background.
+Set the <code class="language-js">inverted</code> when the button is on a dark background.
 <div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">

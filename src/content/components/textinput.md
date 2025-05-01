@@ -63,11 +63,11 @@ The <code class="language-js">nys-textinput</code> component includes the follow
 {% block options %}
 
 ### Width
-If no `width` is provided, the `nys-textinput` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 
 Width full will take up the full width of the parent container.
 
-If an invalid option is assigned to `width`, it will be ignored and default to `full`.
+If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.
 
 <nys-textinput width="sm" label="This label is sm"></nys-textinput>
 
@@ -83,9 +83,9 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 
 
 ### Type
-Accepted types are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
+Accepted <code class="language-js">types</code> are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
 
-Any other input defaults to `type="text"`
+Any other input defaults to <code class="language-js">type="text"</code>
 
 <nys-textinput type="password" label="Password"></nys-textinput>
 
@@ -147,7 +147,7 @@ Any other input defaults to `type="text"`
 
 ### Min Max and step
 
-`max`, `min`, and `step` only apply when `type="number"`
+<code class="language-js">max</code>, <code class="language-js">min</code>, and <code class="language-js">step</code> only apply when <code class="language-js">type="number"</code>
 
 <nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput>
 

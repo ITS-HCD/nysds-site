@@ -82,11 +82,10 @@ The default value is `4`
 </details>
 
 ### Width
-If no `width` is provided, the `nys-textarea` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+If no <code class="language-js">width</code> is provided, the <code class="language-js">nys-textarea</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+Setting property <code class="language-js">width="full"</code> will take up the full width of the parent container.
 
-`width="full"` will take up the full width of the parent container.
-
-If an invalid option is assigned to `width`, it will be ignored and default to `full`.
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.</p>
 
 <nys-textarea width="md" label="This textarea is md"></nys-textarea>
 
@@ -101,9 +100,9 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 </details>
 
 ### Resize
-By default a user can resize the `nys-textarea` vertically. If you want to disallow resizing altogether add `resize="none"`
+By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code class="language-js">resize="none"</code>
 
-Note: `resize` is not affected by setting `nys-textarea` to `disabled` or `readonly` and they are independent.
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> <code class="language-js">resize</code> is not affected by setting <code class="language-js">&lt;nys-textarea&gt;</code> to <code class="language-js">disabled</code> or <code class="language-js">readonly</code> as they are independent.</p>
 
 <nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea>
 
@@ -186,7 +185,7 @@ You can include a description to provide additional context for the user. This i
 </details>
 
 ### Error Message
-To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
+To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-textarea&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
 
 
 <nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea>

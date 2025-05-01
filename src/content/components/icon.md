@@ -226,7 +226,7 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
 ### Color
 
-You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
+You can override the color of an icon by setting a <code class="language-js">color</code> prop. You can use CSS HEX values, CSS color names, or CSS variables
 
 <nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
 
@@ -242,7 +242,7 @@ You can override the color of an icon by setting a `color` prop. You can use CSS
 
 
 ### Rotate
-You can `rotate` an icon by passing the angle as a number, like rotate="20" (without "deg").
+You can <code class="language-js">rotate</code> an icon by passing the angle as a number, like rotate="20" (without "deg").
 
 <nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
 
@@ -258,7 +258,7 @@ You can `rotate` an icon by passing the angle as a number, like rotate="20" (wit
 
 
 ### Flip
-Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`.
+Set an icon to flip horizontally, vertically, or in both directions by using the <code class="language-js">flip</code> property. Available values are `horizontal`, `vertical`, and `both`.
 
 <nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon>
 

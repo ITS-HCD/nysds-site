@@ -94,7 +94,7 @@ The <code class="language-js">nys-select</code> component includes the following
 </details>
 
 ### Width
-The following width options are available:
+The following <code class="language-js">width</code> options are available:
 
   - `sm` (Small): 88px, ideal for compact layouts.
   - `md` (Medium): 200px, ideal for balanced designs.
@@ -122,7 +122,7 @@ The following width options are available:
 </details>
 
 ### Error Message
-To display an error message, pass in the `showError` property to the `nys-select` component. Setting `errorMessage` does not display the message without `showError` set to true.
+To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-select&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
 
 <nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
   <nys-option value="bronx" label="The Bronx"></nys-option>
