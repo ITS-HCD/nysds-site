@@ -14,7 +14,7 @@ navOrder: 15
 
 The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 
-<nys-icon name="info"></nys-icon> The Universal Navigation Header remains consistent across all sites.
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> The Universal Navigation Header remains consistent across all sites.</p>
 
 {% endblock %}
 

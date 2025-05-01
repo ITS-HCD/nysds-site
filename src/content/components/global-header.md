@@ -61,11 +61,11 @@ The <code class="language-js">nys-globalheader</code> component includes the fol
 
 ### With Links
 
-For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (`<ul>`) inside the nys-globalheader slot. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired destination.
+For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (`<ul>`) inside the `<nys-globalheader>` slot. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired destination.
 
-Use the prop `homepageLink` to link your `agencyName` to your homepage. If `homepageLink` is not provided, default fallback is `window.location.origin` otherwise (use `disableHomepageLink` to disable the homepage link).
+Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.
 
-<nys-icon name="info"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.</p>
 
 <nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>

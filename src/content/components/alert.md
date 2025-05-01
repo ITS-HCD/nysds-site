@@ -206,9 +206,8 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
 Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview" style="display: flex; flex-direction: column; gap: 10px">
     <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
-    <br>
     <div class="alert-container"></div> 
   </div>
 
