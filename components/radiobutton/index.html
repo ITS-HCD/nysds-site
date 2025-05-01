@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-04-18T17:13:56.142+00:00 -->
+    <!-- Latest Build: 2025-05-01T04:21:20.831+00:00 -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -362,7 +362,7 @@
 </code></pre>
 </details>
 <h3>Size</h3>
-<p>Set the <code>size</code> prop of the <code>nys-radiogroup</code> to have all <code>nys-radiobutton</code> be the same size. Our current sizes are:</p>
+<p>Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-radiogroup&gt;</code> to have all <code class="language-js">&lt;nys-radiobutton&gt;</code> be the same size. Our current sizes are:</p>
 <ul>
 <li><code>sm</code>: Set to 24px in width and height</li>
 <li><code>md</code>: The default size. Set to 32px in width and height.</li>
@@ -382,7 +382,7 @@
 </code></pre>
 </details>
 <h3>Error</h3>
-<p>To display an error message, pass in the <code>showError</code> property to the <code>nys-radiogroup</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.</p>
+<p>To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-radiogroup&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to <strong>true</strong>.</p>
 <nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
   <nys-radiobutton   name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton> <nys-radiobutton   name="office"   label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
 </nys-radiogroup>
@@ -396,7 +396,7 @@
 </details>
 <h3>Slotted Description</h3>
 <p>When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.</p>
-<p>Both <code>nys-radiobutton</code> and <code>nys-radiogroup</code> support the description slot.</p>
+<p>Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="language-js">&lt;nys-radiogroup&gt;</code> support the description slot.</p>
 <nys-radiogroup label="What is your primary work location?">
   <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
   <nys-radiobutton    name="office"    label="Albany" value="albany">

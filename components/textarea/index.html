@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-04-18T17:13:56.142+00:00 -->
+    <!-- Latest Build: 2025-05-01T04:21:20.831+00:00 -->
   </head>
   
   <body class="single-page page-textarea section-components">
@@ -337,9 +337,9 @@
 </code></pre>
 </details>
 <h3>Width</h3>
-<p>If no <code>width</code> is provided, the <code>nys-textarea</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.</p>
-<p><code>width=&quot;full&quot;</code> will take up the full width of the parent container.</p>
-<p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
+<p>If no <code class="language-js">width</code> is provided, the <code class="language-js">nys-textarea</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.
+Setting property <code class="language-js">width=&quot;full&quot;</code> will take up the full width of the parent container.</p>
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.</p>
 <p><nys-textarea width="md" label="This textarea is md"></nys-textarea></p>
 <details>
 <summary>Example Code</summary>
@@ -347,8 +347,8 @@
 </code></pre>
 </details>
 <h3>Resize</h3>
-<p>By default a user can resize the <code>nys-textarea</code> vertically. If you want to disallow resizing altogether add <code>resize=&quot;none&quot;</code></p>
-<p>Note: <code>resize</code> is not affected by setting <code>nys-textarea</code> to <code>disabled</code> or <code>readonly</code> and they are independent.</p>
+<p>By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code class="language-js">resize=&quot;none&quot;</code></p>
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> <code class="language-js">resize</code> is not affected by setting <code class="language-js">&lt;nys-textarea&gt;</code> to <code class="language-js">disabled</code> or <code class="language-js">readonly</code> as they are independent.</p>
 <p><nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea></p>
 <details>
 <summary>Example Code</summary>
@@ -393,7 +393,7 @@
 </code></pre>
 </details>
 <h3>Error Message</h3>
-<p>To display an error message, pass in the <code>showError</code> property to the <code>nys-select</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.</p>
+<p>To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-textarea&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.</p>
 <p><nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea></p>
 <details>
 <summary>Example Code</summary>

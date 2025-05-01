@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-04-18T17:13:56.142+00:00 -->
+    <!-- Latest Build: 2025-05-01T04:21:20.831+00:00 -->
   </head>
   
   <body class="single-page page-button section-components">
@@ -324,13 +324,13 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Size</h3>
-<p>Set the <code>size</code> prop of the <strong><code>nys-button</code></strong> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
+<p>Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
 <ul>
 <li><code>sm</code>: Set to 40px in height</li>
 <li><code>md</code>: The default size. Set to 48px in height.</li>
 <li><code>lg</code>: Set to 56px in height.</li>
 </ul>
-Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
+Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 <div class="nys-grid-row">
 <div class="nys-grid-col">
 <nys-button id="button1" name="button1" label="Small" size="sm"></nys-button>
@@ -358,14 +358,14 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">fullWidth</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button6<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button6<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Large Full<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Button Type</h3>
-<p>Set the type prop of the <code>nys-button</code> to define the button's behavior in a form context. The available types are:</p>
+<p>Set the type prop of the <code class="language-js">&lt;nys-button&gt;</code> to define the button's behavior in a form context. The available types are:</p>
 <ul>
 <li><code>button</code> (default): A standard button that does not submit a form.</li>
 <li><code>submit</code>: Submits the nearest form when clicked.</li>
 <li><code>reset</code>: Resets all inputs in the nearest form to their default values.</li>
 </ul>
 <h3>Variant</h3>
-<p>Set the variant prop of the <code>nys-button</code> to adjust the appearance of the button. Our current variants are:</p>
+<p>Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the appearance of the button. Our current variants are:</p>
 <ul>
 <li><code>filled</code>: The default variant. Use for primary actions.</li>
 <li><code>outline</code>: Use for secondary actions.</li>
@@ -390,8 +390,8 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Text<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Icons</h3>
-<p>Set the <code>prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.</p>
-<p>Set the <code>suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.</p>
+<p>Set the <code class="language-js">prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.</p>
+<p>Set the <code class="language-js">suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.</p>
 <p><nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button></p>
 <details>
 <summary>Example Code</summary>
@@ -416,14 +416,14 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">disabled</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button4<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Text<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Link</h3>
-<p>Set the <code>href</code> prop when using the button to navigate to a different page. This will render the <code>nys-button</code> as an <code>&lt;a&gt;</code> tag.</p>
+<p>Set the <code class="language-js">href</code> prop when using the button to navigate to a different page. This will render the <code>nys-button</code> as an <code>&lt;a&gt;</code> tag.</p>
 <p><nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button></p>
 <details>
 <summary>Example Code</summary>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit NY.gov<span class="token punctuation">"</span></span>  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
 </details>
 <h3>Inverted</h3>
-<p>Set the <code>inverted</code> when the button is on a dark background.</p>
+<p>Set the <code class="language-js">inverted</code> when the button is on a dark background.</p>
 <div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">

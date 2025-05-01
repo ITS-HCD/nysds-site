@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-04-18T17:13:56.142+00:00 -->
+    <!-- Latest Build: 2025-05-01T04:21:20.831+00:00 -->
   </head>
   
   <body class="single-page page-global-header section-components">
@@ -326,9 +326,9 @@
     <section id="options">
       <h2>Options</h2>
 <h3>With Links</h3>
-<p>For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (<code>&lt;ul&gt;</code>) inside the nys-globalheader slot. Each list item (<code>&lt;li&gt;</code>) should contain an anchor (<code>&lt;a href=&quot;&quot;&gt;</code>) linking to the desired destination.</p>
-<p>Use the prop <code>homepageLink</code> to link your <code>agencyName</code> to your homepage. If <code>homepageLink</code> is not provided, default fallback is <code>window.location.origin</code> otherwise (use <code>disableHomepageLink</code> to disable the homepage link).</p>
-<p><nys-icon name="info"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.</p>
+<p>For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (<code>&lt;ul&gt;</code>) inside the <code class="language-js">&lt;nys-globalheader&gt;</code> slot. Each list item (<code>&lt;li&gt;</code>) should contain an anchor (<code>&lt;a href=&quot;&quot;&gt;</code>) linking to the desired destination.</p>
+<p>Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.</p>
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.</p>
 <nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>
     <li><a href="https://its.ny.gov/services">Services</a></li>

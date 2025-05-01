@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-04-18T17:13:56.142+00:00 -->
+    <!-- Latest Build: 2025-05-01T04:21:20.831+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -358,16 +358,21 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Custom text description</h3>
+<p>Add descriptive content to your alert using the <code class="language-js">text</code> prop or the our slot feature.</p>
+<p>Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.</p>
 <div class="code-preview-container">
   <div class="code-preview">
     <nys-alert type="success" heading="Custom Descriptions">
-    <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+      <p>This is a custom alert with <strong>HTML content</strong>.</p>
+      <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
     </nys-alert>
   </div>
   <details>
   <summary>Example Code</summary>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Custom Descriptions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Click here: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>https://www.ny.gov/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> for more info.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a custom alert with <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>HTML content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Learn more about our accessibility services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
   </details>
 </div>
 <h3>Dismissible</h3>
@@ -376,7 +381,7 @@
 <div class="code-preview-container">
   <div class="code-preview">
     <nys-alert type="info" heading="Information status" dismissible>
-      <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+      <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
     </nys-alert>
   </div>
   <details>
@@ -389,7 +394,7 @@
 <h3>Duration</h3>
 <p>Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview" style="display: flex; flex-direction: column; gap: 10px">
     <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
     <div class="alert-container"></div> 
   </div>
