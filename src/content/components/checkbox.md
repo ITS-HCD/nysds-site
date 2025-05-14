@@ -156,9 +156,9 @@ Set the size property of the <code class="language-js">nys-checkboxgroup</code> 
 
 ### Error
 
-Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
+Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <strong>true</strong>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
 
-Errors can be assigned to both <code class="language-js">nys-checkboxgroup</code> and individual <code class="language-js">nys-checkbox</code> components.
+Errors can be assigned to both <code class="language-js">&lt;nys-checkboxgroup&gt;</code> and individual <code class="language-js">&lt;nys-checkbox&gt;</code> components.
 
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
