@@ -59,6 +59,8 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="visibility" size="4xl"></nys-icon></div><div class="card__desc"> visibility</div></div></div>
 <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="visibility_off" size="4xl"></nys-icon></div><div class="card__desc"> visibility_off</div></div></div>
 <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="notifications" size="4xl"></nys-icon></div><div class="card__desc"> notifications</div></div></div>
+<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="add" size="4xl"></nys-icon></div><div class="card__desc"> add</div></div></div>
+<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="remove" size="4xl"></nys-icon></div><div class="card__desc"> remove</div></div></div>
 </div>
 
 ### Social
