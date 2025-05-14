@@ -140,8 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         setTimeout(() => {
           paragraph.style.color = "var(--nys-color-text)";
-          card.parentElement.removeChild(paragraph);
-
+          if (paragraph) {
+            card.parentElement.removeChild(paragraph);
+          }
       }, 1500);
       } catch (err) {
         cardDesc.innerHTML = "Failed!";
@@ -152,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.addEventListener("mouseenter", async () => {
       const paragraph = document.createElement("p");
       paragraph.style.position = "absolute";
-      paragraph.style.top = "100px";
+      paragraph.style.bottom = "0px";
       paragraph.style.width = "90%";
       paragraph.style.textAlign = "center";
       paragraph.textContent = "Copy to clipboard";
