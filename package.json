@@ -33,8 +33,8 @@
         "@11ty/eleventy-img": "^6.0.1",
         "eleventy-plugin-metagen": "^1.8.3",
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-        "@nysds/components": "^1.1.7",
-        "@nysds/styles": "^1.1.7",
+        "@nysds/components": "^1.1.8",
+        "@nysds/styles": "^1.1.8",
         "eleventy-plugin-time-to-read": "^1.3.0"
     }
 }
