@@ -12,7 +12,7 @@ navOrder: 8
 
 {% block longdescription %}
 
-An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely conveny meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual informaiton. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
+An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
 {% endblock %}
 
 {% block example %}
