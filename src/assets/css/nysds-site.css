@@ -1,119 +1,3 @@
-/* === Selective Resets */
-
-/* Box Model */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Margin/Padding for Text Elements */
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-blockquote,
-figure,
-pre {
-    margin: 0;
-    padding: 0;
-}
-
-/* Lists */
-
-ul,
-ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* Tweaking USWDS Defaults */
-
-.nys-grid-container {
-    max-width: 80em;
-}
-
-/* === Global Styles */
-/* These really need to be defined in nysds.css */
-
-/* === Typography */
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
-    color: var(--nys-color-ink);
-}
-
-small {
-    font: var(--nys-font-size-xs) / var(--nys-font-lineheight-xs) var(--nys-font-family-body);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--nys-font-family-heading);
-    font-weight: 700;
-}
-
-h1 {
-    font-size: var(--nys-font-size-h1);
-    line-height: var(--nys-font-lineheight-h1);
-    margin-top: var(--nys-space-600);
-    margin-bottom: var(--nys-space-250);
-}
-
-h2 {
-    font-size: var(--nys-font-size-h2);
-    line-height: var(--nys-font-lineheight-h2);
-    margin-top: var(--nys-space-500);
-    margin-bottom: var(--nys-space-200);
-}
-
-h3 {
-    font-size: var(--nys-font-size-h3);
-    line-height: var(--nys-font-lineheight-h3);
-    margin-top: var(--nys-space-400);
-    margin-bottom: var(--nys-space-150);
-}
-
-h4 {
-    font-size: var(--nys-font-size-h4);
-    line-height: var(--nys-font-lineheight-h4);
-    margin-top: var(--nys-space-300);
-    margin-bottom: var(--nys-space-100);
-}
-
-h5 {
-    font-size: var(--nys-font-size-h5);
-    line-height: var(--nys-font-lineheight-h5);
-    margin-top: var(--nys-space-250);
-    margin-bottom: var(--nys-space-100);
-}
-
-h6 {
-    font-size: var(--nys-font-size-h6);
-    line-height: var(--nys-font-lineheight-h6);
-    margin-top: var(--nys-space-200);
-    margin-bottom: var(--nys-space-100);
-}
-
-
 p,
 ul,
 ol,
@@ -530,7 +414,6 @@ a.card:focus {
 }
 
 .card__no-border .card__desc {
-    font-size: var(--nys-font-size-ui-sm);
     max-width: 20rem;
 }
 
@@ -777,6 +660,11 @@ li > .section-nav__list {
     overflow: hidden;
 }
 
+/* Colors */
+.color-theme--weaker {
+    background-color: var(--nys-color-theme-weaker);
+}
+
 /* Token List */
 
 .token-list__item {
@@ -856,6 +744,18 @@ li > .section-nav__list {
 opacity: 1;
 }
   
+/*** Code Previews Container ***/
+.code-preview-container {
+    border: 1px solid var(--nys-color-neutral-200);
+    border-radius: var(--nys-radius-md);
+}
+.code-preview {
+    padding: var(--nys-space-200);
+}
+.code-preview-container details {
+    border: none;
+    background-color: var(--nys-color-theme-faint);
+}
 
 /* Additional Tweaks */
 
@@ -895,6 +795,10 @@ summary:hover {
     margin-top: var(--nys-space-300);
 }
 
+.nys-top-800 {
+    margin-top: var(--nys-space-800);
+}
+
 /* Icon display tweaks */
 
 .icon-examples .card:hover {
@@ -918,4 +822,31 @@ summary:hover {
 pre[class*="language-"]:before,
 pre[class*="language-"]:after {
     box-shadow: none !important;
+}
+
+/*** Table ***/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--nys-font-size-md);
+}
+
+th,
+td {
+    padding: var(--nys-space-150);
+    text-align: left;
+}
+
+th {
+    background-color: var(--nys-color-neutral-100);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: var(--nys-color-neutral-50);
+}
+
+tr:hover {
+    background-color: var(--nys-color-neutral-100);
 }

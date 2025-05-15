@@ -41,7 +41,7 @@ A button is used for actions that have an immediate result inside an application
 {% block usagedo %}
 
   - Use sentence-case capitalization for button labels.
-  - For buttons that open a dropdown use a Cheveron Down icon on the right side of the button label.
+  - For buttons that open a dropdown use a Chevron Down icon on the right side of the button label.
   - [Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.
 {% endblock %}
 
@@ -60,7 +60,7 @@ The <code class="language-js">nys-button</code> component includes the following
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
-  - Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assitive technology. Ensure you use Text buttons for actions and Links for navigation.
+  - Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assistive technology. Ensure you use Text buttons for actions and Links for navigation.
 {% endblock %}
 
 {% block content %}
@@ -68,7 +68,7 @@ The <code class="language-js">nys-button</code> component includes the following
 Button labels need to be clear and predictable. Users should be able to anticipate what will happen when they select a button. Never mislead someone by mislabeling a button.
 
 - Verbs like “View” or “Go” or “Read” are often unnecessary since the button itself already conveys these actions
-- No articles or uncessary words (“a” “an” “the”)
+- No articles or unnecessary words (“a” “an” “the”)
 - No punctuation
 - Always write button text in sentence case, which means the first word is capitalized and the rest are lowercase (unless a term is a proper noun).
 
@@ -77,23 +77,23 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 {% block options %}
 
 ### Size
-<p>Set the <code>size</code> prop of the <strong><code>nys-button</code></strong> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
+<p>Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
 <ul>
 <li><code>sm</code>: Set to 40px in height</li>
 <li><code>md</code>: The default size. Set to 48px in height.</li>
 <li><code>lg</code>: Set to 56px in height.</li>
 </ul>
-Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
+Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
 <div class="nys-grid-row">
 <div class="nys-grid-col">
-<nys-button  id="button1"  name="button1"  label="Small"  size="sm"></nys-button>
+<nys-button id="button1" name="button1" label="Small" size="sm"></nys-button>
 </div>
 <div class="nys-grid-col">
-<nys-button  id="button2"  name="button2"  label="Medium"></nys-button>
+<nys-button id="button2" name="button2" label="Medium"></nys-button>
 </div>
 <div class="nys-grid-col">
-<nys-button  id="button3"  name="button3"  label="Large"  size="lg"></nys-button>
+<nys-button id="button3" name="button3" label="Large" size="lg"></nys-button>
 </div>
 </div>
 <br>
@@ -118,7 +118,7 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 
 ### Button Type
 
-Set the type prop of the `nys-button` to define the button's behavior in a form context. The available types are:
+Set the type prop of the <code class="language-js">&lt;nys-button&gt;</code> to define the button's behavior in a form context. The available types are:
 
  - `button` (default): A standard button that does not submit a form.
  - `submit`: Submits the nearest form when clicked.
@@ -126,7 +126,7 @@ Set the type prop of the `nys-button` to define the button's behavior in a form 
 
 ### Variant
 
-Set the variant prop of the `nys-button` to adjust the appearance of the button. Our current variants are:
+Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the appearance of the button. Our current variants are:
 
  - `filled`: The default variant. Use for primary actions.
  - `outline`: Use for secondary actions.
@@ -135,38 +135,38 @@ Set the variant prop of the `nys-button` to adjust the appearance of the button.
 
 <div class="nys-grid-row">
 <div class="nys-grid-col">
-<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
+<nys-button  id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
+<nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
+<nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+<nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
 </div></div>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button  id="button1"  name="button1"  label="Filled"></nys-button>
-<nys-button  id="button2"  name="button2"  label="Outline"   variant="outline"></nys-button>
-<nys-button  id="button3"  name="button3"  label="Ghost"  variant="ghost"></nys-button>
-<nys-button  id="button4"  name="button4"  label="Text"  variant="text"></nys-button>
+<nys-button  id="button1" name="button1" label="Filled"></nys-button>
+<nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
+<nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+<nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
 ```
 </details>
 
 ### Icons
-Set the `prefixIcon` prop to include an icon in the button. The icon will appear to the left of the label.
+Set the <code class="language-js">prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.
 
-Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
+Set the <code class="language-js">suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.
 
-<nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button>
+<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button  id="button1"  name="button1"  label="Click Me"  prefixIcon="chevron_left"  suffixIcon="chevron_right"></nys-button>
+<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
 ```
 </details>
 
@@ -175,7 +175,7 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 <div class="nys-grid-col">
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
@@ -186,32 +186,32 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 
 ```html
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
-<nys-button disabled id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
 ```
 </details>
 
 ### Link
-Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
+Set the <code class="language-js">href</code> prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
 
 
-<nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button>
+<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
-<nys-button href="https://www.ny.gov/" id="button1"  name="button1"  label="Visit NY.gov"  ></nys-button>
+<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
 ```
 </details>
 
 ### Inverted
-Set the `inverted` when the button is on a dark background.
+Set the <code class="language-js">inverted</code> when the button is on a dark background.
 <div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 </div><div class="nys-grid-col">
-<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 </div><div class="nys-grid-col">
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 </div><div class="nys-grid-col">
@@ -222,7 +222,7 @@ Set the `inverted` when the button is on a dark background.
 
 ```html
 <nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
-<nys-button inverted id="button2" name="button2" label="Outline"  variant="outline"></nys-button>
+<nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
 ```

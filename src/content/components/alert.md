@@ -153,18 +153,29 @@ The <code class="language-js">nys-alert</code> component includes the following 
 {% block options %}
 
 ### Custom text description
+Add descriptive content to your alert using the <code class="language-js">text</code> prop or the our slot feature. 
 
-<nys-alert type="success" heading="Custom Descriptions">
-<p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
+Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
 
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-alert type="success" heading="Custom Descriptions">
-<p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p></nys-alert>
-```
-</details>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert type="success" heading="Custom Descriptions">
+      <p>This is a custom alert with <strong>HTML content</strong>.</p>
+      <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+    </nys-alert>
+  </div>
+  
+  <details>
+  <summary>Example Code</summary>
+  
+  ```html
+  <nys-alert type="success" heading="Custom Descriptions">
+    <p>This is a custom alert with <strong>HTML content</strong>.</p>
+    <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+  </nys-alert>
+  ```
+  </details>
+</div>
 
 ### Dismissible
 
@@ -172,62 +183,70 @@ Use the <code class="language-js">dismissible</code> property to make the alert 
 
 The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
-<nys-alert type="info" heading="Information status" dismissible>
-  <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
-</nys-alert>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-alert type="info" heading="Information status" dismissible>
-  <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
-</nys-alert>
-```
-
-</details>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert type="info" heading="Information status" dismissible>
+      <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+    </nys-alert>
+  </div>
+  
+  <details>
+  <summary>Example Code</summary>
+  
+  ```html
+  <nys-alert type="info" heading="Information status" dismissible>
+    <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+  </nys-alert>
+  ```
+  </details>
+</div>
 
 ### Duration
 
 Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
-<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+<div class="code-preview-container">
+  <div class="code-preview" style="display: flex; flex-direction: column; gap: 10px">
+    <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+    <div class="alert-container"></div> 
+  </div>
 
-<div class="alert-container"></div>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
-```
-
-</details>
+  <details>
+  <summary>Example Code</summary>
+  
+  ```html
+  <nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
+  ```
+  </details>
+</div>
 
 ### Icon Customization
 
 Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.
 
-<nys-alert 
-  type="emergency" 
-  heading="Winter storm warning: Dec 10th, 2024."
-  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
-  icon="ac_unit">
-</nys-alert>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-alert 
-  type="emergency" 
-  heading="Winter storm warning: Dec 10th, 2024."
-  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
-  icon="ac_unit">
-</nys-alert>
-```
-
-</details>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert
+      type="emergency"
+      heading="Winter storm warning: Dec 10th, 2024."
+      text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+      icon="ac_unit">
+    </nys-alert>
+  </div>
+  
+  <details>
+  <summary>Example Code</summary>
+  
+  ```html
+  <nys-alert
+    type="emergency"
+    heading="Winter storm warning: Dec 10th, 2024."
+    text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+    icon="ac_unit">
+  </nys-alert>
+  ```
+  </details>
+</div>
 
 
 
@@ -235,22 +254,25 @@ Override the default theme icon by setting the <code class="language-js">icon</c
 
 You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
 
-<nys-alert 
-  type="info"
-  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-alert 
-  type="info"
-  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>
-```
-
-</details>
+<div class="code-preview-container">
+  <div class="code-preview">
+    <nys-alert
+      type="info"
+      heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+    </nys-alert>
+  </div>
+  
+  <details>
+  <summary>Example Code</summary>
+  
+  ```html
+  <nys-alert
+    type="info"
+    heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+  </nys-alert>
+  ```
+  </details>
+</div>
 
 {% endblock %}
 

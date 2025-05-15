@@ -30,9 +30,9 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 {% block usage %}
 
 ### When to use this component
-  - Use `nys-unavfooter` to provide consistent access to essential links across all sites.
+  - Use <code class="language-js">&lt;nys-unavfooter&gt;</code> to provide consistent access to essential links across all sites.
 ### When to consider something else
-  - Do not place the `nys-unavfooter` anywhere other than the bottom of the page as the final footer.
+  - Do not place the <code class="language-js">&lt;nys-unavfooter&gt;</code> anywhere other than the bottom of the page as the final footer.
 
 {% endblock %}
 

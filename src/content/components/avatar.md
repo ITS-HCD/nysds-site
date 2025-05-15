@@ -64,7 +64,7 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 
 The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
 
-  - For intial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
+  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
   - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
   - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
   - A label property to provide accessible text for screen readers.
@@ -108,24 +108,22 @@ The <code class="language-js">nys-</code> component includes the following acces
 <p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
 
 <nys-avatar label="User avatar"></nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="youtube icon" name="social_youtube"></nys-icon>
+<nys-avatar label="Youtube avatar" color="#f2efee">
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
-</nys-avatar>
+<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
 
 <details>
 <summary>Example Code</summary>
 
 ```html
 <nys-avatar label="User avatar"></nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="youtube icon" name="social_youtube"></nys-icon>
+
+<nys-avatar label="Youtube avatar" color="#f2efee">
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
-<nys-avatar label="User avatar">
-  <nys-icon slot="icon" label="snow icon" name="ac_unit"></nys-icon>
-</nys-avatar>
+
+<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
 ```
 </details>
 
