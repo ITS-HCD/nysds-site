@@ -19,19 +19,30 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
+      <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
+      <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+      <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
+      <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+      <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+      <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
+    </nys-checkboxgroup>
+  </div>
 
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
-  <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
-</nys-checkboxgroup>
-{% endblock %}
-
-{% block examplecode %}
-
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-checkboxgroup
   label="Select your favorite New York landmarks"
   description="Choose from the options below"
@@ -48,6 +59,14 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
   <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
 </nys-checkboxgroup>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block usage %}
@@ -90,35 +109,67 @@ The <code class="language-js">nys-checkbox</code> component includes the followi
 
 The <code class="language-js">nys-checkboxgroup</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
+      <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
+      <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
+    </nys-checkboxgroup>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
   <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
   <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
 </nys-checkboxgroup>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
-  <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
-  <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
-</nys-checkboxgroup>
-
-```
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Disabled
 
-<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable."></nys-checkbox>
-
-```
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Size
 
@@ -128,19 +179,30 @@ Set the size property of the <code class="language-js">nys-checkboxgroup</code> 
 
 <code class="language-js">md</code> : The <code class="language-js">default</code> size. Set to 32px in width and height.
 
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
-</nys-checkboxgroup>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
+      <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+      <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+      <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+      <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+      <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+      <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+    </nys-checkboxgroup>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-checkboxgroup size="sm" label="Select your favorite New York landmarks" description="Choose from the options below" >
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
@@ -149,10 +211,14 @@ Set the size property of the <code class="language-js">nys-checkboxgroup</code> 
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
   <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>
-
-```
-</details>
-
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Error
 
@@ -160,44 +226,76 @@ Set an error message and choose to activate it. The error message will appear ON
 
 Errors can be assigned to both <code class="language-js">&lt;nys-checkboxgroup&gt;</code> and individual <code class="language-js">&lt;nys-checkbox&gt;</code> components.
 
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
-  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
-</nys-checkboxgroup>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
+      <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
+      <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
+      <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
+    </nys-checkboxgroup>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-checkboxgroup showError errorMessage="You must select at least one option to continue." label="Select your favorite New York landmarks" description="Choose from the options below" >
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>
-
-```
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ### Slotted Description
 
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
+      <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
+    </nys-checkbox>
+  </div>
+  
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
-  <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
-</nys-checkbox>
-
-```
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
