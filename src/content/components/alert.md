@@ -40,7 +40,6 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </div>
-            <!-- <nys-button class="code-preview__dropdown" fullWidth prefixIcon="chevron_right" label="Example Code" variant="ghost" size="xl" onClick="showSourceCode(this)"></nys-button> -->
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -190,7 +189,6 @@ Use the <code class="language-js">text</code> prop for simple texts, or leverage
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </div>
-            <!-- <nys-button class="code-preview__dropdown" fullWidth prefixIcon="chevron_right" label="Example Code" variant="ghost" size="xl" onClick="showSourceCode(this)"></nys-button> -->
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
