@@ -155,23 +155,36 @@ Add descriptive content to your alert using the <code class="language-js">text</
 Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
 
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview__preview">
     <nys-alert type="success" heading="Custom Descriptions">
       <p>This is a custom alert with <strong>HTML content</strong>.</p>
       <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
     </nys-alert>
   </div>
   
-  <details>
-  <summary>Example Code</summary>
-  
-  ```html
-  <nys-alert type="success" heading="Custom Descriptions">
-    <p>This is a custom alert with <strong>HTML content</strong>.</p>
-    <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
-  </nys-alert>
-  ```
-  </details>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
+<nys-alert type="success" heading="Custom Descriptions">
+  <p>This is a custom alert with <strong>HTML content</strong>.</p>
+  <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+</nys-alert>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 ### Dismissible
