@@ -769,6 +769,8 @@ opacity: 1;
 .code-preview__buttons, .code-preview__dropdown {
     position: relative;
     display: flex;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .code-preview__buttons .code-preview__dropdown {
     flex: 1;
@@ -780,7 +782,10 @@ opacity: 1;
     color: var(--nys-color-text, #1B1B1B);
 }
 .code-preview__buttons .code-preview__dropdown:hover {
-    background: var(--nys-color-neutral-100, #D0D0CE);
+    background: var(--nys-color-black-transparent-100, #0000001a);
+}
+.code-preview__buttons .code-preview__dropdown:active {
+    background: var(--nys-color-black-transparent-200, #00000033);
 }
 .code-preview__buttons .code-preview__dropdown p {
     margin: 0;
@@ -827,7 +832,7 @@ opacity: 1;
     gap: 8px;
     align-self: stretch;
     border-top: 1px solid var(--nys-color-neutral-50, #EDEDED);
-    background: var(--nys-color-neutral-50, #EDEDED);
+    background: var(--nys-color-black-transparent-50, rgba(0, 0, 0, 0.01));
 }
 .code-preview__code-tip p {
     margin: 0;
@@ -857,8 +862,6 @@ opacity: 1;
     font-weight: 400;
     line-height: var(--nys-font-lineheight-ui-sm, 24px); 
     letter-spacing: var(--nys-font-letterspacing-ui-sm, 0.044px);
-    -webkit-user-select: none;
-    user-select: none;
   }
   /* Tooltip Arrow */
   .copy-tooltip::after {
