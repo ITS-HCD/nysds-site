@@ -286,10 +286,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
   <div class="nys-grid-row">
   <div class="nys-grid-col nys-flex-1"></div>
   <div class="nys-grid-col nys-flex-1"></div>
@@ -350,8 +360,12 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-flex-fill"></div>
   ...
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 ## Flex-direction
 
@@ -402,10 +416,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-grid-row nys-flex-column">
   <div class="nys-grid-col"></div>
   <div class="nys-grid-col"></div>
@@ -418,8 +442,12 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col"></div>
   <div class="nys-grid-col"></div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 ## Flex-wrap
 
@@ -478,10 +506,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-grid-row nys-flex-wrap">
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
@@ -494,8 +532,13 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
+
 
 ## Flex-align
 
@@ -666,10 +709,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-display-flex nys-flex-column nys-flex-align-start">
   <div class="example"></div>
   <div class="example"></div>
@@ -725,8 +778,13 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
   <div class="example"></div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
+
 
 ## Flex-align-self
 
@@ -773,10 +831,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-display-flex nys-flex-column">
   <div class="nys-flex-align-self-start"></div>
   <div class="nys-flex-align-self-center"></div>
@@ -790,8 +858,12 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-flex-align-self-end"></div>
   <div class="nys-flex-align-self-stretch"></div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 ## Flex-justify
 
@@ -881,10 +953,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-display-flex nys-flex-column nys-flex-justify">
   <div class="example"></div>
   <div class="example"></div>
@@ -940,8 +1022,12 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
   <div class="example"></div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 ## Order
 
@@ -1042,10 +1128,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-grid-row">
   <div class="nys-grid-col nys-order-11"></div>
   <div class="nys-grid-col nys-order-10"></div>
@@ -1063,8 +1159,12 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-last"></div>
   <div class="nys-grid-col nys-order-first"></div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 
 

@@ -122,47 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Make the <pre> scrollable (if content overflows)
     pre.style.overflow = "auto";
-
-    // // Create Copy Button
-    // const button = document.createElement("nys-button");
-    // button.label = "Copy Code";
-    // button.size = "sm";
-    // button.variant = "outline";
-    // button.prefixIcon = "publish";
-    // button.style.position = "absolute";
-    // button.style.top = "-15px";
-    // button.style.right = "12px";
-    // button.style.display = "flex";
-    // button.style.zIndex = "9999";
-
-    // // Click event: Copy code to clipboard
-    // button.addEventListener("click", async () => {
-    //   try {
-    //     await navigator.clipboard.writeText(codeBlock.innerText.trim());
-    //     button.setAttribute("label", "Copied!");
-        
-    //     // Add aria-live region for screen reader feedback
-    //     const liveRegion = document.createElement("span");
-    //     liveRegion.setAttribute("aria-live", "polite");
-    //     liveRegion.style.position = "absolute";
-    //     liveRegion.style.width = "1px";
-    //     liveRegion.style.height = "1px";
-    //     liveRegion.style.overflow = "hidden";
-    //     liveRegion.innerText = "Code copied to clipboard!";
-    //     pre.appendChild(liveRegion);
-
-    //     setTimeout(() => {
-    //       button.setAttribute("label", "Copy Code");
-    //       pre.removeChild(liveRegion);
-    //     }, 1500);
-    //   } catch (err) {
-    //     console.error("Failed to copy:", err);
-    //     button.setAttribute("label", "Failed!");
-    //     setTimeout(() => button.setAttribute("label", "Copy Code"), 1500);
-    //   }
-    // });
-
-    // containerWrapper.appendChild(button);
   });
 });
 

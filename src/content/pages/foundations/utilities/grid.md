@@ -29,10 +29,19 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   </div>
 </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 <div class="nys-grid-container">
   <div class="nys-grid-row">
     <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
@@ -40,8 +49,11 @@ The grid system uses a series of containers, rows, and columns to lay out and al
     <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
   </div>
 </div>
-```
-</details>
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>This example code creates three equal-width columns on tablet, desktop, and widescreen devices by using our predefined grid classes. Those columns are centered in the page with the parent <code>nys-grid-container</code> container.</p>
 <p>The following sections break the layout grid down and describe how it works.</p>
@@ -81,10 +93,19 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 <div class="nys-grid-container">
   <div class="nys-grid-row">
     <div class="nys-grid-col-auto">.nys-grid-col-auto</div>
@@ -93,8 +114,11 @@ The grid system uses a series of containers, rows, and columns to lay out and al
     <div class="nys-grid-col-auto">.nys-grid-col-auto</div>
   </div>
 </div>
-```
-</details>
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 <section id="responsive-classes">
 
@@ -161,10 +185,20 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 </div>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 
-```html
 <div class="nys-grid-row">
   <div class="nys-grid-col-1">.nys-grid-col-1</div>
   <div class="nys-grid-col-2">.nys-grid-col-2</div>
@@ -178,8 +212,13 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   <div class="nys-grid-col-2">.nys-grid-col-2</div>
   <div class="nys-grid-col-2">.nys-grid-col-2</div>
 </div>
-```
-</details>
+
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 <h3><a id="stacked-columns-at-narrow-widths"></a>Stacked columns at narrow widths</h3>
 <p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>nys-tablet:nys-grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>nys-tablet:</code>) as illustrated in the following rows and corresponding code.</p>
@@ -199,10 +238,20 @@ The grid system uses a series of containers, rows, and columns to lay out and al
 
 </div>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <div class="nys-grid-row">
   <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
   <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
@@ -213,8 +262,12 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   <div class="nys-tablet:nys-grid-col-4">.nys-tablet:nys-grid-col-4</div>
   <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 <h3><a id="mix-and-match"></a>Mix and match</h3>
 <p>Don't want your columns to simply stack in some breakpoints? Use a combination of different classes for each breakpoint as needed. See the following example rows and corresponding code for a better idea of how it all works.</p>
@@ -286,10 +339,20 @@ Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
 Columns are always 50% wide, on mobile and desktop
 </div>
 
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
 
-```html
+{% highlight "html" %}
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="nys-grid-row">
   <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
@@ -308,8 +371,12 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-col-6">.nys-grid-col-6</div>
   <div class="nys-grid-col-6">.nys-grid-col-6</div>
 </div>
-```
-</details>
+{% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 
 </section>
 <section id="offsetting-columns">
@@ -363,15 +430,27 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 <div class="nys-grid-row">
   <div class="nys-grid-col-8 nys-grid-offset-4">.nys-grid-col-8.nys-grid-offset-4</div>
 </div>
-```
-</details>
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 </section>
 <section id="column-wrapping">
@@ -428,17 +507,30 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 <div class="nys-grid-row">
   <div class="nys-grid-col-8">.nys-grid-col-8</div>
   <div class="nys-grid-col-3">.nys-grid-col-3</div>
   <div class="nys-grid-col-5">.nys-grid-col-5</div>
 </div>
-```
-</details>
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </section>
 <section id="gutters">
@@ -501,10 +593,19 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-grid-col-4">
     <div>.nys-grid-col-4</div>
@@ -516,8 +617,12 @@ Columns are always 50% wide, on mobile and desktop
     <div>.nys-grid-col-4</div>
   </div>
 </div>
-```
-</details>
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <h3><a id="large-gutter"></a>Large gutter</h3>
 <p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than <code>nys-grid-gap</code>. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
@@ -586,10 +691,19 @@ Columns are always 50% wide, on mobile and desktop
 
 </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+{% highlight "html" %}
 <div class="nys-grid-row nys-grid-gap-lg">
   <div class="nys-grid-col-4">
     <div>.nys-grid-col-4</div>
@@ -601,8 +715,11 @@ Columns are always 50% wide, on mobile and desktop
     <div>.nys-grid-col-4</div>
   </div>
 </div>
-```
-</details>
+{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 </section>
 {% endblock %}

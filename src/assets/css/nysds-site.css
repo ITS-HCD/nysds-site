@@ -748,6 +748,7 @@ opacity: 1;
 .code-preview-container {
     border-radius: var(--nys-radius-md, 4px);
     border: 1px solid var(--nys-color-neutral-50, #EDEDED);
+    margin: 10px 0;
 }
 /*** Main Render Component Display ***/
 .code-preview__preview {
