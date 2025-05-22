@@ -17,13 +17,32 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web com
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput label="This is a text input"></nys-textinput>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput label="This is a text input"></nys-textinput>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-textinput label="This is a text input"></nys-textinput>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block usage %}
@@ -69,17 +88,32 @@ Width full will take up the full width of the parent container.
 
 If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput width="sm" label="This label is sm"></nys-textinput>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput width="sm" label="This label is sm"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput width="sm" label="This label is sm"></nys-textinput>
-
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ### Type
@@ -87,127 +121,239 @@ Accepted <code class="language-js">types</code> are: `text`, `email`, `number`, 
 
 Any other input defaults to <code class="language-js">type="text"</code>
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput type="password" label="Password"></nys-textinput>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput type="password" label="Password"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput type="password" label="Password"></nys-textinput>
-
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 ### Placeholder
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
-
-```
-
-</details>
-
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Disabled
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput label="Disabled" disabled></nys-textinput>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput label="Disabled" disabled></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput label="Disabled" disabled></nys-textinput>
-
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Readonly
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput label="Readonly" value="Read only value" readonly></nys-textinput>
+  </div>
 
-<nys-textinput label="Readonly" value="Read only value" readonly></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>
-
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ### Min Max and step
 
 <code class="language-js">max</code>, <code class="language-js">min</code>, and <code class="language-js">step</code> only apply when <code class="language-js">type="number"</code>
 
-<nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>
-
-```
-
-</details>
-
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Maxlength
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textinput>
+  </div>
 
-<nys-textinput label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>
-
-```
-
-</details>
-
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Pattern
 
 Takes any valid regex value.
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput placeholder="N00000000" label="Please enter your Employee number" description="include the N prefix" maxlength="9" pattern="N[0-9]{8}" id="nID"></nys-textinput>
+  </div>
 
-<nys-textinput placeholder="N00000000" label="Please enter your Employee number" description="include the N prefix" maxlength="9" pattern="N[0-9]{8}" id="nID"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>
-
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ### Error Message
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
-
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
@@ -302,22 +448,6 @@ Set an error message and choose to activate it. The error message will appear ON
 </table>
 
 {% endblock %}
-
-[[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
 
 {% block cssvariables %}
 
