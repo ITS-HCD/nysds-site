@@ -17,14 +17,32 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-unavfooter></nys-unavfooter>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-unavfooter></nys-unavfooter>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-unavfooter></nys-unavfooter>
-
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block usage %}
@@ -56,7 +74,9 @@ The <code class="language-js">nys-unavfooter</code> component includes the follo
   - Keyboard navigation: Users can tab through all links in the footer.
 {% endblock %}
 
-{% block options %}{% endblock %}
+{% block options %}
+There are no configurable options for this component. It is intended to be used as-is to ensure consistency across all New York State digital products.
+{% endblock %}
 
 {% block properties %}{% endblock %}
 
