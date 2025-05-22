@@ -388,6 +388,19 @@ When the description requires more complexity than a simple string, use the desc
 <li><strong><code>keydown</code></strong> – Fired when a key is pressed while the checkbox is focused.</li>
 </ol>
 
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container open">
+      <div class="code-preview__code-block">
+
 You can listen to these events using JavaScript:
 {% highlight "js" %}
 // Select the checkbox component
@@ -398,6 +411,11 @@ You can listen to these events using JavaScript:
     console.log('Checkbox changed:', event.target.checked);
   });
 {% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block updates %}{% endblock %}

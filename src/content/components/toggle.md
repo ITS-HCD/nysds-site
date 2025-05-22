@@ -243,7 +243,6 @@ The <code class="language-js">nys-toggle</code> component includes the following
 {% endblock %}
 
 {% block events %}
-
 <p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
@@ -253,15 +252,34 @@ The <code class="language-js">nys-toggle</code> component includes the following
 </ol>
 
 You can listen to these events using JavaScript:
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container open">
+      <div class="code-preview__code-block">
+
 {% highlight "js" %}
 // Select the toggle component
   const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
+      
+// Listen for the 'change' event
+toggle.addEventListener('change', (event) => {
+  console.log('Checkbox changed:', event.target.checked);
+});
 {% endhighlight %}
+      
+  </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
