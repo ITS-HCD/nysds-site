@@ -24,7 +24,7 @@ const showSourceCode = (clickedDropdown) => {
     if (!codeBlock) return;
 
     // Toggle visibility & icon change
-    const chevronIcon = container.querySelector("nys-icon");
+    const chevronIcon = container.querySelector(".code-preview__dropdown-icon");
     codeBlock.classList.toggle("open");
     chevronIcon.setAttribute("name", codeBlock.classList.contains("open") ? "chevron_down" : "chevron_right");
   

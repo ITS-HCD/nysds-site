@@ -18,15 +18,34 @@ The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reu
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+    </nys-globalheader>
+  </div>
 
+  <div class="code-preview__source">
+  <div class="code-preview__buttons">
+    <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+      <p>Example Code</p>
+    </div>
+    <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+    <div class="copy-tooltip">Copy Code</div>
+  </div>
+  <div class="code-preview__code-container">
+    <div class="code-preview__code-block">
+      {% highlight "html" %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
 </nys-globalheader>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-</nys-globalheader>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block usage %}
@@ -67,6 +86,32 @@ Use the prop <code class="language-js">homepageLink</code> to link your <code cl
 
 <p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
+      <ul>
+        <li><a href="https://its.ny.gov/services">Services</a></li>
+        <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
+        <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
+        <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
+        <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
+        <li><a href="https://its.ny.gov/about-us">About Us</a></li>
+      </ul>
+    </nys-globalheader>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>
     <li><a href="https://its.ny.gov/services">Services</a></li>
@@ -77,54 +122,74 @@ Use the prop <code class="language-js">homepageLink</code> to link your <code cl
     <li><a href="https://its.ny.gov/about-us">About Us</a></li>
   </ul>
 </nys-globalheader>
-
-<details>
-  <summary>Code</summary>
-
-```html
-<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
-  <ul>
-    <li><a href="https://its.ny.gov/services">Services</a></li>
-    <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
-    <li><a href="https://its.ny.gov/cybersecurity">Cybersecurity</a></li>
-    <li><a href="https://its.ny.gov/policies">Policies and Laws</a></li>
-    <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
-    <li><a href="https://its.ny.gov/about-us">About Us</a></li>
-  </ul>
-</nys-globalheader>
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Just Agency Name
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+    </nys-globalheader>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
 </nys-globalheader>
-
-<details>
-  <summary>Code</summary>
-
-```html
-<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
-</nys-globalheader>
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Just Application Name
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-globalheader disableHomepageLink appName="NYS Employee Portal">
+    </nys-globalheader>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </div>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-globalheader disableHomepageLink appName="NYS Employee Portal">
 </nys-globalheader>
-
-<details>
-  <summary>Code</summary>
-
-```html
-<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
-</nys-globalheader>
-```
-
-</details>
+        {% endhighlight %}
+      </div>
+      <div class="code-preview__code-tip">
+        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 {% endblock %}
