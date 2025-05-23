@@ -805,7 +805,7 @@ opacity: 1;
     justify-content: flex-start;
     align-items: center;
     color: var(--nys-color-text, #1B1B1B);
-    border: var(--border-width-md, 2px) solid var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
+    border: none;
     background: var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
 }
 .code-preview__buttons .code-preview__dropdown:focus-visible {
@@ -856,6 +856,7 @@ opacity: 1;
     margin: 0;
 }
 .code-preview__code-tip {
+    color: var(--nys-color-text-weak, #4A4D4F);
     display: flex;
     justify-content: center;
     padding: var(--nys-space-100, 8px) 16px;
@@ -864,6 +865,12 @@ opacity: 1;
     align-self: stretch;
     border-top: 1px solid var(--nys-color-neutral-50, #EDEDED);
     background: var(--nys-color-black-transparent-50, rgba(0, 0, 0, 0.01));
+    font-family: var(--nys-type-family-ui, "Proxima Nova");
+    font-size: var(--nys-type-size-ui-sm, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--nys-font-lineheight-ui-sm, 24px);
+    letter-spacing: var(--nys-font-letterspacing-ui-sm, 0.044px);
 }
 .code-preview__code-tip p {
     margin: 0;
