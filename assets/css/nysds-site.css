@@ -467,14 +467,14 @@ li > .section-nav__list {
 .section-nav__item--active-section {
     font-weight: bold;
     background-color: var(--nys-color-theme-faint);
-    /* border-left: solid var(--nys-border-width-lg) var(--nys-color-theme-mid);
+    /* border-left: solid var(--nys-border-width-lg) ;
     margin-left: calc(var(--nys-border-width-md) * -1); */
 }
 
 /* Active border with ::after pseudo element */
-.section-nav__item--active::after {
+.section-nav__item--active-section::after {
     content: '';
-    background: var(--nys-color-theme);
+    background: var(--nys-color-theme-mid);
     width: var(--nys-border-width-lg);
     height: 100%;
     left: calc(var(--nys-border-width-md) * -1);
@@ -482,16 +482,22 @@ li > .section-nav__list {
     position: absolute;
 }
 
-.section-nav__list > .section-nav__item:first-child.section-nav__item--active::after {
+.section-nav__list > .section-nav__item:first-child.section-nav__item--active-section:first-child::after {
     border-top-left-radius: var(--nys-radius-md);
     top: calc( var(--nys-border-width-md) * -1);
     height: calc(100% + var(--nys-border-width-md));
 }
 
-.section-nav__list > .section-nav__item:last-child.section-nav__item--active::after {
+.section-nav__list > .section-nav__item:last-child.section-nav__item--active-section:last-child::after {
     border-bottom-left-radius: var(--nys-radius-md);
-    bottom: calc( var(--nys-border-width-md) * -1);
+    bottom: var(--nys-border-width-md);
     height: calc(100% + var(--nys-border-width-md));
+}
+
+/* Hide nested section nav children when parent not active */
+
+.section-nav__item:not(.section-nav__item--active-section) > .section-nav__list {
+    display: none;
 }
 
 /* Section Nav Link */
@@ -500,8 +506,9 @@ li > .section-nav__list {
     display: block;
     text-decoration: none;
     color: var(--nys-color-ink);
-    padding: var(--nys-space-100) var(--nys-space-200);
+    padding: var(--nys-space-150) var(--nys-space-200);
     border-bottom: solid var(--nys-border-width-sm) var(--nys-color-neutral-50);
+    line-height: var(--nys-font-lineheight-2xs);
 }
 
 .section-nav__link:hover,
