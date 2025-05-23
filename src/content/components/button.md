@@ -36,9 +36,9 @@ A button is used for actions that have an immediate result inside an application
 <nys-button label="Button"></nys-button>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
     </div>
   </div>
 </div>
@@ -145,9 +145,6 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 <nys-button fullWidth size="lg" id="button6" name="button6" label="Large Full"></nys-button>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -201,9 +198,6 @@ Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> 
 <nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -232,9 +226,6 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
         {% highlight "html" %}
 <nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -273,9 +264,6 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -302,9 +290,6 @@ Set the <code class="language-js">href</code> prop when using the button to navi
         {% highlight "html" %}
 <nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -343,9 +328,6 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>

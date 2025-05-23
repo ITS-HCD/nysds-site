@@ -38,9 +38,9 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 <nys-avatar label="User avatar"></nys-avatar>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
     </div>
   </div>
 </div>
@@ -112,9 +112,6 @@ The <code class="language-js">nys-</code> component includes the following acces
 <nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -143,9 +140,6 @@ The <code class="language-js">nys-</code> component includes the following acces
         {% highlight "html" %}
 <nys-avatar label="User avatar" initials="NY"></nys-avatar>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -187,9 +181,6 @@ The <code class="language-js">nys-</code> component includes the following acces
 <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -223,9 +214,6 @@ The <code class="language-js">nys-</code> component includes the following acces
 <nys-avatar label="User avatar" shape="square"></nys-avatar>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -253,9 +241,6 @@ You can change the background color of an Avatar. Note that images will naturall
         {% highlight "html" %}
 <nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -331,25 +316,6 @@ You can change the background color of an Avatar. Note that images will naturall
 
 
 {% endblock %}
-[[TODO]]
-<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
 

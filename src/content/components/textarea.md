@@ -40,10 +40,10 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 ></nys-textarea>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>    
   </div>
 </div>
 {% endblock %}
@@ -108,9 +108,6 @@ The default value is `4`
 <nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -141,9 +138,6 @@ Setting property <code class="language-js">width="full"</code> will take up the 
 <nys-textarea width="md" label="This textarea is md"></nys-textarea>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -172,9 +166,6 @@ By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;<
         {% highlight "html" %}
 <nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -213,9 +204,6 @@ You can include a description to provide additional context for the user. This i
 </nys-textarea>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -240,9 +228,6 @@ You can include a description to provide additional context for the user. This i
         {% highlight "html" %}
 <nys-textarea label="Disabled textarea" disabled></nys-textarea>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -271,9 +256,6 @@ You can include a description to provide additional context for the user. This i
 <nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -299,9 +281,6 @@ You can include a description to provide additional context for the user. This i
         {% highlight "html" %}
 <nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -329,9 +308,6 @@ To display an error message, pass in the <code class="language-js">showError</co
         {% highlight "html" %}
 <nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>

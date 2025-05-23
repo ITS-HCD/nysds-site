@@ -46,10 +46,10 @@ navOrder: 13
 </nys-toggle>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>    
   </div>
 </div>
 {% endblock %}
@@ -116,9 +116,6 @@ The <code class="language-js">nys-toggle</code> component includes the following
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -144,9 +141,6 @@ The <code class="language-js">nys-toggle</code> component includes the following
         {% highlight "html" %}
 <nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>

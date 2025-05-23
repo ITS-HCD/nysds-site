@@ -37,10 +37,10 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 <nys-unavfooter></nys-unavfooter>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>   
   </div>
 </div>
 {% endblock %}

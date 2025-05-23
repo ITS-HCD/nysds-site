@@ -48,9 +48,9 @@ The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reu
 </nys-globalfooter>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
     </div>
   </div>
 </div>
@@ -110,9 +110,6 @@ The <code class="language-js">nys-globalfooter</code> component includes the fol
 <nys-globalfooter agencyName="Office of Information Technology Services">
 </nys-globalfooter>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>

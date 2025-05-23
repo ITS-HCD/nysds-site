@@ -72,9 +72,9 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 <nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
     </div>
   </div>
 </div>
@@ -201,9 +201,6 @@ Use the <code class="language-js">text</code> prop for simple texts, or leverage
 </nys-alert>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -238,9 +235,6 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
 </nys-alert>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -269,9 +263,6 @@ Set the <code class="language-js">duration</code> property to automatically hide
         {% highlight "html" %}
 <nys-alert type="info" heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -311,9 +302,6 @@ Override the default theme icon by setting the <code class="language-js">icon</c
 </nys-alert>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -349,9 +337,6 @@ You may find having just a heading without description as a good compact version
     heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
   </nys-alert>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -425,25 +410,6 @@ You may find having just a heading without description as a good compact version
 
 
 {% endblock %}
-[[TODO]]
-<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
 

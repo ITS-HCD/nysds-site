@@ -36,9 +36,9 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 <nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)">
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
     </div>
   </div>
 </div>
@@ -226,9 +226,6 @@ To scale an icon relative to the inherited font size, pass a size variant like s
 <nys-icon name="upload_file" size="4xl"></nys-icon>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -267,9 +264,6 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 <nys-icon name="upload_file" size="64"></nys-icon>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -297,9 +291,6 @@ You can override the color of an icon by setting a <code class="language-js">col
         {% highlight "html" %}
 <nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -329,9 +320,6 @@ You can <code class="language-js">rotate</code> an icon by passing the angle as 
 <nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -359,9 +347,6 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
         {% highlight "html" %}
 <nys-icon flip="horizontal" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>

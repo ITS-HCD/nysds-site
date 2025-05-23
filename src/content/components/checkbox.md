@@ -61,9 +61,9 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 </nys-checkboxgroup>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
     </div>
   </div>
 </div>
@@ -135,9 +135,6 @@ The <code class="language-js">nys-checkboxgroup</code> component can be used to 
 </nys-checkboxgroup>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -163,9 +160,6 @@ The <code class="language-js">nys-checkboxgroup</code> component can be used to 
         {% highlight "html" %}
 <nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable."></nys-checkbox>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
@@ -213,9 +207,6 @@ Set the size property of the <code class="language-js">nys-checkboxgroup</code> 
 </nys-checkboxgroup>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -254,9 +245,6 @@ Errors can be assigned to both <code class="language-js">&lt;nys-checkboxgroup&g
 </nys-checkboxgroup>
         {% endhighlight %}
       </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-      </div>
     </div>
   </div>
 </div>
@@ -289,9 +277,6 @@ When the description requires more complexity than a simple string, use the desc
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>
         {% endhighlight %}
-      </div>
-      <div class="code-preview__code-tip">
-        <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
       </div>
     </div>
   </div>
