@@ -87,12 +87,25 @@ Typography is a core pillar of the New York State Design System, providing a con
 <li>Reference the provided <code class="css-1kwwth4">nysds-fonts.css</code> in the HTML head of your project:</li>
 </ol>
 
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
 {% highlight "html" %}
-
 <link rel="stylesheet" href="/assets/fonts/nysds-fonts.css">
-
-
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>NYSDS web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.</p>
 
@@ -100,12 +113,27 @@ Typography is a core pillar of the New York State Design System, providing a con
 
 <p>For better performance, preload critical fonts. This helps reduce the chance of a fallback font loading and then the web font loading later, causing layout reflow and a Flash of Unstyled Text (FOUT):</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
 {% highlight "html" %}
-
 <head>
   <link rel="preload" href="/assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>Find more details about preloading fonts and web font best practices in Google's <a href="https://fonts.google.com/knowledge/using_type/using_web_fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">Using Web Fonts guide</a>.</p>
 
@@ -121,15 +149,29 @@ Typography is a core pillar of the New York State Design System, providing a con
 
 <p>Apply them using <code>var()</code> in CSS or by using utility classes. Here are some examples:</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
 {% highlight "css" %}
-
 body {
   font-family: var(--nys-font-family-body);
   font-size: var(--nys-font-size-body-md);
   line-height: var(--nys-font-lineheight-body-md);
 }
-
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>Unfortunately, each property must be set individually, as CSS does not support setting multiple properties at once with <code>var()</code>.</p>
 <p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, NYSDS provides utility classes.</p>
@@ -139,6 +181,18 @@ body {
 <p>NYSDS also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
 <p>For example, NYSDS defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
 {% highlight "css" %}
 .nys-font-h1 {
   font: var(--nys-font-size-h1) / var(--nys-font-lineheight-h1) var(--nys-font-family-heading);
@@ -148,17 +202,36 @@ body {
   font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
 }
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>You can reference these classes in your HTML:</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy</div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
 {% highlight "html" %}
-
 <h1 class="nys-font-h1">Welcome to NYSDS</h1>
 <div class="nys-font-body">
   <p>This is a sample paragraph styled using NYSDS typography utilities.</p>
   <p>The parent element has the .nys-font-body class applied.</p>
 </div>
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Full List of Utility Classes
 

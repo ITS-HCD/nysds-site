@@ -18,15 +18,32 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-avatar label="User avatar"></nys-avatar>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-avatar label="User avatar"></nys-avatar>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-avatar
-  label="User avatar"
-></nys-avatar>
+        {% endhighlight %}
+      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block usage %}
@@ -75,31 +92,58 @@ The <code class="language-js">nys-</code> component includes the following acces
 ### Images
 <p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
-
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ### Initials
 
 <p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
 
-<nys-avatar label="User avatar" initials="NY"></nys-avatar>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-avatar label="User avatar" initials="NY"></nys-avatar>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-avatar label="User avatar" initials="NY"></nys-avatar>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -107,58 +151,100 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 <p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-avatar label="User avatar"></nys-avatar>
+    <nys-avatar label="Youtube avatar" color="#f2efee">
+      <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
+    </nys-avatar>
+    <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-avatar label="User avatar"></nys-avatar>
+
 <nys-avatar label="Youtube avatar" color="#f2efee">
   <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
-<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar"></nys-avatar>
-
-<nys-avatar label="Youtube avatar" color="#f2efee">
-  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
-</nys-avatar>
 
 <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 
 ### Shapes
 
 <p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-avatar label="User avatar" shape="circle"></nys-avatar>
+    <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
+    <nys-avatar label="User avatar" shape="square"></nys-avatar>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-avatar label="User avatar" shape="circle"></nys-avatar>
 <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
 <nys-avatar label="User avatar" shape="square"></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" shape="circle"></nys-avatar>
-<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
-<nys-avatar label="User avatar" shape="square"></nys-avatar>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Background Color
 
 You can change the background color of an Avatar. Note that images will naturally cover over the background color.
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
+  </div>
+  
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
-```
-
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 </details>
 
 
@@ -230,25 +316,6 @@ You can change the background color of an Avatar. Note that images will naturall
 
 
 {% endblock %}
-[[TODO]]
-<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
 

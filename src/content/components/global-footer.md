@@ -18,23 +18,44 @@ The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reu
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-globalfooter agencyName="Office of Information Technology Services">
+    <ul>
+        <li><a href="https://its.ny.gov">ITS Home</a></li>
+        <li><a href="https://its.ny.gov/about">About ITS</a></li>
+      </ul>
+    </nys-globalfooter>
+  </div>
 
+  <div class="code-preview__source">
+  <div class="code-preview__buttons">
+    <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+      <p>Example Code</p>
+    </button>
+    <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+    <div class="copy-tooltip">Copy Code</div>
+  </div>
+  <div class="code-preview__code-container">
+    <div class="code-preview__code-block">
+      {% highlight "html" %}
 <nys-globalfooter agencyName="Office of Information Technology Services">
- <ul>
+  <ul>
     <li><a href="https://its.ny.gov">ITS Home</a></li>
     <li><a href="https://its.ny.gov/about">About ITS</a></li>
   </ul>
 </nys-globalfooter>
+        {% endhighlight %}
+      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
-
-{% block examplecode %}
-
-<nys-globalfooter agencyName="Office of Information Technology Services">
- <ul>
-    <li><a href="https://its.ny.gov">ITS Home</a></li>
-    <li><a href="https://its.ny.gov/about">About ITS</a></li>
-  </ul>
-</nys-globalfooter>{% endblock %}
 
 {% block usage %}
 
@@ -68,19 +89,32 @@ The <code class="language-js">nys-globalfooter</code> component includes the fol
 {% block options %}
 
 ### Without Links
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-globalfooter agencyName="Office of Information Technology Services">
+    </nys-globalfooter>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-globalfooter agencyName="Office of Information Technology Services">
 </nys-globalfooter>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
-<details>
-  <summary>Code</summary>
-
-```html
-<nys-globalfooter agencyName="Office of Information Technology Services">
-</nys-globalfooter>
-```
-
-</details>
 
 
 {% endblock %}

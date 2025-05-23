@@ -16,13 +16,32 @@ A button is used for actions that have an immediate result inside an application
 {% endblock %}
 
 {% block example %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-button label="Button"></nys-button>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button label="Button"></nys-button>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-button label="Button"></nys-button>
+        {% endhighlight %}
+      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block usage %}
@@ -83,38 +102,52 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 <li><code>md</code>: The default size. Set to 48px in height.</li>
 <li><code>lg</code>: Set to 56px in height.</li>
 </ul>
-Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.
+<p>Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.</p>
 
-<div class="nys-grid-row">
-<div class="nys-grid-col">
-<nys-button id="button1" name="button1" label="Small" size="sm"></nys-button>
-</div>
-<div class="nys-grid-col">
-<nys-button id="button2" name="button2" label="Medium"></nys-button>
-</div>
-<div class="nys-grid-col">
-<nys-button id="button3" name="button3" label="Large" size="lg"></nys-button>
-</div>
-</div>
-<br>
-<nys-button id="button4" name="button4" label="Small Full" size="sm" fullWidth></nys-button>
-<br>
-<nys-button id="button5" name="button5" label="Medium Full" fullWidth></nys-button>
-<br>
-<nys-button id="button6" name="button6" label="Large Full" size="lg" fullWidth></nys-button>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <div class="nys-grid-row">
+    <div class="nys-grid-col">
+    <nys-button id="button1" name="button1" label="Small" size="sm"></nys-button>
+    </div>
+    <div class="nys-grid-col">
+    <nys-button id="button2" name="button2" label="Medium"></nys-button>
+    </div>
+    <div class="nys-grid-col">
+    <nys-button id="button3" name="button3" label="Large" size="lg"></nys-button>
+    </div>
+    </div>
+    <br>
+    <nys-button id="button4" name="button4" label="Small Full" size="sm" fullWidth></nys-button>
+    <br>
+    <nys-button id="button5" name="button5" label="Medium Full" fullWidth></nys-button>
+    <br>
+    <nys-button id="button6" name="button6" label="Large Full" size="lg" fullWidth></nys-button>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button size="sm" id="button1" name="button1" label="Small"></nys-button>
 <nys-button id="button2" name="button2" label="Medium"></nys-button>
 <nys-button size="lg" id="button3" name="button3" label="Large"></nys-button>
 <nys-button fullWidth size="sm" id="button4" name="button4" label="Small Full"></nys-button>
 <nys-button fullWidth id="button5" name="button5" label="Medium Full"></nys-button>
 <nys-button fullWidth size="lg" id="button6" name="button6" label="Large Full"></nys-button>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Button Type
 
@@ -133,101 +166,172 @@ Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> 
  - `ghost`: Use for uncommon actions.
  - `text`: Use for inline actions.
 
-<div class="nys-grid-row">
-<div class="nys-grid-col">
-<nys-button  id="button1" name="button1" label="Filled"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
-</div></div>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <div class="nys-grid-row">
+    <div class="nys-grid-col">
+    <nys-button  id="button1" name="button1" label="Filled"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
+    </div></div>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button  id="button1" name="button1" label="Filled"></nys-button>
 <nys-button  id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button  id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button  id="button4" name="button4" label="Text" variant="text"></nys-button>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Icons
 Set the <code class="language-js">prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.
 
 Set the <code class="language-js">suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.
 
-<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
+  </div>
 
-<details>
-<summary>Example Code</summary>
-
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Disabled
-<div class="nys-grid-row">
-<div class="nys-grid-col">
-<nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
-</div></div>
-<details>
-<summary>Example Code</summary>
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <div class="nys-grid-row">
+    <div class="nys-grid-col">
+    <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
+    </div></div>
+  </div>
 
-```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
 <nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Link
 Set the <code class="language-js">href</code> prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.
 
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
+  </div>
 
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"  ></nys-button>
-```
-</details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Inverted
 Set the <code class="language-js">inverted</code> when the button is on a dark background.
-<div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
-<div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
-</div><div class="nys-grid-col">
-<nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
-</div></div>
-<details>
-<summary>Example Code</summary>
 
-```html
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
+    <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
+    </div><div class="nys-grid-col">
+    <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
+    </div></div>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 <nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
-```
-</details>
-
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
@@ -334,6 +438,19 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 </ol>
 
 You can listen to these events using JavaScript:
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+
 {% highlight "js" %}
 // Select the button component
   const button = document.querySelector('nys-button');
@@ -343,6 +460,11 @@ You can listen to these events using JavaScript:
     console.log('Button Clicked');
   });
 {% endhighlight %}
+
+  </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block updates %}{% endblock %}

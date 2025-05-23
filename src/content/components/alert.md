@@ -19,21 +19,33 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
 {% block example %}
 
-<nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<br>
-<nys-alert type="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<br>
-<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<br>
-<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<br>
-<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<br>
-<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-{% endblock %}
+<div class="code-preview-container">
+  <div class="code-preview__preview">
+    <nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+    <br>
+    <nys-alert type="info" heading="Info status" text="This is an example of an info alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+    <br>
+    <nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+    <br>
+    <nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+    <br>
+    <nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+    <br>
+    <nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+  </div>
 
-{% block examplecode %}
-
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
 <nys-alert
   type="base"
   heading="Default status"
@@ -58,7 +70,16 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 <nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
 <nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+        {% endhighlight %}
+      </div>
+    </div>
+    <div class="code-preview__code-tip">
+      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
+
 
 {% block usage %}
 
@@ -155,23 +176,33 @@ Add descriptive content to your alert using the <code class="language-js">text</
 Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
 
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview__preview">
     <nys-alert type="success" heading="Custom Descriptions">
       <p>This is a custom alert with <strong>HTML content</strong>.</p>
       <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
     </nys-alert>
   </div>
   
-  <details>
-  <summary>Example Code</summary>
-  
-  ```html
-  <nys-alert type="success" heading="Custom Descriptions">
-    <p>This is a custom alert with <strong>HTML content</strong>.</p>
-    <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
-  </nys-alert>
-  ```
-  </details>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
+<nys-alert type="success" heading="Custom Descriptions">
+  <p>This is a custom alert with <strong>HTML content</strong>.</p>
+  <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+</nys-alert>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
 </div>
 
 ### Dismissible
@@ -181,21 +212,31 @@ Use the <code class="language-js">dismissible</code> property to make the alert 
 The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview__preview">
     <nys-alert type="info" heading="Information status" dismissible>
       <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
     </nys-alert>
   </div>
   
-  <details>
-  <summary>Example Code</summary>
-  
-  ```html
-  <nys-alert type="info" heading="Information status" dismissible>
-    <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
-  </nys-alert>
-  ```
-  </details>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
+<nys-alert type="info" heading="Information status" dismissible>
+  <p slot="text">Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+</nys-alert>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
 </div>
 
 ### Duration
@@ -203,18 +244,28 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
 Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
 <div class="code-preview-container">
-  <div class="code-preview" style="display: flex; flex-direction: column; gap: 10px">
+  <div class="code-preview__preview" style="display: flex; flex-direction: column; gap: 10px">
     <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
     <div class="alert-container"></div> 
   </div>
 
-  <details>
-  <summary>Example Code</summary>
-  
-  ```html
-  <nys-alert heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
-  ```
-  </details>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
+<nys-alert type="info" heading="Duration 3sec" duration="3000" text="Auto-dismiss after 3 seconds"></nys-alert>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
 </div>
 
 ### Icon Customization
@@ -222,7 +273,7 @@ Set the <code class="language-js">duration</code> property to automatically hide
 Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.
 
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview__preview">
     <nys-alert
       type="emergency"
       heading="Winter storm warning: Dec 10th, 2024."
@@ -231,18 +282,28 @@ Override the default theme icon by setting the <code class="language-js">icon</c
     </nys-alert>
   </div>
   
-  <details>
-  <summary>Example Code</summary>
-  
-  ```html
-  <nys-alert
-    type="emergency"
-    heading="Winter storm warning: Dec 10th, 2024."
-    text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
-    icon="ac_unit">
-  </nys-alert>
-  ```
-  </details>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
+<nys-alert
+  type="emergency"
+  heading="Winter storm warning: Dec 10th, 2024."
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+  icon="ac_unit">
+</nys-alert>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -252,23 +313,33 @@ Override the default theme icon by setting the <code class="language-js">icon</c
 You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
 
 <div class="code-preview-container">
-  <div class="code-preview">
+  <div class="code-preview__preview">
     <nys-alert
       type="info"
       heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
     </nys-alert>
   </div>
   
-  <details>
-  <summary>Example Code</summary>
-  
-  ```html
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container">
+      <div class="code-preview__code-block">
+        {% highlight "html" %}
   <nys-alert
     type="info"
     heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
   </nys-alert>
-  ```
-  </details>
+        {% endhighlight %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
@@ -339,25 +410,6 @@ You may find having just a heading without description as a good compact version
 
 
 {% endblock %}
-[[TODO]]
-<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
 
