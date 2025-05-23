@@ -97,7 +97,7 @@ Typography is a core pillar of the New York State Design System, providing a con
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "html" %}
 <link rel="stylesheet" href="/assets/fonts/nysds-fonts.css">
@@ -123,7 +123,7 @@ Typography is a core pillar of the New York State Design System, providing a con
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "html" %}
 <head>
@@ -159,7 +159,7 @@ Typography is a core pillar of the New York State Design System, providing a con
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "css" %}
 body {
@@ -191,7 +191,7 @@ body {
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "css" %}
 .nys-font-h1 {
@@ -219,7 +219,7 @@ body {
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "html" %}
 <h1 class="nys-font-h1">Welcome to NYSDS</h1>

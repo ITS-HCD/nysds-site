@@ -256,7 +256,7 @@ You can listen to these events using JavaScript:
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 
 {% highlight "js" %}

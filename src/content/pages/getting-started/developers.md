@@ -21,7 +21,7 @@ To start using NYSDS in your project, you need to install the core libraries:
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "html" %}
 npm install @nysds/components @nysds/styles
@@ -44,7 +44,7 @@ Once the packages are installed, you need to reference the required files in you
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "html" %}
 <script type="module" src="[path-to-dir]/nysds.js"></script>
@@ -68,7 +68,7 @@ If you prefer to store the assets within your project directory instead of refer
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
-    <div class="code-preview__code-container open">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
 {% highlight "html" %}
 mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor

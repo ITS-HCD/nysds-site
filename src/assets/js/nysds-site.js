@@ -23,8 +23,8 @@ const showSourceCode = (clickedDropdown) => {
     const codeBlock = container.querySelector(".code-preview__code-container");
     if (!codeBlock) return;
 
-    // Toggle the open class
-    const isOpen = codeBlock.classList.toggle("open");
+    // Toggle the expanded class
+    const isOpen = codeBlock.classList.toggle("expanded");
 
     // Update chevron icon
     const chevronIcon = container.querySelector(".code-preview__dropdown-icon");

@@ -820,7 +820,7 @@ opacity: 1;
 .code-preview__code-container{
     display: none;
 }
-.code-preview__code-container.open {
+.code-preview__code-container.expanded {
     display: block;
 }
 .code-preview__code-block{
