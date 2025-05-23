@@ -90,10 +90,10 @@ Typography is a core pillar of the New York State Design System, providing a con
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
@@ -116,10 +116,10 @@ Typography is a core pillar of the New York State Design System, providing a con
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
@@ -152,10 +152,10 @@ Typography is a core pillar of the New York State Design System, providing a con
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
@@ -184,10 +184,10 @@ body {
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>
@@ -212,10 +212,10 @@ body {
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy</div>
     </div>

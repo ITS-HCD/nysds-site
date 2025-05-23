@@ -781,6 +781,12 @@ opacity: 1;
     justify-content: flex-start;
     align-items: center;
     color: var(--nys-color-text, #1B1B1B);
+    border: var(--border-width-md, 2px) solid var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
+    background: var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
+}
+.code-preview__buttons .code-preview__dropdown:focus-visible {
+    outline-offset: var(--nys-space-2px, 2px);
+    outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
 }
 .code-preview__buttons .code-preview__dropdown:hover {
     background: var(--nys-color-black-transparent-100, #0000001a);

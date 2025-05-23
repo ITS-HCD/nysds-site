@@ -23,11 +23,15 @@ const showSourceCode = (clickedDropdown) => {
     const codeBlock = container.querySelector(".code-preview__code-container");
     if (!codeBlock) return;
 
-    // Toggle visibility & icon change
+    // Toggle the open class
+    const isOpen = codeBlock.classList.toggle("open");
+
+    // Update chevron icon
     const chevronIcon = container.querySelector(".code-preview__dropdown-icon");
-    codeBlock.classList.toggle("open");
-    chevronIcon.setAttribute("name", codeBlock.classList.contains("open") ? "chevron_down" : "chevron_right");
-  
+    chevronIcon.setAttribute("name", isOpen ? "chevron_down" : "chevron_right");
+
+    // Update ARIA attributes for accessibility
+    clickedDropdown.setAttribute("aria-expanded", isOpen.toString());
 };
 
 // Trigger copy code to clipboard and show tooltip

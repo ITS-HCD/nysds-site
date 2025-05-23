@@ -28,10 +28,10 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -123,10 +123,10 @@ The <code class="language-js">nys-radiobutton</code> component includes the foll
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -164,10 +164,10 @@ Set the <code class="language-js">size</code> prop of the <code class="language-
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -201,10 +201,10 @@ To display an error message, pass in the <code class="language-js">showError</co
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -244,10 +244,10 @@ Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="l
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -357,10 +357,10 @@ You can listen to these events using JavaScript:
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Sample Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>

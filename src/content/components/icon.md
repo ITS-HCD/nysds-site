@@ -23,10 +23,10 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -211,10 +211,10 @@ To scale an icon relative to the inherited font size, pass a size variant like s
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -252,10 +252,10 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -285,10 +285,10 @@ You can override the color of an icon by setting a <code class="language-js">col
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -316,10 +316,10 @@ You can <code class="language-js">rotate</code> an icon by passing the angle as 
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -347,10 +347,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>

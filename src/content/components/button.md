@@ -23,10 +23,10 @@ A button is used for actions that have an immediate result inside an application
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -127,10 +127,10 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -185,10 +185,10 @@ Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> 
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -220,10 +220,10 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -257,10 +257,10 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -290,10 +290,10 @@ Set the <code class="language-js">href</code> prop when using the button to navi
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -328,10 +328,10 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -459,10 +459,10 @@ You can listen to these events using JavaScript:
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
         <p>Sample Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>

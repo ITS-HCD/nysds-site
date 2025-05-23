@@ -36,10 +36,10 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -185,10 +185,10 @@ Use the <code class="language-js">text</code> prop for simple texts, or leverage
   
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -223,10 +223,10 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
   
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -257,10 +257,10 @@ Set the <code class="language-js">duration</code> property to automatically hide
 
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -293,10 +293,10 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
@@ -334,10 +334,10 @@ You may find having just a heading without description as a good compact version
   
   <div class="code-preview__source">
     <div class="code-preview__buttons">
-      <div class="code-preview__dropdown" onClick="showSourceCode(this)">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
-      </div>
+      </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
