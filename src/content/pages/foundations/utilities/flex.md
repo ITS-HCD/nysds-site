@@ -340,7 +340,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-flex-fill"></div>
   ...
 </div>{% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 ## Flex-direction
@@ -401,7 +400,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col"></div>
 </div>
 {% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 ## Flex-wrap
@@ -468,7 +466,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
 </div>{% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 ## Flex-align
@@ -683,7 +680,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
   <div class="example"></div>
 </div>{% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 ## Flex-align-self
@@ -739,7 +735,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-flex-align-self-end"></div>
   <div class="nys-flex-align-self-stretch"></div>
 </div>{% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 ## Flex-justify
@@ -874,7 +869,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
   <div class="example"></div>
 </div>{% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 ## Order
@@ -989,7 +983,6 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-last"></div>
   <div class="nys-grid-col nys-order-first"></div>
 </div>{% endset %}
-{% set accordionLabel = "Code" %}
 {% include "partials/code-preview.njk" %}
 
 {% block styles %}
