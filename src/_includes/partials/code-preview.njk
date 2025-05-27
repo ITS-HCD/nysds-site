@@ -15,7 +15,9 @@
     </div>
     <div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
       <div class="code-preview__code-block">
-        {% set lang = codeLanguage or "html" %}{% highlight lang -%}{{ code | safe }}{%- endhighlight %}
+        {% set lang = codeLanguage or "html" %}{% highlight lang %}
+        {{ code | safe }}
+        {% endhighlight %}
       </div>
     </div>
 {% if showTip %}
