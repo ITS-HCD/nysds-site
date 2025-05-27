@@ -24,7 +24,7 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -79,7 +79,7 @@ The <code class="language-js">nys-radiobutton</code> component includes the foll
   <nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Size
 Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-radiogroup&gt;</code> to have all <code class="language-js">&lt;nys-radiobutton&gt;</code> be the same size. Our current sizes are:
@@ -93,7 +93,7 @@ Set the <code class="language-js">size</code> prop of the <code class="language-
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error
 To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-radiogroup&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to <strong>true</strong>.
@@ -102,7 +102,7 @@ To display an error message, pass in the <code class="language-js">showError</co
   <nys-radiobutton   name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton> <nys-radiobutton   name="office"   label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Slotted Description
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
@@ -119,7 +119,7 @@ Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="l
   </nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

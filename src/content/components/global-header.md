@@ -22,7 +22,7 @@ The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reu
 </nys-globalheader>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -74,19 +74,19 @@ Use the prop <code class="language-js">homepageLink</code> to link your <code cl
   </ul>
 </nys-globalheader>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Just Agency Name
   {% set preview %}<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Just Application Name
   {% set preview %}<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

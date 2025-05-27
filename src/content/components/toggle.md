@@ -24,7 +24,7 @@ navOrder: 13
 </nys-toggle>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -71,12 +71,12 @@ The <code class="language-js">nys-toggle</code> component includes the following
   {% set code %}
   <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disable Icon
   {% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

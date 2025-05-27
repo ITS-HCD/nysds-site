@@ -19,7 +19,7 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
   {% set preview %}<nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)"></nys-icon>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -184,7 +184,7 @@ To scale an icon relative to the inherited font size, pass a size variant like s
 <nys-icon name="upload_file" size="lg"></nys-icon>
 <nys-icon name="upload_file" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 #### Literal Sizing
 For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.
@@ -200,7 +200,7 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 <nys-icon name="upload_file" size="32"></nys-icon>
 <nys-icon name="upload_file" size="64"></nys-icon>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Color
 
@@ -208,21 +208,21 @@ You can override the color of an icon by setting a <code class="language-js">col
 
   {% set preview %}<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Rotate
 You can <code class="language-js">rotate</code> an icon by passing the angle as a number, like rotate="20" (without "deg").
 
   {% set preview %}<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Flip
 Set an icon to flip horizontally, vertically, or in both directions by using the <code class="language-js">flip</code> property. Available values are `horizontal`, `vertical`, and `both`.
 
   {% set preview %}<nys-icon flip="horizontal" label="upload_file icon" name="check_circle" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

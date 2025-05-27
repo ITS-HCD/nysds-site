@@ -22,7 +22,7 @@ The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web co
   {% set preview %}<nys-unavheader></nys-unavheader>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -64,14 +64,14 @@ The <code class="language-js">nys-unavheader</code> component includes the follo
     <nys-unavheader hideSearch></nys-unavheader>
   {% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Translate toggle
   {% set preview %}
     <nys-unavheader hideTranslate></nys-unavheader>
   {% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

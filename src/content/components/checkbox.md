@@ -29,7 +29,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
     </nys-checkboxgroup>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -77,13 +77,13 @@ The <code class="language-js">nys-checkboxgroup</code> component can be used to 
   <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
   {% set preview %}<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Size
 
@@ -102,7 +102,7 @@ Set the size property of the <code class="language-js">nys-checkboxgroup</code> 
   <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error
 
@@ -116,7 +116,7 @@ Errors can be assigned to both <code class="language-js">&lt;nys-checkboxgroup&g
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Slotted Description
 
@@ -126,7 +126,7 @@ When the description requires more complexity than a simple string, use the desc
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

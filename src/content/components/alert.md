@@ -69,7 +69,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 <nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
   {% endset %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -172,7 +172,7 @@ Use the <code class="language-js">text</code> prop for simple texts, or leverage
   <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
 </nys-alert>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Dismissible
 
@@ -185,7 +185,7 @@ The <code class="language-js">nys-alert-closed</code> custom event is dispatched
   Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
 </nys-alert>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Duration
 
@@ -201,7 +201,7 @@ Set the <code class="language-js">duration</code> property to automatically hide
   text="Auto-dismiss after 3 seconds">
 </nys-alert>
   {% endset %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Icon Customization
 
@@ -214,7 +214,7 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   icon="ac_unit">
 </nys-alert>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
        
 
 ### Heading only
@@ -226,7 +226,7 @@ You may find having just a heading without description as a good compact version
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block properties %}

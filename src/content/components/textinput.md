@@ -20,7 +20,7 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web com
   {% set preview %}<nys-textinput label="This is a text input"></nys-textinput>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -68,7 +68,7 @@ If an invalid option is assigned to <code class="language-js">width</code>, it w
 
   {% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Type
 Accepted <code class="language-js">types</code> are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
@@ -78,23 +78,23 @@ Any other input defaults to <code class="language-js">type="text"</code>
   {% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
 {% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Placeholder
   {% set preview %}<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled
   {% set preview %}<nys-textinput label="Disabled" disabled></nys-textinput>
 {% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Readonly
   {% set preview %}<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Min Max and step
 
@@ -102,25 +102,25 @@ Any other input defaults to <code class="language-js">type="text"</code>
 
   {% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Maxlength
   {% set preview %}<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Pattern
 Takes any valid regex value.
   {% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error Message
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
 
   {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

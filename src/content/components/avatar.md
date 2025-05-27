@@ -21,7 +21,7 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
   {% set preview %}<nys-avatar label="User avatar"></nys-avatar>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -72,7 +72,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 
   {% set preview %}<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Initials
 
@@ -80,7 +80,7 @@ The <code class="language-js">nys-</code> component includes the following acces
 
   {% set preview %}<nys-avatar label="User avatar" initials="NY"></nys-avatar>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Custom Icons
 
@@ -92,7 +92,7 @@ The <code class="language-js">nys-</code> component includes the following acces
     </nys-avatar>
     <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Shapes
 
@@ -102,7 +102,7 @@ The <code class="language-js">nys-</code> component includes the following acces
     <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
     <nys-avatar label="User avatar" shape="square"></nys-avatar></nys-avatar>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Background Color
 
@@ -110,7 +110,7 @@ You can change the background color of an Avatar. Note that images will naturall
 
   {% set preview %}<nys-avatar label="User avatar" color="purple"></nys-avatar>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

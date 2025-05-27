@@ -25,7 +25,7 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 </nys-select>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -69,7 +69,7 @@ The <code class="language-js">nys-select</code> component includes the following
   <nys-option value="queens" label="Queens"></nys-option>      
 </nys-select>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Width
 The following <code class="language-js">width</code> options are available:
@@ -86,7 +86,7 @@ The following <code class="language-js">width</code> options are available:
   <nys-option value="full" label="full"></nys-option>
     </nys-select>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error Message
 To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-select&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
@@ -99,7 +99,7 @@ To display an error message, pass in the <code class="language-js">showError</co
   <nys-option value="queens" label="Queens"></nys-option>  
     </nys-select>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

@@ -19,7 +19,7 @@ A button is used for actions that have an immediate result inside an application
   {% set preview %}<nys-button label="Button"></nys-button>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -98,7 +98,7 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 <nys-button fullWidth size="md" id="button5" name="button5" label="Medium Full"></nys-button>
 <nys-button fullWidth size="lg" id="button6" name="button6" label="Large Full"></nys-button>
 {% endset %}
-{% include "partials/component-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Button Type
 
@@ -129,7 +129,7 @@ Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> 
 <nys-button id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button id="button4" name="button4" label="Text" variant="text"></nys-button>
 {% endset %}
-{% include "partials/component-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Icons
 Set the <code class="language-js">prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.
@@ -138,7 +138,7 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 
   {% set preview %}<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"><nys-button>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled
 {% set preview %}<div class="nys-grid-row">
@@ -153,7 +153,7 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 <nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button>
 {% endset %}
-{% include "partials/component-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Link
 Set the <code class="language-js">href</code> prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
@@ -166,7 +166,7 @@ Set the <code class="language-js">target</code> prop of the **`nys-button`** to 
 
 {% set preview %}<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
 {% set code = preview %}
-{% include "partials/component-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Inverted
 Set the <code class="language-js">inverted</code> when the button is on a dark background.
@@ -184,7 +184,7 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
 {% endset %}
 {% set previewInverted = true %}
-{% include "partials/component-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

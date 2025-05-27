@@ -20,7 +20,7 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
   {% set preview %}<nys-unavfooter></nys-unavfooter>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}

@@ -26,7 +26,7 @@ The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reu
 </nys-globalfooter>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -64,7 +64,7 @@ The <code class="language-js">nys-globalfooter</code> component includes the fol
   {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services">
 </nys-globalfooter>{% endset %}
   {% set code = preview %}
-  {% include "partials/component-preview.njk" %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
