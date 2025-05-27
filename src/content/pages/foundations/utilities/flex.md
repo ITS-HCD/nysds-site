@@ -286,21 +286,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-  <div class="nys-grid-row">
+{% set code %}<div class="nys-grid-row">
   <div class="nys-grid-col nys-flex-1"></div>
   <div class="nys-grid-col nys-flex-1"></div>
   <div class="nys-grid-col nys-flex-1"></div>
@@ -359,13 +345,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 <div class="nys-grid-row">
   <div class="nys-grid-col nys-flex-fill"></div>
   ...
-</div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
+</div>{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 ## Flex-direction
 
@@ -416,21 +398,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-<div class="nys-grid-row nys-flex-column">
+{% set code %}<div class="nys-grid-row nys-flex-column">
   <div class="nys-grid-col"></div>
   <div class="nys-grid-col"></div>
   <div class="nys-grid-col"></div>
@@ -442,12 +410,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col"></div>
   <div class="nys-grid-col"></div>
 </div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
+{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 ## Flex-wrap
 
@@ -506,21 +471,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-<div class="nys-grid-row nys-flex-wrap">
+{% set code %}<div class="nys-grid-row nys-flex-wrap">
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
@@ -531,14 +482,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
   <div class="nys-grid-col-4"></div>
-</div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
-
+</div>{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 ## Flex-align
 
@@ -709,82 +655,56 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-<div class="nys-display-flex nys-flex-column nys-flex-align-start">
+{% set code %}<div class="nys-display-flex nys-flex-column nys-flex-align-start">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-column nys-flex-align-center">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-column nys-flex-align-end">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-column nys-flex-align-stretch">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-align-start">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-align-center">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-align-end">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-align-stretch">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
-</div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
-
+</div>{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 ## Flex-align-self
 
@@ -831,39 +751,20 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-<div class="nys-display-flex nys-flex-column">
+{% set code %}<div class="nys-display-flex nys-flex-column">
   <div class="nys-flex-align-self-start"></div>
   <div class="nys-flex-align-self-center"></div>
   <div class="nys-flex-align-self-end"></div>
   <div class="nys-flex-align-self-stretch"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row">
   <div class="nys-flex-align-self-start"></div>
   <div class="nys-flex-align-self-center"></div>
   <div class="nys-flex-align-self-end"></div>
   <div class="nys-flex-align-self-stretch"></div>
-</div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
+</div>{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 ## Flex-justify
 
@@ -953,81 +854,56 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-<div class="nys-display-flex nys-flex-column nys-flex-justify">
+{% set code %}<div class="nys-display-flex nys-flex-column nys-flex-justify">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-column nys-flex-justify-start">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-column nys-flex-justify-center">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-column nys-flex-justify-end">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-justify">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-justify-start">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-justify-center">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
 </div>
-
 <div class="nys-display-flex nys-flex-row nys-flex-justify-end">
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
   <div class="example"></div>
-</div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
+</div>{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 ## Order
 
@@ -1128,21 +1004,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </section>
   </section>
 
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-
-{% highlight "html" %}
-<div class="nys-grid-row">
+{% set code %}<div class="nys-grid-row">
   <div class="nys-grid-col nys-order-11"></div>
   <div class="nys-grid-col nys-order-10"></div>
   <div class="nys-grid-col nys-order-9"></div>
@@ -1158,15 +1020,9 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-initial"></div>
   <div class="nys-grid-col nys-order-last"></div>
   <div class="nys-grid-col nys-order-first"></div>
-</div>
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
-
-
+</div>{% endset %}
+{% set accordionLabel = "Code" %}
+{% include "partials/code-preview.njk" %}
 
 {% block styles %}
 <link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
