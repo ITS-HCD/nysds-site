@@ -37,7 +37,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -55,7 +55,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
   </div>
 </div>
 
-<p>This example code creates three equal-width columns on tablet, desktop, and widescreen devices by using our predefined grid classes. Those columns are centered in the page with the parent <code>nys-grid-container</code> container.</p>
+<p>This Example Code Emily creates three equal-width columns on tablet, desktop, and widescreen devices by using our predefined grid classes. Those columns are centered in the page with the parent <code>nys-grid-container</code> container.</p>
 <p>The following sections break the layout grid down and describe how it works.</p>
 <h3 id="containers-rows-and-columns"><a id="containers-rows-and-columns-2" ></a>Containers, rows, and columns</h3>
   <p><strong>Containers:</strong> <code>nys-grid-container</code> centers the container and gives it a maximum width of <code>nys-desktop</code> (1024px). If you would like the grid to span the full width of the page, do not use <code>nys-grid-container</code>.</p>
@@ -101,7 +101,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -193,7 +193,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -246,7 +246,7 @@ The grid system uses a series of containers, rows, and columns to lay out and al
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -347,7 +347,7 @@ Columns are always 50% wide, on mobile and desktop
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -438,7 +438,7 @@ Columns are always 50% wide, on mobile and desktop
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -515,7 +515,7 @@ Columns are always 50% wide, on mobile and desktop
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -601,7 +601,7 @@ Columns are always 50% wide, on mobile and desktop
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -699,7 +699,7 @@ Columns are always 50% wide, on mobile and desktop
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">

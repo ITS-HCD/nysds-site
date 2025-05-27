@@ -294,7 +294,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -424,7 +424,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -514,7 +514,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -717,7 +717,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -839,7 +839,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -961,7 +961,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
@@ -1136,7 +1136,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         <p>Code</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container">
       <div class="code-preview__code-block">
