@@ -19,7 +19,7 @@ To start using NYSDS in your project, you need to install the core libraries:
         <p>CLI Command</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
@@ -42,7 +42,7 @@ Once the packages are installed, you need to reference the required files in you
         <p>CLI Command</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
@@ -66,7 +66,7 @@ If you prefer to store the assets within your project directory instead of refer
         <p>CLI Command</p>
       </button>
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy</div>
+      <div class="copy-tooltip">Copy Code</div>
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
