@@ -171,7 +171,7 @@ Set the <code class="language-js">target</code> prop of the **`nys-button`** to 
 ### Inverted
 Set the <code class="language-js">inverted</code> when the button is on a dark background.
 
-{% set preview %}<div class="nys-grid-row" style="background-color:var(--nys-color-theme-stronger); padding: var(--nys-space-100);">
+{% set preview %}<div class="nys-grid-row">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
 <div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
 <div class="nys-grid-col"><nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
@@ -183,6 +183,7 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
 {% endset %}
+{% set previewInverted = true %}
 {% include "partials/component-preview.njk" %}
 
 {% endblock %}
