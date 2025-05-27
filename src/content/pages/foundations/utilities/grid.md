@@ -370,7 +370,7 @@ Columns are always 50% wide, on mobile and desktop
 <h3 id="default-gutter"><a id="default-gutter-2"></a>Default gutter</h3>
 <p>Add <code>nys-grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
 
-<div class="nys-grid-row border-left">
+{% set preview%}<div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -409,51 +409,30 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 <div class="docs-grid-example margin-top-2">
-
-
-<div class="nys-grid-row nys-grid-gap">
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-</div>
-
-</div>
-
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-grid-col-4">
+      <div>.nys-grid-col-4</div>
     </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-{% highlight "html" %}
-<div class="nys-grid-row nys-grid-gap">
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-</div>
-{% endhighlight %}
-      </div>
+    <div class="nys-grid-col-4">
+      <div>.nys-grid-col-4</div>
+    </div>
+    <div class="nys-grid-col-4">
+      <div>.nys-grid-col-4</div>
     </div>
   </div>
-</div>
+</div>{% endset%}
+{% set code%}<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+</div>{% endset %}
+{% include "partials/code-preview.njk" %}
 
 
 <h3><a id="large-gutter"></a>Large gutter</h3>
@@ -468,7 +447,7 @@ Columns are always 50% wide, on mobile and desktop
   <li><code>nys-grid-gap-5</code></li>
   <li><code>nys-grid-gap-6</code></li>
 </ul>
-<div class="nys-grid-row border-left">
+{% set preview %}<div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -507,51 +486,31 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 <div class="docs-grid-example">
-
-
-<div class="nys-grid-row nys-grid-gap-lg">
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-</div>
-
-</div>
-
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
+  <div class="nys-grid-row nys-grid-gap-lg">
+    <div class="nys-grid-col-4">
+      <div>.nys-grid-col-4</div>
     </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-{% highlight "html" %}
-<div class="nys-grid-row nys-grid-gap-lg">
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-  <div class="nys-grid-col-4">
-    <div>.nys-grid-col-4</div>
-  </div>
-</div>
-{% endhighlight %}
-      </div>
+    <div class="nys-grid-col-4">
+      <div>.nys-grid-col-4</div>
+    </div>
+    <div class="nys-grid-col-4">
+      <div>.nys-grid-col-4</div>
     </div>
   </div>
+</div>{% endset %}
+{% set code %}<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
+  <div class="nys-grid-col-4">
+    <div>.nys-grid-col-4</div>
+  </div>
 </div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
 
 </section>
 {% endblock %}
