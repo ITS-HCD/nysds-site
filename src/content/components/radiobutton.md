@@ -202,33 +202,16 @@ Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="l
 </ol>
 
 You can listen to these events using JavaScript:
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Sample Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container expanded">
-      <div class="code-preview__code-block">
-
-{% highlight "js" %}
-// Select the radiobutton component
-  const radiobutton = document.querySelector('nys-radiobutton');
-
-  // Listen for the 'change' event
-  radiobutton.addEventListener('change', (event) => {
-    console.log('Radio Button changed:', event.target.checked);
-  });
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
+{% set code %}// Select the radiobutton component
+const radiobutton = document.querySelector('nys-radiobutton');
+// Listen for the 'change' event
+radiobutton.addEventListener('change', (event) => {
+  console.log('Radio Button changed:', event.target.checked);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}
