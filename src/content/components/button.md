@@ -83,8 +83,8 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 <p>Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.</p>
 
 {% set preview %}<div class="nys-grid-row">
-<div class="nys-grid-col"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
-<div class="nys-grid-col"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
+<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
+<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
 <div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
 </div><br>
 <nys-button fullWidth size="sm" id="button4" name="button4" label="Small Full"></nys-button><br>
@@ -121,7 +121,7 @@ Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> 
 <div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
 <div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
 <div class="nys-grid-col"><nys-button id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col"><nys-button id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button id="button4" name="button4" label="Text" variant="text"></nys-button></div>
 </div>{% endset %}
 {% set code %}
 <nys-button id="button1" name="button1" label="Filled"></nys-button>
@@ -145,7 +145,7 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
 <div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
 <div class="nys-grid-col"><nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col"><nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button></div>
 </div>{% endset %}
 {% set code %}
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
@@ -175,7 +175,7 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
 <div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
 <div class="nys-grid-col"><nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col"><nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button></div>
 </div>{% endset %}
 {% set code %}
 <nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
