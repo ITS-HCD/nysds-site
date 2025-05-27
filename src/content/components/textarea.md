@@ -16,36 +16,14 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 {% endblock %}
 
 {% block example %}
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities."></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea
+  {% set preview %}<nys-textarea
   id="quote"
   label="Enter your favorite quote:"
-  value="Majorities, of course, start with minorities."
-></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>    
-  </div>
-</div>
+  value="Majorities, of course, start with minorities.">
+</nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/component-preview.njk" %}
 {% endblock %}
 
 
@@ -88,29 +66,10 @@ The <code class="language-js">nys-textarea</code> component includes the followi
 The `rows` attribute specifies the visible height of a text area, in number of lines.
 
 The default value is `4`
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
-  </div>
 
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Width
 If no <code class="language-js">width</code> is provided, the <code class="language-js">nys-textarea</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
@@ -118,201 +77,58 @@ Setting property <code class="language-js">width="full"</code> will take up the 
 
 <p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">width="full"</code></p>
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea width="md" label="This textarea is md"></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea width="md" label="This textarea is md"></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-textarea width="md" label="This textarea is md"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Resize
 By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code class="language-js">resize="none"</code>
 
 <p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon> <code class="language-js">resize</code> is not affected by setting <code class="language-js">&lt;nys-textarea&gt;</code> to <code class="language-js">disabled</code> or <code class="language-js">readonly</code> as they are independent.</p>
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Description
 You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Label" description="description property"></nys-textarea>
-    <br />
-    <nys-textarea label="Label">
-      <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
-    </nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea label="Label" description="description property"></nys-textarea>
+  {% set preview %}<nys-textarea label="Label" description="description property"></nys-textarea>
 <br />
 <nys-textarea label="Label">
   <p slot="description">Description slot 
     <a href="https://ny.gov">providing more options</a>
   </p>
-</nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+</nys-textarea>{% endset %}
+  {% set code %}<nys-textarea label="Label" description="description property"></nys-textarea>
+<nys-textarea label="Label">
+  <p slot="description">Description slot 
+    <a href="https://ny.gov">providing more options</a>
+  </p>
+</nys-textarea>{% endset %}
+  {% include "partials/component-preview.njk" %}
 
 ### Disabled 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Disabled textarea" disabled></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea label="Disabled textarea" disabled></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
-</details>
+  {% set preview %}<nys-textarea label="Disabled textarea" disabled></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Readonly
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Readonly textarea" value="This text cannot be changed" readonly></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+  {% set preview %}<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Max length
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Error Message
 To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-textarea&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+  {% set preview %}<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 {% endblock %}
 
 {% block properties %}
