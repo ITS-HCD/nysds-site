@@ -16,46 +16,16 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 {% endblock %}
 
 {% block example %}
-
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-select label="Select your favorite borough" id="borough">
-      <nys-option value="bronx" label="The Bronx"></nys-option>
-      <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-      <nys-option value="manhattan" label="Manhattan"></nys-option>
-      <nys-option value="staten_island" label="Staten Island"></nys-option>
-      <nys-option value="queens" label="Queens"></nys-option>      
-    </nys-select>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-select label="Select your favorite borough" id="borough">
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough">
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
   <nys-option value="manhattan" label="Manhattan"></nys-option>
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>    
-  </div>
-</div>
-
+</nys-select>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/component-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -91,41 +61,15 @@ The <code class="language-js">nys-select</code> component includes the following
 {% block options %}
 
 ### Disabled
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-select label="Select your favorite borough" disabled>
-      <nys-option value="bronx" label="The Bronx"></nys-option>
-      <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-      <nys-option value="manhattan" label="Manhattan"></nys-option>
-      <nys-option value="staten_island" label="Staten Island"></nys-option>
-      <nys-option value="queens" label="Queens"></nys-option>  
-    </nys-select>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-select label="Select your favorite borough" disabled>
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
   <nys-option value="manhattan" label="Manhattan"></nys-option>
   <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  <nys-option value="queens" label="Queens"></nys-option>      
+</nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Width
 The following <code class="language-js">width</code> options are available:
@@ -135,78 +79,27 @@ The following <code class="language-js">width</code> options are available:
   - `lg` (Large): 384px, suitable for displaying longer content.
   - `full` (Full Width): default size. Expands to fill the available space.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
-      <nys-option value="sm" label="sm"></nys-option>
-      <nys-option value="md" label="md"></nys-option>
-      <nys-option value="lg" label="lg"></nys-option>
-      <nys-option value="full" label="full"></nys-option>
-    </nys-select>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
+{% set preview %}<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
   <nys-option value="sm" label="sm"></nys-option>
   <nys-option value="md" label="md"></nys-option>
   <nys-option value="lg" label="lg"></nys-option>
   <nys-option value="full" label="full"></nys-option>
-</nys-select>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+    </nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 ### Error Message
 To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-select&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
-      <nys-option value="bronx" label="The Bronx"></nys-option>
-      <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-      <nys-option value="manhattan" label="Manhattan"></nys-option>
-      <nys-option value="staten_island" label="Staten Island"></nys-option>
-      <nys-option value="queens" label="Queens"></nys-option>  
-    </nys-select>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
+{% set preview %}<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
   <nys-option value="manhattan" label="Manhattan"></nys-option>
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+    </nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/component-preview.njk" %}
 
 {% endblock %}
 
