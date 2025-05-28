@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-28T19:58:28.527+00:00 -->
+    <!-- Latest Build: 2025-05-28T20:09:50.898+00:00 -->
   </head>
   
   <body class="single-page page-textarea section-components">
@@ -312,9 +312,13 @@
 <p>The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.</p>
 </section>
     <section id="example">
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities."></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea
+  id="quote"
+  label="Enter your favorite quote:"
+  value="Majorities, of course, start with minorities.">
+</nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -325,18 +329,18 @@
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span>
   <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>quote<span class="token punctuation">"</span></span>
   <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your favorite quote:<span class="token punctuation">"</span></span>
-  <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Majorities, of course, start with minorities.<span class="token punctuation">"</span></span>
-<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
+  <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Majorities, of course, start with minorities.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>    
+  <div class="code-preview__code-tip">
+    <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
   </div>
 </div>
 </section>
@@ -346,9 +350,9 @@
 <h3>Rows</h3>
 <p>The <code>rows</code> attribute specifies the visible height of a text area, in number of lines.</p>
 <p>The default value is <code>4</code></p>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -359,7 +363,7 @@
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This textarea renders with 6 rows<span class="token punctuation">"</span></span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -370,9 +374,9 @@
 <p>If no <code class="language-js">width</code> is provided, the <code class="language-js">nys-textarea</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.
 Setting property <code class="language-js">width=&quot;full&quot;</code> will take up the full width of the parent container.</p>
 <p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">width="full"</code></p>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea width="md" label="This textarea is md"></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea width="md" label="This textarea is md"></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -383,7 +387,7 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This textarea is md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -393,9 +397,9 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
 <h3>Resize</h3>
 <p>By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code class="language-js">resize=&quot;none&quot;</code></p>
 <p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon> <code class="language-js">resize</code> is not affected by setting <code class="language-js">&lt;nys-textarea&gt;</code> to <code class="language-js">disabled</code> or <code class="language-js">readonly</code> as they are independent.</p>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -406,7 +410,7 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This textarea is not resizable<span class="token punctuation">"</span></span> <span class="token attr-name">resize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -415,13 +419,15 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
 </div>
 <h3>Description</h3>
 <p>You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.</p>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Label" description="description property"></nys-textarea>
-    <br />
-    <nys-textarea label="Label">
-      <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
-    </nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea label="Label" description="description property"></nys-textarea>
+<br />
+<nys-textarea label="Label">
+  <p slot="description">Description slot 
+    <a href="https://ny.gov">providing more options</a>
+  </p>
+</nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -432,10 +438,9 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description property<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Description slot 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>providing more options<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
@@ -446,9 +451,9 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
   </div>
 </div>
 <h3>Disabled</h3>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Disabled textarea" disabled></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea label="Disabled textarea" disabled></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -459,18 +464,17 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Disabled textarea<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
-</details>
 <h3>Readonly</h3>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Readonly textarea" value="This text cannot be changed" readonly></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -481,7 +485,7 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">readonly</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Readonly textarea<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This text cannot be changed<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -489,9 +493,9 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
   </div>
 </div>
 <h3>Max length</h3>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -502,7 +506,7 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Max Length<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You cannot type more than 10 characters in the below field<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -511,9 +515,9 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
 </div>
 <h3>Error Message</h3>
 <p>To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-textarea&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.</p>
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -524,7 +528,7 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
       <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
       <div class="copy-tooltip">Copy Code</div>
     </div>
-    <div class="code-preview__code-container">
+    <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textarea</span> <span class="token attr-name">showError</span> <span class="token attr-name">errorMessage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You did not provide a value for this field.<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Describe the incident<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textarea</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -681,14 +685,13 @@ Setting property <code class="language-js">width=&quot;full&quot;</code> will ta
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-<pre class="language-js"><code class="language-js"><span class="token comment">// Select the textarea component</span>
+        <pre class="language-js"><code class="language-js"><span class="token comment">// Select the textarea component</span>
 <span class="token keyword">const</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-textarea'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 <span class="token comment">// Listen for the 'nys-checkValidity' event</span>
 textarea<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-checkValidity'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Text input changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-  </div>
+      </div>
     </div>
   </div>
 </div>
