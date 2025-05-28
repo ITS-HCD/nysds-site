@@ -16,42 +16,15 @@ navOrder: 13
 {% endblock %}
 
 {% block example %}
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-toggle 
-      label="Dark Mode"
-      description="Enable dark mode for a more comfortable viewing experience."
-      name="toggle-switch"
-      value="access">
-    </nys-toggle>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-toggle 
+  {% set preview %}<nys-toggle 
   label="Dark Mode"
   description="Enable dark mode for a more comfortable viewing experience."
   name="toggle-switch"
   value="access">
-</nys-toggle>
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>    
-  </div>
-</div>
+</nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -93,58 +66,17 @@ The <code class="language-js">nys-toggle</code> component includes the following
 {% block options %}
 
 ### Sizes
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-toggle label='Small (size="sm")' name="toggle-switch" value="access" size="sm"></nys-toggle>
-    </br>
-    <nys-toggle label='Medium (size="md")' name="toggle-switch" value="access" size="md"></nys-toggle>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
-<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+  {% set preview %}<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+  {% set code %}
+  <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disable Icon
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-toggle label="No Icon on the toggle" name="toggle-switch" value="access" noIcon></nys-toggle>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
@@ -246,34 +178,16 @@ The <code class="language-js">nys-toggle</code> component includes the following
 </ol>
 
 You can listen to these events using JavaScript:
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Sample Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container expanded">
-      <div class="code-preview__code-block">
-
-{% highlight "js" %}
-// Select the toggle component
+{% set code %}// Select the toggle component
   const toggle = document.querySelector('nys-toggle');
-      
 // Listen for the 'change' event
 toggle.addEventListener('change', (event) => {
   console.log('Checkbox changed:', event.target.checked);
-});
-{% endhighlight %}
-      
-  </div>
-    </div>
-  </div>
-</div>
-
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

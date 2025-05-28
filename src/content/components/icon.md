@@ -16,32 +16,10 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 {% endblock %}
 
 {% block example %}
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)"></nys-icon>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)">
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)"></nys-icon>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -202,33 +180,11 @@ To scale an icon relative to the inherited font size, pass a size variant like s
   - <code class="language-js">3xl</code> (triple extra large): 225% of parent font size
   - <code class="language-js">4xl</code> (quadruple extra large): 300% of parent font size
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-icon name="upload_file" size="2xs"></nys-icon>
-    <nys-icon name="upload_file" size="lg"></nys-icon>
-    <nys-icon name="upload_file" size="4xl"></nys-icon>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-icon name="upload_file" size="2xs"></nys-icon>
+  {% set preview %}<nys-icon name="upload_file" size="2xs"></nys-icon>
 <nys-icon name="upload_file" size="lg"></nys-icon>
-<nys-icon name="upload_file" size="4xl"></nys-icon>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+<nys-icon name="upload_file" size="4xl"></nys-icon>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 #### Literal Sizing
 For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.
@@ -240,118 +196,33 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
   - <code class="language-js">48</code>: 3rem = 48px
   - <code class="language-js">64</code>: 4rem = 64px
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-icon name="upload_file" size="16"></nys-icon>
-    <nys-icon name="upload_file" size="32"></nys-icon>
-    <nys-icon name="upload_file" size="64"></nys-icon>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-icon name="upload_file" size="16"></nys-icon>
+  {% set preview %}<nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
-<nys-icon name="upload_file" size="64"></nys-icon>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+<nys-icon name="upload_file" size="64"></nys-icon>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Color
 
 You can override the color of an icon by setting a <code class="language-js">color</code> prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+  {% set preview %}<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Rotate
 You can <code class="language-js">rotate</code> an icon by passing the angle as a number, like rotate="20" (without "deg").
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-icon label="upload_file icon" name="upload_file" rotate="20" size="4xl"></nys-icon>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+  {% set preview %}<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Flip
 Set an icon to flip horizontally, vertically, or in both directions by using the <code class="language-js">flip</code> property. Available values are `horizontal`, `vertical`, and `both`.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-icon label="upload_file icon" name="upload_file" flip="horizontal" size="4xl"></nys-icon>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-icon flip="horizontal" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+  {% set preview %}<nys-icon flip="horizontal" label="upload_file icon" name="check_circle" size="4xl"></nys-icon>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

@@ -17,32 +17,10 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 {% endblock %}
 
 {% block example %}
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-unavfooter></nys-unavfooter>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-unavfooter></nys-unavfooter>
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>   
-  </div>
-</div>
+  {% set preview %}<nys-unavfooter></nys-unavfooter>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}

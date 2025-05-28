@@ -18,52 +18,13 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 {% endblock %}
 
 {% block example %}
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
-      <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" checked></nys-radiobutton>
-      <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
-    </nys-radiogroup>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-radiogroup 
-  label="What is your primary work location?"
-  description="This is the location you use for your in office days."
-  size="md"
->
-  <nys-radiobutton
-    name="office"
-    label="Albany"
-    description="Upstate New York"
-    value="albany"
-  ></nys-radiobutton>
-  <nys-radiobutton
-    name="office"
-    label="Manhattan"
-    description="New York City"
-    value="manhattan"
-  ></nys-radiobutton>
-</nys-radiogroup>
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>    
-  </div>
-</div>
+  {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" checked></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -112,37 +73,13 @@ The <code class="language-js">nys-radiobutton</code> component includes the foll
 
 ### Disabled
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
-      <nys-radiobutton name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked disabled></nys-radiobutton>
-      <nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
-      <nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
-    </nys-radiogroup>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
-  <nys-radiobutton disabled name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked></nys-radiobutton>
-  <nys-radiobutton disabled name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2"></nys-radiobutton>
-  <nys-radiobutton disabled name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3"></nys-radiobutton>
-</nys-radiogroup>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
+  <nys-radiobutton name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked disabled></nys-radiobutton>
+  <nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
+  <nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Size
 Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-radiogroup&gt;</code> to have all <code class="language-js">&lt;nys-radiobutton&gt;</code> be the same size. Our current sizes are:
@@ -150,116 +87,39 @@ Set the <code class="language-js">size</code> prop of the <code class="language-
   - `sm`: Set to 24px in width and height
   - `md`: The default size. Set to 32px in width and height.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
-      <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
-      <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
-      <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
-    </nys-radiogroup>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-radiogroup size="sm" label="Select your agency" description="This is the agency, department, or office you work for.">
+  {% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
   <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
-</nys-radiogroup>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error
 To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-radiogroup&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to <strong>true</strong>.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
-      <nys-radiobutton   name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton> <nys-radiobutton   name="office"   label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
-    </nys-radiogroup>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-radiogroup required showError errorMessage="You must select one of the above options to continue" label="What is your primary work location?" description="This is the location you use for your in office days.">
-  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
-  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
-</nys-radiogroup>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
+  <nys-radiobutton   name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton> <nys-radiobutton   name="office"   label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Slotted Description
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
 Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="language-js">&lt;nys-radiogroup&gt;</code> support the description slot.
 
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-radiogroup label="What is your primary work location?">
-      <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
-      <nys-radiobutton name="office" label="Albany" value="albany">
-        <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">Upstate New York</a></label>      
-      </nys-radiobutton>
-      <nys-radiobutton name="office" label="Manhattan" value="manhattan"  >
-        <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
-      </nys-radiobutton>
-    </nys-radiogroup>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-radiogroup label="What is your primary work location?">
+  {% set preview %}<nys-radiogroup label="What is your primary work location?">
   <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
   <nys-radiobutton name="office" label="Albany" value="albany">
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">Upstate New York</a></label>      
   </nys-radiobutton>
-  <nys-radiobutton name="office" label="Manhattan" value="manhattan">
+  <nys-radiobutton name="office" label="Manhattan" value="manhattan"  >
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
   </nys-radiobutton>
-</nys-radiogroup>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
-
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
@@ -342,33 +202,16 @@ Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="l
 </ol>
 
 You can listen to these events using JavaScript:
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>Sample Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container expanded">
-      <div class="code-preview__code-block">
-
-{% highlight "js" %}
-// Select the radiobutton component
-  const radiobutton = document.querySelector('nys-radiobutton');
-
-  // Listen for the 'change' event
-  radiobutton.addEventListener('change', (event) => {
-    console.log('Radio Button changed:', event.target.checked);
-  });
-{% endhighlight %}
-
-  </div>
-    </div>
-  </div>
-</div>
+{% set code %}// Select the radiobutton component
+const radiobutton = document.querySelector('nys-radiobutton');
+// Listen for the 'change' event
+radiobutton.addEventListener('change', (event) => {
+  console.log('Radio Button changed:', event.target.checked);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

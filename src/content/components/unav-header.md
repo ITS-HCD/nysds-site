@@ -19,32 +19,10 @@ The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web co
 {% endblock %}
 
 {% block example %}
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-unavheader></nys-unavheader>
-  </div>
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-unavheader></nys-unavheader>
-        {% endhighlight %}
-      </div>
-    </div>
-    <div class="code-preview__code-tip">
-      <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-    </div>
-  </div>
-</div>
+  {% set preview %}<nys-unavheader></nys-unavheader>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 
@@ -82,56 +60,18 @@ The <code class="language-js">nys-unavheader</code> component includes the follo
 {% block options %}
 
 ### Search toggle
-<div class="code-preview-container">
-  <div class="code-preview__preview">
+  {% set preview %}
     <nys-unavheader hideSearch></nys-unavheader>
-  </div>
-
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-unavheader hideSearch></nys-unavheader>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Translate toggle
-<div class="code-preview-container">
-  <div class="code-preview__preview">
-    <nys-unavheader hideTranslate ></nys-unavheader>
-  </div>
-
-
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container">
-      <div class="code-preview__code-block">
-        {% highlight "html" %}
-<nys-unavheader hideTranslate></nys-unavheader>
-        {% endhighlight %}
-      </div>
-    </div>
-  </div>
-</div>
+  {% set preview %}
+    <nys-unavheader hideTranslate></nys-unavheader>
+  {% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
