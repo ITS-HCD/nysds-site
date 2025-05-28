@@ -562,6 +562,7 @@ li > .section-nav__list {
     justify-content: space-between;
     padding: var(--nys-space-150) var(--nys-space-250);
     border-radius: var(--nys-radius-xl);
+    border: 2px solid var(--nys-color-neutral-400);
 }
 
 .section-nav__toggle:hover {
