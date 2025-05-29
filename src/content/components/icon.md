@@ -218,9 +218,9 @@ You can <code class="language-js">rotate</code> an icon by passing the angle as 
   {% include "partials/code-preview.njk" %}
 
 ### Flip
-Set an icon to flip horizontally, vertically, or in both directions by using the <code class="language-js">flip</code> property. Available values are `horizontal`, `vertical`, and `both`.
+Set an icon to flip horizontally, vertically, or in both directions by using the <code class="language-js">flip</code> property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
 
-  {% set preview %}<nys-icon flip="horizontal" label="upload_file icon" name="check_circle" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon flip="both" label="upload_file icon" name="social_linkedin" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
