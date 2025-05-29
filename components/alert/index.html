@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-29T19:32:16.500+00:00 -->
+    <!-- Latest Build: 2025-05-29T21:53:05.809+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -417,7 +417,7 @@
 </div>
 <h3>Dismissible</h3>
 <p>Use the <code class="language-js">dismissible</code> property to make the alert dismissible.</p>
-<p>The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
+<p>The <code class="language-js">nys-alertClosed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <nys-alert type="info" heading="Information status" dismissible>
@@ -538,7 +538,7 @@
       <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-<li>Use nys-alert to communicate important, time-sensitive information to users in a visually prominent way.</li>
+<li>Use <code class="language-js">&lt;nys-alert&gt;</code> to communicate important, time-sensitive information to users in a visually prominent way.</li>
 <li>Ideal for messages such as success notifications, danger alerts, warnings, or informational updates.</li>
 <li>Use for dismissible or temporary alerts when the message is not critical to user workflow.</li>
 </ul>
@@ -584,7 +584,7 @@
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-alert</code> component includes the following accessibility-focused features:</p>
+<p>The <code class="language-js">&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.</li>
 <li>Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.</li>
