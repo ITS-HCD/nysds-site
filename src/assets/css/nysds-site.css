@@ -967,6 +967,10 @@ code {
     border-color: var(--nys-color-theme-stronger);
 }
 
+.icon-examples .card__title {
+    margin: 0;
+}
+
 .icon-examples .card__title,
 .icon-examples .card__desc {
     text-align: center;

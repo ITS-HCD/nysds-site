@@ -10,11 +10,11 @@
   </head>
   {% set currentPageUrl = page.url %}
   <body class="{% if section  %}single-page page-{{ page.fileSlug }} section-{{section | slug}}{% else %}home{% endif %}">
-
+  <nys-skipnav></nys-skipnav>
   {% include "partials/unav-header.njk" %}
   {% include "partials/site-header.njk" %}
 
-  <main role="main" data-pagefind-body>
+  <main role="main" id="main-content" data-pagefind-body>
     
       {% block content %}
       {{ content | safe }}
