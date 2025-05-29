@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-28T20:09:50.898+00:00 -->
+    <!-- Latest Build: 2025-05-29T05:09:11.905+00:00 -->
   </head>
   
   <body class="single-page page-global-header section-components">
@@ -342,9 +342,11 @@
     <section id="options">
       <h2>Options</h2>
 <h3>With Links</h3>
-<p>For public-facing content sites, the Global Header can include menu links. To add them, place an unordered list (<code>&lt;ul&gt;</code>) inside the <code class="language-js">&lt;nys-globalheader&gt;</code> slot. Each list item (<code>&lt;li&gt;</code>) should contain an anchor (<code>&lt;a href=&quot;&quot;&gt;</code>) linking to the desired destination.</p>
+<p>For public-facing sites, the Global Header can include navigation links. To add links, follow this format:</p>
+<p>     1. Use an unordered list (<code>&lt;ul&gt;</code>) inside the <code class="language-js">&lt;nys-globalheader&gt;</code> slot.</p>
+<p>     2. Each list item (<code>&lt;li&gt;</code>) should contain an anchor (<code>&lt;a href=&quot;&quot;&gt;</code>) linking to the desired URL.</p>
 <p>Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.</p>
-<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to avoid distractions and keep users on task. However, public-facing sites may include links, often within a collapsed menu for better navigation.</p>
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">

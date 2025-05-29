@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-28T20:09:50.898+00:00 -->
+    <!-- Latest Build: 2025-05-29T05:09:11.905+00:00 -->
   </head>
   
   <body class="single-page page-global-footer section-components">
@@ -315,6 +315,41 @@
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <nys-globalfooter agencyName="Office of Information Technology Services">
+</nys-globalfooter>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+</section>
+    <br>
+    <section id="options">
+      <h2>Options</h2>
+<h3>With Links</h3>
+<p>For public-facing sites, the Global Footer can include navigation links. To add links, follow this format:</p>
+<p>     1. Use an unordered list (<code>&lt;ul&gt;</code>) inside the <code class="language-js">&lt;nys-globalfooter&gt;</code> slot.</p>
+<p>     2. Each list item (<code>&lt;li&gt;</code>) should contain an anchor (<code>&lt;a href=&quot;&quot;&gt;</code>) linking to the desired URL.</p>
+<p>Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.</p>
+<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Footer typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
   <ul>
     <li><a href="https://its.ny.gov">ITS Home</a></li>
     <li><a href="https://its.ny.gov/about">About ITS</a></li>
@@ -332,41 +367,11 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span> <span class="token attr-name">homepageLink</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>ITS Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/about<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>About ITS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
-      </div>
-    </div>
-  <div class="code-preview__code-tip">
-    <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-  </div>
-  </div>
-</div>
-</section>
-    <br>
-    <section id="options">
-      <h2>Options</h2>
-<h3>Without Links</h3>
-  <div class="code-preview-container">
-  <div class="code-preview__preview ">
-<nys-globalfooter agencyName="Office of Information Technology Services">
-</nys-globalfooter>
-  </div>
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <nys-button class="copy-btn" prefixIcon="publish" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
