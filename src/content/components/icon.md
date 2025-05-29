@@ -155,7 +155,7 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 
 {% block accessibility %}
 
-The <code class="language-js">nys-icon</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-icon&gt;</code> component includes the following accessibility-focused features:
 
 **ARIA Hidden by Default**: If no label is provided, the icon is hidden from screen readers by setting aria-hidden="true".
 
@@ -172,7 +172,7 @@ To scale an icon relative to the inherited font size, pass a size variant like s
 
   - <code class="language-js">2xs</code> (extra-extra small): 75% of parent font size
   - <code class="language-js">xs</code> (extra small): 87.5% of parent font size
-  - <code class="language-js">sm</code> (small): 100% of parent font size
+  - <code class="language-js">sm</code> (small): 100% of parent font size -- <strong>Default</strong>
   - <code class="language-js">md</code> (medium): 112.5% of parent font size
   - <code class="language-js">lg</code> (large): 125% of parent font size
   - <code class="language-js">xl</code> (extra large): 150% of parent font size

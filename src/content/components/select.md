@@ -53,7 +53,7 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.
-  - Keyboard navigation support, allowing users to tab to the `nys-select` using the keyboard and spacebar to select an option.
+  - Keyboard navigation support, allowing users to tab to the <code class="language-js">nys-select</code> using the keyboard and spacebar to select an option.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
 {% endblock %}
@@ -184,7 +184,7 @@ To display an error message, pass in the <code class="language-js">showError</co
 
 {% block events %}
 
-<p>The <code class="language-js">nys-select</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code class="language-js">&lt;nys-select&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>
 <li><strong><code>focus</code></strong> – Fired when the select gains focus.</li>

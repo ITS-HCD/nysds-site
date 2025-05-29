@@ -57,7 +57,7 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 
 {% block accessibility %}
 
-The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-avatar&gt;</code> component includes the following accessibility-focused features:
 
   - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
   - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
@@ -84,13 +84,13 @@ The <code class="language-js">nys-</code> component includes the following acces
 
 ### Custom Icons
 
-<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
+<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">&lt;nys-icon&gt;</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">&lt;nys-avatar&gt;</code> with the icon slot.</p>
 
   {% set preview %}<nys-avatar label="User avatar"></nys-avatar>
-    <nys-avatar label="Youtube avatar" color="#f2efee">
-      <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
-    </nys-avatar>
-    <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
+<nys-avatar label="Youtube avatar" color="#f2efee">
+  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
+</nys-avatar>
+<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -99,8 +99,8 @@ The <code class="language-js">nys-</code> component includes the following acces
 <p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
 
   {% set preview %}<nys-avatar label="User avatar" shape="circle"></nys-avatar>
-    <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
-    <nys-avatar label="User avatar" shape="square"></nys-avatar></nys-avatar>{% endset %}
+<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
+<nys-avatar label="User avatar" shape="square"></nys-avatar></nys-avatar>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 

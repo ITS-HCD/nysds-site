@@ -48,7 +48,7 @@ The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reu
 
 {% block accessibility %}
 
-The <code class="language-js">nys-globalfooter</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-globalfooter&gt;</code> component includes the following accessibility-focused features:
 
  - Proper use of &lt;footer&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
  - Keyboard navigation: Users can tab through all links in the footer.

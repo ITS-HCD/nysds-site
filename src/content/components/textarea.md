@@ -52,7 +52,7 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 
 {% block accessibility %}
 
-The <code class="language-js">nys-textarea</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-textarea&gt;</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
   - Keyboard navigation support, allowing users to tab into the input using the keyboard.
@@ -72,7 +72,7 @@ The default value is `4`
   {% include "partials/code-preview.njk" %}
 
 ### Width
-If no <code class="language-js">width</code> is provided, the <code class="language-js">nys-textarea</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textarea&gt;</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 Setting property <code class="language-js">width="full"</code> will take up the full width of the parent container.
 
 <p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">width="full"</code></p>
@@ -232,7 +232,7 @@ To display an error message, pass in the <code class="language-js">showError</co
 
 {% block events %}
 
-<p>The <code class="language-js">nys-textarea</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code class="language-js">&lt;nys-textarea&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-checkValidity</code></strong> – Fired when the textarea state changes.</li>
 <li><strong><code>focus</code></strong> – Fired when the textarea gains focus.</li>

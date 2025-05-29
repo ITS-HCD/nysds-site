@@ -12,7 +12,7 @@ navOrder: 4
 
 {% block longdescription %}
 
-A button is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
+The <code class="language-js">&lt;nys-button&gt;</code> component is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
 {% endblock %}
 
 {% block example %}
@@ -51,7 +51,7 @@ A button is used for actions that have an immediate result inside an application
 
 {% block accessibility %}
 
-The <code class="language-js">nys-button</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-button&gt;</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.

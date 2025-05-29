@@ -77,7 +77,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
 ### When to use this component
 
-  - Use nys-alert to communicate important, time-sensitive information to users in a visually prominent way.
+  - Use <code class="language-js">&lt;nys-alert&gt;</code> to communicate important, time-sensitive information to users in a visually prominent way.
   - Ideal for messages such as success notifications, danger alerts, warnings, or informational updates.
   - Use for dismissible or temporary alerts when the message is not critical to user workflow.
 
@@ -115,7 +115,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
 {% block accessibility %}
 
-The <code class="language-js">nys-alert</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:
 
   - Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
   - Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.
@@ -178,7 +178,7 @@ Use the <code class="language-js">text</code> prop for simple texts, or leverage
 
 Use the <code class="language-js">dismissible</code> property to make the alert dismissible.
 
-The <code class="language-js">nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
+The <code class="language-js">nys-alertClosed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
 {% set preview %}<nys-alert type="info" heading="Information status" dismissible>
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>

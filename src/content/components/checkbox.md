@@ -58,7 +58,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 
 {% block accessibility %}
 
-The <code class="language-js">nys-checkbox</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-checkbox&gt;</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.
   - Keyboard navigation support, allowing users to toggle the checkbox using the keyboard.
@@ -70,7 +70,7 @@ The <code class="language-js">nys-checkbox</code> component includes the followi
 
 ### Checkbox group
 
-The <code class="language-js">nys-checkboxgroup</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
+The <code class="language-js">&lt;nys-checkboxgroup&gt;</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
 
   {% set preview %}<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
   <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
@@ -87,7 +87,7 @@ The <code class="language-js">nys-checkboxgroup</code> component can be used to 
 
 ### Size
 
-Set the size property of the <code class="language-js">nys-checkboxgroup</code> to have all <code class="language-js">nys-checkbox</code> be the same size. Our current sizes are:
+Set the size property of the <code class="language-js">&lt;nys-checkboxgroup&gt;</code> to have all <code class="language-js">&lt;nys-checkbox&gt;</code> be the same size. Our current sizes are:
 
 <code class="language-js">sm</code> : Set to 24px in width and height
 
@@ -211,7 +211,7 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block events %}
 
-<p>The <code class="language-js">nys-checkbox</code> component emits <strong>four</strong> custom Javascript events:</p>
+<p>The <code class="language-js">&lt;nys-checkbox&gt;</code> component emits <strong>four</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>
 <li><strong><code>focus</code></strong> – Fired when the checkbox gains focus.</li>

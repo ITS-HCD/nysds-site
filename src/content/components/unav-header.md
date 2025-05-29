@@ -51,7 +51,7 @@ The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web co
 
 {% block accessibility %}
 
-The <code class="language-js">nys-unavheader</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-unavheader&gt;</code> component includes the following accessibility-focused features:
 
   - Proper use of `<header>` and `<a>` elements ensures compatibility with assistive technologies.
   - Keyboard navigation: Users can tab through all links in the header.

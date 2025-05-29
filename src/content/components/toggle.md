@@ -31,11 +31,11 @@ navOrder: 13
 {% block usage %}
 
 ### When to use this component
-  - Consider using nys-toggle when expecting immediate UI effects when turning switch on/off.
+  - Consider using <code class="language-js">&lt;nys-toggle&gt;</code> when expecting immediate UI effects when turning switch on/off.
   - Ideal for settings pages, feature toggles, or user preferences.
 ### When to consider something else
-  - Consider using nys-checkbox or nys-radiobutton to select one or more options from a list where the selections
-  - Use nys-checkbox for forms, especially when you're not expecting immediate action.
+  - Consider using <code class="language-js">&lt;nys-checkbox&gt;</code> or <code class="language-js">&lt;nys-radiobutton&gt;</code> to select one or more options from a list where the selections
+  - Use <code class="language-js">&lt;nys-checkbox&gt;</code> for forms, especially when you're not expecting immediate action.
 {% endblock %}
 
 {% block usagedo %}
@@ -55,7 +55,7 @@ navOrder: 13
 
 {% block accessibility %}
 
-The <code class="language-js">nys-toggle</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-toggle&gt;</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.

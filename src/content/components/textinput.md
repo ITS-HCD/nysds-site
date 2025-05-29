@@ -49,7 +49,7 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web com
 
 {% block accessibility %}
 
-The <code class="language-js">nys-textinput</code> component includes the following accessibility-focused features:
+The <code class="language-js">&lt;nys-textinput&gt;</code> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
   - Keyboard navigation support, allowing users to tab into the input using the keyboard.
@@ -223,7 +223,7 @@ Set an error message and choose to activate it. The error message will appear ON
 
 {% block events %}
 
-<p>The <code class="language-js">nys-textinput</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code class="language-js">&lt;nys-textinput&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-checkValidity</code></strong> – Fired when the textinput state changes.</li>
 <li><strong><code>focus</code></strong> – Fired when the textinput gains focus.</li>
