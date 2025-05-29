@@ -65,8 +65,6 @@ For public-facing sites, the Global Footer can include navigation links. To add 
 
 Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.
 
-<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Footer typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.</p>
-
   {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
   <ul>
     <li><a href="https://its.ny.gov">ITS Home</a></li>
