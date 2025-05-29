@@ -6,7 +6,7 @@ const showAlert = () => {
     container.innerHTML = "";
     const newAlert = document.createElement("nys-alert");
     newAlert.setAttribute("type", "info");
-    newAlert.setAttribute("heading", "Information status");
+    newAlert.setAttribute("heading", "Automatically disappearing alert");
     newAlert.setAttribute("text", "This alert will disappear after 3 seconds.");
     newAlert.setAttribute("duration", 3000);
     container.appendChild(newAlert);
@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".icon-examples .card").forEach((card) => {
     const cardDesc = card.querySelector(".card__desc");
     const cardText = cardDesc.textContent;
+    let hasParagraph = true;
 
     card.addEventListener("click", async () => {
       try {
@@ -143,13 +144,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (paragraph) {
           paragraph.textContent = "Copied!";
           paragraph.style.color = "var(--nys-color-success)";
+          setTimeout(() => {
+            paragraph.style.color = "var(--nys-color-text)";
+            if (hasParagraph) {
+              card.parentElement.removeChild(paragraph);
+            }
+          }, 1500);
         }
-        setTimeout(() => {
-          paragraph.style.color = "var(--nys-color-text)";
-          if (paragraph) {
-            card.parentElement.removeChild(paragraph);
-          }
-      }, 1500);
       } catch (err) {
         cardDesc.innerHTML = "Failed!";
         setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
@@ -158,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     card.addEventListener("mouseenter", async () => {
       const paragraph = document.createElement("p");
+      hasParagraph = true;
       paragraph.style.position = "absolute";
       paragraph.style.bottom = "0px";
       paragraph.style.width = "90%";
@@ -168,8 +170,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     card.addEventListener("mouseleave", async () => {
       const paragraph = document.querySelector(".hover-message");
+    
       if (paragraph) {
         card.parentElement.removeChild(paragraph);
+        hasParagraph = false
       }
       cardDesc.innerHTML = cardText;
     });
