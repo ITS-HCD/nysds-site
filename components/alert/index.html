@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-29T21:53:05.809+00:00 -->
+    <!-- Latest Build: 2025-05-30T18:44:38.739+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -267,6 +267,19 @@
         
         
         <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
+            Skip To Content
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
           <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/" >
             UNav Footer
           </a>
@@ -315,7 +328,7 @@
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-alert
+<div class="code-preview__preview-root-inner"><nys-alert
   type="base"
   heading="Default status"
   text="This is an example of an neutral base alert."
@@ -338,7 +351,7 @@
 <nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
 <nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
 <nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -391,10 +404,10 @@
 <p>Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-alert type="success" heading="Custom Descriptions">
+<div class="code-preview__preview-root-inner"><nys-alert type="success" heading="Custom Descriptions">
   <p>This is a custom alert with <strong>HTML content</strong>.</p>
   <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
-</nys-alert>
+</nys-alert></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -420,10 +433,10 @@
 <p>The <code class="language-js">nys-alertClosed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-alert type="info" heading="Information status" dismissible>
+<div class="code-preview__preview-root-inner"><nys-alert type="info" heading="Information status" dismissible>
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
   Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
-</nys-alert>
+</nys-alert></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -448,8 +461,8 @@
 <p>Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
-<div class="alert-container" style="margin-top: 8px"></div>
+<div class="code-preview__preview-root-inner"><nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+<div class="alert-container" style="margin-top: 8px"></div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -476,12 +489,12 @@
 <p>Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-alert
+<div class="code-preview__preview-root-inner"><nys-alert
   type="emergency"
   heading="Winter storm warning: Dec 10th, 2024."
   text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
   icon="ac_unit">
-</nys-alert>
+</nys-alert></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -508,10 +521,10 @@
 <p>You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-alert
+<div class="code-preview__preview-root-inner"><nys-alert
   type="info"
   heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>
+</nys-alert></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">

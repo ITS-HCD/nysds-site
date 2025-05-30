@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-29T21:53:05.809+00:00 -->
+    <!-- Latest Build: 2025-05-30T18:44:38.739+00:00 -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -267,6 +267,19 @@
         
         
         <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
+            Skip To Content
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
           <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/" >
             UNav Footer
           </a>
@@ -314,7 +327,7 @@
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput label="This is a text input"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput label="This is a text input"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -340,12 +353,12 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Width</h3>
-<p>If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.</p>
+<p>If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to <code class="language-js">full</code>. Supported widths are <code class="language-js">sm</code>, <code class="language-js">md</code>, <code class="language-js">lg</code>, and <code class="language-js">full</code>.</p>
 <p>Width full will take up the full width of the parent container.</p>
-<p>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code>full</code>.</p>
+<p>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">full</code>.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput width="sm" label="This label is sm"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput width="sm" label="This label is sm"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -364,11 +377,12 @@
   </div>
 </div>
 <h3>Type</h3>
-<p>Accepted <code class="language-js">types</code> are: <code>text</code>, <code>email</code>, <code>number</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code></p>
+<p>Accepted <code class="language-js">types</code> are: <code class="language-js">text</code>, <code class="language-js">email</code>, <code class="language-js">number</code>, <code class="language-js">password</code>, <code class="language-js">search</code>, <code class="language-js">tel</code>, <code class="language-js">url</code></p>
 <p>Any other input defaults to <code class="language-js">type=&quot;text&quot;</code></p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput type="password" label="Password"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput type="password" label="Password"></nys-textinput>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -389,7 +403,7 @@
 <h3>Placeholder</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -410,7 +424,8 @@
 <h3>Disabled</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput label="Disabled" disabled></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput label="Disabled" disabled></nys-textinput>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -431,7 +446,7 @@
 <h3>Readonly</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -453,7 +468,7 @@
 <p><code class="language-js">max</code>, <code class="language-js">min</code>, and <code class="language-js">step</code> only apply when <code class="language-js">type=&quot;number&quot;</code></p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -474,7 +489,7 @@
 <h3>Maxlength</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -496,7 +511,7 @@
 <p>Takes any valid regex value.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -514,11 +529,63 @@
     </div>
   </div>
 </div>
+<h3>Slotted Button</h3>
+<p>Note: You can add a button to the input by adding a <code class="language-js">slot=&quot;startButton&quot;</code> or <code class="language-js">slot=&quot;endButton&quot;</code>.
+This will add a button to the left or right of the input respectively.<br>
+The button must be a <code class="language-js">nys-button</code> component and one input should not add both a <code class="language-js">startButton</code> and <code class="language-js">endButton</code> to the same input.<br>
+The slotted button will automatically be <code class="language-js">size=&quot;sm&quot;</code> and <code class="language-js">variant=&quot;filled&quot;</code> and support the disabled state of the input.<br>
+When using a slotted button use either <code class="language-js">&lt;nys-textinput width=&quot;lg&quot;&gt;</code> or <code class="language-js">&lt;nys-textinput width=&quot;full&quot;&gt;</code> to ensure the input is wide enough for the user to see their input.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-textinput 
+  name="searchInput"
+  type="search" 
+  placeholder="Search"
+  id="searchInput"
+>
+  <nys-button
+  slot="endButton"
+  type="submit"
+  label="Search"
+  prefixIcon="search"
+  id="searchButton"
+  ></nys-button>
+</nys-textinput></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> 
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>searchInput<span class="token punctuation">"</span></span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>searchInput<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
+  <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>endButton<span class="token punctuation">"</span></span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span>
+  <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>searchButton<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>Error Message</h3>
 <p>Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">

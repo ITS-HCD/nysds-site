@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-29T21:53:05.809+00:00 -->
+    <!-- Latest Build: 2025-05-30T18:44:38.739+00:00 -->
   </head>
   
   <body class="single-page page-checkbox section-components">
@@ -267,6 +267,19 @@
         
         
         <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
+            Skip To Content
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
           <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/" >
             UNav Footer
           </a>
@@ -315,14 +328,14 @@
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
       <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
       <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
       <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
       <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
       <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
       <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
-    </nys-checkboxgroup>
+    </nys-checkboxgroup></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -358,10 +371,10 @@
 <p>The <code class="language-js">&lt;nys-checkboxgroup&gt;</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
   <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
   <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
-</nys-checkboxgroup>
+</nys-checkboxgroup></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -385,7 +398,7 @@
 <h3>Disabled</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>
+<div class="code-preview__preview-root-inner"><nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -409,14 +422,14 @@
 <p><code class="language-js">md</code> : The <code class="language-js">default</code> size. Set to 32px in width and height.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
   <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
   <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
-</nys-checkboxgroup>
+</nys-checkboxgroup></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -441,16 +454,56 @@
     </div>
   </div>
 </div>
+<h3>Tile</h3>
+<p>The <code class="language-js">tile</code> prop will change the styling of the checkbox to a tile. This is useful when you want a larger clickable area for the user.</p>
+<ul>
+<li>The <code class="language-js">tile</code> prop can be applied to the <code class="language-js">&lt;nys-checkboxgroup&gt;</code> or the <code class="language-js">&lt;nys-checkbox&gt;</code> component. If applied to the <code class="language-js">&lt;nys-checkboxgroup&gt;</code>, all checkboxes will be displayed as tiles. If applied to the <code class="language-js">&lt;nys-checkbox&gt;</code>, only that checkbox will be displayed as a tile.</li>
+<li>Do not use the <code class="language-js">tile</code> prop on a checkbox if it is inside a <code class="language-js">&lt;nys-checkboxgroup&gt;</code>. All checkboxes in a group should be the same size and style.</li>
+</ul>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkboxgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select your favorite New York landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Choose from the options below<span class="token punctuation">"</span></span> <span class="token attr-name">tile</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Adirondacks<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adirondacks<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>finger-lakes<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Finger Lakes<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>catskills<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Catskills<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>niagara-falls<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Niagara Falls<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>landmarks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>coney-island<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Coney Island<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Mount Greylock<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is disabled because it's not in New York.<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkboxgroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>Error</h3>
 <p>Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <strong>true</strong>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.</p>
 <p>Errors can be assigned to both <code class="language-js">&lt;nys-checkboxgroup&gt;</code> and individual <code class="language-js">&lt;nys-checkbox&gt;</code> components.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
-</nys-checkboxgroup>
+</nys-checkboxgroup></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -476,9 +529,9 @@
 <p>When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
+<div class="code-preview__preview-root-inner"><nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
-</nys-checkbox>
+</nys-checkbox></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">

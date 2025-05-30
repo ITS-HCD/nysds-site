@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-05-29T21:53:05.809+00:00 -->
+    <!-- Latest Build: 2025-05-30T18:44:38.739+00:00 -->
   </head>
   
   <body class="single-page page-grid section-foundations">
@@ -245,6 +245,7 @@
 <p>The grid system uses a series of containers, rows, and columns to lay out and align content. The following row and corresponding code are an example of and  in-depth look at how the grid comes together.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
 <div class="docs-grid-example">
   <div class="nys-grid-container">
     <div class="nys-grid-row">
@@ -253,7 +254,7 @@
       <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
     </div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -303,6 +304,7 @@
 <p><code>.nys-grid-col</code> and <code>.nys-grid-col-fill</code> items flex to fill the available space as illustrated in the following example row and code.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
 <div class="docs-grid-example">
   <div class="nys-grid-container">
     <div class="nys-grid-row">
@@ -310,7 +312,7 @@
       <div class="nys-grid-col-fill">.nys-grid-col-fill</div>
     </div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -343,6 +345,7 @@
 <p><code>.nys-grid-col-[1-12]</code> sets a fixed width of [n] grid columns in a 12-column grid.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
 <div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
@@ -394,7 +397,7 @@
   <div class="nys-grid-col-2">.nys-grid-col-2</div>
   <div class="nys-grid-col-2">.nys-grid-col-2</div>
 </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -427,7 +430,7 @@
 <p>Columns are full-width until the narrowest breakpoint specified in a <code>.nys-grid-col</code> class. For instance, using a single set of <code>nys-tablet:nys-grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>nys-tablet:</code>) as illustrated in the following rows and corresponding code.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="docs-grid-example">
+<div class="code-preview__preview-root-inner"><div class="docs-grid-example">
   <div class="nys-grid-row">
     <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
     <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
@@ -437,7 +440,7 @@
     <div class="nys-tablet:nys-grid-col-4">.nys-tablet:nys-grid-col-4</div>
     <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -467,6 +470,7 @@
 <p>Don't want your columns to simply stack in some breakpoints? Use a combination of different classes for each breakpoint as needed. See the following example rows and corresponding code for a better idea of how it all works.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
 <div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
@@ -522,7 +526,7 @@ Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
   <div class="nys-grid-col-6">.nys-grid-col-6</div>
 </div>
 Columns are always 50% wide, on mobile and desktop
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -561,6 +565,7 @@ Columns are always 50% wide, on mobile and desktop
 <p><code>.nys-grid-offset-[1-12]</code> offsets an item by the specified number of grid columns as shown in the following example.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
 <div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
@@ -603,7 +608,7 @@ Columns are always 50% wide, on mobile and desktop
   <div class="nys-grid-row">
     <div class="nys-grid-col-8 nys-grid-offset-4">.nys-grid-col-8.nys-grid-offset-4</div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -629,7 +634,7 @@ Columns are always 50% wide, on mobile and desktop
 <p>Items wrap when the sum of the grid columns is more than 12 as shown in the following example.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="nys-grid-row border-left bg-white">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -673,7 +678,7 @@ Columns are always 50% wide, on mobile and desktop
     <div class="nys-grid-col-3">.nys-grid-col-3</div>
     <div class="nys-grid-col-5">.nys-grid-col-5</div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -702,7 +707,7 @@ Columns are always 50% wide, on mobile and desktop
 <p>Add <code>nys-grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code>desktop</code> and higher.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="nys-grid-row border-left bg-white">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -752,7 +757,7 @@ Columns are always 50% wide, on mobile and desktop
       <div>.nys-grid-col-4</div>
     </div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -794,7 +799,7 @@ Columns are always 50% wide, on mobile and desktop
 </ul>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="nys-grid-row border-left bg-white">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -844,7 +849,7 @@ Columns are always 50% wide, on mobile and desktop
       <div>.nys-grid-col-4</div>
     </div>
   </div>
-</div>
+</div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
