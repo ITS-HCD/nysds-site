@@ -60,18 +60,18 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> component includes th
 {% block options %}
 
 ### Width
-If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to <code class="language-js">full</code>. Supported widths are <code class="language-js">sm</code>, <code class="language-js">md</code>, <code class="language-js">lg</code>, and <code class="language-js">full</code>.
 
 Width full will take up the full width of the parent container.
 
-If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.
+If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">full</code>.
 
   {% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Type
-Accepted <code class="language-js">types</code> are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
+Accepted <code class="language-js">types</code> are: <code class="language-js">text</code>, <code class="language-js">email</code>, <code class="language-js">number</code>, <code class="language-js">password</code>, <code class="language-js">search</code>, <code class="language-js">tel</code>, <code class="language-js">url</code>
 
 Any other input defaults to <code class="language-js">type="text"</code>
 
@@ -112,6 +112,30 @@ Any other input defaults to <code class="language-js">type="text"</code>
 ### Pattern
 Takes any valid regex value.
   {% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Slotted Button
+  Note: You can add a button to the input by adding a <code class="language-js">slot="startButton"</code> or <code class="language-js">slot="endButton"</code>.
+  This will add a button to the left or right of the input respectively.\
+  The button must be a <code class="language-js">nys-button</code> component and one input should not add both a <code class="language-js">startButton</code> and <code class="language-js">endButton</code> to the same input.\
+  The slotted button will automatically be <code class="language-js">size="sm"</code> and <code class="language-js">variant="filled"</code> and support the disabled state of the input.\
+  When using a slotted button use either <code class="language-js">&lt;nys-textinput width="lg"&gt;</code> or <code class="language-js">&lt;nys-textinput width="full"&gt;</code> to ensure the input is wide enough for the user to see their input.
+
+  {% set preview %}<nys-textinput 
+  name="searchInput"
+  type="search" 
+  placeholder="Search"
+  id="searchInput"
+>
+  <nys-button
+  slot="endButton"
+  type="submit"
+  label="Search"
+  prefixIcon="search"
+  id="searchButton"
+  ></nys-button>
+</nys-textinput>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
