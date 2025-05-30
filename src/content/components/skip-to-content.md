@@ -17,7 +17,6 @@ The <code class="language-js">&lt;nys-skipnav&gt;</code> is an accessibility fea
 {% endblock %}
 
 {% block example %}
-{# -- Actual rendered preview -- #}
 {% set preview %}
 <script>
   setTimeout(() => {
