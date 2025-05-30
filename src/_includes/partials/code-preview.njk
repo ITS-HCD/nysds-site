@@ -1,7 +1,7 @@
 <div class="code-preview-container">
 {% if preview %}
   <div class="code-preview__preview {% if previewInverted %}inverted{% endif %}">
-{{ preview | safe }}
+<div class="code-preview__preview-root-inner">{{ preview | safe }}</div>
   </div>
 {% endif %}
   <div class="code-preview__source">

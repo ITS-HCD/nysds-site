@@ -18,22 +18,27 @@ The <code class="language-js">&lt;nys-skipnav&gt;</code> is an accessibility fea
 
 {% block example %}
 {% set preview %}
-<script>
-  setTimeout(() => {
-    const skipnav = document.getElementById("skipnav");
-    const link = skipnav?.shadowRoot?.querySelector(".nys-skipnav__link");
-    link?.classList.add("show");
-  }, 0);
-</script>
-<div style="position: relative; overflow: hidden;"><nys-skipnav id="skipnav" href="#main-content"></nys-skipnav>
-<p style="margin-top:45px;">
+<nys-skipnav id="skipnav-demo" href="#main-content"></nys-skipnav>
+<p style="margin-top:55px;">
   This skip link is visible for demo purposes. In our mockup of a
   real-world scenario further down this page, you'll see it's hidden until
   focused.
-</p></div>
+</p>
+<script type="module">
+  customElements.whenDefined('nys-skipnav').then(async () => {
+    const skipnav = document.getElementById('skipnav-demo');
+    // Wait until the Lit component finishes updating
+    await skipnav.updateComplete;
+    const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
+    if (link) {
+      link.classList.add('show');
+    }
+  });
+</script>
 {% endset %}
+
 {% set code %}
-<nys-skipnav id="skipnav" href="#main-content"></nys-skipnav>
+<nys-skipnav id="skipnav-demo" href="#main-content"></nys-skipnav>
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
@@ -79,11 +84,7 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 **IMPORTANT:** To work correctly, `<nys-skipnav>` should be the first focusable element. Ideally right after the opening `<body>` tag, before any headers or nav elements.
 
-{% set preview %}
-<div style="position: relative; overflow: hidden;"><nys-skipnav
-  id="skipnav"
-  href="#main-content1"
-></nys-skipnav>
+{% set preview %}<nys-skipnav href="#main-content1"></nys-skipnav>
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 <div id="main-content1" style="padding:10px 30px; background-color: #f0f0f0;">
   <h1>Main Content</h1>
