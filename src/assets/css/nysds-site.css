@@ -793,6 +793,7 @@ opacity: 1;
       linear-gradient(-45deg, transparent 75%, var(--nys-color-neutral-10, #f6f6f6) 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    overflow: auto;
 }
 .code-preview__preview.inverted {
     background-color: var(--nys-color-ink, #1b1b1b);
@@ -801,6 +802,10 @@ opacity: 1;
       linear-gradient(-45deg, var(--nys-color-neutral-800, #323435) 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, var(--nys-color-neutral-800, #323435) 75%),
       linear-gradient(-45deg, transparent 75%, var(--nys-color-neutral-800, #323435) 75%);
+}
+.code-preview__preview-root-inner {
+    padding: 1px;
+    position: relative;
 }
 /*** Main Code Source Section ***/
 .code-preview__source {
