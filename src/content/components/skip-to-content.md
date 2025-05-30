@@ -95,11 +95,8 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
       main content section, improving accessibility and usability.
   </p>
 </div>
-<nys-unavfooter></nys-unavfooter></div>
-{% endset %}
-{% set code %}
-<nys-skipnav id="skipnav" href="#main-content"></nys-skipnav>
-{% endset %}
+<nys-unavfooter></nys-unavfooter>{% endset %}
+{% set code = preview%}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
