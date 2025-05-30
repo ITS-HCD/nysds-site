@@ -775,7 +775,15 @@ li > .section-nav__list {
 .token-list__text--value:hover::after {
 opacity: 1;
 }
-  
+
+/* Give these tokens a defined height and bg color so they show up in the token list */
+.token-list__space,
+.token-list__size,
+.token-list__radius {
+    height: 50px;
+    background-color: var(--nys-color-theme);
+}
+
 /*** Code Previews Container ***/
 .code-preview-container {
     border-radius: var(--nys-radius-md, 4px);

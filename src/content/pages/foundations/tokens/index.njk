@@ -34,10 +34,14 @@ navOrder: 40
             </div>
           {% elif token.type == "font-size" %}
             <div class="token-list__type" style="font-size: var({{ token.name }});">Aa</div>
+          {% elif token.type == "font-family" %}
+            <div class="token-list__family" style="font-family: var({{ token.name }}); font-size: var(--nys-font-size-9xl)">Aa</div>
           {% elif token.type == "space" %}
             <div class="token-list__space" style="width: var({{ token.name }});"></div>
           {% elif token.type == "size" %}
             <div class="token-list__size" style="width: var({{ token.name }});"></div>
+          {% elif token.type == "radius" %}
+            <div class="token-list__radius" style="border-radius: var({{ token.name }});"></div>
           {% endif %}
           <pre data-no-copy><code class="token-list__raw">{{ token.rawvalue }}</code></pre>
         </div>
@@ -57,7 +61,7 @@ navOrder: 40
                   id="copy-{{ loop.index }}" 
                   variant="ghost" 
                   size="sm" 
-                  prefixIcon="publish"
+                  prefixIcon="content_copy"
                 </nys-button>
               </div>
             </div>
