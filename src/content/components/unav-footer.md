@@ -48,7 +48,7 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 
 The <code class="language-js">&lt;nys-unavfooter&gt;</code> component includes the following accessibility-focused features:
 
-  - Proper use of <code class="language-js">&lt;footer&gt;</code> and <code class="language-js">&lt;a&gt;</code> elements ensures compatibility with assistive technologies.
+  - Proper use of `<footer>` and `<a>` elements ensures compatibility with assistive technologies.
   - Keyboard navigation: Users can tab through all links in the footer.
 {% endblock %}
 
