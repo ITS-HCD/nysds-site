@@ -104,6 +104,23 @@ Set the size property of the <code class="language-js">&lt;nys-checkboxgroup&gt;
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Tile
+  The <code class="language-js">tile</code> prop will change the styling of the checkbox to a tile. This is useful when you want a larger clickable area for the user.
+  - The <code class="language-js">tile</code> prop can be applied to the <code class="language-js">&lt;nys-checkboxgroup&gt;</code> or the <code class="language-js">&lt;nys-checkbox&gt;</code> component. If applied to the <code class="language-js">&lt;nys-checkboxgroup&gt;</code>, all checkboxes will be displayed as tiles. If applied to the <code class="language-js">&lt;nys-checkbox&gt;</code>, only that checkbox will be displayed as a tile.
+  - Do not use the <code class="language-js">tile</code> prop on a checkbox if it is inside a <code class="language-js">&lt;nys-checkboxgroup&gt;</code>. All checkboxes in a group should be the same size and style.
+
+
+  {% set preview %}<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Error
 
 Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <strong>true</strong>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.

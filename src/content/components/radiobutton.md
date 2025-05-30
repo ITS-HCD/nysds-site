@@ -41,7 +41,7 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 
 {% block usagedo %}
 
-  - Always wrap a set of `nys-radiobutton`s with a `nys-radiogroup`
+  - Always wrap a group of <code class="language-js">&lt;nys-radiobutton&gt;</code> with a <code class="language-js">&lt;nys-radiogroup&gt;</code>
   - Group radio buttons vertically for easier scanning, especially when labels are lengthy.
   - Use a clear default selection if applicable (e.g., the most common or recommended choice).
   - Provide descriptive and concise labels for each option.
@@ -84,13 +84,25 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component includes 
 ### Size
 Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-radiogroup&gt;</code> to have all <code class="language-js">&lt;nys-radiobutton&gt;</code> be the same size. Our current sizes are:
 
-  - `sm`: Set to 24px in width and height
-  - `md`: The default size. Set to 32px in width and height.
+  - <code class="language-js">sm</code>: Set to 24px in width and height
+  - <code class="language-js">md</code>: The default size. Set to 32px in width and height.
 
   {% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
   <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Tile 
+  The <code class="language-js">tile</code> prop will change the styling of the radio button to a tile. This is useful when you want a larger clickable area for the user.\
+  Note: The <code class="language-js">tile</code> prop is applied  to the <code class="language-js">&lt;nys-radiogroup&gt;</code> component, not the <code class="language-js">&lt;nys-radiobutton&gt;</code>. Each <code class="language-js">&lt;nys-radiobutton&gt;</code> in the <code class="language-js">&lt;nys-radiogroup&gt;</code> will be set to tile.
+
+  {% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." tile>
+  <nys-radiobutton name="agency" checked label="Department of Health" value="doh"></nys-radiobutton>
+  <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its"></nys-radiobutton>  
+  <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
