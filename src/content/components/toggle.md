@@ -5,7 +5,7 @@ description: Switch component for enabling or disabling a setting.
 image: /assets/img/components/toggle.svg
 image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
-navOrder: 13
+navOrder: 14
 ---
 
 {% extends "layouts/component.njk" %}

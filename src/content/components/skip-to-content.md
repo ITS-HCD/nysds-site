@@ -5,7 +5,7 @@ description: An accessibility feature that allows keyboard and screen readers to
 image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip to content button.
 image_header: /assets/img/components/skipnav-header.svg
-navOrder: 14
+navOrder: 11
 ---
 
 {% extends "layouts/component.njk" %}
