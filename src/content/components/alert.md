@@ -274,7 +274,6 @@ You may find having just a heading without description as a good compact version
 </table>
 {% endblock %}
 
-{% block cssvariables %}
 <table>
   <thead>
     <tr>
@@ -289,7 +288,8 @@ You may find having just a heading without description as a good compact version
     </tr>
   </tbody>
   </table>
-{% endblock %}
+  
+{% block cssvariables %}{% endblock %}
 
 {% block events %}{% endblock %}
 
