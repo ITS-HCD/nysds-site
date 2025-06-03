@@ -467,8 +467,6 @@ li > .section-nav__list {
 .section-nav__item--active-section {
     font-weight: bold;
     background-color: var(--nys-color-theme-faint);
-    /* border-left: solid var(--nys-border-width-lg) ;
-    margin-left: calc(var(--nys-border-width-md) * -1); */
 }
 
 /* Active border with ::after pseudo element */
@@ -864,7 +862,7 @@ opacity: 1;
     justify-content: center;
     align-items: center;
     gap: var(--nys-space-100, 8px);
-    border-left: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-100, #D0D0CE);
+    border-left: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-50, #EDEDED);
     background: var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
     --_nys-button-radius: 0;
     --_nys-button-radius-left: 0;
