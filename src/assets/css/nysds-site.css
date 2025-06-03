@@ -777,11 +777,16 @@ opacity: 1;
 }
 
 /* Give these tokens a defined height and bg color so they show up in the token list */
-.token-list__space,
 .token-list__size,
 .token-list__radius {
     height: 50px;
     background-color: var(--nys-color-theme);
+}
+.token-list__space {
+    height: 50px;
+    border-color: var(--nys-color-theme);
+    border-width: 1px 2px;
+    border-style: dashed solid;
 }
 
 /*** Code Previews Container ***/
