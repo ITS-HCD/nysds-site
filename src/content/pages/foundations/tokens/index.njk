@@ -17,20 +17,22 @@ navOrder: 40
 
         <div class="token-list__example nys-tablet:nys-grid-col-3">
           {% if token.type == "color" %}
-            <div class="token-list__swatch" style="background-color: var({{ token.name }});">
-              {% if token.recommendedtype %}
-                <div class="token-list__text">
-                {% for textColor, details in token.recommendedtype %}
-                  <span 
-                    class="token-list__text--value" 
-                    style="color: var({{ details.variableName }});" 
-                    data-color="var({{ details.variableName }})"
-                  >
-                    {{ details.contrastRatio }}
-                  </span>
-                {% endfor %}
-                </div>
-              {% endif %}
+            <div class="{% if "transparent" in token.name %}token-list__swatch--checkerboard{% endif %}">
+              <div class="token-list__swatch {% if 'transparent' not in token.name and token.rawvalue in ['#ffffff', '#bec0c1', '#ededed'] %} token-list__swatch--white-border{% endif %}" style="background-color: var({{ token.name }});">
+                {% if token.recommendedtype %}
+                  <div class="token-list__text">
+                  {% for textColor, details in token.recommendedtype %}
+                    <span 
+                      class="token-list__text--value" 
+                      style="color: var({{ details.variableName }});" 
+                      data-color="var({{ details.variableName }})"
+                    >
+                      {{ details.contrastRatio }}
+                    </span>
+                  {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
             </div>
           {% elif token.type == "font-size" %}
             <div class="token-list__type" style="font-size: var({{ token.name }});">Aa</div>
