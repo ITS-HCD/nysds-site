@@ -97,8 +97,8 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
   - Use Success type to confirm a positive system status to users such as saving a form.
   - Use Danger type to display system status error messages.
   - Only use Emergency type for actual emergencies such as a mission person, weather, or power outage; consider switching the left icon to a relevant icon if one exists.
-  - [Dev] Use the appropriate <code class="language-js">theme</code> (e.g., <code class="language-js">info</code>, <code class="language-js">success</code>, <code class="language-js">warning</code>, or <code class="language-js">danger</code>) to match the intent of the alert.
-  - [Dev] Use the <code class="language-js">dismissible</code> property for non-critical alerts, allowing users to clear them from the screen.
+  - [Dev] Use the appropriate `theme` (e.g., `info`, `success`, `warning`, or `danger`) to match the intent of the alert.
+  - [Dev] Use the `dismissible` property for non-critical alerts, allowing users to clear them from the screen.
 {% endblock %}
 
 {% block usagedont %}
@@ -132,12 +132,12 @@ The `<nys-alert>` component includes the following accessibility-focused feature
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-js">role="alert"</code></td>
+      <td><code>role="alert"</code></td>
       <td>Important messages that demand the user's immediate attention.</td>
       <td>Example: Danger and Emergency alert</td>
     </tr>
     <tr>
-      <td><code class="language-js">role="status"</code></td>
+      <td><code>role="status"</code></td>
       <td>
         Messages that provide advisory information but do not have the same
         urgency as alerts.
@@ -145,14 +145,14 @@ The `<nys-alert>` component includes the following accessibility-focused feature
       <td>Example: Success alert</td>
     </tr>
     <tr>
-      <td><code class="language-js">role="region"</code></td>
+      <td><code>role="region"</code></td>
       <td>
         Messages that provide information the user would want to be able to
         easily find, but are not important enough to interrupt user workflow.
       </td>
       <td>
         Information and Warning alert (An
-        <code class="language-js">aria-label</code>will be added for this role.)
+        <code>aria-label</code> will be added for this role.)
       </td>
     </tr>
   </tbody>
@@ -163,22 +163,23 @@ The `<nys-alert>` component includes the following accessibility-focused feature
 {% block options %}
 
 ### Custom text description
-Add descriptive content to your alert using the <code class="language-js">text</code> prop or the our slot feature. 
 
-Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
+Add descriptive content to your alert using the `text` prop or the our slot feature. 
 
-  {% set preview %}<nys-alert type="success" heading="Custom Descriptions">
-  <p>This is a custom alert with <strong>HTML content</strong>.</p>
-  <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+Use the `text` prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
+
+{% set preview %}<nys-alert type="success" heading="Custom Descriptions">
+<p>This is a custom alert with <strong>HTML content</strong>.</p>
+<a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
 </nys-alert>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Dismissible
 
-Use the <code class="language-js">dismissible</code> property to make the alert dismissible.
+Use the `dismissible` property to make the alert dismissible.
 
-The <code class="language-js">nys-alertClosed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
+The `nys-alertClosed` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
 {% set preview %}<nys-alert type="info" heading="Information status" dismissible>
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
@@ -189,7 +190,7 @@ The <code class="language-js">nys-alertClosed</code> custom event is dispatched 
 
 ### Duration
 
-Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
+Set the `duration` property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
 {% set preview %}<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
 <div class="alert-container" style="margin-top: 8px"></div>{% endset %}
@@ -205,7 +206,7 @@ Set the <code class="language-js">duration</code> property to automatically hide
 
 ### Icon Customization
 
-Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.
+Override the default theme icon by setting the `icon` property to any name from the icon library.
 
 {% set preview %}<nys-alert
   type="emergency"
@@ -216,7 +217,6 @@ Override the default theme icon by setting the <code class="language-js">icon</c
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
        
-
 ### Heading only
 
 You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
@@ -230,7 +230,6 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block properties %}
-
 <table>
   <thead>
     <tr>
@@ -273,9 +272,9 @@ You may find having just a heading without description as a good compact version
     </tr>
   </tbody>
 </table>
-
 {% endblock %}
-[[TODO]]
+
+{% block cssvariables %}
 <table>
   <thead>
     <tr>
@@ -290,14 +289,8 @@ You may find having just a heading without description as a good compact version
     </tr>
   </tbody>
   </table>
-
-{% block cssvariables %}
-
-
 {% endblock %}
 
-{% block events %}
-
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}
