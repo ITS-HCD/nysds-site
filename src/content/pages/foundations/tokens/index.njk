@@ -58,14 +58,16 @@ navOrder: 40
               <div class="nys-grid-col-10">
                 <pre data-no-copy><code class="token-list__var">{{ token.name }}</code></pre>
               </div>
-              <div class="nys-grid-col-2">
+              <div class="nys-grid-col-2" style="position: relative;">
                 <nys-button 
+                  class="copy-btn"
                   id="copy-{{ loop.index }}" 
                   variant="ghost" 
                   size="sm" 
                   prefixIcon="content_copy"
                 </nys-button>
               </div>
+              <div class="copy-tooltip">Copy</div>
             </div>
         </div>
 
