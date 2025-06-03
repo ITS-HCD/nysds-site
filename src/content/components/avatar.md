@@ -14,7 +14,7 @@ navOrder: 3
 
 The `<nys-avatar>` component is used to visually represent a user or entity.
 
-By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.
+By default, a generic icon is displayed. Personalize avatars with a custom `icon`, `initials`, or `image`, and always include a `label` for accessibility.
 {% endblock %}
 
 {% block example %}
@@ -44,23 +44,23 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
   - On Tablet and above, prefer showing the full name of the user or entity.
   - Place the full name of the user or entity to the right of the avatar.
   - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
-  - Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.
+  - Use `nys-icon` as a slot when you need further customizations that the `icon` prop can't provide.
 {% endblock %}
 
 {% block usagedont %}
 
   - Don't overload the avatar with unnecessary customizations.
   - Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.
-  - [Dev] Don't skip the <code class="language-js">label</code> attribute for screen reader users.
-  - [Dev] Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.
+  - [Dev] Don't skip the `label` attribute for screen reader users.
+  - [Dev] Don't use the `nys-icon` as a slot when icon prop can satisfy your use.
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-avatar>` component includes the following accessibility-focused features:
 
-  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
-  - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
+  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: `alt="John Smith"`
+  - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: `alt="Photo of John Smith"`
   - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
   - A label property to provide accessible text for screen readers.
 {% endblock %}
@@ -68,49 +68,52 @@ The `<nys-avatar>` component includes the following accessibility-focused featur
 {% block options %}
 
 ### Images
-<p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
+To display an image in the avatar, set the `image` and `label` attributes. Images will take **priority** and **override** initials and icons. You can also enable lazy loading for avatar images by setting the `lazy` boolean attribute.
 
-  {% set preview %}<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Initials
 
-<p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
+If an image is unavailable, you can set the `initials` attribute to display a personalized placeholder instead of an icon. Initials will take **priority** and **override** icons.
 
-  {% set preview %}<nys-avatar label="User avatar" initials="NY"></nys-avatar>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-avatar label="User avatar" initials="NY"></nys-avatar>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Custom Icons
 
-<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in `<nys-icon>` using the <code class="language-js">icon</code> prop or customize directly within `<nys-avatar>` with the icon slot.</p>
+When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in `<nys-icon>` using the `icon` prop or customize directly within `<nys-avatar>` with the icon slot.
 
-  {% set preview %}<nys-avatar label="User avatar"></nys-avatar>
+{% set preview %}
+<nys-avatar label="User avatar"></nys-avatar>
 <nys-avatar label="Youtube avatar" color="#f2efee">
   <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
 <nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Shapes
 
-<p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
+To change the shape of the avatar, set the `shape` attribute. The default shape is **circle**, but you can also set it to **square** or **rounded**.
 
-  {% set preview %}<nys-avatar label="User avatar" shape="circle"></nys-avatar>
+{% set preview %}
+<nys-avatar label="User avatar" shape="circle"></nys-avatar>
 <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
 <nys-avatar label="User avatar" shape="square"></nys-avatar></nys-avatar>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Background Color
 
 You can change the background color of an Avatar. Note that images will naturally cover over the background color.
 
-  {% set preview %}<nys-avatar label="User avatar" color="purple"></nys-avatar>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-avatar label="User avatar" color="purple"></nys-avatar>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
