@@ -59,12 +59,16 @@ navOrder: 40
                 <pre data-no-copy><code class="token-list__var">{{ token.name }}</code></pre>
               </div>
               <div class="nys-grid-col-2">
-                <nys-button 
-                  id="copy-{{ loop.index }}" 
-                  variant="ghost" 
-                  size="sm" 
-                  prefixIcon="content_copy"
-                </nys-button>
+                <div class="copy-button-wrapper" style="position: relative;">
+                  <nys-button
+                    class="copy-btn"
+                    id="copy-{{ loop.index }}"
+                    variant="ghost"
+                    size="sm"
+                    prefixIcon="content_copy">
+                  </nys-button>
+                  <div class="copy-tooltip tokens">Code</div>
+                </div>
               </div>
             </div>
         </div>
@@ -87,14 +91,23 @@ document.querySelectorAll("[id^='copy-']").forEach(button => {
     const tokenName = this.closest(".token-list__info").querySelector(".token-list__var").textContent.trim();
     const copyValue = `var(${tokenName})`; // Wrap token in var()
 
+    const wrapper = this.closest(".copy-button-wrapper");
+    const tooltip = wrapper.querySelector(".copy-tooltip");
+
     // Copy token name to clipboard
     navigator.clipboard.writeText(copyValue).then(() => {
       // Set label to "Copied!"
       this.setAttribute("prefixIcon", "check");
+
+      // Temporarily change tooltip text to "Copied!"
+      tooltip.innerText = "Copied!";
+      tooltip.classList.add("copied");
       
       // Restore icon-only button after 1.5 seconds
       setTimeout(() => {
         this.setAttribute("prefixIcon", "content_copy"); // Restores icon
+        tooltip.innerText = "Copy";
+        tooltip.classList.remove("copied");
       }, 1500);
     });
   });
@@ -127,8 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-
 
 </script>
 

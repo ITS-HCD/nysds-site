@@ -10,8 +10,10 @@
         <nys-icon class="code-preview__dropdown-icon" name="{{ 'chevron_down' if codeExpanded else 'chevron_right' }}" size="xl"></nys-icon>
         <p>{{ accordionLabel or "Example Code" }}</p>
       </button>
-      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-      <div class="copy-tooltip">Copy Code</div>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
     </div>
     <div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
       <div class="code-preview__code-block">
@@ -21,9 +23,7 @@
       </div>
     </div>
 {% if showTip %}
-  <div class="code-preview__code-tip">
-    <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-  </div>
+
 {% endif %}
   </div>
 </div>

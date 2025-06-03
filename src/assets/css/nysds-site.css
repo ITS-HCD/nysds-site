@@ -924,13 +924,19 @@ opacity: 1;
 }
 
 /* COPY Tooltip */
+.copy-button-wrapper {
+    position: relative;
+    width: fit-content;
+}
 .copy-tooltip {
     position: absolute;
-    right: 16px;
     top: -45px;
     display: flex;
     opacity: 0;
     max-width: 400px;
+    width: fit-content;
+    text-wrap: nowrap;
+    text-align: center;
     max-height: 120px;
     padding: var(--nys-space-50, 4px) var(--nys-space-100, 8px);
     justify-content: center;
@@ -947,6 +953,11 @@ opacity: 1;
     font-weight: 400;
     line-height: var(--nys-font-lineheight-ui-sm, 24px); 
     letter-spacing: var(--nys-font-letterspacing-ui-sm, 0.044px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .copy-tooltip.tokens {
+    right: auto;
   }
   /* Tooltip Arrow */
   .copy-tooltip::after {
@@ -961,10 +972,6 @@ opacity: 1;
   }
   .copy-btn:hover ~ .copy-tooltip, .copy-tooltip.copied {
     opacity: 1;
-  }
-  /* The reasoning for the below line is so the longer hover "Copy Code" text is more align center. */
-  .copy-btn:hover ~ .copy-tooltip:not(.copied) {
-    right: 10px;
   }
 
 /* Additional Tweaks */
