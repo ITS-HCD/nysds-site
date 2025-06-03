@@ -231,11 +231,11 @@ Set the `inverted` when the button is on a dark background.
     </tr>
     <tr>
       <td><code>prefixIcon</code></td>
-      <td>`nys-icon` name</td>
+      <td>nys-icon name</td>
     </tr>
     <tr>
       <td><code>suffixIcon</code></td>
-      <td>`nys-icon` name</td>
+      <td>nys-icon name</td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
