@@ -12,7 +12,7 @@ navOrder: 3
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-avatar&gt;</code> component is used to visually represent a user or entity.
+The `<nys-avatar>` component is used to visually represent a user or entity.
 
 By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.
 {% endblock %}
@@ -57,7 +57,7 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-avatar&gt;</code> component includes the following accessibility-focused features:
+The `<nys-avatar>` component includes the following accessibility-focused features:
 
   - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
   - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
@@ -84,7 +84,7 @@ The <code class="language-js">&lt;nys-avatar&gt;</code> component includes the f
 
 ### Custom Icons
 
-<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">&lt;nys-icon&gt;</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">&lt;nys-avatar&gt;</code> with the icon slot.</p>
+<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in `<nys-icon>` using the <code class="language-js">icon</code> prop or customize directly within `<nys-avatar>` with the icon slot.</p>
 
   {% set preview %}<nys-avatar label="User avatar"></nys-avatar>
 <nys-avatar label="Youtube avatar" color="#f2efee">

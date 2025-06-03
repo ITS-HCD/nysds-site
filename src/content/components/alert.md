@@ -14,7 +14,7 @@ navOrder: 2
 
 Alert banners are designed to display critical information, updates, or warnings that require the user's attention.
 
-The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
+The `<nys-alert>` component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
 {% endblock %}
 
 {% block example %}
@@ -77,7 +77,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
 ### When to use this component
 
-  - Use <code class="language-js">&lt;nys-alert&gt;</code> to communicate important, time-sensitive information to users in a visually prominent way.
+  - Use `<nys-alert>` to communicate important, time-sensitive information to users in a visually prominent way.
   - Ideal for messages such as success notifications, danger alerts, warnings, or informational updates.
   - Use for dismissible or temporary alerts when the message is not critical to user workflow.
 
@@ -115,7 +115,7 @@ The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-lik
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:
+The `<nys-alert>` component includes the following accessibility-focused features:
 
   - Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
   - Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.
