@@ -4,17 +4,17 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Accessibility - New York State Design System</title>
-    <meta name="description" content="The New York State Design System makes it easier to build accessible, usable websites for New York State.">   
-    <link rel="canonical" href="https://designsystem.ny.gov/foundations/accessibility/">
+    <title>Margin and Padding - New York State Design System</title>
+    <meta name="description" content="The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">   
+    <link rel="canonical" href="https://designsystem.ny.gov/foundations/utilities/margin-padding/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
     <meta name=”robots” content=”noindex”>
 
-    <meta property="og:title" content="Accessibility">
+    <meta property="og:title" content="Margin and Padding">
     <meta property="og:site_name" content="New York State Design System">
-    <meta property="og:url" content="https://designsystem.ny.gov/foundations/accessibility/">
-    <meta property="og:description" content="The New York State Design System makes it easier to build accessible, usable websites for New York State.">
+    <meta property="og:url" content="https://designsystem.ny.gov/foundations/utilities/margin-padding/">
+    <meta property="og:description" content="The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -38,7 +38,7 @@
     <!-- Latest Build: 2025-06-03T19:28:38.868+00:00 -->
   </head>
   
-  <body class="single-page page-accessibility section-foundations">
+  <body class="single-page page-margin-padding section-foundations">
   <nys-skipnav></nys-skipnav>
   
 
@@ -118,13 +118,13 @@
           
         
         
-        <li class="section-nav__item section-nav__item--active-section section-nav__item--active"  aria-expanded="true" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/"  aria-current="page" >
+        <li class="section-nav__item"  aria-expanded="false" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/" >
             Accessibility
           </a>
           
           
-            <ul class="section-nav__list" >
+            <ul class="section-nav__list"  hidden >
               
                 <li class="section-nav__item">
                   <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/accessibility/digital-experiences/" >
@@ -178,17 +178,19 @@
           
         
           
+            
+          
         
           
         
         
-        <li class="section-nav__item"  aria-expanded="false" >
+        <li class="section-nav__item section-nav__item--active-section"  aria-expanded="true" >
           <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/" >
             Utilities
           </a>
           
           
-            <ul class="section-nav__list"  hidden >
+            <ul class="section-nav__list" >
               
                 <li class="section-nav__item">
                   <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/utilities/" >
@@ -208,8 +210,8 @@
                   </a>
                 </li>
               
-                <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/margin-padding/" >
+                <li class="section-nav__item section-nav__item--active">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/margin-padding/"  aria-current="page" >
                     Margin and Padding
                   </a>
                 </li>
@@ -244,105 +246,186 @@
 </script>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <h1>Accessiblilty</h1>
-<img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;">
-<section id="what-is-web-accessibility">
-<h2>What Is Web Accessibility</h2>
-<p><nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text=""></nys-alert></p>
-<p>Web accessibility is about making websites, digital services, and online content usable by
-everyone, including people with disabilities. Building with accessibility in mind is about removing
-barriers to access. It helps ensure that people who rely on assistive technologies, like screen
-readers, voice commands, or keyboard navigation, have equal access to services and
-information.</p>
-<p>The Web Content Accessibility Guidelines (WCAG) are organized by four key principles:
-Perceivable, Operable, Understandable, and Robust. These principles provide a framework for
-determining if web content is accessible to all users, no matter the disability or device:</p>
-<ul>
-  <li><strong>Perceivable</strong>: Is content presented 
-in ways that all users can perceive?</li>
-  <li><strong>Operable</strong>: Are interface elements navigable and usable by all users?</li>
-  <li><strong>Understandable</strong>: Is information clear and behavior predictable?</li>
-  <li><strong>Robust</strong>: Is the content compatible with assistive technology?</li>
-</ul>
-<div style="border-left: 4px solid var(--nys-color-neutral-100); padding: 16px 32px; margin-top: 16px;">
-  <blockquote>
-    "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
-  </blockquote>
-  <cite>– Sir Tim Berners-Lee</cite>
+    <link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css">
+<h1>Margin and Padding</h1>
+<h2>Margin</h2>
+<p>Margin appears as spacing outside the container it is applied to.</p>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-1px">.nys-margin-1px</div>
+  </div>
 </div>
-</section>
-<section id="accessibility-policy">
-<h2>Accessibility Policy</h2>
-<p><nys-alert type="warning" heading="Upcoming Compliance Deadlines" text="DOJ requires WCAG 2.1 by April 2026 and NYSTL requires WCAG 2.2 by January 2027." primaryLabel="Learn More" primaryAction="/foundations/accessibility/legal/#deadlines"></nys-alert></p>
-<h3>Current ITS Policy</h3>
-<p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
-<p><a href="/foundations/accessibility/legal/#current-its-policy">Learn More</a></p>
-<h3>Recommendations</h3>
-<ul>
-  <li><strong>WCAG Compliance</strong>: Target WCAG 2.1 Level AA compliance for all web applications, content, and mobile applications by June 25, 2026, as required by the DOJ Rule. Upgrade web applications to WCAG 2.2 Level AA compliance by January 1, 2027, in accordance with New York State Technology Law (STL) Section 103-d.</li>
-  <li><strong>Accessibility Training</strong>: Make sure all user interface designers and developers receive basic accessibility training. (See learning resource links below.) Key team members should have a comprehensive understanding of accessibility and WCAG 2.2 AA compliance.</li>
-  <li><strong>Accessibility Testing</strong>: Conduct manual accessibility testing of ICT before production use and prior to any significant changes. Incorporate this testing into a standard development and QA process with key milestones.</li>
-  <li><strong>Documentation and Records</strong>: Keep documented testing reports for each ICT and maintain an updated list of all ICTs along with their current compliance status. Clearly display a link labeled “Accessibility” in the footer of the SE's website home page, providing contact information for accessibility inquiries. </li>
-</ul>
-<h4>Recommendations</h4>
-<p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
-<h5>Recommendations</h5>
-<p>Prioritizing accessibility in our design system allows all users, regardless of ability, navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users</p>
-<h6>Recommendations</h6>
-<p>"Screen reader testing" means checking how well a website or app works for visually impaired users who rely on screen reader software. It ensures that text, images, and interactive elements are properly read aloud and usable with keyboard commands.</p>
-</section>
-<h2>Our Approach</h2>
-<p><strong>How does our team make sure our design system is accessible to all?</strong></p>
-<p>While there are numerous ways to check for accessibility, here are just a few:</p>
-<p><strong>Color Contrast:</strong> Ensure sufficient contrast between text and background colors using a dedicated checker.</p>
-<p><a href="http://webaim.org/resources/contrastchecker/">WebAim</a> is recommended.</p>
-<p><strong>Element Sizing:</strong> Larger interactive elements (minimum 44x44 pixels as recommended by WCAG) make it easier for users with limited dexterity or those using assistive technologies to tap or click accurately.</p>
-<p><strong>Focus States:</strong> Ensures interactive elements like buttons and links clearly indicate focus when navigated with a keyboard.</p>
-<p><strong>Keyboard Navigation:</strong> Designing a website or application so users can navigate and interact with it using only a keyboard, without needing a mouse. This is essential for accessibility, especially for people with disabilities.</p>
-<p><em>It typically includes:</em></p>
-<ul>
-<li>Tab key to move between links, buttons, and form fields.</li>
-<li>Enter/Spacebar to activate buttons and links.</li>
-<li>Arrow keys to scroll or navigate within menus.</li>
-<li>Escape key to close pop-ups or dialogs.</li>
-</ul>
-<p><strong>Screen Reader Testing:</strong>  &quot;Screen reader testing&quot; means checking how well a website or app works for visually impaired users who rely on screen reader software. It ensures that text, images, and interactive elements are properly read aloud and usable with keyboard commands.</p>
-<p>Prioritizing accessibility in our design system allows all users, regardless of ability, navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users.</p>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const navContainer = document.createElement('nav');
-    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
-
-  const navList = document.createElement('ul');
-  navList.classList.add('navigator__list');
-  navContainer.appendChild(navList);
-
-  document.querySelectorAll('h2').forEach((heading) => {
-    const navItem = document.createElement('li');
-    const navLink = document.createElement('a');
-    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
-    
-    // const section = document.createElement('section');
-    // section.id = `${headingId}`;
-    // heading.parentNode.insertBefore(section, heading);
-    // section.appendChild(heading);
-
-    heading.id = headingId;
-    navLink.href = `#${headingId}`;
-    navLink.textContent = heading.textContent;
-    navLink.classList.add('navigator__link');
-    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
-   
-    navItem.appendChild(navLink);
-    navList.appendChild(navItem);
-  });
-
-  const onPageNav = document.getElementById('on-page-nav');
-  if (onPageNav) {
-    onPageNav.appendChild(navContainer);
-  }});
-</script>
-
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-2px">.nys-margin-2px</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-50">.nys-margin-50</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-100">.nys-margin-100</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-150">.nys-margin-150</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-200">.nys-margin-200</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-250">.nys-margin-250</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-300">.nys-margin-300</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-400">.nys-margin-400</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-500">.nys-margin-500</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-600">.nys-margin-600</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-700">.nys-margin-700</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-800">.nys-margin-800</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-1200">.nys-margin-1200</div>
+  </div>
+</div>
+<br/>
+You can also apply margin in vertical, horizontal, and individual directions.
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-x-800 nys-margin-y-200">.nys-margin-x-800 .nys-margin-y-200</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="nys-grid-col margin-example">
+    <div class="nys-margin-t-50 nys-margin-r-200 nys-margin-b-400 nys-margin-l-800">
+      .nys-margin-t-50<br/>
+      .nys-margin-r-200<br/>
+      .nys-margin-b-400<br/>
+      .nys-margin-l-800<br/>
+    </div>
+  </div>
+</div>
+<h2>Padding</h2>
+<p>Padding appears as spacing inside the container it is applied to.</p>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-1px">.nys-padding-1px</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-2px">.nys-padding-2px</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-50">.nys-padding-50</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-100">.nys-padding-100</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-150">.nys-padding-150</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-200">.nys-padding-200</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-250">.nys-padding-250</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-300">.nys-padding-300</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-400">.nys-padding-400</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-500">.nys-padding-500</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-600">.nys-padding-600</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-700">.nys-padding-700</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-800">.nys-padding-800</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-1200">.nys-padding-1200</div>
+  </div>
+</div>
+<br/>
+You can also apply padding in vertical, horizontal, and individual directions.
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-x-800 nys-padding-y-200">.nys-padding-x-800 .nys-padding-y-200</div>
+  </div>
+</div>
+<div class="nys-grid-row utility-example-container">
+  <div class="padding-example">
+    <div class="nys-padding-t-50 nys-padding-r-200 nys-padding-b-400 nys-padding-l-800">
+      .nys-padding-t-50<br/>
+      .nys-padding-r-200<br/>
+      .nys-padding-b-400<br/>
+      .nys-padding-l-800<br/>
+    </div>
+  </div>
+</div>
   </div>
   <aside class="nys-desktop:nys-grid-col-2">
     <div id="onpage-nav" class="onpage-nav"></div>
