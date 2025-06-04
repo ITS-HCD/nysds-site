@@ -12,9 +12,9 @@ navOrder: 16
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
+The `<nys-unavheader>` is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 
-<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> The Universal Navigation Header remains consistent across all sites.</p>
+**Note:** The Universal Navigation Header remains consistent across all sites.
 
 {% endblock %}
 
@@ -29,9 +29,9 @@ The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web co
 {% block usage %}
 
 ### When to use this component
-  - Use <code class="language-js">&lt;nys-unavheader&gt;</code> at the top of every page.
+  - Use `<nys-unavheader>` at the top of every page.
 ### When to consider something else
-  - Do not place the <code class="language-js">&lt;nys-unavheader&gt;</code> anywhere other than the top of the page.
+  - Do not place the `<nys-unavheader>` anywhere other than the top of the page.
 
 {% endblock %}
 
@@ -51,7 +51,7 @@ The <code class="language-js">&lt;nys-unavheader&gt;</code> is a reusable web co
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-unavheader&gt;</code> component includes the following accessibility-focused features:
+The `<nys-unavheader>` component includes the following accessibility-focused features:
 
   - Proper use of `<header>` and `<a>` elements ensures compatibility with assistive technologies.
   - Keyboard navigation: Users can tab through all links in the header.
