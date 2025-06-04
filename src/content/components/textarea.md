@@ -81,9 +81,9 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
   {% include "partials/code-preview.njk" %}
 
 ### Resize
-By default a user can resize the `<nys-textarea>` vertically. If you want to disallow resizing altogether add `resize="none"`
+By default a user can resize the `<nys-textarea>` vertically. If you want to disallow resizing altogether add `resize="none"`.
 
-`resize` is not affected by setting `<nys-textarea>` to `disabled` or `readonly` as they are independent.
+**Note:** `resize` is not affected by setting `<nys-textarea>` to `disabled` or `readonly` as they are independent.
 
   {% set preview %}<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>{% endset %}
   {% set code = preview %}

@@ -64,7 +64,7 @@ For public-facing sites, the Global Header can include navigation links. To add 
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.
+**Note:** Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.
 
   {% set preview %}<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>
