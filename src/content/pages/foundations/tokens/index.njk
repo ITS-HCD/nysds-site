@@ -18,7 +18,7 @@ navOrder: 40
         <div class="token-list__example nys-tablet:nys-grid-col-3">
           {% if token.type == "color" %}
             <div class="{% if "transparent" in token.name %}token-list__swatch--checkerboard{% endif %}">
-              <div class="token-list__swatch {% if ('black' not in token.name) and ('white' in token.name or token.rawvalue in ['#ffffff', '#bec0c1'] )%} token-list__swatch--white-border{% endif %}" style="background-color: var({{ token.name }});">
+              <div class="token-list__swatch {% if ('black' not in token.name) and ('white' in token.name or token.rawvalue in ['#ffffff'] )%} token-list__swatch--white-border{% endif %}" style="background-color: var({{ token.name }});">
                 {% if token.recommendedtype %}
                   <div class="token-list__text">
                   {% for textColor, details in token.recommendedtype %}
