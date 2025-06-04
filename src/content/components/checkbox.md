@@ -123,7 +123,7 @@ The `tile` prop will change the styling of the checkbox to a tile. This is usefu
 
 ### Error
 
-Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to **true**. Setting only `errorMessage` will not display the error message by default. 
+Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
 
 Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkbox>` components.
 
