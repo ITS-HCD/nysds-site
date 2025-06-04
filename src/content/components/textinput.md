@@ -13,7 +13,7 @@ navOrder: 13
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
+The `<nys-textinput>` is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
 {% endblock %}
 
 {% block example %}
@@ -49,7 +49,7 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web com
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-textinput&gt;</code> component includes the following accessibility-focused features:
+The `<nys-textinput>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
   - Keyboard navigation support, allowing users to tab into the input using the keyboard.
@@ -60,20 +60,20 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> component includes th
 {% block options %}
 
 ### Width
-If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to <code class="language-js">full</code>. Supported widths are <code class="language-js">sm</code>, <code class="language-js">md</code>, <code class="language-js">lg</code>, and <code class="language-js">full</code>.
+If no `width` is provided, the `<nys-textinput>` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 
 Width full will take up the full width of the parent container.
 
-If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">full</code>.
+If an invalid option is assigned to `width`, it will be ignored and default to `full`.
 
   {% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Type
-Accepted <code class="language-js">types</code> are: <code class="language-js">text</code>, <code class="language-js">email</code>, <code class="language-js">number</code>, <code class="language-js">password</code>, <code class="language-js">search</code>, <code class="language-js">tel</code>, <code class="language-js">url</code>
+Accepted `types` are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
 
-Any other input defaults to <code class="language-js">type="text"</code>
+Any other input defaults to `type="text"`
 
   {% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
 {% endset %}
@@ -98,7 +98,7 @@ Any other input defaults to <code class="language-js">type="text"</code>
 
 ### Min Max and step
 
-<code class="language-js">max</code>, <code class="language-js">min</code>, and <code class="language-js">step</code> only apply when <code class="language-js">type="number"</code>
+`max`, `min`, and `step` only apply when `type="number"`
 
   {% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
   {% set code = preview %}
@@ -116,11 +116,13 @@ Takes any valid regex value.
   {% include "partials/code-preview.njk" %}
 
 ### Slotted Button
-  Note: You can add a button to the input by adding a <code class="language-js">slot="startButton"</code> or <code class="language-js">slot="endButton"</code>.
-  This will add a button to the left or right of the input respectively.\
-  The button must be a <code class="language-js">nys-button</code> component and one input should not add both a <code class="language-js">startButton</code> and <code class="language-js">endButton</code> to the same input.\
-  The slotted button will automatically be <code class="language-js">size="sm"</code> and <code class="language-js">variant="filled"</code> and support the disabled state of the input.\
-  When using a slotted button use either <code class="language-js">&lt;nys-textinput width="lg"&gt;</code> or <code class="language-js">&lt;nys-textinput width="full"&gt;</code> to ensure the input is wide enough for the user to see their input.
+  Note: You can add a button to the input by adding a `slot="startButton"` or `slot="endButton"`. This will add a button to the left or right of the input respectively.
+
+  The button must be a `nys-button` component and one input should not add both a `startButton` and `endButton` to the same input.
+
+  The slotted button will automatically be `size="sm"` and `variant="filled"` and support the disabled state of the input.
+
+  When using a slotted button use either `<nys-textinput width="lg">` or `<nys-textinput width="full">` to ensure the input is wide enough for the user to see their input.
 
   {% set preview %}<nys-textinput 
   name="searchInput"
@@ -140,7 +142,7 @@ Takes any valid regex value.
   {% include "partials/code-preview.njk" %}
 
 ### Error Message
-Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
+  Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to `true`. Setting only `errorMessage` will not display the error message by default.
 
   {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
   {% set code = preview %}
@@ -247,12 +249,10 @@ Set an error message and choose to activate it. The error message will appear ON
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-textinput&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-checkValidity</code></strong> – Fired when the textinput state changes.</li>
-<li><strong><code>focus</code></strong> – Fired when the textinput gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the textinput loses focus.</li>
-</ol>
+The `<nys-textinput>` component emits **three** custom Javascript events:
+1.  **`nys-checkValidity`** – Fired when the textinput state changes.
+2.  **`focus`** – Fired when the textinput gains focus.
+3.  **`blur`** – Fired when the textinput loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the textinput component
