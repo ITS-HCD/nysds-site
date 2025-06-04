@@ -12,13 +12,13 @@ navOrder: 6
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reusable web component for use in New York State digital products. It helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
-
+The `<nys-globalfooter>` component is a reusable web component for use in New York State digital products. It helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
 
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services">
+  {% set preview %}
+<nys-globalfooter agencyName="Office of Information Technology Services">
 </nys-globalfooter>{% endset %}  
   {% set code = preview %}
   {% set showTip = true %}
@@ -48,7 +48,7 @@ The <code class="language-js">&lt;nys-globalfooter&gt;</code> component is a reu
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-globalfooter&gt;</code> component includes the following accessibility-focused features:
+The `<nys-globalfooter>` component includes the following accessibility-focused features:
 
  - Proper use of &lt;footer&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
  - Keyboard navigation: Users can tab through all links in the footer.
@@ -59,11 +59,11 @@ The <code class="language-js">&lt;nys-globalfooter&gt;</code> component includes
 ### With Links
 For public-facing sites, the Global Footer can include navigation links. To add links, follow this format:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Use an unordered list (`<ul>`) inside the <code class="language-js">&lt;nys-globalfooter&gt;</code> slot. 
+1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired URL.
+2. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired URL.
 
-Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
   {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
   <ul>

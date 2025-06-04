@@ -13,7 +13,7 @@ navOrder: 7
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reusable web component for use in New York State digital products. It helps provide users with consistent access to key features, branding, and primary navigation across all pages.
+The `<nys-globalheader>` component is a reusable web component for use in New York State digital products. It helps provide users with consistent access to key features, branding, and primary navigation across all pages.
 
 {% endblock %}
 
@@ -47,10 +47,10 @@ The <code class="language-js">&lt;nys-globalheader&gt;</code> component is a reu
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-globalheader&gt;</code> component includes the following accessibility-focused features:
+The `<nys-globalheader>` component includes the following accessibility-focused features:
 
- - Proper use of &lt;header&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
- - Keyboard navigation: Users can tab through all links in the header.
+- Proper use of `<header>` and `<a>` elements ensures compatibility with assistive technologies.
+- Keyboard navigation: Users can tab through all links in the header.
 {% endblock %}
 
 {% block options %}
@@ -59,13 +59,12 @@ The <code class="language-js">&lt;nys-globalheader&gt;</code> component includes
 
 For public-facing sites, the Global Header can include navigation links. To add links, follow this format:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Use an unordered list (`<ul>`) inside the <code class="language-js">&lt;nys-globalheader&gt;</code> slot. 
+1. Use an unordered list (`<ul>`) inside the `<nys-globalheader>` slot. 
+2. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired URL.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired URL.
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-Use the prop <code class="language-js">homepageLink</code> to link your <code class="language-js">agencyName</code> to your homepage.
-
-<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.</p>
+Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.
 
   {% set preview %}<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>
