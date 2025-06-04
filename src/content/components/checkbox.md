@@ -14,7 +14,7 @@ navOrder: 5
 
 The `<nys-checkbox>` component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
-Optional: `<nys-checkboxgroup>` can be used to group multiple checkboxes so they function as a single form control.
+**Optional:** `<nys-checkboxgroup>` can be used to group multiple checkboxes so they function as a single form control.
 
 {% endblock %}
 
