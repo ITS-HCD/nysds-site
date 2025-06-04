@@ -12,7 +12,7 @@ navOrder: 12
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
+The `<nys-textarea>` is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
 {% endblock %}
 
 {% block example %}
@@ -52,7 +52,7 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-textarea&gt;</code> component includes the following accessibility-focused features:
+The `<nys-textarea>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
   - Keyboard navigation support, allowing users to tab into the input using the keyboard.
@@ -72,19 +72,18 @@ The default value is `4`
   {% include "partials/code-preview.njk" %}
 
 ### Width
-If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textarea&gt;</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
-Setting property <code class="language-js">width="full"</code> will take up the full width of the parent container.
+If no `width` is provided, the `<nys-textarea>` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`. Setting property `width="full"` will take up the full width of the parent container.
 
-<p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">width="full"</code></p>
+If an invalid option is assigned to `width`, it will be ignored and default to `width="full"`
 
   {% set preview %}<nys-textarea width="md" label="This textarea is md"></nys-textarea>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Resize
-By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code class="language-js">resize="none"</code>
+By default a user can resize the `<nys-textarea>` vertically. If you want to disallow resizing altogether add `resize="none"`
 
-<p style="display:flex; align-items:top; gap:10px; flex-wrap:wrap;"><nys-icon name="info" size="2xl"></nys-icon> <code class="language-js">resize</code> is not affected by setting <code class="language-js">&lt;nys-textarea&gt;</code> to <code class="language-js">disabled</code> or <code class="language-js">readonly</code> as they are independent.</p>
+`resize` is not affected by setting `<nys-textarea>` to `disabled` or `readonly` as they are independent.
 
   {% set preview %}<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>{% endset %}
   {% set code = preview %}
@@ -124,7 +123,7 @@ You can include a description to provide additional context for the user. This i
   {% include "partials/code-preview.njk" %}
 
 ### Error Message
-To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-textarea&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
+To display an error message, pass in the `showError` property to the `<nys-textarea>` component. Setting `errorMessage` does not display the message without `showError` set to true.
 
   {% set preview %}<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>{% endset %}
   {% set code = preview %}
@@ -232,12 +231,11 @@ To display an error message, pass in the <code class="language-js">showError</co
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-textarea&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-checkValidity</code></strong> – Fired when the textarea state changes.</li>
-<li><strong><code>focus</code></strong> – Fired when the textarea gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the textarea loses focus.</li>
-</ol>
+The `<nys-textarea>` component emits **three** custom Javascript events:
+
+1.  **`nys-checkValidity`** – Fired when the textarea state changes.
+2.  **`focus`** – Fired when the textarea gains focus.
+3.  **`blur`** – Fired when the textarea loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the textarea component
