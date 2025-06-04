@@ -12,7 +12,7 @@ navOrder: 14
 
 {% block longdescription %}
 
-  The <code class="language-js">&lt;nys-toggle&gt;</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+  The `<nys-toggle`> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
 {% endblock %}
 
 {% block example %}
@@ -31,11 +31,11 @@ navOrder: 14
 {% block usage %}
 
 ### When to use this component
-  - Consider using <code class="language-js">&lt;nys-toggle&gt;</code> when expecting immediate UI effects when turning switch on/off.
+  - Consider using `<nys-toggle`> when expecting immediate UI effects when turning switch on/off.
   - Ideal for settings pages, feature toggles, or user preferences.
 ### When to consider something else
-  - Consider using <code class="language-js">&lt;nys-checkbox&gt;</code> or <code class="language-js">&lt;nys-radiobutton&gt;</code> to select one or more options from a list where the selections
-  - Use <code class="language-js">&lt;nys-checkbox&gt;</code> for forms, especially when you're not expecting immediate action.
+  - Consider using `<nys-checkbox>` or `<nys-radiobutton>` to select one or more options from a list where the selections
+  - Use `<nys-checkbox>` for forms, especially when you're not expecting immediate action.
 {% endblock %}
 
 {% block usagedo %}
@@ -55,7 +55,7 @@ navOrder: 14
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-toggle&gt;</code> component includes the following accessibility-focused features:
+The `<nys-toggle`> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
@@ -169,13 +169,11 @@ The <code class="language-js">&lt;nys-toggle&gt;</code> component includes the f
 {% endblock %}
 
 {% block events %}
-<p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
+The `<nys-toggle`> component emits three custom Javascript events:
+1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
+2.  **`focus`** – Fired when the toggle gains focus.
+3.  **`blur`** – Fired when the toggle loses focus.
+4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the toggle component
