@@ -12,7 +12,8 @@ navOrder: 10
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.
+The `<nys-select>` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element `<nys-option>` to define the options in the dropdown.
+
 {% endblock %}
 
 {% block example %}
@@ -50,10 +51,10 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 
 {% block accessibility %}
 
-The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:
+The `<nys-select>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.
-  - Keyboard navigation support, allowing users to tab to the <code class="language-js">nys-select</code> using the keyboard and spacebar to select an option.
+  - Keyboard navigation support, allowing users to tab to the `<nys-select>` using the keyboard and spacebar to select an option.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
 {% endblock %}
@@ -72,32 +73,37 @@ The <code class="language-js">nys-select</code> component includes the following
   {% include "partials/code-preview.njk" %}
 
 ### Width
-The following <code class="language-js">width</code> options are available:
+The following `width` options are available:
 
   - `sm` (Small): 88px, ideal for compact layouts.
   - `md` (Medium): 200px, ideal for balanced designs.
   - `lg` (Large): 384px, suitable for displaying longer content.
   - `full` (Full Width): default size. Expands to fill the available space.
 
-{% set preview %}<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
+{% set preview %}
+<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
   <nys-option value="sm" label="sm"></nys-option>
   <nys-option value="md" label="md"></nys-option>
   <nys-option value="lg" label="lg"></nys-option>
   <nys-option value="full" label="full"></nys-option>
-    </nys-select>{% endset %}
+</nys-select>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Error Message
-To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-select&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
 
-{% set preview %}<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
+To display an error message, pass in the `showError` property to the `<nys-select>` component. 
+
+Setting `errorMessage` does not display the message without `showError` set to true.
+
+{% set preview %}
+<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
   <nys-option value="manhattan" label="Manhattan"></nys-option>
   <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-    </nys-select>{% endset %}
+  <nys-option value="queens" label="Queens"></nys-option>
+</nys-select>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -184,15 +190,14 @@ To display an error message, pass in the <code class="language-js">showError</co
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-select&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the select gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the select loses focus.</li>
-</ol>
+The `<nys-select>` component emits **three** custom Javascript events:
+1.  **`change`** – Fired when the select state changes (checked/unchecked).
+2.  **`focus`** – Fired when the select gains focus.
+3.  **`blur`** – Fired when the select loses focus.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the select component
+{% set code %}
+// Select the select component
 const select = document.querySelector('nys-select');
 // Listen for the 'change' event
 select.addEventListener('change', (event) => {
