@@ -112,7 +112,8 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
 To display an error message, pass in the `showError` property to the `<nys-radiogroup>` component. Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
 
   {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
-  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton> <nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
@@ -122,12 +123,13 @@ When the description requires more complexity than a simple string, use the desc
 
 Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
-  {% set preview %}<nys-radiogroup label="What is your primary work location?">
+  {% set preview %}
+<nys-radiogroup label="What is your primary work location?">
   <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
   <nys-radiobutton name="office" label="Albany" value="albany">
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">Upstate New York</a></label>      
   </nys-radiobutton>
-  <nys-radiobutton name="office" label="Manhattan" value="manhattan"  >
+  <nys-radiobutton name="office" label="Manhattan" value="manhattan">
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
   </nys-radiobutton>
 </nys-radiogroup>{% endset %}
