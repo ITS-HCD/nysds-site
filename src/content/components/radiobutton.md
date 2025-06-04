@@ -14,7 +14,7 @@ navOrder: 9
 
 The `<nys-radiobutton>` component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
 
-**NOTE:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
+**Note:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
 
 {% endblock %}
 
