@@ -12,8 +12,9 @@ navOrder: 9
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
-<p style="display:flex; align-items:top; gap:10px; flex-wrap: wrap;"><nys-icon name="info" size="2xl"></nys-icon> NOTE: <code class="language-js">&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.</p>
+The `<nys-radiobutton>` component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
+
+**NOTE:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
 
 {% endblock %}
 
@@ -41,7 +42,7 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 
 {% block usagedo %}
 
-  - Always wrap a group of <code class="language-js">&lt;nys-radiobutton&gt;</code> with a <code class="language-js">&lt;nys-radiogroup&gt;</code>
+  - Always wrap a group of `<nys-radiobutton>` with a `<nys-radiogroup>`
   - Group radio buttons vertically for easier scanning, especially when labels are lengthy.
   - Use a clear default selection if applicable (e.g., the most common or recommended choice).
   - Provide descriptive and concise labels for each option.
@@ -58,12 +59,12 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component is a reus
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-radiobutton&gt;</code> component includes the following accessibility-focused features:
+The `<nys-radiobutton>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the radiobutton correctly.
-    - <code class="language-js">aria-checked</code>
-    - <code class="language-js">aria-disabled</code>
-    - <code class="language-js">aria-required</code>
+    - `aria-checked`
+    - `aria-disabled`
+    - `aria-required`
   - Keyboard navigation support, allowing users to toggle the radiobutton using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
@@ -82,10 +83,10 @@ The <code class="language-js">&lt;nys-radiobutton&gt;</code> component includes 
   {% include "partials/code-preview.njk" %}
 
 ### Size
-Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-radiogroup&gt;</code> to have all <code class="language-js">&lt;nys-radiobutton&gt;</code> be the same size. Our current sizes are:
+Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be the same size. Our current sizes are:
 
-  - <code class="language-js">sm</code>: Set to 24px in width and height
-  - <code class="language-js">md</code>: The default size. Set to 32px in width and height.
+  - `sm`: Set to 24px in width and height
+  - `md`: The default size. Set to 32px in width and height.
 
   {% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
   <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
@@ -96,8 +97,8 @@ Set the <code class="language-js">size</code> prop of the <code class="language-
   {% include "partials/code-preview.njk" %}
 
 ### Tile 
-  The <code class="language-js">tile</code> prop will change the styling of the radio button to a tile. This is useful when you want a larger clickable area for the user.\
-  Note: The <code class="language-js">tile</code> prop is applied  to the <code class="language-js">&lt;nys-radiogroup&gt;</code> component, not the <code class="language-js">&lt;nys-radiobutton&gt;</code>. Each <code class="language-js">&lt;nys-radiobutton&gt;</code> in the <code class="language-js">&lt;nys-radiogroup&gt;</code> will be set to tile.
+  The `tile` prop will change the styling of the radio button to a tile. This is useful when you want a larger clickable area for the user.\
+  Note: The `tile` prop is applied  to the `<nys-radiogroup>` component, not the `<nys-radiobutton>`. Each `<nys-radiobutton>` in the `<nys-radiogroup>` will be set to tile.
 
   {% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." tile>
   <nys-radiobutton name="agency" checked label="Department of Health" value="doh"></nys-radiobutton>
@@ -108,7 +109,7 @@ Set the <code class="language-js">size</code> prop of the <code class="language-
   {% include "partials/code-preview.njk" %}
 
 ### Error
-To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-radiogroup&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to <strong>true</strong>.
+To display an error message, pass in the `showError` property to the `<nys-radiogroup>` component. Setting `errorMessage` does not display the message without `showError` set to **true**.
 
   {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
   <nys-radiobutton   name="office"   label="Albany"   description="Upstate New York"   value="albany" ></nys-radiobutton> <nys-radiobutton   name="office"   label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
@@ -119,7 +120,7 @@ To display an error message, pass in the <code class="language-js">showError</co
 ### Slotted Description
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
-Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="language-js">&lt;nys-radiogroup&gt;</code> support the description slot.
+Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
   {% set preview %}<nys-radiogroup label="What is your primary work location?">
   <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
@@ -205,13 +206,12 @@ Both <code class="language-js">&lt;nys-radiobutton&gt;</code> and <code class="l
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-radiobutton&gt;</code> component emits <strong>four</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the radiobutton gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the radiobutton loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the radiobutton is focused.</li>
-</ol>
+The `<nys-radiobutton>` component emits <strong>four</strong> custom Javascript events:
+
+1.  **`change`** – Fired when the radiobutton state changes (checked/unchecked).
+2.  **`focus`** – Fired when the radiobutton gains focus.
+3.  **`blur`** – Fired when the radiobutton loses focus.
+4.  **`keydown`** – Fired when a key is pressed while the radiobutton is focused.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the radiobutton component
