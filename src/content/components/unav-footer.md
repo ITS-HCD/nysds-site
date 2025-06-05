@@ -56,11 +56,11 @@ The `<nys-unavfooter`> component includes the following accessibility-focused fe
 There are no configurable options for this component. It is intended to be used as-is to ensure consistency across all New York State digital products.
 {% endblock %}
 
-{% block properties %}{% endblock %}
+{% block properties %}
 
-| Property | Type   |
-|----------|--------|
-| `label`  | String |
+There are no properties for this component.
+
+{% endblock %}
 
 {% block cssvariables %}{% endblock %}
 
