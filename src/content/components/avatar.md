@@ -119,65 +119,23 @@ You can change the background color of an Avatar. Note that images will naturall
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>image</code></td>
-      <td>URL</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>initials</code></td>
-      <td>string (2 letters)</td>
-    </tr>
-    <tr>
-      <td><code>icon</code></td>
-      <td>string (&lt;nys-icon&gt;)</td>
-    </tr>
-    <tr>
-      <td><code>shape</code></td>
-      <td>string (square, roundedd, circle)</td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
-      <td>#HEXVAL</td>
-    </tr>
-    <tr>
-      <td><code>lazy</code></td>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
+| Property   | Type                                     |
+|------------|------------------------------------------|
+| `color`    | #HEXVAL                                  |
+| `icon`     | string (`<nys-icon name>`)               |
+| `id`       | string                                   |
+| `image`    | URL                                      |
+| `initials` | string (2 letters)                       |
+| `label`    | string                                   |
+| `lazy`     | boolean                                  |
+| `shape`    | `"square"` \| `"rounded"` \| `"circle"`  |
+
 
 {% endblock %}
 [[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

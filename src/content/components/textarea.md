@@ -132,97 +132,30 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>placeholder</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>readonly</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>maxLength</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ("sm", "md", "lg", "full")</td>
-    </tr>
-    <tr>
-      <td><code>rows</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>resize</code></td>
-      <td>string ("none")</td>
-    </tr>
-  </tbody>
-</table>
+| Property       | Type                                   |
+|----------------|----------------------------------------|
+| `description`  | string                                 |
+| `disabled`     | boolean                                |
+| `errorMessage` | string                                 |
+| `form`         | string                                 |
+| `id`           | string                                 |
+| `label`        | string                                 |
+| `maxLength`    | integer                                |
+| `name`         | string                                 |
+| `placeholder`  | string                                 |
+| `readonly`     | boolean                                |
+| `required`     | boolean                                |
+| `resize`       | `"none"`                               |
+| `rows`         | integer                                |
+| `showError`    | boolean                                |
+| `value`        | string                                 |
+| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
 
 {% endblock %}
 [[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

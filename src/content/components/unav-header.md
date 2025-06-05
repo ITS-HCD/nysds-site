@@ -77,24 +77,11 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>hideTranslate</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>hideSearch</code></td>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
+| Property        | Type    |
+|-----------------|---------|
+| `hideSearch`    | boolean |
+| `hideTranslate` | boolean |
+
 {% endblock %}
 
 

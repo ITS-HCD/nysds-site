@@ -58,20 +58,9 @@ There are no configurable options for this component. It is intended to be used 
 
 {% block properties %}{% endblock %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
+| Property | Type   |
+|----------|--------|
+| `label`  | string |
 
 {% block cssvariables %}{% endblock %}
 

@@ -95,32 +95,12 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>agencyName</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>appName</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>homepageLink</code></td>
-      <td>string (URL)</td>
-    </tr>
-    <tr>
-      <td><code>disableHomepageLink</code></td>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
+| Property              | Type         |
+|-----------------------|--------------|
+| `agencyName`          | string       |
+| `appName`             | string       |
+| `disableHomepageLink` | boolean      |
+| `homepageLink`        | string (URL) |
 
 {% endblock %}
 

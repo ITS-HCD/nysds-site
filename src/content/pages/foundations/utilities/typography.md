@@ -45,31 +45,11 @@ Semantic tokens map specific properties to specific roles, like headings, body t
 
 Here are a few examples of NYSDS' semantic typography tokens:
 
-<table>
-  <thead>
-    <tr>
-      <th>Token Name</th>
-      <th>Description</th>
-      <th>Example Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-font-family-body</code></td>
-      <td>Font family for body text.</td>
-      <td><code>var(--nys-font-family-sans)</code></td>
-    </tr>
-    <tr>
-      <td><code>--nys-font-size-h1</code></td>
-      <td>Font size for Heading 1 elements.</td>
-      <td><code>var(--nys-font-size-5xl)</code></td>
-    </tr>
-      <tr><td><code>--nys-font-size-ui-md</code></td>
-      <td>Medium font size for UI elements.</td>
-      <td><code>var(--nys-font-size-md)</code></td>
-    </tr>
-  </tbody>
-</table>
+| Token Name               | Description                       | Example Value                 |
+|--------------------------|-----------------------------------|-------------------------------|
+| `--nys-font-family-body` | Font family for body text.        | `var(--nys-font-family-sans)` |
+| `--nys-font-size-h1`     | Font size for Heading 1 elements. | `var(--nys-font-size-5xl)`    |
+| `--nys-font-size-ui-md`  | Medium font size for UI elements. | `var(--nys-font-size-md)`     |
 
 </section>
 <section id="installing-fonts">
@@ -78,7 +58,11 @@ Here are a few examples of NYSDS' semantic typography tokens:
 
 ⚠️ Note: Fonts in the design system include some proprietary typefaces that are licensed for use exclusively by New York State government agencies and their digital products. These fonts are distributed separately from the design system and are not part of the open-source package to comply with licensing restrictions.
 
-<table><thead><tr><th>Token Name</th><th>Description</th><th>Example Value</th></tr></thead><tbody><tr><td><code>--nys-font-family-body</code></td><td>Font family for body text.</td><td><code>var(--nys-font-family-sans)</code></td></tr><tr><td><code>--nys-font-size-h1</code></td><td>Font size for Heading 1 elements.</td><td><code>var(--nys-font-size-5xl)</code></td></tr><tr><td><code>--nys-font-size-ui-md</code></td><td>Medium font size for UI elements.</td><td><code>var(--nys-font-size-md)</code></td></tr></tbody></table>
+| Token Name               | Description                       | Example Value                 |
+|--------------------------|-----------------------------------|-------------------------------|
+| `--nys-font-family-body` | Font family for body text.        | `var(--nys-font-family-sans)` |
+| `--nys-font-size-h1`     | Font size for Heading 1 elements. | `var(--nys-font-size-5xl)`    |
+| `--nys-font-size-ui-md`  | Medium font size for UI elements. | `var(--nys-font-size-md)`     |
 
 ### Download and Install
 
@@ -167,7 +151,28 @@ You can reference these classes in your HTML:
 
 ### Full List of Utility Classes
 
-<table><thead><tr><th>Class Name</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td><code>.nys-font-body-xs</code></td><td>Extra small body text</td><td><div class="nys-font-body-xs">Discover the latest initiatives happening across New York State.</div></td></tr><tr><td><code>.nys-font-body-sm</code></td><td>Small body text</td><td><div class="nys-font-body-sm">Explore outdoor adventures, from the Adirondacks to Niagara Falls.</div></td></tr><tr><td><code>.nys-font-body-md</code></td><td>Medium body text</td><td><div class="nys-font-body-md">Welcome to the official website for New York State, where you’ll find services, programs, and resources for residents and businesses.</div></td></tr><tr><td><code>.nys-font-h1</code></td><td>Heading 1</td><td><div class="nys-font-h1">Experience the Empire State</div></td></tr><tr><td><code>.nys-font-h2</code></td><td>Heading 2</td><td><div class="nys-font-h2">Explore New York City and Beyond</div></td></tr><tr><td><code>.nys-font-h3</code></td><td>Heading 3</td><td><div class="nys-font-h3">Parks, Trails, and Natural Wonders</div></td></tr><tr><td><code>.nys-font-h4</code></td><td>Heading 4</td><td><div class="nys-font-h4">Plan Your Visit Today</div></td></tr><tr><td><code>.nys-font-h5</code></td><td>Heading 5</td><td><div class="nys-font-h5">Join Our Community</div></td></tr><tr><td><code>.nys-font-h6</code></td><td>Heading 6</td><td><div class="nys-font-h6">Stay Informed with NYS Updates</div></td></tr><tr><td><code>.nys-font-ui-xs</code></td><td>Extra small UI text</td><td><div class="nys-font-ui-xs">Next</div></td></tr><tr><td><code>.nys-font-ui-sm</code></td><td>Small UI text</td><td><div class="nys-font-ui-sm">Apply Now</div></td></tr><tr><td><code>.nys-font-ui-md</code></td><td>Medium UI text</td><td><div class="nys-font-ui-md">View All Services</div></td></tr><tr><td><code>.nys-font-ui-lg</code></td><td>Large UI text</td><td><div class="nys-font-ui-lg">Explore Programs</div></td></tr><tr><td><code>.nys-font-ui-xl</code></td><td>Extra large UI text</td><td><div class="nys-font-ui-xl">Get Started</div></td></tr><tr><td><code>.nys-font-display-sm</code></td><td>Small display text</td><td><div class="nys-font-display-sm">Discover the beauty of upstate New York.</div></td></tr><tr><td><code>.nys-font-display-md</code></td><td>Medium display text</td><td><div class="nys-font-display-md">Welcome to the Empire State</div></td></tr><tr><td><code>.nys-font-display-lg</code></td><td>Large display text</td><td><div class="nys-font-display-lg">Find Your Next Adventure</div></td></tr><tr><td><code>.nys-font-display-xl</code></td><td>Extra large display text</td><td><div class="nys-font-display-xl">New York State: It’s All Here</div></td></tr><tr><td><code>.nys-font-agency</code></td><td>Agency-specific font style</td><td><div class="nys-font-agency">New York State Department of Transportation</div></td></tr></tbody></table>
+| Class Name             | Description                | Example                                                                                                                                                                   |
+|------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `.nys-font-body-xs`    | Extra small body text      | <div class="nys-font-body-xs">Discover the latest initiatives happening across New York State.</div>                                                                      |
+| `.nys-font-body-sm`    | Small body text            | <div class="nys-font-body-sm">Explore outdoor adventures, from the Adirondacks to Niagara Falls.</div>                                                                    |
+| `.nys-font-body-md`    | Medium body text           | <div class="nys-font-body-md">Welcome to the official website for New York State, where you’ll find services, programs, and resources for residents and businesses.</div> |
+| `.nys-font-h1`         | Heading 1                  | <div class="nys-font-h1">Experience the Empire State</div>                                                                                                                |
+| `.nys-font-h2`         | Heading 2                  | <div class="nys-font-h2">Explore New York City and Beyond</div>                                                                                                           |
+| `.nys-font-h3`         | Heading 3                  | <div class="nys-font-h3">Parks, Trails, and Natural Wonders</div>                                                                                                         |
+| `.nys-font-h4`         | Heading 4                  | <div class="nys-font-h4">Plan Your Visit Today</div>                                                                                                                      |
+| `.nys-font-h5`         | Heading 5                  | <div class="nys-font-h5">Join Our Community</div>                                                                                                                         |
+| `.nys-font-h6`         | Heading 6                  | <div class="nys-font-h6">Stay Informed with NYS Updates</div>                                                                                                             |
+| `.nys-font-ui-xs`      | Extra small UI text        | <div class="nys-font-ui-xs">Next</div>                                                                                                                                    |
+| `.nys-font-ui-sm`      | Small UI text              | <div class="nys-font-ui-sm">Apply Now</div>                                                                                                                               |
+| `.nys-font-ui-md`      | Medium UI text             | <div class="nys-font-ui-md">View All Services</div>                                                                                                                       |
+| `.nys-font-ui-lg`      | Large UI text              | <div class="nys-font-ui-lg">Explore Programs</div>                                                                                                                        |
+| `.nys-font-ui-xl`      | Extra large UI text        | <div class="nys-font-ui-xl">Get Started</div>                                                                                                                             |
+| `.nys-font-display-sm` | Small display text         | <div class="nys-font-display-sm">Discover the beauty of upstate New York.</div>                                                                                           |
+| `.nys-font-display-md` | Medium display text        | <div class="nys-font-display-md">Welcome to the Empire State</div>                                                                                                        |
+| `.nys-font-display-lg` | Large display text         | <div class="nys-font-display-lg">Find Your Next Adventure</div>                                                                                                           |
+| `.nys-font-display-xl` | Extra large display text   | <div class="nys-font-display-xl">New York State: It’s All Here</div>                                                                                                      |
+| `.nys-font-agency`     | Agency-specific font style | <div class="nys-font-agency">New York State Department of Transportation</div>                                                                                            |
+
 </section>
 <section id="best-practices">
 

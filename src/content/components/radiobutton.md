@@ -140,64 +140,20 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>checked</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td>string ("sm", "md")</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
+| Property       | Type             |
+|----------------|------------------|
+| `checked`      | boolean          |
+| `description`  | string           |
+| `disabled`     | boolean          |
+| `errorMessage` | string           |
+| `form`         | string           |
+| `id`           | string           |
+| `label`        | string           |
+| `name`         | string           |
+| `required`     | boolean          |
+| `showError`    | boolean          |
+| `size`         | `"sm"` \| `"md"` |
+| `value`        | string           |
 
 {% endblock %}
 

@@ -189,95 +189,31 @@ Set the `inverted` when the button is on a dark background.
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>onClick</code></td>
-      <td>JS function</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td>string ("sm", "md", "lg")</td>
-    </tr>
-    <tr>
-      <td><code>fullWidth</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>variant</code></td>
-      <td>string ("filled", "outline", "ghost", "text")</td>
-    </tr>
-    <tr>
-      <td><code>inverted</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>prefixIcon</code></td>
-      <td>nys-icon name</td>
-    </tr>
-    <tr>
-      <td><code>suffixIcon</code></td>
-      <td>nys-icon name</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>href</code></td>
-      <td>strong (URL)</td>
-    </tr>
-    <tr>
-      <td><code>type</code></td>
-      <td>string ("submit", "reset", "button")</td>
-    </tr>
-  </tbody>
-</table>
+| Property     | Type                                               |
+|--------------|----------------------------------------------------|
+| `disabled`   | boolean                                            |
+| `form`       | string                                             |
+| `fullWidth`  | boolean                                            |
+| `href`       | string (URL)                                       |
+| `id`         | string                                             |
+| `inverted`   | boolean                                            |
+| `label`      | string                                             |
+| `name`       | string                                             |
+| `onClick`    | JS function                                        |
+| `prefixIcon` | string (`<nys-icon name>`)                         |
+| `size`       | `"sm"` \| `"md"` \| `"lg"`                         |
+| `suffixIcon` | string (`<nys-icon name>`)                         |
+| `type`       | `"submit"` \| `"reset"` \| `"button"`              |
+| `value`      | string                                             |
+| `variant`    | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"` |
 
 {% endblock %}
 
 {% block cssvariables %}{% endblock %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 
 {% block events %}
