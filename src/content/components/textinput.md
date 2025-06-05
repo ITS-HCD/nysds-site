@@ -164,6 +164,7 @@ Takes any valid regex value.
 | `maxlength`    | integer                                                                                 |
 | `min`          | integer                                                                                 |
 | `name`         | String                                                                                  |
+| `optional`     | boolean                                                                                 |
 | `pattern`      | REGEX                                                                                   |
 | `placeholder`  | String                                                                                  |
 | `readonly`     | boolean                                                                                 |

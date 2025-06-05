@@ -142,10 +142,11 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 | `label`        | String                                 |
 | `maxLength`    | integer                                |
 | `name`         | String                                 |
+| `optional`     | boolean                                |
 | `placeholder`  | String                                 |
 | `readonly`     | boolean                                |
 | `required`     | boolean                                |
-| `resize`       | `"none"`                               |
+| `resize`       | `"vertical"` |\ `"none"`               |
 | `rows`         | integer                                |
 | `showError`    | boolean                                |
 | `value`        | String                                 |
