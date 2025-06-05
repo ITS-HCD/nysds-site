@@ -207,6 +207,7 @@ You may find having just a heading without description as a good compact version
 | `duration`        | integer                                                                           |
 | `heading`         | String                                                                            |
 | `icon`            | String (`<nys-icon name>`)                                                        |
+| `id`              | String                                                                            |
 | `primaryAction`   | URL                                                                               |
 | `primaryLabel`    | String                                                                            |
 | `secondaryAction` | URL                                                                               |
