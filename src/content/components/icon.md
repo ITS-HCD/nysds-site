@@ -12,7 +12,7 @@ navOrder: 8
 
 {% block longdescription %}
 
-An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
+An `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
 {% endblock %}
 
 {% block example %}
@@ -28,94 +28,91 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 
 ### General
 <div class="nys-grid-row nys-grid-gap-2">
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="account_circle" size="4xl"></nys-icon></div><div class="card__desc"> account_circle</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="calendar_month" size="4xl"></nys-icon></div><div class="card__desc"> calendar_month</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="cancel" size="4xl"></nys-icon></div><div class="card__desc"> cancel</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="check" size="4xl"></nys-icon></div><div class="card__desc"> check</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="close" size="4xl"></nys-icon></div><div class="card__desc"> close</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="download" size="4xl"></nys-icon></div><div class="card__desc"> download</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="download_done" size="4xl"></nys-icon></div><div class="card__desc"> download_done</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="drive_folder_upload" size="4xl"></nys-icon></div><div class="card__desc"> drive_folder_upload</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="edit_square" size="4xl"></nys-icon></div><div class="card__desc"> edit_square</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="help" size="4xl"></nys-icon></div><div class="card__desc"> help</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="language" size="4xl"></nys-icon></div><div class="card__desc"> language</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="menu" size="4xl"></nys-icon></div><div class="card__desc"> menu</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="more_vert" size="4xl"></nys-icon></div><div class="card__desc"> more_vert</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="open_in_new" size="4xl"></nys-icon></div><div class="card__desc"> open_in_new</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="publish" size="4xl"></nys-icon></div><div class="card__desc"> publish</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="search" size="4xl"></nys-icon></div><div class="card__desc"> search</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="share" size="4xl"></nys-icon></div><div class="card__desc"> share</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="sms" size="4xl"></nys-icon></div><div class="card__desc"> sms</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="thumb_down" size="4xl"></nys-icon></div><div class="card__desc"> thumb_down</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="thumb_up" size="4xl"></nys-icon></div><div class="card__desc"> thumb_up</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="upload_file" size="4xl"></nys-icon></div><div class="card__desc"> upload_file</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="visibility" size="4xl"></nys-icon></div><div class="card__desc"> visibility</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="visibility_off" size="4xl"></nys-icon></div><div class="card__desc"> visibility_off</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="notifications" size="4xl"></nys-icon></div><div class="card__desc"> notifications</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="add" size="4xl"></nys-icon></div><div class="card__desc"> add</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="remove" size="4xl"></nys-icon></div><div class="card__desc"> remove</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="content_copy" size="4xl"></nys-icon></div><div class="card__desc"> content_copy</div></div></div>
+  {% set name = "account_circle" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "calendar_month" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "cancel" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "check" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "close" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "download" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "download_done" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "drive_folder_upload" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "edit_square" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "help" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "language" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "menu" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "more_vert" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "open_in_new" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "publish" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "search" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "share" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "sms" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "thumb_down" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "thumb_up" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "upload_file" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "visibility" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "visibility_off" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "notifications" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "add" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "remove" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "content_copy" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Social
 <div class="nys-grid-row nys-grid-gap-2">
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_facebook" size="4xl"></nys-icon></div><div class="card__desc"> social_facebook</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_flickr" size="4xl"></nys-icon></div><div class="card__desc"> social_flickr</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_google_play" size="4xl"></nys-icon></div><div class="card__desc"> social_google_play</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_instagram" size="4xl"></nys-icon></div><div class="card__desc"> social_instagram</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_linkedin" size="4xl"></nys-icon></div><div class="card__desc"> social_linkedin</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_pinterest" size="4xl"></nys-icon></div><div class="card__desc"> social_pinterest</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_rss" size="4xl"></nys-icon></div><div class="card__desc"> social_rss</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_snapchat" size="4xl"></nys-icon></div><div class="card__desc"> social_snapchat</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_soundcloud" size="4xl"></nys-icon></div><div class="card__desc"> social_soundcloud</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_tiktok" size="4xl"></nys-icon></div><div class="card__desc"> social_tiktok</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_tumblr" size="4xl"></nys-icon></div><div class="card__desc"> social_tumblr</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_vimeo" size="4xl"></nys-icon></div><div class="card__desc"> social_vimeo</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_x" size="4xl"></nys-icon></div><div class="card__desc"> social_x</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="social_youtube" size="4xl"></nys-icon></div><div class="card__desc"> social_youtube</div></div></div>
+  {% set name = "social_facebook" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_flickr" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_google_play" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_instagram" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_linkedin" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_pinterest" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_rss" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_snapchat" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_soundcloud" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_tiktok" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_tumblr" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_vimeo" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_x" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_youtube" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Arrows
 <div class="nys-grid-row nys-grid-gap-2">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="arrow_back" size="4xl"></nys-icon></div><div class="card__desc"> arrow_back</div></div></div>
+  {% set name = "arrow_back" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Chevrons
 <div class="nys-grid-row nys-grid-gap-2">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="chevron_down" size="4xl"></nys-icon></div><div class="card__desc"> chevron_down</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="chevron_up" size="4xl"></nys-icon></div><div class="card__desc"> chevron_up</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="chevron_left" size="4xl"></nys-icon></div><div class="card__desc"> chevron_left</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="chevron_right" size="4xl"></nys-icon></div><div class="card__desc"> chevron_right</div></div></div>
+  {% set name = "chevron_down" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "chevron_up" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "chevron_left" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "chevron_right" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Environmental
 <div class="nys-grid-row nys-grid-gap-2">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="ac_unit" size="4xl"></nys-icon></div><div class="card__desc"> ac_unit</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="air" size="4xl"></nys-icon></div><div class="card__desc"> air</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="clear_day" size="4xl"></nys-icon></div><div class="card__desc"> clear_day</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="coronavirus" size="4xl"></nys-icon></div><div class="card__desc"> coronavirus</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="rainy" size="4xl"></nys-icon></div><div class="card__desc"> rainy</div></div></div>
+  {% set name = "ac_unit" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "air" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "clear_day" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "coronavirus" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "rainy" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Intent
 <div class="nys-grid-row nys-grid-gap-2">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="check_circle" size="4xl"></nys-icon></div><div class="card__desc"> check_circle</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="emergency_home" size="4xl"></nys-icon></div><div class="card__desc"> emergency_home</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="error" size="4xl"></nys-icon></div><div class="card__desc"> error</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="info" size="4xl"></nys-icon></div><div class="card__desc"> info</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="warning" size="4xl"></nys-icon></div><div class="card__desc"> warning</div></div></div>
+  {% set name = "check_circle" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "emergency_home" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "error" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "info" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "warning" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Filled
 <div class="nys-grid-row nys-grid-gap-2">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="account_balance_filled" size="4xl"></nys-icon></div><div class="card__desc"> account_balance_filled</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="cancel_filled" size="4xl"></nys-icon></div><div class="card__desc"> cancel_filled</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="language_filled" size="4xl"></nys-icon></div><div class="card__desc"> language_filled</div></div></div>
-<div class="nys-grid-col-6 nys-tablet:nys-grid-col-3"><div class="card nys-flex-fill"><div class="card__title"><nys-icon name="lock_filled" size="4xl"></nys-icon></div><div class="card__desc"> lock_filled</div></div></div>
+  {% set name = "account_balance_filled" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "cancel_filled" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "language_filled" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "lock_filled" %}{% include "partials/icon-preview.njk" %}
 </div>
-</div> 
-
-<!-- .icon-example -->
 
 ### When to use this component
   - Draw attention to actions. Icons, when paired with text, grab attention and show actions to take. Make sure each icon directly relates to any text it accompanies.
@@ -155,7 +152,7 @@ An icon (<code class="language-js">&lt;nys-icon&gt;</code>) is a visual symbol u
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-icon&gt;</code> component includes the following accessibility-focused features:
+The `<nys-icon>` component includes the following accessibility-focused features:
 
 **ARIA Hidden by Default**: If no label is provided, the icon is hidden from screen readers by setting aria-hidden="true".
 
@@ -170,15 +167,15 @@ You can scale icons either relatively (based on the parent element’s font size
 #### Relative Sizing
 To scale an icon relative to the inherited font size, pass a size variant like size=[variant name] as a prop. The values will scale based on the current font size of the parent element.
 
-  - <code class="language-js">2xs</code> (extra-extra small): 75% of parent font size
-  - <code class="language-js">xs</code> (extra small): 87.5% of parent font size
-  - <code class="language-js">sm</code> (small): 100% of parent font size -- <strong>Default</strong>
-  - <code class="language-js">md</code> (medium): 112.5% of parent font size
-  - <code class="language-js">lg</code> (large): 125% of parent font size
-  - <code class="language-js">xl</code> (extra large): 150% of parent font size
-  - <code class="language-js">2xl</code> (double extra large): 187.5% of parent font size
-  - <code class="language-js">3xl</code> (triple extra large): 225% of parent font size
-  - <code class="language-js">4xl</code> (quadruple extra large): 300% of parent font size
+  - `2xs` (extra-extra small): 75% of parent font size 
+  - `xs` (extra small): 87.5% of parent font size 
+  - `sm` (small): 100% of parent font size -- **Default** 
+  - `md` (medium): 112.5% of parent font size 
+  - `lg` (large): 125% of parent font size 
+  - `xl` (extra large): 150% of parent font size 
+  - `2xl` (double extra large): 187.5% of parent font size 
+  - `3xl` (triple extra large): 225% of parent font size 
+  - `4xl` (quadruple extra large): 300% of parent font size
 
   {% set preview %}<nys-icon name="upload_file" size="2xs"></nys-icon>
 <nys-icon name="upload_file" size="lg"></nys-icon>
@@ -189,12 +186,12 @@ To scale an icon relative to the inherited font size, pass a size variant like s
 #### Literal Sizing
 For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.
 
-  - <code class="language-js">12</code>: 0.75rem = 12px
-  - <code class="language-js">16</code>: 1rem = 16px
-  - <code class="language-js">24</code>: 1.5rem = 24px
-  - <code class="language-js">32</code>: 2rem = 32px
-  - <code class="language-js">48</code>: 3rem = 48px
-  - <code class="language-js">64</code>: 4rem = 64px
+  - `12`: 0.75rem = 12px
+  - `16`: 1rem = 16px
+  - `24`: 1.5rem = 24px
+  - `32`: 2rem = 32px
+  - `48`: 3rem = 48px
+  - `64`: 4rem = 64px
 
   {% set preview %}<nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
@@ -204,21 +201,21 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
 ### Color
 
-You can override the color of an icon by setting a <code class="language-js">color</code> prop. You can use CSS HEX values, CSS color names, or CSS variables
+You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
   {% set preview %}<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Rotate
-You can <code class="language-js">rotate</code> an icon by passing the angle as a number, like rotate="20" (without "deg").
+You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` will rotate the icon by 20 degrees clockwise.
 
   {% set preview %}<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Flip
-Set an icon to flip horizontally, vertically, or in both directions by using the <code class="language-js">flip</code> property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
+Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
 
   {% set preview %}<nys-icon flip="both" label="upload_file icon" name="social_linkedin" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
@@ -285,13 +282,11 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% endblock %}
 [[TODO]]
-<p>The <code class="language-js">&lt;nys-&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
+The `<nys->` component emits **three** custom Javascript events:
+1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
+2.  **`focus`** – Fired when the toggle gains focus.
+3.  **`blur`** – Fired when the toggle loses focus.
+4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
 
 You can listen to these events using JavaScript:
 {% highlight "js" %}

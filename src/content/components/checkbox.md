@@ -12,9 +12,9 @@ navOrder: 5
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
+The `<nys-checkbox>` component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
-<p style="display:flex; align-items:top; gap:10px; flex-wrap: wrap;"><nys-icon name="info" size="2xl"></nys-icon>Optional: <code class="language-js">&lt;nys-checkboxgroup&gt;</code> can be used to group multiple checkboxes so they function as a single form control.</p>
+**Optional:** `<nys-checkboxgroup>` can be used to group multiple checkboxes so they function as a single form control.
 
 {% endblock %}
 
@@ -58,7 +58,7 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component is a form in
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-checkbox&gt;</code> component includes the following accessibility-focused features:
+The `<nys-checkbox>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the checkbox correctly.
   - Keyboard navigation support, allowing users to toggle the checkbox using the keyboard.
@@ -70,70 +70,71 @@ The <code class="language-js">&lt;nys-checkbox&gt;</code> component includes the
 
 ### Checkbox group
 
-The <code class="language-js">&lt;nys-checkboxgroup&gt;</code> component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
+The `<nys-checkboxgroup>` component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
 
-  {% set preview %}<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
-  <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
-  <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
+{% set preview %}<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
+<nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
+<nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Disabled
 
-  {% set preview %}<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Size
 
-Set the size property of the <code class="language-js">&lt;nys-checkboxgroup&gt;</code> to have all <code class="language-js">&lt;nys-checkbox&gt;</code> be the same size. Our current sizes are:
+Set the size property of the `<nys-checkboxgroup>` to have all `<nys-checkbox>` be the same size. Our current sizes are: 
+- `sm` : Set to 24px in width and height 
+- `md` : The `default` size. Set to 32px in width and height.
 
-<code class="language-js">sm</code> : Set to 24px in width and height
-
-<code class="language-js">md</code> : The <code class="language-js">default</code> size. Set to 32px in width and height.
-
-  {% set preview %}<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+{% set preview %}
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
+<nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+<nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+<nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+<nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+<nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+<nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Tile
-  The <code class="language-js">tile</code> prop will change the styling of the checkbox to a tile. This is useful when you want a larger clickable area for the user.
-  - The <code class="language-js">tile</code> prop can be applied to the <code class="language-js">&lt;nys-checkboxgroup&gt;</code> or the <code class="language-js">&lt;nys-checkbox&gt;</code> component. If applied to the <code class="language-js">&lt;nys-checkboxgroup&gt;</code>, all checkboxes will be displayed as tiles. If applied to the <code class="language-js">&lt;nys-checkbox&gt;</code>, only that checkbox will be displayed as a tile.
-  - Do not use the <code class="language-js">tile</code> prop on a checkbox if it is inside a <code class="language-js">&lt;nys-checkboxgroup&gt;</code>. All checkboxes in a group should be the same size and style.
 
+The `tile` prop will change the styling of the checkbox to a tile. This is useful when you want a larger clickable area for the user. 
+- The `tile` prop can be applied to the `<nys-checkboxgroup>` or the `<nys-checkbox>` component. If applied to the `<nys-checkboxgroup>`, all checkboxes will be displayed as tiles. If applied to the `<nys-checkbox>`, only that checkbox will be displayed as a tile. 
+- Do not use the `tile` prop on a checkbox if it is inside a `<nys-checkboxgroup>`. All checkboxes in a group should be the same size and style.
 
-  {% set preview %}<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
-  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
-  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+{% set preview %}
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
+<nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+<nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+<nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+<nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+<nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+<nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Error
 
-Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <strong>true</strong>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
+Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
 
-Errors can be assigned to both <code class="language-js">&lt;nys-checkboxgroup&gt;</code> and individual <code class="language-js">&lt;nys-checkbox&gt;</code> components.
+Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkbox>` components.
 
-  {% set preview %}<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
-  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
-  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
-  <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
+{% set preview %}
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
+<nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
+<nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
+<nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Slotted Description
 
@@ -228,13 +229,11 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-checkbox&gt;</code> component emits <strong>four</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the checkbox state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the checkbox gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the checkbox loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the checkbox is focused.</li>
-</ol>
+The `<nys-checkbox>` component emits **four** custom Javascript events:
+1.  **`change`** – Fired when the checkbox state changes (checked/unchecked).
+2.  **`focus`** – Fired when the checkbox gains focus.
+3.  **`blur`** – Fired when the checkbox loses focus.
+4.  **`keydown`** – Fired when a key is pressed while the checkbox is focused.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the checkbox component

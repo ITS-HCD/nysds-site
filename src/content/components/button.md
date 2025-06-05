@@ -12,7 +12,7 @@ navOrder: 4
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-button&gt;</code> component is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
+The `<nys-button>` component is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
 {% endblock %}
 
 {% block example %}
@@ -51,7 +51,7 @@ The <code class="language-js">&lt;nys-button&gt;</code> component is used for ac
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-button&gt;</code> component includes the following accessibility-focused features:
+The `<nys-button>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
@@ -74,13 +74,12 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 {% block options %}
 
 ### Size
-<p>Set the <code class="language-js">size</code> prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
-<ul>
-<li><code>sm</code>: Set to 40px in height</li>
-<li><code>md</code>: The default size. Set to 48px in height.</li>
-<li><code>lg</code>: Set to 56px in height.</li>
-</ul>
-<p>Add the <code class="language-js">fullWidth</code> prop to make the button take the width of its container. Default behavior will size the button to fit its label.</p>
+Set the `size` prop of the `<nys-button>` to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:
+- `sm`: Set to 40px in height
+- `md`: The default size. Set to 48px in height.
+- `lg`: Set to 56px in height.
+
+Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
 {% set preview %}<div class="nys-grid-row">
 <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
@@ -102,7 +101,7 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 
 ### Button Type
 
-Set the type prop of the <code class="language-js">&lt;nys-button&gt;</code> to define the button's behavior in a form context. The available types are:
+Set the type prop of the `<nys-button>` to define the button's behavior in a form context. The available types are:
 
  - `button` (default): A standard button that does not submit a form.
  - `submit`: Submits the nearest form when clicked.
@@ -110,7 +109,7 @@ Set the type prop of the <code class="language-js">&lt;nys-button&gt;</code> to 
 
 ### Variant
 
-Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> to adjust the appearance of the button. Our current variants are:
+Set the variant prop of the `<nys-button>` to adjust the appearance of the button. Our current variants are:
 
  - `filled`: The default variant. Use for primary actions.
  - `outline`: Use for secondary actions.
@@ -132,9 +131,9 @@ Set the variant prop of the <code class="language-js">&lt;nys-button&gt;</code> 
 {% include "partials/code-preview.njk" %}
 
 ### Icons
-Set the <code class="language-js">prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.
+Set the `prefixIcon` prop to include an icon in the button. The icon will appear to the left of the label.
 
-Set the <code class="language-js">suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.
+Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
 
   {% set preview %}<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"><nys-button>{% endset %}
   {% set code = preview %}
@@ -156,8 +155,8 @@ Set the <code class="language-js">suffixIcon</code> prop to include an icon in t
 {% include "partials/code-preview.njk" %}
 
 ### Link
-Set the <code class="language-js">href</code> prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
-Set the <code class="language-js">target</code> prop of the **`nys-button`** to specify where to open the linked document. The available targets are:
+Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
+Set the `target` prop of the `<nys-button>` to specify where to open the linked document. The available targets are:
 - `_self`: Opens the link in the same frame as it was clicked (default).
 - `_blank`: Opens the link in a new tab or window.
 - `_parent`: Opens the link in the parent frame.
@@ -169,7 +168,7 @@ Set the <code class="language-js">target</code> prop of the **`nys-button`** to 
 {% include "partials/code-preview.njk" %}
 
 ### Inverted
-Set the <code class="language-js">inverted</code> when the button is on a dark background.
+Set the `inverted` when the button is on a dark background.
 
 {% set preview %}<div class="nys-grid-row">
 <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
@@ -232,11 +231,11 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
     </tr>
     <tr>
       <td><code>prefixIcon</code></td>
-      <td>`nys-icon` name</td>
+      <td>nys-icon name</td>
     </tr>
     <tr>
       <td><code>suffixIcon</code></td>
-      <td>`nys-icon` name</td>
+      <td>nys-icon name</td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
@@ -283,12 +282,11 @@ Set the <code class="language-js">inverted</code> when the button is on a dark b
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-button&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>click</code></strong> – Fired when the button is clicked.</li>
-<li><strong><code>focus</code></strong> – Fired when the button gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the button loses focus.</li>
-</ol>
+The `<nys-button>` component emits **three** custom Javascript events:
+
+1.  **`click`** – Fired when the button is clicked.
+2.  **`focus`** – Fired when the button gains focus.
+3.  **`blur`** – Fired when the button loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the button component

@@ -12,7 +12,7 @@ navOrder: 15
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web component for use in New York State digital products. It helps provide users with access to essential NYS links across all pages.
+The `<nys-unavfooter`> is a reusable web component for use in New York State digital products. It helps provide users with access to essential NYS links across all pages.
 
 {% endblock %}
 
@@ -26,9 +26,9 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 {% block usage %}
 
 ### When to use this component
-  - Use <code class="language-js">&lt;nys-unavfooter&gt;</code> to provide consistent access to essential links across all sites.
+  - Use `<nys-unavfooter`> to provide consistent access to essential links across all sites.
 ### When to consider something else
-  - Do not place the <code class="language-js">&lt;nys-unavfooter&gt;</code> anywhere other than the bottom of the page as the final footer.
+  - Do not place the `<nys-unavfooter`> anywhere other than the bottom of the page as the final footer.
 
 {% endblock %}
 
@@ -46,7 +46,7 @@ The <code class="language-js">&lt;nys-unavfooter&gt;</code> is a reusable web co
 
 {% block accessibility %}
 
-The <code class="language-js">&lt;nys-unavfooter&gt;</code> component includes the following accessibility-focused features:
+The `<nys-unavfooter`> component includes the following accessibility-focused features:
 
   - Proper use of `<footer>` and `<a>` elements ensures compatibility with assistive technologies.
   - Keyboard navigation: Users can tab through all links in the footer.

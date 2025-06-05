@@ -12,7 +12,7 @@ navOrder: 11
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-skipnav&gt;</code> is an accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.
+The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.
 
 {% endblock %}
 
