@@ -150,20 +150,21 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block properties %}
 
-| Property       | Type            |
-|----------------|-----------------|
-| `checked`      | boolean         |
-| `description`  | String          |
-| `disabled`     | boolean         |
-| `errorMessage` | String          |
-| `id`           | String          |
-| `label`        | String          |
-| `name`         | String          |
-| `required`     | boolean         |
-| `showError`    | boolean         |
-| `size`         | `"sm"` | `"md"` |
-| `tile`         | boolean         |
-| `value`        | String          |
+| Property       | Type             | Component                  |
+|----------------|------------------|----------------------------|
+| `checked`      | boolean          | only `<nys-checkbox>`      |
+| `description`  | String           | both                       |
+| `disabled`     | boolean          | both                       |
+| `errorMessage` | String           | both                       |
+| `id`           | String           | both                       |
+| `label`        | String           | both                       |
+| `name`         | String           | both                       |
+| `optional`     | boolean          | only `<nys-checkboxgroup>` |
+| `required`     | boolean          | both                       |
+| `showError`    | boolean          | both                       |
+| `size`         | `"sm"` \| `"md"` | both                       |
+| `tile`         | boolean          | both                       |
+| `value`        | String           | only `<nys-checkbox>`      |
 
 
 {% endblock %}
