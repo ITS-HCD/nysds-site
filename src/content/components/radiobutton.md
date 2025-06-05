@@ -140,20 +140,22 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% block properties %}
 
-| Property       | Type             |
-|----------------|------------------|
-| `checked`      | boolean          |
-| `description`  | String           |
-| `disabled`     | boolean          |
-| `errorMessage` | String           |
-| `form`         | String           |
-| `id`           | String           |
-| `label`        | String           |
-| `name`         | String           |
-| `required`     | boolean          |
-| `showError`    | boolean          |
-| `size`         | `"sm"` \| `"md"` |
-| `value`        | String           |
+| Property       | Type             | Component                |
+|----------------|------------------|--------------------------|
+| `checked`      | boolean          | only `<nys-radiobutton>` |
+| `description`  | String           | both                     |
+| `disabled`     | boolean          | only `<nys-radiobutton>` |
+| `errorMessage` | String           | only `<nys-radiogroup>`  |
+| `form`         | String           | only `<nys-radiobutton>` |
+| `id`           | String           | both                     |
+| `label`        | String           | both                     |
+| `name`         | String           | both                     |
+| `optional`     | boolean          | only `<nys-radiogroup>`  |
+| `required`     | boolean          | only `<nys-radiogroup>`  |
+| `showError`    | boolean          | only `<nys-radiogroup>`  |
+| `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
+| `tile`         | boolean          | only `<nys-radiogroup>`  |
+| `value`        | String           | only `<nys-radiobutton>` |
 
 {% endblock %}
 
