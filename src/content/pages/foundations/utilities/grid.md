@@ -449,7 +449,7 @@ Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
-### Large gutter
+### Gutter sizing
 
 `nys-grid-gap-lg` adds a larger gap (or gutter) between each column in a row than `nys-grid-gap`. The default large-gap width is 32px. There is also a `.nys-grid-gap-sm` (2px). Also, you can add the following system values with `nys-grid-gap`:
 

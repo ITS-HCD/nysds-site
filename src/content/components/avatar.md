@@ -14,7 +14,7 @@ navOrder: 3
 
 The `<nys-avatar>` component is used to visually represent a user or entity.
 
-By default, a generic icon is displayed. Personalize avatars with a custom `icon`, `initials`, or `image`, and always include a `label` for accessibility.
+By default, a generic icon is displayed. Personalize avatars with custom props like `icon`, `initials`, or `image`, and always include a `label` for accessibility.
 {% endblock %}
 
 {% block example %}
