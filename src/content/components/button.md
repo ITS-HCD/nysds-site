@@ -189,23 +189,24 @@ Set the `inverted` when the button is on a dark background.
 
 {% block properties %}
 
-| Property     | Type                                               |
-|--------------|----------------------------------------------------|
-| `disabled`   | boolean                                            |
-| `form`       | String                                             |
-| `fullWidth`  | boolean                                            |
-| `href`       | String (URL)                                       |
-| `id`         | String                                             |
-| `inverted`   | boolean                                            |
-| `label`      | String                                             |
-| `name`       | String                                             |
-| `onClick`    | JS function                                        |
-| `prefixIcon` | String (`<nys-icon name>`)                         |
-| `size`       | `"sm"` \| `"md"` \| `"lg"`                         |
-| `suffixIcon` | String (`<nys-icon name>`)                         |
-| `type`       | `"submit"` \| `"reset"` \| `"button"`              |
-| `value`      | String                                             |
-| `variant`    | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"` |
+| Property     | Type                                                               |
+|--------------|--------------------------------------------------------------------|
+| `disabled`   | boolean                                                            |
+| `form`       | String                                                             |
+| `fullWidth`  | boolean                                                            |
+| `href`       | String (URL)                                                       |                
+| `id`         | String                                                             |
+| `inverted`   | boolean                                                            |
+| `label`      | String                                                             |
+| `name`       | String                                                             |
+| `onClick`    | JS function                                                        |
+| `prefixIcon` | String (`<nys-icon name>`)                                         |
+| `size`       | `"sm"` \| `"md"` \| `"lg"`                                         |
+| `suffixIcon` | String (`<nys-icon name>`)                                         |
+| `target`     | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
+| `type`       | `"submit"` \| `"reset"` \| `"button"`                              |
+| `value`      | String                                                             |
+| `variant`    | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
 
 {% endblock %}
 
