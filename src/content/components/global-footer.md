@@ -78,20 +78,10 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>agencyName</code></td>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
+| Property       | Type         |
+|----------------|--------------|
+| `agencyName`   | String       |
+| `homepageLink` | String (URL) |
 
 {% endblock %}
 

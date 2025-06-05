@@ -80,13 +80,13 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
   {% include "partials/code-preview.njk" %}
 
 ### Just Agency Name
-  {% set preview %}<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+  {% set preview %}<nys-globalheader agencyName="Office of Information Technology Services">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Just Application Name
-  {% set preview %}<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
+  {% set preview %}<nys-globalheader appName="NYS Employee Portal">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
@@ -95,32 +95,11 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>agencyName</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>appName</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>homepageLink</code></td>
-      <td>string (URL)</td>
-    </tr>
-    <tr>
-      <td><code>disableHomepageLink</code></td>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
+| Property              | Type         |
+|-----------------------|--------------|
+| `agencyName`          | String       |
+| `appName`             | String       |
+| `homepageLink`        | String (URL) |
 
 {% endblock %}
 

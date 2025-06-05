@@ -122,41 +122,11 @@ The `<nys-alert>` component includes the following accessibility-focused feature
   - Visual focus indicators to help users navigate the component.
   - Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.
 
-<table>
-  <thead>
-    <tr>
-      <th><strong>ARIA Role</strong></th>
-      <th><strong>Attribute</strong></th>
-      <th><strong>Use Case</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>role="alert"</code></td>
-      <td>Important messages that demand the user's immediate attention.</td>
-      <td>Example: Danger and Emergency alert</td>
-    </tr>
-    <tr>
-      <td><code>role="status"</code></td>
-      <td>
-        Messages that provide advisory information but do not have the same
-        urgency as alerts.
-      </td>
-      <td>Example: Success alert</td>
-    </tr>
-    <tr>
-      <td><code>role="region"</code></td>
-      <td>
-        Messages that provide information the user would want to be able to
-        easily find, but are not important enough to interrupt user workflow.
-      </td>
-      <td>
-        Information and Warning alert (An
-        <code>aria-label</code> will be added for this role.)
-      </td>
-    </tr>
-  </tbody>
-</table>
+| **ARIA Role**   | **Attribute**                                                                                                                             | **Use Case**                                                                 |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| `role="alert"`  | Important messages that demand the user's immediate attention.                                                                            | Example: Danger and Emergency alert                                          |
+| `role="status"` | Messages that provide advisory information but do not have the same urgency as alerts.                                                    | Example: Success alert                                                       |
+| `role="region"` | Messages that provide information the user would want to be able to easily find, but are not important enough to interrupt user workflow. | Information and Warning alert (An `aria-label` will be added for this role.) |
 
 {% endblock %}
 
@@ -230,64 +200,26 @@ You may find having just a heading without description as a good compact version
 {% endblock %}
 
 {% block properties %}
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>type</code></td>
-      <td>string (base, info, success, warning, danger, emergency)</td>
-    </tr>
-    <tr>
-      <td><code>heading</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>text</code></td>
-      <td>string (no HTML)</td>
-    </tr>
-    <tr>
-      <td><code>primaryLabel</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>primaryAction</code></td>
-      <td>URL</td>
-    </tr>
-    <tr>
-      <td><code>secondaryLabel</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>secondaryAction</code></td>
-      <td>URL</td>
-    </tr>
-    <tr>
-      <td><code>duration</code></td>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
+
+| Property          | Type                                                                              |
+|-------------------|-----------------------------------------------------------------------------------|
+| `dismissible`     | boolean                                                                           |
+| `duration`        | integer                                                                           |
+| `heading`         | String                                                                            |
+| `icon`            | String (`<nys-icon name>`)                                                        |
+| `id`              | String                                                                            |
+| `primaryAction`   | URL                                                                               |
+| `primaryLabel`    | String                                                                            |
+| `secondaryAction` | URL                                                                               |
+| `secondaryLabel`  | String                                                                            |
+| `text`            | String                                                                            |
+| `type`            | `"base"` \| `"info"` \| `"success"` \| `"warning"` \| `"danger"` \| `"emergency"` |
+
 {% endblock %}
 [[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}{% endblock %}
 

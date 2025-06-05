@@ -82,89 +82,31 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>checked</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>noIcon</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td>string (sm, md)</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
+| Property      | Type             |
+|---------------|------------------|
+| `checked`     | boolean          |
+| `description` | String           |
+| `disabled`    | boolean          |
+| `form`        | String           |
+| `id`          | String           |
+| `label`       | String           |
+| `name`        | String           |
+| `noIcon`      | boolean          |
+| `size`        | `"sm"` \| `"md"` |
+| `value`       | String           |
 
-  </tbody>
-
-  </table>
 
 {% endblock %}
 
 {% block cssvariables %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-height</code></td>
-      <td>Height of the toggle switch.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-border-radius</code></td>
-      <td>Border radius of the toggle switch.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-background-color</code></td>
-      <td>Background color of the toggle switch when it is off.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-checked-background-color</code></td>
-      <td>Background color of the toggle switch when it is on.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable                                | Description                                           |
+|-----------------------------------------|-------------------------------------------------------|
+| `--nys-toggle-background-color`         | Background color of the toggle switch when it is off. |
+| `--nys-toggle-border-radius`            | Border radius of the toggle switch.                   |
+| `--nys-toggle-checked-background-color` | Background color of the toggle switch when it is on.  |
+| `--nys-toggle-height`                   | Height of the toggle switch.                          |
+| `--nys-toggle-width`                    | Width of the toggle switch.                           |
 
 {% endblock %}
 

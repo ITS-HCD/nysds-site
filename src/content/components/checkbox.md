@@ -150,77 +150,28 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>checked</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td>string (sm, md)</td>
-    </tr>
-  </tbody>
-</table>
+| Property       | Type             | Component                  |
+|----------------|------------------|----------------------------|
+| `checked`      | boolean          | only `<nys-checkbox>`      |
+| `description`  | String           | both                       |
+| `disabled`     | boolean          | both                       |
+| `errorMessage` | String           | both                       |
+| `id`           | String           | both                       |
+| `label`        | String           | both                       |
+| `name`         | String           | both                       |
+| `optional`     | boolean          | only `<nys-checkboxgroup>` |
+| `required`     | boolean          | both                       |
+| `showError`    | boolean          | both                       |
+| `size`         | `"sm"` \| `"md"` | both                       |
+| `tile`         | boolean          | both                       |
+| `value`        | String           | only `<nys-checkbox>`      |
+
 
 {% endblock %}
 [[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

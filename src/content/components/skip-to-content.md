@@ -101,7 +101,14 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% endblock %}
 
-{% block properties %}{% endblock %}
+{% block properties %}
+
+| Property | Type         |
+|----------|--------------|
+| `href`   | String (URL) |
+| `id`     | String       |
+
+{% endblock %}
 
 {% block cssvariables %}{% endblock %}
 

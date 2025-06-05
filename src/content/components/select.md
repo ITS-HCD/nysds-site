@@ -111,77 +111,29 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ("sm", "md", "lg", "full")</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
+| Property       | Type                                   | Component           |
+|----------------|----------------------------------------|---------------------|
+| `description`  | String                                 | only `<nys-select>` |
+| `disabled`     | boolean                                | both                |
+| `errorMessage` | String                                 | only `<nys-select>` |
+| `form`         | String                                 | only `<nys-select>` |
+| `hidden`       | boolean                                | only `<nys-option>` |
+| `id`           | String                                 | only `<nys-select>` |
+| `label`        | String                                 | both                |
+| `name`         | String                                 | only `<nys-select>` |
+| `optional`     | boolean                                | only `<nys-select>` |
+| `required`     | boolean                                | only `<nys-select>` |
+| `selected`     | boolean                                | only `<nys-option>` |
+| `showError`    | boolean                                | only `<nys-select>` |
+| `value`        | String                                 | both                |
+| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
+
 
 {% endblock %}
 [[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

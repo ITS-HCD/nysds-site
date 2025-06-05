@@ -152,93 +152,29 @@ Takes any valid regex value.
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>type</code></td>
-      <td>string ("email", "number", "password", "search", "tel", "text", "url")</td>
-      </td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>placeholder</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>readonly</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>pattern</code></td>
-      <td>REGEX</td>
-    </tr>
-    <tr>
-      <td><code>maxlength</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ('sm", "md", "lg", "full")</td>
-    </tr>
-    <tr>
-      <td><code>step</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>min</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>max</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
+| Property       | Type                                                                                    |
+|----------------|-----------------------------------------------------------------------------------------|
+| `description`  | String                                                                                  |
+| `disabled`     | boolean                                                                                 |
+| `errorMessage` | String                                                                                  |
+| `form`         | String                                                                                  |
+| `id`           | String                                                                                  |
+| `label`        | String                                                                                  |
+| `max`          | integer                                                                                 |
+| `maxlength`    | integer                                                                                 |
+| `min`          | integer                                                                                 |
+| `name`         | String                                                                                  |
+| `optional`     | boolean                                                                                 |
+| `pattern`      | REGEX                                                                                   |
+| `placeholder`  | String                                                                                  |
+| `readonly`     | boolean                                                                                 |
+| `required`     | boolean                                                                                 |
+| `showError`    | boolean                                                                                 |
+| `step`         | integer                                                                                 |
+| `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
+| `value`        | String                                                                                  |
+| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
+
 
 {% endblock %}
 

@@ -225,57 +225,21 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block properties %}
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td>string (2xs, xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 12, 16, 24, 32, 48, 64)</td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
-      <td>string (CSS HEX, CSS color name, or CSS variable)</td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>rotate</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>flip</code></td>
-      <td>string (horizontal, vertical, both)</td>
-    </tr>
-  </tbody>
-</table>
+| Property | Type                                                                                                                                                   |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `color`  | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
+| `flip`   | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
+| `label`  | String                                                                                                                                                 |
+| `name`   | String                                                                                                                                                 |
+| `rotate` | integer                                                                                                                                                |
+| `size`   | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
+
 
 {% endblock %}
 [[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
+| Variable             | Description                 |
+|----------------------|-----------------------------|
+| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 
