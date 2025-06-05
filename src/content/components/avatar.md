@@ -121,7 +121,7 @@ You can change the background color of an Avatar. Note that images will naturall
 
 | Property   | Type                                     |
 |------------|------------------------------------------|
-| `color`    | #HEXVAL                                  |
+| `color`    | String (CSS HEX, CSS color name, or CSS) |
 | `icon`     | String (`<nys-icon name>`)               |
 | `id`       | String                                   |
 | `image`    | URL                                      |
