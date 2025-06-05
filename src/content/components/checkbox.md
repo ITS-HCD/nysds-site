@@ -162,6 +162,7 @@ When the description requires more complexity than a simple string, use the desc
 | `required`     | boolean         |
 | `showError`    | boolean         |
 | `size`         | `"sm"` | `"md"` |
+| `tile`         | boolean         |
 | `value`        | String          |
 
 
