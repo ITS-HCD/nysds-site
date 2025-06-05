@@ -60,7 +60,7 @@ There are no configurable options for this component. It is intended to be used 
 
 | Property | Type   |
 |----------|--------|
-| `label`  | string |
+| `label`  | String |
 
 {% block cssvariables %}{% endblock %}
 

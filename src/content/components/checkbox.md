@@ -155,13 +155,13 @@ When the description requires more complexity than a simple string, use the desc
 | `checked`      | boolean          |
 | `disabled`     | boolean          |
 | `required`     | boolean          |
-| `label`        | string           |
-| `description`  | string           |
-| `name`         | string           |
-| `value`        | string           |
+| `label`        | String           |
+| `description`  | String           |
+| `name`         | String           |
+| `value`        | String           |
 | `showError`    | boolean          |
-| `errorMessage` | string           |
-| `id`           | string           |
+| `errorMessage` | String           |
+| `id`           | String           |
 | `size`         | `"sm"` \| `"md"` |
 
 {% endblock %}

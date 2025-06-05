@@ -80,7 +80,7 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 | Property     | Type   |
 |--------------|--------|
-| `agencyName` | string |
+| `agencyName` | String |
 
 {% endblock %}
 

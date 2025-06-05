@@ -227,10 +227,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 | Property | Type                                                                                                                                                   |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `color`  | string (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
+| `color`  | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
 | `flip`   | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
-| `label`  | string                                                                                                                                                 |
-| `name`   | string                                                                                                                                                 |
+| `label`  | String                                                                                                                                                 |
+| `name`   | String                                                                                                                                                 |
 | `rotate` | integer                                                                                                                                                |
 | `size`   | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
 

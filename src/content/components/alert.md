@@ -204,12 +204,12 @@ You may find having just a heading without description as a good compact version
 | Property          | Type                                                                              |
 |-------------------|-----------------------------------------------------------------------------------|
 | `duration`        | integer                                                                           |
-| `heading`         | string                                                                            |
+| `heading`         | String                                                                            |
 | `primaryAction`   | URL                                                                               |
-| `primaryLabel`    | string                                                                            |
+| `primaryLabel`    | String                                                                            |
 | `secondaryAction` | URL                                                                               |
-| `secondaryLabel`  | string                                                                            |
-| `text`            | string                                                                            |
+| `secondaryLabel`  | String                                                                            |
+| `text`            | String                                                                            |
 | `type`            | `"base"` \| `"info"` \| `"success"` \| `"warning"` \| `"danger"` \| `"emergency"` |
 
 {% endblock %}

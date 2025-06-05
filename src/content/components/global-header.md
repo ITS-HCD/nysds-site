@@ -97,10 +97,10 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 | Property              | Type         |
 |-----------------------|--------------|
-| `agencyName`          | string       |
-| `appName`             | string       |
+| `agencyName`          | String       |
+| `appName`             | String       |
 | `disableHomepageLink` | boolean      |
-| `homepageLink`        | string (URL) |
+| `homepageLink`        | String (URL) |
 
 {% endblock %}
 

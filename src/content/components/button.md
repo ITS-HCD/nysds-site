@@ -192,19 +192,19 @@ Set the `inverted` when the button is on a dark background.
 | Property     | Type                                               |
 |--------------|----------------------------------------------------|
 | `disabled`   | boolean                                            |
-| `form`       | string                                             |
+| `form`       | String                                             |
 | `fullWidth`  | boolean                                            |
-| `href`       | string (URL)                                       |
-| `id`         | string                                             |
+| `href`       | String (URL)                                       |
+| `id`         | String                                             |
 | `inverted`   | boolean                                            |
-| `label`      | string                                             |
-| `name`       | string                                             |
+| `label`      | String                                             |
+| `name`       | String                                             |
 | `onClick`    | JS function                                        |
-| `prefixIcon` | string (`<nys-icon name>`)                         |
+| `prefixIcon` | String (`<nys-icon name>`)                         |
 | `size`       | `"sm"` \| `"md"` \| `"lg"`                         |
-| `suffixIcon` | string (`<nys-icon name>`)                         |
+| `suffixIcon` | String (`<nys-icon name>`)                         |
 | `type`       | `"submit"` \| `"reset"` \| `"button"`              |
-| `value`      | string                                             |
+| `value`      | String                                             |
 | `variant`    | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"` |
 
 {% endblock %}

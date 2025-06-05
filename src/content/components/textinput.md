@@ -154,24 +154,24 @@ Takes any valid regex value.
 
 | Property       | Type                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------|
-| `description`  | string                                                                                  |
+| `description`  | String                                                                                  |
 | `disabled`     | boolean                                                                                 |
-| `errorMessage` | string                                                                                  |
-| `form`         | string                                                                                  |
-| `id`           | string                                                                                  |
-| `label`        | string                                                                                  |
+| `errorMessage` | String                                                                                  |
+| `form`         | String                                                                                  |
+| `id`           | String                                                                                  |
+| `label`        | String                                                                                  |
 | `max`          | integer                                                                                 |
 | `maxlength`    | integer                                                                                 |
 | `min`          | integer                                                                                 |
-| `name`         | string                                                                                  |
+| `name`         | String                                                                                  |
 | `pattern`      | REGEX                                                                                   |
-| `placeholder`  | string                                                                                  |
+| `placeholder`  | String                                                                                  |
 | `readonly`     | boolean                                                                                 |
 | `required`     | boolean                                                                                 |
 | `showError`    | boolean                                                                                 |
 | `step`         | integer                                                                                 |
 | `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
-| `value`        | string                                                                                  |
+| `value`        | String                                                                                  |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
 
 

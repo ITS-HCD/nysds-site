@@ -143,17 +143,17 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | Property       | Type             |
 |----------------|------------------|
 | `checked`      | boolean          |
-| `description`  | string           |
+| `description`  | String           |
 | `disabled`     | boolean          |
-| `errorMessage` | string           |
-| `form`         | string           |
-| `id`           | string           |
-| `label`        | string           |
-| `name`         | string           |
+| `errorMessage` | String           |
+| `form`         | String           |
+| `id`           | String           |
+| `label`        | String           |
+| `name`         | String           |
 | `required`     | boolean          |
 | `showError`    | boolean          |
 | `size`         | `"sm"` \| `"md"` |
-| `value`        | string           |
+| `value`        | String           |
 
 {% endblock %}
 

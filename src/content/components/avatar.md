@@ -122,11 +122,11 @@ You can change the background color of an Avatar. Note that images will naturall
 | Property   | Type                                     |
 |------------|------------------------------------------|
 | `color`    | #HEXVAL                                  |
-| `icon`     | string (`<nys-icon name>`)               |
-| `id`       | string                                   |
+| `icon`     | String (`<nys-icon name>`)               |
+| `id`       | String                                   |
 | `image`    | URL                                      |
-| `initials` | string (2 letters)                       |
-| `label`    | string                                   |
+| `initials` | String (2 letters)                       |
+| `label`    | String                                   |
 | `lazy`     | boolean                                  |
 | `shape`    | `"square"` \| `"rounded"` \| `"circle"`  |
 

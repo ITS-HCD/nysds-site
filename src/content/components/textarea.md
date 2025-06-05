@@ -134,21 +134,21 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 | Property       | Type                                   |
 |----------------|----------------------------------------|
-| `description`  | string                                 |
+| `description`  | String                                 |
 | `disabled`     | boolean                                |
-| `errorMessage` | string                                 |
-| `form`         | string                                 |
-| `id`           | string                                 |
-| `label`        | string                                 |
+| `errorMessage` | String                                 |
+| `form`         | String                                 |
+| `id`           | String                                 |
+| `label`        | String                                 |
 | `maxLength`    | integer                                |
-| `name`         | string                                 |
-| `placeholder`  | string                                 |
+| `name`         | String                                 |
+| `placeholder`  | String                                 |
 | `readonly`     | boolean                                |
 | `required`     | boolean                                |
 | `resize`       | `"none"`                               |
 | `rows`         | integer                                |
 | `showError`    | boolean                                |
-| `value`        | string                                 |
+| `value`        | String                                 |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
 
 {% endblock %}

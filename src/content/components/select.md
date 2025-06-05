@@ -113,16 +113,16 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 | Property       | Type                                   |
 |----------------|----------------------------------------|
-| `description`  | string                                 |
+| `description`  | String                                 |
 | `disabled`     | boolean                                |
-| `errorMessage` | string                                 |
-| `form`         | string                                 |
-| `id`           | string                                 |
-| `label`        | string                                 |
-| `name`         | string                                 |
+| `errorMessage` | String                                 |
+| `form`         | String                                 |
+| `id`           | String                                 |
+| `label`        | String                                 |
+| `name`         | String                                 |
 | `required`     | boolean                                |
 | `showError`    | boolean                                |
-| `value`        | string                                 |
+| `value`        | String                                 |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
 
 

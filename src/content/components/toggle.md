@@ -85,14 +85,14 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 | Property      | Type             |
 |---------------|------------------|
 | `checked`     | boolean          |
-| `description` | string           |
+| `description` | String           |
 | `disabled`    | boolean          |
-| `form`        | string           |
-| `label`       | string           |
-| `name`        | string           |
+| `form`        | String           |
+| `label`       | String           |
+| `name`        | String           |
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
-| `value`       | string           |
+| `value`       | String           |
 
 
 {% endblock %}
