@@ -88,6 +88,7 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 | `description` | String           |
 | `disabled`    | boolean          |
 | `form`        | String           |
+| `id`          | String           |
 | `label`       | String           |
 | `name`        | String           |
 | `noIcon`      | boolean          |
