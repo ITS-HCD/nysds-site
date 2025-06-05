@@ -150,19 +150,20 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block properties %}
 
-| Property       | Type             |
-|----------------|------------------|
-| `checked`      | boolean          |
-| `disabled`     | boolean          |
-| `required`     | boolean          |
-| `label`        | String           |
-| `description`  | String           |
-| `name`         | String           |
-| `value`        | String           |
-| `showError`    | boolean          |
-| `errorMessage` | String           |
-| `id`           | String           |
-| `size`         | `"sm"` \| `"md"` |
+| Property       | Type            |
+|----------------|-----------------|
+| `checked`      | boolean         |
+| `description`  | String          |
+| `disabled`     | boolean         |
+| `errorMessage` | String          |
+| `id`           | String          |
+| `label`        | String          |
+| `name`         | String          |
+| `required`     | boolean         |
+| `showError`    | boolean         |
+| `size`         | `"sm"` | `"md"` |
+| `value`        | String          |
+
 
 {% endblock %}
 [[TODO]]
