@@ -80,13 +80,13 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
   {% include "partials/code-preview.njk" %}
 
 ### Just Agency Name
-  {% set preview %}<nys-globalheader disableHomepageLink agencyName="Office of Information Technology Services">
+  {% set preview %}<nys-globalheader agencyName="Office of Information Technology Services">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Just Application Name
-  {% set preview %}<nys-globalheader disableHomepageLink appName="NYS Employee Portal">
+  {% set preview %}<nys-globalheader appName="NYS Employee Portal">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
@@ -99,7 +99,6 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 |-----------------------|--------------|
 | `agencyName`          | String       |
 | `appName`             | String       |
-| `disableHomepageLink` | boolean      |
 | `homepageLink`        | String (URL) |
 
 {% endblock %}
