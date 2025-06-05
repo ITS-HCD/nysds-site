@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-04T17:55:50.119+00:00 -->
+    <!-- Latest Build: 2025-06-05T13:14:14.726+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -323,7 +323,7 @@
     <p><section id="overview">
 <h1>Alert</h1></p>
 <p>Alert banners are designed to display critical information, updates, or warnings that require the user's attention.</p>
-<p>The <code class="language-js">&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.</p>
+<p>The <code>&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.</p>
 </section>
     <section id="example">
   <div class="code-preview-container">
@@ -402,13 +402,13 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Custom text description</h3>
-<p>Add descriptive content to your alert using the <code class="language-js">text</code> prop or the our slot feature.</p>
-<p>Use the <code class="language-js">text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.</p>
-  <div class="code-preview-container">
+<p>Add descriptive content to your alert using the <code>text</code> prop or the our slot feature.</p>
+<p>Use the <code>text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.</p>
+<div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-alert type="success" heading="Custom Descriptions">
-  <p>This is a custom alert with <strong>HTML content</strong>.</p>
-  <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+<p>This is a custom alert with <strong>HTML content</strong>.</p>
+<a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
 </nys-alert></div>
   </div>
   <div class="code-preview__source">
@@ -425,16 +425,16 @@
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Custom Descriptions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a custom alert with <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>HTML content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Learn more about our accessibility services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a custom alert with <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>HTML content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Learn more about our accessibility services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
 <h3>Dismissible</h3>
-<p>Use the <code class="language-js">dismissible</code> property to make the alert dismissible.</p>
-<p>The <code class="language-js">nys-alertClosed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
+<p>Use the <code>dismissible</code> property to make the alert dismissible.</p>
+<p>The <code>nys-alertClosed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-alert type="info" heading="Information status" dismissible>
@@ -464,7 +464,7 @@
   </div>
 </div>
 <h3>Duration</h3>
-<p>Set the <code class="language-js">duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
+<p>Set the <code>duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-button onClick="showAlert()" label="Open Alert"></nys-button>
@@ -494,7 +494,7 @@
   </div>
 </div>
 <h3>Icon Customization</h3>
-<p>Override the default theme icon by setting the <code class="language-js">icon</code> property to any name from the icon library.</p>
+<p>Override the default theme icon by setting the <code>icon</code> property to any name from the icon library.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-alert
@@ -563,7 +563,7 @@
       <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-<li>Use <code class="language-js">&lt;nys-alert&gt;</code> to communicate important, time-sensitive information to users in a visually prominent way.</li>
+<li>Use <code>&lt;nys-alert&gt;</code> to communicate important, time-sensitive information to users in a visually prominent way.</li>
 <li>Ideal for messages such as success notifications, danger alerts, warnings, or informational updates.</li>
 <li>Use for dismissible or temporary alerts when the message is not critical to user workflow.</li>
 </ul>
@@ -585,8 +585,8 @@
 <li>Use Success type to confirm a positive system status to users such as saving a form.</li>
 <li>Use Danger type to display system status error messages.</li>
 <li>Only use Emergency type for actual emergencies such as a mission person, weather, or power outage; consider switching the left icon to a relevant icon if one exists.</li>
-<li>[Dev] Use the appropriate <code class="language-js">theme</code> (e.g., <code class="language-js">info</code>, <code class="language-js">success</code>, <code class="language-js">warning</code>, or <code class="language-js">danger</code>) to match the intent of the alert.</li>
-<li>[Dev] Use the <code class="language-js">dismissible</code> property for non-critical alerts, allowing users to clear them from the screen.</li>
+<li>[Dev] Use the appropriate <code>theme</code> (e.g., <code>info</code>, <code>success</code>, <code>warning</code>, or <code>danger</code>) to match the intent of the alert.</li>
+<li>[Dev] Use the <code>dismissible</code> property for non-critical alerts, allowing users to clear them from the screen.</li>
 </ul>
 </div>
       </div>
@@ -609,7 +609,7 @@
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
+<p>The <code>&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.</li>
 <li>Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.</li>
@@ -626,12 +626,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-js">role="alert"</code></td>
+      <td><code>role="alert"</code></td>
       <td>Important messages that demand the user's immediate attention.</td>
       <td>Example: Danger and Emergency alert</td>
     </tr>
     <tr>
-      <td><code class="language-js">role="status"</code></td>
+      <td><code>role="status"</code></td>
       <td>
         Messages that provide advisory information but do not have the same
         urgency as alerts.
@@ -639,14 +639,14 @@
       <td>Example: Success alert</td>
     </tr>
     <tr>
-      <td><code class="language-js">role="region"</code></td>
+      <td><code>role="region"</code></td>
       <td>
         Messages that provide information the user would want to be able to
         easily find, but are not important enough to interrupt user workflow.
       </td>
       <td>
         Information and Warning alert (An
-        <code class="language-js">aria-label</code>will be added for this role.)
+        <code>aria-label</code> will be added for this role.)
       </td>
     </tr>
   </tbody>
@@ -700,12 +700,10 @@
 </section>
     <br>
     <section id="cssvariables">
-      <h2>CSS Variables</h2>
-</section>
+      <h2>CSS Variables</h2></section>
     <br>
     <section id="events">
-      <h2>Events</h2>
-</section>
+      <h2>Events</h2></section>
     <section class="nys-section">
   <h2>Suggest a New Component</h2>
   <div class="nys-grid-row nys-grid-gap">

@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-04T17:55:50.119+00:00 -->
+    <!-- Latest Build: 2025-06-05T13:14:14.726+00:00 -->
   </head>
   
   <body class="single-page page-toggle section-components">
@@ -322,7 +322,7 @@
   <div class="nys-desktop:nys-grid-col-8">  
     <p><section id="overview">
 <h1>Toggle</h1></p>
-<p>The <code class="language-js">&lt;nys-toggle&gt;</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch &quot;on&quot; or &quot;off&quot;.</p>
+<p>The <code>&lt;nys-toggle</code>&gt; component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch &quot;on&quot; or &quot;off&quot;.</p>
 </section>
     <section id="example">
   <div class="code-preview-container">
@@ -418,13 +418,13 @@
       <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-<li>Consider using <code class="language-js">&lt;nys-toggle&gt;</code> when expecting immediate UI effects when turning switch on/off.</li>
+<li>Consider using <code>&lt;nys-toggle</code>&gt; when expecting immediate UI effects when turning switch on/off.</li>
 <li>Ideal for settings pages, feature toggles, or user preferences.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-<li>Consider using <code class="language-js">&lt;nys-checkbox&gt;</code> or <code class="language-js">&lt;nys-radiobutton&gt;</code> to select one or more options from a list where the selections</li>
-<li>Use <code class="language-js">&lt;nys-checkbox&gt;</code> for forms, especially when you're not expecting immediate action.</li>
+<li>Consider using <code>&lt;nys-checkbox&gt;</code> or <code>&lt;nys-radiobutton&gt;</code> to select one or more options from a list where the selections</li>
+<li>Use <code>&lt;nys-checkbox&gt;</code> for forms, especially when you're not expecting immediate action.</li>
 </ul>
 </section>
     <div class="nys-grid-row nys-grid-gap">
@@ -451,7 +451,7 @@
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">&lt;nys-toggle&gt;</code> component includes the following accessibility-focused features:</p>
+<p>The <code>&lt;nys-toggle</code>&gt; component includes the following accessibility-focused features:</p>
 <ul>
 <li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
 <li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
@@ -546,13 +546,11 @@
     <br>
     <section id="events">
       <h2>Events</h2>
-<p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
+The `<nys-toggle`> component emits three custom Javascript events:
+1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
+2.  **`focus`** – Fired when the toggle gains focus.
+3.  **`blur`** – Fired when the toggle loses focus.
+4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">

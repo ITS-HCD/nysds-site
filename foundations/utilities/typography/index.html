@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-04T17:55:50.119+00:00 -->
+    <!-- Latest Build: 2025-06-05T13:14:14.726+00:00 -->
   </head>
   
   <body class="single-page page-typography section-foundations">
@@ -256,7 +256,7 @@
 <li><strong>D Sari</strong>: The brand font used for agency, program, and initiative titles.</li>
 <li><strong>Oswald</strong>: A supporting typeface for content-heavy websites (optional).</li>
 </ul>
-<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYSDS Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow">NYSDS Fonts</a> <em>(internal)</em>. However, NYSDS provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
+<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYSDS Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/nysds-fonts">NYSDS Fonts</a> <em>(internal)</em>. However, NYSDS provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
 </section>
 <section id="typography-tokens">
 <h2>Typography Tokens</h2>
@@ -296,14 +296,14 @@
 </section>
 <section id="installing-fonts">
 <h2>Installing Fonts</h2>
-<p>⚠️ Note: Fonts in the design system include some proprietary typefaces that are licensed for use exclusively by New York State government agencies and their digital products. These fonts are distributed separately from the design system and are not part of the open-source package to comply with licensing restrictions.
-<table><thead><tr><th>Token Name</th><th>Description</th><th>Example Value</th></tr></thead><tbody><tr><td><code>--nys-font-family-body</code></td><td>Font family for body text.</td><td><code>var(--nys-font-family-sans)</code></td></tr><tr><td><code>--nys-font-size-h1</code></td><td>Font size for Heading 1 elements.</td><td><code>var(--nys-font-size-5xl)</code></td></tr><tr><td><code>--nys-font-size-ui-md</code></td><td>Medium font size for UI elements.</td><td><code>var(--nys-font-size-md)</code></td></tr></tbody></table></p>
+<p>⚠️ Note: Fonts in the design system include some proprietary typefaces that are licensed for use exclusively by New York State government agencies and their digital products. These fonts are distributed separately from the design system and are not part of the open-source package to comply with licensing restrictions.</p>
+<table><thead><tr><th>Token Name</th><th>Description</th><th>Example Value</th></tr></thead><tbody><tr><td><code>--nys-font-family-body</code></td><td>Font family for body text.</td><td><code>var(--nys-font-family-sans)</code></td></tr><tr><td><code>--nys-font-size-h1</code></td><td>Font size for Heading 1 elements.</td><td><code>var(--nys-font-size-5xl)</code></td></tr><tr><td><code>--nys-font-size-ui-md</code></td><td>Medium font size for UI elements.</td><td><code>var(--nys-font-size-md)</code></td></tr></tbody></table>
 <h3>Download and Install</h3>
 <p>To access these fonts:</p>
 <ol>
-<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">NYSDS Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
+<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/nysds-fonts">NYSDS Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
 <li>Extract the fonts into your project.</li>
-<li>Reference the provided <code class="css-1kwwth4">nysds-fonts.css</code> in the HTML head of your project:</li>
+<li>Reference the provided <code>nysds-fonts.css</code> in the HTML head of your project:</li>
 </ol>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -348,7 +348,7 @@
     </div>
   </div>
 </div>
-<p>Find more details about preloading fonts and web font best practices in Google's <a href="https://fonts.google.com/knowledge/using_type/using_web_fonts" rel="nofollow" class="sbdocs sbdocs-a css-ajfpqr">Using Web Fonts guide</a>.</p>
+<p>Find more details about preloading fonts and web font best practices in Google's <a href="https://fonts.google.com/knowledge/using_type/using_web_fonts">Using Web Fonts guide</a>.</p>
 </section>
 <section id="using-typography-in-a-project">
 <h2>Using Typography in a Project</h2>
@@ -439,30 +439,30 @@
 <section id="best-practices">
 <h2>Best Practices</h2>
 <ol>
-  <li>
-    <p><strong>Use Semantic Tokens for Consistency</strong><br>
-    Always use semantic typography tokens for fonts, sizes, and line heights. Avoid primitive tokens or hardcoding font properties.</p>
-  </li>
-  <li>
-    <p><strong>Use Utilities When Necessary</strong><br>
-    Use the predefined <code class="css-1kwwth4">.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by NYSDS components.</p>
-  </li>
-  <li>
-    <p><strong>Preload Critical Fonts</strong><br>
-    Preload the most-used font weights and styles to improve perceived performance — in most cases, this is Proxima Nova Regular.</p>
-  </li>
-  <li>
-    <p><strong>Extend Existing Components</strong><br>
-    NYSDS web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
-  </li>
+<li>
+<p><strong>Use Semantic Tokens for Consistency</strong><br>
+Always use semantic typography tokens for fonts, sizes, and line heights. Avoid primitive tokens or hardcoding font properties.</p>
+</li>
+<li>
+<p><strong>Use Utilities When Necessary</strong><br>
+Use the predefined <code>.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by NYSDS components.</p>
+</li>
+<li>
+<p><strong>Preload Critical Fonts</strong><br>
+Preload the most-used font weights and styles to improve perceived performance — in most cases, this is Proxima Nova Regular.</p>
+</li>
+<li>
+<p><strong>Extend Existing Components</strong><br>
+NYSDS web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
+</li>
 </ol>
 </section>
 <section id="resources">
 <h2>Resources</h2>
 <ul>
-  <li><a href="https://github.com/ITS-HCD/nysds-fonts" rel="nofollow">NYSDS Fonts Repository (Internal)</a></li>
-  <li><a href="#">NYSDS Design System Tokens</a></li>
-  <li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts" rel="nofollow">Using Web Fonts</a></li>
+<li><a href="https://github.com/ITS-HCD/nysds-fonts">NYSDS Fonts Repository (Internal)</a></li>
+<li><a href="#">NYSDS Design System Tokens</a></li>
+<li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts">Using Web Fonts</a></li>
 </ul>
 </section>
 

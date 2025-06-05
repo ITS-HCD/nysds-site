@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-04T17:55:50.119+00:00 -->
+    <!-- Latest Build: 2025-06-05T13:14:14.726+00:00 -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -322,8 +322,8 @@
   <div class="nys-desktop:nys-grid-col-8">  
     <p><section id="overview">
 <h1>Avatar</h1></p>
-<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component is used to visually represent a user or entity.</p>
-<p>By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.</p>
+<p>The <code>&lt;nys-avatar&gt;</code> component is used to visually represent a user or entity.</p>
+<p>By default, a generic icon is displayed. Personalize avatars with custom props like <code>icon</code>, <code>initials</code>, or <code>image</code>, and always include a <code>label</code> for accessibility.</p>
 </section>
     <section id="example">
   <div class="code-preview-container">
@@ -356,8 +356,8 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Images</h3>
-<p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
-  <div class="code-preview-container">
+<p>To display an image in the avatar, set the <code>image</code> and <code>label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code>lazy</code> boolean attribute.</p>
+<div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></div>
   </div>
@@ -380,8 +380,8 @@
   </div>
 </div>
 <h3>Initials</h3>
-<p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
-  <div class="code-preview-container">
+<p>If an image is unavailable, you can set the <code>initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
+<div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-avatar label="User avatar" initials="NY"></nys-avatar></div>
   </div>
@@ -404,10 +404,11 @@
   </div>
 </div>
 <h3>Custom Icons</h3>
-<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">&lt;nys-icon&gt;</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">&lt;nys-avatar&gt;</code> with the icon slot.</p>
-  <div class="code-preview-container">
+<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called &quot;account_circle&quot;, but you can customize this with any other name found in <code>&lt;nys-icon&gt;</code> using the <code>icon</code> prop or customize directly within <code>&lt;nys-avatar&gt;</code> with the icon slot.</p>
+<div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-avatar label="User avatar"></nys-avatar>
+<div class="code-preview__preview-root-inner">
+<nys-avatar label="User avatar"></nys-avatar>
 <nys-avatar label="Youtube avatar" color="#f2efee">
   <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
 </nys-avatar>
@@ -436,10 +437,11 @@
   </div>
 </div>
 <h3>Shapes</h3>
-<p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
-  <div class="code-preview-container">
+<p>To change the shape of the avatar, set the <code>shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
+<div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-avatar label="User avatar" shape="circle"></nys-avatar>
+<div class="code-preview__preview-root-inner">
+<nys-avatar label="User avatar" shape="circle"></nys-avatar>
 <nys-avatar label="User avatar" shape="rounded"></nys-avatar>
 <nys-avatar label="User avatar" shape="square"></nys-avatar></nys-avatar></div>
   </div>
@@ -465,9 +467,10 @@
 </div>
 <h3>Background Color</h3>
 <p>You can change the background color of an Avatar. Note that images will naturally cover over the background color.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-avatar label="User avatar" color="purple"></nys-avatar></div>
+<div class="code-preview__preview-root-inner">
+<nys-avatar label="User avatar" color="purple"></nys-avatar></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -511,7 +514,7 @@
 <li>On Tablet and above, prefer showing the full name of the user or entity.</li>
 <li>Place the full name of the user or entity to the right of the avatar.</li>
 <li>Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.</li>
-<li>Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.</li>
+<li>Use <code>nys-icon</code> as a slot when you need further customizations that the <code>icon</code> prop can't provide.</li>
 </ul>
 </div>
       </div>
@@ -521,8 +524,8 @@
 <ul>
 <li>Don't overload the avatar with unnecessary customizations.</li>
 <li>Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.</li>
-<li>[Dev] Don't skip the <code class="language-js">label</code> attribute for screen reader users.</li>
-<li>[Dev] Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.</li>
+<li>[Dev] Don't skip the <code>label</code> attribute for screen reader users.</li>
+<li>[Dev] Don't use the <code>nys-icon</code> as a slot when icon prop can satisfy your use.</li>
 </ul>
 </div>
       </div>
@@ -530,7 +533,7 @@
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component includes the following accessibility-focused features:</p>
+<p>The <code>&lt;nys-avatar&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt=&quot;John Smith&quot;</code></li>
 <li>For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt=&quot;Photo of John Smith&quot;</code></li>

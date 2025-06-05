@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-04T17:55:50.119+00:00 -->
+    <!-- Latest Build: 2025-06-05T13:14:14.726+00:00 -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -322,7 +322,7 @@
   <div class="nys-desktop:nys-grid-col-8">  
     <p><section id="overview">
 <h1>Textinput</h1></p>
-<p>The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input data to be collected.</p>
+<p>The <code>&lt;nys-textinput&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input data to be collected.</p>
 </section>
     <section id="example">
   <div class="code-preview-container">
@@ -355,9 +355,9 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Width</h3>
-<p>If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to <code class="language-js">full</code>. Supported widths are <code class="language-js">sm</code>, <code class="language-js">md</code>, <code class="language-js">lg</code>, and <code class="language-js">full</code>.</p>
+<p>If no <code>width</code> is provided, the <code>&lt;nys-textinput&gt;</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.</p>
 <p>Width full will take up the full width of the parent container.</p>
-<p>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to <code class="language-js">full</code>.</p>
+<p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-textinput width="sm" label="This label is sm"></nys-textinput></div>
@@ -381,8 +381,8 @@
   </div>
 </div>
 <h3>Type</h3>
-<p>Accepted <code class="language-js">types</code> are: <code class="language-js">text</code>, <code class="language-js">email</code>, <code class="language-js">number</code>, <code class="language-js">password</code>, <code class="language-js">search</code>, <code class="language-js">tel</code>, <code class="language-js">url</code></p>
-<p>Any other input defaults to <code class="language-js">type=&quot;text&quot;</code></p>
+<p>Accepted <code>types</code> are: <code>text</code>, <code>email</code>, <code>number</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code></p>
+<p>Any other input defaults to <code>type=&quot;text&quot;</code></p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-textinput type="password" label="Password"></nys-textinput>
@@ -477,7 +477,7 @@
   </div>
 </div>
 <h3>Min Max and step</h3>
-<p><code class="language-js">max</code>, <code class="language-js">min</code>, and <code class="language-js">step</code> only apply when <code class="language-js">type=&quot;number&quot;</code></p>
+<p><code>max</code>, <code>min</code>, and <code>step</code> only apply when <code>type=&quot;number&quot;</code></p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput></div>
@@ -548,11 +548,10 @@
   </div>
 </div>
 <h3>Slotted Button</h3>
-<p>Note: You can add a button to the input by adding a <code class="language-js">slot=&quot;startButton&quot;</code> or <code class="language-js">slot=&quot;endButton&quot;</code>.
-This will add a button to the left or right of the input respectively.<br>
-The button must be a <code class="language-js">nys-button</code> component and one input should not add both a <code class="language-js">startButton</code> and <code class="language-js">endButton</code> to the same input.<br>
-The slotted button will automatically be <code class="language-js">size=&quot;sm&quot;</code> and <code class="language-js">variant=&quot;filled&quot;</code> and support the disabled state of the input.<br>
-When using a slotted button use either <code class="language-js">&lt;nys-textinput width=&quot;lg&quot;&gt;</code> or <code class="language-js">&lt;nys-textinput width=&quot;full&quot;&gt;</code> to ensure the input is wide enough for the user to see their input.</p>
+<p>Note: You can add a button to the input by adding a <code>slot=&quot;startButton&quot;</code> or <code>slot=&quot;endButton&quot;</code>. This will add a button to the left or right of the input respectively.</p>
+<p>The button must be a <code>nys-button</code> component and one input should not add both a <code>startButton</code> and <code>endButton</code> to the same input.</p>
+<p>The slotted button will automatically be <code>size=&quot;sm&quot;</code> and <code>variant=&quot;filled&quot;</code> and support the disabled state of the input.</p>
+<p>When using a slotted button use either <code>&lt;nys-textinput width=&quot;lg&quot;&gt;</code> or <code>&lt;nys-textinput width=&quot;full&quot;&gt;</code> to ensure the input is wide enough for the user to see their input.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-textinput 
@@ -602,7 +601,7 @@ When using a slotted button use either <code class="language-js">&lt;nys-textinp
   </div>
 </div>
 <h3>Error Message</h3>
-<p>Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.</p>
+<p>Set an error message and choose to activate it. The error message will appear ONLY when the <code>showError</code> attribute is set to <code>true</code>. Setting only <code>errorMessage</code> will not display the error message by default.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput></div>
@@ -664,7 +663,7 @@ When using a slotted button use either <code class="language-js">&lt;nys-textinp
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">&lt;nys-textinput&gt;</code> component includes the following accessibility-focused features:</p>
+<p>The <code>&lt;nys-textinput&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</li>
 <li>Keyboard navigation support, allowing users to tab into the input using the keyboard.</li>
@@ -770,7 +769,7 @@ When using a slotted button use either <code class="language-js">&lt;nys-textinp
     <br>
     <section id="events">
       <h2>Events</h2>
-<p>The <code class="language-js">&lt;nys-textinput&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code>&lt;nys-textinput&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-checkValidity</code></strong> – Fired when the textinput state changes.</li>
 <li><strong><code>focus</code></strong> – Fired when the textinput gains focus.</li>

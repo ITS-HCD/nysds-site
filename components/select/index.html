@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-04T17:55:50.119+00:00 -->
+    <!-- Latest Build: 2025-06-05T13:14:14.726+00:00 -->
   </head>
   
   <body class="single-page page-select section-components">
@@ -322,7 +322,7 @@
   <div class="nys-desktop:nys-grid-col-8">  
     <p><section id="overview">
 <h1>Select</h1></p>
-<p>The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.</p>
+<p>The <code>&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code>&lt;nys-option&gt;</code> to define the options in the dropdown.</p>
 </section>
     <section id="example">
   <div class="code-preview-container">
@@ -402,7 +402,7 @@
   </div>
 </div>
 <h3>Width</h3>
-<p>The following <code class="language-js">width</code> options are available:</p>
+<p>The following <code>width</code> options are available:</p>
 <ul>
 <li><code>sm</code> (Small): 88px, ideal for compact layouts.</li>
 <li><code>md</code> (Medium): 200px, ideal for balanced designs.</li>
@@ -411,12 +411,13 @@
 </ul>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
+<div class="code-preview__preview-root-inner">
+<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
   <nys-option value="sm" label="sm"></nys-option>
   <nys-option value="md" label="md"></nys-option>
   <nys-option value="lg" label="lg"></nys-option>
   <nys-option value="full" label="full"></nys-option>
-    </nys-select></div>
+</nys-select></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -436,22 +437,24 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>full<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>full<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
 <h3>Error Message</h3>
-<p>To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-select&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.</p>
+<p>To display an error message, pass in the <code>showError</code> property to the <code>&lt;nys-select&gt;</code> component.</p>
+<p>Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
+<div class="code-preview__preview-root-inner">
+<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
   <nys-option value="bronx" label="The Bronx"></nys-option>
   <nys-option value="brooklyn" label="Brooklyn"></nys-option>
   <nys-option value="manhattan" label="Manhattan"></nys-option>
   <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-    </nys-select></div>
+  <nys-option value="queens" label="Queens"></nys-option>
+</nys-select></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -471,8 +474,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>brooklyn<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Brooklyn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manhattan<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Manhattan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>staten_island<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Staten Island<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>queens<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Queens<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>  
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>queens<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Queens<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-option</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -512,10 +515,10 @@
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:</p>
+<p>The <code>&lt;nys-select&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.</li>
-<li>Keyboard navigation support, allowing users to tab to the <code class="language-js">nys-select</code> using the keyboard and spacebar to select an option.</li>
+<li>Keyboard navigation support, allowing users to tab to the <code>&lt;nys-select&gt;</code> using the keyboard and spacebar to select an option.</li>
 <li>Visual focus indicators to help users navigate the component.</li>
 <li>Include a label property to provide accessible text for screen readers.</li>
 </ul>
@@ -585,7 +588,7 @@
     <br>
     <section id="events">
       <h2>Events</h2>
-<p>The <code class="language-js">&lt;nys-select&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code>&lt;nys-select&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>
 <li><strong><code>focus</code></strong> – Fired when the select gains focus.</li>
