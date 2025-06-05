@@ -203,8 +203,10 @@ You may find having just a heading without description as a good compact version
 
 | Property          | Type                                                                              |
 |-------------------|-----------------------------------------------------------------------------------|
+| `dismissible`     | boolean                                                                           |
 | `duration`        | integer                                                                           |
 | `heading`         | String                                                                            |
+| `icon`            | String (`<nys-icon name>`)                                                        |
 | `primaryAction`   | URL                                                                               |
 | `primaryLabel`    | String                                                                            |
 | `secondaryAction` | URL                                                                               |
