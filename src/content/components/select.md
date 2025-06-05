@@ -111,19 +111,22 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 {% block properties %}
 
-| Property       | Type                                   |
-|----------------|----------------------------------------|
-| `description`  | String                                 |
-| `disabled`     | boolean                                |
-| `errorMessage` | String                                 |
-| `form`         | String                                 |
-| `id`           | String                                 |
-| `label`        | String                                 |
-| `name`         | String                                 |
-| `required`     | boolean                                |
-| `showError`    | boolean                                |
-| `value`        | String                                 |
-| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
+| Property       | Type                                   | Component           |
+|----------------|----------------------------------------|---------------------|
+| `description`  | String                                 | only `<nys-select>` |
+| `disabled`     | boolean                                | both                |
+| `errorMessage` | String                                 | only `<nys-select>` |
+| `form`         | String                                 | only `<nys-select>` |
+| `hidden`       | boolean                                | only `<nys-option>` |
+| `id`           | String                                 | only `<nys-select>` |
+| `label`        | String                                 | both                |
+| `name`         | String                                 | only `<nys-select>` |
+| `optional`     | boolean                                | only `<nys-select>` |
+| `required`     | boolean                                | only `<nys-select>` |
+| `selected`     | boolean                                | only `<nys-option>` |
+| `showError`    | boolean                                | only `<nys-select>` |
+| `value`        | String                                 | both                |
+| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
 
 
 {% endblock %}
