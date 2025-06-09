@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-05T15:58:04.610+00:00 -->
+    <!-- Latest Build: 2025-06-09T19:31:43.901+00:00 -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -681,12 +681,11 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
     <br>
     <section id="events">
       <h2>Events</h2>
-<p>The <code>&lt;nys-radiobutton&gt;</code> component emits <strong>four</strong> custom Javascript events:</p>
+<p>The <code>&lt;nys-radiobutton&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
-<li><strong><code>change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the radiobutton gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the radiobutton loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the radiobutton is focused.</li>
+<li><strong><code>nys-change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>
+<li><strong><code>nys-focus</code></strong> – Fired when the radiobutton gains focus.</li>
+<li><strong><code>nys-blur</code></strong> – Fired when the radiobutton loses focus.</li>
 </ol>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
@@ -705,9 +704,9 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
       <div class="code-preview__code-block">
         <pre class="language-js"><code class="language-js"><span class="token comment">// Select the radiobutton component</span>
 <span class="token keyword">const</span> radiobutton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-radiobutton'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// Listen for the 'change' event</span>
-radiobutton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Radio Button changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Listen for the 'nys-change' event</span>
+radiobutton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Radio Button changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
