@@ -166,19 +166,18 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% block events %}
 
-The `<nys-radiobutton>` component emits <strong>four</strong> custom Javascript events:
+The `<nys-radiobutton>` component emits <strong>three</strong> custom Javascript events:
 
-1.  **`change`** – Fired when the radiobutton state changes (checked/unchecked).
-2.  **`focus`** – Fired when the radiobutton gains focus.
-3.  **`blur`** – Fired when the radiobutton loses focus.
-4.  **`keydown`** – Fired when a key is pressed while the radiobutton is focused.
+1.  **`nys-change`** – Fired when the radiobutton state changes (checked/unchecked).
+2.  **`nys-focus`** – Fired when the radiobutton gains focus.
+3.  **`nys-blur`** – Fired when the radiobutton loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the radiobutton component
 const radiobutton = document.querySelector('nys-radiobutton');
-// Listen for the 'change' event
-radiobutton.addEventListener('change', (event) => {
-  console.log('Radio Button changed:', event.target.checked);
+// Listen for the 'nys-change' event
+radiobutton.addEventListener('nys-change', (event) => {
+  console.log('Radio Button changed:', event.detail.checked);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

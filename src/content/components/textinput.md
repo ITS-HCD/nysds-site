@@ -186,16 +186,16 @@ Takes any valid regex value.
 {% block events %}
 
 The `<nys-textinput>` component emits **three** custom Javascript events:
-1.  **`nys-checkValidity`** – Fired when the textinput state changes.
-2.  **`focus`** – Fired when the textinput gains focus.
-3.  **`blur`** – Fired when the textinput loses focus.
+1.  **`nys-input`** – Fired when the textinput state changes.
+2.  **`nys-focus`** – Fired when the textinput gains focus.
+3.  **`nys-blur`** – Fired when the textinput loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the textinput component
 const textinput = document.querySelector('nys-textinput');
-// Listen for the 'nys-checkValidity' event
-textinput.addEventListener('nys-checkValidity', (event) => {
-  console.log('Text input changed:', event.target.value);
+// Listen for the 'nys-input' event
+textinput.addEventListener('nys-input', (event) => {
+  console.log('Text input changed:', event.detail.value);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
