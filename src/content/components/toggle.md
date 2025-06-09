@@ -111,18 +111,18 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 {% endblock %}
 
 {% block events %}
-The `<nys-toggle`> component emits three custom Javascript events:
-1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
-2.  **`focus`** – Fired when the toggle gains focus.
-3.  **`blur`** – Fired when the toggle loses focus.
-4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
+
+The `<nys-toggle>` component emits **three** custom Javascript events:
+1.  **`nys-change`** – Fired when the toggle state changes (checked/unchecked).
+2.  **`nys-focus`** – Fired when the toggle gains focus.
+3.  **`nys-blur`** – Fired when the toggle loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-// Listen for the 'change' event
-toggle.addEventListener('change', (event) => {
-  console.log('Checkbox changed:', event.target.checked);
+const toggle = document.querySelector('nys-toggle');
+// Listen for the 'nys-change' event
+toggle.addEventListener('nys-change', (event) => {
+  console.log('Checkbox changed:', event.detail.checked);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

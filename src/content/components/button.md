@@ -221,16 +221,16 @@ Set the `inverted` when the button is on a dark background.
 
 The `<nys-button>` component emits **three** custom Javascript events:
 
-1.  **`click`** – Fired when the button is clicked.
-2.  **`focus`** – Fired when the button gains focus.
-3.  **`blur`** – Fired when the button loses focus.
+1.  **`nys-click`** – Fired when the button is clicked.
+2.  **`nys-focus`** – Fired when the button gains focus.
+3.  **`nys-blur`** – Fired when the button loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the button component
 const button = document.querySelector('nys-button');
-// Listen for the 'change' event
-button.addEventListener('click', (event) => {
-  console.log('Button Clicked');
+// Listen for the 'nys-click' event
+button.addEventListener("nys-click", () => {
+	console.log("Button clicked");
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

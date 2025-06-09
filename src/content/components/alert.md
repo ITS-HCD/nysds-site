@@ -223,6 +223,28 @@ You may find having just a heading without description as a good compact version
 
 {% block cssvariables %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+The `<nys-alert>` component emits **one** custom Javascript events:
+
+1.  **`alertClosed`** – Fired when the button is clicked.
+
+You can listen to these events using JavaScript:
+{% set code %}// Select the alert component
+const alert = document.querySelector("nys-alert");
+/* 
+ * Consider persisting dismissal state (e.g., to localStorage or analytics)
+ * This can be used to prevent the alert from appearing again
+ */
+// Listen for the 'nys-alertClosed' event
+alert.addEventListener("nys-alertClosed", (event) => {
+  const { type, label } = event.detail;
+  console.log(`Alert closed. Type: ${type}, Label: ${label}`);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
 
 {% block updates %}{% endblock %}

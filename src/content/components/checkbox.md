@@ -180,19 +180,19 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block events %}
 
-The `<nys-checkbox>` component emits **four** custom Javascript events:
-1.  **`change`** – Fired when the checkbox state changes (checked/unchecked).
-2.  **`focus`** – Fired when the checkbox gains focus.
-3.  **`blur`** – Fired when the checkbox loses focus.
-4.  **`keydown`** – Fired when a key is pressed while the checkbox is focused.
+The `<nys-checkbox>` component emits **three** custom Javascript events:
+1.  **`nys-change`** – Fired when the checkbox state changes (checked/unchecked).
+2.  **`nys-focus`** – Fired when the checkbox gains focus.
+3.  **`nys-blur`** – Fired when the checkbox loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the checkbox component
 const checkbox = document.querySelector('nys-checkbox');
-// Listen for the 'change' event
-checkbox.addEventListener('change', (event) => {
-  console.log('Checkbox changed:', event.target.checked);
-});{% endset %}
+// Listen for the 'nys-change' event
+checkbox.addEventListener('nys-change', (event) => {
+  console.log('Checkbox changed:', event.detail.checked);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

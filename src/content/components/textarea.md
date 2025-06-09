@@ -165,18 +165,19 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 {% block events %}
 
-The `<nys-textarea>` component emits **three** custom Javascript events:
+The `<nys-textarea>` component emits **four** custom Javascript events:
 
-1.  **`nys-checkValidity`** – Fired when the textarea state changes.
-2.  **`focus`** – Fired when the textarea gains focus.
-3.  **`blur`** – Fired when the textarea loses focus.
+1.  **`nys-input`** – Fired when the textarea state changes.
+2.  **`nys-focus`** – Fired when the textarea gains focus.
+3.  **`nys-blur`** – Fired when the textarea loses focus.
+4.  **`nys-select`** – Fired when the user selects text within the textarea.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the textarea component
 const textarea = document.querySelector('nys-textarea');
-// Listen for the 'nys-checkValidity' event
-textarea.addEventListener('nys-checkValidity', (event) => {
-  console.log('Text input changed:', event.target.value);
+// Listen for the 'nys-input' event
+textarea.addEventListener('nys-input', (event) => {
+  console.log('Text input changed:', event.detail.value);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

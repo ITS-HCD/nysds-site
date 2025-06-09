@@ -143,17 +143,17 @@ Setting `errorMessage` does not display the message without `showError` set to t
 {% block events %}
 
 The `<nys-select>` component emits **three** custom Javascript events:
-1.  **`change`** – Fired when the select state changes (checked/unchecked).
-2.  **`focus`** – Fired when the select gains focus.
-3.  **`blur`** – Fired when the select loses focus.
+1.  **`nys-change`** – Fired when the select state changes. The event detail includes the value of the selected option.
+2.  **`nys-focus`** – Fired when the select gains focus.
+3.  **`nys-blur`** – Fired when the select loses focus.
 
 You can listen to these events using JavaScript:
 {% set code %}
 // Select the select component
 const select = document.querySelector('nys-select');
-// Listen for the 'change' event
-select.addEventListener('change', (event) => {
-  console.log('Select changed:', event.target.checked);
+// Listen for the 'nys-change' event
+select.addEventListener('nys-change', (event) => {
+  console.log('Select changed:', event.detail.value);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
