@@ -15,6 +15,7 @@ navOrder: 2
 Alert banners are designed to display critical information, updates, or warnings that require the user's attention.
 
 The `<nys-alert>` component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
+
 {% endblock %}
 
 {% block example %}
@@ -132,6 +133,18 @@ The `<nys-alert>` component includes the following accessibility-focused feature
 
 {% block options %}
 
+### Theme
+
+Set the `type` property to customize the alert style (e.g. `type="info"`).
+
+{% set preview %}<nys-alert
+ type="info"
+ heading="Information status"
+ text="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+</nys-alert>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Custom text description
 
 Add descriptive content to your alert using the `text` prop or the our slot feature. 
@@ -197,17 +210,33 @@ You may find having just a heading without description as a good compact version
 </nys-alert>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
+
+### Action Links
+
+Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` and `secondaryLabel` for the link text. You must provide both an action label and a URL for each action to ensure proper functionality.
+
+{% set preview %}<nys-alert
+  type="emergency"
+  heading="Winter storm warning: Dec 10th, 2024."
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+  primaryAction="https://www.ny.gov/"
+  secondaryAction="https://www.ny.gov/"
+  primaryLabel="Weather Report"
+  secondaryLabel="Plowing Schedule"
+></nys-alert>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block properties %}
 
 | Property          | Type                                                                              |
 |-------------------|-----------------------------------------------------------------------------------|
+| `id`              | String                                                                            |
 | `dismissible`     | boolean                                                                           |
 | `duration`        | integer                                                                           |
 | `heading`         | String                                                                            |
 | `icon`            | String (`<nys-icon name>`)                                                        |
-| `id`              | String                                                                            |
 | `primaryAction`   | URL                                                                               |
 | `primaryLabel`    | String                                                                            |
 | `secondaryAction` | URL                                                                               |

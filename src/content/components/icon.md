@@ -12,7 +12,7 @@ navOrder: 8
 
 {% block longdescription %}
 
-An `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
+The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
 {% endblock %}
 
 {% block example %}
@@ -227,19 +227,15 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 | Property | Type                                                                                                                                                   |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `label`  | String                                                                                                                                                 |
 | `color`  | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
 | `flip`   | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
-| `label`  | String                                                                                                                                                 |
 | `name`   | String                                                                                                                                                 |
 | `rotate` | integer                                                                                                                                                |
 | `size`   | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
 
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

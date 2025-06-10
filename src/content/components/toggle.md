@@ -73,6 +73,22 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
   {% include "partials/code-preview.njk" %}
 
+### Slotted Description
+Add help text to the toggle using the `label` and `description` props.
+Descriptions can be provided either through the `description` prop or via the `slot="description"`.
+
+**Note**: Use the prop for simple text. Use the slot when you need custom HTML, such as links or formatting.
+  {% set preview %}<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
+  <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
+</nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Disabled Toggle
+  {% set preview %}<nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled></nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Disable Icon
   {% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
   {% set code = preview %}
@@ -84,13 +100,13 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 
 | Property      | Type             |
 |---------------|------------------|
+| `id`          | String           |
+| `label`       | String           |
+| `name`        | String           |
 | `checked`     | boolean          |
 | `description` | String           |
 | `disabled`    | boolean          |
 | `form`        | String           |
-| `id`          | String           |
-| `label`       | String           |
-| `name`        | String           |
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
 | `value`       | String           |

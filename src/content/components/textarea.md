@@ -80,7 +80,7 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
-### Resize
+### Resize Behavior
 By default a user can resize the `<nys-textarea>` vertically. If you want to disallow resizing altogether add `resize="none"`.
 
 **Note:** `resize` is not affected by setting `<nys-textarea>` to `disabled` or `readonly` as they are independent.
@@ -107,6 +107,11 @@ You can include a description to provide additional context for the user. This i
 </nys-textarea>{% endset %}
   {% include "partials/code-preview.njk" %}
 
+### Placeholder 
+  {% set preview %}<nys-textarea label="Placeholder" placeholder="this is a placeholder"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Disabled 
   {% set preview %}<nys-textarea label="Disabled textarea" disabled></nys-textarea>{% endset %}
   {% set code = preview %}
@@ -122,6 +127,16 @@ You can include a description to provide additional context for the user. This i
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Required
+  {% set preview %}<nys-textarea required label="Required textarea"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Optional
+  {% set preview %}<nys-textarea optional label="Optional textarea"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Error Message
 To display an error message, pass in the `showError` property to the `<nys-textarea>` component. Setting `errorMessage` does not display the message without `showError` set to true.
 
@@ -134,14 +149,14 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 | Property       | Type                                   |
 |----------------|----------------------------------------|
+| `id`           | String                                 |
+| `name`         | String                                 |
+| `label`        | String                                 |
 | `description`  | String                                 |
 | `disabled`     | boolean                                |
 | `errorMessage` | String                                 |
 | `form`         | String                                 |
-| `id`           | String                                 |
-| `label`        | String                                 |
 | `maxLength`    | integer                                |
-| `name`         | String                                 |
 | `optional`     | boolean                                |
 | `placeholder`  | String                                 |
 | `readonly`     | boolean                                |
@@ -153,10 +168,6 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

@@ -97,7 +97,7 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 
 ### Shapes
 
-To change the shape of the avatar, set the `shape` attribute. The default shape is **circle**, but you can also set it to **square** or **rounded**.
+To change the shape of the avatar, set the `shape` attribute. The default shape is **"circle"**, but you can also set it to **"square"** or **"rounded"**.
 
 {% set preview %}
 <nys-avatar label="User avatar" shape="circle"></nys-avatar>
@@ -108,7 +108,9 @@ To change the shape of the avatar, set the `shape` attribute. The default shape 
 
 ### Background Color
 
-You can change the background color of an Avatar. Note that images will naturally cover over the background color.
+You can change the background color of an Avatar. This attribute accepts any valid color value, including [design tokens](https://designsystem.ny.gov/foundations/tokens/), such as `color="var(--nys-color-theme)"`.
+
+**Note:** images will naturally cover over the background color.
 
 {% set preview %}
 <nys-avatar label="User avatar" color="purple"></nys-avatar>{% endset %}
@@ -121,9 +123,9 @@ You can change the background color of an Avatar. Note that images will naturall
 
 | Property   | Type                                     |
 |------------|------------------------------------------|
+| `id`       | String                                   |
 | `color`    | String (CSS HEX, CSS color name, or CSS) |
 | `icon`     | String (`<nys-icon name>`)               |
-| `id`       | String                                   |
 | `image`    | URL                                      |
 | `initials` | String (2 letters)                       |
 | `label`    | String                                   |
