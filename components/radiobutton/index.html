@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-10T20:23:52.764+00:00 -->
+    <!-- Latest Build: 2025-06-11T20:13:42.073+00:00 -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -392,6 +392,66 @@
     </div>
   </div>
 </div>
+<h3>Required</h3>
+<p>Set <code>required</code> to <code>&lt;radiogroup&gt;</code> to make selecting an option mandatory.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+</nys-radiogroup></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiogroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>What is your primary work location?<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is the location you use for your in office days.<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Albany<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upstate New York<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>albany<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Manhattan<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>New York City<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manhattan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiogroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Optional</h3>
+<p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." optional>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+</nys-radiogroup></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiogroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>What is your primary work location?<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is the location you use for your in office days.<span class="token punctuation">"</span></span> <span class="token attr-name">optional</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Albany<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upstate New York<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>albany<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Manhattan<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>New York City<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manhattan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiogroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>Size</h3>
 <p>Set the <code>size</code> prop of the <code>&lt;nys-radiogroup&gt;</code> to have all <code>&lt;nys-radiobutton&gt;</code> be the same size. Our current sizes are:</p>
 <ul>
@@ -602,32 +662,12 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 </thead>
 <tbody>
 <tr>
-<td><code>checked</code></td>
-<td>boolean</td>
-<td>only <code>&lt;nys-radiobutton&gt;</code></td>
-</tr>
-<tr>
-<td><code>description</code></td>
+<td><code>id</code></td>
 <td>String</td>
 <td>both</td>
 </tr>
 <tr>
-<td><code>disabled</code></td>
-<td>boolean</td>
-<td>only <code>&lt;nys-radiobutton&gt;</code></td>
-</tr>
-<tr>
-<td><code>errorMessage</code></td>
-<td>String</td>
-<td>only <code>&lt;nys-radiogroup&gt;</code></td>
-</tr>
-<tr>
-<td><code>form</code></td>
-<td>String</td>
-<td>only <code>&lt;nys-radiobutton&gt;</code></td>
-</tr>
-<tr>
-<td><code>id</code></td>
+<td><code>name</code></td>
 <td>String</td>
 <td>both</td>
 </tr>
@@ -637,9 +677,34 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 <td>both</td>
 </tr>
 <tr>
-<td><code>name</code></td>
+<td><code>value</code></td>
+<td>String</td>
+<td>only <code>&lt;nys-radiobutton&gt;</code></td>
+</tr>
+<tr>
+<td><code>checked</code></td>
+<td>boolean</td>
+<td>only <code>&lt;nys-radiobutton&gt;</code></td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>boolean</td>
+<td>only <code>&lt;nys-radiobutton&gt;</code></td>
+</tr>
+<tr>
+<td><code>form</code></td>
+<td>String</td>
+<td>only <code>&lt;nys-radiobutton&gt;</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
 <td>String</td>
 <td>both</td>
+</tr>
+<tr>
+<td><code>errorMessage</code></td>
+<td>String</td>
+<td>only <code>&lt;nys-radiogroup&gt;</code></td>
 </tr>
 <tr>
 <td><code>optional</code></td>
@@ -665,11 +730,6 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 <td><code>tile</code></td>
 <td>boolean</td>
 <td>only <code>&lt;nys-radiogroup&gt;</code></td>
-</tr>
-<tr>
-<td><code>value</code></td>
-<td>String</td>
-<td>only <code>&lt;nys-radiobutton&gt;</code></td>
 </tr>
 </tbody>
 </table>

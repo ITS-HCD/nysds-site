@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-10T20:23:52.764+00:00 -->
+    <!-- Latest Build: 2025-06-11T20:13:42.073+00:00 -->
   </head>
   
   <body class="single-page page-toggle section-components">
@@ -389,6 +389,59 @@
     </div>
   </div>
 </div>
+<h3>Slotted Description</h3>
+<p>Add help text to the toggle using the <code>label</code> and <code>description</code> props.
+Descriptions can be provided either through the <code>description</code> prop or via the <code>slot=&quot;description&quot;</code>.</p>
+<p><strong>Note</strong>: Use the prop for simple text. Use the slot when you need custom HTML, such as links or formatting.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
+  <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
+</nys-toggle></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-toggle</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Toggle Switch<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle-switch<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>access<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This slot is called 'description' (<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>learn more<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-toggle</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Disabled Toggle</h3>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled></nys-toggle></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-toggle</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Disabled Unchecked<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle-switch<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>access<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-toggle</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>Disable Icon</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
@@ -471,6 +524,18 @@
 </thead>
 <tbody>
 <tr>
+<td><code>id</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+</tr>
+<tr>
 <td><code>checked</code></td>
 <td>boolean</td>
 </tr>
@@ -484,18 +549,6 @@
 </tr>
 <tr>
 <td><code>form</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>name</code></td>
 <td>String</td>
 </tr>
 <tr>

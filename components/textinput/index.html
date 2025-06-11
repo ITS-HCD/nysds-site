@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-10T20:23:52.764+00:00 -->
+    <!-- Latest Build: 2025-06-11T20:13:42.073+00:00 -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -409,7 +409,7 @@
 <h3>Placeholder</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput></div>
+<div class="code-preview__preview-root-inner"><nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -424,7 +424,7 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>placeholder<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>this is a placeholder<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Placeholder<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>this is a placeholder<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -547,11 +547,88 @@
     </div>
   </div>
 </div>
+<h3>Required</h3>
+<p>Set <code>required</code> to <code>&lt;nys-textinput&gt;</code> to make it mandatory.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-textinput name="myTextInput7" required label="label"></nys-textinput></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myTextInput7<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Optional</h3>
+<p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-textinput name="myTextInput7" optional label="label"></nys-textinput></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myTextInput7<span class="token punctuation">"</span></span> <span class="token attr-name">optional</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Slotted Description</h3>
+<p>Add a description using the <code>description</code> prop for plain text, or use the description slot to include custom HTML for more flexibility.
+Takes any valid regex value.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-textinput name="descriptionSlot" label="Label">
+  <label slot="description">Slot: description</label>
+</nys-textinput></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>descriptionSlot<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Slot: description<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>Slotted Button</h3>
-<p>Note: You can add a button to the input by adding a <code>slot=&quot;startButton&quot;</code> or <code>slot=&quot;endButton&quot;</code>. This will add a button to the left or right of the input respectively.</p>
-<p>The button must be a <code>nys-button</code> component and one input should not add both a <code>startButton</code> and <code>endButton</code> to the same input.</p>
-<p>The slotted button will automatically be <code>size=&quot;sm&quot;</code> and <code>variant=&quot;filled&quot;</code> and support the disabled state of the input.</p>
-<p>When using a slotted button use either <code>&lt;nys-textinput width=&quot;lg&quot;&gt;</code> or <code>&lt;nys-textinput width=&quot;full&quot;&gt;</code> to ensure the input is wide enough for the user to see their input.</p>
+<p>You can add a button to the input by adding a <code>slot=&quot;startButton&quot;</code> or <code>slot=&quot;endButton&quot;</code>. This will add a button to the left or right of the input respectively.</p>
+<p><strong>Note</strong>: Use a <code>&lt;nys-button&gt;</code> for the slotted button. Do not use both <code>startButton</code> and <code>endButton</code> on the same input.</p>
+<p><strong>Note</strong>: The slotted button will automatically be <code>size=&quot;sm&quot;</code> and <code>variant=&quot;filled&quot;</code> and support the disabled state of the input.</p>
+<p><strong>Note</strong>: Use <code>width=&quot;lg&quot;</code> or <code>width=&quot;full&quot;</code> on <code>&lt;nys-textinput&gt;</code> to give users enough space to enter text when a button is present.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-textinput 
@@ -683,6 +760,18 @@
 </thead>
 <tbody>
 <tr>
+<td><code>id</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>String</td>
+</tr>
+<tr>
 <td><code>description</code></td>
 <td>String</td>
 </tr>
@@ -699,14 +788,6 @@
 <td>String</td>
 </tr>
 <tr>
-<td><code>id</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td>String</td>
-</tr>
-<tr>
 <td><code>max</code></td>
 <td>integer</td>
 </tr>
@@ -717,10 +798,6 @@
 <tr>
 <td><code>min</code></td>
 <td>integer</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>String</td>
 </tr>
 <tr>
 <td><code>optional</code></td>

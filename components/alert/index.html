@@ -35,7 +35,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-10T20:23:52.764+00:00 -->
+    <!-- Latest Build: 2025-06-11T20:13:42.073+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -401,6 +401,38 @@
     <br>
     <section id="options">
       <h2>Options</h2>
+<h3>Theme</h3>
+<p>Set the <code>type</code> property to customize the alert style (e.g. <code>type=&quot;info&quot;</code>).</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-alert
+ type="info"
+ heading="Information status"
+ text="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
+</nys-alert></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span>
+ <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span>
+ <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Information status<span class="token punctuation">"</span></span>
+ <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>Custom text description</h3>
 <p>Add descriptive content to your alert using the <code>text</code> prop or the our slot feature.</p>
 <p>Use the <code>text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.</p>
@@ -557,6 +589,46 @@
     </div>
   </div>
 </div>
+<h3>Action Links</h3>
+<p>Display <code>primaryAction</code> and <code>secondaryAction</code> as links using the <code>primaryLabel</code> and <code>secondaryLabel</code> for the link text. You must provide both an action label and a URL for each action to ensure proper functionality.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner"><nys-alert
+  type="emergency"
+  heading="Winter storm warning: Dec 10th, 2024."
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+  primaryAction="https://www.ny.gov/"
+  secondaryAction="https://www.ny.gov/"
+  primaryLabel="Weather Report"
+  secondaryLabel="Plowing Schedule"
+></nys-alert></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span>
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Winter storm warning: Dec 10th, 2024.<span class="token punctuation">"</span></span>
+  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving.<span class="token punctuation">"</span></span>
+  <span class="token attr-name">primaryAction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span>
+  <span class="token attr-name">secondaryAction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span>
+  <span class="token attr-name">primaryLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Weather Report<span class="token punctuation">"</span></span>
+  <span class="token attr-name">secondaryLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Plowing Schedule<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
     <br>
     <section id="usage">
@@ -655,6 +727,10 @@
 </thead>
 <tbody>
 <tr>
+<td><code>id</code></td>
+<td>String</td>
+</tr>
+<tr>
 <td><code>dismissible</code></td>
 <td>boolean</td>
 </tr>
@@ -669,10 +745,6 @@
 <tr>
 <td><code>icon</code></td>
 <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
 </tr>
 <tr>
 <td><code>primaryAction</code></td>
