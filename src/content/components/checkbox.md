@@ -73,15 +73,15 @@ The `<nys-checkbox>` component includes the following accessibility-focused feat
 The `<nys-checkboxgroup>` component can be used to group multiple checkboxes so they function as a single form control. This is useful when you want to allow users to select multiple options from a list.
 
 {% set preview %}<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
-<nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
-<nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
+  <nys-checkbox label="I have read the terms and conditions." id="terms-conditions" name="terms" value="terms-conditions"></nys-checkbox>
+  <nys-checkbox label="I agree to the NDA" id="legal" name="legal" value="legal"></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
-{% set preview %}<nys-checkbox disabled label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
+{% set preview %}<nys-checkbox disabled checked label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -93,12 +93,12 @@ Set the size property of the `<nys-checkboxgroup>` to have all `<nys-checkbox>` 
 
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
-<nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
-<nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-<nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
-<nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
-<nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-<nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -111,12 +111,41 @@ The `tile` prop will change the styling of the checkbox to a tile. This is usefu
 
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
-<nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
-<nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
-<nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
-<nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
-<nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
-<nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Required
+
+Set `required` to make a checkbox or group of checkboxes mandatory. It can be applied to either `<nys-checkboxgroup>` (no need to add it to individual children) or directly to an individual `<nys-checkbox>`.
+
+{% set preview %}
+<nys-checkbox
+  label="Subscribe to NYS Government Updates"
+  description="Get notified via email about important updates and services."
+  id="subscribe-checkbox-disabled-checked"
+  name="subscribe"
+  value="email-updates"
+  required
+></nys-checkbox>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Optional
+
+Adding the `optional` prop will add an optional flag to the input.
+
+{% set preview %}
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" optional>
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes"></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -129,9 +158,9 @@ Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkb
 
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
-<nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
-<nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
-<nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -152,19 +181,19 @@ When the description requires more complexity than a simple string, use the desc
 
 | Property       | Type             | Component                  |
 |----------------|------------------|----------------------------|
+| `id`           | String           | both                       |
+| `name`         | String           | both                       |
+| `label`        | String           | both                       |
+| `value`        | String           | only `<nys-checkbox>`      |
 | `checked`      | boolean          | only `<nys-checkbox>`      |
 | `description`  | String           | both                       |
 | `disabled`     | boolean          | both                       |
 | `errorMessage` | String           | both                       |
-| `id`           | String           | both                       |
-| `label`        | String           | both                       |
-| `name`         | String           | both                       |
 | `optional`     | boolean          | only `<nys-checkboxgroup>` |
 | `required`     | boolean          | both                       |
 | `showError`    | boolean          | both                       |
 | `size`         | `"sm"` \| `"md"` | both                       |
 | `tile`         | boolean          | both                       |
-| `value`        | String           | only `<nys-checkbox>`      |
 
 
 {% endblock %}

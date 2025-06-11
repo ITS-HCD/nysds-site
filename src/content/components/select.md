@@ -72,6 +72,34 @@ The `<nys-select>` component includes the following accessibility-focused featur
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Required
+Set `required` to `<nys-select>` to make selecting an option mandatory.
+
+{% set preview %}
+<nys-select label="Select your favorite borough" required>
+  <nys-option value="bronx" label="The Bronx"></nys-option>
+  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
+  <nys-option value="manhattan" label="Manhattan"></nys-option>
+  <nys-option value="staten_island" label="Staten Island"></nys-option>
+  <nys-option value="queens" label="Queens"></nys-option>  
+</nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Optional
+Adding the `optional` prop will add an optional flag to the input.
+
+{% set preview %}
+<nys-select label="Select your favorite borough" optional>
+  <nys-option value="bronx" label="The Bronx"></nys-option>
+  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
+  <nys-option value="manhattan" label="Manhattan"></nys-option>
+  <nys-option value="staten_island" label="Staten Island"></nys-option>
+  <nys-option value="queens" label="Queens"></nys-option>  
+</nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Width
 The following `width` options are available:
 
@@ -86,6 +114,21 @@ The following `width` options are available:
   <nys-option value="md" label="md"></nys-option>
   <nys-option value="lg" label="lg"></nys-option>
   <nys-option value="full" label="full"></nys-option>
+</nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Slotted Description
+Add a description using the `description` prop for plain text, or use the description slot to include custom HTML for more flexibility.
+
+{% set preview %}
+<nys-select label="Select your favorite borough">
+  <label slot="description">This is a slot</label>
+  <nys-option value="bronx">The Bronx</nys-option>
+  <nys-option value="brooklyn">Brooklyn</nys-option>
+  <nys-option value="manhattan">Manhattan</nys-option>
+  <nys-option value="staten_island">Staten Island</nys-option>
+  <nys-option value="queens">Queens</nys-option>        
 </nys-select>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
@@ -113,27 +156,23 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 | Property       | Type                                   | Component           |
 |----------------|----------------------------------------|---------------------|
+| `id`           | String                                 | only `<nys-select>` |
+| `name`         | String                                 | only `<nys-select>` |
+| `label`        | String                                 | both                |
 | `description`  | String                                 | only `<nys-select>` |
 | `disabled`     | boolean                                | both                |
 | `errorMessage` | String                                 | only `<nys-select>` |
-| `form`         | String                                 | only `<nys-select>` |
 | `hidden`       | boolean                                | only `<nys-option>` |
-| `id`           | String                                 | only `<nys-select>` |
-| `label`        | String                                 | both                |
-| `name`         | String                                 | only `<nys-select>` |
 | `optional`     | boolean                                | only `<nys-select>` |
 | `required`     | boolean                                | only `<nys-select>` |
 | `selected`     | boolean                                | only `<nys-option>` |
 | `showError`    | boolean                                | only `<nys-select>` |
+| `form`         | String                                 | only `<nys-select>` |
 | `value`        | String                                 | both                |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
 
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 

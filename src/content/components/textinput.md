@@ -81,7 +81,7 @@ Any other input defaults to `type="text"`
   {% include "partials/code-preview.njk" %}
 
 ### Placeholder
-  {% set preview %}<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
+  {% set preview %}<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -115,14 +115,35 @@ Takes any valid regex value.
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Required
+Set `required` to `<nys-textinput>` to make it mandatory.
+  {% set preview %}<nys-textinput name="myTextInput7" required label="label"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Optional
+Adding the `optional` prop will add an optional flag to the input.
+  {% set preview %}<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Slotted Description
+Add a description using the `description` prop for plain text, or use the description slot to include custom HTML for more flexibility.
+Takes any valid regex value.
+  {% set preview %}<nys-textinput name="descriptionSlot" label="Label">
+  <label slot="description">Slot: description</label>
+</nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Slotted Button
-  Note: You can add a button to the input by adding a `slot="startButton"` or `slot="endButton"`. This will add a button to the left or right of the input respectively.
+  You can add a button to the input by adding a `slot="startButton"` or `slot="endButton"`. This will add a button to the left or right of the input respectively.
 
-  The button must be a `nys-button` component and one input should not add both a `startButton` and `endButton` to the same input.
+  **Note**: Use a `<nys-button>` for the slotted button. Do not use both `startButton` and `endButton` on the same input.
 
-  The slotted button will automatically be `size="sm"` and `variant="filled"` and support the disabled state of the input.
+  **Note**: The slotted button will automatically be `size="sm"` and `variant="filled"` and support the disabled state of the input.
 
-  When using a slotted button use either `<nys-textinput width="lg">` or `<nys-textinput width="full">` to ensure the input is wide enough for the user to see their input.
+  **Note**: Use `width="lg"` or `width="full"` on `<nys-textinput>` to give users enough space to enter text when a button is present.
 
   {% set preview %}<nys-textinput 
   name="searchInput"
@@ -154,16 +175,16 @@ Takes any valid regex value.
 
 | Property       | Type                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------|
+| `id`           | String                                                                                  |
+| `name`         | String                                                                                  |
+| `label`        | String                                                                                  |
 | `description`  | String                                                                                  |
 | `disabled`     | boolean                                                                                 |
 | `errorMessage` | String                                                                                  |
 | `form`         | String                                                                                  |
-| `id`           | String                                                                                  |
-| `label`        | String                                                                                  |
 | `max`          | integer                                                                                 |
 | `maxlength`    | integer                                                                                 |
 | `min`          | integer                                                                                 |
-| `name`         | String                                                                                  |
 | `optional`     | boolean                                                                                 |
 | `pattern`      | REGEX                                                                                   |
 | `placeholder`  | String                                                                                  |

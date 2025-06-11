@@ -82,6 +82,24 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Required
+Set `required` to `<radiogroup>` to make selecting an option mandatory.
+  {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Optional
+Adding the `optional` prop will add an optional flag to the input.
+  {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." optional>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Size
 Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be the same size. Our current sizes are:
 
@@ -142,20 +160,20 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 | Property       | Type             | Component                |
 |----------------|------------------|--------------------------|
-| `checked`      | boolean          | only `<nys-radiobutton>` |
-| `description`  | String           | both                     |
-| `disabled`     | boolean          | only `<nys-radiobutton>` |
-| `errorMessage` | String           | only `<nys-radiogroup>`  |
-| `form`         | String           | only `<nys-radiobutton>` |
 | `id`           | String           | both                     |
-| `label`        | String           | both                     |
 | `name`         | String           | both                     |
+| `label`        | String           | both                     |
+| `value`        | String           | only `<nys-radiobutton>` |
+| `checked`      | boolean          | only `<nys-radiobutton>` |
+| `disabled`     | boolean          | only `<nys-radiobutton>` |
+| `form`         | String           | only `<nys-radiobutton>` |
+| `description`  | String           | both                     |
+| `errorMessage` | String           | only `<nys-radiogroup>`  |
 | `optional`     | boolean          | only `<nys-radiogroup>`  |
 | `required`     | boolean          | only `<nys-radiogroup>`  |
 | `showError`    | boolean          | only `<nys-radiogroup>`  |
 | `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
 | `tile`         | boolean          | only `<nys-radiogroup>`  |
-| `value`        | String           | only `<nys-radiobutton>` |
 
 {% endblock %}
 
