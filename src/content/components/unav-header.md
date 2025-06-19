@@ -59,14 +59,14 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
 
 {% block options %}
 
-### Search toggle
+### Search Off
   {% set preview %}
     <nys-unavheader hideSearch></nys-unavheader>
   {% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
-### Translate toggle
+### Translate Off
   {% set preview %}
     <nys-unavheader hideTranslate></nys-unavheader>
   {% endset %}

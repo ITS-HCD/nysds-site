@@ -163,7 +163,7 @@ Set the `target` prop of the `<nys-button>` to specify where to open the linked 
 - `_top`: Opens the link in the full body of the window.
 - `framename`: Opens the link in a named iframe.
 
-{% set preview %}<nys-button href="https://www.ny.gov/" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
+{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -191,15 +191,14 @@ Set the `inverted` when the button is on a dark background.
 
 | Property     | Type                                                               |
 |--------------|--------------------------------------------------------------------|
+| `id`         | String                                                             |
+| `name`       | String                                                             |
 | `disabled`   | boolean                                                            |
 | `form`       | String                                                             |
 | `fullWidth`  | boolean                                                            |
 | `href`       | String (URL)                                                       |                
-| `id`         | String                                                             |
 | `inverted`   | boolean                                                            |
 | `label`      | String                                                             |
-| `ariaLabel`  | String                                                             |
-| `name`       | String                                                             |
 | `onClick`    | JS function                                                        |
 | `prefixIcon` | String (`<nys-icon name>`)                                         |
 | `size`       | `"sm"` \| `"md"` \| `"lg"`                                         |
