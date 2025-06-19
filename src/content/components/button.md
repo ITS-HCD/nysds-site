@@ -198,6 +198,7 @@ Set the `inverted` when the button is on a dark background.
 | `id`         | String                                                             |
 | `inverted`   | boolean                                                            |
 | `label`      | String                                                             |
+| `ariaLabel`  | String                                                             |
 | `name`       | String                                                             |
 | `onClick`    | JS function                                                        |
 | `prefixIcon` | String (`<nys-icon name>`)                                         |
