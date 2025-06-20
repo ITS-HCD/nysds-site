@@ -21,6 +21,8 @@ NYSDS solves this by providing:
 - **Proven Best Practices:** From intuitive design to strict WCAG 2.2 accessibility standards, every element is created with residents in mind.
 - **A Shared Language:** Our design and code libraries are closely aligned so that what designers and business analysts create while prototyping designs is based in the reality of what can quickly be built in code.
 - **Efficiency & Scalability:** Prebuilt components, design tokens, and guidelines make developers more efficient and keep experiences consistent across platforms.
+- **Compliance:** The design system adheres to New York State's web browser compatibility standards, ensuring all components are usable by everyone. Read the full [NYS Web Browsers - Development and Software Support](https://its.ny.gov/system/files/documents/2025/02/its-s16-004-web-browsers-development-and-software-support.pdf) document for more details.
+
 
 ## Bridging Design and Development
 
