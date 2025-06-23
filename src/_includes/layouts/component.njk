@@ -1,68 +1,125 @@
-
-    <section id="overview">
+---
+layout: layouts/base.njk
+---
+{% set currentPageUrl = page.url %}
+<div class="nys-grid-container-widescreen" data-pagefind-weight="10">
+  <div class="nys-grid-row nys-grid-gap">
+    <aside class="nys-desktop:nys-grid-col-2">
+      {% include "partials/section-nav.njk" %}
+    </aside>
+    <div class="nys-desktop:nys-grid-col-8">
       <h1>{{ title }}</h1>
-      {%- block longdescription %}{% endblock -%}
+      {% if long_description %}
+        {{ long_description | md | safe }}
+      {% endif %}
     </section>
     <section id="example">
-      {%- block example %}{% endblock -%}
+      {% set preview %}
+      {% if mainexample %}
+        {{ mainexample | safe }}
+      {% endif %}
+      {% endset %}
+      {% set code %}
+      {% if mainexample %}
+        {{ mainexample | safe }}
+      {% endif %}
+      {% endset %}
+      {% set showTip = true %}
+      {% include "partials/code-preview.njk" %}
     </section>
-    <br>
-    <section id="options">
-      <h2>Options</h2>
-      {%- block options %}{% endblock -%}
-    </section>
-    <br>
-    <section id="usage">
-      <h2>Usage</h2>
-      {%- block usage %}{% endblock -%}
-    </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-          {%- block usagedo %}{% endblock -%}
+      <section id="options">
+        <h2>Options</h2>
+        {% for option in component_options %}
+          {{ option.description | md | safe }}
+          {% if option.examplecode %}
+            {% set preview %}
+              {{ option.examplecode | safe }}
+            {% endset %}
+            {% set code %}
+              {% if mainexample %}
+                {{ option.examplecode | safe }}
+              {% endif %}
+            {% endset %}
+            {% set showTip = true %}
+            {% include "partials/code-preview.njk" %}
+          {% endif %}
+        {% endfor %}
+        {# {{ content | md | safe }} #}
+      </section>
+      <section id="usage">
+        <h2>Usage</h2>
+        {{ usage | md | safe }}
+        {{ content | md | safe }}
+        <div class="nys-grid-row nys-grid-gap">
+          <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+              <h3 class="card__title">
+                <nys-icon name="check_circle" size="lg"></nys-icon>
+                Do</h3>
+              {{ do | md | safe }}
+            </div>
+          </div>
+          <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+              <h3 class="card__title">
+                <nys-icon name="warning" size="lg"></nys-icon>
+                Don't</h3>
+              {{ dont | md | safe }}
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-          {%- block usagedont %}{% endblock -%}
+      </section>
+        <section id="accessibility">
+          <h2>Accessibility</h2>
+          {{ accessibility | md | safe}}
+        </section>
+        <br>
+          <section id="properties">
+            <h2>Properties</h2>
+            {{ properties | md | safe }}
+          </section>
+          <br>
+          {% if cssvars %}
+          <section id="cssvariables">
+            <h2>CSS Variables</h2>
+            {{ cssvars | md | safe }}
+          </section>
+          {% endif %}
+            {% if eventsdescription %}
+              <section id="events">
+                <h2>Events</h2>
+                {{ eventsdescription | md | safe }}
+                {% if eventscode %}
+                  {% set code %}{{ eventscode  | safe}}{% endset %}
+                  {% set showTip = false %}
+                  {% set preview = "" %}
+                  {% set accordionLabel = "Sample Code" %}
+                  {% set codeExpanded = true %}
+                  {% set codeLanguage = "js" %}
+                  {% include "partials/code-preview.njk" %}
+                  {% endif %}
+              </section>
+              {% endif %}
+              <section class="nys-section" data-pagefind-ignore>
+                <h2>Suggest a New Component</h2>
+                <div class="nys-grid-row nys-grid-gap">
+                  <div class="nys-tablet:nys-grid-col-8">
+                    <p>
+                      Do you have an idea for a new NYSDS web component? Look through the existing proposals in our GitHub discussions board
+                      to see if someone already proposed something similar. If not, feel free to submit one.
+                    </p>
+                  </div>
+                  <div class="nys-tablet:nys-grid-col-4">
+                    <nys-button
+                      fullWidth
+                      label="Review Component Proposals"
+                      href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <aside class="nys-desktop:nys-grid-col-2">
+              {% include "partials/onpage-nav.njk" %}
+            </aside>
+          </div>
         </div>
-      </div>
-    </div>
-    <br>
-    <section id="accessibility">
-      <h2>Accessibility</h2>
-      {%- block accessibility %}{% endblock -%}
-    </section>
-    <br>
-    <section id="properties">
-      <h2>Properties</h2>
-      {%- block properties %}{% endblock -%}
-    </section>
-    <br>
-    <section id="cssvariables">
-      <h2>CSS Variables</h2>
-      {%- block cssvariables %}{% endblock -%}
-    </section>
-    <br>
-    <section id="events">
-      <h2>Events</h2>
-      {%- block events %}{% endblock -%}
-    </section>
-    <section class="nys-section">
-  <h2>Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-8">
-      <p>
-        Do you have an idea for a new NYSDS web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
-    </div>
-    <div class="nys-tablet:nys-grid-col-4">
-      <nys-button fullWidth label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
-</section>
-  {# <h2 id="updates">Updates</h2>
-  {%- block updates %}{% endblock -%} #}
-

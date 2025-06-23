@@ -7,27 +7,6 @@
   </ul>
 </nys-globalheader>
 
-{# {% if site_nav != false %} #}
-{# <div class="site-header">
-    <div class="site-header__inner nys-grid-container">
-        <div class="site-header__logo">
-            <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-nysds.svg' | url }}" title="NYSDS Logo"></a>
-        </div>
-        <nav class="site-header__nav">
-            <ul class="site-header__list">
-                <li class="site-header__item{% if section == 'Getting Started' %} site-header__item--active{% endif %}"><a href="{{ '/getting-started' | url }}" class="site-header__link" title="Getting Started">Getting Started</a></li>
-                <li class="site-header__item{% if section == 'Foundations' %} site-header__item--active{% endif %}"><a href="{{ '/foundations' | url }}" class="site-header__link" title="Foundations">Foundations</a></li>
-                <li class="site-header__item{% if section == 'Components' %} site-header__item--active{% endif %}"><a href="{{ '/components' | url }}" class="site-header__link" title="Components">Components</a></li>
-                <li class="site-header__item{% if section == 'About' %} site-header__item--active{% endif %}"><a href="{{ '/about' | url }}" class="site-header__link" title="About">About</a></li>
-            </ul>
-        </nav>
-
-    </div>
-</div> #}
-{# {% endif %} #}
-
-{# <nys-globalheader appName="New York State Design System"></nys-globalheader> #}
-
 {% if section %}
 <div class="section-header">
     <div class="section-header__inner nys-grid-container-widescreen">
@@ -35,16 +14,23 @@
             {{ section }}
         </div>
         <div class="section-header__media">
-            {% if image_header %}
-                <img src="{{ image_header | url }}" alt="{{ title }}">
-            {% else %}
-                <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+            {% for smallimage in imagery %}
+            {% if smallimage.smallcardimage %}
+              <img src="{{ smallimage.smallcardimage }}" alt="{{ smallimage.smallcardimagealt |safe }}" data-pagefind-meta="image[src], image_alt[alt]" class="nys-display-none" style="display: none;">
             {% endif %}
+          {% endfor %}
+            {% for pageimage in imagery %}
+            {% if pageimage.pageheaderimage %}
+                <img src="{{ pageimage.pageheaderimage }}" alt="{{ pageimage.pageheaderimagealt | safe }}">
+            {% endif %}
+            {% endfor %}
+            {% if not imagery %}
+            <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+            {% endif %}
+
         </div>
+         
+                
     </div>
 </div>
 {% endif %}
-
-{# <div id="search" class="search"></div>
-
-<script src="{{ site.url }}/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: true });"></script> #}

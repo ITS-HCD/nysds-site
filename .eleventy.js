@@ -5,7 +5,7 @@ const eleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const eleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const timeToRead = require('eleventy-plugin-time-to-read');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { execSync } = require('child_process')
+const { execSync } = require('child_process');
 
 // filters
 const limit = require("./src/_11ty/filters/limit.js");
@@ -25,7 +25,14 @@ const components = require("./src/_11ty/collections/components");
 const sections = require("./src/_11ty/collections/sections");
 const tokens = require("./src/_11ty/collections/tokens");
 
+
 module.exports = (eleventyConfig) => {
+const markdownIt = require('markdown-it')({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: false,
+});
 
     // filters
     eleventyConfig.addFilter("dateISO", dateISO);
@@ -54,19 +61,25 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addWatchTarget("./src/css/");
 
     // passthrough copy
-    eleventyConfig.addPassthroughCopy({ "./src/static/": "/" });
     eleventyConfig.addPassthroughCopy("./src/assets/img/");
-    eleventyConfig.addPassthroughCopy("./src/assets/i/"); // Images reference in pages
     eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
     eleventyConfig.addPassthroughCopy("./src/assets/css/");
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
     eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
+    eleventyConfig.addPassthroughCopy("./src/admin/");
     eleventyConfig.addPassthroughCopy("./CNAME"); 
 
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
     })
+
+    /* Markdown-It 'markdownify' filter
+    * source: https://github.com/BradCoffield/kidlitconnection/commit/e42a6dee1021be4b1869e4b62582230aed5db84e)
+    */
+    eleventyConfig.addFilter("md", function (content = "") {
+        return markdownIt.render(content.trim());
+    });
 
     // base config
     return {

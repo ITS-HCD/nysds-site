@@ -28,8 +28,7 @@
 * General
 */
 pre[class*="language-"],
-code[class*="language-"],
-code {
+code[class*="language-"] {
   color: var(--nys-color-ink);
   font-size: var(--nys-font-size-body-sm);
   text-shadow: none;
@@ -51,16 +50,13 @@ code {
 pre[class*="language-"]::selection,
 code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
-code[class*="language-"]::mozselection,
-code::selection,
-code::mozselection {
+code[class*="language-"]::mozselection {
   text-shadow: none;
   background: var(--nys-color-neutral-100);
 }
 @media print {
   pre[class*="language-"],
-  code[class*="language-"],
-  code {
+  code[class*="language-"] {
     text-shadow: none;
   }
 }
@@ -70,8 +66,7 @@ pre[class*="language-"] {
   overflow: auto;
   background: var(--nys-color-white);
 }
-:not(pre) > code[class*="language-"],
- :not(pre) > code {
+:not(pre) > code[class*="language-"] {
   padding: var(--nys-space-1px) var(--nys-space-2px);
   border-radius: var(--nys-radius-md);
   color: var(--nys-color-red-600);
@@ -103,6 +98,7 @@ pre[class*="language-"] {
 }
 .token.selector,
 .token.attr-name,
+.token.string,
 .token.char,
 .token.builtin,
 .token.inserted {

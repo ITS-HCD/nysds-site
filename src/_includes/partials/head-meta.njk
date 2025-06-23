@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{% if section != 'home' %}{% if title %}{{ title | safe }} - {% endif %}{% endif %}{{ site.title }}</title>
-    {% if description %}<meta name="description" content="{{ description }}">{% endif %}   
+    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
     <link rel="canonical" href="{{ site.url }}{{page.url}}">
     <link rel="icon" type="image/svg+xml" href="{{ site.url }}/favicon.svg" />
 
@@ -20,10 +20,10 @@
     <meta property="og:image:height" content="630">
     <meta property="og:logo" content="{{ site.url }}/assets/img/nysds-logo-mark.png">
 
-    <link href="{{ site.url | url }}/assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
+    <link href="{{ site.url | url }}/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
     <link rel="preload" href="{{ site.url | url }}/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
-    <link href="{{ site.url | url}}/assets/fonts/nysds-fonts.css" rel="stylesheet">    
+    <link href="{{ site.url | url}}/assets/fonts/nysds-fonts.css" rel="stylesheet">
     <link href="{{ site.url | url}}/pagefind/pagefind-ui.css" rel="stylesheet">
     <link href="{{ site.url | url }}/assets/css/prism-theme.css"rel="stylesheet">
-    <link href="{{ site.url | url }}/assets/css/nysds-site.css" rel="stylesheet">    
-
+    <link href="{{ site.url | url }}/assets/css/nysds-site.css" rel="stylesheet">
+    <link href="{{ site.url | url }}/assets/css/utilities.css" rel="stylesheet">  
