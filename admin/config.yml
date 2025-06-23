@@ -1,0 +1,81 @@
+backend:
+  name: github
+  repo: esteinborn/nysds-site
+  # branch: main
+  # name: git-gateway
+  branch: main
+# Please run "npx netlify-cms-proxy-server" for local backend
+# local_backend: true
+
+media_folder: "src/assets/img/components" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/img/components" # The src attribute for uploaded media will begin with /images/uploads
+
+# publish_mode: editorial_workflow
+
+collections:
+  - name: "page" # Used in routes, e.g., /admin/collections/blog
+    label: "Page" # Used in the UI
+    folder: "src/content/pages" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "select", options: ["layouts/base.njk", "layouts/3-col.njk"] }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "string" }
+      - { label: "Long Description", name: "long_description", widget: "markdown" }
+      - { label: "Navigation Order", name: "navOrder", widget: "number" }
+      - { label: "Section", name: "section", widget: "select", required: false, options: ["Getting Started", "Foundations", "Components", "About"] }
+      - { label: "Parent Nav", name: "parent", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "component" # Used in routes, e.g., /admin/collections/blog
+    label: "Component" # Used in the UI
+    folder: "src/content/components" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/component.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string", hint: "Must start and end with a forward slash '/'" }
+      - label: 'Imagery'
+        name: 'imagery'
+        widget: 'list'
+        types:
+          - label: 'Small Card Image'
+            name: 'smallcard'
+            widget: 'object'
+            fields:
+              - { label: 'Image', name: 'smallcardimage', widget: 'image' }
+              - { label: 'Image Alt', name: 'smallcardimagealt', widget: 'text' }
+          - label: 'Page Header Image'
+            name: 'pageheader'
+            widget: 'object'
+            fields:
+              - { label: 'Image', name: 'pageheaderimage', widget: 'image' }
+              - { label: 'Image Alt', name: 'pageheaderimagealt', widget: 'text' }
+      - { label: "Short Description", name: "description", widget: "string" }
+      - { label: "Long Description", name: "long_description", widget: "markdown" }
+      - { label: "Navigation Order", name: "navOrder", widget: "number" }
+      - { label: "Main Example", name: "mainexample", widget: "markdown" }
+      - { label: "Usage", name: "usage", widget: "markdown" }
+      - { label: "Do", name: "do", widget: "markdown" }
+      - { label: "Dont", name: "dont", widget: "markdown" }
+      - { label: "Accessibility", name: "accessibility", widget: "markdown" }
+      - { label: "Properties", name: "properties", widget: "markdown" }
+      - { label: "CSS Variables", name: "cssvars", widget: "markdown" }
+      - { label: "Event Description", name: "eventsdescription", widget: "markdown" }
+      - { label: "Events Code", name: "eventscode", widget: "markdown", required: false, hint: "Use this field to add code examples for events. If you don't need it, leave it blank." }
+      - label: 'Component Options'
+        name: 'component_options'
+        widget: 'list'
+        search_fields: ['title', 'body']
+        value_field: 'title'
+        required: false
+        types:
+          - label: 'Option'
+            name: 'option'
+            widget: 'object'
+            fields:
+              - { label: 'Option description', name: 'description', widget: 'markdown' }
+              - { label: 'Example Code', name: 'examplecode', widget: 'text', required: false }
+      - { label: "Body Content", name: "body", widget: "markdown" }

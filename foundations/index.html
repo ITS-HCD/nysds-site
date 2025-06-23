@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Foundations - New York State Design System</title>
-    <meta name="description" content="The New York State Design System makes it easier to build accessible, usable websites for New York State.">   
+    <meta name="description" content="Foundations of the NYS design System">
     <link rel="canonical" href="https://designsystem.ny.gov/foundations/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Foundations">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/foundations/">
-    <meta property="og:description" content="The New York State Design System makes it easier to build accessible, usable websites for New York State.">
+    <meta property="og:description" content="Foundations of the NYS design System">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -23,19 +23,19 @@
     <meta property="og:image:height" content="630">
     <meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
 
-    <link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
     <link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
-    <link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
     <link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
     <link href="https://designsystem.ny.gov/assets/css/prism-theme.css"rel="stylesheet">
-    <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">    
-
+    <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+    <link href="https://designsystem.ny.gov/assets/css/utilities.css" rel="stylesheet">  
 
     
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-23T20:15:58.663+00:00 -->
+    <!-- Latest Build: 2025-06-23T20:22:53.709+00:00 -->
   </head>
   
   <body class="single-page page-foundations section-foundations">
@@ -54,12 +54,6 @@
 </nys-globalheader>
 
 
-
-
-
-
-
-
 <div class="section-header">
     <div class="section-header__inner nys-grid-container-widescreen">
         <div class="section-header__title">
@@ -67,13 +61,16 @@
         </div>
         <div class="section-header__media">
             
-                <img src="https://designsystem.ny.gov/assets/img/sections/section-foundations.svg" alt="Foundations section header">
             
+            
+            <img src="https://designsystem.ny.gov/assets/img/sections/section-foundations.svg" alt="Foundations section header">
+            
+
         </div>
+         
+                
     </div>
 </div>
-
-
 
 
 
@@ -82,7 +79,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-2" data-pagefind-ignore>
     <nav class="section-nav" aria-label="Section Navigation">
   <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
     <label>Foundations</label>
@@ -181,6 +178,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
         
         <li class="section-nav__item"  aria-expanded="false" >
           <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/" >
@@ -191,14 +194,20 @@
             <ul class="section-nav__list"  hidden >
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/utilities/" >
-                    General Utilities
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/display/" >
+                    Display
                   </a>
                 </li>
               
                 <li class="section-nav__item">
-                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/flex/" >
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/flexbox/" >
                     Flexbox
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/float/" >
+                    Float
                   </a>
                 </li>
               
@@ -215,8 +224,20 @@
                 </li>
               
                 <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/opacity/" >
+                    Opacity
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
                   <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/typography/" >
                     Typography
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://designsystem.ny.gov/foundations/utilities/z-index/" >
+                    Z-Index
                   </a>
                 </li>
               
@@ -243,7 +264,7 @@
   });
 </script>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-8">
     <h2>Overview</h2>
 <p>What is a design system? It isn't just a component library, a set of fonts and colors, or a prototyping kit. The core value of a design system is in its system-ness. A system is a set of things working together as parts of an interconnected network to create a cohesive whole.</p>
 <p>What makes a design system unique is the connectedness. Our design libraries use variables, our code library is built on the same variables, the two have parity with each other, and our reference site is built using the same components, variables, and guiding principles. This interconnectedness is what makes a design system a system.</p>
@@ -308,7 +329,7 @@
 </ul>
 
   </div>
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-2" data-pagefind-ignore>
     <div id="onpage-nav" class="onpage-nav"></div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -376,7 +397,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   </main>
 
-  <div class="site-footer">
+  <div class="site-footer" data-pagefind-ignore>
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">
       <div class="nys-tablet:nys-grid-col">
@@ -393,7 +414,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <ul>
           <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
           <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
-          <li><a href="/about/" title="Contact the NYSDS team.">Contact</a></li>
+          <li><a href="/about/contact/" title="Contact the NYSDS team.">Contact</a></li>
         </ul>
       </div>
       <div class="nys-tablet:nys-grid-col">
