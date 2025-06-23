@@ -4,38 +4,38 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About the New York State Design System - New York State Design System</title>
-    <meta name="description" content="NYSDS makes it easier to build accessible, usable websites for New York State.">   
-    <link rel="canonical" href="https://designsystem.ny.gov/about/">
-    <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
+    <title>About - New York State Design System</title>
+    <meta name="description" content="About The New York State Design System">
+    <link rel="canonical" href="https://esteinborn.github.io/nysds-site/about/">
+    <link rel="icon" type="image/svg+xml" href="https://esteinborn.github.io/nysds-site/favicon.svg" />
 
     <meta name=”robots” content=”noindex”>
 
-    <meta property="og:title" content="About the New York State Design System">
+    <meta property="og:title" content="About">
     <meta property="og:site_name" content="New York State Design System">
-    <meta property="og:url" content="https://designsystem.ny.gov/about/">
-    <meta property="og:description" content="NYSDS makes it easier to build accessible, usable websites for New York State.">
+    <meta property="og:url" content="https://esteinborn.github.io/nysds-site/about/">
+    <meta property="og:description" content="About The New York State Design System">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
-    <meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+    <meta property="og:image" content="https://esteinborn.github.io/nysds-site/assets/img/nysds_og_image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+    <meta property="og:logo" content="https://esteinborn.github.io/nysds-site/assets/img/nysds-logo-mark.png">
 
-    <link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
-    <link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
-    <link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">    
-    <link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
-    <link href="https://designsystem.ny.gov/assets/css/prism-theme.css"rel="stylesheet">
-    <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">    
-
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+    <link rel="preload" href="https://esteinborn.github.io/nysds-site/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
+    <link href="https://esteinborn.github.io/nysds-site/assets/fonts/nysds-fonts.css" rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/prism-theme.css"rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/nysds-site.css" rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/utilities.css" rel="stylesheet">  
 
     
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-06-20T18:10:11.453+00:00 -->
+    <!-- Latest Build: 2025-06-23T20:08:21.602+00:00 -->
   </head>
   
   <body class="single-page page-about section-about">
@@ -54,12 +54,6 @@
 </nys-globalheader>
 
 
-
-
-
-
-
-
 <div class="section-header">
     <div class="section-header__inner nys-grid-container-widescreen">
         <div class="section-header__title">
@@ -67,20 +61,68 @@
         </div>
         <div class="section-header__media">
             
-                <img src="https://designsystem.ny.gov/assets/img/sections/section-about.svg" alt="About section header">
             
+            
+            <img src="https://esteinborn.github.io/nysds-site/assets/img/sections/section-about.svg" alt="About section header">
+            
+
         </div>
+         
+                
     </div>
 </div>
-
-
 
 
 
   <main role="main" id="main-content" data-pagefind-body>
     
       
-      <div class="nys-grid-container-widescreen">
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2" data-pagefind-ignore>
+    <nav class="section-nav" aria-label="Section Navigation">
+  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
+    <label>About</label>
+    <nys-icon name="chevron_down" size="xl"></nys-icon>
+  </div>
+  <ul class="section-nav__list" id="section-nav" hidden>
+    
+      
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item section-nav__item--active-section section-nav__item--active" >
+          <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/about/"  aria-current="page" >
+            About
+          </a>
+          
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+<script>
+  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') == 'false';
+      toggle.setAttribute('aria-expanded', ! expanded);
+      const icon = toggle.querySelector('nys-icon');
+      icon.setAttribute(
+        'name', expanded
+        ? 'chevron_up'
+        : 'chevron_down');
+      const sectionNav = document.getElementById('section-nav');
+      sectionNav.hidden = expanded;
+    });
+  });
+</script>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">
+    <div class="nys-grid-container-widescreen">
 <h1>About the New York State Design System</h1>
 <h2>Our Vision</h2>
 <p>A team dedicated to improving design system maturity and creating a core set of design resources and guidelines to support product work at the state.</p>
@@ -93,10 +135,76 @@
 <p>Built-in accessibility testing and automation means a greater chance that people with disabilities will be able to use our software (and reduced liability for agencies.)​</p>
 </div>
 
-      
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2" data-pagefind-ignore>
+    <div id="onpage-nav" class="onpage-nav"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
   </main>
 
-  <div class="site-footer">
+  <div class="site-footer" data-pagefind-ignore>
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">
       <div class="nys-tablet:nys-grid-col">
@@ -113,7 +221,7 @@
         <ul>
           <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
           <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
-          <li><a href="/about/" title="Contact the NYSDS team.">Contact</a></li>
+          <li><a href="/about/contact/" title="Contact the NYSDS team.">Contact</a></li>
         </ul>
       </div>
       <div class="nys-tablet:nys-grid-col">
@@ -131,8 +239,8 @@
     
 <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async></script>
-<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+  <script type="module" src="https://esteinborn.github.io/nysds-site/assets/js/vendor/nysds.js" async></script>
+<script src="https://esteinborn.github.io/nysds-site/assets/js/nysds-site.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>

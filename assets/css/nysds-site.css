@@ -800,6 +800,14 @@ opacity: 1;
     border-style: dashed solid;
 }
 
+.token-list p:empty {
+    display: none;
+}
+
+.token-list p+p {
+    margin: 0;
+}
+
 /*** Code Previews Container ***/
 .code-preview-container {
     border-radius: var(--nys-radius-md, 4px);
@@ -976,6 +984,19 @@ opacity: 1;
 
 code {
     font-family: "Monaspace Neon";
+}
+
+/* Alchemer form modifications */
+.sg-content {
+    max-width: 960px;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sg-header {
+    float: none !important;
+    box-shadow: none !important;
 }
 
 /* Byline on homepage */

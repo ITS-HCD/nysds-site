@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flexbox - New York State Design System</title>
+    <meta name="description" content="Flexbox CSS for The New York State Design System">
+    <link rel="canonical" href="https://esteinborn.github.io/nysds-site/foundations/utilities/flexbox/">
+    <link rel="icon" type="image/svg+xml" href="https://esteinborn.github.io/nysds-site/favicon.svg" />
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="Flexbox">
+    <meta property="og:site_name" content="New York State Design System">
+    <meta property="og:url" content="https://esteinborn.github.io/nysds-site/foundations/utilities/flexbox/">
+    <meta property="og:description" content="Flexbox CSS for The New York State Design System">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:image" content="https://esteinborn.github.io/nysds-site/assets/img/nysds_og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:logo" content="https://esteinborn.github.io/nysds-site/assets/img/nysds-logo-mark.png">
+
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+    <link rel="preload" href="https://esteinborn.github.io/nysds-site/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
+    <link href="https://esteinborn.github.io/nysds-site/assets/fonts/nysds-fonts.css" rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/prism-theme.css"rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/nysds-site.css" rel="stylesheet">
+    <link href="https://esteinborn.github.io/nysds-site/assets/css/utilities.css" rel="stylesheet">  
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-06-23T20:08:21.602+00:00 -->
+  </head>
+  
+  <body class="single-page page-flexbox section-foundations">
+  <nys-skipnav></nys-skipnav>
+  
+
+<nys-unavheader hideTranslate hideSearch></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul>
+    <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About">About</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Foundations
+        </div>
+        <div class="section-header__media">
+            
+            
+            
+            <img src="https://esteinborn.github.io/nysds-site/assets/img/sections/section-foundations.svg" alt="Foundations section header">
+            
+
+        </div>
+         
+                
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body>
+    
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2" data-pagefind-ignore>
+    <nav class="section-nav" aria-label="Section Navigation">
+  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
+    <label>Foundations</label>
+    <nys-icon name="chevron_down" size="xl"></nys-icon>
+  </div>
+  <ul class="section-nav__list" id="section-nav" hidden>
+    
+      
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/" >
+            Foundations
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        <li class="section-nav__item"  aria-expanded="false" >
+          <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/accessibility/" >
+            Accessibility
+          </a>
+          
+          
+            <ul class="section-nav__list"  hidden >
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/accessibility/digital-experiences/" >
+                    Digital Experiences
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/accessibility/documents/" >
+                    Documents
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/accessibility/learn/" >
+                    Learning Resources
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/accessibility/legal/" >
+                    Legal Requirements
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/tokens/" >
+            Design Tokens
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        <li class="section-nav__item section-nav__item--active-section"  aria-expanded="true" >
+          <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/" >
+            Utilities
+          </a>
+          
+          
+            <ul class="section-nav__list" >
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/display/" >
+                    Display
+                  </a>
+                </li>
+              
+                <li class="section-nav__item section-nav__item--active">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/flexbox/"  aria-current="page" >
+                    Flexbox
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/float/" >
+                    Float
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/grid/" >
+                    Layout Grid
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/margin-padding/" >
+                    Margin and Padding
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/opacity/" >
+                    Opacity
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/typography/" >
+                    Typography
+                  </a>
+                </li>
+              
+                <li class="section-nav__item">
+                  <a class="section-nav__link" href="https://esteinborn.github.io/nysds-site/foundations/utilities/z-index/" >
+                    Z-Index
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+<script>
+  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') == 'false';
+      toggle.setAttribute('aria-expanded', ! expanded);
+      const icon = toggle.querySelector('nys-icon');
+      icon.setAttribute(
+        'name', expanded
+        ? 'chevron_up'
+        : 'chevron_down');
+      const sectionNav = document.getElementById('section-nav');
+      sectionNav.hidden = expanded;
+    });
+  });
+</script>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">
+    <h1>Flexbox</h1>
+<p>These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.</p>
+<h2>Flex</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-1</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+      <span class="utility-class">.nys-flex-1</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+      <span class="utility-class">.nys-flex-1</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+      <span class="utility-class">.nys-flex-1</span>
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-2">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-2</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center"> </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-3">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-3</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-4">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-4</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-5">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-5</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-6">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-6</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-7">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-7</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-8">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-8</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-9">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-9</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-10">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-10</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-11">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-11</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-12">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-12</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-auto">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-auto</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div>
+<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+  <div class="nys-grid-col nys-flex-fill">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
+      <span class="utility-class text-no-wrap">.nys-flex-fill</span>
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+  <div class="nys-grid-col nys-flex-1">
+    <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center">
+    </div>
+  </div>
+</div></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-5<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-7<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-9<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-11<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-12<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-flex-fill<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Flex-direction</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<div class="border padding-1 radius-md margin-bottom-2">
+  <span class="utility-class">.nys-flex-column</span>
+  <div class="nys-grid-row nys-flex-column margin-top-2">
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="border padding-1 radius-md">
+  <span class="utility-class">.nys-flex-row</span>
+  <div class="nys-grid-row nys-flex-row margin-top-2">
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="nys-grid-col nys-flex-1 padding-1px">
+      <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-flex-column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-flex-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Flex-wrap</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<div class="border padding-1 radius-md margin-bottom-2">
+    <span class="utility-class">.nys-flex-wrap</span>
+    <div class="nys-grid-row nys-flex-wrap margin-top-2">
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border padding-1 radius-md">
+    <span class="utility-class">.nys-flex-no-wrap</span>
+    <div class="nys-grid-row nys-flex-no-wrap margin-top-2">
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+      <div class="nys-grid-col-4 padding-1px">
+        <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          <span class="utility-class">.nys-grid-col-4</span>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-flex-wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-flex-no-wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Flex-align</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+  <div class="border padding-1 radius-md margin-bottom-2">
+    <div class="padding-bottom-4 border-bottom margin-bottom-2">
+      <span class="utility-class">.nys-flex-column</span>
+    </div>
+    <span class="utility-class">.nys-flex-align-start</span>
+    <div class="nys-grid-row nys-flex-column nys-flex-align-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+    </div>
+    <span class="utility-class">.nys-flex-align-center</span>
+    <div class="nys-grid-row nys-flex-column nys-flex-align-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+    </div>
+    <span class="utility-class">.nys-flex-align-end</span>
+    <div class="nys-grid-row nys-flex-column nys-flex-align-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+    </div>
+    <span class="utility-class">.nys-flex-align-stretch</span>
+    <div class="nys-grid-row nys-flex-column nys-flex-align-stretch margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+      <div class="nys-grid-auto padding-1px">
+        <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border padding-1 radius-md">
+    <div class="padding-bottom-4 border-bottom margin-bottom-2">
+      <span class="utility-class">.nys-flex-row</span>
+    </div>
+      <span class="utility-class">.nys-flex-align-start</span>
+      <div class="nys-grid-row nys-flex-row nys-flex-align-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+      <span class="utility-class">.nys-flex-align-center</span>
+      <div class="nys-grid-row nys-flex-row nys-flex-align-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+      <span class="utility-class">.nys-flex-align-end</span>
+      <div class="nys-grid-row nys-flex-row nys-flex-align-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+      <span class="utility-class">.nys-flex-align-stretch</span>
+      <div class="nys-grid-row nys-flex-row nys-flex-align-stretch margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+  </div>
+</div></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-align-start<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-align-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-align-stretch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-align-start<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-align-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-align-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-align-stretch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Flex-align-self</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<div class="border padding-1 radius-md margin-bottom-2">
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
+    <span class="utility-class">.nys-flex-column</span>
+  </div>
+  <div class="nys-grid-row nys-flex-column margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2 minh-card margin-x-neg-05 nys-flex-no-wrap">
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-start nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-start</span>
+    </div>
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-center nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-center</span>
+    </div>
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-end nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-end</span>
+    </div>
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-stretch nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-stretch</span>
+    </div>
+  </div>
+  </div>
+<div class="border padding-1 radius-md">
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
+    <span class="utility-class">.nys-flex-row</span>
+  </div>
+  <div class="nys-grid-row nys-flex-row margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2 minh-card margin-x-neg-05 nys-flex-no-wrap">
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-start nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-start</span>
+    </div>
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-center nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-center</span>
+    </div>
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-end nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-end</span>
+    </div>
+    <div class="nys-flex-1 padding-1px nys-flex-align-self-stretch nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center minh-7 minw-7 padding-1 margin-bottom-1 margin-x-05">
+      <span class="utility-class">.nys-flex-align-self-stretch</span>
+    </div>
+  </div>
+  </div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-start<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-stretch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-start<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-flex-align-self-stretch<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Flex-justify</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<div class="border padding-1 radius-md margin-bottom-2">
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
+    <span class="utility-class">.nys-flex-row</span>
+  </div>
+    <span class="utility-class">.nys-flex-justify</span>
+      <div class="nys-grid-row nys-flex- nys-flex-justify margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+    <span class="utility-class">.nys-flex-justify-start</span>
+      <div class="nys-grid-row nys-flex- nys-flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+    <span class="utility-class">.nys-flex-justify-center</span>
+      <div class="nys-grid-row nys-flex- nys-flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+    <span class="utility-class">.nys-flex-justify-end</span>
+      <div class="nys-grid-row nys-flex- nys-flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+        <div class="nys-grid-auto padding-1px">
+          <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-justify-start<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-justify-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-column nys-flex-justify-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-justify-start<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-justify-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-display-flex nys-flex-row nys-flex-justify-end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Order</h2>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap-sm">
+    <div class="nys-grid-col-auto nys-order-11">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 1</span>
+        <span class="utility-class">.nys-order-11</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-10">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 2</span>
+        <span class="utility-class">.nys-order-10</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-9">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 3</span>
+        <span class="utility-class">.nys-order-9</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-8">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 4</span>
+        <span class="utility-class">.nys-order-8</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-7">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 5</span>
+        <span class="utility-class">.nys-order-7</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-6">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 6</span>
+        <span class="utility-class">.nys-order-6</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-5">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 7</span>
+        <span class="utility-class">.nys-order-5</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-4">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 8</span>
+        <span class="utility-class">.nys-order-4</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-3">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 9</span>
+        <span class="utility-class">.nys-order-3</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-2">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 10</span>
+        <span class="utility-class">.nys-order-2</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-1">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 11</span>
+        <span class="utility-class">.nys-order-1</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-0">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 12</span>
+        <span class="utility-class">.nys-order-0</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-initial">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 13</span>
+        <span class="utility-class">.nys-order-initial</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-last">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 14</span>
+        <span class="utility-class">.nys-order-last</span>
+      </div>
+    </div>
+    <div class="nys-grid-col-auto nys-order-first">
+      <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
+        <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 15</span>
+        <span class="utility-class">.nys-order-first</span>
+      </div>
+    </div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+      <div class="copy-tooltip">Copy Code</div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-11<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-9<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-7<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-5<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-initial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-last<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col nys-order-first<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2" data-pagefind-ignore>
+    <div id="onpage-nav" class="onpage-nav"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+  </main>
+
+  <div class="site-footer" data-pagefind-ignore>
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-lg">
+      <div class="nys-tablet:nys-grid-col">
+        <p class="site-footer__list-header"><strong>Quick Links</strong></p>
+        <ul>
+            <li><a href="/getting-started/" title="How you can use NYSDS.">Getting Started</a></li>
+            <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/about/" title="Learn more about our team and the mission of this project.">About NYSDS</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <p class="site-footer__list-header"><strong>Support</strong></p>
+        <ul>
+          <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/about/contact/" title="Contact the NYSDS team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <p class="site-footer__list-header"><strong>Resources</strong></p>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYSDS Core GitHub repository.">NYSDS GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYSDS Fonts GitHub repository.">NYSDS Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYSDS NPM packages.">NYSDS NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&p=f&t=HxkOUf458bt8bvyn-0" title="Access the NYSDS Figma library.">NYSDS Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://esteinborn.github.io/nysds-site/assets/js/vendor/nysds.js" async></script>
+<script src="https://esteinborn.github.io/nysds-site/assets/js/nysds-site.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+  
+  </body>
+</html>
