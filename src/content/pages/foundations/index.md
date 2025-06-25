@@ -46,7 +46,7 @@ Let's start by defining the parts of the system. The NYS Design System includes:
         <div class="card__media">
             <img src="/assets/img/4-up-card.svg" alt="4 up graphic"></div>
         <div class="card__title">Design Tokens</div>
-        <div class="card__desc">A collection design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.</div>
+        <div class="card__desc">A collection of design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.</div>
       </div>
     </div>
   </div>
