@@ -1,6 +1,6 @@
 ---
 permalink: /components/textarea/
-title: Textarea
+title: Text Area
 description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.

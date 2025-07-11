@@ -1,6 +1,6 @@
 ---
 permalink: /components/radiobutton/
-title: Radiobutton
+title: Radio Button
 description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.

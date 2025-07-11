@@ -1,6 +1,6 @@
 ---
 permalink: /components/textinput/
-title: Textinput
+title: Text Input
 description: Field for entering short text strings, like email, number, password, and more.
 image: /assets/img/components/textinput.svg
 image_alt: An illustration of a text input field.
