@@ -139,6 +139,19 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Circle
+Use the `circle` prop to create a compact, circular button. Ideal for icon-only actions.
+- When `circle` is set, provide the icon using the `icon` prop.
+- If no `label` is given, the `icon` value will be used as the aria-label for accessibility.
+- If a `label` is provided, it won’t be shown visually, but it will be used as the aria-label.
+
+Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `circle` prop.
+{% set preview %}<nys-button circle icon="close"></nys-button>{% endset %}
+{% set code %}
+<nys-button circle icon="close"></nys-button>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
 ### Disabled
 {% set preview %}<div class="nys-grid-row">
 <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
