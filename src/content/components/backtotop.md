@@ -11,6 +11,7 @@ navOrder: 4
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
+
 The `<nys-backtotop>` component provides a button that allows users to quickly return to the top of a page, enhancing user experience and accessibility.
 {% endblock %}
 
@@ -46,25 +47,25 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 
 ### When to use this component
 
-- Only use 1 back to top component on a page
-- Use the component when the content is designed to be longer than the height of the screen
+- Only use 1 back to top component on a page.
+- Use the component when the content is designed to be longer than the height of the screen.
 
 ### When to consider something else
 
-- Add multiple back to top components to one page
-- Use when the content is designed to fill the size of the screen and is not scrollable
+- Add multiple back to top components to one page.
+- Use when the content is designed to fill the size of the screen and is not scrollable.
 {% endblock %}
 
 {% block usagedo %}
 
-  - Only use 1 back to top component on a page
-  - Use the component when the content is designed to be longer than the height of the screen
+  - Only use 1 back to top component on a page.
+  - Use the component when the content is designed to be longer than the height of the screen.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Add multiple back to top components to one page
-  - Use when the content is designed to fill the size of the screen and is not scrollable
+  - Add multiple back to top components to one page.
+  - Use when the content is designed to fill the size of the screen and is not scrollable.
 {% endblock %}
 
 {% block accessibility %}
