@@ -5,7 +5,7 @@ description: An accessibility feature that allows keyboard and screen readers to
 image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
-navOrder: 11
+navOrder: 13
 ---
 
 {% extends "layouts/component.njk" %}
@@ -40,6 +40,7 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 {% set code %}
 <nys-skipnav id="skipnav-demo" href="#main-content"></nys-skipnav>
 {% endset %}
+{% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}

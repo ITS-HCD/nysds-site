@@ -5,7 +5,7 @@ description: Visual symbols used to concisely convey information and increase vi
 image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
-navOrder: 8
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}
