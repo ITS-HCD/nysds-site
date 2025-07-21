@@ -22,7 +22,7 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
   name="fileinput1"
   label="Upload a file"
   description="Accepted file types: .jpg, .png, .pdf"
-  accept="image/png, image/jpeg, image/*,.pdf"
+  accept="image/png, image/jpeg, .pdf"
 ></nys-fileinput>
 {% endset %}
 {% set code = preview %}
@@ -67,7 +67,7 @@ The `<nys-fileinput>` component includes the following accessibility-focused fea
 
 {% block options %}
 
-The `accept` attribute sets the allowed file types using MIME types or file extensions (i.e. `accept="image/png, .pdf"`). Removing `accept` will allow all file types.
+The `accept` attribute sets the allowed file types using MIME types or file extensions (i.e. image/png, .pdf).
 
 **IMPORTANT:** This component relies on the file extension or MIME type provided by the browser to determine if a file is acceptable. If a file does not match the allowed types, it will still appear in the list with an error message for the user, but it will be excluded from form submission.
 
@@ -78,7 +78,7 @@ Use the `dropzone` attribute to allow users to drag and drop files instead of (o
 <nys-fileinput
   label="Upload a file"
   description="Accepted file types: .jpg, .png, .pdf"
-  accept="image/png, image/jpeg, image/*,.pdf"
+  accept="image/png, image/jpeg, .pdf"
   dropzone
 ></nys-fileinput>
 {% endset %}
@@ -94,7 +94,7 @@ Available width values are: `full` (default) and `lg`
   name="fileinput1"
   label="Upload a file"
   description="Accepted file types: .jpg, .png, .pdf"
-  accept="image/png, image/jpeg, image/*,.pdf"
+  accept="image/png, image/jpeg, .pdf"
 ></nys-fileinput>
 {% endset %}
 {% set code = preview %}
@@ -109,7 +109,7 @@ Set `multiple` to `true` to allow the selection of more than one file. Each sele
   name="fileinput1"
   label="Upload a file"
   description="Accepted file types: .jpg, .png, .pdf"
-  accept="image/png, image/jpeg, image/*,.pdf"
+  accept="image/png, image/jpeg, .pdf"
   multiple
 ></nys-fileinput>
 {% endset %}
@@ -125,7 +125,7 @@ Set `disabled` to prevent interaction with the file input. Useful when the input
   name="fileinput1"
   label="Upload a file"
   description="Accepted file types: .jpg, .png, .pdf"
-  accept="image/png, image/jpeg, image/*,.pdf"
+  accept="image/png, image/jpeg, .pdf"
   disabled
 ></nys-fileinput>
 {% endset %}

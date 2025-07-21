@@ -225,14 +225,15 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block properties %}
 
-| Property | Type                                                                                                                                                   |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `label`  | String                                                                                                                                                 |
-| `color`  | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
-| `flip`   | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
-| `name`   | String                                                                                                                                                 |
-| `rotate` | integer                                                                                                                                                |
-| `size`   | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
+| Property          | Type                                                                                                                                                   |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `label`           | String                                                                                                                                                 |
+| `ariaDescription` | String                                                                                                                                                 |
+| `color`           | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
+| `flip`            | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
+| `name`            | String                                                                                                                                                 |
+| `rotate`          | integer                                                                                                                                                |
+| `size`            | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
 
 
 {% endblock %}

@@ -86,16 +86,16 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
 <div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
 </div><br>
-<nys-button fullWidth size="sm" id="button4" name="button4" label="Small Full"></nys-button><br>
-<nys-button fullWidth id="button5" name="button5" label="Medium Full"></nys-button><br>
-<nys-button fullWidth size="lg" id="button6" name="button6" label="Large Full"></nys-button>{% endset %}
+<nys-button fullWidth size="sm" id="button4" name="button4" label="Small full"></nys-button><br>
+<nys-button fullWidth id="button5" name="button5" label="Medium full"></nys-button><br>
+<nys-button fullWidth size="lg" id="button6" name="button6" label="Large full"></nys-button>{% endset %}
 {% set code %}
 <nys-button size="sm" id="button1" name="button1" label="Small"></nys-button>
 <nys-button size="md" id="button2" name="button2" label="Medium"></nys-button>
 <nys-button size="lg" id="button3" name="button3" label="Large"></nys-button>
-<nys-button fullWidth size="sm" id="button4" name="button4" label="Small Full"></nys-button>
-<nys-button fullWidth size="md" id="button5" name="button5" label="Medium Full"></nys-button>
-<nys-button fullWidth size="lg" id="button6" name="button6" label="Large Full"></nys-button>
+<nys-button fullWidth size="sm" id="button4" name="button4" label="Small full"></nys-button>
+<nys-button fullWidth size="md" id="button5" name="button5" label="Medium full"></nys-button>
+<nys-button fullWidth size="lg" id="button6" name="button6" label="Large full"></nys-button>
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
@@ -135,7 +135,7 @@ Set the `prefixIcon` prop to include an icon in the button. The icon will appear
 
 Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
 
-  {% set preview %}<nys-button id="button1" name="button1" label="Click Me" prefixIcon="chevron_left" suffixIcon="chevron_right"><nys-button>{% endset %}
+  {% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"><nys-button>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -202,25 +202,26 @@ Set the `inverted` when the button is on a dark background.
 
 {% block properties %}
 
-| Property     | Type                                                               |
-|--------------|--------------------------------------------------------------------|
-| `id`         | String                                                             |
-| `name`       | String                                                             |
-| `disabled`   | boolean                                                            |
-| `form`       | String                                                             |
-| `fullWidth`  | boolean                                                            |
-| `href`       | String (URL)                                                       |                
-| `inverted`   | boolean                                                            |
-| `label`      | String                                                             |
-| `ariaLabel`  | String                                                             |
-| `onClick`    | JS function                                                        |
-| `prefixIcon` | String (`<nys-icon name>`)                                         |
-| `size`       | `"sm"` \| `"md"` \| `"lg"`                                         |
-| `suffixIcon` | String (`<nys-icon name>`)                                         |
-| `target`     | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
-| `type`       | `"submit"` \| `"reset"` \| `"button"`                              |
-| `value`      | String                                                             |
-| `variant`    | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
+| Property           | Type                                                               |
+|--------------------|--------------------------------------------------------------------|
+| `id`               | String                                                             |
+| `name`             | String                                                             |
+| `disabled`         | boolean                                                            |
+| `form`             | String                                                             |
+| `fullWidth`        | boolean                                                            |
+| `href`             | String (URL)                                                       |                
+| `inverted`         | boolean                                                            |
+| `label`            | String                                                             |
+| `ariaLabel`        | String                                                             |
+| `ariaDescription`  | String                                                             |
+| `onClick`          | JS function                                                        |
+| `prefixIcon`       | String (`<nys-icon name>`)                                         |
+| `size`             | `"sm"` \| `"md"` \| `"lg"`                                         |
+| `suffixIcon`       | String (`<nys-icon name>`)                                         |
+| `target`           | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
+| `type`             | `"submit"` \| `"reset"` \| `"button"`                              |
+| `value`            | String                                                             |
+| `variant`          | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
 
 {% endblock %}
 
