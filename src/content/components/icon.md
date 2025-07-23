@@ -137,7 +137,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   - Test icons for recognition and memorability with representative users of your application or website.
   - Use icons to enhance user interfaces with clear, recognizable icons.
   - Use appropriate icons align with the purpose and context of the UI elements they accompany.
-  - [Dev] Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).
+  - [Dev] Provide an accessible label using the `ariaLabel` attribute to ensure screen readers can interpret the icon's purpose (if warranted).
   - Customize icon sizes and colors to match the design system.
 {% endblock %}
 
@@ -154,9 +154,9 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 The `<nys-icon>` component includes the following accessibility-focused features:
 
-**ARIA Hidden by Default**: If no label is provided, the icon is hidden from screen readers by setting aria-hidden="true".
+**ARIA Hidden by Default**: If no `ariaLabel` is provided, the icon is hidden from screen readers by setting aria-hidden="true".
 
-**Customizable ARIA Label**: If a label is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
+**Customizable ARIA Label**: If a `ariaLabel` is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
 {% endblock %}
 
 {% block options %}
@@ -227,8 +227,7 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 | Property          | Type                                                                                                                                                   |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `label`           | String                                                                                                                                                 |
-| `ariaDescription` | String                                                                                                                                                 |
+| `ariaLabel`           | String                                                                                                                                                 |
 | `color`           | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
 | `flip`            | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
 | `name`            | String                                                                                                                                                 |
