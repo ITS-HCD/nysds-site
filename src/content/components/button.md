@@ -73,6 +73,9 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 
 {% block options %}
 
+### Click Action
+When using the `<nys-button>`, you may want to use the `onClick` prop instead of adding your own `@click`, `@keydown`, or their equivalents in your framework. This makes sure your button responds to both mouse and keyboard interactions (like Enter or Space), keeping it fully accessible.
+
 ### Size
 Set the `size` prop of the `<nys-button>` to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:
 - `sm`: Set to 40px in height

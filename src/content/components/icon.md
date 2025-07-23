@@ -130,15 +130,14 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 {% block usagedo %}
 
-  - **Include a visual text label paired with the icon**; only a very few icons are consistently understood universally across the digital-using public of the world; among them a house for home, printer for printing, and magnifying glass for search. Combine icons with text to improve clarity.
-  - **Be consistent with icon meaning.** When an icon appears multiple times within a page or across pages of an application, it should represent the same concept and have identical text descriptions in every instance. For example, if a blank paper icon means "new document" across most screens, don't use it to mean "reformat document" elsewhere. This consistency benefits users with cognitive disabilities, helps those who may be distracted or scanning the page, and improves the overall user experience.
-  - Align icons vertically with accompanying typography.
-  - Prefer icons that are included in the NYSDS icon library; use Google Material Symbol rounded unfilled icons if you must use an icon not in the library. If you have a need for an icon not in the library, please contact the NYSDS Design System team in MS Teams NYSDS Troubleshooting channel for advisement on which icon is best for your use case.
-  - Test icons for recognition and memorability with representative users of your application or website.
-  - Use icons to enhance user interfaces with clear, recognizable icons.
-  - Use appropriate icons align with the purpose and context of the UI elements they accompany.
-  - [Dev] Provide an accessible label using the `ariaLabel` attribute to ensure screen readers can interpret the icon's purpose (if warranted).
-  - Customize icon sizes and colors to match the design system.
+  - **Include a visual text label paired with the icon**; only a very few icons are consistently understood universally across the digital-using public of the world. Combine icons with text to improve clarity.
+  - **Be consistent with icon meaning.** use the same icon and label for the same meaning throughout your app.
+  - Use `ariaLabel` when the icon is focusable and conveys meaning, so screen readers can announce its purpose.
+  - Align icons with text visually and semantically.
+  - Use icons from the NYSDS library; if not available, use Google Material Symbols (rounded, unfilled).
+  - Match icon size and color to the design system.
+  - Test for clarity with real users when possible.
+
 {% endblock %}
 
 {% block usagedont %}
