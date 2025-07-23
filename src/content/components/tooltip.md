@@ -2,9 +2,9 @@
 permalink: /components/tootlip/
 title: Tooltip
 description: A tooltip component that displays a brief message when hover/focus, offering additional information or context.
-image: /assets/img/components/tootlip.svg
+image: /assets/img/components/tooltip.svg
 image_alt: An illustration of a tooltip.
-image_header: /assets/img/components/tootlip.svg
+image_header: /assets/img/components/tooltip-header.svg
 navOrder: 17
 ---
 
