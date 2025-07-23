@@ -2,9 +2,9 @@
 permalink: /components/backtotop/
 title: Back To Top
 description: Provides a button that lets users quickly scroll back to the top of the page.
-image: /assets/img/components/alert.svg
+image: /assets/img/components/back-to-top.svg
 image_alt: An illustration of a back-to-top button.
-image_header: /assets/img/components/alert-header.svg
+image_header: /assets/img/components/back-to-top.svg
 navOrder: 4
 ---
 

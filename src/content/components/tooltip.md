@@ -75,18 +75,10 @@ Use the `focusable` prop to make non-focusable slotted elements (i.e. `<nys-icon
     </nys-tooltip>
   </div>
 </div>{% endset %}
-  {% set code %}
-<div style="display: flex; justify-content: center;">
-  <div style="display: flex; gap: 5px">
-    <p>Hover over the icon</p>
-    <nys-tooltip
-      label="I am a tooltip."
-      focusable
-    >
-      <nys-icon name="info" size="3xl"></nys-icon>
-    </nys-tooltip>
-  </div>
-</div>{% endset %}
+  {% set code %}<p>Hover over the icon</p>
+<nys-tooltip label="I am a tooltip." focusable>
+    <nys-icon name="info" size="3xl"></nys-icon>
+</nys-tooltip>{% endset %}
   {% include "partials/code-preview.njk" %}
 
 ### Position
@@ -106,19 +98,11 @@ Valid positions are: `top`, `bottom`, `right`, `left`
     </nys-tooltip>
   </div>
 </div>{% endset %}
-  {% set code %}
-<div style="display: flex; justify-content: center;">
-  <div style="display: flex; gap: 5px">
-    <p>Hover over the icon</p>
-    <nys-tooltip
-      label="I am a tooltip."
-      position="right"
-      focusable
-    >
-      <nys-icon name="info" size="3xl"></nys-icon>
-    </nys-tooltip>
-  </div>
-</div>{% endset %}
+  {% set code %}<p>Hover over the icon</p>
+<nys-tooltip label="I am a tooltip." position="right" focusable>
+    <nys-icon name="info" size="3xl"></nys-icon>
+</nys-tooltip>
+{% endset %}
   {% include "partials/code-preview.njk" %}
 
 ### Inverted
@@ -135,19 +119,11 @@ Set the `inverted` when the tooltip is on a dark background.
     </nys-tooltip>
   </div>
 </div>{% endset %}
-  {% set code %}
-<div style="display: flex; justify-content: center; background-color: var(--nys-color-ink, #1b1b1b); padding: var(--nys-space-800, 64px);">
-  <div style="color: #fff; display: flex; gap: 5px">
-    <p>Hover over the icon</p>
-    <nys-tooltip
-      label="I am a tooltip."
-      inverted
-      focusable
-    >
-      <nys-icon name="info" size="3xl"></nys-icon>
-    </nys-tooltip>
-  </div>
-</div>{% endset %}
+  {% set code %}<p>Hover over the icon</p>
+<nys-tooltip label="I am a tooltip." inverted focusable>
+    <nys-icon name="info" size="3xl"></nys-icon>
+</nys-tooltip>
+{% endset %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
