@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>File Input - New York State Design System</title>
+    <meta name="description" content="Used for selecting and uploading one or more files from the user’s device.">   
+    <link rel="canonical" href="https://designsystem.ny.gov/components/fileinput/">
+    <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
+
+    <meta name=”robots” content=”noindex”>
+
+    <meta property="og:title" content="File Input">
+    <meta property="og:site_name" content="New York State Design System">
+    <meta property="og:url" content="https://designsystem.ny.gov/components/fileinput/">
+    <meta property="og:description" content="Used for selecting and uploading one or more files from the user’s device.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+    <meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+    <link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
+    <link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
+    <link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://designsystem.ny.gov/assets/css/prism-theme.css"rel="stylesheet">
+    <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-M4JYBJ7BZY');
+    </script>
+
+    
+    <meta name="robots" content="noindex">
+    
+    
+    <!-- Latest Build: 2025-07-25T17:25:56.706+00:00 -->
+  </head>
+  
+  <body class="single-page page-fileinput section-components">
+  <nys-skipnav></nys-skipnav>
+  
+
+<nys-unavheader hideTranslate hideSearch></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul>
+    <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About">About</a></li>
+  </ul>
+</nys-globalheader>
+
+
+
+
+
+
+
+
+<div class="section-header">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="/assets/img/components/fileinput-header.svg" alt="File Input">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  <main role="main" id="main-content" data-pagefind-body>
+    
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav" aria-label="Section Navigation">
+  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
+    <label>Components</label>
+    <nys-icon name="chevron_down" size="xl"></nys-icon>
+  </div>
+  <ul class="section-nav__list" id="section-nav" hidden>
+    
+      
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/" >
+            Web Components
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/alert/" >
+            Alert
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/avatar/" >
+            Avatar
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/backtotop/" >
+            Back To Top
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/button/" >
+            Button
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/checkbox/" >
+            Checkbox
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item section-nav__item--active-section section-nav__item--active" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/"  aria-current="page" >
+            File Input
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
+            Global Footer
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
+            Global Header
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
+            Icon
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/radiobutton/" >
+            Radio Button
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/select/" >
+            Select
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
+            Skip Navigation
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/textarea/" >
+            Text Area
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/textinput/" >
+            Text Input
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/toggle/" >
+            Toggle
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/tootlip/" >
+            Tooltip
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/" >
+            UNav Footer
+          </a>
+          
+          
+        </li>
+      
+        
+        
+        
+        
+        
+        <li class="section-nav__item" >
+          <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-header/" >
+            UNav Header
+          </a>
+          
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+<script>
+  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') == 'false';
+      toggle.setAttribute('aria-expanded', ! expanded);
+      const icon = toggle.querySelector('nys-icon');
+      icon.setAttribute(
+        'name', expanded
+        ? 'chevron_up'
+        : 'chevron_down');
+      const sectionNav = document.getElementById('section-nav');
+      sectionNav.hidden = expanded;
+    });
+  });
+</script>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">  
+    <p><section id="overview">
+<h1>File Input</h1></p>
+<p>The <code>&lt;nys-fileinput&gt;</code> component is a reusable web component that allows users to select and upload one or more files from their device (like a computer or phone) to a server or app.</p>
+</section>
+    <section id="example">
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-fileinput
+  id="fileinput1"
+  name="fileinput1"
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+></nys-fileinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-fileinput</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload a file<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accepted file types: .jpg, .png, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">accept</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/png, image/jpeg, .pdf<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-fileinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can’t use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+</section>
+    <br>
+    <section id="options">
+      <h2>Options</h2>
+<p>The <code>accept</code> attribute sets the allowed file types using MIME types or file extensions (i.e. image/png, .pdf).</p>
+<p><strong>IMPORTANT:</strong> This component relies on the file extension or MIME type provided by the browser to determine if a file is acceptable. If a file does not match the allowed types, it will still appear in the list with an error message for the user, but it will be excluded from form submission.</p>
+<h3>Dropzone</h3>
+<p>Use the <code>dropzone</code> attribute to allow users to drag and drop files instead of (or in addition to) clicking the &quot;Choose file&quot; button.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-fileinput
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+  dropzone
+></nys-fileinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-fileinput</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload a file<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accepted file types: .jpg, .png, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">accept</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/png, image/jpeg, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">dropzone</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-fileinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Width</h3>
+<p>Available width values are: <code>full</code> (default) and <code>lg</code></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-fileinput
+  id="fileinput1"
+  name="fileinput1"
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+></nys-fileinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-fileinput</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload a file<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accepted file types: .jpg, .png, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">accept</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/png, image/jpeg, .pdf<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-fileinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Multiple files</h3>
+<p>Set <code>multiple</code> to <code>true</code> to allow the selection of more than one file. Each selected file will display its own item in the list with progress and validation feedback.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-fileinput
+  id="fileinput1"
+  name="fileinput1"
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+  multiple
+></nys-fileinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-fileinput</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload a file<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accepted file types: .jpg, .png, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">accept</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/png, image/jpeg, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">multiple</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-fileinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Disabled</h3>
+<p>Set <code>disabled</code> to prevent interaction with the file input. Useful when the input should not be used under certain form conditions.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-fileinput
+  id="fileinput1"
+  name="fileinput1"
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+  disabled
+></nys-fileinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-fileinput</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload a file<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accepted file types: .jpg, .png, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">accept</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/png, image/jpeg, .pdf<span class="token punctuation">"</span></span>
+  <span class="token attr-name">disabled</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-fileinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Description Slot</h3>
+<p>You can supply a description via our <code>description</code> prop for plain text or by embedding HTML within our component via our slot for higher customization.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-fileinput
+  id="fileinput-slot"
+  name="fileinput-slot"
+  label="Upload a file"
+  width="full"
+>
+  <span slot="description">
+    Learn more at
+    <a href="https://www.ny.gov" target="_blank" rel="noopener">ny.gov</a>
+  </span>
+</nys-fileinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-fileinput</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput-slot<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileinput-slot<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload a file<span class="token punctuation">"</span></span>
+  <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>full<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    Learn more at
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>noopener<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>ny.gov<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-fileinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    <br>
+    <section id="usage">
+      <h2>Usage</h2>
+<h3>When to use this component</h3>
+<ul>
+<li>When you need to upload a file as part of a form.</li>
+<li>When you want to support drag-and-drop file uploads.</li>
+</ul>
+<h3>When to consider something else</h3>
+<ul>
+<li>When uploading large files requiring resumable upload logic.</li>
+<li>When selecting only from camera input or other device-native features.</li>
+</ul>
+</section>
+    <div class="nys-grid-row nys-grid-gap">
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use when a file is required in a form.</li>
+<li>Use when multiple file selection is needed.</li>
+</ul>
+</div>
+      </div>
+      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Use when uploading sensitive data without encryption</li>
+<li>Use when file input is not necessary for the task.</li>
+</ul>
+</div>
+      </div>
+    </div>
+    <br>
+    <section id="accessibility">
+      <h2>Accessibility</h2>
+<p>The <code>&lt;nys-fileinput&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Uses <code>ElementInternals</code> for form association and validation.</li>
+<li>Keyboard navigable with <code>Tab</code> key</li>
+<li>Implements ARIA attributes for required and invalid states.</li>
+</ul>
+</section>
+    <br>
+    <section id="properties">
+      <h2>Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>form</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td><code>&quot;full&quot;</code> | <code>&quot;lg&quot;</code></td>
+</tr>
+<tr>
+<td><code>multiple</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>accept</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>errorMessage</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>showError</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>dropzone</code></td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td><code>optional</code></td>
+<td>Boolean</td>
+</tr>
+</tbody>
+</table>
+</section>
+    <br>
+    <section id="cssvariables">
+      <h2>CSS Variables</h2></section>
+    <br>
+    <section id="events">
+      <h2>Events</h2>
+<p>The <code>&lt;nys-fileinput&gt;</code> component emits <strong>one</strong> custom Javascript events:</p>
+<ol>
+<li><strong><code>nys-change</code></strong> – Fired when the file list is updated, either by selecting new files or removing existing ones.</li>
+</ol>
+<p>You can listen to these events using JavaScript:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">// Select the button component</span>
+<span class="token keyword">const</span> fileinput <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-fileinput'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Listen for the 'nys-click' event</span>
+fileinput<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Files have changed:"</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>files<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    <section class="nys-section">
+  <h2>Suggest a New Component</h2>
+  <div class="nys-grid-row nys-grid-gap">
+    <div>
+      <p>
+        Do you have an idea for a new NYSDS web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+      </p>
+    </div>
+    <div class="nys-tablet:nys-grid-col-12">
+      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+  </main>
+
+  <div class="site-footer">
+  <div class="site-footer__inner nys-grid-container">
+    <div class="nys-grid-row nys-grid-gap-lg">
+      <div class="nys-tablet:nys-grid-col">
+        <p class="site-footer__list-header"><strong>Quick Links</strong></p>
+        <ul>
+            <li><a href="/getting-started/" title="How you can use NYSDS.">Getting Started</a></li>
+            <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+            <li><a href="/components/" title="Explore the web components.">Components</a></li>
+            <li><a href="/about/" title="Learn more about our team and the mission of this project.">About NYSDS</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <p class="site-footer__list-header"><strong>Support</strong></p>
+        <ul>
+          <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
+          <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+          <li><a href="/about/" title="Contact the NYSDS team.">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nys-tablet:nys-grid-col">
+        <p class="site-footer__list-header"><strong>Resources</strong></p>
+        <ul>
+            <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYSDS Core GitHub repository.">NYSDS GitHub</a></li>
+            <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYSDS Fonts GitHub repository.">NYSDS Fonts GitHub</a></li>
+            <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYSDS NPM packages.">NYSDS NPM Packages</a></li>
+            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&p=f&t=HxkOUf458bt8bvyn-0" title="Access the NYSDS Figma library.">NYSDS Figma Library</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+  
+  </body>
+</html>
