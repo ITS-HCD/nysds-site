@@ -126,6 +126,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   - Page structure. Don’t rely on an icon to help draw attention to something important that’s otherwise hard to find. Icons don’t fix unclear page hierarchy or confusing content organization.
   - If an icon does not add meaningful value to the context or might confuse users.
   - When a descriptive label or plain text provides clearer communication.
+  - You need the icon to be focusable and clickable - in that case, use a `<nys-button>` component with an icon inside instead.
 {% endblock %}
 
 {% block usagedo %}
@@ -142,9 +143,9 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 {% block usagedont %}
 
-  - Don't overuse icons; too many icons on a page can create visual noise and makes it difficult for the user to focus.
+  - Overuse icons; too many icons on a page can create visual noise and makes it difficult for the user to focus.
   - Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.
-  <!-- - Use icons that lack clarity or context for their intended purpose. -->
+  - Use an icon by itself when it’s meant to perform an action — use a button with an icon instead.
   - Use excessive customization that distracts from UI and established design patterns.
 
 {% endblock %}

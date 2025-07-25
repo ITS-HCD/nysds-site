@@ -23,7 +23,7 @@ navOrder: 17
   <nys-button id="button1" name="button1" label="Hover Me"></nys-button>
 </nys-tooltip>
 </div>{% endset %}
-  {% set code %}<nys-tooltip text="I am a tooltip.">
+{% set code %}<nys-tooltip text="I am a tooltip.">
   <nys-button id="button1" name="button1" label="Hover Me"></nys-button>
 </nys-tooltip>
 {% endset %}
@@ -72,17 +72,14 @@ Use the `focusable` prop to make non-focusable slotted elements (i.e. `<nys-icon
   {% set preview %}<div style="display: flex; justify-content: center; margin-top:30px">
   <div style="display: flex; gap: 5px">
     <p>Hover over the icon</p>
-    <nys-tooltip
-      text="I am a tooltip."
-      focusable
-    >
+    <nys-tooltip text="I am a tooltip." focusable>
       <nys-icon name="info" size="3xl"></nys-icon>
     </nys-tooltip>
   </div>
 </div>{% endset %}
   {% set code %}<p>Hover over the icon</p>
 <nys-tooltip text="I am a tooltip." focusable>
-    <nys-icon name="info" size="3xl"></nys-icon>
+  <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>{% endset %}
   {% include "partials/code-preview.njk" %}
 
@@ -105,7 +102,7 @@ Valid positions are: `top`, `bottom`, `right`, `left`
 </div>{% endset %}
   {% set code %}<p>Hover over the icon</p>
 <nys-tooltip text="I am a tooltip." position="right" focusable>
-    <nys-icon name="info" size="3xl"></nys-icon>
+  <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
   {% include "partials/code-preview.njk" %}
@@ -126,7 +123,7 @@ Set the `inverted` when the tooltip is on a dark background.
 </div>{% endset %}
   {% set code %}<p>Hover over the icon</p>
 <nys-tooltip text="I am a tooltip." inverted focusable>
-    <nys-icon name="info" size="3xl"></nys-icon>
+  <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
   {% include "partials/code-preview.njk" %}
