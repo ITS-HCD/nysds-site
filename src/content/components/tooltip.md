@@ -18,10 +18,15 @@ navOrder: 17
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-tooltip label="I am a tooltip.">
+  {% set preview %}<div style="margin-top:30px">
+  <nys-tooltip text="I am a tooltip.">
   <nys-button id="button1" name="button1" label="Hover Me"></nys-button>
-</nys-tooltip>{% endset %}
-  {% set code = preview %}
+</nys-tooltip>
+</div>{% endset %}
+  {% set code %}<nys-tooltip text="I am a tooltip.">
+  <nys-button id="button1" name="button1" label="Hover Me"></nys-button>
+</nys-tooltip>
+{% endset %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -64,11 +69,11 @@ The `<nys-tooltip`> component includes the following accessibility-focused featu
 ### Focusable
 Use the `focusable` prop to make non-focusable slotted elements (i.e. `<nys-icon>`) accessible via keyboard focus.
 
-  {% set preview %}<div style="display: flex; justify-content: center;">
+  {% set preview %}<div style="display: flex; justify-content: center; margin-top:30px">
   <div style="display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
-      label="I am a tooltip."
+      text="I am a tooltip."
       focusable
     >
       <nys-icon name="info" size="3xl"></nys-icon>
@@ -76,7 +81,7 @@ Use the `focusable` prop to make non-focusable slotted elements (i.e. `<nys-icon
   </div>
 </div>{% endset %}
   {% set code %}<p>Hover over the icon</p>
-<nys-tooltip label="I am a tooltip." focusable>
+<nys-tooltip text="I am a tooltip." focusable>
     <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>{% endset %}
   {% include "partials/code-preview.njk" %}
@@ -90,7 +95,7 @@ Valid positions are: `top`, `bottom`, `right`, `left`
   <div style="display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
-      label="I am a tooltip."
+      text="I am a tooltip."
       position="right"
       focusable
     >
@@ -99,7 +104,7 @@ Valid positions are: `top`, `bottom`, `right`, `left`
   </div>
 </div>{% endset %}
   {% set code %}<p>Hover over the icon</p>
-<nys-tooltip label="I am a tooltip." position="right" focusable>
+<nys-tooltip text="I am a tooltip." position="right" focusable>
     <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
@@ -111,7 +116,7 @@ Set the `inverted` when the tooltip is on a dark background.
   <div style="color: #fff; display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
-      label="I am a tooltip."
+      text="I am a tooltip."
       inverted
       focusable
     >
@@ -120,7 +125,7 @@ Set the `inverted` when the tooltip is on a dark background.
   </div>
 </div>{% endset %}
   {% set code %}<p>Hover over the icon</p>
-<nys-tooltip label="I am a tooltip." inverted focusable>
+<nys-tooltip text="I am a tooltip." inverted focusable>
     <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
