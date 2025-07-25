@@ -86,7 +86,7 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
 
 
 
-{% block c %}{% endblock %}
+{% block cssvariables %}{% endblock %}
 
 {% block events %}{% endblock %}
 
