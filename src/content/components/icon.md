@@ -5,7 +5,7 @@ description: Visual symbols used to concisely convey information and increase vi
 image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
-navOrder: 8
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}
@@ -126,26 +126,26 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   - Page structure. Don’t rely on an icon to help draw attention to something important that’s otherwise hard to find. Icons don’t fix unclear page hierarchy or confusing content organization.
   - If an icon does not add meaningful value to the context or might confuse users.
   - When a descriptive label or plain text provides clearer communication.
+  - You need the icon to be focusable and clickable - in that case, use a `<nys-button>` component with an icon inside instead.
 {% endblock %}
 
 {% block usagedo %}
 
-  - **Include a visual text label paired with the icon**; only a very few icons are consistently understood universally across the digital-using public of the world; among them a house for home, printer for printing, and magnifying glass for search. Combine icons with text to improve clarity.
-  - **Be consistent with icon meaning.** When an icon appears multiple times within a page or across pages of an application, it should represent the same concept and have identical text descriptions in every instance. For example, if a blank paper icon means "new document" across most screens, don't use it to mean "reformat document" elsewhere. This consistency benefits users with cognitive disabilities, helps those who may be distracted or scanning the page, and improves the overall user experience.
-  - Align icons vertically with accompanying typography.
-  - Prefer icons that are included in the NYSDS icon library; use Google Material Symbol rounded unfilled icons if you must use an icon not in the library. If you have a need for an icon not in the library, please contact the NYSDS Design System team in MS Teams NYSDS Troubleshooting channel for advisement on which icon is best for your use case.
-  - Test icons for recognition and memorability with representative users of your application or website.
-  - Use icons to enhance user interfaces with clear, recognizable icons.
-  - Use appropriate icons align with the purpose and context of the UI elements they accompany.
-  - [Dev] Provide an accessible label using the label attribute to ensure screen readers can interpret the icon's purpose (if warranted).
-  - Customize icon sizes and colors to match the design system.
+  - **Include a visual text label paired with the icon**; only a very few icons are consistently understood universally across the digital-using public of the world. Combine icons with text to improve clarity.
+  - **Be consistent with icon meaning.** use the same icon and label for the same meaning throughout your app.
+  - Use `ariaLabel` when the icon is focusable and conveys meaning, so screen readers can announce its purpose.
+  - Align icons with text visually and semantically.
+  - Use icons from the NYSDS library; if not available, use Google Material Symbols (rounded, unfilled).
+  - Match icon size and color to the design system.
+  - Test for clarity with real users when possible.
+
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't overuse icons; too many icons on a page can create visual noise and makes it difficult for the user to focus.
+  - Overuse icons; too many icons on a page can create visual noise and makes it difficult for the user to focus.
   - Replace meaningful text with an icon unless its meaning is universally recognized or accompanied by a text label.
-  <!-- - Use icons that lack clarity or context for their intended purpose. -->
+  - Use an icon by itself when it’s meant to perform an action — use a button with an icon instead.
   - Use excessive customization that distracts from UI and established design patterns.
 
 {% endblock %}
@@ -154,9 +154,9 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 The `<nys-icon>` component includes the following accessibility-focused features:
 
-**ARIA Hidden by Default**: If no label is provided, the icon is hidden from screen readers by setting aria-hidden="true".
+**ARIA Hidden by Default**: If no `ariaLabel` is provided, the icon is hidden from screen readers by setting aria-hidden="true".
 
-**Customizable ARIA Label**: If a label is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
+**Customizable ARIA Label**: If a `ariaLabel` is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
 {% endblock %}
 
 {% block options %}
@@ -203,21 +203,21 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
 You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-  {% set preview %}<nys-icon label="upload_file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Rotate
 You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` will rotate the icon by 20 degrees clockwise.
 
-  {% set preview %}<nys-icon rotate="20" label="upload_file icon" name="upload_file" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Flip
 Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
 
-  {% set preview %}<nys-icon flip="both" label="upload_file icon" name="social_linkedin" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="4xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -225,14 +225,14 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block properties %}
 
-| Property | Type                                                                                                                                                   |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `label`  | String                                                                                                                                                 |
-| `color`  | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
-| `flip`   | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
-| `name`   | String                                                                                                                                                 |
-| `rotate` | integer                                                                                                                                                |
-| `size`   | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
+| Property          | Type                                                                                                                                                   |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ariaLabel`           | String                                                                                                                                                 |
+| `color`           | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
+| `flip`            | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
+| `name`            | String                                                                                                                                                 |
+| `rotate`          | integer                                                                                                                                                |
+| `size`            | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
 
 
 {% endblock %}

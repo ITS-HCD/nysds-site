@@ -1,11 +1,11 @@
 ---
 permalink: /components/radiobutton/
-title: Radiobutton
+title: Radio Button
 description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
-navOrder: 9
+navOrder: 11
 ---
 
 {% extends "layouts/component.njk" %}

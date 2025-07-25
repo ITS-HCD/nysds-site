@@ -5,7 +5,7 @@ description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
-navOrder: 10
+navOrder: 12
 ---
 
 {% extends "layouts/component.njk" %}
