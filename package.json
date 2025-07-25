@@ -33,7 +33,7 @@
         "rimraf": "^6.0.1"
     },
     "dependencies": {
-        "@nysds/components": "^1.5.0",
+        "@nysds/components": "^1.5.1",
         "@nysds/styles": "^1.5.0"
     }
 }
