@@ -2256,6 +2256,7 @@ const ye = g`
     --_nys-fileitem-items-radius: var(--nys-radius-md, 4px);
     --_nys-fileitem-items-padding: var(--nys-space-100, 8px)
       var(--nys-space-200, 16px);
+    --_nys-fileitem-items-background: var(--nys-color-ink-reverse, #fff);
     --_nys-fileitem-items-border: var(--nys-border-width-sm, 1px) solid
       var(--nys-color-neutral-100, #d0d0ce);
     --_nys-fileitem-error-color: var(--nys-color-danger, #b52c2c);
@@ -2287,6 +2288,7 @@ const ye = g`
     position: relative;
     border-radius: var(--_nys-fileitem-items-radius);
     border: var(--_nys-fileitem-items-border);
+    background: var(--_nys-fileitem-items-background);
   }
 
   .file-item.error {
@@ -6281,8 +6283,12 @@ const D1 = class D1 extends u {
     return e == null ? void 0 : e.assignedElements({ flatten: !0 })[0];
   }
   firstUpdated() {
-    const e = this._firstAssignedEl;
-    e && this._applyFocusBehavior(e);
+    var t;
+    const e = (t = this.shadowRoot) == null ? void 0 : t.querySelector("slot");
+    e && e.addEventListener("slotchange", () => {
+      const o = this._firstAssignedEl;
+      o && this._applyFocusBehavior(o);
+    });
   }
   updated(e) {
     super.updated(e);
