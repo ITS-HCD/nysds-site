@@ -1,7 +1,7 @@
 ---
 permalink: /components/skipnav/
 title: Skip Navigation
-description: An accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.
+description: An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.
 image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
