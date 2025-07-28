@@ -39,14 +39,14 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
 
 {% block usagedo %}
 
-  - Use the nys-textarea for long-form text like descriptions or detailed feedback.
-  - Use the nys-textarea when precise user input is required in multiple lines.
+  - Use the `<nys-textarea>` for long-form or multi-line input, like descriptions or feedback.
+  - Use when users need space to write detailed, precise responses.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the nys-textarea for short or single-line inputs (use nys-input instead).
-  - Don't use the nys-textarea for data selection tasks (e.g., dropdowns or predefined options).
+  - Don't use the `<nys-textarea>` for short or single-line inputs (use `<nys-input>` instead).
+  - Don’t use for selecting predefined values (use dropdowns or other inputs).
 
 {% endblock %}
 

@@ -37,16 +37,16 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
 {% block usagedo %}
 
-  - Use sentence-case capitalization for button labels.
-  - For buttons that open a dropdown use a Chevron Down icon on the right side of the button label.
-  - [Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.
+  - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
+  - Use sentence case for button labels.
+  - For buttons that open a dropdown, place a `chevron_down` icon on the right.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.
+  - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.
+  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior. For additions to NYS Button, contact the NYSDS team.
 {% endblock %}
 
 {% block accessibility %}
@@ -57,7 +57,7 @@ The `<nys-button>` component includes the following accessibility-focused featur
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
-  - Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assistive technology. Ensure you use Text buttons for actions and Links for navigation.
+  - Screen readers treat buttons and links differently. When styling links to look like buttons, remember: the Space key activates a button, while the Enter key activates a link. Text buttons are announced as buttons by screen readers, providing a more consistent experience for assistive tech users. Use Text buttons for actions, and links for navigation.
 {% endblock %}
 
 {% block content %}

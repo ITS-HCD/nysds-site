@@ -41,18 +41,18 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 {% block usagedo %}
 
   - Use for clear, simple user or entity representation.
-  - On Tablet and above, prefer showing the full name of the user or entity.
+  - On tablet and larger, prefer showing the full name next to the avatar.
   - Place the full name of the user or entity to the right of the avatar.
   - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
-  - Use `nys-icon` as a slot when you need further customizations that the `icon` prop can't provide.
+  - Use the `nys-icon` slot only when the icon prop isn't sufficient.
 {% endblock %}
 
 {% block usagedont %}
 
+  - Don't skip the `ariaLabel` attribute for screen reader users.
+  - Don't use the `nys-icon` as a slot when icon prop can satisfy your use.
   - Don't overload the avatar with unnecessary customizations.
-  - Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.
-  - [Dev] Don't skip the `ariaLabel` attribute for screen reader users.
-  - [Dev] Don't use the `nys-icon` as a slot when icon prop can satisfy your use.
+  - Don’t override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.
 {% endblock %}
 
 {% block accessibility %}

@@ -49,9 +49,9 @@ navOrder: 17
 
 {% block usagedont %}
 
-  - Use tooltips for information that is vital to task completion.
-  - Use interactive elements such as links or buttons inside a tooltip.
-  - Rely on tooltips when you have room to provide more explanation.
+  - Don't use tooltips for information that is vital to task completion.
+  - Don't use interactive elements such as links or buttons inside a tooltip.
+  - Don't rely on tooltips when you have room to provide more explanation.
 
 {% endblock %}
 

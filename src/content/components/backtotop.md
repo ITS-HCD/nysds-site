@@ -64,8 +64,8 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 
 {% block usagedont %}
 
-  - Add multiple back to top components to one page.
-  - Use when the content is designed to fill the size of the screen and is not scrollable.
+  - Don't add multiple `<nys-backtotop>` components to one page.
+  - Don't use `<nys-backtotop>` when the content fits within the screen and doesn’t scroll.
 {% endblock %}
 
 {% block accessibility %}

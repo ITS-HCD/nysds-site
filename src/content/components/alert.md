@@ -91,25 +91,24 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 
 {% block usagedo %}
 
+  - Use the appropriate `theme` (e.g., `info`, `success`, `warning`, or `danger`) to match the intent of the alert.
+  - Use the `dismissible` property for non-critical alerts.
   - Keep the alert content concise and focused on the message.
-  - Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.
-  - Make alerts dismissible unless they contain critical information or an important step users need to take.
-  - Limit alerts to one per page; if more than one alert is needed, prefer Base alerts if possible to not overwhelm users.
-  - Use Success type to confirm a positive system status to users such as saving a form.
-  - Use Danger type to display system status error messages.
-  - Only use Emergency type for actual emergencies such as a mission person, weather, or power outage; consider switching the left icon to a relevant icon if one exists.
-  - [Dev] Use the appropriate `theme` (e.g., `info`, `success`, `warning`, or `danger`) to match the intent of the alert.
-  - [Dev] Use the `dismissible` property for non-critical alerts, allowing users to clear them from the screen.
+  - Limit alerts to one per page.
+  - Use `success` type to confirm a positive system status to users such as saving a form.
+  - Use `danger` type to display system status error messages.
+  - Only use `emergency` for real emergencies (e.g., missing person, severe weather); swap icon if a more relevant one exists.
+
 {% endblock %}
 
 {% block usagedont %}
 
-- Don't remove the left icon; the icon is required for accessibility.
-- Do not use an alert to call attention to what a user needs to do in a screen instead of making the action clear in the screen itself.
+- Do not remove the left icon, it’s required for accessibility.
+- Don’t use alerts to highlight actions that should be clear in the UI itself.
 - Do not use error messages to communicate form field validation issues; use field error states instead.
 - Don't include more than two link actions in an alert.
-- Don't overuse alerts for non-critical information, as this can desensitize users to important messages.
-- Don't use alerts as toasts. alerts should be placed directly on the page at the top of the screen content.
+- Avoid overusing alerts for low-priority info — this can desensitize users.
+- Don't use alerts as toasts. Place them at the top of the page content.
 - Don't add any shadows to alerts.
 </ul>
 {% endblock %}
@@ -261,7 +260,7 @@ The `<nys-alert>` component emits **one** custom Javascript events:
 You can listen to these events using JavaScript:
 {% set code %}// Select the alert component
 const alert = document.querySelector("nys-alert");
-/* 
+/** 
  * Consider persisting dismissal state (e.g., to localStorage or analytics)
  * This can be used to prevent the alert from appearing again
  */

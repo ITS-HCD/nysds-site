@@ -57,15 +57,15 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 
 {% block usagedo %}
 
-  - Use on pages with navigation or repeated elements before the main content
-  - Make sure the `href` matches the `id` of your main content container
+  - Use on pages with repeated navigation or other content before the main section
+  - Make sure the `href` on `<nys-skipnav>` matches the `id` of the main content container
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use if there’s no content to skip over
-  - Don’t forget to set the correct `href` or matching `id`
+  - Don’t use if there’s nothing to skip over
+  - Don’t mismatch the `href` and target `id`
 
 {% endblock %}
 
