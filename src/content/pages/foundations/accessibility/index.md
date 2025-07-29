@@ -8,7 +8,7 @@ navOrder: 20
 
 {% block content %}
 
-<h1>Accessiblilty</h1>
+<h1>Accessibility</h1>
 
 <img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;">
 
