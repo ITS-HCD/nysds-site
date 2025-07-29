@@ -5,7 +5,7 @@ This repository contains the source code and documentation for the **NYS Design 
 > [!WARNING]
 > **This repository is under active development.** Expect changes.
 
-# Overview
+## Overview
 
 The NYSDS Reference Website serves three key purposes:
 

@@ -10,7 +10,7 @@ navOrder: 20
 
 <h1>Accessibility</h1>
 
-<img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;" alt="Diagram showing the NYS Design System at the center, connected by arrows to five accessibility icons: wheelchair access, visual impairment, cognitive support, hearing support, and dexterity assistance.">
+<img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;" alt="" role="presentation">
 
 <section id="what-is-web-accessibility">
 
