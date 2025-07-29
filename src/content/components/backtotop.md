@@ -154,23 +154,6 @@ label="Chat With Us"
 
 {% block events %}
 
-The `<nys-backtotop>` component emits **three** custom Javascript events:
-
-1.  **`nys-click`** – Fired when the button is clicked.
-2.  **`nys-focus`** – Fired when the button gains focus.
-3.  **`nys-blur`** – Fired when the button loses focus.
-
-You can listen to these events using JavaScript:
-{% set code %}// Select the button component
-const backtotop = document.querySelector('nys-backtotop');
-// Listen for the 'nys-click' event
-backtotop.addEventListener("nys-click", () => {
-	console.log("Back-to-top clicked");
-});{% endset %}
-{% set accordionLabel = "Sample Code" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "js" %}
-{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}
