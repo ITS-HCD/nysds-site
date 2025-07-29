@@ -97,13 +97,13 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
   - Limit alerts to one per page.
   - Use `success` type to confirm a positive system status to users such as saving a form.
   - Use `danger` type to display system status error messages.
-  - Only use `emergency` for real emergencies (e.g., missing person, severe weather); swap icon if a more relevant one exists.
+  - Only use `emergency` for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Do not remove the left icon, it’s required for accessibility.
+- Do not remove the left icon, it is required for accessibility.
 - Don’t use alerts to highlight actions that should be clear in the UI itself.
 - Do not use error messages to communicate form field validation issues; use field error states instead.
 - Don't include more than two link actions in an alert.

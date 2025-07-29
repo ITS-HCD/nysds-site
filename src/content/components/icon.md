@@ -131,8 +131,8 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 {% block usagedo %}
 
-  - **Include a visual text label paired with the icon**; few icons are universally understood alone.
-  - **Be consistent with icon meaning.** same icon and label for the same meaning throughout your app.
+  - Include a visual text label paired with the icon. Few icons are universally understood alone.
+  - Use icons consistently: same icon and label for the same meaning throughout your app.
   - Use `ariaLabel` when the icon is focusable and conveys meaning, so screen readers can announce its purpose.
   - Align icons properly with text, both visually and semantically.
   - Use icons from the NYSDS library; if unavailable, use Google Material Symbols (rounded, unfilled).

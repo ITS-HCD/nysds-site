@@ -41,7 +41,7 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 {% block usagedo %}
 
   - Use for clear, simple user or entity representation.
-  - On tablet and larger, prefer showing the full name next to the avatar.
+  - On tablets and larger breakpoints, prefer showing the full name next to the avatar.
   - Place the full name of the user or entity to the right of the avatar.
   - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
   - Use the `nys-icon` slot only when the icon prop isn't sufficient.

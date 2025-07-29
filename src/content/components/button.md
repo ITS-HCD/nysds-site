@@ -38,7 +38,7 @@ The `<nys-button>` component is used for actions that have an immediate result i
 {% block usagedo %}
 
   - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
-  - Use sentence case for button labels.
+  - Use sentence case for button labels, only capitalizing the first word.
   - For buttons that open a dropdown, place a `chevron_down` icon on the right.
 {% endblock %}
 
@@ -46,7 +46,7 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
   - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior. For additions to NYS Button, contact the NYSDS team.
+  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
 {% endblock %}
 
 {% block accessibility %}
@@ -57,7 +57,7 @@ The `<nys-button>` component includes the following accessibility-focused featur
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
-  - Screen readers treat buttons and links differently. When styling links to look like buttons, remember: the Space key activates a button, while the Enter key activates a link. Text buttons are announced as buttons by screen readers, providing a more consistent experience for assistive tech users. Use Text buttons for actions, and links for navigation.
+  - Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.
 {% endblock %}
 
 {% block content %}
@@ -75,6 +75,14 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 
 ### Click Action
 When using the `<nys-button>`, you may want to use the `onClick` prop instead of adding your own `@click`, `@keydown`, or their equivalents in your framework. This makes sure your button responds to both mouse and keyboard interactions (like Enter or Space), keeping it fully accessible.
+
+### Button Type
+
+Set the `type` prop of the `<nys-button>` to define the button's behavior in a form context. The available types are:
+
+ - `button` (default): A standard button that does not submit a form.
+ - `submit`: Submits the nearest form when clicked.
+ - `reset`: Resets all inputs in the nearest form to their default values.
 
 ### Size
 Set the `size` prop of the `<nys-button>` to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:
@@ -101,14 +109,6 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <nys-button fullWidth size="lg" id="button6" name="button6" label="Large full"></nys-button>
 {% endset %}
 {% include "partials/code-preview.njk" %}
-
-### Button Type
-
-Set the type prop of the `<nys-button>` to define the button's behavior in a form context. The available types are:
-
- - `button` (default): A standard button that does not submit a form.
- - `submit`: Submits the nearest form when clicked.
- - `reset`: Resets all inputs in the nearest form to their default values.
 
 ### Variant
 

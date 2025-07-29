@@ -29,7 +29,9 @@ The `<nys-globalheader>` component is a reusable web component for use in New Yo
 
 ### When to use this component
  - `<nys-globalheader>` should be used at the top of all agency related sites and applications.
- ### When to consider something else
+ - If a `<nys-unavheader>` (Universal Header) is present, `<nys-globalheader>` should appear below it.
+
+### When to consider something else
  - If an application is not for a single agency, the Agency Name can be removed.
 
 {% endblock %}
