@@ -704,7 +704,7 @@ li > .section-nav__list {
     padding: 0;
 }
 .token-list__raw {
-    color: var(--nys-color-neutral-500);
+    color: var(--nys-color-neutral-600);
     font-size: var(--nys-font-size-xs);
 }
 .token-list__info > div {
