@@ -105,7 +105,19 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
-/* === Custom Components */
+/* === Custom Components === */
+
+/* Site body + main content */
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-content {
+  flex: 1;
+}
+
 
 /* Site Header */
 
