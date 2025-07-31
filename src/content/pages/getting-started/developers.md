@@ -18,12 +18,15 @@ To start using NYSDS in your project, you need to install the core libraries:
 {% include "partials/code-preview.njk" %}
 
 ## Reference the files in your application
-Once the packages are installed, you need to reference the required files in your HTML or app's entry point:
+Once the packages are installed, you need to reference the required files in your HTML or app's entry point. You can replace the `path/to` with `node_modules/@nysds/styles/dist/nysds-full.min.css` for example.
 
-{% set code %}<script type="module" src="[path-to-dir]/nysds.js"></script>
-<link rel="stylesheet" href="[path-to-dir]/nysds-full.min.css" />
+**NOTE**: primarily intended for users who do not have an existing framework like React or Angular. Use as needed based on your setup.
+{% set code %}<!-- Load the NYS Design System JavaScript module -->
+<script type="module" src="/path/to/nysds.js"></script>
+<!-- Load the full NYS Design System CSS -->
+<link rel="stylesheet" href="/path/to/nysds-full.min.css" />
 {% endset %}
-{% set accordionLabel = "CLI Command" %}
+{% set accordionLabel = "HTML Snippet" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
