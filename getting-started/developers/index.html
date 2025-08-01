@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-developers section-getting-started">
@@ -184,13 +184,14 @@
   </div>
 </div>
 <h2>Reference the files in your application</h2>
-<p>Once the packages are installed, you need to reference the required files in your HTML or app's entry point:</p>
+<p>Once the packages are installed, you need to reference the required files in your HTML or app's entry point. Replace the <code>path/to</code> with the actual path to the installed files.</p>
+<p><strong>NOTE</strong>: primarily intended for users who do not have an existing framework like React or Angular. Use as needed based on your setup.</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>CLI Command</p>
+        <p>HTML Snippet</p>
       </button>
       <div class="copy-button-wrapper">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
@@ -199,8 +200,10 @@
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Load the NYS Design System JavaScript module --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- Load the full NYS Design System CSS --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -296,7 +299,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

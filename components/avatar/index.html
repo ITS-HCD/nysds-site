@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -561,10 +561,10 @@
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Use for clear, simple user or entity representation.</li>
-<li>On Tablet and above, prefer showing the full name of the user or entity.</li>
+<li>On tablets and larger breakpoints, prefer showing the full name next to the avatar.</li>
 <li>Place the full name of the user or entity to the right of the avatar.</li>
 <li>Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.</li>
-<li>Use <code>nys-icon</code> as a slot when you need further customizations that the <code>icon</code> prop can't provide.</li>
+<li>Use the <code>nys-icon</code> slot only when the icon prop isn't sufficient.</li>
 </ul>
 </div>
       </div>
@@ -572,10 +572,10 @@
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
+<li>Don't skip the <code>ariaLabel</code> attribute for screen reader users.</li>
+<li>Don't use the <code>nys-icon</code> as a slot when icon prop can satisfy your use.</li>
 <li>Don't overload the avatar with unnecessary customizations.</li>
-<li>Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.</li>
-<li>[Dev] Don't skip the <code>ariaLabel</code> attribute for screen reader users.</li>
-<li>[Dev] Don't use the <code>nys-icon</code> as a slot when icon prop can satisfy your use.</li>
+<li>Don’t override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.</li>
 </ul>
 </div>
       </div>
@@ -727,7 +727,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

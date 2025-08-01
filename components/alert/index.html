@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -699,15 +699,13 @@
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
+<li>Use the appropriate <code>theme</code> (e.g., <code>info</code>, <code>success</code>, <code>warning</code>, or <code>danger</code>) to match the intent of the alert.</li>
+<li>Use the <code>dismissible</code> property for non-critical alerts.</li>
 <li>Keep the alert content concise and focused on the message.</li>
-<li>Use the default icon alert icon, displayed on the left, unless you need to communicate critical information visually such as a pandemic or widespread power outage.</li>
-<li>Make alerts dismissible unless they contain critical information or an important step users need to take.</li>
-<li>Limit alerts to one per page; if more than one alert is needed, prefer Base alerts if possible to not overwhelm users.</li>
-<li>Use Success type to confirm a positive system status to users such as saving a form.</li>
-<li>Use Danger type to display system status error messages.</li>
-<li>Only use Emergency type for actual emergencies such as a mission person, weather, or power outage; consider switching the left icon to a relevant icon if one exists.</li>
-<li>[Dev] Use the appropriate <code>theme</code> (e.g., <code>info</code>, <code>success</code>, <code>warning</code>, or <code>danger</code>) to match the intent of the alert.</li>
-<li>[Dev] Use the <code>dismissible</code> property for non-critical alerts, allowing users to clear them from the screen.</li>
+<li>Limit alerts to one per page.</li>
+<li>Use <code>success</code> type to confirm a positive system status to users such as saving a form.</li>
+<li>Use <code>danger</code> type to display system status error messages.</li>
+<li>Only use <code>emergency</code> for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.</li>
 </ul>
 </div>
       </div>
@@ -715,12 +713,12 @@
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't remove the left icon; the icon is required for accessibility.</li>
-<li>Do not use an alert to call attention to what a user needs to do in a screen instead of making the action clear in the screen itself.</li>
+<li>Do not remove the left icon, it is required for accessibility.</li>
+<li>Don’t use alerts to highlight actions that should be clear in the UI itself.</li>
 <li>Do not use error messages to communicate form field validation issues; use field error states instead.</li>
 <li>Don't include more than two link actions in an alert.</li>
-<li>Don't overuse alerts for non-critical information, as this can desensitize users to important messages.</li>
-<li>Don't use alerts as toasts. alerts should be placed directly on the page at the top of the screen content.</li>
+<li>Avoid overusing alerts for low-priority info — this can desensitize users.</li>
+<li>Don't use alerts as toasts. Place them at the top of the page content.</li>
 <li>Don't add any shadows to alerts.</li>
 </ul>
 </ul>
@@ -849,7 +847,7 @@
       <div class="code-preview__code-block">
         <pre class="language-js"><code class="language-js"><span class="token comment">// Select the alert component</span>
 <span class="token keyword">const</span> alert <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"nys-alert"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* 
+<span class="token comment">/** 
  * Consider persisting dismissal state (e.g., to localStorage or analytics)
  * This can be used to prevent the alert from appearing again
  */</span>
@@ -945,7 +943,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

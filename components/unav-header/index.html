@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-unav-header section-components">
@@ -473,7 +473,7 @@
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Place it only at the top of the page as the final footer.</li>
-<li>Toggle search and translate on/off depending on your needs</li>
+<li>Toggle search (<code>hideSearch</code>) and translate (<code>hideTranslate</code>) on/off depending on your needs.</li>
 </ul>
 </div>
       </div>
@@ -482,7 +482,7 @@
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't place it anywhere other than the top of the page.</li>
-<li>Don't modify the header</li>
+<li>Don't modify the universal header.</li>
 </ul>
 </div>
       </div>
@@ -606,7 +606,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

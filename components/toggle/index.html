@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-toggle section-components">
@@ -534,8 +534,9 @@ Descriptions can be provided either through the <code>description</code> prop or
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Provide a clear label and optional description to explain the toggle's purpose.</li>
-<li>Show the UI for toggle’s state is visually distinct for on/off positions.</li>
+<li>Provide a clear label and optional description to explain what the toggle controls.</li>
+<li>Use <code>&lt;nys-checkbox&gt;</code> for forms, especially when you're not expecting immediate action.</li>
+<li>Ensure the page clearly reflects the toggle’s on/off state through visible changes (e.g. switching to dark mode).</li>
 </ul>
 </div>
       </div>
@@ -543,9 +544,9 @@ Descriptions can be provided either through the <code>description</code> prop or
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Use toggles for complex multi-state options.</li>
-<li>Overuse toggles for trivial settings that do not impact user experience significantly.</li>
-<li>Hide labels entirely unless another accessible method of describing the toggle exists.</li>
+<li>Don’t use toggles for complex or multi-state choices.</li>
+<li>Don’t overuse for minor settings that don’t affect the user experience.</li>
+<li>Don’t hide labels unless an accessible alternative is in place.</li>
 </ul>
 </div>
       </div>
@@ -766,7 +767,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

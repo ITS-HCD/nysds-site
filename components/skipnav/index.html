@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Skip Navigation - New York State Design System</title>
-    <meta name="description" content="An accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.">   
+    <meta name="description" content="An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.">   
     <link rel="canonical" href="https://designsystem.ny.gov/components/skipnav/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Skip Navigation">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/components/skipnav/">
-    <meta property="og:description" content="An accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.">
+    <meta property="og:description" content="An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-skipnav section-components">
@@ -486,8 +486,8 @@
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use on pages with navigation or repeated elements before the main content</li>
-<li>Make sure the <code>href</code> matches the <code>id</code> of your main content container</li>
+<li>Use on pages with repeated navigation or other content before the main section</li>
+<li>Make sure the <code>href</code> on <code>&lt;nys-skipnav&gt;</code> matches the <code>id</code> of the main content container</li>
 </ul>
 </div>
       </div>
@@ -495,8 +495,8 @@
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don’t use if there’s no content to skip over</li>
-<li>Don’t forget to set the correct <code>href</code> or matching <code>id</code></li>
+<li>Don’t use if there’s nothing to skip over</li>
+<li>Don’t mismatch the <code>href</code> and target <code>id</code></li>
 </ul>
 </div>
       </div>
@@ -622,7 +622,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

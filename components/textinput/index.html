@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -770,9 +770,9 @@ Takes any valid regex value.</p>
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use clear and concise labels to describe the input required.</li>
-<li>Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.</li>
-<li>Validate input in real-time to catch errors early (e.g., invalid email formats).</li>
+<li>Use clear, concise labels that describe the expected input.</li>
+<li>Add helper texts with the <code>description</code> property for context.</li>
+<li>Validate input live to catch errors early (e.g., invalid email formats).</li>
 </ul>
 </div>
       </div>
@@ -780,8 +780,9 @@ Takes any valid regex value.</p>
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).</li>
-<li>Don't overwhelm users with too many single-line inputs; group similar fields when possible.</li>
+<li>Don’t use for long or detailed responses (use <code>&lt;nys-textarea&gt;</code> instead).</li>
+<li>Don’t overwhelm users with too many fields; group related inputs.</li>
+<li>Don’t use placeholders as labels.</li>
 </ul>
 </div>
       </div>
@@ -1012,7 +1013,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

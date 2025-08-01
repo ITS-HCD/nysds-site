@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-button section-components">
@@ -405,6 +405,13 @@
       <h2>Options</h2>
 <h3>Click Action</h3>
 <p>When using the <code>&lt;nys-button&gt;</code>, you may want to use the <code>onClick</code> prop instead of adding your own <code>@click</code>, <code>@keydown</code>, or their equivalents in your framework. This makes sure your button responds to both mouse and keyboard interactions (like Enter or Space), keeping it fully accessible.</p>
+<h3>Button Type</h3>
+<p>Set the <code>type</code> prop of the <code>&lt;nys-button&gt;</code> to define the button's behavior in a form context. The available types are:</p>
+<ul>
+<li><code>button</code> (default): A standard button that does not submit a form.</li>
+<li><code>submit</code>: Submits the nearest form when clicked.</li>
+<li><code>reset</code>: Resets all inputs in the nearest form to their default values.</li>
+</ul>
 <h3>Size</h3>
 <p>Set the <code>size</code> prop of the <code>&lt;nys-button&gt;</code> to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:</p>
 <ul>
@@ -447,13 +454,6 @@
     </div>
   </div>
 </div>
-<h3>Button Type</h3>
-<p>Set the type prop of the <code>&lt;nys-button&gt;</code> to define the button's behavior in a form context. The available types are:</p>
-<ul>
-<li><code>button</code> (default): A standard button that does not submit a form.</li>
-<li><code>submit</code>: Submits the nearest form when clicked.</li>
-<li><code>reset</code>: Resets all inputs in the nearest form to their default values.</li>
-</ul>
 <h3>Variant</h3>
 <p>Set the variant prop of the <code>&lt;nys-button&gt;</code> to adjust the appearance of the button. Our current variants are:</p>
 <ul>
@@ -664,9 +664,9 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use sentence-case capitalization for button labels.</li>
-<li>For buttons that open a dropdown use a Chevron Down icon on the right side of the button label.</li>
-<li>[Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.</li>
+<li>Always set the <code>type</code> attribute (<code>submit</code>, <code>button</code>, or <code>reset</code>). If omitted, the default is <code>submit</code>.</li>
+<li>Use sentence case for button labels, only capitalizing the first word.</li>
+<li>For buttons that open a dropdown, place a <code>chevron_down</code> icon on the right.</li>
 </ul>
 </div>
       </div>
@@ -674,9 +674,9 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.</li>
+<li>Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.</li>
 <li>Don't use icons in buttons without a text label. Very few icons are universally understood.</li>
-<li>Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.</li>
+<li>Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.</li>
 </ul>
 </div>
       </div>
@@ -690,7 +690,7 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
 <li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
 <li>Visual focus indicators to help users navigate the component.</li>
 <li>Include a label property to provide accessible text for screen readers.</li>
-<li>Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assistive technology. Ensure you use Text buttons for actions and Links for navigation.</li>
+<li>Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.</li>
 </ul>
 </section>
     <br>
@@ -899,7 +899,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">

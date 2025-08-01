@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-07-25T19:52:53.576+00:00 -->
+    <!-- Latest Build: 2025-08-01T15:43:22.922+00:00 -->
   </head>
   
   <body class="single-page page-global-header section-components">
@@ -509,7 +509,8 @@
       <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-<li>nys-globalheader application header should be used at the top of all agency related sites and applications.</li>
+<li><code>&lt;nys-globalheader&gt;</code> should be used at the top of all agency related sites and applications.</li>
+<li>If a <code>&lt;nys-unavheader&gt;</code> (Universal Header) is present, <code>&lt;nys-globalheader&gt;</code> should appear below it.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
@@ -658,7 +659,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
   </main>
-
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
   <div class="site-footer">
   <div class="site-footer__inner nys-grid-container">
     <div class="nys-grid-row nys-grid-gap-lg">
