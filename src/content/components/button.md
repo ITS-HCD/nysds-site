@@ -37,16 +37,16 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
 {% block usagedo %}
 
-  - Use sentence-case capitalization for button labels.
-  - For buttons that open a dropdown use a Chevron Down icon on the right side of the button label.
-  - [Dev] Always set the type attribute. Define the purpose and behavior of a button with the type attribute. The type attribute can accept three values: submit, button, and reset. If no type attribute is defined, the button will behave as a submit button.
+  - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
+  - Use sentence case for button labels, only capitalizing the first word.
+  - For buttons that open a dropdown, place a `chevron_down` icon on the right.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use buttons for external navigation. Use an HTML link (&lt;a&gt;) or Text button if the result of clicking the element is opening a link of an external page.
+  - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
   - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Try not to create new buttons with other styling (color, shape, size). Consistency helps users understand what type of button to look for and what the resulting action will be. If you need additions to NYS Button, or any component, for your application or website please contact the NYSDS team.
+  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
 {% endblock %}
 
 {% block accessibility %}
@@ -57,7 +57,7 @@ The `<nys-button>` component includes the following accessibility-focused featur
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
-  - Screen readers handle buttons and links differently. When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link. Text buttons are read as a button by a screen reader, creating a better experience for users with assistive technology. Ensure you use Text buttons for actions and Links for navigation.
+  - Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.
 {% endblock %}
 
 {% block content %}
@@ -75,6 +75,14 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 
 ### Click Action
 When using the `<nys-button>`, you may want to use the `onClick` prop instead of adding your own `@click`, `@keydown`, or their equivalents in your framework. This makes sure your button responds to both mouse and keyboard interactions (like Enter or Space), keeping it fully accessible.
+
+### Button Type
+
+Set the `type` prop of the `<nys-button>` to define the button's behavior in a form context. The available types are:
+
+ - `button` (default): A standard button that does not submit a form.
+ - `submit`: Submits the nearest form when clicked.
+ - `reset`: Resets all inputs in the nearest form to their default values.
 
 ### Size
 Set the `size` prop of the `<nys-button>` to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:
@@ -101,14 +109,6 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <nys-button fullWidth size="lg" id="button6" name="button6" label="Large full"></nys-button>
 {% endset %}
 {% include "partials/code-preview.njk" %}
-
-### Button Type
-
-Set the type prop of the `<nys-button>` to define the button's behavior in a form context. The available types are:
-
- - `button` (default): A standard button that does not submit a form.
- - `submit`: Submits the nearest form when clicked.
- - `reset`: Resets all inputs in the nearest form to their default values.
 
 ### Variant
 

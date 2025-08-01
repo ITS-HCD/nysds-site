@@ -40,16 +40,17 @@ navOrder: 16
 
 {% block usagedo %}
 
-  - Provide a clear label and optional description to explain the toggle's purpose.
-  - Show the UI for toggle’s state is visually distinct for on/off positions.
+  - Provide a clear label and optional description to explain what the toggle controls.
+  - Use `<nys-checkbox>` for forms, especially when you're not expecting immediate action.
+  - Ensure the page clearly reflects the toggle’s on/off state through visible changes (e.g. switching to dark mode).
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Use toggles for complex multi-state options.
-  - Overuse toggles for trivial settings that do not impact user experience significantly.
-  - Hide labels entirely unless another accessible method of describing the toggle exists.
+  - Don’t use toggles for complex or multi-state choices.
+  - Don’t overuse for minor settings that don’t affect the user experience.
+  - Don’t hide labels unless an accessible alternative is in place.
 
 {% endblock %}
 

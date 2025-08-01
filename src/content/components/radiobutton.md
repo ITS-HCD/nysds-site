@@ -44,16 +44,16 @@ The `<nys-radiobutton>` component is a reusable web component for use in New Yor
 
   - Always wrap a group of `<nys-radiobutton>` with a `<nys-radiogroup>`
   - Group radio buttons vertically for easier scanning, especially when labels are lengthy.
-  - Use a clear default selection if applicable (e.g., the most common or recommended choice).
-  - Provide descriptive and concise labels for each option.
-  - Group related radio buttons with a heading or contextual instructions to clarify the choice.
+  - Set a clear default when one choice is recommended or most common.
+  - Use concise, descriptive labels for each option.
+  - Group related options under a heading or instruction to provide context.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Use radio buttons for yes/no questions (consider a toggle or checkbox).
-  - Overload the user with too many radio button options; simplify or use a dropdown if needed.
-  - Leave all radio buttons unselected if a default selection would help guide users.
+  - Don't use radio buttons for yes/no questions (consider using `<nys-toggle>` or `<nys-checkbox>`).
+  - Don’t overload users with too many options; simplify or use a dropdown instead.
+  - Don’t leave all options unselected if a helpful default can guide users.
 
 {% endblock %}
 

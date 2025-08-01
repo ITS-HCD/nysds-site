@@ -8,9 +8,9 @@ navOrder: 20
 
 {% block content %}
 
-<h1>Accessiblilty</h1>
+<h1>Accessibility</h1>
 
-<img src="/assets/img/Accessibility Illustration.svg" style="width: 100%; display: block; margin-bottom: 32px;">
+<img src="/assets/img/accessibility_image.svg" style="width: 100%; display: block; margin-bottom: 32px;" alt="" role="presentation">
 
 <section id="what-is-web-accessibility">
 
@@ -75,29 +75,9 @@ in ways that all users can perceive?</li>
 
 ## Our Approach
 
-**How does our team make sure our design system is accessible to all?**
-
-While there are numerous ways to check for accessibility, here are just a few: 
-
-**Color Contrast:** Ensure sufficient contrast between text and background colors using a dedicated checker.
-
-[WebAim](http://webaim.org/resources/contrastchecker/) is recommended.
-
-**Element Sizing:** Larger interactive elements (minimum 44x44 pixels as recommended by WCAG) make it easier for users with limited dexterity or those using assistive technologies to tap or click accurately.
-
-**Focus States:** Ensures interactive elements like buttons and links clearly indicate focus when navigated with a keyboard.
-
-**Keyboard Navigation:** Designing a website or application so users can navigate and interact with it using only a keyboard, without needing a mouse. This is essential for accessibility, especially for people with disabilities.
-
-*It typically includes:*
-- Tab key to move between links, buttons, and form fields.
-- Enter/Spacebar to activate buttons and links.
-- Arrow keys to scroll or navigate within menus.
-- Escape key to close pop-ups or dialogs.
-
-**Screen Reader Testing:**  "Screen reader testing" means checking how well a website or app works for visually impaired users who rely on screen reader software. It ensures that text, images, and interactive elements are properly read aloud and usable with keyboard commands.
-
-Prioritizing accessibility in our design system allows all users, regardless of ability, navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users.
+Our team is committed to making our design system accessible by embedding best practices into every component. We emphasize strong color contrast to maintain readability, using tools like WebAIM to confirm sufficient contrast between text and background. Element sizing aligns with WCAG recommendations so that interactive components are easy to use and meet appropriate pixel standards. Keyboard accessibility is a core priority—users can navigate without a mouse through clear focus states, logical tab order, and familiar keyboard controls like Enter, Spacebar, and Escape. We also conduct screen reader testing to ensure that visually impaired users can effectively navigate and understand content with assistive technologies.
+ 
+By embedding accessibility into our design system, we create inclusive, user-friendly experiences that benefit everyone, reinforcing that accessibility is not just a feature but a fundamental part of good design. 
 
 {% endblock %}
 

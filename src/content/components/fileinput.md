@@ -51,8 +51,8 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
 
 {% block usagedont %}
 
-  - Use when uploading sensitive data without encryption
-  - Use when file input is not necessary for the task.
+  - Don't use when uploading sensitive data without encryption
+  - Don't use `<nys-fileinput>` when it is not necessary for the task.
 {% endblock %}
 
 {% block accessibility %}

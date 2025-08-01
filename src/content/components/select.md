@@ -40,12 +40,12 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 
 {% block usagedo %}
 
-  - Use the `nys-option` component to define the options in the dropdown
+  - Use the `<nys-option>` component to define the options in the dropdown
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the native `<option>` element in the `nys-select` component
+  - Don't use the native `<option>` element in the `<nys-select>` component
 
 {% endblock %}
 

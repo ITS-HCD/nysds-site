@@ -35,15 +35,16 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 
 {% block usagedo %}
 
-  - Use clear and concise labels to describe the input required.
-  - Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.
-  - Validate input in real-time to catch errors early (e.g., invalid email formats).
+  - Use clear, concise labels that describe the expected input.
+  - Add helper texts with the `description` property for context. 
+  - Validate input live to catch errors early (e.g., invalid email formats).
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).
-  - Don't overwhelm users with too many single-line inputs; group similar fields when possible.
+  - Don’t use for long or detailed responses (use `<nys-textarea>` instead).
+  - Don’t overwhelm users with too many fields; group related inputs.
+  - Don’t use placeholders as labels.
 
 {% endblock %}
 

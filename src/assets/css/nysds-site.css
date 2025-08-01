@@ -105,7 +105,19 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
-/* === Custom Components */
+/* === Custom Components === */
+
+/* Site body + main content */
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-content {
+  flex: 1;
+}
+
 
 /* Site Header */
 
@@ -425,7 +437,6 @@ a.card:focus {
 /* Section Navigator */
 
 .section-nav {
-    position: sticky;
     top: var(--nys-space-600);
     margin-top: var(--nys-space-600);
     margin-bottom: var(--nys-space-200);
@@ -705,7 +716,7 @@ li > .section-nav__list {
     padding: 0;
 }
 .token-list__raw {
-    color: var(--nys-color-neutral-500);
+    color: var(--nys-color-neutral-600);
     font-size: var(--nys-font-size-xs);
 }
 .token-list__info > div {

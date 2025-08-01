@@ -38,14 +38,14 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 {% block usagedo %}
 
   - Place it only at the top of the page as the final footer.
-  - Toggle search and translate on/off depending on your needs
+  - Toggle search (`hideSearch`) and translate (`hideTranslate`) on/off depending on your needs.
 
 {% endblock %}
 
 {% block usagedont %}
 
   - Don't place it anywhere other than the top of the page.
-  - Don't modify the header
+  - Don't modify the universal header.
 
 {% endblock %}
 

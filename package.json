@@ -20,10 +20,10 @@
     "license": "MIT",
     "devDependencies": {
         "@11ty/eleventy": "^3.0.0",
-        "@11ty/eleventy-navigation": "^1.0.4",
-        "@11ty/eleventy-plugin-rss": "^2.0.3",
         "@11ty/eleventy-fetch": "^5.0.2",
         "@11ty/eleventy-img": "^6.0.1",
+        "@11ty/eleventy-navigation": "^1.0.4",
+        "@11ty/eleventy-plugin-rss": "^2.0.3",
         "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
         "eleventy-plugin-metagen": "^1.8.3",
         "eleventy-plugin-time-to-read": "^1.3.0",
@@ -33,7 +33,8 @@
         "rimraf": "^6.0.1"
     },
     "dependencies": {
-        "@nysds/components": "^1.5.2",
-        "@nysds/styles": "^1.5.0"
+        "@nysds/components": "^1.5.3",
+        "@nysds/styles": "^1.5.3"
+
     }
 }

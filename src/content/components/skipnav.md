@@ -1,7 +1,7 @@
 ---
 permalink: /components/skipnav/
 title: Skip Navigation
-description: An accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.
+description: An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.
 image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
@@ -57,15 +57,15 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 
 {% block usagedo %}
 
-  - Use on pages with navigation or repeated elements before the main content
-  - Make sure the `href` matches the `id` of your main content container
+  - Use on pages with repeated navigation or other content before the main section
+  - Make sure the `href` on `<nys-skipnav>` matches the `id` of the main content container
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use if there’s no content to skip over
-  - Don’t forget to set the correct `href` or matching `id`
+  - Don’t use if there’s nothing to skip over
+  - Don’t mismatch the `href` and target `id`
 
 {% endblock %}
 

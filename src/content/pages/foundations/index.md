@@ -7,7 +7,7 @@ navOrder: 10
 
 {% block content %}
 
-## Overview
+# Overview
 
 What is a design system? It isn't just a component library, a set of fonts and colors, or a prototyping kit. The core value of a design system is in its system-ness. A system is a set of things working together as parts of an interconnected network to create a cohesive whole.
 

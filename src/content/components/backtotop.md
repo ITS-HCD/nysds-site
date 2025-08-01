@@ -20,7 +20,7 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 <p style="margin-bottom:75px;">
   This Back to Top button is always visible for demo purposes. In a real-world scenario, it typically remains hidden until you scroll down the page and appears in the bottom-right corner, unless specified.
 </p>
-<nys-backtotop id="backtotop-demo"></nys-backtotop>
+<nys-backtotop id="backtotop-demo" visible></nys-backtotop>
 
 <script type="module">
   customElements.whenDefined('nys-backtotop').then(async () => {
@@ -64,8 +64,8 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 
 {% block usagedont %}
 
-  - Add multiple back to top components to one page.
-  - Use when the content is designed to fill the size of the screen and is not scrollable.
+  - Don't add multiple `<nys-backtotop>` components to one page.
+  - Don't use `<nys-backtotop>` when the content fits within the screen and doesn’t scroll.
 {% endblock %}
 
 {% block accessibility %}
@@ -102,7 +102,7 @@ variant="outline"
 label="Chat With Us"
 ></nys-button>
 <nys-unavfooter></nys-unavfooter>
-<nys-backtotop id="backtotop-demo2" position="left"></nys-backtotop>
+<nys-backtotop id="backtotop-demo2" position="left" visible></nys-backtotop>
 
 <script type="module">
   customElements.whenDefined('nys-backtotop').then(async () => {
@@ -154,23 +154,6 @@ label="Chat With Us"
 
 {% block events %}
 
-The `<nys-backtotop>` component emits **three** custom Javascript events:
-
-1.  **`nys-click`** – Fired when the button is clicked.
-2.  **`nys-focus`** – Fired when the button gains focus.
-3.  **`nys-blur`** – Fired when the button loses focus.
-
-You can listen to these events using JavaScript:
-{% set code %}// Select the button component
-const backtotop = document.querySelector('nys-backtotop');
-// Listen for the 'nys-click' event
-backtotop.addEventListener("nys-click", () => {
-	console.log("Back-to-top clicked");
-});{% endset %}
-{% set accordionLabel = "Sample Code" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "js" %}
-{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

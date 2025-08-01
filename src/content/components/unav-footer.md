@@ -40,7 +40,7 @@ The `<nys-unavfooter`> is a reusable web component for use in New York State dig
 
 {% block usagedont %}
 
-  - Place it anywhere other than the bottom of the page.
+  - Don't place it anywhere other than the bottom of the page.
 
 {% endblock %}
 
