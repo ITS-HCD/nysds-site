@@ -11,7 +11,65 @@ navOrder: 2
 # Flexbox
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
 
-## Flex
+## Display Flex
+{% set preview %}
+<div class="border padding-1 radius-md margin-bottom-2">
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
+    <span class="utility-class">.nys-display-flex</span>
+  </div>
+  <div class="nys-display-flex margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+    <div class="padding-1px">
+      <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="padding-1px">
+      <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="padding-1px">
+      <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+  </div>
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
+    <span class="utility-class">.nys-display-flex</span>
+  </div>
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
+    <span class="utility-class">.nys-flex-column</span>
+  </div>
+  <div class="nys-display-flex nys-flex-column margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+    <div class="padding-1px">
+      <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="padding-1px">
+      <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+    <div class="padding-1px">
+      <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
+      </div>
+    </div>
+  </div>
+</div>   
+{% endset %}
+{% set code%}
+<div class="nys-display-flex">
+  <div class="example"></div>
+  <div class="example"></div>
+  <div class="example"></div>
+  <div class="example"></div>
+</div>
+<div class="nys-display-flex nys-flex-column">
+  <div class="example"></div>
+  <div class="example"></div>
+  <div class="example"></div>
+  <div class="example"></div>
+</div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
+## Flex Grid Rows
 {% set preview %}
 <div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
   <div class="nys-grid-col nys-flex-1">
