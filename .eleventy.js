@@ -24,6 +24,7 @@ const updates = require("./src/_11ty/collections/updates");
 const components = require("./src/_11ty/collections/components");
 const sections = require("./src/_11ty/collections/sections");
 const tokens = require("./src/_11ty/collections/tokens");
+const videos = require("./src/_11ty/collections/videos");
 
 module.exports = (eleventyConfig) => {
 
@@ -44,6 +45,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addCollection("components", components);
     eleventyConfig.addCollection("sections", sections);
     eleventyConfig.addCollection("tokens", tokens);
+    eleventyConfig.addCollection("videos", videos);
 
     // plugins
     eleventyConfig.addPlugin(eleventyPluginNavigation);

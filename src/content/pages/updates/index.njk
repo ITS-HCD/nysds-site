@@ -1,0 +1,53 @@
+---
+permalink: /updates/
+title: Updates
+description: NYSDS makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+section: Updates
+navOrder: 1
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="nys-grid-container-widescreen">
+<h1>Updates</h1>
+  <div class="nys-tablet:nys-grid-col-8">
+    <div class="content-intro">
+      <div class="content-intro__inner">  
+        <p>Check out the latest updates to the New York State Design System.</p>
+      </div>
+    </div>
+  </div>
+  <div class="nys-tablet:nys-grid-col-4">
+  </div>
+<section class="nys-grid-row nys-grid-gap-6">
+  {%- for post in collections.updates -%}
+  <div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex">
+    <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
+      <div class="card__inner">
+        <div class="card__media">
+          {% if post.data.image %}
+            <img src="{{ post.data.image | url }}" alt="{{ post.data.image_alt }}"></div>
+          {% else %}
+            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
+          {% endif %}
+        <div class="card__title">{{ post.data.title }}</div>
+        <time datetime="{{ page.date | dateISO }}">
+          {{ page.date | dateFull }}
+        </time>
+        <div class="card__desc">{{ post.data.description }}</div>
+      </div>
+    </a>
+  </div>
+  {%- endfor -%}
+</section>
+
+<!-- Section for linking people to GitHub discussion to suggest new components -->
+</div>
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

@@ -8,9 +8,9 @@ function showDraft(data) {
 
 module.exports = () => {
     return {
-        layout: 'layouts/update.njk',
-        permalink: '/updates/{{ title | slugify }}/',
-        section: 'Updates',
+        layout: 'layouts/video.njk',
+        permalink: '/videos/{{ title | slugify }}/',
+        section: 'Videos',
         ogtype: 'article', // Open Graph type
         "changefreq": "monthly", // Information for sitemap.xml
         "priority": "0.8", // Information for sitemap.xml
