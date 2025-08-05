@@ -39,6 +39,8 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "edit_square" %}{% include "partials/icon-preview.njk" %}
   {% set name = "help" %}{% include "partials/icon-preview.njk" %}
   {% set name = "language" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "link" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "mail" %}{% include "partials/icon-preview.njk" %}
   {% set name = "menu" %}{% include "partials/icon-preview.njk" %}
   {% set name = "more_vert" %}{% include "partials/icon-preview.njk" %}
   {% set name = "open_in_new" %}{% include "partials/icon-preview.njk" %}
@@ -78,6 +80,9 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 ### Arrows
 <div class="nys-grid-row nys-grid-gap-2">
   {% set name = "arrow_back" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "arrow_downward" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "arrow_forward" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "arrow_upward" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Chevrons
