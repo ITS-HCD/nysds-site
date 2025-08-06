@@ -21,28 +21,38 @@ navOrder: 1
   <div class="nys-tablet:nys-grid-col-4">
   </div>
 <section class="nys-grid-row nys-grid-gap-6">
-  {%- for post in collections.updates -%}
-  <div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
-      <div class="card__inner">
-        <div class="card__media">
-          {% if post.data.image %}
-            <img src="{{ post.data.image | url }}" alt="{{ post.data.image_alt }}"></div>
-          {% else %}
-            <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>
-          {% endif %}
-        <div class="card__title">{{ post.data.title }}</div>
-        <time datetime="{{ page.date | dateISO }}">
-          {{ page.date | dateFull }}
-        </time>
-        <div class="card__desc">{{ post.data.description }}</div>
-      </div>
-    </a>
-  </div>
-  {%- endfor -%}
+    
+  <ul class="post-list nys-grid-container">
+    {%- for post in collections.updates -%}
+      <li class="post-list__item" style="border-bottom: 1px solid #ddd;">
+        <div class="nys-grid-row nys-grid-gap">
+
+          <!-- Left side: title and description -->
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-9">
+            <h3 class="post-list__title">
+              <a href="{{ post.url }}" class="post-list__link">
+                {{ post.data.title }}
+              </a>
+            </h3>
+            <div class="post-list__description">
+              {{ post.data.description }}
+            </div>
+          </div>
+
+          <!-- Right side: date -->
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-3" style="text-align: right;">
+            <time class="post-list__kicker">
+              {{ post.date | dateFull }}
+            </time>
+          </div>
+
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+
 </section>
 
-<!-- Section for linking people to GitHub discussion to suggest new components -->
 </div>
 {% endblock %}
 

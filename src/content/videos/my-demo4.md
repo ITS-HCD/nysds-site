@@ -6,6 +6,7 @@ image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
 tags: Demo, Web Components, Drupal
 video_url: https://www.youtube-nocookie.com/embed/dXoD6NaaU5k
+draft: true
 ---
 
 References from the video:

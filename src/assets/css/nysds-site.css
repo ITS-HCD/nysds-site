@@ -433,6 +433,46 @@ a.card:focus {
     background-color: var(--nys-color-theme-weaker);
 }
 
+/* Post List*/
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list__item {
+  border-bottom: 1px solid var(--nys-color-neutral-100);
+}
+
+.post-list__title {
+  margin: 0 0 var(--nys-space-100);
+  font-size: var(--nys-font-size-h5);
+  font-weight: var(--nys-font-weight-semibold);
+  line-height: var(--nys-font-lineheight-h5);
+}
+
+.post-list__description {
+  font-size: var(--nys-font-size-body-md);
+  color: var(--nys-color-neutral-600);
+  line-height: var(--nys-font-lineheight-body-md);
+}
+
+.post-list__kicker {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--nys-color-text-weaker);
+  margin-top: var(--nys-space-50);
+}
+
+/* Post Content */
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--nys-space-200) 0;
+}
+
 
 /* Section Navigator */
 

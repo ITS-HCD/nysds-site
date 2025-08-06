@@ -7,6 +7,7 @@ image_header: /assets/img/components/alert-header.svg
 tags: Demo 2, Design, Figma, Drupal
 video_url: https://www.youtube-nocookie.com/embed/_M8bDuT3R1w?si=--whS5b3I_HB4bqm
 navOrder: 2
+draft: true
 ---
 
 Working with NYSDS in Figma means fewer decisions, more consistency, and smoother handoffs. The libraries give you the same visual elements found in our web components.

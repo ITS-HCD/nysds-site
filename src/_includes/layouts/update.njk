@@ -7,20 +7,22 @@
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-desktop:nys-grid-col-10">  
     
+<section class="post-content">
 
-<section>
-
-  
   <h1>{{ title }}</h1>
-  <time datetime="{{ page.date | dateISO }}">
-    {{ page.date | dateFull }}
-  </time>
-  <div>
-    <p>{{ content | timeToRead ('200 words a minute') }} read time</p>
+
+  <div class="nys-grid-row">
+    <div class="nys-grid-col nys-flex-1"><time datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time></div>
+    <div class="nys-grid-col nys-flex-1">{{ page.author }}</div>
+  </div>
+  
+  
+  <div class="nys-grid-row">
+    <div class="nys-grid-col nys-flex-1">{{ content | timeToRead ('200 words a minute') }} read time</div>
     {% if tags %}
-      <ul>
+      <ul class="tag__list">
         {% for tag in tags %}
-          <li>#{{ tag }}</li>
+          <li class="tag">#{{ tag }}</li>
         {% endfor %}
       </ul>
     {% endif %}

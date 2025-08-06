@@ -7,6 +7,7 @@ image_header: /assets/img/components/alert-header.svg
 tags: Demo, Web Components, Drupal
 video_url: https://www.youtube-nocookie.com/embed/M0H7kt_n1gM?si=SH9jdbqWF8cfwT5P
 navOrder: 2
+draft: true
 ---
 
 Accessibility isn’t just a checklist—it’s part of our foundation. NYSDS builds accessible components by default, so you don’t have to guess.
