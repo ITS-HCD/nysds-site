@@ -1,13 +1,13 @@
-import { css as g, LitElement as u, html as a } from "lit";
-import { property as r, state as A } from "lit/decorators.js";
+import { css as C, LitElement as u, html as a } from "lit";
+import { property as r, state as B } from "lit/decorators.js";
 import { ifDefined as h } from "lit/directives/if-defined.js";
 /*!
-   * New York State Design System (v1.5.3)
+   * New York State Design System (v1.6.0)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
  */
-const q1 = g`
+const q1 = C`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
@@ -238,12 +238,12 @@ const q1 = g`
     text-decoration-thickness: 3px;
   }
 `;
-var U1 = Object.defineProperty, P1 = Object.getOwnPropertyDescriptor, V = (l, e, t, o) => {
-  for (var s = o > 1 ? void 0 : o ? P1(e, t) : e, n = l.length - 1, i; n >= 0; n--)
+var U1 = Object.defineProperty, O1 = Object.getOwnPropertyDescriptor, V = (l, e, t, o) => {
+  for (var s = o > 1 ? void 0 : o ? O1(e, t) : e, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && U1(e, t, s), s;
 };
-let O1 = 0;
+let P1 = 0;
 var J;
 const k = (J = class extends u {
   constructor() {
@@ -276,7 +276,7 @@ const k = (J = class extends u {
   }
   /******************** Functions ********************/
   _generateUniqueId() {
-    return `nys-alert-${Date.now()}-${O1++}`;
+    return `nys-alert-${Date.now()}-${P1++}`;
   }
   // Helper function for overriding default icons or checking special naming cases (e.g. type=success)
   _getIconName() {
@@ -315,7 +315,6 @@ const k = (J = class extends u {
       ${this._alertClosed ? "" : a` <div
             id=${this.id}
             class="nys-alert__container ${this._slotHasContent || ((o = this.text) == null ? void 0 : o.trim().length) > 0 ? "" : "nys-alert--centered"}"
-            role=${e}
             aria-label=${h(
       t.trim() !== "" ? t : void 0
     )}
@@ -327,7 +326,7 @@ const k = (J = class extends u {
                 label="${this.type} icon"
               ></nys-icon>
             </div>
-            <div class="nys-alert__texts">
+            <div class="nys-alert__texts" role=${e}>
               <p class="nys-alert__header">${this.heading}</p>
               ${this._slotHasContent ? a`<slot></slot>` : ((s = this.text) == null ? void 0 : s.trim().length) > 0 ? a`<p class="nys-alert__text">${this.text}</p>` : ""}
               ${this.primaryAction || this.secondaryAction ? a`<div class="nys-alert__actions">
@@ -352,7 +351,7 @@ const k = (J = class extends u {
                   icon="close"
                   size="sm"
                   ?inverted=${this.type === "emergency"}
-                  ariaLabel="close button"
+                  ariaLabel="${this.heading}, alert, Close"
                   .onClick=${() => this._closeAlert()}
                 ></nys-button>` : ""}
           </div>`}
@@ -397,17 +396,17 @@ V([
   r({ type: String })
 ], k.prototype, "secondaryLabel", 2);
 V([
-  A()
+  B()
 ], k.prototype, "_alertClosed", 2);
 V([
-  A()
+  B()
 ], k.prototype, "_slotHasContent", 2);
 V([
   r({ reflect: !0 })
 ], k.prototype, "type", 1);
 let R1 = k;
 customElements.get("nys-alert") || customElements.define("nys-alert", R1);
-const T1 = g`
+const T1 = C`
   :host {
     /* Global Avatar Styles */
     --_nys-avatar-shape: var(--nys-radius-round, 1776px);
@@ -588,11 +587,11 @@ Q([
   r({ reflect: !0 })
 ], R.prototype, "shape", 1);
 Q([
-  A()
+  B()
 ], R.prototype, "_slotHasContent", 2);
 let G1 = R;
 customElements.get("nys-avatar") || customElements.define("nys-avatar", G1);
-const Y1 = g`
+const Y1 = C`
   :host {
   }
 
@@ -671,13 +670,13 @@ v1([
   r({ type: Boolean, reflect: !0 })
 ], o1.prototype, "visible");
 v1([
-  A()
+  B()
 ], o1.prototype, "isMobile");
 v1([
-  A()
+  B()
 ], o1.prototype, "forceVisible");
 customElements.get("nys-backtotop") || customElements.define("nys-backtotop", o1);
-const K1 = g`
+const K1 = C`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1105,7 +1104,7 @@ var X1 = Object.defineProperty, Q1 = Object.getOwnPropertyDescriptor, v = (l, e,
 };
 let J1 = 0;
 var w;
-const f = (w = class extends u {
+const g = (w = class extends u {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this._size = "md", this.fullWidth = !1, this._variant = "filled", this.inverted = !1, this.label = "", this.ariaLabel = "", this.prefixIcon = "", this.suffixIcon = "", this.circle = !1, this.icon = "", this.disabled = !1, this.form = "", this.value = "", this.ariaDescription = "", this._type = "button", this.onClick = () => {
@@ -1269,67 +1268,67 @@ const f = (w = class extends u {
 ], w.styles = K1, w.formAssociated = !0, w);
 v([
   r({ type: String })
-], f.prototype, "id", 2);
+], g.prototype, "id", 2);
 v([
   r({ type: String, reflect: !0 })
-], f.prototype, "name", 2);
+], g.prototype, "name", 2);
 v([
   r({ reflect: !0 })
-], f.prototype, "size", 1);
+], g.prototype, "size", 1);
 v([
   r({ type: Boolean, reflect: !0 })
-], f.prototype, "fullWidth", 2);
+], g.prototype, "fullWidth", 2);
 v([
   r({ reflect: !0 })
-], f.prototype, "variant", 1);
+], g.prototype, "variant", 1);
 v([
   r({ type: Boolean, reflect: !0 })
-], f.prototype, "inverted", 2);
+], g.prototype, "inverted", 2);
 v([
   r({ type: String })
-], f.prototype, "label", 2);
+], g.prototype, "label", 2);
 v([
   r({ type: String })
-], f.prototype, "ariaLabel", 2);
+], g.prototype, "ariaLabel", 2);
 v([
   r({ type: String })
-], f.prototype, "prefixIcon", 2);
+], g.prototype, "prefixIcon", 2);
 v([
   r({ type: String })
-], f.prototype, "suffixIcon", 2);
+], g.prototype, "suffixIcon", 2);
 v([
   r({ type: Boolean, reflect: !0 })
-], f.prototype, "circle", 2);
+], g.prototype, "circle", 2);
 v([
   r({ type: String })
-], f.prototype, "icon", 2);
+], g.prototype, "icon", 2);
 v([
   r({ type: Boolean, reflect: !0 })
-], f.prototype, "disabled", 2);
+], g.prototype, "disabled", 2);
 v([
   r({ type: String })
-], f.prototype, "form", 2);
+], g.prototype, "form", 2);
 v([
   r({ type: String })
-], f.prototype, "value", 2);
+], g.prototype, "value", 2);
 v([
   r({ type: String })
-], f.prototype, "ariaDescription", 2);
+], g.prototype, "ariaDescription", 2);
 v([
   r({ reflect: !0 })
-], f.prototype, "type", 1);
+], g.prototype, "type", 1);
 v([
   r({ type: Function })
-], f.prototype, "onClick", 2);
+], g.prototype, "onClick", 2);
 v([
   r({ type: String })
-], f.prototype, "href", 2);
+], g.prototype, "href", 2);
 v([
   r({ reflect: !0 })
-], f.prototype, "target", 1);
-let ee = f;
+], g.prototype, "target", 1);
+let ee = g;
 customElements.get("nys-button") || customElements.define("nys-button", ee);
-const H1 = g`
+const H1 = C`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1693,7 +1692,7 @@ var te = Object.defineProperty, se = Object.getOwnPropertyDescriptor, T = (l, e,
 };
 let oe = 0;
 var j;
-const B = (j = class extends u {
+const A = (j = class extends u {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this.required = !1, this.optional = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this.tile = !1, this._size = "md", this._internals = this.attachInternals();
@@ -1735,7 +1734,7 @@ const B = (j = class extends u {
           if (Array.from(
             this.querySelectorAll("nys-checkbox")
           ).filter(
-            (S) => S.checked
+            ($) => $.checked
           ).length === 0)
             return c;
         } else
@@ -1810,35 +1809,35 @@ const B = (j = class extends u {
 }, j.VALID_SIZES = ["sm", "md"], j.styles = H1, j.formAssociated = !0, j);
 T([
   r({ type: String })
-], B.prototype, "id", 2);
+], A.prototype, "id", 2);
 T([
   r({ type: String, reflect: !0 })
-], B.prototype, "name", 2);
+], A.prototype, "name", 2);
 T([
   r({ type: Boolean, reflect: !0 })
-], B.prototype, "required", 2);
+], A.prototype, "required", 2);
 T([
   r({ type: Boolean, reflect: !0 })
-], B.prototype, "optional", 2);
+], A.prototype, "optional", 2);
 T([
   r({ type: Boolean, reflect: !0 })
-], B.prototype, "showError", 2);
+], A.prototype, "showError", 2);
 T([
   r({ type: String })
-], B.prototype, "errorMessage", 2);
+], A.prototype, "errorMessage", 2);
 T([
   r({ type: String })
-], B.prototype, "label", 2);
+], A.prototype, "label", 2);
 T([
   r({ type: String })
-], B.prototype, "description", 2);
+], A.prototype, "description", 2);
 T([
   r({ type: Boolean, reflect: !0 })
-], B.prototype, "tile", 2);
+], A.prototype, "tile", 2);
 T([
   r({ reflect: !0 })
-], B.prototype, "size", 1);
-let re = B;
+], A.prototype, "size", 1);
+let re = A;
 customElements.get("nys-checkboxgroup") || customElements.define("nys-checkboxgroup", re);
 var ne = Object.defineProperty, ie = Object.getOwnPropertyDescriptor, D = (l, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? ie(e, t) : e, n = l.length - 1, i; n >= 0; n--)
@@ -2046,7 +2045,7 @@ D([
 ], L.prototype, "size", 1);
 let le = L;
 customElements.get("nys-checkbox") || customElements.define("nys-checkbox", le);
-const ce = g`
+const ce = C`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -2104,7 +2103,7 @@ var de = Object.defineProperty, x1 = (l, e, t, o) => {
     (i = l[n]) && (s = i(e, t, s) || s);
   return s && de(e, t, s), s;
 };
-const f1 = class f1 extends u {
+const g1 = class g1 extends u {
   // allows use of elementInternals' API
   constructor() {
     super(), this.showError = !1, this.errorMessage = "", this.showDivider = !1, this._internals = this.attachInternals();
@@ -2116,8 +2115,8 @@ const f1 = class f1 extends u {
         </div>` : ""}`;
   }
 };
-f1.styles = ce, f1.formAssociated = !0;
-let c1 = f1;
+g1.styles = ce, g1.formAssociated = !0;
+let c1 = g1;
 x1([
   r({ type: Boolean })
 ], c1.prototype, "showError");
@@ -2136,7 +2135,7 @@ async function he(l, e) {
       return !0;
   return !1;
 }
-const ye = g`
+const ye = C`
   :host {
     /* Global Fileinput Styles */
     --_nys-fileinput-gap: var(--nys-space-100, 8px);
@@ -2256,7 +2255,7 @@ const ye = g`
   progress::-webkit-progress-bar {
     background: var(--_nys-fileinput-progress-background);
   }
-`, ue = g`
+`, ue = C`
   :host {
     /* Global fileitem Styles */
     --_nys-fileitem-items-radius: var(--nys-radius-md, 4px);
@@ -2394,7 +2393,7 @@ const ye = g`
     }
   }
 `;
-var pe = Object.defineProperty, b1 = (l, e, t, o) => {
+var pe = Object.defineProperty, _1 = (l, e, t, o) => {
   for (var s = void 0, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = i(e, t, s) || s);
   return s && pe(e, t, s), s;
@@ -2474,26 +2473,26 @@ const L1 = class L1 extends u {
 };
 L1.styles = ue;
 let r1 = L1;
-b1([
+_1([
   r({ type: String })
 ], r1.prototype, "filename");
-b1([
+_1([
   r({ type: String })
 ], r1.prototype, "status");
-b1([
+_1([
   r({ type: Number })
 ], r1.prototype, "progress");
-b1([
+_1([
   r({ type: String })
 ], r1.prototype, "errorMessage");
 customElements.define("nys-fileitem", r1);
-var ge = Object.defineProperty, M = (l, e, t, o) => {
+var Ce = Object.defineProperty, M = (l, e, t, o) => {
   for (var s = void 0, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = i(e, t, s) || s);
-  return s && ge(e, t, s), s;
+  return s && Ce(e, t, s), s;
 };
-let fe = 0;
-const C1 = class C1 extends u {
+let ge = 0;
+const f1 = class f1 extends u {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this.label = "", this.description = "", this.multiple = !1, this.accept = "", this.disabled = !1, this.required = !1, this.optional = !1, this.showError = !1, this.errorMessage = "", this.dropzone = !1, this.width = "full", this._selectedFiles = [], this._dragActive = !1, this._internals = this.attachInternals();
@@ -2530,7 +2529,7 @@ const C1 = class C1 extends u {
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-fileinput-${Date.now()}-${fe++}`), this.addEventListener("invalid", this._handleInvalid);
+    super.connectedCallback(), this.id || (this.id = `nys-fileinput-${Date.now()}-${ge++}`), this.addEventListener("invalid", this._handleInvalid);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this.removeEventListener("invalid", this._handleInvalid);
@@ -2785,8 +2784,8 @@ const C1 = class C1 extends u {
     </div>`;
   }
 };
-C1.styles = ye, C1.formAssociated = !0;
-let x = C1;
+f1.styles = ye, f1.formAssociated = !0;
+let x = f1;
 M([
   r({ type: String })
 ], x.prototype, "id");
@@ -2827,7 +2826,7 @@ M([
   r({ type: String, reflect: !0 })
 ], x.prototype, "width");
 customElements.get("nys-fileinput") || customElements.define("nys-fileinput", x);
-const Ce = {
+const fe = {
   // --------- UX Team Main Library (below) --------- //
   // *** CORE *** //
   account_circle: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -2924,6 +2923,22 @@ const Ce = {
   </mask>
   <g mask="url(#mask0_12372_211)">
     <path d="M12 22C10.6333 22 9.34167 21.7375 8.125 21.2125C6.90833 20.6875 5.84583 19.9708 4.9375 19.0625C4.02917 18.1542 3.3125 17.0917 2.7875 15.875C2.2625 14.6583 2 13.3667 2 12C2 10.6167 2.2625 9.32083 2.7875 8.1125C3.3125 6.90417 4.02917 5.84583 4.9375 4.9375C5.84583 4.02917 6.90833 3.3125 8.125 2.7875C9.34167 2.2625 10.6333 2 12 2C13.3833 2 14.6792 2.2625 15.8875 2.7875C17.0958 3.3125 18.1542 4.02917 19.0625 4.9375C19.9708 5.84583 20.6875 6.90417 21.2125 8.1125C21.7375 9.32083 22 10.6167 22 12C22 13.3667 21.7375 14.6583 21.2125 15.875C20.6875 17.0917 19.9708 18.1542 19.0625 19.0625C18.1542 19.9708 17.0958 20.6875 15.8875 21.2125C14.6792 21.7375 13.3833 22 12 22ZM12 19.95C12.4333 19.35 12.8083 18.725 13.125 18.075C13.4417 17.425 13.7 16.7333 13.9 16H10.1C10.3 16.7333 10.5583 17.425 10.875 18.075C11.1917 18.725 11.5667 19.35 12 19.95ZM9.4 19.55C9.1 19 8.8375 18.4292 8.6125 17.8375C8.3875 17.2458 8.2 16.6333 8.05 16H5.1C5.58333 16.8333 6.1875 17.5583 6.9125 18.175C7.6375 18.7917 8.46667 19.25 9.4 19.55ZM14.6 19.55C15.5333 19.25 16.3625 18.7917 17.0875 18.175C17.8125 17.5583 18.4167 16.8333 18.9 16H15.95C15.8 16.6333 15.6125 17.2458 15.3875 17.8375C15.1625 18.4292 14.9 19 14.6 19.55ZM4.25 14H7.65C7.6 13.6667 7.5625 13.3375 7.5375 13.0125C7.5125 12.6875 7.5 12.35 7.5 12C7.5 11.65 7.5125 11.3125 7.5375 10.9875C7.5625 10.6625 7.6 10.3333 7.65 10H4.25C4.16667 10.3333 4.10417 10.6625 4.0625 10.9875C4.02083 11.3125 4 11.65 4 12C4 12.35 4.02083 12.6875 4.0625 13.0125C4.10417 13.3375 4.16667 13.6667 4.25 14ZM9.65 14H14.35C14.4 13.6667 14.4375 13.3375 14.4625 13.0125C14.4875 12.6875 14.5 12.35 14.5 12C14.5 11.65 14.4875 11.3125 14.4625 10.9875C14.4375 10.6625 14.4 10.3333 14.35 10H9.65C9.6 10.3333 9.5625 10.6625 9.5375 10.9875C9.5125 11.3125 9.5 11.65 9.5 12C9.5 12.35 9.5125 12.6875 9.5375 13.0125C9.5625 13.3375 9.6 13.6667 9.65 14ZM16.35 14H19.75C19.8333 13.6667 19.8958 13.3375 19.9375 13.0125C19.9792 12.6875 20 12.35 20 12C20 11.65 19.9792 11.3125 19.9375 10.9875C19.8958 10.6625 19.8333 10.3333 19.75 10H16.35C16.4 10.3333 16.4375 10.6625 16.4625 10.9875C16.4875 11.3125 16.5 11.65 16.5 12C16.5 12.35 16.4875 12.6875 16.4625 13.0125C16.4375 13.3375 16.4 13.6667 16.35 14ZM15.95 8H18.9C18.4167 7.16667 17.8125 6.44167 17.0875 5.825C16.3625 5.20833 15.5333 4.75 14.6 4.45C14.9 5 15.1625 5.57083 15.3875 6.1625C15.6125 6.75417 15.8 7.36667 15.95 8ZM10.1 8H13.9C13.7 7.26667 13.4417 6.575 13.125 5.925C12.8083 5.275 12.4333 4.65 12 4.05C11.5667 4.65 11.1917 5.275 10.875 5.925C10.5583 6.575 10.3 7.26667 10.1 8ZM5.1 8H8.05C8.2 7.36667 8.3875 6.75417 8.6125 6.1625C8.8375 5.57083 9.1 5 9.4 4.45C8.46667 4.75 7.6375 5.20833 6.9125 5.825C6.1875 6.44167 5.58333 7.16667 5.1 8Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </g>
+</svg>`,
+  link: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <mask id="mask0_7578_270" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <rect width="24" height="24" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#mask0_7578_270)">
+    <path d="M7 17C5.61667 17 4.4375 16.5125 3.4625 15.5375C2.4875 14.5625 2 13.3833 2 12C2 10.6167 2.4875 9.4375 3.4625 8.4625C4.4375 7.4875 5.61667 7 7 7H10C10.2833 7 10.5208 7.09583 10.7125 7.2875C10.9042 7.47917 11 7.71667 11 8C11 8.28333 10.9042 8.52083 10.7125 8.7125C10.5208 8.90417 10.2833 9 10 9H7C6.16667 9 5.45833 9.29167 4.875 9.875C4.29167 10.4583 4 11.1667 4 12C4 12.8333 4.29167 13.5417 4.875 14.125C5.45833 14.7083 6.16667 15 7 15H10C10.2833 15 10.5208 15.0958 10.7125 15.2875C10.9042 15.4792 11 15.7167 11 16C11 16.2833 10.9042 16.5208 10.7125 16.7125C10.5208 16.9042 10.2833 17 10 17H7ZM9 13C8.71667 13 8.47917 12.9042 8.2875 12.7125C8.09583 12.5208 8 12.2833 8 12C8 11.7167 8.09583 11.4792 8.2875 11.2875C8.47917 11.0958 8.71667 11 9 11H15C15.2833 11 15.5208 11.0958 15.7125 11.2875C15.9042 11.4792 16 11.7167 16 12C16 12.2833 15.9042 12.5208 15.7125 12.7125C15.5208 12.9042 15.2833 13 15 13H9ZM14 17C13.7167 17 13.4792 16.9042 13.2875 16.7125C13.0958 16.5208 13 16.2833 13 16C13 15.7167 13.0958 15.4792 13.2875 15.2875C13.4792 15.0958 13.7167 15 14 15H17C17.8333 15 18.5417 14.7083 19.125 14.125C19.7083 13.5417 20 12.8333 20 12C20 11.1667 19.7083 10.4583 19.125 9.875C18.5417 9.29167 17.8333 9 17 9H14C13.7167 9 13.4792 8.90417 13.2875 8.7125C13.0958 8.52083 13 8.28333 13 8C13 7.71667 13.0958 7.47917 13.2875 7.2875C13.4792 7.09583 13.7167 7 14 7H17C18.3833 7 19.5625 7.4875 20.5375 8.4625C21.5125 9.4375 22 10.6167 22 12C22 13.3833 21.5125 14.5625 20.5375 15.5375C19.5625 16.5125 18.3833 17 17 17H14Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </g>
+</svg>`,
+  mail: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <mask id="mask0_7578_308" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <rect width="24" height="24" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#mask0_7578_308)">
+    <path d="M4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM20 8L12.525 12.675C12.4417 12.725 12.3542 12.7625 12.2625 12.7875C12.1708 12.8125 12.0833 12.825 12 12.825C11.9167 12.825 11.8292 12.8125 11.7375 12.7875C11.6458 12.7625 11.5583 12.725 11.475 12.675L4 8V18H20V8ZM12 11L20 6H4L12 11ZM4 8.25V6.775V6.8V6.7875V8.25Z" fill="var(--nys-icon-color, currentcolor)"/>
   </g>
 </svg>`,
   menu: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -3079,6 +3094,30 @@ const Ce = {
   </mask>
   <g mask="url(#mask0_12372_673)">
     <path d="M7.82505 13L12.725 17.9C12.925 18.1 13.0209 18.3334 13.0125 18.6C13.0042 18.8667 12.9 19.1 12.7 19.3C12.5 19.4834 12.2667 19.5792 12 19.5875C11.7334 19.5959 11.5 19.5 11.3 19.3L4.70005 12.7C4.60005 12.6 4.52922 12.4917 4.48755 12.375C4.44588 12.2584 4.42505 12.1334 4.42505 12C4.42505 11.8667 4.44588 11.7417 4.48755 11.625C4.52922 11.5084 4.60005 11.4 4.70005 11.3L11.3 4.70005C11.4834 4.51672 11.7125 4.42505 11.9875 4.42505C12.2625 4.42505 12.5 4.51672 12.7 4.70005C12.9 4.90005 13 5.13755 13 5.41255C13 5.68755 12.9 5.92505 12.7 6.12505L7.82505 11H19C19.2834 11 19.5209 11.0959 19.7125 11.2875C19.9042 11.4792 20 11.7167 20 12C20 12.2834 19.9042 12.5209 19.7125 12.7125C19.5209 12.9042 19.2834 13 19 13H7.82505Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </g>
+</svg>`,
+  arrow_downward: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <mask id="mask0_7578_114" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <rect width="24" height="24" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#mask0_7578_114)">
+    <path d="M11 16.175V5C11 4.71667 11.0959 4.47917 11.2875 4.2875C11.4792 4.09583 11.7167 4 12 4C12.2834 4 12.5209 4.09583 12.7125 4.2875C12.9042 4.47917 13 4.71667 13 5V16.175L17.9 11.275C18.1 11.075 18.3334 10.9792 18.6 10.9875C18.8667 10.9958 19.1 11.1 19.3 11.3C19.4834 11.5 19.5792 11.7333 19.5875 12C19.5959 12.2667 19.5 12.5 19.3 12.7L12.7 19.3C12.6 19.4 12.4917 19.4708 12.375 19.5125C12.2584 19.5542 12.1334 19.575 12 19.575C11.8667 19.575 11.7417 19.5542 11.625 19.5125C11.5084 19.4708 11.4 19.4 11.3 19.3L4.70005 12.7C4.51672 12.5167 4.42505 12.2875 4.42505 12.0125C4.42505 11.7375 4.51672 11.5 4.70005 11.3C4.90005 11.1 5.13755 11 5.41255 11C5.68755 11 5.92505 11.1 6.12505 11.3L11 16.175Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </g>
+</svg>`,
+  arrow_forward: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <mask id="mask0_7578_474" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <rect width="24" height="24" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#mask0_7578_474)">
+    <path d="M16.175 13H5C4.71667 13 4.47917 12.9042 4.2875 12.7125C4.09583 12.5208 4 12.2833 4 12C4 11.7167 4.09583 11.4792 4.2875 11.2875C4.47917 11.0958 4.71667 11 5 11H16.175L11.275 6.1C11.075 5.9 10.9792 5.66667 10.9875 5.4C10.9958 5.13334 11.1 4.9 11.3 4.7C11.5 4.51667 11.7333 4.42084 12 4.4125C12.2667 4.40417 12.5 4.5 12.7 4.7L19.3 11.3C19.4 11.4 19.4708 11.5083 19.5125 11.625C19.5542 11.7417 19.575 11.8667 19.575 12C19.575 12.1333 19.5542 12.2583 19.5125 12.375C19.4708 12.4917 19.4 12.6 19.3 12.7L12.7 19.3C12.5167 19.4833 12.2875 19.575 12.0125 19.575C11.7375 19.575 11.5 19.4833 11.3 19.3C11.1 19.1 11 18.8625 11 18.5875C11 18.3125 11.1 18.075 11.3 17.875L16.175 13Z" fill="var(--nys-icon-color, currentcolor)"/>
+  </g>
+</svg>`,
+  arrow_upward: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <mask id="mask0_7578_90" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <rect width="24" height="24" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#mask0_7578_90)">
+    <path d="M11 7.825L6.09999 12.725C5.89999 12.925 5.66665 13.0208 5.39999 13.0125C5.13332 13.0042 4.89999 12.9 4.69999 12.7C4.51665 12.5 4.42082 12.2667 4.41249 12C4.40415 11.7333 4.49999 11.5 4.69999 11.3L11.3 4.7C11.4 4.6 11.5083 4.52917 11.625 4.4875C11.7417 4.44584 11.8667 4.425 12 4.425C12.1333 4.425 12.2583 4.44584 12.375 4.4875C12.4917 4.52917 12.6 4.6 12.7 4.7L19.3 11.3C19.4833 11.4833 19.575 11.7125 19.575 11.9875C19.575 12.2625 19.4833 12.5 19.3 12.7C19.1 12.9 18.8625 13 18.5875 13C18.3125 13 18.075 12.9 17.875 12.7L13 7.825V19C13 19.2833 12.9042 19.5208 12.7125 19.7125C12.5208 19.9042 12.2833 20 12 20C11.7167 20 11.4792 19.9042 11.2875 19.7125C11.0958 19.5208 11 19.2833 11 19V7.825Z" fill="var(--nys-icon-color, currentcolor)"/>
   </g>
 </svg>`,
   // *** Chevrons *** //
@@ -3359,7 +3398,7 @@ const Ce = {
     <path d="M6.30002 22.7751C5.43369 22.7751 4.69211 22.4667 4.07527 21.8498C3.45844 21.2328 3.15002 20.4913 3.15002 19.6251V10.2251C3.15002 9.35893 3.45844 8.61735 4.07527 8.00035C4.69211 7.38351 5.43369 7.0751 6.30002 7.0751H6.62502V5.8001C6.62502 4.28343 7.14586 2.99593 8.18752 1.9376C9.22919 0.879264 10.5 0.350098 12 0.350098C13.5 0.350098 14.7709 0.879264 15.8125 1.9376C16.8542 2.99593 17.375 4.28343 17.375 5.8001V7.0751H17.7C18.5662 7.0751 19.3078 7.38351 19.9248 8.00035C20.5416 8.61735 20.85 9.35893 20.85 10.2251V19.6251C20.85 20.4913 20.5416 21.2328 19.9248 21.8498C19.3078 22.4667 18.5662 22.7751 17.7 22.7751H6.30002ZM12 16.9251C12.55 16.9251 13.0209 16.7293 13.4125 16.3376C13.8042 15.9459 14 15.4751 14 14.9251C14 14.3751 13.8042 13.9043 13.4125 13.5126C13.0209 13.1209 12.55 12.9251 12 12.9251C11.45 12.9251 10.9792 13.1209 10.5875 13.5126C10.1959 13.9043 10 14.3751 10 14.9251C10 15.4751 10.1959 15.9459 10.5875 16.3376C10.9792 16.7293 11.45 16.9251 12 16.9251ZM9.77502 7.0751H14.225V5.8001C14.225 5.16126 14.0125 4.61818 13.5875 4.17085C13.1625 3.72368 12.6334 3.5001 12 3.5001C11.3667 3.5001 10.8375 3.72368 10.4125 4.17085C9.98752 4.61818 9.77502 5.16126 9.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
   </g>
 </svg>`
-}, ve = g`
+}, ve = C`
   :host {
     display: inline-block;
     --_nys-icon-size: 0.7em; /* If cap isn't supported, a fallback value of 0.7em is used, as it closely approximates the height of capital letters in most fonts. */
@@ -3460,10 +3499,10 @@ const Ce = {
     transform: scale(-1, -1);
   }
 `;
-var be = Object.defineProperty, _e = Object.getOwnPropertyDescriptor, h1 = (l, e, t, o) => {
-  for (var s = o > 1 ? void 0 : o ? _e(e, t) : e, n = l.length - 1, i; n >= 0; n--)
+var _e = Object.defineProperty, be = Object.getOwnPropertyDescriptor, h1 = (l, e, t, o) => {
+  for (var s = o > 1 ? void 0 : o ? be(e, t) : e, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
-  return o && s && be(e, t, s), s;
+  return o && s && _e(e, t, s), s;
 }, t1;
 const i1 = (t1 = class extends u {
   constructor() {
@@ -3478,7 +3517,7 @@ const i1 = (t1 = class extends u {
     ) ? e : "sm";
   }
   getIcon() {
-    const e = Ce[this.name];
+    const e = fe[this.name];
     if (!e) return null;
     const s = new DOMParser().parseFromString(e, "image/svg+xml").documentElement;
     return s instanceof SVGElement ? (s.setAttribute("role", "img"), this.ariaLabel ? (s.setAttribute("aria-label", this.ariaLabel), s.removeAttribute("aria-hidden")) : (s.setAttribute("aria-hidden", "true"), s.removeAttribute("aria-label")), s.style.rotate = `${this.rotate}deg`, s.style.color = this.color || "currentcolor", s.classList.add(`nys-icon--${this.size}`), s.classList.add("nys-icon--svg"), this.flip && s.classList.add(`nys-icon--flip-${this.flip}`), s) : null;
@@ -3525,7 +3564,7 @@ h1([
 ], i1.prototype, "size", 1);
 let me = i1;
 customElements.get("nys-icon") || customElements.define("nys-icon", me);
-const xe = g`
+const xe = C`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -3599,12 +3638,12 @@ const xe = g`
     color: var(--nys-optional-font-color);
   }
 `;
-var we = Object.defineProperty, _1 = (l, e, t, o) => {
+var we = Object.defineProperty, b1 = (l, e, t, o) => {
   for (var s = void 0, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = i(e, t, s) || s);
   return s && we(e, t, s), s;
 };
-const $1 = class $1 extends u {
+const S1 = class S1 extends u {
   constructor() {
     super(...arguments), this.id = "", this.label = "", this.description = "", this.flag = "";
   }
@@ -3623,22 +3662,22 @@ const $1 = class $1 extends u {
     `;
   }
 };
-$1.styles = xe;
-let n1 = $1;
-_1([
+S1.styles = xe;
+let n1 = S1;
+b1([
   r({ type: String })
 ], n1.prototype, "id");
-_1([
+b1([
   r({ type: String })
 ], n1.prototype, "label");
-_1([
+b1([
   r({ type: String })
 ], n1.prototype, "description");
-_1([
+b1([
   r({ type: String })
 ], n1.prototype, "flag");
 customElements.get("nys-label") || customElements.define("nys-label", n1);
-const Z1 = g`
+const Z1 = C`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
@@ -3996,7 +4035,7 @@ var ke = Object.defineProperty, Le = Object.getOwnPropertyDescriptor, q = (l, e,
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && ke(e, t, s), s;
 };
-let $e = 0;
+let Se = 0;
 var Y;
 const E = (Y = class extends u {
   // allows use of elementInternals' API
@@ -4013,7 +4052,7 @@ const E = (Y = class extends u {
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-radiogroup-${Date.now()}-${$e++}`), this.addEventListener("nys-change", this._handleRadioButtonChange), this.addEventListener("invalid", this._handleInvalid);
+    super.connectedCallback(), this.id || (this.id = `nys-radiogroup-${Date.now()}-${Se++}`), this.addEventListener("nys-change", this._handleRadioButtonChange), this.addEventListener("invalid", this._handleInvalid);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this.removeEventListener("nys-change", this._handleRadioButtonChange), this.removeEventListener("invalid", this._handleInvalid);
@@ -4142,7 +4181,7 @@ q([
   r({ type: String })
 ], E.prototype, "description", 2);
 q([
-  A()
+  B()
 ], E.prototype, "selectedValue", 2);
 q([
   r({ reflect: !0 })
@@ -4150,8 +4189,8 @@ q([
 q([
   r({ type: Boolean, reflect: !0 })
 ], E.prototype, "tile", 2);
-let Se = E;
-customElements.get("nys-radiogroup") || customElements.define("nys-radiogroup", Se);
+let $e = E;
+customElements.get("nys-radiogroup") || customElements.define("nys-radiogroup", $e);
 var Ve = Object.defineProperty, De = Object.getOwnPropertyDescriptor, F = (l, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? De(e, t) : e, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
@@ -4290,7 +4329,7 @@ F([
 ], U.prototype, "tile", 2);
 let ze = U;
 customElements.get("nys-radiobutton") || customElements.define("nys-radiobutton", ze);
-const Ee = g`
+const Ee = C`
   :host {
     /* Global Select Styles */
     --_nys-select-width: 100%;
@@ -4491,7 +4530,7 @@ var Ze = Object.defineProperty, Ie = Object.getOwnPropertyDescriptor, H = (l, e,
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && Ze(e, t, s), s;
 };
-let Ae = 0;
+let Be = 0;
 var W;
 const z = (W = class extends u {
   // allows use of elementInternals' API
@@ -4508,7 +4547,7 @@ const z = (W = class extends u {
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-select-${Date.now()}-${Ae++}`), this.addEventListener("invalid", this._handleInvalid);
+    super.connectedCallback(), this.id || (this.id = `nys-select-${Date.now()}-${Be++}`), this.addEventListener("invalid", this._handleInvalid);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this.removeEventListener("invalid", this._handleInvalid);
@@ -4688,9 +4727,9 @@ H([
 H([
   r({ reflect: !0 })
 ], z.prototype, "width", 1);
-let Be = z;
-customElements.get("nys-select") || customElements.define("nys-select", Be);
-const qe = g`
+let Ae = z;
+customElements.get("nys-select") || customElements.define("nys-select", Ae);
+const qe = C`
   :host {
     /* Global Skipnav Styles */
     --_nys-skipnav-padding-vertical: var(--nys-space-100, 8px);
@@ -4768,7 +4807,7 @@ var Ue = Object.defineProperty, I1 = (l, e, t, o) => {
     (i = l[n]) && (s = i(e, t, s) || s);
   return s && Ue(e, t, s), s;
 };
-const S1 = class S1 extends u {
+const $1 = class $1 extends u {
   constructor() {
     super(), this.id = "", this.href = "";
   }
@@ -4809,8 +4848,8 @@ const S1 = class S1 extends u {
     `;
   }
 };
-S1.styles = qe;
-let u1 = S1;
+$1.styles = qe;
+let u1 = $1;
 I1([
   r({ type: String })
 ], u1.prototype, "id");
@@ -4818,7 +4857,7 @@ I1([
   r({ type: String })
 ], u1.prototype, "href");
 customElements.get("nys-skipnav") || customElements.define("nys-skipnav", u1);
-const Pe = g`
+const Oe = C`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -4960,14 +4999,14 @@ const Pe = g`
     cursor: not-allowed;
   }
 `;
-var Oe = Object.defineProperty, Re = Object.getOwnPropertyDescriptor, m = (l, e, t, o) => {
+var Pe = Object.defineProperty, Re = Object.getOwnPropertyDescriptor, m = (l, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? Re(e, t) : e, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
-  return o && s && Oe(e, t, s), s;
+  return o && s && Pe(e, t, s), s;
 };
 let Te = 0;
 var Z;
-const b = (Z = class extends u {
+const _ = (Z = class extends u {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this.form = "", this.maxlength = null, this.width = "full", this.rows = 4, this._resize = "vertical", this.showError = !1, this.errorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
@@ -5127,61 +5166,61 @@ ${this.value}</textarea
       </label>
     `;
   }
-}, Z.VALID_WIDTHS = ["sm", "md", "lg", "full"], Z.VALID_RESIZE = ["vertical", "none"], Z.styles = Pe, Z.formAssociated = !0, Z);
+}, Z.VALID_WIDTHS = ["sm", "md", "lg", "full"], Z.VALID_RESIZE = ["vertical", "none"], Z.styles = Oe, Z.formAssociated = !0, Z);
 m([
   r({ type: String })
-], b.prototype, "id", 2);
+], _.prototype, "id", 2);
 m([
   r({ type: String, reflect: !0 })
-], b.prototype, "name", 2);
+], _.prototype, "name", 2);
 m([
   r({ type: String })
-], b.prototype, "label", 2);
+], _.prototype, "label", 2);
 m([
   r({ type: String })
-], b.prototype, "description", 2);
+], _.prototype, "description", 2);
 m([
   r({ type: String })
-], b.prototype, "placeholder", 2);
+], _.prototype, "placeholder", 2);
 m([
   r({ type: String })
-], b.prototype, "value", 2);
+], _.prototype, "value", 2);
 m([
   r({ type: Boolean, reflect: !0 })
-], b.prototype, "disabled", 2);
+], _.prototype, "disabled", 2);
 m([
   r({ type: Boolean, reflect: !0 })
-], b.prototype, "readonly", 2);
+], _.prototype, "readonly", 2);
 m([
   r({ type: Boolean, reflect: !0 })
-], b.prototype, "required", 2);
+], _.prototype, "required", 2);
 m([
   r({ type: Boolean, reflect: !0 })
-], b.prototype, "optional", 2);
+], _.prototype, "optional", 2);
 m([
   r({ type: String })
-], b.prototype, "form", 2);
+], _.prototype, "form", 2);
 m([
   r({ type: Number })
-], b.prototype, "maxlength", 2);
+], _.prototype, "maxlength", 2);
 m([
   r({ reflect: !0 })
-], b.prototype, "width", 2);
+], _.prototype, "width", 2);
 m([
   r({ type: Number })
-], b.prototype, "rows", 2);
+], _.prototype, "rows", 2);
 m([
   r({ reflect: !0 })
-], b.prototype, "resize", 1);
+], _.prototype, "resize", 1);
 m([
   r({ type: Boolean, reflect: !0 })
-], b.prototype, "showError", 2);
+], _.prototype, "showError", 2);
 m([
   r({ type: String })
-], b.prototype, "errorMessage", 2);
-let Fe = b;
+], _.prototype, "errorMessage", 2);
+let Fe = _;
 customElements.get("nys-textarea") || customElements.define("nys-textarea", Fe);
-const Ne = g`
+const Ne = C`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -5283,9 +5322,24 @@ const Ne = g`
     flex-direction: column;
   }
 
+  .nys-textinput__mask-overlay {
+    position: absolute;
+    margin: calc(
+      var(--_nys-textinput-padding) + var(--_nys-textinput-width-border)
+    );
+    color: var(--nys-color-text-weaker, #797c7f);
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    width: stretch;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    font: inherit;
+    letter-spacing: normal;
+  }
+
   .nys-textinput__input {
     color: var(--_nys-textinput-text-color);
-    font-size: var(--_nys-textinput-size-ui-md);
     border-radius: var(--_nys-textinput-radius);
     border: solid var(--_nys-textinput-color-border)
       var(--_nys-textinput-width-border);
@@ -5295,7 +5349,9 @@ const Ne = g`
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background-color: var(--_nys-textinput-background-color);
+    background-color: transparent;
+    position: relative;
+    font: inherit;
   }
   .nys-textinput__input::placeholder {
     color: var(--_nys-textinput-placeholder-color);
@@ -5394,7 +5450,7 @@ const Ne = g`
     cursor: not-allowed;
   }
 `;
-var je = Object.defineProperty, Ge = Object.getOwnPropertyDescriptor, C = (l, e, t, o) => {
+var je = Object.defineProperty, Ge = Object.getOwnPropertyDescriptor, f = (l, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? Ge(e, t) : e, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && je(e, t, s), s;
@@ -5404,7 +5460,9 @@ var I;
 const p = (I = class extends u {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "", this.showPassword = !1, this._originalErrorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this.form = "", this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.showError = !1, this.errorMessage = "", this.showPassword = !1, this._originalErrorMessage = "", this._hasUserInteracted = !1, this._maskPatterns = {
+      tel: "(___) ___-____"
+    }, this._internals = this.attachInternals();
   }
   get type() {
     return this._type;
@@ -5416,7 +5474,20 @@ const p = (I = class extends u {
   }
   // Ensure the "width" property is valid after updates
   async updated(e) {
-    e.has("width") && (await Promise.resolve(), this.width = I.VALID_WIDTHS.includes(this.width) ? this.width : "full"), e.has("disabled") && (this._validateButtonSlot("startButton"), this._validateButtonSlot("endButton"));
+    var t, o;
+    if (e.has("width") && (await Promise.resolve(), this.width = I.VALID_WIDTHS.includes(this.width) ? this.width : "full"), e.has("disabled") && (this._validateButtonSlot("startButton"), this._validateButtonSlot("endButton")), e.has("type")) {
+      const s = this._maskPatterns[this.type], n = (t = this.shadowRoot) == null ? void 0 : t.querySelector("input");
+      if (n)
+        if (s)
+          n.maxLength = s.length, this._updateOverlay(n.value, s);
+        else {
+          n.removeAttribute("maxLength");
+          const i = (o = this.shadowRoot) == null ? void 0 : o.querySelector(
+            ".nys-textinput__mask-overlay"
+          );
+          i && (i.textContent = "");
+        }
+    }
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
@@ -5480,11 +5551,38 @@ const p = (I = class extends u {
   _togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
+  _updateOverlay(e, t) {
+    var i;
+    const o = (i = this.shadowRoot) == null ? void 0 : i.querySelector(
+      ".nys-textinput__mask-overlay"
+    );
+    if (!o) return;
+    const s = e, n = t.slice(s.length);
+    o.textContent = s + n;
+  }
+  _applyMask(e, t) {
+    const o = e.replace(/\D/g, "");
+    let s = "";
+    if (this.type === "tel")
+      return o.length > 0 && (s = "(" + o.substring(0, 3)), o.length >= 4 && (s += ") " + o.substring(3, 6)), o.length > 6 && (s += "-" + o.substring(6, 10)), s;
+    let n = 0;
+    for (let i = 0; i < t.length; i++)
+      if (t[i] === "_" || t[i].match(/[d9]/i))
+        if (n < o.length)
+          s += o[n++];
+        else
+          break;
+      else
+        s += t[i];
+    return s;
+  }
   /******************** Event Handlers ********************/
   // Handle input event to check pattern validity
   _handleInput(e) {
     const t = e.target;
-    this.value = t.value, this._internals.setFormValue(this.value), this._hasUserInteracted && this._validate(), this.dispatchEvent(
+    let o = t.value;
+    const s = this._maskPatterns[this.type];
+    s && (o = this._applyMask(o, s), t.value = o, this._updateOverlay(o, s)), this.value = o, this._internals.setFormValue(this.value), this._hasUserInteracted && this._validate(), this.dispatchEvent(
       new CustomEvent("nys-input", {
         detail: { value: this.value },
         bubbles: !0,
@@ -5534,6 +5632,7 @@ const p = (I = class extends u {
             @slotchange=${this._validateButtonSlot("startButton")}
           ></slot>
           <div class="nys-textinput__container">
+            <span class="nys-textinput__mask-overlay"></span>
             <input
               class="nys-textinput__input"
               type=${this.type === "password" ? this.showPassword ? "text" : "password" : this.type}
@@ -5565,6 +5664,7 @@ const p = (I = class extends u {
                   class="eye-icon"
                   id="password-toggle"
                   suffixIcon="slotted"
+                  ariaLabel="password toggle"
                   .onClick=${() => !this.disabled && this._togglePasswordVisibility()}
                   variant="ghost"
                   size="sm"
@@ -5597,72 +5697,72 @@ const p = (I = class extends u {
   "text",
   "url"
 ], I.VALID_WIDTHS = ["sm", "md", "lg", "full"], I.styles = Ne, I.formAssociated = !0, I);
-C([
+f([
   r({ type: String })
 ], p.prototype, "id", 2);
-C([
+f([
   r({ type: String, reflect: !0 })
 ], p.prototype, "name", 2);
-C([
+f([
   r({ reflect: !0 })
 ], p.prototype, "type", 1);
-C([
+f([
   r({ type: String })
 ], p.prototype, "label", 2);
-C([
+f([
   r({ type: String })
 ], p.prototype, "description", 2);
-C([
+f([
   r({ type: String })
 ], p.prototype, "placeholder", 2);
-C([
+f([
   r({ type: String })
 ], p.prototype, "value", 2);
-C([
+f([
   r({ type: Boolean, reflect: !0 })
 ], p.prototype, "disabled", 2);
-C([
+f([
   r({ type: Boolean, reflect: !0 })
 ], p.prototype, "readonly", 2);
-C([
+f([
   r({ type: Boolean, reflect: !0 })
 ], p.prototype, "required", 2);
-C([
+f([
   r({ type: Boolean, reflect: !0 })
 ], p.prototype, "optional", 2);
-C([
+f([
   r({ type: String })
 ], p.prototype, "form", 2);
-C([
+f([
   r({ type: String })
 ], p.prototype, "pattern", 2);
-C([
+f([
   r({ type: Number })
 ], p.prototype, "maxlength", 2);
-C([
+f([
   r({ reflect: !0 })
 ], p.prototype, "width", 2);
-C([
+f([
   r({ type: Number })
 ], p.prototype, "step", 2);
-C([
+f([
   r({ type: Number })
 ], p.prototype, "min", 2);
-C([
+f([
   r({ type: Number })
 ], p.prototype, "max", 2);
-C([
+f([
   r({ type: Boolean, reflect: !0 })
 ], p.prototype, "showError", 2);
-C([
+f([
   r({ type: String })
 ], p.prototype, "errorMessage", 2);
-C([
-  A()
+f([
+  B()
 ], p.prototype, "showPassword", 2);
 let We = p;
 customElements.get("nys-textinput") || customElements.define("nys-textinput", We);
-const Ke = g`
+const Ke = C`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -5946,7 +6046,7 @@ var Xe = Object.defineProperty, Qe = Object.getOwnPropertyDescriptor, N = (l, e,
 };
 let Je = 0;
 var K;
-const P = (K = class extends u {
+const O = (K = class extends u {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this.value = "", this.checked = !1, this.disabled = !1, this.noIcon = !1, this.label = "", this.description = "", this._size = "md", this.form = "", this._internals = this.attachInternals();
@@ -6035,37 +6135,37 @@ const P = (K = class extends u {
 }, K.VALID_SIZES = ["sm", "md"], K.styles = Ke, K.formAssociated = !0, K);
 N([
   r({ type: String })
-], P.prototype, "id", 2);
+], O.prototype, "id", 2);
 N([
   r({ type: String, reflect: !0 })
-], P.prototype, "name", 2);
+], O.prototype, "name", 2);
 N([
   r({ type: String })
-], P.prototype, "value", 2);
+], O.prototype, "value", 2);
 N([
   r({ type: Boolean, reflect: !0 })
-], P.prototype, "checked", 2);
+], O.prototype, "checked", 2);
 N([
   r({ type: Boolean, reflect: !0 })
-], P.prototype, "disabled", 2);
+], O.prototype, "disabled", 2);
 N([
   r({ type: Boolean })
-], P.prototype, "noIcon", 2);
+], O.prototype, "noIcon", 2);
 N([
   r({ type: String })
-], P.prototype, "label", 2);
+], O.prototype, "label", 2);
 N([
   r({ type: String })
-], P.prototype, "description", 2);
+], O.prototype, "description", 2);
 N([
   r({ reflect: !0 })
-], P.prototype, "size", 1);
+], O.prototype, "size", 1);
 N([
   r({ type: String })
-], P.prototype, "form", 2);
-let et = P;
-customElements.get("nys-toggle") || customElements.define("nys-toggle", et);
-const tt = g`
+], O.prototype, "form", 2);
+let e2 = O;
+customElements.get("nys-toggle") || customElements.define("nys-toggle", e2);
+const t2 = C`
   :host {
     /* Global Tooltip Styles */
     --_nys-tooltip-color: var(--nys-color-text-reverse, #ffffff);
@@ -6222,12 +6322,12 @@ const tt = g`
     }
   }
 `;
-var st = Object.defineProperty, ot = Object.getOwnPropertyDescriptor, y1 = (l, e, t, o) => {
-  for (var s = o > 1 ? void 0 : o ? ot(e, t) : e, n = l.length - 1, i; n >= 0; n--)
+var s2 = Object.defineProperty, o2 = Object.getOwnPropertyDescriptor, y1 = (l, e, t, o) => {
+  for (var s = o > 1 ? void 0 : o ? o2(e, t) : e, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
-  return o && s && st(e, t, s), s;
+  return o && s && s2(e, t, s), s;
 };
-let rt = 0;
+let r2 = 0;
 const V1 = class V1 extends u {
   /**************** Lifecycle Methods ****************/
   constructor() {
@@ -6277,7 +6377,7 @@ const V1 = class V1 extends u {
     this._position = e, this.requestUpdate("position", t), this._internallyUpdatingPosition || (this._userHasSetPosition = e !== null, this._originalUserPosition = e);
   }
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-tooltip-${Date.now()}-${rt++}`), window.addEventListener("keydown", this._handleEscapeKey);
+    super.connectedCallback(), this.id || (this.id = `nys-tooltip-${Date.now()}-${r2++}`), window.addEventListener("keydown", this._handleEscapeKey);
   }
   disconnectedCallback() {
     super.disconnectedCallback(), window.removeEventListener("keydown", this._handleEscapeKey);
@@ -6330,8 +6430,8 @@ const V1 = class V1 extends u {
   }
   // Checks if user's set position fit with current viewport (Does not account for overflow texts at this moment)
   _doesPositionFit(e) {
-    var $, S;
-    const t = ($ = this.shadowRoot) == null ? void 0 : $.querySelector(".nys-tooltip__wrapper"), o = (S = this.shadowRoot) == null ? void 0 : S.querySelector(".nys-tooltip__content");
+    var S, $;
+    const t = (S = this.shadowRoot) == null ? void 0 : S.querySelector(".nys-tooltip__wrapper"), o = ($ = this.shadowRoot) == null ? void 0 : $.querySelector(".nys-tooltip__content");
     if (!t || !o || e == null) return;
     const s = t.getBoundingClientRect(), n = o.getBoundingClientRect(), i = 8, c = {
       top: s.top - i,
@@ -6348,10 +6448,10 @@ const V1 = class V1 extends u {
   }
   // Calculates the best placement based on available space (flips placement if it doesn't fit)
   async autoPositionTooltip() {
-    var $, S;
-    const e = ($ = this.shadowRoot) == null ? void 0 : $.querySelector(
+    var S, $;
+    const e = (S = this.shadowRoot) == null ? void 0 : S.querySelector(
       ".nys-tooltip__wrapper"
-    ), t = (S = this.shadowRoot) == null ? void 0 : S.querySelector(
+    ), t = ($ = this.shadowRoot) == null ? void 0 : $.querySelector(
       ".nys-tooltip__content"
     );
     if (!e || !t) return;
@@ -6368,17 +6468,17 @@ const V1 = class V1 extends u {
       "left"
     ];
     if (this._userHasSetPosition && this._originalUserPosition) {
-      const _ = this._originalUserPosition;
-      _ === "left" ? i = ["left", "right", "top", "bottom"] : _ === "right" ? i = ["right", "left", "top", "bottom"] : _ === "top" ? i = ["top", "bottom", "right", "left"] : _ === "bottom" && (i = ["bottom", "top", "right", "left"]);
+      const b = this._originalUserPosition;
+      b === "left" ? i = ["left", "right", "top", "bottom"] : b === "right" ? i = ["right", "left", "top", "bottom"] : b === "top" ? i = ["top", "bottom", "right", "left"] : b === "bottom" && (i = ["bottom", "top", "right", "left"]);
     }
-    for (const _ of i)
-      if (this._doesPositionFit(_)) {
-        this._setInternalPosition(_), await this.updateComplete, this._shiftTooltipIntoViewport(t);
+    for (const b of i)
+      if (this._doesPositionFit(b)) {
+        this._setInternalPosition(b), await this.updateComplete, this._shiftTooltipIntoViewport(t);
         return;
       }
     let c = "top", d = n.top;
-    for (const _ of i)
-      n[_] > d && (d = n[_], c = _);
+    for (const b of i)
+      n[b] > d && (d = n[b], c = b);
     this._setInternalPosition(c), await this.updateComplete, this._shiftTooltipIntoViewport(t);
   }
   // Sets flag to distinguish to position's setter that we are updating "position" prop internally
@@ -6387,13 +6487,13 @@ const V1 = class V1 extends u {
   }
   // Determines if text of tooltip over-extends outside of viewport edge and adjust tooltip for horizontal overflow
   _shiftTooltipIntoViewport(e) {
-    var _;
-    const o = ((_ = this.shadowRoot) == null ? void 0 : _.querySelector(
+    var b;
+    const o = ((b = this.shadowRoot) == null ? void 0 : b.querySelector(
       ".nys-tooltip__wrapper"
     )).getBoundingClientRect(), s = e.getBoundingClientRect(), n = o.left + o.width / 2, i = s.left < 0, c = s.right > window.innerWidth;
     this._resetTooltipPositioningStyles(e), i ? (e.style.left = "0px", e.style.transform = "none") : c && (e.style.right = "0px", e.style.left = "auto", e.style.transform = "none");
-    const d = e.getBoundingClientRect(), $ = (n - d.left) / d.width, S = Math.max(0, Math.min(1, $)) * 100;
-    e.style.setProperty("--arrow-offset-x", `${S}%`);
+    const d = e.getBoundingClientRect(), S = (n - d.left) / d.width, $ = Math.max(0, Math.min(1, S)) * 100;
+    e.style.setProperty("--arrow-offset-x", `${$}%`);
   }
   // Reposition tooltip back to original set position (e.g. top, left, bottom, right) to avoid positioning issue base on last position
   _resetTooltipPositioningStyles(e) {
@@ -6428,7 +6528,7 @@ const V1 = class V1 extends u {
     `;
   }
 };
-V1.styles = tt;
+V1.styles = t2;
 let X = V1;
 y1([
   r({ type: String })
@@ -6443,13 +6543,13 @@ y1([
   r({ type: Boolean, reflect: !0 })
 ], X.prototype, "focusable", 2);
 y1([
-  A()
+  B()
 ], X.prototype, "_active", 2);
 y1([
   r({ type: String, reflect: !0 })
 ], X.prototype, "position", 1);
 customElements.get("nys-tooltip") || customElements.define("nys-tooltip", X);
-const nt = g`
+const n2 = C`
   :host {
     /* Global Unav Header Styles */
     --_nys-unavheader-gutter: var(--nys-gutter-xs, 20px);
@@ -6812,7 +6912,7 @@ const nt = g`
       display: none;
     }
   }
-`, it = `<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
+`, i2 = `<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
   <path d="M55.1158 7.50499L58.2905 12.6494V7.5189C58.2905 7.5189 58.6487 7.26356 59.5098 7.26356C60.3708 7.26356 60.7378 7.5189 60.7378 7.5189V16.4327C60.7378 16.4327 60.3942 16.689 59.5215 16.689C58.6487 16.689 58.3295 16.4605 58.3295 16.4605L55.1421 11.3171V16.4337C55.1421 16.4337 54.7848 16.69 53.9111 16.69C53.0374 16.69 52.7065 16.4337 52.7065 16.4337V7.51989C52.7065 7.51989 53.0384 7.26456 53.9248 7.26456C54.8112 7.26456 55.1148 7.50697 55.1148 7.50697L55.1158 7.50499Z" fill="#457AA5"/>
   <path d="M67.2209 12.5948H64.9063V14.8709H68.2538C68.2538 14.8709 68.5047 15.1531 68.5047 15.772C68.5047 16.391 68.2538 16.688 68.2538 16.688H62.4589V7.26257H67.9892C67.9892 7.26257 68.2538 7.54572 68.2538 8.17859C68.2538 8.81146 67.9892 9.09362 67.9892 9.09362H64.9063V10.7637H67.2209C67.2209 10.7637 67.4728 11.0598 67.4728 11.6787C67.4728 12.2977 67.2209 12.5948 67.2209 12.5948Z" fill="#457AA5"/>
   <path d="M71.4802 16.4327L68.9791 7.5189C68.9791 7.5189 69.3491 7.26356 70.2101 7.26356C71.0711 7.26356 71.4275 7.5189 71.4275 7.5189L72.6839 12.0434C72.7766 12.3802 72.8166 12.6365 72.8557 12.7845C72.8557 12.7428 72.9221 12.3663 73.0011 12.0573L74.0984 7.5189C74.0984 7.5189 74.5211 7.26356 75.1176 7.26356C75.7141 7.26356 76.084 7.5189 76.084 7.5189L77.3004 12.7845C77.3004 12.6623 77.3795 12.3255 77.4586 12.0573L78.756 7.5189C78.7686 7.5189 79.1132 7.26356 79.9596 7.26356C80.806 7.26356 81.1897 7.5189 81.1897 7.5189L78.6496 16.4327C78.6496 16.4327 78.2922 16.6751 77.4859 16.689C76.5468 16.689 76.2158 16.4327 76.2158 16.4327L75.223 12.2987C75.1449 11.9887 75.0902 11.6529 75.0785 11.5844L74.9184 12.2987L73.9266 16.4327C73.9266 16.4327 73.583 16.689 72.7092 16.689C71.8355 16.689 71.4802 16.4327 71.4802 16.4327Z" fill="#457AA5"/>
@@ -6829,10 +6929,10 @@ const nt = g`
   <path d="M67.6348 51.8019C67.6348 51.8019 67.6173 51.782 67.6173 51.7303C67.6173 51.6787 67.6348 51.6588 67.6348 51.6588H68.5564C68.5564 51.6588 68.5749 51.6806 68.5749 51.7303C68.5749 51.78 68.5564 51.8019 68.5564 51.8019H68.1932V52.9205C68.1932 52.9205 68.1659 52.9404 68.0976 52.9404C68.0292 52.9404 67.998 52.9205 67.998 52.9205V51.8019H67.6348Z" fill="#154973"/>
   <path d="M69.4282 52.8659C69.4135 52.8748 69.3891 52.8858 69.3471 52.8858C69.3178 52.8858 69.2837 52.8798 69.27 52.8659L68.9889 52.1476C68.9723 52.1088 68.9459 52.0323 68.944 52.0214C68.944 52.0264 68.9371 52.1277 68.9332 52.1565L68.8815 52.9205C68.8815 52.9205 68.8561 52.9404 68.7858 52.9404C68.7155 52.9404 68.6862 52.9205 68.6862 52.9205L68.7839 51.6787C68.7839 51.6787 68.8112 51.6588 68.8776 51.6588C68.9518 51.6588 68.9781 51.6787 68.9781 51.6787L69.3042 52.5162L69.3471 52.6533C69.3481 52.6473 69.3774 52.5559 69.392 52.5162L69.7181 51.6787C69.7181 51.6787 69.7464 51.6588 69.8206 51.6588C69.886 51.6588 69.9124 51.6787 69.9124 51.6787L70.01 52.9205C70.01 52.9205 69.9807 52.9404 69.9104 52.9404C69.8401 52.9404 69.8167 52.9205 69.8167 52.9205L69.763 52.1546L69.7523 52.0194C69.7523 52.0194 69.722 52.1148 69.7093 52.1456L69.4282 52.8659Z" fill="#154973"/>
 </svg>`;
-var at = Object.defineProperty, l1 = (l, e, t, o) => {
+var a2 = Object.defineProperty, l1 = (l, e, t, o) => {
   for (var s = void 0, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = i(e, t, s) || s);
-  return s && at(e, t, s), s;
+  return s && a2(e, t, s), s;
 };
 const D1 = class D1 extends u {
   constructor() {
@@ -6854,7 +6954,7 @@ const D1 = class D1 extends u {
     ];
   }
   _getNysLogo() {
-    return new DOMParser().parseFromString(it, "image/svg+xml").documentElement;
+    return new DOMParser().parseFromString(i2, "image/svg+xml").documentElement;
   }
   _toggleTrustbar() {
     this.trustbarVisible = !this.trustbarVisible, this.trustbarVisible && (this.languageVisible = !1, this.searchDropdownVisible = !1);
@@ -7115,31 +7215,31 @@ const D1 = class D1 extends u {
     `;
   }
 };
-D1.styles = nt;
-let O = D1;
+D1.styles = n2;
+let P = D1;
 l1([
   r({ type: Boolean })
-], O.prototype, "trustbarVisible");
+], P.prototype, "trustbarVisible");
 l1([
   r({ type: Boolean })
-], O.prototype, "searchDropdownVisible");
+], P.prototype, "searchDropdownVisible");
 l1([
   r({ type: Boolean })
-], O.prototype, "languageVisible");
+], P.prototype, "languageVisible");
 l1([
   r({ type: Boolean })
-], O.prototype, "isSearchFocused");
+], P.prototype, "isSearchFocused");
 l1([
   r({ type: Boolean })
-], O.prototype, "hideTranslate");
+], P.prototype, "hideTranslate");
 l1([
   r({ type: Boolean })
-], O.prototype, "hideSearch");
+], P.prototype, "hideSearch");
 l1([
   r({ type: String, reflect: !0 })
-], O.prototype, "languages");
-customElements.get("nys-unavheader") || customElements.define("nys-unavheader", O);
-const lt = g`
+], P.prototype, "languages");
+customElements.get("nys-unavheader") || customElements.define("nys-unavheader", P);
+const l2 = C`
   :host {
     /* Global Header Styles */
     --_nys-globalheader-text-color: var(
@@ -7420,10 +7520,10 @@ const lt = g`
     }
   }
 `;
-var ct = Object.defineProperty, g1 = (l, e, t, o) => {
+var c2 = Object.defineProperty, C1 = (l, e, t, o) => {
   for (var s = void 0, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = i(e, t, s) || s);
-  return s && ct(e, t, s), s;
+  return s && c2(e, t, s), s;
 };
 const M1 = class M1 extends u {
   constructor() {
@@ -7450,10 +7550,10 @@ const M1 = class M1 extends u {
     );
     o && s && (o.innerHTML = "", s.innerHTML = "", t.forEach((d) => {
       if (d.nodeType === Node.ELEMENT_NODE) {
-        const $ = d.cloneNode(!0), S = d.cloneNode(!0);
-        ["script", "iframe", "object", "embed, img"].forEach((A1) => {
-          $.querySelectorAll(A1).forEach((B1) => B1.remove());
-        }), o.appendChild($), s.appendChild(S), d.remove();
+        const S = d.cloneNode(!0), $ = d.cloneNode(!0);
+        ["script", "iframe", "object", "embed, img"].forEach((B1) => {
+          S.querySelectorAll(B1).forEach((A1) => A1.remove());
+        }), o.appendChild(S), s.appendChild($), d.remove();
       }
     }));
   }
@@ -7524,25 +7624,25 @@ const M1 = class M1 extends u {
     `;
   }
 };
-M1.styles = lt;
+M1.styles = l2;
 let s1 = M1;
-g1([
+C1([
   r({ type: String })
 ], s1.prototype, "appName");
-g1([
+C1([
   r({ type: String })
 ], s1.prototype, "agencyName");
-g1([
+C1([
   r({ type: String })
 ], s1.prototype, "homepageLink");
-g1([
-  A()
+C1([
+  B()
 ], s1.prototype, "slotHasContent");
-g1([
-  A()
+C1([
+  B()
 ], s1.prototype, "isMobileMenuOpen");
 customElements.get("nys-globalheader") || customElements.define("nys-globalheader", s1);
-const dt = g`
+const d2 = C`
   :host {
     /* Global Footer Styles */
     --_nys-globalfooter-text-color: var(
@@ -7698,10 +7798,10 @@ const dt = g`
     }
   }
 `;
-var ht = Object.defineProperty, w1 = (l, e, t, o) => {
+var h2 = Object.defineProperty, w1 = (l, e, t, o) => {
   for (var s = void 0, n = l.length - 1, i; n >= 0; n--)
     (i = l[n]) && (s = i(e, t, s) || s);
-  return s && ht(e, t, s), s;
+  return s && h2(e, t, s), s;
 };
 const z1 = class z1 extends u {
   constructor() {
@@ -7729,8 +7829,8 @@ const z1 = class z1 extends u {
     o && (o.classList.toggle("columns", s), o.classList.toggle("small", !s), o.innerHTML = "", t.forEach((c) => {
       if (c.nodeType === Node.ELEMENT_NODE) {
         const d = c.cloneNode(!0);
-        ["script", "iframe", "object", "embed", "img"].forEach((S) => {
-          d.querySelectorAll(S).forEach((_) => _.remove());
+        ["script", "iframe", "object", "embed", "img"].forEach(($) => {
+          d.querySelectorAll($).forEach((b) => b.remove());
         }), o.appendChild(d), c.remove();
       }
     }));
@@ -7754,7 +7854,7 @@ const z1 = class z1 extends u {
     `;
   }
 };
-z1.styles = dt;
+z1.styles = d2;
 let d1 = z1;
 w1([
   r({ type: String })
@@ -7763,10 +7863,10 @@ w1([
   r({ type: String })
 ], d1.prototype, "homepageLink");
 w1([
-  A()
+  B()
 ], d1.prototype, "slotHasContent");
 customElements.get("nys-globalfooter") || customElements.define("nys-globalfooter", d1);
-const yt = g`
+const y2 = C`
   :host {
     /* Global Footer Styles */
     --_nys-unavfooter-link-color: var(
@@ -7922,7 +8022,7 @@ const yt = g`
       --_nys-unavfooter-gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`, ut = `<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
+`, u2 = `<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
   <path d="M55.1158 7.50499L58.2905 12.6494V7.5189C58.2905 7.5189 58.6487 7.26356 59.5098 7.26356C60.3708 7.26356 60.7378 7.5189 60.7378 7.5189V16.4327C60.7378 16.4327 60.3942 16.689 59.5215 16.689C58.6487 16.689 58.3295 16.4605 58.3295 16.4605L55.1421 11.3171V16.4337C55.1421 16.4337 54.7848 16.69 53.9111 16.69C53.0374 16.69 52.7065 16.4337 52.7065 16.4337V7.51989C52.7065 7.51989 53.0384 7.26456 53.9248 7.26456C54.8112 7.26456 55.1148 7.50697 55.1148 7.50697L55.1158 7.50499Z" fill="white"/>
   <path d="M67.2209 12.5948H64.9063V14.8709H68.2538C68.2538 14.8709 68.5047 15.1531 68.5047 15.772C68.5047 16.391 68.2538 16.688 68.2538 16.688H62.4589V7.26257H67.9892C67.9892 7.26257 68.2538 7.54572 68.2538 8.17859C68.2538 8.81146 67.9892 9.09362 67.9892 9.09362H64.9063V10.7637H67.2209C67.2209 10.7637 67.4728 11.0598 67.4728 11.6787C67.4728 12.2977 67.2209 12.5948 67.2209 12.5948Z" fill="white"/>
   <path d="M71.4802 16.4327L68.9791 7.5189C68.9791 7.5189 69.3491 7.26356 70.2101 7.26356C71.0711 7.26356 71.4275 7.5189 71.4275 7.5189L72.6839 12.0434C72.7766 12.3802 72.8166 12.6365 72.8557 12.7845C72.8557 12.7428 72.9221 12.3663 73.0011 12.0573L74.0984 7.5189C74.0984 7.5189 74.5211 7.26356 75.1176 7.26356C75.7141 7.26356 76.084 7.5189 76.084 7.5189L77.3004 12.7845C77.3004 12.6623 77.3795 12.3255 77.4586 12.0573L78.756 7.5189C78.7686 7.5189 79.1132 7.26356 79.9596 7.26356C80.806 7.26356 81.1897 7.5189 81.1897 7.5189L78.6496 16.4327C78.6496 16.4327 78.2922 16.6751 77.4859 16.689C76.5468 16.689 76.2158 16.4327 76.2158 16.4327L75.223 12.2987C75.1449 11.9887 75.0902 11.6529 75.0785 11.5844L74.9184 12.2987L73.9266 16.4327C73.9266 16.4327 73.583 16.689 72.7092 16.689C71.8355 16.689 71.4802 16.4327 71.4802 16.4327Z" fill="white"/>
@@ -7941,7 +8041,7 @@ const yt = g`
 </svg>`, E1 = class E1 extends u {
   /**************** Functions ****************/
   _getNysLogo() {
-    return new DOMParser().parseFromString(ut, "image/svg+xml").documentElement;
+    return new DOMParser().parseFromString(u2, "image/svg+xml").documentElement;
   }
   render() {
     return a`
@@ -7975,7 +8075,7 @@ const yt = g`
     `;
   }
 };
-E1.styles = yt;
+E1.styles = y2;
 let m1 = E1;
 customElements.get("nys-unavfooter") || customElements.define("nys-unavfooter", m1);
 export {
@@ -7993,14 +8093,14 @@ export {
   n1 as NysLabel,
   a1 as NysOption,
   ze as NysRadiobutton,
-  Se as NysRadiogroup,
-  Be as NysSelect,
+  $e as NysRadiogroup,
+  Ae as NysSelect,
   u1 as NysSkipnav,
   Fe as NysTextarea,
   We as NysTextinput,
-  et as NysToggle,
+  e2 as NysToggle,
   X as NysTooltip,
   m1 as NysUnavFooter,
-  O as NysUnavHeader
+  P as NysUnavHeader
 };
 //# sourceMappingURL=nysds.es.js.map
