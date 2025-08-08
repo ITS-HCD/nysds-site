@@ -27,7 +27,7 @@ navOrder: 1
     <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
       <div class="card__inner">
         <div class="card__media">
-          <iframe width="100%" height="100%" src="{{ post.data.video_url }}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+          <img src="https://i.ytimg.com/vi/{{ post.data.video_url }}/hq720.jpg" alt="Thumbnail image for {{ post.data.title }}" />
         </div>
         <div class="card__title">{{ post.data.title }}</div>
         <div class="card__desc">

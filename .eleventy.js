@@ -52,6 +52,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(eleventyPluginRss);
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(timeToRead, { style: 'short' });
+    
     // watch for changes to css
     eleventyConfig.addWatchTarget("./src/css/");
 
