@@ -443,6 +443,7 @@ a.card:focus {
 
 .post-list__item {
   border-bottom: 1px solid var(--nys-color-neutral-100);
+  margin-bottom: var(--nys-space-400);
 }
 
 .post-list__title {

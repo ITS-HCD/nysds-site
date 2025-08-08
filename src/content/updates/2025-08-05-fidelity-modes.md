@@ -7,7 +7,6 @@ description: Unlock new workflows by building your design system with a fidelity
 image: /assets/img/components/backtotop.svg
 image_alt: An illustration of a back-to-top button.
 image_header: /assets/img/components/backtotop-header.svg
-navOrder: 4
 ---
 
 ![Screenshot of a Fidelity mode switcher](https://miro.medium.com/v2/resize:fit:2000/1*tJs_VBgPLEmXaZw7Oe8mQQ.png)
