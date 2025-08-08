@@ -13,7 +13,7 @@
 
   <div class="nys-grid-row">
     <div class="nys-grid-col nys-flex-1"><time datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time></div>
-    <div class="nys-grid-col nys-flex-1">{{ page.author }}</div>
+    <div class="nys-grid-col nys-flex-1">{{ author }}</div>
   </div>
   
   
@@ -28,10 +28,18 @@
     {% endif %}
   </div>
 
-  {{ content | safe }}
-
-  <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
-  <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
+  <div class="nys-grid-row nys-margin-t-400">
+    <div class="nys-grid-col">
+    {{ content | safe }}
+    </div>
+  </div>
+  
+    <div class="nys-grid-row nys-margin-t-400">
+    <div class="nys-grid-col">
+      <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
+      <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
+    </div>
+  </div>
 
 </section>
   </div>
