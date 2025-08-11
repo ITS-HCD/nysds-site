@@ -6,6 +6,8 @@ const eleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const timeToRead = require('eleventy-plugin-time-to-read');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { execSync } = require('child_process')
+const matter = require('gray-matter');
+const fs = require('fs');
 
 // filters
 const limit = require("./src/_11ty/filters/limit.js");
@@ -53,6 +55,17 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(timeToRead, { style: 'short' });
     
+    eleventyConfig.addShortcode("youtube", (videoURL, title) => {
+        const url = new URL(videoURL);
+        const id = url.searchParams.get("v");
+        return `
+                <iframe class="yt-shortcode"
+                src="https://www.youtube-nocookie.com/embed/${id}"
+                title="YouTube video player${title ? ` for ${title}` : ""}"
+                frameborder="0"
+                allowfullscreen>
+                </iframe>`;
+    });
     // watch for changes to css
     eleventyConfig.addWatchTarget("./src/css/");
 
