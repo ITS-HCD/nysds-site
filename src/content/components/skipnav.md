@@ -88,7 +88,7 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 {% set preview %}<nys-skipnav href="#main-content1"></nys-skipnav>
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 <div id="main-content1" style="padding:10px 30px; background-color: #f0f0f0;">
-  <h1>Main Content</h1>
+  <2>Main Content</h2>
   <p style="display:flex; align-items:top; gap:10px;">
       <nys-icon name="info" size="2xl"></nys-icon>
       Press Tab to focus on the hidden "Skip to main content" link. This feature 

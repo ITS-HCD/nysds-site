@@ -48,7 +48,7 @@ NYS Design System is designed to speed up and standardize UI design. Here’s ho
 - Use the project template to start with the correct agency theming and design variables.
 - Leverage components with built-in properties and variants to speed up your workflow.
 
-# Next Steps: Learn More About the Design System
+## Next Steps: Learn More About the Design System
 
 NYS Design System isn’t just about using components—it’s about creating better, more accessible digital experiences for New Yorkers.
 
