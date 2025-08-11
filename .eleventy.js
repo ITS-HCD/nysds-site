@@ -6,8 +6,6 @@ const eleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const timeToRead = require('eleventy-plugin-time-to-read');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { execSync } = require('child_process')
-const matter = require('gray-matter');
-const fs = require('fs');
 
 // filters
 const limit = require("./src/_11ty/filters/limit.js");
