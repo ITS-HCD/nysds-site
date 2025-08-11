@@ -9,12 +9,13 @@ site_nav: false
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+<!-- Home Hero -->
 <div class="hero">
   <div class="nys-grid-container-widescreen">
     <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
       <div
-        class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex nys-flex-column nys-flex-align-center nys-flex-justify-center nys-top-300">
-        <img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="NYSDS, New York State's Design System"
+        class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex nys-flex-column nys-flex-align-center nys-flex-justify-center">
+        <img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System"
           style="width: 75%;">
         <div class="byline nys-grid-offset-2">
           <p>The New York State Design System (NYSDS) helps teams rapidly build usable, accessible, mobile-friendly web
@@ -23,13 +24,14 @@ site_nav: false
         </div>
       </div>
       <div class="nys-tablet:nys-grid-col-6 nys-display-none nys-desktop:display-block">
-        <img src="{{ '/assets/img/homepage-grid.svg' | url }}" alt="NYSDS, New York State's Design System"
+        <img src="{{ '/assets/img/homepage-grid.svg' | url }}" alt=""
           style="width: 100%;">
       </div>
     </div>
   </div>
 </div>
 
+<!-- Get Started Section -->
 <div class="nys-grid-container-widescreen nys-top-800">
   <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -44,6 +46,8 @@ site_nav: false
     </div>
   </div>
 </div>
+
+<!-- About the NYSDS Section -->
 <div class="color-theme--weaker nys-top-800">
   <div class="nys-grid-container-widescreen">
     <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
@@ -62,6 +66,9 @@ site_nav: false
             <div class="card__desc">This a collection of common front-end code grouped together in components that can
               be shared and reused across multiple codebases, often with design, state, and default behavior built-in.
             </div>
+            <div class="card__action">
+              <nys-button label="View Components" size="sm" variant="outline" href="/components"></nys-button>
+            </div>
           </div>
         </div>
       </div>
@@ -72,8 +79,13 @@ site_nav: false
               <img src="/assets/img/flex-card.svg" alt="flex">
             </div>
             <div class="card__title">Design Libraries</div>
-            <div class="card__desc">This is a library of icons, styles, components, and variables that can be shared and
-              reused across multiple design files for consistent design and prototyping.</div>
+            <div class="card__desc">
+              This is a library of icons, styles, components, and variables that can be shared and
+              reused across multiple design files for consistent design and prototyping.
+            </div>
+            <div class="card__action">
+              <nys-button label="View NYSDS Figma" size="sm" suffixIcon="lock_filled" variant="outline" href="/components"><nys-button>
+            </div>
           </div>
         </div>
       </div>

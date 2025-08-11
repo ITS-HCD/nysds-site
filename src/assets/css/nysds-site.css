@@ -336,24 +336,6 @@ ex-header__title {
     display: block;
 }
 
-.card--do {
-    background-color: var(--nys-color-success-weak);
-    border-color: var(--nys-color-success-weak);
-}
-
-.card--do h3 {
-    color: var(--nys-color-success);
-}
-
-.card--dont {
-    background-color: var(--nys-color-danger-weak);
-    border-color: var(--nys-color-danger-weak);
-}
-
-.card--dont h3 {
-    color: var(--nys-color-danger);
-}
-
 .card__media {
     aspect-ratio: 2 / 1;
     margin-bottom: var(--nys-space-100);
@@ -381,19 +363,25 @@ ex-header__title {
     line-height: var(--nys-font-lineheight-sm);
 }
 
-.card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: transparent;
+.card__action {
+    margin-top: var(--nys-space-200);
 }
+
+/* Linked Card */
 
 a.card {
     color: inherit;
     text-decoration: none;
     aspect-ratio: 1 / 1;
     max-width: 100%;;
+}
+
+a.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: transparent;
 }
 
 a.card:hover .card__title,
@@ -406,6 +394,8 @@ a.card:focus {
     outline: var(--nys-border-width-sm, 1px) solid var(--nys-color-focus, #004dd1);
     outline-offset: 0;
 }
+
+/* Card Variants*/
 
 .card__no-border {
     border: none;
@@ -432,6 +422,25 @@ a.card:focus {
 .card__flat {
     background-color: var(--nys-color-theme-weaker);
 }
+
+.card--do {
+    background-color: var(--nys-color-success-weak);
+    border-color: var(--nys-color-success-weak);
+}
+
+.card--do .card__title {
+    color: var(--nys-color-success);
+}
+
+.card--dont {
+    background-color: var(--nys-color-danger-weak);
+    border-color: var(--nys-color-danger-weak);
+}
+
+.card--dont .card__title {
+    color: var(--nys-color-danger);
+}
+
 
 /* Post List*/
 
@@ -728,7 +737,7 @@ li > .section-nav__list {
 
 /* Home Hero */
 .hero {
-    padding-top: var(--nys-space-100);
+    padding: 0;
     color: var(--nys-color-ink);
     background-color: var(--nys-color-info-weak);
 }
@@ -737,10 +746,6 @@ li > .section-nav__list {
     background-color: var(--nys-color-theme-weaker);
 }
 
-.hero__media {
-    margin-bottom: var(--nys-space-300);
-    overflow: hidden;
-}
 
 /* Colors */
 .color-theme--weaker {
