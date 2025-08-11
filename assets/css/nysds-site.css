@@ -1048,6 +1048,15 @@ opacity: 1;
     opacity: 1;
   }
 
+/* YouTube Embed */
+
+iframe.yt-shortcode {
+    height: 50vw;
+    margin: 1rem 0;
+    max-height: 25rem;
+    width: 100%;
+}
+
 /* Additional Tweaks */
 
 code {
