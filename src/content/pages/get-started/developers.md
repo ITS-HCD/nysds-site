@@ -1,8 +1,8 @@
 ---
-permalink: /getting-started/developers/
+permalink: /get-started/developers/
 title: "Developers"
 description: "Integrate the New York State Design System into your project with web components, design tokens, and styles. Learn how to install, customize, and use it in Angular, .NET, React, and more."
-section: Getting Started
+section: Get Started
 ---
 
 # Developers
