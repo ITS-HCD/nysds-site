@@ -6,50 +6,28 @@
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-desktop:nys-grid-col-10">  
-    
+    <section>
+      <h1>{{ title }}</h1>
+      <time datetime="{{ page.date | dateISO }}">
+        {{ page.date | dateFull }}
+      </time>
 
-<section>
+    <div>
+        {% if tags %}
+          <ul>
+            {% for tag in tags %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
 
-  
-  <h1>{{ title }}</h1>
-  <time datetime="{{ page.date | dateISO }}">
-    {{ page.date | dateFull }}
-  </time>
+      {{ content | safe }}
 
- <div>
-    {% if tags %}
-      <ul>
-        {% for tag in tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </div>
+      <div>{% if previousVideo %}Up Next: <a href="{{ previousVideo.url }}" title="Read: {{ previousVideo.data.title | safe }}"><b>{{ previousVideo.data.title }}</b></a>{% endif %}</div>
+      <div>{% if nextVideo %}Previous : <a href="{{ nextVideo.url }}" title="Read: {{ nextVideo.data.title | safe }}"><b>{{ nextVideo.data.title }}</b></a>{% endif %}</div>
 
-<div style="position: relative;
-width: 100%;
-height: 0;
-padding-bottom: 56.25%; margin-bottom: 1rem;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;" allowfullscreen></iframe>
-</div>
-
-{# <iframe width="100%" height="100%" src="{{ video_url }}" title="YouTube video player" frameborder="0" allowfullscreen></iframe> #}
-
-
-  {{ content | safe }}
-
-
- 
-
-  <div>{% if previousVideo %}Up Next: <a href="{{ previousVideo.url }}" title="Read: {{ previousVideo.data.title | safe }}"><b>{{ previousVideo.data.title }}</b></a>{% endif %}</div>
-  <div>{% if nextVideo %}Previous : <a href="{{ nextVideo.url }}" title="Read: {{ nextVideo.data.title | safe }}"><b>{{ nextVideo.data.title }}</b></a>{% endif %}</div>
-
-</section>
+    </section>
   </div>
   <aside class="nys-desktop:nys-grid-col-2">
     {% include "partials/onpage-nav.njk" %}

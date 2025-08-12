@@ -56,6 +56,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addShortcode("youtube", (videoURL, title) => {
         const url = new URL(videoURL);
         const id = url.searchParams.get("v");
+
         return `
                 <iframe class="yt-shortcode"
                 src="https://www.youtube-nocookie.com/embed/${id}"
