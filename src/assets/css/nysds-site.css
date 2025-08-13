@@ -238,9 +238,10 @@ a:active {
     padding-top: var(--nys-space-200);
     padding-bottom: var(--nys-space-200);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    flex-direction: column-reverse;
+    gap: var(--nys-space-200);
+
 }
 
 .section-header__title {
@@ -248,7 +249,6 @@ a:active {
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 5px;
-    margin-top: var(--nys-space-200);
 }
 
 .section-header__media {
@@ -495,8 +495,10 @@ a.card:focus {
 
 .section-nav {
     top: var(--nys-space-600);
-    margin-top: var(--nys-space-600);
-    margin-bottom: var(--nys-space-200);
+    /* margin-top: var(--nys-space-600); */
+    /* margin-bottom: var(--nys-space-200); */
+    margin-top: var(--nys-space-250);
+    margin-bottom: 0;
     font-size: var(--nys-font-size-ui-md);
     overflow: hidden;
 }
@@ -626,6 +628,7 @@ li > .section-nav__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    line-height: 1;
     padding: var(--nys-space-150) var(--nys-space-250);
     border-radius: var(--nys-radius-xl);
     border: 2px solid var(--nys-color-neutral-400);
@@ -640,6 +643,9 @@ li > .section-nav__list {
 }
 
 @media (min-width: 1024px) {
+    .section-nav {
+        margin-top: var(--nys-space-600);
+    }
     .section-nav__toggle {
         display: none;
     }
