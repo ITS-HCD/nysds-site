@@ -1,3 +1,10 @@
+/* 🫣 NYS DESIGN SYSTEM
+   We’re early in our journey, so you might spot
+   some hand-rolled CSS here and there. The plan
+   is to keep adding to the design system until
+   these custom bits can retire in style.
+*/
+
 p,
 ul,
 ol,
@@ -735,16 +742,71 @@ li > .section-nav__list {
     }
 }
 
-/* Home Hero */
+/* Hero */
+
 .hero {
-    padding: 0;
     color: var(--nys-color-ink);
-    background-color: var(--nys-color-info-weak);
+    background-color: var(--nys-color-theme-weaker);
+    margin: 0;
+    text-align: center;
+}
+.hero__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: var(--nys-space-200);
+    gap: var(--nys-space-400);
+    max-width: 87.5rem;
+    margin: 0 auto;
+}
+.hero__content {
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--nys-space-100);
+}
+.hero__media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.hero img,
+.hero__media img {
+    width: auto;
+    max-width: 100%;
 }
 
-.hero--home {
-    background-color: var(--nys-color-theme-weaker);
+@media (min-width: 768px) {
+    .hero__inner {
+        flex-direction: row;
+        text-align: left;
+        padding: var(--nys-space-400) var(--nys-space-200);
+    }
+    .hero__content {
+        text-align: left;
+        align-items: flex-start;
+
+    }
+    .hero__media {
+        justify-content: flex-end;
+    }
+    .hero__media img {
+        width: auto;
+        max-width: 100%;
+    }
 }
+@media (min-width: 1024px) {
+    .hero__inner {
+        padding: var(--nys-space-400) var(--nys-space-800);
+    }
+}
+
 
 
 /* Colors */
