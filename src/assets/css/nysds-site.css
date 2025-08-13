@@ -755,7 +755,7 @@ li > .section-nav__list {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    padding: var(--nys-space-200);
+    padding: var(--nys-space-400) var(--nys-space-200);
     gap: var(--nys-space-400);
     max-width: 87.5rem;
     margin: 0 auto;
@@ -791,7 +791,6 @@ li > .section-nav__list {
     .hero__content {
         text-align: left;
         align-items: flex-start;
-
     }
     .hero__media {
         justify-content: flex-end;
@@ -803,7 +802,7 @@ li > .section-nav__list {
 }
 @media (min-width: 1024px) {
     .hero__inner {
-        padding: var(--nys-space-400) var(--nys-space-800);
+        padding: var(--nys-space-400) var(--nys-space-600);
     }
 }
 
