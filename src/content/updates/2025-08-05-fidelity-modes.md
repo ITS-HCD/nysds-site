@@ -4,14 +4,11 @@ title: Rapid Wireframes to Prototypes with Fidelity Modes
 author: Leo Vogel
 subtitle: Instantly Transform FigJam Wireframes to Polished Figma Prototypes with a Design System powered by Figma Variables
 description: Unlock new workflows by building your design system with a fidelity routing collection to swap between low-fi, mid-fi, and high-fi in one click.
-image: /assets/img/components/backtotop.svg
-image_alt: An illustration of a back-to-top button.
-image_header: /assets/img/components/backtotop-header.svg
+image: /assets/i/2025/fidelity-modes-thumbnail.png
+image_alt: Illustration of a fidelity mode switcher
 ---
 
-![Screenshot of a Fidelity mode switcher](https://miro.medium.com/v2/resize:fit:2000/1*tJs_VBgPLEmXaZw7Oe8mQQ.png)
-
-<!-- # Instantly Transform FigJam Wireframes to Polished Figma Prototypes with a Design System powered by Figma Variables -->
+![Illustration of a fidelity mode switcher](/assets/i/2025/fidelity-modes-thumbnail.png)
 
 Unlock new workflows by building your design system with a fidelity routing collection to swap between low-fi, mid-fi, and high-fi in one click.
 
@@ -19,19 +16,19 @@ Designing with speed and consistency doesn’t have to mean compromising on qual
 
 Stakeholders, working under constrained budgets and timelines, are often hesitant to start with low fidelity because of the time (and associated cost) it takes to recreate screens in high fidelity. This friction often discourages early ideation and iteration.
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*7WKthx9FEmcpqHsANDttIw.gif)
+![Animation of variable logic for different fidelity modes](/assets/i/2025/fidelity-modes-animation.gif)
 
 Components are built from Variables and Text Styles that change value depending on the Fidelity mode set.The approach described here removes that barrier by making the transition from low to high fidelity instantaneous. It enables teams to think through layout and content before discussing visual design. This not only reduces time and cost during the design process, but also removes the need for separate wireframing tools. It opens up new workflows — like designing in high or mid fidelity and instantly switching to low fidelity for clearer communication with stakeholders.
 
 Some teams build separate wireframing libraries and use Figma’s library swap feature. The downside to this is that you need to maintain two separate libraries. By adopting this approach, teams who build their own custom components that don’t yet exist in the design system, as long as they are building with the design system’s published Figma Variables and Text Styles, will automatically have wireframing versions of their components that can be used in FigJam with the workaround explained below.
 
-This article walks you through how I created a more streamlined UX workflow while working on the [**New York State Design System**](http://designsystem.ny.gov) — and how you can apply these techniques to your own design system.
+This article walks you through how I created a more streamlined UX workflow while working on the [**New York State Design System**](https://designsystem.ny.gov) — and how you can apply these techniques to your own design system.
 
 *Note: this workflow is currently in a beta stage and has not yet been released in an officially supported capacity to users of the NYS design system.*
 
 ## The Power of Variable Collections in Figma
 
-![](https://miro.medium.com/v2/resize:fit:5480/1*7-rg_6x8w89pSDIpXtV65A@2x.png)
+![Screenshot of variable collections in Figma](/assets/i/2025/fidelity-modes-variable-collections.png)
 
 At the heart of this workflow are three types of Figma variable collections: Primitive, Routing, and Applied.
 
@@ -52,7 +49,7 @@ Each mode adjusts which primitive variables are passed through, allowing flexibi
 
 Before we publish the NYS Design System to the Figma Community, I plan to add a new routing collection named ‘Organization’ with two modes: ‘State’ and ‘Local’. This would allow towns or counties in New York State to adopt our Figma Library and customize it by plugging in their own brand color ramps. By simply switching a screen into ‘Local’ mode, smaller orgs can instantly localize the design system without starting from scratch.
 
-*The idea for Routing collections came from the REWE design system’s talk at the* [*Into Design Systems*](http://intodesignsystems.com) *2025 conference—credit to* [*Vincent Schlothauer*](https://www.linkedin.com/in/vincent-schlothauer/) *and* [*Franziska Haaf*](https://www.linkedin.com/in/franziska-haaf/) *for their innovative ideas. The conference recordings are a great resource if you’re interested in learning more advanced Figma Variable techniques.*
+*The idea for Routing collections came from the REWE design system’s talk at the* [*Into Design Systems*](https://intodesignsystems.com) *2025 conference—credit to* [*Vincent Schlothauer*](https://www.linkedin.com/in/vincent-schlothauer/) *and* [*Franziska Haaf*](https://www.linkedin.com/in/franziska-haaf/) *for their innovative ideas. The conference recordings are a great resource if you’re interested in learning more advanced Figma Variable techniques.*
 
 ### Applied Variables
 
@@ -70,23 +67,18 @@ Primitive and Routing collections should be configured to not be published and s
 
 The Fidelity routing collection has three modes: High, Mid, and Low.
 
-![](https://miro.medium.com/v2/resize:fit:5436/1*disrwJYz6ohN004kbxoRwA@2x.png)
+![Screenshot of fidelity routing collections in Figma](/assets/i/2025/fidelity-modes-routing-logic.png)
 
 Variables are organized in the same structure in all routing collections with a parent group named to match the routing collection’s name so that it’s easier to identify which collection a given variable is being set to.
 
-For example, in the Applied variable collection you might have a primary color variable of ‘primary’. We use ‘nys’ as a prefix for our design tokens. So the variable collections would would look like this for the first mode of each collection:
+For example, in the Applied variable collection you might have a primary color variable of ‘primary’. So the variable collections might look like this for the first mode of each collection:
 
+- **Applied/Semantic:** `color-primary` *(published)* ← `fidelity-color-primary` 
+- **Fidelity: High:** `fidelity-color-primary` ← `brand-color-primary`
+- **Brand: Main:** `brand-color-primary` ← `state-blue-700`
+- **Primitive:** `state-blue-700` ← `#154973`
 
-> ***[Applied]*** *nys/color/primary = fidelity/color/primary* 
-> 
-> ***[Fidelity: High]*** *fidelity/color/primary = brand/color/primary* 
-> 
-> ***[Brand: Main]*** *brand/color/primary = state-blue-700*
-> 
-> ***[Primitive]*** `state-blue-700` = `#154973`
-> 
-
-To manage variable collections efficiently, I used the [Design System Organizer](https://www.figma.com/community/plugin/802579985985331070/design-system-organizer) plugin. It was a huge help for tasks like swapping variables, duplicating variables between collections, and migrating variables between files — especially during the recent project I handled of merging our previously separate component and variable files.
+To manage variable collections efficiently, I use the [Design System Organizer](https://www.figma.com/community/plugin/802579985985331070/design-system-organizer) plugin. It was a huge help for tasks like swapping variables, duplicating variables between collections, and migrating variables between files — especially during the recent project I handled of merging our previously separate component and variable files.
 
 One unexpected benefit: reviewing components in Low Fidelity mode has been a helpful litmus test. If two components look too similar when viewed in grayscale without a text label, it’s often a sign they need better differentiation.
 
