@@ -7,7 +7,7 @@ section: Get Started
 
 {% block content %}
 
-# Getting Started for Designers
+# Get Started as a Designer
 
 The NYS Design System helps New York State teams build accessible, user-friendly, and consistent digital products. But using NYS Design System components alone does not guarantee a good design—strong user experiences come from a thoughtful process that includes:
 
@@ -16,7 +16,7 @@ The NYS Design System helps New York State teams build accessible, user-friendly
 - Wireframing and prototyping before building
 - Testing usability with real users
 
-**--- Illustration of layers ---**
+<!-- **--- Layer Illustration ---** -->
 
 The NYS Design System provides a standardized set of design decisions and reusable components to help reduce effort, maintain consistency, and free up designers to focus on higher-level UX work.
 
