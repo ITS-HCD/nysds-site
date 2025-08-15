@@ -64,6 +64,8 @@ There are no properties for this component.
 
 {% block cssvariables %}{% endblock %}
 
+The `nys-unavheader` does not have any css variables because this component must remain consistent across applications and sites.
+
 {% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}
