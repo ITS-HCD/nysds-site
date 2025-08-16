@@ -1,13 +1,13 @@
 ---
-permalink: /getting-started/designers/
+permalink: /get-started/designers/
 title: "Designers"
 description: "Learn how to use The New York State Design System Figma libraries, design tokens, and accessibility guidelines to create consistent, user-friendly digital experiences for New York State."
-section: Getting Started
+section: Get Started
 ---
 
 {% block content %}
 
-# Getting Started for Designers
+# Get Started as a Designer
 
 The NYS Design System helps New York State teams build accessible, user-friendly, and consistent digital products. But using NYS Design System components alone does not guarantee a good design—strong user experiences come from a thoughtful process that includes:
 
@@ -16,7 +16,7 @@ The NYS Design System helps New York State teams build accessible, user-friendly
 - Wireframing and prototyping before building
 - Testing usability with real users
 
-**--- Illustration of layers ---**
+<!-- **--- Layer Illustration ---** -->
 
 The NYS Design System provides a standardized set of design decisions and reusable components to help reduce effort, maintain consistency, and free up designers to focus on higher-level UX work.
 
@@ -61,8 +61,8 @@ NYS Design System isn’t just about using components—it’s about creating be
     class="nys-tablet:nys-grid-col-6"
     style="margin-bottom: 16px;"></nys-button>
 <nys-button 
-    label="Getting Started for Developers"
-    href="/getting-started/developers"
+    label="Get Started for Developers"
+    href="/get-started/developers"
     variant="outline"
     fullWidth
     class="nys-tablet:nys-grid-col-6"></nys-button>

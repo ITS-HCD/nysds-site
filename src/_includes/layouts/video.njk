@@ -1,37 +1,54 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+
 {% set previousVideo = collections.videos | getPreviousCollectionItem(page) %}
 {% set nextVideo = collections.videos | getNextCollectionItem(page) %}
+
 <div class="nys-grid-container-widescreen">
-<div class="nys-grid-row nys-grid-gap">
-  <div class="nys-desktop:nys-grid-col-10">  
-    <section>
-      <h1>{{ title }}</h1>
-      <time datetime="{{ page.date | dateISO }}">
-        {{ page.date | dateFull }}
-      </time>
+  <div class="nys-grid-row nys-grid-gap">
+    <aside class="nys-tablet:nys-grid-col-3">
+      {% include "partials/section-nav.njk" %}
+    </aside>
+    <main class="nys-tablet:nys-grid-col-9">
 
-    <div>
+      <section class="page-content">
+        {%- if video_url -%}
+        <div class="video-embed">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        {%- endif -%}
+
+        <h1 class="page-title">{{ title }}</h1>
+
         {% if tags %}
-          <ul>
-            {% for tag in tags %}
-              <li>{{ tag }}</li>
-            {% endfor %}
-          </ul>
+        <ul class="taglist">
+          {% for tag in tags %}
+          <li class="badge">{{ tag }}</li>
+          {% endfor %}
+        </ul>
         {% endif %}
-      </div>
 
-      {{ content | safe }}
+        {{ content | safe }}
 
-      <div>{% if previousVideo %}Up Next: <a href="{{ previousVideo.url }}" title="Read: {{ previousVideo.data.title | safe }}"><b>{{ previousVideo.data.title }}</b></a>{% endif %}</div>
-      <div>{% if nextVideo %}Previous : <a href="{{ nextVideo.url }}" title="Read: {{ nextVideo.data.title | safe }}"><b>{{ nextVideo.data.title }}</b></a>{% endif %}</div>
+      </section>
 
-    </section>
+      <section class="page-meta nys-grid-row nys-grid-gap-6">
+        {% if previousVideo %}
+          <a href="{{ previousVideo.url }}" title="Read: {{ previousVideo.data.title | safe }}" class="nys-tablet:nys-grid-col">
+            Previous Video: <b>{{ previousVideo.data.title }}</b>
+          </a>
+        {% endif %}
+        {% if nextVideo %}
+          <a href="{{ nextVideo.url }}" title="Read: {{ nextVideo.data.title | safe }}" class="nys-tablet:nys-grid-col">
+            Next Video: <b>{{ nextVideo.data.title }}</b>
+          </a>
+        {% endif %}
+      </section>
+      {% include "partials/edit-link.njk" %}
+    </main>
+
   </div>
-  <aside class="nys-desktop:nys-grid-col-2">
-    {% include "partials/onpage-nav.njk" %}
-  </aside>
 </div>
-</div>
+
 {% endblock %}

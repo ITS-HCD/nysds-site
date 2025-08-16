@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "The New York State Design System"
-description: "NYSDS makes it easier to build accessible, usable applications and sites for New York State."
+description: "The NYS Design System makes it easier to build accessible, mobile-friendly applications and websites for New York State."
 crawl: false
 site_nav: false
 ---
@@ -9,41 +9,37 @@ site_nav: false
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+<!-- Home Hero -->
 <div class="hero">
-  <div class="nys-grid-container-widescreen">
-    <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
-      <div
-        class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex nys-flex-column nys-flex-align-center nys-flex-justify-center nys-top-300">
-        <img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="NYSDS, New York State's Design System"
-          style="width: 75%;">
-        <div class="byline nys-grid-offset-2">
-          <p>The New York State Design System (NYSDS) helps teams rapidly build usable, accessible, mobile-friendly web
-            applications and sites.</p>
-          <nys-button label="Get started today" href="/getting-started/"></nys-button>
-        </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-none nys-desktop:display-block">
-        <img src="{{ '/assets/img/homepage-grid.svg' | url }}" alt="NYSDS, New York State's Design System"
-          style="width: 100%;">
-      </div>
+  <div class="hero__inner">
+    <div class="hero__content">
+      <img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System">
+      <p>The New York State Design System (NYSDS) helps teams rapidly build usable, accessible, mobile-friendly web applications and sites.</p>
+      <nys-button label="Get started today" href="/get-started/"></nys-button>
+    </div>
+    <div class="hero__media">
+      <img src="{{ '/assets/img/homepage-grid.svg' | url }}" alt="">
     </div>
   </div>
 </div>
 
-<div class="nys-grid-container-widescreen nys-top-800">
+<!-- Get Started Section -->
+<div class="nys-grid-container-widescreen nys-top-600">
   <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
       <h2>Start Designing</h2>
       <p>Reusable design templates with built-in code-paired components.</p>
-      <nys-button label="Start Designing" variant="outline" href="/getting-started/designers/"></nys-button>
+      <nys-button size="sm" label="Start designing" variant="outline" href="/get-started/designers/"></nys-button>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
       <h2>Start Developing</h2>
       <p>Code components to create rich user experiences.</p>
-      <nys-button label="Start developing" variant="outline" href="/getting-started/developers/"></nys-button>
+      <nys-button size="sm" label="Start developing" variant="outline" href="/get-started/developers/"></nys-button>
     </div>
   </div>
 </div>
+
+<!-- About the NYSDS Section -->
 <div class="color-theme--weaker nys-top-800">
   <div class="nys-grid-container-widescreen">
     <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
@@ -72,8 +68,10 @@ site_nav: false
               <img src="/assets/img/flex-card.svg" alt="flex">
             </div>
             <div class="card__title">Design Libraries</div>
-            <div class="card__desc">This is a library of icons, styles, components, and variables that can be shared and
-              reused across multiple design files for consistent design and prototyping.</div>
+            <div class="card__desc">
+              This is a library of icons, styles, components, and variables that can be shared and
+              reused across multiple design files for consistent design and prototyping.
+            </div>
           </div>
         </div>
       </div>

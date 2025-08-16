@@ -1,8 +1,8 @@
 ---
-permalink: /getting-started/
-title: "Getting Started"
+permalink: /get-started/
+title: "Get Started"
 description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
-section: Getting Started
+section: Get Started
 navOrder: 1
 ---
 
