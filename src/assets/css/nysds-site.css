@@ -373,7 +373,7 @@ ex-header__title {
 }
 .card__eyebrow {
     font-size: var(--nys-font-size-md);
-    font-weight: semibold;
+    font-weight: var(--nys-font-weight-semibold);
     text-transform: uppercase;
     color: var(--nys-color-text-weak);
     margin-bottom: var(--nys-space-100);
@@ -455,7 +455,7 @@ a.card:focus-visible {
 }
 
 .card .card__inner {
-height: 100%;
+    height: 100%;
 }
 
 /* Respect users who prefer reduced motion */

@@ -14,6 +14,6 @@ In this video:
 - The problem we're solving across state websites and apps
 - The NYS Design System's three core pillars
 - Improves accessibility, speed, and consistency
-- Sneek peak into upcoming features
+- Sneak peek into upcoming features
 
 [Explore the code](https://github.com/its-hcd/nysds)

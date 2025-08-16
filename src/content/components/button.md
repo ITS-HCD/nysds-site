@@ -140,7 +140,7 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 
 View the full list of [available icons](/components/icon/#usage).
 
-  {% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"><nys-button>{% endset %}
+  {% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 

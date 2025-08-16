@@ -180,33 +180,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const toggleButton = document.querySelector(".section-nav__toggle");
-//   const sectionNav = document.querySelector(".section-nav__list");
-
-//   if (toggleButton) {
-//     toggleButton.addEventListener("click", function () {
-//       const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-//       toggleButton.setAttribute("aria-expanded", !isExpanded);
-//       sectionNav.style.display = isExpanded ? "none" : "block";
-//     });
-//   };
-// });
-
-
-// document.querySelectorAll(".accordion__trigger").forEach((btn) => {
-//   const panelId = btn.getAttribute("aria-controls");
-//   const panel = document.getElementById(panelId);
-//   if (!panel) return;
-
-//   btn.addEventListener("click", () => {
-//     const expanded = btn.getAttribute("aria-expanded") === "true";
-//     const next = !expanded;
-//     btn.setAttribute("aria-expanded", String(next));
-//     panel.hidden = !next;
-//   });
-// });
-
 
 // Load with <script defer> so the DOM exists
 (function () {
