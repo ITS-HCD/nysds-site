@@ -757,8 +757,8 @@ li > .section-nav__list {
 .taglist {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--nys-space-100, 8px);
-  margin: var(--nys-space-200, 16px) 0;
+  gap: var(--nys-space-100);
+  margin: 0 0 var(--nys-space-250);
   padding: 0;
   list-style: none;
 }
@@ -779,6 +779,7 @@ li > .section-nav__list {
   color: var(--nys-color-text, #1b1b1b);
   white-space: nowrap;
   line-height: 1.6;
+  margin-bottom: 0;
 }
 
 /* Page Styling */

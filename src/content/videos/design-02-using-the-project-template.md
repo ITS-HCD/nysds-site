@@ -6,7 +6,7 @@ title: "Using the Project Template"
 description: "Jump start your project with our Figma starter project template, a solid foundation with standard headers, footers, layout, theming, and mobile-responsiveness."
 duration: 12:34
 video_url: kR0whCjK9E8
-tags: figma,starter-template,scaffolding
+tags: resources,projects,starter template
 ---
 The NYS Design System's Figma project template gets you started quickly with default NYS headers, footers, and responsive layout tools already configured.
 

@@ -6,7 +6,7 @@ title: Using the NYSDS CSS Framework
 description: "Learn how to style your site with NYSDS design tokens, utilities, and themes."
 duration: 4:08
 video_url: fjoJKBbTKyU
-tags: utilities,responsive,css
+tags: mobile responsive, css utilities, design tokens, theming
 ---
 Using the NYS Design System CSS framework, design tokens, and utilities to create mobile-responsive layouts and create consistent component styles and themes for your applications.
 
