@@ -1,6 +1,6 @@
 ---
 category: Design
-category_order: 3
+series_order: 7
 intro_series: true
 title: Using the Visual Component Library
 description: "Everything you need to know about NYSDS components in Figma, from basics like inserting into projects to advanced tips like building your own."

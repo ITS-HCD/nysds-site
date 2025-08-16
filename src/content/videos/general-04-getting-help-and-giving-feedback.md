@@ -1,6 +1,6 @@
 ---
 category: General
-category_order: 4
+series_order: 4
 intro_series: true
 title: Getting Help and Giving Feedback
 description: "Get support, share your ideas, contribute to component proposals, and help us make the NYS Design System even better."

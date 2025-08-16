@@ -1,6 +1,6 @@
 ---
 category: Development
-category_order: 1
+series_order: 8
 intro_series: true
 title: Intro to NYSDS Web Components
 description: "Get to know our web components: what they are, how they work, and why they're built to work in any framework."

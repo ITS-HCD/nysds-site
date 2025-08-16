@@ -1,6 +1,6 @@
 ---
 category: Development
-category_order: 3
+series_order: 10
 intro_series: true
 title: Using the NYSDS CSS Framework
 description: "Learn how to style your site with NYSDS design tokens, utilities, and themes."

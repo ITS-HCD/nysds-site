@@ -1,6 +1,6 @@
 ---
 category: Design
-category_order: 1
+series_order: 5
 intro_series: true
 title: Intro to Designing with the New York State Design System
 description: "Learn how to start designing in Figma with ready-to-use NYSDS libraries, tokens, components, and icons."

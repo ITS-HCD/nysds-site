@@ -26,7 +26,7 @@ navOrder: 1
 
       {%- for cat in categories -%}
         <h2>{{ cat }} Track</h2>
-        {%- set list = collections.videos | byCategory(cat) | maybeSortVideos -%}
+        {%- set list = collections.videos | byCategory(cat) | sortBySeriesOrder -%}
 
         {%- if list.length -%}
           {%- for post in list -%}

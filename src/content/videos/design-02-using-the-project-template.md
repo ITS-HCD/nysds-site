@@ -1,6 +1,6 @@
 ---
 category: Design
-category_order: 2
+series_order: 6
 intro_series: true
 title: "Using the Project Template"
 description: "Jump start your project with our Figma starter project template, a solid foundation with standard headers, footers, layout, theming, and mobile-responsiveness."

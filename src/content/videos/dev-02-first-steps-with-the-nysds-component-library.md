@@ -1,6 +1,6 @@
 ---
 category: Development
-category_order: 2
+series_order: 9
 intro_series: true
 title: First Steps with the NYSDS Component Library
 description: Step-by-step instructions for installing NYSDS and adding your first component.

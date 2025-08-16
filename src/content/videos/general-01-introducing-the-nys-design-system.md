@@ -1,6 +1,6 @@
 ---
 category: General
-category_order: 1
+series_order: 1
 intro_series: true
 title: Introducing the NYS Design System
 description: "A quick look at what the NYS Design System is, why we built it, and how it helps teams make websites and apps that work better for everyone."

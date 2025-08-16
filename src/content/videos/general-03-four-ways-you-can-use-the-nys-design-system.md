@@ -1,6 +1,6 @@
 ---
 category: General
-category_order: 3
+series_order: 3
 intro_series: true
 title: Four Ways You Can Use the NYS Design System
 description: "Four simple ways to bring the NYS Design System into your work, no matter what stage your project is in."

@@ -687,13 +687,12 @@ li > .section-nav__list {
 }
 
 
-/* Section Nav hide button */
+/* Section Nav toggle functionality */
 
 @media (max-width: 1023px) {
     .section-nav__list {
         display: none;
     }
-
     .section-nav__toggle {
         display: block;
     }
@@ -711,9 +710,18 @@ li > .section-nav__list {
     align-items: center;
     justify-content: space-between;
     line-height: 1;
-    padding: var(--nys-space-150) var(--nys-space-250);
-    border-radius: var(--nys-radius-xl);
-    border: 2px solid var(--nys-color-neutral-400);
+    padding: var(--nys-space-200) var(--nys-space-250);
+    border-radius: var(--nys-radius-md);
+    background-color: var(--nys-color-neutral-50);
+}
+.section-nav__toggle[aria-expanded="true"] {
+    border-radius: var(--nys-radius-md) var(--nys-radius-md) 0 0;
+}
+.section-nav__list[aria-expanded="true"] {
+    background: #f00;
+    display: block;
+    border-top: none;
+    border-radius: 0 0 var(--nys-radius-md) var(--nys-radius-md);
 }
 
 .section-nav__toggle:hover {
@@ -740,6 +748,11 @@ li > .section-nav__list {
         display: block !important;
     }
 }
+
+/* Accordion */
+
+
+
 
 /* Tags */
 .taglist {

@@ -1,6 +1,6 @@
 ---
 category: General
-category_order: 2
+series_order: 2
 title: Accessible by Design
 intro_series: true
 description: "See how accessibility is built into everything we make so you can create digital services that everyone can use."
