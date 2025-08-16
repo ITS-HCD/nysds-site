@@ -572,13 +572,48 @@ transition: none !important;
     margin: var(--nys-space-200) 0;
 }
 
+/* Accordion */
+
+.accordion {
+    width: 100%;   
+}
+.accordion__trigger {
+    color: var(--nys-color-text);
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+    padding: var(--nys-space-200) var(--nys-space-250);
+    border-radius: var(--nys-radius-md);
+    border: none;
+    background-color: var(--nys-color-neutral-50);
+    font-family: var(--nys-font-family-ui), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--nys-font-size-ui-md, 1rem);
+    font-weight: var(--nys-font-weight-semibold, 600);
+}
+.accordion__trigger:hover {
+  background-color: var(--nys-color-black-transparent-100);
+}
+.accordion__trigger:active {
+  background-color: var(--nys-color-black-transparent-200);
+}
+
+.accordion__trigger nys-icon { display:inline-block; transform:rotate(0); transition:transform 120ms ease; }
+.accordion__trigger[aria-expanded="true"] nys-icon { transform:rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .accordion__trigger nys-icon { transition:none; } }
+
+/* Optional: rounded corners when open — matches your original */
+.accordion .accordion__trigger[aria-expanded="true"] {
+  border-radius: var(--nys-radius-md) var(--nys-radius-md) 0 0;
+}
 
 /* Section Navigator */
 
 .section-nav {
     top: var(--nys-space-600);
-    /* margin-top: var(--nys-space-600); */
-    /* margin-bottom: var(--nys-space-200); */
     margin-top: var(--nys-space-250);
     margin-bottom: 0;
     font-size: var(--nys-font-size-ui-md);
@@ -680,56 +715,30 @@ li > .section-nav__list {
     /* border-bottom-width: var(--nys-border-width-sm) important; */
 }
 
-
 .section-nav__list .section-nav__list .section-nav__link {
     font-size: var(--nys-font-size-ui-sm);
     padding-left: var(--nys-space-400);
 }
 
 
-/* Section Nav toggle functionality */
+/* Section Nav toggle functionality (modifies accordion) */
+
+.section-nav__toggle[aria-expanded="true"] {
+    border-radius: var(--nys-radius-md) var(--nys-radius-md) 0 0;
+}
+.section-nav__list[aria-expanded="true"] {
+    display: block;
+    border-top: none;
+    border-radius: 0 0 var(--nys-radius-md) var(--nys-radius-md);
+}
 
 @media (max-width: 1023px) {
     .section-nav__list {
         display: none;
     }
     .section-nav__toggle {
-        display: block;
+        display: flex;
     }
-}
-
-.section-nav__toggle,
-.section-nav__toggle * {
-    cursor: pointer;
-    user-select: none;
-}
-
-.section-nav__toggle {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    line-height: 1;
-    padding: var(--nys-space-200) var(--nys-space-250);
-    border-radius: var(--nys-radius-md);
-    background-color: var(--nys-color-neutral-50);
-}
-.section-nav__toggle[aria-expanded="true"] {
-    border-radius: var(--nys-radius-md) var(--nys-radius-md) 0 0;
-}
-.section-nav__list[aria-expanded="true"] {
-    background: #f00;
-    display: block;
-    border-top: none;
-    border-radius: 0 0 var(--nys-radius-md) var(--nys-radius-md);
-}
-
-.section-nav__toggle:hover {
-    background-color: var(--nys-color-black-transparent-100);
-}
-
-.section-nav__toggle:active {
-    background-color: var(--nys-color-black-transparent-200);
 }
 
 @media (min-width: 1024px) {
@@ -739,20 +748,10 @@ li > .section-nav__list {
     .section-nav__toggle {
         display: none;
     }
-
     .section-nav__list {
         display: block;
     }
-
-    #section-nav {
-        display: block !important;
-    }
 }
-
-/* Accordion */
-
-
-
 
 /* Tags */
 .taglist {

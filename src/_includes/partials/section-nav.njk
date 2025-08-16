@@ -1,9 +1,21 @@
-<nav class="section-nav" aria-label="Section Navigation">
-  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
-    <label>{{ section }}</label>
-    <nys-icon name="chevron_down" size="xl"></nys-icon>
-  </div>
-  <ul class="section-nav__list" id="section-nav" hidden>
+<nav class="section-nav accordion" aria-label="Section Navigation">
+  <button
+    id="accordion-trigger-{{ section | slug }}"
+    class="section-nav__toggle accordion__trigger"
+    type="button"
+    aria-expanded="false"
+    aria-controls="accordion-panel-{{ section | slug }}">
+    <span class="accordion__label">{{ section }}</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul
+    class="section-nav__list accordion__panel"
+    id="accordion-panel-{{ section | slug }}"
+    role="region"
+    aria-labelledby="accordion-trigger-{{ section | slug }}"
+    hidden>
+
 
 {% if section in collections.sections %}
   {% set top = collections.sections[section].topLevel %}
@@ -46,18 +58,3 @@
 
   </ul>
 </nav>
-<script>
-  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') == 'false';
-      toggle.setAttribute('aria-expanded', ! expanded);
-      const icon = toggle.querySelector('nys-icon');
-      icon.setAttribute(
-        'name', expanded
-        ? 'chevron_up'
-        : 'chevron_down');
-      const sectionNav = document.getElementById('section-nav');
-      sectionNav.hidden = expanded;
-    });
-  });
-</script>
