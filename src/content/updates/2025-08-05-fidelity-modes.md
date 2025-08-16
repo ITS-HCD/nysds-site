@@ -124,4 +124,6 @@ Although we have Code Connect set up for all of our design system components, th
 
 Applying a text variable to a component’s variant property on an instance allows you to swap designs by fidelity mode. For example, I’ve used this to switch the New York State logo, as seen above, between: Sketch (Low Fidelity), Outline (Mid Fidelity), and Full Vector (High Fidelity).
 
-Thanks for reading! If this sparked any ideas — or if you’ve experimented with your own routing collections — drop a comment below to share your ideas. Let’s build better, together.
+Thanks for reading! If this sparked any ideas, questions, or if you’ve experimented with your own routing collections please email the NYS Design System team at [designsystem@its.ny.gov](mailto:designsystem@its.ny.gov).
+
+Let’s build better, together.
