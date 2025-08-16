@@ -50,7 +50,7 @@ cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor
 
 This will copy over styles and scripts, but when new versions are released, you will need to update via npm and copy them over again.
 
-### Manual Asset Management (Alternative Step)
+## Manual Asset Management (Alternative Step)
 
 If you want to avoid npm altogether, you can download the latest release from the [NYSDS GitHub repository](https://github.com/ITS-HCD/nysds/releases/latest/) and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.
 
