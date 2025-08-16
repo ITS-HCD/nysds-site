@@ -278,8 +278,8 @@ a:active {
 /* Site Footer */
 
 .site-footer {
-    margin-top: var(--nys-space-600);
-    background-color: var(--nys-color-neutral-50);
+    margin-top: var(--nys-space-400);
+    background-color: var(--nys-color-theme-weaker);
     color: var(--nys-color-ink);
     padding: var(--nys-space-400) 0;
     font-size: var(--nys-font-size-body-md);
@@ -768,8 +768,6 @@ li > .section-nav__list {
   white-space: nowrap;
   line-height: 1.6;
 }
-
-
 
 /* Page Styling */
 
