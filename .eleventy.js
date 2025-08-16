@@ -20,6 +20,7 @@ const excludeFuture = require("./src/_11ty/filters/excludeFuture.js");
 const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 const byCategory = require("./src/_11ty/filters/byCategory.js");
 const sortBySeriesOrder = require("./src/_11ty/filters/sortBySeriesOrder.js");
+const onlySeries = require("./src/_11ty/filters/onlySeries.js");
 const editOnGitHubUrl = require("./src/_11ty/filters/editOnGitHubUrl.js");
 
 // collections
@@ -45,7 +46,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addFilter("byCategory", byCategory);
     eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
     eleventyConfig.addFilter("editOnGitHubUrl", editOnGitHubUrl);
-    
+    eleventyConfig.addFilter("onlySeries", onlySeries);
 
     // collections
     eleventyConfig.addCollection("updates", updates);

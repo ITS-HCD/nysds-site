@@ -24,11 +24,11 @@ navOrder: 1
     
   <ul class="post-list nys-grid-container">
     {%- for post in collections.updates -%}
-      <li class="post-list__item" style="border-bottom: 1px solid #ddd;">
+      <li class="post-list__item" style="border-bottom: 1px solid #ddd; padding-bottom: 1rem; margin-bottom: 1rem;">
         <div class="nys-grid-row nys-grid-gap">
 
           <!-- Left side: title and description -->
-          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-9">
+          <div class="nys-tablet:nys-grid-col-8">
             <h2 class="post-list__title">
               <a href="{{ post.url }}" class="post-list__link">
                 {{ post.data.title }}

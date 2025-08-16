@@ -22,8 +22,8 @@
   {% set list = top %}
 
   {# If this section is the video series, sort by series_order #}
-  {% if top and (top | length) and (top | first).data.video_url %}
-    {% set list = top | sortBySeriesOrder %}
+  {% if section | lower == "videos" %}
+    {% set list = top | onlySeries | sortBySeriesOrder %}
   {% endif %}
 
   {# Loop through only top-level pages (kept identical) #}
