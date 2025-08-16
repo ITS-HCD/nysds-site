@@ -40,7 +40,7 @@
       <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
     </div>
   </div>
-
+{% include "partials/edit-link.njk" %}
 </section>
   </div>
   <aside class="nys-desktop:nys-grid-col-2">

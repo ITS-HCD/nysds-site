@@ -1316,10 +1316,12 @@ pre[class*="language-"]:after {
 
 /* Edit Page Link */
 .edit-page-link {
-    display: inline-block; 
-    text-decoration: none; 
-    color: var(--nys-color-link);
-    margin-top: var(--nys-space-400); font-size: var(--nys-font-size-sm);
+    margin: var(--nys-space-600) 0 var(--nys-space-1200);
+}
+.edit-page-link p {
+    font-size: var(--nys-font-size-body-xs);
+    line-height: var(--nys-font-lineheight-body-xs);
+    margin: 0;
 }
 
 /*** Table ***/

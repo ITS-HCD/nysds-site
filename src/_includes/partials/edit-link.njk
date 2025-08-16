@@ -1,9 +1,6 @@
 {% if page.inputPath and (show_edit_link != false) %}
-<div class="nys-grid-container-widescreen">
   <div class="edit-page-link">
-    <a href="{{ page | editOnGitHubUrl }}">
-      Edit this page on GitHub
-    </a>
+    <p><a href="{{ page | editOnGitHubUrl }}">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: {{ page.date | dateFull }}</p>
   </div>
-</div>
 {% endif %}
