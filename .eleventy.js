@@ -19,7 +19,6 @@ const excludeDrafts = require("./src/_11ty/filters/excludeDrafts.js");
 const excludeFuture = require("./src/_11ty/filters/excludeFuture.js");
 const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
 const byCategory = require("./src/_11ty/filters/byCategory.js");
-const maybeSortVideos = require("./src/_11ty/filters/maybeSortVideos.js");
 const sortBySeriesOrder = require("./src/_11ty/filters/sortBySeriesOrder.js");
 
 // collections
@@ -43,7 +42,6 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addFilter("excludeFuture", excludeFuture);
     eleventyConfig.addFilter("excludeNoIndex", excludeNoIndex);
     eleventyConfig.addFilter("byCategory", byCategory);
-    eleventyConfig.addFilter("maybeSortVideos", maybeSortVideos);
     eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
 
     // collections

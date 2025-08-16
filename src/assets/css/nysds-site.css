@@ -1313,6 +1313,15 @@ pre[class*="language-"]:after {
     box-shadow: none !important;
 }
 
+
+/* Edit Page Link */
+.edit-page-link {
+    display: inline-block; 
+    text-decoration: none; 
+    color: var(--nys-color-link);
+    margin-top: var(--nys-space-400); font-size: var(--nys-font-size-sm);
+}
+
 /*** Table ***/
 table {
     width: 100%;
