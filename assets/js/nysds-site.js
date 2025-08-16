@@ -180,15 +180,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".section-nav__toggle");
-  const sectionNav = document.querySelector(".section-nav__list");
 
-  if (toggleButton) {
-    toggleButton.addEventListener("click", function () {
-      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-      toggleButton.setAttribute("aria-expanded", !isExpanded);
-      sectionNav.style.display = isExpanded ? "none" : "block";
-    });
-  };
-});
+// Load with <script defer> so the DOM exists
+(function () {
+  // Clean any legacy inline display:none
+  document.querySelectorAll(".accordion__panel").forEach((p) => {
+    if (p.style.display) p.style.removeProperty("display");
+  });
+
+  // Init panel state from the trigger's aria-expanded
+  document.querySelectorAll(".accordion__trigger").forEach((btn) => {
+    const id = btn.getAttribute("aria-controls");
+    const panel = id ? document.getElementById(id) : null;
+    if (!panel) return;
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    panel.setAttribute("aria-expanded", String(expanded));
+  });
+
+  // Toggle on click
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".accordion__trigger");
+    if (!btn) return;
+    const id = btn.getAttribute("aria-controls");
+    const panel = id ? document.getElementById(id) : null;
+    if (!panel) return;
+
+    const next = btn.getAttribute("aria-expanded") !== "true";
+    btn.setAttribute("aria-expanded", String(next));
+    panel.setAttribute("aria-expanded", String(next));
+  });
+})();

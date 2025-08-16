@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-12T15:46:36.800+00:00 -->
+    <!-- Latest Build: 2025-08-16T08:03:18.436+00:00 -->
   </head>
   
   <body class="single-page page-backtotop section-components">
@@ -56,16 +56,14 @@
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul>
-    <li class="site-header__item"><a href="/getting-started" class="site-header__link" title="Getting Started">Getting Started</a></li>
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
     <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
     <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
-    
-    <li class="site-header__item"><a href="/updates" class="site-header__link" title="What's New">What's New</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYSDS Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
     
   </ul>
 </nys-globalheader>
-
-
 
 
 
@@ -95,280 +93,266 @@
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
   <aside class="nys-desktop:nys-grid-col-2">
-    <nav class="section-nav" aria-label="Section Navigation">
-  <div class="section-nav__toggle" aria-expanded="false" aria-controls="section-nav">
-    <label>Components</label>
-    <nys-icon name="chevron_down" size="xl"></nys-icon>
-  </div>
-  <ul class="section-nav__list" id="section-nav" hidden>
+    <nav class="section-nav accordion" aria-label="Section Navigation">
+  <button
+    id="accordion-trigger-components"
+    class="section-nav__toggle accordion__trigger"
+    type="button"
+    aria-expanded="false"
+    aria-controls="accordion-panel-components">
+    <span class="accordion__label">Components</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul
+    class="section-nav__list accordion__panel"
+    id="accordion-panel-components"
+    role="region"
+    aria-labelledby="accordion-trigger-components"
+    hidden>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
     
-      
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/" >
-            Web Components
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/alert/" >
-            Alert
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/avatar/" >
-            Avatar
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item section-nav__item--active-section section-nav__item--active" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/backtotop/"  aria-current="page" >
-            Back To Top
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/button/" >
-            Button
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/checkbox/" >
-            Checkbox
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/" >
-            File Input
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
-            Global Footer
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
-            Global Header
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
-            Icon
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/radiobutton/" >
-            Radio Button
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/select/" >
-            Select
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
-            Skip Navigation
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/textarea/" >
-            Text Area
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/textinput/" >
-            Text Input
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/toggle/" >
-            Toggle
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/tootlip/" >
-            Tooltip
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/" >
-            UNav Footer
-          </a>
-          
-          
-        </li>
-      
-        
-        
-        
-        
-        
-        <li class="section-nav__item" >
-          <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-header/" >
-            UNav Header
-          </a>
-          
-          
-        </li>
-      
     
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/" >
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/alert/" >
+        Alert
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/avatar/" >
+        Avatar
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/backtotop/"  aria-current="page" >
+        Back To Top
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/button/" >
+        Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/checkbox/" >
+        Checkbox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/" >
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
+        Global Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
+        Global Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
+        Icon
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/radiobutton/" >
+        Radio Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/select/" >
+        Select
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
+        Skip Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/textarea/" >
+        Text Area
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/textinput/" >
+        Text Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/toggle/" >
+        Toggle
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/tootlip/" >
+        Tooltip
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/" >
+        UNav Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-header/" >
+        UNav Header
+      </a>
+
+      
+      
+    </li>
+  
+
+
   </ul>
 </nav>
-<script>
-  document.querySelectorAll('.section-nav__toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') == 'false';
-      toggle.setAttribute('aria-expanded', ! expanded);
-      const icon = toggle.querySelector('nys-icon');
-      icon.setAttribute(
-        'name', expanded
-        ? 'chevron_up'
-        : 'chevron_down');
-      const sectionNav = document.getElementById('section-nav');
-      sectionNav.hidden = expanded;
-    });
-  });
-</script>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <p><section id="overview">
@@ -578,6 +562,12 @@ label="Chat With Us"
   </div>
 </section>
 
+    
+  <div class="edit-page-link">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/backtotop.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: August 16, 2025</p>
+  </div>
+
   </div>
   <aside class="nys-desktop:nys-grid-col-2">
     <div id="onpage-nav" class="onpage-nav"></div>
@@ -645,16 +635,17 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </div>
 
+
   </main>
   <nys-backtotop id="backtotop-demo"></nys-backtotop>
   
   <div class="site-footer">
-  <div class="site-footer__inner nys-grid-container">
+  <div class="site-footer__inner nys-grid-container-widescreen">
     <div class="nys-grid-row nys-grid-gap-lg">
       <div class="nys-tablet:nys-grid-col">
         <p class="site-footer__list-header"><strong>Quick Links</strong></p>
         <ul>
-            <li><a href="/getting-started/" title="How you can use NYSDS.">Getting Started</a></li>
+            <li><a href="/get-started/" title="How you can use NYSDS.">Get Started</a></li>
             <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
             <li><a href="/components/" title="Explore the web components.">Components</a></li>
             <li><a href="/about/" title="Learn more about our team and the mission of this project.">About NYSDS</a></li>
