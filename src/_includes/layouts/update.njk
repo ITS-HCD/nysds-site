@@ -3,22 +3,50 @@
 {% block content %}
 {% set previousUpdate = collections.updates | getPreviousCollectionItem(page) %}
 {% set nextUpdate = collections.updates | getNextCollectionItem(page) %}
+{% set avatar = author | authorAvatar(author_avatar) %}
+
 <div class="nys-grid-container-widescreen">
-<div class="nys-grid-row nys-grid-gap">
-  <div class="nys-desktop:nys-grid-col-10">  
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
     
-<section class="post-content">
+      <section class="page-content">
 
-  <h1>{{ title }}</h1>
+        <header class="page-header">
 
-  <div class="nys-grid-row">
-    <div class="nys-grid-col nys-flex-1"><time datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time></div>
-    <div class="nys-grid-col nys-flex-1">{{ author }}</div>
-  </div>
+          {%- if image -%}
+          <div class="page-header__media">
+            <img src="{{ image }}" alt="{{ image_alt }}" />
+          </div>
+          {%- endif -%}
+
+          <h1 class="page-title">{{ title }}</h1>
+
+          {%- if description -%}
+            <p class="page-subtitle">{{ description }}</p>
+          {%- endif -%}
+
+          <div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="{{ avatar.src }}"></nys-avatar>
+              <span class="page-author__name">{{ author }}</span>
+            </div>
+            <div class="page-meta__readtime">{{ content | timeToRead ('200 words a minute') }} read time</div>
+            <time class="page-meta__date" datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time>
+          </div>
+        </header>
+
+
+
+  
+
+  
+
+
   
   
   <div class="nys-grid-row">
-    <div class="nys-grid-col nys-flex-1">{{ content | timeToRead ('200 words a minute') }} read time</div>
+    
     {% if tags %}
       <ul class="tag__list">
         {% for tag in tags %}

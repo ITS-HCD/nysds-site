@@ -8,10 +8,6 @@ image: /assets/i/2025/fidelity-modes-thumbnail.png
 image_alt: Illustration of a fidelity mode switcher
 ---
 
-![Illustration of a fidelity mode switcher](/assets/i/2025/fidelity-modes-thumbnail.png)
-
-Unlock new workflows by building your design system with a fidelity routing collection to swap between low-fi, mid-fi, and high-fi in one click.
-
 Designing with speed and consistency doesn’t have to mean compromising on quality. In fact, with a smart, but simple, use of Figma’s variable collections and systems thinking, you can transform wireframes in FigJam into high-fidelity mockups and realistic prototypes in a single click.
 
 Stakeholders, working under constrained budgets and timelines, are often hesitant to start with low fidelity because of the time (and associated cost) it takes to recreate screens in high fidelity. This friction often discourages early ideation and iteration.

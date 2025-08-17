@@ -18,12 +18,11 @@ navOrder: 1
       </div>
     </div>
   </div>
-  <div class="nys-tablet:nys-grid-col-4">
-  </div>
-<section class="nys-grid-row nys-grid-gap-6">
+  <div class="nys-tablet:nys-grid-col-4"></div>
+  <section class="nys-grid-row nys-grid-gap-6">
     
-  <ul class="post-list nys-grid-container">
-    {%- for post in collections.updates -%}
+    <ul class="post-list nys-grid-container">
+      {%- for post in collections.updates -%}
       <li class="post-list__item" style="border-bottom: 1px solid #ddd; padding-bottom: 1rem; margin-bottom: 1rem;">
         <div class="nys-grid-row nys-grid-gap">
 
@@ -48,11 +47,10 @@ navOrder: 1
 
         </div>
       </li>
-    {%- endfor -%}
-  </ul>
+      {%- endfor -%}
+    </ul>
 
-</section>
-
+  </section>
 </div>
 {% endblock %}
 
