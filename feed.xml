@@ -172,8 +172,7 @@ By starting in FigJam you force yourself not to think about component properties
     <item>
       <title>NYS Design System Release 1.6.0</title>
       <link>https://designsystem.ny.gov/updates/1.6.0-release/</link>
-      <description><![CDATA[<p>New icons, improved field masking, and some Figma updates.</p>
-<h2>Phone fields just got smarter</h2>
+      <description><![CDATA[<h2>Phone fields just got smarter</h2>
 <p>Typing a phone number now auto-formats as you type in <code>&lt;nys-textinput type=&quot;tel&quot;&gt;</code>.</p>
 <p><img src="https://designsystem.ny.gov/assets/i/2025/telephone-input-mask.gif" alt="GIF of a form field typing out a well-formatted phone number" /></p>
 <p>Nice work by <a href="https://github.com/emilygorelik">Emily Gorelik</a>!</p>
@@ -192,8 +191,7 @@ By starting in FigJam you force yourself not to think about component properties
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.6.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.6.0">See the full developer release notes →</a></p>
 ]]></description>
-      <content><![CDATA[<p>New icons, improved field masking, and some Figma updates.</p>
-<h2>Phone fields just got smarter</h2>
+      <content><![CDATA[<h2>Phone fields just got smarter</h2>
 <p>Typing a phone number now auto-formats as you type in <code>&lt;nys-textinput type=&quot;tel&quot;&gt;</code>.</p>
 <p><img src="https://designsystem.ny.gov/assets/i/2025/telephone-input-mask.gif" alt="GIF of a form field typing out a well-formatted phone number" /></p>
 <p>Nice work by <a href="https://github.com/emilygorelik">Emily Gorelik</a>!</p>
