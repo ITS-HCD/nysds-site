@@ -442,7 +442,7 @@ a:active {
 }
 .card__eyebrow {
     font-size: var(--nys-font-size-md);
-    font-weight: var(--nys-font-weight-semibold);
+    font-weight: var(--nys-font-weight-extralight);
     text-transform: uppercase;
     color: var(--nys-color-text-weak);
     margin-bottom: var(--nys-space-100);
