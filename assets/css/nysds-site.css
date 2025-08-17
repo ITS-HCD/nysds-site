@@ -112,7 +112,10 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
+
 /* === Custom Components === */
+
+
 
 /* Site body + main content */
 .home {
@@ -310,6 +313,54 @@ a:active {
     text-decoration: underline;
 }
 
+/* Page Header */
+
+.page-header {
+    padding-top: var(--nys-space-400);
+}
+/* Featured Image */
+.page-header__media img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.page-subtitle,
+.page-subtitle > * {
+    font-size: var(--nys-font-size-h4);
+    line-height: var(--nys-font-lineheight-xl);
+    font-weight: var(--nys-font-weight-light);
+    color: var(--nys-color-text-weak);
+    margin-bottom: var(--nys-space-200);
+}
+
+/* Page Meta */
+
+.page-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Optional, if you want it to wrap nicely on smaller viewports */
+  gap: var(--nys-space-400); /* 12px spacing between all items */
+  color: var(--nys-color-text-weaker);
+  font-size: var(--nys-font-size-body-sm);
+}
+
+/* Author */
+.page-author {
+    display: flex;
+    align-items: center;
+    gap: var(--nys-space-100);
+    color: var(--nys-color-text);
+}
+
+/* Page Content */
+
+.page-content img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--nys-space-200) 0;
+}
+
+
 /* Content Intro */
 
 .content-intro {
@@ -320,16 +371,18 @@ a:active {
 }
 
 /* nysds Subheader */
+
 .ex-header {
     margin-bottom: var(--nys-space-200);
     background-color: var(--nys-color-theme-strong);
 }
 
-ex-header__title {
+.ex-header__title {
     color: white;
 }
 
-/* Base card (kept from your snippet, a few small tweaks noted) */
+/* Card */
+
 .card {
     border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-xxl);
@@ -564,13 +617,6 @@ transition: none !important;
   margin-top: var(--nys-space-50);
 }
 
-/* Post Content */
-
-.post-content img {
-    max-width: 100%;
-    height: auto;
-    margin: var(--nys-space-200) 0;
-}
 
 /* Accordion */
 
@@ -710,16 +756,10 @@ li > .section-nav__list {
     border-bottom-width: 0;
 }
 
-
-.section-nav__list .section-nav__list .section-nav__item:last-child>.section-nav__link {
-    /* border-bottom-width: var(--nys-border-width-sm) important; */
-}
-
 .section-nav__list .section-nav__list .section-nav__link {
     font-size: var(--nys-font-size-ui-sm);
     padding-left: var(--nys-space-400);
 }
-
 
 /* Section Nav toggle functionality (modifies accordion) */
 
@@ -732,6 +772,7 @@ li > .section-nav__list {
     border-radius: 0 0 var(--nys-radius-md) var(--nys-radius-md);
 }
 
+/* Hide section nav on mobile, show toggle button */
 @media (max-width: 1023px) {
     .section-nav__list {
         display: none;
@@ -753,7 +794,8 @@ li > .section-nav__list {
     }
 }
 
-/* Tags */
+/* Tag List */
+
 .taglist {
   display: flex;
   flex-wrap: wrap;
@@ -763,7 +805,8 @@ li > .section-nav__list {
   list-style: none;
 }
 
-/* Currently Using Badge */
+/* Badge */
+
 .badge {
   display: inline-flex;
   justify-content: center;
@@ -780,24 +823,6 @@ li > .section-nav__list {
   white-space: nowrap;
   line-height: 1.6;
   margin-bottom: 0;
-}
-
-/* Page Styling */
-
-.page-meta {
-    margin-top: var(--nys-space-500);
-    padding-top: var(--nys-space-200);
-    border-top: var(--nys-border-width-sm) solid var(--nys-color-neutral-50);
-}
-.page-meta a {
-    font-size: var(--nys-font-size-body-sm);
-    margin-bottom: var(--nys-space-100);
-}
-
-@media (min-width: 768px) {
-    .page-meta a + a {
-        text-align: right;
-    }
 }
 
 /* On-Page Navigator */
