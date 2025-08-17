@@ -1,18 +1,26 @@
 /**
  * Build avatar display data from author metadata.
- * - If avatar is provided, use it.
- * - If not, use default avatar.
+ * Uses a global author → image mapping from _data/authors.json.
+ * Falls back to a default avatar if no match is found.
  *
- * @param {string | undefined} author - Author full name (for alt text).
- * @param {string | undefined} authorAvatar - Optional image path for author avatar.
+ * @param {string | undefined} author - Author full name (e.g. "Jane Doe").
  * @returns {{
  *   alt: string,
- *   src: string,
+ *   src: string
  * }}
  */
-module.exports = function(author, authorAvatar) {
-  const alt = author || "NYS Design System Team";
-  const src = authorAvatar || "/assets/img/authors/default.png";
+module.exports = function getAuthorAvatar(author) {
+  const authors = require("../../_data/authors.json");
 
-  return { alt, src };
+  if (author && authors[author]) {
+    return {
+      src: authors[author],
+      alt: author
+    };
+  }
+
+  return {
+    src: authors._default,
+    alt: "NYS Design System Team"
+  };
 };

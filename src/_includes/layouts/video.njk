@@ -21,13 +21,7 @@
 
         <h1 class="page-title">{{ title }}</h1>
 
-        {% if tags %}
-        <ul class="taglist">
-          {% for tag in tags %}
-          <li class="badge">{{ tag }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+        {%- include "partials/taglist.njk" -%}
 
         {{ content | safe }}
 

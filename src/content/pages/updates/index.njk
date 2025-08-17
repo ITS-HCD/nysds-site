@@ -30,7 +30,7 @@ navOrder: 1
           <div class="nys-tablet:nys-grid-col-8">
             <h2 class="post-list__title">
               <a href="{{ post.url }}" class="post-list__link">
-                {{ post.data.title }}
+                {% if post.data.tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ post.data.title }}
               </a>
             </h2>
             <div class="post-list__description">

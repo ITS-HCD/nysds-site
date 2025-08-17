@@ -23,6 +23,7 @@ const sortBySeriesOrder = require("./src/_11ty/filters/sortBySeriesOrder.js");
 const onlySeries = require("./src/_11ty/filters/onlySeries.js");
 const editOnGitHubUrl = require("./src/_11ty/filters/editOnGitHubUrl.js");
 const authorAvatar = require("./src/_11ty/filters/authorAvatar.js");
+const hasReleaseTag = require("./src/_11ty/filters/hasReleaseTag.js");
 
 // collections
 const updates = require("./src/_11ty/collections/updates");
@@ -49,6 +50,8 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addFilter("onlySeries", onlySeries);
     eleventyConfig.addFilter("editOnGitHubUrl", editOnGitHubUrl);
     eleventyConfig.addFilter("authorAvatar", authorAvatar);
+    eleventyConfig.addFilter("hasReleaseTag", hasReleaseTag);
+
 
     // collections
     eleventyConfig.addCollection("updates", updates);

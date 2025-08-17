@@ -19,7 +19,9 @@
           </div>
           {%- endif -%}
 
-          <h1 class="page-title">{{ title }}</h1>
+          <h1 class="page-title">
+            {% if tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ title }}
+          </h1>
 
           {%- if description -%}
             <p class="page-subtitle">{{ description }}</p>
@@ -36,44 +38,28 @@
           </div>
         </header>
 
+        {{ content | safe }}
 
-
-  
-
-  
-
-
-  
-  
-  <div class="nys-grid-row">
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">
+            {%- include "partials/taglist.njk" -%}
+          </div>
+        </div>
     
-    {% if tags %}
-      <ul class="tag__list">
-        {% for tag in tags %}
-          <li class="tag">#{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </div>
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
+            <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
+          </div>
+        </div>
 
-  <div class="nys-grid-row nys-margin-t-400">
-    <div class="nys-grid-col">
-    {{ content | safe }}
+        {% include "partials/edit-link.njk" %}
+
+      </section>
     </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      {% include "partials/onpage-nav.njk" %}
+    </aside>
   </div>
-  
-    <div class="nys-grid-row nys-margin-t-400">
-    <div class="nys-grid-col">
-      <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
-      <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
-    </div>
-  </div>
-{% include "partials/edit-link.njk" %}
-</section>
-  </div>
-  <aside class="nys-desktop:nys-grid-col-2">
-    {% include "partials/onpage-nav.njk" %}
-  </aside>
-</div>
 </div>
 {% endblock %}

@@ -313,16 +313,32 @@ a:active {
     text-decoration: underline;
 }
 
-/* Page Header */
+/* Page Content */
 
-.page-header {
-    padding-top: var(--nys-space-400);
+.page-content img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--nys-space-200) 0;
 }
+
+/* Page Header */
+.page-header {
+    padding-top: var(--nys-space-600);
+    margin-bottom: var(--nys-space-600);
+}
+.page-header h1.page-title {
+    margin-top: 0;
+}
+
 /* Featured Image */
 .page-header__media img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0;
+}
+.page-header__media {
+    margin-bottom: var(--nys-space-400);
 }
 .page-subtitle,
 .page-subtitle > * {
@@ -344,6 +360,15 @@ a:active {
   font-size: var(--nys-font-size-body-sm);
 }
 
+/* Star Releases */
+
+.release-mark::before {
+  content: "✪";
+  display: inline-block;
+  margin-right: var(--nys-space-50);
+  line-height: 1;
+}
+
 /* Author */
 .page-author {
     display: flex;
@@ -351,15 +376,6 @@ a:active {
     gap: var(--nys-space-100);
     color: var(--nys-color-text);
 }
-
-/* Page Content */
-
-.page-content img {
-    max-width: 100%;
-    height: auto;
-    margin: var(--nys-space-200) 0;
-}
-
 
 /* Content Intro */
 
