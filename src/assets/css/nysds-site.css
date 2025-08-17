@@ -112,6 +112,18 @@ a:active {
     color: var(--nys-color-link-strongest);
 }
 
+/* Additional Text Styles*/
+
+.page-subtitle,
+.page-subtitle p {
+    font-size: var(--nys-font-size-h4);
+    line-height: var(--nys-font-lineheight-xl);
+    font-weight: var(--nys-font-weight-light);
+    color: var(--nys-color-text-weak);
+    margin-bottom: var(--nys-space-200);
+}
+
+
 /* === Custom Components === */
 
 /* Site body + main content */
