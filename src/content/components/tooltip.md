@@ -109,7 +109,7 @@ Valid positions are: `top`, `bottom`, `right`, `left`
 
 ### Inverted
 Set the `inverted` when the tooltip is on a dark background.
-  {% set preview %}<div style="display: flex; justify-content: center; background-color: var(--nys-color-ink, #1b1b1b); padding: var(--nys-space-800, 64px);">
+  {% set preview %}<div style="display: flex; justify-content: center; margin-top:30px">
   <div style="color: #fff; display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
@@ -126,6 +126,7 @@ Set the `inverted` when the tooltip is on a dark background.
   <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
+{% set previewInverted = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
