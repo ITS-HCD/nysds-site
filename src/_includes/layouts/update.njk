@@ -33,8 +33,8 @@
               <nys-avatar image="{{ avatar.src }}"></nys-avatar>
               <span class="page-author__name">{{ author }}</span>
             </div>
-            <div class="page-meta__readtime">{{ content | timeToRead ('200 words a minute') }} read time</div>
             <time class="page-meta__date" datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time>
+            <div class="page-meta__readtime">{{ content | timeToRead ('200 words a minute') }} read time</div>
           </div>
         </header>
 

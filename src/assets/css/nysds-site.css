@@ -116,7 +116,6 @@ a:active {
 /* === Custom Components === */
 
 
-
 /* Site body + main content */
 .home {
     display: flex;
@@ -124,8 +123,12 @@ a:active {
     min-height: 100vh;
 }
 
-#main-content {
-  flex: 1;
+body {
+    background-color: var(--nys-color-theme-strong);
+}
+main[role=main] {
+    background-color: var(--nys-color-surface);
+    padding-bottom: var(--nys-space-400);
 }
 
 /* Fix for utility class layout bug */
@@ -286,7 +289,6 @@ a:active {
 /* Site Footer */
 
 .site-footer {
-    margin-top: var(--nys-space-400);
     background-color: var(--nys-color-theme-weaker);
     color: var(--nys-color-ink);
     padding: var(--nys-space-400) 0;
