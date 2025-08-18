@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.3.0 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.3.0">   
+    <meta name="description" content="Consolidated Figma libraries, new nys-backtotop component, circle prop for nys-button, and key accessibility fixes.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.3.0-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.3.0">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.3.0-release/">
-    <meta property="og:description" content="NYSDS 1.3.0">
+    <meta property="og:description" content="Consolidated Figma libraries, new nys-backtotop component, circle prop for nys-button, and key accessibility fixes.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.3.0 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.3.0
-          </h1><p class="page-subtitle">NYSDS 1.3.0</p><div class="page-meta">
+          </h1><p class="page-subtitle">Consolidated Figma libraries, new nys-backtotop component, circle prop for nys-button, and key accessibility fixes.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,70 +113,31 @@
           </div>
         </header>
 
-        <h1>★ NYSDS v.1.3.0</h1>
-<p>Excited to release the New York State Design System 1.3.0 today! We have spent this sprint consolidating our Figma libraries to enable new features like wireframing modes. We shipped 2 new components, <code>&lt;nys-button circle&gt;</code> and <code>&lt;nys-backtotop&gt;</code> and fixed a few bugs. We're working hard on the next set of components: <code>&lt;nys-tooltip&gt;</code>, <code>&lt;nys-fileinput&gt;</code>, and more!</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h2>🖌️ Figma Library Updates</h2>
+        <h2>Figma libraries streamlined</h2>
+<p>Designers, this one’s for you. We merged the Components and Foundations library, which makes them easier to use with branching and will be a better experience when we publish to the community. This also sets the stage for powerful new “modes” (like wireframing)... coming soon.</p>
+<p>And good news: <code>&lt;nys-tooltip&gt;</code> has already landed in Figma, and will be available in code soon!</p>
+<p><img src="https://github.com/user-attachments/assets/13ee50aa-a531-47d5-bcde-f1e5e26b7caf" alt="Screenshot showing Figma updates"></p>
+<p>↳ Thanks to <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for the tireless work in making this happen.</p>
+<h2>Back to Top joins the library</h2>
+<p>Need a quick way back to the top of a page? <code>&lt;nys-backtotop&gt;</code> is here! Put it at the bottom of your main content container, and it will appear once the user scrolls down. Read more about it on <a href="https://designsystem.ny.gov/components/backtotop">the nys-backtotop component documentation page</a>.</p>
+<p><img src="https://github.com/user-attachments/assets/8b6cb2e2-2753-4af2-90f4-432f10821f73" alt="Screenshot of the nys-backtotop component"></p>
+<p>↳ &quot;Top tier&quot; work by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Circle button variant</h2>
+<p><code>&lt;nys-button&gt;</code> now has a circle variant, great for icon-only actions. (Be sure to use the <code>label</code> prop for accessibility!)</p>
+<p><img src="https://github.com/user-attachments/assets/b771f6d1-da6d-43c1-94c4-7e2c53077669" alt="Screenshot of the circle button"></p>
+<p>↳ <a href="https://github.com/NovaCat35">Robert Chen</a> rounded this one out.</p>
+<h2>Lots of other fixes and improvements</h2>
 <ul>
-<li><code>&lt;nys-tooltip&gt;</code> is live in Figma, not yet in code</li>
-<li><img src="https://github.com/user-attachments/assets/%5B%6013ee50aa%60%5D(https://github.com/its-hcd/nysds/commit/13ee50aa)-a531-47d5-bcde-%5B%60f1e5e26b7caf%60%5D(https://github.com/its-hcd/nysds/commit/f1e5e26b7caf)" alt="image"></li>
-<li>Consolidated three libraries into two, paving the way for new NYSDS &quot;modes&quot; in Figma
-<em>Created by Kristin Sorrentino ([<a href="https://github.com/ksorrentino">@ksorrentino</a>](https://github.com/ksorrentino)) and Leo Vogel ([<a href="https://github.com/leo-vogel">@leo-vogel</a>](https://github.com/leo-vogel))</em></li>
+<li>Code Connect updates for Figma</li>
+<li>☑️ Checkbox tiles are now fully clickable</li>
+<li>Button height issues resolved (no more overflow or static sizing)</li>
+<li>Password toggle button no longer overlaps input text</li>
+<li>Browser support information added to Storybook and the Reference site</li>
 </ul>
-<h2>💠 New Components</h2>
-<h3><code>&lt;nys--backtotop&gt;</code></h3>
-<ul>
-<li><img src="https://github.com/user-attachments/assets/%5B%608b6cb2e2%60%5D(https://github.com/its-hcd/nysds/commit/8b6cb2e2)-2753-4af2-90f4-%5B%60432f10821f73%60%5D(https://github.com/its-hcd/nysds/commit/432f10821f73)" alt="image"></li>
-</ul>
-<h3><code>&lt;nys-button circle&gt;</code> Circle variant of the nys-button element</h3>
-<ul>
-<li><img src="https://github.com/user-attachments/assets/%5B%60b771f6d1%60%5D(https://github.com/its-hcd/nysds/commit/b771f6d1)-da6d-43c1-94c4-%5B%607e2c53077669%60%5D(https://github.com/its-hcd/nysds/commit/7e2c53077669)" alt="image"></li>
-</ul>
-<h2>🛠 Maintenance and Fixes</h2>
-<ul>
-<li>Figma Code Connect updates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/639">#639</a></li>
-</ul>
-</li>
-<li>FIX: Button - height overflow when text is longer than parent container
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/640">#640</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: Checkbox tile not fully clickable
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/670">#670</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: Button height does not adjust dynamically
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/640">#640</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: password button is overlaying the text in the input field
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/672">#672</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/636">#636</a></li>
-</ul>
-</li>
-<li>Browser Support added to Storybook and Reference Website
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/622">#622</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), and Jesse Gardner ([<a href="https://github.com/plasticmind">@plasticmind</a>](https://github.com/plasticmind))</em></li>
-</ul>
-<h2>⚠️ Known Issues</h2>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.2.0...v1.3.0">v1.2.0...v1.3.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> for sweating the details.</p>
+<hr>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.3.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.3.0">See the full developer release notes for v1.3.0 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -185,7 +146,13 @@
           
           <li class="badge">release</li>
           
-          <li class="badge"> update</li>
+          <li class="badge"> components</li>
+          
+          <li class="badge"> figma</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> forms</li>
           
         </ul>
         </div>

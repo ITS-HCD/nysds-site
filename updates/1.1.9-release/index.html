@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.1.9 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.1.9">   
+    <meta name="description" content="New text input variants, a tile option for checkboxes, and automated testing.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.1.9-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.1.9">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.1.9-release/">
-    <meta property="og:description" content="NYSDS 1.1.9">
+    <meta property="og:description" content="New text input variants, a tile option for checkboxes, and automated testing.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.1.9 section-updates">
@@ -102,96 +102,50 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.1.9
-          </h1><p class="page-subtitle">NYSDS 1.1.9</p><div class="page-meta">
+          </h1><p class="page-subtitle">New text input variants, a tile option for checkboxes, and automated testing.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
               <span class="page-author__name">Eric Steinborn</span>
             </div>
-            <div class="page-meta__readtime">2 min read time</div>
+            <div class="page-meta__readtime">1 min read time</div>
             <time class="page-meta__date" datetime="2025-05-29T00:00:00.000+00:00">May 29, 2025</time>
           </div>
         </header>
 
-        <h1>★ NYSDS v1.1.9</h1>
-<p>Excited to release the New York State Design System 1.1.9 today! We have added functionality to three of our components, added automated testing to some components (more to come!)  we are following a new QA process for all new components. We have more components in the queue and will be releasing them in the coming months.</p>
-<h3>✨ NEW <code>nys-checkbox</code> <code>Tile</code> Variant component</h3>
+        <h2>Testing takes center stage</h2>
+<p>Seven components, including <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-alert&gt;</code>, and <code>&lt;nys-textinput&gt;</code>, now run automated tests in CI. This means more reliable builds and fewer surprises in production.</p>
+<p>↳ Thanks for all the hard work from <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/esteinborn">Eric Steinborn</a> to make this a reality.</p>
+<h2>Smarter forms, stronger inputs</h2>
+<p>Forms get a big boost this release:</p>
+<p>A <strong>tile variant</strong> for <code>&lt;nys-checkbox&gt;</code> and <code>&lt;nys-radiobutton&gt;</code> makes grouped choices clearer and easier to scan.</p>
+<p><img src="https://github.com/user-attachments/assets/8613c58a-7e48-4b36-baef-e06f31d19bbe" alt="Checkbox tile variant demo"></p>
+<p><code>&lt;nys-textinput&gt;</code> has two new variants: an <strong>input with button</strong> (great for search bars) and a <strong>password field</strong> with a show/hide toggle.</p>
+<p><img src="https://github.com/user-attachments/assets/ad6e2392-0eec-4400-ae64-dd10bfbdbd2d" alt="Textinput with button demo"><br>
+<img src="https://github.com/user-attachments/assets/15307cc1-382b-483b-a6fb-933ed1156790" alt="Password input demo"></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/NovaCat35">Robert Chen</a> for building out these updates.</p>
+<h2>“Copy that!”</h2>
+<p>The <code>&lt;nys-icon&gt;</code> now includes a <strong>copy icon</strong>.</p>
+<p><img src="https://github.com/user-attachments/assets/794133c9-e77d-4efa-95d8-b8619f81129f" alt="Copy icon preview"></p>
+<p>↳ Added by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Cleaner example code</h2>
+<p>Example blocks on the reference site have a new format and layout, making it easier to grab and reuse snippets.</p>
+<p><img src="https://github.com/user-attachments/assets/5502dc2f-88cf-47b5-96ea-4e9d41fa7b0c" alt="New example code block layout"></p>
+<p>↳ Thanks to <a href="https://github.com/leo-vogel">Leo Vogel</a> for designing and to <a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/NovaCat35">Robert Chen</a> for building it.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>A new variant of displaying a checkbox or radio button, outlines each selection with a border and room for additional information
-<img src="https://github.com/user-attachments/assets/%5B%608613c58a%60%5D(https://github.com/its-hcd/nysds/commit/8613c58a)-7e48-4b36-baef-%5B%60e06f31d19bbe%60%5D(https://github.com/its-hcd/nysds/commit/e06f31d19bbe)" alt="Pasted image ">
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
+<li>Button clicks are now fully accessible</li>
+<li>Keyboard support added for the password toggle</li>
+<li>Fixed textinput tabbing error</li>
+<li>Skipnav transition no longer jumps out of bounds</li>
 </ul>
-<h3>✨ NEW <code>nys-textinput</code> variant: <code>input with button</code></h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li>Place buttons within input fields for things like search, or slim text fields
-<img src="https://github.com/user-attachments/assets/%5B%60ad6e2392%60%5D(https://github.com/its-hcd/nysds/commit/ad6e2392)-0eec-4400-ae64-%5B%60dd10bfbdbd2d%60%5D(https://github.com/its-hcd/nysds/commit/dd10bfbdbd2d)" alt="Pasted image ">
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
+<li><code>&lt;nys-unavheader&gt;</code>: Translate button is missing on mobile (<a href="https://github.com/its-hcd/nysds/issues/571">#571</a>)</li>
 </ul>
-<h3>✨ NEW <code>nys-textinput</code> variant: <code>password</code></h3>
-<ul>
-<li>Place an eye icon in a field to toggle visibility of text input field
-<img src="https://github.com/user-attachments/assets/%5B%60fc8a3e2a%60%5D(https://github.com/its-hcd/nysds/commit/fc8a3e2a)-d8ee-4b44-bdd3-%5B%608be77ca40d9e%60%5D(https://github.com/its-hcd/nysds/commit/8be77ca40d9e)" alt="Pasted image ">
-<img src="https://github.com/user-attachments/assets/%5B%6015307cc1%60%5D(https://github.com/its-hcd/nysds/commit/15307cc1)-382b-483b-a6fb-%5B%60933ed1156790%60%5D(https://github.com/its-hcd/nysds/commit/933ed1156790)" alt="Pasted image ">
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></li>
-</ul>
-<h3>✨ NEW <code>nys-icon</code>: <code>copy</code></h3>
-<p><img src="https://github.com/user-attachments/assets/%5B%60794133c9%60%5D(https://github.com/its-hcd/nysds/commit/794133c9)-e77d-4efa-95d8-%5B%60b8619f81129f%60%5D(https://github.com/its-hcd/nysds/commit/b8619f81129f)" alt="Pasted image ">
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🧰 NEW tests for NYSDS components</h3>
-<ul>
-<li>Tests have been created for these components this release:
-<ul>
-<li>nys-globalheader</li>
-<li>nys-globalfooter</li>
-<li>nys-button</li>
-<li>nys-alert</li>
-<li>nys-avatar</li>
-<li>nys-textinput</li>
-<li>nys-skipnav</li>
-</ul>
-</li>
-<li>These tests are automated during development and are implemented to be tested on CI pipelines and will fail a build if they fail a test
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)) and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></li>
-</ul>
-<h3>🖌️ NEW example code blocks on reference website</h3>
-<p>New format, better layout, same functionality!
-<img src="https://github.com/user-attachments/assets/%5B%605502dc2f%60%5D(https://github.com/its-hcd/nysds/commit/5502dc2f)-88cf-47b5-96ea-%5B%604e9d41fa7b0c%60%5D(https://github.com/its-hcd/nysds/commit/4e9d41fa7b0c)" alt="Pasted image ">
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)) and Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Button clicks were not fully accessible
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/544">#544</a></li>
-</ul>
-</li>
-<li>Keyboard functionality for password toggle
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/543">#543</a></li>
-</ul>
-</li>
-<li>Tabbing in and out of a textinput throws an error
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/538">#538</a></li>
-</ul>
-</li>
-<li>nys-skipnav transition is out of bounds
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/537">#537</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>nys-unavheader: Translate button missing on mobile:
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/571">#571</a></li>
-</ul>
-</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.8...v1.1.9">v1.1.8...v1.1.9</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.9" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.9">See the full developer release notes for v1.1.9 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -199,6 +153,12 @@
         <ul class="taglist">
           
           <li class="badge">release</li>
+          
+          <li class="badge"> forms</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> testing</li>
           
           <li class="badge"> update</li>
           

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 0.0.7-alpha - New York State Design System</title>
-    <meta name="description" content="Excelsior 0.0.7-alpha">   
+    <meta name="description" content="Our first styles package lands + avatar component joins the lineup.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/0.0.7-alpha-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 0.0.7-alpha">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/0.0.7-alpha-release/">
-    <meta property="og:description" content="Excelsior 0.0.7-alpha">
+    <meta property="og:description" content="Our first styles package lands + avatar component joins the lineup.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-0.0.7-alpha section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 0.0.7-alpha
-          </h1><p class="page-subtitle">Excelsior 0.0.7-alpha</p><div class="page-meta">
+          </h1><p class="page-subtitle">Our first styles package lands + avatar component joins the lineup.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,70 +113,54 @@
           </div>
         </header>
 
-        <h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes one new component —<code>&lt;nys-avatar&gt;</code> — We have also shipped our <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
+        <p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
 <h2>What's New</h2>
-<h3>✨ New Component: <code>&lt;nys-avatar&gt;</code></h3>
-<p>Description: UI element for displaying a user icon or image.</p>
+<h3>New Component: nys-avatar</h3>
+<p>This is a UI element for displaying a user icon or image.</p>
 <p>Features:</p>
 <ul>
 <li>Personalize avatars with custom icons, initials, or images</li>
-<li>To display an image in the avatar, set the <code>image</code> and <code>label</code> attributes</li>
-<li>Supports a custom icon from the <code>&lt;nys-icon&gt;</code> library</li>
+<li>Display an image in the avatar, set the image and label attributes</li>
+<li>Supports a custom icon from the <code>&lt;nys-icon&gt;</code> library<br>
+↳Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>)</li>
 </ul>
-<p><em>Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) in #145</em></p>
-<h3>✨ New Style Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-styles</code></h3>
+<h3>New Style Package: @nysds/styles</h3>
 <ul>
-<li>A centralized CSS file for core design tokens <code>(excelsior.min.css)</code></li>
-<li>Agency-specific theme stylesheets (e.g., <code>theme-health.min.css</code>, <code>theme-environment.min.css</code>) that can override the components and UI elements using themed variables</li>
+<li>A centralized CSS file for core design tokens (nysds.min.css)</li>
+<li>Agency-specific theme stylesheets (e.g., theme-health.min.css, theme-environment.min.css) that can override the components and UI elements using themed variables</li>
 <li>Utility classes the cover common styling needs for grid layout, display styles, flexbox, floats, opacity, and z-index</li>
-<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM</li>
+<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM This CSS framework will help us get consistent theming and styling across all New York State digital products.</li>
 </ul>
-<p>This CSS framework will help us get consistent theming and styling across all New York State digital products.</p>
 <h2>Features</h2>
-<p><strong>Global Stylesheet:</strong></p>
-<p>The <code>excelsior.min.css</code> file includes foundational design tokens, like spacing, typography, and default theme colors.</p>
-<p>To use, reference this on pages where you'll be using the variables or the design system components:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Agency-Specific Themes:</strong></p>
-<p>Additional theme stylesheets are published that provide agency-specific color tokens:</p>
+<p><strong>Global Stylesheet:</strong> The excelsior.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>Agency-Specific Themes:</strong> Additional theme stylesheets are published that provide agency-specific color tokens:</p>
 <ul>
-<li>Administration: excelsior-theme-admin.min.css</li>
-<li>Business: excelsior-theme-business.min.css</li>
-<li>Recreation and Environment: excelsior-theme-environment.min.css</li>
-<li>Health and Human Services: excelsior-theme-health.min.css</li>
-<li>Local and Regional Authorities: excelsior-theme-local.min.css</li>
-<li>Public Safety: excelsior-theme-safety.min.css</li>
-<li>Transportation and Utilities: excelsior-theme-transportation.min.css</li>
+<li>Administration: theme-admin.min.css</li>
+<li>Business: theme-business.min.css</li>
+<li>Recreation and Environment: theme-environment.min.css</li>
+<li>Health and Human Services: theme-health.min.css</li>
+<li>Local and Regional Authorities: theme-local.min.css</li>
+<li>Public Safety: theme-safety.min.css</li>
+<li>Transportation and Utilities: theme-transportation.min.css</li>
 </ul>
 <p>To override the default theme:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Utility classes:</strong></p>
-<p>Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>Utility classes:</strong> Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
 <p>To include the full utility classes, simply include the utility CSS file:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Shadow DOM Integration:</strong></p>
-<p>The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
+<p><strong>Shadow DOM Integration:</strong> The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">:host</span> <span class="token punctuation">{</span>
   <span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">,</span> #0044cc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token selector">button</span> <span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--_nys-button-background-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p><strong>Theme Variables:</strong></p>
-<p>Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.</p>
-<p><em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Most components now utilize design tokens for their styles - related issues: <a href="https://github.com/its-hcd/nysds/issues/176">#176</a> <a href="https://github.com/its-hcd/nysds/issues/173">#173</a> <a href="https://github.com/its-hcd/nysds/issues/164">#164</a> <a href="https://github.com/its-hcd/nysds/issues/163">#163</a> <a href="https://github.com/its-hcd/nysds/issues/161">#161</a> <a href="https://github.com/its-hcd/nysds/issues/158">#158</a> <a href="https://github.com/its-hcd/nysds/issues/178">#178</a></li>
-</ul>
-<h2>Related issues</h2>
-<ul>
-<li><code>&lt;nys-avatar&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/145">#145</a></li>
-<li><code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-style</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/159">#159</a> <a href="https://github.com/its-hcd/nysds/issues/155">#155</a> <a href="https://github.com/its-hcd/nysds/issues/179">#179</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.3-alpha...v0.0.7-alpha</p>
+<p><strong>Theme Variables:</strong> Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.<br>
+↳<em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -186,6 +170,10 @@
           <li class="badge">release</li>
           
           <li class="badge"> update</li>
+          
+          <li class="badge"> styles</li>
+          
+          <li class="badge"> avatar</li>
           
         </ul>
         </div>

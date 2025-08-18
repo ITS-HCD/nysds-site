@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.2.0 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.2.0">   
+    <meta name="description" content="Figma updates for buttons and inputs, new automated tests, and key fixes.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.2.0-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.2.0">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.2.0-release/">
-    <meta property="og:description" content="NYSDS 1.2.0">
+    <meta property="og:description" content="Figma updates for buttons and inputs, new automated tests, and key fixes.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.2.0 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.2.0
-          </h1><p class="page-subtitle">NYSDS 1.2.0</p><div class="page-meta">
+          </h1><p class="page-subtitle">Figma updates for buttons and inputs, new automated tests, and key fixes.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,62 +113,27 @@
           </div>
         </header>
 
-        <h1>★ NYSDS v.1.2.0</h1>
-<p>Excited to release the New York State Design System 1.1.10 today! We have spent this sprint catching up on component designs in Figma, and fixing bugs in components. We are following a new QA process for all new components. We have 3 components in the engineering queue and will be releasing them soon!</p>
-<h3>🖌️ Figma Library Updates</h3>
+        <h2>Automated testing kicks in</h2>
+<p>You won't see it, but this is a big deal. <code>&lt;nys-icon&gt;</code> and <code>&lt;nys-textarea&gt;</code> now have automated tests running in CI. If a test fails, the build fails, which makes it easier for us to catch bugs before publishing releases.</p>
+<p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for putting testing in place.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>New Circle Button variant of nys-button (Figma only, no code yet)</li>
-<li>Input subcomponents for nys-label and nys-error for use by designers in building custom input types</li>
-<li>unav header NYS logo fixed</li>
+<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/design-tokens">design tokens</a></li>
+<li>Translate button in <code>nys-unavheader</code> works properly now, and the logo link doesn't open in a new tab anymore</li>
+<li>Improved documentation for component events in our documentation</li>
+<li>Fixed the nys-avatar slot</li>
 </ul>
-<h3>🧰 NEW Tests for NYSDS components</h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h2>Figma gets some love</h2>
+<p>Designers, you’ve got some lovely new tools in your Figma:</p>
 <ul>
-<li>Tests have been created for these components this release:
-<ul>
-<li>nys-icon</li>
-<li>nys-textarea</li>
+<li>A circle button prop for <code>nys-button</code> (Figma-only for now)</li>
+<li>Subcomponents for <code>nys-label</code> and <code>nys-error</code> to make it easier to build your own custom input types</li>
+<li>The <code>nys-unavheader</code> logo alignment is better</li>
 </ul>
-</li>
-<li>These tests are automated during development and are implemented to be tested on CI pipelines and will fail a build if they fail a test
-_Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</li>
-</ul>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Update token list
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/611">#611</a></li>
-</ul>
-</li>
-<li>FIX: unav header translate button
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/603">#603</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/571">#571</a></li>
-</ul>
-</li>
-<li>FIX: unav header logo link opens in new tab
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/602">#602</a></li>
-</ul>
-</li>
-<li>Component JS Event Documentation
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/624">#624</a></li>
-</ul>
-</li>
-<li>FIX: avatar slot logic
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/626">#626</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.9...v1.2.0">v1.1.9...v1.2.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for sweating the small stuff.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.2.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.2.0">See the full developer release notes for v1.2.0 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -176,6 +141,12 @@ _Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>]
         <ul class="taglist">
           
           <li class="badge">release</li>
+          
+          <li class="badge"> figma</li>
+          
+          <li class="badge"> testing</li>
+          
+          <li class="badge"> accessibility</li>
           
           <li class="badge"> update</li>
           

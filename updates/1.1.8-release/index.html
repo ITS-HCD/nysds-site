@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.1.8 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.1.8">   
+    <meta name="description" content="A new skip navigation component, fresh icons, and key accessibility fixes.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.1.8-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.1.8">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.1.8-release/">
-    <meta property="og:description" content="NYSDS 1.1.8">
+    <meta property="og:description" content="A new skip navigation component, fresh icons, and key accessibility fixes.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.1.8 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.1.8
-          </h1><p class="page-subtitle">NYSDS 1.1.8</p><div class="page-meta">
+          </h1><p class="page-subtitle">A new skip navigation component, fresh icons, and key accessibility fixes.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,45 +113,25 @@
           </div>
         </header>
 
-        <p>★ NYSDS v.1.1.8</p>
-<h2>What's New</h2>
-<h3>✨ NEW <code>nys-skipnav</code> component</h3>
+        <h2>Skip straight to the good stuff</h2>
+<p>Say hello to <code>&lt;nys-skipnav&gt;</code>, our brand-new skip navigation component. It provides a visible link for keyboard and screen reader users to jump right to the main content. Include it at the very top of pages for to make it easier for people to skip directly to the content.</p>
+<p>↳ Big thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for this accessibility win.</p>
+<h2>Add it, remove it</h2>
+<p>The <code>&lt;nys-icon&gt;</code> library got two new additions: <code>add</code> and <code>remove</code>.<br>
+↳ Added (not removed) by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>A visible skip link for keyboard and screen reader users to jump directly to the main content.</li>
+<li><code>&lt;nys-radiobutton&gt;</code> now renders correctly when dynamically created in Angular</li>
+<li>Better alignment between icon and text in <code>&lt;nys-alert&gt;</code></li>
+<li>Button is now fully keyboard accessible</li>
 </ul>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>✨ NEW <code>nys-icon</code> icons: <code>add</code> + <code>remove</code></h3>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li>Radiobutton not rendering first radio if entered in dynamically in Angular
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/505">#505</a></li>
+<li>Password field’s eye toggle is not yet keyboard focusable (<a href="https://github.com/its-hcd/nysds/issues/519">#519</a>)</li>
 </ul>
-</li>
-<li>Better align icon and text in <code>nys-alert</code>
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/508">#508</a></li>
-</ul>
-</li>
-<li>Button subcomponent not clickable via keyboard
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/510">#510</a></li>
-</ul>
-</li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></p>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>Eye Toggle of Password field is not keyboard focusable
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/519">#519</a></li>
-</ul>
-</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.7...v1.1.8">v1.1.7...v1.1.8</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.8" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.8">See the full developer release notes for v1.1.8 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -159,6 +139,12 @@
         <ul class="taglist">
           
           <li class="badge">release</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> navigation</li>
+          
+          <li class="badge"> icons</li>
           
           <li class="badge"> update</li>
           

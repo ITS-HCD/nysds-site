@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.5.0 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.5.0">   
+    <meta name="description" content="Welcoming nys-tooltip to the library and polishing up nys-fileinput.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.5.0-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.5.0">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.5.0-release/">
-    <meta property="og:description" content="NYSDS 1.5.0">
+    <meta property="og:description" content="Welcoming nys-tooltip to the library and polishing up nys-fileinput.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.5.0 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.5.0
-          </h1><p class="page-subtitle">NYSDS 1.5.0</p><div class="page-meta">
+          </h1><p class="page-subtitle">Welcoming nys-tooltip to the library and polishing up nys-fileinput.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,53 +113,22 @@
           </div>
         </header>
 
-        <h2>★ NYSDS v.1.5.0</h2>
-<p>Happy New York State Design System 1.5.0! We are releasing multiple fixes to our <code>&lt;nys-fileinput&gt;</code> component. We're also releasing a new <code>nys-tooltip</code> component. We also fixed a few bugs.</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h3>💠 New Component</h3>
-<h4><code>&lt;nys-tooltip&gt;</code></h4>
-<p>Tooltip has come out of design into code this release. Wrap <code>&lt;nys-button&gt;</code> and <code>&lt;nys-icon&gt;</code> with a <code>&lt;nys-tooltip&gt;</code> to create a tooltip on a button or an icon:
-<img width="502" height="225" alt="image" src="https://github.com/user-attachments/assets/[`c2d9ccfd`](https://github.com/its-hcd/nysds/commit/c2d9ccfd)-1e2f-4675-9094-[`4fc89ce33bdd`](https://github.com/its-hcd/nysds/commit/4fc89ce33bdd)" /></p>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🐛 <code>&lt;nys-fileinput&gt;</code> Fixes</h3>
-<p>Last release we shipped <code>&lt;ys-fileinput&gt;</code>, but found a few bugs with it. We have fixed the bugs and the component is now live and functional in 1.5.0
-<img width="668" height="449" alt="image" src="https://github.com/user-attachments/assets/[`fd5f0da7`](https://github.com/its-hcd/nysds/commit/fd5f0da7)-d0cc-4859-8a4a-[`8d0ba1a88c24`](https://github.com/its-hcd/nysds/commit/8d0ba1a88c24)" /></p>
-<p><em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+        <h2>Welcome, tooltips!</h2>
+<p><code>&lt;nys-tooltip&gt;</code> has officially joined the design system family. Wrap it around a <code>&lt;nys-button&gt;</code> or <code>&lt;nys-icon&gt;</code> and you’ll get clear, accessible context on hover or focus.<br>
+↳ Built with care by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>File Input, all cleaned up</h2>
+<p>We gave <code>&lt;nys-fileinput&gt;</code> some extra attention this round. With the bugs ironed out, it’s ready to handle uploads reliably in production.<br>
+↳ Fixes led by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>Properly Build UMD package for alpha releases
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/738">#738</a></li>
+<li>Proper UMD builds for alpha releases</li>
+<li><code>ariaLabel</code> support added to <code>nys-icon</code></li>
+<li><code>nys-unavheader</code> accessibility improved: search button labeled and aria values corrected</li>
+<li>Logic fix for <code>validateFileHeader</code></li>
 </ul>
-</li>
-<li>Add ariaLabel property to nys-icon
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/736">#736</a></li>
-</ul>
-</li>
-<li>UnavHeader search button needs a label
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/719">#719</a></li>
-</ul>
-</li>
-<li>UnavHeader needs updated Aria values
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/730">#730</a></li>
-</ul>
-</li>
-<li>Fix logic for validateFileHeader
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/710">#710</a></li>
-</ul>
-</li>
-</ul>
-<p><em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), Robert Chen([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35)), and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.4.0...v1.5.0">v1.4.0...v1.5.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/NovaCat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> for their work across these updates.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.5.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.5.0">See the full developer release notes for v1.5.0 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -168,7 +137,11 @@
           
           <li class="badge">release</li>
           
-          <li class="badge"> update</li>
+          <li class="badge"> components</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> forms</li>
           
         </ul>
         </div>

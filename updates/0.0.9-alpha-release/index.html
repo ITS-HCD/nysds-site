@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 0.0.9-alpha - New York State Design System</title>
-    <meta name="description" content="Excelsior 0.0.9-alpha">   
+    <meta name="description" content="Global Header + Footer land in Excelsior ↗️, along with form event fixes and dependency updates.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/0.0.9-alpha-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 0.0.9-alpha">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/0.0.9-alpha-release/">
-    <meta property="og:description" content="Excelsior 0.0.9-alpha">
+    <meta property="og:description" content="Global Header + Footer land in Excelsior ↗️, along with form event fixes and dependency updates.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-0.0.9-alpha section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 0.0.9-alpha
-          </h1><p class="page-subtitle">Excelsior 0.0.9-alpha</p><div class="page-meta">
+          </h1><p class="page-subtitle">Global Header + Footer land in Excelsior ↗️, along with form event fixes and dependency updates.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,40 +113,23 @@
           </div>
         </header>
 
-        <h1>Release Notes</h1>
-<p>This is a small update to address bug fixes. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>.</p>
-<p>This release includes two new components <code>nys-globalheader</code> and <code>nys-globalfooter</code>, some modifications to theming, and lots of component bug fixes.</p>
-<h2>What's New</h2>
-<h3>✨ New <code>nys-globalheader</code> and <code>nys-globalfooter</code> Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-globalheader</code> <code>[@nys-excelsior](https://github.com/nys-excelsior)/nysglobalfooter</code></h3>
+        <p>This release introduces the new Global Header and Footer components, improves form elements, and updates core dependencies.<br>
+↳ Thanks to Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>) for the collaborative effort.</p>
+<h2>New Components: Global Header + Global Footer</h2>
+<p>The biggest addition this release:</p>
 <ul>
-<li>A component to create a Global header in sites and apps <a href="https://github.com/its-hcd/nysds/issues/123">#123</a></li>
-<li>A component to create a Global Footer in sites and apps <a href="https://github.com/its-hcd/nysds/issues/124">#124</a></li>
-<li>Agency-specific themes apply to both Global Header and Global Footer</li>
+<li><strong>Global Header (<code>nys-globalheader</code>)</strong> standardizes top navigation across apps and sites.</li>
+<li><strong>Global Footer (<code>nys-globalfooter</code>)</strong> ensures consistency at the bottom of every page.</li>
+<li>Both respect agency-specific themes for seamless branding.<br>
+↳ Created by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a></li>
 </ul>
-<p>These new components will help us get consistent theming and styling across all New York State digital products.</p>
-<p><em>Created by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h2>Maintenance and Fixes</h2>
 <ul>
-<li>
-<h4>Updated <code>nys-select</code>, <code>nys-textinput</code>, and <code>nys-textarea</code></h4>
-</li>
-<li>
-<p>These components now properly bubble up their change events and input events</p>
-</li>
-<li>
-<p><code>textarea</code> also includes new events for select and selectionchange</p>
-</li>
-<li>
-<p>Related issues: <a href="https://github.com/its-hcd/nysds/issues/232">#232</a> <a href="https://github.com/its-hcd/nysds/issues/239">#239</a> <a href="https://github.com/its-hcd/nysds/issues/238">#238</a> <a href="https://github.com/its-hcd/nysds/issues/237">#237</a> <a href="https://github.com/its-hcd/nysds/issues/224">#224</a> <a href="https://github.com/its-hcd/nysds/issues/223">#223</a> <a href="https://github.com/its-hcd/nysds/issues/214">#214</a> <a href="https://github.com/its-hcd/nysds/issues/213">#213</a> <a href="https://github.com/its-hcd/nysds/issues/212">#212</a> <a href="https://github.com/its-hcd/nysds/issues/204">#204</a></p>
-</li>
+<li><strong>Forms behave better:</strong> <code>nys-select</code>, <code>nys-textinput</code>, and <code>nys-textarea</code> now properly bubble change/input events. <code>nys-textarea</code> also adds <code>select</code> and <code>selectionchange</code> events.</li>
+<li><strong>Dependencies updated:</strong> Vite patched for vulnerabilities, Storybook upgraded to 8.5.2.</li>
 </ul>
-<p><em>Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
-<h2>Related issues</h2>
-<ul>
-<li>Update Vulnerable Vite package - Related issue <a href="https://github.com/its-hcd/nysds/issues/249">#249</a></li>
-<li>Update Storybook to 8.5.2 - Related issue <a href="https://github.com/its-hcd/nysds/issues/250">#250</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.8-alpha...v0.0.9-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.9-alpha">See the full developer release notes for v0.0.9 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -156,6 +139,8 @@
           <li class="badge">release</li>
           
           <li class="badge"> update</li>
+          
+          <li class="badge"> events</li>
           
         </ul>
         </div>

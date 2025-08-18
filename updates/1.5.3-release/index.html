@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.5.3 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.5.3">   
+    <meta name="description" content="Hotfixes for nys-textinput, nys-unavheader accessibility, and nys-backtotop behavior.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.5.3-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.5.3">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.5.3-release/">
-    <meta property="og:description" content="NYSDS 1.5.3">
+    <meta property="og:description" content="Hotfixes for nys-textinput, nys-unavheader accessibility, and nys-backtotop behavior.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.5.3 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.5.3
-          </h1><p class="page-subtitle">NYSDS 1.5.3</p><div class="page-meta">
+          </h1><p class="page-subtitle">Hotfixes for nys-textinput, nys-unavheader accessibility, and nys-backtotop behavior.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,29 +113,26 @@
           </div>
         </header>
 
-        <p>This is a Hotfix release for 1.5.0</p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ol>
-<li>BUG: linking to unpublished dependencies breaks single component builds <a href="https://github.com/its-hcd/nysds/issues/760">#760</a></li>
-<li>Publish error message and label <a href="https://github.com/its-hcd/nysds/issues/761">#761</a></li>
-<li>Update nys-backtotop emitted events with nys- prefix <a href="https://github.com/its-hcd/nysds/issues/756">#756</a></li>
-<li>bugfix/Backtotop appears at top of page <a href="https://github.com/its-hcd/nysds/issues/759">#759</a></li>
-<li>UnavHeader tab order corrected <a href="https://github.com/its-hcd/nysds/issues/757">#757</a></li>
-<li>Fix transparent background on file list to not be <a href="https://github.com/its-hcd/nysds/issues/755">#755</a></li>
-<li>Enhancement/Code Connect for back-to-top and circle button <a href="https://github.com/its-hcd/nysds/issues/753">#753</a></li>
-<li>Fix: tooltip rendering on icons <a href="https://github.com/its-hcd/nysds/issues/751">#751</a></li>
-<li>nys-avatar Change label to ariaLabel <a href="https://github.com/its-hcd/nysds/issues/747">#747</a></li>
-<li>Update icon storybook code and figma.config.json links <a href="https://github.com/its-hcd/nysds/issues/742">#742</a></li>
-<li>fix business ramp 700 -&gt; 600 by <a href="https://github.com/its-hcd/nysds/issues/764">#764</a></li>
-<li>Text Input: fix overflowing container bug <a href="https://github.com/its-hcd/nysds/issues/770">#770</a></li>
-</ol>
-<p><em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), Robert Chen([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35)), and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>⚠️ Known Issues</h3>
+        <h2>Forms behave again</h2>
+<p>Text Input no longer overflows its container — forms are back to being predictable and easy to use.<br>
+↳ Big thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> for tracking this down.</p>
+<h2>A more accessible UNavheader</h2>
+<p>Tab order inside <code>nys-unavheader</code> has been corrected, so moving through links with the keyboard now works as expected.<br>
+↳ Kudos to <a href="https://github.com/esteinborn">Eric Steinborn</a> for pushing this fix through.</p>
+<h2>Back to Top works as expected</h2>
+<p>The <code>nys-backtotop</code> button no longer shows up in the wrong place, and its events now use the proper <code>nys-</code> prefix.<br>
+↳ Shout out to <a href="https://github.com/NovaCat35">Robert Chen</a> for handling this one.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>No known issues</li>
+<li><code>nys-tooltip</code> now render correctly on icons</li>
+<li>Avatar now uses <code>ariaLabel</code> for accessibility</li>
+<li>Transparent backgrounds in <code>nys-fileinput</code> lists fixed</li>
+<li>Business agency group ramp color corrected</li>
+<li>Dependency linking and publishing workflow bugs squashed</li>
+<li>Code Connect enhancements for <code>nys-backtotop</code> and circle prop for <code>nys-button</code></li>
 </ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<p>Full Changelog: <a href="https://github.com/ITS-HCD/nysds/compare/v1.5.0...v1.5.3">v1.5.0...v1.5.3</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.5.3" title="https://github.com/its-hcd/nysds/releases/tag/v1.5.3">See the full developer release notes for v.1.5.3 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -144,7 +141,13 @@
           
           <li class="badge">release</li>
           
-          <li class="badge"> update</li>
+          <li class="badge"> hotfix</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> forms</li>
+          
+          <li class="badge"> navigation</li>
           
         </ul>
         </div>

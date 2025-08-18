@@ -367,6 +367,7 @@ a:active {
   display: inline-block;
   margin-right: var(--nys-space-50);
   line-height: 1;
+  opacity: 0.4;
 }
 
 /* Author */

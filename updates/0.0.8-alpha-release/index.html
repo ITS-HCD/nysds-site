@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 0.0.8-alpha - New York State Design System</title>
-    <meta name="description" content="v0.0.8-alpha">   
+    <meta name="description" content="Launch of @nysds/styles package and major documentation improvements.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/0.0.8-alpha-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 0.0.8-alpha">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/0.0.8-alpha-release/">
-    <meta property="og:description" content="v0.0.8-alpha">
+    <meta property="og:description" content="Launch of @nysds/styles package and major documentation improvements.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-0.0.8-alpha section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 0.0.8-alpha
-          </h1><p class="page-subtitle">v0.0.8-alpha</p><div class="page-meta">
+          </h1><p class="page-subtitle">Launch of @nysds/styles package and major documentation improvements.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,30 +113,21 @@
           </div>
         </header>
 
-        <h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes all previous components and some modifications to theming — We have also shipped our <code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code> package to style the components and make design tokens available for broader use.</p>
-<h2>What's New</h2>
-<h3>✨ Updated Style Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code></h3>
+        <h2>Styles now have their own home</h2>
+<p>Big news: <a href="https://www.npmjs.com/package/@nysds/styles"><code>@nysds/styles</code></a> has officially joined the family. It brings:</p>
 <ul>
-<li>A centralized CSS file for core design tokens <code>(excelsior.min.css)</code></li>
-<li>Agency-specific theme stylesheets (e.g., <code>excelsior-theme-health.min.css</code>, <code>excelsior-theme-environment.min.css</code>) that can override the components and UI elements using themed variables</li>
-<li>Utility classes that cover common styling needs for grid layout, display styles, flexbox, floats, opacity, and z-index (<code>excelsior-full.min.css</code>) <a href="https://github.com/its-hcd/nysds/issues/179">#179</a> <a href="https://github.com/its-hcd/nysds/issues/189">#189</a></li>
-<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM</li>
-<li>Typography variables and classes added to the styles package <a href="https://github.com/its-hcd/nysds/issues/208">#208</a></li>
+<li>A centralized CSS file for core design tokens</li>
+<li>Agency-specific themes (like Health and Environment)</li>
+<li><a href="https://designsystem.ny.gov/foundations/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
+<li>Full integration with code components, so tokens flow straight into the Shadow DOM</li>
 </ul>
-<p>This CSS framework will help us get consistent theming and styling across all New York State digital products.</p>
-<p><em>Updated by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Large documentation overhaul for all components - related issues: <a href="https://github.com/its-hcd/nysds/issues/216">#216</a> <a href="https://github.com/its-hcd/nysds/issues/211">#211</a> <a href="https://github.com/its-hcd/nysds/issues/209">#209</a> <a href="https://github.com/its-hcd/nysds/issues/206">#206</a> <a href="https://github.com/its-hcd/nysds/issues/194">#194</a></li>
-</ul>
-<p><em>Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h2>Related issues</h2>
-<ul>
-<li><code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code>- Related issues: <a href="https://github.com/its-hcd/nysds/issues/189">#189</a> <a href="https://github.com/its-hcd/nysds/issues/194">#194</a> <a href="https://github.com/its-hcd/nysds/issues/206">#206</a> <a href="https://github.com/its-hcd/nysds/issues/209">#209</a> <a href="https://github.com/its-hcd/nysds/issues/211">#211</a></li>
-<li>Fixes to build processes - Related issues: <a href="https://github.com/its-hcd/nysds/issues/196">#196</a> <a href="https://github.com/its-hcd/nysds/issues/210">#210</a> <a href="https://github.com/its-hcd/nysds/issues/215">#215</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.7-alpha...v0.0.8-alpha</p>
+<p>This was a huge step in making NYS digital products look and feel consistent everywhere.<br>
+↳ Brought to you by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</p>
+<h2>Documentation revamp</h2>
+<p>The team gave component docs a full refresh. Clearer, easier, faster to navigate, so you can spend less time hunting and more time building.<br>
+↳ Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -146,6 +137,10 @@
           <li class="badge">release</li>
           
           <li class="badge"> update</li>
+          
+          <li class="badge"> styles</li>
+          
+          <li class="badge"> theming</li>
           
         </ul>
         </div>

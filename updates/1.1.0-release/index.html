@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.1.0 - New York State Design System</title>
-    <meta name="description" content="NYSDS 1.1.0">   
+    <meta name="description" content="Form elements now reflect validation properly, plus Code Connect between Figma and code.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.1.0-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.1.0">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.1.0-release/">
-    <meta property="og:description" content="NYSDS 1.1.0">
+    <meta property="og:description" content="Form elements now reflect validation properly, plus Code Connect between Figma and code.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.1.0 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.1.0
-          </h1><p class="page-subtitle">NYSDS 1.1.0</p><div class="page-meta">
+          </h1><p class="page-subtitle">Form elements now reflect validation properly, plus Code Connect between Figma and code.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,39 +113,29 @@
           </div>
         </header>
 
-        <h1>Release Notes</h1>
-<p>We've made bug fixes since our last release and are happy to share the <strong>1.1.0 release</strong> of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
-<p>We did not add any new components in this release, but this we've added native form element functionality to NYSDS form-based web components and have fixed a lot of bugs.</p>
-<h2>What's New</h2>
-<h3>✨ Form elements properly reflect values and validation</h3>
+        <h2>First-class form elements</h2>
+<p>Custom NYS Design System form elements now participate in standard HTML forms just like standard HTML elements, thanks to <code>elementInternals</code>. This means form-based web components behave the way native form elements should, with values, validation, and accessibility. More information about the <code>elementInternals</code> interface can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals">MDN Web Docs →</a><br>
+↳ Big collaborative effort between <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
+<h2>Code Connect = less drift</h2>
+<p>Parity is here between Figma and code! With Code Connect, designers and developers can finally use the same source of truth, whether in design or development.<br>
+↳ Connected by <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li><code>elementInternals</code> is now used on all form elements to properly reflect properties and values  <a href="https://github.com/its-hcd/nysds/issues/326">#326</a> <a href="https://github.com/its-hcd/nysds/issues/334">#334</a> <a href="https://github.com/its-hcd/nysds/issues/348">#348</a> <a href="https://github.com/its-hcd/nysds/issues/347">#347</a> <a href="https://github.com/its-hcd/nysds/issues/352">#352</a> <a href="https://github.com/its-hcd/nysds/issues/319">#319</a> <a href="https://github.com/its-hcd/nysds/issues/317">#317</a> <a href="https://github.com/its-hcd/nysds/issues/315">#315</a></li>
+<li>Global header and footer fixes</li>
+<li>UNav header and footer fixes</li>
+<li>New label and error message private components</li>
+<li>Type declaration fixes</li>
 </ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h3>✨ &quot;Code Connect&quot; parity between Figma and Code</h3>
+<p>↳ Thanks to the tireless work by <a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a></p>
+<h2>Figma-only updates (engineers, you’re off the hook)</h2>
 <ul>
-<li>Code-connect established between code components and Figma. This allows designers and developers to usee the same code whether in design or development <a href="https://github.com/its-hcd/nysds/issues/353">#353</a></li>
+<li>We updated components to better align with NYS brand standards</li>
+<li>See them all in the <a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?m=auto&amp;node-id=51-1514&amp;t=yyjzhjNruCYHdAEB-1">NYS Design System Figma Library →</a> <em>(NYS Figma account required)</em></li>
 </ul>
-<p><em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Global header and footer fixes <a href="https://github.com/its-hcd/nysds/issues/357">#357</a> <a href="https://github.com/its-hcd/nysds/issues/355">#355</a>  <a href="https://github.com/its-hcd/nysds/issues/350">#350</a></li>
-<li>Unav header and footer fixes  <a href="https://github.com/its-hcd/nysds/issues/321">#321</a> <a href="https://github.com/its-hcd/nysds/issues/354">#354</a></li>
-<li>New label and error message private components <a href="https://github.com/its-hcd/nysds/issues/318">#318</a></li>
-<li>Fix type declaration <a href="https://github.com/its-hcd/nysds/issues/367">#367</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
 <h3>⚠️ Known Issues</h3>
-<ul>
-<li>none</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<h3>Design Libraries (Figma):</h3>
-<ul>
-<li>Component style modifications to align with brand better. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.0.0...v1.1.0</p>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.0">See the full developer release notes for v1.1.0 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -155,6 +145,10 @@
           <li class="badge">release</li>
           
           <li class="badge"> update</li>
+          
+          <li class="badge"> forms</li>
+          
+          <li class="badge"> figma</li>
           
         </ul>
         </div>

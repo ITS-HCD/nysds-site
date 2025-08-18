@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.1.7 - New York State Design System</title>
-    <meta name="description" content="NYSDS v1.1.7">   
+    <meta name="description" content="New link targeting in nys-button and important accessibility fixes.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.1.7-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.1.7">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.1.7-release/">
-    <meta property="og:description" content="NYSDS v1.1.7">
+    <meta property="og:description" content="New link targeting in nys-button and important accessibility fixes.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.1.7 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.1.7
-          </h1><p class="page-subtitle">NYSDS v1.1.7</p><div class="page-meta">
+          </h1><p class="page-subtitle">New link targeting in nys-button and important accessibility fixes.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,23 +113,16 @@
           </div>
         </header>
 
-        <h1>1.1.7 NYSDS Release Notes</h1>
-<p>★ NYSDS v.1.1.7</p>
-<h2>What's New</h2>
-<h3>✨ <code>nys-button</code> now accepts <code>target</code> property to determine where to open a link</h3>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Accessibility fixes for ids on <code>nys-alert</code> <code>nys-button</code> <code>nys-textinput</code> <code>nys-select</code> <a href="https://github.com/its-hcd/nysds/issues/494">#494</a></li>
-<li><a href="https://github.com/its-hcd/nysds/issues/468">#468</a></li>
-<li><a href="https://github.com/its-hcd/nysds/issues/476">#476</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
+        <h2>Smarter buttons</h2>
+<p><code>&lt;nys-button&gt;</code> now accepts a <code>target</code> property, giving you control over where links open. (Only works when you set the <code>href</code> property.)
+↳ 🎯 A bullseye by <a href="https://github.com/NovaCat35">Robert Chen</a></p>
+<h2>Accessibility fixes</h2>
+<p>We tightened up accessibility for several core components, including <code>&lt;nys-alert&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-textinput&gt;</code>, and <code>&lt;nys-select&gt;</code>.  Identifiers are now handled more consistently to improve screen reader support.<br>
+↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
 <h3>⚠️ Known Issues</h3>
-<ul>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.1.6...v1.1.7</p>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.7" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.7">See the full developer release notes for v1.1.7 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -139,6 +132,10 @@
           <li class="badge">release</li>
           
           <li class="badge"> update</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> buttons</li>
           
         </ul>
         </div>

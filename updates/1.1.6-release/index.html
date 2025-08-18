@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Release 1.1.6 - New York State Design System</title>
-    <meta name="description" content="v1.1.6">   
+    <meta name="description" content="Accessibility fix for buttons, better component loading, and an npm install fix.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/1.1.6-release/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
@@ -14,7 +14,7 @@
     <meta property="og:title" content="Release 1.1.6">
     <meta property="og:site_name" content="New York State Design System">
     <meta property="og:url" content="https://designsystem.ny.gov/updates/1.1.6-release/">
-    <meta property="og:description" content="v1.1.6">
+    <meta property="og:description" content="Accessibility fix for buttons, better component loading, and an npm install fix.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     
@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-17T22:40:08.295+00:00 -->
+    <!-- Latest Build: 2025-08-18T03:23:45.948+00:00 -->
   </head>
   
   <body class="single-page page-release-1.1.6 section-updates">
@@ -102,7 +102,7 @@
 
         <header class="page-header"><h1 class="page-title">
             <span class="release-mark" aria-hidden="true"></span>Release 1.1.6
-          </h1><p class="page-subtitle">v1.1.6</p><div class="page-meta">
+          </h1><p class="page-subtitle">Accessibility fix for buttons, better component loading, and an npm install fix.</p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
@@ -113,21 +113,21 @@
           </div>
         </header>
 
-        <h1>1.1.6 NYSDS Release Notes</h1>
-<p>★ NYSDS v.1.1.6</p>
-<p>This release fixes an accessibility bug in the button component and fixes a regression in 1.1.5 that caused it to break when trying to build.</p>
+        <h2>Components load more gracefully</h2>
+<p>Undefined components no longer flash unstyled layouts before JavaScript kicks in — they now wait until they’re fully defined before displaying.<br>
+↳ Fix by <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h2>Buttons get their voice back</h2>
+<p><code>nys-button</code> now properly define an accessible name for screen readers, ensuring smoother navigation and better accessibility.<br>
+↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>NPM install issues resolved</h2>
+<p>A packaging bug introduced in 1.1.5 caused installs to fail. That’s now fixed — installs should work smoothly on v1.1.6.<br>
+↳ Patch by <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li><strong>Undefined components will be invisible until after they have been defined by Javascript:</strong> Previously, components would show an unstyled layout before the Javascript loaded the custom element. Now it waits until the javascript has defined the element before displaying it.
-Fixed by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</li>
-<li><strong>Button needs an accessible name:</strong> The button element was not properly defining a label for screen readers. This bug was fixed.
-Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</li>
-<li><strong>NPM install fix:</strong> A bug was discovered in the NPM package which caused it to fail installing. A fix was made to the NPM package to adress the failing installs. Installs should complete successfully on version 1.1.6.
-Fixed by Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</li>
+<li>If you notice any problems, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a> or post in the internal NYSDS Troubleshooting Channel.</li>
 </ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a> or post them in the NYSDS Troubleshooting Channel.</p>
-<p>Full Release Notes: https://github.com/ITS-HCD/nysds/releases/tag/v1.1.6
-NYSDS NPM packages: https://www.npmjs.com/org/nysds
-NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.6" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.6">See the full developer release notes for v1.1.6 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -137,6 +137,10 @@ NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
           <li class="badge">release</li>
           
           <li class="badge"> update</li>
+          
+          <li class="badge"> accessibility</li>
+          
+          <li class="badge"> buttons</li>
           
         </ul>
         </div>

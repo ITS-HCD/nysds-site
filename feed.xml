@@ -9,25 +9,35 @@
     <item>
       <title>Release 0.0.1-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.1-alpha-release/</link>
-      <description><![CDATA[<h2>What's Changed</h2>
+      <description><![CDATA[<h2>Ever Upward!</h2>
+<p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the Excelsior Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
+<p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring Excelsior to life. This is just the beginning.</p>
+<h2>Project Foundations</h2>
 <ul>
-<li>Added pull request template by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/25</li>
-<li>Excelsior - Setup: Added tsconfig by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/26</li>
-<li>Add RollUp and relevant plugins for bundling by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/28</li>
-<li>Excelsior - Build Process: Added ESLint, Linting Configuration, and Linting Build Tasks by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/30</li>
-<li>Excelsior: Add Vite and Storybook by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/45</li>
+<li>Added a <strong>pull request template</strong> to keep our contributions clear and consistent (<a href="https://github.com/ITS-HCD/excelsior/pull/25">#25</a>)</li>
+<li>Configured <strong>TypeScript (tsconfig)</strong> to standardize our dev environment (<a href="https://github.com/ITS-HCD/excelsior/pull/26">#26</a>)</li>
+<li>Introduced <strong>Rollup bundling</strong> with plugins to streamline packaging (<a href="https://github.com/ITS-HCD/excelsior/pull/28">#28</a>)</li>
+<li>Set up <strong>ESLint + linting tasks</strong> to keep our codebase clean and maintainable (<a href="https://github.com/ITS-HCD/excelsior/pull/30">#30</a>)</li>
+<li>Integrated <strong>Vite and Storybook</strong> for lightning-fast development and interactive component previews (<a href="https://github.com/ITS-HCD/excelsior/pull/45">#45</a>)</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/commits/v0.0.1-alpha</p>
+<p>These building blocks are the core of our workflow—and they’ll help us ship stable, consistent, and accessible components going forward.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.1-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.1-alpha">See the full developer release notes for v0.0.1-alpha →</a></p>
 ]]></description>
-      <content><![CDATA[<h2>What's Changed</h2>
+      <content><![CDATA[<h2>Ever Upward!</h2>
+<p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the Excelsior Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
+<p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring Excelsior to life. This is just the beginning.</p>
+<h2>Project Foundations</h2>
 <ul>
-<li>Added pull request template by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/25</li>
-<li>Excelsior - Setup: Added tsconfig by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/26</li>
-<li>Add RollUp and relevant plugins for bundling by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/28</li>
-<li>Excelsior - Build Process: Added ESLint, Linting Configuration, and Linting Build Tasks by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/30</li>
-<li>Excelsior: Add Vite and Storybook by <a href="https://github.com/plasticmind">@plasticmind</a> in https://github.com/ITS-HCD/excelsior/pull/45</li>
+<li>Added a <strong>pull request template</strong> to keep our contributions clear and consistent (<a href="https://github.com/ITS-HCD/excelsior/pull/25">#25</a>)</li>
+<li>Configured <strong>TypeScript (tsconfig)</strong> to standardize our dev environment (<a href="https://github.com/ITS-HCD/excelsior/pull/26">#26</a>)</li>
+<li>Introduced <strong>Rollup bundling</strong> with plugins to streamline packaging (<a href="https://github.com/ITS-HCD/excelsior/pull/28">#28</a>)</li>
+<li>Set up <strong>ESLint + linting tasks</strong> to keep our codebase clean and maintainable (<a href="https://github.com/ITS-HCD/excelsior/pull/30">#30</a>)</li>
+<li>Integrated <strong>Vite and Storybook</strong> for lightning-fast development and interactive component previews (<a href="https://github.com/ITS-HCD/excelsior/pull/45">#45</a>)</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/commits/v0.0.1-alpha</p>
+<p>These building blocks are the core of our workflow—and they’ll help us ship stable, consistent, and accessible components going forward.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.1-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.1-alpha">See the full developer release notes for v0.0.1-alpha →</a></p>
 ]]></content>
       <pubDate>Wed, 06 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -40,11 +50,15 @@
 <ul>
 <li>Added two new components <code>nys-icon</code> and <code>nys-checkbox</code></li>
 </ul>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.2-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.2-alpha">See the full developer release notes for v0.0.2-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h2>What's Changed</h2>
 <ul>
 <li>Added two new components <code>nys-icon</code> and <code>nys-checkbox</code></li>
 </ul>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.2-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.2-alpha">See the full developer release notes for v0.0.2-alpha →</a></p>
 ]]></content>
       <pubDate>Thu, 21 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -89,7 +103,8 @@
 <li>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/47</li>
 <li>Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/56</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.2-alpha...v0.0.3-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h2>What's New</h2>
 <ul>
@@ -127,7 +142,8 @@
 <li>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/47</li>
 <li>Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/56</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.2-alpha...v0.0.3-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
 ]]></content>
       <pubDate>Fri, 29 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -139,7 +155,7 @@
       <description><![CDATA[<h1>Release Notes</h1>
 <p>We’re excited to announce that Excelsior is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
 <h2>What's New</h2>
-<h3>✨ New Component: <code>&lt;nys-textarea&gt;</code></h3>
+<h3>New Component: nys-textarea</h3>
 <p>Description: UI element for entering multiline text input.</p>
 <p>Features:</p>
 <ul>
@@ -149,8 +165,8 @@
 <li>Includes validation support, like required fields, regex patterns, and more to match form requirements</li>
 </ul>
 <p><em>Created by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) in #100</em></p>
-<h3>✨ New Component: <code>&lt;nys-toggle&gt;</code></h3>
-<p>Description: Toggle switch for binary options (on/off). Recommended for cases where the action is binary, such as enabling/disabling settings, but <code>&lt;nys-checkbox&gt;</code> is preferred for more complex selections.</p>
+<h3>New Component: nys-toggle</h3>
+<p>Description: Toggle switch for binary options (on/off). Recommended for cases where the action is binary, such as enabling/disabling settings, but <code>nys-checkbox</code> is preferred for more complex selections.</p>
 <p>Features:</p>
 <ul>
 <li>Includes small (<code>sm</code>) and medium (<code>md</code>, default) sizes. Font sizes and spacing adjust accordingly.</li>
@@ -161,7 +177,7 @@
 <li>Emits standard <code>change</code>, <code>focus</code>, <code>blur</code>, and <code>keydown</code> events</li>
 </ul>
 <p><em>Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) in #94</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h3>Maintenance and Fixes</h3>
 <ul>
 <li>Test builds are now mandatory for PR merges into <code>main</code> - <a href="https://github.com/esteinborn">@esteinborn</a> <a href="https://github.com/its-hcd/nysds/issues/126">#126</a></li>
 <li>Optimized build processes, scoped all packages to <code>[@nys-excelsior](https://github.com/nys-excelsior)</code>, and created NPM publishing workflow - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/120">#120</a></li>
@@ -172,12 +188,13 @@
 <li><code>&lt;nys-toggle&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/68">#68</a> <a href="https://github.com/its-hcd/nysds/issues/81">#81</a> <a href="https://github.com/its-hcd/nysds/issues/94">#94</a> <a href="https://github.com/its-hcd/nysds/issues/127">#127</a> <a href="https://github.com/its-hcd/nysds/issues/129">#129</a></li>
 <li><code>&lt;nys-textarea&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/83">#83</a> <a href="https://github.com/its-hcd/nysds/issues/98">#98</a> <a href="https://github.com/its-hcd/nysds/issues/100">#100</a></li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.3-alpha...v0.0.4-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.4-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.4-alpha">See the full developer release notes for v0.0.4-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h1>Release Notes</h1>
 <p>We’re excited to announce that Excelsior is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
 <h2>What's New</h2>
-<h3>✨ New Component: <code>&lt;nys-textarea&gt;</code></h3>
+<h3>New Component: nys-textarea</h3>
 <p>Description: UI element for entering multiline text input.</p>
 <p>Features:</p>
 <ul>
@@ -187,8 +204,8 @@
 <li>Includes validation support, like required fields, regex patterns, and more to match form requirements</li>
 </ul>
 <p><em>Created by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) in #100</em></p>
-<h3>✨ New Component: <code>&lt;nys-toggle&gt;</code></h3>
-<p>Description: Toggle switch for binary options (on/off). Recommended for cases where the action is binary, such as enabling/disabling settings, but <code>&lt;nys-checkbox&gt;</code> is preferred for more complex selections.</p>
+<h3>New Component: nys-toggle</h3>
+<p>Description: Toggle switch for binary options (on/off). Recommended for cases where the action is binary, such as enabling/disabling settings, but <code>nys-checkbox</code> is preferred for more complex selections.</p>
 <p>Features:</p>
 <ul>
 <li>Includes small (<code>sm</code>) and medium (<code>md</code>, default) sizes. Font sizes and spacing adjust accordingly.</li>
@@ -199,7 +216,7 @@
 <li>Emits standard <code>change</code>, <code>focus</code>, <code>blur</code>, and <code>keydown</code> events</li>
 </ul>
 <p><em>Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) in #94</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h3>Maintenance and Fixes</h3>
 <ul>
 <li>Test builds are now mandatory for PR merges into <code>main</code> - <a href="https://github.com/esteinborn">@esteinborn</a> <a href="https://github.com/its-hcd/nysds/issues/126">#126</a></li>
 <li>Optimized build processes, scoped all packages to <code>[@nys-excelsior](https://github.com/nys-excelsior)</code>, and created NPM publishing workflow - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/120">#120</a></li>
@@ -210,7 +227,8 @@
 <li><code>&lt;nys-toggle&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/68">#68</a> <a href="https://github.com/its-hcd/nysds/issues/81">#81</a> <a href="https://github.com/its-hcd/nysds/issues/94">#94</a> <a href="https://github.com/its-hcd/nysds/issues/127">#127</a> <a href="https://github.com/its-hcd/nysds/issues/129">#129</a></li>
 <li><code>&lt;nys-textarea&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/83">#83</a> <a href="https://github.com/its-hcd/nysds/issues/98">#98</a> <a href="https://github.com/its-hcd/nysds/issues/100">#100</a></li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.3-alpha...v0.0.4-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.4-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.4-alpha">See the full developer release notes for v0.0.4-alpha →</a></p>
 ]]></content>
       <pubDate>Mon, 23 Dec 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -219,135 +237,103 @@
     <item>
       <title>Release 0.0.7-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.7-alpha-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes one new component —<code>&lt;nys-avatar&gt;</code> — We have also shipped our <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
+      <description><![CDATA[<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
 <h2>What's New</h2>
-<h3>✨ New Component: <code>&lt;nys-avatar&gt;</code></h3>
-<p>Description: UI element for displaying a user icon or image.</p>
+<h3>New Component: nys-avatar</h3>
+<p>This is a UI element for displaying a user icon or image.</p>
 <p>Features:</p>
 <ul>
 <li>Personalize avatars with custom icons, initials, or images</li>
-<li>To display an image in the avatar, set the <code>image</code> and <code>label</code> attributes</li>
-<li>Supports a custom icon from the <code>&lt;nys-icon&gt;</code> library</li>
+<li>Display an image in the avatar, set the image and label attributes</li>
+<li>Supports a custom icon from the <code>&lt;nys-icon&gt;</code> library<br />
+↳Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>)</li>
 </ul>
-<p><em>Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) in #145</em></p>
-<h3>✨ New Style Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-styles</code></h3>
+<h3>New Style Package: @nysds/styles</h3>
 <ul>
-<li>A centralized CSS file for core design tokens <code>(excelsior.min.css)</code></li>
-<li>Agency-specific theme stylesheets (e.g., <code>theme-health.min.css</code>, <code>theme-environment.min.css</code>) that can override the components and UI elements using themed variables</li>
+<li>A centralized CSS file for core design tokens (nysds.min.css)</li>
+<li>Agency-specific theme stylesheets (e.g., theme-health.min.css, theme-environment.min.css) that can override the components and UI elements using themed variables</li>
 <li>Utility classes the cover common styling needs for grid layout, display styles, flexbox, floats, opacity, and z-index</li>
-<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM</li>
+<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM This CSS framework will help us get consistent theming and styling across all New York State digital products.</li>
 </ul>
-<p>This CSS framework will help us get consistent theming and styling across all New York State digital products.</p>
 <h2>Features</h2>
-<p><strong>Global Stylesheet:</strong></p>
-<p>The <code>excelsior.min.css</code> file includes foundational design tokens, like spacing, typography, and default theme colors.</p>
-<p>To use, reference this on pages where you'll be using the variables or the design system components:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Agency-Specific Themes:</strong></p>
-<p>Additional theme stylesheets are published that provide agency-specific color tokens:</p>
+<p><strong>Global Stylesheet:</strong> The excelsior.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>Agency-Specific Themes:</strong> Additional theme stylesheets are published that provide agency-specific color tokens:</p>
 <ul>
-<li>Administration: excelsior-theme-admin.min.css</li>
-<li>Business: excelsior-theme-business.min.css</li>
-<li>Recreation and Environment: excelsior-theme-environment.min.css</li>
-<li>Health and Human Services: excelsior-theme-health.min.css</li>
-<li>Local and Regional Authorities: excelsior-theme-local.min.css</li>
-<li>Public Safety: excelsior-theme-safety.min.css</li>
-<li>Transportation and Utilities: excelsior-theme-transportation.min.css</li>
+<li>Administration: theme-admin.min.css</li>
+<li>Business: theme-business.min.css</li>
+<li>Recreation and Environment: theme-environment.min.css</li>
+<li>Health and Human Services: theme-health.min.css</li>
+<li>Local and Regional Authorities: theme-local.min.css</li>
+<li>Public Safety: theme-safety.min.css</li>
+<li>Transportation and Utilities: theme-transportation.min.css</li>
 </ul>
 <p>To override the default theme:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Utility classes:</strong></p>
-<p>Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>Utility classes:</strong> Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
 <p>To include the full utility classes, simply include the utility CSS file:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Shadow DOM Integration:</strong></p>
-<p>The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
+<p><strong>Shadow DOM Integration:</strong> The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">:host</span> <span class="token punctuation">{</span>
   <span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">,</span> #0044cc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token selector">button</span> <span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--_nys-button-background-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p><strong>Theme Variables:</strong></p>
-<p>Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.</p>
-<p><em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Most components now utilize design tokens for their styles - related issues: <a href="https://github.com/its-hcd/nysds/issues/176">#176</a> <a href="https://github.com/its-hcd/nysds/issues/173">#173</a> <a href="https://github.com/its-hcd/nysds/issues/164">#164</a> <a href="https://github.com/its-hcd/nysds/issues/163">#163</a> <a href="https://github.com/its-hcd/nysds/issues/161">#161</a> <a href="https://github.com/its-hcd/nysds/issues/158">#158</a> <a href="https://github.com/its-hcd/nysds/issues/178">#178</a></li>
-</ul>
-<h2>Related issues</h2>
-<ul>
-<li><code>&lt;nys-avatar&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/145">#145</a></li>
-<li><code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-style</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/159">#159</a> <a href="https://github.com/its-hcd/nysds/issues/155">#155</a> <a href="https://github.com/its-hcd/nysds/issues/179">#179</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.3-alpha...v0.0.7-alpha</p>
+<p><strong>Theme Variables:</strong> Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.<br />
+↳<em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes one new component —<code>&lt;nys-avatar&gt;</code> — We have also shipped our <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
+      <content><![CDATA[<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
 <h2>What's New</h2>
-<h3>✨ New Component: <code>&lt;nys-avatar&gt;</code></h3>
-<p>Description: UI element for displaying a user icon or image.</p>
+<h3>New Component: nys-avatar</h3>
+<p>This is a UI element for displaying a user icon or image.</p>
 <p>Features:</p>
 <ul>
 <li>Personalize avatars with custom icons, initials, or images</li>
-<li>To display an image in the avatar, set the <code>image</code> and <code>label</code> attributes</li>
-<li>Supports a custom icon from the <code>&lt;nys-icon&gt;</code> library</li>
+<li>Display an image in the avatar, set the image and label attributes</li>
+<li>Supports a custom icon from the <code>&lt;nys-icon&gt;</code> library<br />
+↳Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>)</li>
 </ul>
-<p><em>Created by Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) in #145</em></p>
-<h3>✨ New Style Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-styles</code></h3>
+<h3>New Style Package: @nysds/styles</h3>
 <ul>
-<li>A centralized CSS file for core design tokens <code>(excelsior.min.css)</code></li>
-<li>Agency-specific theme stylesheets (e.g., <code>theme-health.min.css</code>, <code>theme-environment.min.css</code>) that can override the components and UI elements using themed variables</li>
+<li>A centralized CSS file for core design tokens (nysds.min.css)</li>
+<li>Agency-specific theme stylesheets (e.g., theme-health.min.css, theme-environment.min.css) that can override the components and UI elements using themed variables</li>
 <li>Utility classes the cover common styling needs for grid layout, display styles, flexbox, floats, opacity, and z-index</li>
-<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM</li>
+<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM This CSS framework will help us get consistent theming and styling across all New York State digital products.</li>
 </ul>
-<p>This CSS framework will help us get consistent theming and styling across all New York State digital products.</p>
 <h2>Features</h2>
-<p><strong>Global Stylesheet:</strong></p>
-<p>The <code>excelsior.min.css</code> file includes foundational design tokens, like spacing, typography, and default theme colors.</p>
-<p>To use, reference this on pages where you'll be using the variables or the design system components:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Agency-Specific Themes:</strong></p>
-<p>Additional theme stylesheets are published that provide agency-specific color tokens:</p>
+<p><strong>Global Stylesheet:</strong> The excelsior.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>Agency-Specific Themes:</strong> Additional theme stylesheets are published that provide agency-specific color tokens:</p>
 <ul>
-<li>Administration: excelsior-theme-admin.min.css</li>
-<li>Business: excelsior-theme-business.min.css</li>
-<li>Recreation and Environment: excelsior-theme-environment.min.css</li>
-<li>Health and Human Services: excelsior-theme-health.min.css</li>
-<li>Local and Regional Authorities: excelsior-theme-local.min.css</li>
-<li>Public Safety: excelsior-theme-safety.min.css</li>
-<li>Transportation and Utilities: excelsior-theme-transportation.min.css</li>
+<li>Administration: theme-admin.min.css</li>
+<li>Business: theme-business.min.css</li>
+<li>Recreation and Environment: theme-environment.min.css</li>
+<li>Health and Human Services: theme-health.min.css</li>
+<li>Local and Regional Authorities: theme-local.min.css</li>
+<li>Public Safety: theme-safety.min.css</li>
+<li>Transportation and Utilities: theme-transportation.min.css</li>
 </ul>
 <p>To override the default theme:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Utility classes:</strong></p>
-<p>Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p><strong>Utility classes:</strong> Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
 <p>To include the full utility classes, simply include the utility CSS file:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Shadow DOM Integration:</strong></p>
-<p>The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
+<p><strong>Shadow DOM Integration:</strong> The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">:host</span> <span class="token punctuation">{</span>
   <span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">,</span> #0044cc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token selector">button</span> <span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--_nys-button-background-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p><strong>Theme Variables:</strong></p>
-<p>Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.</p>
-<p><em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Most components now utilize design tokens for their styles - related issues: <a href="https://github.com/its-hcd/nysds/issues/176">#176</a> <a href="https://github.com/its-hcd/nysds/issues/173">#173</a> <a href="https://github.com/its-hcd/nysds/issues/164">#164</a> <a href="https://github.com/its-hcd/nysds/issues/163">#163</a> <a href="https://github.com/its-hcd/nysds/issues/161">#161</a> <a href="https://github.com/its-hcd/nysds/issues/158">#158</a> <a href="https://github.com/its-hcd/nysds/issues/178">#178</a></li>
-</ul>
-<h2>Related issues</h2>
-<ul>
-<li><code>&lt;nys-avatar&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/145">#145</a></li>
-<li><code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-style</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/159">#159</a> <a href="https://github.com/its-hcd/nysds/issues/155">#155</a> <a href="https://github.com/its-hcd/nysds/issues/179">#179</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.3-alpha...v0.0.7-alpha</p>
+<p><strong>Theme Variables:</strong> Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.<br />
+↳<em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
 ]]></content>
       <pubDate>Wed, 15 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -356,55 +342,37 @@
     <item>
       <title>Release 0.0.8-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.8-alpha-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes all previous components and some modifications to theming — We have also shipped our <code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code> package to style the components and make design tokens available for broader use.</p>
-<h2>What's New</h2>
-<h3>✨ Updated Style Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code></h3>
+      <description><![CDATA[<h2>Styles now have their own home</h2>
+<p>Big news: <a href="https://www.npmjs.com/package/@nysds/styles"><code>@nysds/styles</code></a> has officially joined the family. It brings:</p>
 <ul>
-<li>A centralized CSS file for core design tokens <code>(excelsior.min.css)</code></li>
-<li>Agency-specific theme stylesheets (e.g., <code>excelsior-theme-health.min.css</code>, <code>excelsior-theme-environment.min.css</code>) that can override the components and UI elements using themed variables</li>
-<li>Utility classes that cover common styling needs for grid layout, display styles, flexbox, floats, opacity, and z-index (<code>excelsior-full.min.css</code>) <a href="https://github.com/its-hcd/nysds/issues/179">#179</a> <a href="https://github.com/its-hcd/nysds/issues/189">#189</a></li>
-<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM</li>
-<li>Typography variables and classes added to the styles package <a href="https://github.com/its-hcd/nysds/issues/208">#208</a></li>
+<li>A centralized CSS file for core design tokens</li>
+<li>Agency-specific themes (like Health and Environment)</li>
+<li><a href="https://designsystem.ny.gov/foundations/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
+<li>Full integration with code components, so tokens flow straight into the Shadow DOM</li>
 </ul>
-<p>This CSS framework will help us get consistent theming and styling across all New York State digital products.</p>
-<p><em>Updated by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Large documentation overhaul for all components - related issues: <a href="https://github.com/its-hcd/nysds/issues/216">#216</a> <a href="https://github.com/its-hcd/nysds/issues/211">#211</a> <a href="https://github.com/its-hcd/nysds/issues/209">#209</a> <a href="https://github.com/its-hcd/nysds/issues/206">#206</a> <a href="https://github.com/its-hcd/nysds/issues/194">#194</a></li>
-</ul>
-<p><em>Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h2>Related issues</h2>
-<ul>
-<li><code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code>- Related issues: <a href="https://github.com/its-hcd/nysds/issues/189">#189</a> <a href="https://github.com/its-hcd/nysds/issues/194">#194</a> <a href="https://github.com/its-hcd/nysds/issues/206">#206</a> <a href="https://github.com/its-hcd/nysds/issues/209">#209</a> <a href="https://github.com/its-hcd/nysds/issues/211">#211</a></li>
-<li>Fixes to build processes - Related issues: <a href="https://github.com/its-hcd/nysds/issues/196">#196</a> <a href="https://github.com/its-hcd/nysds/issues/210">#210</a> <a href="https://github.com/its-hcd/nysds/issues/215">#215</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.7-alpha...v0.0.8-alpha</p>
+<p>This was a huge step in making NYS digital products look and feel consistent everywhere.<br />
+↳ Brought to you by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</p>
+<h2>Documentation revamp</h2>
+<p>The team gave component docs a full refresh. Clearer, easier, faster to navigate, so you can spend less time hunting and more time building.<br />
+↳ Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes all previous components and some modifications to theming — We have also shipped our <code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code> package to style the components and make design tokens available for broader use.</p>
-<h2>What's New</h2>
-<h3>✨ Updated Style Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code></h3>
+      <content><![CDATA[<h2>Styles now have their own home</h2>
+<p>Big news: <a href="https://www.npmjs.com/package/@nysds/styles"><code>@nysds/styles</code></a> has officially joined the family. It brings:</p>
 <ul>
-<li>A centralized CSS file for core design tokens <code>(excelsior.min.css)</code></li>
-<li>Agency-specific theme stylesheets (e.g., <code>excelsior-theme-health.min.css</code>, <code>excelsior-theme-environment.min.css</code>) that can override the components and UI elements using themed variables</li>
-<li>Utility classes that cover common styling needs for grid layout, display styles, flexbox, floats, opacity, and z-index (<code>excelsior-full.min.css</code>) <a href="https://github.com/its-hcd/nysds/issues/179">#179</a> <a href="https://github.com/its-hcd/nysds/issues/189">#189</a></li>
-<li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM</li>
-<li>Typography variables and classes added to the styles package <a href="https://github.com/its-hcd/nysds/issues/208">#208</a></li>
+<li>A centralized CSS file for core design tokens</li>
+<li>Agency-specific themes (like Health and Environment)</li>
+<li><a href="https://designsystem.ny.gov/foundations/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
+<li>Full integration with code components, so tokens flow straight into the Shadow DOM</li>
 </ul>
-<p>This CSS framework will help us get consistent theming and styling across all New York State digital products.</p>
-<p><em>Updated by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Large documentation overhaul for all components - related issues: <a href="https://github.com/its-hcd/nysds/issues/216">#216</a> <a href="https://github.com/its-hcd/nysds/issues/211">#211</a> <a href="https://github.com/its-hcd/nysds/issues/209">#209</a> <a href="https://github.com/its-hcd/nysds/issues/206">#206</a> <a href="https://github.com/its-hcd/nysds/issues/194">#194</a></li>
-</ul>
-<p><em>Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h2>Related issues</h2>
-<ul>
-<li><code>[@nys-excelsior](https://github.com/nys-excelsior)/styles</code>- Related issues: <a href="https://github.com/its-hcd/nysds/issues/189">#189</a> <a href="https://github.com/its-hcd/nysds/issues/194">#194</a> <a href="https://github.com/its-hcd/nysds/issues/206">#206</a> <a href="https://github.com/its-hcd/nysds/issues/209">#209</a> <a href="https://github.com/its-hcd/nysds/issues/211">#211</a></li>
-<li>Fixes to build processes - Related issues: <a href="https://github.com/its-hcd/nysds/issues/196">#196</a> <a href="https://github.com/its-hcd/nysds/issues/210">#210</a> <a href="https://github.com/its-hcd/nysds/issues/215">#215</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.7-alpha...v0.0.8-alpha</p>
+<p>This was a huge step in making NYS digital products look and feel consistent everywhere.<br />
+↳ Brought to you by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</p>
+<h2>Documentation revamp</h2>
+<p>The team gave component docs a full refresh. Clearer, easier, faster to navigate, so you can spend less time hunting and more time building.<br />
+↳ Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
 ]]></content>
       <pubDate>Wed, 22 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -413,75 +381,41 @@
     <item>
       <title>Release 0.0.9-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.9-alpha-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>This is a small update to address bug fixes. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>.</p>
-<p>This release includes two new components <code>nys-globalheader</code> and <code>nys-globalfooter</code>, some modifications to theming, and lots of component bug fixes.</p>
-<h2>What's New</h2>
-<h3>✨ New <code>nys-globalheader</code> and <code>nys-globalfooter</code> Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-globalheader</code> <code>[@nys-excelsior](https://github.com/nys-excelsior)/nysglobalfooter</code></h3>
+      <description><![CDATA[<p>This release introduces the new Global Header and Footer components, improves form elements, and updates core dependencies.<br />
+↳ Thanks to Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>) for the collaborative effort.</p>
+<h2>New Components: Global Header + Global Footer</h2>
+<p>The biggest addition this release:</p>
 <ul>
-<li>A component to create a Global header in sites and apps <a href="https://github.com/its-hcd/nysds/issues/123">#123</a></li>
-<li>A component to create a Global Footer in sites and apps <a href="https://github.com/its-hcd/nysds/issues/124">#124</a></li>
-<li>Agency-specific themes apply to both Global Header and Global Footer</li>
+<li><strong>Global Header (<code>nys-globalheader</code>)</strong> standardizes top navigation across apps and sites.</li>
+<li><strong>Global Footer (<code>nys-globalfooter</code>)</strong> ensures consistency at the bottom of every page.</li>
+<li>Both respect agency-specific themes for seamless branding.<br />
+↳ Created by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a></li>
 </ul>
-<p>These new components will help us get consistent theming and styling across all New York State digital products.</p>
-<p><em>Created by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h2>Maintenance and Fixes</h2>
 <ul>
-<li>
-<h4>Updated <code>nys-select</code>, <code>nys-textinput</code>, and <code>nys-textarea</code></h4>
-</li>
-<li>
-<p>These components now properly bubble up their change events and input events</p>
-</li>
-<li>
-<p><code>textarea</code> also includes new events for select and selectionchange</p>
-</li>
-<li>
-<p>Related issues: <a href="https://github.com/its-hcd/nysds/issues/232">#232</a> <a href="https://github.com/its-hcd/nysds/issues/239">#239</a> <a href="https://github.com/its-hcd/nysds/issues/238">#238</a> <a href="https://github.com/its-hcd/nysds/issues/237">#237</a> <a href="https://github.com/its-hcd/nysds/issues/224">#224</a> <a href="https://github.com/its-hcd/nysds/issues/223">#223</a> <a href="https://github.com/its-hcd/nysds/issues/214">#214</a> <a href="https://github.com/its-hcd/nysds/issues/213">#213</a> <a href="https://github.com/its-hcd/nysds/issues/212">#212</a> <a href="https://github.com/its-hcd/nysds/issues/204">#204</a></p>
-</li>
+<li><strong>Forms behave better:</strong> <code>nys-select</code>, <code>nys-textinput</code>, and <code>nys-textarea</code> now properly bubble change/input events. <code>nys-textarea</code> also adds <code>select</code> and <code>selectionchange</code> events.</li>
+<li><strong>Dependencies updated:</strong> Vite patched for vulnerabilities, Storybook upgraded to 8.5.2.</li>
 </ul>
-<p><em>Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
-<h2>Related issues</h2>
-<ul>
-<li>Update Vulnerable Vite package - Related issue <a href="https://github.com/its-hcd/nysds/issues/249">#249</a></li>
-<li>Update Storybook to 8.5.2 - Related issue <a href="https://github.com/its-hcd/nysds/issues/250">#250</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.8-alpha...v0.0.9-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.9-alpha">See the full developer release notes for v0.0.9 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>This is a small update to address bug fixes. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>.</p>
-<p>This release includes two new components <code>nys-globalheader</code> and <code>nys-globalfooter</code>, some modifications to theming, and lots of component bug fixes.</p>
-<h2>What's New</h2>
-<h3>✨ New <code>nys-globalheader</code> and <code>nys-globalfooter</code> Package: <code>[@nys-excelsior](https://github.com/nys-excelsior)/nys-globalheader</code> <code>[@nys-excelsior](https://github.com/nys-excelsior)/nysglobalfooter</code></h3>
+      <content><![CDATA[<p>This release introduces the new Global Header and Footer components, improves form elements, and updates core dependencies.<br />
+↳ Thanks to Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>) for the collaborative effort.</p>
+<h2>New Components: Global Header + Global Footer</h2>
+<p>The biggest addition this release:</p>
 <ul>
-<li>A component to create a Global header in sites and apps <a href="https://github.com/its-hcd/nysds/issues/123">#123</a></li>
-<li>A component to create a Global Footer in sites and apps <a href="https://github.com/its-hcd/nysds/issues/124">#124</a></li>
-<li>Agency-specific themes apply to both Global Header and Global Footer</li>
+<li><strong>Global Header (<code>nys-globalheader</code>)</strong> standardizes top navigation across apps and sites.</li>
+<li><strong>Global Footer (<code>nys-globalfooter</code>)</strong> ensures consistency at the bottom of every page.</li>
+<li>Both respect agency-specific themes for seamless branding.<br />
+↳ Created by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a></li>
 </ul>
-<p>These new components will help us get consistent theming and styling across all New York State digital products.</p>
-<p><em>Created by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h2>Maintenance and Fixes</h2>
 <ul>
-<li>
-<h4>Updated <code>nys-select</code>, <code>nys-textinput</code>, and <code>nys-textarea</code></h4>
-</li>
-<li>
-<p>These components now properly bubble up their change events and input events</p>
-</li>
-<li>
-<p><code>textarea</code> also includes new events for select and selectionchange</p>
-</li>
-<li>
-<p>Related issues: <a href="https://github.com/its-hcd/nysds/issues/232">#232</a> <a href="https://github.com/its-hcd/nysds/issues/239">#239</a> <a href="https://github.com/its-hcd/nysds/issues/238">#238</a> <a href="https://github.com/its-hcd/nysds/issues/237">#237</a> <a href="https://github.com/its-hcd/nysds/issues/224">#224</a> <a href="https://github.com/its-hcd/nysds/issues/223">#223</a> <a href="https://github.com/its-hcd/nysds/issues/214">#214</a> <a href="https://github.com/its-hcd/nysds/issues/213">#213</a> <a href="https://github.com/its-hcd/nysds/issues/212">#212</a> <a href="https://github.com/its-hcd/nysds/issues/204">#204</a></p>
-</li>
+<li><strong>Forms behave better:</strong> <code>nys-select</code>, <code>nys-textinput</code>, and <code>nys-textarea</code> now properly bubble change/input events. <code>nys-textarea</code> also adds <code>select</code> and <code>selectionchange</code> events.</li>
+<li><strong>Dependencies updated:</strong> Vite patched for vulnerabilities, Storybook upgraded to 8.5.2.</li>
 </ul>
-<p><em>Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
-<h2>Related issues</h2>
-<ul>
-<li>Update Vulnerable Vite package - Related issue <a href="https://github.com/its-hcd/nysds/issues/249">#249</a></li>
-<li>Update Storybook to 8.5.2 - Related issue <a href="https://github.com/its-hcd/nysds/issues/250">#250</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/excelsior/compare/v0.0.8-alpha...v0.0.9-alpha</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.9-alpha">See the full developer release notes for v0.0.9 →</a></p>
 ]]></content>
       <pubDate>Wed, 29 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -490,81 +424,79 @@
     <item>
       <title>Release 1.0.0</title>
       <link>https://designsystem.ny.gov/updates/1.0.0-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>We've made a lot of progress since our last release and are happy to share the <strong>1.0.0 release</strong> of the component library and design libraries. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
-<p>We added 3 new components: <code>&lt;nys-button&gt;</code>, <code>&lt;nys-unavheader&gt;</code>, and <code>&lt;nys-unavfooter&gt;</code>— bringing us to 17 web components in total, more than the 15 we slated for 1.0.0. Review <a href="https://its-hcd.github.io/nysds/?path=/docs/components-unavfooter--docs">our developer Storybook</a> for updated documentation on the new components.</p>
-<p>I want to give a big shout out to the Design System team. They've been working tirelessly for the last 3 months and have accomplished a great deal in that short time. Thank you Eric, Doug, Emily, Leo, Kristin, and Robert!</p>
-<h2>What's New</h2>
-<h3>✨ New <code>&lt;nys-unavheader&gt;</code> and <code>&lt;nys-unavfooter&gt;</code> Component: <code>[@nysds](https://github.com/nysds)/nys-unavheader</code> <code>[@nysds](https://github.com/nysds)/nys-unavfooter</code></h3>
+      <description><![CDATA[<h2>🎉 Our first major design system release!</h2>
+<p>It’s official: the New York State Design System has hit <strong>1.0.0</strong>! This marks our first stable release of the component library and design libraries. You can now explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
+<p>We set out to ship 15 web components for v1.0.0 — and delivered 17. ✨</p>
+<p>A huge thank you to the entire Design System team — Eric, Doug, Emily, Leo, Kristin, and Robert — for an incredible three months of work getting us here.</p>
+<h2>💠 New Components</h2>
+<h3>Meet UnavHeader and UnavFooter</h3>
+<p>The <code>nys-unavheader</code> and <code>nys-unavfooter</code> have arrived as web components. Perfect for app teams that hit JS conflicts with the official embed script.<br />
+↳ Created by <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a></p>
 <ul>
-<li>A component to create a Universal header in sites and apps <a href="https://github.com/its-hcd/nysds/issues/271">#271</a></li>
-<li>A component to create a Universal Footer in sites and apps <a href="https://github.com/its-hcd/nysds/issues/259">#259</a></li>
-<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1616-6759&amp;t=wCig8fhbifh6ryK0-1">Figma nys-unavheader component design reference</a></li>
-<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=3568-16435&amp;t=wCig8fhbifh6ryK0-1">Figma nys-unavfooter component design reference</a></li>
+<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1616-6759&amp;t=wCig8fhbifh6ryK0-1">Figma: <code>nys-unavheader</code></a></li>
+<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=3568-16435&amp;t=wCig8fhbifh6ryK0-1">Figma: <code>nys-unavfooter</code></a></li>
 </ul>
-<p><strong>Note:</strong> the official <a href="https://github.com/ITS-HCD/unav-next">Universal Navigation script embed</a> should still be used on most sites. This version of the component was created to make it easier for application teams that ran into JS conflict issues with the official embed version.</p>
-<p><em>Created by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) and Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</em></p>
-<h3>✨ New <code>&lt;nys-button&gt;</code> Component: <code>[@nysds](https://github.com/nysds)/nys-button</code></h3>
+<h3>Who's Got The Button</h3>
+<p>A fully branded <code>nys-button</code>, now available as a component.<br />
+↳ Created by <a href="https://github.com/emilygorelik">Emily Gorelik</a></p>
 <ul>
-<li>A component to create a button styled with NYS branding <a href="https://github.com/its-hcd/nysds/issues/231">#231</a></li>
-<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1613-6370&amp;t=wCig8fhbifh6ryK0-1">Figma nys-button component design reference</a></li>
+<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1613-6370&amp;t=wCig8fhbifh6ryK0-1">Figma: <code>nys-button</code></a></li>
 </ul>
-<p><em>Created by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h3>Fixes and Improvements</h3>
 <ul>
-<li>Form fields should now bubble up their values in Angular and React-based applications.</li>
-<li>Many updates were made to various elements with no breaking changes.</li>
+<li>Form fields now properly bubble up their values in Angular and React applications</li>
+<li>Many smaller updates across components</li>
 </ul>
 <h3>⚠️ Known Issues</h3>
 <ul>
-<li>While our custom form components can be used with frameworks that have form helpers (like Angular), native <form> elements won't submit their value. We have a fix for that coming in the next release.</form></li>
-<li>Some of the max-width of header elements are out of alignment with the grid utilities. That will be addressed in the next release.</li>
-<li>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+<li>Custom form components don’t yet submit values through native <code>&lt;form&gt;</code> tags (fix coming next release)</li>
+<li>Some header elements have max-width alignment issues with grid utilities</li>
+<li>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
 </ul>
-<h3>Design Libraries (Figma):</h3>
+<h3>Figma-only updates</h3>
 <ul>
-<li>We published the full suite of 1.0.0 components. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a>.</li>
-<li>We added <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7598-2784&amp;t=wCig8fhbifh6ryK0-1">a helpful &quot;Getting Started&quot; section</a> that walks through core concepts for the components library and how you can use it to design and build prototypes.</li>
+<li>Published the full suite of <strong>1.0.0 components</strong> in Figma</li>
+<li>Added a <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7598-2784&amp;t=wCig8fhbifh6ryK0-1">“Getting Started” guide</a> to help teams learn the system and prototype faster</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v0.0.9-alpha...v1.0.0</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.0.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.0.0">See the full developer release notes for v1.0.0 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>We've made a lot of progress since our last release and are happy to share the <strong>1.0.0 release</strong> of the component library and design libraries. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
-<p>We added 3 new components: <code>&lt;nys-button&gt;</code>, <code>&lt;nys-unavheader&gt;</code>, and <code>&lt;nys-unavfooter&gt;</code>— bringing us to 17 web components in total, more than the 15 we slated for 1.0.0. Review <a href="https://its-hcd.github.io/nysds/?path=/docs/components-unavfooter--docs">our developer Storybook</a> for updated documentation on the new components.</p>
-<p>I want to give a big shout out to the Design System team. They've been working tirelessly for the last 3 months and have accomplished a great deal in that short time. Thank you Eric, Doug, Emily, Leo, Kristin, and Robert!</p>
-<h2>What's New</h2>
-<h3>✨ New <code>&lt;nys-unavheader&gt;</code> and <code>&lt;nys-unavfooter&gt;</code> Component: <code>[@nysds](https://github.com/nysds)/nys-unavheader</code> <code>[@nysds](https://github.com/nysds)/nys-unavfooter</code></h3>
+      <content><![CDATA[<h2>🎉 Our first major design system release!</h2>
+<p>It’s official: the New York State Design System has hit <strong>1.0.0</strong>! This marks our first stable release of the component library and design libraries. You can now explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
+<p>We set out to ship 15 web components for v1.0.0 — and delivered 17. ✨</p>
+<p>A huge thank you to the entire Design System team — Eric, Doug, Emily, Leo, Kristin, and Robert — for an incredible three months of work getting us here.</p>
+<h2>💠 New Components</h2>
+<h3>Meet UnavHeader and UnavFooter</h3>
+<p>The <code>nys-unavheader</code> and <code>nys-unavfooter</code> have arrived as web components. Perfect for app teams that hit JS conflicts with the official embed script.<br />
+↳ Created by <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a></p>
 <ul>
-<li>A component to create a Universal header in sites and apps <a href="https://github.com/its-hcd/nysds/issues/271">#271</a></li>
-<li>A component to create a Universal Footer in sites and apps <a href="https://github.com/its-hcd/nysds/issues/259">#259</a></li>
-<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1616-6759&amp;t=wCig8fhbifh6ryK0-1">Figma nys-unavheader component design reference</a></li>
-<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=3568-16435&amp;t=wCig8fhbifh6ryK0-1">Figma nys-unavfooter component design reference</a></li>
+<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1616-6759&amp;t=wCig8fhbifh6ryK0-1">Figma: <code>nys-unavheader</code></a></li>
+<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=3568-16435&amp;t=wCig8fhbifh6ryK0-1">Figma: <code>nys-unavfooter</code></a></li>
 </ul>
-<p><strong>Note:</strong> the official <a href="https://github.com/ITS-HCD/unav-next">Universal Navigation script embed</a> should still be used on most sites. This version of the component was created to make it easier for application teams that ran into JS conflict issues with the official embed version.</p>
-<p><em>Created by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) and Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</em></p>
-<h3>✨ New <code>&lt;nys-button&gt;</code> Component: <code>[@nysds](https://github.com/nysds)/nys-button</code></h3>
+<h3>Who's Got The Button</h3>
+<p>A fully branded <code>nys-button</code>, now available as a component.<br />
+↳ Created by <a href="https://github.com/emilygorelik">Emily Gorelik</a></p>
 <ul>
-<li>A component to create a button styled with NYS branding <a href="https://github.com/its-hcd/nysds/issues/231">#231</a></li>
-<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1613-6370&amp;t=wCig8fhbifh6ryK0-1">Figma nys-button component design reference</a></li>
+<li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=1613-6370&amp;t=wCig8fhbifh6ryK0-1">Figma: <code>nys-button</code></a></li>
 </ul>
-<p><em>Created by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<h3>Fixes and Improvements</h3>
 <ul>
-<li>Form fields should now bubble up their values in Angular and React-based applications.</li>
-<li>Many updates were made to various elements with no breaking changes.</li>
+<li>Form fields now properly bubble up their values in Angular and React applications</li>
+<li>Many smaller updates across components</li>
 </ul>
 <h3>⚠️ Known Issues</h3>
 <ul>
-<li>While our custom form components can be used with frameworks that have form helpers (like Angular), native <form> elements won't submit their value. We have a fix for that coming in the next release.</form></li>
-<li>Some of the max-width of header elements are out of alignment with the grid utilities. That will be addressed in the next release.</li>
-<li>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+<li>Custom form components don’t yet submit values through native <code>&lt;form&gt;</code> tags (fix coming next release)</li>
+<li>Some header elements have max-width alignment issues with grid utilities</li>
+<li>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
 </ul>
-<h3>Design Libraries (Figma):</h3>
+<h3>Figma-only updates</h3>
 <ul>
-<li>We published the full suite of 1.0.0 components. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a>.</li>
-<li>We added <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7598-2784&amp;t=wCig8fhbifh6ryK0-1">a helpful &quot;Getting Started&quot; section</a> that walks through core concepts for the components library and how you can use it to design and build prototypes.</li>
+<li>Published the full suite of <strong>1.0.0 components</strong> in Figma</li>
+<li>Added a <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7598-2784&amp;t=wCig8fhbifh6ryK0-1">“Getting Started” guide</a> to help teams learn the system and prototype faster</li>
 </ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v0.0.9-alpha...v1.0.0</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.0.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.0.0">See the full developer release notes for v1.0.0 →</a></p>
 ]]></content>
       <pubDate>Fri, 07 Feb 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -573,73 +505,53 @@
     <item>
       <title>Release 1.1.0</title>
       <link>https://designsystem.ny.gov/updates/1.1.0-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>We've made bug fixes since our last release and are happy to share the <strong>1.1.0 release</strong> of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
-<p>We did not add any new components in this release, but this we've added native form element functionality to NYSDS form-based web components and have fixed a lot of bugs.</p>
-<h2>What's New</h2>
-<h3>✨ Form elements properly reflect values and validation</h3>
+      <description><![CDATA[<h2>First-class form elements</h2>
+<p>Custom NYS Design System form elements now participate in standard HTML forms just like standard HTML elements, thanks to <code>elementInternals</code>. This means form-based web components behave the way native form elements should, with values, validation, and accessibility. More information about the <code>elementInternals</code> interface can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals">MDN Web Docs →</a><br />
+↳ Big collaborative effort between <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
+<h2>Code Connect = less drift</h2>
+<p>Parity is here between Figma and code! With Code Connect, designers and developers can finally use the same source of truth, whether in design or development.<br />
+↳ Connected by <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li><code>elementInternals</code> is now used on all form elements to properly reflect properties and values  <a href="https://github.com/its-hcd/nysds/issues/326">#326</a> <a href="https://github.com/its-hcd/nysds/issues/334">#334</a> <a href="https://github.com/its-hcd/nysds/issues/348">#348</a> <a href="https://github.com/its-hcd/nysds/issues/347">#347</a> <a href="https://github.com/its-hcd/nysds/issues/352">#352</a> <a href="https://github.com/its-hcd/nysds/issues/319">#319</a> <a href="https://github.com/its-hcd/nysds/issues/317">#317</a> <a href="https://github.com/its-hcd/nysds/issues/315">#315</a></li>
+<li>Global header and footer fixes</li>
+<li>UNav header and footer fixes</li>
+<li>New label and error message private components</li>
+<li>Type declaration fixes</li>
 </ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h3>✨ &quot;Code Connect&quot; parity between Figma and Code</h3>
+<p>↳ Thanks to the tireless work by <a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a></p>
+<h2>Figma-only updates (engineers, you’re off the hook)</h2>
 <ul>
-<li>Code-connect established between code components and Figma. This allows designers and developers to usee the same code whether in design or development <a href="https://github.com/its-hcd/nysds/issues/353">#353</a></li>
+<li>We updated components to better align with NYS brand standards</li>
+<li>See them all in the <a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?m=auto&amp;node-id=51-1514&amp;t=yyjzhjNruCYHdAEB-1">NYS Design System Figma Library →</a> <em>(NYS Figma account required)</em></li>
 </ul>
-<p><em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Global header and footer fixes <a href="https://github.com/its-hcd/nysds/issues/357">#357</a> <a href="https://github.com/its-hcd/nysds/issues/355">#355</a>  <a href="https://github.com/its-hcd/nysds/issues/350">#350</a></li>
-<li>Unav header and footer fixes  <a href="https://github.com/its-hcd/nysds/issues/321">#321</a> <a href="https://github.com/its-hcd/nysds/issues/354">#354</a></li>
-<li>New label and error message private components <a href="https://github.com/its-hcd/nysds/issues/318">#318</a></li>
-<li>Fix type declaration <a href="https://github.com/its-hcd/nysds/issues/367">#367</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
 <h3>⚠️ Known Issues</h3>
-<ul>
-<li>none</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<h3>Design Libraries (Figma):</h3>
-<ul>
-<li>Component style modifications to align with brand better. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.0.0...v1.1.0</p>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.0">See the full developer release notes for v1.1.0 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>We've made bug fixes since our last release and are happy to share the <strong>1.1.0 release</strong> of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
-<p>We did not add any new components in this release, but this we've added native form element functionality to NYSDS form-based web components and have fixed a lot of bugs.</p>
-<h2>What's New</h2>
-<h3>✨ Form elements properly reflect values and validation</h3>
+      <content><![CDATA[<h2>First-class form elements</h2>
+<p>Custom NYS Design System form elements now participate in standard HTML forms just like standard HTML elements, thanks to <code>elementInternals</code>. This means form-based web components behave the way native form elements should, with values, validation, and accessibility. More information about the <code>elementInternals</code> interface can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals">MDN Web Docs →</a><br />
+↳ Big collaborative effort between <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
+<h2>Code Connect = less drift</h2>
+<p>Parity is here between Figma and code! With Code Connect, designers and developers can finally use the same source of truth, whether in design or development.<br />
+↳ Connected by <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li><code>elementInternals</code> is now used on all form elements to properly reflect properties and values  <a href="https://github.com/its-hcd/nysds/issues/326">#326</a> <a href="https://github.com/its-hcd/nysds/issues/334">#334</a> <a href="https://github.com/its-hcd/nysds/issues/348">#348</a> <a href="https://github.com/its-hcd/nysds/issues/347">#347</a> <a href="https://github.com/its-hcd/nysds/issues/352">#352</a> <a href="https://github.com/its-hcd/nysds/issues/319">#319</a> <a href="https://github.com/its-hcd/nysds/issues/317">#317</a> <a href="https://github.com/its-hcd/nysds/issues/315">#315</a></li>
+<li>Global header and footer fixes</li>
+<li>UNav header and footer fixes</li>
+<li>New label and error message private components</li>
+<li>Type declaration fixes</li>
 </ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em></p>
-<h3>✨ &quot;Code Connect&quot; parity between Figma and Code</h3>
+<p>↳ Thanks to the tireless work by <a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a></p>
+<h2>Figma-only updates (engineers, you’re off the hook)</h2>
 <ul>
-<li>Code-connect established between code components and Figma. This allows designers and developers to usee the same code whether in design or development <a href="https://github.com/its-hcd/nysds/issues/353">#353</a></li>
+<li>We updated components to better align with NYS brand standards</li>
+<li>See them all in the <a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?m=auto&amp;node-id=51-1514&amp;t=yyjzhjNruCYHdAEB-1">NYS Design System Figma Library →</a> <em>(NYS Figma account required)</em></li>
 </ul>
-<p><em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>)</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Global header and footer fixes <a href="https://github.com/its-hcd/nysds/issues/357">#357</a> <a href="https://github.com/its-hcd/nysds/issues/355">#355</a>  <a href="https://github.com/its-hcd/nysds/issues/350">#350</a></li>
-<li>Unav header and footer fixes  <a href="https://github.com/its-hcd/nysds/issues/321">#321</a> <a href="https://github.com/its-hcd/nysds/issues/354">#354</a></li>
-<li>New label and error message private components <a href="https://github.com/its-hcd/nysds/issues/318">#318</a></li>
-<li>Fix type declaration <a href="https://github.com/its-hcd/nysds/issues/367">#367</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
 <h3>⚠️ Known Issues</h3>
-<ul>
-<li>none</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<h3>Design Libraries (Figma):</h3>
-<ul>
-<li>Component style modifications to align with brand better. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.0.0...v1.1.0</p>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.0">See the full developer release notes for v1.1.0 →</a></p>
 ]]></content>
       <pubDate>Wed, 26 Feb 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -648,61 +560,49 @@
     <item>
       <title>Release 1.1.1</title>
       <link>https://designsystem.ny.gov/updates/1.1.1-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>We've made a lot of bug fixes and are happy to share the <strong>1.1.1 release</strong> of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a></p>
-<h2>What's New</h2>
-<h3>✨ Figma variables and Design Tokens in code have been updated</h3>
+      <description><![CDATA[<h2>Fresh tokens, fresh vibes</h2>
+<p>Figma variables and design tokens in code have been brought up to date, making things more consistent across design and engineering.</p>
+<p>↳ Thanks to <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for leading the charge.</p>
+<h2>Bug fixes galore</h2>
+<p>We squashed a whole batch of issues across multiple components — no breaking changes, just smoother sailing all around.</p>
+<p>↳ Fixes delivered by <a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/esteinborn">Eric Steinborn</a>, <a href="https://github.com/plasticmind">Jesse Gardner</a>, and <a href="https://github.com/leo-vogel">Leo Vogel</a>.</p>
+<h2>Figma-only updates (engineers, you’re off the hook)</h2>
 <ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/385">#385</a></li>
+<li>Fixes to UNav Header</li>
+<li>New variables for text, surface, and links</li>
+<li>Component style tweaks to better align with brand standards</li>
+<li>Updated “Getting Started Guide” on <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7140-22199&amp;p=f&amp;t=60nqXSJ6HSDsdR1k-0">Figma Variables →</a></li>
+<li>See it all in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library →</a></li>
 </ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em> and Leo Vogel (<a href="https://github.com/leo-vogel">@leo-vogel</a>)</p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Many bugfixes have been applied in this release <a href="https://github.com/its-hcd/nysds/issues/377">#377</a> <a href="https://github.com/its-hcd/nysds/issues/381">#381</a> <a href="https://github.com/its-hcd/nysds/issues/384">#384</a> <a href="https://github.com/its-hcd/nysds/issues/382">#382</a> <a href="https://github.com/its-hcd/nysds/issues/378">#378</a> <a href="https://github.com/its-hcd/nysds/issues/379">#379</a> <a href="https://github.com/its-hcd/nysds/issues/375">#375</a> <a href="https://github.com/its-hcd/nysds/issues/383">#383</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em>, Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>), and Leo Vogel (<a href="https://github.com/leo-vogel">@leo-vogel</a>)</p>
 <h3>⚠️ Known Issues</h3>
 <ul>
-<li>NYSDS package size is large at the moment, we are working on reducing file size for the next release, stay tuned.</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+<li>The NYSDS package size is still on the large side — we’re working on trimming it down in the next release.</li>
+<li>If you notice anything else, drop it in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
 </ul>
-<h3>Design Libraries (Figma):</h3>
-<ul>
-<li>Getting Started Guide: <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7140-22199&amp;p=f&amp;t=60nqXSJ6HSDsdR1k-0">Figma Variables</a></li>
-<li>Fixes to uNav Header</li>
-<li>New variables for text, surface, and links</li>
-<li>Component style modifications to align with brand better. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.1.0...v1.1.1</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.1" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.1">See the full developer release notes for v1.1.1 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>We've made a lot of bug fixes and are happy to share the <strong>1.1.1 release</strong> of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a></p>
-<h2>What's New</h2>
-<h3>✨ Figma variables and Design Tokens in code have been updated</h3>
+      <content><![CDATA[<h2>Fresh tokens, fresh vibes</h2>
+<p>Figma variables and design tokens in code have been brought up to date, making things more consistent across design and engineering.</p>
+<p>↳ Thanks to <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for leading the charge.</p>
+<h2>Bug fixes galore</h2>
+<p>We squashed a whole batch of issues across multiple components — no breaking changes, just smoother sailing all around.</p>
+<p>↳ Fixes delivered by <a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/esteinborn">Eric Steinborn</a>, <a href="https://github.com/plasticmind">Jesse Gardner</a>, and <a href="https://github.com/leo-vogel">Leo Vogel</a>.</p>
+<h2>Figma-only updates (engineers, you’re off the hook)</h2>
 <ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/385">#385</a></li>
+<li>Fixes to UNav Header</li>
+<li>New variables for text, surface, and links</li>
+<li>Component style tweaks to better align with brand standards</li>
+<li>Updated “Getting Started Guide” on <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7140-22199&amp;p=f&amp;t=60nqXSJ6HSDsdR1k-0">Figma Variables →</a></li>
+<li>See it all in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library →</a></li>
 </ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</em> and Leo Vogel (<a href="https://github.com/leo-vogel">@leo-vogel</a>)</p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Many bugfixes have been applied in this release <a href="https://github.com/its-hcd/nysds/issues/377">#377</a> <a href="https://github.com/its-hcd/nysds/issues/381">#381</a> <a href="https://github.com/its-hcd/nysds/issues/384">#384</a> <a href="https://github.com/its-hcd/nysds/issues/382">#382</a> <a href="https://github.com/its-hcd/nysds/issues/378">#378</a> <a href="https://github.com/its-hcd/nysds/issues/379">#379</a> <a href="https://github.com/its-hcd/nysds/issues/375">#375</a> <a href="https://github.com/its-hcd/nysds/issues/383">#383</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em>, Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>), and Leo Vogel (<a href="https://github.com/leo-vogel">@leo-vogel</a>)</p>
 <h3>⚠️ Known Issues</h3>
 <ul>
-<li>NYSDS package size is large at the moment, we are working on reducing file size for the next release, stay tuned.</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+<li>The NYSDS package size is still on the large side — we’re working on trimming it down in the next release.</li>
+<li>If you notice anything else, drop it in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
 </ul>
-<h3>Design Libraries (Figma):</h3>
-<ul>
-<li>Getting Started Guide: <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=7140-22199&amp;p=f&amp;t=60nqXSJ6HSDsdR1k-0">Figma Variables</a></li>
-<li>Fixes to uNav Header</li>
-<li>New variables for text, surface, and links</li>
-<li>Component style modifications to align with brand better. Review them in the <a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&amp;t=wCig8fhbifh6ryK0-1">NYS Design System Components Figma Library</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.1.0...v1.1.1</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.1" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.1">See the full developer release notes for v1.1.1 →</a></p>
 ]]></content>
       <pubDate>Mon, 24 Mar 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -711,25 +611,27 @@
     <item>
       <title>Release 1.1.5</title>
       <link>https://designsystem.ny.gov/updates/1.1.5-release/</link>
-      <description><![CDATA[<h1>Release Notes</h1>
-<p>We've made a lot of bug fixes and are happy to share the 1.1.5 release of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a></p>
-<h2>What's New</h2>
-<p>✨ Figma Code Connect has been applied to all components
-📂 NPM package file size reduced almost 50%</p>
-<p>Fixed by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>)</p>
-<h2>⚠️ Known Issues</h2>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<p>Full Changelog: https://github.com/ITS-HCD/nysds/compare/v1.1.1...v1.1.5</p>
+      <description><![CDATA[<h2>Figma Code Connect everywhere</h2>
+<p>All components now have Figma Code Connect wired up, making it easier for designers and engineers to stay in sync, and setting the stage for future design-to-code automation.<br />
+↳ Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a>.</p>
+<h2>A leaner npm package</h2>
+<p>We cut the npm package size nearly in half: faster installs, lighter downloads, and a more performant user experience. Download it today: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a><br />
+↳ Also brought to you by <a href="https://github.com/plasticmind">Jesse Gardner</a>.</p>
+<h3>⚠️ Known Issues</h3>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.5" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.5">See the full developer release notes for v1.1.5 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>Release Notes</h1>
-<p>We've made a lot of bug fixes and are happy to share the 1.1.5 release of NYSDS. You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a></p>
-<h2>What's New</h2>
-<p>✨ Figma Code Connect has been applied to all components
-📂 NPM package file size reduced almost 50%</p>
-<p>Fixed by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>)</p>
-<h2>⚠️ Known Issues</h2>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<p>Full Changelog: https://github.com/ITS-HCD/nysds/compare/v1.1.1...v1.1.5</p>
+      <content><![CDATA[<h2>Figma Code Connect everywhere</h2>
+<p>All components now have Figma Code Connect wired up, making it easier for designers and engineers to stay in sync, and setting the stage for future design-to-code automation.<br />
+↳ Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a>.</p>
+<h2>A leaner npm package</h2>
+<p>We cut the npm package size nearly in half: faster installs, lighter downloads, and a more performant user experience. Download it today: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a><br />
+↳ Also brought to you by <a href="https://github.com/plasticmind">Jesse Gardner</a>.</p>
+<h3>⚠️ Known Issues</h3>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.5" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.5">See the full developer release notes for v1.1.5 →</a></p>
 ]]></content>
       <pubDate>Fri, 04 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -738,37 +640,37 @@
     <item>
       <title>Release 1.1.6</title>
       <link>https://designsystem.ny.gov/updates/1.1.6-release/</link>
-      <description><![CDATA[<h1>1.1.6 NYSDS Release Notes</h1>
-<p>★ NYSDS v.1.1.6</p>
-<p>This release fixes an accessibility bug in the button component and fixes a regression in 1.1.5 that caused it to break when trying to build.</p>
+      <description><![CDATA[<h2>Components load more gracefully</h2>
+<p>Undefined components no longer flash unstyled layouts before JavaScript kicks in — they now wait until they’re fully defined before displaying.<br />
+↳ Fix by <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h2>Buttons get their voice back</h2>
+<p><code>nys-button</code> now properly define an accessible name for screen readers, ensuring smoother navigation and better accessibility.<br />
+↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>NPM install issues resolved</h2>
+<p>A packaging bug introduced in 1.1.5 caused installs to fail. That’s now fixed — installs should work smoothly on v1.1.6.<br />
+↳ Patch by <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li><strong>Undefined components will be invisible until after they have been defined by Javascript:</strong> Previously, components would show an unstyled layout before the Javascript loaded the custom element. Now it waits until the javascript has defined the element before displaying it.
-Fixed by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</li>
-<li><strong>Button needs an accessible name:</strong> The button element was not properly defining a label for screen readers. This bug was fixed.
-Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</li>
-<li><strong>NPM install fix:</strong> A bug was discovered in the NPM package which caused it to fail installing. A fix was made to the NPM package to adress the failing installs. Installs should complete successfully on version 1.1.6.
-Fixed by Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</li>
+<li>If you notice any problems, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a> or post in the internal NYSDS Troubleshooting Channel.</li>
 </ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a> or post them in the NYSDS Troubleshooting Channel.</p>
-<p>Full Release Notes: https://github.com/ITS-HCD/nysds/releases/tag/v1.1.6
-NYSDS NPM packages: https://www.npmjs.com/org/nysds
-NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.6" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.6">See the full developer release notes for v1.1.6 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>1.1.6 NYSDS Release Notes</h1>
-<p>★ NYSDS v.1.1.6</p>
-<p>This release fixes an accessibility bug in the button component and fixes a regression in 1.1.5 that caused it to break when trying to build.</p>
+      <content><![CDATA[<h2>Components load more gracefully</h2>
+<p>Undefined components no longer flash unstyled layouts before JavaScript kicks in — they now wait until they’re fully defined before displaying.<br />
+↳ Fix by <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h2>Buttons get their voice back</h2>
+<p><code>nys-button</code> now properly define an accessible name for screen readers, ensuring smoother navigation and better accessibility.<br />
+↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>NPM install issues resolved</h2>
+<p>A packaging bug introduced in 1.1.5 caused installs to fail. That’s now fixed — installs should work smoothly on v1.1.6.<br />
+↳ Patch by <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li><strong>Undefined components will be invisible until after they have been defined by Javascript:</strong> Previously, components would show an unstyled layout before the Javascript loaded the custom element. Now it waits until the javascript has defined the element before displaying it.
-Fixed by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>)</li>
-<li><strong>Button needs an accessible name:</strong> The button element was not properly defining a label for screen readers. This bug was fixed.
-Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</li>
-<li><strong>NPM install fix:</strong> A bug was discovered in the NPM package which caused it to fail installing. A fix was made to the NPM package to adress the failing installs. Installs should complete successfully on version 1.1.6.
-Fixed by Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</li>
+<li>If you notice any problems, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a> or post in the internal NYSDS Troubleshooting Channel.</li>
 </ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a> or post them in the NYSDS Troubleshooting Channel.</p>
-<p>Full Release Notes: https://github.com/ITS-HCD/nysds/releases/tag/v1.1.6
-NYSDS NPM packages: https://www.npmjs.com/org/nysds
-NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.6" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.6">See the full developer release notes for v1.1.6 →</a></p>
 ]]></content>
       <pubDate>Thu, 17 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -777,41 +679,27 @@ NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
     <item>
       <title>Release 1.1.7</title>
       <link>https://designsystem.ny.gov/updates/1.1.7-release/</link>
-      <description><![CDATA[<h1>1.1.7 NYSDS Release Notes</h1>
-<p>★ NYSDS v.1.1.7</p>
-<h2>What's New</h2>
-<h3>✨ <code>nys-button</code> now accepts <code>target</code> property to determine where to open a link</h3>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Accessibility fixes for ids on <code>nys-alert</code> <code>nys-button</code> <code>nys-textinput</code> <code>nys-select</code> <a href="https://github.com/its-hcd/nysds/issues/494">#494</a></li>
-<li><a href="https://github.com/its-hcd/nysds/issues/468">#468</a></li>
-<li><a href="https://github.com/its-hcd/nysds/issues/476">#476</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
+      <description><![CDATA[<h2>Smarter buttons</h2>
+<p><code>&lt;nys-button&gt;</code> now accepts a <code>target</code> property, giving you control over where links open. (Only works when you set the <code>href</code> property.)
+↳ 🎯 A bullseye by <a href="https://github.com/NovaCat35">Robert Chen</a></p>
+<h2>Accessibility fixes</h2>
+<p>We tightened up accessibility for several core components, including <code>&lt;nys-alert&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-textinput&gt;</code>, and <code>&lt;nys-select&gt;</code>.  Identifiers are now handled more consistently to improve screen reader support.<br />
+↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
 <h3>⚠️ Known Issues</h3>
-<ul>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.1.6...v1.1.7</p>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.7" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.7">See the full developer release notes for v1.1.7 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>1.1.7 NYSDS Release Notes</h1>
-<p>★ NYSDS v.1.1.7</p>
-<h2>What's New</h2>
-<h3>✨ <code>nys-button</code> now accepts <code>target</code> property to determine where to open a link</h3>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Accessibility fixes for ids on <code>nys-alert</code> <code>nys-button</code> <code>nys-textinput</code> <code>nys-select</code> <a href="https://github.com/its-hcd/nysds/issues/494">#494</a></li>
-<li><a href="https://github.com/its-hcd/nysds/issues/468">#468</a></li>
-<li><a href="https://github.com/its-hcd/nysds/issues/476">#476</a></li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>)</em></p>
+      <content><![CDATA[<h2>Smarter buttons</h2>
+<p><code>&lt;nys-button&gt;</code> now accepts a <code>target</code> property, giving you control over where links open. (Only works when you set the <code>href</code> property.)
+↳ 🎯 A bullseye by <a href="https://github.com/NovaCat35">Robert Chen</a></p>
+<h2>Accessibility fixes</h2>
+<p>We tightened up accessibility for several core components, including <code>&lt;nys-alert&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-textinput&gt;</code>, and <code>&lt;nys-select&gt;</code>.  Identifiers are now handled more consistently to improve screen reader support.<br />
+↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
 <h3>⚠️ Known Issues</h3>
-<ul>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: https://github.com/ITS-HCD/nysds/compare/v1.1.6...v1.1.7</p>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.7" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.7">See the full developer release notes for v1.1.7 →</a></p>
 ]]></content>
       <pubDate>Wed, 30 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -820,85 +708,45 @@ NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
     <item>
       <title>Release 1.1.8</title>
       <link>https://designsystem.ny.gov/updates/1.1.8-release/</link>
-      <description><![CDATA[<p>★ NYSDS v.1.1.8</p>
-<h2>What's New</h2>
-<h3>✨ NEW <code>nys-skipnav</code> component</h3>
+      <description><![CDATA[<h2>Skip straight to the good stuff</h2>
+<p>Say hello to <code>&lt;nys-skipnav&gt;</code>, our brand-new skip navigation component. It provides a visible link for keyboard and screen reader users to jump right to the main content. Include it at the very top of pages for to make it easier for people to skip directly to the content.</p>
+<p>↳ Big thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for this accessibility win.</p>
+<h2>Add it, remove it</h2>
+<p>The <code>&lt;nys-icon&gt;</code> library got two new additions: <code>add</code> and <code>remove</code>.<br />
+↳ Added (not removed) by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>A visible skip link for keyboard and screen reader users to jump directly to the main content.</li>
+<li><code>&lt;nys-radiobutton&gt;</code> now renders correctly when dynamically created in Angular</li>
+<li>Better alignment between icon and text in <code>&lt;nys-alert&gt;</code></li>
+<li>Button is now fully keyboard accessible</li>
 </ul>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>✨ NEW <code>nys-icon</code> icons: <code>add</code> + <code>remove</code></h3>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li>Radiobutton not rendering first radio if entered in dynamically in Angular
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/505">#505</a></li>
+<li>Password field’s eye toggle is not yet keyboard focusable (<a href="https://github.com/its-hcd/nysds/issues/519">#519</a>)</li>
 </ul>
-</li>
-<li>Better align icon and text in <code>nys-alert</code>
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/508">#508</a></li>
-</ul>
-</li>
-<li>Button subcomponent not clickable via keyboard
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/510">#510</a></li>
-</ul>
-</li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></p>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>Eye Toggle of Password field is not keyboard focusable
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/519">#519</a></li>
-</ul>
-</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.7...v1.1.8">v1.1.7...v1.1.8</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.8" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.8">See the full developer release notes for v1.1.8 →</a></p>
 ]]></description>
-      <content><![CDATA[<p>★ NYSDS v.1.1.8</p>
-<h2>What's New</h2>
-<h3>✨ NEW <code>nys-skipnav</code> component</h3>
+      <content><![CDATA[<h2>Skip straight to the good stuff</h2>
+<p>Say hello to <code>&lt;nys-skipnav&gt;</code>, our brand-new skip navigation component. It provides a visible link for keyboard and screen reader users to jump right to the main content. Include it at the very top of pages for to make it easier for people to skip directly to the content.</p>
+<p>↳ Big thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for this accessibility win.</p>
+<h2>Add it, remove it</h2>
+<p>The <code>&lt;nys-icon&gt;</code> library got two new additions: <code>add</code> and <code>remove</code>.<br />
+↳ Added (not removed) by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>A visible skip link for keyboard and screen reader users to jump directly to the main content.</li>
+<li><code>&lt;nys-radiobutton&gt;</code> now renders correctly when dynamically created in Angular</li>
+<li>Better alignment between icon and text in <code>&lt;nys-alert&gt;</code></li>
+<li>Button is now fully keyboard accessible</li>
 </ul>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>✨ NEW <code>nys-icon</code> icons: <code>add</code> + <code>remove</code></h3>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li>Radiobutton not rendering first radio if entered in dynamically in Angular
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/505">#505</a></li>
+<li>Password field’s eye toggle is not yet keyboard focusable (<a href="https://github.com/its-hcd/nysds/issues/519">#519</a>)</li>
 </ul>
-</li>
-<li>Better align icon and text in <code>nys-alert</code>
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/508">#508</a></li>
-</ul>
-</li>
-<li>Button subcomponent not clickable via keyboard
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/510">#510</a></li>
-</ul>
-</li>
-<li>No breaking changes</li>
-</ul>
-<p><em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></p>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>Eye Toggle of Password field is not keyboard focusable
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/519">#519</a></li>
-</ul>
-</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.7...v1.1.8">v1.1.7...v1.1.8</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.8" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.8">See the full developer release notes for v1.1.8 →</a></p>
 ]]></content>
       <pubDate>Thu, 15 May 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -907,165 +755,73 @@ NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
     <item>
       <title>Release 1.1.9</title>
       <link>https://designsystem.ny.gov/updates/1.1.9-release/</link>
-      <description><![CDATA[<h1>★ NYSDS v1.1.9</h1>
-<p>Excited to release the New York State Design System 1.1.9 today! We have added functionality to three of our components, added automated testing to some components (more to come!)  we are following a new QA process for all new components. We have more components in the queue and will be releasing them in the coming months.</p>
-<h3>✨ NEW <code>nys-checkbox</code> <code>Tile</code> Variant component</h3>
+      <description><![CDATA[<h2>Testing takes center stage</h2>
+<p>Seven components, including <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-alert&gt;</code>, and <code>&lt;nys-textinput&gt;</code>, now run automated tests in CI. This means more reliable builds and fewer surprises in production.</p>
+<p>↳ Thanks for all the hard work from <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/esteinborn">Eric Steinborn</a> to make this a reality.</p>
+<h2>Smarter forms, stronger inputs</h2>
+<p>Forms get a big boost this release:</p>
+<p>A <strong>tile variant</strong> for <code>&lt;nys-checkbox&gt;</code> and <code>&lt;nys-radiobutton&gt;</code> makes grouped choices clearer and easier to scan.</p>
+<p><img src="https://github.com/user-attachments/assets/8613c58a-7e48-4b36-baef-e06f31d19bbe" alt="Checkbox tile variant demo" /></p>
+<p><code>&lt;nys-textinput&gt;</code> has two new variants: an <strong>input with button</strong> (great for search bars) and a <strong>password field</strong> with a show/hide toggle.</p>
+<p><img src="https://github.com/user-attachments/assets/ad6e2392-0eec-4400-ae64-dd10bfbdbd2d" alt="Textinput with button demo" /><br />
+<img src="https://github.com/user-attachments/assets/15307cc1-382b-483b-a6fb-933ed1156790" alt="Password input demo" /></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/NovaCat35">Robert Chen</a> for building out these updates.</p>
+<h2>“Copy that!”</h2>
+<p>The <code>&lt;nys-icon&gt;</code> now includes a <strong>copy icon</strong>.</p>
+<p><img src="https://github.com/user-attachments/assets/794133c9-e77d-4efa-95d8-b8619f81129f" alt="Copy icon preview" /></p>
+<p>↳ Added by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Cleaner example code</h2>
+<p>Example blocks on the reference site have a new format and layout, making it easier to grab and reuse snippets.</p>
+<p><img src="https://github.com/user-attachments/assets/5502dc2f-88cf-47b5-96ea-4e9d41fa7b0c" alt="New example code block layout" /></p>
+<p>↳ Thanks to <a href="https://github.com/leo-vogel">Leo Vogel</a> for designing and to <a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/NovaCat35">Robert Chen</a> for building it.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>A new variant of displaying a checkbox or radio button, outlines each selection with a border and room for additional information
-<img src="https://github.com/user-attachments/assets/%5B%608613c58a%60%5D(https://github.com/its-hcd/nysds/commit/8613c58a)-7e48-4b36-baef-%5B%60e06f31d19bbe%60%5D(https://github.com/its-hcd/nysds/commit/e06f31d19bbe)" alt="Pasted image " />
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
+<li>Button clicks are now fully accessible</li>
+<li>Keyboard support added for the password toggle</li>
+<li>Fixed textinput tabbing error</li>
+<li>Skipnav transition no longer jumps out of bounds</li>
 </ul>
-<h3>✨ NEW <code>nys-textinput</code> variant: <code>input with button</code></h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li>Place buttons within input fields for things like search, or slim text fields
-<img src="https://github.com/user-attachments/assets/%5B%60ad6e2392%60%5D(https://github.com/its-hcd/nysds/commit/ad6e2392)-0eec-4400-ae64-%5B%60dd10bfbdbd2d%60%5D(https://github.com/its-hcd/nysds/commit/dd10bfbdbd2d)" alt="Pasted image " />
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
+<li><code>&lt;nys-unavheader&gt;</code>: Translate button is missing on mobile (<a href="https://github.com/its-hcd/nysds/issues/571">#571</a>)</li>
 </ul>
-<h3>✨ NEW <code>nys-textinput</code> variant: <code>password</code></h3>
-<ul>
-<li>Place an eye icon in a field to toggle visibility of text input field
-<img src="https://github.com/user-attachments/assets/%5B%60fc8a3e2a%60%5D(https://github.com/its-hcd/nysds/commit/fc8a3e2a)-d8ee-4b44-bdd3-%5B%608be77ca40d9e%60%5D(https://github.com/its-hcd/nysds/commit/8be77ca40d9e)" alt="Pasted image " />
-<img src="https://github.com/user-attachments/assets/%5B%6015307cc1%60%5D(https://github.com/its-hcd/nysds/commit/15307cc1)-382b-483b-a6fb-%5B%60933ed1156790%60%5D(https://github.com/its-hcd/nysds/commit/933ed1156790)" alt="Pasted image " />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></li>
-</ul>
-<h3>✨ NEW <code>nys-icon</code>: <code>copy</code></h3>
-<p><img src="https://github.com/user-attachments/assets/%5B%60794133c9%60%5D(https://github.com/its-hcd/nysds/commit/794133c9)-e77d-4efa-95d8-%5B%60b8619f81129f%60%5D(https://github.com/its-hcd/nysds/commit/b8619f81129f)" alt="Pasted image " />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🧰 NEW tests for NYSDS components</h3>
-<ul>
-<li>Tests have been created for these components this release:
-<ul>
-<li>nys-globalheader</li>
-<li>nys-globalfooter</li>
-<li>nys-button</li>
-<li>nys-alert</li>
-<li>nys-avatar</li>
-<li>nys-textinput</li>
-<li>nys-skipnav</li>
-</ul>
-</li>
-<li>These tests are automated during development and are implemented to be tested on CI pipelines and will fail a build if they fail a test
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)) and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></li>
-</ul>
-<h3>🖌️ NEW example code blocks on reference website</h3>
-<p>New format, better layout, same functionality!
-<img src="https://github.com/user-attachments/assets/%5B%605502dc2f%60%5D(https://github.com/its-hcd/nysds/commit/5502dc2f)-88cf-47b5-96ea-%5B%604e9d41fa7b0c%60%5D(https://github.com/its-hcd/nysds/commit/4e9d41fa7b0c)" alt="Pasted image " />
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)) and Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Button clicks were not fully accessible
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/544">#544</a></li>
-</ul>
-</li>
-<li>Keyboard functionality for password toggle
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/543">#543</a></li>
-</ul>
-</li>
-<li>Tabbing in and out of a textinput throws an error
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/538">#538</a></li>
-</ul>
-</li>
-<li>nys-skipnav transition is out of bounds
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/537">#537</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>nys-unavheader: Translate button missing on mobile:
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/571">#571</a></li>
-</ul>
-</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.8...v1.1.9">v1.1.8...v1.1.9</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.9" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.9">See the full developer release notes for v1.1.9 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>★ NYSDS v1.1.9</h1>
-<p>Excited to release the New York State Design System 1.1.9 today! We have added functionality to three of our components, added automated testing to some components (more to come!)  we are following a new QA process for all new components. We have more components in the queue and will be releasing them in the coming months.</p>
-<h3>✨ NEW <code>nys-checkbox</code> <code>Tile</code> Variant component</h3>
+      <content><![CDATA[<h2>Testing takes center stage</h2>
+<p>Seven components, including <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-alert&gt;</code>, and <code>&lt;nys-textinput&gt;</code>, now run automated tests in CI. This means more reliable builds and fewer surprises in production.</p>
+<p>↳ Thanks for all the hard work from <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/esteinborn">Eric Steinborn</a> to make this a reality.</p>
+<h2>Smarter forms, stronger inputs</h2>
+<p>Forms get a big boost this release:</p>
+<p>A <strong>tile variant</strong> for <code>&lt;nys-checkbox&gt;</code> and <code>&lt;nys-radiobutton&gt;</code> makes grouped choices clearer and easier to scan.</p>
+<p><img src="https://github.com/user-attachments/assets/8613c58a-7e48-4b36-baef-e06f31d19bbe" alt="Checkbox tile variant demo" /></p>
+<p><code>&lt;nys-textinput&gt;</code> has two new variants: an <strong>input with button</strong> (great for search bars) and a <strong>password field</strong> with a show/hide toggle.</p>
+<p><img src="https://github.com/user-attachments/assets/ad6e2392-0eec-4400-ae64-dd10bfbdbd2d" alt="Textinput with button demo" /><br />
+<img src="https://github.com/user-attachments/assets/15307cc1-382b-483b-a6fb-933ed1156790" alt="Password input demo" /></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/NovaCat35">Robert Chen</a> for building out these updates.</p>
+<h2>“Copy that!”</h2>
+<p>The <code>&lt;nys-icon&gt;</code> now includes a <strong>copy icon</strong>.</p>
+<p><img src="https://github.com/user-attachments/assets/794133c9-e77d-4efa-95d8-b8619f81129f" alt="Copy icon preview" /></p>
+<p>↳ Added by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Cleaner example code</h2>
+<p>Example blocks on the reference site have a new format and layout, making it easier to grab and reuse snippets.</p>
+<p><img src="https://github.com/user-attachments/assets/5502dc2f-88cf-47b5-96ea-4e9d41fa7b0c" alt="New example code block layout" /></p>
+<p>↳ Thanks to <a href="https://github.com/leo-vogel">Leo Vogel</a> for designing and to <a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/NovaCat35">Robert Chen</a> for building it.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>A new variant of displaying a checkbox or radio button, outlines each selection with a border and room for additional information
-<img src="https://github.com/user-attachments/assets/%5B%608613c58a%60%5D(https://github.com/its-hcd/nysds/commit/8613c58a)-7e48-4b36-baef-%5B%60e06f31d19bbe%60%5D(https://github.com/its-hcd/nysds/commit/e06f31d19bbe)" alt="Pasted image " />
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
+<li>Button clicks are now fully accessible</li>
+<li>Keyboard support added for the password toggle</li>
+<li>Fixed textinput tabbing error</li>
+<li>Skipnav transition no longer jumps out of bounds</li>
 </ul>
-<h3>✨ NEW <code>nys-textinput</code> variant: <code>input with button</code></h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h3>⚠️ Known Issues</h3>
 <ul>
-<li>Place buttons within input fields for things like search, or slim text fields
-<img src="https://github.com/user-attachments/assets/%5B%60ad6e2392%60%5D(https://github.com/its-hcd/nysds/commit/ad6e2392)-0eec-4400-ae64-%5B%60dd10bfbdbd2d%60%5D(https://github.com/its-hcd/nysds/commit/dd10bfbdbd2d)" alt="Pasted image " />
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
+<li><code>&lt;nys-unavheader&gt;</code>: Translate button is missing on mobile (<a href="https://github.com/its-hcd/nysds/issues/571">#571</a>)</li>
 </ul>
-<h3>✨ NEW <code>nys-textinput</code> variant: <code>password</code></h3>
-<ul>
-<li>Place an eye icon in a field to toggle visibility of text input field
-<img src="https://github.com/user-attachments/assets/%5B%60fc8a3e2a%60%5D(https://github.com/its-hcd/nysds/commit/fc8a3e2a)-d8ee-4b44-bdd3-%5B%608be77ca40d9e%60%5D(https://github.com/its-hcd/nysds/commit/8be77ca40d9e)" alt="Pasted image " />
-<img src="https://github.com/user-attachments/assets/%5B%6015307cc1%60%5D(https://github.com/its-hcd/nysds/commit/15307cc1)-382b-483b-a6fb-%5B%60933ed1156790%60%5D(https://github.com/its-hcd/nysds/commit/933ed1156790)" alt="Pasted image " />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></li>
-</ul>
-<h3>✨ NEW <code>nys-icon</code>: <code>copy</code></h3>
-<p><img src="https://github.com/user-attachments/assets/%5B%60794133c9%60%5D(https://github.com/its-hcd/nysds/commit/794133c9)-e77d-4efa-95d8-%5B%60b8619f81129f%60%5D(https://github.com/its-hcd/nysds/commit/b8619f81129f)" alt="Pasted image " />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🧰 NEW tests for NYSDS components</h3>
-<ul>
-<li>Tests have been created for these components this release:
-<ul>
-<li>nys-globalheader</li>
-<li>nys-globalfooter</li>
-<li>nys-button</li>
-<li>nys-alert</li>
-<li>nys-avatar</li>
-<li>nys-textinput</li>
-<li>nys-skipnav</li>
-</ul>
-</li>
-<li>These tests are automated during development and are implemented to be tested on CI pipelines and will fail a build if they fail a test
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)) and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></li>
-</ul>
-<h3>🖌️ NEW example code blocks on reference website</h3>
-<p>New format, better layout, same functionality!
-<img src="https://github.com/user-attachments/assets/%5B%605502dc2f%60%5D(https://github.com/its-hcd/nysds/commit/5502dc2f)-88cf-47b5-96ea-%5B%604e9d41fa7b0c%60%5D(https://github.com/its-hcd/nysds/commit/4e9d41fa7b0c)" alt="Pasted image " />
-<em>Created by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)) and Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Button clicks were not fully accessible
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/544">#544</a></li>
-</ul>
-</li>
-<li>Keyboard functionality for password toggle
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/543">#543</a></li>
-</ul>
-</li>
-<li>Tabbing in and out of a textinput throws an error
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/538">#538</a></li>
-</ul>
-</li>
-<li>nys-skipnav transition is out of bounds
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/537">#537</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>nys-unavheader: Translate button missing on mobile:
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/571">#571</a></li>
-</ul>
-</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.8...v1.1.9">v1.1.8...v1.1.9</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.1.9" title="https://github.com/its-hcd/nysds/releases/tag/v1.1.9">See the full developer release notes for v1.1.9 →</a></p>
 ]]></content>
       <pubDate>Thu, 29 May 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1074,119 +830,49 @@ NYSDS GitHub: https://github.com/ITS-HCD/nysds</p>
     <item>
       <title>Release 1.2.0</title>
       <link>https://designsystem.ny.gov/updates/1.2.0-release/</link>
-      <description><![CDATA[<h1>★ NYSDS v.1.2.0</h1>
-<p>Excited to release the New York State Design System 1.1.10 today! We have spent this sprint catching up on component designs in Figma, and fixing bugs in components. We are following a new QA process for all new components. We have 3 components in the engineering queue and will be releasing them soon!</p>
-<h3>🖌️ Figma Library Updates</h3>
+      <description><![CDATA[<h2>Automated testing kicks in</h2>
+<p>You won't see it, but this is a big deal. <code>&lt;nys-icon&gt;</code> and <code>&lt;nys-textarea&gt;</code> now have automated tests running in CI. If a test fails, the build fails, which makes it easier for us to catch bugs before publishing releases.</p>
+<p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for putting testing in place.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>New Circle Button variant of nys-button (Figma only, no code yet)</li>
-<li>Input subcomponents for nys-label and nys-error for use by designers in building custom input types</li>
-<li>unav header NYS logo fixed</li>
+<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/design-tokens">design tokens</a></li>
+<li>Translate button in <code>nys-unavheader</code> works properly now, and the logo link doesn't open in a new tab anymore</li>
+<li>Improved documentation for component events in our documentation</li>
+<li>Fixed the nys-avatar slot</li>
 </ul>
-<h3>🧰 NEW Tests for NYSDS components</h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h2>Figma gets some love</h2>
+<p>Designers, you’ve got some lovely new tools in your Figma:</p>
 <ul>
-<li>Tests have been created for these components this release:
-<ul>
-<li>nys-icon</li>
-<li>nys-textarea</li>
+<li>A circle button prop for <code>nys-button</code> (Figma-only for now)</li>
+<li>Subcomponents for <code>nys-label</code> and <code>nys-error</code> to make it easier to build your own custom input types</li>
+<li>The <code>nys-unavheader</code> logo alignment is better</li>
 </ul>
-</li>
-<li>These tests are automated during development and are implemented to be tested on CI pipelines and will fail a build if they fail a test
-_Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</li>
-</ul>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Update token list
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/611">#611</a></li>
-</ul>
-</li>
-<li>FIX: unav header translate button
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/603">#603</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/571">#571</a></li>
-</ul>
-</li>
-<li>FIX: unav header logo link opens in new tab
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/602">#602</a></li>
-</ul>
-</li>
-<li>Component JS Event Documentation
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/624">#624</a></li>
-</ul>
-</li>
-<li>FIX: avatar slot logic
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/626">#626</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.9...v1.2.0">v1.1.9...v1.2.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for sweating the small stuff.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.2.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.2.0">See the full developer release notes for v1.2.0 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>★ NYSDS v.1.2.0</h1>
-<p>Excited to release the New York State Design System 1.1.10 today! We have spent this sprint catching up on component designs in Figma, and fixing bugs in components. We are following a new QA process for all new components. We have 3 components in the engineering queue and will be releasing them soon!</p>
-<h3>🖌️ Figma Library Updates</h3>
+      <content><![CDATA[<h2>Automated testing kicks in</h2>
+<p>You won't see it, but this is a big deal. <code>&lt;nys-icon&gt;</code> and <code>&lt;nys-textarea&gt;</code> now have automated tests running in CI. If a test fails, the build fails, which makes it easier for us to catch bugs before publishing releases.</p>
+<p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for putting testing in place.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>New Circle Button variant of nys-button (Figma only, no code yet)</li>
-<li>Input subcomponents for nys-label and nys-error for use by designers in building custom input types</li>
-<li>unav header NYS logo fixed</li>
+<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/design-tokens">design tokens</a></li>
+<li>Translate button in <code>nys-unavheader</code> works properly now, and the logo link doesn't open in a new tab anymore</li>
+<li>Improved documentation for component events in our documentation</li>
+<li>Fixed the nys-avatar slot</li>
 </ul>
-<h3>🧰 NEW Tests for NYSDS components</h3>
+<p>↳ Fixes by <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
+<h2>Figma gets some love</h2>
+<p>Designers, you’ve got some lovely new tools in your Figma:</p>
 <ul>
-<li>Tests have been created for these components this release:
-<ul>
-<li>nys-icon</li>
-<li>nys-textarea</li>
+<li>A circle button prop for <code>nys-button</code> (Figma-only for now)</li>
+<li>Subcomponents for <code>nys-label</code> and <code>nys-error</code> to make it easier to build your own custom input types</li>
+<li>The <code>nys-unavheader</code> logo alignment is better</li>
 </ul>
-</li>
-<li>These tests are automated during development and are implemented to be tested on CI pipelines and will fail a build if they fail a test
-_Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35))</li>
-</ul>
-<h3>🛠 Maintenance and Fixes</h3>
-<ul>
-<li>Update token list
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/611">#611</a></li>
-</ul>
-</li>
-<li>FIX: unav header translate button
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/603">#603</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/571">#571</a></li>
-</ul>
-</li>
-<li>FIX: unav header logo link opens in new tab
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/602">#602</a></li>
-</ul>
-</li>
-<li>Component JS Event Documentation
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/624">#624</a></li>
-</ul>
-</li>
-<li>FIX: avatar slot logic
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/626">#626</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), and Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.1.9...v1.2.0">v1.1.9...v1.2.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for sweating the small stuff.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.2.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.2.0">See the full developer release notes for v1.2.0 →</a></p>
 ]]></content>
       <pubDate>Thu, 12 Jun 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1195,135 +881,57 @@ _Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>]
     <item>
       <title>Release 1.3.0</title>
       <link>https://designsystem.ny.gov/updates/1.3.0-release/</link>
-      <description><![CDATA[<h1>★ NYSDS v.1.3.0</h1>
-<p>Excited to release the New York State Design System 1.3.0 today! We have spent this sprint consolidating our Figma libraries to enable new features like wireframing modes. We shipped 2 new components, <code>&lt;nys-button circle&gt;</code> and <code>&lt;nys-backtotop&gt;</code> and fixed a few bugs. We're working hard on the next set of components: <code>&lt;nys-tooltip&gt;</code>, <code>&lt;nys-fileinput&gt;</code>, and more!</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h2>🖌️ Figma Library Updates</h2>
+      <description><![CDATA[<h2>Figma libraries streamlined</h2>
+<p>Designers, this one’s for you. We merged the Components and Foundations library, which makes them easier to use with branching and will be a better experience when we publish to the community. This also sets the stage for powerful new “modes” (like wireframing)... coming soon.</p>
+<p>And good news: <code>&lt;nys-tooltip&gt;</code> has already landed in Figma, and will be available in code soon!</p>
+<p><img src="https://github.com/user-attachments/assets/13ee50aa-a531-47d5-bcde-f1e5e26b7caf" alt="Screenshot showing Figma updates" /></p>
+<p>↳ Thanks to <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for the tireless work in making this happen.</p>
+<h2>Back to Top joins the library</h2>
+<p>Need a quick way back to the top of a page? <code>&lt;nys-backtotop&gt;</code> is here! Put it at the bottom of your main content container, and it will appear once the user scrolls down. Read more about it on <a href="https://designsystem.ny.gov/components/backtotop">the nys-backtotop component documentation page</a>.</p>
+<p><img src="https://github.com/user-attachments/assets/8b6cb2e2-2753-4af2-90f4-432f10821f73" alt="Screenshot of the nys-backtotop component" /></p>
+<p>↳ &quot;Top tier&quot; work by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Circle button variant</h2>
+<p><code>&lt;nys-button&gt;</code> now has a circle variant, great for icon-only actions. (Be sure to use the <code>label</code> prop for accessibility!)</p>
+<p><img src="https://github.com/user-attachments/assets/b771f6d1-da6d-43c1-94c4-7e2c53077669" alt="Screenshot of the circle button" /></p>
+<p>↳ <a href="https://github.com/NovaCat35">Robert Chen</a> rounded this one out.</p>
+<h2>Lots of other fixes and improvements</h2>
 <ul>
-<li><code>&lt;nys-tooltip&gt;</code> is live in Figma, not yet in code</li>
-<li><img src="https://github.com/user-attachments/assets/%5B%6013ee50aa%60%5D(https://github.com/its-hcd/nysds/commit/13ee50aa)-a531-47d5-bcde-%5B%60f1e5e26b7caf%60%5D(https://github.com/its-hcd/nysds/commit/f1e5e26b7caf)" alt="image" /></li>
-<li>Consolidated three libraries into two, paving the way for new NYSDS &quot;modes&quot; in Figma
-<em>Created by Kristin Sorrentino ([<a href="https://github.com/ksorrentino">@ksorrentino</a>](https://github.com/ksorrentino)) and Leo Vogel ([<a href="https://github.com/leo-vogel">@leo-vogel</a>](https://github.com/leo-vogel))</em></li>
+<li>Code Connect updates for Figma</li>
+<li>☑️ Checkbox tiles are now fully clickable</li>
+<li>Button height issues resolved (no more overflow or static sizing)</li>
+<li>Password toggle button no longer overlaps input text</li>
+<li>Browser support information added to Storybook and the Reference site</li>
 </ul>
-<h2>💠 New Components</h2>
-<h3><code>&lt;nys--backtotop&gt;</code></h3>
-<ul>
-<li><img src="https://github.com/user-attachments/assets/%5B%608b6cb2e2%60%5D(https://github.com/its-hcd/nysds/commit/8b6cb2e2)-2753-4af2-90f4-%5B%60432f10821f73%60%5D(https://github.com/its-hcd/nysds/commit/432f10821f73)" alt="image" /></li>
-</ul>
-<h3><code>&lt;nys-button circle&gt;</code> Circle variant of the nys-button element</h3>
-<ul>
-<li><img src="https://github.com/user-attachments/assets/%5B%60b771f6d1%60%5D(https://github.com/its-hcd/nysds/commit/b771f6d1)-da6d-43c1-94c4-%5B%607e2c53077669%60%5D(https://github.com/its-hcd/nysds/commit/7e2c53077669)" alt="image" /></li>
-</ul>
-<h2>🛠 Maintenance and Fixes</h2>
-<ul>
-<li>Figma Code Connect updates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/639">#639</a></li>
-</ul>
-</li>
-<li>FIX: Button - height overflow when text is longer than parent container
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/640">#640</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: Checkbox tile not fully clickable
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/670">#670</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: Button height does not adjust dynamically
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/640">#640</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: password button is overlaying the text in the input field
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/672">#672</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/636">#636</a></li>
-</ul>
-</li>
-<li>Browser Support added to Storybook and Reference Website
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/622">#622</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), and Jesse Gardner ([<a href="https://github.com/plasticmind">@plasticmind</a>](https://github.com/plasticmind))</em></li>
-</ul>
-<h2>⚠️ Known Issues</h2>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.2.0...v1.3.0">v1.2.0...v1.3.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> for sweating the details.</p>
+<hr />
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.3.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.3.0">See the full developer release notes for v1.3.0 →</a></p>
 ]]></description>
-      <content><![CDATA[<h1>★ NYSDS v.1.3.0</h1>
-<p>Excited to release the New York State Design System 1.3.0 today! We have spent this sprint consolidating our Figma libraries to enable new features like wireframing modes. We shipped 2 new components, <code>&lt;nys-button circle&gt;</code> and <code>&lt;nys-backtotop&gt;</code> and fixed a few bugs. We're working hard on the next set of components: <code>&lt;nys-tooltip&gt;</code>, <code>&lt;nys-fileinput&gt;</code>, and more!</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h2>🖌️ Figma Library Updates</h2>
+      <content><![CDATA[<h2>Figma libraries streamlined</h2>
+<p>Designers, this one’s for you. We merged the Components and Foundations library, which makes them easier to use with branching and will be a better experience when we publish to the community. This also sets the stage for powerful new “modes” (like wireframing)... coming soon.</p>
+<p>And good news: <code>&lt;nys-tooltip&gt;</code> has already landed in Figma, and will be available in code soon!</p>
+<p><img src="https://github.com/user-attachments/assets/13ee50aa-a531-47d5-bcde-f1e5e26b7caf" alt="Screenshot showing Figma updates" /></p>
+<p>↳ Thanks to <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for the tireless work in making this happen.</p>
+<h2>Back to Top joins the library</h2>
+<p>Need a quick way back to the top of a page? <code>&lt;nys-backtotop&gt;</code> is here! Put it at the bottom of your main content container, and it will appear once the user scrolls down. Read more about it on <a href="https://designsystem.ny.gov/components/backtotop">the nys-backtotop component documentation page</a>.</p>
+<p><img src="https://github.com/user-attachments/assets/8b6cb2e2-2753-4af2-90f4-432f10821f73" alt="Screenshot of the nys-backtotop component" /></p>
+<p>↳ &quot;Top tier&quot; work by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Circle button variant</h2>
+<p><code>&lt;nys-button&gt;</code> now has a circle variant, great for icon-only actions. (Be sure to use the <code>label</code> prop for accessibility!)</p>
+<p><img src="https://github.com/user-attachments/assets/b771f6d1-da6d-43c1-94c4-7e2c53077669" alt="Screenshot of the circle button" /></p>
+<p>↳ <a href="https://github.com/NovaCat35">Robert Chen</a> rounded this one out.</p>
+<h2>Lots of other fixes and improvements</h2>
 <ul>
-<li><code>&lt;nys-tooltip&gt;</code> is live in Figma, not yet in code</li>
-<li><img src="https://github.com/user-attachments/assets/%5B%6013ee50aa%60%5D(https://github.com/its-hcd/nysds/commit/13ee50aa)-a531-47d5-bcde-%5B%60f1e5e26b7caf%60%5D(https://github.com/its-hcd/nysds/commit/f1e5e26b7caf)" alt="image" /></li>
-<li>Consolidated three libraries into two, paving the way for new NYSDS &quot;modes&quot; in Figma
-<em>Created by Kristin Sorrentino ([<a href="https://github.com/ksorrentino">@ksorrentino</a>](https://github.com/ksorrentino)) and Leo Vogel ([<a href="https://github.com/leo-vogel">@leo-vogel</a>](https://github.com/leo-vogel))</em></li>
+<li>Code Connect updates for Figma</li>
+<li>☑️ Checkbox tiles are now fully clickable</li>
+<li>Button height issues resolved (no more overflow or static sizing)</li>
+<li>Password toggle button no longer overlaps input text</li>
+<li>Browser support information added to Storybook and the Reference site</li>
 </ul>
-<h2>💠 New Components</h2>
-<h3><code>&lt;nys--backtotop&gt;</code></h3>
-<ul>
-<li><img src="https://github.com/user-attachments/assets/%5B%608b6cb2e2%60%5D(https://github.com/its-hcd/nysds/commit/8b6cb2e2)-2753-4af2-90f4-%5B%60432f10821f73%60%5D(https://github.com/its-hcd/nysds/commit/432f10821f73)" alt="image" /></li>
-</ul>
-<h3><code>&lt;nys-button circle&gt;</code> Circle variant of the nys-button element</h3>
-<ul>
-<li><img src="https://github.com/user-attachments/assets/%5B%60b771f6d1%60%5D(https://github.com/its-hcd/nysds/commit/b771f6d1)-da6d-43c1-94c4-%5B%607e2c53077669%60%5D(https://github.com/its-hcd/nysds/commit/7e2c53077669)" alt="image" /></li>
-</ul>
-<h2>🛠 Maintenance and Fixes</h2>
-<ul>
-<li>Figma Code Connect updates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/639">#639</a></li>
-</ul>
-</li>
-<li>FIX: Button - height overflow when text is longer than parent container
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/640">#640</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: Checkbox tile not fully clickable
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/670">#670</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: Button height does not adjust dynamically
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/640">#640</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/632">#632</a></li>
-</ul>
-</li>
-<li>FIX: password button is overlaying the text in the input field
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/672">#672</a></li>
-<li>Fixes <a href="https://github.com/its-hcd/nysds/issues/636">#636</a></li>
-</ul>
-</li>
-<li>Browser Support added to Storybook and Reference Website
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/622">#622</a></li>
-</ul>
-</li>
-<li>No breaking changes
-<em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/NovaCat35)), Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), and Jesse Gardner ([<a href="https://github.com/plasticmind">@plasticmind</a>](https://github.com/plasticmind))</em></li>
-</ul>
-<h2>⚠️ Known Issues</h2>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.2.0...v1.3.0">v1.2.0...v1.3.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> for sweating the details.</p>
+<hr />
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.3.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.3.0">See the full developer release notes for v1.3.0 →</a></p>
 ]]></content>
       <pubDate>Thu, 26 Jun 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1332,85 +940,55 @@ _Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>]
     <item>
       <title>Release 1.4.0</title>
       <link>https://designsystem.ny.gov/updates/1.4.0-release/</link>
-      <description><![CDATA[<h2>★ NYSDS v.1.4.0</h2>
-<p>The New York State Design System turns 1.4.0 today! We are releasing a new component this week: <code>&lt;nys-fileinput&gt;</code>! We optimized the NPM package build which cut the file size in half. The entire <a href="https://github.com/nysds">@nysds</a>/components package is only 380KB now! We added three new icons, <code>print</code>, <code>progress_activity</code>, and <code>attach_file</code>. We also fixed a few bugs.</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h3>💠 New Component</h3>
-<h4><code>&lt;nys-fileinput&gt;</code></h4>
-<p>Allow users to upload files in your forms. Supports options such as accepting multiple files, drag-and-drop files, filtering by MIME types, and more. CODE ONLY. Figma still needs some work.
-<img src="https://github.com/user-attachments/assets/%5B%60a92741ce%60%5D(https://github.com/its-hcd/nysds/commit/a92741ce)-7497-43b2-8cc3-%5B%60e0d1e8cb255c%60%5D(https://github.com/its-hcd/nysds/commit/e0d1e8cb255c)" alt="image" />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🚀 NPM package size cut in half</h3>
-<p>Node modules can introduce dependency-overload. We have optimized all dependencies for each component and the full package. File size is now 380KB uncompressed (91KB gzipped)!
-<em>Halved by Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>💼 Three new icons in the <code>&lt;nys-icon&gt;</code> component</h3>
-<h4>print</h4>
-<p><img src="https://github.com/user-attachments/assets/%5B%60fb676237%60%5D(https://github.com/its-hcd/nysds/commit/fb676237)-2019-43da-8b8f-%5B%6099354e25a7bf%60%5D(https://github.com/its-hcd/nysds/commit/99354e25a7bf)" alt="image" /></p>
-<h4>attach_file</h4>
-<p><img src="https://github.com/user-attachments/assets/%5B%605dc81558%60%5D(https://github.com/its-hcd/nysds/commit/5dc81558)-9047-4d58-b07a-%5B%60cb4b14cfd43f%60%5D(https://github.com/its-hcd/nysds/commit/cb4b14cfd43f)" alt="image" /></p>
-<h4>progress_activity</h4>
-<p><img src="https://github.com/user-attachments/assets/%5B%60022e666e%60%5D(https://github.com/its-hcd/nysds/commit/022e666e)-7f8e-4678-bbda-%5B%60b26474df1adb%60%5D(https://github.com/its-hcd/nysds/commit/b26474df1adb)" alt="image" />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+      <description><![CDATA[<h2>File uploads arrive</h2>
+<p>Say hello to <code>&lt;nys-fileinput&gt;</code>, a new component for handling file uploads in your forms. It supports multiple files, drag-and-drop, MIME type filtering, and more.</p>
+<p><img src="https://github.com/user-attachments/assets/a92741ce-7497-43b2-8cc3-e0d1e8cb255c" alt="Screenshot of the nys-fileinput component" /><br />
+↳ Built by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Package size cut in half</h2>
+<p>We streamlined dependencies across the library, shrinking the full <code>@nysds/components</code> package down to 380KB. That means faster installs and lighter apps.<br />
+↳ Optimization work by <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
+<h2>Fresh icons for your toolkit</h2>
+<p>Three new icons have landed in <code>&lt;nys-icon&gt;</code>:</p>
+<p><strong>print</strong><br />
+<img src="https://github.com/user-attachments/assets/fb676237-2019-43da-8b8f-99354e25a7bf" alt="print icon" /></p>
+<p><strong>attach_file</strong><br />
+<img src="https://github.com/user-attachments/assets/5dc81558-9047-4d58-b07a-cb4b14cfd43f" alt="attach_file icon" /></p>
+<p><strong>progress_activity</strong><br />
+<img src="https://github.com/user-attachments/assets/022e666e-7f8e-4678-bbda-b26474df1adb" alt="progress_activity icon" /></p>
+<p>↳ Added by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>Plopfile updates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/699">#699</a></li>
+<li>Plopfile updates</li>
+<li>Issue template updates</li>
 </ul>
-</li>
-<li>Update issue templates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/694">#694</a>
-<em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-</li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.3.0...v1.4.0">v1.3.0...v1.4.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> for keeping the scaffolding sharp.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.4.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.4.0">See the full developer release notes for v1.4.0 →</a></p>
 ]]></description>
-      <content><![CDATA[<h2>★ NYSDS v.1.4.0</h2>
-<p>The New York State Design System turns 1.4.0 today! We are releasing a new component this week: <code>&lt;nys-fileinput&gt;</code>! We optimized the NPM package build which cut the file size in half. The entire <a href="https://github.com/nysds">@nysds</a>/components package is only 380KB now! We added three new icons, <code>print</code>, <code>progress_activity</code>, and <code>attach_file</code>. We also fixed a few bugs.</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h3>💠 New Component</h3>
-<h4><code>&lt;nys-fileinput&gt;</code></h4>
-<p>Allow users to upload files in your forms. Supports options such as accepting multiple files, drag-and-drop files, filtering by MIME types, and more. CODE ONLY. Figma still needs some work.
-<img src="https://github.com/user-attachments/assets/%5B%60a92741ce%60%5D(https://github.com/its-hcd/nysds/commit/a92741ce)-7497-43b2-8cc3-%5B%60e0d1e8cb255c%60%5D(https://github.com/its-hcd/nysds/commit/e0d1e8cb255c)" alt="image" />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🚀 NPM package size cut in half</h3>
-<p>Node modules can introduce dependency-overload. We have optimized all dependencies for each component and the full package. File size is now 380KB uncompressed (91KB gzipped)!
-<em>Halved by Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>💼 Three new icons in the <code>&lt;nys-icon&gt;</code> component</h3>
-<h4>print</h4>
-<p><img src="https://github.com/user-attachments/assets/%5B%60fb676237%60%5D(https://github.com/its-hcd/nysds/commit/fb676237)-2019-43da-8b8f-%5B%6099354e25a7bf%60%5D(https://github.com/its-hcd/nysds/commit/99354e25a7bf)" alt="image" /></p>
-<h4>attach_file</h4>
-<p><img src="https://github.com/user-attachments/assets/%5B%605dc81558%60%5D(https://github.com/its-hcd/nysds/commit/5dc81558)-9047-4d58-b07a-%5B%60cb4b14cfd43f%60%5D(https://github.com/its-hcd/nysds/commit/cb4b14cfd43f)" alt="image" /></p>
-<h4>progress_activity</h4>
-<p><img src="https://github.com/user-attachments/assets/%5B%60022e666e%60%5D(https://github.com/its-hcd/nysds/commit/022e666e)-7f8e-4678-bbda-%5B%60b26474df1adb%60%5D(https://github.com/its-hcd/nysds/commit/b26474df1adb)" alt="image" />
-<em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+      <content><![CDATA[<h2>File uploads arrive</h2>
+<p>Say hello to <code>&lt;nys-fileinput&gt;</code>, a new component for handling file uploads in your forms. It supports multiple files, drag-and-drop, MIME type filtering, and more.</p>
+<p><img src="https://github.com/user-attachments/assets/a92741ce-7497-43b2-8cc3-e0d1e8cb255c" alt="Screenshot of the nys-fileinput component" /><br />
+↳ Built by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Package size cut in half</h2>
+<p>We streamlined dependencies across the library, shrinking the full <code>@nysds/components</code> package down to 380KB. That means faster installs and lighter apps.<br />
+↳ Optimization work by <a href="https://github.com/esteinborn">Eric Steinborn</a>.</p>
+<h2>Fresh icons for your toolkit</h2>
+<p>Three new icons have landed in <code>&lt;nys-icon&gt;</code>:</p>
+<p><strong>print</strong><br />
+<img src="https://github.com/user-attachments/assets/fb676237-2019-43da-8b8f-99354e25a7bf" alt="print icon" /></p>
+<p><strong>attach_file</strong><br />
+<img src="https://github.com/user-attachments/assets/5dc81558-9047-4d58-b07a-cb4b14cfd43f" alt="attach_file icon" /></p>
+<p><strong>progress_activity</strong><br />
+<img src="https://github.com/user-attachments/assets/022e666e-7f8e-4678-bbda-b26474df1adb" alt="progress_activity icon" /></p>
+<p>↳ Added by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>Plopfile updates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/699">#699</a></li>
+<li>Plopfile updates</li>
+<li>Issue template updates</li>
 </ul>
-</li>
-<li>Update issue templates
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/694">#694</a>
-<em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik))</em></li>
-</ul>
-</li>
-</ul>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.3.0...v1.4.0">v1.3.0...v1.4.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> for keeping the scaffolding sharp.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.4.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.4.0">See the full developer release notes for v1.4.0 →</a></p>
 ]]></content>
       <pubDate>Thu, 10 Jul 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1419,101 +997,39 @@ _Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>]
     <item>
       <title>Release 1.5.0</title>
       <link>https://designsystem.ny.gov/updates/1.5.0-release/</link>
-      <description><![CDATA[<h2>★ NYSDS v.1.5.0</h2>
-<p>Happy New York State Design System 1.5.0! We are releasing multiple fixes to our <code>&lt;nys-fileinput&gt;</code> component. We're also releasing a new <code>nys-tooltip</code> component. We also fixed a few bugs.</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h3>💠 New Component</h3>
-<h4><code>&lt;nys-tooltip&gt;</code></h4>
-<p>Tooltip has come out of design into code this release. Wrap <code>&lt;nys-button&gt;</code> and <code>&lt;nys-icon&gt;</code> with a <code>&lt;nys-tooltip&gt;</code> to create a tooltip on a button or an icon:
-<img width="502" height="225" alt="image" src="https://github.com/user-attachments/assets/[%60c2d9ccfd%60](https://github.com/its-hcd/nysds/commit/c2d9ccfd)-1e2f-4675-9094-[%604fc89ce33bdd%60](https://github.com/its-hcd/nysds/commit/4fc89ce33bdd)" /></p>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🐛 <code>&lt;nys-fileinput&gt;</code> Fixes</h3>
-<p>Last release we shipped <code>&lt;ys-fileinput&gt;</code>, but found a few bugs with it. We have fixed the bugs and the component is now live and functional in 1.5.0
-<img width="668" height="449" alt="image" src="https://github.com/user-attachments/assets/[%60fd5f0da7%60](https://github.com/its-hcd/nysds/commit/fd5f0da7)-d0cc-4859-8a4a-[%608d0ba1a88c24%60](https://github.com/its-hcd/nysds/commit/8d0ba1a88c24)" /></p>
-<p><em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+      <description><![CDATA[<h2>Welcome, tooltips!</h2>
+<p><code>&lt;nys-tooltip&gt;</code> has officially joined the design system family. Wrap it around a <code>&lt;nys-button&gt;</code> or <code>&lt;nys-icon&gt;</code> and you’ll get clear, accessible context on hover or focus.<br />
+↳ Built with care by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>File Input, all cleaned up</h2>
+<p>We gave <code>&lt;nys-fileinput&gt;</code> some extra attention this round. With the bugs ironed out, it’s ready to handle uploads reliably in production.<br />
+↳ Fixes led by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>Properly Build UMD package for alpha releases
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/738">#738</a></li>
+<li>Proper UMD builds for alpha releases</li>
+<li><code>ariaLabel</code> support added to <code>nys-icon</code></li>
+<li><code>nys-unavheader</code> accessibility improved: search button labeled and aria values corrected</li>
+<li>Logic fix for <code>validateFileHeader</code></li>
 </ul>
-</li>
-<li>Add ariaLabel property to nys-icon
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/736">#736</a></li>
-</ul>
-</li>
-<li>UnavHeader search button needs a label
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/719">#719</a></li>
-</ul>
-</li>
-<li>UnavHeader needs updated Aria values
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/730">#730</a></li>
-</ul>
-</li>
-<li>Fix logic for validateFileHeader
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/710">#710</a></li>
-</ul>
-</li>
-</ul>
-<p><em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), Robert Chen([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35)), and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.4.0...v1.5.0">v1.4.0...v1.5.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/NovaCat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> for their work across these updates.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.5.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.5.0">See the full developer release notes for v1.5.0 →</a></p>
 ]]></description>
-      <content><![CDATA[<h2>★ NYSDS v.1.5.0</h2>
-<p>Happy New York State Design System 1.5.0! We are releasing multiple fixes to our <code>&lt;nys-fileinput&gt;</code> component. We're also releasing a new <code>nys-tooltip</code> component. We also fixed a few bugs.</p>
-<p>Join the conversation on our discussion board: https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals</p>
-<h3>💠 New Component</h3>
-<h4><code>&lt;nys-tooltip&gt;</code></h4>
-<p>Tooltip has come out of design into code this release. Wrap <code>&lt;nys-button&gt;</code> and <code>&lt;nys-icon&gt;</code> with a <code>&lt;nys-tooltip&gt;</code> to create a tooltip on a button or an icon:
-<img width="502" height="225" alt="image" src="https://github.com/user-attachments/assets/[%60c2d9ccfd%60](https://github.com/its-hcd/nysds/commit/c2d9ccfd)-1e2f-4675-9094-[%604fc89ce33bdd%60](https://github.com/its-hcd/nysds/commit/4fc89ce33bdd)" /></p>
-<p><em>Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🐛 <code>&lt;nys-fileinput&gt;</code> Fixes</h3>
-<p>Last release we shipped <code>&lt;ys-fileinput&gt;</code>, but found a few bugs with it. We have fixed the bugs and the component is now live and functional in 1.5.0
-<img width="668" height="449" alt="image" src="https://github.com/user-attachments/assets/[%60fd5f0da7%60](https://github.com/its-hcd/nysds/commit/fd5f0da7)-d0cc-4859-8a4a-[%608d0ba1a88c24%60](https://github.com/its-hcd/nysds/commit/8d0ba1a88c24)" /></p>
-<p><em>Fixed by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35))</em></p>
-<h3>🛠 Maintenance and Fixes</h3>
+      <content><![CDATA[<h2>Welcome, tooltips!</h2>
+<p><code>&lt;nys-tooltip&gt;</code> has officially joined the design system family. Wrap it around a <code>&lt;nys-button&gt;</code> or <code>&lt;nys-icon&gt;</code> and you’ll get clear, accessible context on hover or focus.<br />
+↳ Built with care by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>File Input, all cleaned up</h2>
+<p>We gave <code>&lt;nys-fileinput&gt;</code> some extra attention this round. With the bugs ironed out, it’s ready to handle uploads reliably in production.<br />
+↳ Fixes led by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>Properly Build UMD package for alpha releases
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/738">#738</a></li>
+<li>Proper UMD builds for alpha releases</li>
+<li><code>ariaLabel</code> support added to <code>nys-icon</code></li>
+<li><code>nys-unavheader</code> accessibility improved: search button labeled and aria values corrected</li>
+<li>Logic fix for <code>validateFileHeader</code></li>
 </ul>
-</li>
-<li>Add ariaLabel property to nys-icon
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/736">#736</a></li>
-</ul>
-</li>
-<li>UnavHeader search button needs a label
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/719">#719</a></li>
-</ul>
-</li>
-<li>UnavHeader needs updated Aria values
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/730">#730</a></li>
-</ul>
-</li>
-<li>Fix logic for validateFileHeader
-<ul>
-<li><a href="https://github.com/its-hcd/nysds/issues/710">#710</a></li>
-</ul>
-</li>
-</ul>
-<p><em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), Robert Chen([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35)), and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>⚠️ Known Issues</h3>
-<ul>
-<li>No known issues</li>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
-</ul>
-<p><strong>Full Changelog</strong>: <a href="https://github.com/ITS-HCD/nysds/compare/v1.4.0...v1.5.0">v1.4.0...v1.5.0</a></p>
+<p>↳ Thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/NovaCat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> for their work across these updates.</p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.5.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.5.0">See the full developer release notes for v1.5.0 →</a></p>
 ]]></content>
       <pubDate>Thu, 24 Jul 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1522,53 +1038,47 @@ _Created by Robert Chen ([<a href="https://github.com/NovaCat35">@NovaCat35</a>]
     <item>
       <title>Release 1.5.3</title>
       <link>https://designsystem.ny.gov/updates/1.5.3-release/</link>
-      <description><![CDATA[<p>This is a Hotfix release for 1.5.0</p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ol>
-<li>BUG: linking to unpublished dependencies breaks single component builds <a href="https://github.com/its-hcd/nysds/issues/760">#760</a></li>
-<li>Publish error message and label <a href="https://github.com/its-hcd/nysds/issues/761">#761</a></li>
-<li>Update nys-backtotop emitted events with nys- prefix <a href="https://github.com/its-hcd/nysds/issues/756">#756</a></li>
-<li>bugfix/Backtotop appears at top of page <a href="https://github.com/its-hcd/nysds/issues/759">#759</a></li>
-<li>UnavHeader tab order corrected <a href="https://github.com/its-hcd/nysds/issues/757">#757</a></li>
-<li>Fix transparent background on file list to not be <a href="https://github.com/its-hcd/nysds/issues/755">#755</a></li>
-<li>Enhancement/Code Connect for back-to-top and circle button <a href="https://github.com/its-hcd/nysds/issues/753">#753</a></li>
-<li>Fix: tooltip rendering on icons <a href="https://github.com/its-hcd/nysds/issues/751">#751</a></li>
-<li>nys-avatar Change label to ariaLabel <a href="https://github.com/its-hcd/nysds/issues/747">#747</a></li>
-<li>Update icon storybook code and figma.config.json links <a href="https://github.com/its-hcd/nysds/issues/742">#742</a></li>
-<li>fix business ramp 700 -&gt; 600 by <a href="https://github.com/its-hcd/nysds/issues/764">#764</a></li>
-<li>Text Input: fix overflowing container bug <a href="https://github.com/its-hcd/nysds/issues/770">#770</a></li>
-</ol>
-<p><em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), Robert Chen([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35)), and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>⚠️ Known Issues</h3>
+      <description><![CDATA[<h2>Forms behave again</h2>
+<p>Text Input no longer overflows its container — forms are back to being predictable and easy to use.<br />
+↳ Big thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> for tracking this down.</p>
+<h2>A more accessible UNavheader</h2>
+<p>Tab order inside <code>nys-unavheader</code> has been corrected, so moving through links with the keyboard now works as expected.<br />
+↳ Kudos to <a href="https://github.com/esteinborn">Eric Steinborn</a> for pushing this fix through.</p>
+<h2>Back to Top works as expected</h2>
+<p>The <code>nys-backtotop</code> button no longer shows up in the wrong place, and its events now use the proper <code>nys-</code> prefix.<br />
+↳ Shout out to <a href="https://github.com/NovaCat35">Robert Chen</a> for handling this one.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>No known issues</li>
+<li><code>nys-tooltip</code> now render correctly on icons</li>
+<li>Avatar now uses <code>ariaLabel</code> for accessibility</li>
+<li>Transparent backgrounds in <code>nys-fileinput</code> lists fixed</li>
+<li>Business agency group ramp color corrected</li>
+<li>Dependency linking and publishing workflow bugs squashed</li>
+<li>Code Connect enhancements for <code>nys-backtotop</code> and circle prop for <code>nys-button</code></li>
 </ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<p>Full Changelog: <a href="https://github.com/ITS-HCD/nysds/compare/v1.5.0...v1.5.3">v1.5.0...v1.5.3</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.5.3" title="https://github.com/its-hcd/nysds/releases/tag/v1.5.3">See the full developer release notes for v.1.5.3 →</a></p>
 ]]></description>
-      <content><![CDATA[<p>This is a Hotfix release for 1.5.0</p>
-<h3>🛠 Maintenance and Fixes</h3>
-<ol>
-<li>BUG: linking to unpublished dependencies breaks single component builds <a href="https://github.com/its-hcd/nysds/issues/760">#760</a></li>
-<li>Publish error message and label <a href="https://github.com/its-hcd/nysds/issues/761">#761</a></li>
-<li>Update nys-backtotop emitted events with nys- prefix <a href="https://github.com/its-hcd/nysds/issues/756">#756</a></li>
-<li>bugfix/Backtotop appears at top of page <a href="https://github.com/its-hcd/nysds/issues/759">#759</a></li>
-<li>UnavHeader tab order corrected <a href="https://github.com/its-hcd/nysds/issues/757">#757</a></li>
-<li>Fix transparent background on file list to not be <a href="https://github.com/its-hcd/nysds/issues/755">#755</a></li>
-<li>Enhancement/Code Connect for back-to-top and circle button <a href="https://github.com/its-hcd/nysds/issues/753">#753</a></li>
-<li>Fix: tooltip rendering on icons <a href="https://github.com/its-hcd/nysds/issues/751">#751</a></li>
-<li>nys-avatar Change label to ariaLabel <a href="https://github.com/its-hcd/nysds/issues/747">#747</a></li>
-<li>Update icon storybook code and figma.config.json links <a href="https://github.com/its-hcd/nysds/issues/742">#742</a></li>
-<li>fix business ramp 700 -&gt; 600 by <a href="https://github.com/its-hcd/nysds/issues/764">#764</a></li>
-<li>Text Input: fix overflowing container bug <a href="https://github.com/its-hcd/nysds/issues/770">#770</a></li>
-</ol>
-<p><em>Maintenance by Emily Gorelik ([<a href="https://github.com/emilygorelik">@emilygorelik</a>](https://github.com/emilygorelik)), Robert Chen([<a href="https://github.com/NovaCat35">@NovaCat35</a>](https://github.com/novacat35)), and Eric Steinborn ([<a href="https://github.com/esteinborn">@esteinborn</a>](https://github.com/esteinborn))</em></p>
-<h3>⚠️ Known Issues</h3>
+      <content><![CDATA[<h2>Forms behave again</h2>
+<p>Text Input no longer overflows its container — forms are back to being predictable and easy to use.<br />
+↳ Big thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> for tracking this down.</p>
+<h2>A more accessible UNavheader</h2>
+<p>Tab order inside <code>nys-unavheader</code> has been corrected, so moving through links with the keyboard now works as expected.<br />
+↳ Kudos to <a href="https://github.com/esteinborn">Eric Steinborn</a> for pushing this fix through.</p>
+<h2>Back to Top works as expected</h2>
+<p>The <code>nys-backtotop</code> button no longer shows up in the wrong place, and its events now use the proper <code>nys-</code> prefix.<br />
+↳ Shout out to <a href="https://github.com/NovaCat35">Robert Chen</a> for handling this one.</p>
+<h2>Other fixes and improvements</h2>
 <ul>
-<li>No known issues</li>
+<li><code>nys-tooltip</code> now render correctly on icons</li>
+<li>Avatar now uses <code>ariaLabel</code> for accessibility</li>
+<li>Transparent backgrounds in <code>nys-fileinput</code> lists fixed</li>
+<li>Business agency group ramp color corrected</li>
+<li>Dependency linking and publishing workflow bugs squashed</li>
+<li>Code Connect enhancements for <code>nys-backtotop</code> and circle prop for <code>nys-button</code></li>
 </ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<p>Full Changelog: <a href="https://github.com/ITS-HCD/nysds/compare/v1.5.0...v1.5.3">v1.5.0...v1.5.3</a></p>
+<h3>For full component updates, bug fixes, and the detailed changelog:</h3>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.5.3" title="https://github.com/its-hcd/nysds/releases/tag/v1.5.3">See the full developer release notes for v.1.5.3 →</a></p>
 ]]></content>
       <pubDate>Fri, 01 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1757,7 +1267,7 @@ By starting in FigJam you force yourself not to think about component properties
 </ul>
 <p>That’s it!</p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.6.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.6.0">See the full developer release notes →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.6.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.6.0">See the full developer release notes for v.1.6.0 →</a></p>
 ]]></description>
       <content><![CDATA[<h2>Phone fields just got smarter</h2>
 <p>Typing a phone number now auto-formats as you type in <code>&lt;nys-textinput type=&quot;tel&quot;&gt;</code>.</p>
@@ -1776,7 +1286,7 @@ By starting in FigJam you force yourself not to think about component properties
 </ul>
 <p>That’s it!</p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.6.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.6.0">See the full developer release notes →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.6.0" title="https://github.com/its-hcd/nysds/releases/tag/v1.6.0">See the full developer release notes for v.1.6.0 →</a></p>
 ]]></content>
       <pubDate>Thu, 07 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
