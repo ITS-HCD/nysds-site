@@ -131,12 +131,6 @@ main[role=main] {
     padding-bottom: var(--nys-space-400);
 }
 
-/* Fix for utility class layout bug */
-
-.nys-grid-container-widescreen {
-    overflow: hidden;
-}
-
 /* Site Header */
 
 /* --- Site Header Layout --- */
