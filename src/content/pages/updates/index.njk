@@ -10,16 +10,17 @@ navOrder: 1
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
-<h1>Whatʼs New</h1>
-  <div class="nys-tablet:nys-grid-col-8">
-    <div class="content-intro">
-      <div class="content-intro__inner">  
-        <p>Check out the latest updates to the New York State Design System.</p>
-      </div>
-    </div>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4"></div>
-  <section class="nys-grid-row nys-grid-gap-6">
+
+  <header class="page-header">
+    <h1 class="page-title">What's New</h1>
+
+    {%- if description -%}
+      <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
+    {%- endif -%}
+
+  </header>
+
+  <section class="nys-grid-row nys-grid-gap">
     
     <ul class="post-list nys-grid-container">
       {%- for post in collections.updates -%}

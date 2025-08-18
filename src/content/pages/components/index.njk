@@ -10,21 +10,15 @@ navOrder: 1
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
-<h1>Web Components</h1>
+  <header class="page-header">
 
-<section class="nys-grid-row nys-grid-gap-lg">
-  <div class="nys-tablet:nys-grid-col-8">
-    <div class="content-intro">
-      <div class="content-intro__inner">  
-        <p>
-          NYSDS offers a library of web components. These building blocks help designers and developers create consistent digital products for New York State. Each component includes examples, guidance, accessibility considerations, and options.
-        </p>
-      </div>
+    <h1 class="page-title">Web Components</h1>
+
+    <div class="page-subtitle nys-grid-row nys-grid-gap">
+      <p class="nys-tablet:nys-grid-col-8">The NYS Design System includes a library of web components that serve as building blocks to help developers create consistent digital products. Each component page includes examples, guidance, accessibility considerations, and options.</p>
     </div>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4">
-  </div>
-</section>
+    
+  </header>
 
 <section class="nys-grid-row nys-grid-gap-lg">
   {%- for post in collections.components -%}
