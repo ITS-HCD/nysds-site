@@ -128,6 +128,11 @@ a:active {
   flex: 1;
 }
 
+/* Fix for utility class layout bug */
+
+.nys-grid-container-widescreen {
+    overflow: hidden;
+}
 
 /* Site Header */
 
@@ -367,7 +372,6 @@ a:active {
   display: inline-block;
   margin-right: var(--nys-space-50);
   line-height: 1;
-  opacity: 0.4;
 }
 
 /* Author */
@@ -404,7 +408,7 @@ a:active {
     border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
     border-radius: var(--nys-radius-xxl);
     padding: var(--nys-space-200);
-    margin-bottom: var(--nys-space-200);
+    margin-bottom: var(--nys-space-400);
     align-items: stretch;
     position: relative;
     text-decoration: none;
