@@ -1,5 +1,5 @@
 ---
-permalink: /components/tootlip/
+permalink: /components/tooltip/
 title: Tooltip
 description: A tooltip component that displays a brief message when hover/focus, offering additional information or context.
 image: /assets/img/components/tooltip.svg
