@@ -6,6 +6,8 @@ subtitle: Instantly Transform FigJam Wireframes to Polished Figma Prototypes wit
 description: Unlock new workflows by building your design system with a fidelity routing collection to swap between low-fi, mid-fi, and high-fi in one click.
 image: /assets/i/2025/fidelity-modes-thumbnail.png
 image_alt: Illustration of a fidelity mode switcher
+date: 2025-08-05
+tags: article, figma, prototyping, wireframes, variables, modes
 ---
 
 Designing with speed and consistency doesn’t have to mean compromising on quality. In fact, with a smart, but simple, use of Figma’s variable collections and systems thinking, you can transform wireframes in FigJam into high-fidelity mockups and realistic prototypes in a single click.
