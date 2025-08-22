@@ -1373,9 +1373,9 @@ By starting in FigJam you force yourself not to think about component properties
 <p>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) knocked this out of the park!</p>
 <h2>New icons available</h2>
 <p>New additions: <code>code</code>,  <code>social_bluesky</code>, and <code>social_threads</code></p>
-<p><nys-icon name="social_bluesky" size="4xl"></nys-icon>
-<nys-icon name="social_threads" size="4xl"></nys-icon>
-<nys-icon name="code" size="4xl"></nys-icon></p>
+<p><nys-icon name="code" size="4xl"></nys-icon>
+<nys-icon name="social_bluesky" size="4xl"></nys-icon>
+<nys-icon name="social_threads" size="4xl"></nys-icon></p>
 <p>Thanks to Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) for keeping our icon set sharp.</p>
 <h2>🚨 Breaking Changes</h2>
 <ul>
@@ -1468,9 +1468,9 @@ By starting in FigJam you force yourself not to think about component properties
 <p>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) knocked this out of the park!</p>
 <h2>New icons available</h2>
 <p>New additions: <code>code</code>,  <code>social_bluesky</code>, and <code>social_threads</code></p>
-<p><nys-icon name="social_bluesky" size="4xl"></nys-icon>
-<nys-icon name="social_threads" size="4xl"></nys-icon>
-<nys-icon name="code" size="4xl"></nys-icon></p>
+<p><nys-icon name="code" size="4xl"></nys-icon>
+<nys-icon name="social_bluesky" size="4xl"></nys-icon>
+<nys-icon name="social_threads" size="4xl"></nys-icon></p>
 <p>Thanks to Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) for keeping our icon set sharp.</p>
 <h2>🚨 Breaking Changes</h2>
 <ul>
