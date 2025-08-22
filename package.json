@@ -33,8 +33,7 @@
         "rimraf": "^6.0.1"
     },
     "dependencies": {
-        "@nysds/components": "^1.6.0",
-        "@nysds/styles": "^1.6.0",
-        "eleventy-plugin-blog-tools": "^0.4.1"
+        "@nysds/components": "^1.7.0",
+        "@nysds/styles": "^1.7.0"
     }
 }

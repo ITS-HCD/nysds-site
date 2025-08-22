@@ -161,7 +161,7 @@ Use the `text` prop for simple texts, or leverage the slot by simply putting HTM
 
 Use the `dismissible` property to make the alert dismissible.
 
-The `nys-alertClosed` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
+The `nys-alert-closed` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
 {% set preview %}<nys-alert type="info" heading="Information status" dismissible>
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
@@ -255,7 +255,7 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 The `<nys-alert>` component emits **one** custom Javascript events:
 
-1.  **`alertClosed`** – Fired when the button is clicked.
+1.  **`nys-alert-closed`** – Fired when the button is clicked.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the alert component
@@ -265,7 +265,7 @@ const alert = document.querySelector("nys-alert");
  * This can be used to prevent the alert from appearing again
  */
 // Listen for the 'nys-alertClosed' event
-alert.addEventListener("nys-alertClosed", (event) => {
+alert.addEventListener("nys-alert-closed", (event) => {
   const { type, label } = event.detail;
   console.log(`Alert closed. Type: ${type}, Label: ${label}`);
 });{% endset %}
