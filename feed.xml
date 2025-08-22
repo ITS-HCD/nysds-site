@@ -1292,5 +1292,202 @@ By starting in FigJam you force yourself not to think about component properties
       <dc:creator>NYS ITS Design System Team</dc:creator>
       <guid>https://designsystem.ny.gov/updates/1.6.0-release/</guid>
     </item>
+    <item>
+      <title>NYSDS Release 1.7.0 &quot;Hudson&quot;</title>
+      <link>https://designsystem.ny.gov/updates/1.7.0-release/</link>
+      <description><![CDATA[<h2>Learn the NYS Design System</h2>
+<p><a href="https://designsystem.ny.gov/learn">Visit the &quot;Learn&quot; page</a> on this site to view A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
+<p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
+<div class="nys-grid-row nys-grid-gap-lg nys-display-flex">
+<div class="nys-tablet:nys-grid-col-4">
+<a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" title="Watch Video: Introducing the NYS Design System">
+              <div class="card__inner">               
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/-AzYrquG7E4/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    General
+                  </div>
+                  <div class="card__title">
+                    Introducing the NYS Design System
+                  </div>
+                  <div class="card__desc">
+                    A quick look at what the NYS Design System is, why we built it, and how it helps teams make websites and apps that work better for everyone.
+                    <p><b>Video duration: 12:49</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+</div>
+<div class="nys-tablet:nys-grid-col-4">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/" title="Watch Video: Intro to Designing with the New York State Design System">
+              <div class="card__inner">
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/hSpJv_i-hIg/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    Design
+                  </div>
+                  <div class="card__title">
+                    Intro to Designing with the NYS Design System
+                  </div>
+                  <div class="card__desc">
+                    Learn how to start designing in Figma with ready-to-use NYSDS libraries, tokens, components, and icons.
+                    <p><b>Video duration: 7:59</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+</div>
+<div class="nys-tablet:nys-grid-col-4">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-nysds-web-components/" title="Watch Video: Intro to NYSDS Web Components">
+              <div class="card__inner">
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/NM5PFClfBgA/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    Development
+                  </div>
+                  <div class="card__title">
+                    Intro to NYSDS Web Components
+                  </div>
+                  <div class="card__desc">
+                    Get to know our web components: what they are, how they work, and why they're built to work in any framework.
+                    <p><b>Video duration: 4:47</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+</div>
+</div>
+<h2>Weird Al Yankovic would be proud</h2>
+<p>Add collapsible sections to your content with <a href="https://designsystem.ny.gov/components/accordion">the new <code>nys-accordion</code> component</a>. You can create a one-off accordion, or group a set together.</p>
+<p><img src="https://designsystem.ny.gov/assets/i/2025/accordion.gif" alt="GIF of an accordion opening and closing" /></p>
+<p>Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) plays a mean accordion.</p>
+<h2>Show us your badges</h2>
+<p><a href="https://designsystem.ny.gov/components/badge">The new <code>nys-badge</code> component</a> is a rounded, styled text label which can be used to display categories, tags, or other non-interactable labels for content. You can see examples of the nys-badge at the top of each page.</p>
+<p><img src="https://designsystem.ny.gov/assets/i/2025/badges.png" alt="Picture of the badge element" /></p>
+<p>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) knocked this out of the park!</p>
+<h2>New icons available</h2>
+<p>New additions: <code>code</code>,  <code>social_bluesky</code>, and <code>social_threads</code></p>
+<p><nys-icon name="social_bluesky" size="4xl"></nys-icon>
+<nys-icon name="social_threads" size="4xl"></nys-icon>
+<nys-icon name="code" size="4xl"></nys-icon></p>
+<p>Thanks to Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) for keeping our icon set sharp.</p>
+<h2>🚨 Breaking Changes</h2>
+<ul>
+<li><code>nys-alert</code> event <code>nys-alertClosed</code> changed to <code>nys-alert-closed</code> be sure to update if you are referencing the old event name.</li>
+</ul>
+<h2>⚠️ Known Issues</h2>
+<ul>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/812">Bug: Unavheader not opening dropdowns on Safari</a></li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.7.0">See the full developer release notes for v.1.7.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>Learn the NYS Design System</h2>
+<p><a href="https://designsystem.ny.gov/learn">Visit the &quot;Learn&quot; page</a> on this site to view A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
+<p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
+<div class="nys-grid-row nys-grid-gap-lg nys-display-flex">
+<div class="nys-tablet:nys-grid-col-4">
+<a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" title="Watch Video: Introducing the NYS Design System">
+              <div class="card__inner">               
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/-AzYrquG7E4/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    General
+                  </div>
+                  <div class="card__title">
+                    Introducing the NYS Design System
+                  </div>
+                  <div class="card__desc">
+                    A quick look at what the NYS Design System is, why we built it, and how it helps teams make websites and apps that work better for everyone.
+                    <p><b>Video duration: 12:49</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+</div>
+<div class="nys-tablet:nys-grid-col-4">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/" title="Watch Video: Intro to Designing with the New York State Design System">
+              <div class="card__inner">
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/hSpJv_i-hIg/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    Design
+                  </div>
+                  <div class="card__title">
+                    Intro to Designing with the NYS Design System
+                  </div>
+                  <div class="card__desc">
+                    Learn how to start designing in Figma with ready-to-use NYSDS libraries, tokens, components, and icons.
+                    <p><b>Video duration: 7:59</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+</div>
+<div class="nys-tablet:nys-grid-col-4">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-nysds-web-components/" title="Watch Video: Intro to NYSDS Web Components">
+              <div class="card__inner">
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/NM5PFClfBgA/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    Development
+                  </div>
+                  <div class="card__title">
+                    Intro to NYSDS Web Components
+                  </div>
+                  <div class="card__desc">
+                    Get to know our web components: what they are, how they work, and why they're built to work in any framework.
+                    <p><b>Video duration: 4:47</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+</div>
+</div>
+<h2>Weird Al Yankovic would be proud</h2>
+<p>Add collapsible sections to your content with <a href="https://designsystem.ny.gov/components/accordion">the new <code>nys-accordion</code> component</a>. You can create a one-off accordion, or group a set together.</p>
+<p><img src="https://designsystem.ny.gov/assets/i/2025/accordion.gif" alt="GIF of an accordion opening and closing" /></p>
+<p>Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) plays a mean accordion.</p>
+<h2>Show us your badges</h2>
+<p><a href="https://designsystem.ny.gov/components/badge">The new <code>nys-badge</code> component</a> is a rounded, styled text label which can be used to display categories, tags, or other non-interactable labels for content. You can see examples of the nys-badge at the top of each page.</p>
+<p><img src="https://designsystem.ny.gov/assets/i/2025/badges.png" alt="Picture of the badge element" /></p>
+<p>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) knocked this out of the park!</p>
+<h2>New icons available</h2>
+<p>New additions: <code>code</code>,  <code>social_bluesky</code>, and <code>social_threads</code></p>
+<p><nys-icon name="social_bluesky" size="4xl"></nys-icon>
+<nys-icon name="social_threads" size="4xl"></nys-icon>
+<nys-icon name="code" size="4xl"></nys-icon></p>
+<p>Thanks to Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) for keeping our icon set sharp.</p>
+<h2>🚨 Breaking Changes</h2>
+<ul>
+<li><code>nys-alert</code> event <code>nys-alertClosed</code> changed to <code>nys-alert-closed</code> be sure to update if you are referencing the old event name.</li>
+</ul>
+<h2>⚠️ Known Issues</h2>
+<ul>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/812">Bug: Unavheader not opening dropdowns on Safari</a></li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.7.0">See the full developer release notes for v.1.7.0 →</a></p>
+]]></content>
+      <pubDate>Fri, 22 Aug 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.7.0-release/</guid>
+    </item>
   </channel>
 </rss>
