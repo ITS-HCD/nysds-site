@@ -186,13 +186,20 @@ The `<nys-select>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the select gains focus.
 3.  **`nys-blur`** – Fired when the select loses focus.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+
+  - id (string): The id of the select.
+  - value (string): The value of the selected option.
+
 You can listen to these events using JavaScript:
 {% set code %}
 // Select the select component
 const select = document.querySelector('nys-select');
 // Listen for the 'nys-change' event
 select.addEventListener('nys-change', (event) => {
-  console.log('Select changed:', event.detail.value);
+  const { id, value } = event.detail;
+  console.log(`Select (${id}) changed to: ${value}`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

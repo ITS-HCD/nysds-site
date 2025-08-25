@@ -257,6 +257,13 @@ The `<nys-alert>` component emits **one** custom Javascript events:
 
 1.  **`nys-alert-closed`** – Fired when the button is clicked.
 
+#### Event details
+The event includes a detail object with the following properties:
+
+  - id (string): The id of the alert.
+  - type (string): The alert’s type (e.g., "success", "error", "info").
+  - label (string): The alert’s heading text.
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the alert component
 const alert = document.querySelector("nys-alert");
@@ -266,8 +273,8 @@ const alert = document.querySelector("nys-alert");
  */
 // Listen for the 'nys-alertClosed' event
 alert.addEventListener("nys-alert-closed", (event) => {
-  const { type, label } = event.detail;
-  console.log(`Alert closed. Type: ${type}, Label: ${label}`);
+  const { id, type, label } = event.detail;
+  console.log(`Alert ${id} closed. Type: ${type}, Label: ${label}`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
