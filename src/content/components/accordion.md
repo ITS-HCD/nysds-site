@@ -169,7 +169,7 @@ The `<nys-accordionitem>` component emits **one** custom Javascript events:
   1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked..
 
 #### Event details
-The event includes a detail object with the following properties:
+The `nys-accordionitem-toggle` event includes a detail object with the following properties:
 
   - id (string): The id of the accordion.
   - heading (string): The accordion’s heading text.

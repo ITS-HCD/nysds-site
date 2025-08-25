@@ -258,7 +258,7 @@ The `<nys-alert>` component emits **one** custom Javascript events:
 1.  **`nys-alert-closed`** – Fired when the button is clicked.
 
 #### Event details
-The event includes a detail object with the following properties:
+The `nys-alert-closed` event includes a detail object with the following properties:
 
   - id (string): The id of the alert.
   - type (string): The alert’s type (e.g., "success", "error", "info").
