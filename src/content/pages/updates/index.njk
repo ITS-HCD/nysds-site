@@ -24,29 +24,25 @@ navOrder: 1
     
     <ul class="post-list nys-grid-container">
       {%- for post in collections.updates -%}
-      <li class="post-list__item" style="border-bottom: 1px solid #ddd; padding-bottom: 1rem; margin-bottom: 1rem;">
-        <div class="nys-grid-row nys-grid-gap">
+      <li class="post-list__item{% if "article" in (post.data.tags | default([])) %} post-list--highlight{% endif %}">
 
-          <!-- Left side: title and description -->
-          <div class="nys-tablet:nys-grid-col-8">
             <h2 class="post-list__title">
               <a href="{{ post.url }}" class="post-list__link">
                 {% if post.data.tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ post.data.title }}
               </a>
             </h2>
+
             <div class="post-list__description">
               {{ post.data.description }}
             </div>
-          </div>
 
-          <!-- Right side: date -->
-          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-3" style="text-align: right;">
-            <time class="post-list__kicker">
-              {{ post.date | dateFull }}
-            </time>
-          </div>
+            <div class="post-list__meta">  
+              <div class="post-list__author">
+                by {{ post.data.author }}
+              </div>
+              <time class="post-list__date" datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFull }}</time>
+            </div>
 
-        </div>
       </li>
       {%- endfor -%}
     </ul>

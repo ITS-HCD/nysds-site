@@ -378,15 +378,6 @@ main[role=main] {
     color: var(--nys-color-text);
 }
 
-/* Content Intro */
-
-.content-intro {
-    padding: var(--nys-space-150) 0 0;
-    border-top: solid 1px var(--nys-color-theme-weak);
-    border-bottom: solid 1px var(--nys-color-theme-weak);
-    margin-bottom: var(--nys-space-250);
-}
-
 /* nysds Subheader */
 
 .ex-header {
@@ -610,31 +601,56 @@ transition: none !important;
 }
 
 .post-list__item {
-  border-bottom: 1px solid var(--nys-color-neutral-100);
-  margin-bottom: var(--nys-space-400);
+    margin-bottom: var(--nys-space-400);
 }
 
 .post-list__title {
-  margin: 0 0 var(--nys-space-100);
-  font-size: var(--nys-font-size-h5);
-  font-weight: var(--nys-font-weight-semibold);
-  line-height: var(--nys-font-lineheight-h5);
+    margin: 0 0 var(--nys-space-50);
+    font-size: var(--nys-font-size-h5);
+    font-weight: var(--nys-font-weight-semibold);
+    line-height: var(--nys-font-lineheight-h5);
 }
-
+.post-list__title a {
+    color: var(--nys-color-ink);
+    text-decoration: none;
+}
+.post-list__title a:hover,
+.post-list__title a:focus {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+    text-underline-offset: var(--nys-space-2px, 2px);
+    text-decoration-thickness: 2px;
+}
 .post-list__description {
-  font-size: var(--nys-font-size-body-md);
-  color: var(--nys-color-neutral-600);
-  line-height: var(--nys-font-lineheight-body-md);
+    font-size: var(--nys-font-size-body-md);
+    color: var(--nys-color-text-weaker);
+    line-height: var(--nys-font-lineheight-body-sm);
+    margin-bottom: var(--nys-space-50);
 }
-
-.post-list__kicker {
-  display: inline-block;
-  font-weight: bold;
-  color: var(--nys-color-text-weaker);
-  margin-top: var(--nys-space-50);
+.post-list__meta {
+    display: flex;
+    color: var(--nys-color-text-weaker);
+    font-size: var(--nys-font-size-body-sm);
+    gap: var(--nys-space-200);
 }
-
-
+.post-list__author {
+    color: var(--nys-color-text-weak);
+}
+.post-list--highlight {
+    border-radius: var(--nys-radius-lg);
+    padding: var(--nys-space-300);
+    background-color: var(--nys-color-theme-weaker);
+}
+.post-list--highlight .post-list__title a {
+    color: var(--nys-color-ink);
+}
+.post-list--highlight .post-list__description,
+.post-list__highlight .post-list__meta,
+.post-list--highlight .post-list__author,
+.post-list--highlight .post-list__date {
+    color: var(--nys-color-text-weak);
+}
+ 
 /* Accordion */
 
 .accordion {
