@@ -134,12 +134,18 @@ The `<nys-toggle>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the toggle gains focus.
 3.  **`nys-blur`** – Fired when the toggle loses focus.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+  - id (string): The id of the toggle.
+  - checked (boolean): Whether the toggle is currently checked.
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the toggle component
 const toggle = document.querySelector('nys-toggle');
 // Listen for the 'nys-change' event
 toggle.addEventListener('nys-change', (event) => {
-  console.log('Checkbox changed:', event.detail.checked);
+    const { checked } = event.detail;
+    console.log('Toggle changed. Checked:', checked);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

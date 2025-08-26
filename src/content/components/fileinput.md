@@ -184,12 +184,28 @@ The `<nys-fileinput>` component emits **one** custom Javascript events:
 
 1.  **`nys-change`** – Fired when the file list is updated, either by selecting new files or removing existing ones.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+
+- id (string): The id of the file input.
+- files (Array of file entries): A list of files with status and progress information.
+  - file (File): The raw File object.
+  - progress (number): Upload or processing progress (0–100).
+  - status ("pending" | "processing" | "done" | "error"): Current state of the file.
+  - errorMsg (string): Optional error message if status is "error".
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the button component
 const fileinput = document.querySelector('nys-fileinput');
-// Listen for the 'nys-click' event
+// Listen for the 'nys-change' event
 fileinput.addEventListener("nys-change", () => {
-	console.log("Files have changed:", event.detail.files);
+  console.log("Files have changed:", event.detail.files);
+  // Getting more specific details about each file(s)
+  const { id, files } = event.detail;
+  console.log(`Fileinput (${id}) changed:`);
+    files.forEach(({ file, progress, status, errorMsg }) => {
+      console.log(`- ${file.name} (${status}, ${progress}%)`, errorMsg || "");
+  });
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
