@@ -13,6 +13,11 @@ navOrder: 7
 {% block longdescription %}
 
 The `<nys-fileinput>` component is a reusable web component that allows users to select and upload one or more files from their device (like a computer or phone) to a server or app.
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

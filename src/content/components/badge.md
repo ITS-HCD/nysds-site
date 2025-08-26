@@ -13,6 +13,11 @@ navOrder: 5
 {% block longdescription %}
 
 The `<nys-badge>` component provides a visual indicator of text values like categories.
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=5409-1651" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

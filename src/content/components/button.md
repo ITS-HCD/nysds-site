@@ -13,6 +13,11 @@ navOrder: 5
 {% block longdescription %}
 
 The `<nys-button>` component is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

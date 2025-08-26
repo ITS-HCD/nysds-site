@@ -14,6 +14,10 @@ navOrder: 18
 
 The `<nys-unavfooter`> is a reusable web component for use in New York State digital products. It helps provide users with access to essential NYS links across all pages.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10268" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

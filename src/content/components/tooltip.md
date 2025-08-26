@@ -15,6 +15,11 @@ navOrder: 17
   The `<nys-toggle>` component is a reusable wrapper that displays a brief message when a user hovers over or focuses on its wrapped element, offering additional information or context.
 
   **IMPORTANT:** Unlike tooltip props found on form-related components, `<nys-tooltip>` is a standalone wrapper. Wrap a single `<nys-icon>` or `<nys-button>` manually to add a tooltip.
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4298-1477" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

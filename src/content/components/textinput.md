@@ -14,6 +14,11 @@ navOrder: 15
 {% block longdescription %}
 
 The `<nys-textinput>` is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

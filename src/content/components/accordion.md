@@ -14,6 +14,10 @@ navOrder: 1
 
 The `nys-accordion` and `nys-accordionitem` components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

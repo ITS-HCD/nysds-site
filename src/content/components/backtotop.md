@@ -13,6 +13,11 @@ navOrder: 4
 {% block longdescription %}
 
 The `<nys-backtotop>` component provides a button that allows users to quickly return to the top of a page, enhancing user experience and accessibility.
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4303-1514" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

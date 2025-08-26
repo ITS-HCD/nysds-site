@@ -16,6 +16,10 @@ The `<nys-radiobutton>` component is a reusable web component for use in New Yor
 
 **Note:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

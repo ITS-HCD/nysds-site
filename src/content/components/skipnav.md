@@ -14,6 +14,10 @@ navOrder: 13
 
 The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

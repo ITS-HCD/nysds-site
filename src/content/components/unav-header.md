@@ -16,6 +16,10 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 
 **Note:** The Universal Navigation Header remains consistent across all sites.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11902" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

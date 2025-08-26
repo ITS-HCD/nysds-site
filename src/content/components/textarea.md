@@ -13,6 +13,11 @@ navOrder: 14
 {% block longdescription %}
 
 The `<nys-textarea>` is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

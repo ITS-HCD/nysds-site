@@ -13,6 +13,11 @@ navOrder: 16
 {% block longdescription %}
 
   The `<nys-toggle>` component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

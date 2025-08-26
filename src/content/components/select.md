@@ -14,6 +14,10 @@ navOrder: 12
 
 The `<nys-select>` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element `<nys-option>` to define the options in the dropdown.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}

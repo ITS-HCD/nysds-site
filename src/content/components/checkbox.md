@@ -16,6 +16,10 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 
 **Optional:** `<nys-checkboxgroup>` can be used to group multiple checkboxes so they function as a single form control.
 
+  {% set stable = true %}
+  {% set figmaLink = "https://www.figma.com/design/0ogYpymUPQQfhELthntNbt?node-id=4808-7102" %}
+  {% include "partials/badge-status.njk" %}
+
 {% endblock %}
 
 {% block example %}
