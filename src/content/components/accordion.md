@@ -19,7 +19,7 @@ The `nys-accordion` and `nys-accordionitem` components are vertically stacked li
 {% block example %}
 {% set preview %}
 <nys-accordion>
-  <nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?">
+  <nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?" expanded>
     <p>
       You can apply for or renew a U.S. passport through the U.S. Department
       of State. Some renewals can be done by mail.
@@ -94,6 +94,7 @@ The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add thi
   <nys-accordionitem
     id="individualAcc1"
     heading="Liberty Ipsum: Bridges & Boroughs"
+    expanded
   >
     <p>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit.</p>
   </nys-accordionitem>
@@ -109,7 +110,7 @@ When the `singleSelect` boolean property is set, only one `nys-accordionitem` in
 
 {% set preview %}
 <nys-accordion singleSelect>
-  <nys-accordionitem id="accordion1" heading="Welcome to New York">
+  <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
    <p>Learn about state programs, services, and resources available at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
