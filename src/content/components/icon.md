@@ -5,6 +5,8 @@ description: Visual symbols used to concisely convey information and increase vi
 image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941
 navOrder: 10
 ---
 
@@ -13,10 +15,6 @@ navOrder: 10
 {% block longdescription %}
 
 The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

@@ -5,6 +5,8 @@ description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
 navOrder: 12
 ---
 
@@ -13,10 +15,6 @@ navOrder: 12
 {% block longdescription %}
 
 The `<nys-select>` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element `<nys-option>` to define the options in the dropdown.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

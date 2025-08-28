@@ -5,6 +5,8 @@ description: A checkbox is a form input for users to select options (zero, one, 
 image: /assets/img/components/checkbox.svg
 image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
+stable: true
+figma_link: https://www.figma.com/design/0ogYpymUPQQfhELthntNbt?node-id=4808-7102
 navOrder: 6
 ---
 
@@ -15,10 +17,6 @@ navOrder: 6
 The `<nys-checkbox>` component is a form input for users to select options (zero, one, or multiple) from a collection of choices. It provides users with the ability to toggle a binary state (checked/unchecked). Indeterminate states are not (currently) supported.
 
 **Optional:** `<nys-checkboxgroup>` can be used to group multiple checkboxes so they function as a single form control.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/0ogYpymUPQQfhELthntNbt?node-id=4808-7102" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

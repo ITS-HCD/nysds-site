@@ -5,6 +5,8 @@ description: Provide users with consistent access to key features, branding, and
 image: /assets/img/components/global-header.svg
 image_alt: An illustration of a global header.
 image_header: /assets/img/components/global-header-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924
 navOrder: 11
 ---
 
@@ -14,10 +16,6 @@ navOrder: 11
 {% block longdescription %}
 
 The `<nys-globalheader>` component is a reusable web component for use in New York State digital products. It helps provide users with consistent access to key features, branding, and primary navigation across all pages.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

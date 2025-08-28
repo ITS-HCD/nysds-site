@@ -5,6 +5,8 @@ description: An alert displays a prominent message, with optional links, at the 
 image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845
 navOrder: 2
 ---
 
@@ -15,10 +17,6 @@ navOrder: 2
 Alert banners are designed to display critical information, updates, or warnings that require the user's attention.
 
 The `<nys-alert>` component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

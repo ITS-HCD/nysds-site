@@ -5,6 +5,8 @@ description: Vertically stacked list of headers that reveal or hide associated c
 image: /assets/img/components/accordion.svg
 image_alt: An illustration of an accordion
 image_header: /assets/img/components/accordion-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783
 navOrder: 1
 ---
 
@@ -13,10 +15,6 @@ navOrder: 1
 {% block longdescription %}
 
 The `nys-accordion` and `nys-accordionitem` components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

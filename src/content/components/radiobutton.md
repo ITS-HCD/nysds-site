@@ -5,6 +5,8 @@ description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
 navOrder: 11
 ---
 
@@ -15,10 +17,6 @@ navOrder: 11
 The `<nys-radiobutton>` component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
 
 **Note:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

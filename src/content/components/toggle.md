@@ -5,6 +5,8 @@ description: Switch component for enabling or disabling a setting.
 image: /assets/img/components/toggle.svg
 image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
 navOrder: 16
 ---
 
@@ -13,10 +15,6 @@ navOrder: 16
 {% block longdescription %}
 
   The `<nys-toggle>` component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

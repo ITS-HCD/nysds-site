@@ -5,6 +5,8 @@ description: Provide users with essential information, secondary navigation, leg
 image: /assets/img/components/global-footer.svg
 image_alt: An illustration of a global footer.
 image_header: /assets/img/components/global-footer-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4003-64216
 navOrder: 8
 ---
 
@@ -13,10 +15,6 @@ navOrder: 8
 {% block longdescription %}
 
 The `<nys-globalfooter>` component is a reusable web component for use in New York State digital products. It helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4003-64216" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

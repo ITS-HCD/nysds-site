@@ -5,6 +5,8 @@ description: Used for selecting and uploading one or more files from the user’
 image: /assets/img/components/fileinput.svg
 image_alt: An illustration of a file input.
 image_header: /assets/img/components/fileinput-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
 navOrder: 7
 ---
 
@@ -13,10 +15,6 @@ navOrder: 7
 {% block longdescription %}
 
 The `<nys-fileinput>` component is a reusable web component that allows users to select and upload one or more files from their device (like a computer or phone) to a server or app.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

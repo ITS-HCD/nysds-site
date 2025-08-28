@@ -5,6 +5,8 @@ description: "Used primarily for actions that have an immediate result like 'Sav
 image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
 navOrder: 5
 ---
 
@@ -13,10 +15,6 @@ navOrder: 5
 {% block longdescription %}
 
 The `<nys-button>` component is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

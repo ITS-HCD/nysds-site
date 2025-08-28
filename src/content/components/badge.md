@@ -5,6 +5,8 @@ description: Provides a visual indicator of categories
 image: /assets/img/components/badge.svg
 image_alt: An illustration of a badge.
 image_header: /assets/img/components/badge-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=5409-1651
 navOrder: 5
 ---
 
@@ -13,10 +15,6 @@ navOrder: 5
 {% block longdescription %}
 
 The `<nys-badge>` component provides a visual indicator of text values like categories.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=5409-1651" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 

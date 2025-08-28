@@ -5,6 +5,8 @@ description: Avatars visually represent a user or entity as initials, a photo, o
 image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
 image_header: /assets/img/components/avatar-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063
 navOrder: 3
 ---
 
@@ -15,10 +17,6 @@ navOrder: 3
 The `<nys-avatar>` component is used to visually represent a user or entity.
 
 By default, a generic icon is displayed. Personalize avatars with custom props like `icon`, `initials`, or `image`, and always include a `ariaLabel` for accessibility.
-
-  {% set stable = true %}
-  {% set figmaLink = "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063" %}
-  {% include "partials/badge-status.njk" %}
 
 {% endblock %}
 
