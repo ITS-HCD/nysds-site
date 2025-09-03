@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-28T14:17:44.322+00:00 -->
+    <!-- Latest Build: 2025-09-03T17:58:19.834+00:00 -->
   </head>
   
   <body class="single-page page-accordion section-components">
@@ -221,6 +221,18 @@
     
     <li class="section-nav__item"
         >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/" >
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
         Global Footer
       </a>
@@ -233,8 +245,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
-        Global Header
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
+        Icon
       </a>
 
       
@@ -245,8 +257,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
-        Icon
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
+        Global Header
       </a>
 
       
@@ -370,13 +382,23 @@
     <p><section id="overview">
 <h1>Accordion</h1></p>
 <p>The <code>nys-accordion</code> and <code>nys-accordionitem</code> components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.</p>
-</section>
+<div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+        <nys-badge label="Stable" prefixIcon="code"></nys-badge>
+        <nys-badge
+          prefixIcon
+          prefixLabel="WCAG 2.2"
+          label="AA"
+          intent="success"
+        ></nys-badge>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783"></nys-button>
+      </div>
+    </section>
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
 <nys-accordion>
-  <nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?">
+  <nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?" expanded>
     <p>
       You can apply for or renew a U.S. passport through the U.S. Department
       of State. Some renewals can be done by mail.
@@ -406,7 +428,7 @@
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordion</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordionitem</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordionId1<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>How do I renew my passport or apply for a new one?<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordionitem</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordionId1<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>How do I renew my passport or apply for a new one?<span class="token punctuation">"</span></span> <span class="token attr-name">expanded</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
       You can apply for or renew a U.S. passport through the U.S. Department
       of State. Some renewals can be done by mail.
@@ -441,6 +463,7 @@
   <nys-accordionitem
     id="individualAcc1"
     heading="Liberty Ipsum: Bridges & Boroughs"
+    expanded
   >
     <p>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit.</p>
   </nys-accordionitem>
@@ -464,6 +487,7 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordionitem</span>
     <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>individualAcc1<span class="token punctuation">"</span></span>
     <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Liberty Ipsum: Bridges &amp; Boroughs<span class="token punctuation">"</span></span>
+    <span class="token attr-name">expanded</span>
   <span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-accordionitem</span><span class="token punctuation">></span></span>
@@ -479,7 +503,7 @@
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
 <nys-accordion singleSelect>
-  <nys-accordionitem id="accordion1" heading="Welcome to New York">
+  <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
    <p>Learn about state programs, services, and resources available at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
@@ -507,7 +531,7 @@
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordion</span> <span class="token attr-name">singleSelect</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordionitem</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion1<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Welcome to New York<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-accordionitem</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion1<span class="token punctuation">"</span></span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Welcome to New York<span class="token punctuation">"</span></span> <span class="token attr-name">expanded</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Learn about state programs, services, and resources available at
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>ny.gov<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
@@ -664,7 +688,8 @@
 <ol>
 <li><strong><code>nys-accordionitem-toggle</code></strong> – Emitted when the accordion is clicked..</li>
 </ol>
-<p>The event includes a detail object with the following properties:</p>
+<h4>Event details</h4>
+<p>The <code>nys-accordionitem-toggle</code> event includes a detail object with the following properties:</p>
 <ul>
 <li>id (string): The id of the accordion.</li>
 <li>heading (string): The accordion’s heading text.</li>
@@ -714,7 +739,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 28, 2025</p>
+    <p>Last updated: September 3, 2025</p>
   </div>
 
   </div>

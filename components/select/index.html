@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-28T14:17:44.322+00:00 -->
+    <!-- Latest Build: 2025-09-03T17:58:19.834+00:00 -->
   </head>
   
   <body class="single-page page-select section-components">
@@ -221,6 +221,18 @@
     
     <li class="section-nav__item"
         >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/" >
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
         Global Footer
       </a>
@@ -233,8 +245,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
-        Global Header
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
+        Icon
       </a>
 
       
@@ -245,8 +257,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
-        Icon
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
+        Global Header
       </a>
 
       
@@ -370,7 +382,17 @@
     <p><section id="overview">
 <h1>Select</h1></p>
 <p>The <code>&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code>&lt;nys-option&gt;</code> to define the options in the dropdown.</p>
-</section>
+<div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+        <nys-badge label="Stable" prefixIcon="code"></nys-badge>
+        <nys-badge
+          prefixIcon
+          prefixLabel="WCAG 2.2"
+          label="AA"
+          intent="success"
+        ></nys-badge>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877"></nys-button>
+      </div>
+    </section>
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
@@ -781,6 +803,12 @@
 <li><strong><code>nys-focus</code></strong> – Fired when the select gains focus.</li>
 <li><strong><code>nys-blur</code></strong> – Fired when the select loses focus.</li>
 </ol>
+<h4>Event details</h4>
+<p>The <code>nys-change</code> event includes a detail object with the following properties:</p>
+<ul>
+<li>id (string): The id of the select.</li>
+<li>value (string): The value of the selected option.</li>
+</ul>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -800,7 +828,8 @@
 <span class="token keyword">const</span> select <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-select'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-change' event</span>
 select<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Select changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Select (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) changed to: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -824,7 +853,7 @@ select<span class="token punctuation">.</span><span class="token function">addEv
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/select.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 28, 2025</p>
+    <p>Last updated: September 3, 2025</p>
   </div>
 
   </div>

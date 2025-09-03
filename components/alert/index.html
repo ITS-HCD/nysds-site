@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-28T14:17:44.322+00:00 -->
+    <!-- Latest Build: 2025-09-03T17:58:19.834+00:00 -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -221,6 +221,18 @@
     
     <li class="section-nav__item"
         >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/" >
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
         Global Footer
       </a>
@@ -233,8 +245,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
-        Global Header
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
+        Icon
       </a>
 
       
@@ -245,8 +257,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
-        Icon
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
+        Global Header
       </a>
 
       
@@ -371,7 +383,17 @@
 <h1>Alert</h1></p>
 <p>Alert banners are designed to display critical information, updates, or warnings that require the user's attention.</p>
 <p>The <code>&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.</p>
-</section>
+<div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+        <nys-badge label="Stable" prefixIcon="code"></nys-badge>
+        <nys-badge
+          prefixIcon
+          prefixLabel="WCAG 2.2"
+          label="AA"
+          intent="success"
+        ></nys-badge>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845"></nys-button>
+      </div>
+    </section>
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
@@ -513,7 +535,7 @@
 </div>
 <h3>Dismissible</h3>
 <p>Use the <code>dismissible</code> property to make the alert dismissible.</p>
-<p>The <code>nys-alert-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
+<p>The <code>nys-closed</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner"><nys-alert type="info" heading="Information status" dismissible>
@@ -826,8 +848,15 @@
       <h2>Events</h2>
 <p>The <code>&lt;nys-alert&gt;</code> component emits <strong>one</strong> custom Javascript events:</p>
 <ol>
-<li><strong><code>nys-alert-closed</code></strong> – Fired when the button is clicked.</li>
+<li><strong><code>nys-closed</code></strong> – Fired when the button is clicked.</li>
 </ol>
+<h4>Event details</h4>
+<p>The <code>nys-closed</code> event includes a detail object with the following properties:</p>
+<ul>
+<li>id (string): The id of the alert.</li>
+<li>type (string): The alert’s type (e.g., &quot;success&quot;, &quot;error&quot;, &quot;info&quot;).</li>
+<li>label (string): The alert’s heading text.</li>
+</ul>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -849,10 +878,10 @@
  * Consider persisting dismissal state (e.g., to localStorage or analytics)
  * This can be used to prevent the alert from appearing again
  */</span>
-<span class="token comment">// Listen for the 'nys-alertClosed' event</span>
-alert<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-alert-closed"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> type<span class="token punctuation">,</span> label <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Alert closed. Type: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>type<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, Label: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>label<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Listen for the 'nys-closed' event</span>
+alert<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-closed"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> type<span class="token punctuation">,</span> label <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Alert </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> closed. Type: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>type<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, Label: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>label<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -876,7 +905,7 @@ alert<span class="token punctuation">.</span><span class="token function">addEve
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/alert.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 28, 2025</p>
+    <p>Last updated: September 3, 2025</p>
   </div>
 
   </div>

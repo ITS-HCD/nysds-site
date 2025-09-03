@@ -45,7 +45,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-08-28T14:17:44.322+00:00 -->
+    <!-- Latest Build: 2025-09-03T17:58:19.834+00:00 -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -221,6 +221,18 @@
     
     <li class="section-nav__item"
         >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/" >
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item"
+        >
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-footer/" >
         Global Footer
       </a>
@@ -233,8 +245,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
-        Global Header
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
+        Icon
       </a>
 
       
@@ -245,8 +257,8 @@
     
     <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/" >
-        Icon
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/global-header/" >
+        Global Header
       </a>
 
       
@@ -371,7 +383,17 @@
 <h1>Radio Button</h1></p>
 <p>The <code>&lt;nys-radiobutton&gt;</code> component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.</p>
 <p><strong>Note:</strong> <code>&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.</p>
-</section>
+<div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+        <nys-badge label="Stable" prefixIcon="code"></nys-badge>
+        <nys-badge
+          prefixIcon
+          prefixLabel="WCAG 2.2"
+          label="AA"
+          intent="success"
+        ></nys-badge>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487"></nys-button>
+      </div>
+    </section>
     <section id="example">
   <div class="code-preview-container">
   <div class="code-preview__preview ">
@@ -794,6 +816,14 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 <li><strong><code>nys-focus</code></strong> – Fired when the radiobutton gains focus.</li>
 <li><strong><code>nys-blur</code></strong> – Fired when the radiobutton loses focus.</li>
 </ol>
+<h4>Event details</h4>
+<p>The <code>nys-change</code> event includes a detail object with the following properties:</p>
+<ul>
+<li>id (string): The id of the radiobutton.</li>
+<li>checked (boolean): Whether the radiobutton is selected.</li>
+<li>name (string): The radiobutton group name.</li>
+<li>value (string): The radiobutton’s value.</li>
+</ul>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -813,7 +843,8 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 <span class="token keyword">const</span> radiobutton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-radiobutton'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-change' event</span>
 radiobutton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Radio Button changed:'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> checked<span class="token punctuation">,</span> name<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Radiobutton (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) in group "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" is of </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, checked: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>checked<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -837,7 +868,7 @@ radiobutton<span class="token punctuation">.</span><span class="token function">
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/radiobutton.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 28, 2025</p>
+    <p>Last updated: September 3, 2025</p>
   </div>
 
   </div>
