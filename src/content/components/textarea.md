@@ -5,6 +5,8 @@ description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.
 image_header: /assets/img/components/textarea-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108
 navOrder: 14
 ---
 
@@ -13,6 +15,7 @@ navOrder: 14
 {% block longdescription %}
 
 The `<nys-textarea>` is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
+
 {% endblock %}
 
 {% block example %}
@@ -183,12 +186,18 @@ The `<nys-textarea>` component emits **four** custom Javascript events:
 3.  **`nys-blur`** – Fired when the textarea loses focus.
 4.  **`nys-select`** – Fired when the user selects text within the textarea.
 
+#### Event details
+The `nys-input` and `nys-select` event includes a detail object with the following properties:
+  - id (string): The id of the textarea.
+  - value (string): The currently selected text.
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the textarea component
 const textarea = document.querySelector('nys-textarea');
 // Listen for the 'nys-input' event
 textarea.addEventListener('nys-input', (event) => {
-  console.log('Text input changed:', event.detail.value);
+  const { id, value } = event.detail;
+  console.log(`Textarea (${id}) changed:`, value);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

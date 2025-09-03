@@ -5,6 +5,8 @@ description: An accessibility feature that lets keyboard and screen reader users
 image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102
 navOrder: 13
 ---
 
