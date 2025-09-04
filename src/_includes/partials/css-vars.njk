@@ -1,0 +1,29 @@
+<div class="css-var-table">
+    <table>
+        <thead>
+            <tr>
+                <th>CSS Variable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for variable in variables %}
+            <tr>
+                <td><code>{{ variable.name }}</code></td>
+                <td>{{ variable.description }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2" class="css-var-table__tip">
+                    <p>
+                        Can't find the property you're looking for? Look at existing customizations in
+                        <a href="#options">options</a> or let us know why you believe a specific property
+                        should be available for override through a <a
+                            href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+                            Proposal</a>.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
