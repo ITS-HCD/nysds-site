@@ -253,6 +253,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block cssvariables %}
 
+  {% set variables = [
+  { name: "--nys-icon-size", description: "Width and height of the component"}
+]%}
+  {% include "partials/css-vars.njk" %}
 
 {% endblock %}
 [[TODO]]
