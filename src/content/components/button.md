@@ -249,6 +249,7 @@ Set the `inverted` when the button is on a dark background.
   {% include "partials/css-vars.njk" %}
 
 {% endblock %}
+
 {% block events %}
 
 The `<nys-button>` component emits **three** custom Javascript events:

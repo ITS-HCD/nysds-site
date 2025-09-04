@@ -178,7 +178,7 @@ You can supply a description via our `description` prop for plain text or by emb
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 
 {% block events %}

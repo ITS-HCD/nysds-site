@@ -1,4 +1,5 @@
 <div class="css-var-table">
+    {% if variables and variables | length > 0 %}
     <table>
         <thead>
             <tr>
@@ -25,4 +26,13 @@
             </tr>
         </tbody>
     </table>
+    {% else %}
+    <p>
+        There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
+        propose a
+        new one with a
+        <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+            Proposal</a>.
+    </p>
+{% endif %}
 </div>

@@ -172,10 +172,7 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

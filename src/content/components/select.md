@@ -176,10 +176,7 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

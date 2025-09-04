@@ -147,8 +147,6 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% endblock %}
 
-{% block events %}
-
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

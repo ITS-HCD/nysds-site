@@ -118,17 +118,7 @@ Descriptions can be provided either through the `description` prop or via the `s
 
 {% endblock %}
 
-{% block cssvariables %}
-
-| Variable                                | Description                                           |
-|-----------------------------------------|-------------------------------------------------------|
-| `--nys-toggle-background-color`         | Background color of the toggle switch when it is off. |
-| `--nys-toggle-border-radius`            | Border radius of the toggle switch.                   |
-| `--nys-toggle-checked-background-color` | Background color of the toggle switch when it is on.  |
-| `--nys-toggle-height`                   | Height of the toggle switch.                          |
-| `--nys-toggle-width`                    | Width of the toggle switch.                           |
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
