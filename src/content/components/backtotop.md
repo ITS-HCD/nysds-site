@@ -5,6 +5,8 @@ description: Provides a button that lets users quickly scroll back to the top of
 image: /assets/img/components/backtotop.svg
 image_alt: An illustration of a back-to-top button.
 image_header: /assets/img/components/backtotop-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4303-1514
 navOrder: 4
 ---
 
@@ -13,6 +15,7 @@ navOrder: 4
 {% block longdescription %}
 
 The `<nys-backtotop>` component provides a button that allows users to quickly return to the top of a page, enhancing user experience and accessibility.
+
 {% endblock %}
 
 {% block example %}

@@ -1,10 +1,12 @@
 ---
-permalink: /components/tootlip/
+permalink: /components/tooltip/
 title: Tooltip
 description: A tooltip component that displays a brief message when hover/focus, offering additional information or context.
 image: /assets/img/components/tooltip.svg
 image_alt: An illustration of a tooltip.
 image_header: /assets/img/components/tooltip-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4298-1477
 navOrder: 17
 ---
 
@@ -15,6 +17,7 @@ navOrder: 17
   The `<nys-toggle>` component is a reusable wrapper that displays a brief message when a user hovers over or focuses on its wrapped element, offering additional information or context.
 
   **IMPORTANT:** Unlike tooltip props found on form-related components, `<nys-tooltip>` is a standalone wrapper. Wrap a single `<nys-icon>` or `<nys-button>` manually to add a tooltip.
+
 {% endblock %}
 
 {% block example %}
@@ -109,7 +112,7 @@ Valid positions are: `top`, `bottom`, `right`, `left`
 
 ### Inverted
 Set the `inverted` when the tooltip is on a dark background.
-  {% set preview %}<div style="display: flex; justify-content: center; background-color: var(--nys-color-ink, #1b1b1b); padding: var(--nys-space-800, 64px);">
+  {% set preview %}<div style="display: flex; justify-content: center; margin-top:30px">
   <div style="color: #fff; display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
@@ -126,6 +129,7 @@ Set the `inverted` when the tooltip is on a dark background.
   <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
+{% set previewInverted = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}

@@ -1,0 +1,81 @@
+---
+permalink: /learn/
+title: Welcome to the NYS Design System
+description: An interactive tour by the team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the NYS Design System.
+section: Learn
+navOrder: 1
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <main class="nys-tablet:nys-grid-col-10">
+      
+      <header class="page-header">
+
+        <h1 class="page-title">
+          Learn the NYS Design System
+        </h1>
+
+        <div class="page-subtitle">
+          <p>A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
+        </div>
+ 
+        <p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
+
+      </header>
+      
+
+      {# Category list is defined in _data/videoCategories.json #}
+      {# If not defined, default to these three categories (to loop through) #}
+
+      {% set categories = videoCategories or ["General","Design","Development"] %}
+
+      {%- for cat in categories -%}
+        <h2>{{ cat }} Track</h2>
+        {%- set list = collections.videos | byCategory(cat) | sortBySeriesOrder -%}
+
+        {%- if list.length -%}
+          {%- for post in list -%}
+            <a class="card card--horizontal" href="{{ post.url | url }}" title="Watch Video: {{ post.data.title | escape }}">
+              <div class="card__inner">
+                {% if post.data.video_url %}
+                <div class="card__media">
+                  <img src="https://i.ytimg.com/vi/{{ post.data.video_url }}/hq720.jpg" alt="Thumbnail image" />
+                </div>
+                {% endif %}
+                <div class="card__content">
+                  <div class="card__eyebrow">
+                    {{ post.data.category }}
+                  </div>
+                  <div class="card__title">
+                    {{ post.data.title }}
+                  </div>
+                  <div class="card__desc">
+                    {{ post.data.description }}
+                    <p><b>Video duration: {{ post.data.duration }}</b></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          {%- endfor -%}
+        {%- else -%}
+          <p>No videos yet.</p>
+        {%- endif -%}
+      {%- endfor -%}
+    </main>
+    <aside class="nys-tablet:nys-grid-col-2">
+      {% include "partials/onpage-nav.njk" %}
+    </aside>
+  </div>
+</div>
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

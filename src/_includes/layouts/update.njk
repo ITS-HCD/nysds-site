@@ -3,49 +3,63 @@
 {% block content %}
 {% set previousUpdate = collections.updates | getPreviousCollectionItem(page) %}
 {% set nextUpdate = collections.updates | getNextCollectionItem(page) %}
+{% set avatar = author | authorAvatar(author_avatar) %}
+
 <div class="nys-grid-container-widescreen">
-<div class="nys-grid-row nys-grid-gap">
-  <div class="nys-desktop:nys-grid-col-10">  
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
     
-<section class="post-content">
+      <section class="page-content">
 
-  <h1>{{ title }}</h1>
+        <header class="page-header">
 
-  <div class="nys-grid-row">
-    <div class="nys-grid-col nys-flex-1"><time datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time></div>
-    <div class="nys-grid-col nys-flex-1">{{ author }}</div>
-  </div>
-  
-  
-  <div class="nys-grid-row">
-    <div class="nys-grid-col nys-flex-1">{{ content | timeToRead ('200 words a minute') }} read time</div>
-    {% if tags %}
-      <ul class="tag__list">
-        {% for tag in tags %}
-          <li class="tag">#{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </div>
+          {%- if image -%}
+          <div class="page-header__media">
+            <img src="{{ image }}" alt="{{ image_alt }}" />
+          </div>
+          {%- endif -%}
 
-  <div class="nys-grid-row nys-margin-t-400">
-    <div class="nys-grid-col">
-    {{ content | safe }}
+          <h1 class="page-title">
+            {% if tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ title }}
+          </h1>
+
+          {%- if description -%}
+            <p class="page-subtitle">{{ description }}</p>
+          {%- endif -%}
+
+          <div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="{{ avatar.src }}"></nys-avatar>
+              <span class="page-author__name">{{ author }}</span>
+            </div>
+            <time class="page-meta__date" datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time>
+            <div class="page-meta__readtime">{{ content | timeToRead ('200 words a minute') }} read time</div>
+          </div>
+        </header>
+
+        {{ content | safe }}
+
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">
+            {%- include "partials/taglist.njk" -%}
+          </div>
+        </div>
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
+            <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
+          </div>
+        </div>
+
+        {% include "partials/edit-link.njk" %}
+
+      </section>
     </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      {% include "partials/onpage-nav.njk" %}
+    </aside>
   </div>
-  
-    <div class="nys-grid-row nys-margin-t-400">
-    <div class="nys-grid-col">
-      <div>{% if previousUpdate %}Up Next: <a href="{{ previousUpdate.url }}" title="Read: {{ previousUpdate.data.title | safe }}"><b>{{ previousUpdate.data.title }}</b></a>{% endif %}</div>
-      <div>{% if nextUpdate %}Previous : <a href="{{ nextUpdate.url }}" title="Read: {{ nextUpdate.data.title | safe }}"><b>{{ nextUpdate.data.title }}</b></a>{% endif %}</div>
-    </div>
-  </div>
-
-</section>
-  </div>
-  <aside class="nys-desktop:nys-grid-col-2">
-    {% include "partials/onpage-nav.njk" %}
-  </aside>
-</div>
 </div>
 {% endblock %}

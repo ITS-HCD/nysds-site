@@ -5,6 +5,8 @@ description: Visual symbols used to concisely convey information and increase vi
 image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941
 navOrder: 10
 ---
 
@@ -13,6 +15,7 @@ navOrder: 10
 {% block longdescription %}
 
 The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
+
 {% endblock %}
 
 {% block example %}
@@ -29,8 +32,10 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 ### General
 <div class="nys-grid-row nys-grid-gap-2">
   {% set name = "account_circle" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "attach_file" %}{% include "partials/icon-preview.njk" %}
   {% set name = "calendar_month" %}{% include "partials/icon-preview.njk" %}
   {% set name = "cancel" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "code" %}{% include "partials/icon-preview.njk" %}
   {% set name = "check" %}{% include "partials/icon-preview.njk" %}
   {% set name = "close" %}{% include "partials/icon-preview.njk" %}
   {% set name = "download" %}{% include "partials/icon-preview.njk" %}
@@ -44,6 +49,8 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "menu" %}{% include "partials/icon-preview.njk" %}
   {% set name = "more_vert" %}{% include "partials/icon-preview.njk" %}
   {% set name = "open_in_new" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "print" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "progress_activity" %}{% include "partials/icon-preview.njk" %}
   {% set name = "publish" %}{% include "partials/icon-preview.njk" %}
   {% set name = "search" %}{% include "partials/icon-preview.njk" %}
   {% set name = "share" %}{% include "partials/icon-preview.njk" %}
@@ -61,6 +68,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 ### Social
 <div class="nys-grid-row nys-grid-gap-2">
+  {% set name = "social_bluesky" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_facebook" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_flickr" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_google_play" %}{% include "partials/icon-preview.njk" %}
@@ -71,6 +79,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "social_snapchat" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_soundcloud" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_tiktok" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "social_threads" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_tumblr" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_vimeo" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_x" %}{% include "partials/icon-preview.njk" %}

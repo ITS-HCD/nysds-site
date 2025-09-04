@@ -5,6 +5,8 @@ description: "Used primarily for actions that have an immediate result like 'Sav
 image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
 navOrder: 5
 ---
 
@@ -13,6 +15,7 @@ navOrder: 5
 {% block longdescription %}
 
 The `<nys-button>` component is used for actions that have an immediate result inside an application such as saving progress or navigating back. It is also used in content sites for Call-to-Action (CTA).
+
 {% endblock %}
 
 {% block example %}
@@ -138,7 +141,9 @@ Set the `prefixIcon` prop to include an icon in the button. The icon will appear
 
 Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
 
-  {% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"><nys-button>{% endset %}
+View the full list of [available icons](/components/icon/#usage).
+
+  {% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 

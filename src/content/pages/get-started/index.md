@@ -1,8 +1,8 @@
 ---
-permalink: /getting-started/
-title: "Getting Started"
+permalink: /get-started/
+title: "Get Started"
 description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
-section: Getting Started
+section: Get Started
 navOrder: 1
 ---
 
@@ -34,7 +34,7 @@ One of the greatest challenges in digital product creation is ensuring that the 
 
 ## Three Ways to Engage with NYSDS
 
-The landscape of web applications and sites for New York State is large and diverse. We built the design system to be flexible and adaptable, so that it can teams to use it in a way that best suits their needs. 
+The landscape of web applications and sites for New York State is large and diverse. We built the design system to be flexible and adaptable, so that teams can use it in a way that best suits their needs. 
 
 Here are three ways to engage with NYSDS:
 

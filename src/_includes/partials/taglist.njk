@@ -1,0 +1,7 @@
+        {% if tags %}
+        <ul class="taglist">
+          {% for tag in tags %}
+          <li class="badge">{{ tag }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}

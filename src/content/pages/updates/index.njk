@@ -1,6 +1,6 @@
 ---
 permalink: /updates/
-title: Updates
+title: Whatʼs New
 description: NYSDS makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Updates
 navOrder: 1
@@ -10,28 +10,28 @@ navOrder: 1
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
-<h1>Updates</h1>
-  <div class="nys-tablet:nys-grid-col-8">
-    <div class="content-intro">
-      <div class="content-intro__inner">  
-        <p>Check out the latest updates to the New York State Design System.</p>
-      </div>
-    </div>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4">
-  </div>
-<section class="nys-grid-row nys-grid-gap-6">
+
+  <header class="page-header">
+    <h1 class="page-title">What's New</h1>
+
+    {%- if description -%}
+      <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
+    {%- endif -%}
+
+  </header>
+
+  <section class="nys-grid-row nys-grid-gap">
     
-  <ul class="post-list nys-grid-container">
-    {%- for post in collections.updates -%}
-      <li class="post-list__item" style="border-bottom: 1px solid #ddd;">
+    <ul class="post-list nys-grid-container">
+      {%- for post in collections.updates -%}
+      <li class="post-list__item" style="border-bottom: 1px solid #ddd; padding-bottom: 1rem; margin-bottom: 1rem;">
         <div class="nys-grid-row nys-grid-gap">
 
           <!-- Left side: title and description -->
-          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-9">
+          <div class="nys-tablet:nys-grid-col-8">
             <h2 class="post-list__title">
               <a href="{{ post.url }}" class="post-list__link">
-                {{ post.data.title }}
+                {% if post.data.tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ post.data.title }}
               </a>
             </h2>
             <div class="post-list__description">
@@ -48,11 +48,10 @@ navOrder: 1
 
         </div>
       </li>
-    {%- endfor -%}
-  </ul>
+      {%- endfor -%}
+    </ul>
 
-</section>
-
+  </section>
 </div>
 {% endblock %}
 

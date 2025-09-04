@@ -18,6 +18,12 @@ const shuffle = require("./src/_11ty/filters/shuffle.js");
 const excludeDrafts = require("./src/_11ty/filters/excludeDrafts.js");
 const excludeFuture = require("./src/_11ty/filters/excludeFuture.js");
 const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
+const byCategory = require("./src/_11ty/filters/byCategory.js");
+const sortBySeriesOrder = require("./src/_11ty/filters/sortBySeriesOrder.js");
+const onlySeries = require("./src/_11ty/filters/onlySeries.js");
+const editOnGitHubUrl = require("./src/_11ty/filters/editOnGitHubUrl.js");
+const authorAvatar = require("./src/_11ty/filters/authorAvatar.js");
+const hasReleaseTag = require("./src/_11ty/filters/hasReleaseTag.js");
 
 // collections
 const updates = require("./src/_11ty/collections/updates");
@@ -39,6 +45,13 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addFilter("excludeDrafts", excludeDrafts);
     eleventyConfig.addFilter("excludeFuture", excludeFuture);
     eleventyConfig.addFilter("excludeNoIndex", excludeNoIndex);
+    eleventyConfig.addFilter("byCategory", byCategory);
+    eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
+    eleventyConfig.addFilter("onlySeries", onlySeries);
+    eleventyConfig.addFilter("editOnGitHubUrl", editOnGitHubUrl);
+    eleventyConfig.addFilter("authorAvatar", authorAvatar);
+    eleventyConfig.addFilter("hasReleaseTag", hasReleaseTag);
+
 
     // collections
     eleventyConfig.addCollection("updates", updates);

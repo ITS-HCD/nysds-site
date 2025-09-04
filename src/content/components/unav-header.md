@@ -5,6 +5,8 @@ description: A small NYS-branded header at the top of every page to ensure users
 image: /assets/img/components/unav-header.svg
 image_alt: An illustration of a unav header.
 image_header: /assets/img/components/unav-header-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11902
 navOrder: 19
 ---
 
