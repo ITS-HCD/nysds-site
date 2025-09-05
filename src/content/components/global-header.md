@@ -7,7 +7,7 @@ image_alt: An illustration of a global header.
 image_header: /assets/img/components/global-header-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924
-navOrder: 11
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}

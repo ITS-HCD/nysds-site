@@ -7,7 +7,7 @@ image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941
-navOrder: 10
+navOrder: 11
 ---
 
 {% extends "layouts/component.njk" %}

@@ -7,7 +7,7 @@ image_alt: An illustration of a global footer.
 image_header: /assets/img/components/global-footer-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4003-64216
-navOrder: 8
+navOrder: 9
 ---
 
 {% extends "layouts/component.njk" %}

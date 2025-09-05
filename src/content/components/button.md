@@ -7,7 +7,7 @@ image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
-navOrder: 5
+navOrder: 6
 ---
 
 {% extends "layouts/component.njk" %}
