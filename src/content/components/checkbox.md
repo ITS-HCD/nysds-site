@@ -191,6 +191,7 @@ When the description requires more complexity than a simple string, use the desc
 | `description`  | String           | both                       |
 | `disabled`     | boolean          | both                       |
 | `errorMessage` | String           | both                       |
+| `form`         | String           | both                       |
 | `optional`     | boolean          | only `<nys-checkboxgroup>` |
 | `required`     | boolean          | both                       |
 | `showError`    | boolean          | both                       |

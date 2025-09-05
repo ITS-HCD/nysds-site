@@ -168,7 +168,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `value`        | String           | only `<nys-radiobutton>` |
 | `checked`      | boolean          | only `<nys-radiobutton>` |
 | `disabled`     | boolean          | only `<nys-radiobutton>` |
-| `form`         | String           | only `<nys-radiobutton>` |
+| `form`         | String           | only `<nys-radiogroup>`  |
 | `description`  | String           | both                     |
 | `errorMessage` | String           | only `<nys-radiogroup>`  |
 | `optional`     | boolean          | only `<nys-radiogroup>`  |
