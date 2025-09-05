@@ -179,10 +179,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

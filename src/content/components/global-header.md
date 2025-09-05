@@ -107,7 +107,7 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}{% endblock %}
 

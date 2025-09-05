@@ -86,9 +86,11 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
 
 {% endblock %}
 
+{% block cssvariables %}
 
+The `nys-unavheader` does not have any css variables because this component must remain consistent across applications and sites.
 
-{% block cssvariables %}{% endblock %}
+{% endblock %}
 
 {% block events %}{% endblock %}
 

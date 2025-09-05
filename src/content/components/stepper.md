@@ -68,12 +68,14 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 {% endblock %}
 
 {% block usagedo %}
+
 - Use a stepper for linear, ordered forms with more than 2 sections.
 - Use a stepper to show progress through a multi-step process.
 - Ensure that users can navigate back to previous steps to review or change information.
 {% endblock %}
 
 {% block usagedont %}
+
 - Do not use the stepper if there are only 1 or 2 sections to the form.
 - Do not use the stepper for forms that are nonlinear and can be completed in any order.
 {% endblock %}
@@ -337,7 +339,7 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

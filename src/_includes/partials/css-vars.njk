@@ -1,0 +1,38 @@
+<div class="css-var-table">
+    {% if variables and variables | length > 0 %}
+    <table>
+        <thead>
+            <tr>
+                <th>CSS Variable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for variable in variables %}
+            <tr>
+                <td><code>{{ variable.name }}</code></td>
+                <td>{{ variable.description }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2" class="css-var-table__tip">
+                    <p>
+                        Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
+                        new one with a
+                        <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+                            Proposal</a>.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {% else %}
+    <p>
+        There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
+        propose a
+        new one with a
+        <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+            Proposal</a>.
+    </p>
+{% endif %}
+</div>

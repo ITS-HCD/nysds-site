@@ -163,7 +163,7 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
