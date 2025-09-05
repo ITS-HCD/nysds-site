@@ -44,13 +44,6 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
       label="Newsletter Opt-In"
       href="/stepper-pages/newsletter.html"
     ></nys-step>
-    <div slot="actions">
-      <nys-button
-        variant="outline"
-        label="Save & Exit"
-        fullWidth
-      ></nys-button>
-    </div>
   </nys-stepper>
   <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content">
     Loading...
@@ -121,18 +114,77 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 
 {% block usage %}
 ### When to use this component
+- Use a stepper for linear, ordered forms with more than 2 sections.
+- Use a stepper to show progress through a multi-step process.
+
 ### When to consider something else
+- If there are only 1 or 2 sections to a form do not use a stepper.
+- Forms that are nonlinear and can be completed in any order should not use a stepper.
+
 {% endblock %}
 
-{% block usagedo %}{% endblock %}
+{% block usagedo %}
+- Use a stepper for linear, ordered forms with more than 2 sections.
+- Use a stepper to show progress through a multi-step process.
+- Ensure that users can navigate back to previous steps to review or change information.
+{% endblock %}
 
-{% block usagedont %}{% endblock %}
+{% block usagedont %}
+- Do not use the stepper if there are only 1 or 2 sections to the form.
+- Do not use the stepper for forms that are nonlinear and can be completed in any order.
+{% endblock %}
 
-{% block accessibility %}{% endblock %}
+{% block accessibility %}
+The `nys-stepper` component includes the following accessibility-focused features:
+
+- Proper ARIA roles and attributes to ensure screen readers can interpret the steps correctly.
+- Keyboard navigation support, allowing users to iterate the steps using the keyboard.
+- Visual focus indicators to help users navigate the component.
+
+{% endblock %}
 
 {% block options %}
 
-### Disabled
+### Compact
+On small screens, the `nys-stepper` will render in a compact mode where the progress is indicated by bars rather than complete steps. You can expand to see the names of steps by clicking on "Step x of y"
+
+### Actions Slot
+- You can add actions to the stepper by using the `actions` slot. The action slot only accepts `nys-button` and will render at the top of the `nys-stepper` on desktop and at the end of the stepper on mobile.
+
+## Step Options
+- Each step is represented by a `<nys-step>` element inside the `<nys-stepper>`.
+
+### Label
+- Defines the label of a step:
+```
+<nys-step label="Personal Details">
+```
+
+### href and onClick
+Add a `href` if the content of the step is plain html:
+```
+<nys-step label="Personal Details" href="/nys-stepper/personal.html"></nys-step>
+```
+Add an `onClick` if the content of the step is retrieved from an API or a function needs to be called:
+```
+<nys-step label="Personal Details" .onClick=${() => alert("Personal Details need to be retrieved.")}></nys-step>
+```
+### Selected
+- Represents which step is being displayed to the user.
+- The `selected` step by default will match `current` step if `selected` is not defined.
+- `selected` cannot exist on a step later than the `current` step, if this is done by mistake it will correct to match `current`.
+
+### Current
+- Represents which step is the user is up to in the stepper's progress.
+- This is the last step the user is able to navigate to.
+- Users can go back and review past completed steps, therefor `current` and `selected` might not be the same at a given moment.
+- As the user completes steps, update the `current` flag to the next step, this needs to be done on the user side.
+- if `current` is not defined, the first step is marked by default.
+
+### Previous
+- This prop is automatically applied to all steps before the `current` step and is used to style the steps properly.
+- Do not add `previous` to a step on the implementation side.
+
 
 {% endblock %}
 
@@ -147,6 +199,22 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 
 {% block cssvariables %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+The `nys-stepper` component emits the following events:
+
+1. `nys-step-click`: Emitted when a `nys-step` is clicked
+
+You can listen to these events using JavaScript:
+
+```js
+// Select the stepper component
+const stepper = document.querySelector("nys-stepper");
+
+// Listen for the 'nys-step-click' event
+stepper.addEventListener("nys-step-click", () => {
+	console.log("nys-step clicked");
+});
+```
+{% endblock %}
 
 {% block updates %}{% endblock %}
