@@ -104,50 +104,163 @@ The `nys-stepper` can be used in both multi-page and single-page applications.
 - You will be responsible for managing the `current` state of the steps as the user progresses through the steps.
 - You will need to listen for the `nys-step-click` event to load the content of the step into a container on the page.
 
-{% set code %}
-// load content into the content container
-document.addEventListener("DOMContentLoaded", async () => {
-  const stepper = document.querySelector("nys-stepper");
-  if (stepper?.updateComplete) {
-    await stepper.updateComplete;
+{% set preview %}
+<div class="nys-grid-row">
+  <nys-stepper
+    label="Register for Design System Office Hours"
+    class="nys-desktop:nys-grid-col-4"
+    id="nys-stepper-dynamic"
+  >
+    <nys-step
+      label="Personal Details"
+      href="/stepper-pages/personal.html"
+    ></nys-step>
+    <nys-step
+      label="Team Info"
+      selected
+      href="/stepper-pages/team.html"
+    ></nys-step>
+    <nys-step
+      label="Usage Survey"
+      current
+      href="/stepper-pages/survey.html"
+    ></nys-step>
+    <nys-step
+      label="Newsletter Opt-In"
+      href="/stepper-pages/newsletter.html"
+    ></nys-step>
+  </nys-stepper>
+  <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content-dynamic">
+    Loading...
+  </div>
+</div>
+{% endset %}
+{% set css%}
+<style>
+  #nys-stepper-content-dynamic {
+    background-color: #fff;
   }
-  const selectedStep = document.querySelector("nys-step[selected]");
-  if (selectedStep) {
-    const href = selectedStep.getAttribute("href");
-    if (href) {
-      try {
-        const res = await fetch(href);
-        if (!res.ok) throw new Error("Failed to load " + href);
-        const html = await res.text();
-        const container = document.querySelector("#nys-stepper-content");
-        if (container) container.innerHTML = html;
-      } catch (err) {
-        console.error("Error loading initial step content:", err);
+</style>
+{% endset %}
+{% set script%}
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const stepper = document.getElementById("nys-stepper-dynamic");
+    if (stepper?.updateComplete) {
+      await stepper.updateComplete;
+    }
+    const selectedStep = stepper.querySelector("nys-step[selected]");
+    if (selectedStep) {
+      const href = selectedStep.getAttribute("href");
+      if (href) {
+        try {
+          const res = await fetch(href);
+          if (!res.ok) throw new Error("Failed to load " + href);
+          const html = await res.text();
+          const container = document.querySelector("#nys-stepper-content-dynamic");
+          if (container) container.innerHTML = html;
+        } catch (err) {
+          console.error("Error loading initial step content:", err);
+        }
       }
     }
-  }
-});
-// listen for step click to prevent default page reload
-document.addEventListener("nys-step-click", async (e) => {
-  const href = e.detail?.href;
-  if (!href) return;
-  e.preventDefault();
-  try {
-    const res = await fetch(href);
-    if (!res.ok) throw new Error("Failed to fetch ", href);
-    const html = await res.text();
-    const container = document.querySelector("#nys-stepper-content");
-    if (container) {
-      container.innerHTML = html;
+  });
+  document.addEventListener("nys-step-click", async (e) => {
+    const href = e.detail?.href;
+    if (!href) return;
+    e.preventDefault();
+    try {
+      const res = await fetch(href);
+      if (!res.ok) throw new Error("Failed to fetch ", href);
+      const html = await res.text();
+      const container = document.querySelector("#nys-stepper-content-dynamic");
+      if (container) {
+        container.innerHTML = html;
+      }
+    } catch (err) {
+      console.error("Error loading innerHTML:", err);
     }
-  } catch (err) {
-    console.error("Error loading innerHTML:", err);
+  });
+</script>
+{% endset %}
+{% set code %}
+<div class="nys-grid-row">
+  <nys-stepper
+    label="Register for Design System Office Hours"
+    class="nys-desktop:nys-grid-col-4"
+    id="nys-stepper-dynamic"
+  >
+    <nys-step
+      label="Personal Details"
+      href="/stepper-pages/personal.html"
+    ></nys-step>
+    <nys-step
+      label="Team Info"
+      selected
+      href="/stepper-pages/team.html"
+    ></nys-step>
+    <nys-step
+      label="Usage Survey"
+      current
+      href="/stepper-pages/survey.html"
+    ></nys-step>
+    <nys-step
+      label="Newsletter Opt-In"
+      href="/stepper-pages/newsletter.html"
+    ></nys-step>
+  </nys-stepper>
+  <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content-dynamic">
+    Loading...
+  </div>
+</div>
+<style>
+  #nys-stepper-content-dynamic {
+    background-color: #fff;
   }
-});
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const stepper = document.getElementById("nys-stepper-dynamic");
+    if (stepper?.updateComplete) {
+      await stepper.updateComplete;
+    }
+    const selectedStep = stepper.querySelector("nys-step[selected]");
+    if (selectedStep) {
+      const href = selectedStep.getAttribute("href");
+      if (href) {
+        try {
+          const res = await fetch(href);
+          if (!res.ok) throw new Error("Failed to load " + href);
+          const html = await res.text();
+          const container = document.querySelector("#nys-stepper-content-dynamic");
+          if (container) container.innerHTML = html;
+        } catch (err) {
+          console.error("Error loading initial step content:", err);
+        }
+      }
+    }
+  });
+  document.addEventListener("nys-step-click", async (e) => {
+    const href = e.detail?.href;
+    if (!href) return;
+    e.preventDefault();
+    try {
+      const res = await fetch(href);
+      if (!res.ok) throw new Error("Failed to fetch ", href);
+      const html = await res.text();
+      const container = document.querySelector("#nys-stepper-content-dynamic");
+      if (container) {
+        container.innerHTML = html;
+      }
+    } catch (err) {
+      console.error("Error loading innerHTML:", err);
+    }
+  });
+</script>
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
-{% set codeLanguage = "js" %}
+{% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
 
 ### Compact
@@ -160,6 +273,7 @@ On small screens, the `nys-stepper` will render in a compact mode where the prog
 Each step is represented by a `<nys-step>` element inside the `<nys-stepper>`.
 
 ### Label
+{% set preview = null %}
 {% set code %}<nys-step label="Personal Details">{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
