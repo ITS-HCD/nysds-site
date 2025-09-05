@@ -1,7 +1,7 @@
 ---
 permalink: /components/stepper/
 title: Stepper
-description: TODO
+description: Displays to users how many steps are in a process and indicates their progress.
 image: /assets/img/components/stepper.svg
 image_alt: An illustration of a stepper dropdown.
 image_header: /assets/img/components/stepper-header.svg
@@ -14,7 +14,7 @@ navOrder: 15
 
 {% block longdescription %}
 
-The `<nys-stepper>` is a reusable web component for use in New York State digital products. It allows users to TODO
+The `<nys-stepper>` is a reusable web component for use in New York State digital products. It indicates to a user how many steps are in a process. It updates to reflect the user's progress through the form.
 
 {% endblock %}
 
@@ -65,54 +65,54 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
   </style>
   {% endset %}
   {% set script%}
-    <script>
-      function handleStepClick(e) {
-        alert("This step also has a function called on it");
-      }
+<script>
+  function handleStepClick(e) {
+    alert("This step also has a function called on it");
+  }
 
-      document.addEventListener("DOMContentLoaded", async () => {
-        const stepper = document.querySelector("nys-stepper");
+  document.addEventListener("DOMContentLoaded", async () => {
+    const stepper = document.querySelector("nys-stepper");
 
-        if (stepper?.updateComplete) {
-          await stepper.updateComplete; // Wait for Lit to finish rendering
-        }
+    if (stepper?.updateComplete) {
+      await stepper.updateComplete; // Wait for Lit to finish rendering
+    }
 
-        const selectedStep = document.querySelector("nys-step[selected]");
-        if (selectedStep) {
-          const href = selectedStep.getAttribute("href");
-          if (href) {
-            try {
-              const res = await fetch(href);
-              if (!res.ok) throw new Error("Failed to load " + href);
-              const html = await res.text();
-              const container = document.querySelector("#nys-stepper-content");
-              if (container) container.innerHTML = html;
-            } catch (err) {
-              console.error("Error loading initial step content:", err);
-            }
-          }
-        }
-      });
-
-      document.addEventListener("nys-step-click", async (e) => {
-        const href = e.detail?.href;
-        if (!href) return;
-
-        e.preventDefault();
+    const selectedStep = document.querySelector("nys-step[selected]");
+    if (selectedStep) {
+      const href = selectedStep.getAttribute("href");
+      if (href) {
         try {
           const res = await fetch(href);
-          if (!res.ok) throw new Error("Failed to fetch ", href);
+          if (!res.ok) throw new Error("Failed to load " + href);
           const html = await res.text();
-
           const container = document.querySelector("#nys-stepper-content");
-          if (container) {
-            container.innerHTML = html;
-          }
+          if (container) container.innerHTML = html;
         } catch (err) {
-          console.error("Error loading innerHTML:", err);
+          console.error("Error loading initial step content:", err);
         }
-      });
-    </script>
+      }
+    }
+  });
+
+  document.addEventListener("nys-step-click", async (e) => {
+    const href = e.detail?.href;
+    if (!href) return;
+
+    e.preventDefault();
+    try {
+      const res = await fetch(href);
+      if (!res.ok) throw new Error("Failed to fetch ", href);
+      const html = await res.text();
+
+      const container = document.querySelector("#nys-stepper-content");
+      if (container) {
+        container.innerHTML = html;
+      }
+    } catch (err) {
+      console.error("Error loading innerHTML:", err);
+    }
+  });
+</script>
   {% endset %}
   {% set code = preview %}
   {% set showTip = true %}
