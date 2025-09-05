@@ -337,7 +337,7 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
