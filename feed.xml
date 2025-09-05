@@ -1293,7 +1293,7 @@ By starting in FigJam you force yourself not to think about component properties
       <guid>https://designsystem.ny.gov/updates/1.6.0-release/</guid>
     </item>
     <item>
-      <title>NYSDS Release 1.7.0 &quot;Hudson&quot;</title>
+      <title>NYSDS Release 1.7.0 “Hudson”</title>
       <link>https://designsystem.ny.gov/updates/1.7.0-release/</link>
       <description><![CDATA[<h2>Learn the NYS Design System</h2>
 <p><a href="https://designsystem.ny.gov/learn">Visit the &quot;Learn&quot; page</a> on this site to view A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
@@ -1488,6 +1488,117 @@ By starting in FigJam you force yourself not to think about component properties
       <pubDate>Fri, 22 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
       <guid>https://designsystem.ny.gov/updates/1.7.0-release/</guid>
+    </item>
+    <item>
+      <title>NYSDS Release 1.8.0 “Adirondack”</title>
+      <link>https://designsystem.ny.gov/updates/1.8.0-release/</link>
+      <description><![CDATA[<h2>Step by step</h2>
+<p>The new <code>&lt;nys-stepper&gt;</code> component helps you break down a complex process into simple steps. It is built with options to make it &quot;dumb&quot; (simple HREF links for steps) or &quot;smart&quot; (can use JS to trigger events <code>onClick()</code>). For more information, <a href="https://designsystem.ny.gov/components/stepper">read the full documentation for the <code>&lt;nys-stepper&gt;</code></a>.</p>
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-4">
+  <h3>Mobile</h3>
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
+  </div>
+  <div class="nys-desktop:nys-grid-col-4">
+  <h3>Mobile Expanded</h3>
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
+  </div>
+  <div class="nys-desktop:nys-grid-col-4">
+  <h3>Desktop</h3>
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> poured sweat and tears into this component!</p>
+<h2>nys-avatar has a new base color and more!</h2>
+<p>There is a new base color, new disabled and interactive properties, and logic that detects color contrast ratios to give you the best foreground color for any background color!</p>
+<p>We have removed the <code>shape</code> property. Details can be found in the 🚨 Breaking Changes section</p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> improved the nys-avatar component.</p>
+<h2>Moar testing</h2>
+<p>We are now automated testing in three more browsers. iPhone 14, Pixel 5, and Microsoft Edge. That brings the total number of browsers to five!</p>
+<p><a href="https://github.com/esteinborn">Eric Steinborn</a> tests in his dreams.</p>
+<h2>Code connect</h2>
+<p>We hooked up nys-accordion and nys-avatar to Figma's Code Connect. Copy and paste the code for these components from Figma directly into your editor of choice.</p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> connected this code.</p>
+<h2>CSS variables shake-up</h2>
+<p>We looked at our set of CSS variables and noticed they weren't as intentional as we wanted them to be. So we took a page out of the CSS BEM (Block, Element, Modifier) syntax and have renamed our variables accordingly. We have also bubbled up some variables to be exposed to allow for certain amounts of customization depending on the component. You can find those overridable values on each component page. If you were overriding CSS variables before you'll want to check the names of those tokens to make sure they haven't changed.</p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> organized the chaos.</p>
+<h2>Designers listen up!</h2>
+<ul>
+<li>The NYSDS Figma library has been updated to include a new <code>nys-divider</code> component. (Figma only)</li>
+<li>Additional variants were added to the nys-avatar component</li>
+<li>A massive Figma cleanup took place over a few months leaving a cleaner and more structured Figma library</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> have been delving deep into the Figma library.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>Removed <code>nys-avatar</code>'s <code>shape</code> property. Please remove from your applications</li>
+<li>Changed <code>nys-alert</code> dispatch event from <code>nys-alert-closed</code> to <code>nys-close</code>. Please update any references to both <code>nys-alert-closed</code> and <code>nys-alertClosed</code> to <code>nys-close</code></li>
+<li>Many CSS variables were changed, too many to list, but you can <a href="https://github.com/ITS-HCD/nysds/pull/840">read the full changelog for CSS vars</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/812">Bug: Unavheader not opening dropdowns on Safari</a></li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.8.0">See the full developer release notes for v.1.8.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>Step by step</h2>
+<p>The new <code>&lt;nys-stepper&gt;</code> component helps you break down a complex process into simple steps. It is built with options to make it &quot;dumb&quot; (simple HREF links for steps) or &quot;smart&quot; (can use JS to trigger events <code>onClick()</code>). For more information, <a href="https://designsystem.ny.gov/components/stepper">read the full documentation for the <code>&lt;nys-stepper&gt;</code></a>.</p>
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-desktop:nys-grid-col-4">
+  <h3>Mobile</h3>
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
+  </div>
+  <div class="nys-desktop:nys-grid-col-4">
+  <h3>Mobile Expanded</h3>
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
+  </div>
+  <div class="nys-desktop:nys-grid-col-4">
+  <h3>Desktop</h3>
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> poured sweat and tears into this component!</p>
+<h2>nys-avatar has a new base color and more!</h2>
+<p>There is a new base color, new disabled and interactive properties, and logic that detects color contrast ratios to give you the best foreground color for any background color!</p>
+<p>We have removed the <code>shape</code> property. Details can be found in the 🚨 Breaking Changes section</p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> improved the nys-avatar component.</p>
+<h2>Moar testing</h2>
+<p>We are now automated testing in three more browsers. iPhone 14, Pixel 5, and Microsoft Edge. That brings the total number of browsers to five!</p>
+<p><a href="https://github.com/esteinborn">Eric Steinborn</a> tests in his dreams.</p>
+<h2>Code connect</h2>
+<p>We hooked up nys-accordion and nys-avatar to Figma's Code Connect. Copy and paste the code for these components from Figma directly into your editor of choice.</p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> connected this code.</p>
+<h2>CSS variables shake-up</h2>
+<p>We looked at our set of CSS variables and noticed they weren't as intentional as we wanted them to be. So we took a page out of the CSS BEM (Block, Element, Modifier) syntax and have renamed our variables accordingly. We have also bubbled up some variables to be exposed to allow for certain amounts of customization depending on the component. You can find those overridable values on each component page. If you were overriding CSS variables before you'll want to check the names of those tokens to make sure they haven't changed.</p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> organized the chaos.</p>
+<h2>Designers listen up!</h2>
+<ul>
+<li>The NYSDS Figma library has been updated to include a new <code>nys-divider</code> component. (Figma only)</li>
+<li>Additional variants were added to the nys-avatar component</li>
+<li>A massive Figma cleanup took place over a few months leaving a cleaner and more structured Figma library</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> have been delving deep into the Figma library.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>Removed <code>nys-avatar</code>'s <code>shape</code> property. Please remove from your applications</li>
+<li>Changed <code>nys-alert</code> dispatch event from <code>nys-alert-closed</code> to <code>nys-close</code>. Please update any references to both <code>nys-alert-closed</code> and <code>nys-alertClosed</code> to <code>nys-close</code></li>
+<li>Many CSS variables were changed, too many to list, but you can <a href="https://github.com/ITS-HCD/nysds/pull/840">read the full changelog for CSS vars</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/812">Bug: Unavheader not opening dropdowns on Safari</a></li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.8.0">See the full developer release notes for v.1.8.0 →</a></p>
+]]></content>
+      <pubDate>Fri, 05 Sep 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.8.0-release/</guid>
     </item>
   </channel>
 </rss>
