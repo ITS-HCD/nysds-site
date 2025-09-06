@@ -7,7 +7,7 @@ image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
-navOrder: 12
+navOrder: 13
 ---
 
 {% extends "layouts/component.njk" %}
@@ -176,10 +176,7 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

@@ -1389,3 +1389,8 @@ th {
 tr:nth-child(even) {
     background-color: var(--nys-color-neutral-50);
 }
+
+/* CSS Variables Table */
+.css-var-table__tip {
+    text-align: center;
+}

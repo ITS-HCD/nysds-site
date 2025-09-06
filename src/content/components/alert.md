@@ -246,12 +246,20 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 | `type`            | `"base"` \| `"info"` \| `"success"` \| `"warning"` \| `"danger"` \| `"emergency"` |
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}
+
+  {% set variables = [
+  { name: "--nys-alert-color", description: "Text color of heading and description"},
+  { name: "--nys-alert-color--link", description: "Text color of action links" },
+  { name: "--nys-alert-color--link--hover", description: "Text color of action links when hovered" },
+  { name: "--nys-alert-color--link--active", description: "Text color of action links when active" },
+  { name: "--nys-alert-border-color", description: "Color of border accent color" },
+  { name: "--nys-alert-background-color", description: "Background color of component" }
+]%}
+  {% include "partials/css-vars.njk" %}
+
+{% endblock %}
 
 {% block events %}
 

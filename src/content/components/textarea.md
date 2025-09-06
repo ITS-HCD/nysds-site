@@ -7,7 +7,7 @@ image_alt: An illustration of a textarea field.
 image_header: /assets/img/components/textarea-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108
-navOrder: 14
+navOrder: 16
 ---
 
 {% extends "layouts/component.njk" %}
@@ -172,10 +172,7 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

@@ -7,7 +7,7 @@ image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
-navOrder: 11
+navOrder: 12
 ---
 
 {% extends "layouts/component.njk" %}
@@ -179,10 +179,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

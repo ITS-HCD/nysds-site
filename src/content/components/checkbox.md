@@ -7,7 +7,7 @@ image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
 stable: true
 figma_link: https://www.figma.com/design/0ogYpymUPQQfhELthntNbt?node-id=4808-7102
-navOrder: 6
+navOrder: 7
 ---
 
 {% extends "layouts/component.njk" %}
@@ -199,15 +199,8 @@ When the description requires more complexity than a simple string, use the desc
 
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

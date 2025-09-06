@@ -7,7 +7,7 @@ image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102
-navOrder: 13
+navOrder: 14
 ---
 
 {% extends "layouts/component.njk" %}
@@ -113,7 +113,7 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}{% endblock %}
 

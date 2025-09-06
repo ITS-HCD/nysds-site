@@ -7,7 +7,7 @@ image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941
-navOrder: 10
+navOrder: 11
 ---
 
 {% extends "layouts/component.njk" %}
@@ -253,6 +253,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block cssvariables %}
 
+  {% set variables = [
+  { name: "--nys-icon-size", description: "Width and height of the component"}
+]%}
+  {% include "partials/css-vars.njk" %}
 
 {% endblock %}
 [[TODO]]

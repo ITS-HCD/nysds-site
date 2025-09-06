@@ -7,7 +7,7 @@ image_alt: An illustration of a global header.
 image_header: /assets/img/components/global-header-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924
-navOrder: 11
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}
@@ -107,7 +107,7 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}{% endblock %}
 

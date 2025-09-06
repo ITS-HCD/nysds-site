@@ -7,7 +7,7 @@ image_alt: An illustration of a file input.
 image_header: /assets/img/components/fileinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
-navOrder: 7
+navOrder: 8
 ---
 
 {% extends "layouts/component.njk" %}
@@ -178,7 +178,7 @@ You can supply a description via our `description` prop for plain text or by emb
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 
 {% block events %}

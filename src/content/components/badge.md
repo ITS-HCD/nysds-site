@@ -160,10 +160,8 @@ Badge can include a prefix label, which is a short text that appears before the 
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}
-
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

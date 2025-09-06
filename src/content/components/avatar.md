@@ -137,18 +137,16 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 
+  {% set variables = [
+  { name: "--nys-avatar-size", description: "Width and height of the component"}
+]%}
+  {% include "partials/css-vars.njk" %}
 
 {% endblock %}
 
-{% block events %}
-
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

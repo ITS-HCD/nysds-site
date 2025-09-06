@@ -7,7 +7,7 @@ image_alt: An illustration of a tooltip.
 image_header: /assets/img/components/tooltip-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4298-1477
-navOrder: 17
+navOrder: 19
 ---
 
 {% extends "layouts/component.njk" %}
@@ -146,7 +146,7 @@ Set the `inverted` when the tooltip is on a dark background.
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}{% endblock %}
 

@@ -7,7 +7,7 @@ image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
-navOrder: 16
+navOrder: 18
 ---
 
 {% extends "layouts/component.njk" %}
@@ -118,17 +118,7 @@ Descriptions can be provided either through the `description` prop or via the `s
 
 {% endblock %}
 
-{% block cssvariables %}
-
-| Variable                                | Description                                           |
-|-----------------------------------------|-------------------------------------------------------|
-| `--nys-toggle-background-color`         | Background color of the toggle switch when it is off. |
-| `--nys-toggle-border-radius`            | Border radius of the toggle switch.                   |
-| `--nys-toggle-checked-background-color` | Background color of the toggle switch when it is on.  |
-| `--nys-toggle-height`                   | Height of the toggle switch.                          |
-| `--nys-toggle-width`                    | Width of the toggle switch.                           |
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

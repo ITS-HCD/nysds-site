@@ -7,7 +7,7 @@ image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
-navOrder: 5
+navOrder: 6
 ---
 
 {% extends "layouts/component.njk" %}
@@ -233,12 +233,22 @@ Set the `inverted` when the button is on a dark background.
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}
 
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
+  {% set variables = [
+  { name: "--nys-button-color", description: "Text color of label"},
+  { name: "--nys-button-color--hover", description: "Text color of label when hovered"},
+  { name: "--nys-button-color--active", description: "Text color of label when active"},
+  { name: "--nys-button-background-color", description: "Background color of component" },
+  { name: "--nys-button-background-color--hover", description: "Background color of component when hovered"},
+  { name: "--nys-button-background-color--active", description: "Background color of component when active"},
+  { name: "--nys-button-border-color", description: "Border color of component" },
+  { name: "--nys-button-border-color--hover", description: "Border color of component when hovered"},
+  { name: "--nys-button-border-color--active", description: "Border color of component when active"}
+]%}
+  {% include "partials/css-vars.njk" %}
 
+{% endblock %}
 
 {% block events %}
 
