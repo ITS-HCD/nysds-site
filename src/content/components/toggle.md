@@ -110,10 +110,10 @@ Descriptions can be provided either through the `description` prop or via the `s
 | `checked`     | boolean          |
 | `description` | String           |
 | `disabled`    | boolean          |
-| `form`        | String           |
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
 | `value`       | String           |
+| `form`        | String           |
 
 
 {% endblock %}

@@ -158,7 +158,6 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 | `description`  | String                                 |
 | `disabled`     | boolean                                |
 | `errorMessage` | String                                 |
-| `form`         | String                                 |
 | `maxLength`    | integer                                |
 | `optional`     | boolean                                |
 | `placeholder`  | String                                 |
@@ -169,6 +168,7 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 | `showError`    | boolean                                |
 | `value`        | String                                 |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
+| `form`         | String                                 |
 
 {% endblock %}
 

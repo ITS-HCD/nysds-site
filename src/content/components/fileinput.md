@@ -163,7 +163,6 @@ You can supply a description via our `description` prop for plain text or by emb
 | `id`          | String                                                             |
 | `name`        | String                                                             |
 | `label`       | String                                                             |
-| `form`        | String                                                             |
 | `description` | String                                                             |
 | `width`       | `"full"` \| `"lg"`                                                 |
 | `multiple`    | Boolean                                                            |
@@ -174,6 +173,7 @@ You can supply a description via our `description` prop for plain text or by emb
 | `showError`   | Boolean                                                            |
 | `dropzone`    | Boolean                                                            |
 | `optional`    | Boolean                                                            |
+| `form`        | String                                                             |
 
 
 {% endblock %}
