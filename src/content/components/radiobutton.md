@@ -156,6 +156,34 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Tooltip
+
+Pass in the `tooltip` prop to display a tooltip as a hint for users.
+
+**Note**: Don’t hide critical info in tooltips. Reserve them for optional help.
+
+{% set preview %}<nys-radiogroup 
+  label="Choose an NYS service"
+  description="Select the service you want to complete online."
+  tooltip="Select the service you want to access online."
+>
+  <nys-radiobutton
+    name="service"
+    label="Driver License Renewal"
+    description="Renew your NYS driver license online"
+    value="driver_license_renewal"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="service"
+    label="Vehicle Registration"
+    description="Renew or register your vehicle in NYS"
+    value="vehicle_registration"
+  ></nys-radiobutton>
+</nys-radiogroup>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}  
+
 {% endblock %}
 
 {% block properties %}
@@ -175,7 +203,8 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `showError`    | boolean          | only `<nys-radiogroup>`  |
 | `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
 | `tile`         | boolean          | only `<nys-radiogroup>`  |
-| `form`         | String           | only `<nys-radiogroup>` |
+| `tooltip`      | String           | only `<nys-radiogroup>`  |
+| `form`         | String           | only `<nys-radiogroup>`  |
 
 {% endblock %}
 

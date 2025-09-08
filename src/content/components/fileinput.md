@@ -154,6 +154,21 @@ You can supply a description via our `description` prop for plain text or by emb
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Tooltip
+
+Pass in the `tooltip` prop to display a tooltip as a hint for users.
+
+**Note**: Don’t hide critical info in tooltips. Reserve them for optional help.
+
+{% set preview %}<nys-fileinput
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  tooltip="Maximum file size is 10MB">
+></nys-fileinput>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -173,6 +188,7 @@ You can supply a description via our `description` prop for plain text or by emb
 | `showError`   | Boolean                                                            |
 | `dropzone`    | Boolean                                                            |
 | `optional`    | Boolean                                                            |
+| `tooltip`     | String                                                             |
 | `form`        | String                                                             |
 
 

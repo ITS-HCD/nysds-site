@@ -171,11 +171,48 @@ Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkb
 
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
-  {% set preview %}<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
+{% set preview %}
+<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Tooltip
+
+Pass in the `tooltip` prop to display a tooltip as a hint for users.
+
+**Note**: Don’t hide critical info in tooltips. Reserve them for optional help.
+
+{% set preview %}<nys-checkboxgroup
+  label="Select NYS Services"
+  description="Choose the services you want to access online."
+  tooltip="Select services to access their online applications."
+>
+  <nys-checkbox
+    name="services"
+    value="driver_license_renewal"
+    label="Driver License Renewal"
+  ></nys-checkbox>
+  <nys-checkbox
+    name="services"
+    value="vehicle_registration"
+    label="Vehicle Registration"
+  ></nys-checkbox>
+  <nys-checkbox
+    name="services"
+    value="tax_assistance"
+    label="State Tax Assistance"
+  ></nys-checkbox>
+  <nys-checkbox
+    name="services"
+    value="none"
+    label="None of the above"
+  ></nys-checkbox>
+</nys-checkboxgroup>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
@@ -196,6 +233,7 @@ When the description requires more complexity than a simple string, use the desc
 | `showError`    | boolean          | both                       |
 | `size`         | `"sm"` \| `"md"` | both                       |
 | `tile`         | boolean          | both                       |
+| `tooltip`      | String           | only `<nys-checkboxgroup>` |
 | `form`         | String           | both                       |
 
 
