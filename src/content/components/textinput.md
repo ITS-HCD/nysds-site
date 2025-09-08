@@ -185,7 +185,6 @@ Takes any valid regex value.
 | `description`  | String                                                                                  |
 | `disabled`     | boolean                                                                                 |
 | `errorMessage` | String                                                                                  |
-| `form`         | String                                                                                  |
 | `max`          | integer                                                                                 |
 | `maxlength`    | integer                                                                                 |
 | `min`          | integer                                                                                 |
@@ -199,6 +198,7 @@ Takes any valid regex value.
 | `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
 | `value`        | String                                                                                  |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
+| `form`         | String                                                                                  |
 
 
 {% endblock %}

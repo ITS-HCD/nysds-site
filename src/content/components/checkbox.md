@@ -196,6 +196,7 @@ When the description requires more complexity than a simple string, use the desc
 | `showError`    | boolean          | both                       |
 | `size`         | `"sm"` \| `"md"` | both                       |
 | `tile`         | boolean          | both                       |
+| `form`         | String           | both                       |
 
 
 {% endblock %}

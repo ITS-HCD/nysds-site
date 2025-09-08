@@ -169,9 +169,9 @@ Setting `errorMessage` does not display the message without `showError` set to t
 | `required`     | boolean                                | only `<nys-select>` |
 | `selected`     | boolean                                | only `<nys-option>` |
 | `showError`    | boolean                                | only `<nys-select>` |
-| `form`         | String                                 | only `<nys-select>` |
 | `value`        | String                                 | both                |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
+| `form`         | String                                 | only `<nys-select>` |
 
 
 {% endblock %}

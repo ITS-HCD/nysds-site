@@ -214,22 +214,22 @@ Set the `inverted` when the button is on a dark background.
 |--------------------|--------------------------------------------------------------------|
 | `id`               | String                                                             |
 | `name`             | String                                                             |
+| `label`            | String                                                             |
+| `type`             | `"submit"` \| `"reset"` \| `"button"`                              |
+| `value`            | String                                                             |
+| `ariaLabel`        | String                                                             |
+| `ariaDescription`  | String                                                             |
 | `disabled`         | boolean                                                            |
-| `form`             | String                                                             |
 | `fullWidth`        | boolean                                                            |
 | `href`             | String (URL)                                                       |                
 | `inverted`         | boolean                                                            |
-| `label`            | String                                                             |
-| `ariaLabel`        | String                                                             |
-| `ariaDescription`  | String                                                             |
 | `onClick`          | JS function                                                        |
 | `prefixIcon`       | String (`<nys-icon name>`)                                         |
 | `size`             | `"sm"` \| `"md"` \| `"lg"`                                         |
 | `suffixIcon`       | String (`<nys-icon name>`)                                         |
 | `target`           | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
-| `type`             | `"submit"` \| `"reset"` \| `"button"`                              |
-| `value`            | String                                                             |
 | `variant`          | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
+| `form`             | String                                                             |
 
 {% endblock %}
 
