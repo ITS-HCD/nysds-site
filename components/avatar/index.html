@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-09-06T05:43:26.010+00:00 -->
+    <!-- Latest Build: 2025-09-08T15:03:28.709+00:00 -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -492,7 +492,7 @@
 <div class="code-preview__preview-root-inner">
 <nys-avatar ariaLabel="User avatar"></nys-avatar>
 <nys-avatar ariaLabel="Youtube avatar" color="#f2efee">
-  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
+  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
 </nys-avatar>
 <nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar></div>
   </div>
@@ -511,21 +511,23 @@
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Youtube avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#f2efee<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>youtube icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#b2071d<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>youtube icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#b2071d<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Snow avatar<span class="token punctuation">"</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ac_unit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
-<h3>Shapes</h3>
-<p>To change the shape of the avatar, set the <code>shape</code> attribute. The default shape is <strong>&quot;circle&quot;</strong>, but you can also set it to <strong>&quot;square&quot;</strong> or <strong>&quot;rounded&quot;</strong>.</p>
+<h3>Interactive</h3>
+<p>Enable the <code>interactive</code> prop to apply interactive styling states and keyboard focus.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar" shape="circle"></nys-avatar>
-<nys-avatar ariaLabel="User avatar" shape="rounded"></nys-avatar>
-<nys-avatar ariaLabel="User avatar" shape="square"></nys-avatar></nys-avatar></div>
+<div style="display:flex; gap:5px;">
+  <nys-avatar ariaLabel="User avatar" icon="account_circle" interactive></nys-avatar>
+  <nys-avatar ariaLabel="New York Initial" initials="NY" interactive></nys-avatar>
+</div>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -540,20 +542,47 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rounded<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">shape</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>square<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span> <span class="token property">gap</span><span class="token punctuation">:</span>5px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account_circle<span class="token punctuation">"</span></span> <span class="token attr-name">interactive</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>New York Initial<span class="token punctuation">"</span></span> <span class="token attr-name">initials</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NY<span class="token punctuation">"</span></span> <span class="token attr-name">interactive</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Disabled</h3>
+<p>Use the <code>disabled</code> prop to prevent interaction and remove focusability.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+<nys-avatar ariaLabel="User avatar" disabled></nys-avatar>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
 <h3>Background Color</h3>
 <p>You can change the background color of an Avatar. This attribute accepts any valid color value, including <a href="https://designsystem.ny.gov/foundations/tokens/">design tokens</a>, such as <code>color=&quot;var(--nys-color-theme)&quot;</code>.</p>
-<p><strong>Note:</strong> images will naturally cover over the background color.</p>
+<p><strong>Note:</strong> images will naturally cover over the background color. The inner foreground for icon or initials will automatically switch between #000 or #fff for contrast.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar" color="purple"></nys-avatar></div>
+<nys-avatar ariaLabel="User avatar" color="#154973"></nys-avatar></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -568,7 +597,7 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>purple<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#154973<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -664,8 +693,12 @@
 <td>boolean</td>
 </tr>
 <tr>
-<td><code>shape</code></td>
-<td><code>&quot;square&quot;</code> | <code>&quot;rounded&quot;</code> | <code>&quot;circle&quot;</code></td>
+<td><code>interactive</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>boolean</td>
 </tr>
 </tbody>
 </table>
@@ -720,7 +753,7 @@ Proposal</a>.
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/avatar.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 6, 2025</p>
+    <p>Last updated: September 8, 2025</p>
   </div>
 
   </div>
