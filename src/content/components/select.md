@@ -5,7 +5,9 @@ description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
-navOrder: 12
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
+navOrder: 13
 ---
 
 {% extends "layouts/component.njk" %}
@@ -167,17 +169,14 @@ Setting `errorMessage` does not display the message without `showError` set to t
 | `required`     | boolean                                | only `<nys-select>` |
 | `selected`     | boolean                                | only `<nys-option>` |
 | `showError`    | boolean                                | only `<nys-select>` |
-| `form`         | String                                 | only `<nys-select>` |
 | `value`        | String                                 | both                |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
+| `form`         | String                                 | only `<nys-select>` |
 
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
@@ -186,13 +185,20 @@ The `<nys-select>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the select gains focus.
 3.  **`nys-blur`** – Fired when the select loses focus.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+
+  - id (string): The id of the select.
+  - value (string): The value of the selected option.
+
 You can listen to these events using JavaScript:
 {% set code %}
 // Select the select component
 const select = document.querySelector('nys-select');
 // Listen for the 'nys-change' event
 select.addEventListener('nys-change', (event) => {
-  console.log('Select changed:', event.detail.value);
+  const { id, value } = event.detail;
+  console.log(`Select (${id}) changed to: ${value}`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

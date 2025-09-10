@@ -5,7 +5,9 @@ description: Switch component for enabling or disabling a setting.
 image: /assets/img/components/toggle.svg
 image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
-navOrder: 16
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
+navOrder: 18
 ---
 
 {% extends "layouts/component.njk" %}
@@ -13,6 +15,7 @@ navOrder: 16
 {% block longdescription %}
 
   The `<nys-toggle>` component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+
 {% endblock %}
 
 {% block example %}
@@ -107,25 +110,15 @@ Descriptions can be provided either through the `description` prop or via the `s
 | `checked`     | boolean          |
 | `description` | String           |
 | `disabled`    | boolean          |
-| `form`        | String           |
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
 | `value`       | String           |
+| `form`        | String           |
 
 
 {% endblock %}
 
-{% block cssvariables %}
-
-| Variable                                | Description                                           |
-|-----------------------------------------|-------------------------------------------------------|
-| `--nys-toggle-background-color`         | Background color of the toggle switch when it is off. |
-| `--nys-toggle-border-radius`            | Border radius of the toggle switch.                   |
-| `--nys-toggle-checked-background-color` | Background color of the toggle switch when it is on.  |
-| `--nys-toggle-height`                   | Height of the toggle switch.                          |
-| `--nys-toggle-width`                    | Width of the toggle switch.                           |
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
@@ -134,12 +127,18 @@ The `<nys-toggle>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the toggle gains focus.
 3.  **`nys-blur`** – Fired when the toggle loses focus.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+  - id (string): The id of the toggle.
+  - checked (boolean): Whether the toggle is currently checked.
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the toggle component
 const toggle = document.querySelector('nys-toggle');
 // Listen for the 'nys-change' event
 toggle.addEventListener('nys-change', (event) => {
-  console.log('Checkbox changed:', event.detail.checked);
+    const { checked } = event.detail;
+    console.log('Toggle changed. Checked:', checked);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

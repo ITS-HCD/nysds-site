@@ -5,7 +5,9 @@ description: Field for entering short text strings, like email, number, password
 image: /assets/img/components/textinput.svg
 image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
-navOrder: 15
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587
+navOrder: 17
 ---
 
 {% extends "layouts/component.njk" %}
@@ -14,6 +16,7 @@ navOrder: 15
 {% block longdescription %}
 
 The `<nys-textinput>` is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
+
 {% endblock %}
 
 {% block example %}
@@ -182,7 +185,6 @@ Takes any valid regex value.
 | `description`  | String                                                                                  |
 | `disabled`     | boolean                                                                                 |
 | `errorMessage` | String                                                                                  |
-| `form`         | String                                                                                  |
 | `max`          | integer                                                                                 |
 | `maxlength`    | integer                                                                                 |
 | `min`          | integer                                                                                 |
@@ -196,14 +198,12 @@ Takes any valid regex value.
 | `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
 | `value`        | String                                                                                  |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
+| `form`         | String                                                                                  |
 
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
@@ -212,12 +212,18 @@ The `<nys-textinput>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the textinput gains focus.
 3.  **`nys-blur`** – Fired when the textinput loses focus.
 
+#### Event details
+The `nys-input` event includes a detail object with the following properties:
+  - id (string): The id of the textarea.
+  - value (string): The currently selected text.
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the textinput component
 const textinput = document.querySelector('nys-textinput');
 // Listen for the 'nys-input' event
 textinput.addEventListener('nys-input', (event) => {
-  console.log('Text input changed:', event.detail.value);
+  const { id, value } = event.detail;
+  console.log(`Text input (${id}) changed:`, value);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

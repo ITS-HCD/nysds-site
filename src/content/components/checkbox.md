@@ -5,7 +5,9 @@ description: A checkbox is a form input for users to select options (zero, one, 
 image: /assets/img/components/checkbox.svg
 image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
-navOrder: 6
+stable: true
+figma_link: https://www.figma.com/design/0ogYpymUPQQfhELthntNbt?node-id=4808-7102
+navOrder: 7
 ---
 
 {% extends "layouts/component.njk" %}
@@ -194,18 +196,12 @@ When the description requires more complexity than a simple string, use the desc
 | `showError`    | boolean          | both                       |
 | `size`         | `"sm"` \| `"md"` | both                       |
 | `tile`         | boolean          | both                       |
+| `form`         | String           | both                       |
 
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
@@ -214,13 +210,23 @@ The `<nys-checkbox>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the checkbox gains focus.
 3.  **`nys-blur`** – Fired when the checkbox loses focus.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+
+  - id (string): The id of the checkbox.
+  - checked (boolean): Whether the checkbox is currently checked.
+  - name (string): The checkbox’s name attribute (useful in forms).
+  - value (string): The checkbox’s value attribute.
+  
 You can listen to these events using JavaScript:
 {% set code %}// Select the checkbox component
 const checkbox = document.querySelector('nys-checkbox');
 // Listen for the 'nys-change' event
 checkbox.addEventListener('nys-change', (event) => {
-  console.log('Checkbox changed:', event.detail.checked);
+  const { id, checked, name, value } = event.detail;
+  console.log(`Checkbox ${id} changed: checked=${checked}, name=${name}, value=${value}`);
 });
+
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

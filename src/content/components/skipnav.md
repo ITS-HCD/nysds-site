@@ -5,7 +5,9 @@ description: An accessibility feature that lets keyboard and screen reader users
 image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
-navOrder: 13
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102
+navOrder: 14
 ---
 
 {% extends "layouts/component.njk" %}
@@ -111,7 +113,7 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}{% endblock %}
 

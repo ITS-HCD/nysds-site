@@ -5,6 +5,8 @@ description: An alert displays a prominent message, with optional links, at the 
 image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845
 navOrder: 2
 ---
 
@@ -161,7 +163,7 @@ Use the `text` prop for simple texts, or leverage the slot by simply putting HTM
 
 Use the `dismissible` property to make the alert dismissible.
 
-The `nys-alertClosed` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
+The `nys-close` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
 {% set preview %}<nys-alert type="info" heading="Information status" dismissible>
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
@@ -244,18 +246,33 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 | `type`            | `"base"` \| `"info"` \| `"success"` \| `"warning"` \| `"danger"` \| `"emergency"` |
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}
+
+  {% set variables = [
+  { name: "--nys-alert-color", description: "Text color of heading and description"},
+  { name: "--nys-alert-color--link", description: "Text color of action links" },
+  { name: "--nys-alert-color--link--hover", description: "Text color of action links when hovered" },
+  { name: "--nys-alert-color--link--active", description: "Text color of action links when active" },
+  { name: "--nys-alert-border-color", description: "Color of border accent color" },
+  { name: "--nys-alert-background-color", description: "Background color of component" }
+]%}
+  {% include "partials/css-vars.njk" %}
+
+{% endblock %}
 
 {% block events %}
 
 The `<nys-alert>` component emits **one** custom Javascript events:
 
-1.  **`alertClosed`** – Fired when the button is clicked.
+1.  **`nys-close`** – Fired when the button is clicked.
+
+#### Event details
+The `nys-close` event includes a detail object with the following properties:
+
+  - id (string): The id of the alert.
+  - type (string): The alert’s type (e.g., "success", "error", "info").
+  - label (string): The alert’s heading text.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the alert component
@@ -264,10 +281,10 @@ const alert = document.querySelector("nys-alert");
  * Consider persisting dismissal state (e.g., to localStorage or analytics)
  * This can be used to prevent the alert from appearing again
  */
-// Listen for the 'nys-alertClosed' event
-alert.addEventListener("nys-alertClosed", (event) => {
-  const { type, label } = event.detail;
-  console.log(`Alert closed. Type: ${type}, Label: ${label}`);
+// Listen for the 'nys-close' event
+alert.addEventListener("nys-close", (event) => {
+  const { id, type, label } = event.detail;
+  console.log(`Alert ${id} closed. Type: ${type}, Label: ${label}`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

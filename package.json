@@ -9,7 +9,8 @@
         "build:prod": "npm run copy:assets && ELEVENTY_ENV=production eleventy",
         "copy:assets": "mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor",
         "clean:site": "rimraf _site",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "link": "npm link @nysds/components && npm run start"
     },
     "keywords": [
         "new-york",
@@ -33,8 +34,7 @@
         "rimraf": "^6.0.1"
     },
     "dependencies": {
-        "@nysds/components": "^1.6.0",
-        "@nysds/styles": "^1.6.0",
-        "eleventy-plugin-blog-tools": "^0.4.1"
+        "@nysds/components": "^1.8.0",
+        "@nysds/styles": "^1.8.0"
     }
 }

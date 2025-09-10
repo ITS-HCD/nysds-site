@@ -5,7 +5,9 @@ description: A small NYS-branded header at the top of every page to ensure users
 image: /assets/img/components/unav-header.svg
 image_alt: An illustration of a unav header.
 image_header: /assets/img/components/unav-header-header.svg
-navOrder: 19
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11902
+navOrder: 20
 ---
 
 {% extends "layouts/component.njk" %}
@@ -84,9 +86,11 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
 
 {% endblock %}
 
+{% block cssvariables %}
 
+The `nys-unavheader` does not have any css variables because this component must remain consistent across applications and sites.
 
-{% block cssvariables %}{% endblock %}
+{% endblock %}
 
 {% block events %}{% endblock %}
 

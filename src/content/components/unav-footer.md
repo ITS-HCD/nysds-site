@@ -5,7 +5,9 @@ description: Provide users with access to essential NYS links across all pages.
 image: /assets/img/components/unav-footer.svg
 image_alt: An illustration of a unav footer.
 image_header: /assets/img/components/unav-footer-header.svg
-navOrder: 18
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10268
+navOrder: 20
 ---
 
 {% extends "layouts/component.njk" %}
@@ -62,7 +64,11 @@ There are no properties for this component.
 
 {% endblock %}
 
-{% block cssvariables %}{% endblock %}
+{% block cssvariables %}
+
+The `nys-unavfooter` does not have any css variables because this component must remain consistent across applications and sites.
+
+{% endblock %}
 
 {% block events %}{% endblock %}
 

@@ -5,6 +5,8 @@ description: Avatars visually represent a user or entity as initials, a photo, o
 image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
 image_header: /assets/img/components/avatar-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063
 navOrder: 3
 ---
 
@@ -15,6 +17,7 @@ navOrder: 3
 The `<nys-avatar>` component is used to visually represent a user or entity.
 
 By default, a generic icon is displayed. Personalize avatars with custom props like `icon`, `initials`, or `image`, and always include a `ariaLabel` for accessibility.
+
 {% endblock %}
 
 {% block example %}
@@ -89,20 +92,32 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 {% set preview %}
 <nys-avatar ariaLabel="User avatar"></nys-avatar>
 <nys-avatar ariaLabel="Youtube avatar" color="#f2efee">
-  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
+  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
 </nys-avatar>
 <nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-### Shapes
+### Interactive
 
-To change the shape of the avatar, set the `shape` attribute. The default shape is **"circle"**, but you can also set it to **"square"** or **"rounded"**.
+Enable the `interactive` prop to apply interactive styling states and keyboard focus.
 
 {% set preview %}
-<nys-avatar ariaLabel="User avatar" shape="circle"></nys-avatar>
-<nys-avatar ariaLabel="User avatar" shape="rounded"></nys-avatar>
-<nys-avatar ariaLabel="User avatar" shape="square"></nys-avatar></nys-avatar>{% endset %}
+<div style="display:flex; gap:5px;">
+  <nys-avatar ariaLabel="User avatar" icon="account_circle" interactive></nys-avatar>
+  <nys-avatar ariaLabel="New York Initial" initials="NY" interactive></nys-avatar>
+</div>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Disabled
+
+Use the `disabled` prop to prevent interaction and remove focusability.
+
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" disabled></nys-avatar>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -110,10 +125,10 @@ To change the shape of the avatar, set the `shape` attribute. The default shape 
 
 You can change the background color of an Avatar. This attribute accepts any valid color value, including [design tokens](https://designsystem.ny.gov/foundations/tokens/), such as `color="var(--nys-color-theme)"`.
 
-**Note:** images will naturally cover over the background color.
+**Note:** images will naturally cover over the background color. The inner foreground for icon or initials will automatically switch between #000 or #fff for contrast.
 
 {% set preview %}
-<nys-avatar ariaLabel="User avatar" color="purple"></nys-avatar>{% endset %}
+<nys-avatar ariaLabel="User avatar" color="#154973"></nys-avatar>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -121,31 +136,30 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% block properties %}
 
-| Property   | Type                                     |
-|------------|------------------------------------------|
-| `id`       | String                                   |
-| `color`    | String (CSS HEX, CSS color name, or CSS) |
-| `icon`     | String (`<nys-icon name>`)               |
-| `image`    | URL                                      |
-| `initials` | String (2 letters)                       |
-| `ariaLabel`| String                                   |
-| `lazy`     | boolean                                  |
-| `shape`    | `"square"` \| `"rounded"` \| `"circle"`  |
+| Property     | Type                                     |
+|--------------|------------------------------------------|
+| `id`         | String                                   |
+| `color`      | String (CSS HEX, CSS color name, or CSS) |
+| `icon`       | String (`<nys-icon name>`)               |
+| `image`      | URL                                      |
+| `initials`   | String (2 letters)                       |
+| `ariaLabel`  | String                                   |
+| `lazy`       | boolean                                  |
+| `interactive`| boolean                                  |  
+| `disabled`   | boolean                                  |  
 
 
 {% endblock %}
-[[TODO]]
-| Variable             | Description                 |
-|----------------------|-----------------------------|
-| `--nys-toggle-width` | Width of the toggle switch. |
 
 {% block cssvariables %}
 
+  {% set variables = [
+  { name: "--nys-avatar-size", description: "Width and height of the component"}
+]%}
+  {% include "partials/css-vars.njk" %}
 
 {% endblock %}
 
-{% block events %}
-
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

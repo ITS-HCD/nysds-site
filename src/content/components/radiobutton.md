@@ -5,7 +5,9 @@ description: Form input for selecting one option from a group.
 image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
-navOrder: 11
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
+navOrder: 12
 ---
 
 {% extends "layouts/component.njk" %}
@@ -166,7 +168,6 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `value`        | String           | only `<nys-radiobutton>` |
 | `checked`      | boolean          | only `<nys-radiobutton>` |
 | `disabled`     | boolean          | only `<nys-radiobutton>` |
-| `form`         | String           | only `<nys-radiobutton>` |
 | `description`  | String           | both                     |
 | `errorMessage` | String           | only `<nys-radiogroup>`  |
 | `optional`     | boolean          | only `<nys-radiogroup>`  |
@@ -174,13 +175,11 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `showError`    | boolean          | only `<nys-radiogroup>`  |
 | `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
 | `tile`         | boolean          | only `<nys-radiogroup>`  |
+| `form`         | String           | only `<nys-radiogroup>` |
 
 {% endblock %}
 
-{% block cssvariables %}
-
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
@@ -190,12 +189,21 @@ The `<nys-radiobutton>` component emits <strong>three</strong> custom Javascript
 2.  **`nys-focus`** – Fired when the radiobutton gains focus.
 3.  **`nys-blur`** – Fired when the radiobutton loses focus.
 
+#### Event details
+The `nys-change` event includes a detail object with the following properties:
+
+  - id (string): The id of the radiobutton.
+  - checked (boolean): Whether the radiobutton is selected.
+  - name (string): The radiobutton group name.
+  - value (string): The radiobutton’s value.
+
 You can listen to these events using JavaScript:
 {% set code %}// Select the radiobutton component
 const radiobutton = document.querySelector('nys-radiobutton');
 // Listen for the 'nys-change' event
 radiobutton.addEventListener('nys-change', (event) => {
-  console.log('Radio Button changed:', event.detail.checked);
+  const { id, checked, name, value } = event.detail;
+  console.log(`Radiobutton (${id}) in group "${name}" is of ${value}, checked: ${checked}`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
