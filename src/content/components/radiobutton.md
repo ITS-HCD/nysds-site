@@ -191,7 +191,7 @@ Pass in the `tooltip` prop to display a tooltip as a hint for users.
 | Property       | Type             | Component                |
 |----------------|------------------|--------------------------|
 | `id`           | String           | both                     |
-| `name`         | String           | both                     |
+| `name`         | String           | only `<nys-radiobutton>` |
 | `label`        | String           | both                     |
 | `value`        | String           | only `<nys-radiobutton>` |
 | `checked`      | boolean          | only `<nys-radiobutton>` |
