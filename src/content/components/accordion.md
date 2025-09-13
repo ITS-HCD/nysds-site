@@ -183,9 +183,12 @@ You can listen to these events using JavaScript:
 const accordion = document.querySelector("nys-accordionitem");
 
 // Listen for the '"nys-accordionitem-toggle' event
-accordion.addEventListener("nys-accordionitem-toggle", () => {
-  console.log("Accordion toggled");
-  console.log("Accordion details:", event.detail);
+accordion.addEventListener("nys-accordionitem-toggle", (event) => {
+  console.log("Accordion toggled:", {
+    id: event.detail.id,
+    heading: event.detail.heading,
+    expanded: event.detail.expanded
+  });
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

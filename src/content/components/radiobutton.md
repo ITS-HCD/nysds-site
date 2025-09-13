@@ -163,7 +163,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | Property       | Type             | Component                |
 |----------------|------------------|--------------------------|
 | `id`           | String           | both                     |
-| `name`         | String           | both                     |
+| `name`         | String           | only `<nys-radiobutton>` |
 | `label`        | String           | both                     |
 | `value`        | String           | only `<nys-radiobutton>` |
 | `checked`      | boolean          | only `<nys-radiobutton>` |
@@ -175,7 +175,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `showError`    | boolean          | only `<nys-radiogroup>`  |
 | `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
 | `tile`         | boolean          | only `<nys-radiogroup>`  |
-| `form`         | String           | only `<nys-radiogroup>` |
+| `form`         | String           | only `<nys-radiogroup>`  |
 
 {% endblock %}
 

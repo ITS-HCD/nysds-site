@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const paragraph = document.createElement("p");
       hasParagraph = true;
       paragraph.style.position = "absolute";
-      paragraph.style.bottom = "0px";
+      paragraph.style.bottom = "-10px";
       paragraph.style.width = "90%";
       paragraph.style.textAlign = "center";
       paragraph.textContent = "Copy to clipboard";
