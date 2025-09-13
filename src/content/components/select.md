@@ -152,23 +152,6 @@ Setting `errorMessage` does not display the message without `showError` set to t
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
-### Tooltip
-
-Pass in the `tooltip` prop to display a tooltip as a hint for users.
-
-**Note**: Don’t hide critical info in tooltips. Reserve them for optional help.
-
-{% set preview %}<nys-select label="Select your favorite borough" tooltip="Choose the borough you identify with most">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-{% endset %}
-{% set code = preview %}
-{% include "partials/code-preview.njk" %}
-
 {% endblock %}
 
 {% block properties %}
@@ -188,7 +171,6 @@ Pass in the `tooltip` prop to display a tooltip as a hint for users.
 | `showError`    | boolean                                | only `<nys-select>` |
 | `value`        | String                                 | both                |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
-| `tooltip`      | String                                 | only `<nys-select>` |
 | `form`         | String                                 | only `<nys-select>` |
 
 

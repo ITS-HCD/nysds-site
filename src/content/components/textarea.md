@@ -147,16 +147,6 @@ To display an error message, pass in the `showError` property to the `<nys-texta
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
-### Tooltip
-Pass in the `tooltip` prop to display a tooltip as a hint for users.
-
-**Note**: Don’t hide critical info in tooltips. Reserve them for optional help.
-
-{% set preview %}<nys-textarea label="label" tooltip="Provide additional details if needed"></nys-textarea>
-{% endset %}
-{% set code = preview %}
-{% include "partials/code-preview.njk" %}
-  
 {% endblock %}
 
 {% block properties %}
@@ -179,7 +169,6 @@ Pass in the `tooltip` prop to display a tooltip as a hint for users.
 | `showError`    | boolean                                |
 | `value`        | String                                 |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
-| `tooltip`      | String                                 |
 | `form`         | String                                 |
 
 {% endblock %}

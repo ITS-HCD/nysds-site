@@ -178,42 +178,6 @@ When the description requires more complexity than a simple string, use the desc
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-### Tooltip
-
-Pass in the `tooltip` prop to display a tooltip as a hint for users.
-
-**Note**: Don’t hide critical info in tooltips. Reserve them for optional help.
-
-{% set preview %}<nys-checkboxgroup
-  label="Select NYS Services"
-  description="Choose the services you want to access online."
-  tooltip="Select services to access their online applications."
->
-  <nys-checkbox
-    name="services"
-    value="driver_license_renewal"
-    label="Driver License Renewal"
-  ></nys-checkbox>
-  <nys-checkbox
-    name="services"
-    value="vehicle_registration"
-    label="Vehicle Registration"
-  ></nys-checkbox>
-  <nys-checkbox
-    name="services"
-    value="tax_assistance"
-    label="State Tax Assistance"
-  ></nys-checkbox>
-  <nys-checkbox
-    name="services"
-    value="none"
-    label="None of the above"
-  ></nys-checkbox>
-</nys-checkboxgroup>
-{% endset %}
-{% set code = preview %}
-{% include "partials/code-preview.njk" %}
-
 {% endblock %}
 
 {% block properties %}
@@ -233,7 +197,6 @@ Pass in the `tooltip` prop to display a tooltip as a hint for users.
 | `showError`    | boolean          | both                       |
 | `size`         | `"sm"` \| `"md"` | both                       |
 | `tile`         | boolean          | both                       |
-| `tooltip`      | String           | only `<nys-checkboxgroup>` |
 | `form`         | String           | both                       |
 
 
