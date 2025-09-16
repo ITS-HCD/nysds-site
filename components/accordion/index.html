@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-09-10T19:20:47.639+00:00 -->
+    <!-- Latest Build: 2025-09-16T18:25:41.790+00:00 -->
   </head>
   
   <body class="single-page page-accordion section-components">
@@ -734,9 +734,12 @@ Proposal</a>.
         <pre class="language-js"><code class="language-js"><span class="token comment">// Select the accordion component</span>
 <span class="token keyword">const</span> accordion <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"nys-accordionitem"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <p><span class="token comment">// Listen for the '&quot;nys-accordionitem-toggle' event</span>
-accordion<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;nys-accordionitem-toggle&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Accordion toggled&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Accordion details:&quot;</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+accordion<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;nys-accordionitem-toggle&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Accordion toggled:&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+<span class="token literal-property property">id</span><span class="token operator">:</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+<span class="token literal-property property">heading</span><span class="token operator">:</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>heading<span class="token punctuation">,</span>
+<span class="token literal-property property">expanded</span><span class="token operator">:</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>expanded
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </div>
 </div></p>
@@ -760,7 +763,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 10, 2025</p>
+    <p>Last updated: September 16, 2025</p>
   </div>
 
   </div>
