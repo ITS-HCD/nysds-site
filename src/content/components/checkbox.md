@@ -171,11 +171,12 @@ Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkb
 
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
 
-  {% set preview %}<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
+{% set preview %}
+<nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
