@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-09-17T15:25:43.217+00:00 -->
+    <!-- Latest Build: 2025-09-17T16:36:44.791+00:00 -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -218,6 +218,30 @@
 <li>Many modern build tools allow you to reference files directly from <code>node_modules</code>, but you can also copy them into your project assets (see &quot;Copying Assets (Alternative Step)&quot;).</li>
 </ul>
 <h2>Apply Agency Theming</h2>
+<p>The NYSDS includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc).</p>
+<p>To apply a theme, add the agency stylesheet in the <code>&lt;head&gt;</code> alongside core NYSDS styles. For example, &quot;Office of Children and Family Services&quot; uses the <code>health</code> theme:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>HTML Snippet</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Core NYSDS styles --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
+<span class="token comment">&lt;!-- Agency theme (Health) --></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h2>Copying Assets (Alternative Step)</h2>
 <p>If you prefer to host the NYSDS files locally within your project, you can copy them from <code>node_modules</code> to your project's asset directories.</p>
 <p>If you wanted to copy the NYSDS CSS and JS files to <code>src/assets/css/vendor</code> and <code>src/assets/js/vendor</code> respectively, you could use the following command:</p>
