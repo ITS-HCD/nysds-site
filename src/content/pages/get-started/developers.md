@@ -32,9 +32,11 @@ Once you've installed the packages, reference them in your application or site.
 {% include "partials/code-preview.njk" %}
 
 **Important:** 
-- Replace the `path/to` with the actual path to the installed files. 
-- Place the `<script>` at the end of `<body>`, so the DOM is fully loaded before the Design System initializes.
-- Many modern build tools allow you to link to or reference files directly from `node_modules`, but you can also copy them into your project assets (see next step).
+- Replace the `path/to` with the actual path to the installed files (for example, from `node_modules`).
+- Place the `<script>` right before the closing `</body>` tag, so the DOM is fully loaded before NYSDS initializes.
+- Many modern build tools allow you to reference files directly from `node_modules`, but you can also copy them into your project assets (see "Copying Assets (Alternative Step)").
+
+## Apply Agency Theming
 
 ## Copying Assets (Alternative Step)
 
