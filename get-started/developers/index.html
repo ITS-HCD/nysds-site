@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-09-16T18:25:41.790+00:00 -->
+    <!-- Latest Build: 2025-09-17T15:17:05.927+00:00 -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -211,7 +211,12 @@
     </div>
   </div>
 </div>
-<p>Replace the <code>path/to</code> with the actual path to the installed files. Many modern build tools allow you to link to or reference files directly from <code>node_modules</code>, but you can also copy them into your project assets (see next step).</p>
+<p>Replace the <code>path/to</code> with the actual path to the installed files.</p>
+<p><strong>Important:</strong></p>
+<ul>
+<li>Place the <code>&lt;script&gt;</code> at the end of <code>&lt;body&gt;</code>, so the DOM is fully loaded before the Design System initializes.</li>
+<li>Many modern build tools allow you to link to or reference files directly from <code>node_modules</code>, but you can also copy them into your project assets (see next step).</li>
+</ul>
 <h2>Copying Assets (Alternative Step)</h2>
 <p>If you prefer to host the NYSDS files locally within your project, you can copy them from <code>node_modules</code> to your project's asset directories.</p>
 <p>If you wanted to copy the NYSDS CSS and JS files to <code>src/assets/css/vendor</code> and <code>src/assets/js/vendor</code> respectively, you could use the following command:</p>
@@ -243,7 +248,7 @@ cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor</code></pre>
     
   <div class="edit-page-link">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/developers.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 16, 2025</p>
+    <p>Last updated: September 17, 2025</p>
   </div>
 
   </div>
