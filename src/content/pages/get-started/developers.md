@@ -39,7 +39,7 @@ Once you've installed the packages, reference them in your application or site.
 ## Apply Agency Theming
 The NYSDS includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
 
-To apply a theme, add the agency stylesheet in the `<head>` alongside core NYSDS styles. For example, "Office of Children and Family Services" uses the `health` theme:
+To apply a theme, add the agency stylesheet in the `<head>` alongside core NYSDS styles. For example, "Office of Children and Family Services" uses the `health` theme. :
 
 {% set code %}<!-- Core NYSDS styles -->
 <link rel="stylesheet" href="/path/to/nysds-full.min.css" /> 
@@ -49,6 +49,8 @@ To apply a theme, add the agency stylesheet in the `<head>` alongside core NYSDS
 {% set accordionLabel = "HTML Snippet" %} 
 {% set codeExpanded = true %} 
 {% include "partials/code-preview.njk" %}
+
+**Note:** If no agency theme is applied, components will default to NYS blue.
 
 ## Copying Assets (Alternative Step)
 
