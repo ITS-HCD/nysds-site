@@ -31,7 +31,11 @@ Once you've installed the packages, reference them in your application or site.
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
-Replace the `path/to` with the actual path to the installed files. Many modern build tools allow you to link to or reference files directly from `node_modules`, but you can also copy them into your project assets (see next step).
+Replace the `path/to` with the actual path to the installed files. 
+
+**Important:** 
+- Place the `<script>` at the end of `<body>`, so the DOM is fully loaded before the Design System initializes.
+- Many modern build tools allow you to link to or reference files directly from `node_modules`, but you can also copy them into your project assets (see next step).
 
 ## Copying Assets (Alternative Step)
 
