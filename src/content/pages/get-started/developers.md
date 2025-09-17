@@ -37,6 +37,18 @@ Once you've installed the packages, reference them in your application or site.
 - Many modern build tools allow you to reference files directly from `node_modules`, but you can also copy them into your project assets (see "Copying Assets (Alternative Step)").
 
 ## Apply Agency Theming
+The NYSDS includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
+
+To apply a theme, add the agency stylesheet in the `<head>` alongside core NYSDS styles. For example, "Office of Children and Family Services" uses the `health` theme:
+
+{% set code %}<!-- Core NYSDS styles -->
+<link rel="stylesheet" href="/path/to/nysds-full.min.css" /> 
+<!-- Agency theme (Health) --> 
+<link rel="stylesheet" href="/path/to/nysds-theme-health.min.css" /> 
+{% endset %} 
+{% set accordionLabel = "HTML Snippet" %} 
+{% set codeExpanded = true %} 
+{% include "partials/code-preview.njk" %}
 
 ## Copying Assets (Alternative Step)
 
