@@ -1167,6 +1167,7 @@ opacity: 1;
     overflow: auto;
 }
 .code-preview__preview.inverted {
+    color: var(--nys-color-ink-reverse, #ffffff);
     background-color: var(--nys-color-ink, #1b1b1b);
     background-image: 
       linear-gradient(45deg, var(--nys-color-neutral-800, #323435) 25%, transparent 25%),

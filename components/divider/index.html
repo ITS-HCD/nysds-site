@@ -4,17 +4,17 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Skip Navigation - New York State Design System</title>
-    <meta name="description" content="An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.">   
-    <link rel="canonical" href="https://designsystem.ny.gov/components/skipnav/">
+    <title>Divider - New York State Design System</title>
+    <meta name="description" content="Provides a visual indicator of categories">   
+    <link rel="canonical" href="https://designsystem.ny.gov/components/divider/">
     <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
 
     <meta name=”robots” content=”noindex”>
 
-    <meta property="og:title" content="Skip Navigation">
+    <meta property="og:title" content="Divider">
     <meta property="og:site_name" content="New York State Design System">
-    <meta property="og:url" content="https://designsystem.ny.gov/components/skipnav/">
-    <meta property="og:description" content="An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.">
+    <meta property="og:url" content="https://designsystem.ny.gov/components/divider/">
+    <meta property="og:description" content="Provides a visual indicator of categories">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     
@@ -49,7 +49,7 @@
     <!-- Latest Build: 2025-09-19T19:45:47.834+00:00 -->
   </head>
   
-  <body class="single-page page-skipnav section-components">
+  <body class="single-page page-divider section-components">
   <nys-skipnav></nys-skipnav>
   
 
@@ -78,7 +78,7 @@
         </div>
         <div class="section-header__media">
             
-                <img src="/assets/img/components/skipnav-header.svg" alt="Skip Navigation">
+                <img src="/assets/img/components/divider-header.svg" alt="Divider">
             
         </div>
     </div>
@@ -220,9 +220,9 @@
   
     
     
-    <li class="section-nav__item"
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/divider/" >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/divider/"  aria-current="page" >
         Divider
       </a>
 
@@ -304,9 +304,9 @@
   
     
     
-    <li class="section-nav__item section-nav__item--active-section section-nav__item--active"
+    <li class="section-nav__item"
         >
-      <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/"  aria-current="page" >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/" >
         Skip Navigation
       </a>
 
@@ -405,8 +405,8 @@
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <p><section id="overview">
-<h1>Skip Navigation</h1></p>
-<p>The <code>&lt;nys-skipnav&gt;</code> is an accessibility feature that allows keyboard and screen readers to bypass navigation items and jump directly to the main content of a webpage.</p>
+<h1>Divider</h1></p>
+<p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
         <nys-badge
@@ -415,30 +415,16 @@
           label="AA"
           intent="success"
         ></nys-badge>
-        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102"></nys-button>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=5409-1651"></nys-button>
       </div>
     </section>
     <section id="example">
 <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
-<nys-skipnav id="skipnav-demo" href="#main-content"></nys-skipnav>
-<p style="margin-top:55px;">
-  This skip link is visible for demo purposes. In our mockup of a
-  real-world scenario further down this page, you'll see it's hidden until
-  focused.
-</p>
-<script type="module">
-  customElements.whenDefined('nys-skipnav').then(async () => {
-    const skipnav = document.getElementById('skipnav-demo');
-    // Wait until the Lit component finishes updating
-    await skipnav.updateComplete;
-    const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
-    if (link) {
-      link.classList.add('show');
-    }
-  });
-</script>
+<div>Sample content above</div>
+<nys-divider></nys-divider>
+<div>Sample content below</div>
 </div>
   </div>
   <div class="code-preview__source">
@@ -454,7 +440,9 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-skipnav</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skipnav-demo<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#main-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-skipnav</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Sample content above<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-divider</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-divider</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Sample content below<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   <div class="code-preview__code-tip">
@@ -466,22 +454,15 @@
     <br>
     <section id="options">
       <h2>Options</h2>
-<p>The <code>&lt;nys-skipnav&gt;</code> component adds a hidden &quot;Skip to main content&quot; link that appears on Tab, allowing keyboard and screen reader users to jump directly to the main content. By default, <code>href</code> is set to <code>href=&quot;#main-content&quot;</code>, but you can change it to match the id of your main content container.</p>
-<p><strong>IMPORTANT:</strong> To work correctly, <code>&lt;nys-skipnav&gt;</code> should be the first focusable element. Ideally right after the opening <code>&lt;body&gt;</code> tag, before any headers or nav elements.</p>
+<h3>Inverse</h3>
+<p>On dark background, add the <code>inverted</code> property to ensure the <code>&lt;nys-divider&gt;</code> is visible.</p>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
-<div class="code-preview__preview-root-inner"><nys-skipnav href="#main-content1"></nys-skipnav>
-<nys-unavheader hideTranslate hideSearch></nys-unavheader>
-<div id="main-content1" style="padding:10px 30px; background-color: #f0f0f0;">
-  <h2>Main Content</h2>
-  <p style="display:flex; align-items:top; gap:10px;">
-      <nys-icon name="info" size="2xl"></nys-icon>
-      Press Tab to focus on the hidden "Skip to main content" link. This feature 
-      allows screen reader users and keyboard navigators to jump directly to the 
-      main content section, improving accessibility and usability.
-  </p>
+  <div class="code-preview__preview inverted">
+<div class="code-preview__preview-root-inner">
+<div>Sample content above</div>
+<nys-divider inverted></nys-divider>
+<div>Sample content below</div>
 </div>
-<nys-unavfooter></nys-unavfooter></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -496,20 +477,14 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-skipnav</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#main-content1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-skipnav</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-unavheader</span> <span class="token attr-name">hideTranslate</span> <span class="token attr-name">hideSearch</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-unavheader</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content1<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">padding</span><span class="token punctuation">:</span>10px 30px<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #f0f0f0<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Main Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span> <span class="token property">align-items</span><span class="token punctuation">:</span>top<span class="token punctuation">;</span> <span class="token property">gap</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-      Press Tab to focus on the hidden "Skip to main content" link. This feature 
-      allows screen reader users and keyboard navigators to jump directly to the 
-      main content section, improving accessibility and usability.
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-unavfooter</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-unavfooter</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Sample content above<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-divider</span> <span class="token attr-name">inverted</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-divider</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Sample content below<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
+  <div class="code-preview__code-tip">
+    <p>Can't use NYSDS web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
   </div>
 </div>
 </section>
@@ -518,12 +493,13 @@
       <h2>Usage</h2>
 <h3>When to use this component</h3>
 <ul>
-<li>When your page has a large header or navigation before the main content</li>
-<li>When you want to improve keyboard and screen reader accessibility</li>
+<li>Use dividers for dense copy or when separating content helps users digest content, otherwise use white space.</li>
+<li>Make sure the divider is helping users understand structure or hierarchy — not just adding visual decoration.</li>
 </ul>
 <h3>When to consider something else</h3>
 <ul>
-<li>If your layout already starts with the main content and has no navigation to skip</li>
+<li>When content is formatted side bys side.</li>
+<li>When content is already organized in groups.</li>
 </ul>
 </section>
     <div class="nys-grid-row nys-grid-gap">
@@ -531,8 +507,8 @@
         <div class="card card--do nys-flex-fill">
           <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use on pages with repeated navigation or other content before the main section</li>
-<li>Make sure the <code>href</code> on <code>&lt;nys-skipnav&gt;</code> matches the <code>id</code> of the main content container</li>
+<li>Ensure consistent padding/margin above and below dividers to avoid crowding.</li>
+<li>Use the <code>inverted</code> option on dark backgrounds.</li>
 </ul>
 </div>
       </div>
@@ -540,8 +516,9 @@
         <div class="card card--dont nys-flex-fill">
           <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don’t use if there’s nothing to skip over</li>
-<li>Don’t mismatch the <code>href</code> and target <code>id</code></li>
+<li>Overuse dividers and clutter the interface, reducing scannability.</li>
+<li>Use the divider to separate content appearing side bys side.</li>
+<li>Use the <code>inverted</code> option on light backgrounds.</li>
 </ul>
 </div>
       </div>
@@ -549,12 +526,9 @@
     <br>
     <section id="accessibility">
       <h2>Accessibility</h2>
-<p>The <code>&lt;nys-skipnav&gt;</code> component includes the following accessibility-focused features:</p>
+<p>The <code>&lt;nys-divider&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
-<li>First focusable element on page load for easy keyboard navigation</li>
-<li>Visible only on focus, with a clear focus indicator that meets WCAG 2.2</li>
-<li>Pressing Enter moves focus to the main content section</li>
-<li>Screen readers correctly announce the link and shift focus on activation</li>
+<li>The native <code>&lt;hr&gt;</code> element is used to ensure ARIA compliance</li>
 </ul>
 </section>
     <br>
@@ -569,12 +543,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>href</code></td>
-<td>String (URL)</td>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
+<td><code>inverted</code></td>
+<td>boolean</td>
 </tr>
 </tbody>
 </table>
@@ -592,7 +562,9 @@ Proposal</a>.
 </div></section>
     <br>
     <section id="events">
-      <h2>Events</h2></section>
+      <h2>Events</h2>
+<p>The <code>&lt;nys-divider&gt;</code> is a visual component that does not emit any events.</p>
+</section>
     <section class="nys-section">
   <h2>Suggest a New Component</h2>
   <div class="nys-grid-row nys-grid-gap">
@@ -609,7 +581,7 @@ Proposal</a>.
 
     
   <div class="edit-page-link">
-    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/skipnav.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/divider.md">Edit this page on GitHub</a> (Permissions required)</p>
     <p>Last updated: September 19, 2025</p>
   </div>
 
