@@ -7,7 +7,7 @@ image_alt: An illustration of a textarea field.
 image_header: /assets/img/components/textarea-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108
-navOrder: 16
+navOrder: 17
 ---
 
 {% extends "layouts/component.njk" %}
