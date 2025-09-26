@@ -7,7 +7,7 @@ image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102
-navOrder: 15
+navOrder: 16
 ---
 
 {% extends "layouts/component.njk" %}

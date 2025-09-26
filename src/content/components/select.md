@@ -7,7 +7,7 @@ image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
-navOrder: 14
+navOrder: 15
 ---
 
 {% extends "layouts/component.njk" %}
