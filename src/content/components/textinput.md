@@ -198,7 +198,7 @@ Takes any valid regex value.
 | `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
 | `value`        | String                                                                                  |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
-| `form`         | String                                                                                  |
+| `form`         | String \| `null`                                                                        |
 
 
 {% endblock %}
