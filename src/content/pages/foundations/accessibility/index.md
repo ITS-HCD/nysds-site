@@ -36,7 +36,7 @@ in ways that all users can perceive?</li>
   <li><strong>Understandable</strong>: Is information clear and behavior predictable?</li>
   <li><strong>Robust</strong>: Is the content compatible with assistive technology?</li>
 </ul>
-<div style="border-left: 4px solid var(--nys-color-neutral-100); padding: 16px 32px; margin-top: 16px;">
+<div style="border-left: 4px solid var(--nys-color-neutral-100); padding: var(--nys-space-100) var(--nys-space-200); margin-top: var(--nys-space-100);">
   <blockquote>
     "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
   </blockquote>
@@ -55,7 +55,7 @@ in ways that all users can perceive?</li>
 
 <h3>Recommendations</h3>
 <ul>
-  <li><strong>WCAG Compliance</strong>: Target WCAG 2.1 Level AA compliance for all web applications, content, and mobile applications by June 25, 2026, as required by the DOJ Rule. Upgrade web applications to WCAG 2.2 Level AA compliance by January 1, 2027, in accordance with New York State Technology Law (STL) Section 103-d.</li>
+  <li><strong>WCAG Compliance</strong>: Target WCAG 2.1 Level AA compliance for all web applications, content, and mobile applications by April 25, 2026, as required by the DOJ Rule. Upgrade web applications to WCAG 2.2 Level AA compliance by January 1, 2027, in accordance with New York State Technology Law (STL) Section 103-d.</li>
   <li><strong>Accessibility Training</strong>: Make sure all user interface designers and developers receive basic accessibility training. (See learning resource links below.) Key team members should have a comprehensive understanding of accessibility and WCAG 2.2 AA compliance.</li>
   <li><strong>Accessibility Testing</strong>: Conduct manual accessibility testing of ICT before production use and prior to any significant changes. Incorporate this testing into a standard development and QA process with key milestones.</li>
   <li><strong>Documentation and Records</strong>: Keep documented testing reports for each ICT and maintain an updated list of all ICTs along with their current compliance status. Clearly display a link labeled “Accessibility” in the footer of the SE's website home page, providing contact information for accessibility inquiries. </li>
@@ -82,38 +82,4 @@ By embedding accessibility into our design system, we create inclusive, user-fri
 {% endblock %}
 
 {% block scripts %}
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const navContainer = document.createElement('nav');
-    navContainer.classList.add('navigator__nav'); // Assign a class to the nav element
-
-  const navList = document.createElement('ul');
-  navList.classList.add('navigator__list');
-  navContainer.appendChild(navList);
-
-  document.querySelectorAll('h2').forEach((heading) => {
-    const navItem = document.createElement('li');
-    const navLink = document.createElement('a');
-    const headingId = heading.textContent.toLowerCase().replace(/\s+/g, '-');
-    
-    // const section = document.createElement('section');
-    // section.id = `${headingId}`;
-    // heading.parentNode.insertBefore(section, heading);
-    // section.appendChild(heading);
-
-    heading.id = headingId;
-    navLink.href = `#${headingId}`;
-    navLink.textContent = heading.textContent;
-    navLink.classList.add('navigator__link');
-    navItem.classList.add('navigator__item', `navigator__item--${headingId}`);
-   
-    navItem.appendChild(navLink);
-    navList.appendChild(navItem);
-  });
-
-  const onPageNav = document.getElementById('on-page-nav');
-  if (onPageNav) {
-    onPageNav.appendChild(navContainer);
-  }});
-</script>
 {% endblock %}
