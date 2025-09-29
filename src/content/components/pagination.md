@@ -6,7 +6,7 @@ image: /assets/img/components/pagination.svg
 image_alt: An illustration of a pagination.
 image_header: /assets/img/components/pagination-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4675-4597
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=10600-10347
 navOrder: 13
 ---
 
