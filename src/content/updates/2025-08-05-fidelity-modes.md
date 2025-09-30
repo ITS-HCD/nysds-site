@@ -10,6 +10,13 @@ date: 2025-08-05
 tags: article, figma, prototyping, wireframes, variables, modes
 ---
 
+<div class="nys-margin-b-400">
+<nys-alert type="info" class="nys-padding-b-400" heading="Fidelity Modes Tutorial">
+  To experiment with this fidelity modes approach in Figma, you can try out our: 
+  <a href="https://www.figma.com/community/file/1545561192181442235">Figma Community file for Fidelity Modes</a>
+</nys-alert>  
+</div>
+
 Designing with speed and consistency doesn’t have to mean compromising on quality. In fact, with a smart, but simple, use of Figma’s variable collections and systems thinking, you can transform wireframes in FigJam into high-fidelity mockups and realistic prototypes in a single click.
 
 Stakeholders, working under constrained budgets and timelines, are often hesitant to start with low fidelity because of the time (and associated cost) it takes to recreate screens in high fidelity. This friction often discourages early ideation and iteration.
