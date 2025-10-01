@@ -10,7 +10,7 @@ navOrder: 1
 
 # Getting Started
 
-New York State Design System (NYSDS) is system for building New York State web applications and content websites. It's created to help the people designing and developing digital experiences to do so in a way that is **consistent**, **user-friendly**, and **accessible**. No matter what role you play in the creation of these digital experiences, NYSDS has value to offer: big-picture framing, clear guidance, and ready-to-use resources.
+The New York State Design System (NYSDS) is a system for building New York State web applications and content websites. It's created to help the people designing and developing digital experiences to do so in a way that is **consistent**, **user-friendly**, and **accessible**. No matter what role you play in the creation of these digital experiences, NYSDS has value to offer: big-picture framing, clear guidance, and ready-to-use resources.
 
 ## Why NYSDS?
 
@@ -32,42 +32,40 @@ One of the greatest challenges in digital product creation is ensuring that the 
 - **Consistent Experience:** Colors, spacing, and typography remain uniform across applications.
 - **Built-in Accessibility:** With accessibility integrated into every component, teams reduce compliance risks and avoid costly rework.
 
-## Three Ways to Engage with NYSDS
+## There are Multiple Ways to Engage with NYSDS
 
 The landscape of web applications and sites for New York State is large and diverse. We built the design system to be flexible and adaptable, so that teams can use it in a way that best suits their needs. 
 
-Here are three ways to engage with NYSDS:
+### 1. Learn The NYS Design System
 
-### 1. Follow Design & Accessibility Guidance
+A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.
+
+**[Learn The NYS Design System →](/learn/)**
+
+### 22. Follow Design & Accessibility Guidance
 
 Learn best practices for designing clear, accessible user experiences and using UI components effectively.
 
 **[Explore Design Foundations →](/foundations/)**
 
-### 2. Adopt Styles & Design Tokens
+### 3. Adopt Styles & Design Tokens
 
 For teams working within existing applications, our design tokens for colors, typography, spacing, and more help maintain visual consistency without major overhauls.  
 
-**[About Design Tokens →](/foundations/tokens/)**
+**[Learn About Design Tokens →](/foundations/tokens/)**
 
-### 3. Use the Web Component
+### 4. Use the Web Components
 
 Build new digital products faster with our library of prebuilt, responsive UI components. Enjoy the benefit of design-to-code parity—what’s designed in Figma matches the code you implement.  
 
-**[Web Component Library →](/components/)**
+**[View Web Component Library →](/components/)**
 
 ## Next Steps: Find the Right Guide for You
 
-NYSDS is designed for everyone—whether you’re setting strategic direction or diving into component development. Choose your path:
+NYSDS is designed for everyone whether you’re setting strategic direction or diving into component development. Choose your path:
 
-- **For Designers:** Get started with our Figma libraries and detailed design guidelines.
-- **For Developers:** Discover how to integrate our web components and styling options into your projects.
-- **For Agency Leaders & Product Teams:** Learn how NYSDS drives efficiency and ensures a unified digital experience across New York State.
+- **[Getting Started For Designers](./designers/):** Get started with our Figma libraries and detailed design guidelines.
+- **[Getting Started For Developers](./developers/):** Discover how to integrate our web components and styling options into your projects.
+- **[Understanding the NYSDS For Agency Leaders & Product Teams](/learn/):** Learn how NYSDS drives efficiency and ensures a unified digital experience across New York State.
 
-{% endblock %}
-
-{% block styles %}
-{% endblock %}
-
-{% block scripts %}
 {% endblock %}
