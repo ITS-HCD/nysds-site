@@ -10,7 +10,7 @@ navOrder: 20
 
 <h1>Accessibility</h1>
 
-<img src="/assets/img/accessibility_image.svg" style="width: 100%; display: block; margin-bottom: 32px;" alt="" role="presentation">
+<img src="/assets/img/accessibility_image.svg" style="width: 100%; display: block; margin-bottom: 32px;" alt="An image displaying the different types of accessibility needs" role="presentation">
 
 <section id="what-is-web-accessibility">
 
@@ -18,20 +18,14 @@ navOrder: 20
 
 <nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text=""></nys-alert>
 
+<p>Prioritizing accessibility in our design system allows all users, regardless of ability, to navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users</p>
 
-<p>Web accessibility is about making websites, digital services, and online content usable by
-everyone, including people with disabilities. Building with accessibility in mind is about removing
-barriers to access. It helps ensure that people who rely on assistive technologies, like screen
-readers, voice commands, or keyboard navigation, have equal access to services and
-information.</p>
+<p>Web accessibility is about making websites, digital services, and online content usable by everyone, including people with disabilities. Building with accessibility in mind is about removing barriers to access. It helps ensure that people who rely on assistive technologies, like screen readers, voice commands, or keyboard navigation, have equal access to services and information.</p>
 
-<p>The Web Content Accessibility Guidelines (WCAG) are organized by four key principles:
-Perceivable, Operable, Understandable, and Robust. These principles provide a framework for
-determining if web content is accessible to all users, no matter the disability or device:</p>
+<p>The Web Content Accessibility Guidelines (WCAG) are organized by four key principles: Perceivable, Operable, Understandable, and Robust. These principles provide a framework for determining if web content is accessible to all users, no matter the disability or device:</p>
 
 <ul>
-  <li><strong>Perceivable</strong>: Is content presented 
-in ways that all users can perceive?</li>
+  <li><strong>Perceivable</strong>: Is content presented in ways that all users can perceive?</li>
   <li><strong>Operable</strong>: Are interface elements navigable and usable by all users?</li>
   <li><strong>Understandable</strong>: Is information clear and behavior predictable?</li>
   <li><strong>Robust</strong>: Is the content compatible with assistive technology?</li>
@@ -52,7 +46,6 @@ in ways that all users can perceive?</li>
 <p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
 <p><a href="/foundations/accessibility/legal/#current-its-policy">Learn More</a></p>
 
-
 <h3>Recommendations</h3>
 <ul>
   <li><strong>WCAG Compliance</strong>: Target WCAG 2.1 Level AA compliance for all web applications, content, and mobile applications by April 25, 2026, as required by the DOJ Rule. Upgrade web applications to WCAG 2.2 Level AA compliance by January 1, 2027, in accordance with New York State Technology Law (STL) Section 103-d.</li>
@@ -61,25 +54,12 @@ in ways that all users can perceive?</li>
   <li><strong>Documentation and Records</strong>: Keep documented testing reports for each ICT and maintain an updated list of all ICTs along with their current compliance status. Clearly display a link labeled “Accessibility” in the footer of the SE's website home page, providing contact information for accessibility inquiries. </li>
 </ul>
 
-<h4>Recommendations</h4>
-<p>This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.</p>
-
-<h5>Recommendations</h5>
-<p>Prioritizing accessibility in our design system allows all users, regardless of ability, navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users</p>
-
-<h6>Recommendations</h6>
-<p>"Screen reader testing" means checking how well a website or app works for visually impaired users who rely on screen reader software. It ensures that text, images, and interactive elements are properly read aloud and usable with keyboard commands.</p>
-
-
 </section>
 
 ## Our Approach
 
 Our team is committed to making our design system accessible by embedding best practices into every component. We emphasize strong color contrast to maintain readability, using tools like WebAIM to confirm sufficient contrast between text and background. Element sizing aligns with WCAG recommendations so that interactive components are easy to use and meet appropriate pixel standards. Keyboard accessibility is a core priority—users can navigate without a mouse through clear focus states, logical tab order, and familiar keyboard controls like Enter, Spacebar, and Escape. We also conduct screen reader testing to ensure that visually impaired users can effectively navigate and understand content with assistive technologies.
- 
+
 By embedding accessibility into our design system, we create inclusive, user-friendly experiences that benefit everyone, reinforcing that accessibility is not just a feature but a fundamental part of good design. 
 
-{% endblock %}
-
-{% block scripts %}
 {% endblock %}
