@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-01T13:16:20.101+00:00 -->
+    <!-- Latest Build: 2025-10-01T15:55:05.972+00:00 -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -841,7 +841,7 @@ Proposal</a>.
     <br>
     <section id="events">
       <h2>Events</h2>
-<p>The <code>&lt;nys-radiobutton&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
+<p>The <code>&lt;nys-radiogroup&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>
 <li><strong><code>nys-focus</code></strong> – Fired when the radiobutton gains focus.</li>
@@ -870,12 +870,12 @@ Proposal</a>.
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-js"><code class="language-js"><span class="token comment">// Select the radiobutton component</span>
-<span class="token keyword">const</span> radiobutton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-radiobutton'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <pre class="language-js"><code class="language-js"><span class="token comment">// Select the radiogroup component</span>
+<span class="token keyword">const</span> radiogroup <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-radiogroup'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-change' event</span>
-radiobutton<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+radiogroup<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> checked<span class="token punctuation">,</span> name<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Radiobutton (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) in group "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" is of </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, checked: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>checked<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Radiobutton with id="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" in group "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" was selected. Value="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">", checked=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>checked<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
