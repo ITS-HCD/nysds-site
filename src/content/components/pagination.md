@@ -14,7 +14,7 @@ navOrder: 13
 
 {% block longdescription %}
 
-The `<nys-pagination>` component is a reusable web component for use in New York State digital products. It provides users with the ability to to navigate through a large set of content or data that has been divided into smaller, more manageable sections or "pages."
+The `<nys-pagination>` provides users with the ability to to navigate through a large set of content or data that has been divided into smaller, more manageable sections or "pages."
 
 {% endblock %}
 
@@ -95,7 +95,7 @@ The prop `totalPages` takes in the number of total pages to view.
 
 {% block events %}
 
-The `<nys-pagination>` component emits <strong>three</strong> custom Javascript events:
+The `<nys-pagination>` component emits <strong>one</strong> custom Javascript event:
 
 1.  **`nys-change`** – Fired when the `currentPage` value is changed.
 

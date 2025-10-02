@@ -14,7 +14,7 @@ navOrder: 20
 
 {% block longdescription %}
 
-  The `<nys-toggle>` component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+  The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 
 {% endblock %}
 
