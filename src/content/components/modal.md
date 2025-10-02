@@ -20,25 +20,47 @@ The `<nys-modal>` component allows users to select and upload one or more files 
 
 {% block example %}
 {% set preview %}
+<div>
+  <nys-button label="Open Modal" onClick="showModal('modal1')"></nys-button>
+  <nys-modal
+    id="modal1"
+    heading="Update Available"
+    subheading="A new version of this application is ready to install."
+  >
+    <p>
+        Would you like to install the latest version? Albany ipsum dolor sit
+        Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+        incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+        veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+        Cuomo consequat.
+    </p>
+    <div slot="actions">
+      <nys-button label="Not now" variant="text" onClick="closeModal('modal1')"></nys-button>
+      <nys-button label="Update" onClick="showMessage('modal1', 'Executing update...')"></nys-button>
+    </div>
+  </nys-modal>
+</div>
+{% endset %}
+{% set code %}
+  <nys-button label="Open Modal" onClick="yourOpenModalFunction()"></nys-button>
 <nys-modal
   id="modal1"
   heading="Update Available"
   subheading="A new version of this application is ready to install."
 >
   <p>
-    Would you like to install the latest version? Albany ipsum dolor sit
-    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-    Cuomo consequat.
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
   </p>
   <div slot="actions">
-    <nys-button label="Not now" variant="text" onClick="{your logic here}"></nys-button>
-    <nys-button label="Update" onClick="{your logic here}"></nys-button>
+    <nys-button label="Not now" variant="text" onClick="yourCloseFunction()"></nys-button>
+    <nys-button label="Update" onClick="yourUpdateFunction()"></nys-button>
   </div>
 </nys-modal>
 {% endset %}
-{% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -100,6 +122,19 @@ Use the default slot to add content such as text, links, or other elements insid
 **Note:** The `heading` is required for the modal title, while `subheading` is optional for extra context or instructions.
 
 {% set preview %}
+<div>
+  <nys-button label="Open Modal" onClick="showModal('modal2')"></nys-button>
+  <nys-modal id="modal2" heading="System Maintenance Notice" subheading="Scheduled downtime will occur this weekend.">
+    <p>
+      Please be advised that the system will be unavailable for maintenance
+      from 10 PM Friday to 6 AM Saturday. Ensure you save your work and
+      plan accordingly. For more details, visit the
+      <a href="https://www.ny.gov/" target="_blank" rel="noopener noreferrer">NYS site</a>.
+    </p>
+  </nys-modal>
+</div>
+{% endset %}
+{% set code %}
 <nys-modal id="modal2" heading="System Maintenance Notice" subheading="Scheduled downtime will occur this weekend.">
   <p>
     Please be advised that the system will be unavailable for maintenance
@@ -109,7 +144,6 @@ Use the default slot to add content such as text, links, or other elements insid
   </p>
 </nys-modal>
 {% endset %}
-{% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Adding action buttons
@@ -118,16 +152,28 @@ Set the modal’s visibility using the open (boolean) property on `<nys-modal>`.
 **Tip**: By convention, the secondary/cancel button is usually placed first, followed by the primary/confirm button. This helps maintain consistent UX and accessibility patterns.
 
 {% set preview %}
+<div>
+  <nys-button label="Open Modal" onClick="showModal('modal3')"></nys-button>
+  <nys-modal id="modal3" heading="Update password?">
+    <nys-textinput label="Username" name="username" type="text" width="full"></nys-textinput>
+    <nys-textinput label="Password" name="password" type="password" width="full"></nys-textinput>
+    <div slot="actions">
+      <nys-button label="Not now" variant="outline" onClick="closeModal('modal3')"></nys-button>
+      <nys-button label="Update" onClick="showMessage('modal3', 'Changes saved!')"></nys-button>
+    </div>
+  </nys-modal>
+</div>
+{% endset %}
+{% set code %}
 <nys-modal id="modal3" heading="Update password?">
   <nys-textinput label="Username" name="username" type="text" width="full"></nys-textinput>
   <nys-textinput label="Password" name="password" type="password" width="full"></nys-textinput>
   <div slot="actions">
-    <nys-button label="Not now" variant="outline"></nys-button>
-    <nys-button label="Update"></nys-button>
+    <nys-button label="Not now" variant="outline" onClick="yourFunctionHere()"></nys-button>
+    <nys-button label="Update" onClick="yourFunctionHere()"></nys-button>
   </div>
 </nys-modal>
 {% endset %}
-{% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Mandatory Action
@@ -136,6 +182,21 @@ A forced action modal requires users to make a choice before continuing. Set the
 **Note:** You must provide an action button to allow user to exit the modal!
 
 {% set preview %}
+<div>
+  <nys-button label="Open Modal" onClick="showModal('modal4')"></nys-button>
+  <nys-modal
+    id="modal4"
+    heading="Your session has expired. 🪡"
+    subheading="You will need to login again in order to continue."
+    mandatory
+  >
+    <div slot="actions">
+      <nys-button label="Login" onClick="closeModal('modal4', 'Logging In...')"></nys-button>
+    </div>
+  </nys-modal>
+</div>
+{% endset %}
+{% set code %}
 <nys-modal
   id="modal4"
   heading="Your session has expired. 🪡"
@@ -143,11 +204,32 @@ A forced action modal requires users to make a choice before continuing. Set the
   mandatory
 >
   <div slot="actions">
-    <nys-button label="Login"></nys-button>
+    <nys-button label="Login" onClick="yourFunctionHere()"></nys-button>
   </div>
 </nys-modal>
 {% endset %}
-{% set code = preview %}
+{% set script%}
+<!-- The script tag here impacts all the examples above. -->
+  <script>
+    function showModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.open = true;
+      }
+    };
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.open = false;
+      }
+    }; 
+    function showMessage(id, message) {
+      console.trace();
+      alert(`Mock Alert: ${message}`);
+      closeModal(id);
+    }; 
+  </script>
+{% endset %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
