@@ -169,7 +169,7 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 | `showError`    | boolean                                |
 | `value`        | String                                 |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
-| `form`         | String                                 |
+| `form`         | String \| `null`                       |
 
 {% endblock %}
 

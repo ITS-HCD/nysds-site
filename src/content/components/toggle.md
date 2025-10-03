@@ -113,7 +113,7 @@ Descriptions can be provided either through the `description` prop or via the `s
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
 | `value`       | String           |
-| `form`        | String           |
+| `form`        | String \| `null` |
 
 
 {% endblock %}

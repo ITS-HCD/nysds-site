@@ -229,7 +229,7 @@ Set the `inverted` when the button is on a dark background.
 | `suffixIcon`       | String (`<nys-icon name>`)                                         |
 | `target`           | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
 | `variant`          | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
-| `form`             | String                                                             |
+| `form`             | String \| `null`                                                  |
 
 {% endblock %}
 
