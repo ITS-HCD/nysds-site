@@ -14,7 +14,7 @@ navOrder: 10
 
 {% block longdescription %}
 
-The `<nys-globalfooter>` component is a reusable web component for use in New York State digital products. It helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+The `<nys-globalfooter>` helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
 
 {% endblock %}
 
