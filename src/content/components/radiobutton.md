@@ -7,7 +7,7 @@ image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
-navOrder: 14
+navOrder: 15
 ---
 
 {% extends "layouts/component.njk" %}

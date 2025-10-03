@@ -7,7 +7,7 @@ image_alt: An illustration of a modal.
 image_header: /assets/img/components/modal-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
-navOrder: 9
+navOrder: 13
 ---
 
 {% extends "layouts/component.njk" %}
@@ -224,8 +224,8 @@ A forced action modal requires users to make a choice before continuing. Set the
       }
     }; 
     function showMessage(id, message) {
-      console.trace();
-      alert(`Mock Alert: ${message}`);
+      /* Uncomment the below when the <nys-button> onClick issue with it calling the function twice is fixed... leaving this function here for now */
+      // alert(`Mock Alert: ${message}`);
       closeModal(id);
     }; 
   </script>
