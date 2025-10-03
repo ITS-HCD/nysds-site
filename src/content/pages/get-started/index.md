@@ -42,7 +42,7 @@ A video tour by the NYS Design System team to help you learn how to quickly buil
 
 **[Learn The NYS Design System →](/learn/)**
 
-### 22. Follow Design & Accessibility Guidance
+### 2. Follow Design & Accessibility Guidance
 
 Learn best practices for designing clear, accessible user experiences and using UI components effectively.
 
