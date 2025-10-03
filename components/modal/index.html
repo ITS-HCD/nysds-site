@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-03T16:43:40.282+00:00 -->
+    <!-- Latest Build: 2025-10-03T17:09:26.380+00:00 -->
   </head>
   
   <body class="single-page page-modal section-components">
@@ -510,11 +510,11 @@
     <section id="options">
       <h2>Options</h2>
 <h3>Scrolling Behavior</h3>
-<p>Avoid content-heavy modals. If content is too long, use a dedicated page or Stepper.
-<strong>IMPORTANT:</strong>  <code>&lt;nys-modal&gt;</code> blocks page scrolling to keep focus within the modal.</p>
+<p>Avoid content-heavy modals. If the content is too long, consider using a dedicated page or a Stepper.</p>
+<p><strong>IMPORTANT:</strong>  <code>&lt;nys-modal&gt;</code> blocks page scrolling to keep focus within the modal.</p>
 <h3>Adding basic slots</h3>
-<p>Use the default slot to add content such as text, links, or other elements inside the modal.
-<strong>Note:</strong> The <code>heading</code> is required for the modal title, while <code>subheading</code> is optional for extra context or instructions.</p>
+<p>Use the default slot to add content such as text, links, or other elements inside the modal.</p>
+<p><strong>Note:</strong> The <code>heading</code> is required for the modal title, while <code>subheading</code> is optional for extra context or instructions.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
@@ -601,8 +601,8 @@
   </div>
 </div>
 <h3>Mandatory Action</h3>
-<p>A forced action modal requires users to make a choice before continuing. Set the <code>mandatory</code> prop, which turn off the dismissible button.</p>
-<p><strong>Note:</strong> You must provide an action button to allow user to exit the modal!</p>
+<p>A forced action modal requires users to make a choice before continuing. Set the <code>mandatory</code> prop, which turns off the dismissible button.</p>
+<p><strong>Note:</strong> You must provide an action button to allow the user to exit the modal!</p>
 <div class="code-preview-container">
   <div class="code-preview__preview ">
 <div class="code-preview__preview-root-inner">
@@ -611,7 +611,7 @@
   <nys-modal
     id="modal4"
     heading="Your session has expired. 🪡"
-    subheading="You will need to login again in order to continue."
+    subheading="You will need to log in again in order to continue."
     mandatory
   >
     <div slot="actions">
@@ -637,7 +637,7 @@
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
   <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal4<span class="token punctuation">"</span></span>
   <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Your session has expired. 🪡<span class="token punctuation">"</span></span>
-  <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You will need to login again in order to continue.<span class="token punctuation">"</span></span>
+  <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You will need to log in again in order to continue.<span class="token punctuation">"</span></span>
   <span class="token attr-name">mandatory</span>
 <span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -776,7 +776,7 @@ Proposal</a>.
 <li><strong><code>nys-close</code></strong> – Fired when the modal is closed.</li>
 </ol>
 <h4>Event details</h4>
-<p>The <code>nys-open</code> and <code>nys-close</code> event includes a detail object with the following properties:</p>
+<p>The <code>nys-open</code> and <code>nys-close</code> events include a detail object with the following properties:</p>
 <ul>
 <li>id (string): The id of the file input.</li>
 </ul>
