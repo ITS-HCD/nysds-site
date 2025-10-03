@@ -1719,5 +1719,330 @@ By starting in FigJam you force yourself not to think about component properties
       <dc:creator>NYS ITS Design System Team</dc:creator>
       <guid>https://designsystem.ny.gov/updates/1.9.1-release/</guid>
     </item>
+    <item>
+      <title>NYSDS Release 1.10.0 “Haystack”</title>
+      <link>https://designsystem.ny.gov/updates/1.10.0-release/</link>
+      <description><![CDATA[<!-- 🪡 in the Haystack? -->
+<h2>Multiple pages? No problem</h2>
+<p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-pagination</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">currentPage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>4</span>
+  <span class="token attr-name">totalPages</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>10</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-pagination</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> shipped the pagination component!</p>
+<h2>Modal now available</h2>
+<p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+  <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
+  <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
+    <p>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    </p>
+    <p>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    </p>
+    <div slot="actions">
+      <nys-button label="Not now" variant="text" onclick="closeModal();"></nys-button>
+      <nys-button label="Update" onclick="closeModal();"></nys-button>
+    </div>
+  </nys-modal>
+  <script>
+    function showModal() {
+      const modal = document.getElementById('modal1');
+      if (modal) {
+        modal.open = true;
+      }
+    };
+    function closeModal() {
+      const modal = document.getElementById('modal1');
+      if (modal) {
+        modal.open = false;
+      }
+    };
+  </script>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Modal<span class="token punctuation">"</span></span>
+    <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
+    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open-modal-button<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal1<span class="token punctuation">"</span></span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update Available<span class="token punctuation">"</span></span>
+    <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-modal</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">function</span> <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> popped this up!</p>
+<h2>New <code>phone_in_talk</code> icon</h2>
+<p><nys-icon name="phone_in_talk" size="4xl"></nys-icon></p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> phoned this in!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Label wrapping fixed</li>
+<li>File input validation</li>
+<li>RTL support in alert and unavheader search box</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><code>&lt;nys-button&gt;</code> not triggering click on keydown <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a></li>
+</ul>
+<p>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.10.0">See the full developer release notes for v.1.10.0 →</a></p>
+]]></description>
+      <content><![CDATA[<!-- 🪡 in the Haystack? -->
+<h2>Multiple pages? No problem</h2>
+<p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-pagination</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">currentPage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>4</span>
+  <span class="token attr-name">totalPages</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>10</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-pagination</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> shipped the pagination component!</p>
+<h2>Modal now available</h2>
+<p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview ">
+<div class="code-preview__preview-root-inner">
+  <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
+  <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
+    <p>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    </p>
+    <p>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    </p>
+    <div slot="actions">
+      <nys-button label="Not now" variant="text" onclick="closeModal();"></nys-button>
+      <nys-button label="Update" onclick="closeModal();"></nys-button>
+    </div>
+  </nys-modal>
+  <script>
+    function showModal() {
+      const modal = document.getElementById('modal1');
+      if (modal) {
+        modal.open = true;
+      }
+    };
+    function closeModal() {
+      const modal = document.getElementById('modal1');
+      if (modal) {
+        modal.open = false;
+      }
+    };
+  </script>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Modal<span class="token punctuation">"</span></span>
+    <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
+    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open-modal-button<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal1<span class="token punctuation">"</span></span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update Available<span class="token punctuation">"</span></span>
+    <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-modal</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">function</span> <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> popped this up!</p>
+<h2>New <code>phone_in_talk</code> icon</h2>
+<p><nys-icon name="phone_in_talk" size="4xl"></nys-icon></p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> phoned this in!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Label wrapping fixed</li>
+<li>File input validation</li>
+<li>RTL support in alert and unavheader search box</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><code>&lt;nys-button&gt;</code> not triggering click on keydown <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a></li>
+</ul>
+<p>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.10.0">See the full developer release notes for v.1.10.0 →</a></p>
+]]></content>
+      <pubDate>Fri, 03 Oct 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.10.0-release/</guid>
+    </item>
   </channel>
 </rss>
