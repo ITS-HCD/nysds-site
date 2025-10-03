@@ -15,7 +15,7 @@ navOrder: 11
 
 {% block longdescription %}
 
-The `<nys-globalheader>` component is a reusable web component for use in New York State digital products. It helps provide users with consistent access to key features, branding, and primary navigation across all pages.
+The `<nys-globalheader>` helps provide users with consistent access to key features, branding, and primary navigation across all pages.
 
 {% endblock %}
 

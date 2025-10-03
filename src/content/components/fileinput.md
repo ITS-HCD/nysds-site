@@ -173,7 +173,7 @@ You can supply a description via our `description` prop for plain text or by emb
 | `showError`   | Boolean                                                            |
 | `dropzone`    | Boolean                                                            |
 | `optional`    | Boolean                                                            |
-| `form`        | String                                                             |
+| `form`        | String \| `null`                                                   |
 
 
 {% endblock %}

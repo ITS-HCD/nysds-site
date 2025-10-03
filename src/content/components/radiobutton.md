@@ -7,14 +7,14 @@ image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
-navOrder: 13
+navOrder: 14
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-The `<nys-radiobutton>` component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
+The `<nys-radiobutton>` provides users with the ability to choose from a group of options. Only one option can be selected at a time.
 
 **Note:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
 
@@ -175,7 +175,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `showError`    | boolean          | only `<nys-radiogroup>`  |
 | `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
 | `tile`         | boolean          | only `<nys-radiogroup>`  |
-| `form`         | String           | only `<nys-radiogroup>`  |
+| `form`         | String \| `null` | only `<nys-radiogroup>`  |
 
 {% endblock %}
 

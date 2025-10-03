@@ -7,14 +7,14 @@ image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
-navOrder: 19
+navOrder: 20
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-  The `<nys-toggle>` component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+  The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 
 {% endblock %}
 
@@ -113,7 +113,7 @@ Descriptions can be provided either through the `description` prop or via the `s
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
 | `value`       | String           |
-| `form`        | String           |
+| `form`        | String \| `null` |
 
 
 {% endblock %}
