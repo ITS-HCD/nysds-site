@@ -114,11 +114,13 @@ The `<nys-modal>` component includes the following accessibility-focused feature
 {% block options %}
 
 ### Scrolling Behavior
-Avoid content-heavy modals. If content is too long, use a dedicated page or Stepper.
+Avoid content-heavy modals. If the content is too long, consider using a dedicated page or a Stepper.
+
 **IMPORTANT:**  `<nys-modal>` blocks page scrolling to keep focus within the modal.
 
 ### Adding basic slots
 Use the default slot to add content such as text, links, or other elements inside the modal.
+
 **Note:** The `heading` is required for the modal title, while `subheading` is optional for extra context or instructions.
 
 {% set preview %}
@@ -177,9 +179,9 @@ Control a modal’s visibility with the `open` (boolean) property on `<nys-modal
 {% include "partials/code-preview.njk" %}
 
 ### Mandatory Action
-A forced action modal requires users to make a choice before continuing. Set the `mandatory` prop, which turn off the dismissible button.
+A forced action modal requires users to make a choice before continuing. Set the `mandatory` prop, which turns off the dismissible button.
 
-**Note:** You must provide an action button to allow user to exit the modal!
+**Note:** You must provide an action button to allow the user to exit the modal!
 
 {% set preview %}
 <div>
@@ -187,7 +189,7 @@ A forced action modal requires users to make a choice before continuing. Set the
   <nys-modal
     id="modal4"
     heading="Your session has expired. 🪡"
-    subheading="You will need to login again in order to continue."
+    subheading="You will need to log in again in order to continue."
     mandatory
   >
     <div slot="actions">
@@ -200,7 +202,7 @@ A forced action modal requires users to make a choice before continuing. Set the
 <nys-modal
   id="modal4"
   heading="Your session has expired. 🪡"
-  subheading="You will need to login again in order to continue."
+  subheading="You will need to log in again in order to continue."
   mandatory
 >
   <div slot="actions">
@@ -258,7 +260,7 @@ The `<nys-modal>` component emits **two** custom Javascript events:
 2.  **`nys-close`** – Fired when the modal is closed.
 
 #### Event details
-The `nys-open` and `nys-close` event includes a detail object with the following properties:
+The `nys-open` and `nys-close` events include a detail object with the following properties:
 
 - id (string): The id of the file input.
 
