@@ -1,7 +1,7 @@
 ---
 permalink: /components/badge/
 title: Badge
-description: Provides a visual indicator of categories
+description: Provides a visual indicator of categories.
 image: /assets/img/components/badge.svg
 image_alt: An illustration of a badge.
 image_header: /assets/img/components/badge-header.svg

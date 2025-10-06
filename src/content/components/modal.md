@@ -1,7 +1,7 @@
 ---
 permalink: /components/modal/
 title: Modal
-description: Used as a dialog that appears on top of the page, requiring user interaction before returning to the main content.
+description: Displays content in a dialog that appears over the page and requires user interaction before returning to the main content.
 image: /assets/img/components/modal.svg
 image_alt: An illustration of a modal.
 image_header: /assets/img/components/modal-header.svg

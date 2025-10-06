@@ -1,7 +1,7 @@
 ---
 permalink: /components/pagination/
 title: Pagination
-description: Pagination allows users to navigate through a large set of content or data that has been divided into smaller, more manageable sections or "pages."
+description: Enables users to navigate through large sets of content or data divided into smaller, more manageable pages.
 image: /assets/img/components/pagination.svg
 image_alt: An illustration of a pagination.
 image_header: /assets/img/components/pagination-header.svg

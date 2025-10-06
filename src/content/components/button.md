@@ -1,7 +1,7 @@
 ---
 permalink: /components/button/
 title: Button
-description: "Used primarily for actions that have an immediate result like 'Save', 'Close', or 'Add'."
+description: 'Used primarily for actions that have an immediate result like "Save", "Close", or "Add".'
 image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
