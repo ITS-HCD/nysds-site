@@ -1,7 +1,7 @@
 ---
 permalink: /components/divider/
 title: Divider
-description: Provides a visual indicator of categories
+description: Separates content and visually divides sections within layouts.
 image: /assets/img/components/divider.svg
 image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg

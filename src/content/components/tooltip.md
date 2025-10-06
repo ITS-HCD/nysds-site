@@ -1,7 +1,7 @@
 ---
 permalink: /components/tooltip/
 title: Tooltip
-description: A tooltip component that displays a brief message when hover/focus, offering additional information or context.
+description: Displays a brief message when hover/focus, offering additional information or context.
 image: /assets/img/components/tooltip.svg
 image_alt: An illustration of a tooltip.
 image_header: /assets/img/components/tooltip-header.svg
