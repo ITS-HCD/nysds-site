@@ -679,8 +679,10 @@
     <item>
       <title>Scaling Human-Centered Design with Design Systems</title>
       <link>https://designsystem.ny.gov/updates/scaling-human-centered-design/</link>
-      <description><![CDATA[]]></description>
-      <content><![CDATA[]]></content>
+      <description><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/TBfFzt0150Q?si=PV7FIjQaEwC63ZF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+]]></description>
+      <content><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/TBfFzt0150Q?si=PV7FIjQaEwC63ZF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+]]></content>
       <pubDate>Thu, 17 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
       <guid>https://designsystem.ny.gov/updates/scaling-human-centered-design/</guid>
