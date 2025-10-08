@@ -167,7 +167,7 @@ The `nys-close` custom event is dispatched when the alert is dismissed. Develope
 
 {% set preview %}<nys-alert type="info" heading="Information status" dismissible>
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
-  Click here: <a href="https://www.ny.gov/" target="_blank">https://www.ny.gov/</a> for more info.</p>
+  <p><a href="https://www.ny.gov/" target="_blank">Visit NY.GOV</a> for more info.</p>
 </nys-alert>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
