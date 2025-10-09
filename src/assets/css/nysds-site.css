@@ -1230,9 +1230,8 @@ opacity: 1;
     gap: var(--nys-space-100, 8px);
     border-left: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-50, #EDEDED);
     background: var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
-    --_nys-button-radius: 0;
-    --_nys-button-radius-left: 0;
-    --_nys-button-radius-right: 0;
+    --_nys-button-border-radius--start: 0;
+    --_nys-button-border-radius--end: 0;
 }
 .code-preview__code-container{
     display: none;
