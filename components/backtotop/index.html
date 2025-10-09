@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-09T13:21:47.727+00:00 -->
+    <!-- Latest Build: 2025-10-09T13:22:45.852+00:00 -->
   </head>
   
   <body class="single-page page-backtotop section-components">
@@ -509,6 +509,7 @@ id="chatbot"
 prefixIcon="sms"
 variant="outline"
 label="Chat With Us"
+size="sm"
 ></nys-button>
 <nys-unavfooter></nys-unavfooter>
 <nys-backtotop id="backtotop-demo2" position="left" visible></nys-backtotop>
@@ -522,19 +523,17 @@ label="Chat With Us"
     if (backBtn) {
         backBtn.style.position = 'absolute';
     }
-
-    const chatbot = document.getElementById('chatbot');
-    if (chatbot) {
-        Object.assign(chatbot.style, {
-        position: 'absolute',
-        bottom: '1rem',
-        right: '1rem',
-        '--_nys-button-radius-left': 'var(--nys-radius-round)',
-        '--_nys-button-radius-right': 'var(--nys-radius-round)',
-      });
-    }
   });
 </script>
+<style>
+  #chatbot {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    --_nys-button-border-radius--start: var(--nys-radius-round);
+    --_nys-button-border-radius--end: var(--nys-radius-round);
+  }
+</style>
 </div>
   </div>
   <div class="code-preview__source">
