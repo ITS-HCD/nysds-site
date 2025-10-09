@@ -87,10 +87,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--nys-color-neutral-400);
+  color: var(--nys-color-neutral-600);
 }
 .token.punctuation {
-  color: var(--nys-color-neutral-400);
+  color: var(--nys-color-neutral-600);
 }
 .token.property,
 .token.tag,
@@ -99,7 +99,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: var(--nys-color-neutral-400);
+  color: var(--nys-color-neutral-600);
 }
 .token.selector,
 .token.attr-name,
@@ -113,7 +113,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--nys-color-neutral-500);
+  color: var(--nys-color-neutral-600);
   background: var(--nys-color-white);
 }
 .token.atrule,
