@@ -29,6 +29,27 @@ The `<nys-pagination>` provides users with the ability to to navigate through a 
 
 {% block usage %}
 
+### Sample Implementation
+<nys-alert type="warning">
+  <p>The <code>nys-pagination</code> component only renders the arrow buttons and page number buttons. The handling of what gets rendered is done on implementation.</p>
+</nys-alert>
+
+{% set preview %}
+  <p id="demo"></p>
+  <nys-pagination totalPages=></nys-pagination>
+  <script>
+    const data = [];
+    let displayCount = 3;
+    for (let i = 1; i <= 20; i++) {
+      let item = "Item " + i;
+      data.push(item)
+    } 
+    document.getElementById("demo").innerHTML = data;
+  </script>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### When to use this component
   - When displaying large data sets or search results that would be overwhelming to display all at once
   - When users need control and orientation to navigate to a specific part of the content, such as page 5 of search results
