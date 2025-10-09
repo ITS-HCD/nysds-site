@@ -63,6 +63,18 @@ The `<nys-select>` component includes the following accessibility-focused featur
 
 {% block options %}
 
+### Default Value
+You can set a default value by adding the `selected` attribute to the desired `<nys-option>`.
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough">
+  <nys-option value="bronx" label="The Bronx"></nys-option>
+  <nys-option value="brooklyn" label="Brooklyn" selected></nys-option>
+  <nys-option value="manhattan" label="Manhattan"></nys-option>
+  <nys-option value="staten_island" label="Staten Island"></nys-option>
+  <nys-option value="queens" label="Queens"></nys-option>      
+</nys-select>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Disabled
   {% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
   <nys-option value="bronx" label="The Bronx"></nys-option>
