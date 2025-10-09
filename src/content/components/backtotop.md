@@ -103,6 +103,7 @@ id="chatbot"
 prefixIcon="sms"
 variant="outline"
 label="Chat With Us"
+size="sm"
 ></nys-button>
 <nys-unavfooter></nys-unavfooter>
 <nys-backtotop id="backtotop-demo2" position="left" visible></nys-backtotop>
@@ -117,19 +118,17 @@ label="Chat With Us"
     if (backBtn) {
         backBtn.style.position = 'absolute';
     }
-
-    const chatbot = document.getElementById('chatbot');
-    if (chatbot) {
-        Object.assign(chatbot.style, {
-        position: 'absolute',
-        bottom: '1rem',
-        right: '1rem',
-        '--_nys-button-radius-left': 'var(--nys-radius-round)',
-        '--_nys-button-radius-right': 'var(--nys-radius-round)',
-      });
-    }
   });
 </script>
+<style>
+  #chatbot {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    --_nys-button-border-radius--start: var(--nys-radius-round);
+    --_nys-button-border-radius--end: var(--nys-radius-round);
+  }
+</style>
 {% endset %}
 {% set code %}
 <nys-backtotop position="left"></nys-backtotop>
