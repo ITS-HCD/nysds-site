@@ -9,6 +9,17 @@ navOrder: 40
 
 <h1>Design Tokens</h1>
 
+<nys-select id="theme-selector" label="Select Agency Theme" width="lg">
+  <nys-option value="default" selected>Default (NYS)</nys-option>
+  <nys-option value="nysds-theme-admin.min.css">Admin</nys-option>
+  <nys-option value="nysds-theme-business.min.css">Business</nys-option>
+  <nys-option value="nysds-theme-environment.min.css">Environment</nys-option>
+  <nys-option value="nysds-theme-health.min.css">Health</nys-option>
+  <nys-option value="nysds-theme-local.min.css">Local</nys-option>
+  <nys-option value="nysds-theme-safety.min.css">Safety</nys-option>
+  <nys-option value="nysds-theme-transportation.min.css">Transportation</nys-option>
+</nys-select>
+
 {% for type, tokens in collections.tokens %}
   <h2 id="{{ type }}"> {{ type | capitalize }} </h2>
   <div class="token-list">
@@ -45,7 +56,7 @@ navOrder: 40
           {% elif token.type == "radius" %}
             <div class="token-list__radius" style="border-radius: var({{ token.name }});"></div>
           {% endif %}
-          <pre data-no-copy><code class="token-list__raw">{{ token.rawvalue }}</code></pre>
+          <pre data-no-copy><code class="token-list__raw {{token.name}}">{{ token.rawvalue }}</code></pre>
         </div>
 
         <div class="token-list__details nys-tablet:nys-grid-col-5">
@@ -138,6 +149,59 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Failed to copy:", err);
       });
     });
+  });
+
+  const themeSelector = document.getElementById("theme-selector");
+
+  themeSelector.addEventListener("nys-change", function (event) {
+    const selectedTheme = event.target.value;
+    const existingTheme = document.getElementById("theme-style");
+
+    // Remove the existing theme if it exists
+    if (existingTheme) {
+      existingTheme.remove();
+    }
+
+    if (selectedTheme != "default") {
+      // Create a new link element for the selected theme
+      const newTheme = document.createElement("link");
+      newTheme.id = "theme-style";
+      newTheme.rel = "stylesheet";
+      newTheme.href = `/assets/css/vendor/${selectedTheme}`;
+
+      // Append the new theme to the document head
+      document.head.appendChild(newTheme);
+
+    }
+
+    let themeColors = [
+      '--nys-color-theme',
+      '--nys-color-theme-strong',
+      '--nys-color-theme-stronger',
+      '--nys-color-theme-mid',
+      '--nys-color-theme-weak',
+      '--nys-color-theme-weaker',
+      '--nys-color-theme-faint'
+    ];
+
+    // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
+    // Remove this delay and it will read the default theme value only.
+    setTimeout(() => {
+      // console.log(window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue('--nys-color-theme'));
+      
+      // Loopp through the themeCOlors array to update the theme color text to change when you switch to a new agency theme group.
+      for (let colorVar of themeColors) {
+        let elements = document.querySelectorAll(`code.${colorVar}`);
+        let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
+        
+        elements.forEach(el => {
+          el.innerText = computedColor;
+        });
+      }
+      // document.querySelector('.--nys-color-theme').innerText = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue('--nys-color-theme');
+    }, 100);
+
+
   });
 });
 
