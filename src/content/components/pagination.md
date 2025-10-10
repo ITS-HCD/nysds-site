@@ -30,22 +30,25 @@ The `<nys-pagination>` provides users with the ability to to navigate through a 
 {% block usage %}
 
 ### Sample Implementation
-<nys-alert type="warning">
-  <p>The <code>nys-pagination</code> component only renders the arrow buttons and page number buttons. The handling of what gets rendered is done on implementation.</p>
-</nys-alert>
 
 {% set preview %}
   <p id="demo"></p>
-  <nys-pagination totalPages=></nys-pagination>
-  <script>
-    const data = [];
-    let displayCount = 3;
-    for (let i = 1; i <= 20; i++) {
-      let item = "Item " + i;
-      data.push(item)
-    } 
-    document.getElementById("demo").innerHTML = data;
-  </script>
+  <nys-pagination></nys-pagination>
+{% endset %}
+{% set script %}
+<script>
+  const data = [];
+  let displayCount = 3;
+  for (let i = 1; i <= 20; i++) {
+    let item = "Item " + i;
+    data.push(item)
+  } 
+  document.getElementById("demo").innerHTML = data;
+  // Set page numbers
+  const pagination = document.querySelector("nys-pagination");
+  pagination.currentPage = 1;
+  pagination.totalPages = Math.ceil(data.length / displayCount);
+</script>
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
