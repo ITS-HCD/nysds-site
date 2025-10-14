@@ -9,7 +9,7 @@ navOrder: 40
 
 <h1>Design Tokens</h1>
 
-<nys-select id="theme-selector" label="Select Agency Theme" width="lg">
+<nys-select id="theme-selector" label="Choose an agency theme" width="md">
   <nys-option value="default" selected>Default (NYS)</nys-option>
   <nys-option value="nysds-theme-admin.min.css">Admin</nys-option>
   <nys-option value="nysds-theme-business.min.css">Business</nys-option>
@@ -25,7 +25,6 @@ navOrder: 40
   <div class="token-list">
     {% for token in tokens %}
       <div class="token-list__item nys-grid-row nys-grid-gap">
-
         <div class="token-list__example nys-tablet:nys-grid-col-3">
           {% if token.type == "color" %}
             <div class="{% if "transparent" in token.name %}token-list__swatch--checkerboard{% endif %}">
@@ -58,12 +57,10 @@ navOrder: 40
           {% endif %}
           <pre data-no-copy><code class="token-list__raw {{token.name}}">{{ token.rawvalue }}</code></pre>
         </div>
-
         <div class="token-list__details nys-tablet:nys-grid-col-5">
           <h3 class="token-list__name">{{ token.displayname }}</h3>
           <p class="token-list__desc">{{ token.description }}</p>
-        </div>
-        
+        </div>      
         <div class="token-list__info nys-tablet:nys-grid-col-4">
             <div class="nys-grid-row nys-display-flex nys-flex-align-center">
               <div class="nys-grid-col-10">
@@ -83,7 +80,6 @@ navOrder: 40
               </div>
             </div>
         </div>
-
       </div>
     {% endfor %}
   </div>
@@ -174,6 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    // Theme vars that need to update in the token list when the theme changes.
+    // We iterate through these in a loop below
     let themeColors = [
       '--nys-color-theme',
       '--nys-color-theme-strong',
@@ -185,23 +183,18 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
-    // Remove this delay and it will read the default theme value only.
-    setTimeout(() => {
-      // console.log(window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue('--nys-color-theme'));
-      
-      // Loopp through the themeCOlors array to update the theme color text to change when you switch to a new agency theme group.
+    // DRAGONS: Remove this delay and it will read the default theme value only.
+    setTimeout(() => {    
+      // Loop through the themeColors array to update the theme color text to change when you switch to a new agency theme group.
       for (let colorVar of themeColors) {
-        let elements = document.querySelectorAll(`code.${colorVar}`);
+        let rawcolorval = document.querySelectorAll(`code.${colorVar}`);
         let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
         
-        elements.forEach(el => {
+        rawcolorval.forEach(el => {
           el.innerText = computedColor;
         });
       }
-      // document.querySelector('.--nys-color-theme').innerText = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue('--nys-color-theme');
     }, 100);
-
-
   });
 });
 
