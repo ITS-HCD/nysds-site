@@ -203,7 +203,7 @@ Set the `inverted` when the button is on a dark background.
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
 {% endset %}
-{% set previewInverted = true %}
+{% set inverted = true %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}

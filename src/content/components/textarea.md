@@ -24,6 +24,7 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
   label="Enter your favorite quote:"
   value="Majorities, of course, start with minorities.">
 </nys-textarea>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
@@ -72,6 +73,7 @@ The default value is `4`
 
   {% set preview %}<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Width
@@ -81,6 +83,7 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 
   {% set preview %}<nys-textarea width="md" label="This textarea is md"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Resize Behavior
@@ -108,36 +111,43 @@ You can include a description to provide additional context for the user. This i
     <a href="https://ny.gov">providing more options</a>
   </p>
 </nys-textarea>{% endset %}
+{% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Placeholder 
   {% set preview %}<nys-textarea label="Placeholder" placeholder="this is a placeholder"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Disabled 
   {% set preview %}<nys-textarea label="Disabled textarea" disabled></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Readonly
   {% set preview %}<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Max length
   {% set preview %}<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Required
   {% set preview %}<nys-textarea required label="Required textarea"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Optional
   {% set preview %}<nys-textarea optional label="Optional textarea"></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Error Message
@@ -145,6 +155,7 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
   {% set preview %}<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}

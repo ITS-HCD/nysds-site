@@ -90,14 +90,14 @@ By default, `<nys-backtotop>` will be set on the bottom-right corner. If the bot
 {% set preview %}
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 <nys-globalheader appName="Back to Top Example"></nys-globalheader>
-<div style="padding: 0 2rem;">
-<h2>Sample Content on page</h2>
-<p>
-    This is a sample content area used to demonstrate the functionality of
-    the Back to Top button. In an actual application,
-    <code>nys-backtotop</code> would not be visible until the user scrolls
-    down the page.
-</p>
+<div style="padding: 2rem 1rem; background-color: #fff;">
+  <h2 style="margin: 0;">Sample Content on page</h2>
+  <p  style="margin: 0;">
+      This is a sample content area used to demonstrate the functionality of
+      the Back to Top button. In an actual application,
+      <code>nys-backtotop</code> would not be visible until the user scrolls
+      down the page.
+  </p>
 </div>
 <nys-button
 id="chatbot"
