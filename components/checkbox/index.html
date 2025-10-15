@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-15T18:34:40.553+00:00 -->
+    <!-- Latest Build: 2025-10-15T20:26:35.176+00:00 -->
   </head>
   
   <body class="single-page page-checkbox section-components">
@@ -442,7 +442,7 @@
     </section>
     <section id="example">
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
       <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
       <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
@@ -487,7 +487,7 @@
 <h3>Checkbox group</h3>
 <p>The <code>&lt;nys-checkboxgroup&gt;</code> component can be used to group multiple checkboxes, allowing them to function as a single form control. This is useful when you want to allow users to select multiple options from a list.</p>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
   <nys-checkbox name="legal" label="I have read the terms and conditions." id="terms-conditions" value="terms-conditions"></nys-checkbox>
   <nys-checkbox name="legal" label="I agree to the NDA" id="legal" value="legal"></nys-checkbox>
@@ -516,7 +516,7 @@
 </div>
 <h3>Disabled</h3>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-checkbox disabled checked label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox></div>
   </div>
   <div class="code-preview__source">
@@ -544,7 +544,7 @@
 <li><code>md</code> : The <code>default</code> size. Set to 32px in width and height.</li>
 </ul>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
   <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks" checked></nys-checkbox>
@@ -587,7 +587,7 @@
 <li>Do not use the <code>tile</code> prop on a checkbox if it is inside a <code>&lt;nys-checkboxgroup&gt;</code>. All checkboxes in a group should be the same size and style.</li>
 </ul>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
   <nys-checkbox name="landmarks" label="Adirondacks" value="adirondacks" checked></nys-checkbox>
@@ -626,7 +626,7 @@
 <h3>Required</h3>
 <p>Set <code>required</code> to make a checkbox or group of checkboxes mandatory. It can be applied to either <code>&lt;nys-checkboxgroup&gt;</code> (no need to add it to individual children) or directly to an individual <code>&lt;nys-checkbox&gt;</code>.</p>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-checkbox
   label="Subscribe to NYS Government Updates"
@@ -665,7 +665,7 @@
 <h3>Optional</h3>
 <p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" optional>
   <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks"></nys-checkbox>
@@ -699,7 +699,7 @@
 <p>Set an error message and choose to activate it. Setting <code>errorMessage</code> does not display the message without boolean prop <code>showError</code>.</p>
 <p>Errors can be assigned to both <code>&lt;nys-checkboxgroup&gt;</code> and individual <code>&lt;nys-checkbox&gt;</code> components.</p>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
   <nys-checkbox name="landmarks" label="Adirondacks" value="adirondacks" ></nys-checkbox>
@@ -732,7 +732,7 @@
 <h3>Slotted Description</h3>
 <p>When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.</p>
 <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>

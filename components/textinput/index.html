@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-15T18:34:40.553+00:00 -->
+    <!-- Latest Build: 2025-10-15T20:26:35.176+00:00 -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -441,7 +441,7 @@
     </section>
     <section id="example">
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput label="This is a text input"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -474,7 +474,7 @@
 <p>Width full will take up the full width of the parent container.</p>
 <p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput width="sm" label="This label is sm"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -499,7 +499,7 @@
 <p>Accepted <code>types</code> are: <code>text</code>, <code>email</code>, <code>number</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code></p>
 <p>Any other input defaults to <code>type=&quot;text&quot;</code></p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput type="password" label="Password"></nys-textinput>
 </div>
   </div>
@@ -523,7 +523,7 @@
 </div>
 <h3>Placeholder</h3>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -546,7 +546,7 @@
 </div>
 <h3>Disabled</h3>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput label="Disabled" disabled></nys-textinput>
 </div>
   </div>
@@ -570,7 +570,7 @@
 </div>
 <h3>Readonly</h3>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -594,7 +594,7 @@
 <h3>Min Max and step</h3>
 <p><code>max</code>, <code>min</code>, and <code>step</code> only apply when <code>type=&quot;number&quot;</code></p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -617,7 +617,7 @@
 </div>
 <h3>Maxlength</h3>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -641,7 +641,7 @@
 <h3>Pattern</h3>
 <p>Takes any valid regex value.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -665,7 +665,7 @@
 <h3>Required</h3>
 <p>Set <code>required</code> to <code>&lt;nys-textinput&gt;</code> to make it mandatory.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput name="myTextInput7" required label="label"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -689,7 +689,7 @@
 <h3>Optional</h3>
 <p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput name="myTextInput7" optional label="label"></nys-textinput></div>
   </div>
   <div class="code-preview__source">
@@ -714,7 +714,7 @@
 <p>Add a description using the <code>description</code> prop for plain text, or use the description slot to include custom HTML for more flexibility.
 Takes any valid regex value.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput name="descriptionSlot" label="Label">
   <label slot="description">Slot: description</label>
 </nys-textinput></div>
@@ -745,7 +745,7 @@ Takes any valid regex value.</p>
 <p><strong>Note</strong>: The slotted button will automatically be <code>size=&quot;sm&quot;</code> and <code>variant=&quot;filled&quot;</code> and support the disabled state of the input.</p>
 <p><strong>Note</strong>: Use <code>width=&quot;lg&quot;</code> or <code>width=&quot;full&quot;</code> on <code>&lt;nys-textinput&gt;</code> to give users enough space to enter text when a button is present.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput 
   name="searchInput"
   type="search" 
@@ -795,7 +795,7 @@ Takes any valid regex value.</p>
 <h3>Error Message</h3>
 <p>Set an error message and choose to activate it. The error message will appear ONLY when the <code>showError</code> attribute is set to <code>true</code>. Setting only <code>errorMessage</code> will not display the error message by default.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput></div>
   </div>
   <div class="code-preview__source">

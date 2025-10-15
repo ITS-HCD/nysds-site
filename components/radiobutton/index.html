@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-15T18:34:40.553+00:00 -->
+    <!-- Latest Build: 2025-10-15T20:26:35.176+00:00 -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -442,7 +442,7 @@
     </section>
     <section id="example">
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" checked></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
@@ -478,7 +478,7 @@
       <h2>Options</h2>
 <h3>Disabled</h3>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
   <nys-radiobutton name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked disabled></nys-radiobutton>
   <nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
@@ -510,7 +510,7 @@
 <h3>Required</h3>
 <p>Set <code>required</code> to <code>&lt;radiogroup&gt;</code> to make selecting an option mandatory.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required>
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
@@ -540,7 +540,7 @@
 <h3>Optional</h3>
 <p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." optional>
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
@@ -574,7 +574,7 @@
 <li><code>md</code>: The default size. Set to 32px in width and height.</li>
 </ul>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
   <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
@@ -607,7 +607,7 @@
 <p>The <code>tile</code> prop will change the styling of the radio button to a tile. This is useful when you want a larger clickable area for the user.<br>
 Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;</code> component, not the <code>&lt;nys-radiobutton&gt;</code>. Each <code>&lt;nys-radiobutton&gt;</code> in the <code>&lt;nys-radiogroup&gt;</code> will be set to tile.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." tile>
   <nys-radiobutton name="agency" checked label="Department of Health" value="doh"></nys-radiobutton>
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its"></nys-radiobutton>  
@@ -639,7 +639,7 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 <h3>Error</h3>
 <p>To display an error message, pass in the <code>showError</code> property to the <code>&lt;nys-radiogroup&gt;</code> component. Set an error message and choose to activate it. Setting <code>errorMessage</code> does not display the message without boolean prop <code>showError</code>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
@@ -670,7 +670,7 @@ Note: The <code>tile</code> prop is applied  to the <code>&lt;nys-radiogroup&gt;
 <p>When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.</p>
 <p>Both <code>&lt;nys-radiobutton&gt;</code> and <code>&lt;nys-radiogroup&gt;</code> support the description slot.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview ">
+  <div class="code-preview__preview  solid">
 <div class="code-preview__preview-root-inner">
 <nys-radiogroup label="What is your primary work location?">
   <label slot="description">This is the location you use for your <a href="https://www.ny.gov/" target="__blank">in office days.</a></label>
