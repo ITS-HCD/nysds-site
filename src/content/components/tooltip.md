@@ -129,7 +129,7 @@ Set the `inverted` when the tooltip is on a dark background.
   <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
-{% set previewInverted = true %}
+{% set inverted = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
