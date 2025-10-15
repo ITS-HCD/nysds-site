@@ -75,7 +75,7 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 <nys-divider inverted></nys-divider>
 <div>Sample content below</div>
 {% endset %}
-{% set previewInverted = true %}
+{% set inverted = true %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
