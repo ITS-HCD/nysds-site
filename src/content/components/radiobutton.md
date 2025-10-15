@@ -26,6 +26,7 @@ The `<nys-radiobutton>` provides users with the ability to choose from a group o
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -81,6 +82,7 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
   <nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
   <nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -90,6 +92,7 @@ Set `required` to `<radiogroup>` to make selecting an option mandatory.
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -99,6 +102,7 @@ Adding the `optional` prop will add an optional flag to the input.
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -113,6 +117,7 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -125,6 +130,7 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its"></nys-radiobutton>  
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -135,6 +141,7 @@ To display an error message, pass in the `showError` property to the `<nys-radio
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -153,6 +160,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
   </nys-radiobutton>
 </nys-radiogroup>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
