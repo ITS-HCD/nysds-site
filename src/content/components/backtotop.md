@@ -3,7 +3,7 @@ permalink: /components/backtotop/
 title: Back To Top
 description: Provides a button that lets users quickly scroll back to the top of the page.
 image: /assets/img/components/backtotop.svg
-image_alt: An illustration of a back-to-top button.
+image_alt: a circular button with the text back to top written on it.
 image_header: /assets/img/components/backtotop-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4303-1514
@@ -14,7 +14,7 @@ navOrder: 4
 
 {% block longdescription %}
 
-The `<nys-backtotop>` component provides a button that allows users to quickly return to the top of a page, enhancing user experience and accessibility.
+The `<nys-backtotop>` component provides a button that allows users to quickly return to the top of a page, enhancing user experience and accessibility. The back to top button will appear on a screen after you scroll 1.5 screen lengths.
 
 {% endblock %}
 
@@ -55,14 +55,15 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 
 ### When to consider something else
 
-- Add multiple back to top components to one page.
 - Use when the content is designed to fill the size of the screen and is not scrollable.
+
 {% endblock %}
 
 {% block usagedo %}
 
   - Only use 1 back to top component on a page.
   - Use the component when the content is designed to be longer than the height of the screen.
+  - Place the `<nys-backtotop>` component above the `<nys-globalfooter>` in your code.
 {% endblock %}
 
 {% block usagedont %}
