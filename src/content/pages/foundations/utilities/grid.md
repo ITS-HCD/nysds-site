@@ -1,18 +1,17 @@
 ---
 permalink: /foundations/utilities/grid/
-title: Layout Grid
+title: Grid
 description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Foundations
 parent: Utilities
 layout: layouts/3-col.njk
-navOrder: 3
 ---
 
 {% block content %}
 
 <section id="how-it-works">
 
-# Layout Grid
+# Grid
 
 Use our flexible grid system to structure website content. The grid is mobile-first, powered by flexbox, and based on a 12-column system.
 
