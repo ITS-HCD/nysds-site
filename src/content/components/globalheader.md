@@ -1,5 +1,5 @@
 ---
-permalink: /components/global-header/
+permalink: /components/globalheader/
 title: Global Header
 description: Provide users with consistent access to key features, branding, and primary navigation across all pages.
 image: /assets/img/components/global-header.svg
