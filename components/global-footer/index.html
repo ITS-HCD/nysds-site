@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-17T13:14:10.889+00:00 -->
+    <!-- Latest Build: 2025-10-17T13:46:32.424+00:00 -->
   </head>
   
   <body class="single-page page-global-footer section-components">
@@ -473,7 +473,7 @@
     <section id="options">
       <h2>Options</h2>
 <h3>With Links</h3>
-<p>For public-facing sites, the Global Footer can include navigation links. To add links, follow this format:</p>
+<p>For simpler footers or public-facing sites, the Global Footer can include a single list of navigation links. To add links, follow this format:</p>
 <ol>
 <li>
 <p>Use an unordered list (<code>&lt;ul&gt;</code>) inside the <code>&lt;nys-globalfooter&gt;</code> slot.</p>
@@ -509,6 +509,83 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>ITS Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/about<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>About ITS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>With Column Links</h3>
+<p>For sites that need to organize multiple navigation sections, the Global Footer supports column-based links. To add column links, follow this format:</p>
+<ol>
+<li>
+<p>Use an unordered list (<code>&lt;ul&gt;</code>) inside the <code>&lt;nys-globalfooter&gt;</code> slot.</p>
+</li>
+<li>
+<p>Group related links into columns by giving each column a parent list item (<code>&lt;li&gt;</code>) with a heading (<code>&lt;span&gt;</code>).</p>
+</li>
+<li>
+<p>Nest another unordered list (<code>&lt;ul&gt;</code>) inside each column to hold individual link items.</p>
+</li>
+<li>
+<p>Inside that nested <code>&lt;ul&gt;</code>, add <code>&lt;li&gt;</code> items, each containing an anchor tag (<code>&lt;a href=&quot;&quot;&gt;</code>) that points to the desired URL.</p>
+</li>
+</ol>
+<p>Use the prop <code>homepageLink</code> to link your <code>agencyName</code> to your homepage.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  ">
+<div class="code-preview__preview-root-inner"><nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+  <ul>
+    <li>
+      <span>About</span>
+      <ul>
+        <li><a href="https://its.ny.gov/about-us">About ITS</a></li>
+        <li><a href="https://its.ny.gov/contact-us">Contact</a></li>
+        <li><a href="https://its.ny.gov/policies">Policies</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Resources</span>
+      <ul>
+        <li><a href="https://its.ny.gov/resources">Developer Tools</a></li>
+        <li><a href="https://its.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="https://its.ny.gov/its-tech-podcast">Tech Podcast</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span> <span class="token attr-name">homepageLink</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>About<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/about-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>About ITS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/contact-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/policies<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Policies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Resources<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/resources<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Developer Tools<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/accessibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Accessibility<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/its-tech-podcast<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Tech Podcast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
       </div>
