@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-17T15:01:43.529+00:00 -->
+    <!-- Latest Build: 2025-10-17T19:03:07.535+00:00 -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -60,15 +60,10 @@
     <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
     <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
     <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
-    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYSDS Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
     <li class="site-header__item"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
-    
   </ul>
 </nys-globalheader>
-
-
-
-
 
 
 <div class="section-header">
@@ -155,6 +150,18 @@
       
     </li>
   
+    
+    
+    <li class="section-nav__item"
+        >
+      <a class="section-nav__link" href="https://designsystem.ny.gov/get-started/why/" >
+        Why create a Design System?
+      </a>
+
+      
+      
+    </li>
+  
 
 
   </ul>
@@ -162,9 +169,9 @@
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <h1>Get Started as a Developer</h1>
-<p>The NYS Design System (NYSDS) provides a set of reusable, accessible web components, design tokens, and styles to help New York State teams build consistent, user-friendly digital products. This guide will walk you through the steps to integrate NYSDS into your project.</p>
+<p>The NYS Design System provides a set of reusable, accessible web components, design tokens, and styles to help New York State teams build consistent, user-friendly digital products. This guide will walk you through the steps to integrate the NYS Design System into your project.</p>
 <h2>Install the libraries</h2>
-<p>To start using NYSDS in your project, you need to install the core libraries:</p>
+<p>To start using the NYS Design System in your project, you need to install the core libraries:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -211,12 +218,12 @@
 <p><strong>Important:</strong></p>
 <ul>
 <li>Replace the <code>path/to</code> with the actual path to the installed files (for example, from <code>node_modules</code>).</li>
-<li>Place the <code>&lt;script&gt;</code> right before the closing <code>&lt;/body&gt;</code> tag, so the DOM is fully loaded before NYSDS initializes.</li>
+<li>Place the <code>&lt;script&gt;</code> right before the closing <code>&lt;/body&gt;</code> tag, so the DOM is fully loaded before the NYS Design System initializes.</li>
 <li>Many modern build tools allow you to reference files directly from <code>node_modules</code>, but you can also copy them into your project assets (see &quot;Copying Assets (Alternative Step)&quot;).</li>
 </ul>
 <h2>Apply Agency Theming</h2>
-<p>The NYSDS includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc).</p>
-<p>To apply a theme, add the agency stylesheet in the <code>&lt;head&gt;</code> alongside core NYSDS styles. For example, &quot;Office of Children and Family Services&quot; uses the <code>health</code> theme. :</p>
+<p>The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc).</p>
+<p>To apply a theme, add the agency stylesheet in the <code>&lt;head&gt;</code> alongside core NYS Design System styles. For example, &quot;Office of Children and Family Services&quot; uses the <code>health</code> theme. :</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -231,7 +238,7 @@
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Core NYSDS styles --></span>
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Core NYS Design System styles --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
 <span class="token comment">&lt;!-- Agency theme (Health) --></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
@@ -241,8 +248,8 @@
 </div>
 <p><strong>Note:</strong> If no agency theme is applied, components will default to NYS blue.</p>
 <h2>Copying Assets (Alternative Step)</h2>
-<p>If you prefer to host the NYSDS files locally within your project, you can copy them from <code>node_modules</code> to your project's asset directories.</p>
-<p>If you wanted to copy the NYSDS CSS and JS files to <code>src/assets/css/vendor</code> and <code>src/assets/js/vendor</code> respectively, you could use the following command:</p>
+<p>If you prefer to host the NYS Design System files locally within your project, you can copy them from <code>node_modules</code> to your project's asset directories.</p>
+<p>If you wanted to copy the NYS Design System CSS and JS files to <code>src/assets/css/vendor</code> and <code>src/assets/js/vendor</code> respectively, you could use the following command:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -266,7 +273,7 @@ cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor</code></pre>
 </div>
 <p>This will copy over styles and scripts, but when new versions are released, you will need to update via npm and copy them over again.</p>
 <h2>Manual Asset Management (Alternative Step)</h2>
-<p>If you want to avoid npm altogether, you can download the latest release from the <a href="https://github.com/ITS-HCD/nysds/releases/latest/">NYSDS GitHub repository</a> and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.</p>
+<p>If you want to avoid npm altogether, you can download the latest release from the <a href="https://github.com/ITS-HCD/nysds/releases/latest/">NYS Design System GitHub repository</a> and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.</p>
 
     
   <div class="edit-page-link">
@@ -345,36 +352,27 @@ document.addEventListener("DOMContentLoaded", function () {
   </main>
   <nys-backtotop id="backtotop-demo"></nys-backtotop>
   
-  <div class="site-footer">
-  <div class="site-footer__inner nys-grid-container-widescreen">
-    <div class="nys-grid-row nys-grid-gap-lg">
-      <div class="nys-tablet:nys-grid-col">
-        <p class="site-footer__list-header"><strong>Quick Links</strong></p>
-        <ul>
-            <li><a href="/get-started/" title="How you can use NYSDS.">Get Started</a></li>
-            <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
-            <li><a href="/components/" title="Explore the web components.">Components</a></li>
-        </ul>
-      </div>
-      <div class="nys-tablet:nys-grid-col">
-        <p class="site-footer__list-header"><strong>Support</strong></p>
-        <ul>
-          <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
-          <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
-        </ul>
-      </div>
-      <div class="nys-tablet:nys-grid-col">
-        <p class="site-footer__list-header"><strong>Resources</strong></p>
-        <ul>
-            <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYSDS Core GitHub repository.">NYSDS GitHub</a></li>
-            <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYSDS Fonts GitHub repository.">NYSDS Fonts GitHub</a></li>
-            <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYSDS NPM packages.">NYSDS NPM Packages</a></li>
-            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&p=f&t=HxkOUf458bt8bvyn-0" title="Access the NYSDS Figma library.">NYSDS Figma Library</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul>
+    <li><span>Quick Links</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">NYS Design System GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">NYS Design System Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NYS Design System NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">NYS Design System Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
     
 <nys-unavfooter></nys-unavfooter>
 

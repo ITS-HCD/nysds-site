@@ -46,7 +46,7 @@
     <meta name="robots" content="noindex">
     
     
-    <!-- Latest Build: 2025-10-17T15:01:43.529+00:00 -->
+    <!-- Latest Build: 2025-10-17T19:03:07.535+00:00 -->
   </head>
   
   <body class="single-page page-typography section-foundations">
@@ -60,15 +60,10 @@
     <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
     <li class="site-header__item site-header__item--active"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
     <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
-    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYSDS Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
     <li class="site-header__item"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
-    
   </ul>
 </nys-globalheader>
-
-
-
-
 
 
 <div class="section-header">
@@ -259,24 +254,24 @@
 <h1>Typography</h1>
 <p>Typography is a core pillar of the New York State Design System, providing a consistent foundation for readability, accessibility, and brand alignment across all New York State digital applications.</p>
 <h2>Overview</h2>
-<p>Typography in NYSDS is powered by the core fonts that define the New York State brand. These include:</p>
+<p>Typography in the NYS Design System is powered by the core fonts that define the New York State brand. These include:</p>
 <ul>
 <li><strong>Proxima Nova</strong>: The primary typeface for body text and UI elements.</li>
 <li><strong>D Sari</strong>: The brand font used for agency, program, and initiative titles.</li>
 <li><strong>Oswald</strong>: A supporting typeface for content-heavy websites (optional).</li>
 </ul>
-<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYSDS Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/nysds-fonts">NYSDS Fonts</a> <em>(internal)</em>. However, NYSDS provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
+<p>Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYS Design System. They are available exclusively to New York State teams via <a href="https://github.com/ITS-HCD/nysds-fonts">NYS Design System Fonts</a> <em>(internal)</em>. However, the NYS Design System provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.</p>
 </section>
 <section id="typography-tokens">
 <h2>Typography Tokens</h2>
-<p>NYSDS defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
+<p>The NYS Design System defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
 <h3>Primitive</h3>
 <p>Primitive tokens are the raw typographical building blocks: family, size, weight, line height, and letter spacing. These tokens represent a range of sensible default values that can be used to build out interfaces. This includes tokens like <code>--nys-font-family-sans</code>, <code>--nys-font-size-md</code>, and <code>--nys-font-lineheight-lg</code>.</p>
 <p>⛔️ These values <strong>are not</strong> meant to be used directly in your stylesheets. They are used to define the <strong>semantic</strong> tokens.</p>
 <h3>Semantic</h3>
 <p>Semantic tokens map specific properties to specific roles, like headings, body text, and UI elements.</p>
 <p>✅ They <strong>are</strong> meant to be used directly in stylesheets. They help standardize font usage across components and applications.</p>
-<p>Here are a few examples of NYSDS' semantic typography tokens:</p>
+<p>Here are a few examples of the NYS Design System's semantic typography tokens:</p>
 <table>
 <thead>
 <tr>
@@ -336,7 +331,7 @@
 <h3>Download and Install</h3>
 <p>To access these fonts:</p>
 <ol>
-<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/nysds-fonts">NYSDS Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
+<li>Download the appropriate font bundle from <a href="https://github.com/ITS-HCD/nysds-fonts">NYS Design System Fonts</a>. (🔒 <em>Internal NYS Only</em>)</li>
 <li>Extract the fonts into your project.</li>
 <li>Reference the provided <code>nysds-fonts.css</code> in the HTML head of your project:</li>
 </ol>
@@ -359,7 +354,7 @@
     </div>
   </div>
 </div>
-<p>NYSDS web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.</p>
+<p>NYS Design System web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.</p>
 <h3>Preload Critical Fonts (optional)</h3>
 <p>For better performance, preload critical fonts. This helps reduce the chance of a fallback font loading and then the web font loading later, causing layout reflow and a Flash of Unstyled Text (FOUT):</p>
 <div class="code-preview-container">
@@ -387,8 +382,8 @@
 </section>
 <section id="using-typography-in-a-project">
 <h2>Using Typography in a Project</h2>
-<p>NYSDS' native web components use the typography tokens.</p>
-<p>If you're not using NYSDS components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.</p>
+<p>NYS Design System's native web components use the typography tokens.</p>
+<p>If you're not using NYS Design System components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.</p>
 <h3>Tokens</h3>
 <p>Apply them using <code>var()</code> in CSS or by using utility classes. Here are some examples:</p>
 <div class="code-preview-container">
@@ -415,10 +410,10 @@
   </div>
 </div>
 <p>Unfortunately, each property must be set individually, as CSS does not support setting multiple properties at once with <code>var()</code>.</p>
-<p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, NYSDS provides utility classes.</p>
+<p>This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, the NYS Design System provides utility classes.</p>
 <h3>Utility Classes</h3>
-<p>NYSDS also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
-<p>For example, NYSDS defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
+<p>The NYS Design System also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.</p>
+<p>For example, the NYS Design System defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -459,9 +454,9 @@
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-h1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome to NYSDS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-h1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome to NYS Design System<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-body<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a sample paragraph styled using NYSDS typography utilities.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>This is a sample paragraph styled using NYS Design System typography utilities.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>The parent element has the .nys-font-body class applied.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
       </div>
@@ -585,7 +580,7 @@ Always use semantic typography tokens for fonts, sizes, and line heights. Avoid 
 </li>
 <li>
 <p><strong>Use Utilities When Necessary</strong><br>
-Use the predefined <code>.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by NYSDS components.</p>
+Use the predefined <code>.nys-font-*</code> classes for rapid development and consistent styling for parts of your applications or site not powered by NYS Design System components.</p>
 </li>
 <li>
 <p><strong>Preload Critical Fonts</strong><br>
@@ -593,15 +588,15 @@ Preload the most-used font weights and styles to improve perceived performance �
 </li>
 <li>
 <p><strong>Extend Existing Components</strong><br>
-NYSDS web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
+NYS Design System web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.</p>
 </li>
 </ol>
 </section>
 <section id="resources">
 <h2>Resources</h2>
 <ul>
-<li><a href="https://github.com/ITS-HCD/nysds-fonts">NYSDS Fonts Repository (Internal)</a></li>
-<li><a href="#">NYSDS Design System Tokens</a></li>
+<li><a href="https://github.com/ITS-HCD/nysds-fonts">NYS Design System Fonts Repository (Internal)</a></li>
+<li><a href="/foundations/tokens/">NYS Design System Design Tokens</a></li>
 <li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts">Using Web Fonts</a></li>
 </ul>
 </section>
@@ -683,36 +678,27 @@ document.addEventListener("DOMContentLoaded", function () {
   </main>
   <nys-backtotop id="backtotop-demo"></nys-backtotop>
   
-  <div class="site-footer">
-  <div class="site-footer__inner nys-grid-container-widescreen">
-    <div class="nys-grid-row nys-grid-gap-lg">
-      <div class="nys-tablet:nys-grid-col">
-        <p class="site-footer__list-header"><strong>Quick Links</strong></p>
-        <ul>
-            <li><a href="/get-started/" title="How you can use NYSDS.">Get Started</a></li>
-            <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
-            <li><a href="/components/" title="Explore the web components.">Components</a></li>
-        </ul>
-      </div>
-      <div class="nys-tablet:nys-grid-col">
-        <p class="site-footer__list-header"><strong>Support</strong></p>
-        <ul>
-          <li><a href="/privacy/" title="Review our privacy policy.">Privacy</a></li>
-          <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
-        </ul>
-      </div>
-      <div class="nys-tablet:nys-grid-col">
-        <p class="site-footer__list-header"><strong>Resources</strong></p>
-        <ul>
-            <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYSDS Core GitHub repository.">NYSDS GitHub</a></li>
-            <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYSDS Fonts GitHub repository.">NYSDS Fonts GitHub</a></li>
-            <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYSDS NPM packages.">NYSDS NPM Packages</a></li>
-            <li><a href="https://www.figma.com/design/0ogYpymUPQQfhELthntNbt/%F0%9F%92%A0-NYSDS-%2F-Components?node-id=20-40&p=f&t=HxkOUf458bt8bvyn-0" title="Access the NYSDS Figma library.">NYSDS Figma Library</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul>
+    <li><span>Quick Links</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">NYS Design System GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">NYS Design System Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NYS Design System NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">NYS Design System Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
     
 <nys-unavfooter></nys-unavfooter>
 
