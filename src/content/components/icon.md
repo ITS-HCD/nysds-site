@@ -1,7 +1,7 @@
 ---
 permalink: /components/icon/
 title: Icon
-description: Visual symbols used to concisely convey information and increase visual appearance.
+description: Visual symbols are used to concisely convey information and increase visual appearance.
 image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
@@ -14,7 +14,7 @@ navOrder: 12
 
 {% block longdescription %}
 
-The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
+The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
 
 {% endblock %}
 
@@ -137,7 +137,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   - Ideal for enhancing navigation menus, buttons, or other interactive elements with visual cues.
 
 ### When to consider something else
-  - Ambiguous meaning. Use icons only in a common or conventional way. Icon utility hinges on people quickly recognizing what each icon means. If you suspect that an icon’s intent isn’t perfectly clear, consider removing it.
+  - Ambiguous meaning. Use icons only commonly or conventionally. Icon utility hinges on people quickly recognizing what each icon means. If you suspect that an icon’s intent isn’t clear, consider removing it.
   - Page structure. Don’t rely on an icon to help draw attention to something important that’s otherwise hard to find. Icons don’t fix unclear page hierarchy or confusing content organization.
   - If an icon does not add meaningful value to the context or might confuse users.
   - When a descriptive label or plain text provides clearer communication.
@@ -171,7 +171,7 @@ The `<nys-icon>` component includes the following accessibility-focused features
 
 **ARIA Hidden by Default**: If no `ariaLabel` is provided, the icon is hidden from screen readers by setting aria-hidden="true".
 
-**Customizable ARIA Label**: If a `ariaLabel` is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
+**Customizable ARIA Label**: If an `ariaLabel` is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
 {% endblock %}
 
 {% block options %}
@@ -180,7 +180,7 @@ The `<nys-icon>` component includes the following accessibility-focused features
 You can scale icons either relatively (based on the parent element’s font size) or literally (with predefined size values). The icons support two sizing systems: relative sizes and literal sizes.
 
 #### Relative Sizing
-To scale an icon relative to the inherited font size, pass a size variant like size=[variant name] as a prop. The values will scale based on the current font size of the parent element.
+To scale an icon relative to the inherited font size, pass a size variant like `size=[variant name]` as a prop. The values will scale based on the current font size of the parent element.
 
   - `2xs` (extra-extra small): 75% of parent font size 
   - `xs` (extra small): 87.5% of parent font size 
