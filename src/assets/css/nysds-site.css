@@ -378,7 +378,7 @@ main[role=main] {
     color: var(--nys-color-text);
 }
 
-/* nysds Subheader */
+/* NYS Design System Subheader */
 
 .ex-header {
     margin-bottom: var(--nys-space-200);
@@ -1338,7 +1338,7 @@ code {
 }
 
 .byline p {
-    max-width: 85%; /* Limit the width of the byline to align with NYSDS lockup */
+    max-width: 85%; /* Limit the width of the byline to align with NYS Design System lockup */
 }
 /* Align the logo lockup with the center of the homepage graphic */
 .nys-top-300 {

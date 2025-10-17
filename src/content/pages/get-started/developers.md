@@ -7,11 +7,11 @@ section: Get Started
 
 # Get Started as a Developer
 
-The NYS Design System (NYSDS) provides a set of reusable, accessible web components, design tokens, and styles to help New York State teams build consistent, user-friendly digital products. This guide will walk you through the steps to integrate NYSDS into your project.
+The NYS Design System provides a set of reusable, accessible web components, design tokens, and styles to help New York State teams build consistent, user-friendly digital products. This guide will walk you through the steps to integrate the NYS Design System into your project.
 
 ## Install the libraries
 
-To start using NYSDS in your project, you need to install the core libraries:
+To start using the NYS Design System in your project, you need to install the core libraries:
 
 {% set code %}npm install @nysds/components @nysds/styles{% endset %}
 {% set accordionLabel = "CLI Command" %}
@@ -33,15 +33,15 @@ Once you've installed the packages, reference them in your application or site.
 
 **Important:** 
 - Replace the `path/to` with the actual path to the installed files (for example, from `node_modules`).
-- Place the `<script>` right before the closing `</body>` tag, so the DOM is fully loaded before NYSDS initializes.
+- Place the `<script>` right before the closing `</body>` tag, so the DOM is fully loaded before the NYS Design System initializes.
 - Many modern build tools allow you to reference files directly from `node_modules`, but you can also copy them into your project assets (see "Copying Assets (Alternative Step)").
 
 ## Apply Agency Theming
-The NYSDS includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
+The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
 
-To apply a theme, add the agency stylesheet in the `<head>` alongside core NYSDS styles. For example, "Office of Children and Family Services" uses the `health` theme. :
+To apply a theme, add the agency stylesheet in the `<head>` alongside core NYS Design System styles. For example, "Office of Children and Family Services" uses the `health` theme. :
 
-{% set code %}<!-- Core NYSDS styles -->
+{% set code %}<!-- Core NYS Design System styles -->
 <link rel="stylesheet" href="/path/to/nysds-full.min.css" /> 
 <!-- Agency theme (Health) --> 
 <link rel="stylesheet" href="/path/to/nysds-theme-health.min.css" /> 
@@ -54,9 +54,9 @@ To apply a theme, add the agency stylesheet in the `<head>` alongside core NYSDS
 
 ## Copying Assets (Alternative Step)
 
-If you prefer to host the NYSDS files locally within your project, you can copy them from `node_modules` to your project's asset directories.
+If you prefer to host the NYS Design System files locally within your project, you can copy them from `node_modules` to your project's asset directories.
 
-If you wanted to copy the NYSDS CSS and JS files to `src/assets/css/vendor` and `src/assets/js/vendor` respectively, you could use the following command:
+If you wanted to copy the NYS Design System CSS and JS files to `src/assets/css/vendor` and `src/assets/js/vendor` respectively, you could use the following command:
 
 {% set code %}
 mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor
@@ -71,7 +71,7 @@ This will copy over styles and scripts, but when new versions are released, you 
 
 ## Manual Asset Management (Alternative Step)
 
-If you want to avoid npm altogether, you can download the latest release from the [NYSDS GitHub repository](https://github.com/ITS-HCD/nysds/releases/latest/) and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.
+If you want to avoid npm altogether, you can download the latest release from the [NYS Design System GitHub repository](https://github.com/ITS-HCD/nysds/releases/latest/) and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.
 
 {% block scripts %}
 {% endblock %}

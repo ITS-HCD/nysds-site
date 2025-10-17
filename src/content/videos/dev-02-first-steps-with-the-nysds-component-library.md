@@ -2,8 +2,8 @@
 category: Development
 series_order: 9
 intro_series: true
-title: First Steps with the NYSDS Component Library
-description: Step-by-step instructions for installing NYSDS and adding your first component.
+title: First Steps with the NYS Design System Component Library
+description: Step-by-step instructions for installing the NYS Design System and adding your first component.
 duration: 6:11
 video_url: D7-6RX7n75g
 tags: live demo, installation, setup, demo

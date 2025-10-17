@@ -55,7 +55,7 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 
 {% block usagedont %}
 
- - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in NYSDS, contact Design System team for guidance).
+ - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon).
  - Don’t change the state of one checkbox based on another being clicked.
 {% endblock %}
 

@@ -2,7 +2,7 @@
 category: Development
 series_order: 8
 intro_series: true
-title: Intro to NYSDS Web Components
+title: Intro to NYS Design System Web Components
 description: "Get to know our web components: what they are, how they work, and why they're built to work in any framework."
 duration: 4:47
 video_url: NM5PFClfBgA
