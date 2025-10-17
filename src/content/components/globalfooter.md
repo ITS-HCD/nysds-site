@@ -1,5 +1,5 @@
 ---
-permalink: /components/global-footer/
+permalink: /components/globalfooter/
 title: Global Footer
 description: Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
 image: /assets/img/components/global-footer.svg
