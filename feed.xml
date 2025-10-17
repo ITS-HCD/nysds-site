@@ -2060,6 +2060,68 @@ By starting in FigJam you force yourself not to think about component properties
       <link>https://designsystem.ny.gov/updates/1.10.1-release/</link>
       <description><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  ">
+<div class="code-preview__preview-root-inner">
+  <nys-globalfooter agencyName="Office of Information Technology Services">
+  <ul>
+    <li>
+      <span>About</span>
+      <ul>
+        <li><a href="https://its.ny.gov/about-us">About ITS</a></li>
+        <li><a href="https://its.ny.gov/contact-us">Contact</a></li>
+        <li><a href="https://its.ny.gov/policies">Policies</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Resources</span>
+      <ul>
+        <li><a href="https://its.ny.gov/resources">Developer Tools</a></li>
+        <li><a href="https://its.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="https://its.ny.gov/privacy">Privacy</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>About<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/about-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>About ITS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/contact-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/policies<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Policies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Resources<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/resources<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Developer Tools<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/accessibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Accessibility<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/privacy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Privacy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <p><a href="https://github.com/novacat35">Robert Chen</a> expanded linkage.</p>
 <!-- ## Invert property added to form elements (CODE ONLY)
 All form field components have been updated with a new property which will invert the color scheme of the component to better display on dark backgrounds. As always please check your contrast ratios to make sure you are still creating accessible color combinations. [Read the full documentation for invert prop on the `<nys-textinput>` component](/components/textinput).
@@ -2067,6 +2129,35 @@ All form field components have been updated with a new property which will inver
 [Robert Chen](https://github.com/novacat35) inverted these properties. -->
 <h2>No more disappearing pagination buttons</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  ">
+<div class="code-preview__preview-root-inner">
+  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-pagination</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">currentPage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>4</span>
+  <span class="token attr-name">totalPages</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>10</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-pagination</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> disabled the buttons.</p>
 <h2>Bug fixes</h2>
 <ul>
@@ -2090,6 +2181,68 @@ All form field components have been updated with a new property which will inver
 ]]></description>
       <content><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  ">
+<div class="code-preview__preview-root-inner">
+  <nys-globalfooter agencyName="Office of Information Technology Services">
+  <ul>
+    <li>
+      <span>About</span>
+      <ul>
+        <li><a href="https://its.ny.gov/about-us">About ITS</a></li>
+        <li><a href="https://its.ny.gov/contact-us">Contact</a></li>
+        <li><a href="https://its.ny.gov/policies">Policies</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Resources</span>
+      <ul>
+        <li><a href="https://its.ny.gov/resources">Developer Tools</a></li>
+        <li><a href="https://its.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="https://its.ny.gov/privacy">Privacy</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span> <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>About<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/about-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>About ITS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/contact-us<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/policies<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Policies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Resources<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/resources<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Developer Tools<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/accessibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Accessibility<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://its.ny.gov/privacy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Privacy<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <p><a href="https://github.com/novacat35">Robert Chen</a> expanded linkage.</p>
 <!-- ## Invert property added to form elements (CODE ONLY)
 All form field components have been updated with a new property which will invert the color scheme of the component to better display on dark backgrounds. As always please check your contrast ratios to make sure you are still creating accessible color combinations. [Read the full documentation for invert prop on the `<nys-textinput>` component](/components/textinput).
@@ -2097,6 +2250,35 @@ All form field components have been updated with a new property which will inver
 [Robert Chen](https://github.com/novacat35) inverted these properties. -->
 <h2>No more disappearing pagination buttons</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  ">
+<div class="code-preview__preview-root-inner">
+  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-pagination</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>pagination<span class="token punctuation">"</span></span>
+  <span class="token attr-name">currentPage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>4</span>
+  <span class="token attr-name">totalPages</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>10</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-pagination</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> disabled the buttons.</p>
 <h2>Bug fixes</h2>
 <ul>
