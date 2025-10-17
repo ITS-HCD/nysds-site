@@ -2177,7 +2177,7 @@ All form field components have been updated with a new property which will inver
 <p>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.10.1">See the full developer release notes for v.1.10.1 →</a></p>
 ]]></description>
       <content><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
@@ -2298,7 +2298,7 @@ All form field components have been updated with a new property which will inver
 <p>If you notice any other issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.10.1">See the full developer release notes for v.1.10.1 →</a></p>
 ]]></content>
       <pubDate>Thu, 16 Oct 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
