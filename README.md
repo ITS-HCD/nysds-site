@@ -1,15 +1,15 @@
-# NYSDS Reference Website
+# NYS Design System Reference Website
 
-This repository contains the source code and documentation for the **NYS Design System (NYSDS) Reference Website**. The NYSDS helps teams across New York State build fast, accessible, mobile-friendly applications and websites. It provides consistent design language, implementation guidance, and shared web components.
+This repository contains the source code and documentation for the **NYS Design System Reference Website**. The NYS Design System helps teams across New York State build fast, accessible, mobile-friendly applications and websites. It provides consistent design language, implementation guidance, and shared web components.
 
 > [!WARNING]
 > **This repository is under active development.** Expect changes.
 
 ## Overview
 
-The NYSDS Reference Website serves three key purposes:
+The Reference Website serves three key purposes:
 
-- **Documentation** – Clear, versioned guidance for using NYSDS components, tokens, and utilities.
+- **Documentation** – Clear, versioned guidance for using design system components, tokens, and utilities.
 - **Reference Implementation** – A working example of how components and styles can be applied in real-world use cases.
 - **Community Hub** – A place for contributors to propose changes, log issues, and access the latest updates.
 
@@ -38,7 +38,6 @@ This spins up a local 11ty dev server at `http://localhost:8080` (default).
 │   ├── styles/           # CSS and utility imports
 │   └── pages/            # Site content and templates
 ├── public/               # Static assets
-└── nysds.config.json     # NYSDS-specific configuration options
 ```
 
 ## Dependencies
@@ -56,7 +55,7 @@ We welcome contributions from NYS teams and the public. Here's how to get involv
 
 - File an [issue](https://github.com/its-hcd/nysds/issues) to suggest edits, report bugs, or request new components
 - Fork this repo and submit a pull request with clear documentation and rationale
-- Join NYSDS open design reviews and working group sessions (details on the [main site](https://designsystem.ny.gov) soon)
+- Join open design reviews and working group sessions in [GitHub Discussions](https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals)
 
 ## Design Tokens
 

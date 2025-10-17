@@ -14,7 +14,7 @@ navOrder: 12
 
 {% block longdescription %}
 
-The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYSDS includes a curated subset of the Google Material Symbols rounded icon set.
+The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYS Design System includes a curated subset of the Google Material Symbols rounded icon set.
 
 {% endblock %}
 
@@ -150,7 +150,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   - Use icons consistently: same icon and label for the same meaning throughout your app.
   - Use `ariaLabel` when the icon is focusable and conveys meaning, so screen readers can announce its purpose.
   - Align icons properly with text, both visually and semantically.
-  - Use icons from the NYSDS library; if unavailable, use Google Material Symbols (rounded, unfilled).
+  - Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).
   - Match icon size and color to the design system.
   - Test icon clarity with real users when possible.
 

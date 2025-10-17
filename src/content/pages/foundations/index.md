@@ -7,15 +7,7 @@ navOrder: 10
 
 {% block content %}
 
-# Overview
-
-What is a design system? It isn't just a component library, a set of fonts and colors, or a prototyping kit. The core value of a design system is in its system-ness. A system is a set of things working together as parts of an interconnected network to create a cohesive whole.
-
-What makes a design system unique is the connectedness. Our design libraries use variables, our code library is built on the same variables, the two have parity with each other, and our reference site is built using the same components, variables, and guiding principles. This interconnectedness is what makes a design system a system.
-
-This connectedness helps brings consistency, accessibility, and efficiency to New York State’s digital experiences. This section will walk you through the system and the core principles, styles, and design tokens that make it flexible and scalable across applications.
-
-## Defining Foundations
+# Foundations
 
 Let's start by defining the parts of the system. The NYS Design System includes:
 
@@ -24,7 +16,8 @@ Let's start by defining the parts of the system. The NYS Design System includes:
     <div class="card card__no-border card__flat nys-flex-fill">
       <div class="card__inner">
         <div class="card__media">
-            <img src="/assets/img/toggle-card.svg" alt="toggle graphic"></div>
+          <img src="/assets/img/toggle-card.svg" alt="toggle graphic">
+        </div>
         <div class="card__title">Component Library</div>
         <div class="card__desc">This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</div>
       </div>
@@ -68,21 +61,17 @@ A great design system isn't just about reusable components—it’s about the co
 
 Here are a few examples:
 
-Standardizing design values with design tokens means that when designers select a primary button or an alert in their design tool, that same values are applied in code, creating a 1:1 design-to-development experience.
+  - **Standardizing design values with design tokens** means that when designers select a primary button or an alert in their design tool, that same values are applied in code, creating a 1:1 design-to-development experience.
+  - **Building components with a consistent set of color values** makes it possible to apply the design system to different NYS agencies while maintaining a unified user experience.
+  - **Starting with inclusivity as a requirement (not an afterthought)**, we've built with WCAG 2.2 AA accessibility standards in mind. Components are built and tested for accessibility, which can help teams avoid costly rework.
 
-Building components with a consistent set of color values makes it possible to apply the design system to different NYS agencies while maintaining a unified user experience.
-
-Starting with inclusivity as a requirement (not an afterthought), we've built with WCAG 2.2 AA accessibility standards in mind. Components are built and tested for accessibility, which can help teams avoid costly rework.
-
-Without a strong foundation, a design system becomes just another collection of UI elements. This section helps teams understand how NYSDS components are built and why they work the way they do.
+Without a strong foundation, a design system becomes just another collection of UI elements. This section helps teams understand how NYS Design System components are built and why they work the way they do.
 
 ## Explore Foundations
 
-This section covers:
-
 - [Accessibility](/foundations/accessibility/) – What you should know about accessibility and how the NYS Design System can help.
 - [Design Tokens](/foundations/tokens/) – The shared language of colors, spacing, typography, and UI styles, available in both design and code.
-- [Utilities](/foundations/utilities) – Practical ways to adapt NYSDS to different needs. Layout, mobile-responsiveness, and agency theming.
+- [Utilities](/foundations/utilities) – Practical ways to adapt the NYS Design System to different needs. Layout, mobile-responsiveness, and agency theming.
 
 {% endblock %}
 

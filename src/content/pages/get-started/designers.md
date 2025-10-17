@@ -28,21 +28,20 @@ Designing and prototyping with the NYS Design System is powered by prebuilt Figm
 
 <nys-alert type="warning" text="Using these libraries requires an NYS Figma account."></nys-alert>
 
-NYS Design System’s Figma assets are organized into three libraries:
+NYS Design System’s Figma assets are organized into two libraries:
 
-- **NYSDS Components** → The core file containing all UI components with built-in properties, variants, and prototyping features. [NYSDS Component Library](#)
-- **NYSDS Foundations** → A design token library with colors, spacing, typography, and shadows—ensuring consistency across projects. [NYSDS Foundations Library](#)
-- **NYSDS Icons** → A library of NYS-approved icons for use in interfaces. [NYSDS Icon Library](#)
+- **Components** → The core file containing all UI components with built-in properties, variants, and prototyping features. [NYS Design System Component Library](https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System)
+- **Icons** → A library of NYS-approved icons for use in interfaces. [NYS Design System Icon Library](https://www.figma.com/design/Tad3pBv2jhA8XVf6aMlKEi/%F0%9F%92%9F-NYSDS---Icons)
 
 ### How the Libraries Help
 
-NYS Design System is designed to speed up and standardize UI design. Here’s how:
+The NYS Design System is designed to speed up and standardize UI design. Here’s how:
 
 - **Design & Code Parity:** Components in Figma match the NYS Design System web components 1:1, reducing the need for custom styling. Developers can easily find and implement the same components seen in designs.
-- **Auto-Theming for NYS Agencies:** NYS Design System adapts to agency branding using built-in Figma theme variables. Project templates automatically apply the correct colors, typography, and design tokens.
+- **Auto-Theming for NYS Agencies:** The NYS Design System adapts to agency branding using built-in Figma theme variables. Project templates automatically apply the correct colors, typography, and design tokens.
 - **Built-In Prototyping:** Many components have pre-configured interactions (e.g., modals, buttons, and inputs). Click-through prototypes help teams test and refine user flows before development begins.
 
-## How to Start Designing with NYS Design System
+## How to Start Designing with The NYS Design System
 
 - Search for “NYS Design System” in the Figma Assets panel and activate the libraries.
 - Use the project template to start with the correct agency theming and design variables.
@@ -50,7 +49,7 @@ NYS Design System is designed to speed up and standardize UI design. Here’s ho
 
 ## Next Steps: Learn More About the Design System
 
-NYS Design System isn’t just about using components—it’s about creating better, more accessible digital experiences for New Yorkers.
+The NYS Design System isn’t just about using components—it’s about creating better, more accessible digital experiences for New Yorkers.
 
 <div class="nys-grid-row nys-grid-gap-lg">
 <nys-button 

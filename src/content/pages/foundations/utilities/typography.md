@@ -17,20 +17,20 @@ Typography is a core pillar of the New York State Design System, providing a con
 
 ## Overview 
 
-Typography in NYSDS is powered by the core fonts that define the New York State brand. These include:
+Typography in the NYS Design System is powered by the core fonts that define the New York State brand. These include:
 
 *   **Proxima Nova**: The primary typeface for body text and UI elements.
 *   **D Sari**: The brand font used for agency, program, and initiative titles.
 *   **Oswald**: A supporting typeface for content-heavy websites (optional).
 
-Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYSDS Design System. They are available exclusively to New York State teams via [NYSDS Fonts](https://github.com/ITS-HCD/nysds-fonts) _(internal)_. However, NYSDS provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.
+Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYS Design System. They are available exclusively to New York State teams via [NYS Design System Fonts](https://github.com/ITS-HCD/nysds-fonts) _(internal)_. However, the NYS Design System provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.
 
 </section>
 <section id="typography-tokens">
 
 ## Typography Tokens
 
-<p>NYSDS defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
+<p>The NYS Design System defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
 
 ### Primitive
 
@@ -43,7 +43,7 @@ Semantic tokens map specific properties to specific roles, like headings, body t
 
 ✅ They **are** meant to be used directly in stylesheets. They help standardize font usage across components and applications.
 
-Here are a few examples of NYSDS' semantic typography tokens:
+Here are a few examples of the NYS Design System's semantic typography tokens:
 
 | Token Name               | Description                       | Example Value                 |
 |--------------------------|-----------------------------------|-------------------------------|
@@ -68,7 +68,7 @@ Here are a few examples of NYSDS' semantic typography tokens:
 
 To access these fonts:
 
-1.  Download the appropriate font bundle from [NYSDS Fonts](https://github.com/ITS-HCD/nysds-fonts). (🔒 _Internal NYS Only_)
+1.  Download the appropriate font bundle from [NYS Design System Fonts](https://github.com/ITS-HCD/nysds-fonts). (🔒 _Internal NYS Only_)
 2.  Extract the fonts into your project.
 3.  Reference the provided `nysds-fonts.css` in the HTML head of your project:
 
@@ -77,7 +77,7 @@ To access these fonts:
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
-NYSDS web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.
+NYS Design System web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.
 
 ### Preload Critical Fonts (optional)
 
@@ -97,9 +97,9 @@ Find more details about preloading fonts and web font best practices in Google's
 
 ## Using Typography in a Project
 
-NYSDS' native web components use the typography tokens.
+NYS Design System's native web components use the typography tokens.
 
-If you're not using NYSDS components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.
+If you're not using NYS Design System components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.
 
 ### Tokens
 
@@ -117,13 +117,13 @@ Apply them using `var()` in CSS or by using utility classes. Here are some examp
 
 Unfortunately, each property must be set individually, as CSS does not support setting multiple properties at once with `var()`.
 
-This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, NYSDS provides utility classes.
+This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, the NYS Design System provides utility classes.
 
 ### Utility Classes
 
-NYSDS also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.
+The NYS Design System also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.
 
-For example, NYSDS defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:
+For example, the NYS Design System defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:
 
 {% set code %}.nys-font-h1 {
   font: var(--nys-font-size-h1) / var(--nys-font-lineheight-h1) var(--nys-font-family-heading);
@@ -139,9 +139,9 @@ For example, NYSDS defines several utility classes that apply the font size, lin
 
 You can reference these classes in your HTML:
 
-{% set code %}<h1 class="nys-font-h1">Welcome to NYSDS</h1>
+{% set code %}<h1 class="nys-font-h1">Welcome to NYS Design System</h1>
 <div class="nys-font-body">
-  <p>This is a sample paragraph styled using NYSDS typography utilities.</p>
+  <p>This is a sample paragraph styled using NYS Design System typography utilities.</p>
   <p>The parent element has the .nys-font-body class applied.</p>
 </div>{% endset %}
 {% set accordionLabel = "Code" %}
@@ -181,19 +181,19 @@ You can reference these classes in your HTML:
     Always use semantic typography tokens for fonts, sizes, and line heights. Avoid primitive tokens or hardcoding font properties.
     
 2.  **Use Utilities When Necessary**  
-    Use the predefined `.nys-font-*` classes for rapid development and consistent styling for parts of your applications or site not powered by NYSDS components.
+    Use the predefined `.nys-font-*` classes for rapid development and consistent styling for parts of your applications or site not powered by NYS Design System components.
     
 3.  **Preload Critical Fonts**  
     Preload the most-used font weights and styles to improve perceived performance — in most cases, this is Proxima Nova Regular.
     
 4.  **Extend Existing Components**  
-    NYSDS web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.
+    NYS Design System web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.
 </section>
 <section id="resources">
 
 ## Resources
-*   [NYSDS Fonts Repository (Internal)](https://github.com/ITS-HCD/nysds-fonts)
-*   [NYSDS Design System Tokens](#)
+*   [NYS Design System Fonts Repository (Internal)](https://github.com/ITS-HCD/nysds-fonts)
+*   [NYS Design System Design Tokens](/foundations/tokens/)
 *   [Using Web Fonts](https://fonts.google.com/knowledge/using_type/using_web_fonts)
 </section>
 {% endblock %}
