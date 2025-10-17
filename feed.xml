@@ -2056,7 +2056,7 @@ By starting in FigJam you force yourself not to think about component properties
       <guid>https://designsystem.ny.gov/updates/1.10.0-release/</guid>
     </item>
     <item>
-      <title>NYSDS Release 1.10.1</title>
+      <title>NYS Design System Release 1.10.1</title>
       <link>https://designsystem.ny.gov/updates/1.10.1-release/</link>
       <description><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>

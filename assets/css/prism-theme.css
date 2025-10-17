@@ -31,7 +31,7 @@ pre[class*="language-"],
 code[class*="language-"],
 code {
   color: var(--nys-color-ink);
-  font-size: var(--nys-font-size-body-sm);
+  /* font-size: var(--nys-font-size-body-sm); */
   text-shadow: none;
   font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
