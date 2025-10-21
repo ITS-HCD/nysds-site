@@ -7,14 +7,14 @@ image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
-navOrder: 13
+navOrder: 15
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-The `<nys-radiobutton>` component is a reusable web component for use in New York State digital products. It provides users with the ability to choose from a group of options. Only one option can be selected at a time.
+The `<nys-radiobutton>` provides users with the ability to choose from a group of options. Only one option can be selected at a time.
 
 **Note:** `<nys-radiogroup>` must be used to wrap multiple radio buttons so they function as a single form control.
 
@@ -26,6 +26,7 @@ The `<nys-radiobutton>` component is a reusable web component for use in New Yor
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -81,6 +82,7 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
   <nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
   <nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -90,6 +92,7 @@ Set `required` to `<radiogroup>` to make selecting an option mandatory.
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -99,6 +102,7 @@ Adding the `optional` prop will add an optional flag to the input.
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -113,6 +117,7 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -125,6 +130,7 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
   <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its"></nys-radiobutton>  
   <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -135,6 +141,7 @@ To display an error message, pass in the `showError` property to the `<nys-radio
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
   <nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -153,6 +160,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
     <label slot="description">A part of <a href="https://www.ny.gov/" target="__blank">New York City</a></label>      
   </nys-radiobutton>
 </nys-radiogroup>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -175,7 +183,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 | `showError`    | boolean          | only `<nys-radiogroup>`  |
 | `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
 | `tile`         | boolean          | only `<nys-radiogroup>`  |
-| `form`         | String           | only `<nys-radiogroup>`  |
+| `form`         | String \| `null` | only `<nys-radiogroup>`  |
 
 {% endblock %}
 
@@ -183,7 +191,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% block events %}
 
-The `<nys-radiobutton>` component emits <strong>three</strong> custom Javascript events:
+The `<nys-radiogroup>` component emits <strong>three</strong> custom Javascript events:
 
 1.  **`nys-change`** – Fired when the radiobutton state changes (checked/unchecked).
 2.  **`nys-focus`** – Fired when the radiobutton gains focus.
@@ -198,12 +206,12 @@ The `nys-change` event includes a detail object with the following properties:
   - value (string): The radiobutton’s value.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the radiobutton component
-const radiobutton = document.querySelector('nys-radiobutton');
+{% set code %}// Select the radiogroup component
+const radiogroup = document.querySelector('nys-radiogroup');
 // Listen for the 'nys-change' event
-radiobutton.addEventListener('nys-change', (event) => {
+radiogroup.addEventListener('nys-change', (event) => {
   const { id, checked, name, value } = event.detail;
-  console.log(`Radiobutton (${id}) in group "${name}" is of ${value}, checked: ${checked}`);
+  console.log(`Radiobutton with id="${id}" in group "${name}" was selected. Value="${value}", checked=${checked}`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

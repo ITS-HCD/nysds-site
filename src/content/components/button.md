@@ -1,7 +1,7 @@
 ---
 permalink: /components/button/
 title: Button
-description: "Used primarily for actions that have an immediate result like 'Save', 'Close', or 'Add'."
+description: 'Used primarily for actions that have an immediate result like "Save", "Close", or "Add".'
 image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
@@ -203,7 +203,7 @@ Set the `inverted` when the button is on a dark background.
 <nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button>
 <nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button>
 {% endset %}
-{% set previewInverted = true %}
+{% set inverted = true %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
@@ -229,7 +229,7 @@ Set the `inverted` when the button is on a dark background.
 | `suffixIcon`       | String (`<nys-icon name>`)                                         |
 | `target`           | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
 | `variant`          | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
-| `form`             | String                                                             |
+| `form`             | String \| `null`                                                  |
 
 {% endblock %}
 

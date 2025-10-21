@@ -1,7 +1,7 @@
 ---
 permalink: /components/divider/
 title: Divider
-description: Provides a visual indicator of categories
+description: Separates content and visually divides sections within layouts.
 image: /assets/img/components/divider.svg
 image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg
@@ -75,7 +75,7 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 <nys-divider inverted></nys-divider>
 <div>Sample content below</div>
 {% endset %}
-{% set previewInverted = true %}
+{% set inverted = true %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}

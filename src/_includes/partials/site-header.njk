@@ -3,30 +3,10 @@
     <li class="site-header__item{% if section == 'Getting Started' %} site-header__item--active{% endif %}"><a href="{{ '/get-started' | url }}" class="site-header__link" title="Get Started">Get Started</a></li>
     <li class="site-header__item{% if section == 'Foundations' %} site-header__item--active{% endif %}"><a href="{{ '/foundations' | url }}" class="site-header__link" title="Foundations">Foundations</a></li>
     <li class="site-header__item{% if section == 'Components' %} site-header__item--active{% endif %}"><a href="{{ '/components' | url }}" class="site-header__link" title="Components">Components</a></li>
-    <li class="site-header__item{% if section == 'Learn' %} site-header__item--active{% endif %}"><a href="{{ '/learn' | url }}" class="site-header__link" title="NYSDS Video Series">Learn</a></li>
+    <li class="site-header__item{% if section == 'Learn' %} site-header__item--active{% endif %}"><a href="{{ '/learn' | url }}" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
     <li class="site-header__item{% if section == 'Updates' %} site-header__item--active{% endif %}"><a href="{{ '/updates' | url }}" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
-    {# <li class="site-header__item{% if section == 'About' %} site-header__item--active{% endif %}"><a href="{{ '/about' | url }}" class="site-header__link" title="About">About</a></li> #}
   </ul>
 </nys-globalheader>
-
-{# {% if site_nav != false %} #}
-{# <div class="site-header">
-    <div class="site-header__inner nys-grid-container">
-        <div class="site-header__logo">
-            <a href="{{site.url}}" title="Home"><img src="{{ '/assets/img/logo-nysds.svg' | url }}" title="NYSDS Logo"></a>
-        </div>
-        <nav class="site-header__nav">
-            <ul class="site-header__list">
-                <li class="site-header__item{% if section == 'Getting Started' %} site-header__item--active{% endif %}"><a href="{{ '/get-started' | url }}" class="site-header__link" title="Get Started">Get Started</a></li>
-                <li class="site-header__item{% if section == 'Foundations' %} site-header__item--active{% endif %}"><a href="{{ '/foundations' | url }}" class="site-header__link" title="Foundations">Foundations</a></li>
-                <li class="site-header__item{% if section == 'Components' %} site-header__item--active{% endif %}"><a href="{{ '/components' | url }}" class="site-header__link" title="Components">Components</a></li>
-                <li class="site-header__item{% if section == 'About' %} site-header__item--active{% endif %}"><a href="{{ '/about' | url }}" class="site-header__link" title="About">About</a></li>
-            </ul>
-        </nav>
-
-    </div>
-</div> #}
-{# {% endif %} #}
 
 {% if section %}
 <div class="section-header">
@@ -44,7 +24,3 @@
     </div>
 </div>
 {% endif %}
-
-{# <div id="search" class="search"></div>
-
-<script src="{{ site.url }}/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: true });"></script> #}

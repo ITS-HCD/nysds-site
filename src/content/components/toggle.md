@@ -7,14 +7,14 @@ image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
-navOrder: 19
+navOrder: 21
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-  The `<nys-toggle>` component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+  The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 
 {% endblock %}
 
@@ -26,6 +26,7 @@ navOrder: 19
   value="access">
 </nys-toggle>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -75,6 +76,7 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
   {% set code %}
   <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+{% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Slotted Description
@@ -86,16 +88,19 @@ Descriptions can be provided either through the `description` prop or via the `s
   <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
 </nys-toggle>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Disabled Toggle
   {% set preview %}<nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled></nys-toggle>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Disable Icon
   {% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
@@ -113,7 +118,7 @@ Descriptions can be provided either through the `description` prop or via the `s
 | `noIcon`      | boolean          |
 | `size`        | `"sm"` \| `"md"` |
 | `value`       | String           |
-| `form`        | String           |
+| `form`        | String \| `null` |
 
 
 {% endblock %}

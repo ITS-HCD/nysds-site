@@ -13,6 +13,6 @@ The NYS Design System bakes accessibility into every component so teams can crea
 In this video:
 - Accessibility is a foundation, not an afterthought
 - Upcoming federal and state accessibility deadlines
-- How NYSDS components meet accessibility standards
+- How NYS Design System components meet accessibility standards
 
 [Explore the code](https://github.com/its-hcd/nysds)

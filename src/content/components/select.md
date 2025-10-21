@@ -7,7 +7,7 @@ image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
-navOrder: 14
+navOrder: 16
 ---
 
 {% extends "layouts/component.njk" %}
@@ -26,6 +26,7 @@ The `<nys-select>` is a reusable web component for use in New York State digital
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>      
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
@@ -63,6 +64,19 @@ The `<nys-select>` component includes the following accessibility-focused featur
 
 {% block options %}
 
+### Default Value
+You can set a default value by adding the `selected` attribute to the desired `<nys-option>`.
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough">
+  <nys-option value="bronx" label="The Bronx"></nys-option>
+  <nys-option value="brooklyn" label="Brooklyn" selected></nys-option>
+  <nys-option value="manhattan" label="Manhattan"></nys-option>
+  <nys-option value="staten_island" label="Staten Island"></nys-option>
+  <nys-option value="queens" label="Queens"></nys-option>      
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Disabled
   {% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
   <nys-option value="bronx" label="The Bronx"></nys-option>
@@ -71,6 +85,7 @@ The `<nys-select>` component includes the following accessibility-focused featur
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>      
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -85,6 +100,7 @@ Set `required` to `<nys-select>` to make selecting an option mandatory.
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>  
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -99,6 +115,7 @@ Adding the `optional` prop will add an optional flag to the input.
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>  
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -117,6 +134,7 @@ The following `width` options are available:
   <nys-option value="lg" label="lg"></nys-option>
   <nys-option value="full" label="full"></nys-option>
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -132,6 +150,7 @@ Add a description using the `description` prop for plain text, or use the descri
   <nys-option value="staten_island">Staten Island</nys-option>
   <nys-option value="queens">Queens</nys-option>        
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -149,6 +168,7 @@ Setting `errorMessage` does not display the message without `showError` set to t
   <nys-option value="staten_island" label="Staten Island"></nys-option>
   <nys-option value="queens" label="Queens"></nys-option>
 </nys-select>{% endset %}
+{% set backgroundSolid = true %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -171,7 +191,7 @@ Setting `errorMessage` does not display the message without `showError` set to t
 | `showError`    | boolean                                | only `<nys-select>` |
 | `value`        | String                                 | both                |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
-| `form`         | String                                 | only `<nys-select>` |
+| `form`         | String \| `null`                       | only `<nys-select>` |
 
 
 {% endblock %}

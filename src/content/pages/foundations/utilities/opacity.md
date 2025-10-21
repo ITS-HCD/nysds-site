@@ -1,10 +1,10 @@
 ---
-permalink: /foundations/utilities/utilities/
-title: General Utilities
+permalink: /foundations/utilities/opacity/
+title: Opacity
 description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+section: Foundations
 parent: Utilities
 layout: layouts/3-col.njk
-navOrder: 1
 ---
 
 {% block styles %}
@@ -14,111 +14,7 @@ navOrder: 1
 {% block scripts %}
 {% endblock %}
 
-
-# Utilities
-
-## Display
-<section class="utility-examples" id="display">
-
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-block</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">block</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-block"> </div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-flex</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">flex</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-flex"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-inline</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">inline</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-inline"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-inline-block</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">inline-block</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-inline-block"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-inline-flex</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">inline-flex</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-inline-flex"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-none</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">none</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-none"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-table-cell</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">table-cell</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-table">
-          <div class="nys-display-table-row">
-            <div class="nys-display-table-cell border-1px border-white bg-secondary-light padding-x-5 padding-y-3"></div>
-            <div class="nys-display-table-cell border-1px border-white bg-secondary-light padding-x-5 padding-y-3"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-## Opacity
+# Opacity
 
 <section class="utility" id="opacity">
     <section class="utility-examples">
@@ -343,56 +239,4 @@ navOrder: 1
       </div>
   </div>
 </div>
-</section>
-
-</section>
-
-## Z-index
-
-<section class="utility nys-z-0 position-relative" id="z-index">
-  <section class="utility-examples position-relative padding-bottom-1">
-    <div class="bg-white border-ink radius-lg width-card-lg padding-2  minh-10 margin-left-0 nys-display-flex nys-flex-justify nys-flex-align-start nys-z-auto">
-      <span class="utility-class">.nys-z-auto</span>
-      <span class="utility-value">auto</span>
-    </div>
-    <div class="bg-white border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-top position-relative shadow-3">
-      <span class="utility-class">.nys-z-top</span>
-      <span class="utility-value">99999</span>
-    </div>
-    <div class="bg-gray-1 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-500 position-relative shadow-3">
-      <span class="utility-class">.nys-z-500</span>
-      <span class="utility-value">500</span>
-    </div>
-    <div class="bg-gray-10 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-400 position-relative shadow-3">
-      <span class="utility-class">.nys-z-400</span>
-      <span class="utility-value">400</span>
-    </div>
-    <div class="bg-gray-30 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-300 position-relative shadow-3">
-      <span class="utility-class">.nys-z-300</span>
-      <span class="utility-value">300</span>
-    </div>
-    <div class="bg-gray-50 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-200 position-relative shadow-3">
-      <span class="utility-class">.nys-z-200</span>
-      <span class="utility-value">200</span>
-    </div>
-    <div class="bg-gray-70 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-100 position-relative shadow-3">
-      <span class="utility-class">.nys-z-100</span>
-      <span class="utility-value">100</span>
-    </div>
-    <div class="bg-gray-90 border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-0 position-relative shadow-3">
-      <span class="utility-class">.nys-z-0</span>
-      <span class="utility-value">0</span>
-    </div>
-    <div class="bg-black border-ink radius-lg nys-display-flex nys-flex-justify nys-flex-align-start margin-top-neg-3 nys-z-bottom position-relative shadow-3">
-      <span class="utility-class">.nys-z-bottom</span>
-      <span class="utility-value">-100</span>
-    </div>
-  </section>
-</section>
-
-## Float
-<section class="utility-examples" id="float">
-  <p class="nys-float-none bg-base-lighter padding-2"><span class="utility-class">.nys-float-none</span></p>
-  <p class="nys-float-left bg-base-lighter padding-2"><span class="utility-class">.nys-float-left</span></p>
-  <p class="nys-float-right bg-base-lighter padding-2"><span class="utility-class">.nys-float-right</span></p>
 </section>

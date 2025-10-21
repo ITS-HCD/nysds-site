@@ -7,7 +7,7 @@ image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587
-navOrder: 18
+navOrder: 20
 ---
 
 {% extends "layouts/component.njk" %}
@@ -22,6 +22,7 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 {% block example %}
   {% set preview %}<nys-textinput label="This is a text input"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -72,6 +73,7 @@ If an invalid option is assigned to `width`, it will be ignored and default to `
 
   {% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Type
@@ -82,22 +84,26 @@ Any other input defaults to `type="text"`
   {% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
 {% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Placeholder
   {% set preview %}<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Disabled
   {% set preview %}<nys-textinput label="Disabled" disabled></nys-textinput>
 {% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Readonly
   {% set preview %}<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Min Max and step
@@ -106,29 +112,34 @@ Any other input defaults to `type="text"`
 
   {% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Maxlength
   {% set preview %}<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Pattern
 Takes any valid regex value.
   {% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Required
 Set `required` to `<nys-textinput>` to make it mandatory.
   {% set preview %}<nys-textinput name="myTextInput7" required label="label"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Optional
 Adding the `optional` prop will add an optional flag to the input.
   {% set preview %}<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Slotted Description
@@ -138,6 +149,7 @@ Takes any valid regex value.
   <label slot="description">Slot: description</label>
 </nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Slotted Button
@@ -164,6 +176,7 @@ Takes any valid regex value.
   ></nys-button>
 </nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Error Message
@@ -171,6 +184,7 @@ Takes any valid regex value.
 
   {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
@@ -198,7 +212,7 @@ Takes any valid regex value.
 | `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
 | `value`        | String                                                                                  |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
-| `form`         | String                                                                                  |
+| `form`         | String \| `null`                                                                        |
 
 
 {% endblock %}

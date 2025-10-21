@@ -1,5 +1,5 @@
 ---
-permalink: /components/global-footer/
+permalink: /components/globalfooter/
 title: Global Footer
 description: Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
 image: /assets/img/components/global-footer.svg
@@ -14,7 +14,7 @@ navOrder: 10
 
 {% block longdescription %}
 
-The `<nys-globalfooter>` component is a reusable web component for use in New York State digital products. It helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+The `<nys-globalfooter>` helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
 
 {% endblock %}
 
@@ -59,7 +59,7 @@ The `<nys-globalfooter>` component includes the following accessibility-focused 
 {% block options %}
 
 ### With Links
-For public-facing sites, the Global Footer can include navigation links. To add links, follow this format:
+For simpler footers or public-facing sites, the Global Footer can include a single list of navigation links. To add links, follow this format:
 
 1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
 
@@ -71,6 +71,42 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
   <ul>
     <li><a href="https://its.ny.gov">ITS Home</a></li>
     <li><a href="https://its.ny.gov/about">About ITS</a></li>
+  </ul>
+</nys-globalfooter>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### With Column Links
+For sites that need to organize multiple navigation sections, the Global Footer supports column-based links. To add column links, follow this format:
+
+1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
+
+2. Group related links into columns by giving each column a parent list item (`<li>`) with a heading (`<span>`).
+
+3. Nest another unordered list (`<ul>`) inside each column to hold individual link items.
+
+4. Inside that nested `<ul>`, add `<li>` items, each containing an anchor tag (`<a href="">`) that points to the desired URL.
+
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
+
+  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+  <ul>
+    <li>
+      <span>About</span>
+      <ul>
+        <li><a href="https://its.ny.gov/about-us">About ITS</a></li>
+        <li><a href="https://its.ny.gov/contact-us">Contact</a></li>
+        <li><a href="https://its.ny.gov/policies">Policies</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Resources</span>
+      <ul>
+        <li><a href="https://its.ny.gov/resources">Developer Tools</a></li>
+        <li><a href="https://its.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="https://its.ny.gov/its-tech-podcast">Tech Podcast</a></li>
+      </ul>
+    </li>
   </ul>
 </nys-globalfooter>{% endset %}
   {% set code = preview %}

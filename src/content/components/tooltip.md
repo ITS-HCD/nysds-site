@@ -1,13 +1,13 @@
 ---
 permalink: /components/tooltip/
 title: Tooltip
-description: A tooltip component that displays a brief message when hover/focus, offering additional information or context.
+description: Displays a brief message when hover/focus, offering additional information or context.
 image: /assets/img/components/tooltip.svg
 image_alt: An illustration of a tooltip.
 image_header: /assets/img/components/tooltip-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4298-1477
-navOrder: 20
+navOrder: 22
 ---
 
 {% extends "layouts/component.njk" %}
@@ -129,7 +129,7 @@ Set the `inverted` when the tooltip is on a dark background.
   <nys-icon name="info" size="3xl"></nys-icon>
 </nys-tooltip>
 {% endset %}
-{% set previewInverted = true %}
+{% set inverted = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}

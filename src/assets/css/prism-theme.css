@@ -1,5 +1,5 @@
 /**
- * prism.js NYSDS theme for JavaScript, CoffeeScript, CSS and HTML
+ * prism.js NYS Design System theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://www.npmjs.com/package/prismjs-coy-theme
  */
 
@@ -31,7 +31,7 @@ pre[class*="language-"],
 code[class*="language-"],
 code {
   color: var(--nys-color-ink);
-  font-size: var(--nys-font-size-body-sm);
+  /* font-size: var(--nys-font-size-body-sm); */
   text-shadow: none;
   font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
@@ -87,10 +87,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--nys-color-neutral-400);
+  color: var(--nys-color-neutral-600);
 }
 .token.punctuation {
-  color: var(--nys-color-neutral-400);
+  color: var(--nys-color-neutral-600);
 }
 .token.property,
 .token.tag,
@@ -99,7 +99,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: var(--nys-color-neutral-400);
+  color: var(--nys-color-neutral-600);
 }
 .token.selector,
 .token.attr-name,
@@ -113,7 +113,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--nys-color-neutral-500);
+  color: var(--nys-color-neutral-600);
   background: var(--nys-color-white);
 }
 .token.atrule,

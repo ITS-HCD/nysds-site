@@ -3,7 +3,7 @@ category: Design
 series_order: 7
 intro_series: true
 title: Using the Visual Component Library
-description: "Everything you need to know about NYSDS components in Figma, from basics like inserting into projects to advanced tips like building your own."
+description: "Everything you need to know about NYS Design System components in Figma, from basics like inserting into projects to advanced tips like building your own."
 duration: 25:06
 video_url: Wh-6HINkJvE
 tags: components, variants, properties, slots, theming, auto layout

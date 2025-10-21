@@ -30,6 +30,7 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
       <nys-checkbox name="landmarks" value="statue-liberty" label="Statue of Liberty (Last Year's Winner)" description="Disabled as it was the winner of the previous year." disabled></nys-checkbox>
     </nys-checkboxgroup>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -54,7 +55,7 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 
 {% block usagedont %}
 
- - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon in NYSDS, contact Design System team for guidance).
+ - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon).
  - Don’t change the state of one checkbox based on another being clicked.
 {% endblock %}
 
@@ -78,12 +79,14 @@ The `<nys-checkboxgroup>` component can be used to group multiple checkboxes, al
   <nys-checkbox name="legal" label="I have read the terms and conditions." id="terms-conditions" value="terms-conditions"></nys-checkbox>
   <nys-checkbox name="legal" label="I agree to the NDA" id="legal" value="legal"></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
 {% set preview %}<nys-checkbox disabled checked label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -102,6 +105,7 @@ Set the size property of the `<nys-checkboxgroup>` to have all `<nys-checkbox>` 
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
   <nys-checkbox name="landmarks" label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -120,6 +124,7 @@ The `tile` prop will change the styling of the checkbox to a tile. This is usefu
   <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
   <nys-checkbox name="landmarks" label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -136,6 +141,7 @@ Set `required` to make a checkbox or group of checkboxes mandatory. It can be ap
   value="email-updates"
   required
 ></nys-checkbox>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -149,6 +155,7 @@ Adding the `optional` prop will add an optional flag to the input.
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes"></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -164,6 +171,7 @@ Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkb
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" ></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills" ></nys-checkbox>
 </nys-checkboxgroup>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -175,6 +183,7 @@ When the description requires more complexity than a simple string, use the desc
 <nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
   <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
 </nys-checkbox>{% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -197,7 +206,7 @@ When the description requires more complexity than a simple string, use the desc
 | `showError`    | boolean          | both                       |
 | `size`         | `"sm"` \| `"md"` | both                       |
 | `tile`         | boolean          | both                       |
-| `form`         | String           | both                       |
+| `form`         | String \| `null` | both                       |
 
 
 {% endblock %}

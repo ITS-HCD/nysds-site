@@ -277,7 +277,7 @@
 .utility-value p,
 .utility-value-color {
     display: inline-block;
-    font-size: var(--nys-font-size-ui-xs) !important;
+    font-size: var(--nys-font-size-ui-md) !important;
     padding-bottom: 2px;
     padding-top: 2px;
     padding-left: .25rem;
