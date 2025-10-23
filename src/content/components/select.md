@@ -205,7 +205,7 @@ The `<nys-select>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the select gains focus.
 3.  **`nys-blur`** – Fired when the select loses focus.
 
-#### Event details
+### Event details
 The `nys-change` event includes a detail object with the following properties:
 
   - id (string): The id of the select.

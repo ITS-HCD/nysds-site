@@ -9,7 +9,7 @@
     <!-- Latest Build: {{ site.buildDate | dateISO }} -->
   </head>
   {% set currentPageUrl = page.url %}
-  <body class="{% if section  %}single-page page-{{ page.fileSlug }} section-{{section | slug}}{% else %}home{% endif %}">
+  <body class="{% if section  %}single-page page-{{ page.fileSlug }} section-{{section | slug}}{% else %}home{% endif %}{% if heading_links == false %} no-heading-links{% endif %}">
   <nys-skipnav></nys-skipnav>
   {% include "partials/unav-header.njk" %}
   {% include "partials/site-header.njk" %}

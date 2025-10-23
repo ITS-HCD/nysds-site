@@ -259,7 +259,7 @@ The `<nys-modal>` component emits **two** custom Javascript events:
 1.  **`nys-open`** – Fired when the modal is opened.
 2.  **`nys-close`** – Fired when the modal is closed.
 
-#### Event details
+### Event details
 The `nys-open` and `nys-close` events include a detail object with the following properties:
 
 - id (string): The id of the file input.

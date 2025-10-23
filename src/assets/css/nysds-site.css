@@ -1416,3 +1416,42 @@ tr:nth-child(even) {
 .css-var-table__tip {
     text-align: center;
 }
+
+/* PageFind Customizations */
+
+.pagefind-ui__result-thumb { display: none; }
+
+.pagefind-ui__result-link {
+    font-size: var(--nys-font-size-2xl);
+    font-weight: var(--nys-font-weight-semibold);
+    font-family: var(--nys-font-family-heading) !important;
+}
+
+.pagefind-ui {
+    font-family: var(--nys-font-family-heading) !important;
+    font-size: var(--nys-font-size-lg) !important;
+    margin: var(--nys-space-400) 0;
+}
+.pagefind-ui__result {
+    border-top: none !important;
+        padding: var(--nys-space-200) 0 !important;
+}
+
+.pagefind-ui__result-excerpt {
+    line-height: 1.5;
+}
+.pagefind-ui--reset mark {
+    background-color: transparent;
+    font-weight: var(--nys-font-weight-semibold);
+    padding: var(--nys-space-50);
+}
+
+.pagefind-ui__message {
+    font-weight: var(--nys-font-weight-regular) !important;
+}
+
+
+:root {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-text: var(--nys-color-ink);
+}

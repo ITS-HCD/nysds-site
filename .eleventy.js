@@ -32,7 +32,30 @@ const sections = require("./src/_11ty/collections/sections");
 const tokens = require("./src/_11ty/collections/tokens");
 const videos = require("./src/_11ty/collections/videos");
 
-module.exports = (eleventyConfig) => {
+module.exports = async function (eleventyConfig) {
+    // This script adds ids to all headings in the DOM
+	const { IdAttributePlugin } = await import("@11ty/eleventy");
+
+    eleventyConfig.addPlugin(IdAttributePlugin, {
+		selector: "h1,h2,h3,h4,h5,h6", // default
+
+		// swaps html entities (like &amp;) to their counterparts before slugify-ing
+		decodeEntities: true,
+
+		// check for duplicate `id` attributes in application code?
+		checkDuplicates: "error", // `false` to disable
+
+		// by default we use Eleventy’s built-in `slugify` filter:
+		slugify: eleventyConfig.getFilter("slugify"),
+
+		filter: function({ page }) {
+			if(page.inputPath.endsWith("test-skipped.html")) {
+				return false; // skip
+			}
+
+			return true;
+		}
+	});
 
     // filters
     eleventyConfig.addFilter("dateISO", dateISO);

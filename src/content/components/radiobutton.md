@@ -197,7 +197,7 @@ The `<nys-radiogroup>` component emits <strong>three</strong> custom Javascript 
 2.  **`nys-focus`** – Fired when the radiobutton gains focus.
 3.  **`nys-blur`** – Fired when the radiobutton loses focus.
 
-#### Event details
+### Event details
 The `nys-change` event includes a detail object with the following properties:
 
   - id (string): The id of the radiobutton.

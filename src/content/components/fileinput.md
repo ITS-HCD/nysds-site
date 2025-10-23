@@ -187,7 +187,7 @@ The `<nys-fileinput>` component emits **one** custom Javascript events:
 
 1.  **`nys-change`** – Fired when the file list is updated, either by selecting new files or removing existing ones.
 
-#### Event details
+### Event details
 The `nys-change` event includes a detail object with the following properties:
 
 - id (string): The id of the file input.
