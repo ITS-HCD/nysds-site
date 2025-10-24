@@ -2,22 +2,65 @@
 permalink: 404.html
 title: "Page Not Found"
 description: "Sorry, we couldn't find the page you were looking for."
-crawl: "false"
+heading_links: false
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
-<section>
+<section style="text-align: center; background-color: var(--nys-color-theme-weaker); border-radius:var(--nys-radius-lg)" class="nys-padding-600 nys-margin-t-400">
 <h1>Page not found</h1>
-<p>Sorry, we couldn't find the page you were looking for. If you clicked a link, the page may have been removed or changed location.</p>
-<p>Visit our homepage or contact us, and we'll help any way we can.</p>
-<p>
-  <nys-button label="Homepage" href="{{ site.url | url}}/"></nys-button>
+<img src="{{ '/assets/img/whale.svg' | url }}" alt="The Honored Sir Hudson McWhaleFace, first of his name">
+<p class="nys-font-h4">Uh oh... you may be lost at sea, but we can get you back to dry land.</p>
+<div style="margin: 0 auto; display: inline-block;">
+      <nys-textinput 
+        name="q"
+        type="search" 
+        placeholder="Search"
+        id="q"
+        label="Search the NYS Design System"
+        width="lg"
+      >
+        <nys-button
+        slot="endButton"
+        type="submit"
+        label=""
+        prefixIcon="search"
+        id="searchButton"
+        ></nys-button>
+      </nys-textinput>
+      <br>
+      <p><a href="mailto:designsystem@its.ny.gov">designsystem@its.ny.gov</a></p>
+      <script>
+        {# search the site when you press enter key in the search field #}
+        document.getElementById("q").addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            search();
+          }
+        });
+
+        {# Submit the form when you keypress or click the submit button #}
+        document.getElementById("searchButton").addEventListener("nys-click", () => { 
+          search();
+        });
+
+        {# grab the value of the "q" search text field and send the query to the search page #}
+        function search() {
+          var searchInput = document.getElementById('q');
+          var url = "/search/?q=" + searchInput.value;
+          window.open(url, "_self");
+        }
+      </script>
+
+
+  </div>
+
   <br>
-  <nys-button variant="outline" label="Contact us" href="mailto:designsystem@its.ny.gov"></nys-button>
-</p>
+  <br>
+  <br>
+
 </section>
 </div>
 {% endblock %}
