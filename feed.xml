@@ -2304,5 +2304,68 @@ All form field components have been updated with a new property which will inver
       <dc:creator>NYS ITS Design System Team</dc:creator>
       <guid>https://designsystem.ny.gov/updates/1.10.1-release/</guid>
     </item>
+    <item>
+      <title>October Website Improvements</title>
+      <link>https://designsystem.ny.gov/updates/october-website-improvements/</link>
+      <description><![CDATA[<h2>Site Search Now Available</h2>
+<p>We added a search feature to the site. You can click the <a href="https://designsystem.ny.gov/search">Search</a> link in the site navigation to search the whole site.</p>
+<nys-textinput name="q" type="search" placeholder="Search" id="q" label="Search the NYS Design System" width="lg">
+  <nys-button slot="endButton" type="button" label="" prefixIcon="search" id="searchButton"></nys-button>
+</nys-textinput>
+<script>
+  document.getElementById("q").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      search();
+    }
+  });
+
+  document.getElementById("searchButton").addEventListener("nys-click", () => { 
+    search();
+  });
+
+  function search() {
+    var searchInput = document.getElementById('q');
+    var url = "/search/?q=" + searchInput.value;
+    window.open(url, "_self");
+  }
+</script>
+<h2>New 404 page</h2>
+<p>We've updated our 404 (file not found) error page to include a mascot and a search box. <a href="https://designsystem.ny.gov/foo">See the 404 page in action</a>.</p>
+<h2>Direct Links to Headings</h2>
+<p>When you are on a page, you'll notice a button with a link icon next to headings. Click that button to copy the URL direct to that page and heading. Check out the headings on this page for an example of how it works.</p>
+]]></description>
+      <content><![CDATA[<h2>Site Search Now Available</h2>
+<p>We added a search feature to the site. You can click the <a href="https://designsystem.ny.gov/search">Search</a> link in the site navigation to search the whole site.</p>
+<nys-textinput name="q" type="search" placeholder="Search" id="q" label="Search the NYS Design System" width="lg">
+  <nys-button slot="endButton" type="button" label="" prefixIcon="search" id="searchButton"></nys-button>
+</nys-textinput>
+<script>
+  document.getElementById("q").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      search();
+    }
+  });
+
+  document.getElementById("searchButton").addEventListener("nys-click", () => { 
+    search();
+  });
+
+  function search() {
+    var searchInput = document.getElementById('q');
+    var url = "/search/?q=" + searchInput.value;
+    window.open(url, "_self");
+  }
+</script>
+<h2>New 404 page</h2>
+<p>We've updated our 404 (file not found) error page to include a mascot and a search box. <a href="https://designsystem.ny.gov/foo">See the 404 page in action</a>.</p>
+<h2>Direct Links to Headings</h2>
+<p>When you are on a page, you'll notice a button with a link icon next to headings. Click that button to copy the URL direct to that page and heading. Check out the headings on this page for an example of how it works.</p>
+]]></content>
+      <pubDate>Fri, 24 Oct 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/october-website-improvements/</guid>
+    </item>
   </channel>
 </rss>
