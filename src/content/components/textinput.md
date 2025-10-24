@@ -226,7 +226,7 @@ The `<nys-textinput>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the textinput gains focus.
 3.  **`nys-blur`** – Fired when the textinput loses focus.
 
-#### Event details
+### Event details
 The `nys-input` event includes a detail object with the following properties:
   - id (string): The id of the textarea.
   - value (string): The currently selected text.

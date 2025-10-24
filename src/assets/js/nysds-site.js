@@ -210,3 +210,57 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.setAttribute("aria-expanded", String(next));
   });
 })();
+
+// Add anchor links to all headings (h1..h6)
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.body.classList.contains('no-heading-links')) {
+    return;
+  } else {
+  
+  const headings = Array.from(document.querySelectorAll('h2,h3,h4,h5,h6'));
+  if (!headings.length) return;
+
+  headings.forEach((h) => {
+    // If there's already an explicit anchor link to this heading id, skip
+    const existingId = h.id;
+    if (existingId && h.querySelector(`a[href="#${existingId}"]`)) return;
+
+    // Determine or generate an id
+    let id = existingId;
+
+    // If heading already contains an anchor that links to this id, skip
+    if (h.querySelector(`a[href="#${id}"]`)) return;
+
+    // Move heading's children into the anchor so markup is preserved
+    const anchor = document.createElement('nys-button');
+    //anchor.className = 'heading-link';
+    anchor.setAttribute('label', 'Link to heading');
+    anchor.setAttribute('aria-label', `Link to ${h.textContent.trim()}`);
+    anchor.style.color = 'inherit';
+    anchor.style.textDecoration = 'none';
+    anchor.style.display = 'inline-block';
+    anchor.style.padding = '0 0 0 var(--nys-space-50)';
+    anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
+    anchor.setAttribute('href', `#${id}`);
+    anchor.setAttribute('circle', 'true');
+    anchor.setAttribute('icon', 'link');
+    anchor.setAttribute('size', 'sm');
+    anchor.setAttribute('variant', 'ghost');
+
+    h.insertAdjacentElement('beforeend', anchor);
+  });
+}
+});
+
+// Trigger copy URL to clipboard
+const copyHeadingUrl = async (clickedHeadingLink) => {
+  console.log(clickedHeadingLink);
+  const headingUrl = clickedHeadingLink.getAttribute("href");
+  const fullUrl = window.location.origin + window.location.pathname + headingUrl;
+
+  try {
+    await navigator.clipboard.writeText(fullUrl.trim());
+  } catch (err) {
+    console.error("Failed to copy:", err);
+  }
+};

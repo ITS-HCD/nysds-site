@@ -220,7 +220,7 @@ The `<nys-checkbox>` component emits **three** custom Javascript events:
 2.  **`nys-focus`** – Fired when the checkbox gains focus.
 3.  **`nys-blur`** – Fired when the checkbox loses focus.
 
-#### Event details
+### Event details
 The `nys-change` event includes a detail object with the following properties:
 
   - id (string): The id of the checkbox.

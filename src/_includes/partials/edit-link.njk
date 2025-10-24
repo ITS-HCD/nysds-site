@@ -1,5 +1,5 @@
 {% if page.inputPath and (show_edit_link != false) %}
-  <div class="edit-page-link">
+  <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="{{ page | editOnGitHubUrl }}">Edit this page on GitHub</a> (Permissions required)</p>
     <p>Last updated: {{ page.date | dateFull }}</p>
   </div>

@@ -1,18 +1,31 @@
 ---
 permalink: /search/
-title: "The New York State Design System"
-description: "The NYS Design System makes it easier to build accessible, mobile-friendly applications and websites for New York State."
-crawl: false
-site_nav: false
+title: "Search The New York State Design System"
+description: "Search the NYS Design System documentation."
+section: Search
 ---
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
-<h1>Search</h1>
-    <div id="search" class="search"></div>
-
-    <script src="{{ site.url }}/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: true });"></script>
-
+    <div class="nys-grid-row">
+        <div class="nys-desktop:nys-grid-col-8">
+            <h1>Search</h1>
+            <br>
+           <div id="search" class="search"></div>
+         
+        </div>
+    </div>
 </div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ site.url }}/pagefind/pagefind-ui.js"></script>
+<script>
+let search = new PagefindUI({ element: "#search"});
+
+search.triggerSearch(new URLSearchParams(window.location.search).get("q") || "");
+</script>
+
 {% endblock %}

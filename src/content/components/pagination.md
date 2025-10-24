@@ -99,7 +99,7 @@ The `<nys-pagination>` component emits <strong>one</strong> custom Javascript ev
 
 1.  **`nys-change`** – Fired when the `currentPage` value is changed.
 
-#### Event details
+### Event details
 The `nys-change` event includes a detail object with the following properties:
 
   - id (string): The id of the pagination component.

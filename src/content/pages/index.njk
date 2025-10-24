@@ -4,6 +4,7 @@ title: "The New York State Design System"
 description: "The NYS Design System makes it easier to build accessible, mobile-friendly applications and websites for New York State."
 crawl: false
 site_nav: false
+heading_links: false
 ---
 
 {% extends "layouts/base.njk" %}
@@ -23,7 +24,41 @@ site_nav: false
   </div>
 </div>
 
-<!-- Get Started Section -->
+{# Search section for homepage #}
+{# <div class="nys-grid-container-widescreen nys-top-600">
+  <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
+    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-12">
+      <h2>Search the NYS Design System</h2>
+      <form action="/search" method="get">
+      <nys-textinput 
+  name="q"
+  type="search" 
+  placeholder="Search"
+  id="q"
+>
+  <nys-button
+  slot="endButton"
+  type="button"
+  label="Search"
+  prefixIcon="search"
+  id="searchButton"
+  onclick="search();"
+  ></nys-button>
+</nys-textinput>
+</form>
+      <script>
+        function search() {
+        
+          var searchInput = document.getElementById('q');
+          var url = "/search/?q=" + searchInput.value;
+          window.open(url, "_self");
+        }
+      </script>
+    </div>
+  </div>
+</div> #}
+
+{# Get Started Section #}
 <div class="nys-grid-container-widescreen nys-top-600">
   <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -39,7 +74,7 @@ site_nav: false
   </div>
 </div>
 
-<!-- About the NYS Design System Section -->
+{# <!-- About the NYS Design System Section --> #}
 <div class="color-theme--weaker nys-top-800">
   <div class="nys-grid-container-widescreen">
     <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
@@ -100,7 +135,8 @@ site_nav: false
       </div>
     </div>
   </div>
-</div> {# End color-theme--weaker full bleed #}
+</div>
+{# End color-theme--weaker full bleed #}
 
 <div class="nys-grid-container-widescreen nys-top-800">
   <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
