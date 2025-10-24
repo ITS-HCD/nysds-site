@@ -10,34 +10,34 @@
       <title>Release 0.0.1-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.1-alpha-release/</link>
       <description><![CDATA[<h2>Ever Upward!</h2>
-<p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the Excelsior Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
-<p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring Excelsior to life. This is just the beginning.</p>
+<p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the NYS Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
+<p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring the NYS Design System to life. This is just the beginning.</p>
 <h2>Project Foundations</h2>
 <ul>
-<li>Added a <strong>pull request template</strong> to keep our contributions clear and consistent (<a href="https://github.com/ITS-HCD/excelsior/pull/25">#25</a>)</li>
-<li>Configured <strong>TypeScript (tsconfig)</strong> to standardize our dev environment (<a href="https://github.com/ITS-HCD/excelsior/pull/26">#26</a>)</li>
-<li>Introduced <strong>Rollup bundling</strong> with plugins to streamline packaging (<a href="https://github.com/ITS-HCD/excelsior/pull/28">#28</a>)</li>
-<li>Set up <strong>ESLint + linting tasks</strong> to keep our codebase clean and maintainable (<a href="https://github.com/ITS-HCD/excelsior/pull/30">#30</a>)</li>
-<li>Integrated <strong>Vite and Storybook</strong> for lightning-fast development and interactive component previews (<a href="https://github.com/ITS-HCD/excelsior/pull/45">#45</a>)</li>
+<li>Added a <strong>pull request template</strong> to keep our contributions clear and consistent (<a href="https://github.com/ITS-HCD/nysds/pull/25">#25</a>)</li>
+<li>Configured <strong>TypeScript (tsconfig)</strong> to standardize our dev environment (<a href="https://github.com/ITS-HCD/nysds/pull/26">#26</a>)</li>
+<li>Introduced <strong>Rollup bundling</strong> with plugins to streamline packaging (<a href="https://github.com/ITS-HCD/nysds/pull/28">#28</a>)</li>
+<li>Set up <strong>ESLint + linting tasks</strong> to keep our codebase clean and maintainable (<a href="https://github.com/ITS-HCD/nysds/pull/30">#30</a>)</li>
+<li>Integrated <strong>Vite and Storybook</strong> for lightning-fast development and interactive component previews (<a href="https://github.com/ITS-HCD/nysds/pull/45">#45</a>)</li>
 </ul>
 <p>These building blocks are the core of our workflow—and they’ll help us ship stable, consistent, and accessible components going forward.</p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.1-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.1-alpha">See the full developer release notes for v0.0.1-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.1-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.1-alpha">See the full developer release notes for v0.0.1-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h2>Ever Upward!</h2>
-<p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the Excelsior Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
-<p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring Excelsior to life. This is just the beginning.</p>
+<p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the NYS Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
+<p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring the NYS Design System to life. This is just the beginning.</p>
 <h2>Project Foundations</h2>
 <ul>
-<li>Added a <strong>pull request template</strong> to keep our contributions clear and consistent (<a href="https://github.com/ITS-HCD/excelsior/pull/25">#25</a>)</li>
-<li>Configured <strong>TypeScript (tsconfig)</strong> to standardize our dev environment (<a href="https://github.com/ITS-HCD/excelsior/pull/26">#26</a>)</li>
-<li>Introduced <strong>Rollup bundling</strong> with plugins to streamline packaging (<a href="https://github.com/ITS-HCD/excelsior/pull/28">#28</a>)</li>
-<li>Set up <strong>ESLint + linting tasks</strong> to keep our codebase clean and maintainable (<a href="https://github.com/ITS-HCD/excelsior/pull/30">#30</a>)</li>
-<li>Integrated <strong>Vite and Storybook</strong> for lightning-fast development and interactive component previews (<a href="https://github.com/ITS-HCD/excelsior/pull/45">#45</a>)</li>
+<li>Added a <strong>pull request template</strong> to keep our contributions clear and consistent (<a href="https://github.com/ITS-HCD/nysds/pull/25">#25</a>)</li>
+<li>Configured <strong>TypeScript (tsconfig)</strong> to standardize our dev environment (<a href="https://github.com/ITS-HCD/nysds/pull/26">#26</a>)</li>
+<li>Introduced <strong>Rollup bundling</strong> with plugins to streamline packaging (<a href="https://github.com/ITS-HCD/nysds/pull/28">#28</a>)</li>
+<li>Set up <strong>ESLint + linting tasks</strong> to keep our codebase clean and maintainable (<a href="https://github.com/ITS-HCD/nysds/pull/30">#30</a>)</li>
+<li>Integrated <strong>Vite and Storybook</strong> for lightning-fast development and interactive component previews (<a href="https://github.com/ITS-HCD/nysds/pull/45">#45</a>)</li>
 </ul>
 <p>These building blocks are the core of our workflow—and they’ll help us ship stable, consistent, and accessible components going forward.</p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.1-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.1-alpha">See the full developer release notes for v0.0.1-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.1-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.1-alpha">See the full developer release notes for v0.0.1-alpha →</a></p>
 ]]></content>
       <pubDate>Wed, 06 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -51,14 +51,14 @@
 <li>Added two new components <code>nys-icon</code> and <code>nys-checkbox</code></li>
 </ul>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.2-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.2-alpha">See the full developer release notes for v0.0.2-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.2-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.2-alpha">See the full developer release notes for v0.0.2-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h2>What's Changed</h2>
 <ul>
 <li>Added two new components <code>nys-icon</code> and <code>nys-checkbox</code></li>
 </ul>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.2-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.2-alpha">See the full developer release notes for v0.0.2-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.2-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.2-alpha">See the full developer release notes for v0.0.2-alpha →</a></p>
 ]]></content>
       <pubDate>Thu, 21 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -71,79 +71,79 @@
 <ul>
 <li>New component: <code>&lt;nys-radiobutton&gt;</code> created by <a href="https://github.com/emilygorelik">@emilygorelik</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/52</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/52</li>
 </ul>
 </li>
 <li>New component: <code>&lt;nys-icon&gt;</code> created by <a href="https://github.com/NovaCat35">@NovaCat35</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/56</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/56</li>
 </ul>
 </li>
 <li>New component: <code>&lt;nys-textinput&gt;</code> by <a href="https://github.com/emilygorelik">@emilygorelik</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/83</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/83</li>
 </ul>
 </li>
 <li>New component: <code>&lt;nys-alert&gt;</code> by <a href="https://github.com/NovaCat35">@NovaCat35</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/84</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/84</li>
 </ul>
 </li>
 <li>Maintenance and fixes by <a href="https://github.com/esteinborn">@esteinborn</a>
 <ul>
-<li>Publish Storybook (for collaboration) in https://github.com/ITS-HCD/excelsior/pull/70</li>
-<li>Upgrade Storybook and NPM modules in https://github.com/ITS-HCD/excelsior/pull/75</li>
-<li>CI/CD build fixes in https://github.com/ITS-HCD/excelsior/pull/89</li>
+<li>Publish Storybook (for collaboration) in https://github.com/ITS-HCD/nysds/pull/70</li>
+<li>Upgrade Storybook and NPM modules in https://github.com/ITS-HCD/nysds/pull/75</li>
+<li>CI/CD build fixes in https://github.com/ITS-HCD/nysds/pull/89</li>
 </ul>
 </li>
 </ul>
 <h2>New Contributors</h2>
 <p>Welcome to our new design system engineers!</p>
 <ul>
-<li>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/47</li>
-<li>Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/56</li>
+<li>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) made their first contribution in https://github.com/ITS-HCD/nysds/pull/47</li>
+<li>Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) made their first contribution in https://github.com/ITS-HCD/nysds/pull/56</li>
 </ul>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h2>What's New</h2>
 <ul>
 <li>New component: <code>&lt;nys-radiobutton&gt;</code> created by <a href="https://github.com/emilygorelik">@emilygorelik</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/52</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/52</li>
 </ul>
 </li>
 <li>New component: <code>&lt;nys-icon&gt;</code> created by <a href="https://github.com/NovaCat35">@NovaCat35</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/56</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/56</li>
 </ul>
 </li>
 <li>New component: <code>&lt;nys-textinput&gt;</code> by <a href="https://github.com/emilygorelik">@emilygorelik</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/83</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/83</li>
 </ul>
 </li>
 <li>New component: <code>&lt;nys-alert&gt;</code> by <a href="https://github.com/NovaCat35">@NovaCat35</a>
 <ul>
-<li>Created in https://github.com/ITS-HCD/excelsior/pull/84</li>
+<li>Created in https://github.com/ITS-HCD/nysds/pull/84</li>
 </ul>
 </li>
 <li>Maintenance and fixes by <a href="https://github.com/esteinborn">@esteinborn</a>
 <ul>
-<li>Publish Storybook (for collaboration) in https://github.com/ITS-HCD/excelsior/pull/70</li>
-<li>Upgrade Storybook and NPM modules in https://github.com/ITS-HCD/excelsior/pull/75</li>
-<li>CI/CD build fixes in https://github.com/ITS-HCD/excelsior/pull/89</li>
+<li>Publish Storybook (for collaboration) in https://github.com/ITS-HCD/nysds/pull/70</li>
+<li>Upgrade Storybook and NPM modules in https://github.com/ITS-HCD/nysds/pull/75</li>
+<li>CI/CD build fixes in https://github.com/ITS-HCD/nysds/pull/89</li>
 </ul>
 </li>
 </ul>
 <h2>New Contributors</h2>
 <p>Welcome to our new design system engineers!</p>
 <ul>
-<li>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/47</li>
-<li>Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) made their first contribution in https://github.com/ITS-HCD/excelsior/pull/56</li>
+<li>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) made their first contribution in https://github.com/ITS-HCD/nysds/pull/47</li>
+<li>Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>) made their first contribution in https://github.com/ITS-HCD/nysds/pull/56</li>
 </ul>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
 ]]></content>
       <pubDate>Fri, 29 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -153,7 +153,7 @@
       <title>Release 0.0.4-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.4-alpha-release/</link>
       <description><![CDATA[<h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
+<p>We’re excited to announce that the New York State Design System is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
 <h2>What's New</h2>
 <h3>New Component: nys-textarea</h3>
 <p>Description: UI element for entering multiline text input.</p>
@@ -180,7 +180,7 @@
 <h3>Maintenance and Fixes</h3>
 <ul>
 <li>Test builds are now mandatory for PR merges into <code>main</code> - <a href="https://github.com/esteinborn">@esteinborn</a> <a href="https://github.com/its-hcd/nysds/issues/126">#126</a></li>
-<li>Optimized build processes, scoped all packages to <code>[@nys-excelsior](https://github.com/nys-excelsior)</code>, and created NPM publishing workflow - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/120">#120</a></li>
+<li>Optimized build processes, scoped all packages to <code>[@nysds](https://github.com/its-hcd/nysds)</code>, and created NPM publishing workflow - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/120">#120</a></li>
 <li>Simplified <code>package.json</code> configs and introduced a pre-built step for Storybook  - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/128">#128</a></li>
 </ul>
 <h2>Related issues</h2>
@@ -189,10 +189,10 @@
 <li><code>&lt;nys-textarea&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/83">#83</a> <a href="https://github.com/its-hcd/nysds/issues/98">#98</a> <a href="https://github.com/its-hcd/nysds/issues/100">#100</a></li>
 </ul>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.4-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.4-alpha">See the full developer release notes for v0.0.4-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.4-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.4-alpha">See the full developer release notes for v0.0.4-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h1>Release Notes</h1>
-<p>We’re excited to announce that Excelsior is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nys-excelsior">NYS Excelsior on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
+<p>We’re excited to announce that the New York State Design System is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
 <h2>What's New</h2>
 <h3>New Component: nys-textarea</h3>
 <p>Description: UI element for entering multiline text input.</p>
@@ -219,7 +219,7 @@
 <h3>Maintenance and Fixes</h3>
 <ul>
 <li>Test builds are now mandatory for PR merges into <code>main</code> - <a href="https://github.com/esteinborn">@esteinborn</a> <a href="https://github.com/its-hcd/nysds/issues/126">#126</a></li>
-<li>Optimized build processes, scoped all packages to <code>[@nys-excelsior](https://github.com/nys-excelsior)</code>, and created NPM publishing workflow - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/120">#120</a></li>
+<li>Optimized build processes, scoped all packages to <code>[@nysds](https://github.com/its-hcd/nysds)</code>, and created NPM publishing workflow - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/120">#120</a></li>
 <li>Simplified <code>package.json</code> configs and introduced a pre-built step for Storybook  - <a href="https://github.com/plasticmind">@plasticmind</a> <a href="https://github.com/its-hcd/nysds/issues/128">#128</a></li>
 </ul>
 <h2>Related issues</h2>
@@ -228,7 +228,7 @@
 <li><code>&lt;nys-textarea&gt;</code>-related issues: <a href="https://github.com/its-hcd/nysds/issues/83">#83</a> <a href="https://github.com/its-hcd/nysds/issues/98">#98</a> <a href="https://github.com/its-hcd/nysds/issues/100">#100</a></li>
 </ul>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.4-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.4-alpha">See the full developer release notes for v0.0.4-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.4-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.4-alpha">See the full developer release notes for v0.0.4-alpha →</a></p>
 ]]></content>
       <pubDate>Mon, 23 Dec 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -237,7 +237,7 @@
     <item>
       <title>Release 0.0.7-alpha</title>
       <link>https://designsystem.ny.gov/updates/0.0.7-alpha-release/</link>
-      <description><![CDATA[<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
+      <description><![CDATA[<p>We’re excited to announce that the New York State Design System is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
 <h2>What's New</h2>
 <h3>New Component: nys-avatar</h3>
 <p>This is a UI element for displaying a user icon or image.</p>
@@ -256,7 +256,7 @@
 <li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM This CSS framework will help us get consistent theming and styling across all New York State digital products.</li>
 </ul>
 <h2>Features</h2>
-<p><strong>Global Stylesheet:</strong> The excelsior.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
+<p><strong>Global Stylesheet:</strong> The nysds.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p><strong>Agency-Specific Themes:</strong> Additional theme stylesheets are published that provide agency-specific color tokens:</p>
 <ul>
@@ -271,9 +271,9 @@
 <p>To override the default theme:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Utility classes:</strong> Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
+<p><strong>Utility classes:</strong> The NYS Design System includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
 <p>To include the full utility classes, simply include the utility CSS file:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p><strong>Shadow DOM Integration:</strong> The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">:host</span> <span class="token punctuation">{</span>
   <span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">,</span> #0044cc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -284,9 +284,9 @@
 <p><strong>Theme Variables:</strong> Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.<br />
 ↳<em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
 ]]></description>
-      <content><![CDATA[<p>We’re excited to announce that Excelsior is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
+      <content><![CDATA[<p>We’re excited to announce that the New York State Design System is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
 <h2>What's New</h2>
 <h3>New Component: nys-avatar</h3>
 <p>This is a UI element for displaying a user icon or image.</p>
@@ -305,7 +305,7 @@
 <li>Integration support for the design system’s code components, which will reference these variables in their Shadow DOM This CSS framework will help us get consistent theming and styling across all New York State digital products.</li>
 </ul>
 <h2>Features</h2>
-<p><strong>Global Stylesheet:</strong> The excelsior.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
+<p><strong>Global Stylesheet:</strong> The nysds.min.css file includes foundational design tokens, like spacing, typography, and default theme colors. To use, reference this on pages where you'll be using the variables or the design system components:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p><strong>Agency-Specific Themes:</strong> Additional theme stylesheets are published that provide agency-specific color tokens:</p>
 <ul>
@@ -320,9 +320,9 @@
 <p>To override the default theme:</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-<p><strong>Utility classes:</strong> Excelsior includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
+<p><strong>Utility classes:</strong> The NYS Design System includes a set of utility classes for common styling needs, including grid layout, display styles, flexbox, floats, opacity, and z-index. These classes are designed to be used directly in your HTML to quickly apply common styles without writing custom CSS.</p>
 <p>To include the full utility classes, simply include the utility CSS file:</p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/excelsior-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[path-to-dir]/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p><strong>Shadow DOM Integration:</strong> The design system’s web components dynamically reference these tokens using CSS variables within their Shadow DOM. For example:</p>
 <pre class="language-css"><code class="language-css"><span class="token selector">:host</span> <span class="token punctuation">{</span>
   <span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">,</span> #0044cc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -333,7 +333,7 @@
 <p><strong>Theme Variables:</strong> Each theme includes a predefined set of CSS variables (e.g., --nys-color-theme-faint, --nys-color-theme-stronger) tailored to the agency-specific color palette. These variables are used by components and design elements in the library to give residents a cohesive and branded user experience. Including an agency-specific theme stylesheet will override the default colors, and change these color of the components and elements to reflect the theme for a given agency group. This makes it easy to adapt the design system to align with each agency's branding requirements.<br />
 ↳<em>Created by Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>) in #136</em></p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
 ]]></content>
       <pubDate>Wed, 15 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -356,7 +356,7 @@
 <p>The team gave component docs a full refresh. Clearer, easier, faster to navigate, so you can spend less time hunting and more time building.<br />
 ↳ Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<h2>Styles now have their own home</h2>
 <p>Big news: <a href="https://www.npmjs.com/package/@nysds/styles"><code>@nysds/styles</code></a> has officially joined the family. It brings:</p>
@@ -372,7 +372,7 @@
 <p>The team gave component docs a full refresh. Clearer, easier, faster to navigate, so you can spend less time hunting and more time building.<br />
 ↳ Updated by Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) and Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>)</p>
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
-<p><a href="https://github.com/ITS-HCD/excelsior/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/excelsior/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.8-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.8-alpha">See the full developer release notes for v0.0.8-alpha →</a></p>
 ]]></content>
       <pubDate>Wed, 22 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1629,7 +1629,7 @@ By starting in FigJam you force yourself not to think about component properties
       <description><![CDATA[<h2>Divide up your content</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <h4>Hello World</h4>
 <nys-divider></nys-divider>
@@ -1642,7 +1642,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -1679,7 +1679,7 @@ By starting in FigJam you force yourself not to think about component properties
       <content><![CDATA[<h2>Divide up your content</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <h4>Hello World</h4>
 <nys-divider></nys-divider>
@@ -1692,7 +1692,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -1737,7 +1737,7 @@ By starting in FigJam you force yourself not to think about component properties
 <h2>Multiple pages? No problem</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
@@ -1748,7 +1748,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -1769,7 +1769,7 @@ By starting in FigJam you force yourself not to think about component properties
 <h2>Modal now available</h2>
 <p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
   <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
@@ -1814,7 +1814,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -1896,7 +1896,7 @@ By starting in FigJam you force yourself not to think about component properties
 <h2>Multiple pages? No problem</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
@@ -1907,7 +1907,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -1928,7 +1928,7 @@ By starting in FigJam you force yourself not to think about component properties
 <h2>Modal now available</h2>
 <p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
   <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
@@ -1973,7 +1973,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -2061,7 +2061,7 @@ By starting in FigJam you force yourself not to think about component properties
       <description><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-globalfooter agencyName="Office of Information Technology Services">
   <ul>
@@ -2091,7 +2091,7 @@ By starting in FigJam you force yourself not to think about component properties
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -2130,7 +2130,7 @@ All form field components have been updated with a new property which will inver
 <h2>No more disappearing pagination buttons</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
@@ -2141,7 +2141,7 @@ All form field components have been updated with a new property which will inver
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -2182,7 +2182,7 @@ All form field components have been updated with a new property which will inver
       <content><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-globalfooter agencyName="Office of Information Technology Services">
   <ul>
@@ -2212,7 +2212,7 @@ All form field components have been updated with a new property which will inver
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
@@ -2251,7 +2251,7 @@ All form field components have been updated with a new property which will inver
 <h2>No more disappearing pagination buttons</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
   <div class="code-preview-container">
-  <div class="code-preview__preview  ">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
@@ -2262,7 +2262,7 @@ All form field components have been updated with a new property which will inver
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
         <p>Example Code</p>
       </button>
-      <div class="copy-button-wrapper">
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>

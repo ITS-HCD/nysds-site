@@ -7,9 +7,9 @@
     <title>Rapid Wireframes to Prototypes with Fidelity Modes - New York State Design System</title>
     <meta name="description" content="Unlock new workflows by building your design system with a fidelity routing collection to swap between low-fi, mid-fi, and high-fi in one click.">   
     <link rel="canonical" href="https://designsystem.ny.gov/updates/fidelity-modes-rapid-prototyping/">
-    <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
 
-    <meta name=”robots” content=”noindex”>
+    <meta name="”robots”" content="”noindex”">
 
     <meta property="og:title" content="Rapid Wireframes to Prototypes with Fidelity Modes">
     <meta property="og:site_name" content="New York State Design System">
@@ -26,14 +26,14 @@
     <meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
 
     <link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
-    <link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
     <link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">    
     <link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
-    <link href="https://designsystem.ny.gov/assets/css/prism-theme.css"rel="stylesheet">
+    <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
     <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">    
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -42,31 +42,27 @@
       gtag('config', 'G-M4JYBJ7BZY');
     </script>
 
-    
     <meta name="robots" content="noindex">
     
-    
-    <!-- Latest Build: 2025-10-21T03:00:15.255+00:00 -->
+    <!-- Latest Build: 2025-10-24T18:11:29.003+00:00 -->
   </head>
   
   <body class="single-page page-fidelity-modes section-updates">
   <nys-skipnav></nys-skipnav>
-  
-
-<nys-unavheader hideTranslate hideSearch></nys-unavheader>
-
+  <nys-unavheader hideTranslate="" hideSearch=""></nys-unavheader>
   <nys-globalheader appName="NYS Design System" homepageLink="/">
-  <ul>
+  <ul data-pagefind-ignore="all">
     <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
     <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
     <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
     <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
     <li class="site-header__item site-header__item--active"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+    <li class="site-header__item"><a href="/search" class="site-header__link" title="Search this website">Search</a></li>
   </ul>
 </nys-globalheader>
 
 
-<div class="section-header">
+<div class="section-header" data-pagefind-ignore="all">
     <div class="section-header__inner nys-grid-container-widescreen">
         <div class="section-header__title">
             Updates
@@ -81,7 +77,7 @@
 
 
 
-  <main role="main" id="main-content" data-pagefind-body>
+  <main role="main" id="main-content" data-pagefind-body="">
   
       
 
@@ -95,8 +91,8 @@
       <section class="page-content">
 
         <header class="page-header"><div class="page-header__media">
-            <img src="/assets/i/2025/fidelity-modes-thumbnail.png" alt="Illustration of a fidelity mode switcher" />
-          </div><h1 class="page-title">
+            <img src="/assets/i/2025/fidelity-modes-thumbnail.png" alt="Illustration of a fidelity mode switcher">
+          </div><h1 class="page-title" id="rapid-wireframes-to-prototypes-with-fidelity-modes">
             Rapid Wireframes to Prototypes with Fidelity Modes
           </h1><p class="page-subtitle">Unlock new workflows by building your design system with a fidelity routing collection to swap between low-fi, mid-fi, and high-fi in one click.</p><div class="page-meta">
             
@@ -122,12 +118,12 @@
 <p>Some teams build separate wireframing libraries and use Figma’s library swap feature. The downside to this is that you need to maintain two separate libraries. By adopting this approach, teams who build their own custom components that don’t yet exist in the design system, as long as they are building with the design system’s published Figma Variables and Text Styles, will automatically have wireframing versions of their components that can be used in FigJam with the workaround explained below.</p>
 <p>This article walks you through how I created a more streamlined UX workflow while working on the <a href="https://designsystem.ny.gov"><strong>New York State Design System</strong></a> — and how you can apply these techniques to your own design system.</p>
 <p><em>Note: this workflow is currently in a beta stage and has not yet been released in an officially supported capacity to users of the NYS design system.</em></p>
-<h2>The Power of Variable Collections in Figma</h2>
+<h2 id="the-power-of-variable-collections-in-figma">The Power of Variable Collections in Figma</h2>
 <p><img src="/assets/i/2025/fidelity-modes-variable-collections.png" alt="Screenshot of variable collections in Figma"></p>
 <p>At the heart of this workflow are three types of Figma variable collections: Primitive, Routing, and Applied.</p>
-<h3>Primitive Variables</h3>
+<h3 id="primitive-variables">Primitive Variables</h3>
 <p>These are your foundational design tokens. They define raw values — like color ramps, font size ramps, spacing units — which serve as the base for your semantic variables.</p>
-<h3>Routing Variables</h3>
+<h3 id="routing-variables">Routing Variables</h3>
 <p>Sitting between primitives and applied variables, routing collections help manage different contextual modes such as:</p>
 <ul>
 <li><strong>Branding:</strong> For multiple brand identities</li>
@@ -138,13 +134,13 @@
 <p>Each mode adjusts which primitive variables are passed through, allowing flexibility without complexity.</p>
 <p>Before we publish the NYS Design System to the Figma Community, I plan to add a new routing collection named ‘Organization’ with two modes: ‘State’ and ‘Local’. This would allow towns or counties in New York State to adopt our Figma Library and customize it by plugging in their own brand color ramps. By simply switching a screen into ‘Local’ mode, smaller orgs can instantly localize the design system without starting from scratch.</p>
 <p><em>The idea for Routing collections came from the REWE design system’s talk at the</em> <a href="https://intodesignsystems.com"><em>Into Design Systems</em></a> <em>2025 conference—credit to</em> <a href="https://www.linkedin.com/in/vincent-schlothauer/"><em>Vincent Schlothauer</em></a> <em>and</em> <a href="https://www.linkedin.com/in/franziska-haaf/"><em>Franziska Haaf</em></a> <em>for their innovative ideas. The conference recordings are a great resource if you’re interested in learning more advanced Figma Variable techniques.</em></p>
-<h3>Applied Variables</h3>
+<h3 id="applied-variables">Applied Variables</h3>
 <p>These are the variables that actually get applied to components and text styles. They carry no additional semantic meaning — just the final values that affect the visual interface. This abstraction enables you to add or adjust routing layers without disrupting the applied layer.</p>
 <p>For further clarity: applied variables are mapped to a routing variable. The reason I’m taking this approach is if you apply the routing variables directly to components, then it is painful to add a new routing layer at the top as you’d then need to reapply all of your variables.</p>
 <p>For example, look at the image below and imagine you applied the Fidelity routing layer to the components instead of the Applied variables. If you wanted to insert a routing layer above Fidelity you’d have to swap out all of the variables on your components (and any custom components created by users of the design system’s published variables and text styles). By following my approach you instead would simply map the Applied variables to the new routing layer variables.</p>
 <p><strong>Scoping and Publishing</strong></p>
 <p>Primitive and Routing collections should be configured to not be published and scoped to not apply to any Figma properties. By doing so, only Applied variables will show to consuming designers. All of the complexity of the routing collections is handled by the design system team. Users of the design system in Figma should only ever see, use, and think about the Applied variables.</p>
-<h2>Understanding the Fidelity Routing Collection</h2>
+<h2 id="understanding-the-fidelity-routing-collection">Understanding the Fidelity Routing Collection</h2>
 <p>The Fidelity routing collection has three modes: High, Mid, and Low.</p>
 <p><img src="/assets/i/2025/fidelity-modes-routing-logic.png" alt="Screenshot of fidelity routing collections in Figma"></p>
 <p>Variables are organized in the same structure in all routing collections with a parent group named to match the routing collection’s name so that it’s easier to identify which collection a given variable is being set to.</p>
@@ -157,7 +153,7 @@
 </ul>
 <p>To manage variable collections efficiently, I use the <a href="https://www.figma.com/community/plugin/802579985985331070/design-system-organizer">Design System Organizer</a> plugin. It was a huge help for tasks like swapping variables, duplicating variables between collections, and migrating variables between files — especially during the recent project I handled of merging our previously separate component and variable files.</p>
 <p>One unexpected benefit: reviewing components in Low Fidelity mode has been a helpful litmus test. If two components look too similar when viewed in grayscale without a text label, it’s often a sign they need better differentiation.</p>
-<h2>FigJam Workaround with Fidelity Modes</h2>
+<h2 id="figjam-workaround-with-fidelity-modes">FigJam Workaround with Fidelity Modes</h2>
 <p>You can’t currently set Figma Modes in FigJam so here’s a workaround for how you can start wireframing with this setup:</p>
 <ol>
 <li>Create a Section in Figma Design.</li>
@@ -169,14 +165,14 @@
 <blockquote>
 <p><em>⚠️</em> <em><strong>Important Tip:</strong></em> <em>Components placed in frames with a variable mode set are prolematic. I recommend using sections in FigJam for device artboards rather than a frame.</em></p>
 </blockquote>
-<h2>Building a Smart Wireframe Sticker Sheet</h2>
+<h2 id="building-a-smart-wireframe-sticker-sheet">Building a Smart Wireframe Sticker Sheet</h2>
 <ul>
 <li>Create components using applied variables that are defined by their equivalent values in a fidelity mode routing collection.</li>
 <li>Insert these components with different combinations of component properties into a section with a low or mid fidelity mode set.</li>
 <li>Use these components to wireframe directly in FigJam with your actual design system components making switching to Figma Design a simple copy and paste.</li>
 </ul>
 <p><img src="https://miro.medium.com/v2/resize:fit:5740/1*VZ_iE1DBZcdoZjvor8hHZg@2x.png" alt=""></p>
-<h2>The Workflow in Action</h2>
+<h2 id="the-workflow-in-action">The Workflow in Action</h2>
 <p>This workflow replaces the need for separate wireframing tools — saving time and aligning designers and developers more closely.</p>
 <ol>
 <li><strong>Start in FigJam with Low Fidelity mode.</strong><br>
@@ -188,7 +184,7 @@ By starting in FigJam you force yourself not to think about component properties
 <p>Although we have Code Connect set up for all of our design system components, the variables and tokens aren’t yet automatically synced with code yet. We’re currently maintaining parity manually, which highlights the importance of strong naming conventions and documentation early on.</p>
 <p><img src="https://miro.medium.com/v2/resize:fit:10636/1*ohUbgy_coLW_RU1YzFVy_A.png" alt=""></p>
 <p><strong>This approach may not be for everyone as it does require a robust collection of components and text styles built with Figma Variables.</strong> But for those who choose to adopt it, this will be <em>transformational</em>. To designers, this looks like a Figma magic trick because it feels like it shouldn’t be possible.</p>
-<h2>Bonus: Dynamic Component Variants by Fidelity</h2>
+<h2 id="bonus-dynamic-component-variants-by-fidelity">Bonus: Dynamic Component Variants by Fidelity</h2>
 <p>Applying a text variable to a component’s variant property on an instance allows you to swap designs by fidelity mode. For example, I’ve used this to switch the New York State logo, as seen above, between: Sketch (Low Fidelity), Outline (Mid Fidelity), and Full Vector (High Fidelity).</p>
 <p>Thanks for reading! If this sparked any ideas, questions, or if you’ve experimented with your own routing collections please email the NYS Design System team at <a href="mailto:designsystem@its.ny.gov">designsystem@its.ny.gov</a>.</p>
 <p>Let’s build better, together.</p>
@@ -196,7 +192,7 @@ By starting in FigJam you force yourself not to think about component properties
 
         <div class="nys-grid-row nys-margin-t-200">
           <div class="nys-grid-col">        
-        <ul class="taglist">
+        <ul class="taglist" data-pagefind-ignore="all">
           
           <li class="badge">article</li>
           
@@ -222,7 +218,7 @@ By starting in FigJam you force yourself not to think about component properties
         </div>
 
         
-  <div class="edit-page-link">
+  <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2025-08-05-fidelity-modes.md">Edit this page on GitHub</a> (Permissions required)</p>
     <p>Last updated: August 5, 2025</p>
   </div>
@@ -231,7 +227,7 @@ By starting in FigJam you force yourself not to think about component properties
       </section>
     </div>
     <aside class="nys-desktop:nys-grid-col-2">
-      <div id="onpage-nav" class="onpage-nav"></div>
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -300,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <nys-backtotop id="backtotop-demo"></nys-backtotop>
   
   <nys-globalfooter agencyName="NYS Design System">
-  <ul>
+  <ul data-pagefind-ignore="all">
     <li><span>Learn More</span>
       <ul>
         <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
@@ -320,10 +316,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </ul>
 </nys-globalfooter>
 
-    
-<nys-unavfooter></nys-unavfooter>
+  <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async></script>
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
 
   
