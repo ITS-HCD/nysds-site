@@ -2331,7 +2331,7 @@ All form field components have been updated with a new property which will inver
   }
 </script>
 <h2>New 404 page</h2>
-<p>We've updated our 404 (file not found) error page to include a mascot and a search box. <a href="https://designsystem.ny.gov/foo">See the 404 page in action</a>.</p>
+<p>We've updated our 404 (page not found) error page to include a mascot and a search box. <a href="https://designsystem.ny.gov/foo">See the 404 page in action</a>.</p>
 <h2>Direct Links to Headings</h2>
 <p>When you are on a page, you'll notice a button with a link icon next to headings. Click that button to copy the URL direct to that page and heading. Check out the headings on this page for an example of how it works.</p>
 ]]></description>
@@ -2359,7 +2359,7 @@ All form field components have been updated with a new property which will inver
   }
 </script>
 <h2>New 404 page</h2>
-<p>We've updated our 404 (file not found) error page to include a mascot and a search box. <a href="https://designsystem.ny.gov/foo">See the 404 page in action</a>.</p>
+<p>We've updated our 404 (page not found) error page to include a mascot and a search box. <a href="https://designsystem.ny.gov/foo">See the 404 page in action</a>.</p>
 <h2>Direct Links to Headings</h2>
 <p>When you are on a page, you'll notice a button with a link icon next to headings. Click that button to copy the URL direct to that page and heading. Check out the headings on this page for an example of how it works.</p>
 ]]></content>
