@@ -38,7 +38,7 @@ We added a search feature to the site. You can click the [Search](/search) link 
 
 ## New 404 page
 
-We've updated our 404 (file not found) error page to include a mascot and a search box. [See the 404 page in action](/foo).
+We've updated our 404 (page not found) error page to include a mascot and a search box. [See the 404 page in action](/foo).
 
 ## Direct Links to Headings 
 
