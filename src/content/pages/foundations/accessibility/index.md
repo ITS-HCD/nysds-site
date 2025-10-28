@@ -18,7 +18,7 @@ navOrder: 20
 
 <nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text=""></nys-alert>
 
-<p>Prioritizing accessibility in our design system allows all users, regardless of ability, to navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users</p>
+<p>Prioritizing accessibility in our design system allows all users, regardless of ability, to navigate and interact with our products effectively. By following these best practices, we create a more inclusive experience for everyone. Accessibility is not just a feature; it’s a fundamental part of good design that benefits all users.</p>
 
 <p>Web accessibility is about making websites, digital services, and online content usable by everyone, including people with disabilities. Building with accessibility in mind is about removing barriers to access. It helps ensure that people who rely on assistive technologies, like screen readers, voice commands, or keyboard navigation, have equal access to services and information.</p>
 
