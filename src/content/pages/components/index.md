@@ -44,6 +44,8 @@ navOrder: 1
     </div>
   </div>
 </section>
+    {% include "partials/edit-link.njk" %}
+
 </div>
 {% endblock %}
 
