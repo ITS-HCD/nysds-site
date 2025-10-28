@@ -19,7 +19,7 @@ Let's start by defining the parts of the system. The NYS Design System includes:
           <img src="/assets/img/toggle-card.svg" alt="toggle graphic">
         </div>
         <div class="card__title">Component Library</div>
-        <div class="card__desc">This a collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</div>
+        <div class="card__desc">A collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</div>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ Let's start by defining the parts of the system. The NYS Design System includes:
         <div class="card__media">
             <img src="/assets/img/flex-card.svg" alt="flex"></div>
         <div class="card__title">Design Libraries</div>
-        <div class="card__desc">This is a library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.</div>
+        <div class="card__desc">A library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.</div>
       </div>
     </div>
   </div>
