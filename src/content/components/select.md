@@ -14,17 +14,17 @@ navOrder: 16
 
 {% block longdescription %}
 
-The `<nys-select>` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element `<nys-option>` to define the options in the dropdown.
+The `<nys-select>` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child `<option>` and `<optgroup>` to define the options in the dropdown.
 
 {% endblock %}
 
 {% block example %}
   {% set preview %}<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>      
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -43,12 +43,13 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 
 {% block usagedo %}
 
-  - Use the `<nys-option>` component to define the options in the dropdown
+  - Use the native `<option>` component to define the options in the dropdown
+  - Use the `<optgroup>` element to group related options within the dropdown
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the native `<option>` element in the `<nys-select>` component
+  - Don't use the `<nys-option>` element in the `<nys-select>` component, it will be deprecated with the 2.0 release.
 
 {% endblock %}
 
@@ -65,13 +66,13 @@ The `<nys-select>` component includes the following accessibility-focused featur
 {% block options %}
 
 ### Default Value
-You can set a default value by adding the `selected` attribute to the desired `<nys-option>`.
+You can set a default value by adding the `selected` attribute to the desired `<option>`.
   {% set preview %}<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn" selected></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn" selected></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>      
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -79,11 +80,11 @@ You can set a default value by adding the `selected` attribute to the desired `<
 
 ### Disabled
   {% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>      
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -94,11 +95,11 @@ Set `required` to `<nys-select>` to make selecting an option mandatory.
 
 {% set preview %}
 <nys-select label="Select your favorite borough" required>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>  
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -109,11 +110,11 @@ Adding the `optional` prop will add an optional flag to the input.
 
 {% set preview %}
 <nys-select label="Select your favorite borough" optional>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>  
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -129,10 +130,10 @@ The following `width` options are available:
 
 {% set preview %}
 <nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
-  <nys-option value="sm" label="sm"></nys-option>
-  <nys-option value="md" label="md"></nys-option>
-  <nys-option value="lg" label="lg"></nys-option>
-  <nys-option value="full" label="full"></nys-option>
+  <option value="sm" label="sm"></option>
+  <option value="md" label="md"></option>
+  <option value="lg" label="lg"></option>
+  <option value="full" label="full"></option>
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -144,11 +145,11 @@ Add a description using the `description` prop for plain text, or use the descri
 {% set preview %}
 <nys-select label="Select your favorite borough">
   <label slot="description">This is a slot</label>
-  <nys-option value="bronx">The Bronx</nys-option>
-  <nys-option value="brooklyn">Brooklyn</nys-option>
-  <nys-option value="manhattan">Manhattan</nys-option>
-  <nys-option value="staten_island">Staten Island</nys-option>
-  <nys-option value="queens">Queens</nys-option>        
+  <option value="bronx">The Bronx</option>
+  <option value="brooklyn">Brooklyn</option>
+  <option value="manhattan">Manhattan</option>
+  <option value="staten_island">Staten Island</option>
+  <option value="queens">Queens</option>        
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -162,11 +163,11 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 {% set preview %}
 <nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>
 </nys-select>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
@@ -184,10 +185,10 @@ Setting `errorMessage` does not display the message without `showError` set to t
 | `description`  | String                                 | only `<nys-select>` |
 | `disabled`     | boolean                                | both                |
 | `errorMessage` | String                                 | only `<nys-select>` |
-| `hidden`       | boolean                                | only `<nys-option>` |
+| `hidden`       | boolean                                | only `<option>` |
 | `optional`     | boolean                                | only `<nys-select>` |
 | `required`     | boolean                                | only `<nys-select>` |
-| `selected`     | boolean                                | only `<nys-option>` |
+| `selected`     | boolean                                | only `<option>` |
 | `showError`    | boolean                                | only `<nys-select>` |
 | `value`        | String                                 | both                |
 | `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
