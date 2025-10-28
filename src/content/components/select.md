@@ -78,6 +78,39 @@ You can set a default value by adding the `selected` attribute to the desired `<
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Option Group
+You can separate the options by using the `<optgroup>` tag.
+{% set preview %}<nys-select
+  label="Which New York State service are you contacting us about?"
+  description="This is for demo purposes and the list might not be exhaustive."
+>
+  <optgroup label="Transportation Services">
+    <option value="mta">MTA / Public Transit</option>
+    <option value="dmv">Department of Motor Vehicles (DMV)</option>
+    <option value="highway">Highway Maintenance</option>
+  </optgroup>
+  <optgroup label="Health & Human Services">
+    <option value="medicaid">Medicaid / Health Insurance</option>
+    <option value="mental-health">Mental Health Support</option>
+    <option value="child-family">Child and Family Services</option>
+  </optgroup>
+  <optgroup label="Public Safety">
+    <option value="state-police">State Police</option>
+    <option value="emergency-management">Emergency Management</option>
+    <option value="fire-safety">Fire Safety</option>
+  </optgroup>
+  <optgroup label="Environment & Energy">
+    <option value="environmental-conservation">
+      Environmental Conservation
+    </option>
+    <option value="clean-energy">Clean Energy Programs</option>
+    <option value="waste-management">Waste Management</option>
+  </optgroup>
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Disabled
   {% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
   <option value="bronx" label="The Bronx"></option>
