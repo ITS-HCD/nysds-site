@@ -231,6 +231,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // If heading already contains an anchor that links to this id, skip
     if (h.querySelector(`a[href="#${id}"]`)) return;
 
+    h.style.position = 'relative';
+
     // Move heading's children into the anchor so markup is preserved
     const anchor = document.createElement('nys-button');
     //anchor.className = 'heading-link';
@@ -240,21 +242,29 @@ document.addEventListener('DOMContentLoaded', function () {
     anchor.style.textDecoration = 'none';
     anchor.style.display = 'inline-block';
     anchor.style.padding = '0 0 0 var(--nys-space-50)';
-    anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
+    // anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
     anchor.setAttribute('href', `#${id}`);
     anchor.setAttribute('circle', 'true');
     anchor.setAttribute('icon', 'link');
     anchor.setAttribute('size', 'sm');
     anchor.setAttribute('variant', 'ghost');
 
+    anchor.addEventListener('click', (e) => {
+      // Stop the page from scrolling when you click this link
+      e.preventDefault();
+      // Copy the Full URL to the clipboard
+      copyHeadingUrl(anchor);
+    });
+
     h.insertAdjacentElement('beforeend', anchor);
+
   });
 }
 });
 
 // Trigger copy URL to clipboard
 const copyHeadingUrl = async (clickedHeadingLink) => {
-  console.log(clickedHeadingLink);
+  // console.log(clickedHeadingLink);
   const headingUrl = clickedHeadingLink.getAttribute("href");
   const fullUrl = window.location.origin + window.location.pathname + headingUrl;
 
