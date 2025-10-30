@@ -25,7 +25,6 @@ The `<nys-divider>` component visually separates content or sections within an i
 <div>Sample content below</div>
 {% endset %}
 {% set code = preview %}
-{% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
