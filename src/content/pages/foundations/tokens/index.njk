@@ -54,6 +54,8 @@ navOrder: 40
             <div class="token-list__size" style="width: var({{ token.name }});"></div>
           {% elif token.type == "radius" %}
             <div class="token-list__radius" style="border-radius: var({{ token.name }});"></div>
+          {% elif token.type == "shadow" %}
+            <div class="token-list__shadow" style="box-shadow: var({{ token.name }});"></div>
           {% endif %}
           <pre data-no-copy><code class="token-list__raw {{token.name}}">{{ token.rawvalue }}</code></pre>
         </div>
