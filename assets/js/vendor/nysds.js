@@ -1,5 +1,5 @@
-(function(v,ue){typeof exports=="object"&&typeof module<"u"?ue(exports):typeof define=="function"&&define.amd?define(["exports"],ue):(v=typeof globalThis<"u"?globalThis:v||self,ue(v.NYSDS={}))})(this,function(v){"use strict";/*!
-   * New York State Design System (v1.10.1)
+(function(u,pe){typeof exports=="object"&&typeof module<"u"?pe(exports):typeof define=="function"&&define.amd?define(["exports"],pe):(u=typeof globalThis<"u"?globalThis:u||self,pe(u.NYSDS={}))})(this,(function(u){"use strict";/*!
+   * New York State Design System (v1.11.0)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -7,37 +7,37 @@
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */var g1,Ce,P,j,ae,le,me,xe,ce,m,de,K,X,he;const ue=globalThis,dt=ue.ShadowRoot&&(ue.ShadyCSS===void 0||ue.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,ht=Symbol(),Ot=new WeakMap;let Zt=class{constructor(e,t,o){if(this._$cssResult$=!0,o!==ht)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e,this.t=t}get styleSheet(){let e=this.o;const t=this.t;if(dt&&e===void 0){const o=t!==void 0&&t.length===1;o&&(e=Ot.get(t)),e===void 0&&((this.o=e=new CSSStyleSheet).replaceSync(this.cssText),o&&Ot.set(t,e))}return e}toString(){return this.cssText}};const C1=a=>new Zt(typeof a=="string"?a:a+"",void 0,ht),g=(a,...e)=>{const t=a.length===1?a[0]:e.reduce((o,s,r)=>o+(n=>{if(n._$cssResult$===!0)return n.cssText;if(typeof n=="number")return n;throw Error("Value passed to 'css' function must be a 'css' function result: "+n+". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.")})(s)+a[r+1],a[0]);return new Zt(t,a,ht)},m1=(a,e)=>{if(dt)a.adoptedStyleSheets=e.map(t=>t instanceof CSSStyleSheet?t:t.styleSheet);else for(const t of e){const o=document.createElement("style"),s=ue.litNonce;s!==void 0&&o.setAttribute("nonce",s),o.textContent=t.cssText,a.appendChild(o)}},Ut=dt?a=>a:a=>a instanceof CSSStyleSheet?(e=>{let t="";for(const o of e.cssRules)t+=o.cssText;return C1(t)})(a):a;/**
+ */var _e,I,j,le,ce,Ce,me,de,m,he,K,X,ye;const pe=globalThis,at=pe.ShadowRoot&&(pe.ShadyCSS===void 0||pe.ShadyCSS.nativeShadow)&&"adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prototype,lt=Symbol(),Vt=new WeakMap;let Ht=class{constructor(e,t,o){if(this._$cssResult$=!0,o!==lt)throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");this.cssText=e,this.t=t}get styleSheet(){let e=this.o;const t=this.t;if(at&&e===void 0){const o=t!==void 0&&t.length===1;o&&(e=Vt.get(t)),e===void 0&&((this.o=e=new CSSStyleSheet).replaceSync(this.cssText),o&&Vt.set(t,e))}return e}toString(){return this.cssText}};const y1=a=>new Ht(typeof a=="string"?a:a+"",void 0,lt),g=(a,...e)=>{const t=a.length===1?a[0]:e.reduce(((o,s,r)=>o+(n=>{if(n._$cssResult$===!0)return n.cssText;if(typeof n=="number")return n;throw Error("Value passed to 'css' function must be a 'css' function result: "+n+". Use 'unsafeCSS' to pass non-literal values, but take care to ensure page security.")})(s)+a[r+1]),a[0]);return new Ht(t,a,lt)},u1=(a,e)=>{if(at)a.adoptedStyleSheets=e.map((t=>t instanceof CSSStyleSheet?t:t.styleSheet));else for(const t of e){const o=document.createElement("style"),s=pe.litNonce;s!==void 0&&o.setAttribute("nonce",s),o.textContent=t.cssText,a.appendChild(o)}},Bt=at?a=>a:a=>a instanceof CSSStyleSheet?(e=>{let t="";for(const o of e.cssRules)t+=o.cssText;return y1(t)})(a):a;/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const{is:x1,defineProperty:w1,getOwnPropertyDescriptor:k1,getOwnPropertyNames:$1,getOwnPropertySymbols:S1,getPrototypeOf:L1}=Object,pe=globalThis,qt=pe.trustedTypes,E1=qt?qt.emptyScript:"",yt=pe.reactiveElementPolyfillSupport,qe=(a,e)=>a,tt={toAttribute(a,e){switch(e){case Boolean:a=a?E1:null;break;case Object:case Array:a=a==null?a:JSON.stringify(a)}return a},fromAttribute(a,e){let t=a;switch(e){case Boolean:t=a!==null;break;case Number:t=a===null?null:Number(a);break;case Object:case Array:try{t=JSON.parse(a)}catch{t=null}}return t}},ut=(a,e)=>!x1(a,e),Tt={attribute:!0,type:String,converter:tt,reflect:!1,hasChanged:ut};Symbol.metadata??(Symbol.metadata=Symbol("metadata")),pe.litPropertyMetadata??(pe.litPropertyMetadata=new WeakMap);class He extends HTMLElement{static addInitializer(e){this._$Ei(),(this.l??(this.l=[])).push(e)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(e,t=Tt){if(t.state&&(t.attribute=!1),this._$Ei(),this.elementProperties.set(e,t),!t.noAccessor){const o=Symbol(),s=this.getPropertyDescriptor(e,o,t);s!==void 0&&w1(this.prototype,e,s)}}static getPropertyDescriptor(e,t,o){const{get:s,set:r}=k1(this.prototype,e)??{get(){return this[t]},set(n){this[t]=n}};return{get(){return s==null?void 0:s.call(this)},set(n){const d=s==null?void 0:s.call(this);r.call(this,n),this.requestUpdate(e,d,o)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this.elementProperties.get(e)??Tt}static _$Ei(){if(this.hasOwnProperty(qe("elementProperties")))return;const e=L1(this);e.finalize(),e.l!==void 0&&(this.l=[...e.l]),this.elementProperties=new Map(e.elementProperties)}static finalize(){if(this.hasOwnProperty(qe("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(qe("properties"))){const t=this.properties,o=[...$1(t),...S1(t)];for(const s of o)this.createProperty(s,t[s])}const e=this[Symbol.metadata];if(e!==null){const t=litPropertyMetadata.get(e);if(t!==void 0)for(const[o,s]of t)this.elementProperties.set(o,s)}this._$Eh=new Map;for(const[t,o]of this.elementProperties){const s=this._$Eu(t,o);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(e){const t=[];if(Array.isArray(e)){const o=new Set(e.flat(1/0).reverse());for(const s of o)t.unshift(Ut(s))}else e!==void 0&&t.push(Ut(e));return t}static _$Eu(e,t){const o=t.attribute;return o===!1?void 0:typeof o=="string"?o:typeof e=="string"?e.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){var e;this._$ES=new Promise(t=>this.enableUpdating=t),this._$AL=new Map,this._$E_(),this.requestUpdate(),(e=this.constructor.l)==null||e.forEach(t=>t(this))}addController(e){var t;(this._$EO??(this._$EO=new Set)).add(e),this.renderRoot!==void 0&&this.isConnected&&((t=e.hostConnected)==null||t.call(e))}removeController(e){var t;(t=this._$EO)==null||t.delete(e)}_$E_(){const e=new Map,t=this.constructor.elementProperties;for(const o of t.keys())this.hasOwnProperty(o)&&(e.set(o,this[o]),delete this[o]);e.size>0&&(this._$Ep=e)}createRenderRoot(){const e=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return m1(e,this.constructor.elementStyles),e}connectedCallback(){var e;this.renderRoot??(this.renderRoot=this.createRenderRoot()),this.enableUpdating(!0),(e=this._$EO)==null||e.forEach(t=>{var o;return(o=t.hostConnected)==null?void 0:o.call(t)})}enableUpdating(e){}disconnectedCallback(){var e;(e=this._$EO)==null||e.forEach(t=>{var o;return(o=t.hostDisconnected)==null?void 0:o.call(t)})}attributeChangedCallback(e,t,o){this._$AK(e,o)}_$EC(e,t){var r;const o=this.constructor.elementProperties.get(e),s=this.constructor._$Eu(e,o);if(s!==void 0&&o.reflect===!0){const n=(((r=o.converter)==null?void 0:r.toAttribute)!==void 0?o.converter:tt).toAttribute(t,o.type);this._$Em=e,n==null?this.removeAttribute(s):this.setAttribute(s,n),this._$Em=null}}_$AK(e,t){var r;const o=this.constructor,s=o._$Eh.get(e);if(s!==void 0&&this._$Em!==s){const n=o.getPropertyOptions(s),d=typeof n.converter=="function"?{fromAttribute:n.converter}:((r=n.converter)==null?void 0:r.fromAttribute)!==void 0?n.converter:tt;this._$Em=s,this[s]=d.fromAttribute(t,n.type),this._$Em=null}}requestUpdate(e,t,o){if(e!==void 0){if(o??(o=this.constructor.getPropertyOptions(e)),!(o.hasChanged??ut)(this[e],t))return;this.P(e,t,o)}this.isUpdatePending===!1&&(this._$ES=this._$ET())}P(e,t,o){this._$AL.has(e)||this._$AL.set(e,t),o.reflect===!0&&this._$Em!==e&&(this._$Ej??(this._$Ej=new Set)).add(e)}async _$ET(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const e=this.scheduleUpdate();return e!=null&&await e,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){var o;if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??(this.renderRoot=this.createRenderRoot()),this._$Ep){for(const[r,n]of this._$Ep)this[r]=n;this._$Ep=void 0}const s=this.constructor.elementProperties;if(s.size>0)for(const[r,n]of s)n.wrapped!==!0||this._$AL.has(r)||this[r]===void 0||this.P(r,this[r],n)}let e=!1;const t=this._$AL;try{e=this.shouldUpdate(t),e?(this.willUpdate(t),(o=this._$EO)==null||o.forEach(s=>{var r;return(r=s.hostUpdate)==null?void 0:r.call(s)}),this.update(t)):this._$EU()}catch(s){throw e=!1,this._$EU(),s}e&&this._$AE(t)}willUpdate(e){}_$AE(e){var t;(t=this._$EO)==null||t.forEach(o=>{var s;return(s=o.hostUpdated)==null?void 0:s.call(o)}),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(e)),this.updated(e)}_$EU(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(e){return!0}update(e){this._$Ej&&(this._$Ej=this._$Ej.forEach(t=>this._$EC(t,this[t]))),this._$EU()}updated(e){}firstUpdated(e){}}He.elementStyles=[],He.shadowRootOptions={mode:"open"},He[qe("elementProperties")]=new Map,He[qe("finalized")]=new Map,yt==null||yt({ReactiveElement:He}),(pe.reactiveElementVersions??(pe.reactiveElementVersions=[])).push("2.0.4");/**
+ */const{is:p1,defineProperty:v1,getOwnPropertyDescriptor:f1,getOwnPropertyNames:g1,getOwnPropertySymbols:b1,getPrototypeOf:_1}=Object,Qe=globalThis,It=Qe.trustedTypes,C1=It?It.emptyScript:"",m1=Qe.reactiveElementPolyfillSupport,Ze=(a,e)=>a,Je={toAttribute(a,e){switch(e){case Boolean:a=a?C1:null;break;case Object:case Array:a=a==null?a:JSON.stringify(a)}return a},fromAttribute(a,e){let t=a;switch(e){case Boolean:t=a!==null;break;case Number:t=a===null?null:Number(a);break;case Object:case Array:try{t=JSON.parse(a)}catch{t=null}}return t}},ct=(a,e)=>!p1(a,e),Pt={attribute:!0,type:String,converter:Je,reflect:!1,useDefault:!1,hasChanged:ct};Symbol.metadata??=Symbol("metadata"),Qe.litPropertyMetadata??=new WeakMap;let ze=class extends HTMLElement{static addInitializer(e){this._$Ei(),(this.l??=[]).push(e)}static get observedAttributes(){return this.finalize(),this._$Eh&&[...this._$Eh.keys()]}static createProperty(e,t=Pt){if(t.state&&(t.attribute=!1),this._$Ei(),this.prototype.hasOwnProperty(e)&&((t=Object.create(t)).wrapped=!0),this.elementProperties.set(e,t),!t.noAccessor){const o=Symbol(),s=this.getPropertyDescriptor(e,o,t);s!==void 0&&v1(this.prototype,e,s)}}static getPropertyDescriptor(e,t,o){const{get:s,set:r}=f1(this.prototype,e)??{get(){return this[t]},set(n){this[t]=n}};return{get:s,set(n){const c=s?.call(this);r?.call(this,n),this.requestUpdate(e,c,o)},configurable:!0,enumerable:!0}}static getPropertyOptions(e){return this.elementProperties.get(e)??Pt}static _$Ei(){if(this.hasOwnProperty(Ze("elementProperties")))return;const e=_1(this);e.finalize(),e.l!==void 0&&(this.l=[...e.l]),this.elementProperties=new Map(e.elementProperties)}static finalize(){if(this.hasOwnProperty(Ze("finalized")))return;if(this.finalized=!0,this._$Ei(),this.hasOwnProperty(Ze("properties"))){const t=this.properties,o=[...g1(t),...b1(t)];for(const s of o)this.createProperty(s,t[s])}const e=this[Symbol.metadata];if(e!==null){const t=litPropertyMetadata.get(e);if(t!==void 0)for(const[o,s]of t)this.elementProperties.set(o,s)}this._$Eh=new Map;for(const[t,o]of this.elementProperties){const s=this._$Eu(t,o);s!==void 0&&this._$Eh.set(s,t)}this.elementStyles=this.finalizeStyles(this.styles)}static finalizeStyles(e){const t=[];if(Array.isArray(e)){const o=new Set(e.flat(1/0).reverse());for(const s of o)t.unshift(Bt(s))}else e!==void 0&&t.push(Bt(e));return t}static _$Eu(e,t){const o=t.attribute;return o===!1?void 0:typeof o=="string"?o:typeof e=="string"?e.toLowerCase():void 0}constructor(){super(),this._$Ep=void 0,this.isUpdatePending=!1,this.hasUpdated=!1,this._$Em=null,this._$Ev()}_$Ev(){this._$ES=new Promise((e=>this.enableUpdating=e)),this._$AL=new Map,this._$E_(),this.requestUpdate(),this.constructor.l?.forEach((e=>e(this)))}addController(e){(this._$EO??=new Set).add(e),this.renderRoot!==void 0&&this.isConnected&&e.hostConnected?.()}removeController(e){this._$EO?.delete(e)}_$E_(){const e=new Map,t=this.constructor.elementProperties;for(const o of t.keys())this.hasOwnProperty(o)&&(e.set(o,this[o]),delete this[o]);e.size>0&&(this._$Ep=e)}createRenderRoot(){const e=this.shadowRoot??this.attachShadow(this.constructor.shadowRootOptions);return u1(e,this.constructor.elementStyles),e}connectedCallback(){this.renderRoot??=this.createRenderRoot(),this.enableUpdating(!0),this._$EO?.forEach((e=>e.hostConnected?.()))}enableUpdating(e){}disconnectedCallback(){this._$EO?.forEach((e=>e.hostDisconnected?.()))}attributeChangedCallback(e,t,o){this._$AK(e,o)}_$ET(e,t){const o=this.constructor.elementProperties.get(e),s=this.constructor._$Eu(e,o);if(s!==void 0&&o.reflect===!0){const r=(o.converter?.toAttribute!==void 0?o.converter:Je).toAttribute(t,o.type);this._$Em=e,r==null?this.removeAttribute(s):this.setAttribute(s,r),this._$Em=null}}_$AK(e,t){const o=this.constructor,s=o._$Eh.get(e);if(s!==void 0&&this._$Em!==s){const r=o.getPropertyOptions(s),n=typeof r.converter=="function"?{fromAttribute:r.converter}:r.converter?.fromAttribute!==void 0?r.converter:Je;this._$Em=s;const c=n.fromAttribute(t,r.type);this[s]=c??this._$Ej?.get(s)??c,this._$Em=null}}requestUpdate(e,t,o){if(e!==void 0){const s=this.constructor,r=this[e];if(o??=s.getPropertyOptions(e),!((o.hasChanged??ct)(r,t)||o.useDefault&&o.reflect&&r===this._$Ej?.get(e)&&!this.hasAttribute(s._$Eu(e,o))))return;this.C(e,t,o)}this.isUpdatePending===!1&&(this._$ES=this._$EP())}C(e,t,{useDefault:o,reflect:s,wrapped:r},n){o&&!(this._$Ej??=new Map).has(e)&&(this._$Ej.set(e,n??t??this[e]),r!==!0||n!==void 0)||(this._$AL.has(e)||(this.hasUpdated||o||(t=void 0),this._$AL.set(e,t)),s===!0&&this._$Em!==e&&(this._$Eq??=new Set).add(e))}async _$EP(){this.isUpdatePending=!0;try{await this._$ES}catch(t){Promise.reject(t)}const e=this.scheduleUpdate();return e!=null&&await e,!this.isUpdatePending}scheduleUpdate(){return this.performUpdate()}performUpdate(){if(!this.isUpdatePending)return;if(!this.hasUpdated){if(this.renderRoot??=this.createRenderRoot(),this._$Ep){for(const[s,r]of this._$Ep)this[s]=r;this._$Ep=void 0}const o=this.constructor.elementProperties;if(o.size>0)for(const[s,r]of o){const{wrapped:n}=r,c=this[s];n!==!0||this._$AL.has(s)||c===void 0||this.C(s,void 0,r,c)}}let e=!1;const t=this._$AL;try{e=this.shouldUpdate(t),e?(this.willUpdate(t),this._$EO?.forEach((o=>o.hostUpdate?.())),this.update(t)):this._$EM()}catch(o){throw e=!1,this._$EM(),o}e&&this._$AE(t)}willUpdate(e){}_$AE(e){this._$EO?.forEach((t=>t.hostUpdated?.())),this.hasUpdated||(this.hasUpdated=!0,this.firstUpdated(e)),this.updated(e)}_$EM(){this._$AL=new Map,this.isUpdatePending=!1}get updateComplete(){return this.getUpdateComplete()}getUpdateComplete(){return this._$ES}shouldUpdate(e){return!0}update(e){this._$Eq&&=this._$Eq.forEach((t=>this._$ET(t,this[t]))),this._$EM()}updated(e){}firstUpdated(e){}};ze.elementStyles=[],ze.shadowRootOptions={mode:"open"},ze[Ze("elementProperties")]=new Map,ze[Ze("finalized")]=new Map,m1?.({ReactiveElement:ze}),(Qe.reactiveElementVersions??=[]).push("2.1.1");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const Te=globalThis,st=Te.trustedTypes,Rt=st?st.createPolicy("lit-html",{createHTML:a=>a}):void 0,Nt="$lit$",ve=`lit$${Math.random().toFixed(9).slice(2)}$`,Ft="?"+ve,A1=`<${Ft}>`,ke=document,Re=()=>ke.createComment(""),Ne=a=>a===null||typeof a!="object"&&typeof a!="function",pt=Array.isArray,D1=a=>pt(a)||typeof(a==null?void 0:a[Symbol.iterator])=="function",vt=`[ 	
-\f\r]`,Fe=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,jt=/-->/g,Gt=/>/g,$e=RegExp(`>|${vt}(?:([^\\s"'>=/]+)(${vt}*=${vt}*(?:[^ 	
-\f\r"'\`<>=]|("|')|))|$)`,"g"),Wt=/'/g,Yt=/"/g,Kt=/^(?:script|style|textarea|title)$/i,M1=a=>(e,...t)=>({_$litType$:a,strings:e,values:t}),c=M1(1),Be=Symbol.for("lit-noChange"),S=Symbol.for("lit-nothing"),Xt=new WeakMap,Se=ke.createTreeWalker(ke,129);function Qt(a,e){if(!pt(a)||!a.hasOwnProperty("raw"))throw Error("invalid template strings array");return Rt!==void 0?Rt.createHTML(e):e}const z1=(a,e)=>{const t=a.length-1,o=[];let s,r=e===2?"<svg>":e===3?"<math>":"",n=Fe;for(let d=0;d<t;d++){const l=a[d];let y,p,h=-1,x=0;for(;x<l.length&&(n.lastIndex=x,p=n.exec(l),p!==null);)x=n.lastIndex,n===Fe?p[1]==="!--"?n=jt:p[1]!==void 0?n=Gt:p[2]!==void 0?(Kt.test(p[2])&&(s=RegExp("</"+p[2],"g")),n=$e):p[3]!==void 0&&(n=$e):n===$e?p[0]===">"?(n=s??Fe,h=-1):p[1]===void 0?h=-2:(h=n.lastIndex-p[2].length,y=p[1],n=p[3]===void 0?$e:p[3]==='"'?Yt:Wt):n===Yt||n===Wt?n=$e:n===jt||n===Gt?n=Fe:(n=$e,s=void 0);const E=n===$e&&a[d+1].startsWith("/>")?" ":"";r+=n===Fe?l+A1:h>=0?(o.push(y),l.slice(0,h)+Nt+l.slice(h)+ve+E):l+ve+(h===-2?d:E)}return[Qt(a,r+(a[t]||"<?>")+(e===2?"</svg>":e===3?"</math>":"")),o]};class je{constructor({strings:e,_$litType$:t},o){let s;this.parts=[];let r=0,n=0;const d=e.length-1,l=this.parts,[y,p]=z1(e,t);if(this.el=je.createElement(y,o),Se.currentNode=this.el.content,t===2||t===3){const h=this.el.content.firstChild;h.replaceWith(...h.childNodes)}for(;(s=Se.nextNode())!==null&&l.length<d;){if(s.nodeType===1){if(s.hasAttributes())for(const h of s.getAttributeNames())if(h.endsWith(Nt)){const x=p[n++],E=s.getAttribute(h).split(ve),ye=/([.?@])?(.*)/.exec(x);l.push({type:1,index:r,name:ye[2],strings:E,ctor:ye[1]==="."?H1:ye[1]==="?"?B1:ye[1]==="@"?I1:ot}),s.removeAttribute(h)}else h.startsWith(ve)&&(l.push({type:6,index:r}),s.removeAttribute(h));if(Kt.test(s.tagName)){const h=s.textContent.split(ve),x=h.length-1;if(x>0){s.textContent=st?st.emptyScript:"";for(let E=0;E<x;E++)s.append(h[E],Re()),Se.nextNode(),l.push({type:2,index:++r});s.append(h[x],Re())}}}else if(s.nodeType===8)if(s.data===Ft)l.push({type:2,index:r});else{let h=-1;for(;(h=s.data.indexOf(ve,h+1))!==-1;)l.push({type:7,index:r}),h+=ve.length-1}r++}}static createElement(e,t){const o=ke.createElement("template");return o.innerHTML=e,o}}function Ie(a,e,t=a,o){var n,d;if(e===Be)return e;let s=o!==void 0?(n=t._$Co)==null?void 0:n[o]:t._$Cl;const r=Ne(e)?void 0:e._$litDirective$;return(s==null?void 0:s.constructor)!==r&&((d=s==null?void 0:s._$AO)==null||d.call(s,!1),r===void 0?s=void 0:(s=new r(a),s._$AT(a,t,o)),o!==void 0?(t._$Co??(t._$Co=[]))[o]=s:t._$Cl=s),s!==void 0&&(e=Ie(a,s._$AS(a,e.values),s,o)),e}class V1{constructor(e,t){this._$AV=[],this._$AN=void 0,this._$AD=e,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(e){const{el:{content:t},parts:o}=this._$AD,s=((e==null?void 0:e.creationScope)??ke).importNode(t,!0);Se.currentNode=s;let r=Se.nextNode(),n=0,d=0,l=o[0];for(;l!==void 0;){if(n===l.index){let y;l.type===2?y=new Ge(r,r.nextSibling,this,e):l.type===1?y=new l.ctor(r,l.name,l.strings,this,e):l.type===6&&(y=new P1(r,this,e)),this._$AV.push(y),l=o[++d]}n!==(l==null?void 0:l.index)&&(r=Se.nextNode(),n++)}return Se.currentNode=ke,s}p(e){let t=0;for(const o of this._$AV)o!==void 0&&(o.strings!==void 0?(o._$AI(e,o,t),t+=o.strings.length-2):o._$AI(e[t])),t++}}class Ge{get _$AU(){var e;return((e=this._$AM)==null?void 0:e._$AU)??this._$Cv}constructor(e,t,o,s){this.type=2,this._$AH=S,this._$AN=void 0,this._$AA=e,this._$AB=t,this._$AM=o,this.options=s,this._$Cv=(s==null?void 0:s.isConnected)??!0}get parentNode(){let e=this._$AA.parentNode;const t=this._$AM;return t!==void 0&&(e==null?void 0:e.nodeType)===11&&(e=t.parentNode),e}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(e,t=this){e=Ie(this,e,t),Ne(e)?e===S||e==null||e===""?(this._$AH!==S&&this._$AR(),this._$AH=S):e!==this._$AH&&e!==Be&&this._(e):e._$litType$!==void 0?this.$(e):e.nodeType!==void 0?this.T(e):D1(e)?this.k(e):this._(e)}O(e){return this._$AA.parentNode.insertBefore(e,this._$AB)}T(e){this._$AH!==e&&(this._$AR(),this._$AH=this.O(e))}_(e){this._$AH!==S&&Ne(this._$AH)?this._$AA.nextSibling.data=e:this.T(ke.createTextNode(e)),this._$AH=e}$(e){var r;const{values:t,_$litType$:o}=e,s=typeof o=="number"?this._$AC(e):(o.el===void 0&&(o.el=je.createElement(Qt(o.h,o.h[0]),this.options)),o);if(((r=this._$AH)==null?void 0:r._$AD)===s)this._$AH.p(t);else{const n=new V1(s,this),d=n.u(this.options);n.p(t),this.T(d),this._$AH=n}}_$AC(e){let t=Xt.get(e.strings);return t===void 0&&Xt.set(e.strings,t=new je(e)),t}k(e){pt(this._$AH)||(this._$AH=[],this._$AR());const t=this._$AH;let o,s=0;for(const r of e)s===t.length?t.push(o=new Ge(this.O(Re()),this.O(Re()),this,this.options)):o=t[s],o._$AI(r),s++;s<t.length&&(this._$AR(o&&o._$AB.nextSibling,s),t.length=s)}_$AR(e=this._$AA.nextSibling,t){var o;for((o=this._$AP)==null?void 0:o.call(this,!1,!0,t);e&&e!==this._$AB;){const s=e.nextSibling;e.remove(),e=s}}setConnected(e){var t;this._$AM===void 0&&(this._$Cv=e,(t=this._$AP)==null||t.call(this,e))}}class ot{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(e,t,o,s,r){this.type=1,this._$AH=S,this._$AN=void 0,this.element=e,this.name=t,this._$AM=s,this.options=r,o.length>2||o[0]!==""||o[1]!==""?(this._$AH=Array(o.length-1).fill(new String),this.strings=o):this._$AH=S}_$AI(e,t=this,o,s){const r=this.strings;let n=!1;if(r===void 0)e=Ie(this,e,t,0),n=!Ne(e)||e!==this._$AH&&e!==Be,n&&(this._$AH=e);else{const d=e;let l,y;for(e=r[0],l=0;l<r.length-1;l++)y=Ie(this,d[o+l],t,l),y===Be&&(y=this._$AH[l]),n||(n=!Ne(y)||y!==this._$AH[l]),y===S?e=S:e!==S&&(e+=(y??"")+r[l+1]),this._$AH[l]=y}n&&!s&&this.j(e)}j(e){e===S?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,e??"")}}class H1 extends ot{constructor(){super(...arguments),this.type=3}j(e){this.element[this.name]=e===S?void 0:e}}class B1 extends ot{constructor(){super(...arguments),this.type=4}j(e){this.element.toggleAttribute(this.name,!!e&&e!==S)}}class I1 extends ot{constructor(e,t,o,s,r){super(e,t,o,s,r),this.type=5}_$AI(e,t=this){if((e=Ie(this,e,t,0)??S)===Be)return;const o=this._$AH,s=e===S&&o!==S||e.capture!==o.capture||e.once!==o.once||e.passive!==o.passive,r=e!==S&&(o===S||s);s&&this.element.removeEventListener(this.name,this,o),r&&this.element.addEventListener(this.name,this,e),this._$AH=e}handleEvent(e){var t;typeof this._$AH=="function"?this._$AH.call(((t=this.options)==null?void 0:t.host)??this.element,e):this._$AH.handleEvent(e)}}class P1{constructor(e,t,o){this.element=e,this.type=6,this._$AN=void 0,this._$AM=t,this.options=o}get _$AU(){return this._$AM._$AU}_$AI(e){Ie(this,e)}}const ft=Te.litHtmlPolyfillSupport;ft==null||ft(je,Ge),(Te.litHtmlVersions??(Te.litHtmlVersions=[])).push("3.2.1");const O1=(a,e,t)=>{const o=(t==null?void 0:t.renderBefore)??e;let s=o._$litPart$;if(s===void 0){const r=(t==null?void 0:t.renderBefore)??null;o._$litPart$=s=new Ge(e.insertBefore(Re(),r),r,void 0,t??{})}return s._$AI(a),s};/**
+ */const dt=globalThis,et=dt.trustedTypes,Ot=et?et.createPolicy("lit-html",{createHTML:a=>a}):void 0,Zt="$lit$",ve=`lit$${Math.random().toFixed(9).slice(2)}$`,Ut="?"+ve,x1=`<${Ut}>`,xe=document,Ue=()=>xe.createComment(""),qe=a=>a===null||typeof a!="object"&&typeof a!="function",ht=Array.isArray,w1=a=>ht(a)||typeof a?.[Symbol.iterator]=="function",yt=`[ 	
+\f\r]`,Te=/<(?:(!--|\/[^a-zA-Z])|(\/?[a-zA-Z][^>\s]*)|(\/?$))/g,qt=/-->/g,Tt=/>/g,we=RegExp(`>|${yt}(?:([^\\s"'>=/]+)(${yt}*=${yt}*(?:[^ 	
+\f\r"'\`<>=]|("|')|))|$)`,"g"),Rt=/'/g,Nt=/"/g,Ft=/^(?:script|style|textarea|title)$/i,k1=a=>(e,...t)=>({_$litType$:a,strings:e,values:t}),l=k1(1),Ve=Symbol.for("lit-noChange"),S=Symbol.for("lit-nothing"),jt=new WeakMap,ke=xe.createTreeWalker(xe,129);function Gt(a,e){if(!ht(a)||!a.hasOwnProperty("raw"))throw Error("invalid template strings array");return Ot!==void 0?Ot.createHTML(e):e}const $1=(a,e)=>{const t=a.length-1,o=[];let s,r=e===2?"<svg>":e===3?"<math>":"",n=Te;for(let c=0;c<t;c++){const d=a[c];let h,f,v=-1,$=0;for(;$<d.length&&(n.lastIndex=$,f=n.exec(d),f!==null);)$=n.lastIndex,n===Te?f[1]==="!--"?n=qt:f[1]!==void 0?n=Tt:f[2]!==void 0?(Ft.test(f[2])&&(s=RegExp("</"+f[2],"g")),n=we):f[3]!==void 0&&(n=we):n===we?f[0]===">"?(n=s??Te,v=-1):f[1]===void 0?v=-2:(v=n.lastIndex-f[2].length,h=f[1],n=f[3]===void 0?we:f[3]==='"'?Nt:Rt):n===Nt||n===Rt?n=we:n===qt||n===Tt?n=Te:(n=we,s=void 0);const q=n===we&&a[c+1].startsWith("/>")?" ":"";r+=n===Te?d+x1:v>=0?(o.push(h),d.slice(0,v)+Zt+d.slice(v)+ve+q):d+ve+(v===-2?c:q)}return[Gt(a,r+(a[t]||"<?>")+(e===2?"</svg>":e===3?"</math>":"")),o]};class Re{constructor({strings:e,_$litType$:t},o){let s;this.parts=[];let r=0,n=0;const c=e.length-1,d=this.parts,[h,f]=$1(e,t);if(this.el=Re.createElement(h,o),ke.currentNode=this.el.content,t===2||t===3){const v=this.el.content.firstChild;v.replaceWith(...v.childNodes)}for(;(s=ke.nextNode())!==null&&d.length<c;){if(s.nodeType===1){if(s.hasAttributes())for(const v of s.getAttributeNames())if(v.endsWith(Zt)){const $=f[n++],q=s.getAttribute(v).split(ve),ue=/([.?@])?(.*)/.exec($);d.push({type:1,index:r,name:ue[2],strings:q,ctor:ue[1]==="."?L1:ue[1]==="?"?E1:ue[1]==="@"?A1:tt}),s.removeAttribute(v)}else v.startsWith(ve)&&(d.push({type:6,index:r}),s.removeAttribute(v));if(Ft.test(s.tagName)){const v=s.textContent.split(ve),$=v.length-1;if($>0){s.textContent=et?et.emptyScript:"";for(let q=0;q<$;q++)s.append(v[q],Ue()),ke.nextNode(),d.push({type:2,index:++r});s.append(v[$],Ue())}}}else if(s.nodeType===8)if(s.data===Ut)d.push({type:2,index:r});else{let v=-1;for(;(v=s.data.indexOf(ve,v+1))!==-1;)d.push({type:7,index:r}),v+=ve.length-1}r++}}static createElement(e,t){const o=xe.createElement("template");return o.innerHTML=e,o}}function He(a,e,t=a,o){if(e===Ve)return e;let s=o!==void 0?t._$Co?.[o]:t._$Cl;const r=qe(e)?void 0:e._$litDirective$;return s?.constructor!==r&&(s?._$AO?.(!1),r===void 0?s=void 0:(s=new r(a),s._$AT(a,t,o)),o!==void 0?(t._$Co??=[])[o]=s:t._$Cl=s),s!==void 0&&(e=He(a,s._$AS(a,e.values),s,o)),e}class S1{constructor(e,t){this._$AV=[],this._$AN=void 0,this._$AD=e,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(e){const{el:{content:t},parts:o}=this._$AD,s=(e?.creationScope??xe).importNode(t,!0);ke.currentNode=s;let r=ke.nextNode(),n=0,c=0,d=o[0];for(;d!==void 0;){if(n===d.index){let h;d.type===2?h=new Ne(r,r.nextSibling,this,e):d.type===1?h=new d.ctor(r,d.name,d.strings,this,e):d.type===6&&(h=new D1(r,this,e)),this._$AV.push(h),d=o[++c]}n!==d?.index&&(r=ke.nextNode(),n++)}return ke.currentNode=xe,s}p(e){let t=0;for(const o of this._$AV)o!==void 0&&(o.strings!==void 0?(o._$AI(e,o,t),t+=o.strings.length-2):o._$AI(e[t])),t++}}class Ne{get _$AU(){return this._$AM?._$AU??this._$Cv}constructor(e,t,o,s){this.type=2,this._$AH=S,this._$AN=void 0,this._$AA=e,this._$AB=t,this._$AM=o,this.options=s,this._$Cv=s?.isConnected??!0}get parentNode(){let e=this._$AA.parentNode;const t=this._$AM;return t!==void 0&&e?.nodeType===11&&(e=t.parentNode),e}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(e,t=this){e=He(this,e,t),qe(e)?e===S||e==null||e===""?(this._$AH!==S&&this._$AR(),this._$AH=S):e!==this._$AH&&e!==Ve&&this._(e):e._$litType$!==void 0?this.$(e):e.nodeType!==void 0?this.T(e):w1(e)?this.k(e):this._(e)}O(e){return this._$AA.parentNode.insertBefore(e,this._$AB)}T(e){this._$AH!==e&&(this._$AR(),this._$AH=this.O(e))}_(e){this._$AH!==S&&qe(this._$AH)?this._$AA.nextSibling.data=e:this.T(xe.createTextNode(e)),this._$AH=e}$(e){const{values:t,_$litType$:o}=e,s=typeof o=="number"?this._$AC(e):(o.el===void 0&&(o.el=Re.createElement(Gt(o.h,o.h[0]),this.options)),o);if(this._$AH?._$AD===s)this._$AH.p(t);else{const r=new S1(s,this),n=r.u(this.options);r.p(t),this.T(n),this._$AH=r}}_$AC(e){let t=jt.get(e.strings);return t===void 0&&jt.set(e.strings,t=new Re(e)),t}k(e){ht(this._$AH)||(this._$AH=[],this._$AR());const t=this._$AH;let o,s=0;for(const r of e)s===t.length?t.push(o=new Ne(this.O(Ue()),this.O(Ue()),this,this.options)):o=t[s],o._$AI(r),s++;s<t.length&&(this._$AR(o&&o._$AB.nextSibling,s),t.length=s)}_$AR(e=this._$AA.nextSibling,t){for(this._$AP?.(!1,!0,t);e!==this._$AB;){const o=e.nextSibling;e.remove(),e=o}}setConnected(e){this._$AM===void 0&&(this._$Cv=e,this._$AP?.(e))}}class tt{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(e,t,o,s,r){this.type=1,this._$AH=S,this._$AN=void 0,this.element=e,this.name=t,this._$AM=s,this.options=r,o.length>2||o[0]!==""||o[1]!==""?(this._$AH=Array(o.length-1).fill(new String),this.strings=o):this._$AH=S}_$AI(e,t=this,o,s){const r=this.strings;let n=!1;if(r===void 0)e=He(this,e,t,0),n=!qe(e)||e!==this._$AH&&e!==Ve,n&&(this._$AH=e);else{const c=e;let d,h;for(e=r[0],d=0;d<r.length-1;d++)h=He(this,c[o+d],t,d),h===Ve&&(h=this._$AH[d]),n||=!qe(h)||h!==this._$AH[d],h===S?e=S:e!==S&&(e+=(h??"")+r[d+1]),this._$AH[d]=h}n&&!s&&this.j(e)}j(e){e===S?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,e??"")}}class L1 extends tt{constructor(){super(...arguments),this.type=3}j(e){this.element[this.name]=e===S?void 0:e}}class E1 extends tt{constructor(){super(...arguments),this.type=4}j(e){this.element.toggleAttribute(this.name,!!e&&e!==S)}}class A1 extends tt{constructor(e,t,o,s,r){super(e,t,o,s,r),this.type=5}_$AI(e,t=this){if((e=He(this,e,t,0)??S)===Ve)return;const o=this._$AH,s=e===S&&o!==S||e.capture!==o.capture||e.once!==o.once||e.passive!==o.passive,r=e!==S&&(o===S||s);s&&this.element.removeEventListener(this.name,this,o),r&&this.element.addEventListener(this.name,this,e),this._$AH=e}handleEvent(e){typeof this._$AH=="function"?this._$AH.call(this.options?.host??this.element,e):this._$AH.handleEvent(e)}}class D1{constructor(e,t,o){this.element=e,this.type=6,this._$AN=void 0,this._$AM=t,this.options=o}get _$AU(){return this._$AM._$AU}_$AI(e){He(this,e)}}const M1=dt.litHtmlPolyfillSupport;M1?.(Re,Ne),(dt.litHtmlVersions??=[]).push("3.3.1");const z1=(a,e,t)=>{const o=t?.renderBefore??e;let s=o._$litPart$;if(s===void 0){const r=t?.renderBefore??null;o._$litPart$=s=new Ne(e.insertBefore(Ue(),r),r,void 0,t??{})}return s._$AI(a),s};/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */let f=class extends He{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){var t;const e=super.createRenderRoot();return(t=this.renderOptions).renderBefore??(t.renderBefore=e.firstChild),e}update(e){const t=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(e),this._$Do=O1(t,this.renderRoot,this.renderOptions)}connectedCallback(){var e;super.connectedCallback(),(e=this._$Do)==null||e.setConnected(!0)}disconnectedCallback(){var e;super.disconnectedCallback(),(e=this._$Do)==null||e.setConnected(!1)}render(){return Be}};f._$litElement$=!0,f.finalized=!0,(g1=globalThis.litElementHydrateSupport)==null||g1.call(globalThis,{LitElement:f});const gt=globalThis.litElementPolyfillSupport;gt==null||gt({LitElement:f}),(globalThis.litElementVersions??(globalThis.litElementVersions=[])).push("4.1.1");/**
+ */const ut=globalThis;class p extends ze{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){const e=super.createRenderRoot();return this.renderOptions.renderBefore??=e.firstChild,e}update(e){const t=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(e),this._$Do=z1(t,this.renderRoot,this.renderOptions)}connectedCallback(){super.connectedCallback(),this._$Do?.setConnected(!0)}disconnectedCallback(){super.disconnectedCallback(),this._$Do?.setConnected(!1)}render(){return Ve}}p._$litElement$=!0,p.finalized=!0,ut.litElementHydrateSupport?.({LitElement:p});const V1=ut.litElementPolyfillSupport;V1?.({LitElement:p}),(ut.litElementVersions??=[]).push("4.2.1");/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const Z1={attribute:!0,type:String,converter:tt,reflect:!1,hasChanged:ut},U1=(a=Z1,e,t)=>{const{kind:o,metadata:s}=t;let r=globalThis.litPropertyMetadata.get(s);if(r===void 0&&globalThis.litPropertyMetadata.set(s,r=new Map),r.set(t.name,a),o==="accessor"){const{name:n}=t;return{set(d){const l=e.get.call(this);e.set.call(this,d),this.requestUpdate(n,l,a)},init(d){return d!==void 0&&this.P(n,void 0,a),d}}}if(o==="setter"){const{name:n}=t;return function(d){const l=this[n];e.call(this,d),this.requestUpdate(n,l,a)}}throw Error("Unsupported decorator location: "+o)};function i(a){return(e,t)=>typeof t=="object"?U1(a,e,t):((o,s,r)=>{const n=s.hasOwnProperty(r);return s.constructor.createProperty(r,n?{...o,wrapped:!0}:o),n?Object.getOwnPropertyDescriptor(s,r):void 0})(a,e,t)}/**
+ */const H1={attribute:!0,type:String,converter:Je,reflect:!1,hasChanged:ct},B1=(a=H1,e,t)=>{const{kind:o,metadata:s}=t;let r=globalThis.litPropertyMetadata.get(s);if(r===void 0&&globalThis.litPropertyMetadata.set(s,r=new Map),o==="setter"&&((a=Object.create(a)).wrapped=!0),r.set(t.name,a),o==="accessor"){const{name:n}=t;return{set(c){const d=e.get.call(this);e.set.call(this,c),this.requestUpdate(n,d,a)},init(c){return c!==void 0&&this.C(n,void 0,a,c),c}}}if(o==="setter"){const{name:n}=t;return function(c){const d=this[n];e.call(this,c),this.requestUpdate(n,d,a)}}throw Error("Unsupported decorator location: "+o)};function i(a){return(e,t)=>typeof t=="object"?B1(a,e,t):((o,s,r)=>{const n=s.hasOwnProperty(r);return s.constructor.createProperty(r,o),n?Object.getOwnPropertyDescriptor(s,r):void 0})(a,e,t)}/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */function z(a){return i({...a,state:!0,attribute:!1})}/**
+ */function M(a){return i({...a,state:!0,attribute:!1})}/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const q1=(a,e,t)=>(t.configurable=!0,t.enumerable=!0,Reflect.decorate&&typeof e!="object"&&Object.defineProperty(a,e,t),t);/**
+ */const I1=(a,e,t)=>(t.configurable=!0,t.enumerable=!0,Reflect.decorate&&typeof e!="object"&&Object.defineProperty(a,e,t),t);/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */function T1(a,e){return(t,o,s)=>{const r=n=>{var d;return((d=n.renderRoot)==null?void 0:d.querySelector(a))??null};return q1(t,o,{get(){return r(this)}})}}const Jt=g`
+ */function P1(a,e){return(t,o,s)=>{const r=n=>n.renderRoot?.querySelector(a)??null;return I1(t,o,{get(){return r(this)}})}}const Wt=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -182,7 +182,7 @@
     flex-direction: column;
     gap: var(--_nys-accordion-gap);
   }
-`;var R1=Object.defineProperty,We=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&R1(e,t,s),s};let N1=0;const mt=class mt extends f{constructor(){super(),this.id="",this.heading="",this.expanded=!1,this.bordered=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");this.expanded&&e&&e.addEventListener("slotchange",()=>{this._updateHeight()})}updated(e){e.has("expanded")&&this._updateHeight()}_generateUniqueId(){return`nys-accordionitem-${Date.now()}-${N1++}`}_dispatchEvent(){this.dispatchEvent(new CustomEvent("nys-accordionitem-toggle",{detail:{id:this.id,heading:this.heading,expanded:this.expanded},bubbles:!0,composed:!0}))}_handleExpand(){this.expanded=!this.expanded,this._updateHeight(),this._dispatchEvent()}_handleKeydown(e){(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this._handleExpand())}_updateHeight(){if(this._contentContainer)if(this.expanded){const e=this._contentContainer.scrollHeight;this._contentContainer.style.height=`${e}px`}else this._contentContainer.style.height="0",this._contentContainer.style.overflow="hidden"}render(){const e=`${this.id}-content`;return c`
+`;var O1=Object.defineProperty,Fe=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&O1(e,t,s),s};let Z1=0;const gt=class gt extends p{constructor(){super(),this.id="",this.heading="",this.expanded=!1,this.bordered=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}firstUpdated(){const e=this.shadowRoot?.querySelector("slot");this.expanded&&e&&e.addEventListener("slotchange",()=>{this._updateHeight()})}updated(e){e.has("expanded")&&this._updateHeight()}_generateUniqueId(){return`nys-accordionitem-${Date.now()}-${Z1++}`}_dispatchEvent(){this.dispatchEvent(new CustomEvent("nys-accordionitem-toggle",{detail:{id:this.id,heading:this.heading,expanded:this.expanded},bubbles:!0,composed:!0}))}_handleExpand(){this.expanded=!this.expanded,this._updateHeight(),this._dispatchEvent()}_handleKeydown(e){(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this._handleExpand())}_updateHeight(){if(this._contentContainer)if(this.expanded){const e=this._contentContainer.scrollHeight;this._contentContainer.style.height=`${e}px`}else this._contentContainer.style.height="0",this._contentContainer.style.overflow="hidden"}render(){const e=`${this.id}-content`;return l`
     <div id=${this.id} class="nys-accordionitem">
       <button
         class="nys-accordionitem__heading"
@@ -203,13 +203,13 @@
           </div>
         </div>
       </div>
-    </div>`}};mt.styles=Jt;let te=mt;We([i({type:String})],te.prototype,"id"),We([i({type:String})],te.prototype,"heading"),We([i({type:Boolean,reflect:!0})],te.prototype,"expanded"),We([i({type:Boolean,reflect:!0})],te.prototype,"bordered"),We([T1(".nys-accordionitem__content")],te.prototype,"_contentContainer"),customElements.get("nys-accordionitem")||customElements.define("nys-accordionitem",te);var F1=Object.defineProperty,bt=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&F1(e,t,s),s};let j1=0;const xt=class xt extends f{constructor(){super(),this.id="",this.singleSelect=!1,this.bordered=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}updated(e){e.has("bordered")&&this._applyBordered()}_generateUniqueId(){return`nys-accordionitem-${Date.now()}-${j1++}`}_getAccordions(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector("slot");return((e==null?void 0:e.assignedElements())||[]).filter(s=>s.tagName.toLowerCase()==="nys-accordionitem")}_onAccordionToggle(e){if(!this.singleSelect)return;const t=e.detail.id;e.detail.expanded&&this._getAccordions().forEach(s=>{s.id!==t&&s.expanded&&(s.expanded=!1)})}_applyBordered(){this._getAccordions().forEach(e=>{e.bordered=this.bordered})}render(){return c`<div
+    </div>`}};gt.styles=Wt;let te=gt;Fe([i({type:String})],te.prototype,"id"),Fe([i({type:String})],te.prototype,"heading"),Fe([i({type:Boolean,reflect:!0})],te.prototype,"expanded"),Fe([i({type:Boolean,reflect:!0})],te.prototype,"bordered"),Fe([P1(".nys-accordionitem__content")],te.prototype,"_contentContainer"),customElements.get("nys-accordionitem")||customElements.define("nys-accordionitem",te);var U1=Object.defineProperty,pt=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&U1(e,t,s),s};let q1=0;const bt=class bt extends p{constructor(){super(),this.id="",this.singleSelect=!1,this.bordered=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}updated(e){e.has("bordered")&&this._applyBordered()}_generateUniqueId(){return`nys-accordionitem-${Date.now()}-${q1++}`}_getAccordions(){return(this.shadowRoot?.querySelector("slot")?.assignedElements()||[]).filter(o=>o.tagName.toLowerCase()==="nys-accordionitem")}_onAccordionToggle(e){if(!this.singleSelect)return;const t=e.detail.id;e.detail.expanded&&this._getAccordions().forEach(s=>{s.id!==t&&s.expanded&&(s.expanded=!1)})}_applyBordered(){this._getAccordions().forEach(e=>{e.bordered=this.bordered})}render(){return l`<div
       id=${this.id}
       class="nys-accordion"
       @nys-accordionitem-toggle=${this._onAccordionToggle}
     >
       <slot></slot>
-    </div>`}};xt.styles=Jt;let Le=xt;bt([i({type:String})],Le.prototype,"id"),bt([i({type:Boolean,reflect:!0})],Le.prototype,"singleSelect"),bt([i({type:Boolean,reflect:!0})],Le.prototype,"bordered"),customElements.get("nys-accordion")||customElements.define("nys-accordion",Le);const G1=g`
+    </div>`}};bt.styles=Wt;let $e=bt;pt([i({type:String})],$e.prototype,"id"),pt([i({type:Boolean,reflect:!0})],$e.prototype,"singleSelect"),pt([i({type:Boolean,reflect:!0})],$e.prototype,"bordered"),customElements.get("nys-accordion")||customElements.define("nys-accordion",$e);const T1=g`
   :host {
     /* Global Alert Styles */
     --_nys-alert-border-width: var(--nys-border-width-lg, 4px);
@@ -449,11 +449,11 @@
  * @license
  * Copyright 2018 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */const u=a=>a??S;var W1=Object.defineProperty,Y1=Object.getOwnPropertyDescriptor,T=(a,e,t,o)=>{for(var s=o>1?void 0:o?Y1(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&W1(e,t,s),s};let K1=0;const O=(Ce=class extends f{constructor(){super(...arguments),this.id="",this.heading="",this.icon="",this.dismissible=!1,this.duration=0,this.text="",this.primaryAction="",this.secondaryAction="",this.primaryLabel="Learn more",this.secondaryLabel="Dismiss",this._alertClosed=!1,this._slotHasContent=!0,this._type="base",this._timeoutId=null}get type(){return this._type}set type(e){this._type=Ce.VALID_TYPES.includes(e)?e:"base"}get ariaAttributes(){const e=this.type==="danger"||this.type==="emergency"?"alert":this.type==="success"?"status":"region",t=e==="region"?`${this.type} alert`:"";return{role:e,ariaLabel:t}}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId()),this.duration>0&&(this._timeoutId=setTimeout(()=>{this._closeAlert()},this.duration))}disconnectedCallback(){this._timeoutId&&clearTimeout(this._timeoutId),super.disconnectedCallback()}firstUpdated(){this._checkSlotContent()}_generateUniqueId(){return`nys-alert-${Date.now()}-${K1++}`}_getIconName(){return this.icon?this.icon:this._checkAltNaming()}_checkAltNaming(){return this.type==="success"?"check_circle":this.type==="base"?"info":this.type==="danger"?"error":this.type==="emergency"?"emergency_home":this.type}_closeAlert(){this._alertClosed=!0,this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id,type:this.type,label:this.heading},bubbles:!0,composed:!0}))}async _checkSlotContent(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");if(e){const o=e.assignedNodes({flatten:!0}).filter(s=>{var r;return s.nodeType===Node.ELEMENT_NODE||s.nodeType===Node.TEXT_NODE&&((r=s.textContent)==null?void 0:r.trim())});await Promise.resolve(),this._slotHasContent=o.length>0}else await Promise.resolve(),this._slotHasContent=!1}render(){var o,s;const{role:e,ariaLabel:t}=this.ariaAttributes;return c`
-      ${this._alertClosed?"":c` <div
+ */const y=a=>a??S;var R1=Object.defineProperty,N1=Object.getOwnPropertyDescriptor,T=(a,e,t,o)=>{for(var s=o>1?void 0:o?N1(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&R1(e,t,s),s};let F1=0;const P=(_e=class extends p{constructor(){super(...arguments),this.id="",this.heading="",this.icon="",this.dismissible=!1,this.duration=0,this.text="",this.primaryAction="",this.secondaryAction="",this.primaryLabel="Learn more",this.secondaryLabel="Dismiss",this._alertClosed=!1,this._slotHasContent=!0,this._type="base",this._timeoutId=null}get type(){return this._type}set type(e){this._type=_e.VALID_TYPES.includes(e)?e:"base"}get ariaAttributes(){const e=this.type==="danger"||this.type==="emergency"?"alert":this.type==="success"?"status":"region",t=e==="region"?`${this.type} alert`:"";return{role:e,ariaLabel:t}}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId()),this.duration>0&&(this._timeoutId=setTimeout(()=>{this._closeAlert()},this.duration))}disconnectedCallback(){this._timeoutId&&clearTimeout(this._timeoutId),super.disconnectedCallback()}firstUpdated(){this._checkSlotContent()}_generateUniqueId(){return`nys-alert-${Date.now()}-${F1++}`}_getIconName(){return this.icon?this.icon:this._checkAltNaming()}_checkAltNaming(){return this.type==="success"?"check_circle":this.type==="base"?"info":this.type==="danger"?"error":this.type==="emergency"?"emergency_home":this.type}_closeAlert(){this._alertClosed=!0,this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id,type:this.type,label:this.heading},bubbles:!0,composed:!0}))}async _checkSlotContent(){const e=this.shadowRoot?.querySelector("slot");if(e){const t=e.assignedNodes({flatten:!0}).filter(o=>o.nodeType===Node.ELEMENT_NODE||o.nodeType===Node.TEXT_NODE&&o.textContent?.trim());await Promise.resolve(),this._slotHasContent=t.length>0}else await Promise.resolve(),this._slotHasContent=!1}render(){const{role:e,ariaLabel:t}=this.ariaAttributes;return l`
+      ${this._alertClosed?"":l` <div
             id=${this.id}
-            class="nys-alert__container ${this._slotHasContent||((o=this.text)==null?void 0:o.trim().length)>0?"":"nys-alert--centered"}"
-            aria-label=${u(t.trim()!==""?t:void 0)}
+            class="nys-alert__container ${this._slotHasContent||this.text?.trim().length>0?"":"nys-alert--centered"}"
+            aria-label=${y(t.trim()!==""?t:void 0)}
           >
             <div part="nys-alert__icon" class="nys-alert__icon">
               <nys-icon
@@ -464,23 +464,23 @@
             </div>
             <div class="nys-alert__texts" role=${e}>
               <p class="nys-alert__header">${this.heading}</p>
-              ${this._slotHasContent?c`<slot></slot>`:((s=this.text)==null?void 0:s.trim().length)>0?c`<p class="nys-alert__text">${this.text}</p>`:""}
-              ${this.primaryAction||this.secondaryAction?c`<div class="nys-alert__actions">
-                    ${this.primaryAction?c`<a
-                          href=${u(this.primaryAction||void 0)}
+              ${this._slotHasContent?l`<slot></slot>`:this.text?.trim().length>0?l`<p class="nys-alert__text">${this.text}</p>`:""}
+              ${this.primaryAction||this.secondaryAction?l`<div class="nys-alert__actions">
+                    ${this.primaryAction?l`<a
+                          href=${y(this.primaryAction||void 0)}
                           class="nys-alert__action nys-alert__primary"
                         >
                           ${this.primaryLabel}
                         </a>`:""}
-                    ${this.secondaryAction?c`<a
-                          href=${u(this.secondaryAction||void 0)}
+                    ${this.secondaryAction?l`<a
+                          href=${y(this.secondaryAction||void 0)}
                           class="nys-alert__action nys-alert__secondary"
                         >
                           ${this.secondaryLabel}
                         </a>`:""}
                   </div> `:""}
             </div>
-            ${this.dismissible?c` <nys-button
+            ${this.dismissible?l` <nys-button
                   id="dismiss-btn"
                   variant="ghost"
                   circle
@@ -488,10 +488,10 @@
                   size="sm"
                   ?inverted=${this.type==="emergency"}
                   ariaLabel="${this.heading}, alert, Close"
-                  .onClick=${()=>this._closeAlert()}
+                  @nys-click=${this._closeAlert}
                 ></nys-button>`:""}
           </div>`}
-    `}},Ce.styles=G1,Ce.VALID_TYPES=["base","info","success","warning","danger","emergency"],Ce);T([i({type:String})],O.prototype,"id",2),T([i({type:String})],O.prototype,"heading",2),T([i({type:String})],O.prototype,"icon",2),T([i({type:Boolean,reflect:!0})],O.prototype,"dismissible",2),T([i({type:Number,reflect:!0})],O.prototype,"duration",2),T([i({type:String})],O.prototype,"text",2),T([i({type:String})],O.prototype,"primaryAction",2),T([i({type:String})],O.prototype,"secondaryAction",2),T([i({type:String})],O.prototype,"primaryLabel",2),T([i({type:String})],O.prototype,"secondaryLabel",2),T([z()],O.prototype,"_alertClosed",2),T([z()],O.prototype,"_slotHasContent",2),T([i({reflect:!0})],O.prototype,"type",1);let e1=O;customElements.get("nys-alert")||customElements.define("nys-alert",e1);const X1=g`
+    `}},_e.styles=T1,_e.VALID_TYPES=["base","info","success","warning","danger","emergency"],_e);T([i({type:String})],P.prototype,"id",2),T([i({type:String})],P.prototype,"heading",2),T([i({type:String})],P.prototype,"icon",2),T([i({type:Boolean,reflect:!0})],P.prototype,"dismissible",2),T([i({type:Number,reflect:!0})],P.prototype,"duration",2),T([i({type:String})],P.prototype,"text",2),T([i({type:String})],P.prototype,"primaryAction",2),T([i({type:String})],P.prototype,"secondaryAction",2),T([i({type:String})],P.prototype,"primaryLabel",2),T([i({type:String})],P.prototype,"secondaryLabel",2),T([M()],P.prototype,"_alertClosed",2),T([M()],P.prototype,"_slotHasContent",2),T([i({reflect:!0})],P.prototype,"type",1);let Yt=P;customElements.get("nys-alert")||customElements.define("nys-alert",Yt);const j1=g`
   :host {
     /* Global Avatar Styles */
 
@@ -592,40 +592,40 @@
     height: 100%;
     fill: currentColor;
   }
-`;var Q1=Object.defineProperty,Q=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Q1(e,t,s),s};let J1=0;const wt=class wt extends f{constructor(){super(...arguments),this.id="",this.ariaLabel="",this.image="",this.initials="",this.icon="",this.color="",this.interactive=!1,this.disabled=!1,this.lazy=!1,this._slotHasContent=!0}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${J1++}`)}firstUpdated(){this._checkSlotContent()}async _checkSlotContent(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector("slot");if(!e){this._slotHasContent=!1;return}await Promise.resolve();const t=e.assignedNodes({flatten:!0}).filter(s=>{var r;return s.nodeType===Node.ELEMENT_NODE||s.nodeType===Node.TEXT_NODE&&((r=s.textContent)==null?void 0:r.trim())});this._slotHasContent=t.length>0}getContrastForeground(){var E;const e="var(--nys-color-ink, #000)",t="var(--nys-color-ink-reverse, #fff)",o="var(--nys-color-text, #000)",s="var(--nys-color-text-reverse, #fff)";if(!this.color)return;const r=document.createElement("div");r.style.color=this.color,document.body.appendChild(r);const n=getComputedStyle(r).color;document.body.removeChild(r);const d=n.match(/\d+/g);if(!d)return;const l=Number(d[0]),y=Number(d[1]),p=Number(d[2]),x=(.299*l+.587*y+.114*p)/255<.5;return((E=this.initials)==null?void 0:E.length)>0?x?s:o:x?t:e}render(){var e,t,o;return c`
+`;var G1=Object.defineProperty,Q=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&G1(e,t,s),s};let W1=0;const _t=class _t extends p{constructor(){super(...arguments),this.id="",this.ariaLabel="",this.image="",this.initials="",this.icon="",this.color="",this.interactive=!1,this.disabled=!1,this.lazy=!1,this._slotHasContent=!0}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${W1++}`)}firstUpdated(){this._checkSlotContent()}async _checkSlotContent(){const e=this.shadowRoot?.querySelector("slot");if(!e){this._slotHasContent=!1;return}await Promise.resolve();const t=e.assignedNodes({flatten:!0}).filter(o=>o.nodeType===Node.ELEMENT_NODE||o.nodeType===Node.TEXT_NODE&&o.textContent?.trim());this._slotHasContent=t.length>0}getContrastForeground(){const e="var(--nys-color-ink, #000)",t="var(--nys-color-ink-reverse, #fff)",o="var(--nys-color-text, #000)",s="var(--nys-color-text-reverse, #fff)";if(!this.color)return;const r=document.createElement("div");r.style.color=this.color,document.body.appendChild(r);const n=getComputedStyle(r).color;document.body.removeChild(r);const c=n.match(/\d+/g);if(!c)return;const d=Number(c[0]),h=Number(c[1]),f=Number(c[2]),$=(.299*d+.587*h+.114*f)/255<.5;return this.initials?.length>0?$?s:o:$?t:e}render(){return l`
       <label class="nys-avatar" id=${this.id}>
         <div class="nys-avatar__content">
           <div
             part="nys-avatar"
             class="nys-avatar__component"
             style=${this.color?`--_nys-avatar-background-color: ${this.color}; color: ${this.getContrastForeground()}`:""}
-            role=${u(this.interactive?"button":this.image?void 0:"img")}
-            aria-label=${u(this.image?void 0:this.ariaLabel?this.ariaLabel:"avatar")}
-            tabindex=${this.interactive&&!this.disabled?"0":u(void 0)}
+            role=${y(this.interactive?"button":this.image?void 0:"img")}
+            aria-label=${y(this.image?void 0:this.ariaLabel?this.ariaLabel:"avatar")}
+            tabindex=${this.interactive&&!this.disabled?"0":y(void 0)}
           >
-            ${((e=this.image)==null?void 0:e.length)>0?c`<img
+            ${this.image?.length>0?l`<img
                   part="nys-avatar__image"
                   class="nys-avatar__image"
                   src=${this.image}
                   alt=${this.ariaLabel||"avatar"}
                   loading=${this.lazy?"lazy":"eager"}
-                />`:((t=this.initials)==null?void 0:t.length)>0?c`<span
+                />`:this.initials?.length>0?l`<span
                     part="nys-avatar__initials"
                     class="nys-avatar__initials"
                     aria-hidden="true"
                     >${this.initials}</span
-                  >`:this._slotHasContent?c`<div part="nys-avatar__icon">
+                  >`:this._slotHasContent?l`<div part="nys-avatar__icon">
                       <slot></slot>
-                    </div>`:c`<div part="nys-avatar__icon">
+                    </div>`:l`<div part="nys-avatar__icon">
                       <nys-icon
                         label="nys-avatar__icon"
-                        name=${((o=this.icon)==null?void 0:o.length)>0?this.icon:"account_circle"}
+                        name=${this.icon?.length>0?this.icon:"account_circle"}
                       ></nys-icon>
                     </div>`}
           </div>
         </div>
       </label>
-    `}};wt.styles=X1;let Z=wt;Q([i({type:String})],Z.prototype,"id"),Q([i({type:String})],Z.prototype,"ariaLabel"),Q([i({type:String})],Z.prototype,"image"),Q([i({type:String})],Z.prototype,"initials"),Q([i({type:String})],Z.prototype,"icon"),Q([i({type:String})],Z.prototype,"color"),Q([i({type:Boolean,reflect:!0})],Z.prototype,"interactive"),Q([i({type:Boolean,reflect:!0})],Z.prototype,"disabled"),Q([i({type:Boolean,reflect:!0})],Z.prototype,"lazy"),Q([z()],Z.prototype,"_slotHasContent"),customElements.get("nys-avatar")||customElements.define("nys-avatar",Z);const es=g`
+    `}};_t.styles=j1;let O=_t;Q([i({type:String})],O.prototype,"id"),Q([i({type:String})],O.prototype,"ariaLabel"),Q([i({type:String})],O.prototype,"image"),Q([i({type:String})],O.prototype,"initials"),Q([i({type:String})],O.prototype,"icon"),Q([i({type:String})],O.prototype,"color"),Q([i({type:Boolean,reflect:!0})],O.prototype,"interactive"),Q([i({type:Boolean,reflect:!0})],O.prototype,"disabled"),Q([i({type:Boolean,reflect:!0})],O.prototype,"lazy"),Q([M()],O.prototype,"_slotHasContent"),customElements.get("nys-avatar")||customElements.define("nys-avatar",O);const Y1=g`
   .nys-backtotop {
     /* These props ARE NOT publicly overridable */
     --_nys-button-border-radius--start: var(--nys-radius-round, 1776px);
@@ -648,16 +648,16 @@
   .visible {
     display: inline-flex;
   }
-`;var ts=Object.defineProperty,rt=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&ts(e,t,s),s};const kt=class kt extends f{constructor(){super(),this.position="right",this.visible=!1,this.isMobile=!1,this.forceVisible=!1,this._handleScroll=this._handleScroll.bind(this),this._handleResize=this._handleResize.bind(this),this.mediaQuery=window.matchMedia("(max-width: 480px)")}connectedCallback(){super.connectedCallback(),this.forceVisible=this.hasAttribute("visible"),window.addEventListener("scroll",this._handleScroll),this.mediaQuery.addEventListener("change",this._handleResize),this._handleResize()}disconnectedCallback(){window.removeEventListener("scroll",this._handleScroll),this.mediaQuery.removeEventListener("change",this._handleResize),super.disconnectedCallback()}_handleScroll(){if(this.forceVisible)return;const e=window.innerHeight,t=document.documentElement.scrollHeight;this.visible=t>=e*4&&window.scrollY>e*1.5}_scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}_handleResize(){this.isMobile=this.mediaQuery.matches}render(){const e=["nys-backtotop",this.position,this.visible?"visible":""].filter(Boolean).join(" ");return c`<nys-button
+`;var K1=Object.defineProperty,st=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&K1(e,t,s),s};const Ct=class Ct extends p{constructor(){super(),this.position="right",this.visible=!1,this.isMobile=!1,this.forceVisible=!1,this._handleScroll=this._handleScroll.bind(this),this._handleResize=this._handleResize.bind(this),this.mediaQuery=window.matchMedia("(max-width: 480px)")}connectedCallback(){super.connectedCallback(),this.forceVisible=this.hasAttribute("visible"),window.addEventListener("scroll",this._handleScroll),this.mediaQuery.addEventListener("change",this._handleResize),this._handleResize()}disconnectedCallback(){window.removeEventListener("scroll",this._handleScroll),this.mediaQuery.removeEventListener("change",this._handleResize),super.disconnectedCallback()}_handleScroll(){if(this.forceVisible)return;const e=window.innerHeight,t=document.documentElement.scrollHeight;this.visible=t>=e*4&&window.scrollY>e*1.5}_scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}_handleResize(){this.isMobile=this.mediaQuery.matches}render(){const e=["nys-backtotop",this.position,this.visible?"visible":""].filter(Boolean).join(" ");return l`<nys-button
       id="nys-backtotop"
       prefixIcon="chevron_up"
       variant="outline"
       label="Back to top"
       size="sm"
       class="${e}"
-      .onClick=${this._scrollToTop}
       ?circle=${this.isMobile}
-    ></nys-button>`}};kt.styles=es;let fe=kt;rt([i({type:String})],fe.prototype,"position"),rt([i({type:Boolean,reflect:!0})],fe.prototype,"visible"),rt([z()],fe.prototype,"isMobile"),rt([z()],fe.prototype,"forceVisible"),customElements.get("nys-backtotop")||customElements.define("nys-backtotop",fe);const ss=g`
+      @nys-click=${this._scrollToTop}
+    ></nys-button>`}};Ct.styles=Y1;let fe=Ct;st([i({type:String})],fe.prototype,"position"),st([i({type:Boolean,reflect:!0})],fe.prototype,"visible"),st([M()],fe.prototype,"isMobile"),st([M()],fe.prototype,"forceVisible"),customElements.get("nys-backtotop")||customElements.define("nys-backtotop",fe);const X1=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1316,20 +1316,20 @@
     align-items: center;
     user-select: none;
   }
-`;var os=Object.defineProperty,rs=Object.getOwnPropertyDescriptor,w=(a,e,t,o)=>{for(var s=o>1?void 0:o?rs(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&os(e,t,s),s};let ns=0;const C=(P=class extends f{constructor(){super(),this.id="",this.name="",this._size="md",this.fullWidth=!1,this._variant="filled",this.inverted=!1,this.label="",this.ariaLabel="",this.ariaControls="",this.prefixIcon="",this.suffixIcon="",this.circle=!1,this.icon="",this.disabled=!1,this.form=null,this.value="",this.ariaDescription="",this._type="button",this.onClick=()=>{},this.href="",this._target="_self",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=P.VALID_SIZES.includes(e)?e:"md"}get variant(){return this._variant}set variant(e){this._variant=P.VALID_VARIANTS.includes(e)?e:"filled"}get type(){return this._type}set type(e){this._type=P.VALID_TYPES.includes(e)?e:"button"}get target(){return this._target}set target(e){this._target=P.VALID_TARGETS.includes(e)?e:"_self"}async getButtonElement(){var o,s;await this.updateComplete;const e=((o=this.shadowRoot)==null?void 0:o.querySelector("a.nys-button"))||null;if(e)return e;const t=((s=this.shadowRoot)==null?void 0:s.querySelector("button.nys-button"))||null;return t||null}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}_generateUniqueId(){return`nys-button-${Date.now()}-${ns++}`}_manageFormAction(e){typeof this.onClick=="function"&&this.onClick(e);const t=this._internals.form;if(t)switch(this.type){case"submit":t.requestSubmit();break;case"reset":t.reset();break}}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-button");e==null||e.classList.remove("active-focus"),this.dispatchEvent(new Event("nys-blur"))}_handleClick(e){if(this.disabled){e.preventDefault();return}this._manageFormAction(e),this.dispatchEvent(new Event("nys-click"))}_handleKeydown(e){if(e.code==="Space"||e.code==="Enter"||e.key===" "||e.key==="Enter"){if(this.disabled)return;if(e.preventDefault(),this.href){const t=this.renderRoot.querySelector("a.nys-button");t&&t.click()}else this._handleClick(e)}}focus(e){const t=this.renderRoot.querySelector(this.href?"a.nys-button":"button.nys-button");t?t.focus(e):super.focus(e)}render(){return c`
-      ${this.href?c`
+`;var Q1=Object.defineProperty,J1=Object.getOwnPropertyDescriptor,x=(a,e,t,o)=>{for(var s=o>1?void 0:o?J1(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Q1(e,t,s),s};let es=0;const C=(I=class extends p{constructor(){super(),this.id="",this.name="",this._size="md",this.fullWidth=!1,this._variant="filled",this.inverted=!1,this.label="",this.ariaLabel="",this.ariaControls="",this.prefixIcon="",this.suffixIcon="",this.circle=!1,this.icon="",this.disabled=!1,this.form=null,this.value="",this.ariaDescription="",this._type="button",this.onClick=()=>{},this.href="",this._target="_self",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=I.VALID_SIZES.includes(e)?e:"md"}get variant(){return this._variant}set variant(e){this._variant=I.VALID_VARIANTS.includes(e)?e:"filled"}get type(){return this._type}set type(e){this._type=I.VALID_TYPES.includes(e)?e:"button"}get target(){return this._target}set target(e){this._target=I.VALID_TARGETS.includes(e)?e:"_self"}async getButtonElement(){await this.updateComplete;const e=this.shadowRoot?.querySelector("a.nys-button")||null;if(e)return e;const t=this.shadowRoot?.querySelector("button.nys-button")||null;return t||null}connectedCallback(){super.connectedCallback(),this.id||(this.id=this._generateUniqueId())}_generateUniqueId(){return`nys-button-${Date.now()}-${es++}`}_manageFormAction(){typeof this.onClick=="function"&&this.click();const e=this._internals.form;if(e)switch(this.type){case"submit":e.requestSubmit();break;case"reset":e.reset();break}}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.shadowRoot?.querySelector(".nys-button")?.classList.remove("active-focus"),this.dispatchEvent(new Event("nys-blur"))}_handleClick(e){if(this.disabled){e.preventDefault();return}this._manageFormAction(),this.dispatchEvent(new Event("nys-click"))}_handleKeydown(e){if(e.code==="Space"||e.code==="Enter"||e.key===" "||e.key==="Enter"){if(this.disabled)return;if(e.preventDefault(),this.href){const t=this.renderRoot.querySelector("a.nys-button");t&&t.click()}else this._handleClick(e)}}focus(e){const t=this.renderRoot.querySelector(this.href?"a.nys-button":"button.nys-button");t?t.focus(e):super.focus(e)}render(){return l`
+      ${this.href?l`
             <div class="nys-button__linkwrapper">
               <a
                 class="nys-button"
-                id=${u(this.id)}
-                name=${u(this.name?this.name:void 0)}
+                id=${y(this.id)}
+                name=${y(this.name?this.name:void 0)}
                 ?disabled=${this.disabled}
                 aria-disabled="${this.disabled?"true":"false"}"
-                value=${u(this.value?this.value:void 0)}
+                value=${y(this.value?this.value:void 0)}
                 href=${this.href}
                 target=${this.target}
-                aria-label=${u(this.ariaLabel||this.label||(this.circle?this.icon:null)||"button")}
-                aria-description=${u(this.ariaDescription||void 0)}
+                aria-label=${y(this.ariaLabel||this.label||(this.circle?this.icon:null)||"button")}
+                aria-description=${y(this.ariaDescription||void 0)}
                 @click=${this._handleClick}
                 @focus="${this._handleFocus}"
                 @blur="${this._handleBlur}"
@@ -1337,14 +1337,14 @@
                 role="button"
                 tabindex="${this.disabled?-1:0}"
               >
-                ${this.prefixIcon&&this.variant!=="text"?c`<slot name="prefix-icon">
+                ${this.prefixIcon&&this.variant!=="text"?l`<slot name="prefix-icon">
                       <nys-icon size="16" name=${this.prefixIcon}></nys-icon>
                     </slot>`:""}
-                ${this.label&&!this.circle?c`<div class="nys-button__text">${this.label}</div>`:""}
-                ${this.suffixIcon&&this.variant!=="text"?c`<slot name="suffix-icon">
+                ${this.label&&!this.circle?l`<div class="nys-button__text">${this.label}</div>`:""}
+                ${this.suffixIcon&&this.variant!=="text"?l`<slot name="suffix-icon">
                       <nys-icon size="16" name=${this.suffixIcon}></nys-icon>
                     </slot>`:""}
-                ${this.circle&&this.icon?c`<slot name="circle-icon"
+                ${this.circle&&this.icon?l`<slot name="circle-icon"
                       ><nys-icon
                         size=${this.size==="sm"?"24":this.size==="lg"?"40":"32"}
                         name=${this.icon}
@@ -1352,18 +1352,18 @@
                     ></slot>`:""}
               </a>
             </div>
-          `:c`
+          `:l`
             <button
               class="nys-button"
-              id=${u(this.id)}
-              name=${u(this.name?this.name:void 0)}
+              id=${y(this.id)}
+              name=${y(this.name?this.name:void 0)}
               ?disabled=${this.disabled}
-              form=${u(this.form||void 0)}
-              value=${u(this.value?this.value:void 0)}
+              form=${y(this.form||void 0)}
+              value=${y(this.value?this.value:void 0)}
               type=${this.type}
-              aria-controls=${u(this.ariaControls||void 0)}
-              aria-label=${u(this.ariaLabel||this.label||(this.circle?this.icon:null)||this.prefixIcon||this.suffixIcon||"button")}
-              aria-description=${u(this.ariaDescription||void 0)}
+              aria-controls=${y(this.ariaControls||void 0)}
+              aria-label=${y(this.ariaLabel||this.label||(this.circle?this.icon:null)||this.prefixIcon||this.suffixIcon||"button")}
+              aria-description=${y(this.ariaDescription||void 0)}
               onclick="${this.onClick}"
               @click=${this._handleClick}
               @focus="${this._handleFocus}"
@@ -1371,14 +1371,14 @@
               @keydown="${this._handleKeydown}"
               role="button"
             >
-              ${this.prefixIcon&&this.variant!=="text"?c`<slot name="prefix-icon">
+              ${this.prefixIcon&&this.variant!=="text"?l`<slot name="prefix-icon">
                     <nys-icon size="16" name=${this.prefixIcon}></nys-icon>
                   </slot>`:""}
-              ${this.label&&!this.circle?c`<div class="nys-button__text">${this.label}</div>`:""}
-              ${this.suffixIcon&&this.variant!=="text"?c`<slot name="suffix-icon">
+              ${this.label&&!this.circle?l`<div class="nys-button__text">${this.label}</div>`:""}
+              ${this.suffixIcon&&this.variant!=="text"?l`<slot name="suffix-icon">
                     <nys-icon size="16" name=${this.suffixIcon}></nys-icon>
                   </slot>`:""}
-              ${this.circle&&this.icon?c`<slot name="circle-icon">
+              ${this.circle&&this.icon?l`<slot name="circle-icon">
                     <nys-icon
                       size=${this.size==="sm"?"24":this.size==="lg"?"40":"32"}
                       name=${this.icon}
@@ -1386,7 +1386,7 @@
                   </slot>`:""}
             </button>
           `}
-    `}},P.VALID_SIZES=["sm","md","lg"],P.VALID_VARIANTS=["filled","outline","ghost","text"],P.VALID_TYPES=["submit","reset","button"],P.VALID_TARGETS=["_self","_blank","_parent","_top","framename"],P.styles=ss,P.formAssociated=!0,P);w([i({type:String})],C.prototype,"id",2),w([i({type:String,reflect:!0})],C.prototype,"name",2),w([i({reflect:!0})],C.prototype,"size",1),w([i({type:Boolean,reflect:!0})],C.prototype,"fullWidth",2),w([i({reflect:!0})],C.prototype,"variant",1),w([i({type:Boolean,reflect:!0})],C.prototype,"inverted",2),w([i({type:String})],C.prototype,"label",2),w([i({type:String})],C.prototype,"ariaLabel",2),w([i({type:String})],C.prototype,"ariaControls",2),w([i({type:String})],C.prototype,"prefixIcon",2),w([i({type:String})],C.prototype,"suffixIcon",2),w([i({type:Boolean,reflect:!0})],C.prototype,"circle",2),w([i({type:String})],C.prototype,"icon",2),w([i({type:Boolean,reflect:!0})],C.prototype,"disabled",2),w([i({type:String,reflect:!0})],C.prototype,"form",2),w([i({type:String})],C.prototype,"value",2),w([i({type:String})],C.prototype,"ariaDescription",2),w([i({reflect:!0})],C.prototype,"type",1),w([i({type:Function})],C.prototype,"onClick",2),w([i({type:String})],C.prototype,"href",2),w([i({reflect:!0})],C.prototype,"target",1);let t1=C;customElements.get("nys-button")||customElements.define("nys-button",t1);const is=g`
+    `}},I.VALID_SIZES=["sm","md","lg"],I.VALID_VARIANTS=["filled","outline","ghost","text"],I.VALID_TYPES=["submit","reset","button"],I.VALID_TARGETS=["_self","_blank","_parent","_top","framename"],I.styles=X1,I.formAssociated=!0,I);x([i({type:String})],C.prototype,"id",2),x([i({type:String,reflect:!0})],C.prototype,"name",2),x([i({reflect:!0})],C.prototype,"size",1),x([i({type:Boolean,reflect:!0})],C.prototype,"fullWidth",2),x([i({reflect:!0})],C.prototype,"variant",1),x([i({type:Boolean,reflect:!0})],C.prototype,"inverted",2),x([i({type:String})],C.prototype,"label",2),x([i({type:String})],C.prototype,"ariaLabel",2),x([i({type:String})],C.prototype,"ariaControls",2),x([i({type:String})],C.prototype,"prefixIcon",2),x([i({type:String})],C.prototype,"suffixIcon",2),x([i({type:Boolean,reflect:!0})],C.prototype,"circle",2),x([i({type:String})],C.prototype,"icon",2),x([i({type:Boolean,reflect:!0})],C.prototype,"disabled",2),x([i({type:String,reflect:!0})],C.prototype,"form",2),x([i({type:String})],C.prototype,"value",2),x([i({type:String})],C.prototype,"ariaDescription",2),x([i({reflect:!0})],C.prototype,"type",1),x([i({attribute:!1})],C.prototype,"onClick",2),x([i({type:String})],C.prototype,"href",2),x([i({reflect:!0})],C.prototype,"target",1);let Kt=C;customElements.get("nys-button")||customElements.define("nys-button",Kt);const ts=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1465,14 +1465,14 @@
   .nys-badge__prefix {
     font-weight: var(--_nys-badge-prefix-font-weight);
   }
-`;var as=Object.defineProperty,ls=Object.getOwnPropertyDescriptor,ge=(a,e,t,o)=>{for(var s=o>1?void 0:o?ls(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&as(e,t,s),s};const se=(j=class extends f{constructor(){super(...arguments),this.id="",this.name="",this._size="md",this._intent="neutral",this.prefixLabel="",this.label="",this._prefixIcon="",this._suffixIcon=""}get size(){return this._size}set size(e){this._size=j.VALID_SIZES.includes(e)?e:"md"}get intent(){return this._intent}set intent(e){this._intent=j.VALID_INTENT.includes(e)?e:"neutral"}get prefixIcon(){return this._prefixIcon}set prefixIcon(e){e===""||e===null?this._prefixIcon=!0:e==="false"||e===!1?this._prefixIcon="":this._prefixIcon=e}get suffixIcon(){return this._suffixIcon}set suffixIcon(e){e===""||e===null?this._suffixIcon=!0:e==="false"||e===!1?this._suffixIcon="":this._suffixIcon=e}connectedCallback(){super.connectedCallback();const e=this.getAttribute("prefixicon");e!==null&&this.prefixIcon===""&&(this.prefixIcon=e);const t=this.getAttribute("suffixicon");t!==null&&this.suffixIcon===""&&(this.suffixIcon=t)}resolveIcon(e){return e===!0?j.DEFAULT_ICONS[this.intent]??"info":typeof e=="string"&&e.trim()!==""?e:null}render(){const e=this.resolveIcon(this.prefixIcon),t=this.resolveIcon(this.suffixIcon);return c`
+`;var ss=Object.defineProperty,os=Object.getOwnPropertyDescriptor,ge=(a,e,t,o)=>{for(var s=o>1?void 0:o?os(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&ss(e,t,s),s};const se=(j=class extends p{constructor(){super(...arguments),this.id="",this.name="",this._size="md",this._intent="neutral",this.prefixLabel="",this.label="",this._prefixIcon="",this._suffixIcon=""}get size(){return this._size}set size(e){this._size=j.VALID_SIZES.includes(e)?e:"md"}get intent(){return this._intent}set intent(e){this._intent=j.VALID_INTENT.includes(e)?e:"neutral"}get prefixIcon(){return this._prefixIcon}set prefixIcon(e){e===""||e===null?this._prefixIcon=!0:e==="false"||e===!1?this._prefixIcon="":this._prefixIcon=e}get suffixIcon(){return this._suffixIcon}set suffixIcon(e){e===""||e===null?this._suffixIcon=!0:e==="false"||e===!1?this._suffixIcon="":this._suffixIcon=e}connectedCallback(){super.connectedCallback();const e=this.getAttribute("prefixicon");e!==null&&this.prefixIcon===""&&(this.prefixIcon=e);const t=this.getAttribute("suffixicon");t!==null&&this.suffixIcon===""&&(this.suffixIcon=t)}resolveIcon(e){return e===!0?j.DEFAULT_ICONS[this.intent]??"info":typeof e=="string"&&e.trim()!==""?e:null}render(){const e=this.resolveIcon(this.prefixIcon),t=this.resolveIcon(this.suffixIcon);return l`
       <div class="nys-badge">
-        ${e?c`<nys-icon size="16" name=${e}></nys-icon>`:""}
-        ${this.prefixLabel?c`<div class="nys-badge__prefix">${this.prefixLabel}</div>`:""}
+        ${e?l`<nys-icon size="16" name=${e}></nys-icon>`:""}
+        ${this.prefixLabel?l`<div class="nys-badge__prefix">${this.prefixLabel}</div>`:""}
         <div class="nys-badge__label">${this.label}</div>
-        ${t?c`<nys-icon size="16" name=${t}></nys-icon>`:""}
+        ${t?l`<nys-icon size="16" name=${t}></nys-icon>`:""}
       </div>
-    `}},j.VALID_SIZES=["sm","md"],j.VALID_INTENT=["neutral","error","success","warning"],j.styles=is,j.DEFAULT_ICONS={neutral:"info",error:"emergency_home",success:"check_circle",warning:"warning"},j);ge([i({type:String})],se.prototype,"id",2),ge([i({type:String,reflect:!0})],se.prototype,"name",2),ge([i({reflect:!0})],se.prototype,"size",1),ge([i({reflect:!0})],se.prototype,"intent",1),ge([i({type:String})],se.prototype,"prefixLabel",2),ge([i({type:String})],se.prototype,"label",2),ge([i({type:String,attribute:"prefixicon"})],se.prototype,"prefixIcon",1),ge([i({type:String,attribute:"suffixicon"})],se.prototype,"suffixIcon",1);let s1=se;customElements.get("nys-badge")||customElements.define("nys-badge",s1);const o1=g`
+    `}},j.VALID_SIZES=["sm","md"],j.VALID_INTENT=["neutral","error","success","warning"],j.styles=ts,j.DEFAULT_ICONS={neutral:"info",error:"emergency_home",success:"check_circle",warning:"warning"},j);ge([i({type:String})],se.prototype,"id",2),ge([i({type:String,reflect:!0})],se.prototype,"name",2),ge([i({reflect:!0})],se.prototype,"size",1),ge([i({reflect:!0})],se.prototype,"intent",1),ge([i({type:String})],se.prototype,"prefixLabel",2),ge([i({type:String})],se.prototype,"label",2),ge([i({type:String,attribute:"prefixicon"})],se.prototype,"prefixIcon",1),ge([i({type:String,attribute:"suffixicon"})],se.prototype,"suffixIcon",1);let Xt=se;customElements.get("nys-badge")||customElements.define("nys-badge",Xt);const Qt=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -1854,7 +1854,7 @@
     overflow: hidden;
     border: 0;
   }
-`;var cs=Object.defineProperty,ds=Object.getOwnPropertyDescriptor,U=(a,e,t,o)=>{for(var s=o>1?void 0:o?ds(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&cs(e,t,s),s};let hs=0;const V=(ae=class extends f{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.tile=!1,this._tooltip="",this.invert=!1,this.form=null,this._slottedDescriptionText="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=ae.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${hs++}`),this.addEventListener("nys-change",this._handleCheckboxChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("nys-change",this._handleCheckboxChange),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setGroupExist(),this._updateCheckboxSize(),this._updateCheckboxTile(),this._updateCheckboxShowError(),this._getSlotDescriptionForAria()}updated(e){e.has("required")&&this.required&&this._setupCheckboxRequired(),e.has("size")&&this._updateCheckboxSize(),e.has("tile")&&this._updateCheckboxTile(),e.has("invert")&&this._updateCheckboxInvert(),e.has("showError")&&this._updateCheckboxShowError(),e.has("form")&&this._updateCheckboxForm()}_setGroupExist(){this.querySelectorAll("nys-checkbox").forEach(t=>{t.groupExist=!0})}async _setupCheckboxRequired(){const e=this.querySelector("nys-checkbox"),t=this.errorMessage||"This field is required",o=e?await e.getInputElement():null;this._internals.setValidity({valueMissing:!0},t,o||this)}async _manageRequire(){if(this.required){const e=this.errorMessage||"Please select at least one option.",t=this.querySelector("nys-checkbox"),o=t?await t.getInputElement().catch(()=>null):null,s=this.querySelectorAll("nys-checkbox");Array.from(s).some(n=>n.checked)?(this._internals.setValidity({}),this.showError=!1):(this._internals.setValidity({valueMissing:!0},e,o||this),this.showError=!0)}}_updateCheckboxSize(){this.querySelectorAll("nys-checkbox").forEach(t=>{t.setAttribute("size",this.size)})}_updateCheckboxTile(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.tile?t.toggleAttribute("tile",!0):t.removeAttribute("tile")})}_updateCheckboxInvert(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.invert?t.toggleAttribute("invert",!0):t.removeAttribute("invert")})}_updateCheckboxShowError(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.showError?t.setAttribute("showError",""):t.removeAttribute("showError")})}_updateCheckboxForm(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.showError&&this.form!==null?t.setAttribute("form",this.form):t.removeAttribute("form")})}_getSlotDescriptionForAria(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector('slot[name="description"]'),t=(e==null?void 0:e.assignedNodes({flatten:!0}))||[];this._slottedDescriptionText=t.map(s=>{var r;return(r=s.textContent)==null?void 0:r.trim()}).filter(Boolean).join(", ")}async _handleInvalid(e){e.preventDefault(),this.showError=!0,this._manageRequire();const t=this.querySelector("nys-checkbox"),o=t?await t.getInputElement():null;if(o){const s=this._internals.form;s?Array.from(s.elements).find(d=>{if(d.tagName.toLowerCase()==="nys-checkboxgroup"){if(Array.from(this.querySelectorAll("nys-checkbox")).filter(p=>p.checked).length===0)return d}else return typeof d.checkValidity=="function"&&!d.checkValidity()})===this&&o.focus():o.focus()}}_handleCheckboxChange(e){const t=e,{name:o}=t.detail,r=Array.from(this.querySelectorAll("nys-checkbox")).filter(n=>n.checked).map(n=>n.value);this.name=o,this._internals.setFormValue(r.join(", ")),this._manageRequire()}render(){return c`
+`;var rs=Object.defineProperty,ns=Object.getOwnPropertyDescriptor,Z=(a,e,t,o)=>{for(var s=o>1?void 0:o?ns(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&rs(e,t,s),s};let is=0;const z=(le=class extends p{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.tile=!1,this._tooltip="",this.inverted=!1,this.form=null,this._slottedDescriptionText="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=le.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${is++}`),this.addEventListener("nys-change",this._handleCheckboxChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("nys-change",this._handleCheckboxChange),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setGroupExist(),this._updateCheckboxSize(),this._updateCheckboxTile(),this._updateCheckboxShowError(),this._getSlotDescriptionForAria()}updated(e){e.has("required")&&this.required&&this._setupCheckboxRequired(),e.has("size")&&this._updateCheckboxSize(),e.has("tile")&&this._updateCheckboxTile(),e.has("inverted")&&this._updateCheckboxInvert(),e.has("showError")&&this._updateCheckboxShowError(),e.has("form")&&this._updateCheckboxForm()}_setGroupExist(){this.querySelectorAll("nys-checkbox").forEach(t=>{t.groupExist=!0})}async _setupCheckboxRequired(){const e=this.querySelector("nys-checkbox"),t=this.errorMessage||"This field is required",o=e?await e.getInputElement():null;this._internals.setValidity({valueMissing:!0},t,o||this)}async _manageRequire(){if(this.required){const e=this.errorMessage||"Please select at least one option.",t=this.querySelector("nys-checkbox"),o=t?await t.getInputElement().catch(()=>null):null,s=this.querySelectorAll("nys-checkbox");Array.from(s).some(n=>n.checked)?(this._internals.setValidity({}),this.showError=!1):(this._internals.setValidity({valueMissing:!0},e,o||this),this.showError=!0)}}_updateCheckboxSize(){this.querySelectorAll("nys-checkbox").forEach(t=>{t.setAttribute("size",this.size)})}_updateCheckboxTile(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.tile?t.toggleAttribute("tile",!0):t.removeAttribute("tile")})}_updateCheckboxInvert(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.inverted?t.toggleAttribute("inverted",!0):t.removeAttribute("inverted")})}_updateCheckboxShowError(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.showError?t.setAttribute("showError",""):t.removeAttribute("showError")})}_updateCheckboxForm(){this.querySelectorAll("nys-checkbox").forEach(t=>{this.showError&&this.form!==null?t.setAttribute("form",this.form):t.removeAttribute("form")})}_getSlotDescriptionForAria(){const t=this.shadowRoot?.querySelector('slot[name="description"]')?.assignedNodes({flatten:!0})||[];this._slottedDescriptionText=t.map(o=>o.textContent?.trim()).filter(Boolean).join(", ")}async _handleInvalid(e){e.preventDefault(),this.showError=!0,this._manageRequire();const t=this.querySelector("nys-checkbox"),o=t?await t.getInputElement():null;if(o){const s=this._internals.form;s?Array.from(s.elements).find(c=>{if(c.tagName.toLowerCase()==="nys-checkboxgroup"){if(Array.from(this.querySelectorAll("nys-checkbox")).filter(f=>f.checked).length===0)return c}else return typeof c.checkValidity=="function"&&!c.checkValidity()})===this&&o.focus():o.focus()}}_handleCheckboxChange(e){const t=e,{name:o}=t.detail,r=Array.from(this.querySelectorAll("nys-checkbox")).filter(n=>n.checked).map(n=>n.value);this.name=o,this._internals.setFormValue(r.join(", ")),this._manageRequire()}render(){return l`
       <div class="nys-checkboxgroup">
         <nys-label
           for=${this.id}
@@ -1862,7 +1862,7 @@
           description=${this.description}
           flag=${this.required?"required":this.optional?"optional":""}
           tooltip=${this._tooltip}
-          ?invert=${this.invert}
+          ?inverted=${this.inverted}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -1880,19 +1880,19 @@
           .showDivider=${!this.tile}
         ></nys-errormessage>
       </div>
-    `}},ae.VALID_SIZES=["sm","md"],ae.styles=o1,ae.formAssociated=!0,ae);U([i({type:String})],V.prototype,"id",2),U([i({type:String,reflect:!0})],V.prototype,"name",2),U([i({type:Boolean,reflect:!0})],V.prototype,"required",2),U([i({type:Boolean,reflect:!0})],V.prototype,"optional",2),U([i({type:Boolean,reflect:!0})],V.prototype,"showError",2),U([i({type:String})],V.prototype,"errorMessage",2),U([i({type:String})],V.prototype,"label",2),U([i({type:String})],V.prototype,"description",2),U([i({type:Boolean,reflect:!0})],V.prototype,"tile",2),U([i({type:String})],V.prototype,"_tooltip",2),U([i({type:Boolean,reflect:!0})],V.prototype,"invert",2),U([i({type:String,reflect:!0})],V.prototype,"form",2),U([z()],V.prototype,"_slottedDescriptionText",2),U([i({reflect:!0})],V.prototype,"size",1);let r1=V;customElements.get("nys-checkboxgroup")||customElements.define("nys-checkboxgroup",r1);var ys=Object.defineProperty,us=Object.getOwnPropertyDescriptor,H=(a,e,t,o)=>{for(var s=o>1?void 0:o?us(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&ys(e,t,s),s};let ps=0;const A=(le=class extends f{constructor(){super(),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.form=null,this.showError=!1,this.errorMessage="",this.groupExist=!1,this.tile=!1,this.invert=!1,this._size="md",this._manageLabelClick=()=>{var o,s;const e=(o=this.shadowRoot)==null?void 0:o.querySelector("nys-label"),t=(s=this.shadowRoot)==null?void 0:s.querySelector("input");e&&t&&e.addEventListener("click",()=>t.click())},this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=le.VALID_SIZES.includes(e)?e:"md"}async getInputElement(){var e;return await this.updateComplete,((e=this.shadowRoot)==null?void 0:e.querySelector("input"))||null}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${ps++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire(),this._manageLabelClick()}formResetCallback(){this.checked=!1}_setValue(){this.groupExist||this._internals.setFormValue(this.checked?this.value:null)}_manageRequire(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector("input"),t=this.errorMessage||"This field is required";e&&(this.required&&!this.checked?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):this._internals.setValidity({}))}_setValidityMessage(e=""){var o,s;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");t&&(this.showError=!!e,(s=this.errorMessage)!=null&&s.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!e)return;const t=e.validity;let o="";t.valueMissing&&(o="This field is required"),this._setValidityMessage(o)}checkValidity(){var t;if(this.required&&!this.checked)return!1;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");return e?e.checkValidity():!0}_handleInvalid(e){var o;e.preventDefault(),this.showError=!0,this._validate();const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");if(t){const s=this._internals.form;s?Array.from(s.elements).find(d=>typeof d.checkValidity=="function"&&!d.checkValidity())===this&&t.focus():t.focus()}}_emitChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))}_handleChange(e){const{checked:t}=e.target;this.checked=t,this.groupExist||this._internals.setFormValue(this.checked?this.value:null),this._validate(),this._emitChangeEvent()}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.dispatchEvent(new Event("nys-blur"))}async _handleKeydown(e){e.code==="Space"&&(e.preventDefault(),this.disabled||(this.checked=!this.checked,this._internals.setFormValue(this.checked?this.value:null),await this.updateComplete,this._validate(),this._emitChangeEvent()))}render(){var e;return c`
+    `}},le.VALID_SIZES=["sm","md"],le.styles=Qt,le.formAssociated=!0,le);Z([i({type:String})],z.prototype,"id",2),Z([i({type:String,reflect:!0})],z.prototype,"name",2),Z([i({type:Boolean,reflect:!0})],z.prototype,"required",2),Z([i({type:Boolean,reflect:!0})],z.prototype,"optional",2),Z([i({type:Boolean,reflect:!0})],z.prototype,"showError",2),Z([i({type:String})],z.prototype,"errorMessage",2),Z([i({type:String})],z.prototype,"label",2),Z([i({type:String})],z.prototype,"description",2),Z([i({type:Boolean,reflect:!0})],z.prototype,"tile",2),Z([i({type:String})],z.prototype,"_tooltip",2),Z([i({type:Boolean,reflect:!0})],z.prototype,"inverted",2),Z([i({type:String,reflect:!0})],z.prototype,"form",2),Z([M()],z.prototype,"_slottedDescriptionText",2),Z([i({reflect:!0})],z.prototype,"size",1);let Jt=z;customElements.get("nys-checkboxgroup")||customElements.define("nys-checkboxgroup",Jt);var as=Object.defineProperty,ls=Object.getOwnPropertyDescriptor,V=(a,e,t,o)=>{for(var s=o>1?void 0:o?ls(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&as(e,t,s),s};let cs=0;const E=(ce=class extends p{constructor(){super(),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.form=null,this.showError=!1,this.errorMessage="",this.groupExist=!1,this.tile=!1,this.inverted=!1,this._size="md",this._manageLabelClick=()=>{const e=this.shadowRoot?.querySelector("nys-label"),t=this.shadowRoot?.querySelector("input");e&&t&&e.addEventListener("click",()=>t.click())},this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=ce.VALID_SIZES.includes(e)?e:"md"}async getInputElement(){return await this.updateComplete,this.shadowRoot?.querySelector("input")||null}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-checkbox-${Date.now()}-${cs++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue(),this._manageRequire(),this._manageLabelClick()}formResetCallback(){this.checked=!1}_setValue(){this.groupExist||this._internals.setFormValue(this.checked?this.value:null)}_manageRequire(){const e=this.shadowRoot?.querySelector("input"),t=this.errorMessage||"This field is required";e&&(this.required&&!this.checked?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):this._internals.setValidity({}))}_setValidityMessage(e=""){const t=this.shadowRoot?.querySelector("input");t&&(this.showError=!!e,this.errorMessage?.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){const e=this.shadowRoot?.querySelector("input");if(!e)return;const t=e.validity;let o="";t.valueMissing&&(o="This field is required"),this._setValidityMessage(o)}checkValidity(){if(this.required&&!this.checked)return!1;const e=this.shadowRoot?.querySelector("input");return e?e.checkValidity():!0}_handleInvalid(e){e.preventDefault(),this.showError=!0,this._validate();const t=this.shadowRoot?.querySelector("input");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&t.focus():t.focus()}}_emitChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))}_handleChange(e){const{checked:t}=e.target;this.checked=t,this.groupExist||this._internals.setFormValue(this.checked?this.value:null),this._validate(),this._emitChangeEvent()}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.dispatchEvent(new Event("nys-blur"))}async _handleKeydown(e){e.code==="Space"&&(e.preventDefault(),this.disabled||(this.checked=!this.checked,this._internals.setFormValue(this.checked?this.value:null),await this.updateComplete,this._validate(),this._emitChangeEvent()))}render(){return l`
       <label class="nys-checkbox">
         <div class="nys-checkbox__checkboxwrapper">
           <input
             id="${this.id}"
             class="nys-checkbox__checkbox"
             type="checkbox"
-            name="${u(this.name?this.name:void 0)}"
+            name="${y(this.name?this.name:void 0)}"
             .checked=${this.checked}
             ?disabled=${this.disabled}
             .value=${this.value}
             ?required="${this.required}"
-            form=${u(this.form||void 0)}
+            form=${y(this.form||void 0)}
             aria-checked="${this.checked}"
             aria-disabled="${this.disabled?"true":"false"}"
             aria-required="${this.required}"
@@ -1903,20 +1903,20 @@
             @keydown="${this._handleKeydown}"
             aria-label="${this.label}"
           />
-          ${this.checked?c`<nys-icon
+          ${this.checked?l`<nys-icon
                 for="${this.id}"
                 name="check"
                 size="${this.size==="md"?"4xl":this.size==="sm"?"2xl":"xl"}"
                 class="nys-checkbox__icon"
               ></nys-icon>`:""}
         </div>
-        ${this.label&&c`
+        ${this.label&&l`
           <nys-label
             for=${this.id}
             label=${this.label}
-            description=${u(this.description??void 0)}
-            flag=${u(this.required?"required":void 0)}
-            ?invert=${this.invert}
+            description=${y(this.description??void 0)}
+            flag=${y(this.required?"required":void 0)}
+            ?inverted=${this.inverted}
           >
             <slot name="description" slot="description"
               >${this.description}</slot
@@ -1924,19 +1924,19 @@
           </nys-label>
         `}
       </label>
-      ${((e=this.parentElement)==null?void 0:e.tagName.toLowerCase())!=="nys-checkboxgroup"?c`<nys-errormessage
+      ${this.parentElement?.tagName.toLowerCase()!=="nys-checkboxgroup"?l`<nys-errormessage
             id="single-error-message"
             ?showError=${this.showError}
             errorMessage=${this._internals.validationMessage||this.errorMessage}
             .showDivider=${!this.tile}
           ></nys-errormessage>`:""}
-    `}},le.VALID_SIZES=["sm","md"],le.styles=o1,le.formAssociated=!0,le);H([i({type:Boolean,reflect:!0})],A.prototype,"checked",2),H([i({type:Boolean,reflect:!0})],A.prototype,"disabled",2),H([i({type:Boolean,reflect:!0})],A.prototype,"required",2),H([i({type:String})],A.prototype,"label",2),H([i({type:String})],A.prototype,"description",2),H([i({type:String})],A.prototype,"id",2),H([i({type:String,reflect:!0})],A.prototype,"name",2),H([i({type:String})],A.prototype,"value",2),H([i({type:String,reflect:!0})],A.prototype,"form",2),H([i({type:Boolean,reflect:!0})],A.prototype,"showError",2),H([i({type:String})],A.prototype,"errorMessage",2),H([i({type:Boolean})],A.prototype,"groupExist",2),H([i({type:Boolean,reflect:!0})],A.prototype,"tile",2),H([i({type:Boolean,reflect:!0})],A.prototype,"invert",2),H([i({reflect:!0})],A.prototype,"size",1);let n1=A;customElements.get("nys-checkbox")||customElements.define("nys-checkbox",n1);const vs=g`
+    `}},ce.VALID_SIZES=["sm","md"],ce.styles=Qt,ce.formAssociated=!0,ce);V([i({type:Boolean,reflect:!0})],E.prototype,"checked",2),V([i({type:Boolean,reflect:!0})],E.prototype,"disabled",2),V([i({type:Boolean,reflect:!0})],E.prototype,"required",2),V([i({type:String})],E.prototype,"label",2),V([i({type:String})],E.prototype,"description",2),V([i({type:String})],E.prototype,"id",2),V([i({type:String,reflect:!0})],E.prototype,"name",2),V([i({type:String})],E.prototype,"value",2),V([i({type:String,reflect:!0})],E.prototype,"form",2),V([i({type:Boolean,reflect:!0})],E.prototype,"showError",2),V([i({type:String})],E.prototype,"errorMessage",2),V([i({type:Boolean})],E.prototype,"groupExist",2),V([i({type:Boolean,reflect:!0})],E.prototype,"tile",2),V([i({type:Boolean,reflect:!0})],E.prototype,"inverted",2),V([i({reflect:!0})],E.prototype,"size",1);let e1=E;customElements.get("nys-checkbox")||customElements.define("nys-checkbox",e1);const ds=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
     /* Global Divider Styles */
     --_nys-divider-size: var(--nys-size-1px, 1px);
-    --_nys-divider-color: var(--nys-color-neutral-200, #bec0c1);
+    --_nys-divider-color: var(--nys-color-neutral-500, #797c7f);
     --_nys-divider-width: 100%;
   }
   /* Inverted */
@@ -1952,7 +1952,7 @@
     margin: 0;
     border: none;
   }
-`;var fs=Object.defineProperty,gs=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&fs(e,t,s),s};const $t=class $t extends f{constructor(){super(),this.inverted=!1}render(){return c`<hr class="nys-divider" />`}};$t.styles=vs;let Ye=$t;gs([i({type:Boolean,reflect:!0})],Ye.prototype,"inverted"),customElements.get("nys-divider")||customElements.define("nys-divider",Ye);const bs=g`
+`;var hs=Object.defineProperty,ys=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&hs(e,t,s),s};const mt=class mt extends p{constructor(){super(),this.inverted=!1}render(){return l`<hr class="nys-divider" />`}};mt.styles=ds;let je=mt;ys([i({type:Boolean,reflect:!0})],je.prototype,"inverted"),customElements.get("nys-divider")||customElements.define("nys-divider",je);const us=g`
   :host {
     --_nys-errormessage-font-family: var(
       --nys-font-family-ui,
@@ -2001,10 +2001,10 @@
     border-top: var(--_nys-errormessage-width--divider) solid
       var(--_nys-errormessage-color);
   }
-`;var _s=Object.defineProperty,_t=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&_s(e,t,s),s};const at=class at extends f{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return c`${this.showError?c`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
+`;var ps=Object.defineProperty,vt=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&ps(e,t,s),s};const nt=class nt extends p{constructor(){super(),this.showError=!1,this.errorMessage="",this.showDivider=!1,this._internals=this.attachInternals()}render(){return l`${this.showError?l`<div class="nys-errormessage" ?showDivider=${this.showDivider}>
           <nys-icon name="error" size="2xl"></nys-icon>
           ${this._internals.validationMessage||this.errorMessage}
-        </div>`:""}`}};at.styles=bs,at.formAssociated=!0;let Ee=at;_t([i({type:Boolean})],Ee.prototype,"showError"),_t([i({type:String})],Ee.prototype,"errorMessage"),_t([i({type:Boolean,reflect:!0})],Ee.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",Ee);async function Cs(a,e){if(!e||e.trim()==="")return!0;const t=e.toLowerCase().split(",").map(r=>r.trim()),o=a.name.toLowerCase(),s=o.includes(".")?o.split(".").pop():"";for(const r of t)if(r.startsWith(".")&&r.slice(1)===s||r.endsWith("/*")&&a.type.startsWith(r.slice(0,-1))||a.type===r)return!0;return!1}const ms=g`
+        </div>`:""}`}};nt.styles=us,nt.formAssociated=!0;let Se=nt;vt([i({type:Boolean})],Se.prototype,"showError"),vt([i({type:String})],Se.prototype,"errorMessage"),vt([i({type:Boolean,reflect:!0})],Se.prototype,"showDivider"),customElements.get("nys-errormessage")||customElements.define("nys-errormessage",Se);async function vs(a,e){if(!e||e.trim()==="")return!0;const t=e.toLowerCase().split(",").map(r=>r.trim()),o=a.name.toLowerCase(),s=o.includes(".")?o.split(".").pop():"";for(const r of t)if(r.startsWith(".")&&r.slice(1)===s||r.endsWith("/*")&&a.type.startsWith(r.slice(0,-1))||a.type===r)return!0;return!1}const fs=g`
   :host {
     /* Global Fileinput Styles */
     --_nys-fileinput-gap: var(--nys-space-100, 8px);
@@ -2137,7 +2137,7 @@
   progress::-webkit-progress-bar {
     background-color: var(--_nys-fileinput-progress-background);
   }
-`,xs=g`
+`,gs=g`
   :host {
     /* Global fileitem Styles */
     --_nys-fileitem-border-radius: var(--nys-radius-md, 4px);
@@ -2282,7 +2282,7 @@
       transform: rotate(360deg);
     }
   }
-`;var ws=Object.defineProperty,nt=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&ws(e,t,s),s};const St=class St extends f{constructor(){super(...arguments),this.filename="",this.status="pending",this.progress=0,this.errorMessage=""}_handleRemove(){this.dispatchEvent(new CustomEvent("nys-fileRemove",{detail:{filename:this.filename},bubbles:!0,composed:!0}))}splitFilename(e){const t=e.lastIndexOf("."),o=t!==-1?e.slice(t):"",s=t!==-1?e.slice(0,t):e,r=s.slice(0,s.length-3),n=s.slice(-3);return{startPart:r,endPart:n,extension:o}}render(){const{startPart:e,endPart:t,extension:o}=this.splitFilename(this.filename);return c`
+`;var bs=Object.defineProperty,ot=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&bs(e,t,s),s};const xt=class xt extends p{constructor(){super(...arguments),this.filename="",this.status="pending",this.progress=0,this.errorMessage=""}_handleRemove(){this.dispatchEvent(new CustomEvent("nys-fileRemove",{detail:{filename:this.filename},bubbles:!0,composed:!0}))}splitFilename(e){const t=e.lastIndexOf("."),o=t!==-1?e.slice(t):"",s=t!==-1?e.slice(0,t):e,r=s.slice(0,s.length-3),n=s.slice(-3);return{startPart:r,endPart:n,extension:o}}render(){const{startPart:e,endPart:t,extension:o}=this.splitFilename(this.filename);return l`
       <div
         class="file-item ${this.status}"
         aria-busy=${this.status==="processing"?"true":"false"}
@@ -2301,7 +2301,7 @@
                 >${t}${o}</span
               >
             </div>
-            ${this.errorMessage?c`<p
+            ${this.errorMessage?l`<p
                   class="file-item__error"
                   role="alert"
                   aria-live="assertive"
@@ -2318,11 +2318,11 @@
             ariaLabel="close button"
             size="sm"
             variant="ghost"
-            .onClick=${()=>this._handleRemove()}
+            @nys-click=${this._handleRemove}
             ariaLabel="Remove file: ${this.filename}"
           ></nys-button>
         </div>
-        ${this.status==="processing"?c`<div
+        ${this.status==="processing"?l`<div
               class="file-item__progress-container"
               role="progressbar"
               aria-valuemin="0"
@@ -2333,7 +2333,7 @@
               <progress value=${this.progress} max="100"></progress>
             </div>`:null}
       </div>
-    `}};St.styles=xs;let Ae=St;nt([i({type:String})],Ae.prototype,"filename"),nt([i({type:String})],Ae.prototype,"status"),nt([i({type:Number})],Ae.prototype,"progress"),nt([i({type:String})],Ae.prototype,"errorMessage"),customElements.define("nys-fileitem",Ae);var ks=Object.defineProperty,D=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&ks(e,t,s),s};let $s=0;const lt=class lt extends f{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.multiple=!1,this.form=null,this._tooltip="",this.accept="",this.disabled=!1,this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.dropzone=!1,this.width="full",this.invert=!1,this._selectedFiles=[],this._dragActive=!1,this._internals=this.attachInternals()}get _isDropDisabled(){return this.disabled||!this.multiple&&this._selectedFiles.length>0}get _buttonAriaLabel(){return this._selectedFiles.length===0?this.multiple?"Choose files: ":"Choose file: ":this.multiple?"Change files: ":"Change file: "}get _buttonAriaDescription(){if(this._selectedFiles.length===0)return`${this.label+" "+this.description}`;const e=this._selectedFiles.some(s=>s.status==="error");let t="";if(this._selectedFiles.length===1)t=`You have selected ${this._selectedFiles[0].file.name}.`;else{const s=this._selectedFiles.map(r=>r.file.name).join(", ");t=`You have selected ${this._selectedFiles.length} files: ${s}`}return`${t}${e?" Error: One or more files are not valid file types.":""}`}get _innerNysButton(){var o;const e=this.renderRoot.querySelector('[name="file-btn"]');return(o=e==null?void 0:e.shadowRoot)==null?void 0:o.querySelector("button")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-fileinput-${Date.now()}-${$s++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}_setValue(){var e;if(this.multiple){const t=this._selectedFiles.map(o=>o.file);if(t.length>0){const o=new FormData;t.forEach(s=>{o.append(this.name,s)}),this._internals.setFormValue(o)}else this._internals.setFormValue(null)}else{const t=((e=this._selectedFiles[0])==null?void 0:e.file)||null;this._internals.setFormValue(t)}this._manageRequire()}_manageRequire(){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!e)return;const t=this.errorMessage||"Please upload a file.";this.required&&this._selectedFiles.length==0?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({},"",e))}_setValidityMessage(e=""){var o,s;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");t&&(this.showError=e===(this.errorMessage||"Please upload a file."),(s=this.errorMessage)!=null&&s.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){const e=this._selectedFiles.some(s=>s.status==="error"),t=this.required&&this._selectedFiles.length===0;let o="";t?o=this.errorMessage||"Please upload a file.":e&&(o="One or more files are invalid."),this._setValidityMessage(o)}checkValidity(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");return e?e.checkValidity():!0}_handleInvalid(e){e.preventDefault(),this._validate();const t=this._innerNysButton;if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&(t.focus(),t.classList.add("active-focus")):(t.focus(),t.classList.add("active-focus"))}}async _saveSelectedFiles(e){if(this._selectedFiles.some(s=>s.file.name==e.name)||!this.multiple&&this._selectedFiles.length>=1)return;const o={file:e,progress:0,status:"pending"};this._selectedFiles.push(o),await this._processFile(o),this._setValue(),this._validate()}async _processFile(e){e.status="processing";try{if(!await Cs(e.file,this.accept)){e.status="error",e.errorMsg="File type is invalid.",this.requestUpdate();return}const o=new FileReader;o.onprogress=s=>{if(s.lengthComputable){const r=Math.round(s.loaded*100/s.total);e.progress=r,this.requestUpdate()}},o.onload=()=>{e.progress=100,e.status="done",this.requestUpdate()},o.onerror=()=>{e.status="error",e.errorMsg="Failed to load file.",this.requestUpdate()},o.readAsArrayBuffer(e.file)}catch{e.status="error",e.errorMsg="Error validating file.",this.requestUpdate()}}_dispatchChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,files:this._selectedFiles},bubbles:!0,composed:!0}))}_openFileDialog(){const e=this.renderRoot.querySelector(".hidden-file-input");e==null||e.click()}_handlePostFileSelectionFocus(){if(this.multiple){const e=this._innerNysButton;e&&e.focus()}else this._focusFirstFileItemIfSingleMode()}async _focusFirstFileItemIfSingleMode(){var e;if(!this.multiple){await this.updateComplete;const t=this.renderRoot.querySelector("nys-fileitem"),o=(e=t==null?void 0:t.shadowRoot)==null?void 0:e.querySelector(".file-item");o&&(o.setAttribute("tabindex","-1"),o.focus())}}_handleFileChange(e){const o=e.target.files;(o?Array.from(o):[]).map(r=>{this._saveSelectedFiles(r)}),this.requestUpdate(),this._dispatchChangeEvent(),this._handlePostFileSelectionFocus()}_handleFileRemove(e){var o;const t=e.detail.filename;if(this._selectedFiles=this._selectedFiles.filter(s=>s.file.name!==t),this._selectedFiles.length===0){const s=(o=this.shadowRoot)==null?void 0:o.querySelector("input");s&&(s.value="")}this._setValue(),this._validate(),this.requestUpdate(),this._dispatchChangeEvent()}_onDragOver(e){this.disabled||(e.stopPropagation(),e.preventDefault(),this._dragActive||(this._dragActive=!0,this.requestUpdate()))}_onDragLeave(e){this.disabled||(e.stopPropagation(),e.preventDefault(),e.currentTarget===e.target&&(this._dragActive=!1,this.requestUpdate()))}_onDrop(e){var s;if(this.disabled)return;e.preventDefault(),this._dragActive=!1,this.requestUpdate();const t=(s=e.dataTransfer)==null?void 0:s.files;if(!t)return;const o=Array.from(t);this.multiple?o.forEach(r=>{this._saveSelectedFiles(r)}):this._saveSelectedFiles(o[0]),this.requestUpdate(),this._dispatchChangeEvent()}render(){return c`<div
+    `}};xt.styles=gs;let Le=xt;ot([i({type:String})],Le.prototype,"filename"),ot([i({type:String})],Le.prototype,"status"),ot([i({type:Number})],Le.prototype,"progress"),ot([i({type:String})],Le.prototype,"errorMessage"),customElements.define("nys-fileitem",Le);var _s=Object.defineProperty,A=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&_s(e,t,s),s};let Cs=0;const it=class it extends p{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.multiple=!1,this.form=null,this._tooltip="",this.accept="",this.disabled=!1,this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.dropzone=!1,this.width="full",this.inverted=!1,this._selectedFiles=[],this._dragActive=!1,this._internals=this.attachInternals()}get _isDropDisabled(){return this.disabled||!this.multiple&&this._selectedFiles.length>0}get _buttonAriaLabel(){return this._selectedFiles.length===0?this.multiple?"Choose files: ":"Choose file: ":this.multiple?"Change files: ":"Change file: "}get _buttonAriaDescription(){if(this._selectedFiles.length===0)return`${this.label+" "+this.description}`;const e=this._selectedFiles.some(s=>s.status==="error");let t="";if(this._selectedFiles.length===1)t=`You have selected ${this._selectedFiles[0].file.name}.`;else{const s=this._selectedFiles.map(r=>r.file.name).join(", ");t=`You have selected ${this._selectedFiles.length} files: ${s}`}return`${t}${e?" Error: One or more files are not valid file types.":""}`}get _innerNysButton(){return this.renderRoot.querySelector('[name="file-btn"]')?.shadowRoot?.querySelector("button")}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-fileinput-${Date.now()}-${Cs++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}_setValue(){if(this.multiple){const e=this._selectedFiles.map(t=>t.file);if(e.length>0){const t=new FormData;e.forEach(o=>{t.append(this.name,o)}),this._internals.setFormValue(t)}else this._internals.setFormValue(null)}else{const e=this._selectedFiles[0]?.file||null;this._internals.setFormValue(e)}this._manageRequire()}_manageRequire(){const e=this.shadowRoot?.querySelector("input");if(!e)return;const t=this.errorMessage||"Please upload a file.";this.required&&this._selectedFiles.length==0?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({},"",e))}_setValidityMessage(e=""){const t=this.shadowRoot?.querySelector("input");t&&(this.showError=e===(this.errorMessage||"Please upload a file."),this.errorMessage?.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){const e=this._selectedFiles.some(s=>s.status==="error"),t=this.required&&this._selectedFiles.length===0;let o="";t?o=this.errorMessage||"Please upload a file.":e&&(o="One or more files are invalid."),this._setValidityMessage(o)}checkValidity(){const e=this.shadowRoot?.querySelector("input");return e?e.checkValidity():!0}_handleInvalid(e){e.preventDefault(),this._validate();const t=this._innerNysButton;if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&(t.focus(),t.classList.add("active-focus")):(t.focus(),t.classList.add("active-focus"))}}async _saveSelectedFiles(e){if(this._selectedFiles.some(s=>s.file.name==e.name)||!this.multiple&&this._selectedFiles.length>=1)return;const o={file:e,progress:0,status:"pending"};this._selectedFiles.push(o),await this._processFile(o),this._setValue(),this._validate()}async _processFile(e){e.status="processing";try{if(!await vs(e.file,this.accept)){e.status="error",e.errorMsg="File type is invalid.",this.requestUpdate();return}const o=new FileReader;o.onprogress=s=>{if(s.lengthComputable){const r=Math.round(s.loaded*100/s.total);e.progress=r,this.requestUpdate()}},o.onload=()=>{e.progress=100,e.status="done",this.requestUpdate()},o.onerror=()=>{e.status="error",e.errorMsg="Failed to load file.",this.requestUpdate()},o.readAsArrayBuffer(e.file)}catch{e.status="error",e.errorMsg="Error validating file.",this.requestUpdate()}}_dispatchChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,files:this._selectedFiles},bubbles:!0,composed:!0}))}_openFileDialog(){this.renderRoot.querySelector(".hidden-file-input")?.click()}_handlePostFileSelectionFocus(){if(this.multiple){const e=this._innerNysButton;e&&e.focus()}else this._focusFirstFileItemIfSingleMode()}async _focusFirstFileItemIfSingleMode(){if(!this.multiple){await this.updateComplete;const t=this.renderRoot.querySelector("nys-fileitem")?.shadowRoot?.querySelector(".file-item");t&&(t.setAttribute("tabindex","-1"),t.focus())}}_handleFileChange(e){const o=e.target.files;(o?Array.from(o):[]).map(r=>{this._saveSelectedFiles(r)}),this.requestUpdate(),this._dispatchChangeEvent(),this._handlePostFileSelectionFocus()}_handleFileRemove(e){const t=e.detail.filename;if(this._selectedFiles=this._selectedFiles.filter(o=>o.file.name!==t),this._selectedFiles.length===0){const o=this.shadowRoot?.querySelector("input");o&&(o.value="")}this._setValue(),this._validate(),this.requestUpdate(),this._dispatchChangeEvent()}_onDragOver(e){this.disabled||(e.stopPropagation(),e.preventDefault(),this._dragActive||(this._dragActive=!0,this.requestUpdate()))}_onDragLeave(e){this.disabled||(e.stopPropagation(),e.preventDefault(),e.currentTarget===e.target&&(this._dragActive=!1,this.requestUpdate()))}_onDrop(e){if(this.disabled)return;e.preventDefault(),this._dragActive=!1,this.requestUpdate();const t=e.dataTransfer?.files;if(!t)return;const o=Array.from(t);this.multiple?o.forEach(s=>{this._saveSelectedFiles(s)}):this._saveSelectedFiles(o[0]),this.requestUpdate(),this._dispatchChangeEvent()}render(){return l`<div
       class="nys-fileinput"
       @nys-fileRemove=${this._handleFileRemove}
     >
@@ -2343,7 +2343,7 @@
         description=${this.description}
         flag=${this.required?"required":this.optional?"optional":""}
         _tooltip=${this._tooltip}
-        ?invert=${this.invert}
+        ?inverted=${this.inverted}
       >
         <slot name="description" slot="description">${this.description}</slot>
       </nys-label>
@@ -2354,7 +2354,7 @@
         type="file"
         name=${this.name}
         accept=${this.accept}
-        form=${u(this.form||void 0)}
+        form=${y(this.form||void 0)}
         ?multiple=${this.multiple}
         ?required=${this.required}
         ?disabled=${this.disabled||!this.multiple&&this._selectedFiles.length>0}
@@ -2364,7 +2364,7 @@
         hidden
       />
 
-      ${this.dropzone?c`<div
+      ${this.dropzone?l`<div
             class="nys-fileinput__dropzone
             ${this._dragActive?"drag-active":""}
             ${this._isDropDisabled?"disabled":""}
@@ -2376,36 +2376,37 @@
             @drop=${this._isDropDisabled?null:this._onDrop}
             aria-label="Drag files here or choose from folder"
           >
-            ${this._dragActive?c`<p>Drop file to upload</p>`:c` <nys-button
-                    id=${this.id}
+            ${this._dragActive?l`<p>Drop file to upload</p>`:l` <nys-button
+                    id="choose-files-btn-drag"
                     name="file-btn"
                     label=${this.multiple?"Choose files":"Choose file"}
                     variant="outline"
                     ariaLabel=${this._buttonAriaLabel}
                     ariaDescription=${this._buttonAriaDescription}
                     ?disabled=${this._isDropDisabled}
-                    .onClick=${e=>{e.stopPropagation(),this._openFileDialog()}}
+                    @nys-click=${e=>{e.stopPropagation(),this._openFileDialog()}}
+                    @click=${e=>e.stopPropagation()}
                   ></nys-button>
                   <p>or drag here</p>`}
-          </div>`:c`<nys-button
-            id=${this.id}
+          </div>`:l`<nys-button
+            id="choose-files-btn"
             name="file-btn"
             label=${this.multiple?"Choose files":"Choose file"}
             variant="outline"
             ariaLabel=${this._buttonAriaLabel}
             ariaDescription=${this._buttonAriaDescription}
             ?disabled=${this.disabled||!this.multiple&&this._selectedFiles.length>0}
-            .onClick=${()=>this._openFileDialog()}
+            @nys-click=${this._openFileDialog}
           ></nys-button>`}
-      ${this.showError?c`
+      ${this.showError?l`
             <nys-errormessage
               ?showError=${this.showError}
               errorMessage=${this._internals.validationMessage||this.errorMessage}
             ></nys-errormessage>
           `:null}
-      ${this._selectedFiles.length>0?c`
+      ${this._selectedFiles.length>0?l`
             <ul>
-              ${this._selectedFiles.map(e=>c`<li>
+              ${this._selectedFiles.map(e=>l`<li>
                     <nys-fileitem
                       filename=${e.file.name}
                       status=${e.status}
@@ -2415,7 +2416,7 @@
                   </li>`)}
             </ul>
           `:null}
-    </div>`}};lt.styles=ms,lt.formAssociated=!0;let k=lt;D([i({type:String})],k.prototype,"id"),D([i({type:String,reflect:!0})],k.prototype,"name"),D([i({type:String})],k.prototype,"label"),D([i({type:String})],k.prototype,"description"),D([i({type:Boolean})],k.prototype,"multiple"),D([i({type:String,reflect:!0})],k.prototype,"form"),D([i({type:String})],k.prototype,"_tooltip"),D([i({type:String})],k.prototype,"accept"),D([i({type:Boolean,reflect:!0})],k.prototype,"disabled"),D([i({type:Boolean,reflect:!0})],k.prototype,"required"),D([i({type:Boolean,reflect:!0})],k.prototype,"optional"),D([i({type:Boolean,reflect:!0})],k.prototype,"showError"),D([i({type:String})],k.prototype,"errorMessage"),D([i({type:Boolean})],k.prototype,"dropzone"),D([i({type:String,reflect:!0})],k.prototype,"width"),D([i({type:Boolean,reflect:!0})],k.prototype,"invert"),customElements.get("nys-fileinput")||customElements.define("nys-fileinput",k);const Ss={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    </div>`}};it.styles=fs,it.formAssociated=!0;let w=it;A([i({type:String})],w.prototype,"id"),A([i({type:String,reflect:!0})],w.prototype,"name"),A([i({type:String})],w.prototype,"label"),A([i({type:String})],w.prototype,"description"),A([i({type:Boolean})],w.prototype,"multiple"),A([i({type:String,reflect:!0})],w.prototype,"form"),A([i({type:String})],w.prototype,"_tooltip"),A([i({type:String})],w.prototype,"accept"),A([i({type:Boolean,reflect:!0})],w.prototype,"disabled"),A([i({type:Boolean,reflect:!0})],w.prototype,"required"),A([i({type:Boolean,reflect:!0})],w.prototype,"optional"),A([i({type:Boolean,reflect:!0})],w.prototype,"showError"),A([i({type:String})],w.prototype,"errorMessage"),A([i({type:Boolean})],w.prototype,"dropzone"),A([i({type:String,reflect:!0})],w.prototype,"width"),A([i({type:Boolean,reflect:!0})],w.prototype,"inverted"),customElements.get("nys-fileinput")||customElements.define("nys-fileinput",w);const ms={account_circle:`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <mask id="mask0_12372_781" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
     <rect width="24" height="24" fill="#D9D9D9"/>
   </mask>
@@ -2939,7 +2940,7 @@
   <g mask="url(#mask0_12372_621)">
     <path d="M6.30002 22.7751C5.43369 22.7751 4.69211 22.4667 4.07527 21.8498C3.45844 21.2328 3.15002 20.4913 3.15002 19.6251V10.2251C3.15002 9.35893 3.45844 8.61735 4.07527 8.00035C4.69211 7.38351 5.43369 7.0751 6.30002 7.0751H6.62502V5.8001C6.62502 4.28343 7.14586 2.99593 8.18752 1.9376C9.22919 0.879264 10.5 0.350098 12 0.350098C13.5 0.350098 14.7709 0.879264 15.8125 1.9376C16.8542 2.99593 17.375 4.28343 17.375 5.8001V7.0751H17.7C18.5662 7.0751 19.3078 7.38351 19.9248 8.00035C20.5416 8.61735 20.85 9.35893 20.85 10.2251V19.6251C20.85 20.4913 20.5416 21.2328 19.9248 21.8498C19.3078 22.4667 18.5662 22.7751 17.7 22.7751H6.30002ZM12 16.9251C12.55 16.9251 13.0209 16.7293 13.4125 16.3376C13.8042 15.9459 14 15.4751 14 14.9251C14 14.3751 13.8042 13.9043 13.4125 13.5126C13.0209 13.1209 12.55 12.9251 12 12.9251C11.45 12.9251 10.9792 13.1209 10.5875 13.5126C10.1959 13.9043 10 14.3751 10 14.9251C10 15.4751 10.1959 15.9459 10.5875 16.3376C10.9792 16.7293 11.45 16.9251 12 16.9251ZM9.77502 7.0751H14.225V5.8001C14.225 5.16126 14.0125 4.61818 13.5875 4.17085C13.1625 3.72368 12.6334 3.5001 12 3.5001C11.3667 3.5001 10.8375 3.72368 10.4125 4.17085C9.98752 4.61818 9.77502 5.16126 9.77502 5.8001V7.0751Z" fill="var(--nys-icon-color, currentcolor)"/>
   </g>
-</svg>`},Ls=g`
+</svg>`},xs=g`
   :host {
     display: inline-block;
     --_nys-icon-size: var(
@@ -2965,39 +2966,39 @@
   }
 
   /* Relative Sizes */
-  .nys-icon--2xs {
+  .nys-icon--xs {
     width: calc(var(--_nys-icon-size) * 0.75);
     height: calc(var(--_nys-icon-size) * 0.75);
   }
-  .nys-icon--xs {
+  .nys-icon--sm {
     width: calc(var(--_nys-icon-size) * 0.875);
     height: calc(var(--_nys-icon-size) * 0.875);
   }
-  .nys-icon--sm {
+  .nys-icon--md {
     width: var(--_nys-icon-size);
     height: var(--_nys-icon-size);
   }
-  .nys-icon--md {
+  .nys-icon--lg {
     width: calc(var(--_nys-icon-size) * 1.125);
     height: calc(var(--_nys-icon-size) * 1.125);
   }
-  .nys-icon--lg {
+  .nys-icon--xl {
     width: calc(var(--_nys-icon-size) * 1.25);
     height: calc(var(--_nys-icon-size) * 1.25);
   }
-  .nys-icon--xl {
+  .nys-icon--2xl {
     width: calc(var(--_nys-icon-size) * 1.5);
     height: calc(var(--_nys-icon-size) * 1.5);
   }
-  .nys-icon--2xl {
+  .nys-icon--3xl {
     width: calc(var(--_nys-icon-size) * 1.875);
     height: calc(var(--_nys-icon-size) * 1.875);
   }
-  .nys-icon--3xl {
+  .nys-icon--4xl {
     width: calc(var(--_nys-icon-size) * 2.25);
     height: calc(var(--_nys-icon-size) * 2.25);
   }
-  .nys-icon--4xl {
+  .nys-icon--5xl {
     width: calc(var(--_nys-icon-size) * 3);
     height: calc(var(--_nys-icon-size) * 3);
   }
@@ -3007,9 +3008,21 @@
     width: 0.75rem;
     height: 0.75rem;
   }
+  .nys-icon--14 {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
   .nys-icon--16 {
     width: 1rem;
     height: 1rem;
+  }
+  .nys-icon--18 {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  .nys-icon--20 {
+    width: 1.25rem;
+    height: 1.25rem;
   }
   .nys-icon--24 {
     width: 1.5rem;
@@ -3023,13 +3036,9 @@
     width: 2.5rem;
     height: 2.5rem;
   }
-  .nys-icon--48 {
-    width: 3rem;
-    height: 3rem;
-  }
-  .nys-icon--64 {
-    width: 4rem;
-    height: 4rem;
+  .nys-icon--50 {
+    width: 3.125rem;
+    height: 3.125rem;
   }
 
   /* Flipping Icons */
@@ -3042,7 +3051,7 @@
   .nys-icon--flip-both {
     transform: scale(-1, -1);
   }
-`;var Es=Object.defineProperty,As=Object.getOwnPropertyDescriptor,Pe=(a,e,t,o)=>{for(var s=o>1?void 0:o?As(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Es(e,t,s),s};const De=(me=class extends f{constructor(){super(...arguments),this.name="",this.ariaLabel="",this.rotate="0",this.flip="",this.color="",this._size="sm"}get size(){return this._size}set size(e){this._size=me.VALID_TYPES.includes(e)?e:"sm"}getIcon(){const e=Ss[this.name];if(!e)return null;const s=new DOMParser().parseFromString(e,"image/svg+xml").documentElement;return s instanceof SVGElement?(s.setAttribute("role","img"),this.ariaLabel?(s.setAttribute("aria-label",this.ariaLabel),s.removeAttribute("aria-hidden")):(s.setAttribute("aria-hidden","true"),s.removeAttribute("aria-label")),s.style.rotate=`${this.rotate}deg`,s.style.color=this.color||"currentcolor",s.classList.add(`nys-icon--${this.size}`),s.classList.add("nys-icon--svg"),this.flip&&s.classList.add(`nys-icon--flip-${this.flip}`),s):null}render(){const e=this.getIcon();return e?c`${e}`:null}},me.styles=Ls,me.VALID_TYPES=["2xs","xs","sm","md","lg","xl","2xl","3xl","4xl","12","16","24","32","40","48","64"],me);Pe([i({type:String,reflect:!0})],De.prototype,"name",2),Pe([i({type:String})],De.prototype,"ariaLabel",2),Pe([i({type:String})],De.prototype,"rotate",2),Pe([i({type:String})],De.prototype,"flip",2),Pe([i({type:String})],De.prototype,"color",2),Pe([i({reflect:!0})],De.prototype,"size",1);let i1=De;customElements.get("nys-icon")||customElements.define("nys-icon",i1);const Ds=g`
+`;var ws=Object.defineProperty,ks=Object.getOwnPropertyDescriptor,Be=(a,e,t,o)=>{for(var s=o>1?void 0:o?ks(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&ws(e,t,s),s};const Ee=(Ce=class extends p{constructor(){super(...arguments),this.name="",this.ariaLabel="",this.rotate="0",this.flip="",this.color="",this._size="md"}get size(){return this._size}set size(e){this._size=Ce.VALID_TYPES.includes(e)?e:"md"}getIcon(){const e=ms[this.name];if(!e)return null;const s=new DOMParser().parseFromString(e,"image/svg+xml").documentElement;return s instanceof SVGElement?(s.setAttribute("role","img"),this.ariaLabel?(s.setAttribute("aria-label",this.ariaLabel),s.removeAttribute("aria-hidden")):(s.setAttribute("aria-hidden","true"),s.removeAttribute("aria-label")),s.style.rotate=`${this.rotate}deg`,s.style.color=this.color||"currentcolor",s.classList.add(`nys-icon--${this.size}`),s.classList.add("nys-icon--svg"),this.flip&&s.classList.add(`nys-icon--flip-${this.flip}`),s):null}render(){const e=this.getIcon();return e?l`${e}`:null}},Ce.styles=xs,Ce.VALID_TYPES=["xs","sm","md","lg","xl","2xl","3xl","4xl","5xl","12","14","16","18","20","24","32","40","50"],Ce);Be([i({type:String,reflect:!0})],Ee.prototype,"name",2),Be([i({type:String})],Ee.prototype,"ariaLabel",2),Be([i({type:String})],Ee.prototype,"rotate",2),Be([i({type:String})],Ee.prototype,"flip",2),Be([i({type:String})],Ee.prototype,"color",2),Be([i({reflect:!0})],Ee.prototype,"size",1);let t1=Ee;customElements.get("nys-icon")||customElements.define("nys-icon",t1);const $s=g`
   :host {
     /* Label Typography */
     --_nys-label-font-family: var(
@@ -3132,25 +3141,25 @@
   .nys-label.invert .nys-label__label,
   .nys-label.invert .nys-label__description,
   .nys-label.invert .nys-label__optional {
-    color: var(--nys-color-text-inverse, #fff);
+    color: var(--nys-color-text-reverse, #fff);
   }
 
   .nys-label.invert .nys-label__tooltip-icon {
-    color: var(--nys-color-ink-inverse, #fff);
+    color: var(--nys-color-ink-reverse, #fff);
   }
-`;var Ms=Object.defineProperty,zs=Object.getOwnPropertyDescriptor,Oe=(a,e,t,o)=>{for(var s=o>1?void 0:o?zs(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Ms(e,t,s),s};const Lt=class Lt extends f{constructor(){super(...arguments),this.for="",this.label="",this.description="",this.flag="",this.invert=!1,this._tooltip=""}get tooltip(){return this._tooltip}set tooltip(e){this._tooltip=e}render(){return c`
-      <div class="nys-label ${this.invert?"invert":""}">
+`;var Ss=Object.defineProperty,Ls=Object.getOwnPropertyDescriptor,Ie=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ls(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Ss(e,t,s),s};const wt=class wt extends p{constructor(){super(...arguments),this.for="",this.label="",this.description="",this.flag="",this.inverted=!1,this._tooltip=""}get tooltip(){return this._tooltip}set tooltip(e){this._tooltip=e}render(){return l`
+      <div class="nys-label ${this.inverted?"invert":""}">
         <div class="nys-label__tooltip-wrapper">
           <label for=${this.for} class="nys-label__label"
             >${this.label}
-            ${this.flag==="required"?c`<div class="nys-label__required">*</div>`:""}
-            ${this.flag==="optional"?c`<div class="nys-label__optional">(Optional)</div>`:""}</label
+            ${this.flag==="required"?l`<div class="nys-label__required">*</div>`:""}
+            ${this.flag==="optional"?l`<div class="nys-label__optional">(Optional)</div>`:""}</label
           >
-          ${this._tooltip?c`<nys-tooltip
+          ${this._tooltip?l`<nys-tooltip
                 text="${this._tooltip}"
                 position="top"
                 focusable
-                ?inverted=${this.invert}
+                ?inverted=${this.inverted}
               >
                 <div class="nys-label__tooltip-icon">
                   <nys-icon name="info" size="3xl"></nys-icon>
@@ -3161,7 +3170,7 @@
           <slot name="description">${this.description}</slot>
         </label>
       </div>
-    `}};Lt.styles=Ds;let J=Lt;Oe([i({type:String})],J.prototype,"for",2),Oe([i({type:String})],J.prototype,"label",2),Oe([i({type:String})],J.prototype,"description",2),Oe([i({type:String})],J.prototype,"flag",2),Oe([i({type:Boolean,reflect:!0})],J.prototype,"invert",2),Oe([i({type:String})],J.prototype,"tooltip",1),customElements.get("nys-label")||customElements.define("nys-label",J);const Vs=g`
+    `}};wt.styles=$s;let J=wt;Ie([i({type:String})],J.prototype,"for",2),Ie([i({type:String})],J.prototype,"label",2),Ie([i({type:String})],J.prototype,"description",2),Ie([i({type:String})],J.prototype,"flag",2),Ie([i({type:Boolean,reflect:!0})],J.prototype,"inverted",2),Ie([i({type:String})],J.prototype,"tooltip",1),customElements.get("nys-label")||customElements.define("nys-label",J);const Es=g`
   :host {
     /* Global Modal Styles */
     --_nys-modal-width: 480px;
@@ -3312,7 +3321,7 @@
       align-items: center;
     }
   }
-`;var Hs=Object.defineProperty,Bs=Object.getOwnPropertyDescriptor,be=(a,e,t,o)=>{for(var s=o>1?void 0:o?Bs(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Hs(e,t,s),s};let Is=0;const oe=(xe=class extends f{constructor(){super(),this.id="",this.heading="",this.subheading="",this.open=!1,this.mandatory=!1,this._width="md",this._actionButtonSlot=null,this._prevFocusedElement=null,this._originalBodyOverflow=null,this.hasBodySlots=!1,this.hasActionSlots=!1}get width(){return this._width}set width(e){this._width=xe.VALID_WIDTHS.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-{{componentName}}-${Date.now()}-${Is++}`),window.addEventListener("resize",()=>this._updateSlottedButtonWidth()),window.addEventListener("keydown",e=>this._handleKeydown(e))}disconnectedCallback(){super.disconnectedCallback(),this._restoreBodyScroll(),window.removeEventListener("keydown",e=>this._handleKeydown(e))}firstUpdated(){this._handleBodySlotChange(),this._handleActionSlotChange()}async updated(e){e.has("open")&&(this.open?(this._hideBodyScroll(),this._dispatchOpenEvent(),await this.updateComplete,this._savePrevFocused(),this._focusOnModal(),this._updateDismissAria()):(this._restorePrevFocused(),this._restoreBodyScroll(),this._dispatchCloseEvent(),this._updateDismissAria()))}_hideBodyScroll(){this._originalBodyOverflow===null&&(this._originalBodyOverflow=document.body.style.overflow),document.body.style.overflow="hidden"}_restoreBodyScroll(){this._originalBodyOverflow!==null&&(document.body.style.overflow=this._originalBodyOverflow,this._originalBodyOverflow=null)}_savePrevFocused(){this._prevFocusedElement=document.activeElement}_focusOnModal(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-modal");e==null||e.focus()}async _restorePrevFocused(){var t;const e=this._prevFocusedElement;if(e&&e.tagName.toLowerCase()==="nys-button"){const o=await e.getButtonElement();if(o){o.focus();return}}else(t=this._prevFocusedElement)==null||t.focus();this._prevFocusedElement=null}async _handleBodySlotChange(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e&&(this.hasBodySlots=e.assignedNodes({flatten:!0}).some(o=>{var s;return o.nodeType===Node.ELEMENT_NODE||((s=o.textContent)==null?void 0:s.trim())}))}async _handleActionSlotChange(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector('slot[name="actions"]');e&&(this.hasActionSlots=e.assignedNodes({flatten:!0}).some(o=>{var s;return o.nodeType===Node.ELEMENT_NODE||((s=o.textContent)==null?void 0:s.trim())}),this._actionButtonSlot=e,this._updateSlottedButtonWidth())}_updateSlottedButtonWidth(){if(!this._actionButtonSlot)return;const e=window.innerWidth<=480;this._actionButtonSlot.assignedElements().forEach(t=>{t.querySelectorAll("nys-button").forEach(o=>{e?o==null||o.setAttribute("fullWidth",""):o==null||o.removeAttribute("fullWidth")})})}_dispatchOpenEvent(){this.dispatchEvent(new CustomEvent("nys-open",{detail:{id:this.id},bubbles:!0,composed:!0}))}_dispatchCloseEvent(){this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id},bubbles:!0,composed:!0}))}_getAriaDescribedBy(){const e=[];return this.subheading&&e.push(`${this.id}-subheading`),this.hasBodySlots&&e.push(`${this.id}-desc`),e.join(" ")}_updateDismissAria(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("nys-button");e&&(e.setAttribute("ariaLabel"," "),this.open&&setTimeout(()=>{e.setAttribute("ariaLabel","Close this window")},100))}async _handleKeydown(e){var t;if(this.open&&(e.key==="Escape"&&!this.mandatory&&(e.preventDefault(),this._closeModal()),e.key==="Tab")){const o=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-modal");if(!o)return;const s='a[href], area[href], button:not([disabled]), details, iframe, object, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [contentEditable="true"], [tabindex]:not([tabindex^="-"])',r=[],n=o.querySelector("nys-button");n&&r.push(n);const d=Array.from(o.querySelectorAll("slot"));for(const l of d){const y=l.assignedElements({flatten:!0});for(const p of y)p instanceof HTMLElement&&p.matches(s)&&r.push(p),p.querySelectorAll("nys-button").forEach(h=>{r.push(h)})}if(r.length>0){const l=r[0],y=r[r.length-1];let p=document.activeElement,h=r.indexOf(p);if(e.shiftKey){e.preventDefault();let x=h-1;x<0&&(x=r.length-1);const E=r[x];if(r[x].tagName.toLowerCase()==="nys-button"){const we=await E.getButtonElement();we==null||we.focus()}else E.focus()}else if(p===y)if(e.preventDefault(),l.tagName.toLowerCase()==="nys-button"){const x=await l.getButtonElement();x==null||x.focus()}else l.focus()}}}_closeModal(){this.open=!1,this._dispatchCloseEvent()}render(){return this.open?c`<div
+`;var As=Object.defineProperty,Ds=Object.getOwnPropertyDescriptor,be=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ds(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&As(e,t,s),s};let Ms=0;const oe=(me=class extends p{constructor(){super(),this.id="",this.heading="",this.subheading="",this.open=!1,this.mandatory=!1,this._width="md",this._actionButtonSlot=null,this._prevFocusedElement=null,this._originalBodyOverflow=null,this.hasBodySlots=!1,this.hasActionSlots=!1}get width(){return this._width}set width(e){this._width=me.VALID_WIDTHS.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-{{componentName}}-${Date.now()}-${Ms++}`),window.addEventListener("resize",()=>this._updateSlottedButtonWidth()),window.addEventListener("keydown",e=>this._handleKeydown(e))}disconnectedCallback(){super.disconnectedCallback(),this._restoreBodyScroll(),window.removeEventListener("keydown",e=>this._handleKeydown(e))}firstUpdated(){this._handleBodySlotChange(),this._handleActionSlotChange()}async updated(e){e.has("open")&&(this.open?(this._hideBodyScroll(),this._dispatchOpenEvent(),await this.updateComplete,this._savePrevFocused(),this._focusOnModal(),this._updateDismissAria()):(this._restorePrevFocused(),this._restoreBodyScroll(),this._dispatchCloseEvent(),this._updateDismissAria()))}_hideBodyScroll(){this._originalBodyOverflow===null&&(this._originalBodyOverflow=document.body.style.overflow),document.body.style.overflow="hidden"}_restoreBodyScroll(){this._originalBodyOverflow!==null&&(document.body.style.overflow=this._originalBodyOverflow,this._originalBodyOverflow=null)}_savePrevFocused(){this._prevFocusedElement=document.activeElement}_focusOnModal(){this.shadowRoot?.querySelector(".nys-modal")?.focus()}async _restorePrevFocused(){const e=this._prevFocusedElement;if(e&&e.tagName.toLowerCase()==="nys-button"){const t=await e.getButtonElement();if(t){t.focus();return}}else this._prevFocusedElement?.focus();this._prevFocusedElement=null}async _handleBodySlotChange(){const e=this.shadowRoot?.querySelector("slot");e&&(this.hasBodySlots=e.assignedNodes({flatten:!0}).some(t=>t.nodeType===Node.ELEMENT_NODE||t.textContent?.trim()))}async _handleActionSlotChange(){const e=this.shadowRoot?.querySelector('slot[name="actions"]');e&&(this.hasActionSlots=e.assignedNodes({flatten:!0}).some(t=>t.nodeType===Node.ELEMENT_NODE||t.textContent?.trim()),this._actionButtonSlot=e,this._updateSlottedButtonWidth())}_updateSlottedButtonWidth(){if(!this._actionButtonSlot)return;const e=window.innerWidth<=480;this._actionButtonSlot.assignedElements().forEach(t=>{t.querySelectorAll("nys-button").forEach(o=>{e?o?.setAttribute("fullWidth",""):o?.removeAttribute("fullWidth")})})}_dispatchOpenEvent(){this.dispatchEvent(new CustomEvent("nys-open",{detail:{id:this.id},bubbles:!0,composed:!0}))}_dispatchCloseEvent(){this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id},bubbles:!0,composed:!0}))}_getAriaDescribedBy(){const e=[];return this.subheading&&e.push(`${this.id}-subheading`),this.hasBodySlots&&e.push(`${this.id}-desc`),e.join(" ")}_updateDismissAria(){const e=this.shadowRoot?.querySelector("nys-button");e&&(e.setAttribute("ariaLabel"," "),this.open&&setTimeout(()=>{e.setAttribute("ariaLabel","Close this window")},100))}async _handleKeydown(e){if(this.open&&(e.key==="Escape"&&!this.mandatory&&(e.preventDefault(),this._closeModal()),e.key==="Tab")){const t=this.shadowRoot?.querySelector(".nys-modal");if(!t)return;const o='a[href], area[href], button:not([disabled]), details, iframe, object, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [contentEditable="true"], [tabindex]:not([tabindex^="-"])',s=[],r=t.querySelector("nys-button");r&&s.push(r);const n=Array.from(t.querySelectorAll("slot"));for(const c of n){const d=c.assignedElements({flatten:!0});for(const h of d)h instanceof HTMLElement&&h.matches(o)&&s.push(h),h.querySelectorAll("nys-button").forEach(f=>{s.push(f)})}if(s.length>0){const c=s[0],d=s[s.length-1];let h=document.activeElement,f=s.indexOf(h);if(e.shiftKey){e.preventDefault();let v=f-1;v<0&&(v=s.length-1);const $=s[v];s[v].tagName.toLowerCase()==="nys-button"?(await $.getButtonElement())?.focus():$.focus()}else h===d&&(e.preventDefault(),c.tagName.toLowerCase()==="nys-button"?(await c.getButtonElement())?.focus():c.focus())}}}_closeModal(){this.open=!1,this._dispatchCloseEvent()}render(){return this.open?l`<div
           id=${this.id}
           class="nys-modal-overlay"
           role="dialog"
@@ -3324,14 +3333,15 @@
             <div class="nys-modal_header">
               <div class="nys-modal_header-inner">
                 <h2 id="${this.id}-heading">${this.heading}</h2>
-                ${this.mandatory?"":c`<nys-button
+                ${this.mandatory?"":l`<nys-button
+                      id="dismiss-modal"
                       circle
                       icon="close"
                       variant="ghost"
-                      .onClick=${()=>this._closeModal()}
+                      @nys-click=${this._closeModal}
                     ></nys-button>`}
               </div>
-              ${this.subheading?c`<p id="${this.id}-subheading">${this.subheading}</p>`:""}
+              ${this.subheading?l`<p id="${this.id}-subheading">${this.subheading}</p>`:""}
             </div>
 
             <div
@@ -3352,7 +3362,7 @@
               ></slot>
             </div>
           </div>
-        </div>`:""}},xe.VALID_WIDTHS=["sm","md","lg"],xe.styles=Vs,xe);be([i({type:String})],oe.prototype,"id",2),be([i({type:String})],oe.prototype,"heading",2),be([i({type:String})],oe.prototype,"subheading",2),be([i({type:Boolean,reflect:!0})],oe.prototype,"open",2),be([i({type:Boolean,reflect:!0})],oe.prototype,"mandatory",2),be([i({reflect:!0})],oe.prototype,"width",1),be([z()],oe.prototype,"hasBodySlots",2),be([z()],oe.prototype,"hasActionSlots",2);let a1=oe;customElements.get("nys-modal")||customElements.define("nys-modal",a1);const Ps=g`
+        </div>`:""}},me.VALID_WIDTHS=["sm","md","lg"],me.styles=Es,me);be([i({type:String})],oe.prototype,"id",2),be([i({type:String})],oe.prototype,"heading",2),be([i({type:String})],oe.prototype,"subheading",2),be([i({type:Boolean,reflect:!0})],oe.prototype,"open",2),be([i({type:Boolean,reflect:!0})],oe.prototype,"mandatory",2),be([i({reflect:!0})],oe.prototype,"width",1),be([M()],oe.prototype,"hasBodySlots",2),be([M()],oe.prototype,"hasActionSlots",2);let s1=oe;customElements.get("nys-modal")||customElements.define("nys-modal",s1);const zs=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -3493,20 +3503,20 @@
       display: none;
     }
   }
-`;var Os=Object.defineProperty,Ke=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Os(e,t,s),s};let Zs=0;const Et=class Et extends f{constructor(){super(),this.id="",this.name="",this.currentPage=1,this.totalPages=1,this._twoBeforeLast=!1}updated(e){super.updated(e),this.currentPage=this._clampPage(this.currentPage),this._twoBeforeLast=this.currentPage===this.totalPages-2}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-pagination-${Date.now()}-${Zs++}`)}_clampPage(e){return e<1?1:e>this.totalPages?this.totalPages:e}renderPageButtons(){const e=[],t=(l,y)=>{e.push(c`
+`;var Vs=Object.defineProperty,Ge=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Vs(e,t,s),s};let Hs=0;const kt=class kt extends p{constructor(){super(),this.id="",this.name="",this.currentPage=1,this.totalPages=1,this._twoBeforeLast=!1}updated(e){super.updated(e),this.currentPage=this._clampPage(this.currentPage),this._twoBeforeLast=this.currentPage===this.totalPages-2}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-pagination-${Date.now()}-${Hs++}`)}_clampPage(e){return e<1?1:e>this.totalPages?this.totalPages:e}renderPageButtons(){const e=[],t=(d,h)=>{e.push(l`
         <nys-button
-          label=${String(l)}
-          ariaLabel="Page ${l}"
-          id=${u(y)}
-          variant=${this.currentPage===l?"filled":"outline"}
-          @nys-click="${()=>this._handlePageClick(l)}"
+          label=${String(d)}
+          ariaLabel="Page ${d}"
+          id=${y(h)}
+          variant=${this.currentPage===d?"filled":"outline"}
+          @nys-click="${()=>this._handlePageClick(d)}"
         ></nys-button>
-      `)},o=l=>{e.push(c`<nys-button
+      `)},o=d=>{e.push(l`<nys-button
           label="..."
           class="spacer"
           tabindex="-1"
-          id=${l}
-        ></nys-button>`)},r=this.totalPages,n=this.currentPage-1,d=this.currentPage+1;return t(1),this.currentPage>2&&o("first-spacer"),n>1&&t(n,"prev-page"),this.currentPage!==1&&this.currentPage!==r&&t(this.currentPage,"current-page"),d<r&&t(d,"next-page"),this.currentPage<r-1&&o("last-spacer"),r>1&&t(r),e}_handlePageClick(e){this.currentPage=this._clampPage(e),this.dispatchEvent(new CustomEvent("nys-change",{detail:{page:this.currentPage},bubbles:!0,composed:!0}))}render(){return this.totalPages<=1?null:c`<div class="nys-pagination">
+          id=${d}
+        ></nys-button>`)},r=this.totalPages,n=this.currentPage-1,c=this.currentPage+1;return t(1),this.currentPage>2&&o("first-spacer"),n>1&&t(n,"prev-page"),this.currentPage!==1&&this.currentPage!==r&&t(this.currentPage,"current-page"),c<r&&t(c,"next-page"),this.currentPage<r-1&&o("last-spacer"),r>1&&t(r),e}_handlePageClick(e){this.currentPage=this._clampPage(e),this.dispatchEvent(new CustomEvent("nys-change",{detail:{page:this.currentPage},bubbles:!0,composed:!0}))}render(){return this.totalPages<=1?null:l`<div class="nys-pagination">
       <nys-button
         id="previous"
         label="Previous"
@@ -3540,7 +3550,7 @@
         ?disabled=${this.currentPage===this.totalPages}
         @nys-click="${()=>this._handlePageClick(this.currentPage+1)}"
       ></nys-button>
-    </div>`}};Et.styles=Ps;let re=Et;Ke([i({type:String})],re.prototype,"id"),Ke([i({type:String,reflect:!0})],re.prototype,"name"),Ke([i({type:Number,reflect:!0})],re.prototype,"currentPage"),Ke([i({type:Number,reflect:!0})],re.prototype,"totalPages"),Ke([i({type:Boolean,reflect:!0})],re.prototype,"_twoBeforeLast"),customElements.get("nys-pagination")||customElements.define("nys-pagination",re);const l1=g`
+    </div>`}};kt.styles=zs;let re=kt;Ge([i({type:String})],re.prototype,"id"),Ge([i({type:String,reflect:!0})],re.prototype,"name"),Ge([i({type:Number,reflect:!0})],re.prototype,"currentPage"),Ge([i({type:Number,reflect:!0})],re.prototype,"totalPages"),Ge([i({type:Boolean,reflect:!0})],re.prototype,"_twoBeforeLast"),customElements.get("nys-pagination")||customElements.define("nys-pagination",re);const o1=g`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
@@ -3899,14 +3909,14 @@
     overflow: hidden;
     border: 0;
   }
-`;var Us=Object.defineProperty,qs=Object.getOwnPropertyDescriptor,B=(a,e,t,o)=>{for(var s=o>1?void 0:o?qs(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Us(e,t,s),s};let Ts=0;const M=(ce=class extends f{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.tile=!1,this._tooltip="",this.invert=!1,this.form=null,this.selectedValue=null,this._slottedDescriptionText="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=ce.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${Ts++}`),this.addEventListener("nys-change",this._handleRadioButtonChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("nys-change",this._handleRadioButtonChange),this.removeEventListener("invalid",this._handleInvalid)}async firstUpdated(){this._initializeCheckedRadioValue(),this._setValue(),this._setRadioButtonRequire(),this._updateRadioButtonsSize(),this._updateRadioButtonsTile(),this._updateRadioButtonsShowError(),this._getSlotDescriptionForAria(),await this.updateComplete,this._initializeChildAttributes(),this._updateGroupTabIndex()}updated(e){(e.has("required")||e.has("selectedValue"))&&this._manageRequire(),e.has("size")&&this._updateRadioButtonsSize(),e.has("tile")&&this._updateRadioButtonsTile(),e.has("invert")&&this._updateRadioButtonsInvert(),e.has("showError")&&this._updateRadioButtonsShowError(),e.has("form")&&this._updateRadioButtonsForm()}formResetCallback(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.formResetUpdate()})}_setValue(){this._internals.setFormValue(this.selectedValue)}_setRadioButtonRequire(){this.querySelectorAll("nys-radiobutton").forEach((t,o)=>{this.required&&o===0&&t.setAttribute("required","required")})}async _manageRequire(){const e=this.errorMessage||"Please select an option.",o=Array.from(this.querySelectorAll("nys-radiobutton"))[0];o&&(this.required&&!this.selectedValue?this._internals.setValidity({valueMissing:!0},e,o):(this.showError=!1,this._internals.setValidity({},"",o)))}checkValidity(){const e=Array.from(this.querySelectorAll("nys-radiobutton"));return!this.required||e.some(o=>o.checked)}_initializeCheckedRadioValue(){const e=this.querySelector("nys-radiobutton[checked]");e&&(this.selectedValue=e.getAttribute("value"),this._internals.setFormValue(this.selectedValue))}_getAllRadios(){return Array.from(this.querySelectorAll("nys-radiobutton"))}async _handleKeyDown(e){if(!["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," ","Enter"].includes(e.key))return;e.preventDefault();const o=this._getAllRadios().filter(y=>!y.disabled),s=o.find(y=>y.checked)||o[0],r=e.key===" "||e.key==="Enter"?0:["ArrowUp","ArrowLeft"].includes(e.key)?-1:1;let n=o.indexOf(s)+r;n<0&&(n=o.length-1),n>=o.length&&(n=0);const d=o[n],l=await d.getInputElement();l==null||l.click(),this._updateGroupTabIndex(),d.focus()}_updateGroupTabIndex(){const e=this._getAllRadios(),t=e.find(o=>o.checked)||e[0];e.forEach(o=>{o.disabled?o.tabIndex=-1:o.tabIndex=o===t?0:-1,o.setAttribute("aria-checked",o.checked?"true":"false"),o.setAttribute("aria-disabled",o.disabled?"true":"false"),o.setAttribute("aria-required",this.required?"true":"false")})}_initializeChildAttributes(){this._getAllRadios().forEach(t=>{t.setAttribute("role","radio"),t.setAttribute("aria-checked",String(t.checked)),t.setAttribute("aria-required",String(t.required)),t.setAttribute("aria-disabled",String(t.disabled)),t.setAttribute("tabindex","-1")})}_updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.setAttribute("size",this.size)})}_updateRadioButtonsTile(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.tile?t.toggleAttribute("tile",!0):t.removeAttribute("tile")})}_updateRadioButtonsInvert(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.invert?t.toggleAttribute("invert",!0):t.removeAttribute("invert")})}_updateRadioButtonsShowError(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError?t.setAttribute("showError",""):t.removeAttribute("showError")})}_updateRadioButtonsForm(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError&&this.form!==null?t.setAttribute("form",this.form):t.removeAttribute("form")})}_getSlotDescriptionForAria(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector('slot[name="description"]'),t=(e==null?void 0:e.assignedNodes({flatten:!0}))||[];this._slottedDescriptionText=t.map(s=>{var r;return(r=s.textContent)==null?void 0:r.trim()}).filter(Boolean).join(", ")}_handleRadioButtonChange(e){const t=e,{name:o,value:s}=t.detail;this.name=o,this.selectedValue=s,this._internals.setFormValue(this.selectedValue),this._updateGroupTabIndex()}async _handleInvalid(e){if(e.preventDefault(),this._internals.validity.valueMissing){this.showError=!0,this._manageRequire();const t=this.querySelector("nys-radiobutton");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&(t.focus(),t.classList.add("active-focus")):(t.focus(),t.classList.add("active-focus"))}}}render(){return c`<div class="nys-radiogroup">
+`;var Bs=Object.defineProperty,Is=Object.getOwnPropertyDescriptor,H=(a,e,t,o)=>{for(var s=o>1?void 0:o?Is(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Bs(e,t,s),s};let Ps=0;const D=(de=class extends p{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.tile=!1,this._tooltip="",this.inverted=!1,this.form=null,this.selectedValue=null,this._slottedDescriptionText="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=de.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${Ps++}`),this.addEventListener("nys-change",this._handleRadioButtonChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("nys-change",this._handleRadioButtonChange),this.removeEventListener("invalid",this._handleInvalid)}async firstUpdated(){this._initializeCheckedRadioValue(),this._setValue(),this._setRadioButtonRequire(),this._updateRadioButtonsSize(),this._updateRadioButtonsTile(),this._updateRadioButtonsShowError(),this._getSlotDescriptionForAria(),await this.updateComplete,this._initializeChildAttributes(),this._updateGroupTabIndex()}updated(e){(e.has("required")||e.has("selectedValue"))&&this._manageRequire(),e.has("size")&&this._updateRadioButtonsSize(),e.has("tile")&&this._updateRadioButtonsTile(),e.has("inverted")&&this._updateRadioButtonsInvert(),e.has("showError")&&this._updateRadioButtonsShowError(),e.has("form")&&this._updateRadioButtonsForm()}formResetCallback(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.formResetUpdate()})}_setValue(){this._internals.setFormValue(this.selectedValue)}_setRadioButtonRequire(){this.querySelectorAll("nys-radiobutton").forEach((t,o)=>{this.required&&o===0&&t.setAttribute("required","required")})}async _manageRequire(){const e=this.errorMessage||"Please select an option.",o=Array.from(this.querySelectorAll("nys-radiobutton"))[0];o&&(this.required&&!this.selectedValue?this._internals.setValidity({valueMissing:!0},e,o):(this.showError=!1,this._internals.setValidity({},"",o)))}checkValidity(){const e=Array.from(this.querySelectorAll("nys-radiobutton"));return!this.required||e.some(o=>o.checked)}_initializeCheckedRadioValue(){const e=this.querySelector("nys-radiobutton[checked]");e&&(this.selectedValue=e.getAttribute("value"),this._internals.setFormValue(this.selectedValue))}_getAllRadios(){return Array.from(this.querySelectorAll("nys-radiobutton"))}async _handleKeyDown(e){if(!["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," ","Enter"].includes(e.key))return;e.preventDefault();const o=this._getAllRadios().filter(h=>!h.disabled),s=o.find(h=>h.checked)||o[0],r=e.key===" "||e.key==="Enter"?0:["ArrowUp","ArrowLeft"].includes(e.key)?-1:1;let n=o.indexOf(s)+r;n<0&&(n=o.length-1),n>=o.length&&(n=0);const c=o[n];(await c.getInputElement())?.click(),this._updateGroupTabIndex(),c.focus()}_updateGroupTabIndex(){const e=this._getAllRadios(),t=e.find(o=>o.checked)||e[0];e.forEach(o=>{o.disabled?o.tabIndex=-1:o.tabIndex=o===t?0:-1,o.setAttribute("aria-checked",o.checked?"true":"false"),o.setAttribute("aria-disabled",o.disabled?"true":"false"),o.setAttribute("aria-required",this.required?"true":"false")})}_initializeChildAttributes(){this._getAllRadios().forEach(t=>{t.setAttribute("role","radio"),t.setAttribute("aria-checked",String(t.checked)),t.setAttribute("aria-required",String(t.required)),t.setAttribute("aria-disabled",String(t.disabled)),t.setAttribute("tabindex","-1")})}_updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.setAttribute("size",this.size)})}_updateRadioButtonsTile(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.tile?t.toggleAttribute("tile",!0):t.removeAttribute("tile")})}_updateRadioButtonsInvert(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.inverted?t.toggleAttribute("inverted",!0):t.removeAttribute("inverted")})}_updateRadioButtonsShowError(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError?t.setAttribute("showError",""):t.removeAttribute("showError")})}_updateRadioButtonsForm(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError&&this.form!==null?t.setAttribute("form",this.form):t.removeAttribute("form")})}_getSlotDescriptionForAria(){const t=this.shadowRoot?.querySelector('slot[name="description"]')?.assignedNodes({flatten:!0})||[];this._slottedDescriptionText=t.map(o=>o.textContent?.trim()).filter(Boolean).join(", ")}_handleRadioButtonChange(e){const t=e,{name:o,value:s}=t.detail;this.name=o,this.selectedValue=s,this._internals.setFormValue(this.selectedValue),this._updateGroupTabIndex()}async _handleInvalid(e){if(e.preventDefault(),this._internals.validity.valueMissing){this.showError=!0,this._manageRequire();const t=this.querySelector("nys-radiobutton");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&(t.focus(),t.classList.add("active-focus")):(t.focus(),t.classList.add("active-focus"))}}}render(){return l`<div class="nys-radiogroup">
       <nys-label
         for=${this.id}
         label=${this.label}
         description=${this.description}
         flag=${this.required?"required":this.optional?"optional":""}
         _tooltip=${this._tooltip}
-        ?invert=${this.invert}
+        ?inverted=${this.inverted}
       >
         <slot name="description" slot="description">${this.description}</slot>
       </nys-label>
@@ -3923,16 +3933,16 @@
         errorMessage=${this._internals.validationMessage||this.errorMessage}
         .showDivider=${!this.tile}
       ></nys-errormessage>
-    </div>`}},ce.VALID_SIZES=["sm","md"],ce.styles=l1,ce.formAssociated=!0,ce);B([i({type:String})],M.prototype,"id",2),B([i({type:String,reflect:!0})],M.prototype,"name",2),B([i({type:Boolean,reflect:!0})],M.prototype,"required",2),B([i({type:Boolean,reflect:!0})],M.prototype,"optional",2),B([i({type:Boolean,reflect:!0})],M.prototype,"showError",2),B([i({type:String})],M.prototype,"errorMessage",2),B([i({type:String})],M.prototype,"label",2),B([i({type:String})],M.prototype,"description",2),B([i({type:Boolean,reflect:!0})],M.prototype,"tile",2),B([i({type:String})],M.prototype,"_tooltip",2),B([i({type:Boolean,reflect:!0})],M.prototype,"invert",2),B([i({type:String,reflect:!0})],M.prototype,"form",2),B([z()],M.prototype,"selectedValue",2),B([z()],M.prototype,"_slottedDescriptionText",2),B([i({reflect:!0})],M.prototype,"size",1);let c1=M;customElements.get("nys-radiogroup")||customElements.define("nys-radiogroup",c1);var Rs=Object.defineProperty,Ns=Object.getOwnPropertyDescriptor,N=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ns(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Rs(e,t,s),s};let Fs=0;const R=(m=class extends f{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.invert=!1,this.form=null,this._size="md",this.tile=!1}get size(){return this._size}set size(e){this._size=m.VALID_SIZES.includes(e)?e:"md"}async getInputElement(){var e;return await this.updateComplete,((e=this.shadowRoot)==null?void 0:e.querySelector("input"))||null}formResetUpdate(){this.checked=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiobutton-${Date.now()}-${Fs++}`),this.checked&&(m.buttonGroup[this.name]&&(m.buttonGroup[this.name].checked=!1,m.buttonGroup[this.name].requestUpdate()),m.buttonGroup[this.name]=this),this.addEventListener("focus",this._handleFocus),this.addEventListener("blur",this._handleBlur),this.addEventListener("click",this._handleChange)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("focus",this._handleFocus),this.removeEventListener("blur",this._handleBlur)}updated(e){e.has("checked")&&this.checked&&m.buttonGroup[this.name]!==this&&(m.buttonGroup[this.name]&&(m.buttonGroup[this.name].checked=!1,m.buttonGroup[this.name].requestUpdate()),m.buttonGroup[this.name]=this)}checkValidity(){var t;if(this.required&&!this.checked)return!1;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");return e?e.checkValidity():!0}_emitChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))}_handleChange(){this.classList.remove("active-focus"),!this.checked&&!this.disabled&&(m.buttonGroup[this.name]&&(m.buttonGroup[this.name].checked=!1,m.buttonGroup[this.name].requestUpdate()),m.buttonGroup[this.name]=this,this.checked=!0,this._emitChangeEvent())}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.classList.remove("active-focus"),this.dispatchEvent(new Event("nys-blur"))}_callInputHandling(){var t;if(this.disabled)return;const e=(t=this.shadowRoot)==null?void 0:t.querySelector('input[type="radio"]');e&&(e.focus(),e.click())}render(){return c`
+    </div>`}},de.VALID_SIZES=["sm","md"],de.styles=o1,de.formAssociated=!0,de);H([i({type:String})],D.prototype,"id",2),H([i({type:String,reflect:!0})],D.prototype,"name",2),H([i({type:Boolean,reflect:!0})],D.prototype,"required",2),H([i({type:Boolean,reflect:!0})],D.prototype,"optional",2),H([i({type:Boolean,reflect:!0})],D.prototype,"showError",2),H([i({type:String})],D.prototype,"errorMessage",2),H([i({type:String})],D.prototype,"label",2),H([i({type:String})],D.prototype,"description",2),H([i({type:Boolean,reflect:!0})],D.prototype,"tile",2),H([i({type:String})],D.prototype,"_tooltip",2),H([i({type:Boolean,reflect:!0})],D.prototype,"inverted",2),H([i({type:String,reflect:!0})],D.prototype,"form",2),H([M()],D.prototype,"selectedValue",2),H([M()],D.prototype,"_slottedDescriptionText",2),H([i({reflect:!0})],D.prototype,"size",1);let r1=D;customElements.get("nys-radiogroup")||customElements.define("nys-radiogroup",r1);var Os=Object.defineProperty,Zs=Object.getOwnPropertyDescriptor,N=(a,e,t,o)=>{for(var s=o>1?void 0:o?Zs(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Os(e,t,s),s};let Us=0;const R=(m=class extends p{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.required=!1,this.label="",this.description="",this.id="",this.name="",this.value="",this.inverted=!1,this.form=null,this._size="md",this.tile=!1}get size(){return this._size}set size(e){this._size=m.VALID_SIZES.includes(e)?e:"md"}async getInputElement(){return await this.updateComplete,this.shadowRoot?.querySelector("input")||null}formResetUpdate(){this.checked=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiobutton-${Date.now()}-${Us++}`),this.checked&&(m.buttonGroup[this.name]&&(m.buttonGroup[this.name].checked=!1,m.buttonGroup[this.name].requestUpdate()),m.buttonGroup[this.name]=this),this.addEventListener("focus",this._handleFocus),this.addEventListener("blur",this._handleBlur),this.addEventListener("click",this._handleChange)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("focus",this._handleFocus),this.removeEventListener("blur",this._handleBlur)}updated(e){e.has("checked")&&this.checked&&m.buttonGroup[this.name]!==this&&(m.buttonGroup[this.name]&&(m.buttonGroup[this.name].checked=!1,m.buttonGroup[this.name].requestUpdate()),m.buttonGroup[this.name]=this)}checkValidity(){if(this.required&&!this.checked)return!1;const e=this.shadowRoot?.querySelector("input");return e?e.checkValidity():!0}_emitChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,checked:this.checked,name:this.name,value:this.value},bubbles:!0,composed:!0}))}_handleChange(){this.classList.remove("active-focus"),!this.checked&&!this.disabled&&(m.buttonGroup[this.name]&&(m.buttonGroup[this.name].checked=!1,m.buttonGroup[this.name].requestUpdate()),m.buttonGroup[this.name]=this,this.checked=!0,this._emitChangeEvent())}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.classList.remove("active-focus"),this.dispatchEvent(new Event("nys-blur"))}_callInputHandling(){if(this.disabled)return;const e=this.shadowRoot?.querySelector('input[type="radio"]');e&&(e.focus(),e.click())}render(){return l`
       <input
         id="${this.id}"
         type="radio"
-        name="${u(this.name?this.name:void 0)}"
+        name="${y(this.name?this.name:void 0)}"
         .checked=${this.checked}
         ?disabled=${this.disabled}
         .value=${this.value}
         ?required="${this.required}"
-        form=${u(this.form||void 0)}
+        form=${y(this.form||void 0)}
         @change="${this._handleChange}"
         hidden
         aria-hidden="true"
@@ -3944,16 +3954,16 @@
         aria-label=${this.label}
       >
         <span class="nys-radiobutton__radio"></span>
-        ${this.label&&c`<nys-label
+        ${this.label&&l`<nys-label
           for=${this.id}
           label=${this.label}
-          description=${u(this.description||void 0)}
-          ?invert=${this.invert}
+          description=${y(this.description||void 0)}
+          ?inverted=${this.inverted}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label> `}
       </label>
-    `}},m.VALID_SIZES=["sm","md"],m.buttonGroup={},m.styles=l1,m);N([i({type:Boolean,reflect:!0})],R.prototype,"checked",2),N([i({type:Boolean,reflect:!0})],R.prototype,"disabled",2),N([i({type:Boolean,reflect:!0})],R.prototype,"required",2),N([i({type:String})],R.prototype,"label",2),N([i({type:String})],R.prototype,"description",2),N([i({type:String})],R.prototype,"id",2),N([i({type:String,reflect:!0})],R.prototype,"name",2),N([i({type:String})],R.prototype,"value",2),N([i({type:Boolean,reflect:!0})],R.prototype,"invert",2),N([i({type:String,reflect:!0})],R.prototype,"form",2),N([i({reflect:!0})],R.prototype,"size",1),N([i({type:Boolean,reflect:!0})],R.prototype,"tile",2);let d1=R;customElements.get("nys-radiobutton")||customElements.define("nys-radiobutton",d1);const js=g`
+    `}},m.VALID_SIZES=["sm","md"],m.buttonGroup={},m.styles=o1,m);N([i({type:Boolean,reflect:!0})],R.prototype,"checked",2),N([i({type:Boolean,reflect:!0})],R.prototype,"disabled",2),N([i({type:Boolean,reflect:!0})],R.prototype,"required",2),N([i({type:String})],R.prototype,"label",2),N([i({type:String})],R.prototype,"description",2),N([i({type:String})],R.prototype,"id",2),N([i({type:String,reflect:!0})],R.prototype,"name",2),N([i({type:String})],R.prototype,"value",2),N([i({type:Boolean,reflect:!0})],R.prototype,"inverted",2),N([i({type:String,reflect:!0})],R.prototype,"form",2),N([i({reflect:!0})],R.prototype,"size",1),N([i({type:Boolean,reflect:!0})],R.prototype,"tile",2);let n1=R;customElements.get("nys-radiobutton")||customElements.define("nys-radiobutton",n1);const qs=g`
   :host {
     /* Global Select Styles */
     --_nys-select-width: 100%;
@@ -4017,6 +4027,7 @@
   .nys-select__select {
     color: var(--_nys-select-color);
     font-weight: var(--_nys-select-font-weight);
+    font-family: var(--_nys-select-font-family);
     border-radius: var(--_nys-select-border-radius);
     border: solid var(--_nys-select-border-width)
       var(--_nys-select-border-color);
@@ -4096,7 +4107,7 @@
     --_nys-select-border-default: var(--nys-border-width-sm, 1px) solid
       var(--_nys-select-color--error);
   }
-`;var Gs=Object.defineProperty,Xe=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Gs(e,t,s),s};class _e extends f{constructor(){super(...arguments),this.disabled=!1,this.selected=!1,this.value="",this.label="",this.hidden=!1}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e&&e.addEventListener("slotchange",()=>{var s;const o=e.assignedNodes({flatten:!0});o.length>0&&(this.label=((s=o[0].textContent)==null?void 0:s.trim())||"")})}render(){return c`
+`;var Ts=Object.defineProperty,We=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Ts(e,t,s),s};class ne extends p{constructor(){super(...arguments),this.disabled=!1,this.selected=!1,this.value="",this.label="",this.hidden=!1}firstUpdated(){const e=this.shadowRoot?.querySelector("slot");e&&e.addEventListener("slotchange",()=>{const t=e.assignedNodes({flatten:!0});t.length>0&&(this.label=t[0].textContent?.trim()||"")})}render(){return l`
       <option
         ?disabled=${this.disabled}
         ?selected=${this.selected}
@@ -4106,7 +4117,7 @@
       >
         <slot>${this.label}</slot>
       </option>
-    `}}Xe([i({type:Boolean,reflect:!0})],_e.prototype,"disabled"),Xe([i({type:Boolean,reflect:!0})],_e.prototype,"selected"),Xe([i({type:String})],_e.prototype,"value"),Xe([i({type:String})],_e.prototype,"label"),Xe([i({type:Boolean,reflect:!0})],_e.prototype,"hidden"),customElements.define("nys-option",_e);var Ws=Object.defineProperty,Ys=Object.getOwnPropertyDescriptor,q=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ys(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Ws(e,t,s),s};let Ks=0;const I=(de=class extends f{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.value="",this.disabled=!1,this.required=!1,this.optional=!1,this._tooltip="",this.form=null,this.invert=!1,this.showError=!1,this.errorMessage="",this._width="md",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get width(){return this._width}set width(e){this._width=de.VALID_WIDTHS.includes(e)?e:"full"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-select-${Date.now()}-${Ks++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}formResetCallback(){this.value=""}_handleSlotChange(){var s,r;const e=(s=this.shadowRoot)==null?void 0:s.querySelector('slot:not([name="description"])'),t=(r=this.shadowRoot)==null?void 0:r.querySelector("select");if(!e||!t)return;t.querySelectorAll("option:not([hidden])").forEach(n=>n.remove()),e.assignedElements({flatten:!0}).forEach(n=>{var d;if(n instanceof _e){const l=document.createElement("option");l.value=n.value,l.textContent=n.label||((d=n.textContent)==null?void 0:d.trim())||"",l.disabled=n.disabled,l.selected=n.selected,t.appendChild(l)}})}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("select");if(!e)return;const t=this.errorMessage||"Please select an option.";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(e=""){var o,s;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("select");t&&(this.showError=!!e,(s=this.errorMessage)!=null&&s.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector("select");if(!e)return;let t=e.validationMessage;this._manageRequire(),this._setValidityMessage(t)}checkValidity(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("select");return e?e.checkValidity():!0}_handleInvalid(e){var o;e.preventDefault(),this._hasUserInteracted=!0,this._validate(),this.showError=!0;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("select");if(t){const s=this._internals.form;s?Array.from(s.elements).find(d=>typeof d.checkValidity=="function"&&!d.checkValidity())===this&&t.focus():t.focus()}}_handleChange(e){const t=e.target;this.value=t.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("nys-blur"))}updated(e){var t;if(super.updated(e),e.has("value")){const o=(t=this.shadowRoot)==null?void 0:t.querySelector("select");o&&(o.value=this.value)}}render(){return c`
+    `}}We([i({type:Boolean,reflect:!0})],ne.prototype,"disabled"),We([i({type:Boolean,reflect:!0})],ne.prototype,"selected"),We([i({type:String})],ne.prototype,"value"),We([i({type:String})],ne.prototype,"label"),We([i({type:Boolean,reflect:!0})],ne.prototype,"hidden"),customElements.define("nys-option",ne);var Rs=Object.defineProperty,Ns=Object.getOwnPropertyDescriptor,U=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ns(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Rs(e,t,s),s};let Fs=0;const B=(he=class extends p{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.value="",this.disabled=!1,this.required=!1,this.optional=!1,this._tooltip="",this.form=null,this.inverted=!1,this.showError=!1,this.errorMessage="",this._width="full",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get width(){return this._width}set width(e){this._width=he.VALID_WIDTHS.includes(e)?e:"full"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-select-${Date.now()}-${Fs++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}formResetCallback(){this.value=""}_handleSlotChange(){const e=this.shadowRoot?.querySelector('slot:not([name="description"])'),t=this.shadowRoot?.querySelector("select");if(!e||!t)return;Array.from(t.children).forEach(s=>{s.hasAttribute("data-native")||s.remove()}),e.assignedElements({flatten:!0}).forEach(s=>{if(s instanceof ne){const r=document.createElement("option");r.value=s.value,r.textContent=s.label||s.textContent?.trim()||"",r.disabled=s.disabled,r.selected=s.selected,t.appendChild(r);return}if(s.tagName==="OPTION"){const r=s.cloneNode(!0);r.setAttribute("data-native","true"),t.appendChild(r);return}if(s.tagName==="OPTGROUP"){const r=document.createElement("optgroup");r.label=s.label,s.disabled&&(r.disabled=!0),Array.from(s.children).forEach(n=>{if(n instanceof ne){const c=document.createElement("option");c.value=n.value,c.textContent=n.label||n.textContent?.trim()||"",c.disabled=n.disabled,c.selected=n.selected,r.appendChild(c)}else if(n.tagName==="OPTION"){const c=n.cloneNode(!0);r.appendChild(c)}}),t.appendChild(r);return}})}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){const e=this.shadowRoot?.querySelector("select");if(!e)return;const t=this.errorMessage||"Please select an option.";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(e=""){const t=this.shadowRoot?.querySelector("select");t&&(this.showError=!!e,this.errorMessage?.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){const e=this.shadowRoot?.querySelector("select");if(!e)return;let t=e.validationMessage;this._manageRequire(),this._setValidityMessage(t)}checkValidity(){const e=this.shadowRoot?.querySelector("select");return e?e.checkValidity():!0}_handleInvalid(e){e.preventDefault(),this._hasUserInteracted=!0,this._validate(),this.showError=!0;const t=this.shadowRoot?.querySelector("select");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&t.focus():t.focus()}}_handleChange(e){const t=e.target;this.value=t.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("nys-blur"))}updated(e){if(super.updated(e),e.has("value")){const t=this.shadowRoot?.querySelector("select");t&&(t.value=this.value)}}render(){return l`
       <div class="nys-select">
         <nys-label
           for=${this.id}
@@ -4114,7 +4125,7 @@
           description=${this.description}
           flag=${this.required?"required":this.optional?"optional":""}
           _tooltip=${this._tooltip}
-          ?invert=${this.invert}
+          ?inverted=${this.inverted}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -4123,7 +4134,7 @@
             class="nys-select__select"
             name=${this.name}
             id=${this.id}
-            form=${u(this.form||void 0)}
+            form=${y(this.form||void 0)}
             ?disabled=${this.disabled}
             ?required=${this.required}
             aria-disabled="${this.disabled}"
@@ -4150,7 +4161,7 @@
           errorMessage=${this._internals.validationMessage||this.errorMessage}
         ></nys-errormessage>
       </div>
-    `}},de.VALID_WIDTHS=["sm","md","lg","full"],de.styles=js,de.formAssociated=!0,de);q([i({type:String})],I.prototype,"id",2),q([i({type:String,reflect:!0})],I.prototype,"name",2),q([i({type:String})],I.prototype,"label",2),q([i({type:String})],I.prototype,"description",2),q([i({type:String})],I.prototype,"value",2),q([i({type:Boolean,reflect:!0})],I.prototype,"disabled",2),q([i({type:Boolean,reflect:!0})],I.prototype,"required",2),q([i({type:Boolean,reflect:!0})],I.prototype,"optional",2),q([i({type:String})],I.prototype,"_tooltip",2),q([i({type:String,reflect:!0})],I.prototype,"form",2),q([i({type:Boolean,reflect:!0})],I.prototype,"invert",2),q([i({type:Boolean,reflect:!0})],I.prototype,"showError",2),q([i({type:String})],I.prototype,"errorMessage",2),q([i({reflect:!0})],I.prototype,"width",1);let h1=I;customElements.get("nys-select")||customElements.define("nys-select",h1);const Xs=g`
+    `}},he.VALID_WIDTHS=["sm","md","lg","full"],he.styles=qs,he.formAssociated=!0,he);U([i({type:String})],B.prototype,"id",2),U([i({type:String,reflect:!0})],B.prototype,"name",2),U([i({type:String})],B.prototype,"label",2),U([i({type:String})],B.prototype,"description",2),U([i({type:String})],B.prototype,"value",2),U([i({type:Boolean,reflect:!0})],B.prototype,"disabled",2),U([i({type:Boolean,reflect:!0})],B.prototype,"required",2),U([i({type:Boolean,reflect:!0})],B.prototype,"optional",2),U([i({type:String})],B.prototype,"_tooltip",2),U([i({type:String,reflect:!0})],B.prototype,"form",2),U([i({type:Boolean,reflect:!0})],B.prototype,"inverted",2),U([i({type:Boolean,reflect:!0})],B.prototype,"showError",2),U([i({type:String})],B.prototype,"errorMessage",2),U([i({reflect:!0})],B.prototype,"width",1);let i1=B;customElements.get("nys-select")||customElements.define("nys-select",i1);const js=g`
   :host {
     /* Global Skipnav Styles */
     --_nys-skipnav-padding--y: var(--nys-space-100, 8px);
@@ -4219,7 +4230,7 @@
     left: auto;
     outline: none;
   }
-`;var Qs=Object.defineProperty,y1=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Qs(e,t,s),s};const At=class At extends f{constructor(){super(),this.id="",this.href=""}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-skipnav-${Date.now()}`)}_handleFocus(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-skipnav__link");e==null||e.classList.add("show")}_handleBlur(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-skipnav__link");e==null||e.classList.remove("show")}_handleClick(){const e=(this.href||"#main-content").replace("#",""),t=document.getElementById(e);t&&(t.setAttribute("tabindex","-1"),t.focus(),t.style.outline="none")}render(){return c`
+`;var Gs=Object.defineProperty,a1=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Gs(e,t,s),s};const $t=class $t extends p{constructor(){super(),this.id="",this.href=""}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-skipnav-${Date.now()}`)}_handleFocus(){this.shadowRoot?.querySelector(".nys-skipnav__link")?.classList.add("show")}_handleBlur(){this.shadowRoot?.querySelector(".nys-skipnav__link")?.classList.remove("show")}_handleClick(){const e=(this.href||"#main-content").replace("#",""),t=document.getElementById(e);t&&(t.setAttribute("tabindex","-1"),t.focus(),t.style.outline="none")}render(){return l`
       <div class="nys-skipnav">
         <a
           id=${this.id}
@@ -4233,7 +4244,7 @@
           Skip to main content
         </a>
       </div>
-    `}};At.styles=Xs;let Ze=At;y1([i({type:String})],Ze.prototype,"id"),y1([i({type:String})],Ze.prototype,"href"),customElements.get("nys-skipnav")||customElements.define("nys-skipnav",Ze);const u1=g`
+    `}};$t.styles=js;let Pe=$t;a1([i({type:String})],Pe.prototype,"id"),a1([i({type:String})],Pe.prototype,"href"),customElements.get("nys-skipnav")||customElements.define("nys-skipnav",Pe);const l1=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -4586,7 +4597,7 @@
       pointer-events: all;
     }
   }
-`;var Js=Object.defineProperty,Me=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Js(e,t,s),s};const Dt=class Dt extends f{constructor(){super(...arguments),this.selected=!1,this.current=!1,this.label="",this.href="",this.isCompactExpanded=!1,this.stepNumber=0}_handleActivate(e){typeof this.onClick=="function"&&this.onClick(e);const t=new CustomEvent("nys-step-click",{bubbles:!0,composed:!0,cancelable:!0,detail:{href:this.href,label:this.label}});(this.hasAttribute("previous")||this.current)&&!this.selected&&(this.dispatchEvent(t),!t.defaultPrevented&&this.href&&(window.location.href=this.href))}_handleKeydown(e){(e.key==="Enter"||e.key===" ")&&(e.preventDefault(),this._handleActivate(e))}render(){return c`
+`;var Ws=Object.defineProperty,Ae=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Ws(e,t,s),s};const St=class St extends p{constructor(){super(...arguments),this.selected=!1,this.current=!1,this.label="",this.href="",this.isCompactExpanded=!1,this.stepNumber=0}_handleActivate(e){typeof this.onClick=="function"&&this.onClick(e);const t=new CustomEvent("nys-step-click",{bubbles:!0,composed:!0,cancelable:!0,detail:{href:this.href,label:this.label}});(this.hasAttribute("previous")||this.current)&&!this.selected&&(this.dispatchEvent(t),!t.defaultPrevented&&this.href&&(window.location.href=this.href))}_handleKeydown(e){(e.key==="Enter"||e.key===" ")&&(e.preventDefault(),this._handleActivate(e))}render(){return l`
       <div class="nys-step">
         <div class="nys-step__linewrapper">
           <div class="nys-step__line"></div>
@@ -4613,7 +4624,7 @@
           </div>
         </div>
       </div>
-    `}};Dt.styles=u1;let G=Dt;Me([i({type:Boolean,reflect:!0})],G.prototype,"selected"),Me([i({type:Boolean,reflect:!0})],G.prototype,"current"),Me([i({type:String})],G.prototype,"label"),Me([i({type:String})],G.prototype,"href"),Me([i({type:Boolean})],G.prototype,"isCompactExpanded"),Me([i({type:Function})],G.prototype,"onClick"),Me([i({type:Number})],G.prototype,"stepNumber"),customElements.get("nys-step")||customElements.define("nys-step",G);var eo=Object.defineProperty,Qe=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&eo(e,t,s),s};const Mt=class Mt extends f{constructor(){super(),this.id="",this.name="",this.label="",this.counterText="initial",this.isCompactExpanded=!1,this._stepsNumbered=!1,this._onStepClick=async e=>{const t=e.composedPath().find(n=>n instanceof HTMLElement&&n.tagName.toLowerCase()==="nys-step");if(!t)return;const o=Array.from(this.querySelectorAll("nys-step")),s=o.findIndex(n=>n.hasAttribute("current")),r=o.indexOf(t);s!==-1&&r>s||t.hasAttribute("selected")||(o.forEach(n=>n.removeAttribute("selected")),t.setAttribute("selected",""),this._updateCounter(),this.isCompactExpanded=!1)}}connectedCallback(){super.connectedCallback(),this.addEventListener("nys-step-click",this._onStepClick),requestAnimationFrame(()=>this._validateSteps())}disconnectedCallback(){this.removeEventListener("nys-step-click",this._onStepClick),super.disconnectedCallback()}_validateSteps(){Array.from(this.children).forEach(e=>{const t=e instanceof HTMLElement&&e.tagName.toLowerCase()==="nys-step",o=e instanceof HTMLElement&&e.hasAttribute("slot")&&e.getAttribute("slot")==="actions";!t&&!o&&(console.warn("Only <nys-step> elements or the <div slot='actions'> container are allowed as direct children of <nys-stepper>. Removing:",e),e.remove())})}_validateButtonSlot(e){const o=e.target.assignedElements();if(o.length!==1||o[0].tagName.toLowerCase()!=="div"){console.warn("The 'actions' slot must have exactly one <div> as a direct child.");return}const s=o[0];Array.from(s.children).forEach(r=>{r instanceof HTMLElement&&r.tagName.toLowerCase()==="nys-button"?(r.setAttribute("size","sm"),r.hasAttribute("fullWidth")&&(r.style.flex="1 1 0")):(console.warn("The <div> inside 'actions' slot only accepts <nys-button> elements. Removing invalid node:",r),r.remove())})}_updateCounter(){if(this.isCompactExpanded){this.counterText="Back to Form",this.style.height="-webkit-fit-content",this.style.height="-moz-fit-content",this.style.height="fit-content";return}else this.style.height="auto";const e=this.querySelectorAll("nys-step"),t=Array.from(e).findIndex(s=>s.hasAttribute("selected")),o=e.length;this.counterText=t>=0?`Step ${t+1} of ${o}`:`Step 1 of ${o}`}updated(){const e=this.querySelectorAll("nys-step");this._stepsNumbered||(e.forEach((r,n)=>{r.stepNumber=n+1}),this._stepsNumbered=!0);let t=!1,o=!1,s=!1;e.forEach((r,n)=>{r.hasAttribute("current")&&(s?r.removeAttribute("current"):s=!0),n===0?r.setAttribute("first",""):r.removeAttribute("first"),r.hasAttribute("current")?(t=!0,r.removeAttribute("previous")):t?r.removeAttribute("previous"):r.setAttribute("previous",""),r.hasAttribute("selected")&&(t||o?r.removeAttribute("selected"):o=!0),this.hasAttribute("isCompactExpanded")?r.setAttribute("isCompactExpanded",""):r.removeAttribute("isCompactExpanded")}),o||(s?e.forEach(r=>{r.hasAttribute("current")&&!o&&(r.setAttribute("selected",""),o=!0)}):e.length>0&&(e[0].setAttribute("current",""),e[0].setAttribute("selected",""))),this._updateCounter()}_toggleCompact(){this.isCompactExpanded=!this.isCompactExpanded}_handleCounterKeydown(e){(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this._toggleCompact())}render(){return c`
+    `}};St.styles=l1;let G=St;Ae([i({type:Boolean,reflect:!0})],G.prototype,"selected"),Ae([i({type:Boolean,reflect:!0})],G.prototype,"current"),Ae([i({type:String})],G.prototype,"label"),Ae([i({type:String})],G.prototype,"href"),Ae([i({type:Boolean})],G.prototype,"isCompactExpanded"),Ae([i({type:Function})],G.prototype,"onClick"),Ae([i({type:Number})],G.prototype,"stepNumber"),customElements.get("nys-step")||customElements.define("nys-step",G);var Ys=Object.defineProperty,Ye=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Ys(e,t,s),s};const Lt=class Lt extends p{constructor(){super(),this.id="",this.name="",this.label="",this.counterText="initial",this.isCompactExpanded=!1,this._stepsNumbered=!1,this._onStepClick=async e=>{const t=e.composedPath().find(n=>n instanceof HTMLElement&&n.tagName.toLowerCase()==="nys-step");if(!t)return;const o=Array.from(this.querySelectorAll("nys-step")),s=o.findIndex(n=>n.hasAttribute("current")),r=o.indexOf(t);s!==-1&&r>s||t.hasAttribute("selected")||(o.forEach(n=>n.removeAttribute("selected")),t.setAttribute("selected",""),this._updateCounter(),this.isCompactExpanded=!1)}}connectedCallback(){super.connectedCallback(),this.addEventListener("nys-step-click",this._onStepClick),requestAnimationFrame(()=>this._validateSteps())}disconnectedCallback(){this.removeEventListener("nys-step-click",this._onStepClick),super.disconnectedCallback()}_validateSteps(){Array.from(this.children).forEach(e=>{const t=e instanceof HTMLElement&&e.tagName.toLowerCase()==="nys-step",o=e instanceof HTMLElement&&e.hasAttribute("slot")&&e.getAttribute("slot")==="actions";!t&&!o&&(console.warn("Only <nys-step> elements or the <div slot='actions'> container are allowed as direct children of <nys-stepper>. Removing:",e),e.remove())})}_validateButtonSlot(e){const o=e.target.assignedElements();if(o.length!==1||o[0].tagName.toLowerCase()!=="div"){console.warn("The 'actions' slot must have exactly one <div> as a direct child.");return}const s=o[0];Array.from(s.children).forEach(r=>{r instanceof HTMLElement&&r.tagName.toLowerCase()==="nys-button"?(r.setAttribute("size","sm"),r.hasAttribute("fullWidth")&&(r.style.flex="1 1 0")):(console.warn("The <div> inside 'actions' slot only accepts <nys-button> elements. Removing invalid node:",r),r.remove())})}_updateCounter(){if(this.isCompactExpanded){this.counterText="Back to Form",this.style.height="-webkit-fit-content",this.style.height="-moz-fit-content",this.style.height="fit-content";return}else this.style.height="auto";const e=this.querySelectorAll("nys-step"),t=Array.from(e).findIndex(s=>s.hasAttribute("selected")),o=e.length;this.counterText=t>=0?`Step ${t+1} of ${o}`:`Step 1 of ${o}`}updated(){const e=this.querySelectorAll("nys-step");this._stepsNumbered||(e.forEach((r,n)=>{r.stepNumber=n+1}),this._stepsNumbered=!0);let t=!1,o=!1,s=!1;e.forEach((r,n)=>{r.hasAttribute("current")&&(s?r.removeAttribute("current"):s=!0),n===0?r.setAttribute("first",""):r.removeAttribute("first"),r.hasAttribute("current")?(t=!0,r.removeAttribute("previous")):t?r.removeAttribute("previous"):r.setAttribute("previous",""),r.hasAttribute("selected")&&(t||o?r.removeAttribute("selected"):o=!0),this.hasAttribute("isCompactExpanded")?r.setAttribute("isCompactExpanded",""):r.removeAttribute("isCompactExpanded")}),o||(s?e.forEach(r=>{r.hasAttribute("current")&&!o&&(r.setAttribute("selected",""),o=!0)}):e.length>0&&(e[0].setAttribute("current",""),e[0].setAttribute("selected",""))),this._updateCounter()}_toggleCompact(){this.isCompactExpanded=!this.isCompactExpanded}_handleCounterKeydown(e){(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this._toggleCompact())}render(){return l`
       <div class="nys-stepper" id=${this.id} name=${this.name}>
         <div class="nys-stepper__header">
           <slot name="actions" @slotchange=${this._validateButtonSlot}></slot>
@@ -4634,7 +4645,7 @@
         </div>
         <slot class="nys-stepper__steps"></slot>
       </div>
-    `}};Mt.styles=u1;let ne=Mt;Qe([i({type:String})],ne.prototype,"id"),Qe([i({type:String,reflect:!0})],ne.prototype,"name"),Qe([i({type:String})],ne.prototype,"label"),Qe([i({type:String})],ne.prototype,"counterText"),Qe([i({type:Boolean,reflect:!0})],ne.prototype,"isCompactExpanded"),customElements.get("nys-stepper")||customElements.define("nys-stepper",ne);const to=g`
+    `}};Lt.styles=l1;let ie=Lt;Ye([i({type:String})],ie.prototype,"id"),Ye([i({type:String,reflect:!0})],ie.prototype,"name"),Ye([i({type:String})],ie.prototype,"label"),Ye([i({type:String})],ie.prototype,"counterText"),Ye([i({type:Boolean,reflect:!0})],ie.prototype,"isCompactExpanded"),customElements.get("nys-stepper")||customElements.define("nys-stepper",ie);const Ks=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -4773,7 +4784,7 @@
     color: var(--_nys-textarea-color--disabled);
     cursor: not-allowed;
   }
-`;var so=Object.defineProperty,oo=Object.getOwnPropertyDescriptor,L=(a,e,t,o)=>{for(var s=o>1?void 0:o?oo(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&so(e,t,s),s};let ro=0;const $=(K=class extends f{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this._tooltip="",this.invert=!1,this.form=null,this.maxlength=null,this.width="full",this.rows=4,this._resize="vertical",this.showError=!1,this.errorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get resize(){return this._resize}set resize(e){this._resize=K.VALID_RESIZE.includes(e)?e:"vertical"}async updated(e){await Promise.resolve(),e.has("width")&&(this.width=K.VALID_WIDTHS.includes(this.width)?this.width:"full"),e.has("rows")&&(this.rows=this.rows??4)}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textarea-${Date.now()}-${ro++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("textarea");if(!e)return;const t=this.errorMessage||"This field is required";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(e=""){var o,s;const t=(o=this.shadowRoot)==null?void 0:o.querySelector("textarea");t&&(this.showError=!!e,(s=this.errorMessage)!=null&&s.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){var o;const e=(o=this.shadowRoot)==null?void 0:o.querySelector("textarea");if(!e)return;let t=e.validationMessage;this._setValidityMessage(t)}checkValidity(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("textarea");return e?e.checkValidity():!0}_handleInvalid(e){var o;e.preventDefault(),this._hasUserInteracted=!0,this._validate();const t=(o=this.shadowRoot)==null?void 0:o.querySelector("textarea");if(t){const s=this._internals.form;s?Array.from(s.elements).find(d=>typeof d.checkValidity=="function"&&!d.checkValidity())===this&&t.focus():t.focus()}}_handleInput(e){const t=e.target;this.value=t.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("nys-input",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("nys-blur"))}_handleSelect(e){const t=e.target;this.value=t.value,this.dispatchEvent(new CustomEvent("nys-select",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleSelectionChange(e){const t=e.target;this.value=t.value,this.dispatchEvent(new CustomEvent("nys-selectionchange",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}render(){return c`
+`;var Xs=Object.defineProperty,Qs=Object.getOwnPropertyDescriptor,L=(a,e,t,o)=>{for(var s=o>1?void 0:o?Qs(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Xs(e,t,s),s};let Js=0;const k=(K=class extends p{constructor(){super(),this.id="",this.name="",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this._tooltip="",this.inverted=!1,this.form=null,this.maxlength=null,this.width="full",this.rows=4,this._resize="vertical",this.showError=!1,this.errorMessage="",this._hasUserInteracted=!1,this._internals=this.attachInternals()}get resize(){return this._resize}set resize(e){this._resize=K.VALID_RESIZE.includes(e)?e:"vertical"}async updated(e){await Promise.resolve(),e.has("width")&&(this.width=K.VALID_WIDTHS.includes(this.width)?this.width:"full"),e.has("rows")&&(this.rows=this.rows??4)}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textarea-${Date.now()}-${Js++}`),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){const e=this.shadowRoot?.querySelector("textarea");if(!e)return;const t=this.errorMessage||"This field is required";this.required&&!this.value?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(e=""){const t=this.shadowRoot?.querySelector("textarea");t&&(this.showError=!!e,this.errorMessage?.trim()&&e!==""&&(e=this.errorMessage),this._internals.setValidity(e?{customError:!0}:{},e,t))}_validate(){const e=this.shadowRoot?.querySelector("textarea");if(!e)return;let t=e.validationMessage;this._setValidityMessage(t)}checkValidity(){const e=this.shadowRoot?.querySelector("textarea");return e?e.checkValidity():!0}_handleInvalid(e){e.preventDefault(),this._hasUserInteracted=!0,this._validate();const t=this.shadowRoot?.querySelector("textarea");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&t.focus():t.focus()}}_handleInput(e){const t=e.target;this.value=t.value,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("nys-input",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("nys-blur"))}_handleSelect(e){const t=e.target;this.value=t.value,this.dispatchEvent(new CustomEvent("nys-select",{detail:{value:this.value},bubbles:!0,composed:!0}))}_handleSelectionChange(e){const t=e.target;this.value=t.value,this.dispatchEvent(new CustomEvent("nys-selectionchange",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}render(){return l`
       <label class="nys-textarea">
         <nys-label
           for=${this.id}
@@ -4781,7 +4792,7 @@
           description=${this.description}
           flag=${this.required?"required":this.optional?"optional":""}
           _tooltip=${this._tooltip}
-          ?invert=${this.invert}
+          ?inverted=${this.inverted}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -4792,14 +4803,14 @@
           ?disabled=${this.disabled}
           ?required=${this.required}
           ?readonly=${this.readonly}
-          aria-disabled=${u(this.disabled?"true":void 0)}
-          aria-required=${u(this.required?"true":void 0)}
-          aria-label=${u(this.label||void 0)}
-          aria-description=${u(this.description||void 0)}
-          placeholder=${u(this.placeholder?this.placeholder:void 0)}
-          maxlength=${u(this.maxlength??void 0)}
+          aria-disabled=${y(this.disabled?"true":void 0)}
+          aria-required=${y(this.required?"true":void 0)}
+          aria-label=${y(this.label||void 0)}
+          aria-description=${y(this.description||void 0)}
+          placeholder=${y(this.placeholder?this.placeholder:void 0)}
+          maxlength=${y(this.maxlength??void 0)}
           .rows=${this.rows}
-          form=${u(this.form||void 0)}
+          form=${y(this.form||void 0)}
           @input=${this._handleInput}
           @focus="${this._handleFocus}"
           @blur="${this._handleBlur}"
@@ -4813,7 +4824,7 @@ ${this.value}</textarea
           errorMessage=${this._internals.validationMessage||this.errorMessage}
         ></nys-errormessage>
       </label>
-    `}},K.VALID_WIDTHS=["sm","md","lg","full"],K.VALID_RESIZE=["vertical","none"],K.styles=to,K.formAssociated=!0,K);L([i({type:String})],$.prototype,"id",2),L([i({type:String,reflect:!0})],$.prototype,"name",2),L([i({type:String})],$.prototype,"label",2),L([i({type:String})],$.prototype,"description",2),L([i({type:String})],$.prototype,"placeholder",2),L([i({type:String})],$.prototype,"value",2),L([i({type:Boolean,reflect:!0})],$.prototype,"disabled",2),L([i({type:Boolean,reflect:!0})],$.prototype,"readonly",2),L([i({type:Boolean,reflect:!0})],$.prototype,"required",2),L([i({type:Boolean,reflect:!0})],$.prototype,"optional",2),L([i({type:String})],$.prototype,"_tooltip",2),L([i({type:Boolean,reflect:!0})],$.prototype,"invert",2),L([i({type:String,reflect:!0})],$.prototype,"form",2),L([i({type:Number})],$.prototype,"maxlength",2),L([i({reflect:!0})],$.prototype,"width",2),L([i({type:Number})],$.prototype,"rows",2),L([i({reflect:!0})],$.prototype,"resize",1),L([i({type:Boolean,reflect:!0})],$.prototype,"showError",2),L([i({type:String})],$.prototype,"errorMessage",2);let p1=$;customElements.get("nys-textarea")||customElements.define("nys-textarea",p1);const no=g`
+    `}},K.VALID_WIDTHS=["sm","md","lg","full"],K.VALID_RESIZE=["vertical","none"],K.styles=Ks,K.formAssociated=!0,K);L([i({type:String})],k.prototype,"id",2),L([i({type:String,reflect:!0})],k.prototype,"name",2),L([i({type:String})],k.prototype,"label",2),L([i({type:String})],k.prototype,"description",2),L([i({type:String})],k.prototype,"placeholder",2),L([i({type:String})],k.prototype,"value",2),L([i({type:Boolean,reflect:!0})],k.prototype,"disabled",2),L([i({type:Boolean,reflect:!0})],k.prototype,"readonly",2),L([i({type:Boolean,reflect:!0})],k.prototype,"required",2),L([i({type:Boolean,reflect:!0})],k.prototype,"optional",2),L([i({type:String})],k.prototype,"_tooltip",2),L([i({type:Boolean,reflect:!0})],k.prototype,"inverted",2),L([i({type:String,reflect:!0})],k.prototype,"form",2),L([i({type:Number})],k.prototype,"maxlength",2),L([i({reflect:!0})],k.prototype,"width",2),L([i({type:Number})],k.prototype,"rows",2),L([i({reflect:!0})],k.prototype,"resize",1),L([i({type:Boolean,reflect:!0})],k.prototype,"showError",2),L([i({type:String})],k.prototype,"errorMessage",2);let c1=k;customElements.get("nys-textarea")||customElements.define("nys-textarea",c1);const eo=g`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -5051,7 +5062,7 @@ ${this.value}</textarea
     color: var(--_nys-textinput-color--disabled);
     cursor: not-allowed;
   }
-`;var io=Object.defineProperty,ao=Object.getOwnPropertyDescriptor,_=(a,e,t,o)=>{for(var s=o>1?void 0:o?ao(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&io(e,t,s),s};let lo=0;const b=(X=class extends f{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this._tooltip="",this.form=null,this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.invert=!1,this.showError=!1,this.errorMessage="",this.showPassword=!1,this._originalErrorMessage="",this._hasUserInteracted=!1,this._maskPatterns={tel:"(___) ___-____"},this._internals=this.attachInternals()}get type(){return this._type}set type(e){this._type=X.VALID_TYPES.includes(e)?e:"text"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textinput-${Date.now()}-${lo++}`),this._originalErrorMessage=this.errorMessage??"",this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}async updated(e){var t,o;if(e.has("width")&&(await Promise.resolve(),this.width=X.VALID_WIDTHS.includes(this.width)?this.width:"full"),e.has("disabled")&&(this._validateButtonSlot("startButton"),this._validateButtonSlot("endButton")),e.has("type")){const s=this._maskPatterns[this.type],r=(t=this.shadowRoot)==null?void 0:t.querySelector("input");if(r)if(s)r.maxLength=s.length,this._updateOverlay(r.value,s);else{r.removeAttribute("maxLength");const n=(o=this.shadowRoot)==null?void 0:o.querySelector(".nys-textinput__mask-overlay");n&&(n.textContent="")}}}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){var s,r;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!e)return;const t=this.errorMessage||"This field is required";this.required&&(!this.value||((r=this.value)==null?void 0:r.trim())==="")?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(e=""){var s,r;const t=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!t)return;this.showError=!!e,(r=this._originalErrorMessage)!=null&&r.trim()&&e!==""?this.errorMessage=this._originalErrorMessage:this.errorMessage=e;const o=e?{customError:!0}:{};this._internals.setValidity(o,this.errorMessage,t)}_validate(){var s;const e=(s=this.shadowRoot)==null?void 0:s.querySelector("input");if(!e)return;const t=e.validity;let o="";t.valueMissing?o="This field is required":t.typeMismatch?o="Invalid format for this type":t.patternMismatch?o="Invalid format":t.tooShort?o=`Value is too short. Minimum length is ${e.minLength}`:t.tooLong?o=`Value is too long. Maximum length is ${e.maxLength}`:t.rangeUnderflow?o=`Value must be at least ${e.min}`:t.rangeOverflow?o=`Value must be at most ${e.max}`:t.stepMismatch?o="Invalid step value":o=e.validationMessage,this._setValidityMessage(o)}checkValidity(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("input");return e?e.checkValidity():!0}_handleInvalid(e){var o;e.preventDefault(),this._hasUserInteracted=!0,this._validate();const t=(o=this.shadowRoot)==null?void 0:o.querySelector("input");if(t){const s=this._internals.form;s?Array.from(s.elements).find(d=>typeof d.checkValidity=="function"&&!d.checkValidity())===this&&t.focus():t.focus()}}_togglePasswordVisibility(){this.showPassword=!this.showPassword}_updateOverlay(e,t){var n;const o=(n=this.shadowRoot)==null?void 0:n.querySelector(".nys-textinput__mask-overlay");if(!o)return;const s=e,r=t.slice(s.length);o.textContent=s+r}_applyMask(e,t){const o=e.replace(/\D/g,"");let s="";if(this.type==="tel")return o.length>0&&(s="("+o.substring(0,3)),o.length>=4&&(s+=") "+o.substring(3,6)),o.length>6&&(s+="-"+o.substring(6,10)),s;let r=0;for(let n=0;n<t.length;n++)if(t[n]==="_"||t[n].match(/[d9]/i))if(r<o.length)s+=o[r++];else break;else s+=t[n];return s}_handleInput(e){const t=e.target;let o=t.value;const s=this._maskPatterns[this.type];s&&(o=this._applyMask(o,s),t.value=o,this._updateOverlay(o,s)),this.value=o,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("nys-input",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("nys-blur"))}_validateButtonSlot(e){var n,d;const t=(n=this.shadowRoot)==null?void 0:n.querySelector('slot[name="'+e+'"]'),o=(d=this.shadowRoot)==null?void 0:d.querySelector(".nys-textinput__buttoncontainer");if(!t||!o)return;const s=t.assignedElements();let r=!1;s.forEach(l=>{l instanceof HTMLElement&&l.tagName.toLowerCase()==="nys-button"&&!r?(r=!0,l.setAttribute("size","sm"),l.setAttribute("variant","primary"),this.disabled?l.setAttribute("disabled","true"):l.removeAttribute("disabled")):(console.warn("The '"+e+"' slot only accepts a single <nys-button> element. Removing invalid or extra node:",l),l.remove())}),e==="startButton"?o.classList.toggle("has-start-button",r):e==="endButton"&&o.classList.toggle("has-end-button",r)}render(){return c`
+`;var to=Object.defineProperty,so=Object.getOwnPropertyDescriptor,_=(a,e,t,o)=>{for(var s=o>1?void 0:o?so(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&to(e,t,s),s};let oo=0;const b=(X=class extends p{constructor(){super(),this.id="",this.name="",this._type="text",this.label="",this.description="",this.placeholder="",this.value="",this.disabled=!1,this.readonly=!1,this.required=!1,this.optional=!1,this._tooltip="",this.form=null,this.pattern="",this.maxlength=null,this.width="full",this.step=null,this.min=null,this.max=null,this.inverted=!1,this.showError=!1,this.errorMessage="",this.showPassword=!1,this._originalErrorMessage="",this._hasUserInteracted=!1,this._maskPatterns={tel:"(___) ___-____"},this._internals=this.attachInternals()}get type(){return this._type}set type(e){this._type=X.VALID_TYPES.includes(e)?e:"text"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-textinput-${Date.now()}-${oo++}`),this._originalErrorMessage=this.errorMessage??"",this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("invalid",this._handleInvalid)}firstUpdated(){this._setValue()}async updated(e){if(e.has("width")&&(await Promise.resolve(),this.width=X.VALID_WIDTHS.includes(this.width)?this.width:"full"),e.has("disabled")&&(this._validateButtonSlot("startButton"),this._validateButtonSlot("endButton")),e.has("type")){const t=this._maskPatterns[this.type],o=this.shadowRoot?.querySelector("input");if(o)if(t)o.maxLength=t.length,this._updateOverlay(o.value,t);else{o.removeAttribute("maxLength");const s=this.shadowRoot?.querySelector(".nys-textinput__mask-overlay");s&&(s.textContent="")}}}formResetCallback(){this.value=""}_setValue(){this._internals.setFormValue(this.value),this._manageRequire()}_manageRequire(){const e=this.shadowRoot?.querySelector("input");if(!e)return;const t=this.errorMessage||"This field is required";this.required&&(!this.value||this.value?.trim()==="")?(this._internals.ariaRequired="true",this._internals.setValidity({valueMissing:!0},t,e)):(this._internals.ariaRequired="false",this._internals.setValidity({}),this._hasUserInteracted=!1)}_setValidityMessage(e=""){const t=this.shadowRoot?.querySelector("input");if(!t)return;this.showError=!!e,this._originalErrorMessage?.trim()&&e!==""?this.errorMessage=this._originalErrorMessage:this.errorMessage=e;const o=e?{customError:!0}:{};this._internals.setValidity(o,this.errorMessage,t)}_validate(){const e=this.shadowRoot?.querySelector("input");if(!e)return;const t=e.validity;let o="";t.valueMissing?o="This field is required":t.typeMismatch?o="Invalid format for this type":t.patternMismatch?o="Invalid format":t.tooShort?o=`Value is too short. Minimum length is ${e.minLength}`:t.tooLong?o=`Value is too long. Maximum length is ${e.maxLength}`:t.rangeUnderflow?o=`Value must be at least ${e.min}`:t.rangeOverflow?o=`Value must be at most ${e.max}`:t.stepMismatch?o="Invalid step value":o=e.validationMessage,this._setValidityMessage(o)}checkValidity(){const e=this.shadowRoot?.querySelector("input");return e?e.checkValidity():!0}_handleInvalid(e){e.preventDefault(),this._hasUserInteracted=!0,this._validate();const t=this.shadowRoot?.querySelector("input");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&t.focus():t.focus()}}_togglePasswordVisibility(){this.showPassword=!this.showPassword}_updateOverlay(e,t){const o=this.shadowRoot?.querySelector(".nys-textinput__mask-overlay");if(!o)return;const s=e,r=t.slice(s.length);o.textContent=s+r}_applyMask(e,t){const o=e.replace(/\D/g,"");let s="";if(this.type==="tel")return o.length>0&&(s="("+o.substring(0,3)),o.length>=4&&(s+=") "+o.substring(3,6)),o.length>6&&(s+="-"+o.substring(6,10)),s;let r=0;for(let n=0;n<t.length;n++)if(t[n]==="_"||t[n].match(/[d9]/i))if(r<o.length)s+=o[r++];else break;else s+=t[n];return s}_handleInput(e){const t=e.target;let o=t.value;const s=this._maskPatterns[this.type];s&&(o=this._applyMask(o,s),t.value=o,this._updateOverlay(o,s)),this.value=o,this._internals.setFormValue(this.value),this._hasUserInteracted&&this._validate(),this.dispatchEvent(new CustomEvent("nys-input",{detail:{id:this.id,value:this.value},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this._hasUserInteracted||(this._hasUserInteracted=!0),this._validate(),this.dispatchEvent(new Event("nys-blur"))}_validateButtonSlot(e){const t=this.shadowRoot?.querySelector('slot[name="'+e+'"]'),o=this.shadowRoot?.querySelector(".nys-textinput__buttoncontainer");if(!t||!o)return;const s=t.assignedElements();let r=!1;s.forEach(n=>{n instanceof HTMLElement&&n.tagName.toLowerCase()==="nys-button"&&!r?(r=!0,n.setAttribute("size","sm"),n.setAttribute("variant","primary"),this.disabled?n.setAttribute("disabled","true"):n.removeAttribute("disabled")):(console.warn("The '"+e+"' slot only accepts a single <nys-button> element. Removing invalid or extra node:",n),n.remove())}),e==="startButton"?o.classList.toggle("has-start-button",r):e==="endButton"&&o.classList.toggle("has-end-button",r)}render(){return l`
       <div class="nys-textinput">
         <nys-label
           for=${this.id}
@@ -5059,7 +5070,7 @@ ${this.value}</textarea
           description=${this.description}
           flag=${this.required?"required":this.optional?"optional":""}
           _tooltip=${this._tooltip}
-          ?invert=${this.invert}
+          ?inverted=${this.inverted}
         >
           <slot name="description" slot="description">${this.description}</slot>
         </nys-label>
@@ -5082,25 +5093,25 @@ ${this.value}</textarea
               aria-disabled="${this.disabled}"
               aria-label="${[this.label,this.description].filter(Boolean).join(" ")}"
               .value=${this.value}
-              placeholder=${u(this.placeholder?this.placeholder:void 0)}
-              pattern=${u(this.pattern?this.pattern:void 0)}
-              min=${u(this.min!==null?this.min:void 0)}
-              maxlength=${u(this.maxlength!==null?this.maxlength:void 0)}
-              step=${u(this.step!==null?this.step:void 0)}
-              max=${u(this.max!==null?this.max:void 0)}
-              form=${u(this.form||void 0)}
+              placeholder=${y(this.placeholder?this.placeholder:void 0)}
+              pattern=${y(this.pattern?this.pattern:void 0)}
+              min=${y(this.min!==null?this.min:void 0)}
+              maxlength=${y(this.maxlength!==null?this.maxlength:void 0)}
+              step=${y(this.step!==null?this.step:void 0)}
+              max=${y(this.max!==null?this.max:void 0)}
+              form=${y(this.form||void 0)}
               @input=${this._handleInput}
               @focus="${this._handleFocus}"
               @blur="${this._handleBlur}"
             />
-            ${this.type==="password"?c` <nys-button
+            ${this.type==="password"?l` <nys-button
                   class="eye-icon"
                   id="password-toggle"
                   suffixIcon="slotted"
                   ariaLabel="password toggle"
-                  .onClick=${()=>!this.disabled&&this._togglePasswordVisibility()}
                   variant="ghost"
                   size="sm"
+                  @nys-click=${()=>!this.disabled&&this._togglePasswordVisibility()}
                 >
                   <nys-icon
                     slot="suffix-icon"
@@ -5119,7 +5130,7 @@ ${this.value}</textarea
           errorMessage=${this.errorMessage}
         ></nys-errormessage>
       </div>
-    `}},X.VALID_TYPES=["email","number","password","search","tel","text","url"],X.VALID_WIDTHS=["sm","md","lg","full"],X.styles=no,X.formAssociated=!0,X);_([i({type:String})],b.prototype,"id",2),_([i({type:String,reflect:!0})],b.prototype,"name",2),_([i({reflect:!0})],b.prototype,"type",1),_([i({type:String})],b.prototype,"label",2),_([i({type:String})],b.prototype,"description",2),_([i({type:String})],b.prototype,"placeholder",2),_([i({type:String})],b.prototype,"value",2),_([i({type:Boolean,reflect:!0})],b.prototype,"disabled",2),_([i({type:Boolean,reflect:!0})],b.prototype,"readonly",2),_([i({type:Boolean,reflect:!0})],b.prototype,"required",2),_([i({type:Boolean,reflect:!0})],b.prototype,"optional",2),_([i({type:String})],b.prototype,"_tooltip",2),_([i({type:String,reflect:!0})],b.prototype,"form",2),_([i({type:String})],b.prototype,"pattern",2),_([i({type:Number})],b.prototype,"maxlength",2),_([i({reflect:!0})],b.prototype,"width",2),_([i({type:Number})],b.prototype,"step",2),_([i({type:Number})],b.prototype,"min",2),_([i({type:Number})],b.prototype,"max",2),_([i({type:Boolean,reflect:!0})],b.prototype,"invert",2),_([i({type:Boolean,reflect:!0})],b.prototype,"showError",2),_([i({type:String})],b.prototype,"errorMessage",2),_([z()],b.prototype,"showPassword",2);let v1=b;customElements.get("nys-textinput")||customElements.define("nys-textinput",v1);const co=g`
+    `}},X.VALID_TYPES=["email","number","password","search","tel","text","url"],X.VALID_WIDTHS=["sm","md","lg","full"],X.styles=eo,X.formAssociated=!0,X);_([i({type:String})],b.prototype,"id",2),_([i({type:String,reflect:!0})],b.prototype,"name",2),_([i({reflect:!0})],b.prototype,"type",1),_([i({type:String})],b.prototype,"label",2),_([i({type:String})],b.prototype,"description",2),_([i({type:String})],b.prototype,"placeholder",2),_([i({type:String})],b.prototype,"value",2),_([i({type:Boolean,reflect:!0})],b.prototype,"disabled",2),_([i({type:Boolean,reflect:!0})],b.prototype,"readonly",2),_([i({type:Boolean,reflect:!0})],b.prototype,"required",2),_([i({type:Boolean,reflect:!0})],b.prototype,"optional",2),_([i({type:String})],b.prototype,"_tooltip",2),_([i({type:String,reflect:!0})],b.prototype,"form",2),_([i({type:String})],b.prototype,"pattern",2),_([i({type:Number})],b.prototype,"maxlength",2),_([i({reflect:!0})],b.prototype,"width",2),_([i({type:Number})],b.prototype,"step",2),_([i({type:Number})],b.prototype,"min",2),_([i({type:Number})],b.prototype,"max",2),_([i({type:Boolean,reflect:!0})],b.prototype,"inverted",2),_([i({type:Boolean,reflect:!0})],b.prototype,"showError",2),_([i({type:String})],b.prototype,"errorMessage",2),_([M()],b.prototype,"showPassword",2);let d1=b;customElements.get("nys-textinput")||customElements.define("nys-textinput",d1);const ro=g`
   :host {
     /* Global Toggle Styles */
     --_nys-toggle-width: var(--nys-font-size-8xl, 44px);
@@ -5389,16 +5400,16 @@ ${this.value}</textarea
       --toggle-transition-duration: 0s; /* Disable animation */
     }
   }
-`;var ho=Object.defineProperty,yo=Object.getOwnPropertyDescriptor,W=(a,e,t,o)=>{for(var s=o>1?void 0:o?yo(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&ho(e,t,s),s};let uo=0;const F=(he=class extends f{constructor(){super(),this.id="",this.name="",this.value="",this.label="",this.description="",this.form=null,this.checked=!1,this.disabled=!1,this.noIcon=!1,this.invert=!1,this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=he.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-toggle-${Date.now()}-${uo++}`)}updated(e){(e.has("checked")||e.has("value"))&&this._internals.setFormValue(this.checked?this.value:null)}_emitChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,checked:this.checked},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.dispatchEvent(new Event("nys-blur"))}_handleChange(e){const{checked:t}=e.target;this.checked=t,this._emitChangeEvent()}_handleKeyDown(e){!this.disabled&&(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this.checked=!this.checked,this._emitChangeEvent())}render(){return c`
+`;var no=Object.defineProperty,io=Object.getOwnPropertyDescriptor,W=(a,e,t,o)=>{for(var s=o>1?void 0:o?io(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&no(e,t,s),s};let ao=0;const F=(ye=class extends p{constructor(){super(),this.id="",this.name="",this.value="",this.label="",this.description="",this.form=null,this.checked=!1,this.disabled=!1,this.noIcon=!1,this.inverted=!1,this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=ye.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-toggle-${Date.now()}-${ao++}`)}updated(e){(e.has("checked")||e.has("value"))&&this._internals.setFormValue(this.checked?this.value:null)}_emitChangeEvent(){this.dispatchEvent(new CustomEvent("nys-change",{detail:{id:this.id,checked:this.checked},bubbles:!0,composed:!0}))}_handleFocus(){this.dispatchEvent(new Event("nys-focus"))}_handleBlur(){this.dispatchEvent(new Event("nys-blur"))}_handleChange(e){const{checked:t}=e.target;this.checked=t,this._emitChangeEvent()}_handleKeyDown(e){!this.disabled&&(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this.checked=!this.checked,this._emitChangeEvent())}render(){return l`
       <label class="nys-toggle">
         <div class="nys-toggle__content">
           <div class="nys-toggle__toggle">
             <input
               id="${this.id}"
               type="checkbox"
-              name="${u(this.name?this.name:void 0)}"
+              name="${y(this.name?this.name:void 0)}"
               .value=${this.value}
-              form=${u(this.form||void 0)}
+              form=${y(this.form||void 0)}
               .checked=${this.checked}
               ?disabled=${this.disabled}
               role="switch"
@@ -5411,7 +5422,7 @@ ${this.value}</textarea
             />
             <span class="slider">
               <div class="knob">
-                ${this.noIcon?"":c`<nys-icon
+                ${this.noIcon?"":l`<nys-icon
                       class="toggle-icon"
                       name="${this.checked?"check":"close"}"
                       size="2xl"
@@ -5419,13 +5430,13 @@ ${this.value}</textarea
               </div>
             </span>
           </div>
-          <div class="nys-toggle__text ${this.invert?"invert":""}">
+          <div class="nys-toggle__text ${this.inverted?"invert":""}">
             <div class="nys-toggle__label">${this.label}</div>
             <slot name="description">${this.description}</slot>
           </div>
         </div>
       </label>
-    `}},he.VALID_SIZES=["sm","md"],he.styles=co,he.formAssociated=!0,he);W([i({type:String})],F.prototype,"id",2),W([i({type:String,reflect:!0})],F.prototype,"name",2),W([i({type:String})],F.prototype,"value",2),W([i({type:String})],F.prototype,"label",2),W([i({type:String})],F.prototype,"description",2),W([i({type:String,reflect:!0})],F.prototype,"form",2),W([i({type:Boolean,reflect:!0})],F.prototype,"checked",2),W([i({type:Boolean,reflect:!0})],F.prototype,"disabled",2),W([i({type:Boolean})],F.prototype,"noIcon",2),W([i({type:Boolean,reflect:!0})],F.prototype,"invert",2),W([i({reflect:!0})],F.prototype,"size",1);let f1=F;customElements.get("nys-toggle")||customElements.define("nys-toggle",f1);const po=g`
+    `}},ye.VALID_SIZES=["sm","md"],ye.styles=ro,ye.formAssociated=!0,ye);W([i({type:String})],F.prototype,"id",2),W([i({type:String,reflect:!0})],F.prototype,"name",2),W([i({type:String})],F.prototype,"value",2),W([i({type:String})],F.prototype,"label",2),W([i({type:String})],F.prototype,"description",2),W([i({type:String,reflect:!0})],F.prototype,"form",2),W([i({type:Boolean,reflect:!0})],F.prototype,"checked",2),W([i({type:Boolean,reflect:!0})],F.prototype,"disabled",2),W([i({type:Boolean})],F.prototype,"noIcon",2),W([i({type:Boolean,reflect:!0})],F.prototype,"inverted",2),W([i({reflect:!0})],F.prototype,"size",1);let h1=F;customElements.get("nys-toggle")||customElements.define("nys-toggle",h1);const lo=g`
   :host {
     /* Global Tooltip Styles */
     --_nys-tooltip-color: var(--nys-color-text-reverse, #ffffff);
@@ -5581,7 +5592,7 @@ ${this.value}</textarea
       ); /* 2rem = 32px = 16px margin on each side */
     }
   }
-`;var vo=Object.defineProperty,fo=Object.getOwnPropertyDescriptor,Ue=(a,e,t,o)=>{for(var s=o>1?void 0:o?fo(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&vo(e,t,s),s};let go=0;const zt=class zt extends f{constructor(){super(),this.id="",this.text="",this.inverted=!1,this.focusable=!1,this._active=!1,this._userHasSetPosition=!1,this._originalUserPosition=null,this._internallyUpdatingPosition=!1,this._position=null,this._handleTooltipEnter=()=>{if(this._active=!0,this._addScrollListeners(),this._userHasSetPosition&&this._originalUserPosition&&this._doesPositionFit(this._originalUserPosition)){this.position=this._originalUserPosition,this.updateComplete.then(()=>{var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-tooltip__content");e&&this._shiftTooltipIntoViewport(e)});return}this.autoPositionTooltip()},this._handleBlurOrMouseLeave=()=>{var t;this._active=!1,this._removeScrollListeners();const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-tooltip__content");e&&this._resetTooltipPositioningStyles(e)},this._handleScrollOrResize=()=>{this._active&&(this._userHasSetPosition&&this._originalUserPosition?this._doesPositionFit(this._originalUserPosition)?(this._setInternalPosition(this._originalUserPosition),this.updateComplete.then(()=>{var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-tooltip__content");e&&this._shiftTooltipIntoViewport(e)})):this.autoPositionTooltip():this.autoPositionTooltip())},this._handleEscapeKey=e=>{var t;if(e.key==="Escape"&&this._active){this._active=!1,this._removeScrollListeners();const o=(t=this.shadowRoot)==null?void 0:t.querySelector(".nys-tooltip__content");o&&this._resetTooltipPositioningStyles(o)}}}get position(){return this._position}set position(e){const t=this._position;this._position=e,this.requestUpdate("position",t),this._internallyUpdatingPosition||(this._userHasSetPosition=e!==null,this._originalUserPosition=e)}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-tooltip-${Date.now()}-${go++}`),window.addEventListener("keydown",this._handleEscapeKey)}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("keydown",this._handleEscapeKey)}get _firstAssignedEl(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");return e==null?void 0:e.assignedElements({flatten:!0})[0]}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e&&e.addEventListener("slotchange",()=>{const o=this._firstAssignedEl;o&&this._applyFocusBehavior(o)})}updated(e){super.updated(e);const t=this._firstAssignedEl;t&&(e.has("text")&&this._passAria(t),e.has("focusable")&&this._applyFocusBehavior(t))}_addScrollListeners(){window.addEventListener("scroll",this._handleScrollOrResize,!0),window.addEventListener("resize",this._handleScrollOrResize)}_removeScrollListeners(){window.removeEventListener("scroll",this._handleScrollOrResize,!0),window.removeEventListener("resize",this._handleScrollOrResize)}_passAria(e){const t=e.tagName.toLowerCase();if(t.startsWith("nys-"))if(t==="nys-icon"){const o=e.getAttribute("ariaLabel")||"",s=o?`${o}, ${this.text}`:this.text;e.setAttribute("ariaLabel",s)}else e.setAttribute("ariaDescription",this.text)}async _applyFocusBehavior(e){var o;if(!this.focusable)return;if(e.tagName.toLowerCase()==="nys-icon"){"updateComplete"in e&&await e.updateComplete;const s=(o=e.shadowRoot)==null?void 0:o.querySelector("svg");s&&s.setAttribute("tabindex","0")}else e.setAttribute("tabindex","0")}_doesPositionFit(e){var y,p;const t=(y=this.shadowRoot)==null?void 0:y.querySelector(".nys-tooltip__wrapper"),o=(p=this.shadowRoot)==null?void 0:p.querySelector(".nys-tooltip__content");if(!t||!o||e==null)return;const s=t.getBoundingClientRect(),r=o.getBoundingClientRect(),n=8,d={top:s.top-n,left:s.left-n,bottom:window.innerHeight-s.bottom-n,right:window.innerWidth-s.right-n};return{top:d.top>=r.height,bottom:d.bottom>=r.height,left:d.left>=r.width,right:d.right>=r.width}[e]}async autoPositionTooltip(){var y,p;const e=(y=this.shadowRoot)==null?void 0:y.querySelector(".nys-tooltip__wrapper"),t=(p=this.shadowRoot)==null?void 0:p.querySelector(".nys-tooltip__content");if(!e||!t)return;const o=e.getBoundingClientRect(),s=8,r={top:o.top-s,left:o.left-s,bottom:window.innerHeight-o.bottom-s,right:window.innerWidth-o.right-s};let n=["top","bottom","right","left"];if(this._userHasSetPosition&&this._originalUserPosition){const h=this._originalUserPosition;h==="left"?n=["left","right","top","bottom"]:h==="right"?n=["right","left","top","bottom"]:h==="top"?n=["top","bottom","right","left"]:h==="bottom"&&(n=["bottom","top","right","left"])}for(const h of n)if(this._doesPositionFit(h)){this._setInternalPosition(h),await this.updateComplete,this._shiftTooltipIntoViewport(t);return}let d="top",l=r.top;for(const h of n)r[h]>l&&(l=r[h],d=h);this._setInternalPosition(d),await this.updateComplete,this._shiftTooltipIntoViewport(t)}_setInternalPosition(e){this._internallyUpdatingPosition=!0,this.position=e,this._internallyUpdatingPosition=!1}_shiftTooltipIntoViewport(e){var h;const o=((h=this.shadowRoot)==null?void 0:h.querySelector(".nys-tooltip__wrapper")).getBoundingClientRect(),s=e.getBoundingClientRect(),r=o.left+o.width/2,n=s.left<0,d=s.right>window.innerWidth;this._resetTooltipPositioningStyles(e),n?(e.style.left="0px",e.style.transform="none"):d&&(e.style.right="0px",e.style.left="auto",e.style.transform="none");const l=e.getBoundingClientRect(),y=(r-l.left)/l.width,p=Math.max(0,Math.min(1,y))*100;e.style.setProperty("--arrow-offset-x",`${p}%`)}_resetTooltipPositioningStyles(e){e.style.left="",e.style.right="",e.style.transform=""}render(){var e;return c`
+`;var co=Object.defineProperty,ho=Object.getOwnPropertyDescriptor,Oe=(a,e,t,o)=>{for(var s=o>1?void 0:o?ho(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&co(e,t,s),s};let yo=0;const Et=class Et extends p{constructor(){super(),this.id="",this.text="",this.inverted=!1,this.focusable=!1,this._active=!1,this._userHasSetPosition=!1,this._originalUserPosition=null,this._internallyUpdatingPosition=!1,this._position=null,this._handleTooltipEnter=()=>{if(this._active=!0,this._addScrollListeners(),this._userHasSetPosition&&this._originalUserPosition&&this._doesPositionFit(this._originalUserPosition)){this.position=this._originalUserPosition,this.updateComplete.then(()=>{const e=this.shadowRoot?.querySelector(".nys-tooltip__content");e&&this._shiftTooltipIntoViewport(e)});return}this.autoPositionTooltip()},this._handleBlurOrMouseLeave=()=>{this._active=!1,this._removeScrollListeners();const e=this.shadowRoot?.querySelector(".nys-tooltip__content");e&&this._resetTooltipPositioningStyles(e)},this._handleScrollOrResize=()=>{this._active&&(this._userHasSetPosition&&this._originalUserPosition?this._doesPositionFit(this._originalUserPosition)?(this._setInternalPosition(this._originalUserPosition),this.updateComplete.then(()=>{const e=this.shadowRoot?.querySelector(".nys-tooltip__content");e&&this._shiftTooltipIntoViewport(e)})):this.autoPositionTooltip():this.autoPositionTooltip())},this._handleEscapeKey=e=>{if(e.key==="Escape"&&this._active){this._active=!1,this._removeScrollListeners();const t=this.shadowRoot?.querySelector(".nys-tooltip__content");t&&this._resetTooltipPositioningStyles(t)}}}get position(){return this._position}set position(e){const t=this._position;this._position=e,this.requestUpdate("position",t),this._internallyUpdatingPosition||(this._userHasSetPosition=e!==null,this._originalUserPosition=e)}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-tooltip-${Date.now()}-${yo++}`),window.addEventListener("keydown",this._handleEscapeKey)}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("keydown",this._handleEscapeKey)}get _firstAssignedEl(){return this.shadowRoot?.querySelector("slot")?.assignedElements({flatten:!0})[0]}firstUpdated(){const e=this.shadowRoot?.querySelector("slot");e&&e.addEventListener("slotchange",()=>{const t=this._firstAssignedEl;t&&this._applyFocusBehavior(t)})}updated(e){super.updated(e);const t=this._firstAssignedEl;t&&(e.has("text")&&this._passAria(t),e.has("focusable")&&this._applyFocusBehavior(t))}_addScrollListeners(){window.addEventListener("scroll",this._handleScrollOrResize,!0),window.addEventListener("resize",this._handleScrollOrResize)}_removeScrollListeners(){window.removeEventListener("scroll",this._handleScrollOrResize,!0),window.removeEventListener("resize",this._handleScrollOrResize)}_passAria(e){const t=e.tagName.toLowerCase();if(t.startsWith("nys-"))if(t==="nys-icon"){const o=e.getAttribute("ariaLabel")||"",s=o?`${o}, ${this.text}`:this.text;e.setAttribute("ariaLabel",s)}else e.setAttribute("ariaDescription",this.text)}async _applyFocusBehavior(e){if(!this.focusable)return;if(e.tagName.toLowerCase()==="nys-icon"){"updateComplete"in e&&await e.updateComplete;const o=e.shadowRoot?.querySelector("svg");o&&o.setAttribute("tabindex","0")}else e.setAttribute("tabindex","0")}_doesPositionFit(e){const t=this.shadowRoot?.querySelector(".nys-tooltip__wrapper"),o=this.shadowRoot?.querySelector(".nys-tooltip__content");if(!t||!o||e==null)return;const s=t.getBoundingClientRect(),r=o.getBoundingClientRect(),n=8,c={top:s.top-n,left:s.left-n,bottom:window.innerHeight-s.bottom-n,right:window.innerWidth-s.right-n};return{top:c.top>=r.height,bottom:c.bottom>=r.height,left:c.left>=r.width,right:c.right>=r.width}[e]}async autoPositionTooltip(){const e=this.shadowRoot?.querySelector(".nys-tooltip__wrapper"),t=this.shadowRoot?.querySelector(".nys-tooltip__content");if(!e||!t)return;const o=e.getBoundingClientRect(),s=8,r={top:o.top-s,left:o.left-s,bottom:window.innerHeight-o.bottom-s,right:window.innerWidth-o.right-s};let n=["top","bottom","right","left"];if(this._userHasSetPosition&&this._originalUserPosition){const h=this._originalUserPosition;h==="left"?n=["left","right","top","bottom"]:h==="right"?n=["right","left","top","bottom"]:h==="top"?n=["top","bottom","right","left"]:h==="bottom"&&(n=["bottom","top","right","left"])}for(const h of n)if(this._doesPositionFit(h)){this._setInternalPosition(h),await this.updateComplete,this._shiftTooltipIntoViewport(t);return}let c="top",d=r.top;for(const h of n)r[h]>d&&(d=r[h],c=h);this._setInternalPosition(c),await this.updateComplete,this._shiftTooltipIntoViewport(t)}_setInternalPosition(e){this._internallyUpdatingPosition=!0,this.position=e,this._internallyUpdatingPosition=!1}_shiftTooltipIntoViewport(e){const o=(this.shadowRoot?.querySelector(".nys-tooltip__wrapper")).getBoundingClientRect(),s=e.getBoundingClientRect(),r=o.left+o.width/2,n=s.left<0,c=s.right>window.innerWidth;this._resetTooltipPositioningStyles(e),n?(e.style.left="0px",e.style.transform="none"):c&&(e.style.right="0px",e.style.left="auto",e.style.transform="none");const d=e.getBoundingClientRect(),h=(r-d.left)/d.width,f=Math.max(0,Math.min(1,h))*100;e.style.setProperty("--arrow-offset-x",`${f}%`)}_resetTooltipPositioningStyles(e){e.style.left="",e.style.right="",e.style.transform=""}render(){return l`
       <div class="nys-tooltip__main">
         <div
           class="nys-tooltip__wrapper"
@@ -5594,7 +5605,7 @@ ${this.value}</textarea
             <slot></slot>
           </span>
         </div>
-        ${(e=this.text)!=null&&e.trim()?c`<div
+        ${this.text?.trim()?l`<div
               id=${this.id}
               class="nys-tooltip__content"
               role="tooltip"
@@ -5605,7 +5616,7 @@ ${this.value}</textarea
               <span class="nys-tooltip__arrow"></span>
             </div>`:""}
       </div>
-    `}};zt.styles=po;let ee=zt;Ue([i({type:String})],ee.prototype,"id",2),Ue([i({type:String})],ee.prototype,"text",2),Ue([i({type:Boolean,reflect:!0})],ee.prototype,"inverted",2),Ue([i({type:Boolean,reflect:!0})],ee.prototype,"focusable",2),Ue([z()],ee.prototype,"_active",2),Ue([i({type:String,reflect:!0})],ee.prototype,"position",1),customElements.get("nys-tooltip")||customElements.define("nys-tooltip",ee);const bo=g`
+    `}};Et.styles=lo;let ee=Et;Oe([i({type:String})],ee.prototype,"id",2),Oe([i({type:String})],ee.prototype,"text",2),Oe([i({type:Boolean,reflect:!0})],ee.prototype,"inverted",2),Oe([i({type:Boolean,reflect:!0})],ee.prototype,"focusable",2),Oe([M()],ee.prototype,"_active",2),Oe([i({type:String,reflect:!0})],ee.prototype,"position",1),customElements.get("nys-tooltip")||customElements.define("nys-tooltip",ee);const uo=g`
   :host {
     /* Global Unav Header Styles */
     --_nys-unavheader-padding--gutter: var(--nys-gutter-xs, 20px);
@@ -5824,7 +5835,8 @@ ${this.value}</textarea
     max-width: var(--nys-form-width-lg, 384px);
   }
 
-  #nys-unavheader__translate,
+  #nys-unavheader__translate--desktop,
+  #nys-unavheader__translate--mobile,
   #nys-unavheader__searchbutton {
     /* These props ARE publicly overridable */
     --nys-button-color: var(--nys-color-state-blue-700, #154973);
@@ -5925,7 +5937,7 @@ ${this.value}</textarea
       flex-direction: column;
     }
 
-    #nys-unavheader__translate:not([circle]),
+    #nys-unavheader__translate--desktop,
     #nys-unavheader__searchbar {
       display: none;
     }
@@ -5941,7 +5953,7 @@ ${this.value}</textarea
       display: none;
     }
 
-    #nys-unavheader__translate:not([circle]),
+    #nys-unavheader__translate--desktop,
     #nys-unavheader__searchbar {
       display: none;
     }
@@ -5960,7 +5972,7 @@ ${this.value}</textarea
       display: none;
     }
 
-    #nys-unavheader__translate[circle],
+    #nys-unavheader__translate--mobile,
     #nys-unavheader__searchbutton[circle] {
       display: none;
     }
@@ -5987,7 +5999,7 @@ ${this.value}</textarea
       display: none;
     }
 
-    #nys-unavheader__translate[circle],
+    #nys-unavheader__translate--mobile,
     #nys-unavheader__searchbutton[circle] {
       display: none;
     }
@@ -6004,7 +6016,7 @@ ${this.value}</textarea
       order: 2;
     }
   }
-`,_o=`<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
+`,po=`<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
   <path d="M55.1158 7.50499L58.2905 12.6494V7.5189C58.2905 7.5189 58.6487 7.26356 59.5098 7.26356C60.3708 7.26356 60.7378 7.5189 60.7378 7.5189V16.4327C60.7378 16.4327 60.3942 16.689 59.5215 16.689C58.6487 16.689 58.3295 16.4605 58.3295 16.4605L55.1421 11.3171V16.4337C55.1421 16.4337 54.7848 16.69 53.9111 16.69C53.0374 16.69 52.7065 16.4337 52.7065 16.4337V7.51989C52.7065 7.51989 53.0384 7.26456 53.9248 7.26456C54.8112 7.26456 55.1148 7.50697 55.1148 7.50697L55.1158 7.50499Z" fill="#457AA5"/>
   <path d="M67.2209 12.5948H64.9063V14.8709H68.2538C68.2538 14.8709 68.5047 15.1531 68.5047 15.772C68.5047 16.391 68.2538 16.688 68.2538 16.688H62.4589V7.26257H67.9892C67.9892 7.26257 68.2538 7.54572 68.2538 8.17859C68.2538 8.81146 67.9892 9.09362 67.9892 9.09362H64.9063V10.7637H67.2209C67.2209 10.7637 67.4728 11.0598 67.4728 11.6787C67.4728 12.2977 67.2209 12.5948 67.2209 12.5948Z" fill="#457AA5"/>
   <path d="M71.4802 16.4327L68.9791 7.5189C68.9791 7.5189 69.3491 7.26356 70.2101 7.26356C71.0711 7.26356 71.4275 7.5189 71.4275 7.5189L72.6839 12.0434C72.7766 12.3802 72.8166 12.6365 72.8557 12.7845C72.8557 12.7428 72.9221 12.3663 73.0011 12.0573L74.0984 7.5189C74.0984 7.5189 74.5211 7.26356 75.1176 7.26356C75.7141 7.26356 76.084 7.5189 76.084 7.5189L77.3004 12.7845C77.3004 12.6623 77.3795 12.3255 77.4586 12.0573L78.756 7.5189C78.7686 7.5189 79.1132 7.26356 79.9596 7.26356C80.806 7.26356 81.1897 7.5189 81.1897 7.5189L78.6496 16.4327C78.6496 16.4327 78.2922 16.6751 77.4859 16.689C76.5468 16.689 76.2158 16.4327 76.2158 16.4327L75.223 12.2987C75.1449 11.9887 75.0902 11.6529 75.0785 11.5844L74.9184 12.2987L73.9266 16.4327C73.9266 16.4327 73.583 16.689 72.7092 16.689C71.8355 16.689 71.4802 16.4327 71.4802 16.4327Z" fill="#457AA5"/>
@@ -6020,7 +6032,7 @@ ${this.value}</textarea
   <path d="M51.7107 54.9999C51.577 54.9999 51.4335 54.974 51.2939 54.8965C51.085 54.7803 50.9395 54.5876 50.8858 54.3551C50.8233 54.0868 50.8936 53.7868 51.082 53.5116L51.1426 53.4202C51.2041 53.3268 51.2685 53.2354 51.3407 53.1519C51.4218 53.0595 51.5047 52.995 51.5741 52.9493C51.5243 52.6691 51.5418 52.4267 51.5682 52.2061C51.5877 52.0233 51.6346 51.8683 51.6726 51.7451C51.6892 51.6925 51.7058 51.6388 51.7185 51.5812C51.8201 51.145 51.8855 50.7397 51.9206 50.3453C51.9528 49.9916 51.947 49.9846 51.8864 49.9061C51.7 49.6707 51.3847 49.5018 51.0498 49.3229C50.8878 49.2365 50.7286 49.1491 50.5754 49.0557C49.607 48.4536 48.6376 47.8505 47.6701 47.2465L47.3294 47.0339C47.2513 46.9862 47.1147 46.9156 46.9516 46.8282C45.8817 46.2659 45.172 45.8526 45.0539 45.2595C45.0363 45.173 44.9465 44.9644 44.884 44.864C44.8411 44.8611 44.7307 44.8521 44.6546 44.8471C44.3032 44.8183 43.7711 44.7726 43.3484 44.3196C43.2635 44.2272 43.1786 44.1408 43.1005 44.0583C42.5098 43.4443 42.0003 42.9148 41.9329 41.5993C41.9241 41.4275 41.9251 41.2506 41.928 41.0728C41.9339 40.5283 41.927 40.1836 41.7103 39.962C41.6078 39.8567 41.435 39.7862 41.2349 39.7037C40.9889 39.6034 40.7097 39.4881 40.45 39.2686C40.37 39.2 40.2792 39.1007 40.1776 38.9854C40.0712 38.8602 39.9082 38.6724 39.7969 38.6337C38.974 38.3436 37.986 38.3178 36.96 38.3178L3.07245 38.2909C2.85964 38.2909 2.66927 38.3138 2.48477 38.3347C2.07378 38.3823 1.60812 38.437 1.2313 38.0962C0.866192 37.7664 0.815429 37.2607 0.814452 36.8076L0.8125 34.3993C0.8125 34.2722 0.847644 34.147 0.913051 34.0387C1.22544 33.529 1.83265 33.2558 2.3686 33.0144C2.56872 32.924 2.77666 32.8316 2.88795 32.7571C3.17593 32.5623 3.43561 32.302 3.7109 32.0248C3.91688 31.8182 4.13068 31.6046 4.36887 31.4059C4.69786 31.1317 5.07078 30.931 5.43296 30.7372C5.74535 30.5703 6.03821 30.4124 6.24127 30.2395C6.38575 30.1173 6.49216 29.9146 6.61906 29.6792C6.75476 29.4238 6.90998 29.1337 7.15208 28.8804C7.41273 28.6081 7.7427 28.4194 8.03263 28.2535C8.69744 27.871 8.68182 27.8322 8.57736 27.5769C8.52855 27.4577 8.48072 27.3553 8.43972 27.2639C8.24447 26.8357 8.07754 26.4681 8.19078 25.7051C8.2025 25.6306 8.21616 25.5521 8.22983 25.4706C8.25619 25.3325 8.30305 25.0772 8.27571 25.0037C8.27571 25.0037 8.26204 24.9927 8.23471 24.9778C8.21128 24.9659 8.12928 24.9669 8.06875 24.9679C7.87448 24.9659 7.51914 24.9768 7.2497 24.6689C6.98124 24.3629 6.99686 23.9555 7.03982 23.6356C7.08179 23.3127 7.06032 23.1051 7.03982 22.9223C6.95684 22.1453 7.21358 21.7817 8.10097 21.424C10.7524 20.351 12.901 19.9884 14.8613 20.2805C14.9775 20.2974 15.1356 20.2656 15.3182 20.2269C15.5944 20.1702 15.9351 20.1017 16.312 20.1752L18.3952 20.5766C19.2475 20.7415 19.6653 20.9054 20.3047 21.4995C20.6327 21.8046 20.7655 21.7718 21.3327 21.5661C21.6168 21.4638 21.9399 21.3485 22.3323 21.2949C22.9727 21.2084 23.5731 21.2661 24.153 21.3227C24.4136 21.3475 24.6762 21.3734 24.9408 21.3843C25.2356 21.3952 25.6085 21.2561 25.9717 21.121C26.1318 21.0614 26.2889 21.0028 26.4412 20.9541C26.78 20.8468 27.0973 20.7991 27.4038 20.7514C27.5551 20.7266 27.7064 20.7037 27.8607 20.6729C27.8714 20.6531 27.8821 20.6332 27.8939 20.6113C27.9417 20.5249 27.9944 20.4345 28.0598 20.3411C28.3419 19.9497 28.7471 19.7003 29.0722 19.4966L29.2078 19.4122C29.5564 19.1916 29.8629 18.9879 30.105 18.7386C30.5423 18.2796 31.1232 18.3114 31.5108 18.3312C31.6455 18.3392 31.8495 18.3481 31.91 18.3223C32.1678 18.207 31.9413 17.3993 31.8065 16.9165C31.7119 16.5777 31.6299 16.2846 31.6133 16.0183C31.5664 15.2642 31.9764 14.7317 32.3064 14.3045C32.5651 13.9687 32.7213 13.7481 32.7164 13.5355C32.7164 13.4948 32.7027 13.4382 32.6851 13.3845C32.4587 13.4948 32.0955 13.6369 31.6796 13.4421C31.0129 13.1302 30.6468 12.0264 30.8508 11.3985C31.0197 10.8779 31.54 10.5421 31.9198 10.2957L32.0565 10.2053C32.3806 9.98471 32.7242 9.79792 33.0542 9.6181C33.5159 9.36873 33.9513 9.13227 34.2949 8.82726C34.4404 8.69711 34.5761 8.56994 34.7089 8.44376C35.0076 8.1626 35.3161 7.8715 35.6792 7.61319C35.7056 7.5188 35.728 7.34096 35.7437 7.22571C35.7729 7.00714 35.8022 6.78062 35.8803 6.5849C36.2513 5.64304 37.1592 4.90884 37.9597 4.25908C38.2252 4.04448 38.4771 3.84081 38.6743 3.65602C38.7992 3.53878 38.9222 3.42055 39.0452 3.30332C39.6388 2.73701 40.2509 2.15084 40.9967 1.68289C41.601 1.30536 42.3898 0.833439 43.1249 0.552274C44.0972 0.1807 44.5579 0.208518 45.4766 0.262168L45.6474 0.27111C47.3607 0.371455 49.1384 0.32476 50.8575 0.281045C51.7205 0.258194 52.5796 0.235343 53.4347 0.230376C53.6651 0.230376 54.0156 0.185667 54.3836 0.138972C55.6078 -0.0140291 56.994 -0.188888 57.7818 0.503592C58.1118 0.792705 58.2924 1.19806 58.3031 1.67594C58.311 2.05248 58.1567 2.33464 58.0435 2.54129C58.0064 2.60686 57.9527 2.7082 57.9458 2.74297C57.9488 2.73205 57.9849 2.78768 58.0103 2.82742C58.1362 3.01718 58.3686 3.37088 58.2748 3.89843C58.2397 4.10111 58.1811 4.3167 58.1216 4.53528C58.0464 4.81147 57.9693 5.09761 57.9624 5.31419C57.9498 5.69073 57.6335 5.99376 57.2703 5.97289C56.9013 5.95998 56.6104 5.64603 56.6231 5.26849C56.6367 4.89195 56.7392 4.50944 56.831 4.17264C56.8788 3.9948 56.9276 3.82094 56.9569 3.65502C56.9481 3.65502 56.9218 3.62323 56.8993 3.58746C56.791 3.42254 56.6065 3.14535 56.6065 2.73701C56.6065 2.36345 56.7607 2.08328 56.873 1.87862C56.9072 1.81702 56.9589 1.72462 56.9657 1.69084C56.9608 1.58354 56.9267 1.55274 56.9072 1.53685C56.5694 1.23979 55.2544 1.40372 54.5496 1.49313C54.1386 1.5438 53.752 1.59348 53.4435 1.59547C52.5971 1.60043 51.7439 1.62229 50.8907 1.64315C49.1442 1.68886 47.3382 1.73654 45.5722 1.63421L45.3985 1.62328C44.5345 1.57162 44.3022 1.55871 43.5964 1.82894C42.9618 2.07235 42.2101 2.5244 41.7006 2.84431C41.0699 3.23973 40.533 3.75338 39.9648 4.29683C39.8379 4.41804 39.712 4.53925 39.5831 4.65947C39.3479 4.87804 39.0794 5.09661 38.7953 5.32611C38.1237 5.87056 37.3642 6.48555 37.1231 7.09457C37.1065 7.14425 37.085 7.30221 37.0713 7.40753C37.0147 7.84666 36.9424 8.3931 36.5041 8.69016C36.1927 8.90277 35.9145 9.16704 35.6187 9.44523C35.4771 9.57935 35.3317 9.71546 35.1774 9.85257C34.7186 10.2629 34.1924 10.548 33.6838 10.8222C33.3675 10.9931 33.0698 11.1541 32.8033 11.3369C32.7554 11.3707 32.6978 11.4064 32.6373 11.4462C32.5114 11.5276 32.2332 11.7065 32.1346 11.8217C32.1424 11.8992 32.1726 12.0115 32.2117 12.1009C32.3757 12.0214 32.6041 11.924 32.8804 11.9459C33.6633 12.0135 34.0401 12.8937 34.0558 13.4988C34.0743 14.2191 33.677 14.7337 33.3587 15.145C33.0971 15.4868 32.9351 15.7074 32.9487 15.9319C32.9565 16.0511 33.0288 16.3114 33.0932 16.5419C33.3314 17.3933 33.7746 18.978 32.4479 19.5701C32.0965 19.7281 31.7314 19.7082 31.4375 19.6933C31.3126 19.6864 31.1046 19.6764 31.047 19.7023C30.7171 20.051 30.3227 20.3113 29.9166 20.5706L29.7692 20.663C29.5212 20.816 29.2654 20.976 29.1405 21.1488C29.1083 21.1935 29.0819 21.2412 29.0585 21.2859C28.9345 21.5085 28.7256 21.884 28.174 21.9993C27.9827 22.04 27.7943 22.0708 27.6059 22.0996C27.3364 22.1414 27.0807 22.1811 26.8386 22.2566C26.7087 22.2993 26.5711 22.35 26.4334 22.4017C25.9697 22.5745 25.4435 22.7732 24.8871 22.7474C24.5981 22.7355 24.3131 22.7087 24.027 22.6808C23.4989 22.6282 22.9981 22.5805 22.511 22.6481C22.2572 22.6828 22.0258 22.7653 21.7817 22.8537C21.1716 23.0733 20.3369 23.3733 19.4046 22.508C18.9927 22.1265 18.8267 22.049 18.1473 21.9178L16.065 21.5164C15.942 21.4936 15.775 21.5264 15.5818 21.5651C15.3289 21.6168 15.0136 21.6784 14.6719 21.6297C12.9508 21.3724 11.0218 21.7112 8.59689 22.6928C8.49829 22.7325 8.42703 22.7643 8.37431 22.7891C8.39579 22.9779 8.42312 23.2491 8.39091 23.6217C8.53343 23.6416 8.69353 23.6843 8.86047 23.7737C9.81228 24.2834 9.63461 25.256 9.5487 25.724C9.53601 25.7876 9.52528 25.8511 9.51551 25.9127C9.4628 26.2694 9.49501 26.3429 9.65511 26.6917C9.70392 26.798 9.75664 26.9162 9.81326 27.0543C10.3941 28.4681 9.28415 29.1039 8.68865 29.4447C8.46705 29.5719 8.23764 29.701 8.11268 29.8331C7.99944 29.9524 7.89987 30.1372 7.79541 30.3329C7.62945 30.6448 7.44104 30.9975 7.10522 31.2847C6.79088 31.5529 6.41894 31.7536 6.05871 31.9454C5.74144 32.1153 5.44077 32.2762 5.21623 32.464C5.02782 32.6219 4.84527 32.8048 4.65295 32.9985C4.34252 33.3085 4.02524 33.6294 3.62499 33.8976C3.41901 34.0347 3.17203 34.147 2.9104 34.2652C2.69661 34.3606 2.33443 34.5225 2.14992 34.6626L2.15383 36.8096C2.15383 36.8881 2.15578 36.9527 2.15871 37.0023C2.21533 36.9974 2.27586 36.9904 2.32662 36.9835C2.5287 36.9606 2.77959 36.9308 3.06952 36.9308L36.9581 36.9566C38.0573 36.9566 39.2141 36.9884 40.2304 37.3471C40.6755 37.5021 40.9801 37.8538 41.1812 38.0853C41.2281 38.1399 41.2681 38.1896 41.3052 38.2234C41.4018 38.3048 41.5551 38.3674 41.7328 38.441C42.0129 38.5562 42.3615 38.7003 42.6572 39.0043C43.2811 39.6411 43.2713 40.4469 43.2645 41.0927C43.2606 41.2417 43.2606 41.3897 43.2664 41.5328C43.3084 42.3326 43.5261 42.5581 44.0532 43.1055C44.1372 43.1929 44.2251 43.2853 44.3188 43.3847C44.3842 43.4542 44.5287 43.4701 44.761 43.491C45.0412 43.5138 45.3897 43.5417 45.6953 43.7751C46.0291 44.0275 46.2546 44.5888 46.3376 44.8809C46.5455 45.0846 47.2777 45.4711 47.5647 45.6211C47.7639 45.7264 47.9298 45.8158 48.0265 45.8754L48.3672 46.088C49.3346 46.6891 50.3011 47.2922 51.2705 47.8943C51.3993 47.9727 51.533 48.0463 51.6707 48.1188C52.0924 48.3443 52.5698 48.6006 52.9291 49.0567C53.3215 49.5544 53.2942 50.0045 53.259 50.4029C53.3156 50.2936 53.3781 50.1893 53.4513 50.0879C53.5841 49.8982 53.7393 49.7541 53.877 49.626C54.0136 49.4998 54.1073 49.4104 54.1396 49.3388C54.1132 49.2772 54.0527 49.1739 54.0117 49.1034C53.8487 48.8232 53.6271 48.4387 53.7315 47.9857C53.7725 47.8108 53.8789 47.6588 54.0283 47.5634C54.0849 47.5276 54.205 47.4591 54.3631 47.3717C54.5818 47.2495 55.1373 46.9405 55.475 46.71C54.9723 45.5913 55.1392 44.2163 55.2886 42.9843C55.3345 42.6038 55.3784 42.2451 55.3989 41.9222C55.4204 41.5467 55.7337 41.2606 56.1076 41.2834C56.4776 41.3063 56.7588 41.6301 56.7353 42.0057C56.7148 42.3693 56.667 42.7498 56.6182 43.1522C56.4776 44.3166 56.3165 45.637 56.833 46.3911C56.954 46.5669 56.994 46.7895 56.9452 47.0021C56.8417 47.4502 56.3898 47.7879 55.1958 48.4606C55.352 48.7308 55.5395 49.0904 55.4731 49.5167C55.4623 49.5812 55.4487 49.6428 55.4321 49.7015C55.766 49.5793 56.1154 49.464 56.4845 49.3577C57.8775 48.9543 59.3409 48.7745 61.225 48.7745C62.0587 48.7745 62.8006 48.5053 63.5874 48.2211C64.2103 47.9946 64.8546 47.7621 65.576 47.6508C66.1852 47.5555 66.5005 47.7562 66.7728 47.9688C66.8636 48.0403 66.93 48.09 67.0442 48.1357C67.3625 48.2619 67.7325 48.2211 68.1601 48.1754C68.5925 48.1277 69.0836 48.0731 69.5844 48.2042C69.8821 48.2837 70.09 48.5579 70.0861 48.8709C70.0744 50.0571 68.5076 50.5459 67.7549 50.7814L67.0384 51.0099C66.4985 51.1848 65.9567 51.3586 65.41 51.5176C65.1631 51.5881 64.918 51.6587 64.672 51.7223C64.3889 51.7948 64.099 51.9597 63.7944 52.1316C63.481 52.3094 63.1579 52.4922 62.786 52.6174C62.1426 52.83 61.4837 52.9413 60.6471 52.9761C60.4069 52.987 60.1746 53.0943 59.9295 53.2056C59.5674 53.3735 59.1154 53.5801 58.6107 53.4132C58.3949 53.3864 57.5534 53.6775 57.1502 53.8196C56.832 53.9289 56.5577 54.0242 56.3419 54.0759C55.598 54.2528 54.8415 54.3918 54.1103 54.527L53.5968 54.6223C53.1516 54.7058 52.7035 54.7922 52.2613 54.8926L52.2076 54.9085C52.0797 54.9482 51.9021 55.0038 51.7078 55.0038L51.7107 54.9999ZM53.0735 51.6746C53.0569 51.7471 53.0403 51.8196 53.0237 51.8941C53.0032 51.9806 52.9788 52.064 52.9544 52.1455C52.9281 52.2359 52.9066 52.3055 52.8988 52.3651C52.8793 52.5379 52.8773 52.6313 52.8978 52.7247C52.9495 52.9791 52.9388 53.1907 52.8949 53.3645C53.0482 53.3347 53.2024 53.3049 53.3566 53.2751L53.875 53.1808C54.5896 53.0486 55.3296 52.9125 56.0412 52.7436C56.1906 52.7078 56.4483 52.6194 56.7217 52.525C57.7721 52.1604 58.4994 51.9359 59.0295 52.1127C59.0646 52.1058 59.2559 52.0173 59.3828 51.9597C59.7001 51.8137 60.0945 51.6328 60.5924 51.611C61.3021 51.5812 61.8498 51.4908 62.372 51.3169C62.622 51.2345 62.8748 51.0914 63.1442 50.9374C63.5123 50.7298 63.892 50.5142 64.3469 50.3969C64.5793 50.3373 64.8136 50.2707 65.0459 50.2042C65.5789 50.0482 66.11 49.8773 66.6362 49.7064L67.1253 49.5514C66.9388 49.5246 66.7504 49.4779 66.56 49.4014C66.2672 49.2862 66.0836 49.1411 65.9616 49.0457C65.9313 49.0229 65.906 48.999 65.8757 48.9812C65.8737 48.9851 65.8405 48.9851 65.7781 48.9941C65.1845 49.0855 64.6281 49.2862 64.0394 49.4998C63.1794 49.8107 62.293 50.1326 61.2279 50.1326C59.4717 50.1326 58.1235 50.2966 56.8535 50.6642C55.7142 50.992 54.7868 51.3984 54.0166 51.9031C53.7901 52.0521 53.5001 52.0481 53.2776 51.8951C53.1917 51.8365 53.1214 51.76 53.0735 51.6716V51.6746Z" fill="#154973"/>
   <path d="M67.6348 51.8019C67.6348 51.8019 67.6173 51.782 67.6173 51.7303C67.6173 51.6787 67.6348 51.6588 67.6348 51.6588H68.5564C68.5564 51.6588 68.5749 51.6806 68.5749 51.7303C68.5749 51.78 68.5564 51.8019 68.5564 51.8019H68.1932V52.9205C68.1932 52.9205 68.1659 52.9404 68.0976 52.9404C68.0292 52.9404 67.998 52.9205 67.998 52.9205V51.8019H67.6348Z" fill="#154973"/>
   <path d="M69.4282 52.8659C69.4135 52.8748 69.3891 52.8858 69.3471 52.8858C69.3178 52.8858 69.2837 52.8798 69.27 52.8659L68.9889 52.1476C68.9723 52.1088 68.9459 52.0323 68.944 52.0214C68.944 52.0264 68.9371 52.1277 68.9332 52.1565L68.8815 52.9205C68.8815 52.9205 68.8561 52.9404 68.7858 52.9404C68.7155 52.9404 68.6862 52.9205 68.6862 52.9205L68.7839 51.6787C68.7839 51.6787 68.8112 51.6588 68.8776 51.6588C68.9518 51.6588 68.9781 51.6787 68.9781 51.6787L69.3042 52.5162L69.3471 52.6533C69.3481 52.6473 69.3774 52.5559 69.392 52.5162L69.7181 51.6787C69.7181 51.6787 69.7464 51.6588 69.8206 51.6588C69.886 51.6588 69.9124 51.6787 69.9124 51.6787L70.01 52.9205C70.01 52.9205 69.9807 52.9404 69.9104 52.9404C69.8401 52.9404 69.8167 52.9205 69.8167 52.9205L69.763 52.1546L69.7523 52.0194C69.7523 52.0194 69.722 52.1148 69.7093 52.1456L69.4282 52.8659Z" fill="#154973"/>
-</svg>`;var Co=Object.defineProperty,ze=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Co(e,t,s),s};const Vt=class Vt extends f{constructor(){super(...arguments),this.trustbarVisible=!1,this.searchDropdownVisible=!1,this.languageVisible=!1,this.isSearchFocused=!1,this.hideTranslate=!1,this.hideSearch=!1,this.languages=[["English",""],["Español","es"],["中文","zh"],["繁體中文","zh-traditional"],["Русский","ru"],["יידיש","yi"],["বাংলা","bn"],["한국어","ko"],["Kreyòl Ayisyen","ht"],["Italiano","it"],["العربية","ar"],["Polski","pl"],["Français","fr"],["اردو","ur"]]}_getNysLogo(){return new DOMParser().parseFromString(_o,"image/svg+xml").documentElement}_toggleTrustbar(){this.trustbarVisible=!this.trustbarVisible,this.trustbarVisible?(this.languageVisible=!1,this.searchDropdownVisible=!1,this.updateComplete.then(()=>{var t;const e=(t=this.shadowRoot)==null?void 0:t.getElementById("nys-unavheader__closetrustbar");e==null||e.focus()})):this.updateComplete.then(()=>{var t;const e=(t=this.shadowRoot)==null?void 0:t.getElementById("nys-unavheader__know--inline");e==null||e.focus()})}_toggleLanguageList(){this.languageVisible=!this.languageVisible,this.languageVisible&&(this.trustbarVisible=!1,this.searchDropdownVisible=!1)}_toggleSearchDropdown(){this.searchDropdownVisible=!this.searchDropdownVisible,this.searchDropdownVisible&&(this.trustbarVisible=!1,this.languageVisible=!1)}_handleSearchFocus(){this.isSearchFocused=!0,this.trustbarVisible=!1,this.languageVisible=!1}_handleSearchBlur(){this.isSearchFocused=!1}_handleSearchKeyup(e){var t;if(e.key==="Escape"&&(this._handleSearchBlur(),e.target.blur()),e.key==="Enter"){const o=(t=e.target.value)==null?void 0:t.trim();o!==""&&this._handleSearch(o)}}_handleSearchButton(e){var s,r;const o=(r=((s=this.shadowRoot)==null?void 0:s.getElementById(e)).value)==null?void 0:r.trim();o!==""&&this._handleSearch(o)}_handleSearch(e){window.location.href=`https://search.its.ny.gov/search/search.html?btnG=Search&client=default_frontend&output=xml_no_dtd&proxystylesheet=default_frontend&ulang=en&sort=date:D:L:d1&entqr=3&entqrm=0&wc=200&wc_mc=1&oe=UTF-8&ie=UTF-8&ud=1&site=default_collection&q=${e}+inurl:${window.location.hostname}&site=default_collection`}connectedCallback(){super.connectedCallback()}disconnectedCallback(){super.disconnectedCallback()}render(){return c`
+</svg>`;var vo=Object.defineProperty,De=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&vo(e,t,s),s};const At=class At extends p{constructor(){super(...arguments),this.trustbarVisible=!1,this.searchDropdownVisible=!1,this.languageVisible=!1,this.isSearchFocused=!1,this.hideTranslate=!1,this.hideSearch=!1,this.languages=[["English",""],["Español","es"],["中文","zh"],["繁體中文","zh-traditional"],["Русский","ru"],["יידיש","yi"],["বাংলা","bn"],["한국어","ko"],["Kreyòl Ayisyen","ht"],["Italiano","it"],["العربية","ar"],["Polski","pl"],["Français","fr"],["اردو","ur"]]}_getNysLogo(){return new DOMParser().parseFromString(po,"image/svg+xml").documentElement}_toggleTrustbar(){this.trustbarVisible=!this.trustbarVisible,this.trustbarVisible?(this.languageVisible=!1,this.searchDropdownVisible=!1,this.updateComplete.then(()=>{this.shadowRoot?.getElementById("nys-unavheader__closetrustbar")?.focus()})):this.updateComplete.then(()=>{this.shadowRoot?.getElementById("nys-unavheader__know--inline")?.focus()})}_toggleLanguageList(){this.languageVisible=!this.languageVisible,this.languageVisible&&(this.trustbarVisible=!1,this.searchDropdownVisible=!1)}_toggleSearchDropdown(){this.searchDropdownVisible=!this.searchDropdownVisible,this.searchDropdownVisible&&(this.trustbarVisible=!1,this.languageVisible=!1)}_handleSearchFocus(){this.isSearchFocused=!0,this.trustbarVisible=!1,this.languageVisible=!1}_handleSearchBlur(){this.isSearchFocused=!1}_handleSearchKeyup(e){if(e.key==="Escape"&&(this._handleSearchBlur(),e.target.blur()),e.key==="Enter"){const t=e.target.value?.trim();t!==""&&this._handleSearch(t)}}_handleSearchButton(e){const o=(this.shadowRoot?.getElementById(e)).value?.trim();o!==""&&this._handleSearch(o)}_handleSearch(e){window.location.href=`https://search.its.ny.gov/search/search.html?btnG=Search&client=default_frontend&output=xml_no_dtd&proxystylesheet=default_frontend&ulang=en&sort=date:D:L:d1&entqr=3&entqrm=0&wc=200&wc_mc=1&oe=UTF-8&ie=UTF-8&ud=1&site=default_collection&q=${e}+inurl:${window.location.hostname}&site=default_collection`}connectedCallback(){super.connectedCallback()}disconnectedCallback(){super.disconnectedCallback()}render(){return l`
       <header class="nys-unavheader">
         <div
           class="nys-unavheader__trustbar wrapper"
@@ -6060,7 +6072,7 @@ ${this.value}</textarea
               icon="close"
               size="sm"
               ariaLabel="Close this notice"
-              .onClick="${()=>this._toggleTrustbar()}"
+              @nys-click="${this._toggleTrustbar}"
             ></nys-button>
             <div class="nys-unavheader__messagewrapper">
               <div
@@ -6110,7 +6122,7 @@ ${this.value}</textarea
                 variant="ghost"
                 size="sm"
                 suffixIcon="slotted"
-                .onClick="${()=>this._toggleTrustbar()}"
+                @nys-click="${this._toggleTrustbar}"
               >
                 <nys-icon
                   slot="suffix-icon"
@@ -6120,15 +6132,15 @@ ${this.value}</textarea
               </nys-button>
             </div>
             <div class="nys-unavheader__spacer"></div>
-            ${this.hideTranslate?null:c`<div class="nys-unavheader__translatewrapper">
+            ${this.hideTranslate?null:l`<div class="nys-unavheader__translatewrapper">
                   <nys-button
                     variant="ghost"
                     circle
                     icon="slotted"
                     ariaLabel=${this.languageVisible?"Translate expanded":"Translate collapsed"}
-                    id="nys-unavheader__translate"
+                    id="nys-unavheader__translate--mobile"
                     class="nys-unavheader__iconbutton"
-                    .onClick="${()=>this._toggleLanguageList()}"
+                    @nys-click=${this._toggleLanguageList}
                   >
                     <nys-icon
                       slot="circle-icon"
@@ -6137,22 +6149,22 @@ ${this.value}</textarea
                     ></nys-icon>
                   </nys-button>
 
-                  ${this.isSearchFocused?null:c`
+                  ${this.isSearchFocused?null:l`
                         <nys-button
                           variant="ghost"
                           label="Translate"
                           size="sm"
-                          prefixIcon="language_filled"
+                          prefixIcon="language"
                           suffixIcon=${this.languageVisible?"chevron_up":"chevron_down"}
                           ariaLabel=${this.languageVisible?"Translate expanded":"Translate collapsed"}
-                          id="nys-unavheader__translate"
-                          .onClick="${()=>this._toggleLanguageList()}"
+                          id="nys-unavheader__translate--desktop"
+                          @nys-click="${this._toggleLanguageList}"
                         ></nys-button>
                       `}
                   <div
                     class="nys-unavheader__languagelist ${this.languageVisible?"show":"hide"}"
                   >
-                    ${this.languages.map(([e,t])=>c`<a
+                    ${this.languages.map(([e,t])=>l`<a
                           class="nys-unavheader__languagelink"
                           target="_self"
                           href="https://${t?t+".":""}${window.location.hostname}"
@@ -6160,7 +6172,7 @@ ${this.value}</textarea
                         >`)}
                   </div>
                 </div>`}
-            ${this.hideSearch?null:c`
+            ${this.hideSearch?null:l`
                   <nys-button
                     variant="ghost"
                     circle
@@ -6168,7 +6180,7 @@ ${this.value}</textarea
                     ariaLabel=${this.searchDropdownVisible?"Search expanded":"Search collapsed"}
                     id="nys-unavheader__searchbutton"
                     class="nys-unavheader__iconbutton"
-                    .onClick="${()=>this._toggleSearchDropdown()}"
+                    @nys-click=${this._toggleSearchDropdown}
                   >
                     <nys-icon
                       slot="circle-icon"
@@ -6186,11 +6198,12 @@ ${this.value}</textarea
                     @keyup="${this._handleSearchKeyup}"
                   >
                     <nys-button
+                      id="nys-unavheader__searchbar--button"
                       slot="endButton"
                       type="submit"
                       prefixIcon="search"
                       ariaLabel="Search Button"
-                      .onClick="${()=>this._handleSearchButton("nys-unavheader__searchbar")}"
+                      @nys-click=${()=>{this._handleSearchButton("nys-unavheader__searchbar")}}
                     ></nys-button>
                   </nys-textinput>
                 `}
@@ -6210,17 +6223,18 @@ ${this.value}</textarea
               @keyup="${this._handleSearchKeyup}"
             >
               <nys-button
+                id="nys-unavheader__searchbardropdown--button"
                 slot="endButton"
                 type="submit"
                 prefixIcon="search"
                 ariaLabel="Search Button"
-                .onClick="${()=>this._handleSearchButton("nys-unavheader__searchbardropdown")}"
+                @nys-click=${()=>{this._handleSearchButton("nys-unavheader__searchbardropdown")}}
               ></nys-button
             ></nys-textinput>
           </div>
         </div>
       </header>
-    `}};Vt.styles=bo;let Y=Vt;ze([i({type:Boolean})],Y.prototype,"trustbarVisible"),ze([i({type:Boolean})],Y.prototype,"searchDropdownVisible"),ze([i({type:Boolean})],Y.prototype,"languageVisible"),ze([i({type:Boolean})],Y.prototype,"isSearchFocused"),ze([i({type:Boolean})],Y.prototype,"hideTranslate"),ze([i({type:Boolean})],Y.prototype,"hideSearch"),ze([i({type:Array,reflect:!0})],Y.prototype,"languages"),customElements.get("nys-unavheader")||customElements.define("nys-unavheader",Y);const mo=g`
+    `}};At.styles=uo;let Y=At;De([i({type:Boolean})],Y.prototype,"trustbarVisible"),De([i({type:Boolean})],Y.prototype,"searchDropdownVisible"),De([i({type:Boolean})],Y.prototype,"languageVisible"),De([i({type:Boolean})],Y.prototype,"isSearchFocused"),De([i({type:Boolean})],Y.prototype,"hideTranslate"),De([i({type:Boolean})],Y.prototype,"hideSearch"),De([i({type:Array,reflect:!0})],Y.prototype,"languages"),customElements.get("nys-unavheader")||customElements.define("nys-unavheader",Y);const fo=g`
   :host {
     /* Global Header Styles */
     --_nys-globalheader-color: var(
@@ -6528,10 +6542,10 @@ ${this.value}</textarea
         var(--nys-space-800, 64px) 0;
     }
   }
-`;var xo=Object.defineProperty,Je=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&xo(e,t,s),s};const Ht=class Ht extends f{constructor(){super(...arguments),this.appName="",this.agencyName="",this.homepageLink="",this.slotHasContent=!0,this.isMobileMenuOpen=!1}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e==null||e.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange(),this._listenLinkClicks()}async _handleSlotChange(){var r,n,d;const e=(r=this.shadowRoot)==null?void 0:r.querySelector("slot");if(!e)return;const t=e==null?void 0:e.assignedNodes({flatten:!0}).filter(l=>l.nodeType===Node.ELEMENT_NODE);await Promise.resolve(),this.slotHasContent=t.length>0;const o=(n=this.shadowRoot)==null?void 0:n.querySelector(".nys-globalheader__content"),s=(d=this.shadowRoot)==null?void 0:d.querySelector(".nys-globalheader__content-mobile");if(o&&s){o.innerHTML="",s.innerHTML="";const l=this._normalizePath(window.location.pathname+window.location.hash);t.forEach(y=>{if(y.nodeType===Node.ELEMENT_NODE){const p=y.cloneNode(!0),h=y.cloneNode(!0);["script","iframe","object","embed, img"].forEach(ye=>{p.querySelectorAll(ye).forEach(we=>we.remove())});const E=ye=>{const we=Array.from(ye.querySelectorAll("a"));let ct={li:null,length:0};we.forEach(Pt=>{var b1;const Lo=Pt.getAttribute("href"),et=this._normalizePath(Lo);et&&(et==="/"&&l==="/"?ct={li:Pt.closest("li"),length:1}:l!=null&&l.startsWith(et)&&et.length>ct.length&&(ct={li:Pt.closest("li"),length:et.length}),we.forEach(Eo=>{var _1;return(_1=Eo.closest("li"))==null?void 0:_1.classList.remove("active")}),(b1=ct.li)==null||b1.classList.add("active"))})};E(p),E(h),o.appendChild(p),s.appendChild(h),y.remove()}})}}_normalizePath(e){if(e)return e.startsWith("/")||(e="/"+e),e.length>1&&e.endsWith("/")&&(e=e.slice(0,-1)),e.toLowerCase()}_toggleMobileMenu(){this.isMobileMenuOpen=!this.isMobileMenuOpen}_listenLinkClicks(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelectorAll(".nys-globalheader__content, .nys-globalheader__content-mobile");e==null||e.forEach(o=>{o==null||o.addEventListener("click",s=>{const n=s.target.closest("a");if(!n)return;o.querySelectorAll("li.active").forEach(l=>l.classList.remove("active"));const d=n.closest("li");d&&d.classList.add("active")})})}render(){var e,t,o,s,r,n,d,l;return c`
+`;var go=Object.defineProperty,Ke=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&go(e,t,s),s};const Dt=class Dt extends p{constructor(){super(...arguments),this.appName="",this.agencyName="",this.homepageLink="",this.slotHasContent=!0,this.isMobileMenuOpen=!1}firstUpdated(){this.shadowRoot?.querySelector("slot")?.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange(),this._listenLinkClicks()}async _handleSlotChange(){const e=this.shadowRoot?.querySelector("slot");if(!e)return;const t=e?.assignedNodes({flatten:!0}).filter(r=>r.nodeType===Node.ELEMENT_NODE);await Promise.resolve(),this.slotHasContent=t.length>0;const o=this.shadowRoot?.querySelector(".nys-globalheader__content"),s=this.shadowRoot?.querySelector(".nys-globalheader__content-mobile");if(o&&s){o.innerHTML="",s.innerHTML="";const r=this._normalizePath(window.location.pathname+window.location.hash);t.forEach(n=>{if(n.nodeType===Node.ELEMENT_NODE){const c=n.cloneNode(!0),d=n.cloneNode(!0);["script","iframe","object","embed, img"].forEach(v=>{c.querySelectorAll(v).forEach($=>$.remove())});const f=v=>{const $=Array.from(v.querySelectorAll("a"));let q={li:null,length:0};$.forEach(ue=>{const xo=ue.getAttribute("href"),Xe=this._normalizePath(xo);Xe&&(Xe==="/"&&r==="/"?q={li:ue.closest("li"),length:1}:r?.startsWith(Xe)&&Xe.length>q.length&&(q={li:ue.closest("li"),length:Xe.length}),$.forEach(wo=>wo.closest("li")?.classList.remove("active")),q.li?.classList.add("active"))})};f(c),f(d),o.appendChild(c),s.appendChild(d),n.remove()}})}}_normalizePath(e){if(e)return e.startsWith("/")||(e="/"+e),e.length>1&&e.endsWith("/")&&(e=e.slice(0,-1)),e.toLowerCase()}_toggleMobileMenu(){this.isMobileMenuOpen=!this.isMobileMenuOpen}_listenLinkClicks(){this.shadowRoot?.querySelectorAll(".nys-globalheader__content, .nys-globalheader__content-mobile")?.forEach(t=>{t?.addEventListener("click",o=>{const r=o.target.closest("a");if(!r)return;t.querySelectorAll("li.active").forEach(c=>c.classList.remove("active"));const n=r.closest("li");n&&n.classList.add("active")})})}render(){return l`
       <header class="nys-globalheader">
         <div class="nys-globalheader__main-container">
-          ${this.slotHasContent?c` <div class="nys-globalheader__button-container">
+          ${this.slotHasContent?l` <div class="nys-globalheader__button-container">
                 <button
                   class="nys-globalheader__mobile-menu-button"
                   @click="${this._toggleMobileMenu}"
@@ -6546,37 +6560,37 @@ ${this.value}</textarea
                   >
                 </button>
               </div>`:""}
-          ${(e=this.homepageLink)!=null&&e.trim()?c`<a
+          ${this.homepageLink?.trim()?l`<a
                 class="nys-globalheader__name-container-link"
-                href=${(r=this.homepageLink)==null?void 0:r.trim()}
+                href=${this.homepageLink?.trim()}
               >
                 <div class="nys-globalheader__name-container">
-                  ${((n=this.appName)==null?void 0:n.trim().length)>0?c`<div
+                  ${this.appName?.trim().length>0?l`<div
                         class="nys-globalheader__appName nys-globalheader__name"
                       >
                         ${this.appName}
                       </div> `:""}
-                  ${((d=this.agencyName)==null?void 0:d.trim().length)>0?c`<div
-                        class="nys-globalheader__agencyName nys-globalheader__name ${((l=this.appName)==null?void 0:l.trim().length)>0?"":"main"}"
+                  ${this.agencyName?.trim().length>0?l`<div
+                        class="nys-globalheader__agencyName nys-globalheader__name ${this.appName?.trim().length>0?"":"main"}"
                       >
                         ${this.agencyName}
                       </div> `:""}
                 </div>
-              </a>`:c`
+              </a>`:l`
                 <div class="nys-globalheader__name-container">
-                  ${((t=this.appName)==null?void 0:t.trim().length)>0?c`<div
+                  ${this.appName?.trim().length>0?l`<div
                         class="nys-globalheader__appName nys-globalheader__name"
                       >
                         ${this.appName}
                       </div> `:""}
-                  ${((o=this.agencyName)==null?void 0:o.trim().length)>0?c`<div
-                        class="nys-globalheader__agencyName nys-globalheader__name ${((s=this.appName)==null?void 0:s.trim().length)>0?"":"main"}"
+                  ${this.agencyName?.trim().length>0?l`<div
+                        class="nys-globalheader__agencyName nys-globalheader__name ${this.appName?.trim().length>0?"":"main"}"
                       >
                         ${this.agencyName}
                       </div> `:""}
                 </div>
               `}
-          ${this.slotHasContent?c`<div class="nys-globalheader__content">
+          ${this.slotHasContent?l`<div class="nys-globalheader__content">
                 <slot
                   style="display: hidden"
                   @slotchange="${this._handleSlotChange}"
@@ -6587,7 +6601,7 @@ ${this.value}</textarea
       <div
         class="nys-globalheader__content-mobile ${this.isMobileMenuOpen?"":"close"}"
       ></div>
-    `}};Ht.styles=mo;let ie=Ht;Je([i({type:String})],ie.prototype,"appName"),Je([i({type:String})],ie.prototype,"agencyName"),Je([i({type:String})],ie.prototype,"homepageLink"),Je([z()],ie.prototype,"slotHasContent"),Je([z()],ie.prototype,"isMobileMenuOpen"),customElements.get("nys-globalheader")||customElements.define("nys-globalheader",ie);const wo=g`
+    `}};Dt.styles=fo;let ae=Dt;Ke([i({type:String})],ae.prototype,"appName"),Ke([i({type:String})],ae.prototype,"agencyName"),Ke([i({type:String})],ae.prototype,"homepageLink"),Ke([M()],ae.prototype,"slotHasContent"),Ke([M()],ae.prototype,"isMobileMenuOpen"),customElements.get("nys-globalheader")||customElements.define("nys-globalheader",ae);const bo=g`
   :host {
     /* Global Footer Styles */
     --_nys-globalfooter-color: var(
@@ -6740,26 +6754,25 @@ ${this.value}</textarea
   }
 
   /** Column Menus **/
-  .nys-globalfooter__content ul li:has(span + ul) {
-    flex: 1 0 205px;
+  .nys-globalfooter__content ul li:has(span ~ ul) {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: var(--nys-space-300, 24px);
   }
 
-  .nys-globalfooter__content ul li > span::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    background: var(--_nys-globalfooter-background--divider);
-    margin-top: var(--_nys-globalfooter-margin--divider);
+  .nys-globalfooter__content ul:has(li > span ~ ul) {
+    --_nys-globalfooter-column-gap: var(--nys-space-500, 40px);
   }
 
-  .nys-globalfooter__content ul li > span + ul {
+  .nys-globalfooter__content ul li > span ~ ul {
     display: flex;
     flex-direction: column;
     gap: var(--nys-space-200, 16px);
+  }
+
+  .divider {
+    margin-top: var(--_nys-globalfooter-margin--divider);
+    margin-bottom: var(--nys-space-300, 24px);
   }
 
   /* Breakpoints using NYSDS Guidelines (Menu Links) */
@@ -6767,6 +6780,9 @@ ${this.value}</textarea
     /* Tablet (MD - Above 768px) */
     .nys-globalfooter__content ul {
       flex-direction: row;
+    }
+    .nys-globalfooter__content ul li:has(span ~ ul) {
+      flex: 1 0 205px;
     }
     :host {
       --_nys-globalfooter-padding--gutter: var(--nys-gutter-lg, 32px);
@@ -6780,13 +6796,13 @@ ${this.value}</textarea
       --_nys-globalfooter-padding--gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`;var ko=Object.defineProperty,Ct=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&ko(e,t,s),s};const Bt=class Bt extends f{constructor(){super(...arguments),this.agencyName="",this.homepageLink="",this.slotHasContent=!0}firstUpdated(){var t;const e=(t=this.shadowRoot)==null?void 0:t.querySelector("slot");e==null||e.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange()}async _handleSlotChange(){var r,n;const e=(r=this.shadowRoot)==null?void 0:r.querySelector("slot");if(!e)return;const t=e==null?void 0:e.assignedNodes({flatten:!0}).filter(d=>d.nodeType===Node.ELEMENT_NODE);await Promise.resolve(),this.slotHasContent=t.length>0;const o=(n=this.shadowRoot)==null?void 0:n.querySelector(".nys-globalfooter__content"),s=t==null?void 0:t.some(d=>d.tagName==="H4");o&&(o.classList.toggle("columns",s),o.classList.toggle("small",!s),o.innerHTML="",t.forEach(d=>{if(d.nodeType===Node.ELEMENT_NODE){const l=d.cloneNode(!0);["script","iframe","object","embed","img"].forEach(p=>{l.querySelectorAll(p).forEach(h=>h.remove())}),o.appendChild(l),d.remove()}}))}render(){var e,t;return c`
+`;var _o=Object.defineProperty,ft=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&_o(e,t,s),s};const Mt=class Mt extends p{constructor(){super(...arguments),this.agencyName="",this.homepageLink="",this.slotHasContent=!0}firstUpdated(){this.shadowRoot?.querySelector("slot")?.addEventListener("slotchange",()=>this._handleSlotChange()),this._handleSlotChange()}async _handleSlotChange(){const e=this.shadowRoot?.querySelector("slot");if(!e)return;const t=e?.assignedNodes({flatten:!0}).filter(r=>r.nodeType===Node.ELEMENT_NODE);await Promise.resolve(),this.slotHasContent=t.length>0;const o=this.shadowRoot?.querySelector(".nys-globalfooter__content"),s=t?.some(r=>r.tagName==="H4");o&&(o.classList.toggle("columns",s),o.classList.toggle("small",!s),o.innerHTML="",t.forEach(n=>{if(n.nodeType===Node.ELEMENT_NODE){const c=n.cloneNode(!0);["script","iframe","object","embed","img"].forEach(h=>{c.querySelectorAll(h).forEach(f=>f.remove())}),o.appendChild(c),n.remove()}}),o.querySelectorAll("span").forEach(n=>{const c=document.createElement("nys-divider");c.classList.add("divider"),n.insertAdjacentElement("afterend",c)}))}render(){return l`
       <footer class="nys-globalfooter">
         <div class="nys-globalfooter__main-container">
-          ${(e=this.homepageLink)!=null&&e.trim()?c`<a href=${(t=this.homepageLink)==null?void 0:t.trim()}>
-                <p class="nys-globalfooter__name">${this.agencyName}</p>
-              </a>`:c`<p class="nys-globalfooter__name">${this.agencyName}</p>`}
-          ${this.slotHasContent?c`<div class="nys-globalfooter__content">
+          ${this.homepageLink?.trim()?l`<a href=${this.homepageLink?.trim()}>
+                <h2 class="nys-globalfooter__name">${this.agencyName}</h2>
+              </a>`:l`<h2 class="nys-globalfooter__name">${this.agencyName}</h2>`}
+          ${this.slotHasContent?l`<div class="nys-globalfooter__content">
                 <slot
                   style="display: hidden"
                   @slotchange="${this._handleSlotChange}"
@@ -6794,7 +6810,7 @@ ${this.value}</textarea
               </div>`:""}
         </div>
       </footer>
-    `}};Bt.styles=wo;let Ve=Bt;Ct([i({type:String})],Ve.prototype,"agencyName"),Ct([i({type:String})],Ve.prototype,"homepageLink"),Ct([z()],Ve.prototype,"slotHasContent"),customElements.get("nys-globalfooter")||customElements.define("nys-globalfooter",Ve);const $o=g`
+    `}};Mt.styles=bo;let Me=Mt;ft([i({type:String})],Me.prototype,"agencyName"),ft([i({type:String})],Me.prototype,"homepageLink"),ft([M()],Me.prototype,"slotHasContent"),customElements.get("nys-globalfooter")||customElements.define("nys-globalfooter",Me);const Co=g`
   :host {
     /* Global Footer Styles */
     --_nys-unavfooter-color: var(
@@ -6943,7 +6959,7 @@ ${this.value}</textarea
       --_nys-unavfooter-padding--gutter: var(--nys-gutter-xl, 64px);
     }
   }
-`,So=`<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
+`,mo=`<svg xmlns="http://www.w3.org/2000/svg" width="91" height="55" viewBox="0 0 91 55" fill="none">
   <path d="M55.1158 7.50499L58.2905 12.6494V7.5189C58.2905 7.5189 58.6487 7.26356 59.5098 7.26356C60.3708 7.26356 60.7378 7.5189 60.7378 7.5189V16.4327C60.7378 16.4327 60.3942 16.689 59.5215 16.689C58.6487 16.689 58.3295 16.4605 58.3295 16.4605L55.1421 11.3171V16.4337C55.1421 16.4337 54.7848 16.69 53.9111 16.69C53.0374 16.69 52.7065 16.4337 52.7065 16.4337V7.51989C52.7065 7.51989 53.0384 7.26456 53.9248 7.26456C54.8112 7.26456 55.1148 7.50697 55.1148 7.50697L55.1158 7.50499Z" fill="white"/>
   <path d="M67.2209 12.5948H64.9063V14.8709H68.2538C68.2538 14.8709 68.5047 15.1531 68.5047 15.772C68.5047 16.391 68.2538 16.688 68.2538 16.688H62.4589V7.26257H67.9892C67.9892 7.26257 68.2538 7.54572 68.2538 8.17859C68.2538 8.81146 67.9892 9.09362 67.9892 9.09362H64.9063V10.7637H67.2209C67.2209 10.7637 67.4728 11.0598 67.4728 11.6787C67.4728 12.2977 67.2209 12.5948 67.2209 12.5948Z" fill="white"/>
   <path d="M71.4802 16.4327L68.9791 7.5189C68.9791 7.5189 69.3491 7.26356 70.2101 7.26356C71.0711 7.26356 71.4275 7.5189 71.4275 7.5189L72.6839 12.0434C72.7766 12.3802 72.8166 12.6365 72.8557 12.7845C72.8557 12.7428 72.9221 12.3663 73.0011 12.0573L74.0984 7.5189C74.0984 7.5189 74.5211 7.26356 75.1176 7.26356C75.7141 7.26356 76.084 7.5189 76.084 7.5189L77.3004 12.7845C77.3004 12.6623 77.3795 12.3255 77.4586 12.0573L78.756 7.5189C78.7686 7.5189 79.1132 7.26356 79.9596 7.26356C80.806 7.26356 81.1897 7.5189 81.1897 7.5189L78.6496 16.4327C78.6496 16.4327 78.2922 16.6751 77.4859 16.689C76.5468 16.689 76.2158 16.4327 76.2158 16.4327L75.223 12.2987C75.1449 11.9887 75.0902 11.6529 75.0785 11.5844L74.9184 12.2987L73.9266 16.4327C73.9266 16.4327 73.583 16.689 72.7092 16.689C71.8355 16.689 71.4802 16.4327 71.4802 16.4327Z" fill="white"/>
@@ -6959,7 +6975,7 @@ ${this.value}</textarea
   <path d="M51.7107 54.9999C51.577 54.9999 51.4335 54.974 51.2939 54.8965C51.085 54.7803 50.9395 54.5876 50.8858 54.3551C50.8233 54.0868 50.8936 53.7868 51.082 53.5116L51.1426 53.4202C51.2041 53.3268 51.2685 53.2354 51.3407 53.1519C51.4218 53.0595 51.5047 52.995 51.5741 52.9493C51.5243 52.6691 51.5418 52.4267 51.5682 52.2061C51.5877 52.0233 51.6346 51.8683 51.6726 51.7451C51.6892 51.6925 51.7058 51.6388 51.7185 51.5812C51.8201 51.145 51.8855 50.7397 51.9206 50.3453C51.9528 49.9916 51.947 49.9846 51.8864 49.9061C51.7 49.6707 51.3847 49.5018 51.0498 49.3229C50.8878 49.2365 50.7286 49.1491 50.5754 49.0557C49.607 48.4536 48.6376 47.8505 47.6701 47.2465L47.3294 47.0339C47.2513 46.9862 47.1147 46.9156 46.9516 46.8282C45.8817 46.2659 45.172 45.8526 45.0539 45.2595C45.0363 45.173 44.9465 44.9644 44.884 44.864C44.8411 44.8611 44.7307 44.8521 44.6546 44.8471C44.3032 44.8183 43.7711 44.7726 43.3484 44.3196C43.2635 44.2272 43.1786 44.1408 43.1005 44.0583C42.5098 43.4443 42.0003 42.9148 41.9329 41.5993C41.9241 41.4275 41.9251 41.2506 41.928 41.0728C41.9339 40.5283 41.927 40.1836 41.7103 39.962C41.6078 39.8567 41.435 39.7862 41.2349 39.7037C40.9889 39.6034 40.7097 39.4881 40.45 39.2686C40.37 39.2 40.2792 39.1007 40.1776 38.9854C40.0712 38.8602 39.9082 38.6724 39.7969 38.6337C38.974 38.3436 37.986 38.3178 36.96 38.3178L3.07245 38.2909C2.85964 38.2909 2.66927 38.3138 2.48477 38.3347C2.07378 38.3823 1.60812 38.437 1.2313 38.0962C0.866192 37.7664 0.815429 37.2607 0.814452 36.8076L0.8125 34.3993C0.8125 34.2722 0.847644 34.147 0.913051 34.0387C1.22544 33.529 1.83265 33.2558 2.3686 33.0144C2.56872 32.924 2.77666 32.8316 2.88795 32.7571C3.17593 32.5623 3.43561 32.302 3.7109 32.0248C3.91688 31.8182 4.13068 31.6046 4.36887 31.4059C4.69786 31.1317 5.07078 30.931 5.43296 30.7372C5.74535 30.5703 6.03821 30.4124 6.24127 30.2395C6.38575 30.1173 6.49216 29.9146 6.61906 29.6792C6.75476 29.4238 6.90998 29.1337 7.15208 28.8804C7.41273 28.6081 7.7427 28.4194 8.03263 28.2535C8.69744 27.871 8.68182 27.8322 8.57736 27.5769C8.52855 27.4577 8.48072 27.3553 8.43972 27.2639C8.24447 26.8357 8.07754 26.4681 8.19078 25.7051C8.2025 25.6306 8.21616 25.5521 8.22983 25.4706C8.25619 25.3325 8.30305 25.0772 8.27571 25.0037C8.27571 25.0037 8.26204 24.9927 8.23471 24.9778C8.21128 24.9659 8.12928 24.9669 8.06875 24.9679C7.87448 24.9659 7.51914 24.9768 7.2497 24.6689C6.98124 24.3629 6.99686 23.9555 7.03982 23.6356C7.08179 23.3127 7.06032 23.1051 7.03982 22.9223C6.95684 22.1453 7.21358 21.7817 8.10097 21.424C10.7524 20.351 12.901 19.9884 14.8613 20.2805C14.9775 20.2974 15.1356 20.2656 15.3182 20.2269C15.5944 20.1702 15.9351 20.1017 16.312 20.1752L18.3952 20.5766C19.2475 20.7415 19.6653 20.9054 20.3047 21.4995C20.6327 21.8046 20.7655 21.7718 21.3327 21.5661C21.6168 21.4638 21.9399 21.3485 22.3323 21.2949C22.9727 21.2084 23.5731 21.2661 24.153 21.3227C24.4136 21.3475 24.6762 21.3734 24.9408 21.3843C25.2356 21.3952 25.6085 21.2561 25.9717 21.121C26.1318 21.0614 26.2889 21.0028 26.4412 20.9541C26.78 20.8468 27.0973 20.7991 27.4038 20.7514C27.5551 20.7266 27.7064 20.7037 27.8607 20.6729C27.8714 20.6531 27.8821 20.6332 27.8939 20.6113C27.9417 20.5249 27.9944 20.4345 28.0598 20.3411C28.3419 19.9497 28.7471 19.7003 29.0722 19.4966L29.2078 19.4122C29.5564 19.1916 29.8629 18.9879 30.105 18.7386C30.5423 18.2796 31.1232 18.3114 31.5108 18.3312C31.6455 18.3392 31.8495 18.3481 31.91 18.3223C32.1678 18.207 31.9413 17.3993 31.8065 16.9165C31.7119 16.5777 31.6299 16.2846 31.6133 16.0183C31.5664 15.2642 31.9764 14.7317 32.3064 14.3045C32.5651 13.9687 32.7213 13.7481 32.7164 13.5355C32.7164 13.4948 32.7027 13.4382 32.6851 13.3845C32.4587 13.4948 32.0955 13.6369 31.6796 13.4421C31.0129 13.1302 30.6468 12.0264 30.8508 11.3985C31.0197 10.8779 31.54 10.5421 31.9198 10.2957L32.0565 10.2053C32.3806 9.98471 32.7242 9.79792 33.0542 9.6181C33.5159 9.36873 33.9513 9.13227 34.2949 8.82726C34.4404 8.69711 34.5761 8.56994 34.7089 8.44376C35.0076 8.1626 35.3161 7.8715 35.6792 7.61319C35.7056 7.5188 35.728 7.34096 35.7437 7.22571C35.7729 7.00714 35.8022 6.78062 35.8803 6.5849C36.2513 5.64304 37.1592 4.90884 37.9597 4.25908C38.2252 4.04448 38.4771 3.84081 38.6743 3.65602C38.7992 3.53878 38.9222 3.42055 39.0452 3.30332C39.6388 2.73701 40.2509 2.15084 40.9967 1.68289C41.601 1.30536 42.3898 0.833439 43.1249 0.552274C44.0972 0.1807 44.5579 0.208518 45.4766 0.262168L45.6474 0.27111C47.3607 0.371455 49.1384 0.32476 50.8575 0.281045C51.7205 0.258194 52.5796 0.235343 53.4347 0.230376C53.6651 0.230376 54.0156 0.185667 54.3836 0.138972C55.6078 -0.0140291 56.994 -0.188888 57.7818 0.503592C58.1118 0.792705 58.2924 1.19806 58.3031 1.67594C58.311 2.05248 58.1567 2.33464 58.0435 2.54129C58.0064 2.60686 57.9527 2.7082 57.9458 2.74297C57.9488 2.73205 57.9849 2.78768 58.0103 2.82742C58.1362 3.01718 58.3686 3.37088 58.2748 3.89843C58.2397 4.10111 58.1811 4.3167 58.1216 4.53528C58.0464 4.81147 57.9693 5.09761 57.9624 5.31419C57.9498 5.69073 57.6335 5.99376 57.2703 5.97289C56.9013 5.95998 56.6104 5.64603 56.6231 5.26849C56.6367 4.89195 56.7392 4.50944 56.831 4.17264C56.8788 3.9948 56.9276 3.82094 56.9569 3.65502C56.9481 3.65502 56.9218 3.62323 56.8993 3.58746C56.791 3.42254 56.6065 3.14535 56.6065 2.73701C56.6065 2.36345 56.7607 2.08328 56.873 1.87862C56.9072 1.81702 56.9589 1.72462 56.9657 1.69084C56.9608 1.58354 56.9267 1.55274 56.9072 1.53685C56.5694 1.23979 55.2544 1.40372 54.5496 1.49313C54.1386 1.5438 53.752 1.59348 53.4435 1.59547C52.5971 1.60043 51.7439 1.62229 50.8907 1.64315C49.1442 1.68886 47.3382 1.73654 45.5722 1.63421L45.3985 1.62328C44.5345 1.57162 44.3022 1.55871 43.5964 1.82894C42.9618 2.07235 42.2101 2.5244 41.7006 2.84431C41.0699 3.23973 40.533 3.75338 39.9648 4.29683C39.8379 4.41804 39.712 4.53925 39.5831 4.65947C39.3479 4.87804 39.0794 5.09661 38.7953 5.32611C38.1237 5.87056 37.3642 6.48555 37.1231 7.09457C37.1065 7.14425 37.085 7.30221 37.0713 7.40753C37.0147 7.84666 36.9424 8.3931 36.5041 8.69016C36.1927 8.90277 35.9145 9.16704 35.6187 9.44523C35.4771 9.57935 35.3317 9.71546 35.1774 9.85257C34.7186 10.2629 34.1924 10.548 33.6838 10.8222C33.3675 10.9931 33.0698 11.1541 32.8033 11.3369C32.7554 11.3707 32.6978 11.4064 32.6373 11.4462C32.5114 11.5276 32.2332 11.7065 32.1346 11.8217C32.1424 11.8992 32.1726 12.0115 32.2117 12.1009C32.3757 12.0214 32.6041 11.924 32.8804 11.9459C33.6633 12.0135 34.0401 12.8937 34.0558 13.4988C34.0743 14.2191 33.677 14.7337 33.3587 15.145C33.0971 15.4868 32.9351 15.7074 32.9487 15.9319C32.9565 16.0511 33.0288 16.3114 33.0932 16.5419C33.3314 17.3933 33.7746 18.978 32.4479 19.5701C32.0965 19.7281 31.7314 19.7082 31.4375 19.6933C31.3126 19.6864 31.1046 19.6764 31.047 19.7023C30.7171 20.051 30.3227 20.3113 29.9166 20.5706L29.7692 20.663C29.5212 20.816 29.2654 20.976 29.1405 21.1488C29.1083 21.1935 29.0819 21.2412 29.0585 21.2859C28.9345 21.5085 28.7256 21.884 28.174 21.9993C27.9827 22.04 27.7943 22.0708 27.6059 22.0996C27.3364 22.1414 27.0807 22.1811 26.8386 22.2566C26.7087 22.2993 26.5711 22.35 26.4334 22.4017C25.9697 22.5745 25.4435 22.7732 24.8871 22.7474C24.5981 22.7355 24.3131 22.7087 24.027 22.6808C23.4989 22.6282 22.9981 22.5805 22.511 22.6481C22.2572 22.6828 22.0258 22.7653 21.7817 22.8537C21.1716 23.0733 20.3369 23.3733 19.4046 22.508C18.9927 22.1265 18.8267 22.049 18.1473 21.9178L16.065 21.5164C15.942 21.4936 15.775 21.5264 15.5818 21.5651C15.3289 21.6168 15.0136 21.6784 14.6719 21.6297C12.9508 21.3724 11.0218 21.7112 8.59689 22.6928C8.49829 22.7325 8.42703 22.7643 8.37431 22.7891C8.39579 22.9779 8.42312 23.2491 8.39091 23.6217C8.53343 23.6416 8.69353 23.6843 8.86047 23.7737C9.81228 24.2834 9.63461 25.256 9.5487 25.724C9.53601 25.7876 9.52528 25.8511 9.51551 25.9127C9.4628 26.2694 9.49501 26.3429 9.65511 26.6917C9.70392 26.798 9.75664 26.9162 9.81326 27.0543C10.3941 28.4681 9.28415 29.1039 8.68865 29.4447C8.46705 29.5719 8.23764 29.701 8.11268 29.8331C7.99944 29.9524 7.89987 30.1372 7.79541 30.3329C7.62945 30.6448 7.44104 30.9975 7.10522 31.2847C6.79088 31.5529 6.41894 31.7536 6.05871 31.9454C5.74144 32.1153 5.44077 32.2762 5.21623 32.464C5.02782 32.6219 4.84527 32.8048 4.65295 32.9985C4.34252 33.3085 4.02524 33.6294 3.62499 33.8976C3.41901 34.0347 3.17203 34.147 2.9104 34.2652C2.69661 34.3606 2.33443 34.5225 2.14992 34.6626L2.15383 36.8096C2.15383 36.8881 2.15578 36.9527 2.15871 37.0023C2.21533 36.9974 2.27586 36.9904 2.32662 36.9835C2.5287 36.9606 2.77959 36.9308 3.06952 36.9308L36.9581 36.9566C38.0573 36.9566 39.2141 36.9884 40.2304 37.3471C40.6755 37.5021 40.9801 37.8538 41.1812 38.0853C41.2281 38.1399 41.2681 38.1896 41.3052 38.2234C41.4018 38.3048 41.5551 38.3674 41.7328 38.441C42.0129 38.5562 42.3615 38.7003 42.6572 39.0043C43.2811 39.6411 43.2713 40.4469 43.2645 41.0927C43.2606 41.2417 43.2606 41.3897 43.2664 41.5328C43.3084 42.3326 43.5261 42.5581 44.0532 43.1055C44.1372 43.1929 44.2251 43.2853 44.3188 43.3847C44.3842 43.4542 44.5287 43.4701 44.761 43.491C45.0412 43.5138 45.3897 43.5417 45.6953 43.7751C46.0291 44.0275 46.2546 44.5888 46.3376 44.8809C46.5455 45.0846 47.2777 45.4711 47.5647 45.6211C47.7639 45.7264 47.9298 45.8158 48.0265 45.8754L48.3672 46.088C49.3346 46.6891 50.3011 47.2922 51.2705 47.8943C51.3993 47.9727 51.533 48.0463 51.6707 48.1188C52.0924 48.3443 52.5698 48.6006 52.9291 49.0567C53.3215 49.5544 53.2942 50.0045 53.259 50.4029C53.3156 50.2936 53.3781 50.1893 53.4513 50.0879C53.5841 49.8982 53.7393 49.7541 53.877 49.626C54.0136 49.4998 54.1073 49.4104 54.1396 49.3388C54.1132 49.2772 54.0527 49.1739 54.0117 49.1034C53.8487 48.8232 53.6271 48.4387 53.7315 47.9857C53.7725 47.8108 53.8789 47.6588 54.0283 47.5634C54.0849 47.5276 54.205 47.4591 54.3631 47.3717C54.5818 47.2495 55.1373 46.9405 55.475 46.71C54.9723 45.5913 55.1392 44.2163 55.2886 42.9843C55.3345 42.6038 55.3784 42.2451 55.3989 41.9222C55.4204 41.5467 55.7337 41.2606 56.1076 41.2834C56.4776 41.3063 56.7588 41.6301 56.7353 42.0057C56.7148 42.3693 56.667 42.7498 56.6182 43.1522C56.4776 44.3166 56.3165 45.637 56.833 46.3911C56.954 46.5669 56.994 46.7895 56.9452 47.0021C56.8417 47.4502 56.3898 47.7879 55.1958 48.4606C55.352 48.7308 55.5395 49.0904 55.4731 49.5167C55.4623 49.5812 55.4487 49.6428 55.4321 49.7015C55.766 49.5793 56.1154 49.464 56.4845 49.3577C57.8775 48.9543 59.3409 48.7745 61.225 48.7745C62.0587 48.7745 62.8006 48.5053 63.5874 48.2211C64.2103 47.9946 64.8546 47.7621 65.576 47.6508C66.1852 47.5555 66.5005 47.7562 66.7728 47.9688C66.8636 48.0403 66.93 48.09 67.0442 48.1357C67.3625 48.2619 67.7325 48.2211 68.1601 48.1754C68.5925 48.1277 69.0836 48.0731 69.5844 48.2042C69.8821 48.2837 70.09 48.5579 70.0861 48.8709C70.0744 50.0571 68.5076 50.5459 67.7549 50.7814L67.0384 51.0099C66.4985 51.1848 65.9567 51.3586 65.41 51.5176C65.1631 51.5881 64.918 51.6587 64.672 51.7223C64.3889 51.7948 64.099 51.9597 63.7944 52.1316C63.481 52.3094 63.1579 52.4922 62.786 52.6174C62.1426 52.83 61.4837 52.9413 60.6471 52.9761C60.4069 52.987 60.1746 53.0943 59.9295 53.2056C59.5674 53.3735 59.1154 53.5801 58.6107 53.4132C58.3949 53.3864 57.5534 53.6775 57.1502 53.8196C56.832 53.9289 56.5577 54.0242 56.3419 54.0759C55.598 54.2528 54.8415 54.3918 54.1103 54.527L53.5968 54.6223C53.1516 54.7058 52.7035 54.7922 52.2613 54.8926L52.2076 54.9085C52.0797 54.9482 51.9021 55.0038 51.7078 55.0038L51.7107 54.9999ZM53.0735 51.6746C53.0569 51.7471 53.0403 51.8196 53.0237 51.8941C53.0032 51.9806 52.9788 52.064 52.9544 52.1455C52.9281 52.2359 52.9066 52.3055 52.8988 52.3651C52.8793 52.5379 52.8773 52.6313 52.8978 52.7247C52.9495 52.9791 52.9388 53.1907 52.8949 53.3645C53.0482 53.3347 53.2024 53.3049 53.3566 53.2751L53.875 53.1808C54.5896 53.0486 55.3296 52.9125 56.0412 52.7436C56.1906 52.7078 56.4483 52.6194 56.7217 52.525C57.7721 52.1604 58.4994 51.9359 59.0295 52.1127C59.0646 52.1058 59.2559 52.0173 59.3828 51.9597C59.7001 51.8137 60.0945 51.6328 60.5924 51.611C61.3021 51.5812 61.8498 51.4908 62.372 51.3169C62.622 51.2345 62.8748 51.0914 63.1442 50.9374C63.5123 50.7298 63.892 50.5142 64.3469 50.3969C64.5793 50.3373 64.8136 50.2707 65.0459 50.2042C65.5789 50.0482 66.11 49.8773 66.6362 49.7064L67.1253 49.5514C66.9388 49.5246 66.7504 49.4779 66.56 49.4014C66.2672 49.2862 66.0836 49.1411 65.9616 49.0457C65.9313 49.0229 65.906 48.999 65.8757 48.9812C65.8737 48.9851 65.8405 48.9851 65.7781 48.9941C65.1845 49.0855 64.6281 49.2862 64.0394 49.4998C63.1794 49.8107 62.293 50.1326 61.2279 50.1326C59.4717 50.1326 58.1235 50.2966 56.8535 50.6642C55.7142 50.992 54.7868 51.3984 54.0166 51.9031C53.7901 52.0521 53.5001 52.0481 53.2776 51.8951C53.1917 51.8365 53.1214 51.76 53.0735 51.6716V51.6746Z" fill="white"/>
   <path d="M67.6348 51.8019C67.6348 51.8019 67.6173 51.782 67.6173 51.7303C67.6173 51.6787 67.6348 51.6588 67.6348 51.6588H68.5564C68.5564 51.6588 68.5749 51.6806 68.5749 51.7303C68.5749 51.78 68.5564 51.8019 68.5564 51.8019H68.1932V52.9205C68.1932 52.9205 68.1659 52.9404 68.0976 52.9404C68.0292 52.9404 67.998 52.9205 67.998 52.9205V51.8019H67.6348Z" fill="white"/>
   <path d="M69.4282 52.8659C69.4135 52.8748 69.3891 52.8858 69.3471 52.8858C69.3178 52.8858 69.2837 52.8798 69.27 52.8659L68.9889 52.1476C68.9723 52.1088 68.9459 52.0323 68.944 52.0214C68.944 52.0264 68.9371 52.1277 68.9332 52.1565L68.8815 52.9205C68.8815 52.9205 68.8561 52.9404 68.7858 52.9404C68.7155 52.9404 68.6862 52.9205 68.6862 52.9205L68.7839 51.6787C68.7839 51.6787 68.8112 51.6588 68.8776 51.6588C68.9518 51.6588 68.9781 51.6787 68.9781 51.6787L69.3042 52.5162L69.3471 52.6533C69.3481 52.6473 69.3774 52.5559 69.392 52.5162L69.7181 51.6787C69.7181 51.6787 69.7464 51.6588 69.8206 51.6588C69.886 51.6588 69.9124 51.6787 69.9124 51.6787L70.01 52.9205C70.01 52.9205 69.9807 52.9404 69.9104 52.9404C69.8401 52.9404 69.8167 52.9205 69.8167 52.9205L69.763 52.1546L69.7523 52.0194C69.7523 52.0194 69.722 52.1148 69.7093 52.1456L69.4282 52.8659Z" fill="white"/>
-</svg>`,It=class It extends f{_getNysLogo(){return new DOMParser().parseFromString(So,"image/svg+xml").documentElement}render(){return c`
+</svg>`,zt=class zt extends p{_getNysLogo(){return new DOMParser().parseFromString(mo,"image/svg+xml").documentElement}render(){return l`
       <footer class="nys-unavfooter">
         <div class="nys-unavfooter__main-container">
           <div class="nys-unavfooter__container_menu">
@@ -6987,5 +7003,5 @@ ${this.value}</textarea
           </div>
         </div>
       </footer>
-    `}};It.styles=$o;let it=It;customElements.get("nys-unavfooter")||customElements.define("nys-unavfooter",it),v.NysAccordion=Le,v.NysAccordionItem=te,v.NysAlert=e1,v.NysAvatar=Z,v.NysBacktotop=fe,v.NysBadge=s1,v.NysButton=t1,v.NysCheckbox=n1,v.NysCheckboxgroup=r1,v.NysDivider=Ye,v.NysErrorMessage=Ee,v.NysFileinput=k,v.NysGlobalFooter=Ve,v.NysGlobalHeader=ie,v.NysIcon=i1,v.NysLabel=J,v.NysModal=a1,v.NysOption=_e,v.NysPagination=re,v.NysRadiobutton=d1,v.NysRadiogroup=c1,v.NysSelect=h1,v.NysSkipnav=Ze,v.NysStep=G,v.NysStepper=ne,v.NysTextarea=p1,v.NysTextinput=v1,v.NysToggle=f1,v.NysTooltip=ee,v.NysUnavFooter=it,v.NysUnavHeader=Y,Object.defineProperty(v,Symbol.toStringTag,{value:"Module"})});
+    `}};zt.styles=Co;let rt=zt;customElements.get("nys-unavfooter")||customElements.define("nys-unavfooter",rt),u.NysAccordion=$e,u.NysAccordionItem=te,u.NysAlert=Yt,u.NysAvatar=O,u.NysBacktotop=fe,u.NysBadge=Xt,u.NysButton=Kt,u.NysCheckbox=e1,u.NysCheckboxgroup=Jt,u.NysDivider=je,u.NysErrorMessage=Se,u.NysFileinput=w,u.NysGlobalFooter=Me,u.NysGlobalHeader=ae,u.NysIcon=t1,u.NysLabel=J,u.NysModal=s1,u.NysOption=ne,u.NysPagination=re,u.NysRadiobutton=n1,u.NysRadiogroup=r1,u.NysSelect=i1,u.NysSkipnav=Pe,u.NysStep=G,u.NysStepper=ie,u.NysTextarea=c1,u.NysTextinput=d1,u.NysToggle=h1,u.NysTooltip=ee,u.NysUnavFooter=rt,u.NysUnavHeader=Y,Object.defineProperty(u,Symbol.toStringTag,{value:"Module"})}));
 //# sourceMappingURL=nysds.js.map

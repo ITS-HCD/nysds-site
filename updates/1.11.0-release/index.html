@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NYS Design System Release 1.11.0 “Gothics” - New York State Design System</title>
+    <meta name="description" content="Enhancements and bug fixes for this release. Some nice Figma improvements as well. Enhancement to &lt;nys-icon&gt; size ramps and bug fixes for accessibility (including a particularly nasty bug) and some deprecation changes with &lt;nys-select&gt;.
+">   
+    <link rel="canonical" href="https://designsystem.ny.gov/updates/1.11.0-release/">
+    <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+
+    <meta name="”robots”" content="”noindex”">
+
+    <meta property="og:title" content="NYS Design System Release 1.11.0 “Gothics”">
+    <meta property="og:site_name" content="New York State Design System">
+    <meta property="og:url" content="https://designsystem.ny.gov/updates/1.11.0-release/">
+    <meta property="og:description" content="Enhancements and bug fixes for this release. Some nice Figma improvements as well. Enhancement to &lt;nys-icon&gt; size ramps and bug fixes for accessibility (including a particularly nasty bug) and some deprecation changes with &lt;nys-select&gt;.
+">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:image" content="https://designsystem.ny.gov/assets/i/2025/release-1.11.0.png">
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+    <meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+    <link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">    
+    <link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+    <link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">    
+    <link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+    <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+    <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">    
+
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-M4JYBJ7BZY');
+    </script>
+
+    <meta name="robots" content="noindex">
+    
+    <!-- Latest Build: 2025-10-31T15:25:36.224+00:00 -->
+  </head>
+  
+  <body class="single-page page-release-1.11.0 section-updates">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader hideTranslate="" hideSearch=""></nys-unavheader>
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+    <li class="site-header__item"><a href="/search" class="site-header__link" title="Search this website">Search</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Updates
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-updates.svg" alt="Updates section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+
+
+
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
+    
+      <section class="page-content">
+
+        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-11-0-gothics">
+            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.11.0 “Gothics”
+          </h1><p class="page-subtitle">Enhancements and bug fixes for this release. Some nice Figma improvements as well. Enhancement to &lt;nys-icon&gt; size ramps and bug fixes for accessibility (including a particularly nasty bug) and some deprecation changes with &lt;nys-select&gt;.
+</p><div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+              <span class="page-author__name">Eric Steinborn</span>
+            </div>
+            <time class="page-meta__date" datetime="2025-10-30T00:00:00.000+00:00">October 30, 2025</time>
+            <div class="page-meta__readtime">2 min read time</div>
+          </div>
+        </header>
+
+        <!-- SPOOKY RELEASE!!! 👻 -->
+<h2 id="why-gothics">Why “Gothics?”</h2>
+<p>When we name our releases, we pick from a list of Adirondack high peaks. This week's release is named <strong>Gothics</strong>. We wanted to take advantage of spooky season and find an appropriate name! BOO! 👻</p>
+<p><a href="https://en.wikipedia.org/wiki/Gothics">Learn more about Gothics mountain.</a></p>
+<h2 id="nys-option-deprecated"><code>&lt;nys-option&gt;</code> deprecated</h2>
+<p><code>&lt;nys-select&gt;</code> has been updated to use “native guts.” <strong>If you are running v1.11.0 or higher, you should use native <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code> tags instead of <code>&lt;nys-option&gt;</code>.</strong> Check it out below and on the <a href="/components/select"><code>&lt;nys-select&gt;</code> documentation page</a>.</p>
+<p><nys-alert type="warning" heading="WARNING: Installations prior to v1.11.0 should continue to use `<nys-option>`">
+</nys-alert></p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
+  <optgroup label="Transportation Services">
+    <option value="mta">MTA / Public Transit</option>
+    <option value="dmv">Department of Motor Vehicles (DMV)</option>
+    <option value="highway">Highway Maintenance</option>
+  </optgroup>
+  <optgroup label="Health & Human Services">
+    <option value="medicaid">Medicaid / Health Insurance</option>
+    <option value="mental-health">Mental Health Support</option>
+    <option value="child-family">Child and Family Services</option>
+  </optgroup>
+  <optgroup label="Public Safety">
+    <option value="state-police">State Police</option>
+    <option value="emergency-management">Emergency Management</option>
+    <option value="fire-safety">Fire Safety</option>
+  </optgroup>
+  <optgroup label="Environment & Energy">
+    <option value="environmental-conservation">Environmental Conservation</option>
+    <option value="clean-energy">Clean Energy Programs</option>
+    <option value="waste-management">Waste Management</option>
+  </optgroup>
+</nys-select>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Which New York State service are you contacting us about?<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is for demo purposes and the list might not be exhaustive.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Transportation Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mta<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>MTA / Public Transit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dmv<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Department of Motor Vehicles (DMV)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>highway<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Highway Maintenance<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Health &amp; Human Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>medicaid<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Medicaid / Health Insurance<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mental-health<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Mental Health Support<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>child-family<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Child and Family Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Public Safety<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>state-police<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>State Police<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency-management<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Emergency Management<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fire-safety<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Fire Safety<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Environment &amp; Energy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>environmental-conservation<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Environmental Conservation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>clean-energy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Clean Energy Programs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>waste-management<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Waste Management<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> selected this ticket to work on.</p>
+<h2 id="other-notable-code-changes">Other notable code changes</h2>
+<ul>
+<li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
+<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="/components/icon/#size">Read the icon size documentation</a>.</li>
+<li>New <code>elevation</code> design tokens - <a href="/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
+<li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>, Thank you.</p>
+<h2 id="figma-screen-template-changes">Figma Screen Template changes</h2>
+<p>Added option to add modal and ability to configure screen size from top of right sidebar before detaching. Also revised layer names for better code generation by AI from Figma Screens.</p>
+<h2 id="other-notable-figma-changes">Other notable Figma changes</h2>
+<ul>
+<li><strong>Text input and text area</strong> components now have a &quot;readonly&quot; property.</li>
+<li><strong>Fixed prototyping issues</strong> in nys-unavheader and nys-unavfooter.</li>
+<li><strong>Size naming in nys-icon</strong> have been resolved.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> made these changes.</p>
+<h2 id="bug-fixes">Bug fixes</h2>
+<ul>
+<li><code>&lt;nys-select&gt;</code> now defaults to <code>full</code> width instead of <code>md</code></li>
+<li><code>&lt;nys-select&gt;</code> font is now properly Proxima Nova</li>
+<li><code>&lt;nys-globalfooter&gt;</code> now uses native <code>&lt;nys-divider&gt;</code></li>
+</ul>
+<h2 id="breaking-changes">🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2 id="known-issues">⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3 id="that-s-it">That’s it!</h3>
+<h4 id="for-full-component-updates-bug-fixes-and-the-detailed-changelog">For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.11.0">See the full developer release notes for v.1.11.0 →</a></p>
+
+
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">        
+        <ul class="taglist" data-pagefind-ignore="all">
+          
+          <li class="badge">release</li>
+          
+          <li class="badge"> nys-select</li>
+          
+          <li class="badge"> nys-icon</li>
+          
+        </ul>
+        </div>
+        </div>
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div></div>
+            <div>Previous : <a href="/updates/october-website-improvements/" title="Read: October Website Improvements"><b>October Website Improvements</b></a></div>
+          </div>
+        </div>
+
+        
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2025-10-16-release-1.11.0.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: October 30, 2025</p>
+  </div>
+
+
+      </section>
+    </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+    </aside>
+  </div>
+</div>
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+  
+  </body>
+</html>

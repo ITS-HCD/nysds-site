@@ -7,6 +7,235 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.11.0 “Gothics”</title>
+      <link>https://designsystem.ny.gov/updates/1.11.0-release/</link>
+      <description><![CDATA[<!-- SPOOKY RELEASE!!! 👻 -->
+<h2>Why “Gothics?”</h2>
+<p>When we name our releases, we pick from a list of Adirondack high peaks. This week's release is named <strong>Gothics</strong>. We wanted to take advantage of spooky season and find an appropriate name! BOO! 👻</p>
+<p><a href="https://en.wikipedia.org/wiki/Gothics">Learn more about Gothics mountain.</a></p>
+<h2><code>&lt;nys-option&gt;</code> deprecated</h2>
+<p><code>&lt;nys-select&gt;</code> has been updated to use “native guts.” <strong>If you are running v1.11.0 or higher, you should use native <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code> tags instead of <code>&lt;nys-option&gt;</code>.</strong> Check it out below and on the <a href="https://designsystem.ny.gov/components/select"><code>&lt;nys-select&gt;</code> documentation page</a>.</p>
+<p><nys-alert type="warning" heading="WARNING: Installations prior to v1.11.0 should continue to use `<nys-option>`">
+</nys-alert></p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
+  <optgroup label="Transportation Services">
+    <option value="mta">MTA / Public Transit</option>
+    <option value="dmv">Department of Motor Vehicles (DMV)</option>
+    <option value="highway">Highway Maintenance</option>
+  </optgroup>
+  <optgroup label="Health & Human Services">
+    <option value="medicaid">Medicaid / Health Insurance</option>
+    <option value="mental-health">Mental Health Support</option>
+    <option value="child-family">Child and Family Services</option>
+  </optgroup>
+  <optgroup label="Public Safety">
+    <option value="state-police">State Police</option>
+    <option value="emergency-management">Emergency Management</option>
+    <option value="fire-safety">Fire Safety</option>
+  </optgroup>
+  <optgroup label="Environment & Energy">
+    <option value="environmental-conservation">Environmental Conservation</option>
+    <option value="clean-energy">Clean Energy Programs</option>
+    <option value="waste-management">Waste Management</option>
+  </optgroup>
+</nys-select>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Which New York State service are you contacting us about?<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is for demo purposes and the list might not be exhaustive.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Transportation Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mta<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>MTA / Public Transit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dmv<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Department of Motor Vehicles (DMV)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>highway<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Highway Maintenance<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Health &amp; Human Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>medicaid<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Medicaid / Health Insurance<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mental-health<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Mental Health Support<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>child-family<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Child and Family Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Public Safety<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>state-police<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>State Police<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency-management<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Emergency Management<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fire-safety<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Fire Safety<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Environment &amp; Energy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>environmental-conservation<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Environmental Conservation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>clean-energy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Clean Energy Programs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>waste-management<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Waste Management<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> selected this ticket to work on.</p>
+<h2>Other notable code changes</h2>
+<ul>
+<li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
+<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="https://designsystem.ny.gov/components/icon/#size">Read the icon size documentation</a>.</li>
+<li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
+<li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>, Thank you.</p>
+<h2>Figma Screen Template changes</h2>
+<p>Added option to add modal and ability to configure screen size from top of right sidebar before detaching. Also revised layer names for better code generation by AI from Figma Screens.</p>
+<h2>Other notable Figma changes</h2>
+<ul>
+<li><strong>Text input and text area</strong> components now have a &quot;readonly&quot; property.</li>
+<li><strong>Fixed prototyping issues</strong> in nys-unavheader and nys-unavfooter.</li>
+<li><strong>Size naming in nys-icon</strong> have been resolved.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> made these changes.</p>
+<h2>Bug fixes</h2>
+<ul>
+<li><code>&lt;nys-select&gt;</code> now defaults to <code>full</code> width instead of <code>md</code></li>
+<li><code>&lt;nys-select&gt;</code> font is now properly Proxima Nova</li>
+<li><code>&lt;nys-globalfooter&gt;</code> now uses native <code>&lt;nys-divider&gt;</code></li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.11.0">See the full developer release notes for v.1.11.0 →</a></p>
+]]></description>
+      <content><![CDATA[<!-- SPOOKY RELEASE!!! 👻 -->
+<h2>Why “Gothics?”</h2>
+<p>When we name our releases, we pick from a list of Adirondack high peaks. This week's release is named <strong>Gothics</strong>. We wanted to take advantage of spooky season and find an appropriate name! BOO! 👻</p>
+<p><a href="https://en.wikipedia.org/wiki/Gothics">Learn more about Gothics mountain.</a></p>
+<h2><code>&lt;nys-option&gt;</code> deprecated</h2>
+<p><code>&lt;nys-select&gt;</code> has been updated to use “native guts.” <strong>If you are running v1.11.0 or higher, you should use native <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code> tags instead of <code>&lt;nys-option&gt;</code>.</strong> Check it out below and on the <a href="https://designsystem.ny.gov/components/select"><code>&lt;nys-select&gt;</code> documentation page</a>.</p>
+<p><nys-alert type="warning" heading="WARNING: Installations prior to v1.11.0 should continue to use `<nys-option>`">
+</nys-alert></p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
+  <optgroup label="Transportation Services">
+    <option value="mta">MTA / Public Transit</option>
+    <option value="dmv">Department of Motor Vehicles (DMV)</option>
+    <option value="highway">Highway Maintenance</option>
+  </optgroup>
+  <optgroup label="Health & Human Services">
+    <option value="medicaid">Medicaid / Health Insurance</option>
+    <option value="mental-health">Mental Health Support</option>
+    <option value="child-family">Child and Family Services</option>
+  </optgroup>
+  <optgroup label="Public Safety">
+    <option value="state-police">State Police</option>
+    <option value="emergency-management">Emergency Management</option>
+    <option value="fire-safety">Fire Safety</option>
+  </optgroup>
+  <optgroup label="Environment & Energy">
+    <option value="environmental-conservation">Environmental Conservation</option>
+    <option value="clean-energy">Clean Energy Programs</option>
+    <option value="waste-management">Waste Management</option>
+  </optgroup>
+</nys-select>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Which New York State service are you contacting us about?<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>This is for demo purposes and the list might not be exhaustive.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Transportation Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mta<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>MTA / Public Transit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dmv<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Department of Motor Vehicles (DMV)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>highway<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Highway Maintenance<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Health &amp; Human Services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>medicaid<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Medicaid / Health Insurance<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mental-health<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Mental Health Support<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>child-family<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Child and Family Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Public Safety<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>state-police<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>State Police<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency-management<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Emergency Management<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fire-safety<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Fire Safety<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Environment &amp; Energy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>environmental-conservation<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Environmental Conservation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>clean-energy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Clean Energy Programs<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>waste-management<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Waste Management<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optgroup</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> selected this ticket to work on.</p>
+<h2>Other notable code changes</h2>
+<ul>
+<li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
+<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="https://designsystem.ny.gov/components/icon/#size">Read the icon size documentation</a>.</li>
+<li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
+<li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>, Thank you.</p>
+<h2>Figma Screen Template changes</h2>
+<p>Added option to add modal and ability to configure screen size from top of right sidebar before detaching. Also revised layer names for better code generation by AI from Figma Screens.</p>
+<h2>Other notable Figma changes</h2>
+<ul>
+<li><strong>Text input and text area</strong> components now have a &quot;readonly&quot; property.</li>
+<li><strong>Fixed prototyping issues</strong> in nys-unavheader and nys-unavfooter.</li>
+<li><strong>Size naming in nys-icon</strong> have been resolved.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> made these changes.</p>
+<h2>Bug fixes</h2>
+<ul>
+<li><code>&lt;nys-select&gt;</code> now defaults to <code>full</code> width instead of <code>md</code></li>
+<li><code>&lt;nys-select&gt;</code> font is now properly Proxima Nova</li>
+<li><code>&lt;nys-globalfooter&gt;</code> now uses native <code>&lt;nys-divider&gt;</code></li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.11.0">See the full developer release notes for v.1.11.0 →</a></p>
+]]></content>
+      <pubDate>Thu, 30 Oct 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.11.0-release/</guid>
+    </item>
+    <item>
       <title>October Website Improvements</title>
       <link>https://designsystem.ny.gov/updates/october-website-improvements/</link>
       <description><![CDATA[<h2>Site Search Now Available</h2>
