@@ -92,6 +92,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 <li>Added: <code>5xl</code></li>
 <li>Removed: <code>2xs</code></li>
 <li><code>md</code> is now the <strong>default</strong> size (previously <code>sm</code>)</li>
+<li>The size ramp has been shifted up, so if you have been using relative sizes, your icons may be smaller</li>
 </ul>
 <p><strong>Literal size updates:</strong></p>
 <ul>
@@ -222,6 +223,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 <li>Added: <code>5xl</code></li>
 <li>Removed: <code>2xs</code></li>
 <li><code>md</code> is now the <strong>default</strong> size (previously <code>sm</code>)</li>
+<li>The size ramp has been shifted up, so if you have been using relative sizes, your icons may be smaller</li>
 </ul>
 <p><strong>Literal size updates:</strong></p>
 <ul>
