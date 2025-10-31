@@ -233,6 +233,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     h.style.position = 'relative';
 
+    const tooltip = document.createElement('nys-tooltip');
+    tooltip.setAttribute('text', `Copy`);
+    tooltip.setAttribute('focusable', true);
+    tooltip.style.display = 'inline-flex';
+    tooltip.style.padding = '0 0 0 var(--nys-space-50)';
+
+
+    tooltip.appendChild(document.createElement('nys-icon')).setAttribute('name', 'link');
     // Move heading's children into the anchor so markup is preserved
     const anchor = document.createElement('nys-button');
     //anchor.className = 'heading-link';
@@ -241,7 +249,6 @@ document.addEventListener('DOMContentLoaded', function () {
     anchor.style.color = 'inherit';
     anchor.style.textDecoration = 'none';
     anchor.style.display = 'inline-block';
-    anchor.style.padding = '0 0 0 var(--nys-space-50)';
     // anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
     anchor.setAttribute('href', `#${id}`);
     anchor.setAttribute('circle', 'true');
@@ -249,14 +256,20 @@ document.addEventListener('DOMContentLoaded', function () {
     anchor.setAttribute('size', 'sm');
     anchor.setAttribute('variant', 'ghost');
 
-    anchor.addEventListener('click', (e) => {
+    tooltip.addEventListener('click', (e) => {
       // Stop the page from scrolling when you click this link
       e.preventDefault();
       // Copy the Full URL to the clipboard
       copyHeadingUrl(anchor);
+      tooltip.setAttribute('text', 'Copied link!');
+
+      setTimeout(() => {
+        tooltip.setAttribute('text', 'Copy');
+      }, 1500);
     });
 
-    h.insertAdjacentElement('beforeend', anchor);
+    // h.insertAdjacentElement('beforeend', anchor);
+    h.insertAdjacentElement('beforeend', tooltip);
 
   });
 }
