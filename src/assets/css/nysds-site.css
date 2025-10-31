@@ -1111,13 +1111,20 @@ opacity: 1;
 }
 
 /* Give these tokens a defined height and bg color so they show up in the token list */
+.token-list__shadow {
+    border-radius: var(--nys-radius-lg);
+    background-color: var(--nys-color-surface);
+    border: none;
+    height: var(--nys-space-800);
+}
+
 .token-list__size,
 .token-list__radius {
-    height: 50px;
+    height: var(--nys-space-600);
     background-color: var(--nys-color-theme);
 }
 .token-list__space {
-    height: 50px;
+    height: var(--nys-space-600);
     background-color: var(--nys-color-neutral-100, #D0D0CE);
 
 }
