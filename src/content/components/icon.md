@@ -19,7 +19,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-icon name="check_circle" size="4xl" color="var(--nys-color-success)"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon name="check_circle" size="5xl" color="var(--nys-color-success)"></nys-icon>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
@@ -182,19 +182,19 @@ You can scale icons either relatively (based on the parent element’s font size
 #### Relative Sizing
 To scale an icon relative to the inherited font size, pass a size variant like `size=[variant name]` as a prop. The values will scale based on the current font size of the parent element.
 
-  - `2xs` (extra-extra small): 75% of parent font size 
-  - `xs` (extra small): 87.5% of parent font size 
-  - `sm` (small): 100% of parent font size -- **Default** 
-  - `md` (medium): 112.5% of parent font size 
-  - `lg` (large): 125% of parent font size 
-  - `xl` (extra large): 150% of parent font size 
-  - `2xl` (double extra large): 187.5% of parent font size 
-  - `3xl` (triple extra large): 225% of parent font size 
-  - `4xl` (quadruple extra large): 300% of parent font size
+  - `xs` (extra small): 75% of parent font size 
+  - `sm` (small): 87.5% of parent font size 
+  - `md` (medium): 100% of parent font size -- **Default** 
+  - `lg` (large): 112.5% of parent font size
+  - `xl` (extra large): 125% of parent font size
+  - `2xl` (double extra large): 150% of parent font size
+  - `3xl` (triple extra large): 187.5% of parent font size
+  - `4xl` (quadruple extra large): 225% of parent font size
+  - `5xl` (quintuple extra large): 300% of parent font size
 
-  {% set preview %}<nys-icon name="upload_file" size="2xs"></nys-icon>
-<nys-icon name="upload_file" size="lg"></nys-icon>
-<nys-icon name="upload_file" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon name="upload_file" size="xs"></nys-icon>
+<nys-icon name="upload_file" size="xl"></nys-icon>
+<nys-icon name="upload_file" size="5xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -202,15 +202,18 @@ To scale an icon relative to the inherited font size, pass a size variant like `
 For fixed, predefined sizes, you can use literal sizes. These sizes are defined in rem units, which provide fixed scaling options.
 
   - `12`: 0.75rem = 12px
+  - `14`: 0.875rem = 14px
   - `16`: 1rem = 16px
+  - `18`: 1.125rem = 18px
+  - `20`: 1.25rem = 20px
   - `24`: 1.5rem = 24px
   - `32`: 2rem = 32px
-  - `48`: 3rem = 48px
-  - `64`: 4rem = 64px
+  - `40`: 2.5rem = 40px
+  - `50`: 3.125rem = 50px
 
   {% set preview %}<nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
-<nys-icon name="upload_file" size="64"></nys-icon>{% endset %}
+<nys-icon name="upload_file" size="50"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -218,21 +221,21 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
 You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-  {% set preview %}<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Rotate
 You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` will rotate the icon by 20 degrees clockwise.
 
-  {% set preview %}<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
 ### Flip
 Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
 
-  {% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="4xl"></nys-icon>{% endset %}
+  {% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
@@ -240,14 +243,14 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block properties %}
 
-| Property          | Type                                                                                                                                                   |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `ariaLabel`           | String                                                                                                                                                 |
-| `color`           | String (CSS HEX, CSS color name, or CSS variable)                                                                                                      |
-| `flip`            | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                             |
-| `name`            | String                                                                                                                                                 |
-| `rotate`          | integer                                                                                                                                                |
-| `size`            | `"2xs"` \| `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"12"` \| `"16"` \| `"24"` \| `"32"` \| `"48"` \| `"64"` |
+| Property          | Type                                                                                                                                                                                 |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `ariaLabel`       | String                                                                                                                                                                               |
+| `color`           | String (CSS HEX, CSS color name, or CSS variable)                                                                                                                                    |
+| `flip`            | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                                                           |
+| `name`            | String                                                                                                                                                                               |
+| `rotate`          | integer                                                                                                                                                                              |
+| `size`            | `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"5xl"` \| `"12"` \| `"14"` \| `"16"` \| `"18"` \| `"20"` \| `"24"` \| `"32"` \| `"40"` \| `"50"` |
 
 
 {% endblock %}
