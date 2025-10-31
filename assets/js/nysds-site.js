@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
       tooltip.setAttribute('text', 'Copied link!');
 
       setTimeout(() => {
-        tooltip.setAttribute('text', 'Copy');
+        tooltip.setAttribute('text', 'Copy link');
       }, 1500);
     });
 
