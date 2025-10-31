@@ -46,7 +46,7 @@
 
     <meta name="robots" content="noindex">
     
-    <!-- Latest Build: 2025-10-31T16:00:00.939+00:00 -->
+    <!-- Latest Build: 2025-10-31T16:04:11.999+00:00 -->
   </head>
   
   <body class="single-page page-release-1.11.0 section-updates">
@@ -102,7 +102,7 @@
               <span class="page-author__name">Eric Steinborn</span>
             </div>
             <time class="page-meta__date" datetime="2025-10-30T00:00:00.000+00:00">October 30, 2025</time>
-            <div class="page-meta__readtime">2 min read time</div>
+            <div class="page-meta__readtime">3 min read time</div>
           </div>
         </header>
 
@@ -181,11 +181,26 @@
   </div>
 </div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> selected this ticket to work on.</p>
+<h2 id="nys-icon-size-ramp-change"><code>nys-icon</code> size ramp change</h2>
+<p><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="/components/icon/#size">Read the icon size documentation</a>.
+This release includes <strong>major changes</strong> to the icon size system to align with new design tokens and improve consistency between Figma and code.</p>
+<p><strong>Relative size updates:</strong></p>
+<ul>
+<li>Added: <code>5xl</code></li>
+<li>Removed: <code>2xs</code></li>
+<li><code>md</code> is now the <strong>default</strong> size (previously <code>sm</code>)</li>
+</ul>
+<p><strong>Literal size updates:</strong></p>
+<ul>
+<li>Added: <code>14</code>, <code>18</code>, <code>20</code>, <code>40</code>, <code>50</code></li>
+<li>Removed: <code>48</code>, <code>64</code></li>
+</ul>
+<img width="547" height="88" alt="Screenshot 2025-10-31 at 11 56 07 AM" src="https://github.com/user-attachments/assets/93673462-40ae-4ddf-94e8-dd4dc1fcfac5">
+<p>If you reference icon sizes directly in code, Figma, or documentation, <strong>please review and update</strong> your usage accordingly.<br>
+<a href="/components/icon/#size">See the updated size documentation →</a></p>
 <h2 id="other-notable-code-changes">Other notable code changes</h2>
 <ul>
 <li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
-<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="/components/icon/#size">Read the icon size documentation</a>.
-🚨 <strong>SEE BREAKING CHANGE BELOW!</strong> 🚨</li>
 <li>New <code>elevation</code> design tokens - <a href="/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
 <li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
 </ul>
@@ -206,21 +221,10 @@
 <li><code>&lt;nys-globalfooter&gt;</code> now uses native <code>&lt;nys-divider&gt;</code></li>
 </ul>
 <h2 id="breaking-changes">🚨 Breaking changes</h2>
-<h3 id="nys-icon-size-scale-updated"><code>&lt;nys-icon&gt;</code> size scale updated</h3>
-<p>This release includes <strong>major changes</strong> to the icon size system to align with new design tokens and improve consistency between Figma and code.</p>
-<p><strong>Relative size updates:</strong></p>
 <ul>
-<li>Added: <code>5xl</code></li>
-<li>Removed: <code>2xs</code></li>
-<li><code>md</code> is now the <strong>default</strong> size (previously <code>sm</code>)</li>
+<li><code>&lt;nys-icon&gt;</code> size scale updated</li>
 </ul>
-<p><strong>Literal size updates:</strong></p>
-<ul>
-<li>Added: <code>14</code>, <code>18</code>, <code>20</code>, <code>40</code>, <code>50</code></li>
-<li>Removed: <code>48</code>, <code>64</code></li>
-</ul>
-<img width="547" height="88" alt="Screenshot 2025-10-31 at 11 56 07 AM" src="https://github.com/user-attachments/assets/93673462-40ae-4ddf-94e8-dd4dc1fcfac5">
-<p>If you reference icon sizes directly in code, Figma, or documentation, please review and update your usage accordingly.<br>
+<p>If you have used or referenced icon sizes directly in code, Figma, or documentation, please review and update your usage accordingly.<br>
 <a href="/components/icon/#size">See the updated size documentation →</a></p>
 <h2 id="known-issues">⚠️ Known issues</h2>
 <ul>
