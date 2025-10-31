@@ -243,19 +243,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tooltip.appendChild(document.createElement('nys-icon')).setAttribute('name', 'link');
     // Move heading's children into the anchor so markup is preserved
-    // const anchor = document.createElement('nys-button');
-    // //anchor.className = 'heading-link';
-    // anchor.setAttribute('label', 'Link to heading');
-    // // anchor.setAttribute('aria-label', );
-    // anchor.style.color = 'inherit';
-    // anchor.style.textDecoration = 'none';
-    // anchor.style.display = 'inline-block';
-    // // anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
-    // anchor.setAttribute('href', `#${id}`);
-    // anchor.setAttribute('circle', 'true');
-    // anchor.setAttribute('icon', 'link');
-    // anchor.setAttribute('size', 'sm');
-    // anchor.setAttribute('variant', 'ghost');
+    const anchor = document.createElement('nys-button');
+    //anchor.className = 'heading-link';
+    anchor.setAttribute('label', 'Link to heading');
+    // anchor.setAttribute('aria-label', );
+    anchor.style.color = 'inherit';
+    anchor.style.textDecoration = 'none';
+    anchor.style.display = 'inline-block';
+    // anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
+    anchor.setAttribute('href', `#${id}`);
+    anchor.setAttribute('circle', 'true');
+    anchor.setAttribute('icon', 'link');
+    anchor.setAttribute('size', 'sm');
+    anchor.setAttribute('variant', 'ghost');
 
     tooltip.addEventListener('click', (e) => {
       // Stop the page from scrolling when you click this link
