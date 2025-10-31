@@ -87,7 +87,7 @@
 <h2>Other notable code changes</h2>
 <ul>
 <li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
-<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="https://designsystem.ny.gov/components/icon/#size">Read the icon size documentation</a>.</li>
+<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="https://designsystem.ny.gov/components/icon/#size">Read the icon size documentation</a>. 🚨 SEE BREAKING CHANGE BELOW!</li>
 <li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
 <li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
 </ul>
@@ -122,7 +122,7 @@
 <li>Removed: <code>48</code>, <code>64</code></li>
 </ul>
 <p>If you reference icon sizes directly in code, Figma, or documentation, please review and update your usage accordingly.<br />
-<a href="https://designsystem.ny.gov/components/icon/#options">See the updated size documentation →</a></p>
+<a href="https://designsystem.ny.gov/components/icon/#size">See the updated size documentation →</a></p>
 <h2>⚠️ Known issues</h2>
 <ul>
 <li>None</li>
@@ -210,7 +210,7 @@
 <h2>Other notable code changes</h2>
 <ul>
 <li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
-<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="https://designsystem.ny.gov/components/icon/#size">Read the icon size documentation</a>.</li>
+<li><code>&lt;nys-icon&gt;</code> sizes synced between design and code - <a href="https://designsystem.ny.gov/components/icon/#size">Read the icon size documentation</a>. 🚨 SEE BREAKING CHANGE BELOW!</li>
 <li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
 <li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
 </ul>
@@ -245,7 +245,7 @@
 <li>Removed: <code>48</code>, <code>64</code></li>
 </ul>
 <p>If you reference icon sizes directly in code, Figma, or documentation, please review and update your usage accordingly.<br />
-<a href="https://designsystem.ny.gov/components/icon/#options">See the updated size documentation →</a></p>
+<a href="https://designsystem.ny.gov/components/icon/#size">See the updated size documentation →</a></p>
 <h2>⚠️ Known issues</h2>
 <ul>
 <li>None</li>
