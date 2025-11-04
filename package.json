@@ -33,7 +33,7 @@
         "pagefind": "^1.4.0"
     },
     "dependencies": {
-        "@nysds/components": "^1.11.0",
-        "@nysds/styles": "^1.11.0"
+        "@nysds/components": "^1.11.1",
+        "@nysds/styles": "^1.11.1"
     }
 }
