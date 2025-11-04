@@ -2,12 +2,12 @@ import { css as u, LitElement as y, html as l } from "lit";
 import { property as r, query as u1, state as $ } from "lit/decorators.js";
 import { ifDefined as d } from "lit/directives/if-defined.js";
 /*!
-   * New York State Design System (v1.11.0)
+   * New York State Design System (v1.11.1)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
  */
-const i1 = u`
+const a1 = u`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -229,7 +229,7 @@ const Ne = class Ne extends y {
     </div>`;
   }
 };
-Ne.styles = i1;
+Ne.styles = a1;
 let le = Ne;
 De([
   r({ type: String })
@@ -295,7 +295,7 @@ const Fe = class Fe extends y {
     </div>`;
   }
 };
-Fe.styles = i1;
+Fe.styles = a1;
 let Ce = Fe;
 Ue([
   r({ type: String })
@@ -551,7 +551,7 @@ var _1 = Object.defineProperty, C1 = Object.getOwnPropertyDescriptor, P = (a, e,
 };
 let m1 = 0;
 var ne;
-const H = (ne = class extends y {
+const A = (ne = class extends y {
   constructor() {
     super(...arguments), this.id = "", this.heading = "", this.icon = "", this.dismissible = !1, this.duration = 0, this.text = "", this.primaryAction = "", this.secondaryAction = "", this.primaryLabel = "Learn more", this.secondaryLabel = "Dismiss", this._alertClosed = !1, this._slotHasContent = !0, this._type = "base", this._timeoutId = null;
   }
@@ -668,44 +668,44 @@ const H = (ne = class extends y {
 ], ne);
 P([
   r({ type: String })
-], H.prototype, "id", 2);
+], A.prototype, "id", 2);
 P([
   r({ type: String })
-], H.prototype, "heading", 2);
+], A.prototype, "heading", 2);
 P([
   r({ type: String })
-], H.prototype, "icon", 2);
+], A.prototype, "icon", 2);
 P([
   r({ type: Boolean, reflect: !0 })
-], H.prototype, "dismissible", 2);
+], A.prototype, "dismissible", 2);
 P([
   r({ type: Number, reflect: !0 })
-], H.prototype, "duration", 2);
+], A.prototype, "duration", 2);
 P([
   r({ type: String })
-], H.prototype, "text", 2);
+], A.prototype, "text", 2);
 P([
   r({ type: String })
-], H.prototype, "primaryAction", 2);
+], A.prototype, "primaryAction", 2);
 P([
   r({ type: String })
-], H.prototype, "secondaryAction", 2);
+], A.prototype, "secondaryAction", 2);
 P([
   r({ type: String })
-], H.prototype, "primaryLabel", 2);
+], A.prototype, "primaryLabel", 2);
 P([
   r({ type: String })
-], H.prototype, "secondaryLabel", 2);
+], A.prototype, "secondaryLabel", 2);
 P([
   $()
-], H.prototype, "_alertClosed", 2);
+], A.prototype, "_alertClosed", 2);
 P([
   $()
-], H.prototype, "_slotHasContent", 2);
+], A.prototype, "_slotHasContent", 2);
 P([
   r({ reflect: !0 })
-], H.prototype, "type", 1);
-let x1 = H;
+], A.prototype, "type", 1);
+let x1 = A;
 customElements.get("nys-alert") || customElements.define("nys-alert", x1);
 const w1 = u`
   :host {
@@ -809,7 +809,7 @@ const w1 = u`
     fill: currentColor;
   }
 `;
-var k1 = Object.defineProperty, K = (a, e, t, o) => {
+var k1 = Object.defineProperty, W = (a, e, t, o) => {
   for (var s = void 0, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = i(e, t, s) || s);
   return s && k1(e, t, s), s;
@@ -849,8 +849,8 @@ const je = class je extends y {
     document.body.removeChild(n);
     const c = i.match(/\d+/g);
     if (!c) return;
-    const p = Number(c[0]), h = Number(c[1]), V = Number(c[2]), j = (0.299 * p + 0.587 * h + 0.114 * V) / 255 < 0.5;
-    return this.initials?.length > 0 ? j ? s : o : j ? t : e;
+    const p = Number(c[0]), h = Number(c[1]), V = Number(c[2]), T = (0.299 * p + 0.587 * h + 0.114 * V) / 255 < 0.5;
+    return this.initials?.length > 0 ? T ? s : o : T ? t : e;
   }
   render() {
     return l`
@@ -866,7 +866,9 @@ const je = class je extends y {
             aria-label=${d(
       this.image ? void 0 : this.ariaLabel ? this.ariaLabel : "avatar"
     )}
-            tabindex=${this.interactive && !this.disabled ? "0" : d(void 0)}
+            tabindex=${d(
+      this.interactive && !this.disabled ? 0 : void 0
+    )}
           >
             ${this.image?.length > 0 ? l`<img
                   part="nys-avatar__image"
@@ -895,34 +897,34 @@ const je = class je extends y {
 };
 je.styles = w1;
 let I = je;
-K([
+W([
   r({ type: String })
 ], I.prototype, "id");
-K([
+W([
   r({ type: String })
 ], I.prototype, "ariaLabel");
-K([
+W([
   r({ type: String })
 ], I.prototype, "image");
-K([
+W([
   r({ type: String })
 ], I.prototype, "initials");
-K([
+W([
   r({ type: String })
 ], I.prototype, "icon");
-K([
+W([
   r({ type: String })
 ], I.prototype, "color");
-K([
+W([
   r({ type: Boolean, reflect: !0 })
 ], I.prototype, "interactive");
-K([
+W([
   r({ type: Boolean, reflect: !0 })
 ], I.prototype, "disabled");
-K([
+W([
   r({ type: Boolean, reflect: !0 })
 ], I.prototype, "lazy");
-K([
+W([
   $()
 ], I.prototype, "_slotHasContent");
 customElements.get("nys-avatar") || customElements.define("nys-avatar", I);
@@ -1679,8 +1681,7 @@ var S;
 const b = (S = class extends y {
   // allows use of elementInternals' API
   constructor() {
-    super(), this.id = "", this.name = "", this._size = "md", this.fullWidth = !1, this._variant = "filled", this.inverted = !1, this.label = "", this.ariaLabel = "", this.ariaControls = "", this.prefixIcon = "", this.suffixIcon = "", this.circle = !1, this.icon = "", this.disabled = !1, this.form = null, this.value = "", this.ariaDescription = "", this._type = "button", this.onClick = () => {
-    }, this.href = "", this._target = "_self", this._internals = this.attachInternals();
+    super(), this.id = "", this.name = "", this._size = "md", this.fullWidth = !1, this._variant = "filled", this.inverted = !1, this.label = "", this.ariaLabel = "", this.ariaControls = "", this.prefixIcon = "", this.suffixIcon = "", this.circle = !1, this.icon = "", this.disabled = !1, this.form = null, this.value = "", this.ariaDescription = "", this._type = "button", this.onClick = null, this.href = "", this._target = "_self", this._internals = this.attachInternals();
   }
   get size() {
     return this._size;
@@ -1729,7 +1730,7 @@ const b = (S = class extends y {
     return `nys-button-${Date.now()}-${z1++}`;
   }
   _manageFormAction() {
-    typeof this.onClick == "function" && this.click();
+    typeof this.onClick == "function" && this.onClick !== null && this.onClick(new Event("click"));
     const e = this._internals.form;
     if (e)
       switch (this.type) {
@@ -1767,8 +1768,18 @@ const b = (S = class extends y {
         );
         t && t.click();
       } else
-        this._handleClick(e);
+        this._handleAnyAttributeFunction(), this._handleClick(e);
     }
+  }
+  /**
+   * Vanilla JS & Native HTML keydown solution:
+   * The <nys-button onClick="doFunction();"></nys-button> onClick is an attribute here.
+   * Thus, we call it here. Otherwise, at this point, this.onClick is null as it isn't props, but a string attribute
+   * In vanilla HTML/JS, clicking with execute the attribute function, BUT now with keydown, hence this solution.
+   */
+  _handleAnyAttributeFunction() {
+    const e = this.getAttribute("onClick");
+    e && new Function("return " + e)();
   }
   /******************** Public Methods ********************/
   focus(e) {
@@ -1830,7 +1841,6 @@ const b = (S = class extends y {
       this.ariaLabel || this.label || (this.circle ? this.icon : null) || this.prefixIcon || this.suffixIcon || "button"
     )}
               aria-description=${d(this.ariaDescription || void 0)}
-              onclick="${this.onClick}"
               @click=${this._handleClick}
               @focus="${this._handleFocus}"
               @blur="${this._handleBlur}"
@@ -1931,7 +1941,7 @@ _([
 ], b.prototype, "target", 1);
 let V1 = b;
 customElements.get("nys-button") || customElements.define("nys-button", V1);
-const H1 = u`
+const A1 = u`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -2011,10 +2021,10 @@ const H1 = u`
     font-weight: var(--_nys-badge-prefix-font-weight);
   }
 `;
-var A1 = Object.defineProperty, B1 = Object.getOwnPropertyDescriptor, ue = (a, e, t, o) => {
+var H1 = Object.defineProperty, B1 = Object.getOwnPropertyDescriptor, ue = (a, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? B1(e, t) : e, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
-  return o && s && A1(e, t, s), s;
+  return o && s && H1(e, t, s), s;
 }, q;
 const oe = (q = class extends y {
   constructor() {
@@ -2074,7 +2084,7 @@ const oe = (q = class extends y {
   "error",
   "success",
   "warning"
-], q.styles = H1, q.DEFAULT_ICONS = {
+], q.styles = A1, q.DEFAULT_ICONS = {
   neutral: "info",
   error: "emergency_home",
   success: "check_circle",
@@ -2106,7 +2116,7 @@ ue([
 ], oe.prototype, "suffixIcon", 1);
 let I1 = oe;
 customElements.get("nys-badge") || customElements.define("nys-badge", I1);
-const a1 = u`
+const l1 = u`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -2489,14 +2499,14 @@ const a1 = u`
     border: 0;
   }
 `;
-var P1 = Object.defineProperty, Z1 = Object.getOwnPropertyDescriptor, A = (a, e, t, o) => {
+var P1 = Object.defineProperty, Z1 = Object.getOwnPropertyDescriptor, H = (a, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? Z1(e, t) : e, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && P1(e, t, s), s;
 };
 let q1 = 0;
-var W;
-const E = (W = class extends y {
+var K;
+const E = (K = class extends y {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this.required = !1, this.optional = !1, this.showError = !1, this.errorMessage = "", this.label = "", this.description = "", this.tile = !1, this._tooltip = "", this.inverted = !1, this.form = null, this._slottedDescriptionText = "", this._size = "md", this._internals = this.attachInternals();
@@ -2505,7 +2515,7 @@ const E = (W = class extends y {
     return this._size;
   }
   set size(e) {
-    this._size = W.VALID_SIZES.includes(
+    this._size = K.VALID_SIZES.includes(
       e
     ) ? e : "md";
   }
@@ -2636,47 +2646,47 @@ const E = (W = class extends y {
       </div>
     `;
   }
-}, W.VALID_SIZES = ["sm", "md"], W.styles = a1, W.formAssociated = !0, W);
-A([
+}, K.VALID_SIZES = ["sm", "md"], K.styles = l1, K.formAssociated = !0, K);
+H([
   r({ type: String })
 ], E.prototype, "id", 2);
-A([
+H([
   r({ type: String, reflect: !0 })
 ], E.prototype, "name", 2);
-A([
+H([
   r({ type: Boolean, reflect: !0 })
 ], E.prototype, "required", 2);
-A([
+H([
   r({ type: Boolean, reflect: !0 })
 ], E.prototype, "optional", 2);
-A([
+H([
   r({ type: Boolean, reflect: !0 })
 ], E.prototype, "showError", 2);
-A([
+H([
   r({ type: String })
 ], E.prototype, "errorMessage", 2);
-A([
+H([
   r({ type: String })
 ], E.prototype, "label", 2);
-A([
+H([
   r({ type: String })
 ], E.prototype, "description", 2);
-A([
+H([
   r({ type: Boolean, reflect: !0 })
 ], E.prototype, "tile", 2);
-A([
+H([
   r({ type: String })
 ], E.prototype, "_tooltip", 2);
-A([
+H([
   r({ type: Boolean, reflect: !0 })
 ], E.prototype, "inverted", 2);
-A([
+H([
   r({ type: String, reflect: !0 })
 ], E.prototype, "form", 2);
-A([
+H([
   $()
 ], E.prototype, "_slottedDescriptionText", 2);
-A([
+H([
   r({ reflect: !0 })
 ], E.prototype, "size", 1);
 let O1 = E;
@@ -2847,7 +2857,7 @@ const w = (X = class extends y {
           ></nys-errormessage>` : ""}
     `;
   }
-}, X.VALID_SIZES = ["sm", "md"], X.styles = a1, X.formAssociated = !0, X);
+}, X.VALID_SIZES = ["sm", "md"], X.styles = l1, X.formAssociated = !0, X);
 D([
   r({ type: Boolean, reflect: !0 })
 ], w.prototype, "checked", 2);
@@ -2987,10 +2997,10 @@ const Y1 = u`
       var(--_nys-errormessage-color);
   }
 `;
-var K1 = Object.defineProperty, Te = (a, e, t, o) => {
+var W1 = Object.defineProperty, Te = (a, e, t, o) => {
   for (var s = void 0, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = i(e, t, s) || s);
-  return s && K1(e, t, s), s;
+  return s && W1(e, t, s), s;
 };
 const Ie = class Ie extends y {
   // allows use of elementInternals' API
@@ -3016,7 +3026,7 @@ Te([
   r({ type: Boolean, reflect: !0 })
 ], me.prototype, "showDivider");
 customElements.get("nys-errormessage") || customElements.define("nys-errormessage", me);
-async function W1(a, e) {
+async function K1(a, e) {
   if (!e || e.trim() === "") return !0;
   const t = e.toLowerCase().split(",").map((n) => n.trim()), o = a.name.toLowerCase(), s = o.includes(".") ? o.split(".").pop() : "";
   for (const n of t)
@@ -3308,7 +3318,7 @@ var J1 = Object.defineProperty, qe = (a, e, t, o) => {
     (i = a[n]) && (s = i(e, t, s) || s);
   return s && J1(e, t, s), s;
 };
-const Ke = class Ke extends y {
+const We = class We extends y {
   constructor() {
     super(...arguments), this.filename = "", this.status = "pending", this.progress = 0, this.errorMessage = "";
   }
@@ -3381,8 +3391,8 @@ const Ke = class Ke extends y {
     `;
   }
 };
-Ke.styles = Q1;
-let fe = Ke;
+We.styles = Q1;
+let fe = We;
 qe([
   r({ type: String })
 ], fe.prototype, "filename");
@@ -3516,7 +3526,7 @@ const Pe = class Pe extends y {
   async _processFile(e) {
     e.status = "processing";
     try {
-      if (!await W1(e.file, this.accept)) {
+      if (!await K1(e.file, this.accept)) {
         e.status = "error", e.errorMsg = "File type is invalid.", this.requestUpdate();
         return;
       }
@@ -4632,7 +4642,7 @@ var lt = Object.defineProperty, ct = Object.getOwnPropertyDescriptor, ke = (a, e
     (i = a[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && lt(e, t, s), s;
 };
-const We = class We extends y {
+const Ke = class Ke extends y {
   constructor() {
     super(...arguments), this.for = "", this.label = "", this.description = "", this.flag = "", this.inverted = !1, this._tooltip = "";
   }
@@ -4669,8 +4679,8 @@ const We = class We extends y {
     `;
   }
 };
-We.styles = at;
-let te = We;
+Ke.styles = at;
+let te = Ke;
 ke([
   r({ type: String })
 ], te.prototype, "for", 2);
@@ -4890,9 +4900,9 @@ const re = (ae = class extends y {
   async _restorePrevFocused() {
     const e = this._prevFocusedElement;
     if (e && e.tagName.toLowerCase() === "nys-button") {
-      const t = await e.getButtonElement();
-      if (t) {
-        t.focus();
+      const o = await e.getButtonElement();
+      if (o) {
+        o.focus();
         return;
       }
     } else
@@ -4980,10 +4990,10 @@ const re = (ae = class extends y {
         let h = document.activeElement, V = s.indexOf(h);
         if (e.shiftKey) {
           e.preventDefault();
-          let F = V - 1;
-          F < 0 && (F = s.length - 1);
-          const j = s[F];
-          s[F].tagName.toLowerCase() === "nys-button" ? (await j.getButtonElement())?.focus() : j.focus();
+          let j = V - 1;
+          j < 0 && (j = s.length - 1);
+          const T = s[j];
+          s[j].tagName.toLowerCase() === "nys-button" ? (await T.getButtonElement())?.focus() : T.focus();
         } else
           h === p && (e.preventDefault(), c.tagName.toLowerCase() === "nys-button" ? (await c.getButtonElement())?.focus() : c.focus());
       }
@@ -5318,7 +5328,7 @@ Me([
   r({ type: Boolean, reflect: !0 })
 ], ce.prototype, "_twoBeforeLast");
 customElements.get("nys-pagination") || customElements.define("nys-pagination", ce);
-const l1 = u`
+const c1 = u`
   :host {
     /* Global Radiobutton Styles */
     --_nys-radiobutton-size: var(--nys-size-400, 32px);
@@ -5748,7 +5758,9 @@ const L = (Q = class extends y {
   }
   /********************** Core Keyboard & Click Logic **********************/
   _getAllRadios() {
-    return Array.from(this.querySelectorAll("nys-radiobutton"));
+    return Array.from(
+      this.querySelectorAll("nys-radiobutton")
+    );
   }
   // Arrow / Space / Enter navigation at group level
   async _handleKeyDown(e) {
@@ -5822,7 +5834,9 @@ const L = (Q = class extends y {
   async _handleInvalid(e) {
     if (e.preventDefault(), this._internals.validity.valueMissing) {
       this.showError = !0, this._manageRequire();
-      const t = this.querySelector("nys-radiobutton");
+      const t = this.querySelector(
+        "nys-radiobutton"
+      );
       if (t) {
         const o = this._internals.form;
         o ? Array.from(o.elements).find(
@@ -5858,7 +5872,7 @@ const L = (Q = class extends y {
       ></nys-errormessage>
     </div>`;
   }
-}, Q.VALID_SIZES = ["sm", "md"], Q.styles = l1, Q.formAssociated = !0, Q);
+}, Q.VALID_SIZES = ["sm", "md"], Q.styles = c1, Q.formAssociated = !0, Q);
 M([
   r({ type: String })
 ], L.prototype, "id", 2);
@@ -6018,7 +6032,7 @@ const Z = (g = class extends y {
       </label>
     `;
   }
-}, g.VALID_SIZES = ["sm", "md"], g.buttonGroup = {}, g.styles = l1, g);
+}, g.VALID_SIZES = ["sm", "md"], g.buttonGroup = {}, g.styles = c1, g);
 O([
   r({ type: Boolean, reflect: !0 })
 ], Z.prototype, "checked", 2);
@@ -6544,10 +6558,10 @@ const Vt = u`
     outline: none;
   }
 `;
-var Ht = Object.defineProperty, c1 = (a, e, t, o) => {
+var At = Object.defineProperty, d1 = (a, e, t, o) => {
   for (var s = void 0, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = i(e, t, s) || s);
-  return s && Ht(e, t, s), s;
+  return s && At(e, t, s), s;
 };
 const Qe = class Qe extends y {
   constructor() {
@@ -6588,14 +6602,14 @@ const Qe = class Qe extends y {
 };
 Qe.styles = Vt;
 let Ee = Qe;
-c1([
+d1([
   r({ type: String })
 ], Ee.prototype, "id");
-c1([
+d1([
   r({ type: String })
 ], Ee.prototype, "href");
 customElements.get("nys-skipnav") || customElements.define("nys-skipnav", Ee);
-const d1 = u`
+const h1 = u`
   :host {
     /* Anything that can be overridden should be defined here */
 
@@ -6949,10 +6963,10 @@ const d1 = u`
     }
   }
 `;
-var At = Object.defineProperty, be = (a, e, t, o) => {
+var Ht = Object.defineProperty, be = (a, e, t, o) => {
   for (var s = void 0, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = i(e, t, s) || s);
-  return s && At(e, t, s), s;
+  return s && Ht(e, t, s), s;
 };
 const Je = class Je extends y {
   constructor() {
@@ -7002,7 +7016,7 @@ const Je = class Je extends y {
     `;
   }
 };
-Je.styles = d1;
+Je.styles = h1;
 let G = Je;
 be([
   r({ type: Boolean, reflect: !0 })
@@ -7020,7 +7034,7 @@ be([
   r({ type: Boolean })
 ], G.prototype, "isCompactExpanded");
 be([
-  r({ type: Function })
+  r({ attribute: !1 })
 ], G.prototype, "onClick");
 be([
   r({ type: Number })
@@ -7129,7 +7143,7 @@ const e1 = class e1 extends y {
     `;
   }
 };
-e1.styles = d1;
+e1.styles = h1;
 let he = e1;
 Ve([
   r({ type: String })
@@ -7293,8 +7307,8 @@ var Pt = Object.defineProperty, Zt = Object.getOwnPropertyDescriptor, x = (a, e,
   return o && s && Pt(e, t, s), s;
 };
 let qt = 0;
-var T;
-const C = (T = class extends y {
+var R;
+const C = (R = class extends y {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this._tooltip = "", this.inverted = !1, this.form = null, this.maxlength = null, this.width = "full", this.rows = 4, this._resize = "vertical", this.showError = !1, this.errorMessage = "", this._hasUserInteracted = !1, this._internals = this.attachInternals();
@@ -7303,12 +7317,12 @@ const C = (T = class extends y {
     return this._resize;
   }
   set resize(e) {
-    this._resize = T.VALID_RESIZE.includes(
+    this._resize = R.VALID_RESIZE.includes(
       e
     ) ? e : "vertical";
   }
   async updated(e) {
-    await Promise.resolve(), e.has("width") && (this.width = T.VALID_WIDTHS.includes(this.width) ? this.width : "full"), e.has("rows") && (this.rows = this.rows ?? 4);
+    await Promise.resolve(), e.has("width") && (this.width = R.VALID_WIDTHS.includes(this.width) ? this.width : "full"), e.has("rows") && (this.rows = this.rows ?? 4);
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
@@ -7449,7 +7463,7 @@ ${this.value}</textarea
       </label>
     `;
   }
-}, T.VALID_WIDTHS = ["sm", "md", "lg", "full"], T.VALID_RESIZE = ["vertical", "none"], T.styles = It, T.formAssociated = !0, T);
+}, R.VALID_WIDTHS = ["sm", "md", "lg", "full"], R.VALID_RESIZE = ["vertical", "none"], R.styles = It, R.formAssociated = !0, R);
 x([
   r({ type: String })
 ], C.prototype, "id", 2);
@@ -7754,8 +7768,8 @@ var Tt = Object.defineProperty, Rt = Object.getOwnPropertyDescriptor, f = (a, e,
   return o && s && Tt(e, t, s), s;
 };
 let Nt = 0;
-var R;
-const v = (R = class extends y {
+var N;
+const v = (N = class extends y {
   // allows use of elementInternals' API
   constructor() {
     super(), this.id = "", this.name = "", this._type = "text", this.label = "", this.description = "", this.placeholder = "", this.value = "", this.disabled = !1, this.readonly = !1, this.required = !1, this.optional = !1, this._tooltip = "", this.form = null, this.pattern = "", this.maxlength = null, this.width = "full", this.step = null, this.min = null, this.max = null, this.inverted = !1, this.showError = !1, this.errorMessage = "", this.showPassword = !1, this._originalErrorMessage = "", this._hasUserInteracted = !1, this._maskPatterns = {
@@ -7766,7 +7780,7 @@ const v = (R = class extends y {
     return this._type;
   }
   set type(e) {
-    this._type = R.VALID_TYPES.includes(
+    this._type = N.VALID_TYPES.includes(
       e
     ) ? e : "text";
   }
@@ -7782,7 +7796,7 @@ const v = (R = class extends y {
   }
   // Ensure the "width" property is valid after updates
   async updated(e) {
-    if (e.has("width") && (await Promise.resolve(), this.width = R.VALID_WIDTHS.includes(this.width) ? this.width : "full"), e.has("disabled") && (this._validateButtonSlot("startButton"), this._validateButtonSlot("endButton")), e.has("type")) {
+    if (e.has("width") && (await Promise.resolve(), this.width = N.VALID_WIDTHS.includes(this.width) ? this.width : "full"), e.has("disabled") && (this._validateButtonSlot("startButton"), this._validateButtonSlot("endButton")), e.has("type")) {
       const t = this._maskPatterns[this.type], o = this.shadowRoot?.querySelector("input");
       if (o)
         if (t)
@@ -7980,7 +7994,7 @@ const v = (R = class extends y {
       </div>
     `;
   }
-}, R.VALID_TYPES = [
+}, N.VALID_TYPES = [
   "email",
   "number",
   "password",
@@ -7988,7 +8002,7 @@ const v = (R = class extends y {
   "tel",
   "text",
   "url"
-], R.VALID_WIDTHS = ["sm", "md", "lg", "full"], R.styles = Ut, R.formAssociated = !0, R);
+], N.VALID_WIDTHS = ["sm", "md", "lg", "full"], N.styles = Ut, N.formAssociated = !0, N);
 f([
   r({ type: String })
 ], v.prototype, "id", 2);
@@ -8331,12 +8345,12 @@ const jt = u`
     }
   }
 `;
-var Gt = Object.defineProperty, Yt = Object.getOwnPropertyDescriptor, N = (a, e, t, o) => {
+var Gt = Object.defineProperty, Yt = Object.getOwnPropertyDescriptor, F = (a, e, t, o) => {
   for (var s = o > 1 ? void 0 : o ? Yt(e, t) : e, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = (o ? i(e, t, s) : i(s)) || s);
   return o && s && Gt(e, t, s), s;
 };
-let Kt = 0;
+let Wt = 0;
 var ee;
 const U = (ee = class extends y {
   // allows use of elementInternals' API
@@ -8353,7 +8367,7 @@ const U = (ee = class extends y {
   }
   // Generate a unique ID if one is not provided
   connectedCallback() {
-    super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${Kt++}`);
+    super.connectedCallback(), this.id || (this.id = `nys-toggle-${Date.now()}-${Wt++}`);
   }
   /********************** Form Integration **********************/
   // Update the internals whenever `checked` or `value` changes.
@@ -8425,41 +8439,41 @@ const U = (ee = class extends y {
     `;
   }
 }, ee.VALID_SIZES = ["sm", "md"], ee.styles = jt, ee.formAssociated = !0, ee);
-N([
+F([
   r({ type: String })
 ], U.prototype, "id", 2);
-N([
+F([
   r({ type: String, reflect: !0 })
 ], U.prototype, "name", 2);
-N([
+F([
   r({ type: String })
 ], U.prototype, "value", 2);
-N([
+F([
   r({ type: String })
 ], U.prototype, "label", 2);
-N([
+F([
   r({ type: String })
 ], U.prototype, "description", 2);
-N([
+F([
   r({ type: String, reflect: !0 })
 ], U.prototype, "form", 2);
-N([
+F([
   r({ type: Boolean, reflect: !0 })
 ], U.prototype, "checked", 2);
-N([
+F([
   r({ type: Boolean, reflect: !0 })
 ], U.prototype, "disabled", 2);
-N([
+F([
   r({ type: Boolean })
 ], U.prototype, "noIcon", 2);
-N([
+F([
   r({ type: Boolean, reflect: !0 })
 ], U.prototype, "inverted", 2);
-N([
+F([
   r({ reflect: !0 })
 ], U.prototype, "size", 1);
-let Wt = U;
-customElements.get("nys-toggle") || customElements.define("nys-toggle", Wt);
+let Kt = U;
+customElements.get("nys-toggle") || customElements.define("nys-toggle", Kt);
 const Xt = u`
   :host {
     /* Global Tooltip Styles */
@@ -9134,7 +9148,7 @@ const ts = u`
       flex-direction: column;
     }
 
-    #nys-unavheader__translate:not([circle]),
+    #nys-unavheader__translate--desktop,
     #nys-unavheader__searchbar {
       display: none;
     }
@@ -9277,16 +9291,14 @@ const s1 = class s1 extends y {
   _getNysLogo() {
     return new DOMParser().parseFromString(ss, "image/svg+xml").documentElement;
   }
-  _toggleTrustbar() {
-    this.trustbarVisible = !this.trustbarVisible, this.trustbarVisible ? (this.languageVisible = !1, this.searchDropdownVisible = !1, this.updateComplete.then(() => {
-      this.shadowRoot?.getElementById(
-        "nys-unavheader__closetrustbar"
-      )?.focus();
-    })) : this.updateComplete.then(() => {
-      this.shadowRoot?.getElementById(
-        "nys-unavheader__know--inline"
-      )?.focus();
-    });
+  _toggleTrustbar(e) {
+    if (this.trustbarVisible = !this.trustbarVisible, this.trustbarVisible && (this.languageVisible = !1, this.searchDropdownVisible = !1), e === "no focus") return;
+    if (e === "nys-unavheader__know--inline" || !e) {
+      const o = this.trustbarVisible ? "nys-unavheader__closetrustbar" : "nys-unavheader__know--inline";
+      this.updateComplete.then(() => {
+        this.shadowRoot?.getElementById(o)?.focus();
+      });
+    }
   }
   _toggleLanguageList() {
     this.languageVisible = !this.languageVisible, this.languageVisible && (this.trustbarVisible = !1, this.searchDropdownVisible = !1);
@@ -9326,7 +9338,9 @@ const s1 = class s1 extends y {
       <header class="nys-unavheader">
         <div
           class="nys-unavheader__trustbar wrapper"
-          @click="${this._toggleTrustbar}"
+          @click="${(e) => {
+      e.target.closest("nys-button") || this._toggleTrustbar("no focus");
+    }}"
         >
           <div class="content">
             <label id="nys-unavheader__official"
@@ -9339,8 +9353,8 @@ const s1 = class s1 extends y {
               variant="ghost"
               size="sm"
               suffixIcon="slotted"
-              @keydown="${(e) => {
-      (e.code === "Enter" || e.code === "Space" || e.key === "Enter" || e.key === " ") && this._toggleTrustbar();
+              @nys-click="${(e) => {
+      e.preventDefault(), e.stopPropagation(), this._toggleTrustbar("nys-unavheader__know");
     }}"
             >
               <nys-icon
@@ -9364,7 +9378,7 @@ const s1 = class s1 extends y {
               icon="close"
               size="sm"
               ariaLabel="Close this notice"
-              @nys-click="${this._toggleTrustbar}"
+              @nys-click="${() => this._toggleTrustbar("nys-unavheader__know--inline")}"
             ></nys-button>
             <div class="nys-unavheader__messagewrapper">
               <div
@@ -9414,7 +9428,7 @@ const s1 = class s1 extends y {
                 variant="ghost"
                 size="sm"
                 suffixIcon="slotted"
-                @nys-click="${this._toggleTrustbar}"
+                @nys-click="${() => this._toggleTrustbar("nys-unavheader__know--inline")}"
               >
                 <nys-icon
                   slot="suffix-icon"
@@ -9706,7 +9720,7 @@ const rs = u`
     font-weight: var(--_nys-globalheader-font-weight);
     line-height: var(--_nys-globalheader-line-height);
     letter-spacing: var(--_nys-globalheader-letter-spacing);
-    text-wrap: wrap;
+    overflow-wrap: break-word; /* note: we use this bc text-wrap: wrap; is not a standard CSS property (yet). */
   }
 
   .nys-globalheader__agencyName {
@@ -9868,7 +9882,7 @@ const rs = u`
     }
   }
 `;
-var ns = Object.defineProperty, He = (a, e, t, o) => {
+var ns = Object.defineProperty, Ae = (a, e, t, o) => {
   for (var s = void 0, n = a.length - 1, i; n >= 0; n--)
     (i = a[n]) && (s = i(e, t, s) || s);
   return s && ns(e, t, s), s;
@@ -9901,18 +9915,18 @@ const o1 = class o1 extends y {
       t.forEach((i) => {
         if (i.nodeType === Node.ELEMENT_NODE) {
           const c = i.cloneNode(!0), p = i.cloneNode(!0);
-          ["script", "iframe", "object", "embed, img"].forEach((F) => {
-            c.querySelectorAll(F).forEach((j) => j.remove());
+          ["script", "iframe", "object", "embed, img"].forEach((j) => {
+            c.querySelectorAll(j).forEach((T) => T.remove());
           });
-          const V = (F) => {
-            const j = Array.from(F.querySelectorAll("a"));
+          const V = (j) => {
+            const T = Array.from(j.querySelectorAll("a"));
             let Se = {
               li: null,
               length: 0
             };
-            j.forEach((Ae) => {
-              const h1 = Ae.getAttribute("href"), $e = this._normalizePath(h1);
-              $e && ($e === "/" && n === "/" ? Se = { li: Ae.closest("li"), length: 1 } : n?.startsWith($e) && $e.length > Se.length && (Se = { li: Ae.closest("li"), length: $e.length }), j.forEach((y1) => y1.closest("li")?.classList.remove("active")), Se.li?.classList.add("active"));
+            T.forEach((He) => {
+              const i1 = He.getAttribute("href"), $e = this._normalizePath(i1);
+              $e && ($e === "/" && n === "/" ? Se = { li: He.closest("li"), length: 1 } : n?.startsWith($e) && $e.length > Se.length && (Se = { li: He.closest("li"), length: $e.length }), T.forEach((y1) => y1.closest("li")?.classList.remove("active")), Se.li?.classList.add("active"));
             });
           };
           V(c), V(p), o.appendChild(c), s.appendChild(p), i.remove();
@@ -10011,19 +10025,19 @@ const o1 = class o1 extends y {
 };
 o1.styles = rs;
 let ye = o1;
-He([
+Ae([
   r({ type: String })
 ], ye.prototype, "appName");
-He([
+Ae([
   r({ type: String })
 ], ye.prototype, "agencyName");
-He([
+Ae([
   r({ type: String })
 ], ye.prototype, "homepageLink");
-He([
+Ae([
   $()
 ], ye.prototype, "slotHasContent");
-He([
+Ae([
   $()
 ], ye.prototype, "isMobileMenuOpen");
 customElements.get("nys-globalheader") || customElements.define("nys-globalheader", ye);
@@ -10523,7 +10537,7 @@ export {
   he as NysStepper,
   Ot as NysTextarea,
   Ft as NysTextinput,
-  Wt as NysToggle,
+  Kt as NysToggle,
   se as NysTooltip,
   Oe as NysUnavFooter,
   Y as NysUnavHeader
