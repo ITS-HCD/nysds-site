@@ -44,7 +44,7 @@ The NYS Design System is designed to speed up and standardize UI design. Here’
 ## How to Start Designing with The NYS Design System
 
 - Search for “NYS Design System” in the Figma Assets panel and activate the libraries.
-- Use the project template to start with the correct agency theming and design variables.
+- Use the [Design System project template](https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7)to start with the correct agency theming and design variables.
 - Leverage components with built-in properties and variants to speed up your workflow.
 
 ## Next Steps: Learn More About the Design System
