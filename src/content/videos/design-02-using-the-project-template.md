@@ -8,7 +8,7 @@ duration: 12:34
 video_url: kR0whCjK9E8
 tags: resources,projects,starter template
 ---
-The NYS Design System's Figma project template gets you started quickly with default NYS headers, footers, and responsive layout tools already configured.
+The [NYS Design System's Figma project template](https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7) helps you get started quickly with a consistent Figma file structure. It includes brief instructions for each of the major features of the design system's Figma Library including how to insert the Screen Template component; which should be the starting point for any NYS screen in Figma.
 
 In this video:
 - Finding and duplicating the template
