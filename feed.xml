@@ -7,6 +7,65 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.11.2</title>
+      <link>https://designsystem.ny.gov/updates/1.11.2-release/</link>
+      <description><![CDATA[<h2>Notable bug fixes</h2>
+<ul>
+<li><code>&lt;nys-fileinput&gt;</code> used to double click on keyboard. This is no longer the case, a single click is all you will get now!</li>
+<li>Updated our <a href="https://github.com/ITS-HCD/nysds/blob/main/LICENSE.md">LICENSE.md</a>. We now identify Lit.dev and Material icon licenses.</li>
+<li>Our consoles were filled with warnings, NO LONGER! We fixed ALL browser warnings in Web Test Runner and lit-analyze tests.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/greenbergb">Ben Greenberg</a> exterminated these bugs, cleared the console, and updated our license.</p>
+<h2>Notable Figma changes</h2>
+<ul>
+<li><strong>Image component</strong> - Decorative property added for accessibility.</li>
+<li><strong>Screen template instructions</strong> - Added detailed guidance for using the Screen Template component, including explanations of fidelity mode, and instructions on adjusting the size and theme.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> made these changes.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>None</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.11.2">See the full developer release notes for v.1.11.2 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>Notable bug fixes</h2>
+<ul>
+<li><code>&lt;nys-fileinput&gt;</code> used to double click on keyboard. This is no longer the case, a single click is all you will get now!</li>
+<li>Updated our <a href="https://github.com/ITS-HCD/nysds/blob/main/LICENSE.md">LICENSE.md</a>. We now identify Lit.dev and Material icon licenses.</li>
+<li>Our consoles were filled with warnings, NO LONGER! We fixed ALL browser warnings in Web Test Runner and lit-analyze tests.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Robert Chen</a>, <a href="https://github.com/emilygorelik">Emily Gorelik</a>, and <a href="https://github.com/greenbergb">Ben Greenberg</a> exterminated these bugs, cleared the console, and updated our license.</p>
+<h2>Notable Figma changes</h2>
+<ul>
+<li><strong>Image component</strong> - Decorative property added for accessibility.</li>
+<li><strong>Screen template instructions</strong> - Added detailed guidance for using the Screen Template component, including explanations of fidelity mode, and instructions on adjusting the size and theme.</li>
+</ul>
+<p><a href="https://github.com/novacat35">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> made these changes.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>None</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.11.2">See the full developer release notes for v.1.11.2 →</a></p>
+]]></content>
+      <pubDate>Thu, 13 Nov 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.11.2-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.11.0 “Gothics”</title>
       <link>https://designsystem.ny.gov/updates/1.11.0-release/</link>
       <description><![CDATA[<!-- SPOOKY RELEASE!!! 👻 -->

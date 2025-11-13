@@ -1,5 +1,5 @@
 (function(u,pe){typeof exports=="object"&&typeof module<"u"?pe(exports):typeof define=="function"&&define.amd?define(["exports"],pe):(u=typeof globalThis<"u"?globalThis:u||self,pe(u.NYSDS={}))})(this,(function(u){"use strict";/*!
-   * New York State Design System (v1.11.1)
+   * New York State Design System (v1.11.2)
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -592,7 +592,7 @@
     height: 100%;
     fill: currentColor;
   }
-`;var W1=Object.defineProperty,Q=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&W1(e,t,s),s};let Y1=0;const _t=class _t extends p{constructor(){super(...arguments),this.id="",this.ariaLabel="",this.image="",this.initials="",this.icon="",this.color="",this.interactive=!1,this.disabled=!1,this.lazy=!1,this._slotHasContent=!0}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${Y1++}`)}firstUpdated(){this._checkSlotContent()}async _checkSlotContent(){const e=this.shadowRoot?.querySelector("slot");if(!e){this._slotHasContent=!1;return}await Promise.resolve();const t=e.assignedNodes({flatten:!0}).filter(o=>o.nodeType===Node.ELEMENT_NODE||o.nodeType===Node.TEXT_NODE&&o.textContent?.trim());this._slotHasContent=t.length>0}getContrastForeground(){const e="var(--nys-color-ink, #000)",t="var(--nys-color-ink-reverse, #fff)",o="var(--nys-color-text, #000)",s="var(--nys-color-text-reverse, #fff)";if(!this.color)return;const r=document.createElement("div");r.style.color=this.color,document.body.appendChild(r);const n=getComputedStyle(r).color;document.body.removeChild(r);const c=n.match(/\d+/g);if(!c)return;const d=Number(c[0]),h=Number(c[1]),f=Number(c[2]),w=(.299*d+.587*h+.114*f)/255<.5;return this.initials?.length>0?w?s:o:w?t:e}render(){return l`
+`;var W1=Object.defineProperty,Q=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&W1(e,t,s),s};let Y1=0;const _t=class _t extends p{constructor(){super(...arguments),this.id="",this.ariaLabel="",this.image="",this.initials="",this.icon="",this.color="",this.interactive=!1,this.disabled=!1,this.lazy=!1,this._slotHasContent=!1}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-avatar-${Date.now()}-${Y1++}`)}async _handleSlotChange(){const e=this.shadowRoot?.querySelector("slot");if(!e){this._slotHasContent=!1;return}await Promise.resolve();const t=e.assignedNodes({flatten:!0}).filter(o=>o.nodeType===Node.ELEMENT_NODE||o.nodeType===Node.TEXT_NODE&&o.textContent?.trim());this._slotHasContent=t.length>0}getContrastForeground(){const e="var(--nys-color-ink, #000)",t="var(--nys-color-ink-reverse, #fff)",o="var(--nys-color-text, #000)",s="var(--nys-color-text-reverse, #fff)";if(!this.color)return;const r=document.createElement("div");r.style.color=this.color,document.body.appendChild(r);const n=getComputedStyle(r).color;document.body.removeChild(r);const c=n.match(/\d+/g);if(!c)return;const d=Number(c[0]),h=Number(c[1]),f=Number(c[2]),w=(.299*d+.587*h+.114*f)/255<.5;return this.initials?.length>0?w?s:o:w?t:e}render(){return l`
       <label class="nys-avatar" id=${this.id}>
         <div class="nys-avatar__content">
           <div
@@ -614,14 +614,13 @@
                     class="nys-avatar__initials"
                     aria-hidden="true"
                     >${this.initials}</span
-                  >`:this._slotHasContent?l`<div part="nys-avatar__icon">
-                      <slot></slot>
-                    </div>`:l`<div part="nys-avatar__icon">
-                      <nys-icon
-                        label="nys-avatar__icon"
-                        name=${this.icon?.length>0?this.icon:"account_circle"}
-                      ></nys-icon>
-                    </div>`}
+                  >`:l`<div part="nys-avatar__icon">
+                    <slot @slotchange=${this._handleSlotChange}></slot>
+                    ${this._slotHasContent?null:l`<nys-icon
+                          label="nys-avatar__icon"
+                          name=${this.icon?.length>0?this.icon:"account_circle"}
+                        ></nys-icon>`}
+                  </div>`}
           </div>
         </div>
       </label>
@@ -666,8 +665,12 @@
     --_nys-button-height: var(--nys-size-600, 48px);
     --_nys-button-border-radius--start: var(--nys-radius-xl, 12px);
     --_nys-button-border-radius--end: var(--nys-radius-xl, 12px);
-    --_nys-button-padding--y: var(--nys-space-150, 12px);
-    --_nys-button-padding--x: var(--nys-space-250, 20px);
+    --_nys-button-padding--y: calc(
+      var(--nys-space-150, 12px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
+    --_nys-button-padding--x: calc(
+      var(--nys-space-250, 20px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
     --_nys-button-gap: var(--nys-space-100, 8px);
     --_nys-button-border-width: var(--nys-border-width-md, 2px);
     --_nys-button-outline-width: var(--nys-border-width-md, 2px);
@@ -741,18 +744,30 @@
   /* Sizes */
   :host([size="sm"]) {
     --_nys-button-height: var(--nys-size-500, 40px);
-    --_nys-button-padding--y: var(--nys-space-100, 8px);
-    --_nys-button-padding--x: var(--nys-space-200, 16px);
+    --_nys-button-padding--y: calc(
+      var(--nys-space-100, 8px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
+    --_nys-button-padding--x: calc(
+      var(--nys-space-200, 16px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
   }
   :host([size="md"]) {
     --_nys-button-height: var(--nys-size-600, 48px);
-    --_nys-button-padding--y: var(--nys-space-150, 12px);
-    --_nys-button-padding--x: var(--nys-space-250, 20px);
+    --_nys-button-padding--y: calc(
+      var(--nys-space-150, 12px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
+    --_nys-button-padding--x: calc(
+      var(--nys-space-250, 20px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
   }
   :host([size="lg"]) {
     --_nys-button-height: var(--nys-size-700, 56px);
-    --_nys-button-padding--y: var(--nys-space-200, 16px);
-    --_nys-button-padding--x: var(--nys-space-300, 24px);
+    --_nys-button-padding--y: calc(
+      var(--nys-space-200, 16px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
+    --_nys-button-padding--x: calc(
+      var(--nys-space-300, 24px) - var(--nys-border-width-md, 2px)
+    ); /* remove calc when SASS'd */
   }
   :host([fullWidth]) {
     --_nys-button-width: 100%;
@@ -1232,7 +1247,6 @@
   .nys-button {
     width: var(--_nys-button-width);
     min-height: var(--_nys-button-height);
-    height: var(--_nys-button-height);
     /* set every corner individually */
     border-start-start-radius: var(--_nys-button-border-radius--start);
     border-end-start-radius: var(--_nys-button-border-radius--start);
@@ -2368,8 +2382,7 @@
             ${this._dragActive?"drag-active":""}
             ${this._isDropDisabled?"disabled":""}
             ${this.showError&&!this._isDropDisabled?"error":""}"
-            @click=${this._isDropDisabled?null:this._openFileDialog}
-            @keydown=${e=>!this._isDropDisabled&&(e.key==="Enter"||e.key===" ")&&this._openFileDialog()}
+            @click=${this._isDropDisabled?null:e=>{e.target.closest("nys-button")||this._openFileDialog()}}
             @dragover=${this._isDropDisabled?null:this._onDragOver}
             @dragleave=${this._isDropDisabled?null:this._onDragLeave}
             @drop=${this._isDropDisabled?null:this._onDrop}
@@ -2383,8 +2396,7 @@
                     ariaLabel=${this._buttonAriaLabel}
                     ariaDescription=${this._buttonAriaDescription}
                     ?disabled=${this._isDropDisabled}
-                    @nys-click=${e=>{e.stopPropagation(),this._openFileDialog()}}
-                    @click=${e=>e.stopPropagation()}
+                    @nys-click="${e=>{e.preventDefault(),e.stopPropagation(),this._openFileDialog()}}"
                   ></nys-button>
                   <p>or drag here</p>`}
           </div>`:l`<nys-button
@@ -3161,7 +3173,7 @@
                 ?inverted=${this.inverted}
               >
                 <div class="nys-label__tooltip-icon">
-                  <nys-icon name="info" size="3xl"></nys-icon>
+                  <nys-icon name="info" size="4xl"></nys-icon>
                 </div>
               </nys-tooltip>`:""}
         </div>
@@ -3320,7 +3332,7 @@
       align-items: center;
     }
   }
-`;var Ds=Object.defineProperty,Ms=Object.getOwnPropertyDescriptor,be=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ms(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Ds(e,t,s),s};let zs=0;const oe=(me=class extends p{constructor(){super(),this.id="",this.heading="",this.subheading="",this.open=!1,this.mandatory=!1,this._width="md",this._actionButtonSlot=null,this._prevFocusedElement=null,this._originalBodyOverflow=null,this.hasBodySlots=!1,this.hasActionSlots=!1}get width(){return this._width}set width(e){this._width=me.VALID_WIDTHS.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-{{componentName}}-${Date.now()}-${zs++}`),window.addEventListener("resize",()=>this._updateSlottedButtonWidth()),window.addEventListener("keydown",e=>this._handleKeydown(e))}disconnectedCallback(){super.disconnectedCallback(),this._restoreBodyScroll(),window.removeEventListener("keydown",e=>this._handleKeydown(e))}firstUpdated(){this._handleBodySlotChange(),this._handleActionSlotChange()}async updated(e){e.has("open")&&(this.open?(this._hideBodyScroll(),this._dispatchOpenEvent(),await this.updateComplete,this._savePrevFocused(),this._focusOnModal(),this._updateDismissAria()):(this._restorePrevFocused(),this._restoreBodyScroll(),this._dispatchCloseEvent(),this._updateDismissAria()))}_hideBodyScroll(){this._originalBodyOverflow===null&&(this._originalBodyOverflow=document.body.style.overflow),document.body.style.overflow="hidden"}_restoreBodyScroll(){this._originalBodyOverflow!==null&&(document.body.style.overflow=this._originalBodyOverflow,this._originalBodyOverflow=null)}_savePrevFocused(){this._prevFocusedElement=document.activeElement}_focusOnModal(){this.shadowRoot?.querySelector(".nys-modal")?.focus()}async _restorePrevFocused(){const e=this._prevFocusedElement;if(e&&e.tagName.toLowerCase()==="nys-button"){const o=await e.getButtonElement();if(o){o.focus();return}}else this._prevFocusedElement?.focus();this._prevFocusedElement=null}async _handleBodySlotChange(){const e=this.shadowRoot?.querySelector("slot");e&&(this.hasBodySlots=e.assignedNodes({flatten:!0}).some(t=>t.nodeType===Node.ELEMENT_NODE||t.textContent?.trim()))}async _handleActionSlotChange(){const e=this.shadowRoot?.querySelector('slot[name="actions"]');e&&(this.hasActionSlots=e.assignedNodes({flatten:!0}).some(t=>t.nodeType===Node.ELEMENT_NODE||t.textContent?.trim()),this._actionButtonSlot=e,this._updateSlottedButtonWidth())}_updateSlottedButtonWidth(){if(!this._actionButtonSlot)return;const e=window.innerWidth<=480;this._actionButtonSlot.assignedElements().forEach(t=>{t.querySelectorAll("nys-button").forEach(o=>{e?o?.setAttribute("fullWidth",""):o?.removeAttribute("fullWidth")})})}_dispatchOpenEvent(){this.dispatchEvent(new CustomEvent("nys-open",{detail:{id:this.id},bubbles:!0,composed:!0}))}_dispatchCloseEvent(){this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id},bubbles:!0,composed:!0}))}_getAriaDescribedBy(){const e=[];return this.subheading&&e.push(`${this.id}-subheading`),this.hasBodySlots&&e.push(`${this.id}-desc`),e.join(" ")}_updateDismissAria(){const e=this.shadowRoot?.querySelector("nys-button");e&&(e.setAttribute("ariaLabel"," "),this.open&&setTimeout(()=>{e.setAttribute("ariaLabel","Close this window")},100))}async _handleKeydown(e){if(this.open&&(e.key==="Escape"&&!this.mandatory&&(e.preventDefault(),this._closeModal()),e.key==="Tab")){const t=this.shadowRoot?.querySelector(".nys-modal");if(!t)return;const o='a[href], area[href], button:not([disabled]), details, iframe, object, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [contentEditable="true"], [tabindex]:not([tabindex^="-"])',s=[],r=t.querySelector("nys-button");r&&s.push(r);const n=Array.from(t.querySelectorAll("slot"));for(const c of n){const d=c.assignedElements({flatten:!0});for(const h of d)h instanceof HTMLElement&&h.matches(o)&&s.push(h),h.querySelectorAll("nys-button").forEach(f=>{s.push(f)})}if(s.length>0){const c=s[0],d=s[s.length-1];let h=document.activeElement,f=s.indexOf(h);if(e.shiftKey){e.preventDefault();let v=f-1;v<0&&(v=s.length-1);const w=s[v];s[v].tagName.toLowerCase()==="nys-button"?(await w.getButtonElement())?.focus():w.focus()}else h===d&&(e.preventDefault(),c.tagName.toLowerCase()==="nys-button"?(await c.getButtonElement())?.focus():c.focus())}}}_closeModal(){this.open=!1,this._dispatchCloseEvent()}render(){return this.open?l`<div
+`;var Ds=Object.defineProperty,Ms=Object.getOwnPropertyDescriptor,be=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ms(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Ds(e,t,s),s};let zs=0;const oe=(me=class extends p{constructor(){super(),this.id="",this.heading="",this.subheading="",this.open=!1,this.mandatory=!1,this._width="md",this._actionButtonSlot=null,this._prevFocusedElement=null,this._originalBodyOverflow=null,this.hasBodySlots=!1,this.hasActionSlots=!1}get width(){return this._width}set width(e){this._width=me.VALID_WIDTHS.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-{{componentName}}-${Date.now()}-${zs++}`),window.addEventListener("resize",()=>this._updateSlottedButtonWidth()),window.addEventListener("keydown",e=>this._handleKeydown(e))}disconnectedCallback(){super.disconnectedCallback(),this._restoreBodyScroll(),window.removeEventListener("keydown",e=>this._handleKeydown(e))}async updated(e){e.has("open")&&(this.open?(this._hideBodyScroll(),this._dispatchOpenEvent(),await this.updateComplete,this._savePrevFocused(),this._focusOnModal(),this._updateDismissAria()):(this._restorePrevFocused(),this._restoreBodyScroll(),this._dispatchCloseEvent(),this._updateDismissAria()))}_hideBodyScroll(){this._originalBodyOverflow===null&&(this._originalBodyOverflow=document.body.style.overflow),document.body.style.overflow="hidden"}_restoreBodyScroll(){this._originalBodyOverflow!==null&&(document.body.style.overflow=this._originalBodyOverflow,this._originalBodyOverflow=null)}_savePrevFocused(){this._prevFocusedElement=document.activeElement}_focusOnModal(){this.shadowRoot?.querySelector(".nys-modal")?.focus()}async _restorePrevFocused(){const e=this._prevFocusedElement;if(e&&e.tagName.toLowerCase()==="nys-button"){const o=await e.getButtonElement();if(o){o.focus();return}}else this._prevFocusedElement?.focus();this._prevFocusedElement=null}async _handleBodySlotChange(){const e=this.shadowRoot?.querySelector("slot");e&&(this.hasBodySlots=e.assignedNodes({flatten:!0}).some(t=>t.nodeType===Node.ELEMENT_NODE||t.textContent?.trim()))}async _handleActionSlotChange(){const e=this.shadowRoot?.querySelector('slot[name="actions"]');e&&(this.hasActionSlots=e.assignedNodes({flatten:!0}).some(t=>t.nodeType===Node.ELEMENT_NODE||t.textContent?.trim()),this._actionButtonSlot=e,this._updateSlottedButtonWidth())}_updateSlottedButtonWidth(){if(!this._actionButtonSlot)return;const e=window.innerWidth<=480;this._actionButtonSlot.assignedElements().forEach(t=>{t.querySelectorAll("nys-button").forEach(o=>{e?o?.setAttribute("fullWidth",""):o?.removeAttribute("fullWidth")})})}_dispatchOpenEvent(){this.dispatchEvent(new CustomEvent("nys-open",{detail:{id:this.id},bubbles:!0,composed:!0}))}_dispatchCloseEvent(){this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id},bubbles:!0,composed:!0}))}_getAriaDescribedBy(){const e=[];return this.subheading&&e.push(`${this.id}-subheading`),this.hasBodySlots&&e.push(`${this.id}-desc`),e.join(" ")}_updateDismissAria(){const e=this.shadowRoot?.querySelector("nys-button");e&&(e.setAttribute("ariaLabel"," "),this.open&&setTimeout(()=>{e.setAttribute("ariaLabel","Close this window")},100))}async _handleKeydown(e){if(this.open&&(e.key==="Escape"&&!this.mandatory&&(e.preventDefault(),this._closeModal()),e.key==="Tab")){const t=this.shadowRoot?.querySelector(".nys-modal");if(!t)return;const o='a[href], area[href], button:not([disabled]), details, iframe, object, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [contentEditable="true"], [tabindex]:not([tabindex^="-"])',s=[],r=t.querySelector("nys-button");r&&s.push(r);const n=Array.from(t.querySelectorAll("slot"));for(const c of n){const d=c.assignedElements({flatten:!0});for(const h of d)h instanceof HTMLElement&&h.matches(o)&&s.push(h),h.querySelectorAll("nys-button").forEach(f=>{s.push(f)})}if(s.length>0){const c=s[0],d=s[s.length-1];let h=document.activeElement,f=s.indexOf(h);if(e.shiftKey){e.preventDefault();let v=f-1;v<0&&(v=s.length-1);const w=s[v];s[v].tagName.toLowerCase()==="nys-button"?(await w.getButtonElement())?.focus():w.focus()}else h===d&&(e.preventDefault(),c.tagName.toLowerCase()==="nys-button"?(await c.getButtonElement())?.focus():c.focus())}}}_closeModal(){this.open=!1,this._dispatchCloseEvent()}render(){return this.open?l`<div
           id=${this.id}
           class="nys-modal-overlay"
           role="dialog"
@@ -3502,7 +3514,7 @@
       display: none;
     }
   }
-`;var Hs=Object.defineProperty,Ge=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Hs(e,t,s),s};let Bs=0;const kt=class kt extends p{constructor(){super(),this.id="",this.name="",this.currentPage=1,this.totalPages=1,this._twoBeforeLast=!1}updated(e){super.updated(e),this.currentPage=this._clampPage(this.currentPage),this._twoBeforeLast=this.currentPage===this.totalPages-2}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-pagination-${Date.now()}-${Bs++}`)}_clampPage(e){return e<1?1:e>this.totalPages?this.totalPages:e}renderPageButtons(){const e=[],t=(d,h)=>{e.push(l`
+`;var Hs=Object.defineProperty,Ge=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Hs(e,t,s),s};let Bs=0;const kt=class kt extends p{constructor(){super(),this.id="",this.name="",this.currentPage=1,this.totalPages=1,this._twoBeforeLast=!1}willUpdate(e){if(e.has("currentPage")||e.has("totalPages")){const t=this._clampPage(this.currentPage);t!==this.currentPage&&(this.currentPage=t);const o=this.currentPage===this.totalPages-2;o!==this._twoBeforeLast&&(this._twoBeforeLast=o)}}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-pagination-${Date.now()}-${Bs++}`)}_clampPage(e){return e<1?1:e>this.totalPages?this.totalPages:e}renderPageButtons(){const e=[],t=(d,h)=>{e.push(l`
         <nys-button
           label=${String(d)}
           ariaLabel="Page ${d}"
@@ -3908,7 +3920,7 @@
     overflow: hidden;
     border: 0;
   }
-`;var Is=Object.defineProperty,Ps=Object.getOwnPropertyDescriptor,H=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ps(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Is(e,t,s),s};let Os=0;const D=(de=class extends p{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.tile=!1,this._tooltip="",this.inverted=!1,this.form=null,this.selectedValue=null,this._slottedDescriptionText="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=de.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${Os++}`),this.addEventListener("nys-change",this._handleRadioButtonChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("nys-change",this._handleRadioButtonChange),this.removeEventListener("invalid",this._handleInvalid)}async firstUpdated(){this._initializeCheckedRadioValue(),this._setValue(),this._setRadioButtonRequire(),this._updateRadioButtonsSize(),this._updateRadioButtonsTile(),this._updateRadioButtonsShowError(),this._getSlotDescriptionForAria(),await this.updateComplete,this._initializeChildAttributes(),this._updateGroupTabIndex()}updated(e){(e.has("required")||e.has("selectedValue"))&&this._manageRequire(),e.has("size")&&this._updateRadioButtonsSize(),e.has("tile")&&this._updateRadioButtonsTile(),e.has("inverted")&&this._updateRadioButtonsInvert(),e.has("showError")&&this._updateRadioButtonsShowError(),e.has("form")&&this._updateRadioButtonsForm()}formResetCallback(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.formResetUpdate()})}_setValue(){this._internals.setFormValue(this.selectedValue)}_setRadioButtonRequire(){this.querySelectorAll("nys-radiobutton").forEach((t,o)=>{this.required&&o===0&&t.setAttribute("required","required")})}async _manageRequire(){const e=this.errorMessage||"Please select an option.",o=Array.from(this.querySelectorAll("nys-radiobutton"))[0];o&&(this.required&&!this.selectedValue?this._internals.setValidity({valueMissing:!0},e,o):(this.showError=!1,this._internals.setValidity({},"",o)))}checkValidity(){const e=Array.from(this.querySelectorAll("nys-radiobutton"));return!this.required||e.some(o=>o.checked)}_initializeCheckedRadioValue(){const e=this.querySelector("nys-radiobutton[checked]");e&&(this.selectedValue=e.getAttribute("value"),this._internals.setFormValue(this.selectedValue))}_getAllRadios(){return Array.from(this.querySelectorAll("nys-radiobutton"))}async _handleKeyDown(e){if(!["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," ","Enter"].includes(e.key))return;e.preventDefault();const o=this._getAllRadios().filter(h=>!h.disabled),s=o.find(h=>h.checked)||o[0],r=e.key===" "||e.key==="Enter"?0:["ArrowUp","ArrowLeft"].includes(e.key)?-1:1;let n=o.indexOf(s)+r;n<0&&(n=o.length-1),n>=o.length&&(n=0);const c=o[n];(await c.getInputElement())?.click(),this._updateGroupTabIndex(),c.focus()}_updateGroupTabIndex(){const e=this._getAllRadios(),t=e.find(o=>o.checked)||e[0];e.forEach(o=>{o.disabled?o.tabIndex=-1:o.tabIndex=o===t?0:-1,o.setAttribute("aria-checked",o.checked?"true":"false"),o.setAttribute("aria-disabled",o.disabled?"true":"false"),o.setAttribute("aria-required",this.required?"true":"false")})}_initializeChildAttributes(){this._getAllRadios().forEach(t=>{t.setAttribute("role","radio"),t.setAttribute("aria-checked",String(t.checked)),t.setAttribute("aria-required",String(t.required)),t.setAttribute("aria-disabled",String(t.disabled)),t.setAttribute("tabindex","-1")})}_updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.setAttribute("size",this.size)})}_updateRadioButtonsTile(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.tile?t.toggleAttribute("tile",!0):t.removeAttribute("tile")})}_updateRadioButtonsInvert(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.inverted?t.toggleAttribute("inverted",!0):t.removeAttribute("inverted")})}_updateRadioButtonsShowError(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError?t.setAttribute("showError",""):t.removeAttribute("showError")})}_updateRadioButtonsForm(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError&&this.form!==null?t.setAttribute("form",this.form):t.removeAttribute("form")})}_getSlotDescriptionForAria(){const t=this.shadowRoot?.querySelector('slot[name="description"]')?.assignedNodes({flatten:!0})||[];this._slottedDescriptionText=t.map(o=>o.textContent?.trim()).filter(Boolean).join(", ")}_handleRadioButtonChange(e){const t=e,{name:o,value:s}=t.detail;this.name=o,this.selectedValue=s,this._internals.setFormValue(this.selectedValue),this._updateGroupTabIndex()}async _handleInvalid(e){if(e.preventDefault(),this._internals.validity.valueMissing){this.showError=!0,this._manageRequire();const t=this.querySelector("nys-radiobutton");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&(t.focus(),t.classList.add("active-focus")):(t.focus(),t.classList.add("active-focus"))}}}render(){return l`<div class="nys-radiogroup">
+`;var Is=Object.defineProperty,Ps=Object.getOwnPropertyDescriptor,H=(a,e,t,o)=>{for(var s=o>1?void 0:o?Ps(e,t):e,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=(o?n(e,t,s):n(s))||s);return o&&s&&Is(e,t,s),s};let Os=0;const D=(de=class extends p{constructor(){super(),this.id="",this.name="",this.required=!1,this.optional=!1,this.showError=!1,this.errorMessage="",this.label="",this.description="",this.tile=!1,this._tooltip="",this.inverted=!1,this.form=null,this.selectedValue=null,this._slottedDescriptionText="",this._size="md",this._internals=this.attachInternals()}get size(){return this._size}set size(e){this._size=de.VALID_SIZES.includes(e)?e:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-radiogroup-${Date.now()}-${Os++}`),this.addEventListener("nys-change",this._handleRadioButtonChange),this.addEventListener("invalid",this._handleInvalid)}disconnectedCallback(){super.disconnectedCallback(),this.removeEventListener("nys-change",this._handleRadioButtonChange),this.removeEventListener("invalid",this._handleInvalid)}async firstUpdated(){await this.updateComplete,this._initializeCheckedRadioValue(),this._setValue(),this._setRadioButtonRequire(),this._updateRadioButtonsSize(),this._updateRadioButtonsTile(),this._updateRadioButtonsShowError(),this._getSlotDescriptionForAria(),this._initializeChildAttributes(),this._updateGroupTabIndex()}updated(e){(e.has("required")||e.has("selectedValue"))&&this._manageRequire(),e.has("size")&&this._updateRadioButtonsSize(),e.has("tile")&&this._updateRadioButtonsTile(),e.has("inverted")&&this._updateRadioButtonsInvert(),e.has("showError")&&this._updateRadioButtonsShowError(),e.has("form")&&this._updateRadioButtonsForm()}formResetCallback(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.formResetUpdate()})}_setValue(){this._internals.setFormValue(this.selectedValue)}_setRadioButtonRequire(){this.querySelectorAll("nys-radiobutton").forEach((t,o)=>{this.required&&o===0&&t.setAttribute("required","required")})}async _manageRequire(){const e=this.errorMessage||"Please select an option.",o=Array.from(this.querySelectorAll("nys-radiobutton"))[0];o&&(this.required&&!this.selectedValue?this._internals.setValidity({valueMissing:!0},e,o):(this.showError=!1,this._internals.setValidity({},"",o)))}checkValidity(){const e=Array.from(this.querySelectorAll("nys-radiobutton"));return!this.required||e.some(o=>o.checked)}_initializeCheckedRadioValue(){const e=this.querySelector("nys-radiobutton[checked]");e&&(this.selectedValue=e.getAttribute("value"),this._internals.setFormValue(this.selectedValue))}_getAllRadios(){return Array.from(this.querySelectorAll("nys-radiobutton"))}async _handleKeyDown(e){if(!["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," ","Enter"].includes(e.key))return;e.preventDefault();const o=this._getAllRadios().filter(h=>!h.disabled),s=o.find(h=>h.checked)||o[0],r=e.key===" "||e.key==="Enter"?0:["ArrowUp","ArrowLeft"].includes(e.key)?-1:1;let n=o.indexOf(s)+r;n<0&&(n=o.length-1),n>=o.length&&(n=0);const c=o[n];(await c.getInputElement())?.click(),this._updateGroupTabIndex(),c.focus()}_updateGroupTabIndex(){const e=this._getAllRadios(),t=e.find(o=>o.checked)||e[0];e.forEach(o=>{o.disabled?o.tabIndex=-1:o.tabIndex=o===t?0:-1,o.setAttribute("aria-checked",o.checked?"true":"false"),o.setAttribute("aria-disabled",o.disabled?"true":"false"),o.setAttribute("aria-required",this.required?"true":"false")})}_initializeChildAttributes(){this._getAllRadios().forEach(t=>{t.setAttribute("role","radio"),t.setAttribute("aria-checked",String(t.checked)),t.setAttribute("aria-required",String(t.required)),t.setAttribute("aria-disabled",String(t.disabled)),t.setAttribute("tabindex","-1")})}_updateRadioButtonsSize(){this.querySelectorAll("nys-radiobutton").forEach(t=>{t.setAttribute("size",this.size)})}_updateRadioButtonsTile(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.tile?t.toggleAttribute("tile",!0):t.removeAttribute("tile")})}_updateRadioButtonsInvert(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.inverted?t.toggleAttribute("inverted",!0):t.removeAttribute("inverted")})}_updateRadioButtonsShowError(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError?t.setAttribute("showError",""):t.removeAttribute("showError")})}_updateRadioButtonsForm(){this.querySelectorAll("nys-radiobutton").forEach(t=>{this.showError&&this.form!==null?t.setAttribute("form",this.form):t.removeAttribute("form")})}_getSlotDescriptionForAria(){const t=this.shadowRoot?.querySelector('slot[name="description"]')?.assignedNodes({flatten:!0})||[];this._slottedDescriptionText=t.map(o=>o.textContent?.trim()).filter(Boolean).join(", ")}_handleRadioButtonChange(e){const t=e,{name:o,value:s}=t.detail;this.name=o,this.selectedValue=s,this._internals.setFormValue(this.selectedValue),this._updateGroupTabIndex()}async _handleInvalid(e){if(e.preventDefault(),this._internals.validity.valueMissing){this.showError=!0,this._manageRequire();const t=this.querySelector("nys-radiobutton");if(t){const o=this._internals.form;o?Array.from(o.elements).find(n=>typeof n.checkValidity=="function"&&!n.checkValidity())===this&&(t.focus(),t.classList.add("active-focus")):(t.focus(),t.classList.add("active-focus"))}}}render(){return l`<div class="nys-radiogroup">
       <nys-label
         for=${this.id}
         label=${this.label}
@@ -4143,7 +4155,7 @@
             @blur="${this._handleBlur}"
             @change="${this._handleChange}"
           >
-            <option hidden disabled selected value=""></option>
+            <option data-native hidden disabled selected value=""></option>
           </select>
           <slot
             @slotchange="${this._handleSlotChange}"
@@ -4397,7 +4409,11 @@
       rgba(255, 255, 255, 0.9)
     );
     width: var(--nys-size-300, 24px);
+    min-width: var(--nys-size-300, 24px);
+    max-width: var(--nys-size-300, 24px);
     height: var(--nys-size-300, 24px);
+    min-height: var(--nys-size-300, 24px);
+    max-height: var(--nys-size-300, 24px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4513,7 +4529,11 @@
       border: none;
       background-color: var(--nys-color-neutral-200, #bec0c1);
       height: var(--nys-size-100, 8px);
+      min-height: var(--nys-size-100, 8px);
+      max-height: var(--nys-size-100, 8px);
       width: 100%;
+      min-width: 100%;
+      max-width: 100%;
       color: transparent;
     }
 
@@ -4572,7 +4592,11 @@
         rgba(255, 255, 255, 0.9)
       );
       width: var(--nys-space-300, 24px);
+      min-width: var(--nys-space-300, 24px);
+      max-width: var(--nys-space-300, 24px);
       height: var(--nys-space-300, 24px);
+      min-height: var(--nys-space-300, 24px);
+      max-height: var(--nys-space-300, 24px);
       color: var(--nys-color-text, #1b1b1b);
     }
 
@@ -4623,7 +4647,7 @@
           </div>
         </div>
       </div>
-    `}};St.styles=l1;let G=St;Ae([i({type:Boolean,reflect:!0})],G.prototype,"selected"),Ae([i({type:Boolean,reflect:!0})],G.prototype,"current"),Ae([i({type:String})],G.prototype,"label"),Ae([i({type:String})],G.prototype,"href"),Ae([i({type:Boolean})],G.prototype,"isCompactExpanded"),Ae([i({attribute:!1})],G.prototype,"onClick"),Ae([i({type:Number})],G.prototype,"stepNumber"),customElements.get("nys-step")||customElements.define("nys-step",G);var Ks=Object.defineProperty,Ye=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Ks(e,t,s),s};const Lt=class Lt extends p{constructor(){super(),this.id="",this.name="",this.label="",this.counterText="initial",this.isCompactExpanded=!1,this._stepsNumbered=!1,this._onStepClick=async e=>{const t=e.composedPath().find(n=>n instanceof HTMLElement&&n.tagName.toLowerCase()==="nys-step");if(!t)return;const o=Array.from(this.querySelectorAll("nys-step")),s=o.findIndex(n=>n.hasAttribute("current")),r=o.indexOf(t);s!==-1&&r>s||t.hasAttribute("selected")||(o.forEach(n=>n.removeAttribute("selected")),t.setAttribute("selected",""),this._updateCounter(),this.isCompactExpanded=!1)}}connectedCallback(){super.connectedCallback(),this.addEventListener("nys-step-click",this._onStepClick),requestAnimationFrame(()=>this._validateSteps())}disconnectedCallback(){this.removeEventListener("nys-step-click",this._onStepClick),super.disconnectedCallback()}_validateSteps(){Array.from(this.children).forEach(e=>{const t=e instanceof HTMLElement&&e.tagName.toLowerCase()==="nys-step",o=e instanceof HTMLElement&&e.hasAttribute("slot")&&e.getAttribute("slot")==="actions";!t&&!o&&(console.warn("Only <nys-step> elements or the <div slot='actions'> container are allowed as direct children of <nys-stepper>. Removing:",e),e.remove())})}_validateButtonSlot(e){const o=e.target.assignedElements();if(o.length!==1||o[0].tagName.toLowerCase()!=="div"){console.warn("The 'actions' slot must have exactly one <div> as a direct child.");return}const s=o[0];Array.from(s.children).forEach(r=>{r instanceof HTMLElement&&r.tagName.toLowerCase()==="nys-button"?(r.setAttribute("size","sm"),r.hasAttribute("fullWidth")&&(r.style.flex="1 1 0")):(console.warn("The <div> inside 'actions' slot only accepts <nys-button> elements. Removing invalid node:",r),r.remove())})}_updateCounter(){if(this.isCompactExpanded){this.counterText="Back to Form",this.style.height="-webkit-fit-content",this.style.height="-moz-fit-content",this.style.height="fit-content";return}else this.style.height="auto";const e=this.querySelectorAll("nys-step"),t=Array.from(e).findIndex(s=>s.hasAttribute("selected")),o=e.length;this.counterText=t>=0?`Step ${t+1} of ${o}`:`Step 1 of ${o}`}updated(){const e=this.querySelectorAll("nys-step");this._stepsNumbered||(e.forEach((r,n)=>{r.stepNumber=n+1}),this._stepsNumbered=!0);let t=!1,o=!1,s=!1;e.forEach((r,n)=>{r.hasAttribute("current")&&(s?r.removeAttribute("current"):s=!0),n===0?r.setAttribute("first",""):r.removeAttribute("first"),r.hasAttribute("current")?(t=!0,r.removeAttribute("previous")):t?r.removeAttribute("previous"):r.setAttribute("previous",""),r.hasAttribute("selected")&&(t||o?r.removeAttribute("selected"):o=!0),this.hasAttribute("isCompactExpanded")?r.setAttribute("isCompactExpanded",""):r.removeAttribute("isCompactExpanded")}),o||(s?e.forEach(r=>{r.hasAttribute("current")&&!o&&(r.setAttribute("selected",""),o=!0)}):e.length>0&&(e[0].setAttribute("current",""),e[0].setAttribute("selected",""))),this._updateCounter()}_toggleCompact(){this.isCompactExpanded=!this.isCompactExpanded}_handleCounterKeydown(e){(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this._toggleCompact())}render(){return l`
+    `}};St.styles=l1;let G=St;Ae([i({type:Boolean,reflect:!0})],G.prototype,"selected"),Ae([i({type:Boolean,reflect:!0})],G.prototype,"current"),Ae([i({type:String})],G.prototype,"label"),Ae([i({type:String})],G.prototype,"href"),Ae([i({type:Boolean})],G.prototype,"isCompactExpanded"),Ae([i({attribute:!1})],G.prototype,"onClick"),Ae([i({type:Number})],G.prototype,"stepNumber"),customElements.get("nys-step")||customElements.define("nys-step",G);var Ks=Object.defineProperty,Ye=(a,e,t,o)=>{for(var s=void 0,r=a.length-1,n;r>=0;r--)(n=a[r])&&(s=n(e,t,s)||s);return s&&Ks(e,t,s),s};const Lt=class Lt extends p{constructor(){super(),this.id="",this.name="",this.label="",this.counterText="initial",this.isCompactExpanded=!1,this._stepsNumbered=!1,this._onStepClick=async e=>{const t=e.composedPath().find(n=>n instanceof HTMLElement&&n.tagName.toLowerCase()==="nys-step");if(!t)return;const o=Array.from(this.querySelectorAll("nys-step")),s=o.findIndex(n=>n.hasAttribute("current")),r=o.indexOf(t);s!==-1&&r>s||t.hasAttribute("selected")||(o.forEach(n=>n.removeAttribute("selected")),t.setAttribute("selected",""),this._updateCounter(),this.isCompactExpanded=!1)}}connectedCallback(){super.connectedCallback(),this.addEventListener("nys-step-click",this._onStepClick),requestAnimationFrame(()=>this._validateSteps())}disconnectedCallback(){this.removeEventListener("nys-step-click",this._onStepClick),super.disconnectedCallback()}_validateSteps(){Array.from(this.children).forEach(e=>{const t=e instanceof HTMLElement&&e.tagName.toLowerCase()==="nys-step",o=e instanceof HTMLElement&&e.hasAttribute("slot")&&e.getAttribute("slot")==="actions";!t&&!o&&(console.warn("Only <nys-step> elements or the <div slot='actions'> container are allowed as direct children of <nys-stepper>. Removing:",e),e.remove())})}_validateButtonSlot(e){const o=e.target.assignedElements();if(o.length!==1||o[0].tagName.toLowerCase()!=="div"){console.warn("The 'actions' slot must have exactly one <div> as a direct child.");return}const s=o[0];Array.from(s.children).forEach(r=>{r instanceof HTMLElement&&r.tagName.toLowerCase()==="nys-button"?(r.setAttribute("size","sm"),r.hasAttribute("fullWidth")&&(r.style.flex="1 1 0")):(console.warn("The <div> inside 'actions' slot only accepts <nys-button> elements. Removing invalid node:",r),r.remove())})}_updateCounter(){let e;if(this.isCompactExpanded)e="Back to Form",this.style.height="-webkit-fit-content",this.style.height="-moz-fit-content",this.style.height="fit-content";else{this.style.height="auto";const t=this.querySelectorAll("nys-step"),o=Array.from(t).findIndex(r=>r.hasAttribute("selected")),s=t.length;e=o>=0?`Step ${o+1} of ${s}`:`Step 1 of ${s}`}e!==this.counterText&&(this.counterText=e)}willUpdate(){const e=this.querySelectorAll("nys-step");this._stepsNumbered||(e.forEach((r,n)=>{r.stepNumber=n+1}),this._stepsNumbered=!0);let t=!1,o=!1,s=!1;e.forEach((r,n)=>{r.hasAttribute("current")&&(s?r.removeAttribute("current"):s=!0),n===0?r.setAttribute("first",""):r.removeAttribute("first"),r.hasAttribute("current")?(t=!0,r.removeAttribute("previous")):t?r.removeAttribute("previous"):r.setAttribute("previous",""),r.hasAttribute("selected")&&(t||o?r.removeAttribute("selected"):o=!0),this.isCompactExpanded?r.setAttribute("isCompactExpanded",""):r.removeAttribute("isCompactExpanded")}),o||(s?e.forEach(r=>{r.hasAttribute("current")&&!o&&(r.setAttribute("selected",""),o=!0)}):e.length>0&&(e[0].setAttribute("current",""),e[0].setAttribute("selected",""))),this._updateCounter()}_toggleCompact(){this.isCompactExpanded=!this.isCompactExpanded}_handleCounterKeydown(e){(e.key===" "||e.key==="Enter")&&(e.preventDefault(),this._toggleCompact())}render(){return l`
       <div class="nys-stepper" id=${this.id} name=${this.name}>
         <div class="nys-stepper__header">
           <slot name="actions" @slotchange=${this._validateButtonSlot}></slot>
@@ -4799,6 +4823,7 @@
           class="nys-textarea__textarea ${this.resize}"
           name=${this.name}
           id=${this.id}
+          .value=${this.value}
           ?disabled=${this.disabled}
           ?required=${this.required}
           ?readonly=${this.readonly}
@@ -4815,9 +4840,7 @@
           @blur="${this._handleBlur}"
           @select="${this._handleSelect}"
           @selectionchange="${this._handleSelectionChange}"
-        >
-${this.value}</textarea
-        >
+        ></textarea>
         <nys-errormessage
           ?showError=${this.showError}
           errorMessage=${this._internals.validationMessage||this.errorMessage}
