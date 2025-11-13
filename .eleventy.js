@@ -111,6 +111,7 @@ module.exports = async function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
     eleventyConfig.addPassthroughCopy("./src/assets/css/");
     eleventyConfig.addPassthroughCopy("./src/assets/js/");
+    eleventyConfig.addPassthroughCopy("./src/assets/files/");
     eleventyConfig.addPassthroughCopy("./src/robots.txt"); 
     eleventyConfig.addPassthroughCopy("./src/favicon.svg"); 
     eleventyConfig.addPassthroughCopy("./CNAME"); 
