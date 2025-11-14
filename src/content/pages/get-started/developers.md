@@ -15,6 +15,25 @@ section: Get Started
 
 ## Component Integration
 
+### Using CSS Variables
+
+The New York State Design System is built on a foundation of CSS variable ramps that define colors, spacing, and other design tokens. These variables style the components themselves but are also meant to be used across your site for consistency. Apply them in your own CSS to align custom layouts and elements to create a consistent visual experience for New Yorkers.
+
+View all [available design tokens here](/foundations/tokens/).{# , and read more about how they work and how to use them effectively here. TODO: add link to article once published #}
+
+### Accessibility
+
+All components in our design system are built with accessibility in mind. They are WCAG 2.2 compliant and have been tested for screen readers and keyboard navigation. By using these components, your site gains built-in accessibility features, helping ensure a more inclusive experience for all users.
+
+### Event Interactions
+
+Most NYS Design System components emit custom JavaScript events that allow developers to respond to user interactions such as clicks, selections, and state changes.
+
+Each component’s event behavior is documented in the “Events” section on its reference page. There, you’ll find:
+- A list of all custom events the component emits (e.g., `nys-change`, `nys-click`, etc.)
+- The event detail object describing what data is passed when the event is fired
+- These events are fully accessible through standard DOM event listeners, allowing you to hook into component behavior from your scripts.
+
 ## Get Support
 Need help or want to report an issue? You can:
 
