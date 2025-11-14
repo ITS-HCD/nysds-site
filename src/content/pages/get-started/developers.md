@@ -15,6 +15,19 @@ section: Get Started
 
 ## Component Integration
 
+## Adding a Component
+Once the references are set up, you can start using NYSDS components directly in your HTML.
+For example, to add an `nys-alert` component:
+
+{% set code %}
+<nys-alert
+  heading="Welcome to the Design System!"
+  text="You can use all the web components the design system offers."
+></nys-alert>
+{% endset %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
 ### Using CSS Variables
 
 The New York State Design System is built on a foundation of CSS variable ramps that define colors, spacing, and other design tokens. These variables style the components themselves but are also meant to be used across your site for consistency. Apply them in your own CSS to align custom layouts and elements to create a consistent visual experience for New Yorkers.
