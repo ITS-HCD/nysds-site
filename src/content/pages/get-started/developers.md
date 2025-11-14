@@ -7,8 +7,25 @@ section: Get Started
 
 # Get Started as a Developer
 
-The NYS Design System provides a set of reusable, accessible web components, design tokens, and styles to help New York State teams build consistent, user-friendly digital products. This guide will walk you through the steps to integrate the NYS Design System into your project.
+## Quick Start
 
+## Install Component Library
+
+## Install Styles
+
+## Component Integration
+
+## Get Support
+Need help or want to report an issue? You can:
+
+<ul>
+  <li>Submit or track issues on <a href="https://github.com/ITS-HCD/nysds/issues" target="_blank" rel="noopener noreferrer">GitHub<nys-icon name="open_in_new" size="lg"></nys-icon></a></li>
+  <li>Review the latest <a href="/updates/" target="_self" rel="noopener noreferrer">Release Notes</a></li>
+  <li>Ask questions or get troubleshooting help in the <a href="https://teams.microsoft.com/l/channel/19%3A0228156e2bb5419c8152047f596a7bfb%40thread.tacv2/Troubleshooting?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" target="_blank" rel="noopener noreferrer">Troubleshooting channel on Teams<nys-icon name="open_in_new" size="lg"></nys-icon></a></li>
+</ul>
+
+
+-----------------old below---------------------
 ## Install the libraries
 
 To start using the NYS Design System in your project, you need to install the core libraries:
