@@ -6,8 +6,9 @@ section: Get Started
 ---
 
 # Get Started as a Developer
-
-## Quick Start
+There are two parts of the NYS Design System that are crucial for engineers to understand: 
+- A library of custom HTML elements, called web components, built with lit.dev and native JS and designed to work anywhere
+- A collection of CSS variables that define the style of components and can be used to extend those styles to other components, and layout utilities that can be used to create mobile-responsive layouts
 
 ## Install Component Library
 
