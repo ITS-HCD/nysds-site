@@ -60,6 +60,29 @@ If you want to avoid npm altogether, you can download the latest release from th
 
 ## Install Styles
 
+### Full CSS Reference
+
+### Minimal CSS Reference
+
+### Install Font Styles
+
+### Apply Agency Theming
+
+The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
+
+To apply a theme, add the agency stylesheet in the `<head>` alongside core NYS Design System styles. For example, "Office of Children and Family Services" uses the `health` theme. :
+
+{% set code %}<!-- Core NYS Design System styles -->
+<link rel="stylesheet" href="/path/to/nysds-full.min.css" /> 
+<!-- Agency theme (Health) --> 
+<link rel="stylesheet" href="/path/to/nysds-theme-health.min.css" /> 
+{% endset %} 
+{% set accordionLabel = "HTML Snippet" %} 
+{% set codeExpanded = true %} 
+{% include "partials/code-preview.njk" %}
+
+**Note:** If no agency theme is applied, components will default to NYS blue.
+
 ## Component Integration
 
 ## Adding a Component
@@ -102,25 +125,6 @@ Need help or want to report an issue? You can:
   <li>Review the latest <a href="/updates/" target="_self" rel="noopener noreferrer">Release Notes</a></li>
   <li>Ask questions or get troubleshooting help in the <a href="https://teams.microsoft.com/l/channel/19%3A0228156e2bb5419c8152047f596a7bfb%40thread.tacv2/Troubleshooting?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" target="_blank" rel="noopener noreferrer">Troubleshooting channel on Teams<nys-icon name="open_in_new" size="lg"></nys-icon></a></li>
 </ul>
-
-
------------------old below---------------------
-
-## Apply Agency Theming
-The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
-
-To apply a theme, add the agency stylesheet in the `<head>` alongside core NYS Design System styles. For example, "Office of Children and Family Services" uses the `health` theme. :
-
-{% set code %}<!-- Core NYS Design System styles -->
-<link rel="stylesheet" href="/path/to/nysds-full.min.css" /> 
-<!-- Agency theme (Health) --> 
-<link rel="stylesheet" href="/path/to/nysds-theme-health.min.css" /> 
-{% endset %} 
-{% set accordionLabel = "HTML Snippet" %} 
-{% set codeExpanded = true %} 
-{% include "partials/code-preview.njk" %}
-
-**Note:** If no agency theme is applied, components will default to NYS blue.
 
 {% block scripts %}
 {% endblock %}
