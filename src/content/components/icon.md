@@ -29,7 +29,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 {% block usage %}
 <div class="icon-examples">
 
-### General
+### Core
 <div class="nys-grid-row nys-grid-gap-2">
   {% set name = "account_circle" %}{% include "partials/icon-preview.njk" %}
   {% set name = "attach_file" %}{% include "partials/icon-preview.njk" %}
