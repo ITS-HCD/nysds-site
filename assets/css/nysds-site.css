@@ -807,9 +807,9 @@ li > .section-nav__list {
 
 /* Hide section nav on mobile, show toggle button */
 @media (max-width: 1023px) {
-    .section-nav__list {
+    /* .section-nav__list {
         display: none;
-    }
+    } */
     .section-nav__toggle {
         display: flex;
     }
