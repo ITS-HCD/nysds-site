@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2025-11-25T22:32:30.235+00:00 -->
+    <!-- Latest Build: 2025-11-26T15:02:39.933+00:00 -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -151,8 +151,12 @@
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
     <h1 id="get-started-as-a-developer">Get Started as a Developer</h1>
-<p>The NYS Design System provides a set of reusable, accessible web components, design tokens, and styles to help New York State teams build consistent, user-friendly digital products. This guide will walk you through the steps to integrate the NYS Design System into your project.</p>
-<h2 id="install-the-libraries">Install the libraries</h2>
+<p>There are two parts of the NYS Design System that are crucial for engineers to understand:</p>
+<ul>
+<li>A library of custom HTML elements, called web components, built with lit.dev and native JS and designed to work anywhere</li>
+<li>A collection of CSS variables that define the style of components and can be used to extend those styles to other components, and layout utilities that can be used to create mobile-responsive layouts</li>
+</ul>
+<h2 id="install-component-library">Install Component Library</h2>
 <p>To start using the NYS Design System in your project, you need to install the core libraries:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -173,7 +177,7 @@
     </div>
   </div>
 </div>
-<h2 id="reference-the-files-in-your-application">Reference the files in your application</h2>
+<h3 id="reference-the-files-in-your-application">Reference the files in your application</h3>
 <p>Once you've installed the packages, reference them in your application or site.</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -203,7 +207,109 @@
 <li>Place the <code>&lt;script&gt;</code> right before the closing <code>&lt;/body&gt;</code> tag, so the DOM is fully loaded before the NYS Design System initializes.</li>
 <li>Many modern build tools allow you to reference files directly from <code>node_modules</code>, but you can also copy them into your project assets (see &quot;Copying Assets (Alternative Step)&quot;).</li>
 </ul>
-<h2 id="apply-agency-theming">Apply Agency Theming</h2>
+<h4 id="copying-assets-alternative-step">Copying Assets (Alternative Step)</h4>
+<p>If you prefer to host the NYS Design System files locally within your project, you can copy them from <code>node_modules</code> to your project's asset directories.</p>
+<p>If you wanted to copy the NYS Design System CSS and JS files to <code>src/assets/css/vendor</code> and <code>src/assets/js/vendor</code> respectively, you could use the following command:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>CLI Command</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">mkdir -p src/assets/css/vendor &amp;&amp; mkdir -p src/assets/js/vendor
+cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor
+cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>This will copy over styles and scripts, but when new versions are released, you will need to update via npm and copy them over again.</p>
+<h4 id="manual-asset-management-alternative-step">Manual Asset Management (Alternative Step)</h4>
+<p>If you want to avoid npm altogether, you can download the latest release from the <a href="https://github.com/ITS-HCD/nysds/releases/latest/">NYS Design System GitHub repository</a> and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.</p>
+<h2 id="install-styles">Install Styles</h2>
+<h3 id="full-css-reference">Full CSS Reference</h3>
+<p>The recommended way to use the NYS Design System styles is to include the full stylesheet, which contains all component styles and layout utilities.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>HTML Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Load the NYS Design System Javascript library --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- Load the full NYS Design System CSS --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="minimal-css-reference">Minimal CSS Reference</h3>
+<p>If you only need access to the design tokens and layout utilities, you can include the minimal stylesheet instead.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>HTML Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Load the NYS Design System Javascript library --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- Load the minimal NYS Design System CSS --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="install-font-styles">Install Font Styles</h3>
+<p>Fonts must be downloaded separately due to licensing restrictions.</p>
+<p><strong>Important:</strong>
+Note: These fonts are licensed for New York State applications only and are not distributed as part of the open-source design system.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>HTML Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Load the NYS Design System Javascript library --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- Load the minimal NYS Design System CSS --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-typography.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="apply-agency-theming">Apply Agency Theming</h3>
 <p>The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc).</p>
 <p>To apply a theme, add the agency stylesheet in the <code>&lt;head&gt;</code> alongside core NYS Design System styles. For example, &quot;Office of Children and Family Services&quot; uses the <code>health</code> theme. :</p>
 <div class="code-preview-container">
@@ -229,15 +335,16 @@
   </div>
 </div>
 <p><strong>Note:</strong> If no agency theme is applied, components will default to NYS blue.</p>
-<h2 id="copying-assets-alternative-step">Copying Assets (Alternative Step)</h2>
-<p>If you prefer to host the NYS Design System files locally within your project, you can copy them from <code>node_modules</code> to your project's asset directories.</p>
-<p>If you wanted to copy the NYS Design System CSS and JS files to <code>src/assets/css/vendor</code> and <code>src/assets/js/vendor</code> respectively, you could use the following command:</p>
+<h2 id="component-integration">Component Integration</h2>
+<h2 id="adding-a-component">Adding a Component</h2>
+<p>Once the references are set up, you can start using NYSDS components directly in your HTML.
+For example, to add an <code>nys-alert</code> component:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
-        <p>CLI Command</p>
+        <p>HTML Snippet</p>
       </button>
       <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
@@ -246,21 +353,38 @@
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html">mkdir -p src/assets/css/vendor &amp;&amp; mkdir -p src/assets/js/vendor
-cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor
-cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor</code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-alert</span>
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Welcome to the Design System!<span class="token punctuation">"</span></span>
+  <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>You can use all the web components the design system offers.<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-alert</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
-<p>This will copy over styles and scripts, but when new versions are released, you will need to update via npm and copy them over again.</p>
-<h2 id="manual-asset-management-alternative-step">Manual Asset Management (Alternative Step)</h2>
-<p>If you want to avoid npm altogether, you can download the latest release from the <a href="https://github.com/ITS-HCD/nysds/releases/latest/">NYS Design System GitHub repository</a> and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.</p>
-
+<h3 id="using-css-variables">Using CSS Variables</h3>
+<p>The New York State Design System is built on a foundation of CSS variable ramps that define colors, spacing, and other design tokens. These variables style the components themselves but are also meant to be used across your site for consistency. Apply them in your own CSS to align custom layouts and elements to create a consistent visual experience for New Yorkers.</p>
+<p>View all <a href="/foundations/tokens/">available design tokens here</a>.</p>
+<h3 id="accessibility">Accessibility</h3>
+<p>All components in our design system are built with accessibility in mind. They are WCAG 2.2 compliant and have been tested for screen readers and keyboard navigation. By using these components, your site gains built-in accessibility features, helping ensure a more inclusive experience for all users.</p>
+<h3 id="event-interactions">Event Interactions</h3>
+<p>Most NYS Design System components emit custom JavaScript events that allow developers to respond to user interactions such as clicks, selections, and state changes.</p>
+<p>Each component’s event behavior is documented in the “Events” section on its reference page. There, you’ll find:</p>
+<ul>
+<li>A list of all custom events the component emits (e.g., <code>nys-change</code>, <code>nys-click</code>, etc.)</li>
+<li>The event detail object describing what data is passed when the event is fired</li>
+<li>These events are fully accessible through standard DOM event listeners, allowing you to hook into component behavior from your scripts.</li>
+</ul>
+<h2 id="get-support">Get Support</h2>
+<p>Need help or want to report an issue? You can:</p>
+<ul>
+  <li>Submit or track issues on <a href="https://github.com/ITS-HCD/nysds/issues" target="_blank" rel="noopener noreferrer">GitHub<nys-icon name="open_in_new" size="lg"></nys-icon></a></li>
+  <li>Review the latest <a href="/updates/" target="_self" rel="noopener noreferrer">Release Notes</a></li>
+  <li>Ask questions or get troubleshooting help in the <a href="https://teams.microsoft.com/l/channel/19%3A0228156e2bb5419c8152047f596a7bfb%40thread.tacv2/Troubleshooting?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" target="_blank" rel="noopener noreferrer">Troubleshooting channel on Teams<nys-icon name="open_in_new" size="lg"></nys-icon></a></li>
+</ul>
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/developers.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: November 25, 2025</p>
+    <p>Last updated: November 26, 2025</p>
   </div>
 
   </div>
