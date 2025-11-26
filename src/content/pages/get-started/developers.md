@@ -62,9 +62,45 @@ If you want to avoid npm altogether, you can download the latest release from th
 
 ### Full CSS Reference
 
+The recommended way to use the NYS Design System styles is to include the full stylesheet, which contains all component styles and layout utilities.
+
+{% set code %}<!-- Load the NYS Design System Javascript library -->
+<script src="/path/to/nysds.js"></script>
+<!-- Load the full NYS Design System CSS -->
+<link rel="stylesheet" href="/path/to/nysds-full.min.css" />
+{% endset %}
+{% set accordionLabel = "HTML Snippet" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
 ### Minimal CSS Reference
 
+If you only need access to the design tokens and layout utilities, you can include the minimal stylesheet instead.
+
+{% set code %}<!-- Load the NYS Design System Javascript library -->
+<script src="/path/to/nysds.js"></script>
+<!-- Load the minimal NYS Design System CSS -->
+<link rel="stylesheet" href="/path/to/tokens.min.css" />
+{% endset %}
+{% set accordionLabel = "HTML Snippet" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
 ### Install Font Styles
+
+Fonts must be downloaded separately due to licensing restrictions. 
+
+**Important:** 
+Note: These fonts are licensed for New York State applications only and are not distributed as part of the open-source design system.
+
+{% set code %}<!-- Load the NYS Design System Javascript library -->
+<script src="/path/to/nysds.js"></script>
+<!-- Load the minimal NYS Design System CSS -->
+<link rel="stylesheet" href="/path/to/nysds-fonts.css" />
+{% endset %}
+{% set accordionLabel = "HTML Snippet" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Apply Agency Theming
 
