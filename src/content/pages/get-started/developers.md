@@ -80,7 +80,7 @@ If you only need access to the design tokens and layout utilities, you can inclu
 {% set code %}<!-- Load the NYS Design System Javascript library -->
 <script src="/path/to/nysds.js"></script>
 <!-- Load the minimal NYS Design System CSS -->
-<link rel="stylesheet" href="/path/to/tokens.min.css" />
+<link rel="stylesheet" href="/path/to/nysds.min.css" />
 {% endset %}
 {% set accordionLabel = "HTML Snippet" %}
 {% set codeExpanded = true %}
@@ -96,7 +96,7 @@ Note: These fonts are licensed for New York State applications only and are not 
 {% set code %}<!-- Load the NYS Design System Javascript library -->
 <script src="/path/to/nysds.js"></script>
 <!-- Load the minimal NYS Design System CSS -->
-<link rel="stylesheet" href="/path/to/nysds-fonts.css" />
+<link rel="stylesheet" href="/path/to/nysds-typography.css" />
 {% endset %}
 {% set accordionLabel = "HTML Snippet" %}
 {% set codeExpanded = true %}
