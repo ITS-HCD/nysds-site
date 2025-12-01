@@ -1,10 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /cdn-cgi/
-
-User-agent: GPTBot
-Disallow: /
 
 Host: https://designsystem.ny.gov/
 
