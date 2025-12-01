@@ -1893,7 +1893,7 @@ By starting in FigJam you force yourself not to think about component properties
 <p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for putting testing in place.</p>
 <h2>Other fixes and improvements</h2>
 <ul>
-<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/design-tokens">design tokens</a></li>
+<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/tokens">design tokens</a></li>
 <li>Translate button in <code>nys-unavheader</code> works properly now, and the logo link doesn't open in a new tab anymore</li>
 <li>Improved documentation for component events in our documentation</li>
 <li>Fixed the nys-avatar slot</li>
@@ -1915,7 +1915,7 @@ By starting in FigJam you force yourself not to think about component properties
 <p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for putting testing in place.</p>
 <h2>Other fixes and improvements</h2>
 <ul>
-<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/design-tokens">design tokens</a></li>
+<li>Updated our list of <a href="https://designsystem.ny.gov/foundations/tokens">design tokens</a></li>
 <li>Translate button in <code>nys-unavheader</code> works properly now, and the logo link doesn't open in a new tab anymore</li>
 <li>Improved documentation for component events in our documentation</li>
 <li>Fixed the nys-avatar slot</li>
