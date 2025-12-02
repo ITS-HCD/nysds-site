@@ -14,7 +14,7 @@ navOrder: 13
 
 {% block longdescription %}
 
-The `<nys-modal>` component appears centered on the page and requires the user to interact with it before returning to the main content.
+The `<nys-modal>` component allows users to select and upload one or more files from their device (like a computer or phone) to a server or app.
 
 {% endblock %}
 
