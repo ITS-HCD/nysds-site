@@ -1,4 +1,4 @@
-# NYS Design System Reference Website
+# New York State Design System Reference Website
 
 This repository contains the source code and documentation for the **NYS Design System Reference Website**. The NYS Design System helps teams across New York State build fast, accessible, mobile-friendly applications and websites. It provides consistent design language, implementation guidance, and shared web components.
 
