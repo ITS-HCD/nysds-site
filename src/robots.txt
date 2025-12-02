@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /cdn-cgi/
 
 Host: https://designsystem.ny.gov/
 
