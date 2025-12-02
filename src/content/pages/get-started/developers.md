@@ -58,6 +58,25 @@ This will copy over styles and scripts, but when new versions are released, you 
 
 If you want to avoid npm altogether, you can download the latest release from the [NYS Design System GitHub repository](https://github.com/ITS-HCD/nysds/releases/latest/) and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.
 
+## VSCode Autocomplete
+
+To add vscode autocompletion to your editor:
+
+Copy the .vscode/ folder into the root of your project. You can find it in `/node_modules/@nysds/components/.vscode`
+
+Edit the following file (create it if it doesn't exist)
+
+`./vscode/settings.json`
+
+Add the following lines and save the file:
+
+```json
+"html.customData": [".vscode/vscode.html-custom-data.json"],
+"css.customData": [".vscode/vscode.css-custom-data.json"]
+```
+
+If you have existing settings, add the custom data in addition to the files already listed.
+
 ## Install Styles
 
 ### Full CSS Reference
@@ -121,7 +140,7 @@ To apply a theme, add the agency stylesheet in the `<head>` alongside core NYS D
 
 ## Component Integration
 
-## Adding a Component
+### Adding a Component
 Once the references are set up, you can start using NYSDS components directly in your HTML.
 For example, to add an `nys-alert` component:
 
