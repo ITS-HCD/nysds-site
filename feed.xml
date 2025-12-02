@@ -9,13 +9,23 @@
     <item>
       <title>NYS Design System Release 1.11.3</title>
       <link>https://designsystem.ny.gov/updates/1.11.3-release/</link>
-      <description><![CDATA[<h2>Community Figma file now publicly available to Non-NYS Employees</h2>
+      <description><![CDATA[<h2>Community Figma file now publicly available to non-NYS employees</h2>
 <p>The Figma Library for the New York State Design System is now available in the Figma Community for non-NYS Employees. If you are an NYS Employee, contractor, or vendor of NYS please use the actual Figma library.</p>
 <p>The Community library contains all of the components in the system, the project template, and you can even configure a custom theme so local governments within New York State can adopt the design system. Use the <a href="https://www.figma.com/community/file/1574803287825265318">NYS Design System Figma file today</a>.</p>
 <p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> published the Figma file.</p>
 <h2>Sass under the hood</h2>
 <p>Our initial setup for the NYS Design System included raw CSS file imports through JavaScript. We have run out of runway with vanilla CSS and have made the conversion to Sass for all style files. Sass gives us more flexibility in generating CSS programatically. All components have been converted to use Sass, and an added benefit, the file size for the package was reduced by 40KB just by including minified CSS instead of expanded. Stay tuned for an extensive utility class expansion coming soon!</p>
 <p><a href="https://github.com/esteinborn">Eric Steinborn</a> ended up getting real sassy.</p>
+<h2>VSCode autocomplete support</h2>
+<p>To add vscode autocompletion to your editor:</p>
+<p>Copy the .vscode/ folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/.vscode</code></p>
+<p>Edit the following file (create it if it doesn't exist)</p>
+<p><code>./vscode/settings.json</code></p>
+<p>Add the following lines and save the file:</p>
+<pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token property">"css.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.css-custom-data.json"</span><span class="token punctuation">]</span></code></pre>
+<p>If you have existing settings, add the custom data in addition to the files already listed.</p>
+<img src="https://designsystem.ny.gov/assets/i/2025/vscode-autocomplete.gif" alt="visual representation of vscode autocomplete" />
 <h2>Notable bug fixes</h2>
 <ul>
 <li>Fix: Pagination edge case bug by @emilygorelik</li>
@@ -42,13 +52,23 @@
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.11.3">See the full developer release notes for v.1.11.3 →</a></p>
 ]]></description>
-      <content><![CDATA[<h2>Community Figma file now publicly available to Non-NYS Employees</h2>
+      <content><![CDATA[<h2>Community Figma file now publicly available to non-NYS employees</h2>
 <p>The Figma Library for the New York State Design System is now available in the Figma Community for non-NYS Employees. If you are an NYS Employee, contractor, or vendor of NYS please use the actual Figma library.</p>
 <p>The Community library contains all of the components in the system, the project template, and you can even configure a custom theme so local governments within New York State can adopt the design system. Use the <a href="https://www.figma.com/community/file/1574803287825265318">NYS Design System Figma file today</a>.</p>
 <p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> published the Figma file.</p>
 <h2>Sass under the hood</h2>
 <p>Our initial setup for the NYS Design System included raw CSS file imports through JavaScript. We have run out of runway with vanilla CSS and have made the conversion to Sass for all style files. Sass gives us more flexibility in generating CSS programatically. All components have been converted to use Sass, and an added benefit, the file size for the package was reduced by 40KB just by including minified CSS instead of expanded. Stay tuned for an extensive utility class expansion coming soon!</p>
 <p><a href="https://github.com/esteinborn">Eric Steinborn</a> ended up getting real sassy.</p>
+<h2>VSCode autocomplete support</h2>
+<p>To add vscode autocompletion to your editor:</p>
+<p>Copy the .vscode/ folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/.vscode</code></p>
+<p>Edit the following file (create it if it doesn't exist)</p>
+<p><code>./vscode/settings.json</code></p>
+<p>Add the following lines and save the file:</p>
+<pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token property">"css.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.css-custom-data.json"</span><span class="token punctuation">]</span></code></pre>
+<p>If you have existing settings, add the custom data in addition to the files already listed.</p>
+<img src="https://designsystem.ny.gov/assets/i/2025/vscode-autocomplete.gif" alt="visual representation of vscode autocomplete" />
 <h2>Notable bug fixes</h2>
 <ul>
 <li>Fix: Pagination edge case bug by @emilygorelik</li>
