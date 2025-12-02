@@ -25,7 +25,6 @@
 <pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token property">"css.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.css-custom-data.json"</span><span class="token punctuation">]</span></code></pre>
 <p>If you have existing settings, add the custom data in addition to the files already listed.</p>
-<img src="https://designsystem.ny.gov/assets/i/2025/vscode-autocomplete.gif" alt="visual representation of vscode autocomplete" />
 <h2>Notable bug fixes</h2>
 <ul>
 <li>Fix: Pagination edge case bug by @emilygorelik</li>
@@ -68,7 +67,6 @@
 <pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token property">"css.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.css-custom-data.json"</span><span class="token punctuation">]</span></code></pre>
 <p>If you have existing settings, add the custom data in addition to the files already listed.</p>
-<img src="https://designsystem.ny.gov/assets/i/2025/vscode-autocomplete.gif" alt="visual representation of vscode autocomplete" />
 <h2>Notable bug fixes</h2>
 <ul>
 <li>Fix: Pagination edge case bug by @emilygorelik</li>
