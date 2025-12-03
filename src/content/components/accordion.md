@@ -153,13 +153,13 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% block properties %}
 
-| Property          | Type                                                                              |
-|-------------------|-----------------------------------------------------------------------------------|
-| `id`              | String                                                                            |
-| `heading`         | String                                                                            |
-| `expanded`        | Boolean                                                                           |
-| `bordered`        | Boolean                                                                           |
-| `singleSelect`    | Boolean                                                                           |
+| Property          | Type                   | Component                 |
+|-------------------|----------------------------------------------------|
+| `id`              | String                 | both                      |
+| `heading`         | String                 | only `nys-accordionitem`  |
+| `expanded`        | Boolean                | only `nys-accordionitem`  |
+| `bordered`        | Boolean                | only `nys-accordion`      |
+| `singleSelect`    | Boolean                | only `nys-accordion`      |
 
 {% endblock %}
 
