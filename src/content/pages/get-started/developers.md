@@ -24,7 +24,7 @@ To start using the NYS Design System in your project, you need to install the co
 Once you've installed the packages, reference them in your application or site. 
 
 {% set code %}<!-- Load the NYS Design System Javascript library -->
-<script src="/path/to/nysds.js"></script>
+<script type="module" src="/path/to/nysds.js"></script>
 <!-- Load the full NYS Design System CSS -->
 <link rel="stylesheet" href="/path/to/nysds-full.min.css" />
 {% endset %}
@@ -84,7 +84,7 @@ If you have existing settings, add the custom data in addition to the files alre
 The recommended way to use the NYS Design System styles is to include the full stylesheet, which contains all component styles and layout utilities.
 
 {% set code %}<!-- Load the NYS Design System Javascript library -->
-<script src="/path/to/nysds.js"></script>
+<script type="module" src="/path/to/nysds.js"></script>
 <!-- Load the full NYS Design System CSS -->
 <link rel="stylesheet" href="/path/to/nysds-full.min.css" />
 {% endset %}
@@ -97,7 +97,7 @@ The recommended way to use the NYS Design System styles is to include the full s
 If you only need access to the design tokens and layout utilities, you can include the minimal stylesheet instead.
 
 {% set code %}<!-- Load the NYS Design System Javascript library -->
-<script src="/path/to/nysds.js"></script>
+<script type="module" src="/path/to/nysds.js"></script>
 <!-- Load the minimal NYS Design System CSS -->
 <link rel="stylesheet" href="/path/to/nysds.min.css" />
 {% endset %}
@@ -113,7 +113,7 @@ Fonts must be downloaded separately due to licensing restrictions.
 Note: These fonts are licensed for New York State applications only and are not distributed as part of the open-source design system.
 
 {% set code %}<!-- Load the NYS Design System Javascript library -->
-<script src="/path/to/nysds.js"></script>
+<script type="module" src="/path/to/nysds.js"></script>
 <!-- Load the minimal NYS Design System CSS -->
 <link rel="stylesheet" href="/path/to/nysds-typography.css" />
 {% endset %}
