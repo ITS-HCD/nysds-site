@@ -62,7 +62,7 @@ If you want to avoid npm altogether, you can download the latest release from th
 
 To add vscode autocompletion to your editor:
 
-Copy the .vscode/ folder into the root of your project. You can find it in `/node_modules/@nysds/components/.vscode`
+Copy the .vscode/ folder into the root of your project. You can find it in `/node_modules/@nysds/components/dist/.vscode/`
 
 Edit the following file (create it if it doesn't exist)
 
