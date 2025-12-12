@@ -237,11 +237,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // tooltip.setAttribute('text', `Copy link to ${h.textContent.trim()}`);
     tooltip.setAttribute('text', `Copy link`);
     tooltip.setAttribute('focusable', true);
+    tooltip.setAttribute('for', `heading-link-icon-${id}`);
     tooltip.style.display = 'inline-flex';
     tooltip.style.padding = '0 0 0 var(--nys-space-50)';
 
 
-    tooltip.appendChild(document.createElement('nys-icon')).setAttribute('name', 'link');
+    const linkIcon = document.createElement('nys-icon');
+    linkIcon.setAttribute('name', 'link');
+    linkIcon.setAttribute('id', `heading-link-icon-${id}`);
     // Move heading's children into the anchor so markup is preserved
     const anchor = document.createElement('nys-button');
     //anchor.className = 'heading-link';
@@ -257,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
     anchor.setAttribute('size', 'sm');
     anchor.setAttribute('variant', 'ghost');
 
-    tooltip.addEventListener('click', (e) => {
+    linkIcon.addEventListener('click', (e) => {
       // Stop the page from scrolling when you click this link
       e.preventDefault();
       // Copy the Full URL to the clipboard
@@ -271,6 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // h.insertAdjacentElement('beforeend', anchor);
     h.insertAdjacentElement('beforeend', tooltip);
+    h.insertAdjacentElement('beforeend', linkIcon);
 
   });
 }
