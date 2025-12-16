@@ -7,6 +7,307 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.12.0 “Skylight”</title>
+      <link>https://designsystem.ny.gov/updates/1.12.0-release/</link>
+      <description><![CDATA[<h2>Why “Skylight?” 🏔️</h2>
+<p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we held a vote in our teams channel and Office Hours. After a total of 34 responses, our winner is <strong>Skylight</strong> with 17 votes! Skylight is the fourth-highest peak in New York, with an elevation of 4,924 feet (1,501 m)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Mount_Skylight">Learn more about Mount Skylight.</a></p>
+<h2>Hello new tooltip!</h2>
+<p><nys-alert type="warning" heading="WARNING" text="The old tooltip wrapper has been removed from the package as of 1.12.0. If you are using it, please update your code to use the new standalone tooltip component." primaryLabel="Documentation for new standalone tooltip component" primaryAction="/components/tooltip"></nys-alert></p>
+<p>We realized soon after releasing the <code>&lt;nys-tooltip&gt;</code> component that is was too limited in scope. It was only able to be wrapped around buttons and icons. So we took a look at other design systems and decided to implement tooltip as a stand-alone component. Using a <code>for</code> attribute to target an <code>id</code> will display tooltips on the following elements:</p>
+<ul>
+<li><code>&lt;nys-button&gt;</code></li>
+<li><code>&lt;nys-icon&gt;</code></li>
+<li><code>&lt;nys-textinput&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-textarea&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-select&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkboxgroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkbox&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-radiogroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-fileinput&gt;</code> (appears as a hint icon)</li>
+</ul>
+<h3>Tooltip demo</h3>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+<nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="md"></nys-textinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>fullName<span class="token punctuation">'</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full name<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your full legal name<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> was tipped off about this change.</p>
+<h2>New responsive utility classes</h2>
+<p>We have added new responsive variants for our popular utility classes. You can now apply certain utility classes at specific breakpoints as written below:</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row border-left bg-white">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example"><div class="nys-grid-row">
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">12 columns at mobile size</div>
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">6 columns at tablet size</div>
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">4 columns at desktop size</div>
+</div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>12 columns at mobile size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>6 columns at tablet size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>4 columns at desktop size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>You can read the full documentation for the new responsive utility classes on our <a href="https://designsystem.ny.gov/foundations/utilities/responsive">responsive utility documentation page</a>.</p>
+<p><a href="https://github.com/esteinborn">Eric Steinborn</a> was responsible for these.</p>
+<h2>Figma updates</h2>
+<ul>
+<li><strong>Table</strong> - The table component is ready to use in your Figma designs!</li>
+<li><strong>Datepicker</strong> - The datepicker component is ready to use in your Figma designs, too!</li>
+</ul>
+<p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> rose to the challenge!</p>
+<h2>Updates to Custom Element Manifest (CEM)</h2>
+<ul>
+<li>Added missing events to several components including <code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-textarea&gt;</code>, and <code>&lt;nys-select&gt;</code>.</li>
+<li>Improved descriptions and typings for various properties and methods across multiple components.</li>
+<li>VSCode intellisense now properly reports back options for properties like <code>size</code> in <code>&lt;nys-icon&gt;</code> and <code>width</code> in <code>&lt;nys-button&gt;</code>.</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> insisted on improving intellisense.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-tooltip&gt;</code> is now a standalone component. The old tooltip wrapper has been removed from the package. If you are using it, please update your code to use the <a href="https://designsystem.ny.gov/components/tooltip">new standalone tooltip component</a>.</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
+]]></description>
+      <content><![CDATA[<h2>Why “Skylight?” 🏔️</h2>
+<p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we held a vote in our teams channel and Office Hours. After a total of 34 responses, our winner is <strong>Skylight</strong> with 17 votes! Skylight is the fourth-highest peak in New York, with an elevation of 4,924 feet (1,501 m)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Mount_Skylight">Learn more about Mount Skylight.</a></p>
+<h2>Hello new tooltip!</h2>
+<p><nys-alert type="warning" heading="WARNING" text="The old tooltip wrapper has been removed from the package as of 1.12.0. If you are using it, please update your code to use the new standalone tooltip component." primaryLabel="Documentation for new standalone tooltip component" primaryAction="/components/tooltip"></nys-alert></p>
+<p>We realized soon after releasing the <code>&lt;nys-tooltip&gt;</code> component that is was too limited in scope. It was only able to be wrapped around buttons and icons. So we took a look at other design systems and decided to implement tooltip as a stand-alone component. Using a <code>for</code> attribute to target an <code>id</code> will display tooltips on the following elements:</p>
+<ul>
+<li><code>&lt;nys-button&gt;</code></li>
+<li><code>&lt;nys-icon&gt;</code></li>
+<li><code>&lt;nys-textinput&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-textarea&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-select&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkboxgroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkbox&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-radiogroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-fileinput&gt;</code> (appears as a hint icon)</li>
+</ul>
+<h3>Tooltip demo</h3>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+<nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="md"></nys-textinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>fullName<span class="token punctuation">'</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full name<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your full legal name<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> was tipped off about this change.</p>
+<h2>New responsive utility classes</h2>
+<p>We have added new responsive variants for our popular utility classes. You can now apply certain utility classes at specific breakpoints as written below:</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row border-left bg-white">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example"><div class="nys-grid-row">
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">12 columns at mobile size</div>
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">6 columns at tablet size</div>
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">4 columns at desktop size</div>
+</div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>12 columns at mobile size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>6 columns at tablet size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>4 columns at desktop size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>You can read the full documentation for the new responsive utility classes on our <a href="https://designsystem.ny.gov/foundations/utilities/responsive">responsive utility documentation page</a>.</p>
+<p><a href="https://github.com/esteinborn">Eric Steinborn</a> was responsible for these.</p>
+<h2>Figma updates</h2>
+<ul>
+<li><strong>Table</strong> - The table component is ready to use in your Figma designs!</li>
+<li><strong>Datepicker</strong> - The datepicker component is ready to use in your Figma designs, too!</li>
+</ul>
+<p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> rose to the challenge!</p>
+<h2>Updates to Custom Element Manifest (CEM)</h2>
+<ul>
+<li>Added missing events to several components including <code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-textarea&gt;</code>, and <code>&lt;nys-select&gt;</code>.</li>
+<li>Improved descriptions and typings for various properties and methods across multiple components.</li>
+<li>VSCode intellisense now properly reports back options for properties like <code>size</code> in <code>&lt;nys-icon&gt;</code> and <code>width</code> in <code>&lt;nys-button&gt;</code>.</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> insisted on improving intellisense.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-tooltip&gt;</code> is now a standalone component. The old tooltip wrapper has been removed from the package. If you are using it, please update your code to use the <a href="https://designsystem.ny.gov/components/tooltip">new standalone tooltip component</a>.</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
+]]></content>
+      <pubDate>Thu, 11 Dec 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.12.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.11.3</title>
       <link>https://designsystem.ny.gov/updates/1.11.3-release/</link>
       <description><![CDATA[<h2>Community Figma file now publicly available to non-NYS employees</h2>
@@ -18,7 +319,7 @@
 <p><a href="https://github.com/esteinborn">Eric Steinborn</a> ended up getting real sassy.</p>
 <h2>VSCode autocomplete support</h2>
 <p>To add NYS Design System vscode autocompletion to your editor:</p>
-<p>Copy the <code>.vscode/</code> folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/.vscode</code></p>
+<p>Copy the <code>.vscode/</code> folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/dist/.vscode</code></p>
 <p>Edit the following file (create it if it doesn't exist)</p>
 <p><code>./vscode/settings.json</code></p>
 <p>Add the following lines and save the file:</p>
@@ -60,7 +361,7 @@
 <p><a href="https://github.com/esteinborn">Eric Steinborn</a> ended up getting real sassy.</p>
 <h2>VSCode autocomplete support</h2>
 <p>To add NYS Design System vscode autocompletion to your editor:</p>
-<p>Copy the <code>.vscode/</code> folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/.vscode</code></p>
+<p>Copy the <code>.vscode/</code> folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/dist/.vscode</code></p>
 <p>Edit the following file (create it if it doesn't exist)</p>
 <p><code>./vscode/settings.json</code></p>
 <p>Add the following lines and save the file:</p>

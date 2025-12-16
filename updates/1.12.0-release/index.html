@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NYS Design System Release 1.12.0 “Skylight” - New York State Design System</title>
+
+<meta name="description" content="This release completely revamped the tooltip component to be more accessible and easier to use. The old tooltip wrapper has been removed from the package. We also introduced new responsive variants for our popular utility classes.
+">
+<link rel="canonical" href="https://designsystem.ny.gov/updates/1.12.0-release/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="NYS Design System Release 1.12.0 “Skylight”">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/updates/1.12.0-release/">
+<meta property="og:description" content="This release completely revamped the tooltip component to be more accessible and easier to use. The old tooltip wrapper has been removed from the package. We also introduced new responsive variants for our popular utility classes.
+">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/i/2025/release-1.12.0.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+    
+    <!-- Latest Build: 2025-12-16T19:56:59.601+00:00 -->
+  </head>
+  
+  <body class="single-page page-release-1.12.0 section-updates">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader hideTranslate="" hideSearch=""></nys-unavheader>
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+    <li class="site-header__item"><a href="/search" class="site-header__link" title="Search this website">Search</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Updates
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-updates.svg" alt="Updates section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+
+
+
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
+    
+      <section class="page-content">
+
+        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-12-0-skylight">
+            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.12.0 “Skylight”
+          </h1><p class="page-subtitle">This release completely revamped the tooltip component to be more accessible and easier to use. The old tooltip wrapper has been removed from the package. We also introduced new responsive variants for our popular utility classes.
+</p><div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+              <span class="page-author__name">Eric Steinborn</span>
+            </div>
+            <time class="page-meta__date" datetime="2025-12-11T00:00:00.000+00:00">December 11, 2025</time>
+            <div class="page-meta__readtime">2 min read time</div>
+          </div>
+        </header>
+
+        <h2 id="why-skylight">Why “Skylight?” 🏔️</h2>
+<p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we held a vote in our teams channel and Office Hours. After a total of 34 responses, our winner is <strong>Skylight</strong> with 17 votes! Skylight is the fourth-highest peak in New York, with an elevation of 4,924 feet (1,501 m)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Mount_Skylight">Learn more about Mount Skylight.</a></p>
+<h2 id="hello-new-tooltip">Hello new tooltip!</h2>
+<p><nys-alert type="warning" heading="WARNING" text="The old tooltip wrapper has been removed from the package as of 1.12.0. If you are using it, please update your code to use the new standalone tooltip component." primaryLabel="Documentation for new standalone tooltip component" primaryAction="/components/tooltip"></nys-alert></p>
+<p>We realized soon after releasing the <code>&lt;nys-tooltip&gt;</code> component that is was too limited in scope. It was only able to be wrapped around buttons and icons. So we took a look at other design systems and decided to implement tooltip as a stand-alone component. Using a <code>for</code> attribute to target an <code>id</code> will display tooltips on the following elements:</p>
+<ul>
+<li><code>&lt;nys-button&gt;</code></li>
+<li><code>&lt;nys-icon&gt;</code></li>
+<li><code>&lt;nys-textinput&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-textarea&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-select&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkboxgroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkbox&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-radiogroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-fileinput&gt;</code> (appears as a hint icon)</li>
+</ul>
+<h3 id="tooltip-demo">Tooltip demo</h3>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+<nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="md"></nys-textinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>fullName<span class="token punctuation">'</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full name<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your full legal name<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> was tipped off about this change.</p>
+<h2 id="new-responsive-utility-classes">New responsive utility classes</h2>
+<p>We have added new responsive variants for our popular utility classes. You can now apply certain utility classes at specific breakpoints as written below:</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row border-left bg-white">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example"><div class="nys-grid-row">
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">12 columns at mobile size</div>
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">6 columns at tablet size</div>
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">4 columns at desktop size</div>
+</div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>12 columns at mobile size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>6 columns at tablet size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>4 columns at desktop size.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>You can read the full documentation for the new responsive utility classes on our <a href="/foundations/utilities/responsive">responsive utility documentation page</a>.</p>
+<p><a href="https://github.com/esteinborn">Eric Steinborn</a> was responsible for these.</p>
+<h2 id="figma-updates">Figma updates</h2>
+<ul>
+<li><strong>Table</strong> - The table component is ready to use in your Figma designs!</li>
+<li><strong>Datepicker</strong> - The datepicker component is ready to use in your Figma designs, too!</li>
+</ul>
+<p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> rose to the challenge!</p>
+<h2 id="updates-to-custom-element-manifest-cem">Updates to Custom Element Manifest (CEM)</h2>
+<ul>
+<li>Added missing events to several components including <code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-textarea&gt;</code>, and <code>&lt;nys-select&gt;</code>.</li>
+<li>Improved descriptions and typings for various properties and methods across multiple components.</li>
+<li>VSCode intellisense now properly reports back options for properties like <code>size</code> in <code>&lt;nys-icon&gt;</code> and <code>width</code> in <code>&lt;nys-button&gt;</code>.</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> insisted on improving intellisense.</p>
+<h2 id="breaking-changes">🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-tooltip&gt;</code> is now a standalone component. The old tooltip wrapper has been removed from the package. If you are using it, please update your code to use the <a href="/components/tooltip">new standalone tooltip component</a>.</li>
+</ul>
+<h2 id="known-issues">⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3 id="that-s-it">That’s it!</h3>
+<h4 id="for-full-component-updates-bug-fixes-and-the-detailed-changelog">For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css">
+
+
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">        
+        <ul class="taglist" data-pagefind-ignore="all">
+          
+          <li class="badge">release</li>
+          
+          <li class="badge"> custom element manifest</li>
+          
+          <li class="badge"> figma</li>
+          
+        </ul>
+        </div>
+        </div>
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div></div>
+            <div>Previous : <a href="/updates/1.11.3-release/" title="Read: NYS Design System Release 1.11.3"><b>NYS Design System Release 1.11.3</b></a></div>
+          </div>
+        </div>
+
+        
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2025-12-11-release-1.12.0.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: December 11, 2025</p>
+  </div>
+
+
+      </section>
+    </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+    </aside>
+  </div>
+</div>
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+  
+  </body>
+</html>
