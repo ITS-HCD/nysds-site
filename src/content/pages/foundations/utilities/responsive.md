@@ -12,14 +12,14 @@ layout: layouts/3-col.njk
 
 # Responsive Utilities
 
-Responsive classes which combine with utilitiy classes to apply them at specific breakpoints. 
+Responsive classes which combine with utility classes to apply them at specific breakpoints. 
 
 Here are the responsive breakpoints you can prefix to utility classes:
 
-  - `nys-mobile-lg:` - (min-width: 480px)
-  - `nys-tablet:` - (min-width: 768px)
-  - `nys-desktop:` - (min-width: 1024px)
-  - `nys-widescreen:` - (min-width: 1400px)
+  - `nys-mobile-lg:` min-width: 480px
+  - `nys-tablet:` min-width: 768px
+  - `nys-desktop:` min-width: 1024px
+  - `nys-widescreen:` min-width: 1400px
 
 Responsive utilities are written as their screen size followed by a colon, followed by the utility class you want to make responsive. Here is an example of a responsive `display` utility that applies `display: none` to desktop screens and larger:
 
@@ -104,7 +104,7 @@ If you want to have a utility class apply at every breakpoint, simply use the ut
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
-### Different utility at different breakpoints
+## Different utility at different breakpoints
 Columns are full-width until the narrowest breakpoint specified in a `.nys-grid-col` class. For instance, using a single set of `nys-desktop:nys-grid-col-4` classes, you can create a basic grid system that starts out stacked before displaying as columns at the desktop breakpoint (`nys-desktop:`) as illustrated in the following rows and corresponding code.
 
 **You can see in the preview below**, the columns are stacked on top of each other at narrow screen widths (Smaller than desktop breakpoint size of `1024px`).
@@ -165,7 +165,7 @@ Columns are full-width until the narrowest breakpoint specified in a `.nys-grid-
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
-### Mix and match breakpoints
+## Mix and match breakpoints
 Use a combination of different breakpoints for each layout as needed. See the following example code for a better idea of how it all works. **Use caution when applying styles at different breakpoints**, changing the layout on a screen drastically between breakpoints can be confusing to users.
 
 {% set preview %}
