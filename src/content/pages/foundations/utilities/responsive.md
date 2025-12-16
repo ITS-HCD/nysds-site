@@ -12,9 +12,20 @@ layout: layouts/3-col.njk
 
 # Responsive Utilities
 
-The NYS Design System features responsive classes which apply utility classes at specific breakpoints.
+Responsive classes which combine with utilitiy classes to apply them at specific breakpoints. 
 
-The following utilities are supported:
+Here are the responsive breakpoints you can prefix to utility classes:
+
+  - `nys-mobile-lg:` - (min-width: 480px)
+  - `nys-tablet:` - (min-width: 768px)
+  - `nys-desktop:` - (min-width: 1024px)
+  - `nys-widescreen:` - (min-width: 1400px)
+
+Responsive utilities are written as their screen size followed by a colon, followed by the utility class you want to make responsive. Here is an example of a responsive `display` utility that applies `display: none` to desktop screens and larger:
+
+  - `<p class="nys-desktop:nys-display-none">Hello Mobile World</p>`
+
+## List of supported utilities
   - [Display](../display)
   - [Flex](../flex)
   - [Float](../float)
@@ -22,16 +33,14 @@ The following utilities are supported:
   - [Opacity](../opacity)
   - [Z-index](../zindex)
 
-Currently unsupported:
+**Currently unsupported:**
   - [Margin and Padding](../margin-padding)
 
+## Same utility on all breakpoints
 
-### Same at all breakpoints
+If you want to have a utility class apply at every breakpoint, simply use the utility class on its own. No need to use the responsive utilities to target specific breakpoints as they will apply mobile-first through all larger breakpoints. Let's see an example using the `nys-grid-col` classes.
 
-For columns that should maintain the same proportion at any viewport width, use the `.nys-grid-col` and `.nys-grid-col-*` classes. Specify a numbered class when you need a column of a specific width; otherwise, use `.nys-grid-col`.
-
-`.nys-grid-col-[1-12]` sets a fixed width of \[n\] grid columns in a 12-column grid.
-
+{% set backgroundSolid = true %}
 {% set preview %}
 <div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
@@ -72,63 +81,92 @@ For columns that should maintain the same proportion at any viewport width, use 
   </div>
 </div>
 <div class="docs-grid-example">
-<div class="nys-grid-row">
-  <div class="nys-grid-col-1">.nys-grid-col-1</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-  <div class="nys-grid-col-3">.nys-grid-col-3</div>
-  <div class="nys-grid-col-4">.nys-grid-col-4</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-</div>
-<div class="nys-grid-row">
-  <div class="nys-grid-col-8">.nys-grid-col-8</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-</div>
+    <div class="nys-grid-row">
+    <div class="nys-grid-col-6">.nys-grid-col-6</div>
+    <div class="nys-grid-col-6">.nys-grid-col-6</div>
+    </div>
+    Will always be a set of 6 columns
+    <div class="nys-grid-row">
+    <div class="nys-grid-col-8">.nys-grid-col-8</div>
+    <div class="nys-grid-col-4">.nys-grid-col-4</div>
+    </div>
+    Will always be a set of 8 and 4 columns
 </div>{% endset %}
 {% set code%}
 <div class="nys-grid-row">
-  <div class="nys-grid-col-1">.nys-grid-col-1</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-  <div class="nys-grid-col-3">.nys-grid-col-3</div>
-  <div class="nys-grid-col-4">.nys-grid-col-4</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
+    <div class="nys-grid-col-6">.nys-grid-col-6</div>
+    <div class="nys-grid-col-6">.nys-grid-col-6</div>
 </div>
 <div class="nys-grid-row">
-  <div class="nys-grid-col-8">.nys-grid-col-8</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-  <div class="nys-grid-col-2">.nys-grid-col-2</div>
-</div>{% endset %}
-{% include "partials/code-preview.njk" %}
-
-
-### Stacked columns at narrow widths
-Columns are full-width until the narrowest breakpoint specified in a `.nys-grid-col` class. For instance, using a single set of `nys-tablet:nys-grid-col-*` classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (`nys-tablet:`) as illustrated in the following rows and corresponding code.
-
-{% set preview %}<div class="docs-grid-example">
-  <div class="nys-grid-row">
-    <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
-    <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
-    <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
-  </div>
-  <div class="nys-grid-row">
-    <div class="nys-tablet:nys-grid-col-4">.nys-tablet:nys-grid-col-4</div>
-    <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
-  </div>
-</div>{% endset %}
-{% set code %}<div class="nys-grid-row">
-  <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
-  <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
-  <div class="nys-tablet:nys-grid-col">.nys-tablet:nys-grid-col</div>
-</div>
-<div class="nys-grid-row">
-  <div class="nys-tablet:nys-grid-col-4">.nys-tablet:nys-grid-col-4</div>
-  <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
+    <div class="nys-grid-col-8">.nys-grid-col-8</div>
+    <div class="nys-grid-col-4">.nys-grid-col-4</div>
 </div>
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
-### Mix and match
-Don't want your columns to simply stack in some breakpoints? Use a combination of different classes for each breakpoint as needed. See the following example rows and corresponding code for a better idea of how it all works.
+### Different utility at different breakpoints
+Columns are full-width until the narrowest breakpoint specified in a `.nys-grid-col` class. For instance, using a single set of `nys-desktop:nys-grid-col-4` classes, you can create a basic grid system that starts out stacked before displaying as columns at the desktop breakpoint (`nys-desktop:`) as illustrated in the following rows and corresponding code.
+
+**You can see in the preview below**, the columns are stacked on top of each other at narrow screen widths (Smaller than desktop breakpoint size of `1024px`).
+
+{% set preview %}
+<div class="nys-grid-row border-left bg-white">
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">1</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">2</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">3</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">4</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">5</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">6</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">7</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">8</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">9</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">10</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">11</div>
+  </div>
+  <div class="nys-grid-col-1 border-right">
+    <div class="text-center">12</div>
+  </div>
+</div>
+<div class="docs-grid-example">
+  <div class="nys-grid-row">
+    <div class="nys-desktop:nys-grid-col-4">.nys-desktop:nys-grid-col-4</div>
+    <div class="nys-desktop:nys-grid-col-4">.nys-desktop:nys-grid-col-4</div>
+    <div class="nys-desktop:nys-grid-col-4">.nys-desktop:nys-grid-col-4</div>
+  </div>
+  12 columns mobile through tablet, 4 columns starting from the desktop breakpoint
+</div>{% endset %}
+{% set code %}
+<div class="nys-grid-row">
+    <div class="nys-desktop:nys-grid-col-4">.nys-desktop:nys-grid-col-4</div>
+    <div class="nys-desktop:nys-grid-col-4">.nys-desktop:nys-grid-col-4</div>
+    <div class="nys-desktop:nys-grid-col-4">.nys-desktop:nys-grid-col-4</div>
+</div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
+### Mix and match breakpoints
+Use a combination of different breakpoints for each layout as needed. See the following example code for a better idea of how it all works. **Use caution when applying styles at different breakpoints**, changing the layout on a screen drastically between breakpoints can be confusing to users.
 
 {% set preview %}
 <div class="nys-grid-row border-left bg-white">
@@ -171,38 +209,24 @@ Don't want your columns to simply stack in some breakpoints? Use a combination o
 </div>
 <div class="docs-grid-example">
 <div class="nys-grid-row">
-  <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
+  <div class="nys-mobile-lg:nys-grid-col-3 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-9 nys-widescreen:nys-grid-col-12">Multi-column</div>
 </div>
-Stack the columns on mobile by making one full-width and the other half-width
-<div class="nys-grid-row">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
-</div>
-Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
-<div class="nys-grid-row">
-  <div class="nys-grid-col-6">.nys-grid-col-6</div>
-  <div class="nys-grid-col-6">.nys-grid-col-6</div>
-</div>
-Columns are always 50% wide, on mobile and desktop
+Mobile: 3 columns - <code>class="nys-mobile-lg:nys-grid-col-3"</code><br>
+Tablet: 6 columns - <code>class="nys-tablet:nys-grid-col-6"</code><br>
+Desktop: 9 columns - <code>class="nys-desktop:nys-grid-col-9"</code><br>
+Widescreen: 12 columns - <code>class="nys-widescreen:nys-grid-col-12"</code>
 </div>{% endset %}
-{% set code%}<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+{% set code%}
 <div class="nys-grid-row">
-  <div class="nys-tablet:nys-grid-col-8">.nys-tablet:nys-grid-col-8</div>
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
+  <div class="
+    nys-mobile-lg:nys-grid-col-3
+    nys-tablet:nys-grid-col-6
+    nys-desktop:nys-grid-col-9
+    nys-widescreen:nys-grid-col-12
+    ">
+    Multi-column</div>
 </div>
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-<div class="nys-grid-row">
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
-  <div class="nys-grid-col-6 nys-tablet:nys-grid-col-4">.nys-grid-col-6 .nys-tablet:nys-grid-col-4</div>
-</div>
-<!-- Columns are always 50% wide, on mobile and desktop -->
-<div class="nys-grid-row">
-  <div class="nys-grid-col-6">.nys-grid-col-6</div>
-  <div class="nys-grid-col-6">.nys-grid-col-6</div>
-</div>
+
 {% endset %}
 {% include "partials/code-preview.njk" %}
 

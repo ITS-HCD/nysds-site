@@ -57,7 +57,6 @@ To attach a `<nys-tooltip>` to a support NYSDS component, set the tooltip’s `f
 <nys-button id="btn1" label="Submit"></nys-button>{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
-{% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
 
 ### Position
