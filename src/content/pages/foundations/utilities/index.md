@@ -71,6 +71,16 @@ layout: layouts/3-col.njk
     </a>
   </div>
   <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
+    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/responsive">
+      <div class="card__inner">
+        <div class="card__media">
+          <img src="{{ site.url | url}}/assets/img/components/placeholder.svg" alt=""></div>
+        <div class="card__title">Responsive Utilities</div>
+        <div class="card__desc">Responsive utilities for adjusting applied styles based on screen width.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
     <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/typography">
       <div class="card__inner">
         <div class="card__media">

@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (document.body.classList.contains('no-heading-links')) {
     return;
   } else {
-  
+  // Grab all headings from h2 to h6
   const headings = Array.from(document.querySelectorAll('h2,h3,h4,h5,h6'));
   if (!headings.length) return;
 
@@ -231,33 +231,31 @@ document.addEventListener('DOMContentLoaded', function () {
     // If heading already contains an anchor that links to this id, skip
     if (h.querySelector(`a[href="#${id}"]`)) return;
 
+    // Need to relatively position the headsing so we can absolutely position the icon
     h.style.position = 'relative';
 
+    // Create our tooltip element
     const tooltip = document.createElement('nys-tooltip');
     // tooltip.setAttribute('text', `Copy link to ${h.textContent.trim()}`);
     tooltip.setAttribute('text', `Copy link`);
     tooltip.setAttribute('focusable', true);
+    tooltip.setAttribute('for', `heading-link-icon-${id}`);
     tooltip.style.display = 'inline-flex';
     tooltip.style.padding = '0 0 0 var(--nys-space-50)';
 
+    // Create our link icon element
+    const linkIcon = document.createElement('nys-icon');
+    linkIcon.setAttribute('name', 'link');
+    linkIcon.setAttribute('id', `heading-link-icon-${id}`);
 
-    tooltip.appendChild(document.createElement('nys-icon')).setAttribute('name', 'link');
-    // Move heading's children into the anchor so markup is preserved
+    // Create an anchor that will hold the URL to copy for this heading
+    // anchor is in memory, not added to the DOM
     const anchor = document.createElement('nys-button');
-    //anchor.className = 'heading-link';
-    anchor.setAttribute('label', 'Link to heading');
-    // anchor.setAttribute('aria-label', );
-    anchor.style.color = 'inherit';
-    anchor.style.textDecoration = 'none';
-    anchor.style.display = 'inline-block';
-    // anchor.setAttribute('onclick', 'copyHeadingUrl(this);');
     anchor.setAttribute('href', `#${id}`);
-    anchor.setAttribute('circle', 'true');
-    anchor.setAttribute('icon', 'link');
-    anchor.setAttribute('size', 'sm');
-    anchor.setAttribute('variant', 'ghost');
 
-    tooltip.addEventListener('click', (e) => {
+    // When you click on the copy icon, copy the heading URL to clipboard
+    // change the tooltip text to "Copied!" temporarily
+    linkIcon.addEventListener('click', (e) => {
       // Stop the page from scrolling when you click this link
       e.preventDefault();
       // Copy the Full URL to the clipboard
@@ -269,8 +267,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 1500);
     });
 
-    // h.insertAdjacentElement('beforeend', anchor);
+    // insert both the tooltip and linkicon elements after the heading text
     h.insertAdjacentElement('beforeend', tooltip);
+    h.insertAdjacentElement('beforeend', linkIcon);
 
   });
 }
