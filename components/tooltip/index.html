@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2025-12-11T16:35:20.474+00:00 -->
+    <!-- Latest Build: 2025-12-16T16:57:13.184+00:00 -->
   </head>
   
   <body class="single-page page-tooltip section-components">
@@ -383,8 +383,7 @@
   <div class="nys-desktop:nys-grid-col-8">  
     <p></p><section id="overview">
 <h1 id="tooltip">Tooltip</h1><p></p>
-<p>The <code>&lt;nys-toggle&gt;</code> component is a reusable wrapper that displays a brief message when a user hovers over or focuses on its wrapped element, offering additional information or context.</p>
-<p><strong>IMPORTANT:</strong> Unlike tooltip props found on form-related components, <code>&lt;nys-tooltip&gt;</code> is a standalone wrapper. Wrap a single <code>&lt;nys-icon&gt;</code> or <code>&lt;nys-button&gt;</code> manually to add a tooltip.</p>
+<p>The <code>&lt;nys-tooltip&gt;</code> component is used to provide short, supplemental information when users hover, focus, or keyboard-navigate to the linked component (more info on linking with <code>for</code> prop below).</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
         <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
@@ -395,9 +394,8 @@
   <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><div style="margin-top:30px">
-  <nys-tooltip text="I am a tooltip.">
-  <nys-button id="button1" name="button1" label="Hover Me"></nys-button>
-</nys-tooltip>
+<nys-tooltip for="my-button" text="I am a tooltip."></nys-tooltip>
+<nys-button id="my-button" label="Hover Me"></nys-button>
 </div></div>
   </div>
   <div class="code-preview__source">
@@ -413,9 +411,8 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button1<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Hover Me<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-button<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-button<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Hover Me<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   <div class="code-preview__code-tip">
@@ -427,105 +424,142 @@
     <br>
     <section>
       <h2 id="options">Options</h2>
-<h3 id="focusable">Focusable</h3>
-<p>Use the <code>focusable</code> prop to make non-focusable slotted elements (i.e. <code>&lt;nys-icon&gt;</code>) accessible via keyboard focus.</p>
-  <div class="code-preview-container">
-  <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center; margin-top:30px">
-  <div style="display: flex; gap: 5px">
-    <p>Hover over the icon</p>
-    <nys-tooltip text="I am a tooltip." focusable="">
-      <nys-icon name="info" size="3xl"></nys-icon>
-    </nys-tooltip>
-  </div>
-</div></div>
-  </div>
+<h3 id="supported-components">Supported Components</h3>
+<p>The <code>&lt;nys-tooltip&gt;</code> supports the following NYS components:</p>
+<ul>
+<li><code>&lt;nys-button&gt;</code></li>
+<li><code>&lt;nys-icon&gt;</code></li>
+<li><code>&lt;nys-textinput&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-textarea&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-select&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkboxgroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-checkbox&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-radiogroup&gt;</code> (appears as a hint icon)</li>
+<li><code>&lt;nys-fileinput&gt;</code> (appears as a hint icon)</li>
+</ul>
+<p><strong>These components are either:</strong></p>
+<ul>
+<li>a form-related web component.</li>
+<li>standard components used for tooltips (i.e., <code>nys-icon</code> and <code>nys-button</code>).</li>
+</ul>
+<p>To attach <code>&lt;nys-tooltip&gt;</code> to a NYS component, see the section below.</p>
+<h3 id="linking-tooltip-to-an-component">Linking Tooltip to an Component</h3>
+<p>To attach a <code>&lt;nys-tooltip&gt;</code> to a support NYSDS component, set the tooltip’s <code>for</code> attribute to the target component's <code>id</code>. <strong>Both values MUST match.</strong></p>
+<div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
       </button>
       <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
     </div>
-    <div class="code-preview__code-container ">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hover over the icon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>nys<span class="token operator">-</span>tooltip <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"btn1"</span> text<span class="token operator">=</span><span class="token string">"More details"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>tooltip<span class="token operator">></span>
+<span class="token operator">&lt;</span>nys<span class="token operator">-</span>button id<span class="token operator">=</span><span class="token string">"btn1"</span> label<span class="token operator">=</span><span class="token string">"Submit"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>button<span class="token operator">></span></code></pre>
       </div>
     </div>
   </div>
 </div>
 <h3 id="position">Position</h3>
-<p>Use the <code>position</code> prop to control where the direction where the tooltip will appear. If no <code>position</code> is provided, the tooltip will automatically choose the best position based on the available space.</p>
-<p>Valid positions are: <code>top</code>, <code>bottom</code>, <code>right</code>, <code>left</code></p>
-  <div class="code-preview-container">
+<p>Use the <code>position</code> prop to control where the direction where the tooltip will appear. <br>
+Valid positions are: <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code></p>
+<p><strong>Note:</strong> If no position is provided, the tooltip will automatically choose the best position based on the available space.</p>
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center;">
   <div style="display: flex; gap: 5px">
     <p>Hover over the icon</p>
-    <nys-tooltip text="I am a tooltip." position="right" focusable="">
-      <nys-icon name="info" size="3xl"></nys-icon>
+    <nys-tooltip for="my-icon2" text="I am a tooltip." position="right">
     </nys-tooltip>
+    <nys-icon id="my-icon2" name="info" size="3xl"></nys-icon>
   </div>
 </div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
       </button>
       <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
     </div>
-    <div class="code-preview__code-container ">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hover over the icon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>right<span class="token punctuation">"</span></span> <span class="token attr-name">focusable</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>p<span class="token operator">></span>Hover over the icon<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span>nys<span class="token operator">-</span>tooltip <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"my-icon2"</span> text<span class="token operator">=</span><span class="token string">"I am a tooltip."</span> position<span class="token operator">=</span><span class="token string">"right"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>tooltip<span class="token operator">></span>
+<span class="token operator">&lt;</span>nys<span class="token operator">-</span>icon id<span class="token operator">=</span><span class="token string">"my-icon2"</span> name<span class="token operator">=</span><span class="token string">"info"</span> size<span class="token operator">=</span><span class="token string">"3xl"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>icon<span class="token operator">></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="hints-for-form-fields">Hints for Form Fields</h3>
+<p>When a <code>&lt;nys-tooltip&gt;</code> is added to an NYS form component, it appears as a hint icon next to the label. <br>
+Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to set a position prop.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner"><div style="margin-top:30px">
+  <nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+  <nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="lg" required=""></nys-textinput>
+</div></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>nys<span class="token operator">-</span>tooltip <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"my-textinput"</span> text<span class="token operator">=</span><span class="token string">"I am a tooltip."</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>tooltip<span class="token operator">></span>
+<span class="token operator">&lt;</span>nys<span class="token operator">-</span>textinput id<span class="token operator">=</span><span class="token string">"my-textinput"</span> name<span class="token operator">=</span><span class="token string">"fullName"</span> label<span class="token operator">=</span><span class="token string">"Full name"</span> description<span class="token operator">=</span><span class="token string">"Enter your full legal name"</span> width<span class="token operator">=</span><span class="token string">"lg"</span> required<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>textinput<span class="token operator">></span></code></pre>
       </div>
     </div>
   </div>
 </div>
 <h3 id="inverted">Inverted</h3>
 <p>Set the <code>inverted</code> when the tooltip is on a dark background.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview inverted " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center; margin-top:30px">
   <div style="color: #fff; display: flex; gap: 5px">
     <p>Hover over the icon</p>
-    <nys-tooltip text="I am a tooltip." inverted="" focusable="">
-      <nys-icon name="info" size="3xl"></nys-icon>
+    <nys-tooltip for="my-tooltip3" text="I am a tooltip." inverted="">
     </nys-tooltip>
+    <nys-icon id="my-tooltip3" name="info" size="3xl"></nys-icon>
   </div>
 </div></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
       </button>
       <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
         <div class="copy-tooltip">Copy Code</div>
       </div>
     </div>
-    <div class="code-preview__code-container ">
+    <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hover over the icon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span> <span class="token attr-name">inverted</span> <span class="token attr-name">focusable</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token string">"color: #fff; display: flex; gap: 5px"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>p<span class="token operator">></span>Hover over the icon<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+  <span class="token operator">&lt;</span>nys<span class="token operator">-</span>tooltip <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"my-tooltip3"</span> text<span class="token operator">=</span><span class="token string">"I am a tooltip."</span> inverted<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>tooltip<span class="token operator">></span>
+  <span class="token operator">&lt;</span>nys<span class="token operator">-</span>icon id<span class="token operator">=</span><span class="token string">"my-tooltip3"</span> name<span class="token operator">=</span><span class="token string">"info"</span> size<span class="token operator">=</span><span class="token string">"3xl"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nys<span class="token operator">-</span>icon<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
       </div>
     </div>
   </div>
@@ -536,7 +570,7 @@
       <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
-<li>Use this component to wrap interactive or visual elements like <code>nys-icon</code> or <code>nys-button</code> to provide additional information or context.</li>
+<li>Use this component to wrap interactive or visual elements like <code>nys-icon</code>, <code>nys-button</code>, or the listed form-related NYSDS components to provide additional information or context.</li>
 </ul>
 <h3 id="when-to-consider-something-else">When to consider something else</h3>
 <ul>
@@ -551,6 +585,7 @@
 <ul>
 <li>Provide brief and helpful content inside the tooltip.</li>
 <li>Add tooltips to icons that do not have visible labels and require additional context.</li>
+<li>Position tooltips so they don’t block related content.</li>
 </ul>
 </div>
       </div>
@@ -595,8 +630,8 @@
 <td>String</td>
 </tr>
 <tr>
-<td><code>focusable</code></td>
-<td>boolean</td>
+<td><code>for</code></td>
+<td>String</td>
 </tr>
 <tr>
 <td><code>inverted</code></td>
@@ -640,7 +675,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/tooltip.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: December 11, 2025</p>
+    <p>Last updated: December 16, 2025</p>
   </div>
 
   </div>
