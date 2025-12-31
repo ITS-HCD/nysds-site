@@ -10,7 +10,7 @@ navOrder: 2
 {% block content %}
 
 # Documents
-Resources for making electronic documents accessibile.
+Resources for making electronic documents accessible.
 
 - [PDF Accessibility – What makes a PDF accessible?](https://webaim.org/techniques/acrobat/)
 - [PDF Accessibility – Exporting accessible PDFs with Adobe Acrobat](https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html)
