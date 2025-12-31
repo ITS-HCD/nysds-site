@@ -1,0 +1,1533 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYS Design System 2025 Wrapped</title>
+
+    <!-- REQUIRED: do not add/remove CSS/JS references -->
+    <link rel="stylesheet" href="../assets/css/vendor/nysds-full.min.css">
+    <link rel="stylesheet" href="../assets/fonts/nysds-fonts.css">
+
+    <style>
+      /* Minimum text size requirement */
+      html {
+        font-size: 18px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--nys-color-text);
+        background: var(--nys-color-surface);
+        font-family: "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      .wrapped-app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      /* “Wrapped” deck chrome */
+      .wrapped-toolbar {
+        border-bottom: 1px solid var(--nys-color-neutral-200, var(--nys-color-base-weak));
+        background: var(--nys-color-surface);
+      }
+
+      .wrapped-toolbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .wrapped-progress {
+        width: 100%;
+      }
+
+      .wrapped-progress progress {
+        width: 100%;
+        height: 0.75rem;
+        appearance: none;
+      }
+
+      .wrapped-progress progress::-webkit-progress-bar {
+        background: var(--nys-color-base-weak);
+        border-radius: 999px;
+      }
+
+      .wrapped-progress progress::-webkit-progress-value {
+        background: var(--nys-color-theme);
+        border-radius: 999px;
+      }
+
+      .wrapped-deck {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .wrapped-slide {
+        display: none;
+        min-height: var(--wrapped-available-height, 70vh);
+      }
+
+      .wrapped-slide[data-active="true"] {
+        display: block;
+      }
+
+      /* Slide content layout */
+      .wrapped-slide-inner {
+        min-height: var(--wrapped-available-height, 70vh);
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+
+      .wrapped-surface {
+        border-radius: 1.25rem;
+        border: 1px solid var(--nys-color-base-weak);
+        background: var(--nys-color-surface);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Wrapped-y “story” backgrounds using NYSDS tokens only */
+      .wrap-bg-hero {
+        background:
+          radial-gradient(1200px 600px at 20% 20%, var(--nys-color-theme-mid), transparent 60%),
+          radial-gradient(900px 500px at 80% 30%, var(--nys-color-theme), transparent 55%),
+          linear-gradient(135deg, var(--nys-color-theme-stronger), var(--nys-color-theme-strong));
+        color: var(--nys-color-text-reverse);
+      }
+
+      .wrap-bg-night {
+        background:
+          radial-gradient(900px 500px at 25% 20%, var(--nys-color-theme), transparent 60%),
+          radial-gradient(700px 400px at 85% 35%, var(--nys-color-theme), transparent 55%),
+          linear-gradient(135deg, var(--nys-color-neutral-900), var(--nys-color-theme-stronger));
+        color: var(--nys-color-text-reverse);
+      }
+
+      .wrap-bg-calm {
+        background: radial-gradient(900px 500px at 20% 20%, var(--nys-color-theme-weak), transparent 60%),
+          radial-gradient(800px 450px at 80% 30%, var(--nys-color-info-weak), transparent 55%),
+          linear-gradient(135deg, var(--nys-color-surface), var(--nys-color-theme-faint));
+        color: var(--nys-color-text);
+      }
+
+      .wrap-bg-success {
+        background: radial-gradient(900px 500px at 25% 20%, var(--nys-color-environment-green-700), transparent 60%),
+          radial-gradient(700px 400px at 80% 35%, var(--nys-color-environment-green-600), transparent 55%),
+          linear-gradient(135deg, var(--nys-color-environment-green-900), var(--nys-color-environment-green-700));
+        color: var(--nys-color-text-reverse);
+      }
+
+      .wrap-bg-health {
+        background: radial-gradient(900px 500px at 25% 20%, var(--nys-color-health-purple-700), transparent 60%),
+          radial-gradient(700px 400px at 80% 35%, var(--nys-color-health-purple-600), transparent 55%),
+          linear-gradient(135deg, var(--nys-color-theme-stronger), var(--nys-color-health-purple-700));
+        color: var(--nys-color-text-reverse);
+      }
+
+      .wrap-bg-contrast {
+        background:
+          radial-gradient(900px 500px at 20% 20%, var(--nys-color-theme), transparent 60%),
+          radial-gradient(700px 400px at 85% 35%, var(--nys-color-theme), transparent 55%),
+          linear-gradient(135deg, var(--nys-color-theme-stronger), var(--nys-color-neutral-900));
+        color: var(--nys-color-text-reverse);
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .wrapped-slide[data-animate="true"] .wrapped-animate-in {
+          animation: wrappedIn 520ms ease-out both;
+        }
+
+        @keyframes wrappedIn {
+          from {
+            opacity: 0;
+            transform: translateY(16px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      /* Typography scale (keep everything large) */
+      .wrapped-kicker {
+        font-size: 1.1rem;
+        opacity: 0.92;
+        letter-spacing: 0.02em;
+      }
+
+      .wrapped-title {
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+        margin: 0.25rem 0 0;
+        line-height: 1.05;
+      }
+
+      .wrapped-subtitle {
+        font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+        margin: 0.75rem 0 0;
+        max-width: 55ch;
+        opacity: 0.95;
+      }
+
+      .wrapped-stat-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .wrapped-stat-grid.two {
+          grid-template-columns: 1fr 1fr;
+        }
+        .wrapped-stat-grid.three {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      .wrapped-stat-card {
+        border-radius: 1.25rem;
+        padding: 1.2rem;
+        border: 1px solid var(--nys-color-base-weak);
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(6px);
+      }
+
+      .wrap-bg-calm .wrapped-stat-card {
+        background: var(--nys-color-surface);
+      }
+
+      .wrapped-stat-number {
+        font-size: clamp(2.6rem, 6vw, 4.2rem);
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+      }
+
+      .wrapped-stat-label {
+        margin: 0.5rem 0 0;
+        font-size: 1.1rem;
+        opacity: 0.95;
+      }
+
+      .wrapped-quote {
+        font-size: clamp(1.2rem, 2.8vw, 1.8rem);
+        line-height: 1.35;
+        margin: 0;
+      }
+
+      .wrapped-attrib {
+        margin: 0.9rem 0 0;
+        font-size: 1.1rem;
+        opacity: 0.95;
+      }
+
+      /* Bottom nav */
+      .wrapped-nav {
+        position: sticky;
+        bottom: 0;
+        background: var(--nys-color-surface);
+        border-top: 1px solid var(--nys-color-base-weak);
+      }
+
+      .wrapped-nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .wrapped-nav-left,
+      .wrapped-nav-right {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .wrapped-slide-indicator {
+        font-size: 1rem;
+        opacity: 0.9;
+        white-space: nowrap;
+      }
+
+      /* Team member slide */
+      .member-card {
+        border-radius: 1.25rem;
+        border: 1px solid var(--nys-color-base-weak);
+        background: rgba(255, 255, 255, 0.10);
+        overflow: hidden;
+      }
+
+      .wrap-bg-calm .member-card {
+        background: var(--nys-color-surface);
+      }
+
+      .member-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .wrap-bg-calm .member-photo {
+        border-bottom: 1px solid var(--nys-color-base-weak);
+      }
+
+      .member-body {
+        padding: 1rem 1.2rem;
+      }
+
+      .member-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .member-role {
+        margin: 0.3rem 0 0;
+        opacity: 0.92;
+      }
+
+      .wrapped-list {
+        margin: 0.6rem 0 0;
+        padding-left: 1.2rem;
+      }
+
+      .wrapped-list li {
+        margin: 0.4rem 0;
+      }
+
+      /* Simple “package size” bar */
+      .size-bar {
+        border-radius: 999px;
+        height: 1rem;
+        background: rgba(255, 255, 255, 0.18);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+      }
+
+      .wrap-bg-calm .size-bar {
+        background: var(--nys-color-base-weak);
+        border: 1px solid var(--nys-color-base-weak);
+      }
+
+      .size-fill {
+        height: 100%;
+        width: 0%;
+        background: var(--nys-color-accent);
+      }
+
+      .wrap-bg-calm .size-fill {
+        background: var(--nys-color-theme);
+      }
+
+      /* Accessibility helper */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Make native input large and readable */
+      /* .share-input {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid var(--nys-color-base-weak);
+        font-size: 1rem;
+        background: var(--nys-color-surface);
+        color: var(--nys-color-text);
+      } */
+      section + section {
+        margin-top: 0; /* Fixes the extra section + section top margin introduced in nysds-full.min.css */
+        margin-bottom: 0!important; /* Override extra bottom margin from nysds-full.min.css */
+      }
+
+      .wrapped-stat-card {
+        border: 1px solid;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+        outline: 1px solid;
+        outline-color: rgba(255, 255, 255, .5);
+        outline-offset: 0px;
+        text-shadow: none;
+        transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+      } 
+
+      .wrapped-stat-card:hover {
+        border: 1px solid;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 15px;
+        text-shadow: 1px 1px 2px #427388; 
+      }
+
+      [data-contrast="dark"] li::marker {
+        color: var(--nys-color-text-reverse);
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .logo-mark {
+        display: none;
+        position: absolute;
+        width: 200px;
+        top: 20px;
+        right: 40px;
+      }
+
+      @media (min-width: 768px) {
+        .logo-mark {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapped-app">
+      <!-- Required site chrome -->
+      <nys-globalheader appName="Design System Wrapped 2025">
+        <ul>
+          <li><a href="https://designsystem.ny.gov">Home</a></li>
+        </ul>
+      </nys-globalheader>
+      <img src="../assets/img/nysds-logo-long-white.png" alt="NYSDS Logo" class="logo-mark">
+      <main id="main">
+        <!-- Top toolbar (no Customize button; Share only) -->
+        <!-- <div class="wrapped-toolbar">
+          <div class="nys-grid-container nys-padding-y-200">
+            <div class="wrapped-toolbar-inner">
+              <div class="wrapped-progress" aria-label="Story progress">
+                <div class="sr-only" id="progressText">Slide progress</div>
+                <progress id="progressBar" value="1" max="1" aria-describedby="progressText"></progress>
+              </div>
+
+              <div>
+                <nys-button id="shareBtn" label="Share" variant="outline"></nys-button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Slide deck -->
+        <div id="deck" class="wrapped-deck" aria-live="polite">
+          <!-- Slide 0: Intro -->
+          <section class="wrapped-slide wrap-bg-hero" data-slide="0" data-active="true" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 1" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Wrapped: Our year in design + code</p>
+                  <h1 class="wrapped-title" id=""><img src="../assets/img/nysds-logo-stacked-white.svg" alt="New York State Design System"></h1>
+                  <p class="wrapped-subtitle">
+                    A quick, mobile-friendly recap of 2025. Built with NYS DS components and tokens.
+                  </p>
+
+                  <div class="nys-margin-t-500">
+                    <nys-button id="startBtn" label="Start" variant="outline"></nys-button>
+                  </div>
+
+                  <p class="nys-margin-t-300 wrapped-kicker" style="display:none;">
+                    <!-- (No inline styles allowed; this element intentionally unused) -->
+                  </p>
+
+                  <p class="nys-margin-t-300 wrapped-kicker">
+                    Tip: Use arrow keys, or the buttons below to navigate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 1: Big launch stats -->
+          <section class="wrapped-slide wrap-bg-night" data-slide="1" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 2" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Launched in 2025</p>
+                  <h2 class="wrapped-title" id="we-built-a-lot-this-year">We built a lot this year!</h2>
+
+                  <div class="wrapped-stat-grid three nys-margin-t-600">
+                    <div class="wrapped-stat-card btn-4">
+                      <p class="wrapped-stat-number" data-count="26">26</p>
+                      <p class="wrapped-stat-label">New code components</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="30">30</p>
+                      <p class="wrapped-stat-label">New Figma components</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="34">34</p>
+                      <p class="wrapped-stat-label">Releases published</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 2: Quality + throughput -->
+          <section class="wrapped-slide wrap-bg-success" data-slide="2" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 3" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Quality + delivery</p>
+                  <h2 class="wrapped-title" id="velocity-with-guardrails">Velocity with guardrails.</h2>
+
+                  <div class="wrapped-stat-grid three nys-margin-t-600">
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="204">204</p>
+                      <p class="wrapped-stat-label">Component tests</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="450">450</p>
+                      <p class="wrapped-stat-label">Issues closed</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="500">500</p>
+                      <p class="wrapped-stat-label">Pull requests closed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 3: Community + enablement -->
+          <section class="wrapped-slide wrap-bg-calm" data-slide="3" data-contrast="light" aria-roledescription="slide" role="group" aria-label="Slide 4" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Community + enablement</p>
+                  <h2 class="wrapped-title" id="adoption-is-a-team-sport">Adoption is a team sport.</h2>
+
+                  <div class="wrapped-stat-grid three nys-margin-t-600">
+                    <div class="wrapped-stat-card wrapped-surface">
+                      <p class="wrapped-stat-number" data-count="10">10</p>
+                      <p class="wrapped-stat-label">Tutorial videos recorded</p>
+                    </div>
+                    <div class="wrapped-stat-card wrapped-surface">
+                      <p class="wrapped-stat-number" data-count="13">13</p>
+                      <p class="wrapped-stat-label">Office hour meetings</p>
+                    </div>
+                    <div class="wrapped-stat-card wrapped-surface">
+                      <p class="wrapped-stat-number" data-count="240">240+</p>
+                      <p class="wrapped-stat-label">Users in our Teams channel</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 4: Reach -->
+          <section class="wrapped-slide wrap-bg-contrast" data-slide="4" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 5" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Reach</p>
+                  <h2 class="wrapped-title" id="people-are-using-it">People are using it.</h2>
+
+                  <div class="wrapped-stat-grid two nys-margin-t-600">
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="6000">6,000</p>
+                      <p class="wrapped-stat-label">Website hits</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number" data-count="50000">50,000</p>
+                      <p class="wrapped-stat-label">Figma inserts</p>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-subtitle nys-margin-t-400" style="display:none;">
+                    <!-- intentionally unused -->
+                  </p>
+
+                  <p class="wrapped-subtitle nys-margin-t-400">
+                    Every number here translates to less reinvention, more consistency, and faster delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 5: Top components (kept) -->
+          <section class="wrapped-slide wrap-bg-calm" data-slide="5" data-contrast="light" aria-roledescription="slide" role="group" aria-label="Slide 6" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Top components</p>
+                  <h2 class="wrapped-title" id="what-teams-reached-for-most">What teams reached for most.</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-margin-b-400">
+                      <div class="wrapped-surface nys-padding-500">
+                        <h3 class="nys-margin-t-0" id="most-used-building-blocks">
+                          Most used building blocks
+                        </h3>
+                        <ol class="wrapped-list">
+                          <li><strong>nys-textinput</strong> — 8,097</li>
+                          <li><strong>nys-button</strong> — 7,787</li>
+                          <li><strong>nys-unavheader</strong> — 3,719</li>
+                          <li><strong>nys-icon</strong> — 3,328</li>
+                          <li><strong>nys-select</strong> — 3,189</li>
+                        </ol>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+                      <div class="wrapped-surface nys-padding-500">
+                        <h3 class="nys-margin-t-0" id="components-that-stood-out">
+                          Components that stood out
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li><strong>nys-fileinput</strong> — accessible file uploads (rare in DS land)</li>
+                          <li><strong>nys-tooltip</strong> — high-request, high-impact</li>
+                          <li><strong>nys-globalheader</strong> / <strong>nys-globalfooter</strong> — instant NYS chrome</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 6: Productivity quote -->
+          <section class="wrapped-slide wrap-bg-night" data-slide="6" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 7" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Productivity improvements</p>
+                  <h2 class="wrapped-title" id="speed-you-can-feel">Speed you can feel.</h2>
+
+                  <div class="wrapped-surface nys-padding-600 nys-margin-t-600" style="display:none;">
+                    <!-- intentionally unused -->
+                  </div>
+
+                  <div class="member-card nys-padding-600 nys-margin-t-600">
+                    <p class="wrapped-quote">
+                      “Building out the screens for Child Support Enrollment 1.0 took us 4-5 months.
+                      When we built 2.0 with the NYS Design System, it took us 1-2 months instead.
+                      It was so fast for us to get up and running."
+                    </p>
+                    <p class="wrapped-attrib">— NYS Child Support Enrollment team</p>
+                  </div>
+
+                  <div class="nys-margin-t-500 wrapped-stat-grid two">
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number">3x</p>
+                      <p class="wrapped-stat-label">Faster delivery window</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number">Less</p>
+                      <p class="wrapped-stat-label">Rebuild, re-style, re-test</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 7: Accessibility -->
+          <section class="wrapped-slide wrap-bg-calm" data-slide="7" data-contrast="light" aria-roledescription="slide" role="group" aria-label="Slide 8" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Accessibility</p>
+                  <h2 class="wrapped-title" id="designed-and-tested-for-everyone">Designed and tested for everyone.</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-7 nys-margin-b-400">
+                      <div class="wrapped-surface nys-padding-600">
+                        <p class="wrapped-quote" style="font-size: 1.25rem;">
+                          We manually tested every component, and we automatically test on build. We’re always expanding coverage.
+                        </p>
+
+                        <ul class="wrapped-list nys-margin-t-400">
+                          <li><strong>Manual testing</strong> for real-world interactions and edge cases</li>
+                          <li><strong>Automated checks</strong> running every build to prevent regressions</li>
+                          <li><strong>Continuous expansion</strong> as new components ship</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5">
+                      <div class="wrapped-surface nys-padding-600">
+                        <p class="nys-margin-t-0" style="font-size: 1.25rem; font-weight: 700;">
+                          What “accessible by default” means
+                        </p>
+                        <ul class="wrapped-list">
+                          <li>Keyboard usable</li>
+                          <li>Screen reader friendly</li>
+                          <li>Focus visible</li>
+                          <li>Semantic structure</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 8: Package size reduction -->
+          <section class="wrapped-slide wrap-bg-contrast" data-slide="8" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 9" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Performance</p>
+                  <h2 class="wrapped-title" id="we-cut-the-package-size-in-half">We cut the package size in half.</h2>
+
+                  <div class="wrapped-stat-grid two nys-margin-t-600">
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number">990KB+</p>
+                      <p class="wrapped-stat-label">Earlier this year</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number">480KB</p>
+                      <p class="wrapped-stat-label">Now</p>
+                    </div>
+                  </div>
+
+                  <div class="nys-margin-t-600">
+                    <div class="size-bar" aria-label="Package size comparison bar">
+                      <div id="sizeFill" class="size-fill" role="img" aria-label="Reduced package size bar"></div>
+                    </div>
+                    <p class="nys-margin-t-300 wrapped-kicker">
+                      That’s about <strong id="sizePct">47%</strong> smaller.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 9: Team member spotlight (Jesse Gardner) -->
+          <section class="wrapped-slide wrap-bg-success" data-slide="9" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 10" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="jesse-gardner">Jesse Gardner</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/jesse-headshot.jpg" alt="Photo for Jesse Gardner" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Jesse Gardner</p>
+                          <p class="member-role">Director</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “I think we’re doing some of the best design system work in government right now, and I couldn’t be prouder of this team. We didn’t just build a design system, we built it in public: a reference site, a video series, articles, office hours, an open-source repo. That’s not easy, even though the team made it look like it.”
+                        </p>
+
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>We cultivated a spirit of collaboration, with so many other teams contributing to the system to make it what it is;</li>
+                          <li>We worked incredibly hard but had a lot of fun doing it (chef hats, bootleg t-shirts, silly 404 pages);</li>
+                          <li>We proved that state government can ship world-class design system work;</li>
+                          <li>We created the building blocks, next we’re focused on creating a library of shared patterns.</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 9: Team member spotlight (Eric Steinborn) -->
+          <section class="wrapped-slide wrap-bg-success" data-slide="10" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 11" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="eric-steinborn">Eric Steinborn</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/eric-headshot.jpg" alt="Photo for Eric Steinborn" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Eric Steinborn</p>
+                          <p class="member-role">Design System Lead</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “A year is not a long time to create a robust and scalable design system from scratch. Luckily we had a great team and great partners like Experience Design and OGS Digital Services teams which helped us move the project forward and deliver 34 releases in the first year.”
+                        </p>
+
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-2">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Winning the “Best Application Serving the Public” award.</li>
+                          <li>The complex DevOps test, build, and deploy process that supports our Design System and it’s reference website.</li>
+                          <li>Reducing the NPM package size by ~47%</li>
+                          <li>Focusing on design and development collaboration.</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>          
+
+          <!-- Slide 9: Team member spotlight (Leo Vogel) -->
+          <section class="wrapped-slide wrap-bg-success" data-slide="11" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 12" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="leo-vogel">Leo Vogel</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/leo-headshot.jpg" alt="Photo for Leo Vogel" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Leo Vogel</p>
+                          <p class="member-role">Lead UX Designer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “2025 was a memorable and highly productive year in which we accomplished a tremendous amount as a team. I’m grateful for the opportunities I had to meet with other design systems professionals in Stockholm, London, and San Francisco. The NYS Design System is just getting started. The impact we’re going to have will be immense.”
+                        </p>
+
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-3">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Helped the project reach finalist stage for a zeroheight innovation design system award</li>
+                          <li>Published NYS DS as a Figma Community file for external use</li>
+                          <li>Co-presented at FormFest 2025 with Jesse Gardner</li>
+                          <li>Wrote a guest article in Dan Mall’s design system newsletter about Fidelity Modes</li>
+                          <li>Met with multiple organizations to begin building a national standard for a Quick Exit component</li>
+                          <li>Released our initial video series</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 9: Team member spotlight (Kristin Sorrentino) -->
+          <section class="wrapped-slide wrap-bg-success" data-slide="12" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 13" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="kristin-sorrentino">Kristin Sorrentino</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/kristin-headshot.jpg" alt="Photo for Kristin Sorrentino" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Kristin Sorrentino</p>
+                          <p class="member-role">UX Designer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “Creating a design system from scratch with a small team has been both challenging and deeply rewarding. The experience pushed me to grow as a UX designer and sharpen my skills. Each component required thoughtful consideration and intentional design choices. Seeing others recognize its value and save time by adopting the system has been incredibly fulfilling.”
+                        </p>
+
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-4">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Working on a team that prioritizes accessibility and provides the time and resources to continuously learn and grow in this area</li>
+                          <li>Building a robust button component with multiple states, variants, and sizes</li>
+                          <li>Creating well-organized Figma guidance across key categories such as components, theming, and variables in our Get Started section</li>
+                          <li>Completing numerous SPIKE tickets through in-depth research and competitive analysis</li>
+                          <li>Designing and contributing to complex components, including a Date Picker and Table, and seeing them come to life in code</li>
+                          <li>Developing clear, visual guidance for our Screen Template to help teams quickly get started using the design system</li>
+                          <li>Designed a 404 page that helps users quickly get back on track, turning confusion into a clear, on-brand experience that also adds personality to our site.</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+                    <!-- Slide 9: Team member spotlight (Robert Chen) -->
+          <section class="wrapped-slide wrap-bg-success" data-slide="13" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 14" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="robert-chen">Robert Chen</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/robert-headshot.jpg" alt="Photo for Robert Chen" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Robert Chen</p>
+                          <p class="member-role">Software Developer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “After so much effort spent preparing the reference site, demo repos, and building trust with early users, seeing real adoption of the Design System has been one of the most rewarding moments this year.”
+                        </p>
+
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-5">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Finalized the reference site code preview/copy.</li>
+                          <li>Organizing the React demo; publishing a live page and deployment process</li>
+                          <li>Released A11y-compliant components that fill gaps in other design systems, adding complex functionality now used across NYSDS (e.g., nys-tooltip, nys-fileinput).</li>
+                          <li>Code connect setup which bridges the gap between design and engineering </li>
+                          <li>Ensuring Web Test Runner consistency in code and accessibility testing</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 10: Team member spotlight (Emily Gorelik) -->
+          <section class="wrapped-slide wrap-bg-health" data-slide="14" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 15" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="emily-gorelik">Emily Gorelik</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/emily-headshot.jpg" alt="Photo for Emily Gorelik" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Emily Gorelik</p>
+                          <p class="member-role">Software Developer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “I automated the most tedious parts of our development process, such as new component code generation and templatized our reference website "view code" snippets. These little things are not as flashy or visible as some components, but have a high impact on productivity and help to streamline developing and documenting new components.”
+                        </p>
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-6">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Documenting and standardizing over 300 CSS variables across 25+ components</li>
+                          Creating the new file templates through plop to make starting new components faster and easier
+                          <li>Getting testing coverage above 80% across all components</li>
+                          <li>&lt;nys-stepper&gt; and &lt;nys-table&gt;</li>
+                          <li>Managing the GitHub Kanban board, migrating tickets, sprint organization, etc.</li>
+                          Creating the NYSDS dashboard to track different metrics across GitHub, Figma, Office Hours etc.
+                          <li>Organizing the applications for our student assistant openings and taking part in interviews</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+                    <!-- Slide 10: Team member spotlight (Ben Greenberg) -->
+          <section class="wrapped-slide wrap-bg-night" data-slide="15" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 16" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="ben-greenberg">Ben Greenberg</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/ben-headshot.jpg" alt="Photo for Ben Greenberg" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Ben Greenberg</p>
+                          <p class="member-role">Integration Specialist</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “I was able to show teams how fast they can create new or re-create existing front ends for their applications using the design system.”
+                        </p>
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-7">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Re-creating an application front-end using Figma and the design system</li>
+                          <li>Continuing to use and learn new technologies (i.e. Figma)</li>
+                          <li>Contributing to accessibility scans and findings</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+                    <!-- Slide 10: Team member spotlight (Doug Bartow) -->
+          <section class="wrapped-slide wrap-bg-night" data-slide="16" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 17" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="doug-bartow">Doug Bartow</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/doug-headshot.jpg" alt="Photo for Doug Bartow" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Doug Bartow</p>
+                          <p class="member-role">Platform Coordinator</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “It was so incredibly gratifying to help launch the NYS Design System and our open-source reference site in 2025.”
+                        </p>
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-8">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Designed and established a clear, modern visual brand for the NYS Design System that is flexible, and fits alongside existing NYS digital properties   </li>
+                          <li>Collaborated to design and publish our reference site that is accessible, distinctive, and useful for designers, developers, and engineers who work for and with NYS</li>
+                          <li>Helped educate our users and market the Design System as a tool to make the design and development of NYS web apps accessible, consistent, and more efficient</li>
+                          <li>Worked closely with our newly-formed Digital Accessibility Team to help define a new NYS a11y visual brand and ensure accessibility in the NYS DS</li>
+                          <li>2025 brought accessibility as a foremost concern to my design process and workflow</li>
+                          <li>Became a Figma-first designer for the first time in my career   </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Slide 17: Team member spotlight (Mashya Mumin) -->
+          <section class="wrapped-slide wrap-bg-night" data-slide="17" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 18" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <p class="wrapped-kicker">Team spotlight</p>
+                  <h2 class="wrapped-title" id="mashya-mumin">Mashya Mumin</h2>
+
+                  <div class="nys-grid-row nys-grid-gap nys-margin-t-600">
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-margin-b-400">
+                      <div class="member-card">
+                        <!-- Placeholder photo requested -->
+                        <img class="member-photo" src="../assets/i/2025/wrapped/mashya-headshot.jpg" alt="Photo for Mashya Mumin" loading="lazy">
+                        <div class="member-body">
+                          <p class="member-name">Mashya Mumin</p>
+                          <p class="member-role">UX Student Assistant</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-8">
+                      <div class="member-card nys-padding-600">
+                        <p class="wrapped-quote">
+                          “Contributing to a design system that advances accessible and inclusive digital experiences for New York communities, especially those that shaped my own design perspective, has been incredibly meaningful.”
+                        </p>
+                        <h3 class="nys-margin-t-500" id="what-i-m-proud-of-9">
+                          What I’m proud of:
+                        </h3>
+                        <ul class="wrapped-list">
+                          <li>Redesigning the NYS Design System reference site homepage</li>
+                          <li>Building a deeper understanding of design system variables and components, and how they enable consistency and scalability across agencies</li>
+                          <li>Designing slides that explain how to use the Figma Design System to support clearer onboarding</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p class="wrapped-kicker nys-margin-t-400">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 11: Outro / share -->
+          <section class="wrapped-slide wrap-bg-calm" data-slide="18" data-contrast="dark" aria-roledescription="slide" role="group" aria-label="Slide 19" tabindex="-1">
+            <div class="wrapped-slide-inner">
+              <div class="nys-grid-container nys-padding-y-800">
+                <div class="wrapped-animate-in">
+                  <img src="../assets/img/nysds-logo-stacked.svg" alt="New York State Design System Logo" loading="lazy">
+                  <h2 class="wrapped-title" id="thanks-for-building-with-the-nys-design-system">Thanks for building with the NYS Design System.</h2>
+                  <p class="wrapped-subtitle">
+                    Want to share this recap? Use the Share button to copy a link
+                  </p>
+
+                  <!-- <div class="nys-margin-t-600 wrapped-stat-grid two">
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number">26</p>
+                      <p class="wrapped-stat-label">New components</p>
+                    </div>
+                    <div class="wrapped-stat-card">
+                      <p class="wrapped-stat-number">33</p>
+                      <p class="wrapped-stat-label">Releases</p>
+                    </div>
+                  </div> -->
+
+                  <div class="nys-margin-t-600">
+                    <nys-button id="restartBtn" label="Replay Wrapped" variant="outline"></nys-button>
+                    <br>
+                    <nys-button id="shareBtn" label="Share" variant="outline"></nys-button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Bottom navigation -->
+        <div class="wrapped-nav">
+          <div class="nys-grid-container nys-padding-y-200">
+            <div class="wrapped-nav-inner">
+              <div class="wrapped-nav-left">
+                <nys-button id="prevBtn" label="Back" variant="outline"></nys-button>
+                <nys-button id="nextBtn" label="Next" variant="primary"></nys-button>
+              </div>
+
+              <div class="wrapped-slide-indicator" aria-live="polite">
+                <span id="slideCounter">1 / 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share modal -->
+        <nys-modal id="shareModal" heading="Share NYSDS Wrapped 2025" subheading="Copy a link to share with your team.">
+
+          <!-- <label class="sr-only" for="shareUrl">Share URL</label> -->
+          <nys-textinput id="shareUrl" label="Share URL" class="share-input" type="text" readonly=""></nys-textinput>
+
+          <div slot="actions">
+            <nys-button id="copyLinkBtn" label="Copy link" variant="outline"></nys-button>
+            <!-- <nys-button id="copySummaryBtn" label="Copy summary" variant="outline"></nys-button> -->
+            <nys-button id="closeShareBtn" label="Close"></nys-button>
+          </div>
+        </nys-modal>
+      </main>
+
+    </div>
+
+    <nys-modal id="secret-modal" heading="Secret Photo Unlocked!">
+      <img src="../assets/i/2025/wrapped/team-lego.jpg" alt="Lego photo of the NYS Design System team" loading="lazy">
+      <div slot="actions">
+        <nys-button label="Awesome!" onClick="modalClose()"></nys-button>
+      </div>
+    </nys-modal>
+
+    <!-- REQUIRED: do not add/remove CSS/JS references -->
+    <script src="../assets/js/vendor/nysds.js" type="module"></script>
+
+    <script>
+
+      // document.getElementById("nextBtn").addEventListener("click", function () {
+      //   console.log("Next button clicked");
+      // });
+
+      (function () {
+        const deck = document.getElementById("deck");
+        const slides = Array.from(deck.querySelectorAll(".wrapped-slide"));
+        const progressBar = document.getElementById("progressBar");
+        const slideCounter = document.getElementById("slideCounter");
+
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const startBtn = document.getElementById("startBtn");
+        const restartBtn = document.getElementById("restartBtn");
+
+        const shareBtn = document.getElementById("shareBtn");
+        const shareModal = document.getElementById("shareModal");
+        const shareUrl = document.getElementById("shareUrl");
+        const copyLinkBtn = document.getElementById("copyLinkBtn");
+        const copySummaryBtn = document.getElementById("copySummaryBtn");
+        const closeShareBtn = document.getElementById("closeShareBtn");
+
+        const sizeFill = document.getElementById("sizeFill");
+        const sizePct = document.getElementById("sizePct");
+
+        let active = 0;
+
+        function setAvailableHeight() {
+          const unavHeader = document.querySelector("nys-unavheader");
+          const globalHeader = document.querySelector("nys-globalheader");
+          const nav = document.querySelector(".wrapped-nav");
+          const toolbar = document.querySelector(".wrapped-toolbar");
+
+          const chrome =
+            (unavHeader?.getBoundingClientRect().height || 0) +
+            (globalHeader?.getBoundingClientRect().height || 0) +
+            (toolbar?.getBoundingClientRect().height || 0) +
+            (nav?.getBoundingClientRect().height || 0);
+
+          const available = Math.max(420, window.innerHeight - chrome);
+          document.documentElement.style.setProperty("--wrapped-available-height", available + "px");
+        }
+
+        function clampIndex(i) {
+          return Math.max(0, Math.min(slides.length - 1, i));
+        }
+
+        function getTitleForSlide(slideEl) {
+          const h1 = slideEl.querySelector("h1");
+          const h2 = slideEl.querySelector("h2");
+          const title = (h1 || h2)?.textContent?.trim();
+          return title || "NYSDS Wrapped 2025";
+        }
+
+        function updateHash(i) {
+          const url = new URL(window.location.href);
+          url.hash = "slide=" + i;
+          history.replaceState(null, "", url.toString());
+        }
+
+        function readHash() {
+          const hash = window.location.hash || "";
+          const match = hash.match(/slide=(\d+)/);
+          if (!match) return null;
+          const n = Number(match[1]);
+          return Number.isFinite(n) ? clampIndex(n) : null;
+        }
+
+        function updateProgress(i) {
+          const current = i + 1;
+          const total = slides.length;
+          // progressBar.max = total;
+          // progressBar.value = current;
+          slideCounter.textContent = current + " / " + total;
+        }
+
+        function setControlsDisabled(i) {
+          const atStart = i === 0;
+          const atEnd = i === slides.length - 1;
+
+          prevBtn.disabled = atStart;
+          nextBtn.disabled = atEnd;
+
+          // Flag active slide for animation (respects prefers-reduced-motion)
+          slides.forEach((s) => s.setAttribute("data-animate", "false"));
+          slides[i].setAttribute("data-animate", "true");
+        }
+
+        function showSlide(i, { focus = true } = {}) {
+          const idx = clampIndex(i);
+          active = idx;
+
+          slides.forEach((s, n) => {
+            s.setAttribute("data-active", n === idx ? "true" : "false");
+            s.setAttribute("aria-hidden", n === idx ? "false" : "true");
+          });
+
+          updateProgress(idx);
+          setControlsDisabled(idx);
+          updateHash(idx);
+
+          // Update document title for nicer sharing/bookmarking
+          document.title = getTitleForSlide(slides[idx]) + " — NYSDS Wrapped 2025";
+
+          // “Package size” visualization
+          if (slides[idx].getAttribute("data-slide") === "8") {
+            const startKb = 900;
+            const nowKb = 480;
+            const pctSmaller = Math.round(((startKb - nowKb) / startKb) * 100);
+            sizePct.textContent = pctSmaller + "%";
+
+            // Fill = now / start (smaller fill is better); animate width change
+            const ratio = nowKb / startKb;
+            sizeFill.style.width = Math.max(10, Math.round(ratio * 100)) + "%";
+          }
+
+          // Update share URL field
+          shareUrl.value = window.location.href;
+
+          if (focus) slides[idx].focus({ preventScroll: true });
+          window.scrollTo({ top: 0, behavior: "instant" });
+        }
+
+        function next() {
+          showSlide(active + 1);
+        }
+
+        function prev() {
+          showSlide(active - 1);
+        }
+
+        function onAnyClick(el, handler) {
+          if (!el) return;
+          // el.addEventListener("click", handler); // Removing the main click listener
+          el.addEventListener("nys-click", handler);
+        }
+
+        async function copyToClipboard(text) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch {
+            return false;
+          }
+        }
+
+        function buildShareSummary() {
+          return [
+            "NYS Design System Wrapped 2025",
+            "• 26 new components launched",
+            "• 30 new Figma components",
+            "• 33 releases",
+            "• 204 component tests",
+            "• 10 tutorial videos",
+            "• 13 office hours",
+            "• 240+ Teams users",
+            "• 450 issues closed",
+            "• 500 PRs closed",
+            "• 6,000 website hits",
+            "• 50,000 Figma inserts",
+            "",
+            "Link: " + window.location.href,
+          ].join("\n");
+        }
+
+        async function openShare() {
+          const url = window.location.href.split('#')[0];
+          const title = "NYS Design System Wrapped 2025";
+          const text = buildShareSummary();
+
+          // Prefer native share if available
+          // if (navigator.share) {
+          //   try {
+          //     await navigator.share({ title, text, url });
+          //     return;
+          //   } catch {
+          //     // If user cancels, fall through to modal.
+          //   }
+          // }
+
+          shareUrl.value = url;
+          shareModal.open = true;
+        }
+
+        function closeShare() {
+          shareModal.open = false;
+        }
+
+        // Init
+        function init() {
+          setAvailableHeight();
+
+          const hashSlide = readHash();
+          showSlide(hashSlide ?? 0, { focus: false });
+
+          // Controls
+          onAnyClick(nextBtn, () => next());
+          onAnyClick(prevBtn, () => prev());
+          onAnyClick(startBtn, () => showSlide(1));
+          onAnyClick(restartBtn, () => showSlide(0));
+
+          onAnyClick(shareBtn, () => openShare());
+          onAnyClick(closeShareBtn, () => closeShare());
+
+          onAnyClick(copyLinkBtn, async () => {
+            const ok = await copyToClipboard(window.location.href);
+            if (!ok) {
+              shareUrl.focus();
+              shareUrl.select();
+            }
+          });
+
+          onAnyClick(copySummaryBtn, async () => {
+            const ok = await copyToClipboard(buildShareSummary());
+            if (!ok) {
+              shareUrl.focus();
+              shareUrl.select();
+            }
+          });
+
+          // Keyboard navigation
+          window.addEventListener("keydown", (e) => {
+            if (shareModal?.open) return;
+
+            if (e.key === "ArrowRight" || e.key === "PageDown") {
+              e.preventDefault();
+              next();
+            }
+            if (e.key === "ArrowLeft" || e.key === "PageUp") {
+              e.preventDefault();
+              prev();
+            }
+            if (e.key === "Home") {
+              e.preventDefault();
+              showSlide(0);
+            }
+            if (e.key === "End") {
+              e.preventDefault();
+              showSlide(slides.length - 1);
+            }
+          });
+
+          // // Touch swipe
+          // let touchX = null;
+          // deck.addEventListener("touchstart", (e) => {
+          //   if (!e.touches || e.touches.length !== 1) return;
+          //   touchX = e.touches[0].clientX;
+          // });
+
+          // deck.addEventListener("touchend", (e) => {
+          //   if (touchX === null) return;
+          //   const endX = e.changedTouches?.[0]?.clientX;
+          //   if (typeof endX !== "number") return;
+
+          //   const delta = endX - touchX;
+          //   touchX = null;
+
+          //   if (Math.abs(delta) < 40) return; // threshold
+          //   if (delta < 0) next();
+          //   else prev();
+          // });
+
+          // Recompute available height on resize
+          window.addEventListener("resize", () => {
+            setAvailableHeight();
+          });
+
+          // If hash changes, update slide
+          window.addEventListener("hashchange", () => {
+            const n = readHash();
+            if (n !== null) showSlide(n, { focus: false });
+          });
+        }
+
+        init();
+      })();
+
+      const secretCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA', 'Enter'];
+      let pressedKeys = [];
+
+      document.addEventListener('keydown', (event) => {
+        handleKeystroke(event.code);
+      });
+
+      function handleKeystroke(key) {
+        // Add the new key to the array of pressed keys
+        pressedKeys.push(key);
+
+        // Keep the array length limited to the length of the secret code
+        // by slicing off the oldest keys
+        pressedKeys = pressedKeys.slice(-secretCode.length);
+
+        // Check if the current sequence of pressed keys matches the secret code
+        if (JSON.stringify(pressedKeys) === JSON.stringify(secretCode)) {
+            // Execute your desired function here
+          document.getElementById('secret-modal').setAttribute('open', true)            
+            // Optional: Reset the pressedKeys array after a successful match
+            pressedKeys = []; 
+        }
+      }
+
+      modalClose = () => {
+        document.getElementById('secret-modal').removeAttribute('open');
+      }
+    </script>
+  </body>
+</html>

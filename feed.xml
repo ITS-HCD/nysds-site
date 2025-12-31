@@ -7,6 +7,77 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.12.1</title>
+      <link>https://designsystem.ny.gov/updates/1.12.1-release/</link>
+      <description><![CDATA[<h2>NYS Design System 2025 wrapped</h2>
+<p>Visit our <a href="https://designsystem.ny.gov/2025-wrapped">NYS Design System 2025 Wrapped</a> page to see our highlighted accomplishments for the Design System over the last year. We shipped 34 releases featuring a lot of capabilities and configuration options. Design Tokens made available as CSS variables will transform any old UI into an NYS-branded UI in a short amount of time!</p>
+<h2>Figma updates</h2>
+<p>Today we’re launching <strong>PREVIEW</strong> versions of our new table and datepicker components.</p>
+<ul>
+<li><strong>Table</strong> - The table component is ready to use in your Figma designs. (Code is close to release!)</li>
+<li><strong>Datepicker</strong> - The datepicker component is ready to use in your Figma designs, too!</li>
+</ul>
+<p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> updated these important components!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Stepper voiceover bugfix</li>
+<li>Begin JSDoc documentation for code components</li>
+<li>Fix RTL support in nys-alert and nys-button</li>
+<li>Fixed readonly and required props interfering with each other</li>
+<li>Added more tests to some components</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/novacat35">Robert Chen</a> fix broken things.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.1">See the full developer release notes for v.1.12.1 →</a></p>
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
+]]></description>
+      <content><![CDATA[<h2>NYS Design System 2025 wrapped</h2>
+<p>Visit our <a href="https://designsystem.ny.gov/2025-wrapped">NYS Design System 2025 Wrapped</a> page to see our highlighted accomplishments for the Design System over the last year. We shipped 34 releases featuring a lot of capabilities and configuration options. Design Tokens made available as CSS variables will transform any old UI into an NYS-branded UI in a short amount of time!</p>
+<h2>Figma updates</h2>
+<p>Today we’re launching <strong>PREVIEW</strong> versions of our new table and datepicker components.</p>
+<ul>
+<li><strong>Table</strong> - The table component is ready to use in your Figma designs. (Code is close to release!)</li>
+<li><strong>Datepicker</strong> - The datepicker component is ready to use in your Figma designs, too!</li>
+</ul>
+<p><a href="https://github.com/leo-vogel">Leo Vogel</a> and <a href="https://github.com/ksorrentino">Kristin Sorrentino</a> updated these important components!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Stepper voiceover bugfix</li>
+<li>Begin JSDoc documentation for code components</li>
+<li>Fix RTL support in nys-alert and nys-button</li>
+<li>Fixed readonly and required props interfering with each other</li>
+<li>Added more tests to some components</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> and <a href="https://github.com/novacat35">Robert Chen</a> fix broken things.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>None</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.1">See the full developer release notes for v.1.12.1 →</a></p>
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
+]]></content>
+      <pubDate>Wed, 31 Dec 2025 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.12.1-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.12.0 “Skylight”</title>
       <link>https://designsystem.ny.gov/updates/1.12.0-release/</link>
       <description><![CDATA[<h2>Why “Skylight?” 🏔️</h2>
