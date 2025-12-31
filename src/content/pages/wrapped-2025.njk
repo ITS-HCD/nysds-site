@@ -1651,7 +1651,7 @@ description: "A quick, mobile-friendly recap of 2025, built with NYS DS componen
           onAnyClick(closeShareBtn, () => closeShare());
 
           onAnyClick(copyLinkBtn, async () => {
-            const ok = await copyToClipboard(window.location.href);
+            const ok = await copyToClipboard(window.location.href.split('#')[0]);
             if (!ok) {
               shareUrl.focus();
               shareUrl.select();
