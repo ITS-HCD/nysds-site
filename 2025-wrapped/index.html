@@ -1448,7 +1448,7 @@
           onAnyClick(closeShareBtn, () => closeShare());
 
           onAnyClick(copyLinkBtn, async () => {
-            const ok = await copyToClipboard(window.location.href);
+            const ok = await copyToClipboard(window.location.href.split('#')[0]);
             if (!ok) {
               shareUrl.focus();
               shareUrl.select();
