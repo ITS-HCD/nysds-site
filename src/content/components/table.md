@@ -6,7 +6,7 @@ image: /assets/img/components/table.svg
 image_alt: An illustration of a table.
 image_header: /assets/img/components/table-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4897-5811
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=13670-31069
 navOrder: 19
 ---
 
@@ -19,24 +19,59 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% endblock %}
 
 {% block example %}
-  {% set preview %}
-<div class="nys-grid-row">
-  <nys-table>
-  </nys-table>
-</div>
-  {% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-table>
+  <table id="table1" name="table1">
+    <caption>
+      New York State High Peaks and Popular Hikes
+    </caption>
+    <tr>
+      <th>Mountain</th>
+      <th>Peak Height (ft)</th>
+      <th>Hike Name</th>
+    </tr>
+    <tr>
+      <td>Marcy</td>
+      <td>5,344</td>
+      <td>Van Hoevenberg Trail</td>
+    </tr>
+    <tr>
+      <td>Algonquin</td>
+      <td>5,114</td>
+      <td>Northeast Trail</td>
+    </tr>
+    <tr>
+      <td>Haystack</td>
+      <td>4,960</td>
+      <td>Johns Brook Trail</td>
+    </tr>
+    <tr>
+      <td>Skylight</td>
+      <td>4,926</td>
+      <td>Lake Tear Trail</td>
+    </tr>
+    <tr>
+      <td>Whiteface</td>
+      <td>4,867</td>
+      <td>Whiteface Mountain Trail</td>
+    </tr>
+  </table>
+</nys-table>
+{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
 
 ### When to use this component
+
 - TODO
 - TODO
 
 ### When to consider something else
+
 - TODO
 - TODO
 
@@ -68,19 +103,26 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block options %}
 
-### Option 1
+### Striped
 
-### Option 2
+### Bordered
+
+### Sortable
+
+### Download
 
 {% endblock %}
 
 {% block properties %}
 
-| Property       | Type         | Component     | 
-|----------------|--------------|---------------|
-| `id`           | String       | `nys-table` |
-| `name`         | String       | `nys-table` |
-
+| Property    | Type    |
+| ----------- | ------- |
+| `id`        | String  |
+| `name`      | String  |
+| `striped`   | Boolean |
+| `bordered`  | Boolean |
+| `sortable`  | Boolean |
+| `download`  | String  |
 
 {% endblock %}
 
