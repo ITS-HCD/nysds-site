@@ -66,6 +66,9 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% block options %}
 
 ### Striped
+
+Adding the `striped` property can improve readability by visually grouping row content with alternating background colors.
+
 {% set preview %}
 <nys-table id="table2" name="table2" striped>
   <table>
@@ -109,6 +112,8 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% include "partials/code-preview.njk" %}
 
 ### Bordered
+
+Adding the `bordered` property can improve readability by adding a line between cells.
 
 {% set preview %}
 <nys-table id="table3" name="table3" bordered>
@@ -154,6 +159,8 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 
 ### Sortable
 
+Adding the `sortable` property allows for the table to be reordered in ascending or descending order.
+
 {% set preview %}
 <nys-table id="table4" name="table4" sortable>
   <table>
@@ -197,6 +204,8 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% include "partials/code-preview.njk" %}
 
 ### Download
+
+Adding the `download` property adds a button which downloads the data that is being displayed. The `download` property takes in a string that points to the dataset. It does not parse and download the content in the `<nys-table>`.
 
 {% set preview %}
 <nys-table id="table5" name="table5" download="path/to/downloadable-data.csv">
