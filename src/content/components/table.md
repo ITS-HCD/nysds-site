@@ -256,28 +256,25 @@ Adding the `download` property adds a button which downloads the data that is be
 
 ### When to use this component
 
-- TODO
-- TODO
+- Displaying tabular data. When you need to display tabular information, such as statistical data.
+- Displaying directories. When listing locations or resources that have similarly structured content for many items.
 
 ### When to consider something else
 
-- TODO
-- TODO
+- Non-tabular data. Depending on the type of content, consider using other presentation formats, such as definition lists or hierarchical lists.
+- Dashboards and other layouts. Don't use tables in place of a layout grid. Table content should follow a consistent structure using headers and logical columns and rows.
+- Long-form content. Table cell content should be brief and scannable. If you find yourself drafting multiple bullet points or paragraphs within a single table cell, the content is likely better off under conventional page headers or in an accordion.
 
 {% endblock %}
 
 {% block usagedo %}
 
-- TODO
-- TODO
-- TODO
+- Use for displaying tabular data.
+- Use for displaying directories.
 
 {% endblock %}
 
 {% block usagedont %}
-
-- TODO
-- TODO
 
 {% endblock %}
 
