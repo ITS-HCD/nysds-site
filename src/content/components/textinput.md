@@ -7,7 +7,7 @@ image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587
-navOrder: 21
+navOrder: 22
 ---
 
 {% extends "layouts/component.njk" %}

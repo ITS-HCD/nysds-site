@@ -7,7 +7,7 @@ image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
-navOrder: 22
+navOrder: 23
 ---
 
 {% extends "layouts/component.njk" %}

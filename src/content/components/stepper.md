@@ -7,7 +7,7 @@ image_alt: An illustration of a stepper dropdown.
 image_header: /assets/img/components/stepper-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4897-5811
-navOrder: 18
+navOrder: 19
 ---
 
 {% extends "layouts/component.njk" %}
