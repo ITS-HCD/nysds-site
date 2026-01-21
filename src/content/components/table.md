@@ -21,6 +21,7 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% block example %}
 {% set preview %}
 <nys-table>
+
   <table id="table1" name="table1">
     <caption>
       New York State High Peaks and Popular Hikes
@@ -71,6 +72,7 @@ Adding the `striped` property can improve readability by visually grouping row c
 
 {% set preview %}
 <nys-table id="table2" name="table2" striped>
+
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -117,6 +119,7 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 {% set preview %}
 <nys-table id="table3" name="table3" bordered>
+
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -161,8 +164,13 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 Adding the `sortable` property allows for the table to be reordered in ascending or descending order.
 
+<nys-alert type="warning">
+<p>Currently the <code>sortable</code> property does <strong>NOT</strong> support <code>rowspan</code> or <code>colspan</code>.</p>
+</nys-alert>
+
 {% set preview %}
 <nys-table id="table4" name="table4" sortable>
+
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -209,6 +217,7 @@ Adding the `download` property adds a button which downloads the data that is be
 
 {% set preview %}
 <nys-table id="table5" name="table5" download="path/to/downloadable-data.csv">
+
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -251,7 +260,6 @@ Adding the `download` property adds a button which downloads the data that is be
 
 {% endblock %}
 
-
 {% block usage %}
 
 ### When to use this component
@@ -276,6 +284,8 @@ Adding the `download` property adds a button which downloads the data that is be
 
 {% block usagedont %}
 
+- Use for layouts
+- Add `rowspan` or `colspan` with the `sortable` property
 {% endblock %}
 
 {% block accessibility %}
@@ -284,18 +294,18 @@ The `nys-table` component includes the following accessibility-focused features:
 
 - Proper use of `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>` elements to ensure semantic structure.
 - Support for keyboard navigation, allowing users to navigate through table rows and cells using the keyboard.
-{% endblock %}
+  {% endblock %}
 
 {% block properties %}
 
-| Property    | Type    |
-| ----------- | ------- |
-| `id`        | String  |
-| `name`      | String  |
-| `striped`   | Boolean |
-| `bordered`  | Boolean |
-| `sortable`  | Boolean |
-| `download`  | String  |
+| Property   | Type    |
+| ---------- | ------- |
+| `id`       | String  |
+| `name`     | String  |
+| `striped`  | Boolean |
+| `bordered` | Boolean |
+| `sortable` | Boolean |
+| `download` | String  |
 
 {% endblock %}
 
