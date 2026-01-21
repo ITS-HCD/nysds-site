@@ -282,9 +282,8 @@ Adding the `download` property adds a button which downloads the data that is be
 
 The `nys-table` component includes the following accessibility-focused features:
 
-- TODO
-- TODO
-
+- Proper use of `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>` elements to ensure semantic structure.
+- Support for keyboard navigation, allowing users to navigate through table rows and cells using the keyboard.
 {% endblock %}
 
 {% block properties %}
