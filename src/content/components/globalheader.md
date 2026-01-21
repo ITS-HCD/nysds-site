@@ -95,6 +95,26 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### User Actions
+The `<nys-globalheader>` component includes a named slot called `user-actions`. This slot allows you to insert custom HTML content, such as user profile links, settings, or logout buttons, into the header.
+
+{% set preview %}
+<nys-globalheader 
+  appName="User Registration Form" 
+  agencyName="Office of Information Technology Services"
+>
+  <nys-button slot="user-actions" label="Log out" prefixIcon="slotted">
+    <nys-avatar
+      slot="prefix-icon"
+      ariaLabel="User avatar"
+      initials="NY"
+    ></nys-avatar>
+  </nys-button>
+</nys-globalheader>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
