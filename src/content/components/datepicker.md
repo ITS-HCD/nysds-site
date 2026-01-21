@@ -6,7 +6,7 @@ image: /assets/img/components/datepicker.svg
 image_alt: An illustration of a date picker.
 image_header: /assets/img/components/datepicker-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=8420-575
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=15514-1502
 navOrder: 8
 ---
 
@@ -54,7 +54,7 @@ Consider memorable date fields ([currently under proposal](https://github.com/IT
 
 {% block usagedo %}
 
-  - Use for deadlines and scheduling
+  - Use for deadlines, scheduling, and future dates
   - Pair with labels and helper text for clarity
   - Use `required` when the date must be provided
 
@@ -62,9 +62,9 @@ Consider memorable date fields ([currently under proposal](https://github.com/IT
 
 {% block usagedont %}
 
-  - Use for selecting time or date ranges
-  - Use without a label or accessible description
-  - Rely on browser specific date picker behavior
+  - Don't use for memorable dates, or dates in the past, use a textinput instead
+  - Don't use without a label or accessible description
+  - Don't use if relying on browser specific date picker behavior
 
 {% endblock %}
 
@@ -81,6 +81,9 @@ The `<nys-datepicker>` component includes the following accessibility-focused fe
 {% endblock %}
 
 {% block options %}
+<nys-alert heading="Browser behavior" type="info">
+  <p>The calendar interface does not appear in Safari or mobile browsers (iOS and Android). In those environments, users enter dates manually or use the native calendar popup.</p>
+</nys-alert>
 
 ### Value and form output
 The value prop can be set as a Date object or an ISO date string (`YYYY-MM-DD`).
