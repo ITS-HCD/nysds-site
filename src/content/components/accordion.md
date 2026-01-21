@@ -169,7 +169,7 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 The `<nys-accordionitem>` component emits **one** custom Javascript events:
 
-  1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked..
+  1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
 
 ### Event details
 The `nys-accordionitem-toggle` event includes a detail object with the following properties:
@@ -181,7 +181,7 @@ The `nys-accordionitem-toggle` event includes a detail object with the following
 You can listen to these events using JavaScript:
 {% set code %}// Select the accordion component
 const accordion = document.querySelector("nys-accordionitem");
-// Listen for the '"nys-accordionitem-toggle' event
+// Listen for the 'nys-accordionitem-toggle' event
 accordion.addEventListener("nys-accordionitem-toggle", (event) => {
   console.log("Accordion toggled:", {
     id: event.detail.id,
