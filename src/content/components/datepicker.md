@@ -14,7 +14,7 @@ navOrder: 8
 
 {% block longdescription %}
 
-The `<nys-datepicker>` component visually separates content or sections within an interface.
+The `<nys-datepicker>` component allows users to select a date from a visual calendar or type a date into the input field.
 
 {% endblock %}
 
