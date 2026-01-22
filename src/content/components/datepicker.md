@@ -24,7 +24,7 @@ The `<nys-datepicker>` component visually separates content or sections within a
   id="myDatepicker"
   name="myDatepicker"
   type="date"
-  label="Date of birth"
+  label="Schedule your appointment"
   description="Enter in MM/DD/YYYY format"
 ></nys-datepicker>
 {% endset %}
