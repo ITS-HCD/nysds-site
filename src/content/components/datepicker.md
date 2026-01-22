@@ -23,7 +23,6 @@ The `<nys-datepicker>` component allows users to select a date from a visual cal
 <nys-datepicker
   id="myDatepicker"
   name="myDatepicker"
-  type="date"
   label="Schedule your appointment"
   description="Enter in MM/DD/YYYY format"
 ></nys-datepicker>
@@ -189,7 +188,7 @@ Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
 | `label`            | String                                                             |
 | `description`      | String                                                             |
 | `name`             | String                                                             |
-| `value`            | String                                                             |
+| `value`            | string | Date                                                      |
 | `width`            | `"md"` \| `"lg"` \| `"full"`                                       |
 | `disabled`         | boolean                                                            |
 | `required`         | String                                                             |
