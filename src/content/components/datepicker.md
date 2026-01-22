@@ -21,8 +21,8 @@ The `<nys-datepicker>` component allows users to select a date from a visual cal
 {% block example %}
 {% set preview %}
 <nys-datepicker
-  id="myDatepicker"
-  name="myDatepicker"
+  id="my-datepicker"
+  name="my-datepicker"
   label="Schedule your appointment"
   description="Enter in MM/DD/YYYY format"
 ></nys-datepicker>
