@@ -161,13 +161,13 @@ heading_links: false
                 {{ post.data.title }}
               </div>
               <div class="card_date">
-                {{ post.data.date | dateFull }}
+                <p>{{ post.data.date | dateFull }}</p>
               </div>
               <div class="card__desc">
-                {{ post.data.description }}
+                <p>{{ post.data.description }}</p>
               </div>
               <div class="card__category">
-                <nys-badge label="Latest release"></nys-badge>
+                <p><nys-badge label="Latest release"></nys-badge></p>
               </div>
             </div>
           </div>
@@ -188,10 +188,10 @@ heading_links: false
                 {{ post.data.title }}
               </div>
               <div class="card__desc">
-                {{ post.data.description }}
+                <p>{{ post.data.description }}</p>
               </div>
               <div class="card__category">
-                <nys-badge label="Latest article"></nys-badge>
+                <p><nys-badge label="Latest article"></nys-badge></p>
               </div>
             </div>
           </div>
@@ -205,18 +205,18 @@ heading_links: false
 {# Value Props #}
 <div class="color-theme--weaker nys-top-800 nys-padding-y-800">
   <div class="nys-grid-container-widescreen">
-    <div class="nys-grid-row nys-grid-gap-lg">
-      <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex nys-flex-column nys-margin-b-200">
+    <div class="nys-grid-row nys-grid-gap-lg nys-flex-justify-center">
+      <div class="nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/accessibility-eye-card.svg" width="150px">
         <h3>Accessible, by design</h3>
         <p>A consistent, accessible design system helps NYS meet WCAG and ADA compliance deadlines - while improving usability for everyone.</p>
       </div>
-      <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex nys-flex-column nys-margin-b-200">
+      <div class="nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/brand-card.svg" width="150px">
         <h3>Brand-aligned</h3>
         <p>A shared design language helps us build products with the same quality of user experience across NYS applications and websites.</p>
       </div>
-      <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex nys-flex-column nys-margin-b-200">
+      <div class="nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/cost-card.svg" width="150px">
         <h3>Cost savings</h3>
         <p>A design system carries an upfront cost, but it proves its value over time.</p>
