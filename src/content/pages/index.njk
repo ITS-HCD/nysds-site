@@ -153,7 +153,7 @@ heading_links: false
           {% set found_release = true %}
           <a class="card card--horizontal" href="{{ post.url | url }}">
           <div class="card__inner">
-            <div class="card__media">
+            <div class="card__media card__media--thin">
               <img src="{{ post.data.ogimage }}" alt="Thumbnail image" />
             </div>
             <div class="card__content">
@@ -180,7 +180,7 @@ heading_links: false
           {% set found_article = true %}
           <a class="card card--horizontal" href="{{ post.url | url }}">
           <div class="card__inner">
-            <div class="card__media">
+            <div class="card__media card__media--thin">
               <img src="{{ post.data.ogimage }}" alt="Thumbnail image" />
             </div>
             <div class="card__content">
@@ -226,10 +226,11 @@ heading_links: false
 </div>
 {# End color-theme--weaker full bleed #}
 
+{# Figma files #}
 <div class="nys-grid-container-widescreen nys-top-800">
   <div class="nys-grid-row nys-grid-gap-lg">
     <div class="nys-grid-col-6">
-      <div class="card card--horizontal">
+      <div class="card card--horizontal card--horizontal--padded">
         <div class="card__inner">
           <div class="card__content">
             <div class="card__eyebrow">
@@ -239,9 +240,8 @@ heading_links: false
               Community Figma file
             </div>
             <div class="card__desc">
-              Available to anyone with a Figma account, our Community file provides instant access to our shared components, tokens, and text styles. Simply duplicate the file to your workspace to customize the library to your needs.
-              <br>
-              <a href="https://www.figma.com/community/file/1122508722021704101" target="_blank" rel="noopener">Open the Figma community file</a>.
+              <p>Available to anyone with a Figma account, our Community file provides instant access to our shared components, tokens, and text styles. Simply duplicate the file to your workspace to customize the library to your needs.</p>
+              <p><a href="https://www.figma.com/community/file/1574803287825265318/new-york-state-design-system" target="_blank">Open the Figma community file</a>.</p>
             </div>
           </div>
         </div>
@@ -258,9 +258,8 @@ heading_links: false
               NYS Figma file
             </div>
             <div class="card__desc">
-              Streamline your design flows with the official NYS Design System Figma file. Included are WCAG-compliant components, foundational tokens, and flexible themes that adapt to any agency’s brand.
-              <br>
-              <a href="https://www.figma.com/community/file/1122508722021704101" target="_blank" rel="noopener">Open the NYS Figma file</a>.
+              <p>Streamline your design flows with the official NYS Design System Figma file. Included are WCAG-compliant components, foundational tokens, and flexible themes that adapt to any agency’s brand.</p>
+              <p><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?m=auto&node-id=51-1514&t=bipoQLI10KcdaAlv-1" target="_blank">Open the NYS Figma file</a>.</p>
             </div>
           </div>
         </div>
@@ -269,6 +268,7 @@ heading_links: false
   </div>
 </div>
 
+{# Support #}
 <div class="nys-grid-container-widescreen nys-top-800">
   <div class="nys-grid-row nys-grid-gap-lg">
     <div class="nys-grid-col-12">
@@ -278,33 +278,15 @@ heading_links: false
             <div class="card__title">
               Connect with us
             </div>
-            <div class="card__desc">
-              Whether you're building an app, designing or updating a website, or just exploring our components, there's a dedicated design system team here to support you. This is a collaborative effort and it's by everyone who builds digital products across New York State government. Feedback helps keep the design system consistent, usable, and aligned with team needs.
-              <br>
-              <nys-button size="lg" label="Find support resources" href="/get-started/support/"></nys-button>
+            <div class="card__desc nys-grid-col-9">
+              <p>Whether you're building an app, designing or updating a website, or just exploring our components, there's a dedicated design system team here to support you. This is a collaborative effort and it's by everyone who builds digital products across New York State government. Feedback helps keep the design system consistent, usable, and aligned with team needs.</p>
+              <p><nys-button size="lg" label="Find support resources" href="/get-started/support/"></nys-button></p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="nys-grid-container-widescreen nys-top-800">
-  <div class="nys-grid-row nys-flex-row nys-grid-gap-lg">
-    <div class="nys-grid-col-12">
-      <h3>Got Feedback?</h3>
-    </div>
-    <div class="nys-grid-col-12 nys-desktop:nys-grid-col-3">
-      <h4>NYS Employees</h4>
-      <p><a href="https://teams.microsoft.com/l/team/19%3Al5Zo00jgzpzTb5ACeXQQVatofIuRI-C0ThuQXbndb9U1%40thread.tacv2/conversations?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7">Follow the NYS Design System on Teams</a></p>
-    </div>
-    <div class="nys-grid-col-12 nys-desktop:nys-grid-col-3">
-      <h4>Email us</h4>
-      <p><a href="mailto:designsystem@its.ny.gov">designsystem@its.ny.gov</a></p>
-    </div>
-  </div>
-</div>
 </div>
 
 {% endblock %}

@@ -493,7 +493,11 @@ a.card:focus-visible {
         flex: 0 0 50%;
         align-self: stretch;
         margin-bottom: 0;
-        aspect-ratio: 16 / 9;
+        /* aspect-ratio: 16 / 9;  */ /* Removing due to excess spacing in the Y axis */
+    }
+
+    .card--horizontal .card__media--thin {
+        flex: 0 0 30%;
     }
 
     .card--horizontal .card__content {
