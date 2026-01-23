@@ -1018,6 +1018,10 @@ li > .section-nav__list {
     background-color: var(--nys-color-theme-weaker);
 }
 
+.color-theme--faint {
+    background-color: var(--nys-color-theme-faint);
+}
+
 /* Token List */
 .token-list__item {
     margin-bottom: var(--nys-space-400);
