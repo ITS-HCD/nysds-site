@@ -7,7 +7,7 @@ image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=8420-575
-navOrder: 8
+navOrder: 9
 ---
 
 {% extends "layouts/component.njk" %}

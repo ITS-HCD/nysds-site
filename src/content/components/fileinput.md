@@ -7,7 +7,7 @@ image_alt: An illustration of a file input.
 image_header: /assets/img/components/fileinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
-navOrder: 9
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}

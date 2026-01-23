@@ -7,7 +7,7 @@ image_alt: An illustration of a global header.
 image_header: /assets/img/components/global-header-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924
-navOrder: 11
+navOrder: 12
 ---
 
 {% extends "layouts/component.njk" %}
@@ -94,6 +94,26 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 </nys-globalheader>{% endset %}
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
+
+### User Actions
+The `<nys-globalheader>` component includes a named slot called `user-actions`. This slot allows you to insert custom HTML content, such as user profile links, settings, or logout buttons, into the header.
+
+{% set preview %}
+<nys-globalheader 
+  appName="User Registration Form" 
+  agencyName="Office of Information Technology Services"
+>
+  <nys-button slot="user-actions" label="Log out" prefixIcon="slotted">
+    <nys-avatar
+      slot="prefix-icon"
+      ariaLabel="User avatar"
+      initials="NY"
+    ></nys-avatar>
+  </nys-button>
+</nys-globalheader>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
