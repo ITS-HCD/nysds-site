@@ -67,9 +67,9 @@ The `<nys-select>` component includes the following accessibility-focused featur
 
 {% block options %}
 
-<nys-alert type="warning">
-<p>The <code>nys-option</code> component will be deprecated with the 2.0 release of the New York State Design System.</p>
-<p>Use the native  <code>option</code> tag for the options in the  <code>nys-select</code> component.</p>
+<nys-alert type="warning" heading="Deprecated <nys-option>">
+<p>The <code>&lt;nys-option&gt;</code> component will be deprecated with the 2.0 release of the New York State Design System.</p>
+<p>Use the native  <code>&lt;option&gt;</code> tag for the options in the  <code>&lt;nys-select&gt;</code> component.</p>
 </nys-alert>
 
 ### Default Value

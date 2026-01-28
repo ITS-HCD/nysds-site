@@ -159,6 +159,23 @@ Adding the `optional` prop will add an optional flag to the input.
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Other
+
+The `other` option lets users enter a custom value when none of the listed choices apply. When selected, a text input appears and the `nys-checkbox`’s value is set to the entered text. By default, the `label` will be “Other” if no `label` is provided. You may optionally supply a custom `label` to better match the context, such as “Something else” or “Other (please specify)”.
+
+**Note:** Place this option as the last `<nys-checkbox>` within `<nys-checkboxgroup>`.
+
+{% set preview %}
+<nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below">
+  <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" errorMessage="You must select this box to continue" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
+  <nys-checkbox name="landmarks" other></nys-checkbox>
+</nys-checkboxgroup>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Error
 
 Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
