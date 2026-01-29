@@ -28,6 +28,7 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
   accept="image/png, image/jpeg, .pdf"
 ></nys-fileinput>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
@@ -85,6 +86,7 @@ Use the `dropzone` attribute to allow users to drag and drop files instead of (o
   dropzone
 ></nys-fileinput>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -100,6 +102,7 @@ Available width values are: `full` (default) and `lg`
   accept="image/png, image/jpeg, .pdf"
 ></nys-fileinput>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -116,6 +119,7 @@ Set `multiple` to `true` to allow the selection of more than one file. Each sele
   multiple
 ></nys-fileinput>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -132,6 +136,7 @@ Set `disabled` to prevent interaction with the file input. Useful when the input
   disabled
 ></nys-fileinput>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -151,6 +156,7 @@ You can supply a description via our `description` prop for plain text or by emb
   </span>
 </nys-fileinput>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
