@@ -68,6 +68,18 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Custom Search Endpoint
+
+The default search URL for the `<nys-unavheader>` is `https://search.its.ny.gov/search/search.html?q=`. The `searchUrl` property allows you to override the search endpoint with a custom url. 
+
+<nys-alert type="warning" heading="Make sure the query is included in the string, otherwise it will not correctly append the search result."></nys-alert>
+
+  {% set preview %}
+    <nys-unavheader searchUrl="https://designsystem.ny.gov/search/?q=" hideTranslate></nys-unavheader>
+  {% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
 ### Translate Off
   {% set preview %}
     <nys-unavheader hideTranslate></nys-unavheader>
