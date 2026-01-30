@@ -154,7 +154,7 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 {% block properties %}
 
 | Property          | Type                   | Component                 |
-|-------------------|----------------------------------------------------|
+|-------------------|------------------------|---------------------------|
 | `id`              | String                 | both                      |
 | `heading`         | String                 | only `nys-accordionitem`  |
 | `expanded`        | Boolean                | only `nys-accordionitem`  |
