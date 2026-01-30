@@ -16,22 +16,18 @@ The NYS Design System helps New York State teams build accessible, user-friendly
 - Wireframing and prototyping before building
 - Testing usability with real users
 
-<!-- **--- Layer Illustration ---** -->
-
 The NYS Design System provides a standardized set of design decisions and reusable components to help reduce effort, maintain consistency, and free up designers to focus on higher-level UX work.
 
 ## NYS Design System’s Figma Libraries
 
 Designing and prototyping with the NYS Design System is powered by prebuilt Figma libraries that mirror the coded components. This connectedness makes it easier for designers and developers to collaborate and ensures that what is designed in matches what is built.
 
-### How the Libraries Work
+<nys-alert type="warning" text="Using the NYS Employee library requires an NYS Figma account."></nys-alert>
 
-<nys-alert type="warning" text="Using these libraries requires an NYS Figma account."></nys-alert>
+Access the NYS Design System’s Figma assets:
 
-NYS Design System’s Figma assets are organized into two libraries:
-
-- **Components** → The core file containing all UI components with built-in properties, variants, and prototyping features. [NYS Design System Component Library](https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System)
-- **Icons** → A library of NYS-approved icons for use in interfaces. [NYS Design System Icon Library](https://www.figma.com/design/Tad3pBv2jhA8XVf6aMlKEi/%F0%9F%92%9F-NYSDS---Icons)
+- **NYS Design System for NYS Employeess** → The core file containing all UI components with built-in properties, variants, and prototyping features. Requires an NYS Figma account: [NYS Design System Component Library](https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System)
+- **NYS Design System for the Community** → The community library for use in interfaces. Does NOT require an NYS Figma account: [NYS Design System Community Library](https://www.figma.com/community/file/1574803287825265318)
 
 ### How the Libraries Help
 
