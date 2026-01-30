@@ -22,7 +22,7 @@ The NYS Design System provides a standardized set of design decisions and reusab
 
 Designing and prototyping with the NYS Design System is powered by prebuilt Figma libraries that mirror the coded components. This connectedness makes it easier for designers and developers to collaborate and ensures that what is designed in matches what is built.
 
-<nys-alert type="warning" text="Using the NYS Employee library requires an NYS Figma account."></nys-alert>
+<nys-alert type="warning" heading="Using the NYS Employee library requires an NYS Figma account."></nys-alert>
 
 Access the NYS Design System’s Figma assets:
 
