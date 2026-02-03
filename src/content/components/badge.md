@@ -86,6 +86,24 @@ Below are the available badge intents, each showcasing its unique style and purp
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 
+### Variant
+Add `variant="strong"` for badges on a raised surface or for more emphasis.
+
+{% set preview %}
+<div class="nys-grid-row nys-grid-gap-1">
+  <nys-badge label="Neutral" variant="strong" prefixIcon></nys-badge>
+  <nys-badge label="Error" intent="error" variant="strong" prefixIcon></nys-badge>
+  <nys-badge label="Warning" intent="warning" variant="strong" prefixIcon></nys-badge>
+  <nys-badge label="Success" intent="success" variant="strong" prefixIcon></nys-badge>
+</div>
+{% endset %}
+{% set code %}<nys-badge label="Neutral" variant="strong" prefixIcon></nys-badge>
+<nys-badge label="Error" intent="error" variant="strong" prefixIcon></nys-badge>
+<nys-badge label="Warning" intent="warning" variant="strong" prefixIcon></nys-badge>
+<nys-badge label="Success" intent="success" variant="strong" prefixIcon></nys-badge>
+{% endset %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Icons
 Badge can include icons as either a prefix or suffix. The icons can be specified using the `prefixIcon` or `suffixIcon` attributes. Pass in the attribute as a boolean to use the default icon, or pass in a string to use a specific icon. Icons do not appear by default and must be explicitly specified.
@@ -152,8 +170,9 @@ Badge can include a prefix label, which is a short text that appears before the 
 | `id`       | String       |
 | `label` | String       |
 | `name` | String       |
-| `size` | String "md", "sm"      |
-| `intent` | String  "neutral", "error", "success", "warning"     |
+| `size` |  `"md"`, `"sm"`     |
+| `intent` |   `"neutral"`, `"error"`, `"success"`, `"warning"`     |
+| `variant` |   `"strong"`      |
 | `prefix` | String       |
 | `prefixIcon` | String       |
 | `suffixIcon` | String       |
