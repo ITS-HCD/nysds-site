@@ -1,6 +1,6 @@
 ---
-permalink: /get-started/support/
-title: "Support"
+permalink: /get-started/contribute/
+title: "Contribute"
 description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
 section: Get Started
 
@@ -8,7 +8,7 @@ section: Get Started
 
 {% block content %}
 
-# Support
+# Contribute
 Whether you're building an app, designing or updating a website, or just exploring our components, there's a dedicated design system team here to support you. This is a collaborative effort and it's by everyone who builds digital products across New York State government.
 
 Here are ways you can get help and how your feedback helps make the design system better for everyone at New York State.

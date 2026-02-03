@@ -432,6 +432,7 @@ main[role=main] {
     margin-bottom: var(--nys-space-150);
     line-height: var(--nys-font-lineheight-lg);
 }
+
 .card__eyebrow {
     font-size: var(--nys-font-size-md);
     font-weight: var(--nys-font-weight-extralight);
@@ -440,9 +441,15 @@ main[role=main] {
     margin-bottom: var(--nys-space-100);
     letter-spacing: var(--nys-space-50);
 }
+
+.card__badge {
+    margin-bottom: var(--nys-space-100);
+}
+
 .card__desc {
     line-height: var(--nys-font-lineheight-sm);
 }
+
 .card__action {
     margin-top: var(--nys-space-200);
 }
