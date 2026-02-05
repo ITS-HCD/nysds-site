@@ -42,6 +42,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "download_done" %}{% include "partials/icon-preview.njk" %}
   {% set name = "drive_folder_upload" %}{% include "partials/icon-preview.njk" %}
   {% set name = "edit_square" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "expand_all" %}{% include "partials/icon-preview.njk" %}
   {% set name = "help" %}{% include "partials/icon-preview.njk" %}
   {% set name = "language" %}{% include "partials/icon-preview.njk" %}
   {% set name = "link" %}{% include "partials/icon-preview.njk" %}

@@ -27,6 +27,7 @@ The `<nys-datepicker>` component allows users to select a date from a visual cal
   description="Enter in MM/DD/YYYY format"
 ></nys-datepicker>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -142,6 +143,7 @@ Supported widths are:
 {% endset %}
 {% set codeLanguage = "html" %}
 {% set codeExpanded = false %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -150,6 +152,7 @@ Use this option to guide users toward a relevant time period without preselectin
 {% set preview %}
 <nys-datepicker label="Project start date" startDate="2024-01-01"></nys-datepicker>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -163,6 +166,7 @@ Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
   hideClearButton
 ></nys-datepicker>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -174,6 +178,7 @@ Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
   value="2025-01-15"
 ></nys-datepicker>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 

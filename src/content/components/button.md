@@ -99,10 +99,11 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
 <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
 <div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
-</div><br>
-<nys-button fullWidth size="sm" id="button4" name="button4" label="Small full"></nys-button><br>
-<nys-button fullWidth id="button5" name="button5" label="Medium full"></nys-button><br>
-<nys-button fullWidth size="lg" id="button6" name="button6" label="Large full"></nys-button>{% endset %}
+</div>
+<nys-button class="nys-margin-y-100" fullWidth size="sm" id="button4" name="button4" label="Small full"></nys-button>
+<nys-button class="nys-margin-y-100" fullWidth id="button5" name="button5" label="Medium full"></nys-button>
+<nys-button class="nys-margin-y-100" fullWidth size="lg" id="button6" name="button6" label="Large full"></nys-button>
+{% endset %}
 {% set code %}
 <nys-button size="sm" id="button1" name="button1" label="Small"></nys-button>
 <nys-button size="md" id="button2" name="button2" label="Medium"></nys-button>
