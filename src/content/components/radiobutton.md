@@ -134,7 +134,7 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
-### Other
+<!-- ### Other
 The `other` option lets users enter a custom value when none of the listed choices apply. When selected, a text input appears and the `<nys-radiobutton>`’s value is set to the entered text. By default, the `label` will be “Other” if no `label` is provided. You may optionally supply a custom `label` to better match the context, such as “Something else” or “Other (please specify)”.
 
 **Note:** Place this option as the last `<nys-radiobutton>` within `<nys-radiogroup>`.
@@ -158,7 +158,7 @@ The `other` option lets users enter a custom value when none of the listed choic
 </nys-radiogroup>{% endset %}
   {% set backgroundSolid = true %}
   {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+  {% include "partials/code-preview.njk" %} -->
   
 ### Error
 To display an error message, pass in the `showError` property to the `<nys-radiogroup>` component. Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
