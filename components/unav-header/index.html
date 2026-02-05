@@ -43,12 +43,12 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-01-30T17:26:35.244+00:00 -->
+    <!-- Latest Build: 2026-02-05T19:18:10.361+00:00 -->
   </head>
   
   <body class="single-page page-unav-header section-components">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader hideTranslate="" hideSearch=""></nys-unavheader>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
     <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
@@ -56,7 +56,6 @@
     <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
     <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
     <li class="site-header__item"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
-    <li class="site-header__item"><a href="/search" class="site-header__link" title="Search this website">Search</a></li>
   </ul>
 </nys-globalheader>
 
@@ -468,6 +467,33 @@
     </div>
   </div>
 </div>
+<h3 id="custom-search-endpoint">Custom Search Endpoint</h3>
+<p>The default search URL for the <code>&lt;nys-unavheader&gt;</code> is <code>https://search.its.ny.gov/search/search.html?q=</code>. The <code>searchUrl</code> property allows you to override the search endpoint with a custom url.</p>
+<p><nys-alert type="warning" heading="Make sure the query is included in the string, otherwise it will not correctly append the search result."></nys-alert></p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+    <nys-unavheader searchUrl="https://designsystem.ny.gov/search/?q=" hideTranslate=""></nys-unavheader>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-unavheader</span> <span class="token attr-name">searchUrl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://designsystem.ny.gov/search/?q=<span class="token punctuation">"</span></span> <span class="token attr-name">hideTranslate</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-unavheader</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3 id="translate-off">Translate Off</h3>
   <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
@@ -582,7 +608,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/unav-header.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: January 30, 2026</p>
+    <p>Last updated: February 5, 2026</p>
   </div>
 
   </div>
