@@ -231,19 +231,58 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 {% block properties %}
 
-| Property          | Type                                                                              |
-|-------------------|-----------------------------------------------------------------------------------|
-| `id`              | String                                                                            |
-| `dismissible`     | boolean                                                                           |
-| `duration`        | integer                                                                           |
-| `heading`         | String                                                                            |
-| `icon`            | String (`<nys-icon name>`)                                                        |
-| `primaryAction`   | URL                                                                               |
-| `primaryLabel`    | String                                                                            |
-| `secondaryAction` | URL                                                                               |
-| `secondaryLabel`  | String                                                                            |
-| `text`            | String                                                                            |
-| `type`            | `"base"` \| `"info"` \| `"success"` \| `"warning"` \| `"danger"` \| `"emergency"` |
+<nys-table striped bordered>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>dismissible</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>duration</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>heading</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>icon</code></td>
+      <td>String (<code>&lt;nys-icon&gt; name</code>)</td>
+    </tr>
+    <tr>
+      <td><code>primaryAction</code></td>
+      <td>URL</td>
+    </tr>
+    <tr>
+      <td><code>primaryLabel</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>secondaryAction</code></td>
+      <td>URL</td>
+    </tr>
+    <tr>
+      <td><code>secondaryLabel</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>text</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td><code>"base"</code> | <code>"info"</code> | <code>"success"</code> | <code>"warning"</code> | <code>"danger"</code> | <code>"emergency"</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
