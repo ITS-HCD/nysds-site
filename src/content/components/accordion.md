@@ -79,7 +79,7 @@ The `nys-accordion` and `nys-accordionitem` components are vertically stacked li
 The `nys-accordionitem` component includes the following accessibility-focused features:
 
   - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
-   -Headers are large enough to interact with easily (minimum 44x44px).
+  - Headers are large enough to interact with easily (minimum 44x44px).
 
 {% endblock %}
 
@@ -154,7 +154,7 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 {% block properties %}
 
 | Property          | Type                   | Component                 |
-|-------------------|----------------------------------------------------|
+|-------------------|------------------------|---------------------------|
 | `id`              | String                 | both                      |
 | `heading`         | String                 | only `nys-accordionitem`  |
 | `expanded`        | Boolean                | only `nys-accordionitem`  |
@@ -163,11 +163,30 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.
+
+{% set code %}
+nys-accordion {
+  --nys-accordion-header-background-color: #fff;
+  --nys-accordion-content-max-width: 100%;
+}{% endset %}
+{% set accordionLabel = "Example" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+  {% set variables = [
+  { name: "--nys-accordion-header-background-color", description: "Background color of the accordion header."},
+  { name: "--nys-accordion-content-max-width", description: "Maximum readable width of the accordion content. Defaults to a readable character-based width (80ch) for accessibility."}
+]%}
+  {% include "partials/css-vars.njk" %}
+
+{% endblock %}
 
 {% block events %}
 
-The `<nys-accordionitem>` component emits **one** custom Javascript events:
+The `<nys-accordionitem>` component emits **one** custom Javascript event:
 
   1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
 

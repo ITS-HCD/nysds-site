@@ -230,11 +230,22 @@ Set the `inverted` when the button is on a dark background.
 | `suffixIcon`       | String (`<nys-icon name>`)                                         |
 | `target`           | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
 | `variant`          | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
-| `form`             | String \| `null`                                                  |
+| `form`             | String \| `null`                                                   |
 
 {% endblock %}
 
 {% block cssvariables %}
+These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.
+
+{% set code %}
+nys-button {
+  --nys-button-color: #ffffff;
+}
+{% endset %}
+{% set accordionLabel = "Example" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
 
   {% set variables = [
   { name: "--nys-button-color", description: "Text color of label"},
