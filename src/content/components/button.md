@@ -211,26 +211,87 @@ Set the `inverted` when the button is on a dark background.
 
 {% block properties %}
 
-| Property           | Type                                                               |
-|--------------------|--------------------------------------------------------------------|
-| `id`               | String                                                             |
-| `name`             | String                                                             |
-| `label`            | String                                                             |
-| `type`             | `"submit"` \| `"reset"` \| `"button"`                              |
-| `value`            | String                                                             |
-| `ariaLabel`        | String                                                             |
-| `ariaDescription`  | String                                                             |
-| `disabled`         | boolean                                                            |
-| `fullWidth`        | boolean                                                            |
-| `href`             | String (URL)                                                       |                
-| `inverted`         | boolean                                                            |
-| `onClick`          | JS function                                                        |
-| `prefixIcon`       | String (`<nys-icon name>`)                                         |
-| `size`             | `"sm"` \| `"md"` \| `"lg"`                                         |
-| `suffixIcon`       | String (`<nys-icon name>`)                                         |
-| `target`           | `"_self"` \| `"_blank"` \| `"_parent"` \| `"_top"` \| `"framename"`|
-| `variant`          | `"filled"` \| `"outline"` \| `"ghost"` \| `"text"`                 |
-| `form`             | String \| `null`                                                  |
+<nys-table striped bordered>
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td><code>name</code></td>
+          <td>String</td>          
+      </tr>
+      <tr>
+          <td><code>label</code></td>
+          <td>String</td>          
+      </tr>
+      <tr>
+          <td><code>type</code></td>
+          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>         
+      </tr>
+      <tr>
+          <td><code>value</code></td>
+          <td>String</td>         
+      </tr>
+      <tr>
+          <td><code>ariaLabel</code></td>
+          <td>String</td>         
+      </tr>
+      <tr>
+          <td><code>ariaDescription</code></td>
+          <td>String</td>         
+      </tr>
+      <tr>
+          <td><code>disabled</code></td>
+          <td>boolean</td>          
+      </tr>
+      <tr>
+          <td><code>fullWidth</code></td>
+          <td>boolean</td>          
+      </tr>
+      <tr>
+          <td><code>href</code></td>
+          <td>String (URL)</td>          
+      </tr>
+      <tr>
+          <td><code>inverted</code></td>
+          <td>boolean</td>          
+      </tr>
+      <tr>
+          <td><code>onClick</code></td>
+          <td>JS function</td>         
+      </tr>
+      <tr>
+          <td><code>prefixIcon</code></td>
+          <td>String (<code><nys-icon name></code>)</td>          
+      </tr>
+      <tr>
+          <td><code>size</code></td>
+          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>       
+      </tr>
+      <tr>
+          <td><code>suffixIcon</code></td>
+          <td>String (<code><nys-icon name></code>)</td>         
+      </tr>
+      <tr>
+          <td><code>target</code></td>
+          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>         
+      </tr>
+      <tr>
+          <td><code>variant</code></td>
+          <td><code>"filled"</code> , <code>"outline"</code> , <code>"ghost"</code> , <code>"text"</code></td>
+      </tr>
+      <tr>
+          <td><code>form</code></td>
+          <td>String , <code>null</code></td>
+      </tr>
+  </table>
+</nys-table>
+
 
 {% endblock %}
 
