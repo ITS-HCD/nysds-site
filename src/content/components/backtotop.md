@@ -141,10 +141,22 @@ size="sm"
 
 {% block properties %}
 
-| Property   | Type         |
-|------------|--------------|
-| `id`       | String       |
-| `position` | String       |
+<nys-table striped bordered>
+  <table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>id<code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>position<code></td>
+        <td>String</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
