@@ -119,7 +119,7 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
 
 {% block properties %}
 
-<nys-table striped bordered>
+<nys-table striped>
   <table>
     <tr>
       <th>Property</th>

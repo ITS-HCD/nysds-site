@@ -153,7 +153,7 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% block properties %}
 
-<nys-table striped bordered>
+<nys-table striped>
   <table>
       <tr>
           <th>Property</th>

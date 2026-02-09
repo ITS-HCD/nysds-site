@@ -116,7 +116,7 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% block properties %}
 
-<nys-table striped bordered>
+<nys-table striped>
   <table>
     <tr>
       <th>Property</th>

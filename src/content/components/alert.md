@@ -124,7 +124,7 @@ The `<nys-alert>` component includes the following accessibility-focused feature
   - Visual focus indicators to help users navigate the component.
   - Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.
 
-<nys-table striped bordered>
+<nys-table striped>
 <table>
     <tr>
         <th>ARIA Role</th>
@@ -250,7 +250,7 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 {% block properties %}
 
-<nys-table striped bordered>
+<nys-table striped>
   <table>
     <tr>
       <th>Property</th>
@@ -298,7 +298,7 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
     </tr>
     <tr>
       <td><code>type</code></td>
-      <td><code>"base"</code> | <code>"info"</code> | <code>"success"</code> | <code>"warning"</code> | <code>"danger"</code> | <code>"emergency"</code></td>
+      <td><code>"base"</code> , <code>"info"</code> , <code>"success"</code> , <code>"warning"</code> , <code>"danger"</code> , <code>"emergency"</code></td>
     </tr>
   </table>
 </nys-table>

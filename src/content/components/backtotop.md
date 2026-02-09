@@ -141,7 +141,7 @@ size="sm"
 
 {% block properties %}
 
-<nys-table striped bordered>
+<nys-table striped>
   <table>
     <tr>
         <th>Property</th>

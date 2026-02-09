@@ -165,7 +165,7 @@ Badge can include a prefix label, which is a short text that appears before the 
 
 {% block properties %}
 
-<nys-table striped bordered>
+<nys-table striped>
   <table>
     <tr>
         <th>Property</th>

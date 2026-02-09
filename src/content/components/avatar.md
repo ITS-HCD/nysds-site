@@ -135,7 +135,7 @@ You can change the background color of an Avatar. This attribute accepts any val
 {% endblock %}
 
 {% block properties %}
-<nys-table striped bordered>
+<nys-table striped>
   <table>
       <tr>
           <th>Property</th>
