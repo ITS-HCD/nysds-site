@@ -81,13 +81,30 @@ The prop `totalPages` takes in the number of total pages to view.
 
 {% block properties %}
 
-| Property       | Type             |
-|----------------|------------------|
-| `id`           | String           |
-| `name`         | String           |
-| `currentPage`  | Number           |
-| `totalPages`   | Number           |
-
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr> 
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>currentPage</code></td>
+      <td>Number</td>
+    </tr>
+    <tr>
+      <td><code>totalPages</code></td>
+      <td>Number</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

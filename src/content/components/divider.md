@@ -84,9 +84,18 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 
 {% block properties %}
 
-| Property   | Type         |
-|------------|--------------|
-| `inverted`  | boolean     |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>inverted</code></td>
+      <td>Boolean</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
