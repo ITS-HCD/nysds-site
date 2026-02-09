@@ -493,7 +493,7 @@ a.card:focus-visible {
     .card--horizontal .card__inner {
         flex-direction: row;
         align-items: stretch;
-        gap: var(--nys-space-200);
+        gap: var(--nys-space-400);
     }
 
     .card--horizontal .card__media {
