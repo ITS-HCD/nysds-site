@@ -119,11 +119,27 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
 
 {% block properties %}
 
-| Property              | Type         |
-|-----------------------|--------------|
-| `agencyName`          | String       |
-| `appName`             | String       |
-| `homepageLink`        | String (URL) |
+<nys-table striped bordered>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>agencyName</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>appName</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>homepageLink</code></td>
+      <td>String (URL)</td>
+    </tr>
+  </table>
+</nys-table>
+
 
 {% endblock %}
 
