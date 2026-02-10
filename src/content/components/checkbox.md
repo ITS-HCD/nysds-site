@@ -208,23 +208,85 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block properties %}
 
-| Property       | Type             | Component                  |
-|----------------|------------------|----------------------------|
-| `id`           | String           | both                       |
-| `name`         | String           | both                       |
-| `label`        | String           | both                       |
-| `value`        | String           | only `<nys-checkbox>`      |
-| `checked`      | boolean          | only `<nys-checkbox>`      |
-| `description`  | String           | both                       |
-| `disabled`     | boolean          | both                       |
-| `errorMessage` | String           | both                       |
-| `optional`     | boolean          | only `<nys-checkboxgroup>` |
-| `required`     | boolean          | both                       |
-| `showError`    | boolean          | both                       |
-| `size`         | `"sm"` \| `"md"` | both                       |
-| `tile`         | boolean          | both                       |
-| `form`         | String \| `null` | both                       |
-
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+      <td>only <code>&lt;nys-checkbox&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+      <td>only <code>&lt;nys-checkbox&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+      <td>only <code>&lt;nys-checkboxgroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>"sm"</code> | <code>"md"</code></td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>tile</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String | <code>null</code></td>
+      <td>both</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

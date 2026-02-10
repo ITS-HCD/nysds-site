@@ -164,23 +164,70 @@ You can supply a description via our `description` prop for plain text or by emb
 
 {% block properties %}
 
-| Property      | Type                                                               |
-|---------------|--------------------------------------------------------------------|
-| `id`          | String                                                             |
-| `name`        | String                                                             |
-| `label`       | String                                                             |
-| `description` | String                                                             |
-| `width`       | `"full"` \| `"lg"`                                                 |
-| `multiple`    | Boolean                                                            |
-| `accept`      | String                                                             |
-| `required`    | Boolean                                                            |
-| `disabled`    | Boolean                                                            |
-| `errorMessage`| String                                                             |
-| `showError`   | Boolean                                                            |
-| `dropzone`    | Boolean                                                            |
-| `optional`    | Boolean                                                            |
-| `form`        | String \| `null`                                                   |
-
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>"full"</code> , <code>"lg"</code></td>
+    </tr>
+    <tr>
+      <td><code>multiple</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>accept</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>dropzone</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String , <code>null</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
