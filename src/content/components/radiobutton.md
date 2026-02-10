@@ -209,7 +209,7 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
     <tr>
       <td><code>name</code></td>
       <td>String</td>
-      <td>only <code>&lt;nys-radiobutton&gt;</code></td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
@@ -219,17 +219,17 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
     <tr>
       <td><code>value</code></td>
       <td>String</td>
-      <td>only <code>&lt;nys-radiobutton&gt;</code></td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
     </tr>
     <tr>
       <td><code>checked</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-radiobutton&gt;</code></td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-radiobutton&gt;</code></td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
@@ -239,37 +239,37 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
     <tr>
       <td><code>errorMessage</code></td>
       <td>String</td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>optional</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>showError</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"sm"</code>, <code>"md"</code></td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>tile</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String, <code>null</code></td>
-      <td>only <code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
   </table>
 </nys-table>

@@ -168,22 +168,22 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
       <tr>
           <td><code>heading</code></td>
           <td>String</td>
-          <td>only <code>nys-accordionitem</code></td>
+          <td><code>nys-accordionitem</code></td>
       </tr>
       <tr>
           <td><code>expanded</code></td>
           <td>Boolean</td>
-          <td>only <code>nys-accordionitem</code></td>
+          <td><code>nys-accordionitem</code></td>
       </tr>
       <tr>
           <td><code>bordered</code></td>
           <td>Boolean</td>
-          <td>only <code>nys-accordion</code></td>
+          <td><code>nys-accordion</code></td>
       </tr>
       <tr>
           <td><code>singleSelect</code></td>
           <td>Boolean</td>
-          <td>only <code>nys-accordion</code></td>
+          <td><code>nys-accordion</code></td>
       </tr>
   </table>
 </nys-table>

@@ -233,12 +233,12 @@ When the description requires more complexity than a simple string, use the desc
     <tr>
       <td><code>value</code></td>
       <td>String</td>
-      <td>only <code>&lt;nys-checkbox&gt;</code></td>
+      <td><code>&lt;nys-checkbox&gt;</code></td>
     </tr>
     <tr>
       <td><code>checked</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-checkbox&gt;</code></td>
+      <td><code>&lt;nys-checkbox&gt;</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
@@ -258,7 +258,7 @@ When the description requires more complexity than a simple string, use the desc
     <tr>
       <td><code>optional</code></td>
       <td>boolean</td>
-      <td>only <code>&lt;nys-checkboxgroup&gt;</code></td>
+      <td><code>&lt;nys-checkboxgroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
