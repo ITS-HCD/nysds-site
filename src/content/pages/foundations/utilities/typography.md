@@ -44,11 +44,30 @@ Semantic tokens map specific properties to specific roles, like headings, body t
 
 Here are a few examples of the NYS Design System's semantic typography tokens:
 
-| Token Name               | Description                       | Example Value                 |
-|--------------------------|-----------------------------------|-------------------------------|
-| `--nys-font-family-body` | Font family for body text.        | `var(--nys-font-family-sans)` |
-| `--nys-font-size-h1`     | Font size for Heading 1 elements. | `var(--nys-font-size-5xl)`    |
-| `--nys-font-size-ui-md`  | Medium font size for UI elements. | `var(--nys-font-size-md)`     |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Token Name</th>
+      <th>Description</th>
+      <th>Example Value</th>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-body</code></td>
+      <td>Font family for body text.</td>
+      <td><code>var(--nys-font-family-sans)</code></td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-h1</code></td>
+      <td>Font size for Heading 1 elements.</td>
+      <td><code>var(--nys-font-size-5xl)</code></td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-ui-md</code></td>
+      <td>Medium font size for UI elements.</td>
+      <td><code>var(--nys-font-size-md)</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 </section>
 <section id="installing-fonts">
@@ -57,11 +76,30 @@ Here are a few examples of the NYS Design System's semantic typography tokens:
 
 ⚠️ Note: Fonts in the design system include some proprietary typefaces that are licensed for use exclusively by New York State government agencies and their digital products. These fonts are distributed separately from the design system and are not part of the open-source package to comply with licensing restrictions.
 
-| Token Name               | Description                       | Example Value                 |
-|--------------------------|-----------------------------------|-------------------------------|
-| `--nys-font-family-body` | Font family for body text.        | `var(--nys-font-family-sans)` |
-| `--nys-font-size-h1`     | Font size for Heading 1 elements. | `var(--nys-font-size-5xl)`    |
-| `--nys-font-size-ui-md`  | Medium font size for UI elements. | `var(--nys-font-size-md)`     |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Token Name</th>
+      <th>Description</th>
+      <th>Example Value</th>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-body</code></td>
+      <td>Font family for body text.</td>
+      <td><code>var(--nys-font-family-sans)</code></td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-h1</code></td>
+      <td>Font size for Heading 1 elements.</td>
+      <td><code>var(--nys-font-size-5xl)</code></td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-ui-md</code></td>
+      <td>Medium font size for UI elements.</td>
+      <td><code>var(--nys-font-size-md)</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 ### Download and Install
 
