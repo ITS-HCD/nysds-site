@@ -156,10 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedTheme = event.target.value;
     const htmlRoot = document.documentElement;
 
-       
-    console.log(selectedTheme);
-    console.log(htmlRoot);
-
     if (selectedTheme != "default") {
       htmlRoot.setAttribute('data-theme', selectedTheme);
     } else {
