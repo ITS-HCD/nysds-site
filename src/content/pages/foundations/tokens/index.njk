@@ -12,13 +12,13 @@ heading_links: false
 
 <nys-select id="theme-selector" label="Choose an agency theme" width="md">
   <nys-option value="default" selected>Default (NYS)</nys-option>
-  <nys-option value="nysds-theme-admin.min.css">Admin</nys-option>
-  <nys-option value="nysds-theme-business.min.css">Business</nys-option>
-  <nys-option value="nysds-theme-environment.min.css">Environment</nys-option>
-  <nys-option value="nysds-theme-health.min.css">Health</nys-option>
-  <nys-option value="nysds-theme-local.min.css">Local</nys-option>
-  <nys-option value="nysds-theme-safety.min.css">Safety</nys-option>
-  <nys-option value="nysds-theme-transportation.min.css">Transportation</nys-option>
+  <nys-option value="admin">Admin</nys-option>
+  <nys-option value="business">Business</nys-option>
+  <nys-option value="environment">Environment</nys-option>
+  <nys-option value="health">Health</nys-option>
+  <nys-option value="local">Local</nys-option>
+  <nys-option value="safety">Safety</nys-option>
+  <nys-option value="transportation">Transportation</nys-option>
 </nys-select>
 
 {% for type, tokens in collections.tokens %}
@@ -154,23 +154,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   themeSelector.addEventListener("nys-change", function (event) {
     const selectedTheme = event.target.value;
-    const existingTheme = document.getElementById("theme-style");
+    const htmlRoot = document.documentElement;
 
-    // Remove the existing theme if it exists
-    if (existingTheme) {
-      existingTheme.remove();
-    }
+       
+    console.log(selectedTheme);
+    console.log(htmlRoot);
 
     if (selectedTheme != "default") {
-      // Create a new link element for the selected theme
-      const newTheme = document.createElement("link");
-      newTheme.id = "theme-style";
-      newTheme.rel = "stylesheet";
-      newTheme.href = `/assets/css/vendor/${selectedTheme}`;
-
-      // Append the new theme to the document head
-      document.head.appendChild(newTheme);
-
+      htmlRoot.setAttribute('data-theme', selectedTheme);
+    } else {
+      htmlRoot.removeAttribute('data-theme');
     }
 
     // Theme vars that need to update in the token list when the theme changes.
@@ -197,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
           el.innerText = computedColor;
         });
       }
-    }, 100);
+    }, 500);
   });
 });
 

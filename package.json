@@ -8,7 +8,7 @@
         "build": "npm run copy:assets && ELEVENTY_ENV=production eleventy",
         "build:prod": "npm run copy:assets && ELEVENTY_ENV=production eleventy",
         "copy:assets": "mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor",
-        "clean:site": "rimraf _site",
+        "clean:site": "rimraf _site && rimraf src/assets/css/vendor && rimraf src/assets/js/vendor",
         "test": "echo \"Error: no test specified\" && exit 1",
         "link": "npm link @nysds/components && npm run start"
     },
