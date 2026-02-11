@@ -1,5 +1,17 @@
 <div class="css-var-table">
   {% if variables and variables | length > 0 %}
+    <p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p>
+
+    {% set code %}
+nys-component {
+  --nys-component-background-color: var(--nys-color-accent);
+  --nys-component-color: var(--nys-color-ink);
+}
+{% endset %}
+{% set accordionLabel = "Example" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
 
     {#-- Collect rows safely --#}
     {% set tableRows %}
