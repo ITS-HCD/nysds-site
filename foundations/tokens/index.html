@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-02-05T19:18:10.361+00:00 -->
+    <!-- Latest Build: 2026-02-11T19:21:28.487+00:00 -->
   </head>
   
   <body class="single-page page-tokens section-foundations no-heading-links">
@@ -268,13 +268,13 @@
 
 <nys-select id="theme-selector" label="Choose an agency theme" width="md">
   <nys-option value="default" selected="">Default (NYS)</nys-option>
-  <nys-option value="nysds-theme-admin.min.css">Admin</nys-option>
-  <nys-option value="nysds-theme-business.min.css">Business</nys-option>
-  <nys-option value="nysds-theme-environment.min.css">Environment</nys-option>
-  <nys-option value="nysds-theme-health.min.css">Health</nys-option>
-  <nys-option value="nysds-theme-local.min.css">Local</nys-option>
-  <nys-option value="nysds-theme-safety.min.css">Safety</nys-option>
-  <nys-option value="nysds-theme-transportation.min.css">Transportation</nys-option>
+  <nys-option value="admin">Admin</nys-option>
+  <nys-option value="business">Business</nys-option>
+  <nys-option value="environment">Environment</nys-option>
+  <nys-option value="health">Health</nys-option>
+  <nys-option value="local">Local</nys-option>
+  <nys-option value="safety">Safety</nys-option>
+  <nys-option value="transportation">Transportation</nys-option>
 </nys-select>
 
 
@@ -4297,23 +4297,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   themeSelector.addEventListener("nys-change", function (event) {
     const selectedTheme = event.target.value;
-    const existingTheme = document.getElementById("theme-style");
-
-    // Remove the existing theme if it exists
-    if (existingTheme) {
-      existingTheme.remove();
-    }
+    const htmlRoot = document.documentElement;
 
     if (selectedTheme != "default") {
-      // Create a new link element for the selected theme
-      const newTheme = document.createElement("link");
-      newTheme.id = "theme-style";
-      newTheme.rel = "stylesheet";
-      newTheme.href = `/assets/css/vendor/${selectedTheme}`;
-
-      // Append the new theme to the document head
-      document.head.appendChild(newTheme);
-
+      htmlRoot.setAttribute('data-theme', selectedTheme);
+    } else {
+      htmlRoot.removeAttribute('data-theme');
     }
 
     // Theme vars that need to update in the token list when the theme changes.
@@ -4340,7 +4329,7 @@ document.addEventListener("DOMContentLoaded", function () {
           el.innerText = computedColor;
         });
       }
-    }, 100);
+    }, 500);
   });
 });
 
@@ -4351,7 +4340,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/tokens/index.njk">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: February 5, 2026</p>
+    <p>Last updated: February 11, 2026</p>
   </div>
 
   </div>
