@@ -519,6 +519,10 @@ a.card:focus-visible {
         flex: none;
     }
 
+    .card--horizontal .card__media--thin img {
+        max-width: 180px;
+    }
+
     .card--horizontal .card__content {
         flex: 1 1 auto;
         display: flex;
