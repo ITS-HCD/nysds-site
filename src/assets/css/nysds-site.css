@@ -414,6 +414,9 @@ main[role=main] {
 
 .card__media {
     margin-bottom: var(--nys-space-100);
+}
+
+.card__media--thin {
     height: 180px;
     overflow: hidden;
 }
