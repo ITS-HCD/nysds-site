@@ -144,64 +144,66 @@ heading_links: false
 <div class="nys-grid-container-widescreen nys-top-800">
   <h2>Latest Updates</h2>
   <div class="nys-grid-row nys-flex-row">
-    {% set found_release = false %}
-    {% set found_article = false %}
-    {%- for post in collections.updates -%}
-      {# Check for the first release tag, display and dip out of the for loop #}
-      {% if post.data.tags | hasReleaseTag %}
-        {% if not found_release %}
-          {% set found_release = true %}
-          <a class="card card--horizontal" href="{{ post.url | url }}">
-            <div class="card__inner">
-              <div class="card__media card__media--thin">
-                <img src="{{ post.data.ogimage }}" alt="Thumbnail image" />
+    <div class="nys-grid-col-12">
+      {% set found_release = false %}
+      {% set found_article = false %}
+      {%- for post in collections.updates -%}
+        {# Check for the first release tag, display and dip out of the for loop #}
+        {% if post.data.tags | hasReleaseTag %}
+          {% if not found_release %}
+            {% set found_release = true %}
+            <a class="card card--horizontal" href="{{ post.url | url }}">
+              <div class="card__inner">
+                <div class="card__media card__media--thin">
+                  <img src="{{ post.data.thumbnailimage }}" alt="" role="presentation" />
+                </div>
+                <div class="card__content">
+                  <div class="card__title">
+                    {{ post.data.title }}
+                  </div>
+                  <div class="card_date">
+                    <p>{{ post.data.date | dateFull }}</p>
+                  </div>
+                  <div class="card__desc">
+                    <p>{{ post.data.description }}</p>
+                  </div>
+                  <div class="card__category">
+                    <p><nys-badge label="Latest release"></nys-badge></p>
+                  </div>
+                </div>
               </div>
-              <div class="card__content">
-                <div class="card__title">
-                  {{ post.data.title }}
-                </div>
-                <div class="card_date">
-                  <p>{{ post.data.date | dateFull }}</p>
-                </div>
-                <div class="card__desc">
-                  <p>{{ post.data.description }}</p>
-                </div>
-                <div class="card__category">
-                  <p><nys-badge label="Latest release"></nys-badge></p>
-                </div>
-              </div>
-            </div>
-          </a>
+            </a>
+          {% endif %}
         {% endif %}
-      {% endif %}
-      {# Check for the first article tag, display and dip out of the for loop #}
-      {% if post.data.tags | hasArticleTag %}
-        {% if not found_article %}
-          {% set found_article = true %}
-          <a class="card card--horizontal" href="{{ post.url | url }}">
-            <div class="card__inner">
-              <div class="card__media card__media--thin">
-                <img src="{{ post.data.ogimage }}" alt="Thumbnail image" />
+        {# Check for the first article tag, display and dip out of the for loop #}
+        {% if post.data.tags | hasArticleTag %}
+          {% if not found_article %}
+            {% set found_article = true %}
+            <a class="card card--horizontal" href="{{ post.url | url }}">
+              <div class="card__inner">
+                <div class="card__media card__media--thin">
+                  <img src="{{ post.data.thumbnailimage }}" alt="" role="presentation" />
+                </div>
+                <div class="card__content">
+                  <div class="card__title">
+                    {{ post.data.title }}
+                  </div>
+                  <div class="card_date">
+                    <p>{{ post.data.date | dateFull }}</p>
+                  </div>
+                  <div class="card__desc">
+                    <p>{{ post.data.description }}</p>
+                  </div>
+                  <div class="card__category">
+                    <p><nys-badge label="Latest article"></nys-badge></p>
+                  </div>
+                </div>
               </div>
-              <div class="card__content">
-                <div class="card__title">
-                  {{ post.data.title }}
-                </div>
-                <div class="card_date">
-                  <p>{{ post.data.date | dateFull }}</p>
-                </div>
-                <div class="card__desc">
-                  <p>{{ post.data.description }}</p>
-                </div>
-                <div class="card__category">
-                  <p><nys-badge label="Latest article"></nys-badge></p>
-                </div>
-              </div>
-            </div>
-          </a>
+            </a>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {%- endfor -%}
+      {%- endfor -%}
+    </div>
   </div>
 </div>
 

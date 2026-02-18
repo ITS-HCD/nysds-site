@@ -4,7 +4,7 @@ title: February Website Improvements
 author: Eric Steinborn
 description: |
   We have shipped a new homepage and contribute page to engage with users. We implemented the nys-unavheader's new search customizationon the site, and created links to important resources like the Community Figma file.
-ogimage: /assets/i/2026/release-1.14.0.png
+thumbnailimage: /assets/i/2026/february-website-improvements-thumbnail.png
 tags: article, website, search, community, Figma
 date: 2026-02-17
 ---

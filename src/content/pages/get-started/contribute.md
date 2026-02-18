@@ -23,7 +23,7 @@ When you submit a component request, we ask questions like:
 
 New proposals are announced in the design system teams channel. Once a proposal is accepted, the design system team will go through a UX design review and accessibility review, development, and finally testing. When that's done, it will be released to the reference site and our Figma libraries.
 
-<a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues">
+<a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/discussions">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/propose-a-component.svg" />

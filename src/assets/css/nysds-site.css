@@ -416,6 +416,10 @@ main[role=main] {
     margin-bottom: var(--nys-space-100);
 }
 
+.card--horizontal .card__media--thin img {
+    max-width: 250px;
+}
+
 .card__media img {
     display: block; /* Remove bottom space under image */
     width: 100%;
@@ -504,7 +508,7 @@ a.card:focus-visible {
     }
 
     .card--horizontal .card__media--thin {
-        flex: 0 0 30%;
+        flex: none;
     }
 
     .card--horizontal .card__content {
