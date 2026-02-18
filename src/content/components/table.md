@@ -164,7 +164,7 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 Adding the `sortable` property allows for the table to be reordered in ascending or descending order.
 
-<nys-alert type="warning">
+<nys-alert type="warning" heading="Warning">
 <p>Currently the <code>sortable</code> property does <strong>NOT</strong> support <code>rowspan</code> or <code>colspan</code>.</p>
 </nys-alert>
 
