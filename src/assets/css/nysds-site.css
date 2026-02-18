@@ -418,6 +418,7 @@ main[role=main] {
 
 .card--horizontal .card__media--thin img {
     max-width: 250px;
+    margin: 0 auto;
 }
 
 .card__media img {
