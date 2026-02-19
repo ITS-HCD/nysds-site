@@ -1,9 +1,9 @@
 ---
 permalink: /updates/february-website-improvements/
-title: February Website Improvements
+title: Happy Birthday NYS Design System!
 author: Eric Steinborn
 description: |
-  We have shipped a new homepage and contribute page to engage with users. We implemented the nys-unavheader's new search customization on the site, and created links to important resources like the Community Figma file.
+  We're celebrating our one year anniversary! We shipped a new homepage and contribute pages. Contribution can take many forms: New feature requests, bug reports, or hop into our Teams channel.
 thumbnailimage: /assets/i/2026/february-website-improvements-thumbnail.png
 tags: article, website, anniversary, contribute
 date: 2026-02-19
@@ -123,7 +123,7 @@ Improved the search function on the website to fit into the unav header (top whi
 
 ## New contribute page
 
-There are multiple ways to contribute to the NYS Design System. Our new [contributing page](/get-started/contribute) provides multiple ways you can contribute to the NYS Design System. We've included links for requesting new components and enhancements, links for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!
+There are multiple ways to contribute to the NYS Design System. Our new [contributing page](/get-started/contribute) provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!
 
 
 <style>

@@ -53,6 +53,7 @@ If you find something that's not working, our design system team uses GitHub iss
             </div>
             <div class="card__desc">
                 Spotted an issue or a visual glitch? Open a GitHub ticket with a clear description and reproduction steps so we can squash it.
+                <nys-badge label="Requires a GitHub account"></nys-badge>
             </div>
         </div>
     </div>
@@ -75,6 +76,7 @@ Every two weeks, our team hosts a design system office hours event on our team's
             </div>
             <div class="card__desc">
                 Have a quick question or need immediate guidance? Jump into our Microsoft Teams channel to chat with the team in real-time.
+                <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
             </div>
         </div>
     </div>
