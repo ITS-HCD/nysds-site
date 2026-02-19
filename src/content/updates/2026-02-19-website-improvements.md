@@ -1,5 +1,5 @@
 ---
-permalink: /updates/february-website-improvements/
+permalink: /updates/happy-birthday-nysds/
 title: Happy Birthday NYS Design System!
 author: Eric Steinborn
 description: |

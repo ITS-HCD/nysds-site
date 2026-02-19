@@ -34,6 +34,8 @@ New proposals are announced in the design system teams channel. Once a proposal 
             </div>
             <div class="card__desc">
                 Search through the existing list of component proposals and if you don't find a component that meets your needs, feel free to create a new proposal for a specific component.
+                <p></p>
+                <nys-badge label="Requires a GitHub account"></nys-badge>
             </div>
         </div>
     </div>
@@ -53,12 +55,17 @@ If you find something that's not working, our design system team uses GitHub iss
             </div>
             <div class="card__desc">
                 Spotted an issue or a visual glitch? Open a GitHub ticket with a clear description and reproduction steps so we can squash it.
+                <p></p>
                 <nys-badge label="Requires a GitHub account"></nys-badge>
             </div>
         </div>
     </div>
 </a>
-
+<style>
+.card__desc nys-badge {
+    margin-top: 20em;
+}
+</style>
 
 ## Join the design system troubleshooting channel
 You can join us on Microsoft Teams. If you work for New York State, you can join our design system teams channel and drop your questions or feedback in the threads. We have dedicated spaces for general questions, release notes, and troubleshooting. It's an easy way to learn from each other and help shape the future of the design system.
@@ -76,6 +83,7 @@ Every two weeks, our team hosts a design system office hours event on our team's
             </div>
             <div class="card__desc">
                 Have a quick question or need immediate guidance? Jump into our Microsoft Teams channel to chat with the team in real-time.
+                <p></p>
                 <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
             </div>
         </div>
