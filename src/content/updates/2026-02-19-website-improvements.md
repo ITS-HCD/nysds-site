@@ -5,8 +5,8 @@ author: Eric Steinborn
 description: |
   We have shipped a new homepage and contribute page to engage with users. We implemented the nys-unavheader's new search customization on the site, and created links to important resources like the Community Figma file.
 thumbnailimage: /assets/i/2026/february-website-improvements-thumbnail.png
-tags: article, website, search, community, Figma
-date: 2026-02-17
+tags: article, website, anniversary, contribute
+date: 2026-02-19
 ---
 
 ## Happy first birthday NYS Design System!
@@ -108,7 +108,7 @@ Thanks to Kevin Luddy for the perfect birthday badge for our one year anniversar
 </g>
 </svg>
 <div class="controls">
-<button onclick="replay()">Replay</button>
+<button onclick="replay()">Play</button>
 <span class="time-display" id="timeDisplay">0.0s</span>
 </div>
 </div>
@@ -370,7 +370,12 @@ clone.id = "badgeSvg";
 container.replaceChild(clone, svg);
 startAnimation();
 }
-window.addEventListener("load", startAnimation);
+window.addEventListener("load", function() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    startAnimation();
+  }
+});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
