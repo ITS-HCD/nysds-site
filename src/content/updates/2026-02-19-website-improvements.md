@@ -346,7 +346,10 @@ updateMorph(t);
 updateCrossfade(t);
 // Keep running until everything is done
 if (t < FINISH_CLIPPING_SPIN + 1) {
-animId = requestAnimationFrame(animate);
+  animId = requestAnimationFrame(animate);
+} else {
+  animId = null;
+  document.querySelector('.controls button').textContent = 'Replay';
 }
 }
 function startAnimation() {
@@ -362,13 +365,22 @@ document.querySelector(".caption").classList.add("hidden");
 animId = requestAnimationFrame(animate);
 }
 function replay() {
-// Reset SMIL morph by cloning SVG (resets SMIL timeline)
-const svg = document.getElementById("badgeSvg");
-const container = svg.parentElement;
-const clone = svg.cloneNode(true);
-clone.id = "badgeSvg";
-container.replaceChild(clone, svg);
-startAnimation();
+  const btn = document.querySelector('.controls button');
+  if (animId) {
+    // Animation is running — stop it
+    cancelAnimationFrame(animId);
+    animId = null;
+    btn.textContent = 'Replay';
+  } else {
+    // Animation is stopped — restart it
+    const svg = document.getElementById("badgeSvg");
+    const container = svg.parentElement;
+    const clone = svg.cloneNode(true);
+    clone.id = "badgeSvg";
+    container.replaceChild(clone, svg);
+    startAnimation();
+    btn.textContent = 'Stop';
+  }
 }
 window.addEventListener("load", function() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -380,7 +392,7 @@ window.addEventListener("load", function() {
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
 <script>
-var duration = 5 * 1000;
+var duration = 2.5 * 1000;
 var animationEnd = Date.now() + duration;
 var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, disableForReducedMotion: true };
 function randomInRange(min, max) {
