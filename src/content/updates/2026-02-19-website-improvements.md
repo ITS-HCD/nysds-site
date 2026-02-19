@@ -108,7 +108,7 @@ Thanks to Kevin Luddy for the perfect birthday badge for our one year anniversar
 </g>
 </svg>
 <div class="controls">
-<button onclick="replay()">Play</button>
+<button onclick="replay()">Stop</button>
 <span class="time-display" id="timeDisplay">0.0s</span>
 </div>
 </div>
