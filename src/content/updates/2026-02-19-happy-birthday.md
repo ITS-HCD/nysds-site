@@ -4,14 +4,15 @@ title: Happy Birthday NYS Design System!
 author: Eric Steinborn
 description: |
   We're celebrating our one year anniversary! We shipped a new homepage and contribute pages. Contribution can take many forms: New feature requests, bug reports, or hop into our Teams channel.
-thumbnailimage: /assets/i/2026/february-website-improvements-thumbnail.png
+ogimage: /assets/i/2026/happy-birthday.png
+thumbnailimage: /assets/i/2026/happy-birthday-thumbnail.png
 tags: article, website, anniversary, contribute
 date: 2026-02-19
 ---
 
 ## Happy first birthday NYS Design System!
 
-Thanks to Kevin Luddy for the perfect birthday badge for our one year anniversary!
+Thanks to [Doug Bartow](https://github.com/dougbartow) and [Kevin Luddy](https://github.com/goodship11) for designing and animating the perfect birthday badge for our one year anniversary!
 
 <div class="badge-container">
 <svg id="badgeSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 447.50273 447.50273">
@@ -125,6 +126,7 @@ Improved the search function on the website to fit into the unav header (top whi
 
 There are multiple ways to contribute to the NYS Design System. Our new [contributing page](/get-started/contribute) provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!
 
+Thanks to [Mashya Mumin](https://github.com/mashyamumin), [Kristin Sorrentino](https://github.com/ksorrentino), and [Doug Bartow](https://github.com/dougbartow) for this new style!
 
 <style>
 .badge-container { width: 500px; max-width: 90vw; }
@@ -183,7 +185,7 @@ const CONTENT_DECEL_DURATION = FINISH_ONE_SPIN - CROSSFADE_ARROW_TO_ONE; // 4s *
 const CLIP_ACCEL_DURATION = 2 * TEMPO;
 const CLIP_DECEL_DURATION =
 FINISH_CLIPPING_SPIN - (START_ARROW_SPIN + CLIP_ACCEL_DURATION);
-const TOTAL_ROTATIONS = 12;
+const TOTAL_ROTATIONS = 6;
 const PEAK_OMEGA =
 (TOTAL_ROTATIONS * 360) / (ACCEL_DURATION / 4 + CONTENT_DECEL_DURATION / 2);
 const CX = 208.75137,
