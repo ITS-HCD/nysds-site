@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-02-11T19:21:28.487+00:00 -->
+    <!-- Latest Build: 2026-02-20T13:21:46.587+00:00 -->
   </head>
   
   <body class="single-page page-button section-components">
@@ -736,101 +736,123 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
     <br>
     <section>
       <h2 id="properties">Properties</h2>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>type</code></td>
-<td><code>&quot;submit&quot;</code> | <code>&quot;reset&quot;</code> | <code>&quot;button&quot;</code></td>
-</tr>
-<tr>
-<td><code>value</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>ariaLabel</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>ariaDescription</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>disabled</code></td>
-<td>boolean</td>
-</tr>
-<tr>
-<td><code>fullWidth</code></td>
-<td>boolean</td>
-</tr>
-<tr>
-<td><code>href</code></td>
-<td>String (URL)</td>
-</tr>
-<tr>
-<td><code>inverted</code></td>
-<td>boolean</td>
-</tr>
-<tr>
-<td><code>onClick</code></td>
-<td>JS function</td>
-</tr>
-<tr>
-<td><code>prefixIcon</code></td>
-<td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-</tr>
-<tr>
-<td><code>size</code></td>
-<td><code>&quot;sm&quot;</code> | <code>&quot;md&quot;</code> | <code>&quot;lg&quot;</code></td>
-</tr>
-<tr>
-<td><code>suffixIcon</code></td>
-<td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-</tr>
-<tr>
-<td><code>target</code></td>
-<td><code>&quot;_self&quot;</code> | <code>&quot;_blank&quot;</code> | <code>&quot;_parent&quot;</code> | <code>&quot;_top&quot;</code> | <code>&quot;framename&quot;</code></td>
-</tr>
-<tr>
-<td><code>variant</code></td>
-<td><code>&quot;filled&quot;</code> | <code>&quot;outline&quot;</code> | <code>&quot;ghost&quot;</code> | <code>&quot;text&quot;</code></td>
-</tr>
-<tr>
-<td><code>form</code></td>
-<td>String | <code>null</code></td>
-</tr>
-</tbody>
-</table>
+<nys-table striped="">
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td><code>name</code></td>
+          <td>String</td>          
+      </tr>
+      <tr>
+          <td><code>label</code></td>
+          <td>String</td>          
+      </tr>
+      <tr>
+          <td><code>type</code></td>
+          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>         
+      </tr>
+      <tr>
+          <td><code>value</code></td>
+          <td>String</td>         
+      </tr>
+      <tr>
+          <td><code>ariaLabel</code></td>
+          <td>String</td>         
+      </tr>
+      <tr>
+          <td><code>ariaDescription</code></td>
+          <td>String</td>         
+      </tr>
+      <tr>
+          <td><code>disabled</code></td>
+          <td>boolean</td>          
+      </tr>
+      <tr>
+          <td><code>fullWidth</code></td>
+          <td>boolean</td>          
+      </tr>
+      <tr>
+          <td><code>href</code></td>
+          <td>String (URL)</td>          
+      </tr>
+      <tr>
+          <td><code>inverted</code></td>
+          <td>boolean</td>          
+      </tr>
+      <tr>
+          <td><code>onClick</code></td>
+          <td>JS function</td>         
+      </tr>
+      <tr>
+          <td><code>prefixIcon</code></td>
+          <td>String (<code><nys-icon name=""></nys-icon></code>)</td>          
+      </tr>
+      <tr>
+          <td><code>size</code></td>
+          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>       
+      </tr>
+      <tr>
+          <td><code>suffixIcon</code></td>
+          <td>String (<code><nys-icon name=""></nys-icon></code>)</td>         
+      </tr>
+      <tr>
+          <td><code>target</code></td>
+          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>         
+      </tr>
+      <tr>
+          <td><code>variant</code></td>
+          <td><code>"filled"</code> , <code>"outline"</code> , <code>"ghost"</code> , <code>"text"</code></td>
+      </tr>
+      <tr>
+          <td><code>form</code></td>
+          <td>String , <code>null</code></td>
+      </tr>
+  </table>
+</nys-table>
 </section>
     <br>
     <section>
-      <h2 id="css-variables">CSS Variables</h2>
+      <h2 id="style-overrides">Style Overrides</h2>
   <div class="css-var-table">
-<p></p><table>
-<thead>
-<tr>
-<th>CSS Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><p></p>
+<p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--nys-component-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<nys-table striped="">
+      <table>
+        <thead>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
 <p><tr>
 <td><code>--nys-button-color</code></td>
 <td>Text color of label</td>
@@ -869,16 +891,15 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
 </tr></p>
 <p><tr>
 <td colspan="2" class="css-var-table__tip">
-<p>
 Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
 new one with a
 <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
 Proposal</a>.
-</p>
 </td>
-</tr>
-</p></tbody>
-</table><p></p>
+</tr></p>
+<p></p></tbody>
+</table>
+</nys-table><p></p>
 </div>
 </section>
     <br>
@@ -933,7 +954,7 @@ button<span class="token punctuation">.</span><span class="token function">addEv
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/button.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: February 11, 2026</p>
+    <p>Last updated: February 20, 2026</p>
   </div>
 
   </div>

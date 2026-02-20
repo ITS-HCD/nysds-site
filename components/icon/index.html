@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-02-11T19:21:28.487+00:00 -->
+    <!-- Latest Build: 2026-02-20T13:21:46.587+00:00 -->
   </head>
   
   <body class="single-page page-icon section-components">
@@ -1257,69 +1257,90 @@
     <br>
     <section>
       <h2 id="properties">Properties</h2>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ariaLabel</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>color</code></td>
-<td>String (CSS HEX, CSS color name, or CSS variable)</td>
-</tr>
-<tr>
-<td><code>flip</code></td>
-<td><code>&quot;horizontal&quot;</code> | <code>&quot;vertical&quot;</code> | <code>&quot;both&quot;</code></td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>rotate</code></td>
-<td>integer</td>
-</tr>
-<tr>
-<td><code>size</code></td>
-<td><code>&quot;xs&quot;</code> | <code>&quot;sm&quot;</code> | <code>&quot;md&quot;</code> | <code>&quot;lg&quot;</code> | <code>&quot;xl&quot;</code> | <code>&quot;2xl&quot;</code> | <code>&quot;3xl&quot;</code> | <code>&quot;4xl&quot;</code> | <code>&quot;5xl&quot;</code> | <code>&quot;12&quot;</code> | <code>&quot;14&quot;</code> | <code>&quot;16&quot;</code> | <code>&quot;18&quot;</code> | <code>&quot;20&quot;</code> | <code>&quot;24&quot;</code> | <code>&quot;32&quot;</code> | <code>&quot;40&quot;</code> | <code>&quot;50&quot;</code></td>
-</tr>
-</tbody>
-</table>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>ariaLabel</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>color</code></td>
+      <td>String (CSS HEX, CSS color name, or CSS variable)</td>
+    </tr>
+    <tr>
+      <td><code>flip</code></td>
+      <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>rotate</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>"xs"</code>, <code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"xl"</code>, <code>"2xl"</code>, <code>"3xl"</code>, <code>"4xl"</code>, <code>"5xl"</code>, <code>"12"</code>, <code>"14"</code>, <code>"16"</code>, <code>"18"</code>, <code>"20"</code>, <code>"24"</code>, <code>"32"</code>, <code>"40"</code>, <code>"50"</code></td>
+    </tr>
+  </table>
+</nys-table>
 </section>
     <br>
     <section>
-      <h2 id="css-variables">CSS Variables</h2>
+      <h2 id="style-overrides">Style Overrides</h2>
   <div class="css-var-table">
-<p></p><table>
-<thead>
-<tr>
-<th>CSS Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><p></p>
+<p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--nys-component-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<nys-table striped="">
+      <table>
+        <thead>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
 <p><tr>
 <td><code>--nys-icon-size</code></td>
 <td>Width and height of the component</td>
 </tr></p>
 <p><tr>
 <td colspan="2" class="css-var-table__tip">
-<p>
 Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
 new one with a
 <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
 Proposal</a>.
-</p>
 </td>
-</tr>
-</p></tbody>
-</table><p></p>
+</tr></p>
+<p></p></tbody>
+</table>
+</nys-table><p></p>
 </div>
 </section>
     <br>
@@ -1343,7 +1364,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/icon.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: February 11, 2026</p>
+    <p>Last updated: February 20, 2026</p>
   </div>
 
   </div>
