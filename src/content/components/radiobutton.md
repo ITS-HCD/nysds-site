@@ -194,22 +194,85 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 
 {% block properties %}
 
-| Property       | Type             | Component                |
-|----------------|------------------|--------------------------|
-| `id`           | String           | both                     |
-| `name`         | String           | only `<nys-radiobutton>` |
-| `label`        | String           | both                     |
-| `value`        | String           | only `<nys-radiobutton>` |
-| `checked`      | boolean          | only `<nys-radiobutton>` |
-| `disabled`     | boolean          | only `<nys-radiobutton>` |
-| `description`  | String           | both                     |
-| `errorMessage` | String           | only `<nys-radiogroup>`  |
-| `optional`     | boolean          | only `<nys-radiogroup>`  |
-| `required`     | boolean          | only `<nys-radiogroup>`  |
-| `showError`    | boolean          | only `<nys-radiogroup>`  |
-| `size`         | `"sm"` \| `"md"` | only `<nys-radiogroup>`  |
-| `tile`         | boolean          | only `<nys-radiogroup>`  |
-| `form`         | String \| `null` | only `<nys-radiogroup>`  |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>"sm"</code>, <code>"md"</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>tile</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String, <code>null</code></td>
+      <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

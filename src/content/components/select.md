@@ -219,22 +219,85 @@ Setting `errorMessage` does not display the message without `showError` set to t
 
 {% block properties %}
 
-| Property       | Type                                   | Component           |
-|----------------|----------------------------------------|---------------------|
-| `id`           | String                                 | only `<nys-select>` |
-| `name`         | String                                 | only `<nys-select>` |
-| `label`        | String                                 | both                |
-| `description`  | String                                 | only `<nys-select>` |
-| `disabled`     | boolean                                | both                |
-| `errorMessage` | String                                 | only `<nys-select>` |
-| `hidden`       | boolean                                | only `<option>` |
-| `optional`     | boolean                                | only `<nys-select>` |
-| `required`     | boolean                                | only `<nys-select>` |
-| `selected`     | boolean                                | only `<option>` |
-| `showError`    | boolean                                | only `<nys-select>` |
-| `value`        | String                                 | both                |
-| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` | only `<nys-select>` |
-| `form`         | String \| `null`                       | only `<nys-select>` |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>hidden</code></td>
+      <td>boolean</td>
+      <td><code>&lt;option&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>selected</code></td>
+      <td>boolean</td>
+      <td><code>&lt;option&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"full"</code></td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String, <code>null</code></td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 
 {% endblock %}

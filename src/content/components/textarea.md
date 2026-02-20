@@ -162,25 +162,82 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 
 {% block properties %}
 
-| Property       | Type                                   |
-|----------------|----------------------------------------|
-| `id`           | String                                 |
-| `name`         | String                                 |
-| `label`        | String                                 |
-| `description`  | String                                 |
-| `disabled`     | boolean                                |
-| `errorMessage` | String                                 |
-| `maxLength`    | integer                                |
-| `optional`     | boolean                                |
-| `placeholder`  | String                                 |
-| `readonly`     | boolean                                |
-| `required`     | boolean                                |
-| `resize`       | `"vertical"` |\ `"none"`               |
-| `rows`         | integer                                |
-| `showError`    | boolean                                |
-| `value`        | String                                 |
-| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"` |
-| `form`         | String \| `null`                       |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>maxLength</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>placeholder</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>readonly</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>resize</code></td>
+      <td><code>"vertical"</code>, <code>"none"</code></td>
+    </tr>
+    <tr>
+      <td><code>rows</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"full"</code></td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String, <code>null</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

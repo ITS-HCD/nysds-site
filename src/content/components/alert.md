@@ -124,11 +124,30 @@ The `<nys-alert>` component includes the following accessibility-focused feature
   - Visual focus indicators to help users navigate the component.
   - Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.
 
-| **ARIA Role**   | **Attribute**                                                                                                                             | **Use Case**                                                                 |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| `role="alert"`  | Important messages that demand the user's immediate attention.                                                                            | Example: Danger and Emergency alert                                          |
-| `role="status"` | Messages that provide advisory information but do not have the same urgency as alerts.                                                    | Example: Success alert                                                       |
-| `role="region"` | Messages that provide information the user would want to be able to easily find, but are not important enough to interrupt user workflow. | Information and Warning alert (An `aria-label` will be added for this role.) |
+<nys-table striped>
+<table>
+    <tr>
+        <th>ARIA Role</th>
+        <th>Attribute</th>
+        <th>Use Case</th>
+    </tr>
+    <tr>
+        <td><code>role=&quot;alert&quot;</code></td>
+        <td>Important messages that demand the user&#39;s immediate attention.</td>
+        <td>Example: Danger and Emergency alert</td>
+    </tr>
+    <tr>
+        <td><code>role=&quot;status&quot;</code></td>
+        <td>Messages that provide advisory information but do not have the same urgency as alerts.</td>
+        <td>Example: Success alert</td>
+    </tr>
+    <tr>
+        <td><code>role="region"</code></td>
+        <td>Messages that provide information the user would want to be able to easily find, but are not important enough to interrupt user workflow.</td>
+        <td>Information and Warning alert (An <code>aria-label</code> will be added for this role.)</td>
+    </tr>
+</table>
+</nys-table>
 
 {% endblock %}
 
@@ -231,19 +250,58 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 {% block properties %}
 
-| Property          | Type                                                                              |
-|-------------------|-----------------------------------------------------------------------------------|
-| `id`              | String                                                                            |
-| `dismissible`     | boolean                                                                           |
-| `duration`        | integer                                                                           |
-| `heading`         | String                                                                            |
-| `icon`            | String (`<nys-icon name>`)                                                        |
-| `primaryAction`   | URL                                                                               |
-| `primaryLabel`    | String                                                                            |
-| `secondaryAction` | URL                                                                               |
-| `secondaryLabel`  | String                                                                            |
-| `text`            | String                                                                            |
-| `type`            | `"base"` \| `"info"` \| `"success"` \| `"warning"` \| `"danger"` \| `"emergency"` |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>dismissible</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>duration</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>heading</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>icon</code></td>
+      <td>String (<code>&lt;nys-icon&gt; name</code>)</td>
+    </tr>
+    <tr>
+      <td><code>primaryAction</code></td>
+      <td>URL</td>
+    </tr>
+    <tr>
+      <td><code>primaryLabel</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>secondaryAction</code></td>
+      <td>URL</td>
+    </tr>
+    <tr>
+      <td><code>secondaryLabel</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>text</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td><code>"base"</code> , <code>"info"</code> , <code>"success"</code> , <code>"warning"</code> , <code>"danger"</code> , <code>"emergency"</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

@@ -191,29 +191,94 @@ Takes any valid regex value.
 
 {% block properties %}
 
-| Property       | Type                                                                                    |
-|----------------|-----------------------------------------------------------------------------------------|
-| `id`           | String                                                                                  |
-| `name`         | String                                                                                  |
-| `label`        | String                                                                                  |
-| `description`  | String                                                                                  |
-| `disabled`     | boolean                                                                                 |
-| `errorMessage` | String                                                                                  |
-| `max`          | integer                                                                                 |
-| `maxlength`    | integer                                                                                 |
-| `min`          | integer                                                                                 |
-| `optional`     | boolean                                                                                 |
-| `pattern`      | REGEX                                                                                   |
-| `placeholder`  | String                                                                                  |
-| `readonly`     | boolean                                                                                 |
-| `required`     | boolean                                                                                 |
-| `showError`    | boolean                                                                                 |
-| `step`         | integer                                                                                 |
-| `type`         | `"email"` \| `"number"` \| `"password"` \| `"search"` \| `"tel"` \| `"text"` \| `"url"` |
-| `value`        | String                                                                                  |
-| `width`        | `"sm"` \| `"md"` \| `"lg"` \| `"full"`                                                  |
-| `form`         | String \| `null`                                                                        |
-
+<nys-table striped>
+  <table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>id</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>label</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>description</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>errorMessage</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>max</code></td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>maxlength</code></td>
+        <td>integer</td>
+    </tr>
+    <tr>
+    <td><code>min</code></td>
+        <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>pattern</code></td>
+      <td>REGEX</td>
+    </tr>
+      <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>placeholder</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>readonly</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>step</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td><code>"email"</code> , <code>"number"</code> , <code>"password"</code> , <code>"search"</code> , <code>"tel"</code> , <code>"text"</code> , <code>"url"</code></td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code> , <code>"full"</code></td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String , <code>null</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

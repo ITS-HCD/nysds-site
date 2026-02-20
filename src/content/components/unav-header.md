@@ -91,10 +91,26 @@ The default search URL for the `<nys-unavheader>` is `https://search.its.ny.gov/
 
 {% block properties %}
 
-| Property        | Type    |
-|-----------------|---------|
-| `hideSearch`    | boolean |
-| `hideTranslate` | boolean |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>searchUrl</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>hideSearch</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr><
+      <td><code>hideTranslate</code></td>
+      <td>Boolean</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

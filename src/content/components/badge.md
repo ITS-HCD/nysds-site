@@ -165,17 +165,50 @@ Badge can include a prefix label, which is a short text that appears before the 
 
 {% block properties %}
 
-| Property   | Type         |
-|------------|--------------|
-| `id`       | String       |
-| `label` | String       |
-| `name` | String       |
-| `size` |  `"md"`, `"sm"`     |
-| `intent` |   `"neutral"`, `"error"`, `"success"`, `"warning"`     |
-| `variant` |   `"strong"`      |
-| `prefix` | String       |
-| `prefixIcon` | String       |
-| `suffixIcon` | String       |
+<nys-table striped>
+  <table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>id</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>label</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>size</code></td>
+        <td><code>"md"</code>, <code>"sm"</code></td>
+    </tr>
+    <tr>
+        <td><code>intent</code></td>
+        <td><code>"neutral"</code>, <code>"error"</code>, <code>"success"</code>, <code>"warning"</code></td>
+    </tr>
+    <tr>
+        <td><code>variant</code></td>
+        <td><code>"strong"</code></td>
+    </tr>
+    <tr>
+        <td><code>prefix</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>prefixIcon</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>suffixIcon</code></td>
+        <td>String</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

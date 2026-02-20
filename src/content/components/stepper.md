@@ -327,15 +327,50 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 {% block properties %}
 
-| Property       | Type         | Component     | 
-|----------------|--------------|---------------|
-| `id`           | String       | `nys-stepper` |
-| `name`         | String       | `nys-stepper` |
-| `label`        | String       | both          |
-| `selected`     | boolean      | `nys-step`    |
-| `current`      | boolean      | `nys-step`    |
-| `href`         | String (URL) | `nys-step`    |
-| `onClick`      | JS function  | `nys-step`    |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-stepper&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-stepper&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>selected</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-step&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>current</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-step&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td>String (URL)</td>
+      <td><code>&lt;nys-step&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>onClick</code></td>
+      <td>JS function</td>
+      <td><code>&lt;nys-step&gt;</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
