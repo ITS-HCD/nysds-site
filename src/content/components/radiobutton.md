@@ -134,31 +134,34 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
-<!-- ### Other
-The `other` option lets users enter a custom value when none of the listed choices apply. When selected, a text input appears and the `<nys-radiobutton>`’s value is set to the entered text. By default, the `label` will be “Other” if no `label` is provided. You may optionally supply a custom `label` to better match the context, such as “Something else” or “Other (please specify)”.
+### Other
+Use the `other` option to allow a custom response when none of the listed choices apply. When selected, a text input appears and the `<nys-radiobutton>` value becomes whatever the user enters.
+
+If no `label` is provided, it defaults to “Other.” You can provide a custom label such as “Something else” or “Other (please specify).”
 
 **Note:** Place this option as the last `<nys-radiobutton>` within `<nys-radiogroup>`.
-  {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days.">
-  <nys-radiobutton
-    name="office"
-    label="Albany"
-    description="Upstate New York"
-    value="albany"
-  ></nys-radiobutton>
-  <nys-radiobutton
-    name="office"
-    label="Manhattan"
-    description="New York City"
-    value="manhattan"
-  ></nys-radiobutton>
-  <nys-radiobutton
-    name="office"
-    other
-  ></nys-radiobutton>
+
+{% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days.">
+<nys-radiobutton
+  name="office"
+  label="Albany"
+  description="Upstate New York"
+  value="albany"
+></nys-radiobutton>
+<nys-radiobutton
+  name="office"
+  label="Manhattan"
+  description="New York City"
+  value="manhattan"
+></nys-radiobutton>
+<nys-radiobutton
+  name="office"
+  other
+></nys-radiobutton>
 </nys-radiogroup>{% endset %}
-  {% set backgroundSolid = true %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %} -->
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
   
 ### Error
 To display an error message, pass in the `showError` property to the `<nys-radiogroup>` component. Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
@@ -265,6 +268,11 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
       <td><code>tile</code></td>
       <td>boolean</td>
       <td><code>&lt;nys-radiogroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>other</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>

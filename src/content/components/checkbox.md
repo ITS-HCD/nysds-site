@@ -159,9 +159,11 @@ Adding the `optional` prop will add an optional flag to the input.
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-<!-- ### Other
+### Other
 
-The `other` option lets users enter a custom value when none of the listed choices apply. When selected, a text input appears and the `nys-checkbox`’s value is set to the entered text. By default, the `label` will be “Other” if no `label` is provided. You may optionally supply a custom `label` to better match the context, such as “Something else” or “Other (please specify)”.
+Use the `other` option to allow a custom response when none of the listed choices apply. When selected, a text input appears and the `<nys-checkbox>` value becomes whatever the user enters.
+
+If no `label` is provided, it defaults to "Other." You can provide a custom label such as "Something else" or "Other (please specify)."
 
 **Note:** Place this option as the last `<nys-checkbox>` within `<nys-checkboxgroup>`.
 
@@ -174,7 +176,7 @@ The `other` option lets users enter a custom value when none of the listed choic
 </nys-checkboxgroup>{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
-{% include "partials/code-preview.njk" %} -->
+{% include "partials/code-preview.njk" %}
 
 ### Error
 
@@ -279,6 +281,11 @@ When the description requires more complexity than a simple string, use the desc
       <td><code>tile</code></td>
       <td>boolean</td>
       <td>both</td>
+    </tr>
+    <tr>
+      <td><code>other</code></td>
+      <td>boolean</td>
+      <code>&lt;nys-checkbox&gt;</code>
     </tr>
     <tr>
       <td><code>form</code></td>
