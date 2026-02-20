@@ -285,7 +285,7 @@ When the description requires more complexity than a simple string, use the desc
     <tr>
       <td><code>other</code></td>
       <td>boolean</td>
-      <code>&lt;nys-checkbox&gt;</code>
+      <td><code>&lt;nys-checkbox&gt;</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
