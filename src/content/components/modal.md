@@ -238,13 +238,34 @@ A forced action modal requires users to make a choice before continuing. Set the
 
 {% block properties %}
 
-| Property      | Type                                                               |
-|---------------|--------------------------------------------------------------------|
-| `id`          | String                                                             |
-| `heading`     | String                                                             |
-| `subheading`  | String                                                             |
-| `open`        | Boolean                                                            |
-| `mandatory`   | Boolean                                                            |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>heading</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>subheading</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>open</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>mandatory</code></td>
+      <td>Boolean</td>
+    </tr>
+  </table>
+</nys-table>
 
 
 {% endblock %}

@@ -187,24 +187,74 @@ Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
 
 {% block properties %}
 
-| Property           | Type                                                               |
-|--------------------|--------------------------------------------------------------------|
-| `id`               | String                                                             |
-| `label`            | String                                                             |
-| `description`      | String                                                             |
-| `name`             | String                                                             |
-| `value`            | string | Date                                                      |
-| `width`            | `"md"` \| `"lg"` \| `"full"`                                       |
-| `disabled`         | boolean                                                            |
-| `required`         | String                                                             |
-| `optional`         | String                                                             |
-| `showError`        | boolean                                                            |
-| `errorMessage`     | String                                                             |
-| `startDate`        | String (format `MM/DD/YYYY`)                                       |
-| `hideTodayButton`  | boolean                                                            |
-| `hideClearButton`  | boolean                                                            |
-| `form`             | String \| `null`                                                   |
-
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>string , Date</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>"md"</code> , <code>"lg"</code> , <code>"full"</code></td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>startDate</code></td>
+      <td>String (format <code>MM/DD/YYYY</code>)</td>
+    </tr>
+    <tr>
+      <td><code>hideTodayButton</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>hideClearButton</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String , <code>null</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

@@ -159,9 +159,11 @@ Adding the `optional` prop will add an optional flag to the input.
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-<!-- ### Other
+### Other
 
-The `other` option lets users enter a custom value when none of the listed choices apply. When selected, a text input appears and the `nys-checkbox`’s value is set to the entered text. By default, the `label` will be “Other” if no `label` is provided. You may optionally supply a custom `label` to better match the context, such as “Something else” or “Other (please specify)”.
+Use the `other` option to allow a custom response when none of the listed choices apply. When selected, a text input appears and the `<nys-checkbox>` value becomes whatever the user enters.
+
+If no `label` is provided, it defaults to "Other." You can provide a custom label such as "Something else" or "Other (please specify)."
 
 **Note:** Place this option as the last `<nys-checkbox>` within `<nys-checkboxgroup>`.
 
@@ -174,7 +176,7 @@ The `other` option lets users enter a custom value when none of the listed choic
 </nys-checkboxgroup>{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
-{% include "partials/code-preview.njk" %} -->
+{% include "partials/code-preview.njk" %}
 
 ### Error
 
@@ -208,23 +210,90 @@ When the description requires more complexity than a simple string, use the desc
 
 {% block properties %}
 
-| Property       | Type             | Component                  |
-|----------------|------------------|----------------------------|
-| `id`           | String           | both                       |
-| `name`         | String           | both                       |
-| `label`        | String           | both                       |
-| `value`        | String           | only `<nys-checkbox>`      |
-| `checked`      | boolean          | only `<nys-checkbox>`      |
-| `description`  | String           | both                       |
-| `disabled`     | boolean          | both                       |
-| `errorMessage` | String           | both                       |
-| `optional`     | boolean          | only `<nys-checkboxgroup>` |
-| `required`     | boolean          | both                       |
-| `showError`    | boolean          | both                       |
-| `size`         | `"sm"` \| `"md"` | both                       |
-| `tile`         | boolean          | both                       |
-| `form`         | String \| `null` | both                       |
-
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-checkbox&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-checkbox&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-checkboxgroup&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>required</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>showError</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>"sm"</code> | <code>"md"</code></td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>tile</code></td>
+      <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>other</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-checkbox&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String | <code>null</code></td>
+      <td>both</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

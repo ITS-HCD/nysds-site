@@ -153,21 +153,56 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% block properties %}
 
-| Property          | Type                   | Component                 |
-|-------------------|------------------------|---------------------------|
-| `id`              | String                 | both                      |
-| `heading`         | String                 | only `nys-accordionitem`  |
-| `expanded`        | Boolean                | only `nys-accordionitem`  |
-| `bordered`        | Boolean                | only `nys-accordion`      |
-| `singleSelect`    | Boolean                | only `nys-accordion`      |
+<nys-table striped>
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Component</th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+          <td>both</td>
+      </tr>
+      <tr>
+          <td><code>heading</code></td>
+          <td>String</td>
+          <td><code>nys-accordionitem</code></td>
+      </tr>
+      <tr>
+          <td><code>expanded</code></td>
+          <td>Boolean</td>
+          <td><code>nys-accordionitem</code></td>
+      </tr>
+      <tr>
+          <td><code>bordered</code></td>
+          <td>Boolean</td>
+          <td><code>nys-accordion</code></td>
+      </tr>
+      <tr>
+          <td><code>singleSelect</code></td>
+          <td>Boolean</td>
+          <td><code>nys-accordion</code></td>
+      </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+  {% set variables = [
+    { name: "--nys-accordion-background-color--header", description: "Background color of the accordion header"},
+    { name: "--nys-accordion-background-color--header--hover", description: "Background hover color of the accordion header"},
+    { name: "--nys-accordion-content-max-width", description: "Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability."}
+  ]%}
+{% include "partials/css-vars.njk" %}
+
+{% endblock %}
 
 {% block events %}
 
-The `<nys-accordionitem>` component emits **one** custom Javascript events:
+The `<nys-accordionitem>` component emits **one** custom Javascript event:
 
   1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
 

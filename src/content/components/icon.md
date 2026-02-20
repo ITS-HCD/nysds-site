@@ -244,14 +244,38 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 
 {% block properties %}
 
-| Property          | Type                                                                                                                                                                                 |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `ariaLabel`       | String                                                                                                                                                                               |
-| `color`           | String (CSS HEX, CSS color name, or CSS variable)                                                                                                                                    |
-| `flip`            | `"horizontal"` \| `"vertical"` \| `"both"`                                                                                                                                           |
-| `name`            | String                                                                                                                                                                               |
-| `rotate`          | integer                                                                                                                                                                              |
-| `size`            | `"xs"` \| `"sm"` \| `"md"` \| `"lg"` \| `"xl"` \| `"2xl"` \| `"3xl"` \| `"4xl"` \| `"5xl"` \| `"12"` \| `"14"` \| `"16"` \| `"18"` \| `"20"` \| `"24"` \| `"32"` \| `"40"` \| `"50"` |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>ariaLabel</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>color</code></td>
+      <td>String (CSS HEX, CSS color name, or CSS variable)</td>
+    </tr>
+    <tr>
+      <td><code>flip</code></td>
+      <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>rotate</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>"xs"</code>, <code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"xl"</code>, <code>"2xl"</code>, <code>"3xl"</code>, <code>"4xl"</code>, <code>"5xl"</code>, <code>"12"</code>, <code>"14"</code>, <code>"16"</code>, <code>"18"</code>, <code>"20"</code>, <code>"24"</code>, <code>"32"</code>, <code>"40"</code>, <code>"50"</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 
 {% endblock %}

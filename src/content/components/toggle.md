@@ -107,19 +107,54 @@ Descriptions can be provided either through the `description` prop or via the `s
 
 {% block properties %}
 
-| Property      | Type             |
-|---------------|------------------|
-| `id`          | String           |
-| `label`       | String           |
-| `name`        | String           |
-| `checked`     | boolean          |
-| `description` | String           |
-| `disabled`    | boolean          |
-| `noIcon`      | boolean          |
-| `size`        | `"sm"` \| `"md"` |
-| `value`       | String           |
-| `form`        | String \| `null` |
-
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>checked</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>noIcon</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td><code>"sm"</code> , <code>"md"</code></td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>form</code></td>
+      <td>String , <code>null</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

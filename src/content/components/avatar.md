@@ -135,18 +135,60 @@ You can change the background color of an Avatar. This attribute accepts any val
 {% endblock %}
 
 {% block properties %}
-
-| Property     | Type                                     |
-|--------------|------------------------------------------|
-| `id`         | String                                   |
-| `color`      | String (CSS HEX, CSS color name, or CSS) |
-| `icon`       | String (`<nys-icon name>`)               |
-| `image`      | URL                                      |
-| `initials`   | String (2 letters)                       |
-| `ariaLabel`  | String                                   |
-| `lazy`       | boolean                                  |
-| `interactive`| boolean                                  |  
-| `disabled`   | boolean                                  |  
+<nys-table striped>
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th></th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>color</code></td>
+          <td>String (CSS HEX, CSS color name, or CSS)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>icon</code></td>
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>image</code></td>
+          <td>URL</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>initials</code></td>
+          <td>String (2 letters)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>ariaLabel</code></td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>lazy</code></td>
+          <td>boolean</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>interactive</code></td>
+          <td>boolean</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>disabled</code></td>
+          <td>boolean</td>
+          <td></td>
+      </tr>
+  </table>
+</nys-table>
 
 
 {% endblock %}

@@ -116,10 +116,22 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% block properties %}
 
-| Property       | Type         |
-|----------------|--------------|
-| `agencyName`   | String       |
-| `homepageLink` | String (URL) |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>agencyName</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>homepageLink</code></td>
+      <td>String (URL)</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

@@ -121,10 +121,22 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% block properties %}
 
-| Property | Type         |
-|----------|--------------|
-| `href`   | String (URL) |
-| `id`     | String       |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td>String (URL)</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 

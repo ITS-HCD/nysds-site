@@ -1,38 +1,58 @@
 <div class="css-var-table">
-    {% if variables and variables | length > 0 %}
-    <table>
+  {% if variables and variables | length > 0 %}
+    <p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p>
+
+    {% set code %}
+nys-component {
+  --nys-component-background-color: var(--nys-color-accent);
+  --nys-component-color: var(--nys-color-ink);
+}
+{% endset %}
+{% set accordionLabel = "Example" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+    {#-- Collect rows safely --#}
+    {% set tableRows %}
+      {% for variable in variables %}
+      <tr>
+        <td><code>{{ variable.name }}</code></td>
+        <td>{{ variable.description }}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="2" class="css-var-table__tip">
+            Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
+            new one with a
+            <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+              Proposal</a>.
+        </td>
+      </tr>
+    {% endset %}
+
+    {#-- Render the Web Component table --#}
+    <nys-table striped>
+      <table>
         <thead>
-            <tr>
-                <th>CSS Variable</th>
-                <th>Description</th>
-            </tr>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
         </thead>
         <tbody>
-            {% for variable in variables %}
-            <tr>
-                <td><code>{{ variable.name }}</code></td>
-                <td>{{ variable.description }}</td>
-            </tr>
-            {% endfor %}
-            <tr>
-                <td colspan="2" class="css-var-table__tip">
-                    <p>
-                        Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
-                        new one with a
-                        <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
-                            Proposal</a>.
-                    </p>
-                </td>
-            </tr>
+          {{ tableRows | safe }}
         </tbody>
-    </table>
-    {% else %}
+      </table>
+    </nys-table>
+
+  {% else %}
     <p>
-        There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
-        propose a
-        new one with a
-        <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
-            Proposal</a>.
+      There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
+      propose a
+      new one with a
+      <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+        Proposal</a>.
     </p>
-{% endif %}
+  {% endif %}
 </div>

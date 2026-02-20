@@ -158,13 +158,34 @@ The `<nys-tooltip`> component includes the following accessibility-focused featu
 
 {% block properties %}
 
-| Property      | Type                                           |
-|---------------|------------------------------------------------|
-| `id`          | String                                         |
-| `text`        | String                                         |
-| `for`         | String                                         |
-| `inverted`    | boolean                                        |
-| `position`    | `"top"` \| `"bottom"` \| `"left"` \| `"right"` |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>text</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>for</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>inverted</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>position</code></td>
+      <td><code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, <code>"right"</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
