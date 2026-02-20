@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-            <loc>https://designsystem.ny.gov/videos/getting-help-and-giving-feedback/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/getting-help-and-giving-feedback/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -10,8 +10,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/four-ways-you-can-use-the-nys-design-system/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/four-ways-you-can-use-the-nys-design-system/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -19,8 +19,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/accessible-by-design/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/accessible-by-design/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -28,8 +28,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/introducing-the-nys-design-system/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/introducing-the-nys-design-system/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -37,8 +37,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/using-the-nys-design-system-css-framework/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/using-the-nys-design-system-css-framework/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -46,8 +46,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/first-steps-with-the-nys-design-system-component-library/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/first-steps-with-the-nys-design-system-component-library/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -55,8 +55,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/intro-to-nys-design-system-web-components/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/intro-to-nys-design-system-web-components/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -64,8 +64,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/using-the-visual-component-library/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/using-the-visual-component-library/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -73,8 +73,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/using-the-project-template/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/using-the-project-template/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -82,8 +82,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/</loc>
-            <lastmod>2026-02-20T18:08:56.617Z</lastmod>
+            <loc>https://nysds-test.netlify.app//videos/intro-to-designing-with-the-new-york-state-design-system/</loc>
+            <lastmod>2026-02-20T21:02:41.038Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -91,8 +91,8 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/2025-wrapped/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//2025-wrapped/</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -100,8 +100,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//updates/</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -109,8 +109,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/search/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//search/</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -118,8 +118,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/learn/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//learn/</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -127,8 +127,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -136,8 +136,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/get-started/why/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//get-started/why/</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -145,8 +145,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/get-started/</loc>
-            <lastmod>2026-02-20T18:08:56.615Z</lastmod>
+            <loc>https://nysds-test.netlify.app//get-started/</loc>
+            <lastmod>2026-02-20T21:02:41.036Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -154,8 +154,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/get-started/developers/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//get-started/developers/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -163,8 +163,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/get-started/designers/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//get-started/designers/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -172,8 +172,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/zindex/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//get-started/contribute/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -181,8 +181,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/typography/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/zindex/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -190,8 +190,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/responsive/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/typography/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -199,8 +199,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/opacity/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/responsive/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -208,8 +208,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/margin-padding/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/opacity/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -217,8 +217,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/margin-padding/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -226,8 +226,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/grid/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -235,8 +235,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/float/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/grid/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -244,8 +244,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/flex/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/float/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -253,8 +253,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/utilities/display/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/flex/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -262,8 +262,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/tokens/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/utilities/display/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -271,8 +271,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/tokens/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -280,8 +280,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/accessibility/legal/</loc>
-            <lastmod>2026-02-20T18:08:56.614Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/</loc>
+            <lastmod>2026-02-20T21:02:41.035Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -289,8 +289,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/accessibility/learn/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/accessibility/legal/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -298,8 +298,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/accessibility/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/accessibility/learn/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -307,8 +307,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/accessibility/documents/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/accessibility/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -316,8 +316,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/foundations/accessibility/digital-experiences/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/accessibility/documents/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -325,8 +325,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/formfest2025/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//foundations/accessibility/digital-experiences/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -334,8 +334,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//formfest2025/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -343,8 +343,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/a11y/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -352,8 +352,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/404.html</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//a11y/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -361,8 +361,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/unav-header/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//404.html</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -370,8 +370,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/unav-footer/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/unav-header/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -379,8 +379,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/tooltip/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/unav-footer/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -388,8 +388,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/toggle/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/tooltip/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -397,8 +397,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/textinput/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/toggle/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -406,8 +406,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/textarea/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/textinput/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -415,8 +415,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/table/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/textarea/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -424,8 +424,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/stepper/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/table/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -433,8 +433,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/skipnav/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/stepper/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -442,8 +442,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/select/</loc>
-            <lastmod>2026-02-20T18:08:56.613Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/skipnav/</loc>
+            <lastmod>2026-02-20T21:02:41.034Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -451,8 +451,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/radiobutton/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/select/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -460,8 +460,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/pagination/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/radiobutton/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -469,8 +469,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/modal/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/pagination/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -478,8 +478,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/icon/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/modal/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -487,8 +487,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/globalheader/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/icon/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -496,8 +496,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/globalfooter/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/globalheader/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -505,8 +505,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/fileinput/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/globalfooter/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -514,8 +514,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/divider/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/fileinput/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -523,8 +523,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/datepicker/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/divider/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -532,8 +532,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/checkbox/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/datepicker/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -541,8 +541,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/button/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/checkbox/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -550,8 +550,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/badge/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/button/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -559,8 +559,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/backtotop/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/badge/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -568,8 +568,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/avatar/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/backtotop/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -577,8 +577,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/alert/</loc>
-            <lastmod>2026-02-20T18:08:56.612Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/avatar/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -586,8 +586,8 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/components/accordion/</loc>
-            <lastmod>2026-02-20T18:08:56.611Z</lastmod>
+            <loc>https://nysds-test.netlify.app//components/alert/</loc>
+            <lastmod>2026-02-20T21:02:41.033Z</lastmod>
             
               <changefreq>monthly</changefreq>
             
@@ -595,7 +595,43 @@
               <priority>0.5</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.13.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//components/accordion/</loc>
+            <lastmod>2026-02-20T21:02:41.032Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.5</priority>
+            
+        </url><url>
+            <loc>https://nysds-test.netlify.app//updates/1.14.0-release/</loc>
+            <lastmod>2026-02-19T00:00:00.000Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.8</priority>
+            
+        </url><url>
+            <loc>https://nysds-test.netlify.app//updates/happy-birthday-nysds/</loc>
+            <lastmod>2026-02-19T00:00:00.000Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.8</priority>
+            
+        </url><url>
+            <loc>https://nysds-test.netlify.app//updates/1.13.1-release/</loc>
+            <lastmod>2026-02-05T00:00:00.000Z</lastmod>
+            
+              <changefreq>monthly</changefreq>
+            
+            
+              <priority>0.8</priority>
+            
+        </url><url>
+            <loc>https://nysds-test.netlify.app//updates/1.13.0-release/</loc>
             <lastmod>2026-01-22T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -604,7 +640,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.12.1-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.12.1-release/</loc>
             <lastmod>2025-12-31T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -613,7 +649,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.12.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.12.0-release/</loc>
             <lastmod>2025-12-11T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -622,7 +658,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.11.3-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.11.3-release/</loc>
             <lastmod>2025-11-26T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -631,7 +667,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.11.2-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.11.2-release/</loc>
             <lastmod>2025-11-13T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -640,7 +676,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.11.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.11.0-release/</loc>
             <lastmod>2025-10-31T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -649,7 +685,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/october-website-improvements/</loc>
+            <loc>https://nysds-test.netlify.app//updates/october-website-improvements/</loc>
             <lastmod>2025-10-24T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -658,7 +694,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.10.1-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.10.1-release/</loc>
             <lastmod>2025-10-16T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -667,7 +703,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.10.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.10.0-release/</loc>
             <lastmod>2025-10-03T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -676,7 +712,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.9.1-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.9.1-release/</loc>
             <lastmod>2025-09-18T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -685,7 +721,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.8.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.8.0-release/</loc>
             <lastmod>2025-09-05T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -694,7 +730,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.7.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.7.0-release/</loc>
             <lastmod>2025-08-22T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -703,7 +739,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.6.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.6.0-release/</loc>
             <lastmod>2025-08-07T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -712,7 +748,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/fidelity-modes-rapid-prototyping/</loc>
+            <loc>https://nysds-test.netlify.app//updates/fidelity-modes-rapid-prototyping/</loc>
             <lastmod>2025-08-05T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -721,7 +757,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.5.3-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.5.3-release/</loc>
             <lastmod>2025-08-01T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -730,7 +766,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.5.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.5.0-release/</loc>
             <lastmod>2025-07-24T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -739,7 +775,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.4.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.4.0-release/</loc>
             <lastmod>2025-07-10T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -748,7 +784,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.3.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.3.0-release/</loc>
             <lastmod>2025-06-26T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -757,7 +793,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.2.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.2.0-release/</loc>
             <lastmod>2025-06-12T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -766,7 +802,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.9-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.9-release/</loc>
             <lastmod>2025-05-29T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -775,7 +811,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.8-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.8-release/</loc>
             <lastmod>2025-05-15T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -784,7 +820,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.7-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.7-release/</loc>
             <lastmod>2025-04-30T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -793,7 +829,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/scaling-human-centered-design/</loc>
+            <loc>https://nysds-test.netlify.app//updates/scaling-human-centered-design/</loc>
             <lastmod>2025-04-17T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -802,7 +838,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.6-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.6-release/</loc>
             <lastmod>2025-04-17T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -811,7 +847,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.5-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.5-release/</loc>
             <lastmod>2025-04-04T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -820,7 +856,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.1-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.1-release/</loc>
             <lastmod>2025-03-24T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -829,7 +865,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.1.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.1.0-release/</loc>
             <lastmod>2025-02-26T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -838,7 +874,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/1.0.0-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/1.0.0-release/</loc>
             <lastmod>2025-02-07T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -847,7 +883,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.9-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.9-alpha-release/</loc>
             <lastmod>2025-01-29T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -856,7 +892,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.8-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.8-alpha-release/</loc>
             <lastmod>2025-01-22T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -865,7 +901,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.7-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.7-alpha-release/</loc>
             <lastmod>2025-01-15T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -874,7 +910,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.4-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.4-alpha-release/</loc>
             <lastmod>2024-12-23T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -883,7 +919,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.3-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.3-alpha-release/</loc>
             <lastmod>2024-11-29T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -892,7 +928,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.2-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.2-alpha-release/</loc>
             <lastmod>2024-11-21T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
@@ -901,7 +937,7 @@
               <priority>0.8</priority>
             
         </url><url>
-            <loc>https://designsystem.ny.gov/updates/0.0.1-alpha-release/</loc>
+            <loc>https://nysds-test.netlify.app//updates/0.0.1-alpha-release/</loc>
             <lastmod>2024-11-06T00:00:00.000Z</lastmod>
             
               <changefreq>monthly</changefreq>
