@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-02-20T13:21:46.587+00:00 -->
+    <!-- Latest Build: 2026-02-20T18:01:33.488+00:00 -->
   </head>
   
   <body class="single-page page-accordion section-components">
@@ -698,20 +698,69 @@
 </section>
     <br>
     <section>
-      <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
-<p></p><p>
-There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
-propose a
+      <h2 id="style-overrides">Style Overrides</h2>
+<div class="css-var-table">
+<p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--nys-component-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<nys-table striped="">
+      <table>
+        <thead>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<p><tr>
+<td><code>--nys-accordion-background-color--header</code></td>
+<td>Background color of the accordion header</td>
+</tr></p>
+<p><tr>
+<td><code>--nys-accordion-background-color--header--hover</code></td>
+<td>Background hover color of the accordion header</td>
+</tr></p>
+<p><tr>
+<td><code>--nys-accordion-content-max-width</code></td>
+<td>Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability.</td>
+</tr></p>
+<p><tr>
+<td colspan="2" class="css-var-table__tip">
+Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
 new one with a
 <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
 Proposal</a>.
-</p><p></p>
+</td>
+</tr></p>
+<p></p></tbody>
+</table>
+</nys-table><p></p>
 </div>
 </section>
     <br>
     <section>
       <h2 id="events">Events</h2>
-<p>The <code>&lt;nys-accordionitem&gt;</code> component emits <strong>one</strong> custom Javascript events:</p>
+<p>The <code>&lt;nys-accordionitem&gt;</code> component emits <strong>one</strong> custom Javascript event:</p>
 <ol>
 <li><strong><code>nys-accordionitem-toggle</code></strong> – Emitted when the accordion is clicked.</li>
 </ol>
