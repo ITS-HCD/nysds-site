@@ -510,7 +510,7 @@ a.card:focus-visible {
 
     .card--horizontal .card__media {
         flex: 0 0 50%;
-        align-self: stretch;
+        align-self: center;
         margin-bottom: 0;
         /* aspect-ratio: 16 / 9;  */ /* Removing due to excess spacing in the Y axis */
     }
