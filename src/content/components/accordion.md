@@ -190,11 +190,19 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+  {% set variables = [
+    { name: "--nys-accordion-background-color--header", description: "Background color of the accordion header"},
+    { name: "--nys-accordion-background-color--header--hover", description: "Background hover color of the accordion header"},
+    { name: "--nys-accordion-content-max-width", description: "Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability."}
+  ]%}
+{% include "partials/css-vars.njk" %}
+
+{% endblock %}
 
 {% block events %}
 
-The `<nys-accordionitem>` component emits **one** custom Javascript events:
+The `<nys-accordionitem>` component emits **one** custom Javascript event:
 
   1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
 
