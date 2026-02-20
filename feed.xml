@@ -1230,7 +1230,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.13.1">See the full developer release notes for v.1.13.1 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></description>
       <content><![CDATA[<h2>Customize your search engine in <code>&lt;nys-unavheader&gt;</code></h2>
 <p>The <code>&lt;nys-unavheader&gt;</code> now supports a custom search url. Simply change the property <code>&quot;searchUrl&quot;</code> to point to a valid search endpoint and be sure to include the search parameter (Usually &quot;q=&quot;, but your mileage may vary). To see an example of the search, use the search at the very top right of this page to search this site. <a href="https://designsystem.ny.gov/components/unav-header/#custom-search-endpoint">Read the custom search endpoint documentation for <code>&lt;nys-unavheader&gt;</code></a>.</p>
@@ -1299,7 +1299,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.13.1">See the full developer release notes for v.1.13.1 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></content>
       <pubDate>Thu, 05 Feb 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1516,7 +1516,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.13.0">See the full developer release notes for v.1.13.0 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></description>
       <content><![CDATA[<h2>Why “TableTop?” 🏔️</h2>
 <p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we felt it appropriate to name it after the <code>&lt;nys-table&gt;</code> component. TableTop is the 19th highest peak in New York, with an elevation of 4,427 feet (1,349 m)!</p>
@@ -1726,7 +1726,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.13.0">See the full developer release notes for v.1.13.0 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></content>
       <pubDate>Thu, 22 Jan 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1765,7 +1765,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.1">See the full developer release notes for v.1.12.1 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></description>
       <content><![CDATA[<h2>NYS Design System 2025 wrapped</h2>
 <p>Visit our <a href="https://designsystem.ny.gov/2025-wrapped">NYS Design System 2025 Wrapped</a> page to see our highlighted accomplishments for the Design System over the last year. We shipped 34 releases featuring a lot of capabilities and configuration options. Design Tokens made available as CSS variables will transform any old UI into an NYS-branded UI in a short amount of time!</p>
@@ -1797,7 +1797,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.1">See the full developer release notes for v.1.12.1 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></content>
       <pubDate>Wed, 31 Dec 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
@@ -1951,7 +1951,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></description>
       <content><![CDATA[<h2>Why “Skylight?” 🏔️</h2>
 <p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we held a vote in our teams channel and Office Hours. After a total of 34 responses, our winner is <strong>Skylight</strong> with 17 votes! Skylight is the fourth-highest peak in New York, with an elevation of 4,924 feet (1,501 m)!</p>
@@ -2098,7 +2098,7 @@ var interval = setInterval(function() {
 <h3>That’s it!</h3>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.12.0">See the full developer release notes for v.1.12.0 →</a></p>
-<link rel="stylesheet" href="https://nysds-test.netlify.app//assets/css/utilities.css" />
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css" />
 ]]></content>
       <pubDate>Thu, 11 Dec 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
