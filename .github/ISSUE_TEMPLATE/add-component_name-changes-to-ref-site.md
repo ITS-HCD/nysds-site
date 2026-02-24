@@ -1,5 +1,5 @@
 ---
-name: Add Documentation Changes to Ref Site
+name: Add COMPONENT_NAME Changes to Ref Site
 about: Update the reference site with the changes outlined in this feature/encancement.
 title: Add Documentation Changes to Ref Site
 labels: documentation
