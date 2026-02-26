@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-02-24T14:17:24.443+00:00 -->
+    <!-- Latest Build: 2026-02-26T16:22:46.747+00:00 -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -245,15 +245,6 @@ cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor</code></pre>
 <p>This will copy over styles and scripts, but when new versions are released, you will need to update via npm and copy them over again.</p>
 <h4 id="manual-asset-management-alternative-step">Manual Asset Management (Alternative Step)</h4>
 <p>If you want to avoid npm altogether, you can download the latest release from the <a href="https://github.com/ITS-HCD/nysds/releases/latest/">NYS Design System GitHub repository</a> and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.</p>
-<h2 id="vscode-autocomplete">VSCode Autocomplete</h2>
-<p>To add vscode autocompletion to your editor:</p>
-<p>Copy the .vscode/ folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/dist/.vscode/</code></p>
-<p>Edit the following file (create it if it doesn't exist)</p>
-<p><code>./vscode/settings.json</code></p>
-<p>Add the following lines and save the file:</p>
-<pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token property">"css.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.css-custom-data.json"</span><span class="token punctuation">]</span></code></pre>
-<p>If you have existing settings, add the custom data in addition to the files already listed.</p>
 <h2 id="install-styles">Install Styles</h2>
 <h3 id="full-css-reference">Full CSS Reference</h3>
 <p>The recommended way to use the NYS Design System styles is to include the full stylesheet, which contains all component styles and layout utilities.</p>
@@ -324,14 +315,14 @@ Note: These fonts are licensed for New York State applications only and are not 
         <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Load the NYS Design System Javascript library --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token comment">&lt;!-- Load the minimal NYS Design System CSS --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-typography.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-typography.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
 <h3 id="apply-agency-theming">Apply Agency Theming</h3>
 <p>The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc).</p>
-<p>To apply a theme, add the agency stylesheet in the <code>&lt;head&gt;</code> alongside core NYS Design System styles. For example, &quot;Office of Children and Family Services&quot; uses the <code>health</code> theme. :</p>
+<p>There are now three ways to apply agency themes to your apps and sites:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -346,15 +337,14 @@ Note: These fonts are licensed for New York State applications only and are not 
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Core NYS Design System styles --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
-<span class="token comment">&lt;!-- Agency theme (Health) --></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/nysds-theme-health.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+        <pre class="language-html"><code class="language-html">1. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span> <span class="token attr-name">data-theme</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>admin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+2. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>theme-admin.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+3. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-theme-admin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
-<p><strong>Note:</strong> If no agency theme is applied, components will default to NYS blue.</p>
+<p><strong>Note:</strong> If no agency theme is applied, components will default to NYS theme.</p>
 <h2 id="component-integration">Component Integration</h2>
 <h3 id="adding-a-component">Adding a Component</h3>
 <p>Once the references are set up, you can start using NYSDS components directly in your HTML.
@@ -394,6 +384,15 @@ For example, to add an <code>nys-alert</code> component:</p>
 <li>The event detail object describing what data is passed when the event is fired</li>
 <li>These events are fully accessible through standard DOM event listeners, allowing you to hook into component behavior from your scripts.</li>
 </ul>
+<h2 id="vscode-autocomplete">VSCode Autocomplete</h2>
+<p>To add vscode autocompletion to your editor:</p>
+<p>Copy the .vscode/ folder into the root of your project. You can find it in <code>/node_modules/@nysds/components/dist/.vscode/</code></p>
+<p>Edit the following file (create it if it doesn't exist)</p>
+<p><code>./vscode/settings.json</code></p>
+<p>Add the following lines and save the file:</p>
+<pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token property">"css.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.css-custom-data.json"</span><span class="token punctuation">]</span></code></pre>
+<p>If you have existing settings, add the custom data in addition to the files already listed.</p>
 <h2 id="get-support">Get Support</h2>
 <p>Need help or want to report an issue? You can:</p>
 <ul>
@@ -401,10 +400,11 @@ For example, to add an <code>nys-alert</code> component:</p>
   <li>Review the latest <a href="/updates/" target="_self" rel="noopener noreferrer">Release Notes</a></li>
   <li>Ask questions or get troubleshooting help in the <a href="https://teams.microsoft.com/l/channel/19%3A0228156e2bb5419c8152047f596a7bfb%40thread.tacv2/Troubleshooting?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" target="_blank" rel="noopener noreferrer">Troubleshooting channel on Teams<nys-icon name="open_in_new" size="lg"></nys-icon></a></li>
 </ul>
+
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/developers.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: February 24, 2026</p>
+    <p>Last updated: February 26, 2026</p>
   </div>
 
   </div>
