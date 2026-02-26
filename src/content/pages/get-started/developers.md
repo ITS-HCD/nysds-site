@@ -58,25 +58,6 @@ This will copy over styles and scripts, but when new versions are released, you 
 
 If you want to avoid npm altogether, you can download the latest release from the [NYS Design System GitHub repository](https://github.com/ITS-HCD/nysds/releases/latest/) and copy the files you need directly into your project. Keep in mind that you will need to manually check for updates and replace the files as new versions are released.
 
-## VSCode Autocomplete
-
-To add vscode autocompletion to your editor:
-
-Copy the .vscode/ folder into the root of your project. You can find it in `/node_modules/@nysds/components/dist/.vscode/`
-
-Edit the following file (create it if it doesn't exist)
-
-`./vscode/settings.json`
-
-Add the following lines and save the file:
-
-```json
-"html.customData": [".vscode/vscode.html-custom-data.json"],
-"css.customData": [".vscode/vscode.css-custom-data.json"]
-```
-
-If you have existing settings, add the custom data in addition to the files already listed.
-
 ## Install Styles
 
 ### Full CSS Reference
@@ -115,7 +96,7 @@ Note: These fonts are licensed for New York State applications only and are not 
 {% set code %}<!-- Load the NYS Design System Javascript library -->
 <script type="module" src="/path/to/nysds.js"></script>
 <!-- Load the minimal NYS Design System CSS -->
-<link rel="stylesheet" href="/path/to/nysds-typography.css" />
+<link rel="stylesheet" href="/path/to/nysds-typography.min.css" />
 {% endset %}
 {% set accordionLabel = "HTML Snippet" %}
 {% set codeExpanded = true %}
@@ -125,18 +106,17 @@ Note: These fonts are licensed for New York State applications only and are not 
 
 The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 
 
-To apply a theme, add the agency stylesheet in the `<head>` alongside core NYS Design System styles. For example, "Office of Children and Family Services" uses the `health` theme. :
+There are now three ways to apply agency themes to your apps and sites:
 
-{% set code %}<!-- Core NYS Design System styles -->
-<link rel="stylesheet" href="/path/to/nysds-full.min.css" /> 
-<!-- Agency theme (Health) --> 
-<link rel="stylesheet" href="/path/to/nysds-theme-health.min.css" /> 
+{% set code %}1. <html lang="en" data-theme="admin">
+2. <link rel="stylesheet" href="theme-admin.css">
+3. <body class="nys-theme-admin">
 {% endset %} 
 {% set accordionLabel = "HTML Snippet" %} 
 {% set codeExpanded = true %} 
 {% include "partials/code-preview.njk" %}
 
-**Note:** If no agency theme is applied, components will default to NYS blue.
+**Note:** If no agency theme is applied, components will default to NYS theme.
 
 ## Component Integration
 
@@ -171,6 +151,25 @@ Each component’s event behavior is documented in the “Events” section on i
 - A list of all custom events the component emits (e.g., `nys-change`, `nys-click`, etc.)
 - The event detail object describing what data is passed when the event is fired
 - These events are fully accessible through standard DOM event listeners, allowing you to hook into component behavior from your scripts.
+
+## VSCode Autocomplete
+
+To add vscode autocompletion to your editor:
+
+Copy the .vscode/ folder into the root of your project. You can find it in `/node_modules/@nysds/components/dist/.vscode/`
+
+Edit the following file (create it if it doesn't exist)
+
+`./vscode/settings.json`
+
+Add the following lines and save the file:
+
+```json
+"html.customData": [".vscode/vscode.html-custom-data.json"],
+"css.customData": [".vscode/vscode.css-custom-data.json"]
+```
+
+If you have existing settings, add the custom data in addition to the files already listed.
 
 ## Get Support
 Need help or want to report an issue? You can:
