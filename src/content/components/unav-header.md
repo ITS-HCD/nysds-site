@@ -87,6 +87,26 @@ The default search URL for the `<nys-unavheader>` is `https://search.its.ny.gov/
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Custom Language Endpoints
+By default, the translate feature utilizes Smartling, which reroutes the page to the same URL with the language code prepended (e.g. `https://www.ny.gov/` becomes `https://es.ny.gov/`). If your site does not use Smartling, you can override the default translate behavior to function with your translation service.
+
+You also can override the default list of languages offered if your translation service does not support all of the default languages. 
+
+{% set preview %}
+<nys-unavheader id="my-header"></nys-unavheader>
+<script>
+  const header = document.querySelector('#my-header');
+  header.languages = [
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' , url: 'https://www.google.com'},
+    { code: 'fr', label: 'Français', url: 'https://www.yahoo.com'},
+  ];
+</script>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+
 {% endblock %}
 
 {% block properties %}
