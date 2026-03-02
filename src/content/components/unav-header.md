@@ -87,6 +87,41 @@ The default search URL for the `<nys-unavheader>` is `https://search.its.ny.gov/
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Custom Language Endpoints
+By default, the translate feature utilizes Smartling, which reroutes the page to the same URL with the language code prepended (e.g. `https://www.ny.gov/` becomes `https://es.ny.gov/`). If your site does not use Smartling, you can override the default translate behavior to function with your translation service.
+
+You also can override the default list of languages offered if your translation service does not support all of the default languages. 
+
+{% set preview %}
+<nys-unavheader id="my-header"></nys-unavheader>
+<script>
+  const header = document.querySelector('#my-header');
+  header.languages = [
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' , url: '"https://ny.gov/?lang=es"'},
+    { code: 'fr', label: 'Français', url: '"https://ny.gov/?lang=fr"'},
+  ];
+</script>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+You also can override the default translate behavior to work with JavaScript rather than rerouting the URL. This allows you to implement a custom translation solution that does not require page reroutes.
+
+{% set preview %}
+<nys-unavheader id="my-header2" hideSearch></nys-unavheader>
+<script>
+  document.querySelector('#my-header2').addEventListener('nys-language-select', (event) => {
+    event.preventDefault();
+    const selectedLanguage = event.detail.language.label;
+    alert(`Language changed to: ${selectedLanguage}`);
+  });
+</script>
+
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
