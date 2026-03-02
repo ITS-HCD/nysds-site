@@ -98,8 +98,8 @@ You also can override the default list of languages offered if your translation 
   const header = document.querySelector('#my-header');
   header.languages = [
     { code: 'en', label: 'English' },
-    { code: 'es', label: 'Español' , url: 'https://www.google.com'},
-    { code: 'fr', label: 'Français', url: 'https://www.yahoo.com'},
+    { code: 'es', label: 'Español' , url: '"https://ny.gov/?lang=es"'},
+    { code: 'fr', label: 'Français', url: '"https://ny.gov/?lang=fr"'},
   ];
 </script>
 {% endset %}
