@@ -106,6 +106,21 @@ You also can override the default list of languages offered if your translation 
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+You also can override the default translate behavior to work with JavaScript rather than rerouting the URL. This allows you to implement a custom translation solution that does not require page reroutes.
+
+{% set preview %}
+<nys-unavheader id="my-header2" hideSearch></nys-unavheader>
+<script>
+  document.querySelector('#my-header2').addEventListener('nys-language-select', (event) => {
+    event.preventDefault();
+    const selectedLanguage = event.detail.language.label;
+    alert(`Language changed to: ${selectedLanguage}`);
+  });
+</script>
+
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
