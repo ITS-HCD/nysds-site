@@ -10,3 +10,49 @@ figma_link:
 navOrder: 8
 ---
 
+{% extends "layouts/component.njk" %}
+
+{% block longdescription %}
+
+{% endblock %}
+
+{% block example %}
+  {% set preview %}{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+
+{% block options %}
+
+{% endblock %}
+
+{% block usagedo %}
+
+{% endblock %}
+
+{% block usagedont %}
+
+{% endblock %}
+
+{% block usage %}
+
+{% endblock %}
+
+{% block accessibility %}
+
+{% endblock %}
+
+{% block properties %}
+
+{% endblock %}
+
+{% block cssvariables %}{% include "partials/css-vars.njk" %}
+
+{% endblock %}
+
+{% block events %}
+
+{% endblock %}
