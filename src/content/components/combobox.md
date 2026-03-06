@@ -725,9 +725,16 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 
 {% block usagedo %}
 
+  - Use when there are more than 15 options to choose from.
+  - Use when screen real estate is limited.
+  - Use when users can predict or recognize the value they're looking for.
+
 {% endblock %}
 
 {% block usagedont %}
+
+  - Don't use when the number of options is small, use a select or radio button group instead.
+  - Don't use when options are unfamiliar to users and browsing the full list is necessary.
 
 {% endblock %}
 
