@@ -35,3 +35,6 @@ npm-debug.log*
 # Ignore temporary and system files
 .DS_Store
 Thumbs.db
+
+# Ignore Claude Code config
+.claude/
