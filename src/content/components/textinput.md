@@ -293,7 +293,7 @@ The `<nys-textinput>` component emits **three** custom Javascript events:
 
 ### Event details
 The `nys-input` event includes a detail object with the following properties:
-  - id (string): The id of the textarea.
+  - id (string): The id of the textinput.
   - value (string): The currently selected text.
 
 You can listen to these events using JavaScript:
