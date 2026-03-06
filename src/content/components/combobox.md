@@ -103,6 +103,8 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 {% block options %}
 
 ### Preselected Value
+Use the `selected` attribute on an `<option>` to set a default value when the combobox loads.
+
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox'>
     <option value="albany">Albany</option>
@@ -184,6 +186,8 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   {% include "partials/code-preview.njk" %}
 
 ### Option Groups
+Use `<optgroup>` to organize options into labeled categories, making long lists easier to navigate.
+
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox'>
     <optgroup label="New York City">
@@ -308,6 +312,7 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 {% include "partials/code-preview.njk" %}
 
 ### Disabled 
+Set the `disabled` attribute to prevent user interaction with the combobox.
 
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox' disabled>
@@ -326,6 +331,7 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   {% include "partials/code-preview.njk" %}
 
 ### Disabled Options
+Set `disabled` on individual `<option>` elements to make specific choices unavailable while keeping others selectable.
 
 {% set preview %}
 <nys-combobox label="Choose a sports team" id='my-combobox'>
@@ -348,6 +354,7 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 {% include "partials/code-preview.njk" %}
 
 ### Required
+Set `required` to make the combobox mandatory. The field will be flagged during form validation if left empty.
 
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox' required>
@@ -428,6 +435,7 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   {% include "partials/code-preview.njk" %}
 
 ### Optional
+Adding the `optional` prop will add an optional flag to the label.
 
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox' optional >
@@ -508,6 +516,8 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   {% include "partials/code-preview.njk" %}
 
 ### Error Message
+Set an `errorMessage` to display a validation message. The error will surface automatically on form submission or when the field loses focus without a valid selection.
+
 
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox' required errorMessage="County is required">
@@ -588,6 +598,8 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   {% include "partials/code-preview.njk" %}
 
 ### Width
+Use the `width` prop to control the size of the combobox. Available values are `md`, `lg`, and `full` (default).
+
 {% set preview %}
 <nys-combobox label="Choose a sports team" id='my-combobox' width="lg">
     <option value="brooklyn-nets">Brooklyn Nets</option>
@@ -609,6 +621,7 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 {% include "partials/code-preview.njk" %}
 
 ### Description Slot
+When the description requires more than a simple string, use the `description` slot to include HTML such as links or formatted text.
 
 {% set preview %}
 <nys-combobox label="Choose a state park" id='my-combobox'>
@@ -641,6 +654,8 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 {% include "partials/code-preview.njk" %}
 
 ### Inverted
+Use the `inverted` prop when placing the combobox on a dark background.
+
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox' inverted>
     <option value="albany">Albany</option>
