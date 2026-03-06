@@ -14,7 +14,7 @@ navOrder: 8
 
 {% block longdescription %}
 
-The `<nys-combobox>`  is a reusable web component for use in New York State digital products. It combines a text box with a dropdown list, allowing users to either select a predefined option or type in their own custom value.
+The `<nys-combobox>`  is a reusable web component for use in New York State digital products. It combines a text box with a dropdown list, allowing users to either select a predefined option or type to filter a list.
 
 {% endblock %}
 

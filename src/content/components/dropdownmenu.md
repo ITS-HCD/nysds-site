@@ -1,9 +1,15 @@
 ---
 permalink: /components/dropdownmenu/
 title: Dropdown Menu
+<<<<<<< HEAD
 description:
 image: /assets/img/components/dropdownmenu.svg
 image_alt: An illustration of a dropdown menu.
+=======
+description: 
+image: /assets/img/components/dropdownmenu.svg
+image_alt: An illustration of a dropdownmenu.
+>>>>>>> 6b9fb11db (begin 1.15.0 release notes)
 image_header: /assets/img/components/dropdownmenu-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545
