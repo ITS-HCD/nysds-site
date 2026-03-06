@@ -323,43 +323,322 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   ...rest of options...
 </nys-combobox>
   {% endset %}
-  {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 
 ### Disabled Options
 
 {% set preview %}
-<nys-combobox label="Choose a team" id='my-combobox'>
-    <option value="buffalo-bills">Buffalo Bills</option>
-    <option value="buffalo-sabres" disabled>Buffalo Sabres (season ended)</option>
-    <option value="new-york-giants">New York Giants</option>
-    <option value="new-york-jets">New York Jets</option>
-    <option value="new-york-knicks">New York Knicks</option>
-    <option value="new-york-mets" disabled>New York Mets (season ended)</option>
-    <option value="new-york-rangers">New York Rangers</option>
-    <option value="new-york-yankees" disabled>New York Yankees (season ended)</option>
+<nys-combobox label="Choose a sports team" id='my-combobox'>
     <option value="brooklyn-nets">Brooklyn Nets</option>
+    <option value="buffalo-bills" disabled>Buffalo Bills (off-season)</option>
+    <option value="buffalo-sabres">Buffalo Sabres</option>
+    <option value="gotham-fc" disabled>Gotham FC (off-season)</option>
+    <option value="new-york-giants" disabled>New York Giants (off-season)</option>
+    <option value="new-york-jets" disabled>New York Jets (off-season)</option>
+    <option value="new-york-knicks">New York Knicks</option>
+    <option value="new-york-liberty" disabled>New York Liberty (off-season)</option>
+    <option value="new-york-mets" disabled>New York Mets (off-season)</option>
+    <option value="new-york-rangers">New York Rangers</option>
+    <option value="new-york-sirens">New York Sirens</option>
+    <option value="new-york-yankees" disabled>New York Yankees (off-season)</option>
 </nys-combobox>
 {% endset %}
-{% set code %}
-<nys-combobox label="Choose a team" id='my-combobox'>
-  <option value="buffalo-bills">Buffalo Bills</option>
-  <option value="buffalo-sabres" disabled>Buffalo Sabres (season ended)</option>
-  ...rest of options...
-</nys-combobox>
-{% endset %}
+{% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Required
 
+{% set preview %}
+<nys-combobox label="Choose a county" id='my-combobox' required>
+    <option value="albany">Albany</option>
+    <option value="allegany">Allegany</option>
+    <option value="bronx">Bronx</option>
+    <option value="broome">Broome</option>
+    <option value="cattaraugus">Cattaraugus</option>
+    <option value="cayuga">Cayuga</option>
+    <option value="chautauqua">Chautauqua</option>
+    <option value="chemung">Chemung</option>
+    <option value="chenango">Chenango</option>
+    <option value="clinton">Clinton</option>
+    <option value="columbia">Columbia</option>
+    <option value="cortland">Cortland</option>
+    <option value="delaware">Delaware</option>
+    <option value="dutchess">Dutchess</option>
+    <option value="erie">Erie</option>
+    <option value="essex">Essex</option>
+    <option value="franklin">Franklin</option>
+    <option value="fulton">Fulton</option>
+    <option value="genesee">Genesee</option>
+    <option value="greene">Greene</option>
+    <option value="hamilton">Hamilton</option>
+    <option value="herkimer">Herkimer</option>
+    <option value="jefferson">Jefferson</option>
+    <option value="kings">Kings</option>
+    <option value="lewis">Lewis</option>
+    <option value="livingston">Livingston</option>
+    <option value="madison">Madison</option>
+    <option value="monroe">Monroe</option>
+    <option value="montgomery">Montgomery</option>
+    <option value="nassau">Nassau</option>
+    <option value="new-york">New York</option>
+    <option value="niagara">Niagara</option>
+    <option value="oneida">Oneida</option>
+    <option value="onondaga">Onondaga</option>
+    <option value="ontario">Ontario</option>
+    <option value="orange">Orange</option>
+    <option value="orleans">Orleans</option>
+    <option value="oswego">Oswego</option>
+    <option value="otsego">Otsego</option>
+    <option value="putnam">Putnam</option>
+    <option value="queens">Queens</option>
+    <option value="rensselaer">Rensselaer</option>
+    <option value="richmond">Richmond</option>
+    <option value="rockland">Rockland</option>
+    <option value="st-lawrence">St. Lawrence</option>
+    <option value="saratoga">Saratoga</option>
+    <option value="schenectady">Schenectady</option>
+    <option value="schoharie">Schoharie</option>
+    <option value="schuyler">Schuyler</option>
+    <option value="seneca">Seneca</option>
+    <option value="steuben">Steuben</option>
+    <option value="suffolk">Suffolk</option>
+    <option value="sullivan">Sullivan</option>
+    <option value="tioga">Tioga</option>
+    <option value="tompkins">Tompkins</option>
+    <option value="ulster">Ulster</option>
+    <option value="warren">Warren</option>
+    <option value="washington">Washington</option>
+    <option value="wayne">Wayne</option>
+    <option value="westchester">Westchester</option>
+    <option value="wyoming">Wyoming</option>
+    <option value="yates">Yates</option>
+</nys-combobox>
+  {% endset %}
+  {% set code %}
+<nys-combobox label="Choose a county" id='my-combobox' required>
+  <option value="albany">Albany</option>
+  <option value="allegany">Allegany</option>
+  <option value="bronx">Bronx</option>
+  <option value="broome">Broome</option>
+  ...rest of options...
+</nys-combobox>
+  {% endset %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
 ### Optional
+
+{% set preview %}
+<nys-combobox label="Choose a county" id='my-combobox' optional >
+    <option value="albany">Albany</option>
+    <option value="allegany">Allegany</option>
+    <option value="bronx">Bronx</option>
+    <option value="broome">Broome</option>
+    <option value="cattaraugus">Cattaraugus</option>
+    <option value="cayuga">Cayuga</option>
+    <option value="chautauqua">Chautauqua</option>
+    <option value="chemung">Chemung</option>
+    <option value="chenango">Chenango</option>
+    <option value="clinton">Clinton</option>
+    <option value="columbia">Columbia</option>
+    <option value="cortland">Cortland</option>
+    <option value="delaware">Delaware</option>
+    <option value="dutchess">Dutchess</option>
+    <option value="erie">Erie</option>
+    <option value="essex">Essex</option>
+    <option value="franklin">Franklin</option>
+    <option value="fulton">Fulton</option>
+    <option value="genesee">Genesee</option>
+    <option value="greene">Greene</option>
+    <option value="hamilton">Hamilton</option>
+    <option value="herkimer">Herkimer</option>
+    <option value="jefferson">Jefferson</option>
+    <option value="kings">Kings</option>
+    <option value="lewis">Lewis</option>
+    <option value="livingston">Livingston</option>
+    <option value="madison">Madison</option>
+    <option value="monroe">Monroe</option>
+    <option value="montgomery">Montgomery</option>
+    <option value="nassau">Nassau</option>
+    <option value="new-york">New York</option>
+    <option value="niagara">Niagara</option>
+    <option value="oneida">Oneida</option>
+    <option value="onondaga">Onondaga</option>
+    <option value="ontario">Ontario</option>
+    <option value="orange">Orange</option>
+    <option value="orleans">Orleans</option>
+    <option value="oswego">Oswego</option>
+    <option value="otsego">Otsego</option>
+    <option value="putnam">Putnam</option>
+    <option value="queens">Queens</option>
+    <option value="rensselaer">Rensselaer</option>
+    <option value="richmond">Richmond</option>
+    <option value="rockland">Rockland</option>
+    <option value="st-lawrence">St. Lawrence</option>
+    <option value="saratoga">Saratoga</option>
+    <option value="schenectady">Schenectady</option>
+    <option value="schoharie">Schoharie</option>
+    <option value="schuyler">Schuyler</option>
+    <option value="seneca">Seneca</option>
+    <option value="steuben">Steuben</option>
+    <option value="suffolk">Suffolk</option>
+    <option value="sullivan">Sullivan</option>
+    <option value="tioga">Tioga</option>
+    <option value="tompkins">Tompkins</option>
+    <option value="ulster">Ulster</option>
+    <option value="warren">Warren</option>
+    <option value="washington">Washington</option>
+    <option value="wayne">Wayne</option>
+    <option value="westchester">Westchester</option>
+    <option value="wyoming">Wyoming</option>
+    <option value="yates">Yates</option>
+</nys-combobox>
+  {% endset %}
+  {% set code %}
+<nys-combobox label="Choose a county" id='my-combobox' optional>
+  <option value="albany">Albany</option>
+  <option value="allegany">Allegany</option>
+  <option value="bronx">Bronx</option>
+  <option value="broome">Broome</option>
+  ...rest of options...
+</nys-combobox>
+  {% endset %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error Message
 
+{% set preview %}
+<nys-combobox label="Choose a county" id='my-combobox' required errorMessage="County is required">
+    <option value="albany">Albany</option>
+    <option value="allegany">Allegany</option>
+    <option value="bronx">Bronx</option>
+    <option value="broome">Broome</option>
+    <option value="cattaraugus">Cattaraugus</option>
+    <option value="cayuga">Cayuga</option>
+    <option value="chautauqua">Chautauqua</option>
+    <option value="chemung">Chemung</option>
+    <option value="chenango">Chenango</option>
+    <option value="clinton">Clinton</option>
+    <option value="columbia">Columbia</option>
+    <option value="cortland">Cortland</option>
+    <option value="delaware">Delaware</option>
+    <option value="dutchess">Dutchess</option>
+    <option value="erie">Erie</option>
+    <option value="essex">Essex</option>
+    <option value="franklin">Franklin</option>
+    <option value="fulton">Fulton</option>
+    <option value="genesee">Genesee</option>
+    <option value="greene">Greene</option>
+    <option value="hamilton">Hamilton</option>
+    <option value="herkimer">Herkimer</option>
+    <option value="jefferson">Jefferson</option>
+    <option value="kings">Kings</option>
+    <option value="lewis">Lewis</option>
+    <option value="livingston">Livingston</option>
+    <option value="madison">Madison</option>
+    <option value="monroe">Monroe</option>
+    <option value="montgomery">Montgomery</option>
+    <option value="nassau">Nassau</option>
+    <option value="new-york">New York</option>
+    <option value="niagara">Niagara</option>
+    <option value="oneida">Oneida</option>
+    <option value="onondaga">Onondaga</option>
+    <option value="ontario">Ontario</option>
+    <option value="orange">Orange</option>
+    <option value="orleans">Orleans</option>
+    <option value="oswego">Oswego</option>
+    <option value="otsego">Otsego</option>
+    <option value="putnam">Putnam</option>
+    <option value="queens">Queens</option>
+    <option value="rensselaer">Rensselaer</option>
+    <option value="richmond">Richmond</option>
+    <option value="rockland">Rockland</option>
+    <option value="st-lawrence">St. Lawrence</option>
+    <option value="saratoga">Saratoga</option>
+    <option value="schenectady">Schenectady</option>
+    <option value="schoharie">Schoharie</option>
+    <option value="schuyler">Schuyler</option>
+    <option value="seneca">Seneca</option>
+    <option value="steuben">Steuben</option>
+    <option value="suffolk">Suffolk</option>
+    <option value="sullivan">Sullivan</option>
+    <option value="tioga">Tioga</option>
+    <option value="tompkins">Tompkins</option>
+    <option value="ulster">Ulster</option>
+    <option value="warren">Warren</option>
+    <option value="washington">Washington</option>
+    <option value="wayne">Wayne</option>
+    <option value="westchester">Westchester</option>
+    <option value="wyoming">Wyoming</option>
+    <option value="yates">Yates</option>
+</nys-combobox>
+  {% endset %}
+  {% set code %}
+<nys-combobox label="Choose a county" id='my-combobox' required errorMessage="County is required">
+  <option value="albany">Albany</option>
+  <option value="allegany">Allegany</option>
+  <option value="bronx">Bronx</option>
+  <option value="broome">Broome</option>
+  ...rest of options...
+</nys-combobox>
+  {% endset %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
 ### Width
+{% set preview %}
+<nys-combobox label="Choose a sports team" id='my-combobox' width="lg">
+    <option value="brooklyn-nets">Brooklyn Nets</option>
+    <option value="buffalo-bills">Buffalo Bills</option>
+    <option value="buffalo-sabres">Buffalo Sabres</option>
+    <option value="gotham-fc">Gotham FC</option>
+    <option value="new-york-giants">New York Giants</option>
+    <option value="new-york-jets">New York Jets</option>
+    <option value="new-york-knicks">New York Knicks</option>
+    <option value="new-york-liberty">New York Liberty</option>
+    <option value="new-york-mets">New York Mets</option>
+    <option value="new-york-rangers">New York Rangers</option>
+    <option value="new-york-sirens">New York Sirens</option>
+    <option value="new-york-yankees">New York Yankees</option>
+</nys-combobox>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Description Slot
+
+{% set preview %}
+<nys-combobox label="Choose a state park" id='my-combobox'>
+    <label slot="description">NY is home to some of the most beautiful state parks in the country.</label>
+    <option value="adirondack">Adirondack</option>
+    <option value="allegany">Allegany</option>
+    <option value="bear-mountain">Bear Mountain</option>
+    <option value="bethpage">Bethpage</option>
+    <option value="buttermilk-falls">Buttermilk Falls</option>
+    <option value="catskill">Catskill</option>
+    <option value="chimney-bluffs">Chimney Bluffs</option>
+    <option value="connetquot-river">Connetquot River</option>
+    <option value="crown-point">Crown Point</option>
+    <option value="fort-niagara">Fort Niagara</option>
+    <option value="harriman">Harriman</option>
+    <option value="hither-hills">Hither Hills</option>
+    <option value="jones-beach">Jones Beach</option>
+    <option value="letchworth">Letchworth</option>
+    <option value="minnewaska">Minnewaska</option>
+    <option value="niagara-falls">Niagara Falls</option>
+    <option value="orient-beach">Orient Beach</option>
+    <option value="robert-moses">Robert Moses</option>
+    <option value="saratoga-spa">Saratoga Spa</option>
+    <option value="taughannock-falls">Taughannock Falls</option>
+    <option value="watkins-glen">Watkins Glen</option>
+</nys-combobox>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Inverted
 
