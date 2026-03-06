@@ -1,7 +1,7 @@
 ---
 permalink: /components/dropdownmenu/
 title: Dropdown Menu
-description:
+description: A dropdown menu shows options when a trigger is clicked and hides after a selection or outside click.
 image: /assets/img/components/dropdownmenu.svg
 image_alt: An illustration of a dropdown menu.
 image_header: /assets/img/components/dropdownmenu-header.svg
@@ -82,6 +82,21 @@ The `<nys-dropdownmenu>` component includes the following accessibility-focused 
 
 {% block options %}
 
+### Connecting to a Trigger
+
+The `<nys-dropdownmenu>` anchors itself to a trigger element provided by the user, such as a button or avatar, by matching its `for` attribute to the trigger's `id`.
+
+{% set code %}
+<nys-button id="my-trigger-id" label="Open Menu"></nys-button>
+<nys-dropdownmenu for="my-trigger-id">
+    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+</nys-dropdownmenu>
+{% endset %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+
 ### Position
 
 Use the `position` prop to control where the dropdown menu appears relative to its trigger.
@@ -149,8 +164,6 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
 
 #### With Icons
 
@@ -233,6 +246,8 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
 </nys-dropdownmenu>
 {% endset %}
 {% include "partials/code-preview.njk" %}
+
+{% endblock %}
 
 {% block properties %}
 
