@@ -740,6 +740,10 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   - Users can predict the value
   - The value has a recognizable name
 
+### When to consider something else
+
+- When the number of options is small, instead use `<nys-select>` or `<nys-radiobutton>`
+
 {% endblock %}
 
 {% block accessibility %}
@@ -753,6 +757,71 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 
 {% block properties %}
 
+<nys-table striped>
+  <table>
+    <tr>
+        <th>Property</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><code>id</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>label</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>description</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>value</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>disabled</code></td>
+        <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>required</code></td>
+        <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>optional</code></td>
+        <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>tooltip</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>form</code></td>
+        <td>String , <code>null</code></td>
+    </tr>
+    <tr>
+        <td><code>width</code></td>
+        <td><code>"md"</code> , <code>"lg"</code> , <code>"full"</code></td>
+    </tr>
+    <tr>
+        <td><code>inverted</code></td>
+        <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>showError</code></td>
+        <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>errorMessage</code></td>
+        <td>String</td>
+    </tr>
+  </table>
+</nys-table>
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}
@@ -761,4 +830,35 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
 
 {% block events %}
 
+The `<nys-combobox>` component emits **four** custom Javascript events:
+1. **`nys-change`** – Fired when the selected value changes.
+2. **`nys-input`** – Fired on every keystroke as the user types in the input.
+3. **`nys-focus`** – Fired when the combobox gains focus.
+4. **`nys-blur`** – Fired when the combobox loses focus.
+
+### Event details
+The `nys-change` and `nys-input` events include a detail object with the following properties:
+
+  - id (string): The id of the combobox.
+  - value (string): The current value of the combobox.
+
+You can listen to these events using JavaScript:
+{% set code %}
+// Select the combobox component
+const combobox = document.querySelector('nys-combobox');
+// Listen for the 'nys-change' event
+combobox.addEventListener('nys-change', (event) => {
+  const { id, value } = event.detail;
+  console.log(`Combobox ${id} changed: value=${value}`);
+});
+// Listen for the 'nys-input' event
+combobox.addEventListener('nys-input', (event) => {
+  const { id, value } = event.detail;
+  console.log(`Combobox ${id} input: value=${value}`);
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
