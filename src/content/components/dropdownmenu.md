@@ -1,15 +1,9 @@
 ---
 permalink: /components/dropdownmenu/
 title: Dropdown Menu
-<<<<<<< HEAD
-description:
-image: /assets/img/components/dropdownmenu.svg
-image_alt: An illustration of a dropdown menu.
-=======
 description: 
 image: /assets/img/components/dropdownmenu.svg
 image_alt: An illustration of a dropdownmenu.
->>>>>>> 6b9fb11db (begin 1.15.0 release notes)
 image_header: /assets/img/components/dropdownmenu-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545
@@ -20,7 +14,7 @@ navOrder: 11
 
 {% block longdescription %}
 
-The `<nys-dropdownmenu>` and `<dropdownmenuitem>` components are a list of actions or options that appears when a user interacts with a trigger, and disappears after a selection or clicking away.
+The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of actions or options that appears when a user interacts with a trigger, and disappears after a selection or clicking away.
 
 {% endblock %}
 
@@ -329,7 +323,8 @@ The `nys-click` event includes a detail object with the following properties:
   - `href` (string): The href of the clicked item. **Only present if `href` was provided.**
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the dropdownmenu component
+{% set code %}
+// Select the dropdownmenu component
 const dropdownmenu = document.querySelector("nys-dropdownmenu");
 // Listen for the 'nys-click' event
 dropdownmenu.addEventListener('nys-click', (event) => {
@@ -340,6 +335,7 @@ dropdownmenu.addEventListener('nys-click', (event) => {
         console.log(`Action item clicked (${id}): ${label}`);
     }
 });{% endset %}
+{% set preview ="" %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
