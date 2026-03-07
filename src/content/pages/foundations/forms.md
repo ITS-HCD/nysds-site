@@ -1,6 +1,7 @@
 ---
 permalink: /foundations/forms/
 title: Form Patterns
+navTitle: "Forms"
 description: Cross-cutting patterns for building forms with NYSDS web components, including form association, validation, event handling, and submission.
 layout: layouts/3-col.njk
 section: Foundations
@@ -37,10 +38,16 @@ You do not need to interact with `ElementInternals` directly. The components han
 
 For a component's value to appear in form data, it must have a `name` attribute. This is the key under which the value is submitted.
 
-```html
-<!-- This textinput's value will be submitted as "applicant_name" -->
+{% set preview %}
 <nys-textinput name="applicant_name" label="Full Name" required></nys-textinput>
-```
+{% endset %}
+{% set code %}<!-- This textinput's value will be submitted as "applicant_name" -->
+<nys-textinput name="applicant_name" label="Full Name" required></nys-textinput>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
 
 Without a `name`, the component still participates in validation but its value is not included in the submitted `FormData`.
 
@@ -50,8 +57,7 @@ Every NYSDS form component supports a `form` property that associates the compon
 
 Use this when a form component needs to live outside the `<form>` tag but still submit with that form:
 
-```html
-<form id="benefits-application">
+{% set code %}<form id="benefits-application">
   <nys-textinput name="full_name" label="Full Name" required></nys-textinput>
   <nys-button type="submit" label="Submit Application"></nys-button>
 </form>
@@ -63,8 +69,12 @@ Use this when a form component needs to live outside the `<form>` tag but still 
   <option value="kings">Kings (Brooklyn)</option>
   <option value="new-york">New York (Manhattan)</option>
   <option value="suffolk">Suffolk</option>
-</nys-select>
-```
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set backgroundSolid = false %}
 
 </section>
 
@@ -78,12 +88,11 @@ Structure forms using the NYSDS grid system. Place each form field on its own li
 
 Single-column layouts are easier to scan, reduce cognitive load, and perform better on mobile devices. Use them for most government forms.
 
-```html
+{% set preview %}
 <form id="voter-registration">
   <nys-textinput name="first_name" label="First Name" required width="lg"></nys-textinput>
   <nys-textinput name="last_name" label="Last Name" required width="lg"></nys-textinput>
-  <nys-textinput name="dob" label="Date of Birth" required width="md"
-    description="MM/DD/YYYY"></nys-textinput>
+  <nys-textinput name="dob" label="Date of Birth" required width="md" description="MM/DD/YYYY"></nys-textinput>
   <nys-select name="county" label="County of Residence" required width="lg">
     <option value="albany">Albany</option>
     <option value="erie">Erie</option>
@@ -92,13 +101,30 @@ Single-column layouts are easier to scan, reduce cognitive load, and perform bet
   </nys-select>
   <nys-button type="submit" label="Register"></nys-button>
 </form>
-```
+{% endset %}
+{% set code %}<form id="voter-registration">
+  <nys-textinput name="first_name" label="First Name" required width="lg"></nys-textinput>
+  <nys-textinput name="last_name" label="Last Name" required width="lg"></nys-textinput>
+  <nys-textinput name="dob" label="Date of Birth" required width="md" description="MM/DD/YYYY"></nys-textinput>
+  <nys-select name="county" label="County of Residence" required width="lg">
+    <option value="albany">Albany</option>
+    <option value="erie">Erie</option>
+    <option value="monroe">Monroe</option>
+    <option value="onondaga">Onondaga</option>
+  </nys-select>
+  <nys-button type="submit" label="Register"></nys-button>
+</form>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
 
 ### Multi-column form
 
 When placing fields side by side makes semantic sense (like first name and last name), use the [grid utilities](/foundations/utilities/grid/):
 
-```html
+{% set preview %}
 <form id="dmv-contact">
   <div class="nys-grid-row nys-grid-gap">
     <div class="nys-tablet:nys-grid-col-6">
@@ -112,7 +138,25 @@ When placing fields side by side makes semantic sense (like first name and last 
   <nys-textarea name="message" label="How can we help?" required></nys-textarea>
   <nys-button type="submit" label="Submit"></nys-button>
 </form>
-```
+{% endset %}
+{% set code %}<form id="dmv-contact">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6">
+      <nys-textinput name="first_name" label="First Name" required></nys-textinput>
+    </div>
+    <div class="nys-tablet:nys-grid-col-6">
+      <nys-textinput name="last_name" label="Last Name" required></nys-textinput>
+    </div>
+  </div>
+  <nys-textinput name="email" label="Email Address" type="email" required></nys-textinput>
+  <nys-textarea name="message" label="How can we help?" required></nys-textarea>
+  <nys-button type="submit" label="Submit"></nys-button>
+</form>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
 
 ### Layout guidance
 
@@ -159,15 +203,21 @@ NYSDS form components use an **eager/lazy validation strategy**:
 
 Set the `errorMessage` property to override the default validation message:
 
-```html
-<nys-textinput
+{% set preview %}
+<nys-textinput name="employee_id" label="Employee ID" required pattern="N[0-9]{8}" errorMessage="Enter a valid Employee ID (e.g., N00123456)"></nys-textinput>
+{% endset %}
+{% set code %}<nys-textinput
   name="employee_id"
   label="Employee ID"
   required
   pattern="N[0-9]{8}"
   errorMessage="Enter a valid Employee ID (e.g., N00123456)"
-></nys-textinput>
-```
+></nys-textinput>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
 
 If `errorMessage` is set, it takes precedence over the browser's built-in validation messages for all validation failures on that component.
 
@@ -175,28 +225,46 @@ If `errorMessage` is set, it takes precedence over the browser's built-in valida
 
 You can also control errors programmatically by setting both `errorMessage` and `showError`:
 
-```js
-const emailInput = document.querySelector('nys-textinput[name="email"]');
+{% set preview %}
+<nys-textinput name="email" label="Email Address" errorMessage="This email is already registered" showError required></nys-textinput>
+{% endset %}
+{% set code %}<nys-textinput name="email" label="Email Address" errorMessage="This email is already registered" showError required></nys-textinput>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
+
+Or in JavaScript:
+
+{% set code %}const emailInput = document.querySelector('nys-textinput[name="email"]');
 
 // Show a custom error
 emailInput.errorMessage = "This email is already registered";
 emailInput.showError = true;
 
 // Clear the error
-emailInput.showError = false;
-```
+emailInput.showError = false;{% endset %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set codeLanguage = "" %}
 
 ### Checking validity in JavaScript
 
 Each NYSDS form component exposes a `checkValidity()` method that returns `true` if the component's current value satisfies its constraints:
 
-```js
-const countySelect = document.querySelector('nys-select[name="county"]');
+{% set code %}const countySelect = document.querySelector('nys-select[name="county"]');
 
 if (!countySelect.checkValidity()) {
   console.log("County is required");
-}
-```
+}{% endset %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set codeLanguage = "" %}
 
 </section>
 
@@ -230,8 +298,7 @@ Every `nys-input` and `nys-change` event includes a `detail` object with at mini
 
 Events bubble up through the DOM and cross shadow DOM boundaries (via `composed: true`). You can listen on individual components or on a parent element:
 
-```js
-// Listen on a single component
+{% set code %}// Listen on a single component
 const nameInput = document.querySelector('nys-textinput[name="applicant_name"]');
 nameInput.addEventListener('nys-input', (event) => {
   console.log('Name changed to:', event.detail.value);
@@ -242,8 +309,12 @@ const form = document.getElementById('benefits-application');
 form.addEventListener('nys-change', (event) => {
   const { id, value } = event.detail;
   console.log(`Field ${id} changed to: ${value}`);
-});
-```
+});{% endset %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set codeLanguage = "" %}
 
 ### `nys-input` vs. `nys-change`
 
@@ -261,8 +332,19 @@ For component-specific event details, see each component's Events section.
 
 Use `<nys-button type="submit">` inside or associated with a `<form>`. When clicked, the button calls `form.requestSubmit()`, which triggers constraint validation on all form-associated elements before dispatching the `submit` event.
 
-```html
+{% set preview %}
 <form id="license-renewal">
+  <nys-textinput name="license_number" label="License Number" required pattern="[0-9]{9}" errorMessage="Enter your 9-digit license number"></nys-textinput>
+  <nys-select name="office" label="Preferred DMV Office" required>
+    <option value="albany">Albany</option>
+    <option value="syracuse">Syracuse</option>
+    <option value="nyc-harlem">NYC - Harlem</option>
+    <option value="buffalo">Buffalo</option>
+  </nys-select>
+  <nys-button type="submit" label="Schedule Renewal"></nys-button>
+</form>
+{% endset %}
+{% set code %}<form id="license-renewal">
   <nys-textinput name="license_number" label="License Number" required
     pattern="[0-9]{9}" errorMessage="Enter your 9-digit license number"></nys-textinput>
   <nys-select name="office" label="Preferred DMV Office" required>
@@ -272,15 +354,18 @@ Use `<nys-button type="submit">` inside or associated with a `<form>`. When clic
     <option value="buffalo">Buffalo</option>
   </nys-select>
   <nys-button type="submit" label="Schedule Renewal"></nys-button>
-</form>
-```
+</form>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
 
 ### Handling the submit event
 
 Listen for the standard `submit` event on the `<form>`. If all fields pass validation, the event fires. If any field is invalid, submission is blocked and the first invalid field receives focus.
 
-```js
-document.getElementById('license-renewal').addEventListener('submit', (event) => {
+{% set code %}document.getElementById('license-renewal').addEventListener('submit', (event) => {
   event.preventDefault();
 
   const formData = new FormData(event.target);
@@ -292,8 +377,12 @@ document.getElementById('license-renewal').addEventListener('submit', (event) =>
     method: 'POST',
     body: formData,
   });
-});
-```
+});{% endset %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set codeLanguage = "" %}
 
 ### Resetting forms
 
@@ -303,7 +392,7 @@ Use `<nys-button type="reset">` or call `form.reset()` in JavaScript. Every NYSD
 - Removes error messages and hides error state
 - Resets internal validation state
 
-```html
+{% set preview %}
 <form id="contact-form">
   <nys-textinput name="name" label="Your Name" required></nys-textinput>
   <nys-textarea name="message" label="Message" required></nys-textarea>
@@ -316,14 +405,30 @@ Use `<nys-button type="reset">` or call `form.reset()` in JavaScript. Every NYSD
     </div>
   </div>
 </form>
-```
+{% endset %}
+{% set code %}<form id="contact-form">
+  <nys-textinput name="name" label="Your Name" required></nys-textinput>
+  <nys-textarea name="message" label="Message" required></nys-textarea>
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-grid-col-auto">
+      <nys-button type="submit" label="Send Message"></nys-button>
+    </div>
+    <div class="nys-grid-col-auto">
+      <nys-button type="reset" label="Clear Form" variant="outline"></nys-button>
+    </div>
+  </div>
+</form>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
 
 ### Reading form values without submission
 
 Access current values at any time through the `FormData` API:
 
-```js
-const form = document.getElementById('benefits-application');
+{% set code %}const form = document.getElementById('benefits-application');
 const data = new FormData(form);
 
 // Read individual values
@@ -333,8 +438,12 @@ const county = data.get('county');
 // Iterate all entries
 for (const [key, value] of data.entries()) {
   console.log(`${key}: ${value}`);
-}
-```
+}{% endset %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set codeLanguage = "" %}
 
 </section>
 
@@ -344,10 +453,33 @@ for (const [key, value] of data.entries()) {
 
 For long forms, consider displaying a summary of all errors at the top of the form after a failed submission attempt. This helps users understand what needs to be fixed, especially when errors are spread across many fields.
 
-NYSDS does not currently provide a dedicated error summary component, but you can build one using `<nys-alert>` and the form's validation API:
+NYSDS does not currently provide a dedicated error summary component, but you can build one using `<nys-alert>` and the form's validation API. Here is an example of an error summary at the top of a form:
 
-```js
-function showErrorSummary(form) {
+{% set preview %}
+<nys-alert type="error" heading="3 field(s) need your attention">
+  <ul>
+    <li><a href="#field-email">Email address is required</a></li>
+    <li><a href="#field-phone">Phone number must be 10 digits</a></li>
+    <li><a href="#field-program">Program selection is required</a></li>
+  </ul>
+</nys-alert>
+{% endset %}
+{% set code %}<nys-alert type="error" heading="3 field(s) need your attention">
+  <ul>
+    <li><a href="#field-email">Email address is required</a></li>
+    <li><a href="#field-phone">Phone number must be 10 digits</a></li>
+    <li><a href="#field-program">Program selection is required</a></li>
+  </ul>
+</nys-alert>{% endset %}
+{% set backgroundSolid = true %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}{% set code = "" %}{% set backgroundSolid = false %}
+
+Here is the JavaScript to generate and display error summaries:
+
+{% set code %}function showErrorSummary(form) {
   const errors = [];
 
   // Collect all invalid form elements
@@ -369,11 +501,17 @@ function showErrorSummary(form) {
     .map((err) => `<li><a href="#${err.element.id}">${err.label}</a></li>`)
     .join('');
   summary.innerHTML = `<ul>${list}</ul>`;
-}
-```
+}{% endset %}
+{% set accordionLabel = "showErrorSummary Function" %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
 
-```html
-<nys-alert id="error-summary" type="error" heading="" style="display:none;"></nys-alert>
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeLanguage = "" %}
+
+Here is the HTML for a form with an error summary and the event handler:
+
+{% set code %}<nys-alert id="error-summary" type="error" heading="" style="display:none;"></nys-alert>
 
 <form id="enrollment-form" novalidate>
   <nys-textinput name="full_name" label="Full Name" id="field-name" required></nys-textinput>
@@ -384,11 +522,15 @@ function showErrorSummary(form) {
     <option value="medicaid">Medicaid</option>
   </nys-select>
   <nys-button type="submit" label="Enroll"></nys-button>
-</form>
-```
+</form>{% endset %}
+{% set accordionLabel = "HTML" %}
+{% set codeLanguage = "html" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
 
-```js
-const form = document.getElementById('enrollment-form');
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeLanguage = "" %}
+
+{% set code %}const form = document.getElementById('enrollment-form');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -413,8 +555,13 @@ form.addEventListener('submit', (event) => {
   // All valid — proceed with submission
   const formData = new FormData(form);
   // ... submit to API
-});
-```
+});{% endset %}
+{% set accordionLabel = "Form Submit Handler" %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeLanguage = "" %}
 
 ### Error summary best practices
 
@@ -433,48 +580,23 @@ form.addEventListener('submit', (event) => {
 
 The following example shows a realistic multi-field form using several NYSDS form components with validation and submission handling.
 
-```html
-<nys-alert id="form-errors" type="error" heading="" style="display:none;"></nys-alert>
+{% set code %}<nys-alert id="form-errors" type="error" heading="" style="display:none;"></nys-alert>
 
 <form id="dmv-appointment" novalidate>
   <h2>Schedule a DMV Appointment</h2>
 
   <div class="nys-grid-row nys-grid-gap">
     <div class="nys-tablet:nys-grid-col-6">
-      <nys-textinput
-        name="first_name"
-        id="first-name"
-        label="First Name"
-        required
-      ></nys-textinput>
+      <nys-textinput name="first_name" id="first-name" label="First Name" required></nys-textinput>
     </div>
     <div class="nys-tablet:nys-grid-col-6">
-      <nys-textinput
-        name="last_name"
-        id="last-name"
-        label="Last Name"
-        required
-      ></nys-textinput>
+      <nys-textinput name="last_name" id="last-name" label="Last Name" required></nys-textinput>
     </div>
   </div>
 
-  <nys-textinput
-    name="email"
-    id="email"
-    label="Email Address"
-    type="email"
-    required
-    description="We'll send your confirmation to this address."
-  ></nys-textinput>
+  <nys-textinput name="email" id="email" label="Email Address" type="email" required description="We'll send your confirmation to this address."></nys-textinput>
 
-  <nys-textinput
-    name="phone"
-    id="phone"
-    label="Phone Number"
-    type="tel"
-    optional
-    description="In case we need to reach you about your appointment."
-  ></nys-textinput>
+  <nys-textinput name="phone" id="phone" label="Phone Number" type="tel" optional description="In case we need to reach you about your appointment."></nys-textinput>
 
   <nys-select name="office" id="office" label="DMV Office" required>
     <optgroup label="Capital Region">
@@ -492,12 +614,7 @@ The following example shows a realistic multi-field form using several NYSDS for
     </optgroup>
   </nys-select>
 
-  <nys-radiogroup
-    name="service_type"
-    id="service-type"
-    label="Type of Service"
-    required
-  >
+  <nys-radiogroup name="service_type" id="service-type" label="Type of Service" required>
     <nys-radiobutton name="service_type" value="renewal" label="License Renewal"></nys-radiobutton>
     <nys-radiobutton name="service_type" value="new-license" label="New License"></nys-radiobutton>
     <nys-radiobutton name="service_type" value="permit-test" label="Permit Test"></nys-radiobutton>
@@ -505,21 +622,9 @@ The following example shows a realistic multi-field form using several NYSDS for
     <nys-radiobutton name="service_type" other label="Other (please specify)"></nys-radiobutton>
   </nys-radiogroup>
 
-  <nys-textarea
-    name="notes"
-    id="notes"
-    label="Additional Notes"
-    optional
-    description="Any special accommodations or information we should know about."
-  ></nys-textarea>
+  <nys-textarea name="notes" id="notes" label="Additional Notes" optional description="Any special accommodations or information we should know about."></nys-textarea>
 
-  <nys-checkbox
-    name="confirm"
-    id="confirm"
-    label="I confirm the information above is accurate"
-    required
-    errorMessage="You must confirm before submitting"
-  ></nys-checkbox>
+  <nys-checkbox name="confirm" id="confirm" label="I confirm the information above is accurate" required errorMessage="You must confirm before submitting"></nys-checkbox>
 
   <div class="nys-grid-row nys-grid-gap" style="margin-top: var(--nys-space-400);">
     <div class="nys-grid-col-auto">
@@ -529,11 +634,17 @@ The following example shows a realistic multi-field form using several NYSDS for
       <nys-button type="reset" label="Start Over" variant="outline"></nys-button>
     </div>
   </div>
-</form>
-```
+</form>{% endset %}
+{% set accordionLabel = "DMV Appointment Form" %}
+{% set codeLanguage = "html" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
 
-```js
-const form = document.getElementById('dmv-appointment');
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeLanguage = "" %}
+
+Here is the JavaScript to handle validation and submission:
+
+{% set code %}const form = document.getElementById('dmv-appointment');
 const errorAlert = document.getElementById('form-errors');
 
 form.addEventListener('submit', (event) => {
@@ -578,8 +689,13 @@ form.addEventListener('submit', (event) => {
 // Clear error summary on reset
 form.addEventListener('reset', () => {
   errorAlert.style.display = 'none';
-});
-```
+});{% endset %}
+{% set accordionLabel = "DMV Appointment Handler" %}
+{% set codeLanguage = "javascript" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeLanguage = "" %}
 
 </section>
 

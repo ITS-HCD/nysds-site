@@ -1369,6 +1369,13 @@ code {
     font-family: "Monaspace Neon";
 }
 
+.code-preview__code-block code,
+.code-preview__code-block pre,
+.code-preview__code-block pre[class*="language-"],
+.code-preview__code-block code[class*="language-"] {
+    font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
 /* Byline on homepage */
 
 .byline {

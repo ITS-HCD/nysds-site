@@ -1,6 +1,7 @@
 ---
 permalink: /foundations/themes/
 title: "Agency Themes"
+navTitle: "Theming"
 description: "How to apply agency-specific color themes to NYSDS components using the data-theme attribute and theme tokens."
 navOrder: 50
 ---
@@ -21,16 +22,6 @@ NYSDS themes work through the [design token](/foundations/tokens/) system. Here 
 
 Every component that needs a brand color references a **theme token** like `--nys-color-theme` instead of a specific color value. When you activate a theme, the system remaps those theme tokens to a different color palette. The component code does not change — only the token values do.
 
-### The token resolution chain
-
-NYSDS tokens are organized in layers. Themes rely on how those layers connect:
-
-1. **Primitive tokens** define raw color values. For example, `--nys-color-state-blue-700` is `#154973` and `--nys-color-environment-green-700` is `#233f2b`.
-2. **Theme tokens** point to a primitive color based on the active theme. By default, `--nys-color-theme` points to `--nys-color-state-blue-700`. Under the Environment theme, it points to `--nys-color-environment-green-700` instead.
-3. **Components** reference theme tokens. A button's background color uses `--nys-color-theme`. A checked checkbox uses `--nys-color-theme`. A table header uses `--nys-color-theme`. When the underlying token changes, they all update.
-
-This means you never need to restyle individual components when switching agencies. You change the theme once and the system handles the rest.
-
 ### Theme token scale
 
 Each theme provides seven color values at different intensities:
@@ -46,6 +37,84 @@ Each theme provides seven color values at different intensities:
 | `--nys-color-theme-stronger` | Active/pressed states, high-contrast text on light backgrounds |
 
 For a deeper explanation of token layers and naming conventions, see [Design Tokens](/foundations/tokens/).
+
+### Theme color intensity scale
+
+Select a theme below to see all seven intensity levels in action. Notice how the full palette shifts when you change themes, while the hierarchy (faint to stronger) stays consistent:
+
+<div id="theme-swatch-demo" style="padding: 1.5rem; border: 1px solid var(--nys-color-border); border-radius: var(--nys-radius-400);">
+  <div style="margin-bottom: 1.5rem;">
+    <nys-select id="theme-switcher" label="Select a theme" name="theme">
+      <option value="default" selected>NY.gov (Default)</option>
+      <option value="admin">Admin</option>
+      <option value="business">Business</option>
+      <option value="environment">Environment</option>
+      <option value="health">Health</option>
+      <option value="local">Local Government</option>
+      <option value="safety">Public Safety</option>
+      <option value="transportation">Transportation</option>
+    </nys-select>
+  </div>
+
+  <div class="theme-swatches" style="display: flex; gap: 0; border-radius: var(--nys-radius-400); overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme-faint); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: var(--nys-color-ink); margin-bottom: 0.5rem;">Faint</div>
+      <div style="font-size: 0.65rem; color: var(--nys-color-ink); opacity: 0.7;">--nys-color-theme-faint</div>
+    </div>
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme-weaker); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: var(--nys-color-ink); margin-bottom: 0.5rem;">Weaker</div>
+      <div style="font-size: 0.65rem; color: var(--nys-color-ink); opacity: 0.7;">--nys-color-theme-weaker</div>
+    </div>
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme-weak); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: var(--nys-color-ink); margin-bottom: 0.5rem;">Weak</div>
+      <div style="font-size: 0.65rem; color: var(--nys-color-ink); opacity: 0.7;">--nys-color-theme-weak</div>
+    </div>
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme-mid); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: var(--nys-color-ink-reverse); margin-bottom: 0.5rem;">Mid</div>
+      <div style="font-size: 0.65rem; color: var(--nys-color-ink-reverse); opacity: 0.8;">--nys-color-theme-mid</div>
+    </div>
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: var(--nys-color-ink-reverse); margin-bottom: 0.5rem;">Primary</div>
+      <div style="font-size: 0.65rem; color: var(--nys-color-ink-reverse); opacity: 0.8;">--nys-color-theme</div>
+    </div>
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme-strong); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Strong</div>
+      <div style="font-size: 0.65rem; color: white; opacity: 0.8;">--nys-color-theme-strong</div>
+    </div>
+    <div style="flex: 1; padding: 1.5rem 1rem; background: var(--nys-color-theme-stronger); text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; color: white; margin-bottom: 0.5rem;">Stronger</div>
+      <div style="font-size: 0.65rem; color: white; opacity: 0.8;">--nys-color-theme-stronger</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const switcher = document.getElementById('theme-switcher');
+  const demo = document.getElementById('theme-swatch-demo');
+
+  if (switcher) {
+    switcher.addEventListener('nys-change', function(e) {
+      const theme = e.detail.value;
+      if (theme === 'default') {
+        demo.removeAttribute('data-theme');
+      } else {
+        demo.setAttribute('data-theme', theme);
+      }
+    });
+  }
+})();
+</script>
+
+### The token resolution chain
+
+NYSDS tokens are organized in layers. Themes rely on how those layers connect:
+
+1. **Primitive tokens** define raw color values. For example, `--nys-color-state-blue-700` is `#154973` and `--nys-color-environment-green-700` is `#233f2b`.
+2. **Theme tokens** point to a primitive color based on the active theme. By default, `--nys-color-theme` points to `--nys-color-state-blue-700`. Under the Environment theme, it points to `--nys-color-environment-green-700` instead.
+3. **Components** reference theme tokens. A button's background color uses `--nys-color-theme`. A checked checkbox uses `--nys-color-theme`. A table header uses `--nys-color-theme`. When the underlying token changes, they all update.
+
+This means you never need to restyle individual components when switching agencies. You change the theme once and the system handles the rest.
 
 </section>
 
@@ -153,20 +222,6 @@ To apply an agency theme, add the `data-theme` attribute to the `<body>` element
 
 In this example, the buttons, global header, and global footer will all render using the Environment theme's green palette instead of the default State Blue.
 
-### Using a CSS class instead
-
-You can also activate a theme with a CSS class instead of the `data-theme` attribute. Each theme has a corresponding class:
-
-{% set code %}
-<body class="nys-theme-transportation">
-  <!-- All NYSDS components use the Transportation theme -->
-</body>
-{% endset %}
-{% set accordionLabel = "Using a CSS class" %}
-{% include "partials/code-preview.njk" %}
-
-The `data-theme` attribute is the recommended approach. Use the CSS class when your framework or CMS makes attribute manipulation difficult.
-
 ### Theming a section of a page
 
 You can scope a theme to a specific section rather than the entire page. Place `data-theme` on any ancestor element to theme its descendants:
@@ -196,16 +251,16 @@ Themes override the `--nys-color-theme-*` family of CSS custom properties. Any c
 
 The following NYSDS components use theme tokens and will update when you switch themes:
 
-- **nys-button** — Background, border, and text colors for filled, outline, and ghost variants
-- **nys-globalheader** — Header bar background and accent colors
-- **nys-globalfooter** — Footer background and link colors
-- **nys-table** — Header row background and striped row accents
-- **nys-checkbox** — Checked state background and border
-- **nys-radiobutton** — Selected state indicator
-- **nys-toggle** — Active toggle background
-- **nys-stepper** — Active and completed step indicators
-- **nys-avatar** — Avatar background and text colors
-- **nys-fileinput** — Upload button accent
+- **[Button](/components/button/)** — Background, border, and text colors for filled, outline, and ghost variants
+- **[Global Header](/components/globalheader/)** — Header bar background and accent colors
+- **[Global Footer](/components/globalfooter/)** — Footer background and link colors
+- **[Table](/components/table/)** — Header row background and striped row accents
+- **[Checkbox](/components/checkbox/)** — Checked state background and border
+- **[Radio Button](/components/radiobutton/)** — Selected state indicator
+- **[Toggle](/components/toggle/)** — Active toggle background
+- **[Stepper](/components/stepper/)** — Active and completed step indicators
+- **[Avatar](/components/avatar/)** — Avatar background and text colors
+- **[File Input](/components/fileinput/)** — Upload button accent
 
 Themes do **not** change semantic colors like `--nys-color-danger`, `--nys-color-success`, or `--nys-color-info`. These remain consistent across all agencies to preserve the meaning of error states, success messages, and informational alerts.
 
@@ -215,7 +270,9 @@ Themes do **not** change semantic colors like `--nys-color-danger`, `--nys-color
 
 ## Using Theme Tokens in Custom Styles
 
-If you are building custom components or page layouts alongside NYSDS components, use theme tokens so your styles respond to agency themes automatically:
+If you are building custom components or page layouts alongside NYSDS components, use theme tokens so your styles respond to agency themes automatically.
+
+Use `--nys-color-theme` and related theme tokens in your CSS. The correct primary color is applied automatically when you set a theme. You never need to look up or specify individual color values.
 
 {% set code %}
 <style>
@@ -355,6 +412,17 @@ If a component looks wrong under your theme, the issue is almost always a contra
 {% endblock %}
 
 {% block styles %}
+<style>
+@media (max-width: 768px) {
+  .theme-swatches {
+    flex-wrap: wrap !important;
+  }
+  .theme-swatches > div {
+    flex: 1 1 calc(50% - 0px) !important;
+    min-width: 0 !important;
+  }
+}
+</style>
 {% endblock %}
 
 {% block scripts %}

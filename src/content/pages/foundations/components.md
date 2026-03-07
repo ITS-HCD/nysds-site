@@ -1,6 +1,7 @@
 ---
 permalink: /foundations/components/
 title: "How Components Work"
+navTitle: "Web Components"
 description: "Understand how NYSDS web components work — custom elements, shadow DOM, slots, CSS custom properties, and the patterns you need to use them effectively."
 layout: layouts/3-col.njk
 navOrder: 5
@@ -10,7 +11,7 @@ navOrder: 5
 
 # How Components Work
 
-The NYS Design System component library is a set of [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) — custom HTML elements that work in any framework or no framework at all. If your project uses React, Angular, Vue, .NET Razor Pages, or plain HTML, NYSDS components work the same way.
+The NYS Design System component library is a set of [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) — custom HTML elements built on web standards. Web components are framework-agnostic by design, meaning they work natively in the browser regardless of your tech stack.
 
 This page explains the key concepts behind how these components are built, how they behave, and what you need to know to use them effectively. For installation and setup, see [Get Started as a Developer](/get-started/developers/).
 
@@ -207,6 +208,24 @@ dateField.addEventListener('nys-change', (event) => {
 {% include "partials/code-preview.njk" %}
 
 Events bubble up through the DOM like any other event, so you can also listen on a parent element. Each component's reference page documents the events it emits and the data available in `event.detail`.
+
+</section>
+
+<section id="framework-integration">
+
+## Framework Integration
+
+Web components work directly in plain HTML and in frameworks that support custom elements natively.
+
+**Plain HTML and .NET Razor Pages** — NYSDS components work as standard HTML elements. No wrappers or special configuration needed.
+
+**React** — React's synthetic event system and property handling don't always align with web component conventions. Framework-specific wrappers are planned but not yet available. Some teams have successfully wrapped NYSDS components for React — see the [React integration demo](https://its-hcd.github.io/nysds-react-demo/) for one approach.
+
+**Angular** — Angular supports custom elements through its `CUSTOM_ELEMENTS_SCHEMA`. Components work directly in templates, though typed wrappers would improve the developer experience. Wrappers are planned.
+
+**Vue** — Vue has strong native web component support. NYSDS components work with minimal configuration. Configure Vue to recognize `nys-*` elements as custom elements to avoid warnings.
+
+For framework-specific setup instructions, see [Getting Started for Developers](/get-started/developers/).
 
 </section>
 

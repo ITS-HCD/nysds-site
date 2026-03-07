@@ -3,7 +3,7 @@ permalink: /about/contribute/
 title: "Contribute"
 description: "Feedback keeps the design system consistent, usable, and aligned with team needs. Contributors across New York State government help shape and improve digital products."
 section: About
-
+navOrder: 3
 ---
 
 {% block content %}

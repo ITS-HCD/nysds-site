@@ -4,6 +4,7 @@ description: Learn about the vision, mission, and values behind the New York Sta
 layout: layouts/3-col.njk
 permalink: /about/
 section: About
+navTitle: "About the NYSDS"
 navOrder: 1
 ---
 
@@ -51,29 +52,13 @@ We design for the entire state, not for any single agency.
 
 </section>
 
-<section id="what-the-system-solves">
+<section id="what-it-solves">
 
-## What the Design System Solves
+## What It Solves
 
-<nys-alert type="base" heading="Every day, New York State residents interact with digital services." text="They expect clear and accessible experiences. Without a unified approach, teams often create their own solutions. This often results in duplicated work, inconsistent designs, and accessibility challenges."></nys-alert>
+State agencies face common challenges: inconsistent digital experiences, duplicated development effort, and the cost of making every application accessible. The design system provides shared solutions to all three.
 
-### Consistency Across Agencies
-
-Twenty million New Yorkers interact with state services across dozens of agencies. Without a unified design language, each agency solves the same problems independently. This creates inconsistent experiences — residents face different patterns for the same tasks, teams duplicate effort, and quality varies.
-
-The design system provides a shared language. Colors, spacing, typography, and components are synchronized across Figma and code. When a resident moves from one agency's service to another, the experience feels familiar.
-
-### Accessibility Without Rework
-
-Building accessible interfaces is complex. It requires ARIA knowledge, keyboard testing, color contrast checks, and testing with assistive technology. When teams build from scratch, accessibility often comes late — after the experience is designed, after code is written.
-
-The design system puts accessibility in the foundation. Every component is tested against WCAG 2.2 standards before it ships. Agencies adopting the system get accessibility built in, not bolted on. This reduces remediation costs and helps teams meet legal deadlines.
-
-### Development Efficiency
-
-Developers spend significant time re-solving the same front-end problems: building form validation, ensuring navigation works on mobile, fixing accessibility bugs, keeping components consistent. This is rework. It doesn't add value to residents or the state.
-
-The design system eliminates that rework. Teams use prebuilt, tested components instead of rebuilding them. They spend time on the logic, services, and data unique to their agency instead of reinventing common UI patterns.
+[Learn more about what the design system solves](/about/what-it-solves/)
 
 </section>
 

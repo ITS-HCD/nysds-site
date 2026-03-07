@@ -1,6 +1,7 @@
 ---
 permalink: /foundations/styles/
 title: "Styles Framework"
+navTitle: "CSS"
 description: "The @nysds/styles package provides design tokens, a CSS reset, typography styles, and utility classes as composable CSS endpoints."
 navOrder: 15
 ---
@@ -14,6 +15,37 @@ The `@nysds/styles` package is the CSS foundation of the NYS Design System. It d
 Components from `@nysds/components` handle their own internal styling through shadow DOM. The styles package is for everything outside of components: page layout, typography, spacing, and ensuring your application's baseline styles align with the design system.
 
 For installation and setup instructions, see [Get Started as a Developer](/get-started/developers/).
+
+At a glance, the package provides three composable endpoints:
+
+<nys-table caption="@nysds/styles Endpoints" striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>File</th>
+        <th>Use when...</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tokens only</td>
+        <td><code>nysds.min.css</code></td>
+        <td>You only need design tokens and FOUC prevention</td>
+      </tr>
+      <tr>
+        <td>Typography</td>
+        <td><code>nysds-typography.min.css</code></td>
+        <td>You need role-based font classes</td>
+      </tr>
+      <tr>
+        <td>Full</td>
+        <td><code>nysds-full.min.css</code></td>
+        <td>You want everything: reset + tokens + typography + utilities</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 <section id="stylesheet-endpoints">
 
@@ -99,7 +131,10 @@ After installing with `npm install @nysds/styles`, reference the dist files from
 @import "@nysds/styles/dist/nysds-full.min.css";{% endset %}
 {% set accordionLabel = "CSS @import" %}
 {% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeExpanded = false %}{% set codeLanguage = "" %}
 
 Or reference the file as a `<link>` tag pointed at the resolved path in your build output.
 
@@ -110,20 +145,28 @@ If your build tool does not resolve `node_modules` paths, copy the CSS files int
 {% set code %}cp node_modules/@nysds/styles/dist/nysds-full.min.css src/assets/css/{% endset %}
 {% set accordionLabel = "CLI Command" %}
 {% set codeExpanded = true %}
+{% set codeLanguage = "bash" %}
 {% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeExpanded = false %}{% set codeLanguage = "" %}
 
 Then reference the local copy:
 
 {% set code %}<link rel="stylesheet" href="/assets/css/nysds-full.min.css" />{% endset %}
 {% set accordionLabel = "HTML" %}
 {% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
+
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeExpanded = false %}{% set codeLanguage = "" %}
 
 For the full installation walkthrough, including copying both CSS and JS files, see [Get Started as a Developer](/get-started/developers/).
 
 ### Manual download
 
 For teams that cannot use npm, download the latest release from the <a href="https://github.com/ITS-HCD/nysds/releases/latest/" target="_blank" rel="noopener noreferrer">NYSDS GitHub releases page<nys-icon name="open_in_new" size="lg"></nys-icon></a> and include the CSS files in your project manually. Keep in mind that you will need to check for updates and replace the files when new versions are released.
+
+{% set code = "" %}{% set accordionLabel = "" %}{% set codeExpanded = false %}{% set codeLanguage = "" %}
 
 </section>
 

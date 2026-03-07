@@ -23,6 +23,14 @@ These pages explain how the design system is built — the technologies, token l
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
     <div class="card card__no-border card__flat nys-flex-fill">
       <div class="card__inner">
+        <div class="card__title"><a href="/foundations/design/">Design</a></div>
+        <div class="card__desc">How the design system fits into the broader UX process — from strategy and scope to the interface.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <div class="card card__no-border card__flat nys-flex-fill">
+      <div class="card__inner">
         <div class="card__title"><a href="/foundations/components/">How Components Work</a></div>
         <div class="card__desc">Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.</div>
       </div>

@@ -1,59 +1,75 @@
 ---
 permalink: /about/updates/
-title: Whatʼs New
-description: What is new in the New York State Design System?
-section: Updates
-navOrder: 1
-heading_links: false
+title: "Updates"
+navTitle: "Updates"
+navOrder: 4
+section: About
+description: "Stay current with the NYS Design System — releases, new components, and articles."
 ---
 
-{% extends "layouts/base.njk" %}
+{% set latestRelease = null %}
+{% set latestArticle = null %}
+{% for post in collections.updates | reverse %}
+  {% if not latestRelease and post.data.tags and "release" in post.data.tags %}
+    {% set latestRelease = post %}
+  {% endif %}
+  {% if not latestArticle and post.data.tags and "article" in post.data.tags %}
+    {% set latestArticle = post %}
+  {% endif %}
+{% endfor %}
 
 {% block content %}
-<div class="nys-grid-container-widescreen">
 
-  <header class="page-header">
-    <h1 class="page-title">Whatʼs New</h1>
+# Updates
 
-    {%- if description -%}
-      <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
-    {%- endif -%}
+Stay current with the NYS Design System. Find the latest releases, component updates, and articles about building accessible digital services for New York State.
 
-  </header>
+<nys-alert type="info" heading="Subscribe to Updates">Email notifications for new releases and articles are coming soon.</nys-alert>
 
-  <section class="nys-grid-row nys-grid-gap">
+{% if latestRelease %}
+<section id="latest-release">
 
-    <ul class="post-list nys-grid-container">
-      {%- for post in collections.updates -%}
-      <li class="post-list__item{% if "article" in (post.data.tags | default([])) %} post-list--highlight{% endif %}">
+## Latest Release
 
-            <h2 class="post-list__title">
-              <a href="{{ post.url }}" class="post-list__link">
-                {% if post.data.tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ post.data.title }}
-              </a>
-            </h2>
-
-            <div class="post-list__description">
-              {{ post.data.description }}
-            </div>
-
-            <div class="post-list__meta">
-              <div class="post-list__author">
-                by {{ post.data.author }}
-              </div>
-              <time class="post-list__date" datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFull }}</time>
-            </div>
-
-      </li>
-      {%- endfor -%}
-    </ul>
-
-  </section>
+<div class="card card--horizontal">
+    <div class="card__content">
+        <h3 class="card__title">
+            <a href="{{ latestRelease.url }}">{{ latestRelease.data.title }}</a>
+        </h3>
+        <div class="card__desc">
+            {{ latestRelease.data.description }}
+        </div>
+        <div class="card__meta" style="margin-top: 1rem;">
+            <time datetime="{{ latestRelease.data.date | dateISO }}">{{ latestRelease.data.date | dateFull }}</time>
+        </div>
+    </div>
 </div>
-{% endblock %}
 
-{% block styles %}
-{% endblock %}
+</section>
+{% endif %}
 
-{% block scripts %}
+{% if latestArticle %}
+<section id="latest-article">
+
+## Latest Article
+
+<div class="card card--horizontal">
+    <div class="card__content">
+        <h3 class="card__title">
+            <a href="{{ latestArticle.url }}">{{ latestArticle.data.title }}</a>
+        </h3>
+        <div class="card__desc">
+            {{ latestArticle.data.description }}
+        </div>
+        <div class="card__meta" style="margin-top: 1rem;">
+            <time datetime="{{ latestArticle.data.date | dateISO }}">{{ latestArticle.data.date | dateFull }}</time>
+        </div>
+    </div>
+</div>
+
+</section>
+{% endif %}
+
+<p><a href="/about/updates/all/">View all updates →</a></p>
+
 {% endblock %}

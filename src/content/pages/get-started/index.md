@@ -16,39 +16,43 @@ The NYS Design System gives your team the tools to build accessible, consistent 
 
 <div class="nys-grid-row nys-grid-gap-lg" style="margin: 32px 0;">
 
-<div class="nys-tablet:nys-grid-col-4">
+<div class="nys-grid-col-12" style="background: var(--nys-color-theme-faint); border-left: 4px solid var(--nys-color-theme); padding: var(--nys-space-400); margin-bottom: 24px;">
+
+<nys-badge label="Recommended for new projects"></nys-badge>
 
 ### Code: Use the Web Components
 
-Build new products faster with prebuilt, accessible UI components. Each one handles responsiveness, keyboard navigation, and screen reader support automatically.
+Build new products and modernize existing ones faster with prebuilt, accessible UI components. Our web components handle responsiveness, keyboard navigation, screen reader support, and theme switching automatically—so your team can focus on application logic, not accessibility infrastructure.
 
-**[Browse Components](/components/)**
+Each component is production-ready, thoroughly tested, and built for government use cases: DMV forms, benefits applications, permit systems, and agency dashboards.
+
+**[Browse All Components →](/components/)**
 
 </div>
 
-<div class="nys-tablet:nys-grid-col-4">
+<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
 
 ### Styles: Use Design Tokens and CSS Framework
 
-Maintain visual consistency across your site with design tokens for color, typography, and spacing. Apply them with our CSS framework—no major overhauls needed.
+Don't want to adopt components yet? Use our design tokens and CSS framework to maintain visual consistency across your site. Apply tokens for color, typography, spacing, and borders to custom HTML—no component wrapper needed.
 
-**[Learn About Tokens](/foundations/tokens/)** | **[Explore Styles](/foundations/styles/)**
-
-</div>
-
-<div class="nys-tablet:nys-grid-col-4">
-
-### Guidance: Follow Best Practices
-
-Learn how to design and build clear, accessible digital experiences. We cover everything from WCAG compliance to practical keyboard and screen reader testing.
-
-**[Read Accessibility Guidance](/foundations/accessibility/)**
+**[Explore Tokens & Styles](/foundations/styles/)**
 
 </div>
 
+<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
+
+### Guidance: Build Accessibly
+
+Learn how to design and build clear, usable digital experiences for all New Yorkers. We cover WCAG compliance, plain language, keyboard navigation, screen reader testing, and accessibility patterns for forms, tables, and complex workflows.
+
+**[Read Accessibility Best Practices](/foundations/accessibility/)**
+
 </div>
 
-You can adopt all three or start with what you need most. Teams often begin with styles and tokens in an existing app, then add components incrementally.
+</div>
+
+**You can adopt all three approaches or start with what fits your situation.** Many teams begin with styles and tokens in an existing application, then add web components incrementally as their team builds confidence and finds the right moments to refactor.
 
 ## Choose Your Path
 

@@ -196,9 +196,9 @@ For more on web font performance, see Google's [Using Web Fonts](https://fonts.g
 
 ## Using Typography in a Project
 
-NYSDS web components reference typography tokens internally — if you are using components like `nys-button` or `nys-textinput`, the typography is already handled for you.
+The full NYSDS stylesheet (`nysds-full.min.css`) includes predefined typography styles that handle most use cases. If you include this stylesheet, headings, body text, and common elements will use the correct fonts, sizes, and line heights automatically. See [Styles Framework](/foundations/styles/) for full installation and usage instructions.
 
-For parts of your application not covered by NYSDS components, you have two options: **tokens** and **utility classes**.
+If you need to customize beyond the defaults or can't use the full stylesheet, you can use typography tokens and utility classes directly:
 
 ### Tokens via CSS Custom Properties
 
@@ -261,7 +261,25 @@ For the complete list of typography utility classes with live previews, see [Typ
 
 ## Resources
 
-*   [NYS Design System Fonts Repository](https://github.com/ITS-HCD/nysds-fonts) (internal)
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-12">
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds-fonts">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/font-card.svg" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">NYSDS Fonts Repository</div>
+          <div class="card__desc">Download the complete NYSDS font bundle including Proxima Nova, D Sari, and Oswald. Available to NYS staff only.
+            <p></p>
+            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
 *   [Typography Utility Classes](/foundations/utilities/typography/) — full reference with live previews
 *   [Design Tokens](/foundations/tokens/) — how primitive and semantic token layers work
 *   [Token Reference](/tokens/) — browse all tokens including typography

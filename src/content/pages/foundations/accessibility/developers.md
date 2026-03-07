@@ -29,19 +29,26 @@ Even when using NYSDS components, your pages need:
 - **Page titles** — Every page needs a unique, descriptive `<title>`.
 - **Skip navigation** — Use the [`nys-skipnav` component](/components/skipnav/) to let keyboard users bypass repetitive navigation.
 
+<section id="testing-tools">
+
 ## Testing Tools
 
 Automated tools catch roughly 30-40% of accessibility issues. Manual testing catches the rest. Use both.
 
-### Automated Testing
+### Primary Recommended Tools
 
-Run these during development to catch common issues early:
+**[Accessibility Insights](https://accessibilityinsights.io/)** (Microsoft) — The best single tool for starting accessibility testing. Accessibility Insights combines automated checks, guided manual testing workflows, and detailed reporting. It works in Chrome and Edge and includes both quick scans for common issues and comprehensive assessments. Start here.
 
-- **[Deque Axe](https://www.deque.com/axe/)** — Chrome and Firefox extension for in-browser accessibility testing. Start here.
+**[NVDA](https://webaim.org/articles/nvda/)** — Free screen reader for Windows. NVDA is the most common screen reader among users and is essential for understanding how your content sounds when read aloud. Navigate your pages using only the keyboard and screen reader — do not look at the screen.
+
+### Additional Automated Testing Tools
+
+Run these during development to catch common issues:
+
+- **[Deque Axe](https://www.deque.com/axe/)** — Chrome and Firefox extension for quick in-browser accessibility scans.
 - **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)** — Built into Chrome DevTools. Runs accessibility audits alongside performance.
 - **[Wave](https://wave.webaim.org/extension/)** — Browser extension that visually overlays accessibility errors and warnings on your page.
 - **[HTML CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/)** — Bookmarklet that checks the current page against WCAG criteria in real time.
-- **[Accessibility Insights](https://accessibilityinsights.io/)** — Microsoft's testing and reporting suite. Includes guided manual assessments.
 - **[a11y.css](https://ffoodd.github.io/a11y.css/)** — A CSS file that highlights potential accessibility issues by flagging problematic markup visually.
 
 ### CI/CD Integration
@@ -51,15 +58,18 @@ Incorporate automated checks into your build pipeline:
 - **[Pa11y](https://pa11y.org/)** — Command-line tool for running WCAG checks in CI. Supports multiple reporters.
 - **[accessibility-checker](https://www.npmjs.com/package/accessibility-checker)** — IBM's Node.js module for automated accessibility scanning. Works in test frameworks.
 
-### Screen Reader Testing
+### Other Screen Readers
 
-Automated tools cannot evaluate whether content *makes sense* when read aloud. Test with real screen readers:
+Beyond NVDA, test with:
 
-- **[NVDA](https://webaim.org/articles/nvda/)** — Free screen reader for Windows. The most common screen reader among users.
 - **VoiceOver** — Built into macOS and iOS. Activate with Cmd+F5 on Mac.
 - **TalkBack** — Built into Android devices.
 
-Test at minimum with NVDA on Windows and VoiceOver on macOS. Navigate your page using only the keyboard and screen reader — do not look at the screen.
+Test at minimum with NVDA on Windows and VoiceOver on macOS.
+
+</section>
+
+<section id="coding-techniques">
 
 ## Coding Techniques
 
@@ -89,15 +99,70 @@ When content changes without a full page reload:
 - Complex images (charts, diagrams): provide a text summary in the alt attribute and a detailed description nearby or linked.
 - Video: include synchronized captions and a transcript.
 
+</section>
+
+<section id="nys-resources">
+
 ## NYS Internal Resources
 
 The following resources are available to New York State staff:
 
-- **Accessibility Teams Channel** — Ask questions, share findings, get help with specific issues.
-- **Accessibility SharePoint** — Policies, templates, and internal guidance documents.
-- **Accessibility Review Request Form** — Submit your site or application for an accessibility review by the NYSDS team.
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-12">
+    <div class="card card--horizontal">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/teams-channel.svg" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">Accessibility Teams Channel</div>
+          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies.
+            <p></p>
+            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-12">
+    <div class="card card--horizontal">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/accessibility-card.svg" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">Accessibility SharePoint</div>
+          <div class="card__desc">Policies, templates, and internal guidance documents for accessibility compliance.
+            <p></p>
+            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-12">
+    <div class="card card--horizontal">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/accessibility-card.svg" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">Accessibility Review Request</div>
+          <div class="card__desc">Submit your site or application for review by the ITS Accessibility Team.
+            <p></p>
+            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-Contact the NYSDS team for links to these internal resources.
+Contact the ITS Accessibility Team for links to these internal resources.
+
+</section>
+
+<section id="further-reading">
 
 ## Further Reading
 
@@ -105,6 +170,8 @@ Contact the NYSDS team for links to these internal resources.
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) — Patterns and examples for complex interactive widgets.
 - [Deque University: Accessibility for Front-End Developers](https://on.ny.gov/4eksOwH) (SLMS login) — NYS-available online course.
 - See our [Learning Resources](/foundations/accessibility/learn/) page for additional courses and references.
+
+</section>
 
 {% endblock %}
 

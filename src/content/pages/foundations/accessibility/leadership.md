@@ -12,40 +12,25 @@ navOrder: 3
 
 # Accessibility for Leadership
 
-Accessibility compliance is a legal requirement for every New York State digital service. This page covers what you need to know to plan, budget, and procure accessible technology.
+Accessibility compliance is a legal requirement for every New York State digital service. Whether you manage a development team, oversee agency IT, handle procurement, or lead a program, this page covers what you need to know to plan, budget, and procure accessible technology.
+
+<section id="compliance-deadlines">
 
 ## Compliance Deadlines
 
-Two mandates set concrete deadlines for state agencies:
+Two federal and state mandates set concrete deadlines:
 
-<nys-table striped>
-<table>
-  <thead>
-    <tr>
-      <th>Deadline</th>
-      <th>Requirement</th>
-      <th>Standard</th>
-      <th>Authority</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>April 2026</strong></td>
-      <td>All web content and mobile applications</td>
-      <td>WCAG 2.1 Level AA</td>
-      <td>DOJ Rule (28 CFR Part 35)</td>
-    </tr>
-    <tr>
-      <td><strong>January 2027</strong></td>
-      <td>All State Entity websites, including third-party</td>
-      <td>WCAG 2.2 Level AA</td>
-      <td>NYS Technology Law, STL Section 103-d</td>
-    </tr>
-  </tbody>
-</table>
-</nys-table>
+<nys-alert type="warning" heading="April 24, 2026 — DOJ Rule (28 CFR Part 35)">
+  All state and local government web content and mobile apps must meet <strong>WCAG 2.1 Level AA</strong>. This applies to entities serving populations of 50,000 or more.
+</nys-alert>
 
-The January 2027 deadline is stricter in scope — it explicitly includes websites provided by third-party vendors on behalf of state agencies. Plan your vendor contracts accordingly.
+<nys-alert type="warning" heading="January 2027 — NYS Technology Law (STL §103-d)">
+  All New York State entity websites must meet <strong>WCAG 2.2 Level AA</strong>. This is a higher standard than the federal rule and applies to all state agencies, including third-party vendor-managed sites.
+</nys-alert>
+
+</section>
+
+<section id="its-policy">
 
 ## Current ITS Policy
 
@@ -60,6 +45,10 @@ ITS Policy NYS-P08-005 establishes minimum accessibility requirements for all In
 
 [Read the full ITS Accessibility Policy](https://its.ny.gov/document/accessibility-web-based-information-and-applications-compliance-reporting)
 
+</section>
+
+<section id="wcag-compliance">
+
 ## What WCAG Compliance Means
 
 WCAG (Web Content Accessibility Guidelines) is the internationally recognized standard for web accessibility. It is maintained by the World Wide Web Consortium (W3C).
@@ -70,6 +59,10 @@ WCAG (Web Content Accessibility Guidelines) is the internationally recognized st
 
 WCAG 2.2 builds on WCAG 2.1 — meeting 2.2 AA also satisfies the DOJ's 2.1 AA requirement. Targeting WCAG 2.2 now means you meet both deadlines with a single effort.
 
+</section>
+
+<section id="recommendations">
+
 ## Recommendations for Your Agency
 
 1. **Inventory your digital properties.** List every website, web application, mobile application, and third-party service under your agency's control. Include vendor-managed sites.
@@ -79,6 +72,10 @@ WCAG 2.2 builds on WCAG 2.1 — meeting 2.2 AA also satisfies the DOJ's 2.1 AA r
 5. **Build accessibility into procurement.** Require WCAG 2.2 AA conformance in every technology RFP and vendor contract (see RFP language below).
 6. **Adopt the NYS Design System.** NYSDS components are tested for accessibility compliance. Using the design system reduces the accessibility burden on individual teams. See [Getting Started](/get-started/developers/) for installation.
 7. **Establish ongoing testing.** Accessibility is not a one-time fix. Build testing into your QA process and conduct biennial reviews as the policy requires.
+
+</section>
+
+<section id="procurement">
 
 ## RFP and Procurement Language
 
@@ -93,6 +90,10 @@ Key points to include in RFPs:
 - Include accessibility in acceptance criteria — deliverables that fail accessibility testing are not complete.
 - Require remediation of accessibility defects at no additional cost during the warranty period.
 - Specify that accessibility testing will include both automated tools and manual testing with assistive technologies.
+
+</section>
+
+<section id="standards">
 
 ## Measurable Standards
 
@@ -115,10 +116,16 @@ Accessible Rich Internet Applications (ARIA) defines attributes that make dynami
 - [WAI-ARIA 1.1 Specification](https://www.w3.org/TR/wai-aria-1.1/#usage)
 - [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)
 
+</section>
+
+<section id="further-reading">
+
 ## Further Reading
 
 - [How People with Disabilities Use the Web (W3C)](https://www.w3.org/WAI/people-use-web/) — Foundational context for understanding who accessibility serves.
 - See our [Learning Resources](/foundations/accessibility/learn/) for training courses and checklists.
+
+</section>
 
 {% endblock %}
 
