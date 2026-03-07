@@ -23,12 +23,41 @@ The team also uses Figma variables to power agency theming. When you switch an a
 
 Designing and prototyping with the NYS Design System is powered by prebuilt Figma libraries that mirror the coded components. This connectedness makes it easier for designers and developers to collaborate and ensures that what is designed matches what is built.
 
-<nys-alert type="warning" heading="Using the NYS Employee library requires an NYS Figma account."></nys-alert>
+<a class="card card--horizontal" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System">
+    <div class="card__inner">
+        <div class="card__media card__media--thin">
+            <img src="/assets/img/design-token-card.svg" />
+        </div>
+        <div class="card__content">
+            <div class="card__title">
+                NYS Design System for NYS Employees
+            </div>
+            <div class="card__desc">
+                The core Figma file containing all UI components with built-in properties, variants, and prototyping features.
+                <p></p>
+                <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+            </div>
+        </div>
+    </div>
+</a>
 
-Access the NYS Design System’s Figma assets:
-
-- **NYS Design System for NYS Employees** — The core file containing all UI components with built-in properties, variants, and prototyping features. Requires an NYS Figma account: [NYS Design System Component Library](https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System)
-- **NYS Design System for the Community** — The community library for use in interfaces. Does NOT require an NYS Figma account: [NYS Design System Community Library](https://www.figma.com/community/file/1574803287825265318)
+<a class="card card--horizontal" href="https://www.figma.com/community/file/1574803287825265318">
+    <div class="card__inner">
+        <div class="card__media card__media--thin">
+            <img src="/assets/img/brand-card.svg" />
+        </div>
+        <div class="card__content">
+            <div class="card__title">
+                NYS Design System for the Community
+            </div>
+            <div class="card__desc">
+                The community Figma library for use in interfaces. No NYS account required.
+                <p></p>
+                <nys-badge label="Open to all" prefixIcon="public"></nys-badge>
+            </div>
+        </div>
+    </div>
+</a>
 
 ### How the Libraries Help
 
@@ -66,7 +95,25 @@ Open the local styles panel or use the selection colors section to see what desi
 
 ### 5. Look at example layouts
 
-Open the [Design System project template](https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7) to see how components come together in realistic page layouts. These examples show common patterns like form pages, content pages, and navigation structures. Use them as starting points for your own work.
+Open the project template to see how components come together in realistic page layouts. These examples show common patterns like form pages, content pages, and navigation structures. Use them as starting points for your own work.
+
+<a class="card card--horizontal" href="https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7">
+    <div class="card__inner">
+        <div class="card__media card__media--thin">
+            <img src="/assets/img/4-up-card.svg" />
+        </div>
+        <div class="card__content">
+            <div class="card__title">
+                NYS Design System Project Template
+            </div>
+            <div class="card__desc">
+                Start with the correct agency theming and design variables already applied. Includes example layouts for common page types.
+                <p></p>
+                <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+            </div>
+        </div>
+    </div>
+</a>
 
 After this quick tour, you will have a solid sense of what the library offers. From here, you can start applying components to your actual project work.
 

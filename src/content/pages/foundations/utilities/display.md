@@ -1,115 +1,155 @@
 ---
 permalink: /foundations/utilities/display/
 title: Display
-description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: Utility classes for controlling element display behavior in the NYS Design System.
 section: Foundations
 parent: Utilities
 layout: layouts/3-col.njk
 ---
+
+{% block content %}
+
+<section id="overview">
+
+# Display
+
+Display utilities control how elements render in the document flow. Use them to show, hide, or change the display type of any element.
+
+</section>
+
+<section id="display-classes">
+
+## Display classes
+
+{% set preview %}
+<div class="docs-utility-demo">
+  <div class="nys-display-block docs-demo-box">
+    <code>.nys-display-block</code>
+  </div>
+  <div class="nys-display-inline docs-demo-box">
+    <code>.nys-display-inline</code>
+  </div>
+  <div class="nys-display-inline docs-demo-box">
+    <code>.nys-display-inline</code>
+  </div>
+  <div class="nys-display-inline-block docs-demo-box">
+    <code>.nys-display-inline-block</code>
+  </div>
+  <div class="nys-display-inline-block docs-demo-box">
+    <code>.nys-display-inline-block</code>
+  </div>
+  <div class="nys-display-flex docs-demo-box">
+    <code>.nys-display-flex</code>
+  </div>
+  <div class="nys-display-inline-flex docs-demo-box">
+    <code>.nys-display-inline-flex</code>
+  </div>
+  <div class="nys-display-inline-flex docs-demo-box">
+    <code>.nys-display-inline-flex</code>
+  </div>
+</div>
+{% endset %}
+{% set code %}
+<div class="nys-display-block">Block element</div>
+<div class="nys-display-inline">Inline element</div>
+<div class="nys-display-inline-block">Inline-block element</div>
+<div class="nys-display-flex">Flex container</div>
+<div class="nys-display-inline-flex">Inline flex container</div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
+### All display classes
+
+| Class | CSS value |
+|-------|-----------|
+| `.nys-display-block` | `display: block` |
+| `.nys-display-flex` | `display: flex` |
+| `.nys-display-inline` | `display: inline` |
+| `.nys-display-inline-block` | `display: inline-block` |
+| `.nys-display-inline-flex` | `display: inline-flex` |
+| `.nys-display-none` | `display: none` |
+| `.nys-display-table` | `display: table` |
+| `.nys-display-table-cell` | `display: table-cell` |
+| `.nys-display-table-row` | `display: table-row` |
+
+</section>
+
+<section id="hiding-elements">
+
+## Hiding elements
+
+Use `.nys-display-none` to hide an element entirely. Combine with responsive prefixes to hide elements at specific breakpoints — for example, hiding a sidebar on mobile.
+
+{% set preview %}
+<div class="nys-display-flex" style="gap: var(--nys-space-200);">
+  <div class="docs-demo-box"><code>Visible</code></div>
+  <div class="nys-display-none docs-demo-box"><code>Hidden</code></div>
+  <div class="docs-demo-box"><code>Visible</code></div>
+</div>
+{% endset %}
+{% set code %}
+<!-- Hide on all screen sizes -->
+<div class="nys-display-none">This content is hidden</div>
+
+<!-- Hide only on desktop and wider -->
+<div class="nys-desktop:nys-display-none">Hidden on desktop</div>
+
+<!-- Show as flex only on tablet and wider -->
+<div class="nys-display-none nys-tablet:nys-display-flex">
+  Visible on tablet+
+</div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
+</section>
+
+<section id="table-display">
+
+## Table display
+
+Use table display utilities to create table-like layouts without using `<table>` elements.
+
+{% set preview %}
+<div class="nys-display-table" style="width: 100%;">
+  <div class="nys-display-table-row">
+    <div class="nys-display-table-cell docs-demo-box"><code>.nys-display-table-cell</code></div>
+    <div class="nys-display-table-cell docs-demo-box"><code>.nys-display-table-cell</code></div>
+    <div class="nys-display-table-cell docs-demo-box"><code>.nys-display-table-cell</code></div>
+  </div>
+</div>
+{% endset %}
+{% set code %}
+<div class="nys-display-table">
+  <div class="nys-display-table-row">
+    <div class="nys-display-table-cell">Cell 1</div>
+    <div class="nys-display-table-cell">Cell 2</div>
+    <div class="nys-display-table-cell">Cell 3</div>
+  </div>
+</div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
+</section>
+
+<section id="responsive">
+
+## Responsive variants
+
+All display utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+
+```html
+<div class="nys-display-none nys-tablet:nys-display-block">
+  Visible on tablet and wider
+</div>
+```
+
+</section>
+
+{% endblock %}
+
 {% block styles %}
-<link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
+<link rel="stylesheet" href="{{ site.url | url }}/assets/css/utilities.css">
 {% endblock %}
 
 {% block scripts %}
 {% endblock %}
-
-# Display
-<section class="utility-examples" id="display">
-
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-block</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">block</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-block"> </div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-flex</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">flex</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-flex"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-inline</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">inline</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-inline"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-inline-block</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">inline-block</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-inline-block"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-inline-flex</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">inline-flex</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-inline-flex"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-none</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">none</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-none"></div>
-      </div>
-    </div>
-  </div>
-  <div class="utility-example-container">
-    <div class="nys-grid-row flex-justify">
-      <div class="nys-grid-col utility-example-class nys-grid-col-12 nys-tablet:nys-grid-col">
-        <span class="utility-class">.nys-display-table-cell</span>
-      </div>
-      <div class="nys-grid-col utility-example-value">
-        <span class="utility-value">table-cell</span>
-      </div>
-      <div class="nys-grid-col utility-example">
-        <div class="nys-display-table">
-          <div class="nys-display-table-row">
-            <div class="nys-display-table-cell border-1px border-white bg-secondary-light padding-x-5 padding-y-3"></div>
-            <div class="nys-display-table-cell border-1px border-white bg-secondary-light padding-x-5 padding-y-3"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>

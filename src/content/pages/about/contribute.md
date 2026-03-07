@@ -61,11 +61,6 @@ If you find something that's not working, our design system team uses GitHub iss
         </div>
     </div>
 </a>
-<style>
-.card__desc nys-badge {
-    margin-top: 20em;
-}
-</style>
 
 ## Join the design system troubleshooting channel
 You can join us on Microsoft Teams. If you work for New York State, you can join our design system teams channel and drop your questions or feedback in the threads. We have dedicated spaces for general questions, release notes, and troubleshooting. It's an easy way to learn from each other and help shape the future of the design system.

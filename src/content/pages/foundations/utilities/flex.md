@@ -1,14 +1,25 @@
 ---
 permalink: /foundations/utilities/flex/
 title: Flexbox
-description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: Utility classes for building flexible one-dimensional layouts with alignment, wrapping, and ordering in the NYS Design System.
 section: Foundations
 parent: Utilities
 layout: layouts/3-col.njk
 ---
 
+{% block content %}
+
+<section id="overview">
+
 # Flexbox
+
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
+
+All flexbox utilities support [responsive prefixes](/foundations/utilities/responsive/).
+
+</section>
+
+<section id="display-flex">
 
 ## Display Flex
 {% set preview %}
@@ -67,6 +78,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 {% endset %}
 {% include "partials/code-preview.njk" %}
+
+
+</section>
+
+<section id="flex-grid-rows">
 
 ## Flex Grid Rows
 {% set preview %}
@@ -400,6 +416,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-direction">
+
 ## Flex-direction
 {% set preview %}
 <div class="border padding-1 radius-md margin-bottom-2">
@@ -459,6 +480,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 {% endset %}
 {% include "partials/code-preview.njk" %}
+
+
+</section>
+
+<section id="flex-wrap">
 
 ## Flex-wrap
 {% set preview %}
@@ -525,6 +551,10 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col-4"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+</section>
+
+<section id="flex-align">
 
 ## Flex-align
 {% set preview %}
@@ -740,6 +770,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-align-self">
+
 ## Flex-align-self
 {% set preview %}
 <div class="border padding-1 radius-md margin-bottom-2">
@@ -794,6 +829,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-flex-align-self-stretch"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+
+</section>
+
+<section id="flex-justify">
 
 ## Flex-justify
 {% set preview %}
@@ -929,7 +969,24 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="order">
+
 ## Order
+
+Order utilities change the visual order of flex items without changing the DOM order. Use `.nys-order-first` to move an item to the beginning, `.nys-order-last` to the end, or `.nys-order-0` through `.nys-order-11` for specific positions.
+
+| Class | CSS value |
+|-------|-----------|
+| `.nys-order-first` | `order: -1` |
+| `.nys-order-last` | `order: 999` |
+| `.nys-order-initial` | `order: 0` |
+| `.nys-order-0` – `.nys-order-11` | `order: 0` – `order: 11` |
+
+All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-first`).
+
 {% set preview %}
 <div class="nys-grid-row nys-grid-gap-sm">
     <div class="nys-grid-col-auto nys-order-11">
@@ -1042,6 +1099,10 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-first"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+</section>
+
+{% endblock %}
 
 {% block styles %}
 <link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
