@@ -10,183 +10,16 @@ layout: layouts/3-col.njk
 
 <section id="overview">
 
-# Typography
+# Typography Utility Classes
 
-Typography is a core pillar of the New York State Design System, providing a consistent foundation for readability, accessibility, and brand alignment across all New York State digital applications.
+This page is a quick reference for the `.nys-font-*` utility classes available in the NYS Design System. Each class bundles font family, size, line height, and letter spacing for common text roles.
 
-## Overview 
-
-Typography in the NYS Design System is powered by the core fonts that define the New York State brand. These include:
-
-*   **Proxima Nova**: The primary typeface for body text and UI elements.
-*   **D Sari**: The brand font used for agency, program, and initiative titles.
-*   **Oswald**: A supporting typeface for content-heavy websites (optional).
-
-Due to licensing restrictions, the fonts themselves are not distributed as part of the open-source NYS Design System. They are available exclusively to New York State teams via [NYS Design System Fonts](https://github.com/ITS-HCD/nysds-fonts) _(internal)_. However, the NYS Design System provides a set of typography tokens and utilities that work well with Proxima Nova but will fall back to system fonts if the primary fonts are not available.
+For font concepts, tokens, installation, and best practices, see [Typography Foundations](/foundations/typography/).
 
 </section>
-<section id="typography-tokens">
+<section id="utility-classes">
 
-## Typography Tokens
-
-<p>The NYS Design System defines typography tokens (also known as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" rel="nofollow">CSS variables</a>) — for each font property. These tokens are organized into <strong>primitive</strong> and <strong>semantic</strong> categories.</p>
-
-### Primitive
-
-Primitive tokens are the raw typographical building blocks: family, size, weight, line height, and letter spacing. These tokens represent a range of sensible default values that can be used to build out interfaces. This includes tokens like `--nys-font-family-sans`, `--nys-font-size-md`, and `--nys-font-lineheight-lg`.
-
-⛔️ These values **are not** meant to be used directly in your stylesheets. They are used to define the **semantic** tokens.
-### Semantic
-
-Semantic tokens map specific properties to specific roles, like headings, body text, and UI elements.
-
-✅ They **are** meant to be used directly in stylesheets. They help standardize font usage across components and applications.
-
-Here are a few examples of the NYS Design System's semantic typography tokens:
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Token Name</th>
-      <th>Description</th>
-      <th>Example Value</th>
-    </tr>
-    <tr>
-      <td><code>--nys-font-family-body</code></td>
-      <td>Font family for body text.</td>
-      <td><code>var(--nys-font-family-sans)</code></td>
-    </tr>
-    <tr>
-      <td><code>--nys-font-size-h1</code></td>
-      <td>Font size for Heading 1 elements.</td>
-      <td><code>var(--nys-font-size-5xl)</code></td>
-    </tr>
-    <tr>
-      <td><code>--nys-font-size-ui-md</code></td>
-      <td>Medium font size for UI elements.</td>
-      <td><code>var(--nys-font-size-md)</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-</section>
-<section id="installing-fonts">
-
-## Installing Fonts
-
-⚠️ Note: Fonts in the design system include some proprietary typefaces that are licensed for use exclusively by New York State government agencies and their digital products. These fonts are distributed separately from the design system and are not part of the open-source package to comply with licensing restrictions.
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Token Name</th>
-      <th>Description</th>
-      <th>Example Value</th>
-    </tr>
-    <tr>
-      <td><code>--nys-font-family-body</code></td>
-      <td>Font family for body text.</td>
-      <td><code>var(--nys-font-family-sans)</code></td>
-    </tr>
-    <tr>
-      <td><code>--nys-font-size-h1</code></td>
-      <td>Font size for Heading 1 elements.</td>
-      <td><code>var(--nys-font-size-5xl)</code></td>
-    </tr>
-    <tr>
-      <td><code>--nys-font-size-ui-md</code></td>
-      <td>Medium font size for UI elements.</td>
-      <td><code>var(--nys-font-size-md)</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-### Download and Install
-
-To access these fonts:
-
-1.  Download the appropriate font bundle from [NYS Design System Fonts](https://github.com/ITS-HCD/nysds-fonts). (🔒 _Internal NYS Only_)
-2.  Extract the fonts into your project.
-3.  Reference the provided `nysds-fonts.css` in the HTML head of your project:
-
-{% set code %}<link rel="stylesheet" href="/assets/fonts/nysds-fonts.css">{% endset %}
-{% set accordionLabel = "Code" %}
-{% set codeExpanded = true %}
-{% include "partials/code-preview.njk" %}
-
-NYS Design System web components use the typography tokens, so as soon as the fonts are installed, the components will appear correctly. More details about using tokens below.
-
-### Preload Critical Fonts (optional)
-
-For better performance, preload critical fonts. This helps reduce the chance of a fallback font loading and then the web font loading later, causing layout reflow and a Flash of Unstyled Text (FOUT):
-
-{% set code %}<head>
-  <link rel="preload" href="/assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-</head>{% endset %}
-{% set accordionLabel = "Code" %}
-{% set codeExpanded = true %}
-{% include "partials/code-preview.njk" %}
-
-Find more details about preloading fonts and web font best practices in Google's [Using Web Fonts guide](https://fonts.google.com/knowledge/using_type/using_web_fonts).
-
-</section>
-<section id="using-typography-in-a-project">
-
-## Using Typography in a Project
-
-NYS Design System's native web components use the typography tokens.
-
-If you're not using NYS Design System components or if you're styling custom elements or parts of the site not covered by the components, use the typography tokens or utility classes directly in CSS and HTML.
-
-### Tokens
-
-Apply them using `var()` in CSS or by using utility classes. Here are some examples:
-
-{% set code %}body {
-  font-family: var(--nys-font-family-body);
-  font-size: var(--nys-font-size-body-md);
-  line-height: var(--nys-font-lineheight-body-md);
-}{% endset %}
-{% set accordionLabel = "Code" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "css" %}
-{% include "partials/code-preview.njk" %}
-
-Unfortunately, each property must be set individually, as CSS does not support setting multiple properties at once with `var()`.
-
-This approach isn't too cumbersome when creating a library of components where you can define it once, but it can lead to a lot of repetition for everyday use. To help with this, the NYS Design System provides utility classes.
-
-### Utility Classes
-
-The NYS Design System also provides utility classes that combine several font tokens into common styles. These can be applied directly in your HTML or included in your project’s CSS.
-
-For example, the NYS Design System defines several utility classes that apply the font size, line height, and family for specific semantic text roles like heading, body, UI, and display:
-
-{% set code %}.nys-font-h1 {
-  font: var(--nys-font-size-h1) / var(--nys-font-lineheight-h1) var(--nys-font-family-heading);
-  letter-spacing: var(--nys-font-letterspacing-h1);
-}
-.nys-font-body {
-  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
-}{% endset %}
-{% set accordionLabel = "Code" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "css" %}
-{% include "partials/code-preview.njk" %}
-
-You can reference these classes in your HTML:
-
-{% set code %}<h1 class="nys-font-h1">Welcome to NYS Design System</h1>
-<div class="nys-font-body">
-  <p>This is a sample paragraph styled using NYS Design System typography utilities.</p>
-  <p>The parent element has the .nys-font-body class applied.</p>
-</div>{% endset %}
-{% set accordionLabel = "Code" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "html" %}
-{% include "partials/code-preview.njk" %}
-
-### Full List of Utility Classes
+## Utility Classes
 
 | Class Name             | Description                | Example                                                                                                                                                                   |
 |------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -210,28 +43,6 @@ You can reference these classes in your HTML:
 | `.nys-font-display-xl` | Extra large display text   | <div class="nys-font-display-xl">New York State: It’s All Here</div>                                                                                                      |
 | `.nys-font-agency`     | Agency-specific font style | <div class="nys-font-agency">New York State Department of Transportation</div>                                                                                            |
 
-</section>
-<section id="best-practices">
-
-## Best Practices
-1.  **Use Semantic Tokens for Consistency**  
-    Always use semantic typography tokens for fonts, sizes, and line heights. Avoid primitive tokens or hardcoding font properties.
-    
-2.  **Use Utilities When Necessary**  
-    Use the predefined `.nys-font-*` classes for rapid development and consistent styling for parts of your applications or site not powered by NYS Design System components.
-    
-3.  **Preload Critical Fonts**  
-    Preload the most-used font weights and styles to improve perceived performance — in most cases, this is Proxima Nova Regular.
-    
-4.  **Extend Existing Components**  
-    NYS Design System web components automatically reference typography tokens. Use custom styles to extend or override these tokens for specific needs before creating new components.
-</section>
-<section id="resources">
-
-## Resources
-*   [NYS Design System Fonts Repository (Internal)](https://github.com/ITS-HCD/nysds-fonts)
-*   [NYS Design System Design Tokens](/foundations/tokens/)
-*   [Using Web Fonts](https://fonts.google.com/knowledge/using_type/using_web_fonts)
 </section>
 {% endblock %}
 

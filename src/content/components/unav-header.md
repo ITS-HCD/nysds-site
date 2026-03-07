@@ -96,18 +96,22 @@ The default search URL for the `<nys-unavheader>` is `https://search.its.ny.gov/
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>searchUrl</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>hideSearch</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
-    <tr><
+    <tr>
       <td><code>hideTranslate</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
   </table>
 </nys-table>
@@ -120,6 +124,10 @@ The `nys-unavheader` does not have any css variables because this component must
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

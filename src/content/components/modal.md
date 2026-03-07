@@ -113,6 +113,12 @@ The `<nys-modal>` component includes the following accessibility-focused feature
 
 {% block options %}
 
+### Slots
+The `<nys-modal>` component provides two slots:
+
+- **Default slot** -- Body content such as text, forms, or other elements displayed inside the modal.
+- **`actions`** -- Action buttons displayed in the modal footer. Buttons auto-resize on mobile. By convention, place the secondary/cancel button first, followed by the primary/confirm button.
+
 ### Scrolling Behavior
 Avoid content-heavy modals. If the content is too long, consider using a dedicated page or a Stepper.
 
@@ -243,26 +249,37 @@ A forced action modal requires users to make a choice before continuing. Set the
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>heading</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>subheading</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>open</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>mandatory</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
+      <td><code>"md"</code></td>
     </tr>
   </table>
 </nys-table>

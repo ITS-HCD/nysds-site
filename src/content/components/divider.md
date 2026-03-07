@@ -37,7 +37,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 ### When to consider something else
 
-  - When content is formatted side bys side.
+  - When content is formatted side by side.
   - When content is already organized in groups.
 
 {% endblock %}
@@ -52,7 +52,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 {% block usagedont %}
 
   - Overuse dividers and clutter the interface, reducing scannability.
-  - Use the divider to separate content appearing side bys side. 
+  - Use the divider to separate content appearing side by side. 
   - Use the `inverted` option on light backgrounds.
 
 {% endblock %}
@@ -89,10 +89,12 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>inverted</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
   </table>
 </nys-table>

@@ -1,5 +1,5 @@
 ---
-permalink: /updates/october-website-improvements/
+permalink: /about/updates/october-website-improvements/
 title: October Website Improvements
 author: Eric Steinborn
 description: |

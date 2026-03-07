@@ -1,7 +1,7 @@
 ---
 permalink: /foundations/tokens/
 title: "Design Tokens"
-description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
+description: "How the NYS Design System uses layered design tokens — primitive, semantic, and theme — to deliver consistent, themeable styles across every component and application."
 navOrder: 40
 heading_links: false
 ---
@@ -9,6 +9,110 @@ heading_links: false
 {% block content %}
 
 <h1>Design Tokens</h1>
+
+<p>Design tokens are the fundamental design decisions of the NYS Design System — colors, spacing, typography, radii, shadows — stored as named values. Instead of hardcoding <code>#154973</code> for a button background, a component references <code>--nys-color-theme</code>. When the agency theme changes or the design system updates its palette, every component that uses that token updates automatically.</p>
+
+<p>Tokens are the mechanism that connects design decisions to working code. They are what make it possible to restyle an entire application by switching a single <code>data-theme</code> attribute.</p>
+
+<h2 id="token-architecture">Token Architecture</h2>
+
+<p>NYSDS tokens are organized in three layers. Each layer serves a different purpose, and understanding them will help you choose the right token for your CSS.</p>
+
+<h3>Primitive tokens</h3>
+
+<p>Raw values with no opinion about how they should be used. These are the building blocks — full color palettes, a type scale, spacing increments.</p>
+
+<pre><code>--nys-color-neutral-900: #1b1b1b;
+--nys-color-state-blue-700: #154973;
+--nys-font-size-md: 1rem;
+--nys-space-200: 1rem;</code></pre>
+
+<p><strong>Do not use primitive tokens directly in your stylesheets.</strong> Primitive tokens are the raw material that semantic and theme tokens are built from. If you reference <code>--nys-color-state-blue-700</code> in your CSS, that value will not change when an agency theme is applied. Use semantic or theme tokens instead.</p>
+
+<h3>Semantic (applied) tokens</h3>
+
+<p>Purpose-driven tokens that describe <em>what</em> a value is used for, not <em>what</em> the value is. These are the tokens you should use in your CSS.</p>
+
+<pre><code>--nys-color-text: #1b1b1b;          /* Primary text color */
+--nys-color-link: #004dd1;          /* Default link color */
+--nys-color-success: #1e752e;       /* Success state indicator */
+--nys-color-surface: #ffffff;       /* Default page background */
+--nys-color-focus: #004dd1;         /* Focus ring color */</code></pre>
+
+<p>Semantic tokens point to primitive tokens under the hood. <code>--nys-color-text</code> resolves to <code>--nys-color-neutral-900</code> which resolves to <code>#1b1b1b</code>. But because your code references the semantic name, the system can change the underlying value without breaking your styles.</p>
+
+<p>NYSDS semantic tokens cover colors for text, links, surfaces, status states (success, info, warning, danger, emergency), ink, focus, and base UI elements. Each category includes intensity variants — <code>default</code>, <code>weak</code>, <code>strong</code> — so you can express visual hierarchy without picking arbitrary colors.</p>
+
+<h3>Theme tokens</h3>
+
+<p>A special set of semantic tokens that change based on the active <a href="/foundations/themes/">agency theme</a>. When you apply <code>data-theme="environment"</code> to your page, every <code>--nys-color-theme-*</code> token remaps to the Environment color palette.</p>
+
+<pre><code>/* Default theme (NY.gov) */
+--nys-color-theme: #154973;         /* State Blue 700 */
+
+/* With data-theme="environment" */
+--nys-color-theme: #233f2b;         /* Environment Green 700 */</code></pre>
+
+<p>Theme tokens use a seven-step intensity scale — <code>faint</code>, <code>weaker</code>, <code>weak</code>, <code>mid</code>, <code>default</code> (no suffix), <code>strong</code>, <code>stronger</code> — giving every component the range it needs for hover states, backgrounds, text, and borders. See <a href="/foundations/themes/">Agency Themes</a> for the full list of available themes and how to apply them.</p>
+
+<h2 id="which-tokens-to-use">Which Tokens to Use</h2>
+
+<p>Use <strong>semantic tokens</strong> for anything that has a defined purpose in the system:</p>
+
+<pre><code>/* Correct — adapts to themes and future system updates */
+.card-header {
+  color: var(--nys-color-text);
+  background-color: var(--nys-color-theme-faint);
+  border-bottom: var(--nys-border-width-sm) solid var(--nys-color-base);
+  padding: var(--nys-space-200) var(--nys-space-300);
+}
+
+/* Wrong — bypasses the token system, ignores themes */
+.card-header {
+  color: #1b1b1b;
+  background-color: #f7fafd;
+  border-bottom: 1px solid #62666a;
+  padding: 1rem 1.5rem;
+}</code></pre>
+
+<p>Use <strong>theme tokens</strong> (<code>--nys-color-theme-*</code>) when a color should change with the agency theme — branded headings, accent backgrounds, active states. Use non-theme semantic tokens (<code>--nys-color-text</code>, <code>--nys-color-success</code>, <code>--nys-color-link</code>) for colors that should stay consistent regardless of theme — body text, status indicators, focus rings.</p>
+
+<p>Use <strong>spacing, size, and radius tokens</strong> to keep your layouts aligned with the system's scale:</p>
+
+<pre><code>.benefits-form-section {
+  margin-bottom: var(--nys-space-600);
+  border-radius: var(--nys-radius-md);
+  padding: var(--nys-space-400);
+}</code></pre>
+
+<h2 id="reverse-and-dark-surfaces">Reverse and Dark Surfaces</h2>
+
+<p>NYSDS provides reverse-variant tokens for content on dark backgrounds — footers, dark hero sections, inverted cards. These are semantic tokens, not a separate "dark mode":</p>
+
+<pre><code>.agency-footer {
+  background-color: var(--nys-color-surface-reverse);  /* Dark background */
+  color: var(--nys-color-text-reverse);                 /* White text */
+}
+
+.agency-footer a {
+  color: var(--nys-color-link-reverse);                 /* Light link color */
+}</code></pre>
+
+<p>Reverse tokens are designed for sections within a light-mode page that need dark backgrounds. They are not a system-wide dark mode toggle. The token names make the intent clear: <code>-reverse</code> means "use this on a dark surface."</p>
+
+<h2 id="tokens-in-components">How Components Use Tokens</h2>
+
+<p>Every NYSDS component references semantic and theme tokens internally. A button uses <code>--nys-color-theme</code> for its background. An alert uses <code>--nys-color-danger</code> for error states. A text input uses <code>--nys-color-text</code> for its value.</p>
+
+<p>Components also expose <strong>CSS custom properties</strong> that let you override specific values without breaking the token chain. These component-level custom properties are documented on each <a href="/components/">component page</a>.</p>
+
+<p>For details on how to install the stylesheets that deliver these tokens to your application, see <a href="/get-started/developers/">Get Started as a Developer</a>. For a deeper look at the CSS framework that bundles tokens with resets, typography, and utilities, see <a href="/foundations/styles/">Styles Framework</a>.</p>
+
+<hr>
+
+<h2 id="token-reference">Token Reference</h2>
+
+<p>Browse every token in the system below. Use the theme selector to see how theme tokens change across agency palettes. Click the copy button next to any token to copy it as a <code>var()</code> expression ready to paste into your CSS.</p>
 
 <nys-select id="theme-selector" label="Choose an agency theme" width="md">
   <nys-option value="default" selected>Default (NYS)</nys-option>
@@ -33,9 +137,9 @@ heading_links: false
                 {% if token.recommendedtype %}
                   <div class="token-list__text">
                   {% for textColor, details in token.recommendedtype %}
-                    <span 
-                      class="token-list__text--value" 
-                      style="color: var({{ details.variableName }});" 
+                    <span
+                      class="token-list__text--value"
+                      style="color: var({{ details.variableName }});"
                       data-color="var({{ details.variableName }})"
                     >
                       {{ details.contrastRatio }}
@@ -63,7 +167,7 @@ heading_links: false
         <div class="token-list__details nys-tablet:nys-grid-col-5">
           <h3 class="token-list__name">{{ token.displayname }}</h3>
           <p class="token-list__desc">{{ token.description }}</p>
-        </div>      
+        </div>
         <div class="token-list__info nys-tablet:nys-grid-col-4">
             <div class="nys-grid-row nys-display-flex nys-flex-align-center">
               <div class="nys-grid-col-10">
@@ -112,7 +216,7 @@ document.querySelectorAll("[id^='copy-']").forEach(button => {
       // Temporarily change tooltip text to "Copied!"
       tooltip.innerText = "Copied!";
       tooltip.classList.add("copied");
-      
+
       // Restore icon-only button after 1.5 seconds
       setTimeout(() => {
         this.setAttribute("prefixIcon", "content_copy"); // Restores icon
@@ -176,12 +280,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
     // DRAGONS: Remove this delay and it will read the default theme value only.
-    setTimeout(() => {    
+    setTimeout(() => {
       // Loop through the themeColors array to update the theme color text to change when you switch to a new agency theme group.
       for (let colorVar of themeColors) {
         let rawcolorval = document.querySelectorAll(`code.${colorVar}`);
         let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
-        
+
         rawcolorval.forEach(el => {
           el.innerText = computedColor;
         });

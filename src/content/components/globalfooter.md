@@ -14,7 +14,7 @@ navOrder: 11
 
 {% block longdescription %}
 
-The `<nys-globalfooter>` helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+The `<nys-globalfooter>` component renders an agency-branded footer section that sits above the `<nys-unavfooter>`. It displays your agency name and supports slotted content for navigation links, contact information, and other site-wide resources. The layout automatically adjusts between a single-section and multi-column format based on the content structure you provide.
 
 {% endblock %}
 
@@ -30,30 +30,40 @@ The `<nys-globalfooter>` helps provide users with essential information, seconda
 {% block usage %}
 
 ### When to use this component
- - Use nys-globalfooter to provide consistent access to essential links like contact details, privacy policies, and terms of use across all pages.
- - Ideal for displaying organizational information and secondary navigation
- ### When to consider something else
- - Don’t use the global footer for primary navigation or highly interactive features.
- - Avoid adding content that is not relevant or essential for all pages.
+ - Use on every agency site and application. The Global Footer is a required page element that provides consistent agency branding and secondary navigation.
+ - Use to surface essential links such as contact information, privacy policies, accessibility statements, and related program pages.
+ - Use with slotted `<ul>` content for single-list links, or nested `<ul>` with `<span>` headings for multi-column layouts.
+
+### When to consider something else
+ - Don’t use the Global Footer for primary navigation. Primary navigation belongs in `<nys-globalheader>`.
+ - Don’t use the Global Footer for page-specific content or calls to action. Footer content should be relevant site-wide.
+ - If you need statewide universal links (Agencies, Services, Counties), those belong in `<nys-unavfooter>`, which renders below this component.
 {% endblock %}
 
 {% block usagedo %}
 
- - Include essential links and information users need site-wide.
- - Minimize the number of links.
+ - Set `agencyName` to your agency's full official name (e.g., "Office of Information Technology Services").
+ - Set `homepageLink` to make the agency name a clickable link back to your site's homepage.
+ - Keep footer link lists concise. Group related links under `<span>` headings when you have more than 5-6 links.
+ - Place `<nys-globalfooter>` above `<nys-unavfooter>` and below your page content and `<nys-backtotop>`.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use it for critical alerts or primary navigation.
+  - Don't use the Global Footer for primary navigation or interactive features. Use `<nys-globalheader>` for primary navigation.
+  - Don't include page-specific content that only applies to certain sections of your site.
+  - Don't embed `<script>`, `<iframe>`, `<object>`, or `<img>` elements in slotted content. These are sanitized and removed by the component for security.
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-globalfooter>` component includes the following accessibility-focused features:
 
- - Proper use of &lt;footer&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
- - Keyboard navigation: Users can tab through all links in the footer.
+ - Renders a `<footer>` landmark element, which screen readers identify as a `contentinfo` region. This allows users to navigate directly to the footer using landmark shortcuts.
+ - The agency name is rendered as an `<h2>` heading, providing a clear content hierarchy within the footer region.
+ - All links use standard `<a>` elements, ensuring they are keyboard-focusable and announced correctly by assistive technologies.
+ - Keyboard navigation: users can `Tab` through all links in the footer in a logical reading order.
+ - When `homepageLink` is set, the agency name becomes a link, providing an additional path back to the agency homepage.
 {% endblock %}
 
 {% block options %}
@@ -121,14 +131,22 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>agencyName</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>homepageLink</code></td>
       <td>String (URL)</td>
+      <td><code>""</code></td>
     </tr>
   </table>
 </nys-table>
@@ -137,6 +155,10 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

@@ -215,85 +215,103 @@ When the description requires more complexity than a simple string, use the desc
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
       <th>Component</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>value</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-checkbox&gt;</code></td>
     </tr>
     <tr>
       <td><code>checked</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-checkbox&gt;</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>errorMessage</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>optional</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-checkboxgroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>showError</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"sm"</code> | <code>"md"</code></td>
+      <td><code>"md"</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>tile</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>other</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-checkbox&gt;</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String | <code>null</code></td>
+      <td><code>null</code></td>
       <td>both</td>
     </tr>
   </table>
 </nys-table>
+
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 

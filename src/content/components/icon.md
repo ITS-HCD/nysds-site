@@ -249,30 +249,37 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>ariaLabel</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>color</code></td>
       <td>String (CSS HEX, CSS color name, or CSS variable)</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>flip</code></td>
       <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>rotate</code></td>
       <td>integer</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"xs"</code>, <code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"xl"</code>, <code>"2xl"</code>, <code>"3xl"</code>, <code>"4xl"</code>, <code>"5xl"</code>, <code>"12"</code>, <code>"14"</code>, <code>"16"</code>, <code>"18"</code>, <code>"20"</code>, <code>"24"</code>, <code>"32"</code>, <code>"40"</code>, <code>"50"</code></td>
+      <td><code>"md"</code></td>
     </tr>
   </table>
 </nys-table>
@@ -288,25 +295,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   {% include "partials/css-vars.njk" %}
 
 {% endblock %}
-[[TODO]]
-The `<nys->` component emits **three** custom Javascript events:
-1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
-2.  **`focus`** – Fired when the toggle gains focus.
-3.  **`blur`** – Fired when the toggle loses focus.
-4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
+
+This component does not emit any custom events.
 
 {% endblock %}
 

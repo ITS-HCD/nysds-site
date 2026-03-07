@@ -46,18 +46,20 @@ The `<nys-badge>` component provides a visual indicator of text values like cate
 
 {% block usagedo %}
 
-  - To display a small piece of information that is related to another element.
-  - To draw attention to new, important content.
-  - To indicate the status of an item, such as "new", "updated", or "beta".
-  - To provide additional context or information about an item without cluttering the interface.
+  - Keep badge labels short -- one or two words like "New", "Beta", or "Updated".
+  - Use the `intent` property to match the badge's visual style to its meaning (e.g., `success` for positive statuses, `warning` for caution).
+  - Place badges near the element they describe so the relationship is clear.
+  - Use the `prefixIcon` or `suffixIcon` attributes to reinforce meaning when the label alone may be ambiguous.
+  - Apply the `strong` variant when the badge appears on a raised surface or needs extra emphasis.
 {% endblock %}
 
 {% block usagedont %}
 
-  - When the information is too complex to be conveyed in a small badge.
-  - When the badge would not add significant value to the user experience.
-  - When the badge would clutter the interface or distract from more important content.
-  - As a link to another page or action, as badges are not interactive elements.
+  - Don't use badges as interactive elements -- they are not buttons or links.
+  - Don't pack long sentences or multiple values into a single badge label.
+  - Don't mix badge sizes within the same group; pick either `md` or `sm` and stay consistent.
+  - Don't rely on color alone to convey meaning; always include a text label.
+  - Don't stack multiple badges on a single element unless each communicates a distinct, necessary status.
 {% endblock %}
 
 {% block accessibility %}
@@ -170,42 +172,52 @@ Badge can include a prefix label, which is a short text that appears before the 
     <tr>
         <th>Property</th>
         <th>Type</th>
+        <th>Default</th>
     </tr>
     <tr>
         <td><code>id</code></td>
         <td>String</td>
+        <td><code>""</code></td>
     </tr>
     <tr>
         <td><code>label</code></td>
         <td>String</td>
+        <td><code>""</code></td>
     </tr>
     <tr>
         <td><code>name</code></td>
         <td>String</td>
+        <td><code>""</code></td>
     </tr>
     <tr>
         <td><code>size</code></td>
         <td><code>"md"</code>, <code>"sm"</code></td>
+        <td><code>"md"</code></td>
     </tr>
     <tr>
         <td><code>intent</code></td>
         <td><code>"neutral"</code>, <code>"error"</code>, <code>"success"</code>, <code>"warning"</code></td>
+        <td><code>"neutral"</code></td>
     </tr>
     <tr>
         <td><code>variant</code></td>
         <td><code>"strong"</code></td>
+        <td><code>""</code></td>
     </tr>
     <tr>
-        <td><code>prefix</code></td>
+        <td><code>prefixLabel</code></td>
         <td>String</td>
+        <td><code>""</code></td>
     </tr>
     <tr>
         <td><code>prefixIcon</code></td>
-        <td>String</td>
+        <td>String | boolean</td>
+        <td>—</td>
     </tr>
     <tr>
         <td><code>suffixIcon</code></td>
-        <td>String</td>
+        <td>String | boolean</td>
+        <td>—</td>
     </tr>
   </table>
 </nys-table>
@@ -214,6 +226,10 @@ Badge can include a prefix label, which is a short text that appears before the 
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}
