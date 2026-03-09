@@ -1,0 +1,72 @@
+---
+permalink: /get-started/designers/
+title: "Designers"
+description: "Learn how to use The New York State Design System Figma libraries, design tokens, and accessibility guidelines to create consistent, user-friendly digital experiences for New York State."
+section: Get Started
+---
+
+{% block content %}
+
+# Get Started as a Designer
+
+The NYS Design System helps New York State teams build accessible, user-friendly, and consistent digital products. But using NYS Design System components alone does not guarantee a good design—strong user experiences come from a thoughtful process that includes:
+
+- Understanding user needs through research
+- Developing personas and user flows
+- Wireframing and prototyping before building
+- Testing usability with real users
+
+The NYS Design System provides a standardized set of design decisions and reusable components to help reduce effort, maintain consistency, and free up designers to focus on higher-level UX work.
+
+## NYS Design System’s Figma Libraries
+
+Designing and prototyping with the NYS Design System is powered by prebuilt Figma libraries that mirror the coded components. This connectedness makes it easier for designers and developers to collaborate and ensures that what is designed in matches what is built.
+
+<nys-alert type="warning" heading="Using the NYS Employee library requires an NYS Figma account."></nys-alert>
+
+Access the NYS Design System’s Figma assets:
+
+- **NYS Design System for NYS Employeess** → The core file containing all UI components with built-in properties, variants, and prototyping features. Requires an NYS Figma account: [NYS Design System Component Library](https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System)
+- **NYS Design System for the Community** → The community library for use in interfaces. Does NOT require an NYS Figma account: [NYS Design System Community Library](https://www.figma.com/community/file/1574803287825265318)
+
+### How the Libraries Help
+
+The NYS Design System is designed to speed up and standardize UI design. Here’s how:
+
+- **Design & Code Parity:** Components in Figma match the NYS Design System web components 1:1, reducing the need for custom styling. Developers can easily find and implement the same components seen in designs.
+- **Auto-Theming for NYS Agencies:** The NYS Design System adapts to agency branding using built-in Figma theme variables. Project templates automatically apply the correct colors, typography, and design tokens.
+- **Built-In Prototyping:** Many components have pre-configured interactions (e.g., modals, buttons, and inputs). Click-through prototypes help teams test and refine user flows before development begins.
+
+## How to Start Designing with The NYS Design System
+
+- Search for “NYS Design System” in the Figma Assets panel and activate the libraries.
+- Use the [Design System project template](https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7) to start with the correct agency theming and design variables.
+- Leverage components with built-in properties and variants to speed up your workflow.
+
+## Next Steps: Learn More About the Design System
+
+The NYS Design System isn’t just about using components—it’s about creating better, more accessible digital experiences for New Yorkers.
+
+<div class="nys-grid-row nys-grid-gap-lg">
+<nys-button 
+    label="Learn More About Foundations"
+    href="/foundations"
+    variant="outline"
+    fullWidth
+    class="nys-tablet:nys-grid-col-6"
+    style="margin-bottom: 16px;"></nys-button>
+<nys-button 
+    label="Get Started for Developers"
+    href="/get-started/developers"
+    variant="outline"
+    fullWidth
+    class="nys-tablet:nys-grid-col-6"></nys-button>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

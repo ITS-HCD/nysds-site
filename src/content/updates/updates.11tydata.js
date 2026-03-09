@@ -10,6 +10,7 @@ module.exports = () => {
     return {
         layout: 'layouts/update.njk',
         permalink: '/updates/{{ title | slugify }}/',
+        section: 'Updates',
         ogtype: 'article', // Open Graph type
         "changefreq": "monthly", // Information for sitemap.xml
         "priority": "0.8", // Information for sitemap.xml

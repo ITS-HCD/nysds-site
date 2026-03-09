@@ -5,64 +5,62 @@ description: Switch component for enabling or disabling a setting.
 image: /assets/img/components/toggle.svg
 image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
-navOrder: 13
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
+navOrder: 23
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-  The <code class="language-js">&lt;nys-toggle&gt;</code> component is a reusable web component for use in New York State digital products. It allows users to toggle a toggle switch "on" or "off".
+  The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
+
 {% endblock %}
 
 {% block example %}
-
-  <nys-toggle 
-    label="Dark Mode"
-    description="Enable dark mode for a more comfortable viewing experience."
-    name="toggle-switch"
-    value="access">
-  </nys-toggle>
+  {% set preview %}<nys-toggle 
+  label="Dark Mode"
+  description="Enable dark mode for a more comfortable viewing experience."
+  name="toggle-switch"
+  value="access">
+</nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block examplecode %}
-
-  <nys-toggle 
-    label="Dark Mode"
-    description="Enable dark mode for a more comfortable viewing experience."
-    name="toggle-switch"
-    value="access">
-  </nys-toggle>
-{% endblock %}
 
 {% block usage %}
 
 ### When to use this component
-  - Consider using nys-toggle when expecting immediate UI effects when turning switch on/off.
+  - Consider using `<nys-toggle`> when expecting immediate UI effects when turning switch on/off.
   - Ideal for settings pages, feature toggles, or user preferences.
 ### When to consider something else
-  - Consider using nys-checkbox or nys-radiobutton to select one or more options from a list where the selections
-  - Use nys-checkbox for forms, especially when you're not expecting immediate action.
+  - Consider using `<nys-checkbox>` or `<nys-radiobutton>` to select one or more options from a list where the selections
+  - Use `<nys-checkbox>` for forms, especially when you're not expecting immediate action.
 {% endblock %}
 
 {% block usagedo %}
 
-  - Provide a clear label and optional description to explain the toggle's purpose.
-  - Show the UI for toggle’s state is visually distinct for on/off positions.
+  - Provide a clear label and optional description to explain what the toggle controls.
+  - Use `<nys-checkbox>` for forms, especially when you're not expecting immediate action.
+  - Ensure the page clearly reflects the toggle’s on/off state through visible changes (e.g. switching to dark mode).
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Use toggles for complex multi-state options.
-  - Overuse toggles for trivial settings that do not impact user experience significantly.
-  - Hide labels entirely unless another accessible method of describing the toggle exists.
+  - Don’t use toggles for complex or multi-state choices.
+  - Don’t overuse for minor settings that don’t affect the user experience.
+  - Don’t hide labels unless an accessible alternative is in place.
 
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-toggle</code> component includes the following accessibility-focused features:
+The `<nys-toggle`> component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
   - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
@@ -73,69 +71,67 @@ The <code class="language-js">nys-toggle</code> component includes the following
 {% block options %}
 
 ### Sizes
+  {% set preview %}<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+  {% set code %}
+  <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+{% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-<nys-toggle label='Small (size="sm")' name="toggle-switch" value="access" size="sm"></nys-toggle>
-</br>
-<nys-toggle label='Medium (size="md")' name="toggle-switch" value="access" size="md"></nys-toggle>
+### Slotted Description
+Add help text to the toggle using the `label` and `description` props.
+Descriptions can be provided either through the `description` prop or via the `slot="description"`.
 
-<details>
-<summary>Example Code</summary>
+**Note**: Use the prop for simple text. Use the slot when you need custom HTML, such as links or formatting.
+  {% set preview %}<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
+  <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
+</nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-```html
-<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
-
-<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
-
-```
-
-</details>
-
+### Disabled Toggle
+  {% set preview %}<nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled></nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disable Icon
-
-<nys-toggle label="No Icon on the toggle" name="toggle-switch" value="access" noIcon></nys-toggle>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>
-
-```
-
-</details>
+  {% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
 {% block properties %}
 
-<table>
-  <thead>
+<nys-table striped>
+  <table>
     <tr>
       <th>Property</th>
       <th>Type</th>
     </tr>
-  </thead>
-  <tbody>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+    </tr>
     <tr>
       <td><code>label</code></td>
-      <td>string</td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>checked</code></td>
       <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
@@ -147,74 +143,47 @@ The <code class="language-js">nys-toggle</code> component includes the following
     </tr>
     <tr>
       <td><code>size</code></td>
-      <td>string (sm, md)</td>
+      <td><code>"sm"</code> , <code>"md"</code></td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>form</code></td>
-      <td>string</td>
+      <td>String , <code>null</code></td>
     </tr>
-
-  </tbody>
-
   </table>
+</nys-table>
 
 {% endblock %}
 
-{% block cssvariables %}
-
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-height</code></td>
-      <td>Height of the toggle switch.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-border-radius</code></td>
-      <td>Border radius of the toggle switch.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-background-color</code></td>
-      <td>Background color of the toggle switch when it is off.</td>
-    </tr>
-    <tr>
-      <td><code>--nys-toggle-checked-background-color</code></td>
-      <td>Background color of the toggle switch when it is on.</td>
-    </tr>
-  </tbody>
-  </table>
-
-{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
-<p>The <code class="language-js">&lt;nys-toggle&gt;</code> component emits three custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
+The `<nys-toggle>` component emits **three** custom Javascript events:
+1.  **`nys-change`** – Fired when the toggle state changes (checked/unchecked).
+2.  **`nys-focus`** – Fired when the toggle gains focus.
+3.  **`nys-blur`** – Fired when the toggle loses focus.
+
+### Event details
+The `nys-change` event includes a detail object with the following properties:
+  - id (string): The id of the toggle.
+  - checked (boolean): Whether the toggle is currently checked.
 
 You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
+{% set code %}// Select the toggle component
+const toggle = document.querySelector('nys-toggle');
+// Listen for the 'nys-change' event
+toggle.addEventListener('nys-change', (event) => {
+    const { checked } = event.detail;
+    console.log('Toggle changed. Checked:', checked);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -5,36 +5,31 @@ description: Dropdown menu for selecting a single option.
 image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
-navOrder: 10
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
+navOrder: 17
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child element <code class="language-js">&lt;nys-option&gt;</code> to define the options in the dropdown.
+The `<nys-select>` is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child elements `<option>` and `<optgroup>` to define the options in the dropdown.
+
 {% endblock %}
 
 {% block example %}
-
-<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-select label="Select your favorite borough" id="borough">
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>      
-</nys-select>
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough">
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>      
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -48,203 +43,293 @@ The <code class="language-js">&lt;nys-select&gt;</code> is a reusable web compon
 
 {% block usagedo %}
 
-  - Use the `nys-option` component to define the options in the dropdown
+  - Use the `<nys-select>` component when you need the user to select a single item from a list
+  - Use the `<option>` component to define the options in the dropdown
+  - Use the native `<optgroup>` to group options in the dropdown
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the native `<option>` element in the `nys-select` component
+  - Don't use the custom `<nys-option>` element in the `<nys-select>` component. This will be deprecated with the 2.0 release
+  - Use `<nys-select multiple>` as an input for users to select multiple items from a dropdown. Consider a [checkbox group](/components/checkbox/) instead. More guidance from the [US Web Design System](https://designsystem.digital.gov/components/select/#when-to-consider-something-else)
 
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-select</code> component includes the following accessibility-focused features:
+The `<nys-select>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the select dropdown correctly.
-  - Keyboard navigation support, allowing users to tab to the `nys-select` using the keyboard and spacebar to select an option.
+  - Keyboard navigation support, allowing users to tab to the `<nys-select>` using the keyboard and spacebar to select an option.
   - Visual focus indicators to help users navigate the component.
   - Include a label property to provide accessible text for screen readers.
 {% endblock %}
 
 {% block options %}
 
+<nys-alert type="warning" heading="Deprecated <nys-option>">
+<p>The <code>&lt;nys-option&gt;</code> component will be deprecated with the 2.0 release of the New York State Design System.</p>
+<p>Use the native  <code>&lt;option&gt;</code> tag for the options in the  <code>&lt;nys-select&gt;</code> component.</p>
+</nys-alert>
+
+### Default Value
+You can set a default value by adding the `selected` attribute to the desired `<option>`.
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough">
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn" selected></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>      
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Option Group
+You can separate the options by using the `<optgroup>` tag.
+{% set preview %}
+<nys-select
+  label="Which New York State service are you contacting us about?"
+  description="This is for demo purposes and the list might not be exhaustive."
+>
+  <optgroup label="Transportation Services">
+    <option value="mta">MTA / Public Transit</option>
+    <option value="dmv">Department of Motor Vehicles (DMV)</option>
+    <option value="highway">Highway Maintenance</option>
+  </optgroup>
+  <optgroup label="Health & Human Services">
+    <option value="medicaid">Medicaid / Health Insurance</option>
+    <option value="mental-health">Mental Health Support</option>
+    <option value="child-family">Child and Family Services</option>
+  </optgroup>
+  <optgroup label="Public Safety">
+    <option value="state-police">State Police</option>
+    <option value="emergency-management">Emergency Management</option>
+    <option value="fire-safety">Fire Safety</option>
+  </optgroup>
+  <optgroup label="Environment & Energy">
+    <option value="environmental-conservation">
+      Environmental Conservation
+    </option>
+    <option value="clean-energy">Clean Energy Programs</option>
+    <option value="waste-management">Waste Management</option>
+  </optgroup>
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+
 ### Disabled
+  {% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>      
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
-<nys-select label="Select your favorite borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
+### Required
+Set `required` to `<nys-select>` to make selecting an option mandatory.
 
-<details>
-  <summary>Example Code</summary>
-  {% highlight "html" %}
-<nys-select label="Select your favorite borough" disabled>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-{% endhighlight %}
+{% set preview %}
+<nys-select label="Select your favorite borough" required>
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>  
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
-</details>
+### Optional
+Adding the `optional` prop will add an optional flag to the input.
+
+{% set preview %}
+<nys-select label="Select your favorite borough" optional>
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>  
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Width
-The following <code class="language-js">width</code> options are available:
+The following `width` options are available:
 
   - `sm` (Small): 88px, ideal for compact layouts.
   - `md` (Medium): 200px, ideal for balanced designs.
   - `lg` (Large): 384px, suitable for displaying longer content.
   - `full` (Full Width): default size. Expands to fill the available space.
 
+{% set preview %}
 <nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
-  <nys-option value="sm" label="sm"></nys-option>
-  <nys-option value="md" label="md"></nys-option>
-  <nys-option value="lg" label="lg"></nys-option>
-  <nys-option value="full" label="full"></nys-option>
-</nys-select>
+  <option value="sm" label="sm"></option>
+  <option value="md" label="md"></option>
+  <option value="lg" label="lg"></option>
+  <option value="full" label="full"></option>
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
-<details>
-  <summary>Example Code</summary>
+### Slotted Description
+Add a description using the `description` prop for plain text, or use the description slot to include custom HTML for more flexibility.
 
-```html
-<nys-select label="Select your favorite width" description="Valid widths are sm, md, lg, and full" width="sm">
-  <nys-option value="sm" label="sm"></nys-option>
-  <nys-option value="md" label="md"></nys-option>
-  <nys-option value="lg" label="lg"></nys-option>
-  <nys-option value="full" label="full"></nys-option>
-</nys-select>
-```
-</details>
+{% set preview %}
+<nys-select label="Select your favorite borough">
+  <label slot="description">This is a slot</label>
+  <option value="bronx">The Bronx</option>
+  <option value="brooklyn">Brooklyn</option>
+  <option value="manhattan">Manhattan</option>
+  <option value="staten_island">Staten Island</option>
+  <option value="queens">Queens</option>        
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error Message
-To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-select&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
 
+To display an error message, pass in the `showError` property to the `<nys-select>` component. 
+
+Setting `errorMessage` does not display the message without `showError` set to true.
+
+{% set preview %}
 <nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
-  <nys-option value="bronx" label="The Bronx"></nys-option>
-  <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-  <nys-option value="manhattan" label="Manhattan"></nys-option>
-  <nys-option value="staten_island" label="Staten Island"></nys-option>
-  <nys-option value="queens" label="Queens"></nys-option>  
-</nys-select>
-```
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>
+</nys-select>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
 {% block properties %}
 
-<table>
-  <thead>
+<nys-table striped>
+  <table>
     <tr>
       <th>Property</th>
       <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
+      <th>Component</th>
     </tr>
     <tr>
       <td><code>id</code></td>
-      <td>string</td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>string</td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td>both</td>
     </tr>
     <tr>
       <td><code>description</code></td>
-      <td>string</td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>hidden</code></td>
+      <td>boolean</td>
+      <td><code>&lt;option&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
       <td>boolean</td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
     <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ("sm", "md", "lg", "full")</td>
+      <td><code>selected</code></td>
+      <td>boolean</td>
+      <td><code>&lt;option&gt;</code></td>
     </tr>
     <tr>
       <td><code>showError</code></td>
       <td>boolean</td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
     <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
+      <td><code>value</code></td>
+      <td>String</td>
+      <td>both</td>
     </tr>
-  </tbody>
-</table>
-
-{% endblock %}
-[[TODO]]
-<table>
-  <thead>
     <tr>
-      <th>Variable</th>
-      <th>Description</th>
+      <td><code>width</code></td>
+      <td><code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"full"</code></td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
+      <td><code>form</code></td>
+      <td>String, <code>null</code></td>
+      <td><code>&lt;nys-select&gt;</code></td>
     </tr>
-  </tbody>
   </table>
-
-{% block cssvariables %}
+</nys-table>
 
 
 {% endblock %}
+
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
-<p>The <code class="language-js">nys-select</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the select state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the select gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the select loses focus.</li>
-</ol>
+The `<nys-select>` component emits **three** custom Javascript events:
+1.  **`nys-change`** – Fired when the select state changes. The event detail includes the value of the selected option.
+2.  **`nys-focus`** – Fired when the select gains focus.
+3.  **`nys-blur`** – Fired when the select loses focus.
+
+### Event details
+The `nys-change` event includes a detail object with the following properties:
+
+  - id (string): The id of the select.
+  - value (string): The value of the selected option.
 
 You can listen to these events using JavaScript:
-{% highlight "js" %}
+{% set code %}
 // Select the select component
-  const select = document.querySelector('nys-select');
-
-  // Listen for the 'change' event
-  select.addEventListener('change', (event) => {
-    console.log('Select changed:', event.target.checked);
-  });
-{% endhighlight %}
+const select = document.querySelector('nys-select');
+// Listen for the 'nys-change' event
+select.addEventListener('nys-change', (event) => {
+  const { id, value } = event.detail;
+  console.log(`Select (${id}) changed to: ${value}`);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -1,0 +1,55 @@
+---
+permalink: /formfest2025/
+title: "FormFest 2025"
+description: "Resources for our FormFest 2025 talk."
+layout: layouts/base.njk
+---
+
+{% block content %}
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <main class="nys-tablet:nys-grid-col-10">
+      
+      <header class="page-header">
+
+        <h1 class="page-title">
+          {{ title }}
+        </h1>
+
+        <div class="page-subtitle">
+          <p>Resources for our FormFest 2025 session: <em>Browser → Blueprint: How NYS Goes from Whiteboard to Working Code</em>.</p>
+        </div>
+      </header>
+
+      <h2>Resources</h2>
+
+      <ul>
+        <li><a href="https://www.figma.com/slides/M377vP2iaJTdcp9RgjbSyX/Blueprint-%E2%86%92-Browser?node-id=0-20&t=NA2GPBMeZ02AuwV5-1">FormFest 2025: Browser → Blueprint: How NYS Goes from Whiteboard to Working Code (Slides)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Sq64Gh9C4U8&list=PL65XgbSILalXdTeyGWP-de_yRyD_F4Gq2&index=12&pp=iAQB">FormFest 2025: Browser → Blueprint: How NYS Goes from Whiteboard to Working Code (Video)</a></li>
+        <li><a href="https://www.figma.com/community/file/1574803287825265318">NYS Design System Figma File</a></li>
+        <li><a href="https://designsystem.ny.gov/learn">NYS Design System Video Series</a></li>
+        <li><a href="https://github.com/its-hcd/nysds">NYS Design System Code Base (GitHub)</a></li>
+        <li><a href="https://designsystem.ny.gov/updates/fidelity-modes-rapid-prototyping/">Rapid Wireframes to Prototypes with Fidelity Modes (Article)</li>
+        <li><a href="https://www.figma.com/community/file/1545561192181442235">Figma Community file for Fidelity Modes</a></li>
+        <li><a href="https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect">Figma: Setting up Code Connect</li>        
+        <li><a href="https://developers.figma.com/docs/figma-mcp-server/local-server-installation/">Figma: Setting up Local MCP</a></li>
+        <li><a href="https://developers.figma.com/docs/figma-mcp-server/write-effective-prompts/">Figma: Effective Prompts for AI + Figma MCP</a></li>
+        <li><a href="https://www.figma.com/community/file/1380235722331273046">Figma's Simple Design System (Figma)</a></li>
+        <li><a href="https://github.com/figma/sds">Figma's Simple Design System (GitHub)</a></li>
+      </ul>
+
+      <h2>Learn More</h2>
+      <div class="video-embed">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-AzYrquG7E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+      </div>
+      <p class="nys-padding-t-200">Check out our full video series to learn more about the NYS Design System and how to use it.</p>
+      <nys-button href="/learn/" variant="primary" label="Go to Video Series"></nys-button>
+    </main>
+    <aside class="nys-tablet:nys-grid-col-2">
+      {% include "partials/onpage-nav.njk" %}
+    </aside>
+  </div>
+</div>
+
+{% endblock %}

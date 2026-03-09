@@ -5,6 +5,8 @@ description: Avatars visually represent a user or entity as initials, a photo, o
 image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
 image_header: /assets/img/components/avatar-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063
 navOrder: 3
 ---
 
@@ -12,21 +14,17 @@ navOrder: 3
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-avatar&gt;</code> component is used to visually represent a user or entity.
+The `<nys-avatar>` component is used to visually represent a user or entity.
 
-By default, a generic icon is displayed. Personalize avatars with a custom <code class="language-js">icon</code>, <code class="language-js">initials</code>, or <code class="language-js">image</code>, and always include a <code class="language-js">label</code> for accessibility.
+By default, a generic icon is displayed. Personalize avatars with custom props like `icon`, `initials`, or `image`, and always include a `ariaLabel` for accessibility.
+
 {% endblock %}
 
 {% block example %}
-
-<nys-avatar label="User avatar"></nys-avatar>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-avatar
-  label="User avatar"
-></nys-avatar>
+  {% set preview %}<nys-avatar ariaLabel="User avatar"></nys-avatar>{% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -46,212 +44,164 @@ By default, a generic icon is displayed. Personalize avatars with a custom <code
 {% block usagedo %}
 
   - Use for clear, simple user or entity representation.
-  - On Tablet and above, prefer showing the full name of the user or entity.
+  - On tablets and larger breakpoints, prefer showing the full name next to the avatar.
   - Place the full name of the user or entity to the right of the avatar.
   - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
-  - Use <code class="language-js">nys-icon</code> as a slot when you need further customizations that the <code class="language-js">icon</code> prop can't provide.
+  - Use the `nys-icon` slot only when the icon prop isn't sufficient.
 {% endblock %}
 
 {% block usagedont %}
 
+  - Don't skip the `ariaLabel` attribute for screen reader users.
+  - Don't use the `nys-icon` as a slot when icon prop can satisfy your use.
   - Don't overload the avatar with unnecessary customizations.
-  - Don't override the default user or entity avatar icons unless needed to communicate additional context to the viewer; doing so provides an inconsistent user experience across NYS applications and websites.
-  - [Dev] Don't skip the <code class="language-js">label</code> attribute for screen reader users.
-  - [Dev] Don't use the <code class="language-js">nys-icon</code> as a slot when icon prop can satisfy your use.
+  - Don’t override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-</code> component includes the following accessibility-focused features:
+The `<nys-avatar>` component includes the following accessibility-focused features:
 
-  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: <code>alt="John Smith"</code>
-  - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: <code>alt="Photo of John Smith"</code>
+  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: `alt="John Smith"`
+  - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: `alt="Photo of John Smith"`
   - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
-  - A label property to provide accessible text for screen readers.
+  - A `ariaLabel` property to provide accessible text for screen readers.
 {% endblock %}
 
 {% block options %}
 
 ### Images
-<p>To display an image in the avatar, set the <code class="language-js">image</code> and <code class="language-js">label</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code class="language-js">lazy</code> boolean attribute.</p>
+To display an image in the avatar, set the `image` and `ariaLabel` attributes. Images will take **priority** and **override** initials and icons. You can also enable lazy loading for avatar images by setting the `lazy` boolean attribute.
 
-<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy></nys-avatar>
-
-```
-</details>
-
+{% set preview %}<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Initials
 
-<p>If an image is unavailable, you can set the <code class="language-js">initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
+If an image is unavailable, you can set the `initials` attribute to display a personalized placeholder instead of an icon. Initials will take **priority** and **override** icons.
 
-<nys-avatar label="User avatar" initials="NY"></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" initials="NY"></nys-avatar>
-```
-</details>
-
-
+{% set preview %}<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Custom Icons
 
-<p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in <code class="language-js">nys-icon</code> using the <code class="language-js">icon</code> prop or customize directly within <code class="language-js">nys-avatar</code> with the icon slot.</p>
+When no image or initials are set, an icon will be shown. The default avatar shows an icon called "account_circle", but you can customize this with any other name found in `<nys-icon>` using the `icon` prop or customize directly within `<nys-avatar>` with the icon slot.
 
-<nys-avatar label="User avatar"></nys-avatar>
-<nys-avatar label="Youtube avatar" color="#f2efee">
-  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
+{% set preview %}
+<nys-avatar ariaLabel="User avatar"></nys-avatar>
+<nys-avatar ariaLabel="Youtube avatar" color="#f2efee">
+  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
 </nys-avatar>
-<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
+<nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
-<details>
-<summary>Example Code</summary>
+### Interactive
 
-```html
-<nys-avatar label="User avatar"></nys-avatar>
+Enable the `interactive` prop to apply interactive styling states and keyboard focus.
 
-<nys-avatar label="Youtube avatar" color="#f2efee">
-  <nys-icon label="youtube icon" name="social_youtube" color="#b2071d" size="lg"></nys-icon>
-</nys-avatar>
+{% set preview %}
+<div style="display:flex; gap:5px;">
+  <nys-avatar ariaLabel="User avatar" icon="account_circle" interactive></nys-avatar>
+  <nys-avatar ariaLabel="New York Initial" initials="NY" interactive></nys-avatar>
+</div>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
-<nys-avatar label="Snow avatar" icon="ac_unit"></nys-avatar>
-```
-</details>
+### Disabled
 
+Use the `disabled` prop to prevent interaction and remove focusability.
 
-### Shapes
-
-<p>To change the shape of the avatar, set the <code class="language-js">shape</code> attribute. The default shape is <strong>circle</strong>, but you can also set it to <strong>square</strong> or <strong>rounded</strong>.</p>
-
-<nys-avatar label="User avatar" shape="circle"></nys-avatar>
-<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
-<nys-avatar label="User avatar" shape="square"></nys-avatar>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" shape="circle"></nys-avatar>
-<nys-avatar label="User avatar" shape="rounded"></nys-avatar>
-<nys-avatar label="User avatar" shape="square"></nys-avatar>
-```
-</details>
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" disabled></nys-avatar>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Background Color
 
-You can change the background color of an Avatar. Note that images will naturally cover over the background color.
+You can change the background color of an Avatar. This attribute accepts any valid color value, including [design tokens](https://designsystem.ny.gov/foundations/tokens/), such as `color="var(--nys-color-theme)"`.
 
-<nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
+**Note:** images will naturally cover over the background color. The inner foreground for icon or initials will automatically switch between #000 or #fff for contrast.
 
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-avatar label="User avatar" color="rebeccapurple"></nys-avatar>
-```
-
-</details>
-
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" color="#154973"></nys-avatar>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
 {% block properties %}
+<nys-table striped>
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th></th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>color</code></td>
+          <td>String (CSS HEX, CSS color name, or CSS)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>icon</code></td>
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>image</code></td>
+          <td>URL</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>initials</code></td>
+          <td>String (2 letters)</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>ariaLabel</code></td>
+          <td>String</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>lazy</code></td>
+          <td>boolean</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>interactive</code></td>
+          <td>boolean</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>disabled</code></td>
+          <td>boolean</td>
+          <td></td>
+      </tr>
+  </table>
+</nys-table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>image</code></td>
-      <td>URL</td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>initials</code></td>
-      <td>string (2 letters)</td>
-    </tr>
-    <tr>
-      <td><code>icon</code></td>
-      <td>string (&lt;nys-icon&gt;)</td>
-    </tr>
-    <tr>
-      <td><code>shape</code></td>
-      <td>string (square, roundedd, circle)</td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
-      <td>#HEXVAL</td>
-    </tr>
-    <tr>
-      <td><code>lazy</code></td>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
 
 {% endblock %}
-[[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
-  </table>
 
 {% block cssvariables %}
 
+  {% set variables = [
+  { name: "--nys-avatar-size", description: "Width and height of the component"}
+]%}
+  {% include "partials/css-vars.njk" %}
 
 {% endblock %}
-[[TODO]]
-<p>The <code class="language-js">&lt;nys-avatar&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>change</code></strong> – Fired when the toggle state changes (checked/unchecked).</li>
-<li><strong><code>focus</code></strong> – Fired when the toggle gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the toggle loses focus.</li>
-<li><strong><code>keydown</code></strong> – Fired when a key is pressed while the toggle is focused.</li>
-</ol>
 
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
-
-{% block events %}
-
-{% endblock %}
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}

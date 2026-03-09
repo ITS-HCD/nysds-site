@@ -5,11 +5,58 @@ const showAlert = () => {
     // Clear previous instance if present
     container.innerHTML = "";
     const newAlert = document.createElement("nys-alert");
-    newAlert.setAttribute("theme", "info");
-    newAlert.setAttribute("heading", "Information status");
+    newAlert.setAttribute("type", "info");
+    newAlert.setAttribute("heading", "Automatically disappearing alert");
     newAlert.setAttribute("text", "This alert will disappear after 3 seconds.");
     newAlert.setAttribute("duration", 3000);
     container.appendChild(newAlert);
+  }
+};
+
+// Trigger dropdown to show the source code
+const showSourceCode = (clickedDropdown) => {
+    // Find the nearest parent container
+    const container = clickedDropdown.closest(".code-preview-container");
+    if (!container) return;
+
+    // Get the code block inside this container
+    const codeBlock = container.querySelector(".code-preview__code-container");
+    if (!codeBlock) return;
+
+    // Toggle the expanded class
+    const isOpen = codeBlock.classList.toggle("expanded");
+
+    // Update chevron icon
+    const chevronIcon = container.querySelector(".code-preview__dropdown-icon");
+    chevronIcon.setAttribute("name", isOpen ? "chevron_down" : "chevron_right");
+
+    // Update ARIA attributes for accessibility
+    clickedDropdown.setAttribute("aria-expanded", isOpen.toString());
+};
+
+// Trigger copy code to clipboard and show tooltip
+const copyCode = async (clickedCopyButton) => {
+  const container = clickedCopyButton.closest(".code-preview-container");
+  if (!container) return;
+  const codeBlock = container.querySelector(".code-preview__code-block");
+  if (!codeBlock) return;
+
+  try {
+    await navigator.clipboard.writeText(codeBlock.innerText.trim());
+
+    const tooltip = container.querySelector(".copy-tooltip");
+    if (!tooltip) return;
+
+    // Temporarily change tooltip text to "Copied!"
+    tooltip.innerText = "Copied!";
+    tooltip.classList.add("copied");
+
+    setTimeout(() => {
+      tooltip.innerText = "Copy Code";
+      tooltip.classList.remove("copied");
+    }, 1500);
+  } catch (err) {
+    console.error("Failed to copy:", err);
   }
 };
 
@@ -79,47 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Make the <pre> scrollable (if content overflows)
     pre.style.overflow = "auto";
-
-    // Create Copy Button
-    const button = document.createElement("nys-button");
-    button.label = "Copy Code";
-    button.size = "sm";
-    button.variant = "outline";
-    button.prefixIcon = "publish";
-    button.style.position = "absolute";
-    button.style.top = "-15px";
-    button.style.right = "12px";
-    button.style.display = "flex";
-    button.style.zIndex = "9999";
-
-    // Click event: Copy code to clipboard
-    button.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(codeBlock.innerText.trim());
-        button.setAttribute("label", "Copied!");
-        
-        // Add aria-live region for screen reader feedback
-        const liveRegion = document.createElement("span");
-        liveRegion.setAttribute("aria-live", "polite");
-        liveRegion.style.position = "absolute";
-        liveRegion.style.width = "1px";
-        liveRegion.style.height = "1px";
-        liveRegion.style.overflow = "hidden";
-        liveRegion.innerText = "Code copied to clipboard!";
-        pre.appendChild(liveRegion);
-
-        setTimeout(() => {
-          button.setAttribute("label", "Copy Code");
-          pre.removeChild(liveRegion);
-        }, 1500);
-      } catch (err) {
-        console.error("Failed to copy:", err);
-        button.setAttribute("label", "Failed!");
-        setTimeout(() => button.setAttribute("label", "Copy Code"), 1500);
-      }
-    });
-
-    containerWrapper.appendChild(button);
   });
 });
 
@@ -129,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".icon-examples .card").forEach((card) => {
     const cardDesc = card.querySelector(".card__desc");
     const cardText = cardDesc.textContent;
+    let hasParagraph = true;
 
     card.addEventListener("click", async () => {
       try {
@@ -137,13 +144,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (paragraph) {
           paragraph.textContent = "Copied!";
           paragraph.style.color = "var(--nys-color-success)";
+          setTimeout(() => {
+            paragraph.style.color = "var(--nys-color-text)";
+            if (hasParagraph) {
+              card.parentElement.removeChild(paragraph);
+            }
+          }, 1500);
         }
-        setTimeout(() => {
-          paragraph.style.color = "var(--nys-color-text)";
-          if (paragraph) {
-            card.parentElement.removeChild(paragraph);
-          }
-      }, 1500);
       } catch (err) {
         cardDesc.innerHTML = "Failed!";
         setTimeout(() => (cardDesc.innerHTML = cardText), 1500);
@@ -152,8 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     card.addEventListener("mouseenter", async () => {
       const paragraph = document.createElement("p");
+      hasParagraph = true;
       paragraph.style.position = "absolute";
-      paragraph.style.bottom = "0px";
+      paragraph.style.bottom = "-10px";
       paragraph.style.width = "90%";
       paragraph.style.textAlign = "center";
       paragraph.textContent = "Copy to clipboard";
@@ -162,23 +170,120 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     card.addEventListener("mouseleave", async () => {
       const paragraph = document.querySelector(".hover-message");
+    
       if (paragraph) {
         card.parentElement.removeChild(paragraph);
+        hasParagraph = false
       }
       cardDesc.innerHTML = cardText;
     });
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".section-nav__toggle");
-  const sectionNav = document.querySelector(".section-nav__list");
 
-  if (toggleButton) {
-    toggleButton.addEventListener("click", function () {
-      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-      toggleButton.setAttribute("aria-expanded", !isExpanded);
-      sectionNav.style.display = isExpanded ? "none" : "block";
+// Load with <script defer> so the DOM exists
+(function () {
+  // Clean any legacy inline display:none
+  document.querySelectorAll(".accordion__panel").forEach((p) => {
+    if (p.style.display) p.style.removeProperty("display");
+  });
+
+  // Init panel state from the trigger's aria-expanded
+  document.querySelectorAll(".accordion__trigger").forEach((btn) => {
+    const id = btn.getAttribute("aria-controls");
+    const panel = id ? document.getElementById(id) : null;
+    if (!panel) return;
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    panel.setAttribute("aria-expanded", String(expanded));
+  });
+
+  // Toggle on click
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".accordion__trigger");
+    if (!btn) return;
+    const id = btn.getAttribute("aria-controls");
+    const panel = id ? document.getElementById(id) : null;
+    if (!panel) return;
+
+    const next = btn.getAttribute("aria-expanded") !== "true";
+    btn.setAttribute("aria-expanded", String(next));
+    panel.setAttribute("aria-expanded", String(next));
+  });
+})();
+
+// Add anchor links to all headings (h1..h6)
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.body.classList.contains('no-heading-links')) {
+    return;
+  } else {
+  // Grab all headings from h2 to h6
+  const headings = Array.from(document.querySelectorAll('h2,h3,h4,h5,h6'));
+  if (!headings.length) return;
+
+  headings.forEach((h) => {
+    // If there's already an explicit anchor link to this heading id, skip
+    const existingId = h.id;
+    if (existingId && h.querySelector(`a[href="#${existingId}"]`)) return;
+
+    // Determine or generate an id
+    let id = existingId;
+
+    // If heading already contains an anchor that links to this id, skip
+    if (h.querySelector(`a[href="#${id}"]`)) return;
+
+    // Need to relatively position the headsing so we can absolutely position the icon
+    h.style.position = 'relative';
+
+    // Create our tooltip element
+    const tooltip = document.createElement('nys-tooltip');
+    // tooltip.setAttribute('text', `Copy link to ${h.textContent.trim()}`);
+    tooltip.setAttribute('text', `Copy link`);
+    tooltip.setAttribute('focusable', true);
+    tooltip.setAttribute('for', `heading-link-icon-${id}`);
+    tooltip.style.display = 'inline-flex';
+    tooltip.style.padding = '0 0 0 var(--nys-space-50)';
+
+    // Create our link icon element
+    const linkIcon = document.createElement('nys-icon');
+    linkIcon.setAttribute('name', 'link');
+    linkIcon.setAttribute('id', `heading-link-icon-${id}`);
+
+    // Create an anchor that will hold the URL to copy for this heading
+    // anchor is in memory, not added to the DOM
+    const anchor = document.createElement('nys-button');
+    anchor.setAttribute('href', `#${id}`);
+
+    // When you click on the copy icon, copy the heading URL to clipboard
+    // change the tooltip text to "Copied!" temporarily
+    linkIcon.addEventListener('click', (e) => {
+      // Stop the page from scrolling when you click this link
+      e.preventDefault();
+      // Copy the Full URL to the clipboard
+      copyHeadingUrl(anchor);
+      tooltip.setAttribute('text', 'Copied link!');
+
+      setTimeout(() => {
+        tooltip.setAttribute('text', 'Copy link');
+      }, 1500);
     });
-  };
+
+    // insert both the tooltip and linkicon elements after the heading text
+    h.insertAdjacentElement('beforeend', tooltip);
+    h.insertAdjacentElement('beforeend', linkIcon);
+
+  });
+}
 });
+
+// Trigger copy URL to clipboard
+const copyHeadingUrl = async (clickedHeadingLink) => {
+  // console.log(clickedHeadingLink);
+  const headingUrl = clickedHeadingLink.getAttribute("href");
+  const fullUrl = window.location.origin + window.location.pathname + headingUrl;
+
+  try {
+    await navigator.clipboard.writeText(fullUrl.trim());
+  } catch (err) {
+    console.error("Failed to copy:", err);
+  }
+};

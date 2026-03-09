@@ -1,0 +1,142 @@
+---
+permalink: /components/globalfooter/
+title: Global Footer
+description: Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+image: /assets/img/components/global-footer.svg
+image_alt: An illustration of a global footer.
+image_header: /assets/img/components/global-footer-header.svg
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4003-64216
+navOrder: 11
+---
+
+{% extends "layouts/component.njk" %}
+
+{% block longdescription %}
+
+The `<nys-globalfooter>` helps provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+
+{% endblock %}
+
+{% block example %}
+  {% set preview %}
+<nys-globalfooter agencyName="Office of Information Technology Services">
+</nys-globalfooter>{% endset %}  
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block usage %}
+
+### When to use this component
+ - Use nys-globalfooter to provide consistent access to essential links like contact details, privacy policies, and terms of use across all pages.
+ - Ideal for displaying organizational information and secondary navigation
+ ### When to consider something else
+ - Don’t use the global footer for primary navigation or highly interactive features.
+ - Avoid adding content that is not relevant or essential for all pages.
+{% endblock %}
+
+{% block usagedo %}
+
+ - Include essential links and information users need site-wide.
+ - Minimize the number of links.
+{% endblock %}
+
+{% block usagedont %}
+
+  - Don't use it for critical alerts or primary navigation.
+{% endblock %}
+
+{% block accessibility %}
+
+The `<nys-globalfooter>` component includes the following accessibility-focused features:
+
+ - Proper use of &lt;footer&gt; and &lt;a&gt; elements ensures compatibility with assistive technologies.
+ - Keyboard navigation: Users can tab through all links in the footer.
+{% endblock %}
+
+{% block options %}
+
+### With Links
+For simpler footers or public-facing sites, the Global Footer can include a single list of navigation links. To add links, follow this format:
+
+1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
+
+2. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired URL.
+
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
+
+  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+  <ul>
+    <li><a href="https://its.ny.gov">ITS Home</a></li>
+    <li><a href="https://its.ny.gov/about">About ITS</a></li>
+  </ul>
+</nys-globalfooter>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### With Column Links
+For sites that need to organize multiple navigation sections, the Global Footer supports column-based links. To add column links, follow this format:
+
+1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
+
+2. Group related links into columns by giving each column a parent list item (`<li>`) with a heading (`<span>`).
+
+3. Nest another unordered list (`<ul>`) inside each column to hold individual link items.
+
+4. Inside that nested `<ul>`, add `<li>` items, each containing an anchor tag (`<a href="">`) that points to the desired URL.
+
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
+
+  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+  <ul>
+    <li>
+      <span>About</span>
+      <ul>
+        <li><a href="https://its.ny.gov/about-us">About ITS</a></li>
+        <li><a href="https://its.ny.gov/contact-us">Contact</a></li>
+        <li><a href="https://its.ny.gov/policies">Policies</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Resources</span>
+      <ul>
+        <li><a href="https://its.ny.gov/resources">Developer Tools</a></li>
+        <li><a href="https://its.ny.gov/accessibility">Accessibility</a></li>
+        <li><a href="https://its.ny.gov/its-tech-podcast">Tech Podcast</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+{% endblock %}
+
+{% block properties %}
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><code>agencyName</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>homepageLink</code></td>
+      <td>String (URL)</td>
+    </tr>
+  </table>
+</nys-table>
+
+{% endblock %}
+
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+
+{% block events %}{% endblock %}
+
+{% block updates %}{% endblock %}

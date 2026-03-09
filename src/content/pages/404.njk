@@ -2,21 +2,76 @@
 permalink: 404.html
 title: "Page Not Found"
 description: "Sorry, we couldn't find the page you were looking for."
-crawl: "false"
+heading_links: false
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
-<section>
+<section style="text-align: center; background-color: var(--nys-color-neutral-10); border-radius:var(--nys-radius-lg)" class="nys-padding-600 nys-margin-t-400">
 <h1>Page not found</h1>
-<p>Sorry, we couldn't find the page you were looking for. If you clicked a link, the page may have been removed or changed location.</p>
-<p>Visit our homepage or contact us, and we'll help any way we can.</p>
-<p>
-  <a class="nys-button" href="{{ site.url | url}}/">Homepage</a>
-  <a class="nys-button nys-button--outline" href="mailto:designsystem@its.ny.gov">Contact Us</a>
-</p>
+<img src="{{ '/assets/img/whale.svg' | url }}" alt="The Honored Sir Hudson McWhaleFace, first of his name" style="max-width: 100%;">
+<p class="nys-font-h4">Uh oh... you may be lost at sea, but we can get you back to dry land.</p>
+<div class="nys-grid-row nys-grid-container-tablet">
+  <div class="nys-grid-col-4">
+    <p><a href="{{ site.url }}/">Home</a></p>
+  </div>
+  <div class="nys-grid-col-4">
+    <p><a href="{{ site.url }}/get-started">Get Started</a></p>
+  </div>
+  <div class="nys-grid-col-4">
+    <p><a href="{{ site.url }}/components">Components</a></p>
+  </div>
+</div>
+<div style="margin: 0 auto; display: inline-block; max-width: 100%;">
+      <nys-textinput 
+        name="q"
+        type="search" 
+        placeholder="Search"
+        id="q"
+        label="Search the NYS Design System"
+        width="lg"
+      >
+        <nys-button
+        slot="endButton"
+        type="button"
+        label=""
+        prefixIcon="search"
+        id="searchButton"
+        ></nys-button>
+      </nys-textinput>
+      <br>
+      <p><a href="mailto:designsystem@its.ny.gov">designsystem@its.ny.gov</a></p>
+      <script>
+        {# search the site when you press enter key in the search field #}
+        document.getElementById("q").addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            search();
+          }
+        });
+
+        {# Submit the form when you keypress or click the submit button #}
+        document.getElementById("searchButton").addEventListener("nys-click", () => { 
+          search();
+        });
+
+        {# grab the value of the "q" search text field and send the query to the search page #}
+        function search() {
+          var searchInput = document.getElementById('q');
+          var url = "/search/?q=" + searchInput.value;
+          window.open(url, "_self");
+        }
+      </script>
+
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+
 </section>
 </div>
 {% endblock %}

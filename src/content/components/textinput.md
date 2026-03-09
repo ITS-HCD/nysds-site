@@ -1,11 +1,13 @@
 ---
 permalink: /components/textinput/
-title: Textinput
+title: Text Input
 description: Field for entering short text strings, like email, number, password, and more.
 image: /assets/img/components/textinput.svg
 image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
-navOrder: 12
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587
+navOrder: 22
 ---
 
 {% extends "layouts/component.njk" %}
@@ -13,17 +15,16 @@ navOrder: 12
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
+The `<nys-textinput>` is a reusable web component for use in New York State digital products. It allows users to input data to be collected.
+
 {% endblock %}
 
 {% block example %}
-
-<nys-textinput label="This is a text input"></nys-textinput>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-textinput label="This is a text input"></nys-textinput>
+  {% set preview %}<nys-textinput label="This is a text input"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
@@ -38,21 +39,22 @@ The <code class="language-js">&lt;nys-textinput&gt;</code> is a reusable web com
 
 {% block usagedo %}
 
-  - Use clear and concise labels to describe the input required.
-  - Provide helper text to guide the user, but don’t rely on placeholders as a substitute for labels.
-  - Validate input in real-time to catch errors early (e.g., invalid email formats).
+  - Use clear, concise labels that describe the expected input.
+  - Add helper texts with the `description` property for context. 
+  - Validate input live to catch errors early (e.g., invalid email formats).
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use single-line text inputs for collecting long or detailed text responses (use a textarea).
-  - Don't overwhelm users with too many single-line inputs; group similar fields when possible.
+  - Don’t use for long or detailed responses (use `<nys-textarea>` instead).
+  - Don’t overwhelm users with too many fields; group related inputs.
+  - Don’t use placeholders as labels.
 
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-textinput</code> component includes the following accessibility-focused features:
+The `<nys-textinput>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
   - Keyboard navigation support, allowing users to tab into the input using the keyboard.
@@ -63,196 +65,185 @@ The <code class="language-js">nys-textinput</code> component includes the follow
 {% block options %}
 
 ### Width
-If no <code class="language-js">width</code> is provided, the <code class="language-js">&lt;nys-textinput&gt;</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
+If no `width` is provided, the `<nys-textinput>` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 
 Width full will take up the full width of the parent container.
 
-If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.
+If an invalid option is assigned to `width`, it will be ignored and default to `full`.
 
-<nys-textinput width="sm" label="This label is sm"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput width="sm" label="This label is sm"></nys-textinput>
-
-```
-
-</details>
-
+  {% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Type
-Accepted <code class="language-js">types</code> are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
+Accepted `types` are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
 
-Any other input defaults to <code class="language-js">type="text"</code>
+Any other input defaults to `type="text"`
 
-<nys-textinput type="password" label="Password"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput type="password" label="Password"></nys-textinput>
-
-```
-
-</details>
-
-
+  {% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
+{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Placeholder
-
-<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput label="placeholder" placeholder="this is a placeholder"></nys-textinput>
-
-```
-
-</details>
-
+  {% set preview %}<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled
-
-<nys-textinput label="Disabled" disabled></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput label="Disabled" disabled></nys-textinput>
-
-```
-
-</details>
+  {% set preview %}<nys-textinput label="Disabled" disabled></nys-textinput>
+{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Readonly
-
-<nys-textinput label="Readonly" value="Read only value" readonly></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>
-
-```
-
-</details>
-
+  {% set preview %}<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Min Max and step
 
-<code class="language-js">max</code>, <code class="language-js">min</code>, and <code class="language-js">step</code> only apply when <code class="language-js">type="number"</code>
+`max`, `min`, and `step` only apply when `type="number"`
 
-<nys-textinput label="Max/Min Example" description="Must be between 0 and 100" type="number" min="0"  max="100" step="10"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>
-
-```
-
-</details>
-
+  {% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Maxlength
-
-<nys-textinput label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>
-
-```
-
-</details>
-
+  {% set preview %}<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Pattern
-
 Takes any valid regex value.
+  {% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-<nys-textinput placeholder="N00000000" label="Please enter your Employee number" description="include the N prefix" maxlength="9" pattern="N[0-9]{8}" id="nID"></nys-textinput>
+### Required
+Set `required` to `<nys-textinput>` to make it mandatory.
+  {% set preview %}<nys-textinput name="myTextInput7" required label="label"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-<details>
-<summary>Example Code</summary>
+### Optional
+Adding the `optional` prop will add an optional flag to the input.
+  {% set preview %}<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-```html
-<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>
+### Slotted Description
+Add a description using the `description` prop for plain text, or use the description slot to include custom HTML for more flexibility.
+Takes any valid regex value.
+  {% set preview %}<nys-textinput name="descriptionSlot" label="Label">
+  <label slot="description">Slot: description</label>
+</nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-```
+### Slotted Button
+  You can add a button to the input by adding a `slot="startButton"` or `slot="endButton"`. This will add a button to the left or right of the input respectively.
 
-</details>
+  **Note**: Use a `<nys-button>` for the slotted button. Do not use both `startButton` and `endButton` on the same input.
 
+  **Note**: The slotted button will automatically be `size="sm"` and `variant="filled"` and support the disabled state of the input.
+
+  **Note**: Use `width="lg"` or `width="full"` on `<nys-textinput>` to give users enough space to enter text when a button is present.
+
+  {% set preview %}<nys-textinput 
+  name="searchInput"
+  type="search" 
+  placeholder="Search"
+  id="searchInput"
+>
+  <nys-button
+  slot="endButton"
+  type="submit"
+  label="Search"
+  prefixIcon="search"
+  id="searchButton"
+  ></nys-button>
+</nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error Message
-Set an error message and choose to activate it. The error message will appear ONLY when the <code class="language-js">showError</code> attribute is set to <code class="language-js">true</code>. Setting only <code class="language-js">errorMessage</code> will not display the error message by default.
+  Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to `true`. Setting only `errorMessage` will not display the error message by default.
 
-<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
-
-```
-
-</details>
+  {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
 {% block properties %}
 
-<table>
-  <thead>
+<nys-table striped>
+  <table>
     <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
+        <th>Property</th>
+        <th>Type</th>
     </tr>
     <tr>
-      <td><code>value</code></td>
-      <td>string</td>
+        <td><code>id</code></td>
+        <td>String</td>
     </tr>
     <tr>
-      <td><code>id</code></td>
-      <td>string</td>
+        <td><code>name</code></td>
+        <td>String</td>
     </tr>
     <tr>
-      <td><code>name</code></td>
-      <td>string</td>
+        <td><code>label</code></td>
+        <td>String</td>
     </tr>
     <tr>
-      <td><code>type</code></td>
-      <td>string ("email", "number", "password", "search", "tel", "text", "url")</td>
-      </td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>placeholder</code></td>
-      <td>string</td>
+        <td><code>description</code></td>
+        <td>String</td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+    </tr>
+    <tr>
+        <td><code>errorMessage</code></td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>max</code></td>
+        <td>integer</td>
+    </tr>
+    <tr>
+        <td><code>maxlength</code></td>
+        <td>integer</td>
+    </tr>
+    <tr>
+    <td><code>min</code></td>
+        <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>pattern</code></td>
+      <td>REGEX</td>
+    </tr>
+      <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>placeholder</code></td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>readonly</code></td>
@@ -263,86 +254,60 @@ Set an error message and choose to activate it. The error message will appear ON
       <td>boolean</td>
     </tr>
     <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>pattern</code></td>
-      <td>REGEX</td>
-    </tr>
-    <tr>
-      <td><code>maxlength</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ('sm", "md", "lg", "full")</td>
+      <td><code>showError</code></td>
+      <td>boolean</td>
     </tr>
     <tr>
       <td><code>step</code></td>
       <td>integer</td>
     </tr>
     <tr>
-      <td><code>min</code></td>
-      <td>integer</td>
+      <td><code>type</code></td>
+      <td><code>"email"</code> , <code>"number"</code> , <code>"password"</code> , <code>"search"</code> , <code>"tel"</code> , <code>"text"</code> , <code>"url"</code></td>
     </tr>
     <tr>
-      <td><code>max</code></td>
-      <td>integer</td>
+      <td><code>value</code></td>
+      <td>String</td>
     </tr>
     <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
+      <td><code>width</code></td>
+      <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code> , <code>"full"</code></td>
     </tr>
     <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
+      <td><code>form</code></td>
+      <td>String , <code>null</code></td>
     </tr>
-  </tbody>
-</table>
-
-{% endblock %}
-
-[[TODO]]
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
-    </tr>
-  </tbody>
   </table>
-
-{% block cssvariables %}
-
+</nys-table>
 
 {% endblock %}
+
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
-<p>The <code class="language-js">nys-textinput</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-checkValidity</code></strong> – Fired when the textinput state changes.</li>
-<li><strong><code>focus</code></strong> – Fired when the textinput gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the textinput loses focus.</li>
-</ol>
+The `<nys-textinput>` component emits **three** custom Javascript events:
+1.  **`nys-input`** – Fired when the textinput state changes.
+2.  **`nys-focus`** – Fired when the textinput gains focus.
+3.  **`nys-blur`** – Fired when the textinput loses focus.
+
+### Event details
+The `nys-input` event includes a detail object with the following properties:
+  - id (string): The id of the textarea.
+  - value (string): The currently selected text.
 
 You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the textinput component
+{% set code %}// Select the textinput component
 const textinput = document.querySelector('nys-textinput');
-
-// Listen for the 'nys-checkValidity' event
-textinput.addEventListener('nys-checkValidity', (event) => {
-  console.log('Text input changed:', event.target.value);
-});
-{% endhighlight %}
+// Listen for the 'nys-input' event
+textinput.addEventListener('nys-input', (event) => {
+  const { id, value } = event.detail;
+  console.log(`Text input (${id}) changed:`, value);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

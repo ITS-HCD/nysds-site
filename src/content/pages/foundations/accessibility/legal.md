@@ -25,7 +25,7 @@ This policy ensures that all digital tools, including websites and applications 
 This policy recognizes the importance of universal accessibility and establishes minimum accessibility requirements to ensure that Information and Communication Technology (“ICT”), including applications, websites, and other digital interfaces, developed, procured, maintained, or used by State Entities (“SE”) are accessible to all users, including those with disabilities.
 
 To ensure compliance with the requirements of this policy, SEs must:  
-- Ensure that all web content and mobile applications conform to the Level AA success criteria and conformance requirements of WCAG Version 2.1 in accordance with the DOJ Rule by June 25, 2026. 
+- Ensure that all web content and mobile applications conform to the Level AA success criteria and conformance requirements of WCAG Version 2.1 in accordance with the DOJ Rule by April 25, 2026. 
 - Ensure that each website either owned or maintained by the SE, including those provided by third parties, conform to the Level AA success criteria and conformance requirements of WCAG Version 2.2, or any successor guidelines, by January 1, 2027, in accordance with STL Section 103-d.
 - Conduct manual testing of ICT before production use, prior to any fundamental alterations, and biennially thereafter through use of specialized software or services.
 - Maintain documented testing reports for each ICT until the next automated and manual testing is completed.

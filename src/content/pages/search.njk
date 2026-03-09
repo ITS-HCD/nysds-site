@@ -1,0 +1,31 @@
+---
+permalink: /search/
+title: "Search The New York State Design System"
+description: "Search the New York State Design System documentation."
+section: Search
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="nys-grid-container-widescreen">
+    <div class="nys-grid-row">
+        <div class="nys-desktop:nys-grid-col-8">
+            <h1>Search</h1>
+            <br>
+           <div id="search" class="search"></div>
+         
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+let search = new PagefindUI({ element: "#search"});
+
+search.triggerSearch(new URLSearchParams(window.location.search).get("q") || "");
+</script>
+
+{% endblock %}

@@ -10,7 +10,7 @@ navOrder: 1
 {% block content %}
 
 # Digital Experiences
-Resources for making websites and applications accessibile.
+Resources for making websites and applications accessible.
 
 - [Creating Accessible Forms – Making forms accessible and understandable for all users](https://webaim.org/techniques/forms/)
 - [Accessibility Insights (Microsoft) – Accessibility testing and reporting suite ](href="https://accessibilityinsights.io/)

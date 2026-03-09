@@ -1,33 +1,35 @@
 ---
 permalink: /components/textarea/
-title: Textarea
+title: Text Area
 description: Field for entering multiple lines of text.
 image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.
 image_header: /assets/img/components/textarea-header.svg
-navOrder: 11
+stable: true
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108
+navOrder: 21
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
+The `<nys-textarea>` is a reusable web component for use in New York State digital products. It allows users to input multiple lines of text to be collected.
+
 {% endblock %}
 
 {% block example %}
-
-<nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities."></nys-textarea>
-{% endblock %}
-
-{% block examplecode %}
-
-<nys-textarea
+  {% set preview %}<nys-textarea
   id="quote"
   label="Enter your favorite quote:"
-  value="Majorities, of course, start with minorities."
-></nys-textarea>
+  value="Majorities, of course, start with minorities.">
+</nys-textarea>{% endset %}
+{% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
+
 
 {% block usage %}
 
@@ -41,20 +43,20 @@ The <code class="language-js">&lt;nys-textarea&gt;</code> is a reusable web comp
 
 {% block usagedo %}
 
-  - Use the nys-textarea for long-form text like descriptions or detailed feedback.
-  - Use the nys-textarea when precise user input is required in multiple lines.
+  - Use the `<nys-textarea>` for long-form or multi-line input, like descriptions or feedback.
+  - Use when users need space to write detailed, precise responses.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the nys-textarea for short or single-line inputs (use nys-input instead).
-  - Don't use the nys-textarea for data selection tasks (e.g., dropdowns or predefined options).
+  - Don't use the `<nys-textarea>` for short or single-line inputs (use `<nys-input>` instead).
+  - Don’t use for selecting predefined values (use dropdowns or other inputs).
 
 {% endblock %}
 
 {% block accessibility %}
 
-The <code class="language-js">nys-textarea</code> component includes the following accessibility-focused features:
+The `<nys-textarea>` component includes the following accessibility-focused features:
 
   - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
   - Keyboard navigation support, allowing users to tab into the input using the keyboard.
@@ -69,184 +71,138 @@ The `rows` attribute specifies the visible height of a text area, in number of l
 
 The default value is `4`
 
-<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
-
-```
-
-</details>
+  {% set preview %}<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Width
-If no <code class="language-js">width</code> is provided, the <code class="language-js">nys-textarea</code> will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
-Setting property <code class="language-js">width="full"</code> will take up the full width of the parent container.
+If no `width` is provided, the `<nys-textarea>` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`. Setting property `width="full"` will take up the full width of the parent container.
 
-<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon>If an invalid option is assigned to <code class="language-js">width</code>, it will be ignored and default to `full`.</p>
+If an invalid option is assigned to `width`, it will be ignored and default to `width="full"`
 
-<nys-textarea width="md" label="This textarea is md"></nys-textarea>
+  {% set preview %}<nys-textarea width="md" label="This textarea is md"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-<details>
-<summary>Example Code</summary>
+### Resize Behavior
+By default a user can resize the `<nys-textarea>` vertically. If you want to disallow resizing altogether add `resize="none"`.
 
-```html
-<nys-textarea width="md" label="This textarea is md"></nys-textarea>
+**Note:** `resize` is not affected by setting `<nys-textarea>` to `disabled` or `readonly` as they are independent.
 
-```
-
-</details>
-
-### Resize
-By default a user can resize the <code class="language-js">&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code class="language-js">resize="none"</code>
-
-<p style="display:flex; align-items:top; gap:10px;"><nys-icon name="info" size="2xl"></nys-icon> <code class="language-js">resize</code> is not affected by setting <code class="language-js">&lt;nys-textarea&gt;</code> to <code class="language-js">disabled</code> or <code class="language-js">readonly</code> as they are independent.</p>
-
-<nys-textarea label="This textarea is not resizable" rows="4" resize="none"></nys-textarea>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>
-
-```
-
-</details>
+  {% set preview %}<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Description
 You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.
 
-<nys-textarea label="Label" description="description property"></nys-textarea>
-
+  {% set preview %}<nys-textarea label="Label" description="description property"></nys-textarea>
+<br />
 <nys-textarea label="Label">
-  <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
-</nys-textarea>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea label="Label" description="description property"></nys-textarea>
-
+  <p slot="description">Description slot 
+    <a href="https://ny.gov">providing more options</a>
+  </p>
+</nys-textarea>{% endset %}
+  {% set code %}<nys-textarea label="Label" description="description property"></nys-textarea>
 <nys-textarea label="Label">
-  <p slot="description">Description slot <a href="https://ny.gov">providing more options</a></p>
-</nys-textarea>
+  <p slot="description">Description slot 
+    <a href="https://ny.gov">providing more options</a>
+  </p>
+</nys-textarea>{% endset %}
+{% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-
-```
-
-</details>
-
+### Placeholder 
+  {% set preview %}<nys-textarea label="Placeholder" placeholder="this is a placeholder"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled 
-
-<nys-textarea label="Disabled textarea" disabled></nys-textarea>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea label="Disabled textarea" disabled></nys-textarea>
-
-```
-
-</details>
+  {% set preview %}<nys-textarea label="Disabled textarea" disabled></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Readonly
-
-<nys-textarea label="Readonly teextarea" value="This text cannot be changed" readonly></nys-textarea>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea readonly label="Readonly teextarea" value="This text cannot be changed"></nys-textarea>
-
-```
-
-</details>
-
+  {% set preview %}<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Max length
+  {% set preview %}<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-<nys-textarea label="Max Length" description="You cannot type more than 10 characters in the below field" maxlength="10"></nys-textarea>
+### Required
+  {% set preview %}<nys-textarea required label="Required textarea"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>
-
-```
-
-</details>
+### Optional
+  {% set preview %}<nys-textarea optional label="Optional textarea"></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 ### Error Message
-To display an error message, pass in the <code class="language-js">showError</code> property to the <code class="language-js">&lt;nys-textarea&gt;</code> component. Setting <code class="language-js">errorMessage</code> does not display the message without <code class="language-js">showError</code> set to true.
+To display an error message, pass in the `showError` property to the `<nys-textarea>` component. Setting `errorMessage` does not display the message without `showError` set to true.
 
-
-<nys-textarea label="Describe the incident" showError errorMessage="You did not provide a value for this field."></nys-textarea>
-
-<details>
-<summary>Example Code</summary>
-
-```html
-<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
-
-```
-
-</details>
+  {% set preview %}<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
 {% block properties %}
 
-<table>
-  <thead>
+<nys-table striped>
+  <table>
     <tr>
       <th>Property</th>
       <th>Type</th>
     </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>label</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>errorMessage</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>showError</code></td>
-      <td>boolean</td>
-    </tr>
     <tr>
       <td><code>id</code></td>
-      <td>string</td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>string</td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>description</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>placeholder</code></td>
-      <td>string</td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>errorMessage</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>maxLength</code></td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><code>optional</code></td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><code>placeholder</code></td>
+      <td>String</td>
     </tr>
     <tr>
       <td><code>readonly</code></td>
@@ -257,69 +213,62 @@ To display an error message, pass in the <code class="language-js">showError</co
       <td>boolean</td>
     </tr>
     <tr>
-      <td><code>form</code></td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td><code>maxLength</code></td>
-      <td>integer</td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>string ("sm", "md", "lg", "full")</td>
+      <td><code>resize</code></td>
+      <td><code>"vertical"</code>, <code>"none"</code></td>
     </tr>
     <tr>
       <td><code>rows</code></td>
       <td>integer</td>
     </tr>
     <tr>
-      <td><code>resize</code></td>
-      <td>string ("none")</td>
+      <td><code>showError</code></td>
+      <td>boolean</td>
     </tr>
-  </tbody>
-</table>
-
-{% endblock %}
-[[TODO]]
-<table>
-  <thead>
     <tr>
-      <th>Variable</th>
-      <th>Description</th>
+      <td><code>value</code></td>
+      <td>String</td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
-      <td><code>--nys-toggle-width</code></td>
-      <td>Width of the toggle switch.</td>
+      <td><code>width</code></td>
+      <td><code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"full"</code></td>
     </tr>
-  </tbody>
+    <tr>
+      <td><code>form</code></td>
+      <td>String, <code>null</code></td>
+    </tr>
   </table>
-
-{% block cssvariables %}
-
+</nys-table>
 
 {% endblock %}
+
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
-<p>The <code class="language-js">nys-textarea</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-checkValidity</code></strong> – Fired when the textarea state changes.</li>
-<li><strong><code>focus</code></strong> – Fired when the textarea gains focus.</li>
-<li><strong><code>blur</code></strong> – Fired when the textarea loses focus.</li>
-</ol>
+The `<nys-textarea>` component emits **four** custom Javascript events:
+
+1.  **`nys-input`** – Fired when the textarea state changes.
+2.  **`nys-focus`** – Fired when the textarea gains focus.
+3.  **`nys-blur`** – Fired when the textarea loses focus.
+4.  **`nys-select`** – Fired when the user selects text within the textarea.
+
+### Event details
+The `nys-input` and `nys-select` event includes a detail object with the following properties:
+  - id (string): The id of the textarea.
+  - value (string): The currently selected text.
 
 You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the textarea component
+{% set code %}// Select the textarea component
 const textarea = document.querySelector('nys-textarea');
-
-// Listen for the 'nys-checkValidity' event
-textarea.addEventListener('nys-checkValidity', (event) => {
-  console.log('Text input changed:', event.target.value);
-});
-{% endhighlight %}
+// Listen for the 'nys-input' event
+textarea.addEventListener('nys-input', (event) => {
+  const { id, value } = event.detail;
+  console.log(`Textarea (${id}) changed:`, value);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

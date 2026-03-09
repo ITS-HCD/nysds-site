@@ -2,25 +2,27 @@
     <section id="overview">
       <h1>{{ title }}</h1>
       {%- block longdescription %}{% endblock -%}
+      <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+        <nys-badge label="{{ 'Stable' if stable else 'Unstable' }}" prefixIcon="code"></nys-badge>
+        <nys-badge
+          prefixIcon
+          prefixLabel="WCAG 2.2"
+          label="AA"
+          intent="success"
+        ></nys-badge>
+        <nys-button size="sm" variant="text" label="View in Figma" href="{{ figma_link or "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=51-1514" }}" target="_blank"></nys-button>
+      </div>
     </section>
-    <section id="example">
+    <section>
       {%- block example %}{% endblock -%}
     </section>
-    <section id="examplecode">
-      <details>
-        <summary>Example Code</summary>
-      {% highlight "html" %}
-      {%- block examplecode %}{% endblock -%}
-      {% endhighlight %}
-      </details>
-    </section>
     <br>
-    <section id="options">
+    <section>
       <h2>Options</h2>
       {%- block options %}{% endblock -%}
     </section>
     <br>
-    <section id="usage">
+    <section>
       <h2>Usage</h2>
       {%- block usage %}{% endblock -%}
     </section>
@@ -39,25 +41,37 @@
       </div>
     </div>
     <br>
-    <section id="accessibility">
+    <section>
       <h2>Accessibility</h2>
       {%- block accessibility %}{% endblock -%}
     </section>
     <br>
-    <section id="properties">
+    <section>
       <h2>Properties</h2>
       {%- block properties %}{% endblock -%}
     </section>
     <br>
-    <section id="cssvariables">
-      <h2>CSS Variables</h2>
+    <section>
+      <h2>Style Overrides</h2>
       {%- block cssvariables %}{% endblock -%}
     </section>
     <br>
-    <section id="events">
+    <section>
       <h2>Events</h2>
       {%- block events %}{% endblock -%}
     </section>
-  {# <h2 id="updates">Updates</h2>
-  {%- block updates %}{% endblock -%} #}
+    <section class="nys-section">
+  <h2>Suggest a New Component</h2>
+  <div class="nys-grid-row nys-grid-gap">
+    <div>
+      <p>
+        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+      </p>
+    </div>
+    <div class="nys-tablet:nys-grid-col-12">
+      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+    </div>
+  </div>
+</section>
+
 

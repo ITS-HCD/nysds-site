@@ -3,9 +3,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /cdn-cgi/
 
-User-agent: GPTBot
-Disallow: /
-
 Host: https://designsystem.ny.gov/
 
 Sitemap: https://designsystem.ny.gov/sitemap.xml
