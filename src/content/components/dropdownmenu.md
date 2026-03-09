@@ -1,7 +1,7 @@
 ---
 permalink: /components/dropdownmenu/
 title: Dropdown Menu
-description: 
+description: A list of actions or options that appear when a user interacts with a trigger, and disappears after a selection or clicking away.
 image: /assets/img/components/dropdownmenu.svg
 image_alt: An illustration of a dropdownmenu.
 image_header: /assets/img/components/dropdownmenu-header.svg
