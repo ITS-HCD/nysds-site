@@ -1,9 +1,9 @@
 ---
 permalink: /components/dropdownmenu/
 title: Dropdown Menu
-description: A dropdown menu shows options when a trigger is clicked and hides after a selection or outside click.
+description: A list of actions or options that appear when a user interacts with a trigger, and disappears after a selection or clicking away.
 image: /assets/img/components/dropdownmenu.svg
-image_alt: An illustration of a dropdown menu.
+image_alt: An illustration of a dropdownmenu.
 image_header: /assets/img/components/dropdownmenu-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545
@@ -14,7 +14,7 @@ navOrder: 11
 
 {% block longdescription %}
 
-The `<nys-dropdownmenu>` and `<dropdownmenuitem>` components are a list of actions or options that appears when a user interacts with a trigger, and disappears after a selection or clicking away.
+The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of actions or options that appears when a user interacts with a trigger, and disappears after a selection or clicking away.
 
 {% endblock %}
 
@@ -150,11 +150,11 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 {% set preview %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-    <nys-button id="trigger-id1" slot="user-actions" label="Log out" prefixIcon="slotted">
+    <nys-button id="my-user-actions" slot="user-actions" label="Log out" prefixIcon="slotted">
         <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
     </nys-button>
 </nys-globalheader>
-<nys-dropdownmenu id="dropdownmenu1" for="trigger-id1" position="bottom-end">
+<nys-dropdownmenu id="dropdownmenu1" for="my-user-actions" position="bottom-end">
     <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
@@ -338,7 +338,8 @@ The `nys-click` event includes a detail object with the following properties:
   - `href` (string): The href of the clicked item. **Only present if `href` was provided.**
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the dropdownmenu component
+{% set code %}
+// Select the dropdownmenu component
 const dropdownmenu = document.querySelector("nys-dropdownmenu");
 // Listen for the 'nys-click' event
 dropdownmenu.addEventListener('nys-click', (event) => {
@@ -349,6 +350,7 @@ dropdownmenu.addEventListener('nys-click', (event) => {
         console.log(`Action item clicked (${id}): ${label}`);
     }
 });{% endset %}
+{% set preview ="" %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
