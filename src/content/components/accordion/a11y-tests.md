@@ -8,7 +8,7 @@ image_header: /assets/img/components/accordion-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783
 parent: Accordion
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 ---
 
 {% extends "layouts/component.njk" %}
