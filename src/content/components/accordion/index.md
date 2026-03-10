@@ -14,7 +14,7 @@ navOrder: 2
 
 {% block longdescription %}
 
-The `nys-accordion` and `nys-accordionitem` components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.
+The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.
 
 {% endblock %}
 

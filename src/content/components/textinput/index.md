@@ -7,7 +7,7 @@ image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587
-navOrder: 22
+navOrder: 24
 ---
 
 {% extends "layouts/component.njk" %}
@@ -293,7 +293,7 @@ The `<nys-textinput>` component emits **three** custom Javascript events:
 
 ### Event details
 The `nys-input` event includes a detail object with the following properties:
-  - id (string): The id of the textarea.
+  - id (string): The id of the textinput.
   - value (string): The currently selected text.
 
 You can listen to these events using JavaScript:

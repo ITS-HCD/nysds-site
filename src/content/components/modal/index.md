@@ -7,7 +7,7 @@ image_alt: An illustration of a modal.
 image_header: /assets/img/components/modal-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
-navOrder: 14
+navOrder: 16
 ---
 
 {% extends "layouts/component.njk" %}

@@ -482,16 +482,6 @@ a.card::after {
     background: transparent;
 }
 
-<<<<<<< HEAD
-a.card {
-    color: inherit;
-    text-decoration: none;
-    max-width: 100%;
-    ;
-}
-
-=======
->>>>>>> main
 a.card:hover .card__title,
 a.card:focus .card__title,
 a.card:focus-visible .card__title {
@@ -744,12 +734,8 @@ transition: none !important;
     border-radius: var(--nys-radius-md);
 }
 
-<<<<<<< HEAD
-li>.section-nav__list {
-=======
 /* Remove border from nested tables */
 li > .section-nav__list {
->>>>>>> main
     border: none;
 }
 
@@ -1099,9 +1085,6 @@ li > .section-nav__list {
     height: var(--nys-space-1200);
     border-radius: var(--nys-radius-md);
 }
-<<<<<<< HEAD
-
-=======
 .token-list__swatch--checkerboard {
     background-image:
     linear-gradient(45deg, var(--nys-color-neutral-40, #f6f6f6) 25%, transparent 25%),
@@ -1116,7 +1099,6 @@ li > .section-nav__list {
 .token-list__swatch--white-border {
     border: 1px solid var(--nys-color-neutral-100);
 }
->>>>>>> main
 .token-list__text {
     font-size: var(--nys-font-size-sm);
     position: absolute;
@@ -1167,8 +1149,6 @@ li > .section-nav__list {
     opacity: 1;
 }
 
-<<<<<<< HEAD
-=======
 /* Give these tokens a defined height and bg color so they show up in the token list */
 .token-list__shadow {
     border-radius: var(--nys-radius-lg);
@@ -1213,21 +1193,12 @@ li > .section-nav__list {
     transform: translateY(50%);
 }
 
->>>>>>> main
 /*** Code Previews Container ***/
 .code-preview-container {
     border-radius: var(--nys-radius-md, 4px);
     border: 1px solid var(--nys-color-neutral-50, #EDEDED);
     margin: 10px 0;
 }
-<<<<<<< HEAD
-
-.code-preview {
-    padding: var(--nys-space-200);
-}
-
-.code-preview-container details {
-=======
 /*** Main Render Component Display ***/
 .code-preview__preview {
     padding: var(--nys-space-300, 24px);
@@ -1279,7 +1250,6 @@ li > .section-nav__list {
     justify-content: flex-start;
     align-items: center;
     color: var(--nys-color-text, #1B1B1B);
->>>>>>> main
     border: none;
     background: var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
 }
@@ -1414,12 +1384,8 @@ code {
 }
 
 .byline p {
-<<<<<<< HEAD
     max-width: 85%;
     /* Limit the width of the byline to align with NYSDS lockup */
-=======
-    max-width: 85%; /* Limit the width of the byline to align with NYS Design System lockup */
->>>>>>> main
 }
 
 /* Align the logo lockup with the center of the homepage graphic */
@@ -1494,10 +1460,10 @@ tr:nth-child(even) {
     background-color: var(--nys-color-neutral-50);
 }
 
-<<<<<<< HEAD
 tr:hover {
     background-color: var(--nys-color-neutral-100);
-=======
+}
+
 /* CSS Variables Table */
 .css-var-table__tip {
     text-align: center;
@@ -1536,9 +1502,7 @@ tr:hover {
     font-weight: var(--nys-font-weight-regular) !important;
 }
 
-
 :root {
     --pagefind-ui-scale: 1;
     --pagefind-ui-text: var(--nys-color-ink);
->>>>>>> main
 }
