@@ -7,7 +7,7 @@ image_alt: An illustration of a date picker.
 image_header: /assets/img/components/datepicker-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=15514-1502
-navOrder: 8
+navOrder: 9
 ---
 
 {% extends "layouts/component.njk" %}
