@@ -43,6 +43,8 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "drive_folder_upload" %}{% include "partials/icon-preview.njk" %}
   {% set name = "edit_square" %}{% include "partials/icon-preview.njk" %}
   {% set name = "expand_all" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "filter_list" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "filter_alt" %}{% include "partials/icon-preview.njk" %}
   {% set name = "help" %}{% include "partials/icon-preview.njk" %}
   {% set name = "language" %}{% include "partials/icon-preview.njk" %}
   {% set name = "link" %}{% include "partials/icon-preview.njk" %}
@@ -56,6 +58,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "publish" %}{% include "partials/icon-preview.njk" %}
   {% set name = "search" %}{% include "partials/icon-preview.njk" %}
   {% set name = "share" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "sort" %}{% include "partials/icon-preview.njk" %}
   {% set name = "sms" %}{% include "partials/icon-preview.njk" %}
   {% set name = "thumb_down" %}{% include "partials/icon-preview.njk" %}
   {% set name = "thumb_up" %}{% include "partials/icon-preview.njk" %}
