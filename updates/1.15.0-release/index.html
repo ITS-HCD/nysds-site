@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NYS Design System Release 1.15.0 “Nye” - New York State Design System</title>
+
+<meta name="description" content="Meet &lt;nys-combobox&gt; and &lt;nys-dropdownmenu&gt;, the two newest components in the NYS Design System! We added 3 new icons to the &lt;nys-icon&gt; component, standardized our JS files, fixed bugs, and added a new language configuration option for &lt;nys-unavheader&gt;.
+">
+<link rel="canonical" href="https://designsystem.ny.gov/updates/1.15.0-release/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="NYS Design System Release 1.15.0 “Nye”">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/updates/1.15.0-release/">
+<meta property="og:description" content="Meet &lt;nys-combobox&gt; and &lt;nys-dropdownmenu&gt;, the two newest components in the NYS Design System! We added 3 new icons to the &lt;nys-icon&gt; component, standardized our JS files, fixed bugs, and added a new language configuration option for &lt;nys-unavheader&gt;.
+">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/i/2026/release-1.15.0.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+    
+    <!-- Latest Build: 2026-03-10T14:24:46.229+00:00 -->
+  </head>
+  
+  <body class="single-page page-release-1.15.0 section-updates">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Updates
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-updates.svg" alt="Updates section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+
+
+
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
+    
+      <section class="page-content">
+
+        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-15-0-nye">
+            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.15.0 “Nye”
+          </h1><p class="page-subtitle">Meet &lt;nys-combobox&gt; and &lt;nys-dropdownmenu&gt;, the two newest components in the NYS Design System! We added 3 new icons to the &lt;nys-icon&gt; component, standardized our JS files, fixed bugs, and added a new language configuration option for &lt;nys-unavheader&gt;.
+</p><div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+              <span class="page-author__name">Eric Steinborn</span>
+            </div>
+            <time class="page-meta__date" datetime="2026-03-06T00:00:00.000+00:00">March 6, 2026</time>
+            <div class="page-meta__readtime">3 min read time</div>
+          </div>
+        </header>
+
+        <h2 id="nye">“Nye” 🏔️</h2>
+<p>This is our 35<sup>th</sup> release of the New York State Design System. Nye is the 45<sup>th</sup> highest peak in New York, with an elevation of 3,895 ft (1,187 m)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Nye_Mountain">Learn more about Nye Mountain.</a></p>
+<h2 id="nys-combobox-now-available"><code>&lt;nys-combobox&gt;</code> now available</h2>
+<p>The new <code>&lt;nys-combobox&gt;</code> combines a text box with a dropdown list, allowing users to either select a predefined option or type to select a value from the list.</p>
+<p><a href="/components/combobox">Read the full combobox documentation</a>.</p>
+  <div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-combobox label="Choose a county" id="my-combobox" width="lg">
+  <option value="albany">Albany</option>
+  <option value="allegany">Allegany</option>
+  <option value="bronx">Bronx</option>
+  <option value="broome">Broome</option>
+  <option value="cattaraugus">Cattaraugus</option>
+  <option value="cayuga">Cayuga</option>
+  <option value="chautauqua">Chautauqua</option>
+  <option value="chemung">Chemung</option>
+  <option value="chenango">Chenango</option>
+  <option value="clinton">Clinton</option>
+  <option value="columbia">Columbia</option>
+  <option value="cortland">Cortland</option>
+  <option value="delaware">Delaware</option>
+  <option value="dutchess">Dutchess</option>
+  <option value="erie">Erie</option>
+  <option value="essex">Essex</option>
+  <option value="franklin">Franklin</option>
+  <option value="fulton">Fulton</option>
+  <option value="genesee">Genesee</option>
+  <option value="greene">Greene</option>
+  <option value="hamilton">Hamilton</option>
+  <option value="herkimer">Herkimer</option>
+  <option value="jefferson">Jefferson</option>
+  <option value="kings">Kings</option>
+  <option value="lewis">Lewis</option>
+  <option value="livingston">Livingston</option>
+  <option value="madison">Madison</option>
+  <option value="monroe">Monroe</option>
+  <option value="montgomery">Montgomery</option>
+  <option value="nassau">Nassau</option>
+  <option value="new-york">New York</option>
+  <option value="niagara">Niagara</option>
+  <option value="oneida">Oneida</option>
+  <option value="onondaga">Onondaga</option>
+  <option value="ontario">Ontario</option>
+  <option value="orange">Orange</option>
+  <option value="orleans">Orleans</option>
+  <option value="oswego">Oswego</option>
+  <option value="otsego">Otsego</option>
+  <option value="putnam">Putnam</option>
+  <option value="queens">Queens</option>
+  <option value="rensselaer">Rensselaer</option>
+  <option value="richmond">Richmond</option>
+  <option value="rockland">Rockland</option>
+  <option value="st-lawrence">St. Lawrence</option>
+  <option value="saratoga">Saratoga</option>
+  <option value="schenectady">Schenectady</option>
+  <option value="schoharie">Schoharie</option>
+  <option value="schuyler">Schuyler</option>
+  <option value="seneca">Seneca</option>
+  <option value="steuben">Steuben</option>
+  <option value="suffolk">Suffolk</option>
+  <option value="sullivan">Sullivan</option>
+  <option value="tioga">Tioga</option>
+  <option value="tompkins">Tompkins</option>
+  <option value="ulster">Ulster</option>
+  <option value="warren">Warren</option>
+  <option value="washington">Washington</option>
+  <option value="wayne">Wayne</option>
+  <option value="westchester">Westchester</option>
+  <option value="wyoming">Wyoming</option>
+  <option value="yates">Yates</option>
+</nys-combobox>
+  </div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-combobox</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Choose a county<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>my-combobox<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>albany<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Albany<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>allegany<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Allegany<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bronx<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Bronx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>broome<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Broome<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  ...rest of options...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-combobox</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> combo'd these boxes.</p>
+<h2 id="nys-dropdownmenu-now-available"><code>&lt;nys-dropdownmenu&gt;</code> now available</h2>
+<p>The new <code>&lt;nys-dropdownmenu&gt;</code> is a highly rquested feature for the NYS Design System. Featuring a trigger element, and dropdown content you can either assign URL's to the dropdown items, or listen to their JavaScript events to fire off a script. Give it a try today in the <a href="/components/globalheader"><code>&lt;nys-globalheader&gt;</code></a>.</p>
+<p><a href="/components/dropdownmenu">Read the full dropdownmenu documentation</a>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-button id="my-trigger-id" label="Dropdown Menu"></nys-button>
+<nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+</nys-dropdownmenu>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-trigger-id<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Dropdown Menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenu</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-dropdownmenu<span class="token punctuation">"</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-trigger-id<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Profile<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/profile<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Repositories &amp; Github Pages<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/repos<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Organizations<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/organizations<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Sign out<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/logout<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenu</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> dropped this hot new component!</p>
+<h2 id="custom-language-list-in-nys-unavheader">Custom language list in <code>&lt;nys-unavheader&gt;</code></h2>
+<p>Different agencies solve the multi-lingual issue in different ways. Initially the unavheader component only supported specifically formatted URLs with subdomains for each language. The latest update to <code>&lt;nys-unavheader&gt;</code> allows you to customize the language list in the &quot;translate&quot; dropdown.</p>
+<p><a href="/components/unav-header/#custom-language-endpoints">Read the full custom language endpoint documentation</a>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-unavheader id="my-header" hideSearch=""></nys-unavheader>
+<script>
+  const header = document.querySelector('#my-header');
+  header.languages = [
+    { code: 'en', label: 'Custom' },
+    { code: 'es', label: 'Language' , url: '?lang=es'},
+    { code: 'fr', label: 'Support', url: '?lang=fr'},
+    { code: 'fr', label: 'in v1.15.0', url: '?lang=js'},
+  ];
+</script>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-unavheader</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-header<span class="token punctuation">"</span></span> <span class="token attr-name">hideSearch</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-unavheader</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">const</span> header <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#my-header'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  header<span class="token punctuation">.</span>languages <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'Custom'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'Language'</span> <span class="token punctuation">,</span> <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">'?lang=es'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'fr'</span><span class="token punctuation">,</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'Support'</span><span class="token punctuation">,</span> <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">'?lang=fr'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'fr'</span><span class="token punctuation">,</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'in v1.15.0'</span><span class="token punctuation">,</span> <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">'?lang=js'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> customized the header!</p>
+<h2 id="three-new-icons-available">Three new icons available:</h2>
+<p>Check out the new icons in <code>&lt;nys-icon&gt;</code>: <code>filter_list</code>, <code>filter_alt</code>, and <code>sort</code> are now available for use!</p>
+<p><a href="/components/icon">View the full icon list</a>.</p>
+<p><nys-icon name="filter_list" size="4xl"></nys-icon>
+<nys-icon name="filter_alt" size="4xl"></nys-icon>
+<nys-icon name="sort" size="4xl"></nys-icon></p>
+<p><a href="https://github.com/novacat35">Robert Chen</a> sorted this out!</p>
+<h2 id="figma-updates">Figma updates</h2>
+<p>Today we’re launching the official versions of our new combobox and dropdown components in our design library.</p>
+<ul>
+<li><strong><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=17435-37173&amp;t=P5qCmlyHYP3OBj3Y-4">Combobox</a></strong> - Give your users a type-ahead list of values to search and select</li>
+<li><strong><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=19283-19719&amp;t=P5qCmlyHYP3OBj3Y-4">Dropdown</a></strong> - A trigger with a dropdown attached to it</li>
+<li><code>Video Player</code> now available in Figma</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> is creating important components!</p>
+<h2 id="bug-fixes">Bug fixes</h2>
+<ul>
+<li>Fix form field ability to be focused programatically</li>
+<li>Dispatch unique events for both <code>&lt;nys-checkbox&gt;</code> and <code>&lt;nys-radiobutton&gt;</code> “other” fields</li>
+<li>Fixed buttons that were taking up too much horizontal space in the DOM</li>
+<li>De-duplicate the build script to only build each component once</li>
+<li>Re-apply version numbers to build JS and CSS files</li>
+<li>Fixed Sass errors in utility scripts</li>
+<li><code>&lt;nys-radiobutton&gt;</code> and <code>&lt;nys-checkbox&gt;</code> with no label no longer prints &quot;false&quot;</li>
+<li>Dispatch an input event when typing in <code>&lt;nys-datepicker&gt;</code></li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> fix broken things.</p>
+<h2 id="breaking-changes">🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2 id="known-issues">⚠️ Known issues</h2>
+<ul>
+<li><code>&lt;nys-dropdownmenu&gt;</code> in v1.15.0 has z-index issues. They have been resolved in a hotfix, but will not be released until next release.</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3 id="that-s-it">That’s it!</h3>
+<h4 id="for-full-component-updates-bug-fixes-and-the-detailed-changelog">For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.15.0">See the full developer release notes for v.1.15.0 →</a></p>
+
+
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">        
+        <ul class="taglist" data-pagefind-ignore="all">
+          
+          <li class="badge">release</li>
+          
+          <li class="badge"> combobox</li>
+          
+          <li class="badge"> dropdown</li>
+          
+          <li class="badge"> i18n</li>
+          
+          <li class="badge"> unav</li>
+          
+        </ul>
+        </div>
+        </div>
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div></div>
+            <div>Previous : <a href="/updates/1.14.0-release/" title="Read: NYS Design System Release 1.14.0 “Marcy”"><b>NYS Design System Release 1.14.0 “Marcy”</b></a></div>
+          </div>
+        </div>
+
+        
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2026-03-06-release-1.15.0.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: March 6, 2026</p>
+  </div>
+
+
+      </section>
+    </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+    </aside>
+  </div>
+</div>
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+  
+  </body>
+</html>
