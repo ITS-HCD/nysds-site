@@ -103,11 +103,11 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
   appName="User Registration Form" 
   agencyName="Office of Information Technology Services"
 >
-  <nys-button id="my-action-slot" slot="user-actions" label="Log out" prefixIcon="slotted">
+  <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
     <nys-avatar
       slot="prefix-icon"
       ariaLabel="User avatar"
-      initials="NY"
+      initials="JS"
     ></nys-avatar>
   </nys-button>
 </nys-globalheader>
