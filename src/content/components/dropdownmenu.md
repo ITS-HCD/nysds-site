@@ -150,8 +150,8 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 {% set preview %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-    <nys-button id="my-user-actions" slot="user-actions" label="Log out" prefixIcon="slotted">
-        <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+    <nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
+        <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
     </nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu1" for="my-user-actions" position="bottom-end">
