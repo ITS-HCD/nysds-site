@@ -6,7 +6,7 @@ image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
 image_header: /assets/img/components/avatar-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4019-57057&t=ehyQYJeb6ohvHYV0-4 
 navOrder: 3
 ---
 
@@ -203,5 +203,15 @@ You can change the background color of an Avatar. This attribute accepts any val
 {% endblock %}
 
 {% block events %}{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
 
 {% block updates %}{% endblock %}
