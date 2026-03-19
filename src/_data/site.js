@@ -1,7 +1,7 @@
 module.exports = {
     buildDate: new Date(),
     url: process.env.NETLIFY === 'true'
-        ? '/'
+        ? 'https://nysds-test.netlify.app'
         : process.env.ELEVENTY_ENV === 'development'
             ? 'http://localhost:8080'
             : 'https://designsystem.ny.gov',
