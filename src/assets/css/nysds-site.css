@@ -567,7 +567,6 @@ transition: none !important;
 }
 
 .card__no-border .card__media {
-    aspect-ratio: 1.7 / 1;
     margin: var(--nys-space-200) 0;
     max-height: 10rem;
 }
@@ -1053,20 +1052,24 @@ li > .section-nav__list {
 .token-list__item {
     margin-bottom: var(--nys-space-400);
 }
+
 .token-list__name {
     font-size: var(--nys-font-size-xl);
     margin: 0;
     padding: 0;
 }
+
 .token-list__raw {
     color: var(--nys-color-neutral-600);
     font-size: var(--nys-font-size-xs);
 }
-.token-list__info > div {
+
+.token-list__info>div {
     padding: var(--nys-space-50) var(--nys-space-250);
     background-color: var(--nys-color-neutral-50);
     height: auto;
 }
+
 .token-list__var {
     font-size: var(--nys-font-size-xs);
     word-break: break-all;
@@ -1074,10 +1077,11 @@ li > .section-nav__list {
     white-space: pre-wrap;
     line-height: 1;
 }
+
 .token-list__swatch {
     position: relative;
     width: 100%;
-    max-width: calc( var(--nys-space-1200) * 2);
+    max-width: calc(var(--nys-space-1200) * 2);
     height: var(--nys-space-1200);
     border-radius: var(--nys-radius-md);
 }
@@ -1107,6 +1111,7 @@ li > .section-nav__list {
     justify-content: flex-start;
     flex-direction: column-reverse;
 }
+
 .token-list__text--value::before {
     content: '';
     display: inline-block;
@@ -1115,14 +1120,17 @@ li > .section-nav__list {
     border-radius: var(--nys-radius-round);
     background: currentColor;
 }
+
 .token-list__text--value {
     position: relative;
     cursor: pointer;
 }
+
 .token-list__text--value::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 120%; /* Adjust position */
+    bottom: 120%;
+    /* Adjust position */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
@@ -1138,7 +1146,7 @@ li > .section-nav__list {
 }
 
 .token-list__text--value:hover::after {
-opacity: 1;
+    opacity: 1;
 }
 
 /* Give these tokens a defined height and bg color so they show up in the token list */
@@ -1376,8 +1384,10 @@ code {
 }
 
 .byline p {
-    max-width: 85%; /* Limit the width of the byline to align with NYS Design System lockup */
+    max-width: 85%;
+    /* Limit the width of the byline to align with NYSDS lockup */
 }
+
 /* Align the logo lockup with the center of the homepage graphic */
 .nys-top-300 {
     margin-top: var(--nys-space-300);
@@ -1450,6 +1460,10 @@ tr:nth-child(even) {
     background-color: var(--nys-color-neutral-50);
 }
 
+tr:hover {
+    background-color: var(--nys-color-neutral-100);
+}
+
 /* CSS Variables Table */
 .css-var-table__tip {
     text-align: center;
@@ -1487,7 +1501,6 @@ tr:nth-child(even) {
 .pagefind-ui__message {
     font-weight: var(--nys-font-weight-regular) !important;
 }
-
 
 :root {
     --pagefind-ui-scale: 1;
