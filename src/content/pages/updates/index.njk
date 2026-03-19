@@ -21,33 +21,42 @@ heading_links: false
 
   </header>
 
+<style>
+.post-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+</style>
   <section class="nys-grid-row nys-grid-gap">
     
     <ul class="post-list nys-grid-container">
       {%- for post in collections.updates -%}
       <li class="post-list__item{% if "article" in (post.data.tags | default([])) %} post-list--highlight{% endif %}">
-
-            <h2 class="post-list__title">
-              <a href="{{ post.url }}" class="post-list__link">
-                {% if post.data.tags | hasReleaseTag %}<span class="release-mark" aria-hidden="true"></span>{% endif %}{{ post.data.title }}
-              </a>
-            </h2>
-
-            <div class="post-list__description">
-              {{ post.data.description }}
+        <div class="card-start">
+          {% if "release" in (post.data.tags) %}
+            <div class="release-logo">
+              <img src="{{post.data.updatethumbnail}}" width="150px" alt="">
             </div>
-
-            <div class="post-list__meta">  
-              <div class="post-list__author">
-                by {{ post.data.author }}
-              </div>
-              <time class="post-list__date" datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFull }}</time>
+          {% endif %}
+        </div>
+        <div class="card-content">
+          <h2 class="post-list__title">
+            <a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a>
+          </h2>
+          <div class="post-list__description">
+            {{ post.data.description }}
+          </div>
+          <div class="post-list__meta">  
+            <div class="post-list__author">
+              by {{ post.data.author }}
             </div>
-
+            <time class="post-list__date" datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFull }}</time>
+          </div>
+        </div>
       </li>
       {%- endfor -%}
     </ul>
-
   </section>
 </div>
 {% endblock %}
