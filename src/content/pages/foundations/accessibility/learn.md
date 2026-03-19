@@ -13,30 +13,27 @@ navOrder: 3
 
 ## Getting Started
 
-<ul>
-  <li><a href="https://www.w3.org/WAI/people-use-web/">How People with Disabilities Use the Web </a></li>
-<li><a href="https://www.linkedin.com/learning/ux-foundations-accessibility">LinkedIn's Foundations of Accessibility Online Course </a></li>
-<li><a href="https://web.dev/learn/accessibility">Google's Web Accessibility Online Course (for technical audiences) </a></li>
-<li><a href="https://www.a11yproject.com/">The Accessibility Project </a></li>
-<li><a href="https://on.ny.gov/4d3yuKB">Deque: Accessibility Awareness for Editors and Content Contributors (SLMS login) </a></li>
-<li><a href="https://on.ny.gov/4eksOwH">Deque: Accessibility Awareness for Front-End Developers (SLMS login) </a></li>
-<li><a href="https://on.ny.gov/4elshdX">Deque: Accessibility Awareness for Quality Assurance Professionals (SLMS login) </a></li>
+- <a href="https://www.w3.org/WAI/people-use-web/" target="_blank">How People with Disabilities Use the Web</a>
+- <a href="https://www.linkedin.com/learning/ux-foundations-accessibility" target="_blank">LinkedIn's Foundations of Accessibility Online Course</a>
+- <a href="https://web.dev/learn/accessibility" target="_blank">Google's Web Accessibility Online Course (for technical audiences)</a>
+- <a href="https://www.a11yproject.com/" target="_blank">The Accessibility Project</a>
+- <a href="https://on.ny.gov/4d3yuKB" target="_blank">Deque: Accessibility Awareness for Editors and Content Contributors (SLMS login)</a>
+- <a href="https://on.ny.gov/4eksOwH" target="_blank">Deque: Accessibility Awareness for Front-End Developers (SLMS login)</a>
+- <a href="https://on.ny.gov/4elshdX" target="_blank">Deque: Accessibility Awareness for Quality Assurance Professionals (SLMS login)</a>
 </ul>
 
 ## Advanced Learning
-<ul>
-<li><a href="https://webaim.org/articles/">WebAim Accessibility Guide </a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 Quick Reference </a></li>
-<li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 Full Guidelines </a></li>
-</ul>
+
+- <a href="https://webaim.org/articles/" target="_blank">WebAim Accessibility Guide</a>
+- <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank">WCAG 2.2 Quick Reference</a>
+- <a href="https://www.w3.org/TR/WCAG22/" target="_blank">WCAG 2.2 Full Guidelines</a>
 
 ## Assessing Compliance
 
 ### Checklists
-<ul>
-  <li><a href="https://www.wuhcag.com/wcag-checklist/">WUHCAG WCAG Checklists </a></li>
-  <li><a href="https://a11yproject.com/checklist">A11Y Project Checklist </a></li>
-</ul>
+
+- <a href="https://www.w3.org/WAI/test-evaluate/" target="_blank">Evaluating Web Accessibility Overview (W3C WAI)</a>
+- <a href="https://a11yproject.com/checklist" target="_blank">A11Y Project Checklist</a>
 
 {% endblock %}
 
