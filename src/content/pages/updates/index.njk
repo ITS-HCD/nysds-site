@@ -29,7 +29,6 @@ heading_links: false
 }
 </style>
   <section class="nys-grid-row nys-grid-gap">
-    
     <ul class="post-list nys-grid-container">
       {%- for post in collections.updates -%}
       <li class="post-list__item{% if "article" in (post.data.tags | default([])) %} post-list--highlight{% endif %}">
