@@ -298,14 +298,38 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block properties %}
 
-| Property   | Type    |
-| ---------- | ------- |
-| `id`       | String  |
-| `name`     | String  |
-| `striped`  | Boolean |
-| `bordered` | Boolean |
-| `sortable` | Boolean |
-| `download` | String  |
+<nys-table striped>
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td><code>name</code></td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td><code>striped</code></td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td><code>bordered</code></td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td><code>sortable</code></td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td><code>download</code></td>
+          <td>String</td>
+      </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
