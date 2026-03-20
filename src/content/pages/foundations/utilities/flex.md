@@ -1016,8 +1016,22 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
 </div>
+<span class="utility-class">.nys-flex-gap-150</span>
+<div class="nys-grid-row nys-flex-gap-150 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
 <span class="utility-class">.nys-flex-gap-200</span>
 <div class="nys-grid-row nys-flex-gap-200 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-250</span>
+<div class="nys-grid-row nys-flex-gap-250 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
