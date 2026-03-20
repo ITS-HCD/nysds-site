@@ -986,6 +986,111 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+## Flex-gap
+{% set preview %}
+<span class="utility-class">.nys-flex-gap-1px</span>
+<div class="nys-grid-row nys-flex-gap-1px margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-2px</span>
+<div class="nys-grid-row nys-flex-gap-2px margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-50</span>
+<div class="nys-grid-row nys-flex-gap-50 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-100</span>
+<div class="nys-grid-row nys-flex-gap-100 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-200</span>
+<div class="nys-grid-row nys-flex-gap-200 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-300</span>
+<div class="nys-grid-row nys-flex-gap-300 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-400</span>
+<div class="nys-grid-row nys-flex-gap-400 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-500</span>
+<div class="nys-grid-row nys-flex-gap-500 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-600</span>
+<div class="nys-grid-row nys-flex-gap-600 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-700</span>
+<div class="nys-grid-row nys-flex-gap-700 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-800</span>
+<div class="nys-grid-row nys-flex-gap-800 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+<span class="utility-class">.nys-flex-gap-1200</span>
+<div class="nys-grid-row nys-flex-gap-1200 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
+{% endset %}
+{% set code %}
+<div class="nys-display-flex nys-flex-gap-1px"></div>
+<div class="nys-display-flex nys-flex-gap-2px"></div>
+<div class="nys-display-flex nys-flex-gap-50"></div>
+<div class="nys-display-flex nys-flex-gap-100"></div>
+<div class="nys-display-flex nys-flex-gap-150"></div>
+<div class="nys-display-flex nys-flex-gap-200"></div>
+<div class="nys-display-flex nys-flex-gap-250"></div>
+<div class="nys-display-flex nys-flex-gap-300"></div>
+<div class="nys-display-flex nys-flex-gap-400"></div>
+<div class="nys-display-flex nys-flex-gap-500"></div>
+<div class="nys-display-flex nys-flex-gap-600"></div>
+<div class="nys-display-flex nys-flex-gap-700"></div>
+<div class="nys-display-flex nys-flex-gap-800"></div>
+<div class="nys-display-flex nys-flex-gap-1200"></div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
 ## Order
 {% set preview %}
 <div class="nys-grid-row nys-grid-gap-sm">
