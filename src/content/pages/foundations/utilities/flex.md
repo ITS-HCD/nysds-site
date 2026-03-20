@@ -1072,6 +1072,16 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
   <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
 </div>
+<span class="utility-class">.nys-flex-column-gap-1200 .nys-flex-row-gap-50</span>
+<div class="nys-grid-row nys-flex-column-gap-1200 nys-flex-row-gap-50 margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>  
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+  <div class="height-full minh-7 minw-7 width-full bg-secondary-light"></div>
+</div>
 {% endset %}
 {% set code %}
 <div class="nys-display-flex nys-flex-gap-1px"></div>
