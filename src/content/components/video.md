@@ -1,7 +1,7 @@
 ---
 permalink: /components/video/
 title: Video Player
-description: Designed to display and control media playback consistently across a digital product with Youtube player underneath.
+description: Video player for embedding YouTube videos with thumbnail preview and on-demand playback.
 image: /assets/img/components/unav-header.svg
 image_alt: An illustration of a unav header.
 image_header: /assets/img/components/unav-header-header.svg
@@ -127,7 +127,7 @@ starttime="43"
 
 ### Sizes
 
-If `size` is not set, the component automatically responds to the viewport width. Use explicit sizes to lock a specific layout.
+Use explicit sizes to lock a specific layout. If `size` is not set, the component defaults to `size="md"`.
 
 {% set preview %}
 <nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Full (width: 100% with Aspect-ratio: 16 / 9)" size="full"></nys-video>
