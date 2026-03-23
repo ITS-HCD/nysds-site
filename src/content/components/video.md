@@ -132,14 +132,14 @@ If `size` is not set, the component automatically responds to the viewport width
 {% set preview %}
 <nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Full (width: 100% with Aspect-ratio: 16 / 9)" size="full"></nys-video>
 <br/>
-<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Contained (width: 440-675px)" size="contained"></nys-video>
+<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Medium (width: 440-675px)" size="md"></nys-video>
 <br/>
-<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Compact (width: 320-439px)" size="compact"></nys-video>
+<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Small (width: 320-439px)" size="sm"></nys-video>
 {% endset %}
 {% set code %}
 <nys-video size="full" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Full (width: 100%)"></nys-video>
-<nys-video size="contained" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Contained (width: 440-675px)"></nys-video>
-<nys-video size="compact" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Compact (width: 320-439px)"></nys-video>
+<nys-video size="md" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Medium (width: 440-675px)"></nys-video>
+<nys-video size="sm" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Small (width: 320-439px)"></nys-video>
 {% endset %}
 {% include "partials/code-preview.njk" %}
   
@@ -169,7 +169,7 @@ If `size` is not set, the component automatically responds to the viewport width
     </tr>
     <tr>
       <td><code>size</code></td>
-      <td><code>"full" | "contained" | "compact"</code></td>
+      <td><code>"full" | "md" | "sm"</code></td>
       <td>auto</td>
       <td>Locks the player to a specific size. If unset, size responds to viewport width.</td>
     </tr>
