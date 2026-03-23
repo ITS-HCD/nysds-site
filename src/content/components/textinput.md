@@ -181,6 +181,22 @@ Takes any valid regex value.
 
 ### Error Message
   Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to `true`. Setting only `errorMessage` will not display the error message by default.
+  Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
+
+  {% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
+  {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
+  {% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
 
   {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
   {% set code = preview %}
