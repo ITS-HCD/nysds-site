@@ -258,7 +258,7 @@ Adding the `download` property adds a button which downloads the data that is be
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-## Adjusted Column Widths
+### Adjusted Column Widths
 
 By default, column widths are determined by the content within each cell. However, you can adjust column widths by applying inline styles to the `<th>` elements in the table header row. This allows you to set specific widths for each column as needed.
 
@@ -379,7 +379,11 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+  {% set variables = [
+  { name: "--nys-table-padding--cell-y", description: "Vertical padding for table cells"}
+]%}
+{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
