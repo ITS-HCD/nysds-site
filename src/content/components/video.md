@@ -2,9 +2,9 @@
 permalink: /components/video/
 title: Video Player
 description: Video player for embedding YouTube videos with thumbnail preview and on-demand playback.
-image: /assets/img/components/unav-header.svg
-image_alt: An illustration of a unav header.
-image_header: /assets/img/components/unav-header-header.svg
+image: /assets/img/components/video.svg
+image_alt: An illustration of a video player.
+image_header: /assets/img/components/video-header-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20897-9539
 navOrder: 29
