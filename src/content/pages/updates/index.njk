@@ -30,11 +30,15 @@ heading_links: false
 .card-content {
   align-self: center;
 }
+.card-start {
+  flex-shrink: 0;
+  width: 120px;
+}
 </style>
   <section class="nys-grid-row nys-grid-gap">
     <ul class="post-list nys-grid-container">
       {%- for post in collections.updates | limit(10) -%}
-      <li class="post-list__item{% if "article" in (post.data.tags | default([])) %} post-list--highlight{% endif %}">
+      <li class="post-list__item">
         <div class="card-start">
           {% if post.data.updatethumbnail %}
             <div class="release-logo">
