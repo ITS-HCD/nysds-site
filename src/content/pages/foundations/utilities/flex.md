@@ -802,7 +802,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     <span class="utility-class">.nys-flex-row</span>
   </div>
     <span class="utility-class">.nys-flex-justify</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -821,7 +821,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-start</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -840,7 +840,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-center</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -859,7 +859,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-end</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
