@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-03-24T16:26:36.629+00:00 -->
+    <!-- Latest Build: 2026-03-24T17:04:05.321+00:00 -->
   </head>
   
   <body class="single-page page-textarea section-components">
@@ -718,7 +718,8 @@
   </div>
 </div>
 <h3 id="error-message">Error Message</h3>
-<p>To display an error message, pass in the <code>showError</code> property to the <code>&lt;nys-textarea&gt;</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.</p>
+<p>To display an error message, pass in the <code>showError</code> property to the <code>&lt;nys-textarea&gt;</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.
+Note: The <code>showError</code> attribute is a boolean that toggles automatically based on other validation. setting <code>showError</code> to <code>true</code> manually will only set the error message to be visible on initial render, once the user interacts with the component, <code>showError</code> will toggle based on validation rules (e.g., required, pattern, etc.)</p>
   <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea showError="" errorMessage="You did not provide a value for this field." label="Describe the incident"></nys-textarea></div>

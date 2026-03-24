@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-03-24T16:26:36.629+00:00 -->
+    <!-- Latest Build: 2026-03-24T17:04:05.321+00:00 -->
   </head>
   
   <body class="single-page page-table section-components">
@@ -736,7 +736,7 @@ New York State High Peaks and Popular Hikes
 </div>
 <h3 id="sortable">Sortable</h3>
 <p>Adding the <code>sortable</code> property allows for the table to be reordered in ascending or descending order.</p>
-<nys-alert type="warning">
+<nys-alert type="warning" heading="Sortable support">
 <p>Currently the <code>sortable</code> property does <strong>NOT</strong> support <code>rowspan</code> or <code>colspan</code>.</p>
 </nys-alert>
 <div class="code-preview-container">
@@ -981,40 +981,38 @@ New York State High Peaks and Popular Hikes
     <h2 id="properties">Properties</h2>
 
 
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>String</td>
-</tr>
-<tr>
-<td><code>striped</code></td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td><code>bordered</code></td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td><code>sortable</code></td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td><code>download</code></td>
-<td>String</td>
-</tr>
-</tbody>
-</table>
+<nys-table striped="">
+  <table>
+      <tr>
+          <th>Property</th>
+          <th>Type</th>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td><code>name</code></td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td><code>striped</code></td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td><code>bordered</code></td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td><code>sortable</code></td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td><code>download</code></td>
+          <td>String</td>
+      </tr>
+  </table>
+</nys-table>
 </section>
     <br>
     <section>
@@ -1031,7 +1029,44 @@ Proposal</a>.
     <br>
     <section>
       <h2 id="events">Events</h2>
-<p>The <code>&lt;nys-table&gt;</code> component does not emit any events.</p>
+<p>The <code>&lt;nys-table&gt;</code> component emits <strong>two</strong> custom Javascript events:</p>
+<ol>
+<li><strong><code>nys-click</code></strong> – Fired when the download button or a sortable column header is clicked.</li>
+<li><strong><code>nys-column-sort</code></strong> – Fired when a sortable column header is clicked. Can be prevented by calling <code>event.preventDefault()</code> to override the default sort behavior.</li>
+</ol>
+<h3 id="event-details">Event details</h3>
+<p>The <code>nys-column-sort</code> event includes a detail object with the following properties:</p>
+<ul>
+<li>columnIndex (number): The zero-based index of the clicked column.</li>
+<li>columnLabel (string): The text label of the clicked column header.</li>
+<li>sortDirection (string): The resulting sort direction — <code>&quot;asc&quot;</code>, <code>&quot;desc&quot;</code>, or <code>&quot;none&quot;</code>.</li>
+</ul>
+<p>You can listen to these events using JavaScript:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">// Select the table component</span>
+<span class="token keyword">const</span> table <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-table'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Listen for the 'nys-column-sort' event</span>
+table<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-column-sort'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> columnIndex<span class="token punctuation">,</span> columnLabel<span class="token punctuation">,</span> sortDirection <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Column </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnIndex<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> ("</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">") sorted: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sortDirection<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
     <section class="nys-section">
   <h2 id="suggest-a-new-component">Suggest a New Component</h2>
