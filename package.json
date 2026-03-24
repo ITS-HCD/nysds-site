@@ -10,7 +10,7 @@
         "copy:assets": "mkdir -p src/assets/css/vendor && mkdir -p src/assets/js/vendor && cp -r node_modules/@nysds/components/dist/nysds.* src/assets/js/vendor && cp -r node_modules/@nysds/styles/dist/* src/assets/css/vendor",
         "clean:site": "rimraf _site && rimraf src/assets/css/vendor && rimraf src/assets/js/vendor",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "link": "npm link @nysds/components && npm link @nysds/styles && npm run start"
+        "link": "npm link @nysds/components && npm run start"
     },
     "keywords": [
         "new-york",
@@ -34,7 +34,7 @@
         "rimraf": "^6.1.3"
     },
     "dependencies": {
-        "@nysds/components": "^1.15.0",
-        "@nysds/styles": "^1.15.0"
+        "@nysds/components": "^1.15.1",
+        "@nysds/styles": "^1.15.1"
     }
 }
