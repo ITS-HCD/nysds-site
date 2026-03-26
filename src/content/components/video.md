@@ -22,8 +22,8 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 
 {% block example %}
   {% set preview %}<nys-video
-  videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  titleText="Rick Astley - Never Gonna Give You Up"
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
 ></nys-video>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
@@ -77,9 +77,10 @@ The `<nys-video>` component includes the following accessibility-focused feature
 Provide your own thumbnail via the `thumbnail` property. If not set, the component fetches YouTube's auto-generated thumbnail at: `https://img.youtube.com/vi/{video-id}/maxresdefault.jpg`
 
 {% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-titleText="Rick Astley - Never Gonna Give You Up"
-thumbnail="https://wallpapers.com/images/hd/rick-astley-th6vqytajjixfuqj.jpg"
+videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design
+"
+thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ></nys-video>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -94,8 +95,8 @@ thumbnail="https://wallpapers.com/images/hd/rick-astley-th6vqytajjixfuqj.jpg"
 The iframe loads immediately and plays muted. Sound is always off when `autoplay` is set — this is intentional and cannot be overridden.
 
 {% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-titleText="Rick Astley - Never Gonna Give You Up"
+videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
 autoplay
 ></nys-video>{% endset %}
 {% set code = preview %}
@@ -106,8 +107,8 @@ autoplay
 Prevents playback. The thumbnail and play button are visible but non-interactive.
 
 {% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-titleText="Rick Astley - Never Gonna Give You Up"
+videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
 disabled
 ></nys-video>{% endset %}
 {% set code = preview %}
@@ -118,8 +119,8 @@ disabled
 Use `starttime` (in seconds) to begin playback at a specific point.
 
 {% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-titleText="Rick Astley - Never Gonna Give You Up"
+videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
 starttime="43"
 ></nys-video>{% endset %}
 {% set code = preview %}
@@ -130,16 +131,16 @@ starttime="43"
 Use explicit sizes to lock a specific layout. If `size` is not set, the component defaults to `size="md"`.
 
 {% set preview %}
-<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Full (width: 100% with Aspect-ratio: 16 / 9)" size="full"></nys-video>
+<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Full (width: 100% with Aspect-ratio: 16 / 9)" size="full"></nys-video>
 <br/>
-<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Medium (width: 440-675px)" size="md"></nys-video>
+<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Medium (width: 440-675px)" size="md"></nys-video>
 <br/>
-<nys-video videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Small (width: 320-439px)" size="sm"></nys-video>
+<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Small (width: 320-439px)" size="sm"></nys-video>
 {% endset %}
 {% set code %}
-<nys-video size="full" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Full (width: 100%)"></nys-video>
-<nys-video size="md" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Medium (width: 440-675px)"></nys-video>
-<nys-video size="sm" videourl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" titleText="Small (width: 320-439px)"></nys-video>
+<nys-video size="full" videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Full (width: 100%)"></nys-video>
+<nys-video size="md" videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Medium (width: 440-675px)"></nys-video>
+<nys-video size="sm" videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Small (width: 320-439px)"></nys-video>
 {% endset %}
 {% include "partials/code-preview.njk" %}
   
