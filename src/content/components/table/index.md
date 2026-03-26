@@ -258,6 +258,52 @@ Adding the `download` property adds a button which downloads the data that is be
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Adjusted Column Widths
+
+By default, column widths are determined by the content within each cell. However, you can adjust column widths by applying inline styles to the `<th>` elements in the table header row. This allows you to set specific widths for each column as needed.
+
+{% set preview %}
+<nys-table id="table6" name="table6" bordered>
+  <table>
+     <caption>
+      New York State High Peaks and Popular Hikes
+    </caption>
+    <tr>
+      <th style="width: 10%;">Mountain</th>
+      <th style="width: 80%;">Peak Height (ft)</th>
+      <th style="width: 10%;">Hike Name</th>
+    </tr>
+    <tr>
+      <td>Marcy</td>
+      <td>5,344</td>
+      <td>Van Hoevenberg Trail</td>
+    </tr>
+    <tr>
+      <td>Algonquin</td>
+      <td>5,114</td>
+      <td>Northeast Trail</td>
+    </tr>
+    <tr>
+      <td>Haystack</td>
+      <td>4,960</td>
+      <td>Johns Brook Trail</td>
+    </tr>
+    <tr>
+      <td>Skylight</td>
+      <td>4,926</td>
+      <td>Lake Tear Trail</td>
+    </tr>
+    <tr>
+      <td>Whiteface</td>
+      <td>4,867</td>
+      <td>Whiteface Mountain Trail</td>
+    </tr>
+  </table>
+</nys-table>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block usage %}
@@ -333,7 +379,11 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+  {% set variables = [
+  { name: "--nys-table-padding--cell-y", description: "Vertical padding for table cells"}
+]%}
+{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
