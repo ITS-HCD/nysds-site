@@ -379,11 +379,7 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block cssvariables %}
-  {% set variables = [
-  { name: "--nys-table-padding--cell-y", description: "Vertical padding for table cells"}
-]%}
-{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
