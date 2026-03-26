@@ -1,6 +1,6 @@
 ---
-permalink: /updates/
-title: Whatʼs New
+permalink: /updates/archive/
+title: Whatʼs New Archive
 description: What is new in the New York State Design System?
 section: Updates
 navOrder: 1
@@ -13,10 +13,10 @@ heading_links: false
 <div class="nys-grid-container-widescreen">
 
   <header class="page-header">
-    <h1 class="page-title">Whatʼs New</h1>
+    <h1 class="page-title">Whatʼs New Archive</h1>
 
     {%- if description -%}
-      <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
+      <p class="page-subtitle">Check out archived updates to the New York State Design System.</p>
     {%- endif -%}
 
   </header>
@@ -37,7 +37,7 @@ heading_links: false
 </style>
   <section class="nys-grid-row nys-grid-gap">
     <ul class="post-list nys-grid-container">
-      {%- for post in collections.updates | limit(10) -%}
+      {%- for post in collections.updates | offset(10) -%}
       <li class="post-list__item">
         <div class="card-start">
           {% if post.data.updatethumbnail %}
@@ -68,9 +68,6 @@ heading_links: false
       {%- endfor -%}
     </ul>
   </section>
-  <div class="nys-grid-col-12">
-    <p><a href="/updates/archive/">View update archive</a></p>
-  </div>
 </div>
 {% endblock %}
 
