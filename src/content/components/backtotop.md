@@ -187,6 +187,7 @@ backtotop.addEventListener("blur", () => {
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
+{% set showTip = false %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
