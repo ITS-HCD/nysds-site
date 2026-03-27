@@ -76,6 +76,8 @@ module.exports = async function (eleventyConfig) {
     eleventyConfig.addFilter("authorAvatar", authorAvatar);
     eleventyConfig.addFilter("hasReleaseTag", hasReleaseTag);
     eleventyConfig.addFilter("hasArticleTag", hasArticleTag);
+    eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
+    eleventyConfig.addFilter("offset", (arr, start) => arr.slice(start));
 
 
     // collections

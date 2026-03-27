@@ -7,7 +7,7 @@ image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
-navOrder: 16
+navOrder: 18
 ---
 
 {% extends "layouts/component.njk" %}
@@ -165,6 +165,7 @@ If no `label` is provided, it defaults to “Other.” You can provide a custom 
   
 ### Error
 To display an error message, pass in the `showError` property to the `<nys-radiogroup>` component. Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
+Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
   {% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
   <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
