@@ -206,6 +206,43 @@ When the description requires more complexity than a simple string, use the desc
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Inverted
+
+Set the `inverted` when the component is on a dark background.
+You can set `inverted` on `nys-checkboxgroup` to apply it to all checkboxes, or on a single `nys-checkbox` if only one needs it.
+
+<div style="display: flex; background-color: var(--nys-color-ink, #1b1b1b); padding: var(--nys-space-800, 64px);">
+
+{% set preview %}
+
+<nys-checkboxgroup
+  label="Select your favorite New York landmarks"
+  description="Choose from the options below"
+  inverted
+>
+  <nys-checkbox
+    label="Adirondacks"
+    name="landmarks"
+    value="adirondacks"
+    errorMessage="You must select this box to continue"
+    checked
+  ></nys-checkbox>
+  <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls" checked></nys-checkbox>
+  <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+  <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+</nys-checkboxgroup>
+
+{% endset %}
+
+</div>
+
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+
 {% endblock %}
 
 {% block properties %}
