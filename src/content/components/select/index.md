@@ -7,7 +7,7 @@ image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
-navOrder: 17
+navOrder: 19
 ---
 
 {% extends "layouts/component.njk" %}
@@ -200,8 +200,8 @@ Add a description using the `description` prop for plain text, or use the descri
 ### Error Message
 
 To display an error message, pass in the `showError` property to the `<nys-select>` component. 
-
 Setting `errorMessage` does not display the message without `showError` set to true.
+Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
 {% set preview %}
 <nys-select label="Select your favorite borough" errorMessage="You did not select a borough" showError>
