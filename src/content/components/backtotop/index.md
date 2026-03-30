@@ -50,26 +50,24 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 
 ### When to use this component
 
-- Only use 1 back to top component on a page.
 - Use the component when the content is designed to be longer than the height of the screen.
 
 ### When to consider something else
 
-- Use when the content is designed to fill the size of the screen and is not scrollable.
+- When the content is designed to fill the size of the screen and is not scrollable.
 
 {% endblock %}
 
 {% block usagedo %}
 
-  - Only use 1 back to top component on a page.
-  - Use the component when the content is designed to be longer than the height of the screen.
+  - Only use one back to top component on a page.
   - Place the `<nys-backtotop>` component above the `<nys-globalfooter>` in your code.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't add multiple `<nys-backtotop>` components to one page.
-  - Don't use `<nys-backtotop>` when the content fits within the screen and doesn’t scroll.
+  - Add multiple `<nys-backtotop>` components to one page.
+  - Use `<nys-backtotop>` when the content fits within the screen and doesn't scroll.
 {% endblock %}
 
 {% block accessibility %}

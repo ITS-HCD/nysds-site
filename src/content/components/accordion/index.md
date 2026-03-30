@@ -7,7 +7,7 @@ image_alt: An illustration of an accordion
 image_header: /assets/img/components/accordion-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=6468-13132&t=0cK7llM1tFRVIgBx-4
-navOrder: 2
+navOrder: 1
 ---
 
 {% extends "layouts/component.njk" %}
@@ -68,9 +68,9 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 
 {% block usagedont %}
 
-  - Don't hide time-sensitive deadlines or required steps in a collapsed section.
-  - Don't use vague or unclear headings that make it hard to know what is inside.
-  - Don't overuse accordions for content that is short enough to display fully on the page.
+  - Hide time-sensitive deadlines or required steps in a collapsed section.
+  - Use vague or unclear headings that make it hard to know what is inside.
+  - Overuse accordions for content that is short enough to display fully on the page.
 
 {% endblock %}
 

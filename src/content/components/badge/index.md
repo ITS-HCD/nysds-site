@@ -31,8 +31,6 @@ The `<nys-badge>` component provides a visual indicator of text values like cate
 
 ### When to use this component
 
- - To display a small piece of information that is related to another element.
- - To draw attention to new, important content.
  - To indicate the status of an item, such as "new", "updated", or "beta".
  - To provide additional context or information about an item without cluttering the interface.
 
@@ -40,24 +38,19 @@ The `<nys-badge>` component provides a visual indicator of text values like cate
 
   - When the information is too complex to be conveyed in a small badge.
   - When the badge would not add significant value to the user experience.
-  - When the badge would clutter the interface or distract from more important content.
-  - As a link to another page or action, as badges are not interactive elements.
+
 {% endblock %}
 
 {% block usagedo %}
 
-  - To display a small piece of information that is related to another element.
-  - To draw attention to new, important content.
-  - To indicate the status of an item, such as "new", "updated", or "beta".
-  - To provide additional context or information about an item without cluttering the interface.
+  - Display a small piece of information that is related to another element.
+  - Draw attention to new, important content.
 {% endblock %}
 
 {% block usagedont %}
 
-  - When the information is too complex to be conveyed in a small badge.
-  - When the badge would not add significant value to the user experience.
-  - When the badge would clutter the interface or distract from more important content.
-  - As a link to another page or action, as badges are not interactive elements.
+  - Clutter the interface or distract from more important content.
+  - Use as a link to another page or action, as badges are not interactive elements.
 {% endblock %}
 
 {% block accessibility %}

@@ -42,14 +42,14 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
   - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
   - Use sentence case for button labels, only capitalizing the first word.
-  - For buttons that open a dropdown, place a `chevron_down` icon on the right.
+  - Place a `chevron_down` icon on the right for buttons that open a dropdown.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
-  - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
+  - Use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
+  - Use icons in buttons without a text label. Very few icons are universally understood.
+  - Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
 {% endblock %}
 
 {% block accessibility %}

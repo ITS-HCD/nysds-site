@@ -105,13 +105,13 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 
 {% block usagedont %}
 
-- Do not remove the left icon, it is required for accessibility.
-- Don’t use alerts to highlight actions that should be clear in the UI itself.
-- Do not use error messages to communicate form field validation issues; use field error states instead.
-- Don't include more than two link actions in an alert.
-- Avoid overusing alerts for low-priority info — this can desensitize users.
-- Don't use alerts as toasts. Place them at the top of the page content.
-- Don't add any shadows to alerts.
+- Remove the left icon, it is required for accessibility.
+- Use alerts to highlight actions that should be clear in the UI itself.
+- Use error messages to communicate form field validation issues; use field error states instead.
+- Include more than two link actions in an alert.
+- Overuse alerts for low-priority info — this can desensitize users.
+- Use alerts as toasts. Place them at the top of the page content.
+- Add any shadows to alerts.
 </ul>
 {% endblock %}
 
