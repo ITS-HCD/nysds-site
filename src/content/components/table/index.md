@@ -7,7 +7,7 @@ image_alt: An illustration of a table.
 image_header: /assets/img/components/table-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=13670-31069
-navOrder: 22
+navOrder: 23
 ---
 
 {% extends "layouts/component.njk" %}
