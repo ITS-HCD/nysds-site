@@ -16,13 +16,17 @@ navOrder: 28
 
 The `<nys-unavheader>` is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 
-<nys-alert type="warning" heading="The UNav and back office applications" text="The UNav should only be used on official NYS websites or applications that are hosted on a ny.gov domain and secured with HTTPS encryption. Intranets and backoffice applications are not currently required to use the UNav." primaryLabel="Please refer to the New York State Universal Web Navigation Policy (NYS-S16-001) for more details." primaryAction="https://its.ny.gov/system/files/documents/2025/02/nys-s16-001-nys-universal-web-navigation.pdf"></nys-alert>
-
 **Note:** The Universal Navigation Header remains consistent across all sites.
 
 {% endblock %}
 
 {% block example %}
+
+<nys-alert type="warning" heading="Proper Usage">
+<p>The <code>&lt;nys-unavheader&gt;</code> should only be used on official NYS websites or applications that are <strong>hosted on a ny.gov domain</strong> and <strong>secured with HTTPS encryption</strong>. Intranets and back office applications are not currently required to use the <code>&lt;nys-unavheader&gt;</code>.</p>
+<p>Please refer to the <a target="_blank" href="https://its.ny.gov/system/files/documents/2025/02/nys-s16-001-nys-universal-web-navigation.pdf">New York State Universal Web Navigation Policy (NYS-S16-001)</a> for more details.</p>
+</nys-alert>
+
   {% set preview %}<nys-unavheader></nys-unavheader>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
