@@ -1,31 +1,8 @@
-<svg width="548" height="138" viewBox="0 0 548 138" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Quarter circle with rounded corner -->
-  <path d="M100 138H0C0 62 62 0 138 0V100C138 121 121 138 100 138Z" fill="#286AD8"/>
-
-  <!-- Token hexagon ring (flat-top, cx=228, cy=69, outer r=78, inner r=50) -->
-  <path fill-rule="evenodd" d="M306 69L267 136.5H189L150 69L189 1.5H267L306 69ZM278 69L253 112.3H203L178 69L203 25.7H253L278 69Z" fill="#286AD8"/>
-
-  <!-- Token center dot -->
-  <circle cx="228" cy="69" r="15" fill="#286AD8"/>
-
-  <!-- Circle -->
-  <circle cx="370" cy="69" r="69" fill="#286AD8"/>
-
-  <!-- Hexagonal pattern inside circle (blend overlay, masked to circle) -->
-  <g style="mix-blend-mode:multiply" opacity="0.76">
-    <mask id="mask0_tokens" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="301" y="0" width="138" height="138">
-      <circle cx="370" cy="69" r="69" fill="#286AD8"/>
-    </mask>
-    <g mask="url(#mask0_tokens)">
-      <path d="M430 69L400 121H340L310 69L340 17H400Z" fill="#1D4874" opacity="0.8"/>
-      <path d="M415 95L392 135H346L323 95L346 55H392Z" fill="#1D4874" opacity="0.6"/>
-      <path d="M420 45L400 80H360L340 45L360 10H400Z" fill="#1D4874" opacity="0.5"/>
-    </g>
-  </g>
-
-  <!-- Triangle -->
-  <path d="M548 138H410V0L548 138Z" fill="#286AD8"/>
-
-  <!-- Small circle accent -->
-  <circle cx="505" cy="39" r="31" fill="#286AD8"/>
+<svg width="578" height="145" viewBox="0 0 578 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M288 145V1.52588e-05L359.84 1.52588e-05C400.245 1.52588e-05 433 32.4594 433 72.5C433 112.541 400.245 145 359.84 145L288 145Z" fill="#286AD8"/>
+<path d="M105.125 145H0C0 64.9187 64.9187 0 145 0V105.125C145 127.147 127.147 145 105.125 145Z" fill="#286AD8"/>
+<path d="M216.5 144.188C256.54 144.188 289 111.911 289 72.0943C289 32.2778 256.54 0 216.5 0C176.459 0 144 32.2777 144 72.0943C144 111.911 176.459 144.188 216.5 144.188Z" fill="#286AD8"/>
+<path d="M432.189 105.125V0C512.271 0 577.189 64.9187 577.189 145H472.064C450.042 145 432.189 127.147 432.189 105.125Z" fill="#286AD8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M216.5 32L250 52.2522V92.7389L216.5 113L183 92.7389V52.2522L216.5 32ZM191.451 57.3573V87.6427L216.5 102.781L241.549 87.6427V57.3484L216.5 42.219L191.451 57.3573Z" fill="#5287DF"/>
+<path d="M224.951 72.4956C224.951 77.3883 221.165 81.3432 216.5 81.3432C211.835 81.3432 208.049 77.3883 208.049 72.4956C208.049 67.6117 211.835 63.648 216.5 63.648C221.165 63.648 224.951 67.6117 224.951 72.4956Z" fill="#5287DF"/>
 </svg>
