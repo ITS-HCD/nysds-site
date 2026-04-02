@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-04-01T17:12:10.949+00:00 -->
+    <!-- Latest Build: 2026-04-02T17:02:06.178+00:00 -->
   </head>
   
   <body class="single-page page-globalheader section-components">
@@ -419,6 +419,17 @@
       
     </li>
   
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/video/">
+        Video Player
+      </a>
+
+      
+      
+    </li>
+  
 
 
   </ul>
@@ -515,6 +526,7 @@
   </div>
 </div>
 <h3 id="just-agency-name">Just Agency Name</h3>
+<p>Use the prop <code>homepageLink</code> to link your <code>agencyName</code> to your homepage.</p>
   <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-globalheader agencyName="Office of Information Technology Services">
@@ -566,20 +578,13 @@
 </div>
 <h3 id="user-actions">User Actions</h3>
 <p>The <code>&lt;nys-globalheader&gt;</code> component includes a named slot called <code>user-actions</code>. This slot allows you to insert custom HTML content, such as user profile links, settings, or logout buttons, into the header.</p>
+<h3 id="nys-brand-logo">NYS Brand Logo</h3>
+<p>The NYS Brand Logo can be toggled on via the <code>nysLogo</code> property for back-office applications.</p>
+<p><strong>Note:</strong> Do not use the NYS brand mark on public-facing applications. This is intended exclusively for internal and back-office use.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
-<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-  <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
-    <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
-  </nys-button>
-</nys-globalheader>
-<nys-dropdownmenu id="dropdownmenu" for="my-action-slot">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled=""></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
-</nys-dropdownmenu>
+<nys-globalheader nysLogo="" appName="Admin Dashboard"></nys-globalheader>
 </div>
   </div>
   <div class="code-preview__source">
@@ -595,24 +600,7 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> 
-  <span class="token attr-name">appName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User Registration Form<span class="token punctuation">"</span></span> 
-  <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Office of Information Technology Services<span class="token punctuation">"</span></span>
-<span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-action-slot<span class="token punctuation">"</span></span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user-actions<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>John Smith<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>slotted<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span>
-      <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prefix-icon<span class="token punctuation">"</span></span>
-      <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span>
-      <span class="token attr-name">initials</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>JS<span class="token punctuation">"</span></span>
-    <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenu</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dropdownmenu<span class="token punctuation">"</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-action-slot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Profile<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/profile<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Repositories &amp; Github Pages<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/repos<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Organizations<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/organizations<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Sign out<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/logout<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenu</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalheader</span> <span class="token attr-name">nysLogo</span> <span class="token attr-name">appName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Admin Dashboard<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalheader</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -714,8 +702,8 @@ Proposal</a>.
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
-    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/globalheader.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 1, 2026</p>
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/globalheader/index.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: April 2, 2026</p>
   </div>
 
   </div>
