@@ -26,24 +26,55 @@ description: "Stay current with the NYS Design System — releases, new componen
 
 <nys-alert type="info" heading="Subscribe to Updates">Email notifications for new releases and articles are coming soon.</nys-alert>
 
+<style>
+.post-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.card-content {
+  align-self: center;
+}
+.card-start {
+  flex-shrink: 0;
+  width: 120px;
+}
+</style>
+
 {% if latestRelease %}
 <section id="latest-release">
 
 <h2>Latest Release</h2>
 
-<div class="card card--horizontal">
-    <div class="card__content">
-        <h3 class="card__title">
-            <a href="{{ latestRelease.url }}">{{ latestRelease.data.title }}</a>
-        </h3>
-        <div class="card__desc">
-            {{ latestRelease.data.description }}
+<ul class="post-list">
+  <li class="post-list__item">
+    <div class="card-start">
+      {% if latestRelease.data.updatethumbnail %}
+        <div class="release-logo">
+          <img src="{{latestRelease.data.updatethumbnail}}" width="120px" alt="">
         </div>
-        <div class="card__meta" style="margin-top: 1rem;">
-            <time datetime="{{ latestRelease.data.date | dateISO }}">{{ latestRelease.data.date | dateFull }}</time>
+      {% else %}
+        <div class="release-logo">
+          <img src="/assets/img/mono-star.png" width="120px" alt="">
         </div>
+      {% endif %}
     </div>
-</div>
+    <div class="card-content">
+      <h3 class="post-list__title">
+        <a href="{{ latestRelease.url }}" class="post-list__link">{{ latestRelease.data.title }}</a>
+      </h3>
+      <div class="post-list__description">
+        {{ latestRelease.data.description }}
+      </div>
+      <div class="post-list__meta">
+        <div class="post-list__author">
+          by {{ latestRelease.data.author }}
+        </div>
+        <time class="post-list__date" datetime="{{ latestRelease.data.date | dateISO }}">{{ latestRelease.data.date | dateFull }}</time>
+      </div>
+    </div>
+  </li>
+</ul>
 
 </section>
 {% endif %}
@@ -53,19 +84,35 @@ description: "Stay current with the NYS Design System — releases, new componen
 
 <h2>Latest Article</h2>
 
-<div class="card card--horizontal">
-    <div class="card__content">
-        <h3 class="card__title">
-            <a href="{{ latestArticle.url }}">{{ latestArticle.data.title }}</a>
-        </h3>
-        <div class="card__desc">
-            {{ latestArticle.data.description }}
+<ul class="post-list">
+  <li class="post-list__item">
+    <div class="card-start">
+      {% if latestArticle.data.updatethumbnail %}
+        <div class="release-logo">
+          <img src="{{latestArticle.data.updatethumbnail}}" width="120px" alt="">
         </div>
-        <div class="card__meta" style="margin-top: 1rem;">
-            <time datetime="{{ latestArticle.data.date | dateISO }}">{{ latestArticle.data.date | dateFull }}</time>
+      {% else %}
+        <div class="release-logo">
+          <img src="/assets/img/mono-star.png" width="120px" alt="">
         </div>
+      {% endif %}
     </div>
-</div>
+    <div class="card-content">
+      <h3 class="post-list__title">
+        <a href="{{ latestArticle.url }}" class="post-list__link">{{ latestArticle.data.title }}</a>
+      </h3>
+      <div class="post-list__description">
+        {{ latestArticle.data.description }}
+      </div>
+      <div class="post-list__meta">
+        <div class="post-list__author">
+          by {{ latestArticle.data.author }}
+        </div>
+        <time class="post-list__date" datetime="{{ latestArticle.data.date | dateISO }}">{{ latestArticle.data.date | dateFull }}</time>
+      </div>
+    </div>
+  </li>
+</ul>
 
 </section>
 {% endif %}

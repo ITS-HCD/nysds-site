@@ -22,6 +22,12 @@
       <div class="token-list__type" style="font-size: var({{ token.name }});">Aa</div>
     {% elif token.type == "font-family" %}
       <div class="token-list__family" style="font-family: var({{ token.name }}); font-size: var(--nys-font-size-9xl)">Aa</div>
+    {% elif token.type == "font-weight" %}
+      <div class="token-list__type" style="font-weight: var({{ token.name }}); font-size: var(--nys-font-size-3xl);">Aa</div>
+    {% elif token.type == "line-height" %}
+      <div class="token-list__type" style="line-height: var({{ token.name }}); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    {% elif token.type == "letter-spacing" %}
+      <div class="token-list__type" style="letter-spacing: var({{ token.name }}); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
     {% elif token.type == "space" %}
       <div class="token-list__space" style="width: var({{ token.name }});"></div>
     {% elif token.type == "size" %}

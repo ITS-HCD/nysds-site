@@ -41,25 +41,17 @@ description: "Browse all NYSDS color tokens — theme, intent, neutral, and tran
 {% endfor %}
 </div>
 
-<h2 id="neutral">Neutral</h2>
-<p>Neutral tokens cover text, links, surfaces, ink, focus, and the full neutral gray scale. These are the workhorses of everyday UI styling.</p>
+<h2 id="semantic">Semantic</h2>
+<p>Purpose-driven tokens for text, links, surfaces, ink, focus indicators, and base UI tones. These describe <em>what</em> a color is used for rather than what the color is.</p>
 <div class="token-list">
 {% for token in collections.tokens.color %}
-  {% if token.colorCategory == "neutral" %}
+  {% if token.colorCategory == "semantic" %}
     {% include "partials/token-item.njk" %}
   {% endif %}
 {% endfor %}
 </div>
 
-<h2 id="transparency">Transparency</h2>
-<p>Transparency tokens provide black and white overlays at ten opacity steps, useful for scrims, hover states, and layered surfaces.</p>
-<div class="token-list">
-{% for token in collections.tokens.color %}
-  {% if token.colorCategory == "transparency" %}
-    {% include "partials/token-item.njk" %}
-  {% endif %}
-{% endfor %}
-</div>
+<p>Looking for the neutral gray scale or transparency overlays? Those are primitive tokens — find them on the <a href="/tokens/primitives/#color-neutral">Primitives</a> page.</p>
 
 {% include "partials/token-copy-scripts.njk" %}
 

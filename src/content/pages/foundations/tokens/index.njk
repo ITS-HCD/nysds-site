@@ -27,7 +27,7 @@ heading_links: false
 --nys-font-size-md: 1rem;
 --nys-space-200: 1rem;{% endset %}
 {% set accordionLabel = "CSS Variables" %}
-{% set codeExpanded = false %}
+{% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
@@ -43,7 +43,7 @@ heading_links: false
 --nys-color-surface: #ffffff;       /* Default page background */
 --nys-color-focus: #004dd1;         /* Focus ring color */{% endset %}
 {% set accordionLabel = "CSS Variables" %}
-{% set codeExpanded = false %}
+{% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
@@ -61,7 +61,7 @@ heading_links: false
 /* With data-theme="environment" */
 --nys-color-theme: #233f2b;         /* Environment Green 700 */{% endset %}
 {% set accordionLabel = "CSS Variables" %}
-{% set codeExpanded = false %}
+{% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
@@ -91,7 +91,7 @@ heading_links: false
   padding: 1rem 1.5rem;
 }{% endset %}
 {% set accordionLabel = "CSS — Avoid" %}
-{% set codeExpanded = false %}
+{% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
@@ -105,7 +105,7 @@ heading_links: false
   padding: var(--nys-space-400);
 }{% endset %}
 {% set accordionLabel = "CSS — Spacing & Radius" %}
-{% set codeExpanded = false %}
+{% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
@@ -122,7 +122,7 @@ heading_links: false
   color: var(--nys-color-link-reverse);                 /* Light link color */
 }{% endset %}
 {% set accordionLabel = "CSS — Reverse Tokens" %}
-{% set codeExpanded = false %}
+{% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
@@ -142,24 +142,30 @@ heading_links: false
 
 <p>Ready to browse all tokens? The interactive token reference lets you see every token in the system with live previews.</p>
 
-<div class="card card--horizontal">
+<a class="card card--horizontal" href="/tokens/">
   <div class="card__inner">
-    <div class="card__title"><a href="/tokens/">Color Tokens</a></div>
-    <div class="card__desc">Theme, intent, neutral, and transparency colors. Switch between agency themes to see how values change.</div>
+    <div class="card__content">
+      <div class="card__title">Color Tokens</div>
+      <div class="card__desc">Theme, intent, neutral, and transparency colors. Switch between agency themes to see how values change.</div>
+    </div>
   </div>
-</div>
-<div class="card card--horizontal">
+</a>
+<a class="card card--horizontal" href="/tokens/typography/">
   <div class="card__inner">
-    <div class="card__title"><a href="/tokens/typography/">Typography Tokens</a></div>
-    <div class="card__desc">Font size and font family tokens that define the typographic scale.</div>
+    <div class="card__content">
+      <div class="card__title">Typography Tokens</div>
+      <div class="card__desc">Font size and font family tokens that define the typographic scale.</div>
+    </div>
   </div>
-</div>
-<div class="card card--horizontal">
+</a>
+<a class="card card--horizontal" href="/tokens/other/">
   <div class="card__inner">
-    <div class="card__title"><a href="/tokens/other/">Spacing & Layout Tokens</a></div>
-    <div class="card__desc">Spacing, sizing, border radius, and elevation tokens for consistent layouts.</div>
+    <div class="card__content">
+      <div class="card__title">Spacing & Layout Tokens</div>
+      <div class="card__desc">Spacing, sizing, border radius, and elevation tokens for consistent layouts.</div>
+    </div>
   </div>
-</div>
+</a>
 
 
 {% endblock %}

@@ -8,6 +8,7 @@ ogimage: /assets/i/2026/nysds-mcp-server.png
 thumbnailimage: /assets/i/2026/nysds-mcp-server-thumbnail.png
 tags: updates, ai, mcp, web components
 date: 2026-03-05
+draft: true
 ---
 
 # AI-Assisted Development with the NYS Design System

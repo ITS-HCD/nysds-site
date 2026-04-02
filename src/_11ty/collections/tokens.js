@@ -51,7 +51,9 @@ function getColorCategory(name) {
   if (name.includes('-transparent-')) return 'transparency';
   if (name.startsWith('--nys-color-theme')) return 'theme';
   if (/^--nys-color-(accent|info|success|warning|danger|emergency)/.test(name)) return 'intent';
-  return 'neutral';
+  if (name.startsWith('--nys-color-neutral-')) return 'neutral';
+  if (/^--nys-color-(base|ink|text|link|focus|surface)/.test(name)) return 'semantic';
+  return 'semantic';
 }
 
 module.exports = function(collectionApi) {
