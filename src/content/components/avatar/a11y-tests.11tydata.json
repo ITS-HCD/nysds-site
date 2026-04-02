@@ -1,0 +1,172 @@
+{
+  "pattern": "Avatar",
+  "status": {
+    "total": 0,
+    "pass": 0,
+    "fail": 0,
+    "toDo": 0
+  },
+
+  "keyboard": {
+    "interactions": [
+      {
+        "scenario": "WHEN I <kbd>k1<\/kbd>",
+        "requirements": ["THEN outcome k1"],
+        "status": "Pass, Fail, Not done"
+      },
+      {
+        "scenario": "WHEN I <kbd>k2<\/kbd>, <kbd>k3<\/kbd>",
+        "requirements": ["THEN outcome k1", "THEN outcome k2"],
+        "status": "Pass"
+      }
+    ]
+  },
+
+  "mouse": {
+    "interactions": [
+      {
+        "scenario": "WHEN I m4",
+        "requirements": ["THEN outcome m4"],
+        "status": "Fail"
+      },
+      {
+        "scenario": "WHEN I m5, m6",
+        "requirements": ["THEN outcome m5", "THEN outcome m6"],
+        "status": "Not done"
+      }
+    ]
+  },
+
+  "screenReader": {
+    "interactions": [
+      {
+        "scenario": "WHEN I sr7",
+        "requirements": ["THEN outcome sr7"],
+        "status": "Pass, Fail, Not done"
+      },
+      {
+        "scenario": "WHEN I sr8, sr9",
+        "requirements": ["THEN outcome sr8", "THEN outcome sr9"],
+        "status": "Pass, Fail, Not done"
+      }
+    ]
+  },
+
+  "screenReaderMobile": {
+    "interactions": [
+      {
+        "scenario": "WHEN I srm10",
+        "requirements": ["THEN outcome srm10"],
+        "status": "Pass, Fail, Not done"
+      },
+      {
+        "scenario": "WHEN I srm11, srm12",
+        "requirements": ["THEN outcome srm11", "THEN outcome srm12"],
+        "status": "Pass, Fail, Not done"
+      }
+    ]
+  },
+
+  "voice": {
+    "interactions": [
+      {
+        "scenario": "WHEN I v13",
+        "requirements": ["THEN outcome v13"],
+        "status": "Pass, Fail, Not done"
+      },
+      {
+        "scenario": "WHEN I v14, v15",
+        "requirements": ["THEN outcome v14", "THEN outcome v15"],
+        "status": "Pass, Fail, Not done"
+      }
+    ]
+  },
+
+  "zoom": {
+    "interactions": [
+      {
+        "scenario": "WHEN I z16",
+        "requirements": ["THEN outcome z16"],
+        "status": "Pass, Fail, Not done"
+      },
+      {
+        "scenario": "WHEN I z17, z18",
+        "requirements": ["THEN outcome z17", "THEN outcome z18"],
+        "status": "Pass, Fail, Not done"
+      }
+    ]
+  },
+
+  "disabilities": [
+    {
+      "type": "blindness",
+      "criteria": [
+        {
+          "description": "Blind 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.0 AA"
+        },
+        {
+          "description": "Blind 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.1 AA"
+        }
+      ]
+    },
+    {
+      "type": "cognition",
+      "criteria": [
+        {
+          "description": "Cognition...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.2 AA"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "criteria": [
+        {
+          "description": "Color 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.3 AA"
+        },
+        {
+          "description": "Color 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.4 AA"
+        }
+      ]
+    },
+    {
+      "type": "low vision",
+      "criteria": [
+        {
+          "description": "LowVis 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.5 AA"
+        },
+        {
+          "description": "LowVis 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.6 AA"
+        }
+      ]
+    },
+    {
+      "type": "motor",
+      "criteria": [
+        {
+          "description": "Motor 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.8 AA"
+        },
+        {
+          "description": "Motor 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.9 AA"
+        }
+      ]
+    }
+  ]
+}
