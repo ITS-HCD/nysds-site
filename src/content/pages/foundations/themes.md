@@ -26,15 +26,46 @@ Every component that needs a brand color references a **theme token** like `--ny
 
 Each theme provides seven color values at different intensities:
 
-| Token | Purpose |
-|-------|---------|
-| `--nys-color-theme-faint` | Very subtle backgrounds, barely visible tints |
-| `--nys-color-theme-weaker` | Light backgrounds for hover states, selected rows |
-| `--nys-color-theme-weak` | Soft accent backgrounds, active states |
-| `--nys-color-theme-mid` | Medium-emphasis elements, secondary indicators |
-| `--nys-color-theme` | Primary brand color — buttons, links, headers |
-| `--nys-color-theme-strong` | Hover states on primary elements |
-| `--nys-color-theme-stronger` | Active/pressed states, high-contrast text on light backgrounds |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Token</th>
+        <th>Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--nys-color-theme-faint</code></td>
+        <td>Very subtle backgrounds, barely visible tints</td>
+      </tr>
+      <tr>
+        <td><code>--nys-color-theme-weaker</code></td>
+        <td>Light backgrounds for hover states, selected rows</td>
+      </tr>
+      <tr>
+        <td><code>--nys-color-theme-weak</code></td>
+        <td>Soft accent backgrounds, active states</td>
+      </tr>
+      <tr>
+        <td><code>--nys-color-theme-mid</code></td>
+        <td>Medium-emphasis elements, secondary indicators</td>
+      </tr>
+      <tr>
+        <td><code>--nys-color-theme</code></td>
+        <td>Primary brand color — buttons, links, headers</td>
+      </tr>
+      <tr>
+        <td><code>--nys-color-theme-strong</code></td>
+        <td>Hover states on primary elements</td>
+      </tr>
+      <tr>
+        <td><code>--nys-color-theme-stronger</code></td>
+        <td>Active/pressed states, high-contrast text on light backgrounds</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 For a deeper explanation of token layers and naming conventions, see [Design Tokens](/foundations/tokens/).
 

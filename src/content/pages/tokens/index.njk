@@ -1,0 +1,124 @@
+---
+permalink: /tokens/
+title: Color Tokens
+navTitle: Color
+navOrder: 1
+description: "Browse all NYSDS color tokens — theme, intent, neutral, and transparency. Switch themes to see how values change across agencies."
+---
+
+<h1>Color Tokens</h1>
+
+<p>Browse every color token in the NYSDS. Use the theme selector to see how theme tokens change across agency palettes. Click the copy button next to any token to copy it as a <code>var()</code> expression ready to paste into your CSS.</p>
+
+<nys-select id="theme-selector" label="Choose an agency theme" width="md">
+  <nys-option value="default" selected>Default (NYS)</nys-option>
+  <nys-option value="admin">Admin</nys-option>
+  <nys-option value="business">Business</nys-option>
+  <nys-option value="environment">Environment</nys-option>
+  <nys-option value="health">Health</nys-option>
+  <nys-option value="local">Local</nys-option>
+  <nys-option value="safety">Safety</nys-option>
+  <nys-option value="transportation">Transportation</nys-option>
+</nys-select>
+
+<h2 id="theme">Theme</h2>
+<p>Theme tokens change based on the active agency theme. They provide a seven-step intensity scale for branded UI elements.</p>
+<div class="token-list">
+{% for token in collections.tokens.color %}
+  {% if token.colorCategory == "theme" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="intent">Intent</h2>
+<p>Intent tokens communicate status and feedback — success, warning, danger, and other semantic states. These remain consistent regardless of agency theme.</p>
+<div class="token-list">
+{% for token in collections.tokens.color %}
+  {% if token.colorCategory == "intent" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="neutral">Neutral</h2>
+<p>Neutral tokens cover text, links, surfaces, ink, focus, and the full neutral gray scale. These are the workhorses of everyday UI styling.</p>
+<div class="token-list">
+{% for token in collections.tokens.color %}
+  {% if token.colorCategory == "neutral" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="transparency">Transparency</h2>
+<p>Transparency tokens provide black and white overlays at ten opacity steps, useful for scrims, hover states, and layered surfaces.</p>
+<div class="token-list">
+{% for token in collections.tokens.color %}
+  {% if token.colorCategory == "transparency" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+{% include "partials/token-copy-scripts.njk" %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".token-list__text--value").forEach(span => {
+    span.addEventListener("mouseenter", function () {
+      this.setAttribute("data-tooltip", this.getAttribute("data-color"));
+    });
+    span.addEventListener("mouseleave", function () {
+      this.removeAttribute("data-tooltip");
+    });
+    span.addEventListener("click", function () {
+      const colorVar = this.getAttribute("data-color");
+      navigator.clipboard.writeText(colorVar).then(() => {
+        this.setAttribute("data-tooltip", "Copied!");
+        setTimeout(() => {
+          this.setAttribute("data-tooltip", colorVar);
+        }, 1500);
+      }).catch(err => {
+        console.error("Failed to copy:", err);
+      });
+    });
+  });
+
+  const themeSelector = document.getElementById("theme-selector");
+
+  themeSelector.addEventListener("nys-change", function (event) {
+    const selectedTheme = event.target.value;
+    const htmlRoot = document.documentElement;
+
+    if (selectedTheme != "default") {
+      htmlRoot.setAttribute('data-theme', selectedTheme);
+    } else {
+      htmlRoot.removeAttribute('data-theme');
+    }
+
+    let themeColors = [
+      '--nys-color-theme',
+      '--nys-color-theme-strong',
+      '--nys-color-theme-stronger',
+      '--nys-color-theme-mid',
+      '--nys-color-theme-weak',
+      '--nys-color-theme-weaker',
+      '--nys-color-theme-faint'
+    ];
+
+    // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
+    // DRAGONS: Remove this delay and it will read the default theme value only.
+    setTimeout(() => {
+      for (let colorVar of themeColors) {
+        let rawcolorval = document.querySelectorAll(`code.${colorVar}`);
+        let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
+
+        rawcolorval.forEach(el => {
+          el.innerText = computedColor;
+        });
+      }
+    }, 500);
+  });
+});
+</script>

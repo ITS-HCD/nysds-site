@@ -143,7 +143,7 @@ Semantic tokens map primitive values to specific roles — headings, body text, 
   </table>
 </nys-table>
 
-Semantic tokens exist for every heading level (h1--h6), body sizes (xs, sm, md, lg), UI sizes (xs--xl), display sizes (sm--xl), and agency sizes (md--xl). Browse the complete list in the [token reference](/tokens/).
+Semantic tokens exist for every heading level (h1--h6), body sizes (xs, sm, md, lg), UI sizes (xs--xl), display sizes (sm--xl), and agency sizes (md--xl). Browse the complete list in the [typography token reference](/tokens/typography/).
 
 For a deeper explanation of how primitive and semantic token layers work together, see [Design Tokens](/foundations/tokens/).
 
@@ -282,7 +282,7 @@ For the complete list of typography utility classes with live previews, see [Typ
 
 *   [Typography Utility Classes](/foundations/utilities/typography/) — full reference with live previews
 *   [Design Tokens](/foundations/tokens/) — how primitive and semantic token layers work
-*   [Token Reference](/tokens/) — browse all tokens including typography
+*   [Typography Tokens](/tokens/typography/) — browse font size and font family tokens
 *   [Using Web Fonts](https://fonts.google.com/knowledge/using_type/using_web_fonts) — Google's guide to web font performance
 
 </section>

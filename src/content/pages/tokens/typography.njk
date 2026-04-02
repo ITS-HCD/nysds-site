@@ -1,0 +1,29 @@
+---
+permalink: /tokens/typography/
+title: Typography Tokens
+navTitle: Typography
+navOrder: 2
+description: "Browse NYSDS typography tokens — font sizes and font families used across all components."
+---
+
+<h1>Typography Tokens</h1>
+
+<p>Font size and font family tokens that define the typographic scale of the NYS Design System. Click the copy button next to any token to copy it as a <code>var()</code> expression.</p>
+
+<h2 id="font-size">Font Size</h2>
+<p>A nine-step type scale from <code>2xs</code> to <code>9xl</code>. Components reference these tokens internally — use them in your own CSS to stay aligned with the system's typographic rhythm.</p>
+<div class="token-list">
+{% for token in collections.tokens["font-size"] %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+<h2 id="font-family">Font Family</h2>
+<p>The typeface stacks used across NYSDS components and page-level typography. See <a href="/foundations/typography/">Typography</a> for installation and usage guidance.</p>
+<div class="token-list">
+{% for token in collections.tokens["font-family"] %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+{% include "partials/token-copy-scripts.njk" %}

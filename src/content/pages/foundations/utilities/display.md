@@ -60,17 +60,54 @@ Display utilities control how elements render in the document flow. Use them to 
 
 ### All display classes
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-display-block` | `display: block` |
-| `.nys-display-flex` | `display: flex` |
-| `.nys-display-inline` | `display: inline` |
-| `.nys-display-inline-block` | `display: inline-block` |
-| `.nys-display-inline-flex` | `display: inline-flex` |
-| `.nys-display-none` | `display: none` |
-| `.nys-display-table` | `display: table` |
-| `.nys-display-table-cell` | `display: table-cell` |
-| `.nys-display-table-row` | `display: table-row` |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>CSS value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.nys-display-block</code></td>
+        <td><code>display: block</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-flex</code></td>
+        <td><code>display: flex</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-inline</code></td>
+        <td><code>display: inline</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-inline-block</code></td>
+        <td><code>display: inline-block</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-inline-flex</code></td>
+        <td><code>display: inline-flex</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-none</code></td>
+        <td><code>display: none</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-table</code></td>
+        <td><code>display: table</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-table-cell</code></td>
+        <td><code>display: table-cell</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-display-table-row</code></td>
+        <td><code>display: table-row</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 </section>
 

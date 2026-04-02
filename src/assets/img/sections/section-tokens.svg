@@ -1,0 +1,31 @@
+<svg width="548" height="138" viewBox="0 0 548 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Quarter circle with rounded corner -->
+  <path d="M100 138H0C0 62 62 0 138 0V100C138 121 121 138 100 138Z" fill="#286AD8"/>
+
+  <!-- Token hexagon ring (flat-top, cx=228, cy=69, outer r=78, inner r=50) -->
+  <path fill-rule="evenodd" d="M306 69L267 136.5H189L150 69L189 1.5H267L306 69ZM278 69L253 112.3H203L178 69L203 25.7H253L278 69Z" fill="#286AD8"/>
+
+  <!-- Token center dot -->
+  <circle cx="228" cy="69" r="15" fill="#286AD8"/>
+
+  <!-- Circle -->
+  <circle cx="370" cy="69" r="69" fill="#286AD8"/>
+
+  <!-- Hexagonal pattern inside circle (blend overlay, masked to circle) -->
+  <g style="mix-blend-mode:multiply" opacity="0.76">
+    <mask id="mask0_tokens" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="301" y="0" width="138" height="138">
+      <circle cx="370" cy="69" r="69" fill="#286AD8"/>
+    </mask>
+    <g mask="url(#mask0_tokens)">
+      <path d="M430 69L400 121H340L310 69L340 17H400Z" fill="#1D4874" opacity="0.8"/>
+      <path d="M415 95L392 135H346L323 95L346 55H392Z" fill="#1D4874" opacity="0.6"/>
+      <path d="M420 45L400 80H360L340 45L360 10H400Z" fill="#1D4874" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Triangle -->
+  <path d="M548 138H410V0L548 138Z" fill="#286AD8"/>
+
+  <!-- Small circle accent -->
+  <circle cx="505" cy="39" r="31" fill="#286AD8"/>
+</svg>

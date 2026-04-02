@@ -63,17 +63,54 @@ Z-index utilities control the stacking order of positioned elements. Higher valu
 
 ### All z-index classes
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-z-auto` | `z-index: auto` |
-| `.nys-z-bottom` | `z-index: -100` |
-| `.nys-z-0` | `z-index: 0` |
-| `.nys-z-100` | `z-index: 100` |
-| `.nys-z-200` | `z-index: 200` |
-| `.nys-z-300` | `z-index: 300` |
-| `.nys-z-400` | `z-index: 400` |
-| `.nys-z-500` | `z-index: 500` |
-| `.nys-z-top` | `z-index: 99999` |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>CSS value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.nys-z-auto</code></td>
+        <td><code>z-index: auto</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-bottom</code></td>
+        <td><code>z-index: -100</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-0</code></td>
+        <td><code>z-index: 0</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-100</code></td>
+        <td><code>z-index: 100</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-200</code></td>
+        <td><code>z-index: 200</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-300</code></td>
+        <td><code>z-index: 300</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-400</code></td>
+        <td><code>z-index: 400</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-500</code></td>
+        <td><code>z-index: 500</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-z-top</code></td>
+        <td><code>z-index: 99999</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 </section>
 

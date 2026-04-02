@@ -23,22 +23,87 @@ Spacing utilities add margin (space outside an element) and padding (space insid
 
 All margin and padding utilities use the same spacing scale:
 
-| Scale value | Size | Class example |
-|-------------|------|---------------|
-| `1px` | 1px | `.nys-margin-1px` |
-| `2px` | 2px | `.nys-margin-2px` |
-| `50` | 4px | `.nys-margin-50` |
-| `100` | 8px | `.nys-margin-100` |
-| `150` | 12px | `.nys-margin-150` |
-| `200` | 16px | `.nys-margin-200` |
-| `250` | 20px | `.nys-margin-250` |
-| `300` | 24px | `.nys-margin-300` |
-| `400` | 32px | `.nys-margin-400` |
-| `500` | 40px | `.nys-margin-500` |
-| `600` | 48px | `.nys-margin-600` |
-| `700` | 56px | `.nys-margin-700` |
-| `800` | 64px | `.nys-margin-800` |
-| `1200` | 96px | `.nys-margin-1200` |
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Scale value</th>
+<th>Size</th>
+<th>Class example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1px</code></td>
+<td>1px</td>
+<td><code>.nys-margin-1px</code></td>
+</tr>
+<tr>
+<td><code>2px</code></td>
+<td>2px</td>
+<td><code>.nys-margin-2px</code></td>
+</tr>
+<tr>
+<td><code>50</code></td>
+<td>4px</td>
+<td><code>.nys-margin-50</code></td>
+</tr>
+<tr>
+<td><code>100</code></td>
+<td>8px</td>
+<td><code>.nys-margin-100</code></td>
+</tr>
+<tr>
+<td><code>150</code></td>
+<td>12px</td>
+<td><code>.nys-margin-150</code></td>
+</tr>
+<tr>
+<td><code>200</code></td>
+<td>16px</td>
+<td><code>.nys-margin-200</code></td>
+</tr>
+<tr>
+<td><code>250</code></td>
+<td>20px</td>
+<td><code>.nys-margin-250</code></td>
+</tr>
+<tr>
+<td><code>300</code></td>
+<td>24px</td>
+<td><code>.nys-margin-300</code></td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>32px</td>
+<td><code>.nys-margin-400</code></td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>40px</td>
+<td><code>.nys-margin-500</code></td>
+</tr>
+<tr>
+<td><code>600</code></td>
+<td>48px</td>
+<td><code>.nys-margin-600</code></td>
+</tr>
+<tr>
+<td><code>700</code></td>
+<td>56px</td>
+<td><code>.nys-margin-700</code></td>
+</tr>
+<tr>
+<td><code>800</code></td>
+<td>64px</td>
+<td><code>.nys-margin-800</code></td>
+</tr>
+<tr>
+<td><code>1200</code></td>
+<td>96px</td>
+<td><code>.nys-margin-1200</code></td>
+</tr>
+</tbody>
+</table></nys-table>
 
 </section>
 

@@ -9,7 +9,7 @@ description: "Stay current with the NYS Design System — releases, new componen
 
 {% set latestRelease = null %}
 {% set latestArticle = null %}
-{% for post in collections.updates | reverse %}
+{% for post in collections.updates %}
   {% if not latestRelease and post.data.tags and "release" in post.data.tags %}
     {% set latestRelease = post %}
   {% endif %}
@@ -20,16 +20,16 @@ description: "Stay current with the NYS Design System — releases, new componen
 
 {% block content %}
 
-# Updates
+<h1>Updates</h1>
 
-Stay current with the NYS Design System. Find the latest releases, component updates, and articles about building accessible digital services for New York State.
+<p>Stay current with the NYS Design System. Find the latest releases, component updates, and articles about building accessible digital services for New York State.</p>
 
 <nys-alert type="info" heading="Subscribe to Updates">Email notifications for new releases and articles are coming soon.</nys-alert>
 
 {% if latestRelease %}
 <section id="latest-release">
 
-## Latest Release
+<h2>Latest Release</h2>
 
 <div class="card card--horizontal">
     <div class="card__content">
@@ -51,7 +51,7 @@ Stay current with the NYS Design System. Find the latest releases, component upd
 {% if latestArticle %}
 <section id="latest-article">
 
-## Latest Article
+<h2>Latest Article</h2>
 
 <div class="card card--horizontal">
     <div class="card__content">

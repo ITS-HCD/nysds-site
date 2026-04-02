@@ -21,12 +21,37 @@ Overflow utilities control what happens when content is larger than its containe
 
 ## Overflow classes
 
-| Class | CSS value | Behavior |
-|-------|-----------|----------|
-| `.nys-overflow-auto` | `overflow: auto` | Adds scrollbars only when content overflows |
-| `.nys-overflow-hidden` | `overflow: hidden` | Clips overflowing content with no scrollbar |
-| `.nys-overflow-scroll` | `overflow: scroll` | Always shows scrollbars |
-| `.nys-overflow-visible` | `overflow: visible` | Content overflows visibly (default) |
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-overflow-auto</code></td>
+<td><code>overflow: auto</code></td>
+<td>Adds scrollbars only when content overflows</td>
+</tr>
+<tr>
+<td><code>.nys-overflow-hidden</code></td>
+<td><code>overflow: hidden</code></td>
+<td>Clips overflowing content with no scrollbar</td>
+</tr>
+<tr>
+<td><code>.nys-overflow-scroll</code></td>
+<td><code>overflow: scroll</code></td>
+<td>Always shows scrollbars</td>
+</tr>
+<tr>
+<td><code>.nys-overflow-visible</code></td>
+<td><code>overflow: visible</code></td>
+<td>Content overflows visibly (default)</td>
+</tr>
+</tbody>
+</table></nys-table>
 
 {% set preview %}
 <div class="nys-grid-row nys-grid-gap">
@@ -71,12 +96,32 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 
 ### Overflow-x
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-overflow-x-auto` | `overflow-x: auto` |
-| `.nys-overflow-x-hidden` | `overflow-x: hidden` |
-| `.nys-overflow-x-scroll` | `overflow-x: scroll` |
-| `.nys-overflow-x-visible` | `overflow-x: visible` |
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-overflow-x-auto</code></td>
+<td><code>overflow-x: auto</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-x-hidden</code></td>
+<td><code>overflow-x: hidden</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-x-scroll</code></td>
+<td><code>overflow-x: scroll</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-x-visible</code></td>
+<td><code>overflow-x: visible</code></td>
+</tr>
+</tbody>
+</table></nys-table>
 
 {% set preview %}
 <div class="nys-overflow-x-auto" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">
@@ -97,12 +142,32 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 
 ### Overflow-y
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-overflow-y-auto` | `overflow-y: auto` |
-| `.nys-overflow-y-hidden` | `overflow-y: hidden` |
-| `.nys-overflow-y-scroll` | `overflow-y: scroll` |
-| `.nys-overflow-y-visible` | `overflow-y: visible` |
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-overflow-y-auto</code></td>
+<td><code>overflow-y: auto</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-y-hidden</code></td>
+<td><code>overflow-y: hidden</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-y-scroll</code></td>
+<td><code>overflow-y: scroll</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-y-visible</code></td>
+<td><code>overflow-y: visible</code></td>
+</tr>
+</tbody>
+</table></nys-table>
 
 {% set preview %}
 <div class="nys-overflow-y-auto" style="max-height: 120px; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">

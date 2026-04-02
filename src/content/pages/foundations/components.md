@@ -93,7 +93,7 @@ For example, to change the background color of a button on your agency's landing
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
-Each component's reference page lists its available CSS custom properties. You can find the full list of NYSDS design tokens at the [token reference](/tokens/), and learn how the token system works at [Design Tokens](/foundations/tokens/).
+Each component's reference page lists its available CSS custom properties. You can browse all NYSDS design tokens — [color](/tokens/), [typography](/tokens/typography/), and [spacing & layout](/tokens/other/) — in the token reference, and learn how the token system works at [Design Tokens](/foundations/tokens/).
 
 </section>
 

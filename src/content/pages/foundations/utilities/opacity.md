@@ -78,19 +78,62 @@ Opacity utilities control the transparency of an element and all of its children
 
 ### All opacity classes
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-opacity-0` | `opacity: 0` |
-| `.nys-opacity-10` | `opacity: 0.1` |
-| `.nys-opacity-20` | `opacity: 0.2` |
-| `.nys-opacity-30` | `opacity: 0.3` |
-| `.nys-opacity-40` | `opacity: 0.4` |
-| `.nys-opacity-50` | `opacity: 0.5` |
-| `.nys-opacity-60` | `opacity: 0.6` |
-| `.nys-opacity-70` | `opacity: 0.7` |
-| `.nys-opacity-80` | `opacity: 0.8` |
-| `.nys-opacity-90` | `opacity: 0.9` |
-| `.nys-opacity-100` | `opacity: 1` |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>CSS value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.nys-opacity-0</code></td>
+        <td><code>opacity: 0</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-10</code></td>
+        <td><code>opacity: 0.1</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-20</code></td>
+        <td><code>opacity: 0.2</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-30</code></td>
+        <td><code>opacity: 0.3</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-40</code></td>
+        <td><code>opacity: 0.4</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-50</code></td>
+        <td><code>opacity: 0.5</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-60</code></td>
+        <td><code>opacity: 0.6</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-70</code></td>
+        <td><code>opacity: 0.7</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-80</code></td>
+        <td><code>opacity: 0.8</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-90</code></td>
+        <td><code>opacity: 0.9</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-opacity-100</code></td>
+        <td><code>opacity: 1</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 </section>
 

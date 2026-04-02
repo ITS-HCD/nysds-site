@@ -21,13 +21,44 @@ Position utilities set the CSS `position` property on an element, controlling ho
 
 ## Position classes
 
-| Class | CSS value | Behavior |
-|-------|-----------|----------|
-| `.nys-position-static` | `position: static` | Default. Element flows normally in the document. |
-| `.nys-position-relative` | `position: relative` | Flows normally but can be offset from its natural position. Creates a positioning context for children. |
-| `.nys-position-absolute` | `position: absolute` | Removed from flow. Positioned relative to nearest positioned ancestor. |
-| `.nys-position-fixed` | `position: fixed` | Removed from flow. Positioned relative to the viewport. Stays in place during scrolling. |
-| `.nys-position-sticky` | `position: sticky` | Flows normally until it reaches a scroll threshold, then "sticks" in place. |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>CSS value</th>
+        <th>Behavior</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.nys-position-static</code></td>
+        <td><code>position: static</code></td>
+        <td>Default. Element flows normally in the document.</td>
+      </tr>
+      <tr>
+        <td><code>.nys-position-relative</code></td>
+        <td><code>position: relative</code></td>
+        <td>Flows normally but can be offset from its natural position. Creates a positioning context for children.</td>
+      </tr>
+      <tr>
+        <td><code>.nys-position-absolute</code></td>
+        <td><code>position: absolute</code></td>
+        <td>Removed from flow. Positioned relative to nearest positioned ancestor.</td>
+      </tr>
+      <tr>
+        <td><code>.nys-position-fixed</code></td>
+        <td><code>position: fixed</code></td>
+        <td>Removed from flow. Positioned relative to the viewport. Stays in place during scrolling.</td>
+      </tr>
+      <tr>
+        <td><code>.nys-position-sticky</code></td>
+        <td><code>position: sticky</code></td>
+        <td>Flows normally until it reaches a scroll threshold, then "sticks" in place.</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 </section>
 

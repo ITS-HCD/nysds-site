@@ -21,11 +21,30 @@ Float utilities position an element to the left or right of its container, allow
 
 ## Float classes
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-float-left` | `float: left` |
-| `.nys-float-right` | `float: right` |
-| `.nys-float-none` | `float: none` |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>CSS value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.nys-float-left</code></td>
+        <td><code>float: left</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-float-right</code></td>
+        <td><code>float: right</code></td>
+      </tr>
+      <tr>
+        <td><code>.nys-float-none</code></td>
+        <td><code>float: none</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 {% set preview %}
 <div style="overflow: hidden;">

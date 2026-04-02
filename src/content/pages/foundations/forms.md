@@ -177,14 +177,49 @@ NYSDS form components validate using a combination of native HTML constraint val
 
 Each component supports the standard HTML validation attributes appropriate to its type:
 
-| Attribute | Supported by | What it checks |
-|-----------|-------------|----------------|
-| `required` | All form components | Value is not empty |
-| `pattern` | `<nys-textinput>` | Value matches a regex pattern |
-| `type` (email, url, tel) | `<nys-textinput>` | Value matches the expected format |
-| `min` / `max` | `<nys-textinput type="number">` | Value is within numeric range |
-| `maxlength` | `<nys-textinput>`, `<nys-textarea>` | Value does not exceed character limit |
-| `step` | `<nys-textinput type="number">` | Value matches the step increment |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Attribute</th>
+        <th>Supported by</th>
+        <th>What it checks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>required</code></td>
+        <td>All form components</td>
+        <td>Value is not empty</td>
+      </tr>
+      <tr>
+        <td><code>pattern</code></td>
+        <td><code>&lt;nys-textinput&gt;</code></td>
+        <td>Value matches a regex pattern</td>
+      </tr>
+      <tr>
+        <td><code>type</code> (email, url, tel)</td>
+        <td><code>&lt;nys-textinput&gt;</code></td>
+        <td>Value matches the expected format</td>
+      </tr>
+      <tr>
+        <td><code>min</code> / <code>max</code></td>
+        <td><code>&lt;nys-textinput type="number"&gt;</code></td>
+        <td>Value is within numeric range</td>
+      </tr>
+      <tr>
+        <td><code>maxlength</code></td>
+        <td><code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-textarea&gt;</code></td>
+        <td>Value does not exceed character limit</td>
+      </tr>
+      <tr>
+        <td><code>step</code></td>
+        <td><code>&lt;nys-textinput type="number"&gt;</code></td>
+        <td>Value matches the step increment</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 When validation fails, the component automatically:
 1. Sets `showError` to `true`
@@ -276,12 +311,39 @@ NYSDS form components emit custom events prefixed with `nys-`. The specific even
 
 ### Common events across form components
 
-| Event | Fired when | Components |
-|-------|-----------|------------|
-| `nys-input` | Value changes (on each keystroke) | `<nys-textinput>`, `<nys-textarea>` |
-| `nys-change` | Selection or state changes | `<nys-select>`, `<nys-checkbox>`, `<nys-radiobutton>`, `<nys-toggle>`, `<nys-datepicker>` |
-| `nys-focus` | Component gains focus | All form components |
-| `nys-blur` | Component loses focus | All form components |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Fired when</th>
+        <th>Components</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>nys-input</code></td>
+        <td>Value changes (on each keystroke)</td>
+        <td><code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-textarea&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-change</code></td>
+        <td>Selection or state changes</td>
+        <td><code>&lt;nys-select&gt;</code>, <code>&lt;nys-checkbox&gt;</code>, <code>&lt;nys-radiobutton&gt;</code>, <code>&lt;nys-toggle&gt;</code>, <code>&lt;nys-datepicker&gt;</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-focus</code></td>
+        <td>Component gains focus</td>
+        <td>All form components</td>
+      </tr>
+      <tr>
+        <td><code>nys-blur</code></td>
+        <td>Component loses focus</td>
+        <td>All form components</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 ### Event detail structure
 
@@ -705,17 +767,64 @@ form.addEventListener('reset', () => {
 
 These NYSDS components are form-associated and work with the patterns described on this page:
 
-| Component | Use for | Events |
-|-----------|---------|--------|
-| [`<nys-textinput>`](/components/textinput/) | Short text: names, emails, numbers, passwords | `nys-input`, `nys-focus`, `nys-blur` |
-| [`<nys-textarea>`](/components/textarea/) | Multi-line text: comments, descriptions | `nys-input`, `nys-focus`, `nys-blur` |
-| [`<nys-select>`](/components/select/) | Single selection from a dropdown list | `nys-change`, `nys-focus`, `nys-blur` |
-| [`<nys-checkbox>`](/components/checkbox/) | Binary choices or multi-select lists | `nys-change`, `nys-focus`, `nys-blur` |
-| [`<nys-radiobutton>`](/components/radiobutton/) | Single selection from visible options | `nys-change`, `nys-focus`, `nys-blur` |
-| [`<nys-datepicker>`](/components/datepicker/) | Date selection with calendar | `nys-change`, `nys-focus`, `nys-blur` |
-| [`<nys-toggle>`](/components/toggle/) | Binary settings with immediate effect | `nys-change`, `nys-focus`, `nys-blur` |
-| [`<nys-fileinput>`](/components/fileinput/) | File uploads with drag-and-drop | `nys-change` |
-| [`<nys-button>`](/components/button/) | Submit, reset, or custom form actions | `nys-click`, `nys-focus`, `nys-blur` |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Use for</th>
+        <th>Events</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="/components/textinput/"><code>&lt;nys-textinput&gt;</code></a></td>
+        <td>Short text: names, emails, numbers, passwords</td>
+        <td><code>nys-input</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/textarea/"><code>&lt;nys-textarea&gt;</code></a></td>
+        <td>Multi-line text: comments, descriptions</td>
+        <td><code>nys-input</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/select/"><code>&lt;nys-select&gt;</code></a></td>
+        <td>Single selection from a dropdown list</td>
+        <td><code>nys-change</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/checkbox/"><code>&lt;nys-checkbox&gt;</code></a></td>
+        <td>Binary choices or multi-select lists</td>
+        <td><code>nys-change</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/radiobutton/"><code>&lt;nys-radiobutton&gt;</code></a></td>
+        <td>Single selection from visible options</td>
+        <td><code>nys-change</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/datepicker/"><code>&lt;nys-datepicker&gt;</code></a></td>
+        <td>Date selection with calendar</td>
+        <td><code>nys-change</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/toggle/"><code>&lt;nys-toggle&gt;</code></a></td>
+        <td>Binary settings with immediate effect</td>
+        <td><code>nys-change</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/fileinput/"><code>&lt;nys-fileinput&gt;</code></a></td>
+        <td>File uploads with drag-and-drop</td>
+        <td><code>nys-change</code></td>
+      </tr>
+      <tr>
+        <td><a href="/components/button/"><code>&lt;nys-button&gt;</code></a></td>
+        <td>Submit, reset, or custom form actions</td>
+        <td><code>nys-click</code>, <code>nys-focus</code>, <code>nys-blur</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 For accessibility patterns in forms, see [Accessibility](/foundations/accessibility/).
 

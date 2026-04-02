@@ -99,16 +99,50 @@ This matters because LLMs generate code based on probability. Without explicit c
 
 #### Available Tools
 
-| Tool | What it does |
-|------|--------------|
-| `list_components` | Lists all NYSDS components with brief summaries |
-| `get_component_docs` | Returns full documentation for a specific component |
-| `find_components` | Searches components by name or description |
-| `get_design_tokens` | Returns token values by category |
-| `get_usage_guide` | Returns installation and usage patterns |
-| `validate_component_api` | Validates that you're using correct props and attributes |
-| `setup_framework` | Returns framework-specific setup guides |
-| `find_tokens` | Searches tokens by name or value |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>What it does</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>list_components</code></td>
+        <td>Lists all NYSDS components with brief summaries</td>
+      </tr>
+      <tr>
+        <td><code>get_component_docs</code></td>
+        <td>Returns full documentation for a specific component</td>
+      </tr>
+      <tr>
+        <td><code>find_components</code></td>
+        <td>Searches components by name or description</td>
+      </tr>
+      <tr>
+        <td><code>get_design_tokens</code></td>
+        <td>Returns token values by category</td>
+      </tr>
+      <tr>
+        <td><code>get_usage_guide</code></td>
+        <td>Returns installation and usage patterns</td>
+      </tr>
+      <tr>
+        <td><code>validate_component_api</code></td>
+        <td>Validates that you're using correct props and attributes</td>
+      </tr>
+      <tr>
+        <td><code>setup_framework</code></td>
+        <td>Returns framework-specific setup guides</td>
+      </tr>
+      <tr>
+        <td><code>find_tokens</code></td>
+        <td>Searches tokens by name or value</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 #### Getting Started with the NYSDS MCP Server
 

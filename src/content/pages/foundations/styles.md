@@ -216,12 +216,39 @@ For the complete reference of available utility classes and usage examples, see 
 
 ## Choosing an Endpoint
 
-| Scenario | Stylesheet | Why |
-|----------|------------|-----|
-| Starting a new NYS application | `nysds-full.min.css` | Get tokens, reset, typography, and layout utilities out of the box |
-| Adding NYSDS components to an existing site with its own CSS | `nysds.min.css` | Tokens and FOUC prevention without overriding your existing typography or reset |
-| Building an email template or print stylesheet | `nysds.min.css` | Tokens only — you control all other styling |
-| Need typography classes but have your own reset | `nysds.min.css` + `nysds-typography.min.css` | Combine the base tokens with typography classes without bringing in the full reset |
+<nys-table striped>
+  <table>
+    <thead>
+      <tr>
+        <th>Scenario</th>
+        <th>Stylesheet</th>
+        <th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Starting a new NYS application</td>
+        <td><code>nysds-full.min.css</code></td>
+        <td>Get tokens, reset, typography, and layout utilities out of the box</td>
+      </tr>
+      <tr>
+        <td>Adding NYSDS components to an existing site with its own CSS</td>
+        <td><code>nysds.min.css</code></td>
+        <td>Tokens and FOUC prevention without overriding your existing typography or reset</td>
+      </tr>
+      <tr>
+        <td>Building an email template or print stylesheet</td>
+        <td><code>nysds.min.css</code></td>
+        <td>Tokens only — you control all other styling</td>
+      </tr>
+      <tr>
+        <td>Need typography classes but have your own reset</td>
+        <td><code>nysds.min.css</code> + <code>nysds-typography.min.css</code></td>
+        <td>Combine the base tokens with typography classes without bringing in the full reset</td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
 
 </section>
 
@@ -232,7 +259,7 @@ For the complete reference of available utility classes and usage examples, see 
 - <a href="https://www.npmjs.com/package/@nysds/styles" target="_blank" rel="noopener noreferrer">@nysds/styles on npm<nys-icon name="open_in_new" size="lg"></nys-icon></a>
 - [Get Started as a Developer](/get-started/developers/) — Installation, setup, and framework guides
 - [Design Tokens](/foundations/tokens/) — How the token architecture works
-- [Token Reference](/tokens/) — Full list of available tokens with theme switcher
+- Token Reference — Browse [color](/tokens/), [typography](/tokens/typography/), and [spacing & layout](/tokens/other/) tokens
 - [Utilities](/foundations/utilities/) — Complete utility class reference
 - [Typography](/foundations/typography/) — Fonts, font licensing, and typography tokens
 - [Agency Themes](/foundations/themes/) — How to apply agency-specific theming

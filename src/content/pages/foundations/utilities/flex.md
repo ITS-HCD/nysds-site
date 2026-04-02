@@ -978,12 +978,32 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
 
 Order utilities change the visual order of flex items without changing the DOM order. Use `.nys-order-first` to move an item to the beginning, `.nys-order-last` to the end, or `.nys-order-0` through `.nys-order-11` for specific positions.
 
-| Class | CSS value |
-|-------|-----------|
-| `.nys-order-first` | `order: -1` |
-| `.nys-order-last` | `order: 999` |
-| `.nys-order-initial` | `order: 0` |
-| `.nys-order-0` – `.nys-order-11` | `order: 0` – `order: 11` |
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-order-first</code></td>
+<td><code>order: -1</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-last</code></td>
+<td><code>order: 999</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-initial</code></td>
+<td><code>order: 0</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-0</code> – <code>.nys-order-11</code></td>
+<td><code>order: 0</code> – <code>order: 11</code></td>
+</tr>
+</tbody>
+</table></nys-table>
 
 All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-first`).
 
