@@ -43,6 +43,7 @@ For developers and testers who need to understand WCAG criteria, ARIA patterns, 
 
 Use these to assess and track compliance progress.
 
+- [Evaluating Web Accessibility Overview (W3C WAI)](https://www.w3.org/WAI/test-evaluate/) — W3C's framework for planning and conducting accessibility evaluations.
 - [A11Y Project Checklist](https://a11yproject.com/checklist) — Practical checklist mapped to WCAG criteria. Good for development teams doing self-assessments.
 - [WUHCAG WCAG Checklists](https://www.wuhcag.com/wcag-checklist/) — Organized by WCAG level (A, AA, AAA) with plain-language explanations of each criterion.
 

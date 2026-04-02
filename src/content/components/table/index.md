@@ -164,7 +164,7 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 Adding the `sortable` property allows for the table to be reordered in ascending or descending order.
 
-<nys-alert type="warning">
+<nys-alert type="warning" heading="Sortable support">
 <p>Currently the <code>sortable</code> property does <strong>NOT</strong> support <code>rowspan</code> or <code>colspan</code>.</p>
 </nys-alert>
 
@@ -344,8 +344,29 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block events %}
 
-The `<nys-table>` component does not emit any events.
+The `<nys-table>` component emits **two** custom Javascript events:
 
+1. **`nys-click`** – Fired when the download button or a sortable column header is clicked.
+2. **`nys-column-sort`** – Fired when a sortable column header is clicked. Can be prevented by calling `event.preventDefault()` to override the default sort behavior.
+
+### Event details
+The `nys-column-sort` event includes a detail object with the following properties:
+  - columnIndex (number): The zero-based index of the clicked column.
+  - columnLabel (string): The text label of the clicked column header.
+  - sortDirection (string): The resulting sort direction — `"asc"`, `"desc"`, or `"none"`.
+
+You can listen to these events using JavaScript:
+{% set code %}// Select the table component
+const table = document.querySelector('nys-table');
+// Listen for the 'nys-column-sort' event
+table.addEventListener('nys-column-sort', (event) => {
+  const { columnIndex, columnLabel, sortDirection } = event.detail;
+  console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

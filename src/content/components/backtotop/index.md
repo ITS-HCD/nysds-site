@@ -6,7 +6,7 @@ image: /assets/img/components/backtotop.svg
 image_alt: a circular button with the text back to top written on it.
 image_header: /assets/img/components/backtotop-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4303-1514
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4303-2694&t=ehyQYJeb6ohvHYV0-4
 navOrder: 4
 ---
 
@@ -176,7 +176,40 @@ size="sm"
 
 {% block events %}
 
-This component does not emit any custom events.
+The `<nys-backtotop>` component emits **three** custom Javascript events:
+
+  1.  **`click`** – Emitted when the backtotop is clicked.
+  2.  **`focus`** - Emitted when the backtotop receives focus.
+  3.  **`blur`** - Emitted when the backtotop loses focus.
+
+### Event details
+
+You can listen to these events using JavaScript:
+{% set code %}// Select the backtotop component
+const backtotop = document.querySelector("nys-backtotop");
+// Listen for the 'click' event
+backtotop.addEventListener("click", () => {
+	console.log("Backtotop clicked");
+});
+// Listen for the 'blur' event
+backtotop.addEventListener("blur", () => {
+	console.log("Backtotop lost focus");
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% set showTip = false %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

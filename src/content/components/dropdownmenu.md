@@ -63,9 +63,9 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 
 {% block usagedont %}
 
-- Don't use for form inputs or selectable values — use `<nys-select>` instead
-- Don't use without a label or accessible description on the trigger
-- Don't nest dropdown menus inside other dropdown menus
+- Use for form inputs or selectable values — use `<nys-select>` instead
+- Use without a label or accessible description on the trigger
+- Nest dropdown menus inside other dropdown menus
 
 {% endblock %}
 
@@ -150,8 +150,8 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 {% set preview %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-    <nys-button id="my-user-actions" slot="user-actions" label="Log out" prefixIcon="slotted">
-        <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+    <nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
+        <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
     </nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu1" for="my-user-actions" position="bottom-end">
@@ -355,6 +355,16 @@ dropdownmenu.addEventListener('nys-click', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

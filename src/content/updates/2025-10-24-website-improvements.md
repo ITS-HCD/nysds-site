@@ -5,6 +5,7 @@ author: Eric Steinborn
 description: |
     We have implemented a site search, added a new 404 page, and created quick links for headings across the site.
 ogimage: /assets/i/2026/test2.png
+updatethumbnail: /assets/i/2025/october-website-improvements.png
 tags: article, website, search
 date: 2025-10-24
 ---

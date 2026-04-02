@@ -6,7 +6,7 @@ image: /assets/img/components/global-header.svg
 image_alt: An illustration of a global header.
 image_header: /assets/img/components/global-header-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4024-14432&t=EXsXvlMbCdRw10ir-4
 navOrder: 14
 ---
 
@@ -117,11 +117,11 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
   appName="User Registration Form" 
   agencyName="Office of Information Technology Services"
 >
-  <nys-button id="my-action-slot" slot="user-actions" label="Log out" prefixIcon="slotted">
+  <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
     <nys-avatar
       slot="prefix-icon"
       ariaLabel="User avatar"
-      initials="NY"
+      initials="JS"
     ></nys-avatar>
   </nys-button>
 </nys-globalheader>

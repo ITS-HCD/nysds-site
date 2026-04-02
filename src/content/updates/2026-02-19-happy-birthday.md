@@ -6,6 +6,7 @@ description: |
   We're celebrating our one year anniversary! We shipped a new homepage and contribute pages. Contribution can take many forms: New feature requests, bug reports, or hop into our Teams channel.
 ogimage: /assets/i/2026/happy-birthday.png
 thumbnailimage: /assets/i/2026/happy-birthday-thumbnail.png
+updatethumbnail: /assets/i/2026/hb-circle.png
 tags: article, website, anniversary, contribute
 date: 2026-02-19
 ---

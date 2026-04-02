@@ -6,7 +6,7 @@ image: /assets/img/components/global-footer.svg
 image_alt: An illustration of a global footer.
 image_header: /assets/img/components/global-footer-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4003-64216
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4024-12187&t=EXsXvlMbCdRw10ir-4
 navOrder: 13
 ---
 
@@ -67,6 +67,14 @@ The `<nys-globalfooter>` component includes the following accessibility-focused 
 {% endblock %}
 
 {% block options %}
+
+### Without Links
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
+
+  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://its.ny.gov">
+</nys-globalfooter>{% endset %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### With Links
 For simpler footers or public-facing sites, the Global Footer can include a single list of navigation links. To add links, follow this format:

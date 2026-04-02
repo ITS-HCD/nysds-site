@@ -6,7 +6,7 @@ image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-8784&t=0cK7llM1tFRVIgBx-4
 navOrder: 2
 ---
 
@@ -105,13 +105,13 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 
 {% block usagedont %}
 
-- Do not remove the left icon, it is required for accessibility.
-- Don’t use alerts to highlight actions that should be clear in the UI itself.
-- Do not use error messages to communicate form field validation issues; use field error states instead.
-- Don't include more than two link actions in an alert.
-- Avoid overusing alerts for low-priority info — this can desensitize users.
-- Don't use alerts as toasts. Place them at the top of the page content.
-- Don't add any shadows to alerts.
+- Remove the left icon, it is required for accessibility.
+- Use alerts to highlight actions that should be clear in the UI itself.
+- Use error messages to communicate form field validation issues; use field error states instead.
+- Include more than two link actions in an alert.
+- Overuse alerts for low-priority info — this can desensitize users.
+- Use alerts as toasts. Place them at the top of the page content.
+- Add any shadows to alerts.
 </ul>
 {% endblock %}
 
@@ -360,6 +360,16 @@ alert.addEventListener("nys-close", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>", "<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

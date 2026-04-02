@@ -6,7 +6,7 @@ image: /assets/img/components/datepicker.svg
 image_alt: An illustration of a date picker.
 image_header: /assets/img/components/datepicker-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=15514-1502
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=15514-6117&t=YFURmePNl1sEj6Vj-4
 navOrder: 9
 ---
 
@@ -28,6 +28,7 @@ The `<nys-datepicker>` component lets users select a single date by typing into 
   required
 ></nys-datepicker>
 {% endset %}
+{% set showTip = true %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% set showTip = true %}
@@ -379,6 +380,16 @@ datepicker.addEventListener("nys-blur", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<wc-datepicker>","<nys-icon>","<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

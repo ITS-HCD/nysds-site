@@ -6,7 +6,7 @@ image: /assets/img/components/checkbox.svg
 image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
 stable: true
-figma_link: https://www.figma.com/design/0ogYpymUPQQfhELthntNbt?node-id=4808-7102
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-68534&t=ehyQYJeb6ohvHYV0-4
 navOrder: 7
 ---
 
@@ -55,8 +55,8 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 
 {% block usagedont %}
 
- - Avoid using when you have more than 10 options to choose from; instead, consider a multiselect dropdown (coming soon).
- - Don’t change the state of one checkbox based on another being clicked.
+ - Use when you have more than 10 options to choose from.
+ - Change the state of one checkbox based on another being clicked.
 {% endblock %}
 
 {% block accessibility %}
@@ -206,6 +206,36 @@ When the description requires more complexity than a simple string, use the desc
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Inverted
+
+Set the `inverted` when the component is on a dark background.
+You can set `inverted` on `nys-checkboxgroup` to apply it to all checkboxes, or on a single `nys-checkbox` if only one needs it.
+
+{% set preview %}
+  <nys-checkboxgroup
+    label="Select your favorite New York landmarks"
+    description="Choose from the options below"
+    inverted
+  >
+    <nys-checkbox
+      label="Adirondacks"
+      name="landmarks"
+      value="adirondacks"
+      errorMessage="You must select this box to continue"
+      checked
+    ></nys-checkbox>
+    <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" checked></nys-checkbox>
+    <nys-checkbox name="landmarks" value="catskills" label="Catskills" checked></nys-checkbox>
+    <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls" checked></nys-checkbox>
+    <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
+    <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
+  </nys-checkboxgroup>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set inverted = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -346,6 +376,16 @@ checkbox.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
