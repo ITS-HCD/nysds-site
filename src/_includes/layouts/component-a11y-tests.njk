@@ -1,0 +1,281 @@
+
+    <section id="overview">
+      <h1>{{ title }}</h1>
+      {%- block longdescription %}
+      Any {{ pattern }} used in a New York State website should pass these tests and checklists.
+      Also follow this acceptance criteria when building and testing a
+      <a href="./accessibility-build.html">custom {{ pattern }}</a>
+      and when evaluating third-party open source or licensed component libraries.
+      {% endblock -%}
+    </section>
+    <section>
+        {%- block status %}
+        <nys-table bordered>
+            <table>
+                <caption>
+                    NYSDS {{ pattern | capitalize }} accessibility status
+                </caption>
+                <tr>
+                    <th>Total tests</th>
+                    <th>Passing</th>
+                    <th>Failing</th>
+                    <th>Not done</th>
+                </tr>
+                <tr>
+                    <td>{{ status.total }}</td>
+                    <td>{{ status.pass }}</td>
+                    <td>{{ status.fail }}</td>
+                    <td>{{ status.toDo }}</td>
+                </tr>
+            </table>
+        </nys-table>
+        {% endblock -%}
+    </section>
+    <br>
+    <section>
+        <h2>Accessibility tests</h2>
+      {%- block anyonecandoit %}
+      <!-- TODO: style card--bisect -->
+      <div class="card--bisect">
+          <div class="card--bisect__start color-theme--faint">
+      <h3>Anyone can run these accessibility tests, no special tools needed.</h3>
+      <p>
+    Each passing test removes a real barrier for New Yorkers who navigate by keyboard,
+    screen reader, or voice control.
+      </p>
+          </div>
+          <div class="card--bisect__end">
+              <div>
+                  <nys-icon name="check" size="md"></nys-icon>
+            <h4>Find what you need</h4>
+           <p>
+            All of these tests can be run from your browser.
+            Each section tells you what to use and where to get it.
+           </p>
+              </div>
+              <div>
+                  <nys-icon name="check" size="md"></nys-icon>
+            <h4>Follow the checklists</h4>
+           <p>
+            Each checkbox tells you exactly what to do and what a passing result looks or sounds like.
+           </p>
+              </div>
+              <div>
+                  <nys-icon name="check" size="md"></nys-icon>
+            <h4>Track and share results</h4>
+            <p>
+            Run each test, record what passes and what needs work, and print your results to share with your team.
+            </p>
+              </div>
+          </div>
+      {% endblock -%}
+    </section>
+
+    <section>
+      <h3>Keyboard navigation</h3>
+      {%- block keyboard %}
+      <p>
+          Limit interaction with the component to only the <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Space</kbd> keys.
+          While testing keyboard navigation do not use a mouse whatsoever.
+      </p>
+
+      {% for interaction in keyboard.interactions %}
+      <!-- TODO: style card--a11ytest -->
+      <div class="card--a11ytest">
+          <div>
+              <!-- TODO: use Nunjucks loop index here -->
+              <input type="checkbox" aria-label="keyboard test 1" aria-describedby="kt1-desc">
+          </div>
+          <div>
+            <h4>{{ interaction.scenario | safe }}</h4>
+            <ul>
+                {% for requirement in interaction.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            <!-- TODO: make macro or just add JSON member -->
+            {% set i = "success" if interaction.status | upper == "PASS" else ("error" if interaction.status | upper == "FAIL" else ("warning" if interaction.status | upper == "NOT DONE" else "")) %}
+            <nys-badge intent="{{ i }}" label="{{ interaction.status }}" prefixIcon></nys-badge>
+          </div>
+      </div>
+      {% endfor %}
+      {% endblock -%}
+    </section>
+
+    <section>
+        <!-- TODO: write acceptance criteria and description for MOUSE !! -->
+      <h3>Mouse</h3>
+      {%- block mouse %}
+      <p>
+         Lorem ipsum dolor sit amet.
+      </p>
+
+      {% for interaction in mouse.interactions %}
+      <div class="card--a11ytest">
+          <div>
+              <nys-checkbox label="" aria-describedby=""></nys-checkbox>
+          </div>
+          <div>
+            <h4>{{ interaction.scenario | safe }}</h4>
+            <ul>
+                {% for requirement in interaction.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            {% set i = "success" if interaction.status | upper == "PASS" else ("error" if interaction.status | upper == "FAIL" else ("warning" if interaction.status | upper == "NOT DONE" else "")) %}
+            <nys-badge intent="{{ i }}" label="{{ interaction.status }}" prefixIcon></nys-badge>
+          </div>
+      </div>
+      {% endfor %}
+      {% endblock -%}
+    </section>
+
+    <section>
+      <h3>Desktop screen reader</h3>
+      {%- block screenreader %}
+      <p>
+          <!-- TODO: add HREFs -->
+          Test with at least two out of the three most common screen readers.
+          <a href="https://www.nvaccess.org/download/" target="_blank">NVDA</a> runs under Windows and is a free download.
+          <a href="https://support.freedomscientific.com/Downloads/JAWS" target="_blank">JAWS</a> runs under Windows and is a commercial product.
+          <a href="https://support.apple.com/guide/voiceover/welcome/mac" target="_blank">VoiceOver</a> is built into macOS.
+          While using a screen reader do not use a mouse whatsoever.
+      </p>
+
+      {% for interaction in screenReader.interactions %}
+      <div class="card--a11ytest">
+          <div>
+              <nys-checkbox label="" aria-describedby=""></nys-checkbox>
+          </div>
+          <div>
+            <h4>{{ interaction.scenario | safe }}</h4>
+            <ul>
+                {% for requirement in interaction.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            {% set i = "success" if interaction.status | upper == "PASS" else ("error" if interaction.status | upper == "FAIL" else ("warning" if interaction.status | upper == "NOT DONE" else "")) %}
+            <nys-badge intent="{{ i }}" label="{{ interaction.status }}" prefixIcon></nys-badge>
+          </div>
+      </div>
+      {% endfor %}
+      {% endblock -%}
+    </section>
+
+    <section>
+      <h3>Mobile screen reader</h3>
+      {%- block screenreadermobile %}
+      <p>
+        Test with at least one, ideally both, of the primary mobile screen readers.
+        <a href="https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios" target="_blank">VoiceOver</a>
+        is part of iOS and
+        <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en" target="_blank">TalkBack</a>
+        is included with most Android devices.
+      </p>
+
+      {% for interaction in screenReaderMobile.interactions %}
+      <div class="card--a11ytest">
+          <div>
+              <nys-checkbox label="" aria-describedby=""></nys-checkbox>
+          </div>
+          <div>
+            <h4>{{ interaction.scenario | safe }}</h4>
+            <ul>
+                {% for requirement in interaction.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            {% set i = "success" if interaction.status | upper == "PASS" else ("error" if interaction.status | upper == "FAIL" else ("warning" if interaction.status | upper == "NOT DONE" else "")) %}
+            <nys-badge intent="{{ i }}" label="{{ interaction.status }}" prefixIcon></nys-badge>
+          </div>
+      </div>
+      {% endfor %}
+      {% endblock -%}
+    </section>
+
+    <section>
+      <h3>Voice</h3>
+      {%- block voice %}
+      <p>
+        <a href="https://support.microsoft.com/en-us/topic/get-started-with-voice-access-bd2aa2dc-46c2-486c-93ae-3d75f7d053a4" target="_blank">Voice Access</a>
+        is part of the Windows OS, and
+        <a href="https://support.apple.com/guide/mac-help/get-started-with-voice-control-mchl1a04f324/mac" target="_blank">Voice Control</a>
+        is part of macOS.
+      </p>
+
+      {% for interaction in voice.interactions %}
+      <div class="card--a11ytest">
+          <div>
+              <nys-checkbox label="" aria-describedby=""></nys-checkbox>
+          </div>
+          <div>
+            <h4>{{ interaction.scenario | safe }}</h4>
+            <ul>
+                {% for requirement in interaction.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            {% set i = "success" if interaction.status | upper == "PASS" else ("error" if interaction.status | upper == "FAIL" else ("warning" if interaction.status | upper == "NOT DONE" else "")) %}
+            <nys-badge intent="{{ i }}" label="{{ interaction.status }}" prefixIcon></nys-badge>
+          </div>
+      </div>
+      {% endfor %}
+      {% endblock -%}
+    </section>
+
+    <section>
+      <h3>Zoom</h3>
+      {%- block zoom %}
+      <p>
+        All tests in this section require the browser to be zoomed to 200%.
+        On Windows press <kbd>Ctrl</kbd> + <kbd>plus</kbd> and
+        on macOS press <kbd>Cmd</kbd> + <kbd>plus</kbd>.
+      </p>
+
+      {% for interaction in zoom.interactions %}
+      <div class="card--a11ytest">
+          <div>
+              <nys-checkbox label="" aria-describedby=""></nys-checkbox>
+          </div>
+          <div>
+            <h4>{{ interaction.scenario | safe }}</h4>
+            <ul>
+                {% for requirement in interaction.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            {% set i = "success" if interaction.status | upper == "PASS" else ("error" if interaction.status | upper == "FAIL" else ("warning" if interaction.status | upper == "NOT DONE" else "")) %}
+            <nys-badge intent="{{ i }}" label="{{ interaction.status }}" prefixIcon></nys-badge>
+          </div>
+      </div>
+      {% endfor %}
+      {% endblock -%}
+    </section>
+
+
+
+
+
+
+    <section>
+      <h2>Use this checklist at the design stage</h2>
+      {%- block wcag %}
+      <p>
+        This checklist breaks down the specific design and interaction requirements behind the tests above,
+        organized by disability type so you can see exactly who each requirement serves and what it means in practice.
+        Each item links to the relevant
+        <a href="https://www.w3.org/WAI/WCAG22/quickref/WCAG" target="_blank">WCAG guideline</a> for deeper reference.
+      </p>
+      {% for wcag in disabilities %}
+      <h4>{{ wcag.type }}</h4>
+      {% for criterion in wcag.criteria %}
+      <div class="a11y-block">
+          <span>{{ criterion.description }}</span>
+          <a href="{{ criterion.uri }}" target="_blank">
+              {{ criterion.sc }}
+          </a>
+      </div>
+      {% endfor %}
+      {% endfor %}
+      {% endblock -%}
+    </section>
