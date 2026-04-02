@@ -7,7 +7,7 @@ image_alt: An illustration of a global header.
 image_header: /assets/img/components/global-header-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11924
-navOrder: 12
+navOrder: 14
 ---
 
 {% extends "layouts/component.njk" %}
@@ -117,7 +117,7 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
   appName="User Registration Form" 
   agencyName="Office of Information Technology Services"
 >
-  <nys-button slot="user-actions" label="Log out" prefixIcon="slotted">
+  <nys-button id="my-action-slot" slot="user-actions" label="Log out" prefixIcon="slotted">
     <nys-avatar
       slot="prefix-icon"
       ariaLabel="User avatar"
@@ -125,6 +125,12 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
     ></nys-avatar>
   </nys-button>
 </nys-globalheader>
+<nys-dropdownmenu id="dropdownmenu" for="my-action-slot">
+    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+</nys-dropdownmenu>
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
