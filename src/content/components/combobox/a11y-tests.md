@@ -1,12 +1,12 @@
 ---
-permalink: /components/accordion/accessibility-tests.html
+permalink: /components/combobox/accessibility-tests.html
 title: Accessibility Checklist
-description: How to test the accessibility of an accordion.
-image: /assets/img/components/accordion.svg
-image_alt: An illustration of an accordion
-image_header: /assets/img/components/accordion-header.svg
+description: How to test the accessibility of a combobox.
+image: /assets/img/components/combobox.svg
+image_alt: An illustration of a combobox
+image_header: /assets/img/components/combobox-header.svg
 stable: true
-parent: Accordion
+parent: Combobox
 navOrder: 1
 eleventyExcludeFromCollections: true
 ---
