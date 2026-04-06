@@ -1,3 +1,10 @@
+/**
+ * --------------------------------------------------------------------+
+ * JSON5 supports comments and much more <https://json5.org/>          +
+ * Values for `interactions.status` must be one of these combinations: +
+ * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
+ * --------------------------------------------------------------------+
+ */
 {
   "pattern": "Icon",
   "tests": {
