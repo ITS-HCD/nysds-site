@@ -3,6 +3,10 @@
  * JSON5 supports comments and much more <https://json5.org/>          +
  * Values for `interactions.status` must be one of these combinations: +
  * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
+ * Comment top-level members to prevent their corresponding njk blocks +
+ * from rendering. Members that may be commented are exactly these:    +
+ * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
+ * zoom, disabilities.                                                 +
  * --------------------------------------------------------------------+
  */
 {
