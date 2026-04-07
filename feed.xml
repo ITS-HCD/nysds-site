@@ -7,6 +7,159 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.16.0 “Algonquin”</title>
+      <link>https://designsystem.ny.gov/updates/1.16.0-release/</link>
+      <description><![CDATA[<h2>“Algonquin” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release &quot;Algonquin&quot; after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
+<p><a href="https://en.wikipedia.org/wiki/Algonquin_Peak">Learn more about Algonquin Peak.</a></p>
+<h2><code>&lt;nys-video&gt;</code> now available</h2>
+<p>The new <code>&lt;nys-video&gt;</code> embeds a YouTube video with a clickable thumbnail and on-demand playback. The iframe loads only after interaction by default, helping improve page performance while keeping the experience responsive and accessible.</p>
+<p><a href="https://designsystem.ny.gov/components/video">Read the full video documentation</a>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-video</span>
+  <span class="token attr-name">videourl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.youtube.com/watch?v=TBfFzt0150Q<span class="token punctuation">"</span></span>
+  <span class="token attr-name">titleText</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IT'S a Tech Podcast, Episode 3: Human-Centered Design<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-video</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> pressed play on this one.</p>
+<h2><code>.nys-flex-gap</code> classes now available</h2>
+<p>We've added flex gap configuration classes to the NYS DS styles package. You can use them in your HTML to set gap widths that fit your application needs.</p>
+<p><a href="https://designsystem.ny.gov/foundations/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> Flexed her muscles on this one.</p>
+<h2>Figma updates</h2>
+<p>Today we’re launching the official version of the video component in our design library.</p>
+<ul>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=20897-9561&amp;t=Y3c7CNRjerknJQgj-4">Video Player</a> now available in Figma</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> is creating important components!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li><code>&lt;nys-dropdownmenu&gt;</code> in v1.15.0 had z-index issues. They have been resolved in this release.</li>
+<li><code>maxLength</code> fixed in <code>&lt;nys-textinput&gt;</code></li>
+<li>React support has expanded to add react wrappers and JSX definitions for React-like</li>
+<li>Dispatch events now bubble up and are composed</li>
+<li>Project build time reduced significantly</li>
+<li>Fixed table sort event not firing</li>
+<li>Globalheader no longer scheduling updates</li>
+<li>Fixes to build scripts</li>
+<li>Focus and logic fixes for <code>&lt;nys-checkboxgroup&gt;</code></li>
+<li>Removed extraneous getButtonElement() function from <code>&lt;nys-modal&gt;</code></li>
+<li>Icon alignment fixes</li>
+<li>MCP server fixes</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>,  <a href="https://github.com/esteinborn">Eric Steinborn</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> fix broken things.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.0">See the full developer release notes for v.1.16.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>“Algonquin” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release &quot;Algonquin&quot; after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
+<p><a href="https://en.wikipedia.org/wiki/Algonquin_Peak">Learn more about Algonquin Peak.</a></p>
+<h2><code>&lt;nys-video&gt;</code> now available</h2>
+<p>The new <code>&lt;nys-video&gt;</code> embeds a YouTube video with a clickable thumbnail and on-demand playback. The iframe loads only after interaction by default, helping improve page performance while keeping the experience responsive and accessible.</p>
+<p><a href="https://designsystem.ny.gov/components/video">Read the full video documentation</a>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-video</span>
+  <span class="token attr-name">videourl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.youtube.com/watch?v=TBfFzt0150Q<span class="token punctuation">"</span></span>
+  <span class="token attr-name">titleText</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IT'S a Tech Podcast, Episode 3: Human-Centered Design<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-video</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> pressed play on this one.</p>
+<h2><code>.nys-flex-gap</code> classes now available</h2>
+<p>We've added flex gap configuration classes to the NYS DS styles package. You can use them in your HTML to set gap widths that fit your application needs.</p>
+<p><a href="https://designsystem.ny.gov/foundations/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> Flexed her muscles on this one.</p>
+<h2>Figma updates</h2>
+<p>Today we’re launching the official version of the video component in our design library.</p>
+<ul>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=20897-9561&amp;t=Y3c7CNRjerknJQgj-4">Video Player</a> now available in Figma</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> is creating important components!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li><code>&lt;nys-dropdownmenu&gt;</code> in v1.15.0 had z-index issues. They have been resolved in this release.</li>
+<li><code>maxLength</code> fixed in <code>&lt;nys-textinput&gt;</code></li>
+<li>React support has expanded to add react wrappers and JSX definitions for React-like</li>
+<li>Dispatch events now bubble up and are composed</li>
+<li>Project build time reduced significantly</li>
+<li>Fixed table sort event not firing</li>
+<li>Globalheader no longer scheduling updates</li>
+<li>Fixes to build scripts</li>
+<li>Focus and logic fixes for <code>&lt;nys-checkboxgroup&gt;</code></li>
+<li>Removed extraneous getButtonElement() function from <code>&lt;nys-modal&gt;</code></li>
+<li>Icon alignment fixes</li>
+<li>MCP server fixes</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>,  <a href="https://github.com/esteinborn">Eric Steinborn</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> fix broken things.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.0">See the full developer release notes for v.1.16.0 →</a></p>
+]]></content>
+      <pubDate>Thu, 02 Apr 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.16.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.15.0 “Nye”</title>
       <link>https://designsystem.ny.gov/updates/1.15.0-release/</link>
       <description><![CDATA[<h2>“Nye” 🏔️</h2>
