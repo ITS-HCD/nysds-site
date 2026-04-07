@@ -1626,7 +1626,7 @@ kbd {
  * Rendered: `src/content/components/<component>/a11y-*.md`
  */
 
-body[class*="page-a11y-"] {
+body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     h2,
     h3,
     h4,
@@ -1639,114 +1639,159 @@ body[class*="page-a11y-"] {
     nys-badge {
         text-transform: capitalize;
     }
-
-    .card--bisect {
-        background-color: var(--nys-color-surface, #fff);
-        border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
-        border-radius: var(--nys-radius-xxl);
-        display: flex;
-        flex-direction: column;
-
-        .card--bisect__start {
-            border-bottom: solid var(--nys-size-1px)
-                var(--nys-color-neutral-200);
-            border-start-start-radius: inherit;
-            border-start-end-radius: inherit;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-block: 1.5rem;
-            padding-inline: 1.5rem;
-            h3 {
-                font-size: 1.125rem; /* 18px */
-            }
+    p:has(mark) > mark {
+        background-color: transparent;
+        display: block;
+        font-weight: 600;
+    }
+    code.element {
+        &::before {
+            content: "<" / "";
         }
-
-        .card--bisect__end {
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
-            padding-block: 1.75rem 2rem;
-            padding-inline: 2.625rem;
-            div:has(i, h4) {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-                i.color-theme--faint {
-                    align-items: center;
-                    border-radius: 0.125px;
-                    display: flex;
-                    height: 1.5rem;
-                    justify-content: center;
-                    width: 1.5rem;
-                }
-                h4 {
-                    font-size: 1rem;
-                    font-weight: 700;
-                }
-            }
-        }
-        h3,
-        h4 {
-            line-height: 1.125rem;
-        }
-        h3,
-        h4,
-        p {
-            margin: 0;
+        &::after {
+            content: ">" / "";
         }
     }
 
-    .card--a11ytest {
-        /* Defensive coding, Re: CSS above! TODO: refactor without `*` */
-        * {
-            margin: 0 !important;
-        }
-        /* Defensive coding, Re: WTF nunjucks/11ty! */
-        p:empty {
-            display: none;
-        }
-        background-color: var(--nys-color-surface, #fff);
-        border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
-        border-radius: var(--nys-radius-sm);
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        padding-block: 1rem;
-        padding-inline: 1.25rem;
-
-        .card--a11ytest__start {
-            input[type="checkbox"] {
-                /* Cannot customize until `appearance` is set,
-                   in which case more styles will be needed,
-                   to completely re-create the interaction affordances;
-                   for first draft, just size.
-                */
-                /*border: solid var(--nys-border-width-md, 2px) var(--nys-color-neutral-600, #62666a);*/
-                /*border-radius: var(--nys-radius-md, 4px);*/
-                height: var(--nys-size-400, 32px);
-                width: var(--nys-size-400, 32px);
-            }
-        }
-
-        .card--a11ytest__end {
+    article[data-template="a11yTests"] {
+        .card--bisect {
+            background-color: var(--nys-color-surface, #fff);
+            border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
+            border-radius: var(--nys-radius-xxl);
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
-            gap: 0.5rem;
-            h4 {
-                font-size: 1rem;
-                line-height: 1.125rem;
+
+            .card--bisect__start {
+                border-bottom: solid var(--nys-size-1px)
+                    var(--nys-color-neutral-200);
+                border-start-start-radius: inherit;
+                border-start-end-radius: inherit;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding-block: 1.5rem;
+                padding-inline: 1.5rem;
+                h3 {
+                    font-size: 1.125rem; /* 18px */
+                }
             }
-            li:has(mark) {
-                list-style-type: none;
-                mark {
-                    background-color: transparent;
-                    color: var(--nys-color-neutral-600);
-                    &::after {
-                        content: ":" / "";
+
+            .card--bisect__end {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                padding-block: 1.75rem 2rem;
+                padding-inline: 2.625rem;
+                div:has(i, h4) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    i.color-theme--faint {
+                        align-items: center;
+                        border-radius: 0.125px;
+                        display: flex;
+                        height: 1.5rem;
+                        justify-content: center;
+                        width: 1.5rem;
+                    }
+                    h4 {
+                        font-size: 1rem;
+                        font-weight: 700;
                     }
                 }
+            }
+            h3,
+            h4 {
+                line-height: 1.125rem;
+            }
+            h3,
+            h4,
+            p {
+                margin: 0;
+            }
+        }
+
+        .card--a11ytest {
+            /* Defensive coding, Re: CSS above! TODO: refactor without `*` */
+            * {
+                margin: 0 !important;
+            }
+            /* Defensive coding, Re: WTF nunjucks/11ty! */
+            p:empty {
+                display: none;
+            }
+            background-color: var(--nys-color-surface, #fff);
+            border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
+            border-radius: var(--nys-radius-sm);
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            padding-block: 1rem;
+            padding-inline: 1.25rem;
+
+            .card--a11ytest__start {
+                input[type="checkbox"] {
+                    /* Cannot customize until `appearance` is set,
+                       in which case more styles will be needed,
+                       to completely re-create the interaction affordances;
+                       for first draft, just size.
+                    */
+                    /*border: solid var(--nys-border-width-md, 2px) var(--nys-color-neutral-600, #62666a);*/
+                    /*border-radius: var(--nys-radius-md, 4px);*/
+                    height: var(--nys-size-400, 32px);
+                    width: var(--nys-size-400, 32px);
+                }
+            }
+
+            .card--a11ytest__end {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                gap: 0.5rem;
+                h4 {
+                    font-size: 1rem;
+                    line-height: 1.125rem;
+                }
+                li:has(mark) {
+                    list-style-type: none;
+                    mark {
+                        background-color: transparent;
+                        color: var(--nys-color-neutral-600);
+                        &::after {
+                            content: ":" / "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    article[data-template="a11yBuild"] {
+        > section {
+            margin-block-end: 2rem;
+        }
+        .card--handled--TMP {
+            display: grid;
+            /* Defines 2 columns of equal width */
+            grid-template-columns: repeat(2, 1fr);
+            /* Defines 3 rows (height adjusts to content) */
+            grid-template-rows: repeat(3, auto);
+            /* Optional: Adds space between cells */
+            gap: 10px;
+        }
+        .alternative-solutions {
+            h3 {
+                font-size: 1.5rem;
+                margin-block-start: 0;
+            }
+            ins {
+                background-color: var(--nys-color-surface-raised, #f6f6f6);
+                border-radius: 0.5rem;
+                display: block;
+                padding-block: 0.75rem;
+                padding-inline: 1.25rem;
+                text-decoration: none;
+                width: 100%;
             }
         }
     }

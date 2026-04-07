@@ -1,0 +1,60 @@
+<article data-template="a11yBuild">
+    {%- block Introduction  %}
+    <section id="overview">
+        <h1>{{ title_h1 }}</h1>
+        Are you in the right place?
+        If you are constrained to a third-party component library, see the
+        <a href="./accessibility-tests.html">Accordion Accessibility Checklist</a> and ensure that it passes.
+        Otherwise, follow the guidance here to choose the best option for your project.
+    </section>
+    {% endblock -%}
+
+    {%- block RecommendedSolution %}
+    <section class="recommended-solution">
+    <nys-badge>
+
+    </nys-badge>
+    <h2>Use the NYSDS {{ parent }} Web Component</h2>
+    <p>
+        The NYSDS Accordion is a web component you can drop into your project and use right away.
+        For most teams, this is the simplest way to implement an accessible accordion.
+        This means teams don’t need to manually implement accessibility or test for it.
+    </p>
+    <h3>What's already handled for you:</h3>
+    <ul class="card--handled--TMP">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    </ul>
+    <nys-button label="View NYSDS {{ parent }} Component"></nys-button>
+    </section>
+    {% endblock -%}
+
+    <nys-divider></nys-divider>
+
+    <section class="alternative-solutions">
+        <h2>Alternatives</h2>
+        <p>
+            <mark>For projects not ready to adopt the Design System</mark>
+            Whether you seek to remediate an existing component or build one from scratch,
+            these reference implementations will ensure an accessible outcome.
+            For more details, <a href="#about-this-pattern">read about this pattern</a>.
+        </p>
+        {%- block Alternatives %}
+        {% endblock -%}
+    </section>
+
+    <nys-divider></nys-divider>
+
+    <section class="about-this-pattern">
+        <h2>About this pattern</h2>
+        {%- block AboutThisPattern %}
+        {% endblock -%}
+    </section>
+
+<!-- TODO: add huge MS Teams link callout -->
+<!-- TODO: add huge GitHub issues link callout -->
+</article>

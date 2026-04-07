@@ -1,0 +1,174 @@
+---
+permalink: /components/accordion/accessibility-build.html
+title: Build Accessibly
+title_h1: Build an Accessible Accordion
+description: How to code an accessible accordion.
+image: /assets/img/components/accordion.svg
+image_alt: An illustration of an accordion
+image_header: /assets/img/components/accordion-header.svg
+stable: true
+parent: Accordion
+navOrder: 2
+extra_css:
+  - "/assets/nysa11y/accordion-native.css"
+  - "/assets/nysa11y/accordion-custom.css"
+extra_js:
+  - "/assets/nysa11y/accordion-custom.js"
+---
+
+{% extends "layouts/component-a11y-build.njk" %}
+{# block Introduction #}
+{# block RecommendedSolution #}
+
+{% block Alternatives %}
+<div class="card">
+    <h3>Style the native HTML <code class="element">details</code> element</h3>
+    <p>
+        <mark>When to use</mark>
+        If your team has source-level control over UI code,
+        wants to avoid error-prone semantics programming,
+        and has no hard requirements in excess of what native HTML provides,
+        then the <code class="element">details</code> element is a great option
+        that has built-in accessibility and is effectively unbreakable.
+    </p>
+    {% include "partials/a11y-rely-checks.njk" %}
+</div>
+
+{% block HTMLNative %}
+{% set preview %}
+<details class="nysa11y accordion" data-component="accordion" data-html="native">
+  <summary>
+    Native example
+  </summary>
+  Lorem ipsum dolor sit amet.
+</details>
+{% endset %}
+{% set accordionLabel = "HTML" %}
+{% set code = preview %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% set showTip = false %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}{# HTMLNative #}
+
+{% block CSSNative %}
+{% set code %}
+{% include "../../../assets/nysa11y/accordion-native.css" %}
+{% endset %}
+{% set accordionLabel = "CSS" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}{# CSSNative #}
+ 
+<div class="card">
+    <h3>Build a custom accordion component</h3>
+    <p>
+        <mark>When to use</mark>
+        If your team has source-level control over UI code,
+        but DOES have a hard requirement not provided by native HTML,
+        you may choose to build a custom accordion.
+        Or perhaps your legacy component has been flagged for remediation
+        and you need a high quality reference.
+        This custom example recreates the accessibility built into the
+        NYSDS Accordion and the <code class="element">details</code> element.
+        See the
+        <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank">W3C APG Accordion Pattern</a>
+        for more involved implementations.
+    </p>
+    {% include "partials/a11y-rely-checks.njk" %}
+</div>
+
+{% block HTMLCustom %}
+{% set preview %}
+<div class="nysa11y accordion" data-component="accordion" data-html="custom">
+  <button data-part="summary" aria-expanded="false">
+    Custom example
+  </button>
+  <div data-part="content">
+    Recreation of semantics carries a burden of responsibility.
+    This example is as simple as possible.
+    See the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank">W3C Accordion Pattern</a>
+    for more involved implementations.
+  </div>
+</div>
+{% endset %}
+{% set accordionLabel = "HTML" %}
+{% set code = preview %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% set showTip = false %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}{# HTMLCustom #}
+
+{% block CSSCustom %}
+{% set code %}
+{% include "../../../assets/nysa11y/accordion-custom.css" %}
+{% endset %}
+{% set accordionLabel = "CSS" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}{# CSSCustom #}
+ 
+
+{% block JSCustom %}
+{% set code %}
+{% include "../../../assets/nysa11y/accordion-custom.js" %}
+{% endset %}
+{% set accordionLabel = "JavaScript" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}{# JSCustom #}
+
+{% endblock %}{# Alternatives #}
+ 
+{% block AboutThisPattern %}
+<p>
+    An accordion is a component that presents a binary state button and an adjacent content area.
+    The button toggles the visibility of the content.
+    This component is also known as a "disclosure" or "expander."
+    The native HTML analog is the <code class="element">details</code> element.
+</p>
+<p>
+    <mark>The Header</mark>
+    The accordion button is commonly called the "header,"
+    since it functions as a descriptive heading for the content.
+    The native analog is the <code class="element">summary</code> element.
+    Because it is activated to use the component, the header MUST be focusable,
+    and its visible label MUST either be the accessible name or be part of
+    the accessible name.
+    Note that the <code class="element">details</code> element
+    automagically gains its accessible name from the text of its
+    <code class="element">summary</code>.
+</p>
+<p>
+    The entire header should function semantically as a button.
+    As such it MUST meet all rules for button accessibility.
+    Because it is an interactive element,
+    the header MUST NOT contain interactive child elements, 
+    otherwise it is a nested-interactive WCAG failure.
+</p>
+<p>
+    The binary state (open/expanded vs. closed/collapsed) is inherited
+    "for free" when using <code class="element">details</code> and
+    <code class="element">summary</code>.
+    In a custom component it is recreated with <code>aria-expanded</code>
+    and JavaScript.
+</p>
+<p>
+    <mark>The Content</mark>
+    When content is hidden, it MUST be fully hidden from assistive technologies,
+    not merely visually hidden.
+    Consult the <a href="https://codepen.io/its-a11y/full/wBGxjWj" target="_blank">
+        Removal Techniques and Implications</a> matrix to understand all options.
+    The <code class="element">details</code> element properly hides content by default.
+    Note that the native content area is selected in CSS with the
+    <code>::details-content</code> pseudo element.
+</p>
+<p>
+    <mark>Best Practices</mark>
+    When multiple accordions are composed into a group, some implementations allow mutually exclusive activation, meaning that only one may be open at a time. Many Accessibility professionals consider this to be an anti-pattern. Consider, for example, the use case of comparing content between two accordions. If mutually exclusive behavior is provided, please consider giving the user an option to disable it.
+</p>
+{% endblock %}{# AboutThisPattern #}
