@@ -10,7 +10,7 @@
       <title>NYS Design System Release 1.16.0 “Algonquin”</title>
       <link>https://designsystem.ny.gov/updates/1.16.0-release/</link>
       <description><![CDATA[<h2>“Algonquin” 🏔️</h2>
-<p>We held a vote during our office hours this week, and the winning vote was for naming this release &quot;Algonquin&quot; after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Algonquin” after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
 <p><a href="https://en.wikipedia.org/wiki/Algonquin_Peak">Learn more about Algonquin Peak.</a></p>
 <h2><code>&lt;nys-video&gt;</code> now available</h2>
 <p>The new <code>&lt;nys-video&gt;</code> embeds a YouTube video with a clickable thumbnail and on-demand playback. The iframe loads only after interaction by default, helping improve page performance while keeping the experience responsive and accessible.</p>
@@ -83,7 +83,7 @@
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.0">See the full developer release notes for v.1.16.0 →</a></p>
 ]]></description>
       <content><![CDATA[<h2>“Algonquin” 🏔️</h2>
-<p>We held a vote during our office hours this week, and the winning vote was for naming this release &quot;Algonquin&quot; after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Algonquin” after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
 <p><a href="https://en.wikipedia.org/wiki/Algonquin_Peak">Learn more about Algonquin Peak.</a></p>
 <h2><code>&lt;nys-video&gt;</code> now available</h2>
 <p>The new <code>&lt;nys-video&gt;</code> embeds a YouTube video with a clickable thumbnail and on-demand playback. The iframe loads only after interaction by default, helping improve page performance while keeping the experience responsive and accessible.</p>
