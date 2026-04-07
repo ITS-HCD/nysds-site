@@ -11,25 +11,73 @@
 
     {%- block RecommendedSolution %}
     <section class="recommended-solution">
-    <nys-badge>
-
-    </nys-badge>
-    <h2>Use the NYSDS {{ parent }} Web Component</h2>
-    <p>
-        The NYSDS Accordion is a web component you can drop into your project and use right away.
-        For most teams, this is the simplest way to implement an accessible accordion.
-        This means teams don’t need to manually implement accessibility or test for it.
-    </p>
-    <h3>What's already handled for you:</h3>
-    <ul class="card--handled--TMP">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    <li>Item 6</li>
-    </ul>
-    <nys-button label="View NYSDS {{ parent }} Component"></nys-button>
+        <div class="card">
+            <nys-badge label="Recommended" intent="success" prefixIcon></nys-badge>
+            <h2>Use the NYSDS {{ parent }} Web Component</h2>
+            <p>
+                The NYSDS Accordion is a web component you can drop into your project and use right away.
+                For most teams, this is the simplest way to implement an accessible accordion.
+                This means teams don’t need to manually implement accessibility or test for it.
+            </p>
+            <h3>What's already handled for you</h3>
+            <ul class="built-in color-theme--faint">
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <strong>Keyboard Navigation</strong>
+                        <p class="nys-font-body-sm"><kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>Space</kbd> all work.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <strong>Focus management</strong>
+                        <p class="nys-font-body-sm">Focus stays where users expecting</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <strong>Zoom magnification</strong>
+                        <p class="nys-font-body-sm">Works correctly at 200% browser zoom</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <strong>Screen reader support</strong>
+                        <p class="nys-font-body-sm">Tested with NVDA, JAWS, and VoiceOver</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <strong>Voice control</strong>
+                        <p class="nys-font-body-sm">Supports Windows and macOS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <strong>WCAG 2.2 AA conformant</strong>
+                        <p class="nys-font-body-sm">Meets New York State standards</p>
+                    </div>
+                </li>
+            </ul>
+            <nys-button label="View NYSDS {{ parent }} Component" fullWidth></nys-button>
+        </div>
     </section>
     {% endblock -%}
 
@@ -55,6 +103,5 @@
         {% endblock -%}
     </section>
 
-<!-- TODO: add huge MS Teams link callout -->
-<!-- TODO: add huge GitHub issues link callout -->
+    {% include "partials/a11y-contact-points.njk" %}
 </article>
