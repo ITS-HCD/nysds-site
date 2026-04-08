@@ -53,7 +53,7 @@ The `<nys-tab>` acts as a clickable interface to toggle between different sets o
 
 {% block options %}
 
-## Disabled Tabs
+### Disabled Tabs
 To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disabled tabs will not be clickable and will have a different visual style to indicate that they are inactive.
 
 {% set preview %}
@@ -125,9 +125,18 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 
 {% block accessibility %}
 
+The `nys-tab` component includes the following accessibility-focused features:
+
+- **Keyboard Navigation**: Users can navigate between tabs using the arrow keys, and activate a tab with the Enter or Space key.
+- **ARIA Roles and Attributes**: The component uses appropriate ARIA roles (e.g., `tablist`, `tab`, `tabpanel`) and attributes (e.g., `aria-selected`, `aria-controls`) to ensure that assistive technologies can correctly interpret the structure and state of the tabs.
+
+
 {% endblock %}
 
 {% block cssvariables %}
+
+{% include "partials/css-vars.njk" %}
+
 {% endblock %}
 
 {% block events %}
