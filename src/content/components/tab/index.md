@@ -95,11 +95,13 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 {% block usage %}
 
 ### When to use this component
+
 - Use a tabs component to organize related content into distinct, manageable sections, reducing cognitive load and saving screen space
 - When you need to categorize related, but separate, information within the same context (e.g., Overview, Specs, Reviews).
 - When you need to display a large amount of content without making the page overwhelmingly long.
 
 ### When to consider something else
+
 - Comparing Data: If the user needs to compare information between sections simultaneously, tabs are poor, as they require clicking back and forth.
 - Linear Process: If the content represents a strict, step-by-step process, use a Stepper component indicator instead.
 - Too Few Categories: If you only have two small pieces of content, it might be better to just display them consecutively.
@@ -107,6 +109,7 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 {% endblock %}
 
 {% block usagedo %}
+
 - Keep it Simple: Use 2–9 short, clear labels.
 - Limit to One Row: Avoid wrapping, as it makes navigation confusing.
 - Only one Tab should ever be in the active state.
@@ -114,6 +117,7 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 {% endblock %}
 
 {% block usagedont %}
+
 - Don't Nest: Avoid putting tabs inside other tabs; it creates a poor user experience.
 - Do not use Tabs for navigation.
 
