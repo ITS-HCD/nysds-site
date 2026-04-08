@@ -1,7 +1,9 @@
-{# Visibility of most blocks in this template is determined by presence of the
-corresponding JSON member in each component's a11y-test JSON file. For example,
-if the `tests` JSON member is commented-out, the TestStatus block below will
-not render. <https://json5.org/> gives us the ability to comment, and more. #}
+{#
+    Visibility of most blocks in this template is determined by presence of
+    the corresponding JSON member in each component's a11y-test JSON5 file.
+    For example, if the `tests` JSON member is commented-out,
+    the TestStatus block below will not render. <https://json5.org/>
+#}
 <article data-template="a11yTests">
     {%- block Introduction  %}
     <section id="overview">
@@ -11,7 +13,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         <a href="./accessibility-build.html">custom {{ pattern }}</a>
         and when evaluating third-party open source or licensed component libraries.
     </section>
-    {% endblock -%}
+    {% endblock -%}{# Introduction #}
 
     {%- block TestStatus %}
     {% if tests %}
@@ -36,8 +38,8 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
             </table>
         </nys-table>
     </section>
-    {% endif %}
-    {% endblock -%}
+    {% endif %}{# Introduction #}
+    {% endblock -%}{# TestStatus #}
 
     {%- block AnyoneCanDoIt %}
     <section class="anyone-can-do-it">
@@ -82,7 +84,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
             </div>
         </div>
     </section>
-    {% endblock -%}
+    {% endblock -%}{# AnyoneCanDoIt #}
 
     {%- block Keyboard %}
     {% if keyboard %}
@@ -117,7 +119,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif -%}
-    {% endblock -%}
+    {% endblock -%}{# Keyboard #}
 
     {%- block Mouse %}
     {% if mouse %}
@@ -151,7 +153,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif %}
-    {% endblock -%}
+    {% endblock -%}{# Mouse #}
 
     {%- block ScreenReader %}
     {% if screenReader %}
@@ -191,7 +193,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif -%}
-    {% endblock -%}
+    {% endblock -%}{# ScreenReader #}
 
     {%- block MobileScreenReader %}
     {% if screenReaderMobile %}
@@ -228,7 +230,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif -%}
-    {% endblock -%}
+    {% endblock -%}{# MobileScreenReader #}
 
     {%- block Voice %}
     {% if voice %}
@@ -264,7 +266,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif -%}
-    {% endblock -%}
+    {% endblock -%}{# Voice #}
 
     {%- block Zoom %}
     {% if zoom %}
@@ -299,7 +301,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif -%}
-    {% endblock -%}
+    {% endblock -%}{# Zoom #}
 
     {%- block wcag %}
     {% if disabilities %}
@@ -331,7 +333,7 @@ not render. <https://json5.org/> gives us the ability to comment, and more. #}
         {% endfor %}
     </section>
     {% endif -%}
-    {% endblock -%}
+    {% endblock -%}{# wcag #}
 
     {% include "partials/a11y-contact-points.njk" %}
 </article>
