@@ -75,7 +75,7 @@
 </ul>
 <h2>⚠️ Known issues</h2>
 <ul>
-<li>none</li>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
 </ul>
 <p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
 <h3>That’s it!</h3>
@@ -148,7 +148,7 @@
 </ul>
 <h2>⚠️ Known issues</h2>
 <ul>
-<li>none</li>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
 </ul>
 <p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
 <h3>That’s it!</h3>
