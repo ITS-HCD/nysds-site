@@ -12,7 +12,7 @@ tags: article, css variables, design tokens, theme switching, design system
 ---
 Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.
 
-At the heart of that consistency are **design tokens**. Design tokens are not just an abstract concept. In the NYS Design System, tokens are actual defined values that live in the @nysds package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.
+At the heart of that consistency are **design tokens**.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the @nysds package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.
 
 Let’s unpack how that works.
 
@@ -59,7 +59,7 @@ These primitives are stable. Their names never change, even if the underlying va
 
 ### Semantic Tokens — Meaning and Context 
 
-On top of primitives are semantic tokens, which describe intent rather than raw value.
+On top of primitives are semantic tokens, which describe intent rather than raw value. This distinction matters: semantic tokens make it clear what to use where. Rather than leaving developers to guess whether to reach for --nys-color-red-600 or --nys-color-blue-500, semantic tokens communicate purpose directly in their name. Primitive tokens should only ever be referenced when mapping them to a semantic token. When codebases skip this layer and reference primitives directly, changes become painful: a single rebrand or accessibility adjustment means hunting down every raw value instead of updating one token.
 
 Instead of referencing `--nys-color-red-600`,` we use:
 ```
