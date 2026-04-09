@@ -139,8 +139,34 @@ The `nys-tab` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block events %}
-
+{% block properties %}
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-tabgroup&gt;</code>, <code>&lt;nys-tab&gt;</code>, <code>&lt;nys-tabpanel&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-tab&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>label</code></td>
+      <td>String</td>
+      <td><code>&lt;nys-tab&gt;</code></td>
+    </tr>
+   
+  </table>
+</nys-table>
 {% endblock %}
+
+{% block events %}{% endblock %}
 
 {% block updates %}{% endblock %}
