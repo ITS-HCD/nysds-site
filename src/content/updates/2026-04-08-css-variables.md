@@ -59,7 +59,7 @@ These primitives are stable. Their names never change, even if the underlying va
 
 ### Semantic Tokens — Meaning and Context 
 
-On top of primitives are semantic tokens, which describe intent rather than raw value. This distinction matters: semantic tokens make it clear what to use where. Rather than leaving developers to guess whether to reach for --nys-color-red-600 or --nys-color-blue-500, semantic tokens communicate purpose directly in their name. Primitive tokens should only ever be referenced when mapping them to a semantic token. When codebases skip this layer and reference primitives directly, changes become painful: a single rebrand or accessibility adjustment means hunting down every raw value instead of updating one token.
+On top of primitives are semantic tokens, which describe intent rather than raw value. This distinction matters: semantic tokens make it clear what to use where. Rather than leaving developers to guess whether to reach for `--nys-color-red-600` or `-nys-color-red-500`, semantic tokens communicate purpose directly in their name. Primitive tokens should only ever be referenced when mapping them to a semantic token. When codebases skip this layer and reference primitives directly, changes become painful: a single rebrand or accessibility adjustment means hunting down every raw value instead of updating one token.
 
 Instead of referencing `--nys-color-red-600`,` we use:
 ```
