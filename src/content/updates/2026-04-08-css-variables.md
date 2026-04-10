@@ -90,7 +90,7 @@ Internally, private tokens often map to their semantic or primitive version. Let
 --_nys-button-background-color: var(--nys-button-background-color, var(--nys-color-theme));
 ```
 
-<img src="/assets/i/2026/css-vars-article/var-map-wide.png" alt="Image of how raw values map to useable tokens in the New York State Design System"/>
+<img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System"/>
 
 This means:
 - If a public override exists, use it.
