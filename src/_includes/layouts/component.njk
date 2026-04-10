@@ -60,6 +60,12 @@
       <h2>Events</h2>
       {%- block events %}{% endblock -%}
     </section>
+    <section>
+      <h2>Dependencies</h2>
+      {%- block dependencies %}
+        {% include "partials/dependencies.njk" %}
+      {% endblock -%}
+    </section>
     <section class="nys-section">
   <h2>Suggest a New Component</h2>
   <div class="nys-grid-row nys-grid-gap">

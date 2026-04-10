@@ -748,16 +748,15 @@ Use the `inverted` prop when placing the combobox on a dark background.
 
 {% block usagedont %}
 
-  - Don't use when the number of options is small, use a select or radio button group instead.
-  - Don't use when options are unfamiliar to users and browsing the full list is necessary.
+  - Use when the number of options is small, use a select or radio button group instead.
+  - Use when options are unfamiliar to users and browsing the full list is necessary.
 
 {% endblock %}
 
 {% block usage %}
 
 ### When to use this component
-- The option list is long (more than 15 items)
-- Use a combo box for presenting options when screen real estate is limited.
+
 - Combo boxes work best when:
   - Users can predict the value
   - The value has a recognizable name
