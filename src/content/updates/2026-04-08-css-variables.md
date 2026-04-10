@@ -113,7 +113,8 @@ This design makes the New York State Design System scalable across diverse agenc
 
 When multiple teams consistently override the same token in the same way, it suggests a gap in the system.
 
-For example, if several agencies keep overriding the `--nys-button-background-color` to the agency’s accent color, that’s valuable data. It tells us that an "accent" button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by submitting a component proposal suggesting a new variant or enhancement.
+For example, if several agencies keep overriding the `--nys-button-background-color` to the agency’s accent color, that’s valuable data. It tells us that an "accent" button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" target="_blank">submitting a component proposal</a>
+suggesting a new variant or enhancement.
 
 In other words, overrides help the system evolve organically, guided by real-world use rather than guesswork.
 
