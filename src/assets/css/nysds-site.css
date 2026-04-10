@@ -335,7 +335,8 @@ main[role=main] {
     color: var(--nys-color-red-600);
     background: var(--nys-color-neutral-10);
     margin-bottom: var(--nys-space-150);
-    width: fit-content;
+    max-width: fit-content;
+    overflow: auto;
 }
 
 .page-header h1.page-title {
