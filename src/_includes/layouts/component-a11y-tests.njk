@@ -46,37 +46,37 @@
         <h2>Accessibility tests</h2>
         <div class="card--bisect">
             <div class="card--bisect__start color-theme--faint">
-                <h3>Anyone can run these accessibility tests, no special tools needed.</h3>
+                <mark class="subhead nys-font-h6">Anyone can run these accessibility tests, no special tools needed.</mark>
                 <p>
                     Each passing test removes a real barrier for New Yorkers who navigate by keyboard,
                     screen reader, or voice control.
                 </p>
             </div>
-            <div class="card--bisect__end">
-                <div>
+            <div class="card--bisect__end nys-grid-row nys-grid-gap-5">
+                <div class="nys-tablet:nys-grid-col-4">
                     <i class="color-theme--faint">
                         <nys-icon color="var(--nys-color-theme)" name="search" size="18"></nys-icon>
                     </i>
-                    <h4>Find what you need</h4>
+                    <mark class="subhead stronger">Find what you need</mark>
                     <p>
                         All of these tests can be run from your browser.
                         Each section tells you what to use and where to get it.
                     </p>
                 </div>
-                <div>
+                <div class="nys-tablet:nys-grid-col-4">
                     <i class="color-theme--faint">
                         <nys-icon color="var(--nys-color-theme)" name="edit_square" size="16"></nys-icon>
                     </i>
-                    <h4>Follow the checklists</h4>
+                    <mark class="subhead stronger">Follow the checklists</mark>
                     <p>
                         Each checkbox tells you exactly what to do and what a passing result looks or sounds like.
                     </p>
                 </div>
-                <div>
+                <div class="nys-tablet:nys-grid-col-4">
                     <i class="color-theme--faint">
                         <nys-icon color="var(--nys-color-theme)" name="check" size="20"></nys-icon>
                     </i>
-                    <h4>Track and share results</h4>
+                    <mark class="subhead stronger">Track and share results</mark>
                     <p>
                         Run each test, record what passes and what needs work, and print your results to share with your team.
                     </p>
@@ -91,16 +91,19 @@
     <section class="test-keyboard">
         <h3>Keyboard navigation</h3>
         <p>
-            Limit interaction with the component to only the <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Space</kbd> keys.
+            Limit interaction with the component to only the <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Spacebar</kbd> keys.
             While testing keyboard navigation do not use a mouse whatsoever.
         </p>
 
         {% for interaction in keyboard.interactions %}
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
-                <input type="checkbox"
-                    aria-label="Mark when keyboard test {{ loop.index }} passes"
-                    aria-describedby="keyboard-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when keyboard test {{ loop.index }} passes"
+                        aria-describedby="keyboard-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end" id="keyboard-desc-{{ loop.index }}">
                 <h4>{{ interaction.scenario | safe }}</h4>
@@ -109,11 +112,13 @@
                     <li>{{ requirement | safe }}</li>
                     {% endfor %}
                 </ul>
-                <span class="sr-only">keyboard test {{loop.index}}</span>
-                <nys-badge label="{{ interaction.status[0] }}"
-                        intent="{{ interaction.status[1] }}"
-                        prefixIcon>
-                </nys-badge>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
             </div>
         </div>
         {% endfor %}
@@ -133,9 +138,12 @@
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
                 <!-- TODO: use Nunjucks loop index here -->
-                <input type="checkbox"
-                    aria-label="Mark when mouse test {{ loop.index }} passes"
-                    aria-describedby="mouse-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when mouse test {{ loop.index }} passes"
+                        aria-describedby="mouse-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end">
                 <h4 id="mouse-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
@@ -144,10 +152,13 @@
                     <li>{{ requirement | safe }}</li>
                     {% endfor %}
                 </ul>
-                <nys-badge label="{{ interaction.status[0] }}"
-                        intent="{{ interaction.status[1] }}"
-                        prefixIcon>
-                </nys-badge>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
             </div>
         </div>
         {% endfor %}
@@ -173,9 +184,12 @@
         {% for interaction in screenReader.interactions %}
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
-                <input type="checkbox"
-                    aria-label="Mark when screen reader test {{ loop.index }} passes"
-                    aria-describedby="screenreader-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when screen reader test {{ loop.index }} passes"
+                        aria-describedby="screenreader-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end">
                 <h4 id="screenreader-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
@@ -184,10 +198,13 @@
                     <li>{{ requirement | safe }}</li>
                     {% endfor %}
                 </ul>
-                <nys-badge label="{{ interaction.status[0] }}"
-                        intent="{{ interaction.status[1] }}"
-                        prefixIcon>
-                </nys-badge>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
             </div>
         </div>
         {% endfor %}
@@ -210,9 +227,12 @@
         {% for interaction in screenReaderMobile.interactions %}
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
-                <input type="checkbox"
-                    aria-label="Mark when mobile screen reader test {{ loop.index }} passes"
-                    aria-describedby="screenreader-mobile-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when mobile screen reader test {{ loop.index }} passes"
+                        aria-describedby="screenreader-mobile-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end">
                 <h4 id="screenreader-mobile-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
@@ -221,10 +241,13 @@
                     <li>{{ requirement | safe }}</li>
                     {% endfor %}
                 </ul>
-                <nys-badge label="{{ interaction.status[0] }}"
-                        intent="{{ interaction.status[1] }}"
-                        prefixIcon>
-                </nys-badge>
+                <mark class="subhead">
+                    <span class="sr-only">mobile screen reader test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
             </div>
         </div>
         {% endfor %}
@@ -246,9 +269,12 @@
         {% for interaction in voice.interactions %}
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
-                <input type="checkbox"
-                    aria-label="Mark when voice test {{ loop.index }} passes"
-                    aria-describedby="voice-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when voice test {{ loop.index }} passes"
+                        aria-describedby="voice-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end">
                 <h4 id="voice-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
@@ -257,10 +283,13 @@
                     <li>{{ requirement | safe }}</li>
                     {% endfor %}
                 </ul>
-                <nys-badge label="{{ interaction.status[0] }}"
-                        intent="{{ interaction.status[1] }}"
-                        prefixIcon>
-                </nys-badge>
+                <mark class="subhead">
+                    <span class="sr-only">voice test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
             </div>
         </div>
         {% endfor %}
@@ -281,9 +310,12 @@
         {% for interaction in zoom.interactions %}
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
-                <input type="checkbox"
-                    aria-label="Mark when zoom test {{ loop.index }} passes"
-                    aria-describedby="zoom-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when zoom test {{ loop.index }} passes"
+                        aria-describedby="zoom-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end">
                 <h4 id="zoom-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
@@ -292,10 +324,13 @@
                     <li>{{ requirement | safe }}</li>
                     {% endfor %}
                 </ul>
-                <nys-badge label="{{ interaction.status[0] }}"
-                        intent="{{ interaction.status[1] }}"
-                        prefixIcon>
-                </nys-badge>
+                <mark class="subhead">
+                    <span class="sr-only">zoom test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
             </div>
         </div>
         {% endfor %}
@@ -318,9 +353,12 @@
         {% for criterion in wcag.criteria %}
         <div class="card--a11ytest">
             <div class="card--a11ytest__start">
-                <input type="checkbox"
-                    aria-label="Mark when {{ wcag.type }} requirement {{ loop.index }} is ensured"
-                    aria-describedby="{{ wcag.type }}-desc-{{ loop.index }}">
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when {{ wcag.type }} requirement {{ loop.index }} is ensured"
+                        aria-describedby="{{ wcag.type }}-desc-{{ loop.index }}">
             </div>
             <div class="card--a11ytest__end" id="{{ wcag.type }}-desc-{{ loop.index }}">
                 <h4>{{ criterion.description }}</h4>

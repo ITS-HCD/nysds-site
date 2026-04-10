@@ -1591,16 +1591,15 @@ tr:hover {
 }
 
 kbd {
-    /* TODO: use NYS tokens */
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 0.35rem;
-    padding: 0 0.25rem 0 0.3rem;
-    font-family: monospace;
-    font-size: medium;
+    background-color: var(--nys-color-surface, #fff);
+    border: 1px solid var(--nys-color-neutral-200);
+    border-radius: 0.25rem;
+    padding: 1px 0.25rem;
+    font-family: var(--nys-font-family-sans);
+    font-size: 0.875rem;
+    font-weight: 600 !important;
     margin-inline: 1px 2px;
-    text-transform: capitalize;
-    box-shadow: 1px 1px #333;
+    box-shadow: 0 1px var(--nys-color-neutral-200);
 }
 
 .sr-only {
@@ -1631,18 +1630,14 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    kbd {
         &::first-letter {
             text-transform: uppercase;
         }
     }
     nys-badge {
         text-transform: capitalize;
-    }
-    p:has(mark) > mark {
-        background-color: transparent;
-        display: block;
-        font-weight: 600;
     }
     code.element {
         &::before {
@@ -1654,6 +1649,16 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     }
     section.contact-points {
         margin-block-start: 4rem;
+    }
+    mark.subhead {
+        background-color: transparent;
+        display: block;
+    }
+    .strong {
+        font-weight: 600;
+    }
+    .stronger {
+        font-weight: 700;
     }
 
     article[data-template="a11yTests"] {
@@ -1675,14 +1680,16 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
                 padding-block: 1.5rem;
                 padding-inline: 1.5rem;
                 h3 {
-                    font-size: 1.125rem; /* 18px */
+                    font-size: 1.125rem;
                 }
             }
 
             .card--bisect__end {
-                display: flex;
+                /* Before using NYS utility */
+                /*display: flex;
                 flex-direction: row;
-                gap: 2rem;
+                flex-wrap: wrap;
+                gap: 2rem;*/
                 padding-block: 1.75rem 2rem;
                 padding-inline: 2.625rem;
                 div:has(i, h4) {
@@ -1705,7 +1712,7 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
             }
             h3,
             h4 {
-                line-height: 1.125rem;
+                line-height: 1.1; /* unitless for better zoom */
             }
             h3,
             h4,
@@ -1715,14 +1722,6 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
         }
 
         .card--a11ytest {
-            /* Defensive coding, Re: CSS above! TODO: refactor without `*` */
-            * {
-                margin: 0 !important;
-            }
-            /* Defensive coding, Re: WTF nunjucks/11ty! */
-            p:empty {
-                display: none;
-            }
             background-color: var(--nys-color-surface, #fff);
             border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
             border-radius: var(--nys-radius-sm);
@@ -1731,19 +1730,8 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
             gap: 1rem;
             padding-block: 1rem;
             padding-inline: 1.25rem;
-
-            .card--a11ytest__start {
-                input[type="checkbox"] {
-                    /* Cannot customize until `appearance` is set,
-                       in which case more styles will be needed,
-                       to completely re-create the interaction affordances;
-                       for first draft, just size.
-                    */
-                    /*border: solid var(--nys-border-width-md, 2px) var(--nys-color-neutral-600, #62666a);*/
-                    /*border-radius: var(--nys-radius-md, 4px);*/
-                    height: var(--nys-size-400, 32px);
-                    width: var(--nys-size-400, 32px);
-                }
+            &:not(:last-child) {
+                margin-block-end: 1.5rem;
             }
 
             .card--a11ytest__end {
@@ -1753,7 +1741,12 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
                 gap: 0.5rem;
                 h4 {
                     font-size: 1rem;
-                    line-height: 1.125rem;
+                    line-height: 1.1; /* unitless for better zoom */
+                    margin-block: 0;
+                }
+                ul,
+                li {
+                    margin-block: 0;
                 }
                 li:has(mark) {
                     list-style-type: none;
@@ -1776,46 +1769,66 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
 
     article[data-template="a11yBuild"] {
         > section {
-            margin-block-end: 2rem;
+            &:not(.contact-points) .card {
+                padding: 1.5rem;
+            }
+            &#overview {
+                margin-block-end: 3rem;
+            }
             &.recommended-solution {
-                h2 {
-                    font-size: 1.5rem;
-                    margin-block-start: 0.75rem;
-                }
-                h3 {
-                    font-size: 1rem;
-                    margin-block-start: 0.75rem;
-                    margin-block-end: 0.35rem;
-                }
-                ul.built-in {
-                    border-radius: var(--nys-radius-xxl);
-                    display: grid;
-                    gap: 0.625rem;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(3, auto);
-                    list-style-type: none;
-                    margin: 0;
-                    margin-block-end: 1.5rem;
-                    padding: 1rem;
-                    padding-block: 1.5rem 0.75rem;
-                    padding-inline: 1.5rem 1rem;
-                    li {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        gap: 0.5rem;
-                        margin-block-end: 0;
-                        .built-in__end {
+                .card {
+                    padding: 1.5rem; /* per Mashya */
+                    h2 {
+                        font-size: 1.5rem;
+                        margin-block-start: 0.75rem;
+                    }
+                    mark.subhead.stronger {
+                        margin-block-start: 0.75rem;
+                        margin-block-end: 0.35rem;
+                    }
+                    ul.built-in {
+                        border-radius: var(--nys-radius-xxl);
+                        display: grid;
+                        gap: 0.625rem;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(3, auto);
+                        list-style-type: none;
+                        margin: 0;
+                        margin-block-end: 1.5rem;
+                        padding: 1rem;
+                        padding-block: 1.5rem 0.75rem;
+                        padding-inline: 1.5rem 1rem;
+                        li {
                             display: flex;
-                            flex-direction: column;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            gap: 0.5rem;
+                            margin-block-end: 0;
+                            .built-in__end {
+                                display: flex;
+                                flex-direction: column;
+                            }
                         }
+                    }
+                    nys-button {
+                        display: block;
                     }
                 }
             }
             &.alternative-solutions {
+                margin-block-end: 2.5rem;
+                .card {
+                    margin-block-end: 2.5rem;
+                }
+                h2 + p {
+                    margin-block-end: 3rem;
+                }
                 h3 {
                     font-size: 1.5rem;
                     margin-block-start: 0;
+                }
+                hr {
+                    margin-block: 2.5rem;
                 }
                 ins {
                     background-color: var(--nys-color-surface-raised, #f6f6f6);
@@ -1826,6 +1839,16 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
                     text-decoration: none;
                     width: 100%;
                 }
+            }
+        }
+    }
+}
+@media (width < 640px) {
+    body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
+        article[data-template="a11yBuild"] {
+            .built-in {
+                grid-template-columns: 1fr !important;
+                grid-template-rows: auto !important;
             }
         }
     }
