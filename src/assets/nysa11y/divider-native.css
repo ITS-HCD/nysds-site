@@ -1,0 +1,10 @@
+@layer nysa11y {
+    body:has(.nysa11y) {
+        hr.nysa11y.divider[data-component="divider"][data-html="native"] {
+            background-color: var(--nys-color-neutral-500, #797c7f);
+            border-block-end: solid var(--nys-size-1px, 1px)
+                var(--nys-color-ink-reverse, #ffffff);
+            height: var(--nys-size-1px, 1px);
+        }
+    }
+}
