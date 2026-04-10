@@ -40,9 +40,9 @@ Change the value once, and every element that uses it updates automatically. Tha
 
 Primitive tokens are the building blocks of the design system. They are the raw values (hex codes, spacing units, font sizes, border radii) that everything else references.
 
-For example, our color system is organized in **ramps**. Each color family has a scale, from light to dark:
+For example, our color system is organized in **ramps**. Each color family has a scale, from light to dark, where smaller values represent a soft tint, while larger values represent a deep, saturated tone. This predictable pattern lets designers and developers discuss color consistently, and in a structured way. The same logic applies to spacing, typography, and radius.
 
-IMAGE HERE
+![Image of red color ramp used in the New York State Design System](/assets/i/2026/css-vars-article/red-ramp.png)
 
 ```
 --nys-color-red-10
@@ -52,8 +52,6 @@ IMAGE HERE
 ...
 --nys-color-red-900
 ```
-
-Smaller values represent a soft tint, while larger values represent a deep, saturated tone. This predictable pattern lets designers and developers discuss color consistently, and in a structured way. The same logic applies to spacing, typography, and radius.
 
 These primitives are stable. Their names never change, even if the underlying values are updated over time. `--nys-color-red-100` might shift to meet new accessibility or brand needs, but the token itself will always exist as a constant in the system.
 
