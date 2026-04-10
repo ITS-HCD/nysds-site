@@ -7,6 +7,7 @@ description: description
 image: /assets/i/2026/css-variables-thumbnail.png
 image_alt: Illustration of CSS variables
 updatethumbnail: /assets/i/2026/nysds-css-variables-thumbnail.png
+image_header: /assets/i/2026/css-vars-header.svg
 date: 2026-04-08
 tags: article, css variables, design tokens, theme switching, design system
 ---
