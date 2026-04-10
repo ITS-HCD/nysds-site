@@ -22,7 +22,7 @@ A CSS variable works like a variable in any programming language; it holds a val
 
 ```
 :root {
---nys-component-background-color: #154973;
+  --nys-component-background-color: #154973;
 }
 ```
 
@@ -30,7 +30,7 @@ Then, anywhere you need that color:
 
 ```
 .nys-component {
-background-color: var(--nys-component-background-color);
+  background-color: var(--nys-component-background-color);
 }
 ```
 
@@ -42,7 +42,7 @@ Primitive tokens are the building blocks of the design system. They are the raw 
 
 For example, our color system is organized in **ramps**. Each color family has a scale, from light to dark, where smaller values represent a soft tint, while larger values represent a deep, saturated tone. This predictable pattern lets designers and developers discuss color consistently, and in a structured way. The same logic applies to spacing, typography, and radius.
 
-![Image of red color ramp used in the New York State Design System](/assets/i/2026/css-vars-article/red-ramp.png)
+<img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800"/>
 
 ```
 --nys-color-red-10
@@ -90,7 +90,7 @@ Internally, private tokens often map to their semantic or primitive version. Let
 --_nys-button-background-color: var(--nys-button-background-color, var(--nys-color-theme));
 ```
 
-IMAGE HERE
+<img src="/assets/i/2026/css-vars-article/variable-map.png" alt="Image of how raw values map to useable tokens in the New York State Design System" width="800"/>
 
 This means:
 - If a public override exists, use it.
