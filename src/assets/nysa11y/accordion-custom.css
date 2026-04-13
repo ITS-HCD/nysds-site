@@ -1,3 +1,5 @@
+/* TODO: replace base64 chevron with inlined SVG converted to polyline */
+/* TODO: replace spurious custom properties with DS tokens */
 @layer nysa11y {
     body:has(.nysa11y) {
         div.nysa11y.accordion[data-component="accordion"][data-html="custom"] {
