@@ -98,6 +98,8 @@ The component automatically highlights the active link based on the current URL 
   {% include "partials/code-preview.njk" %}
 
 ### Just Agency Name
+Use the prop `homepageLink` to link your `agencyName` to your homepage.
+
   {% set preview %}<nys-globalheader agencyName="Office of Information Technology Services">
 </nys-globalheader>{% endset %}
   {% set code = preview %}
@@ -131,6 +133,16 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
     <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
+{% endset %}
+{% set code = preview %}
+
+### NYS Brand Logo
+The NYS Brand Logo can be toggled on via the `nysLogo` property for back-office applications.
+
+**Note:** Do not use the NYS brand mark on public-facing applications. This is intended exclusively for internal and back-office use.
+
+{% set preview %}
+<nys-globalheader nysLogo appName="Admin Dashboard"></nys-globalheader>
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}

@@ -21,12 +21,17 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 {% endblock %}
 
 {% block example %}
+
+<nys-alert type="warning" heading="Proper Usage">
+<p>The <code>&lt;nys-unavheader&gt;</code> should only be used on official NYS websites or applications that are <strong>hosted on a ny.gov domain</strong> and <strong>secured with HTTPS encryption</strong>. Intranets and back office applications are not currently required to use the <code>&lt;nys-unavheader&gt;</code>.</p>
+<p>Please refer to the <a target="_blank" href="https://its.ny.gov/system/files/documents/2025/02/nys-s16-001-nys-universal-web-navigation.pdf">New York State Universal Web Navigation Policy (NYS-S16-001)</a> for more details.</p>
+</nys-alert>
+
   {% set preview %}<nys-unavheader></nys-unavheader>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
-
 
 {% block usage %}
 
