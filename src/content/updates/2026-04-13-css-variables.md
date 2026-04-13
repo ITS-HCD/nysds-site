@@ -132,7 +132,7 @@ By creating public-facing CSS variables we are not encouraging teams to stray fr
 
 One final principle: readability beats cleverness.
 
-Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button isn’t `--_nys-button-text-color` but instead to `--_nys-button-color`.
+Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button maps to  `--_nys-button-color` rather than to `--_nys-button-text-color`.
 
 This one-to-one mapping reduces cognitive load for engineers. No need to remember abbreviations or shorthand. You can look at the variable and instantly know which property it controls.
 
