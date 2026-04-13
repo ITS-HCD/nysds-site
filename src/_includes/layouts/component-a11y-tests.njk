@@ -88,7 +88,7 @@
 
     {%- block Keyboard %}
     {% if keyboard %}
-    <section class="test-keyboard">
+    <section class="test-keyboard checkbox__tile">
         <h3>Keyboard navigation</h3>
         <p>
             Limit interaction with the component to only the <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Spacebar</kbd> keys.
@@ -96,17 +96,17 @@
         </p>
 
         {% for interaction in keyboard.interactions %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
-                <input  type="checkbox"
-                        class="nysa11y checkbox"
-                        data-component="checkbox"
-                        data-html="native"
-                        aria-label="Mark when keyboard test {{ loop.index }} passes"
-                        aria-describedby="keyboard-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end" id="keyboard-desc-{{ loop.index }}">
-                <h4>{{ interaction.scenario | safe }}</h4>
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when keyboard test {{ loop.index }} passes"
+                    aria-describedby="keyboard-desc-{{ loop.index }}">
+            <span id="keyboard-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
                 <ul>
                     {% for requirement in interaction.requirements %}
                     <li>{{ requirement | safe }}</li>
@@ -120,7 +120,7 @@
                     </nys-badge>
                 </mark>
             </div>
-        </div>
+        </label>
         {% endfor %}
     </section>
     {% endif -%}
@@ -128,25 +128,24 @@
 
     {%- block Mouse %}
     {% if mouse %}
-    <section class="test-mouse">
+    <section class="test-mouse checkbox__tile">
         <h3>Mouse</h3>
         <p>
             Lorem ipsum dolor sit amet.
         </p>
 
         {% for interaction in mouse.interactions %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
-                <!-- TODO: use Nunjucks loop index here -->
-                <input  type="checkbox"
-                        class="nysa11y checkbox"
-                        data-component="checkbox"
-                        data-html="native"
-                        aria-label="Mark when mouse test {{ loop.index }} passes"
-                        aria-describedby="mouse-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end">
-                <h4 id="mouse-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when mouse test {{ loop.index }} passes"
+                    aria-describedby="mouse-desc-{{ loop.index }}">
+            <span id="mouse-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
                 <ul>
                     {% for requirement in interaction.requirements %}
                     <li>{{ requirement | safe }}</li>
@@ -160,7 +159,7 @@
                     </nys-badge>
                 </mark>
             </div>
-        </div>
+        </label>
         {% endfor %}
     </section>
     {% endif %}
@@ -168,7 +167,7 @@
 
     {%- block ScreenReader %}
     {% if screenReader %}
-    <section class="test-screenreader">
+    <section class="test-screenreader checkbox__tile">
         <h3>Desktop screen reader</h3>
         <p>
             Test with at least two out of the three most common screen readers.
@@ -182,17 +181,17 @@
         </p>
 
         {% for interaction in screenReader.interactions %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
-                <input  type="checkbox"
-                        class="nysa11y checkbox"
-                        data-component="checkbox"
-                        data-html="native"
-                        aria-label="Mark when screen reader test {{ loop.index }} passes"
-                        aria-describedby="screenreader-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end">
-                <h4 id="screenreader-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when screen reader test {{ loop.index }} passes"
+                    aria-describedby="screenreader-desc-{{ loop.index }}">
+            <span id="screenreader-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
                 <ul>
                     {% for requirement in interaction.requirements %}
                     <li>{{ requirement | safe }}</li>
@@ -206,7 +205,7 @@
                     </nys-badge>
                 </mark>
             </div>
-        </div>
+        </label>
         {% endfor %}
     </section>
     {% endif -%}
@@ -214,7 +213,7 @@
 
     {%- block MobileScreenReader %}
     {% if screenReaderMobile %}
-    <section class="test-screenreader-mobile">
+    <section class="test-screenreader-mobile checkbox__tile">
         <h3>Mobile screen reader</h3>
         <p>
             Test with at least one, ideally both, of the primary mobile screen readers.
@@ -225,17 +224,17 @@
         </p>
 
         {% for interaction in screenReaderMobile.interactions %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
-                <input  type="checkbox"
-                        class="nysa11y checkbox"
-                        data-component="checkbox"
-                        data-html="native"
-                        aria-label="Mark when mobile screen reader test {{ loop.index }} passes"
-                        aria-describedby="screenreader-mobile-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end">
-                <h4 id="screenreader-mobile-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when mobile screen reader test {{ loop.index }} passes"
+                    aria-describedby="screenreader-mobile-desc-{{ loop.index }}">
+            <span id="screenreader-mobile-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
                 <ul>
                     {% for requirement in interaction.requirements %}
                     <li>{{ requirement | safe }}</li>
@@ -249,7 +248,7 @@
                     </nys-badge>
                 </mark>
             </div>
-        </div>
+        </label>
         {% endfor %}
     </section>
     {% endif -%}
@@ -257,7 +256,7 @@
 
     {%- block Voice %}
     {% if voice %}
-    <section class="test-voice">
+    <section class="test-voice checkbox__tile">
         <h3>Voice</h3>
         <p>
             <a href="https://support.microsoft.com/en-us/topic/get-started-with-voice-access-bd2aa2dc-46c2-486c-93ae-3d75f7d053a4" target="_blank">Voice Access</a>
@@ -267,17 +266,17 @@
         </p>
 
         {% for interaction in voice.interactions %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
-                <input  type="checkbox"
-                        class="nysa11y checkbox"
-                        data-component="checkbox"
-                        data-html="native"
-                        aria-label="Mark when voice test {{ loop.index }} passes"
-                        aria-describedby="voice-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end">
-                <h4 id="voice-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when voice test {{ loop.index }} passes"
+                    aria-describedby="voice-desc-{{ loop.index }}">
+            <span id="voice-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
                 <ul>
                     {% for requirement in interaction.requirements %}
                     <li>{{ requirement | safe }}</li>
@@ -291,7 +290,7 @@
                     </nys-badge>
                 </mark>
             </div>
-        </div>
+        </label>
         {% endfor %}
     </section>
     {% endif -%}
@@ -299,7 +298,7 @@
 
     {%- block Zoom %}
     {% if zoom %}
-    <section class="test-zoom">
+    <section class="test-zoom checkbox__tile">
         <h3>Zoom</h3>
         <p>
             All tests in this section require the browser to be zoomed to 200%.
@@ -308,17 +307,17 @@
         </p>
 
         {% for interaction in zoom.interactions %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
-                <input  type="checkbox"
-                        class="nysa11y checkbox"
-                        data-component="checkbox"
-                        data-html="native"
-                        aria-label="Mark when zoom test {{ loop.index }} passes"
-                        aria-describedby="zoom-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end">
-                <h4 id="zoom-desc-{{ loop.index }}">{{ interaction.scenario | safe }}</h4>
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when zoom test {{ loop.index }} passes"
+                    aria-describedby="zoom-desc-{{ loop.index }}">
+            <span id="zoom-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
                 <ul>
                     {% for requirement in interaction.requirements %}
                     <li>{{ requirement | safe }}</li>
@@ -332,7 +331,7 @@
                     </nys-badge>
                 </mark>
             </div>
-        </div>
+        </label>
         {% endfor %}
     </section>
     {% endif -%}
@@ -340,7 +339,7 @@
 
     {%- block wcag %}
     {% if disabilities %}
-    <section class="wcag">
+    <section class="wcag checkbox__tile">
         <h2>Use this checklist at the design stage</h2>
         <p>
             This checklist breaks down the specific design and interaction requirements behind the tests above,
@@ -351,22 +350,22 @@
         {% for wcag in disabilities %}
         <h3>{{ wcag.type }}</h3>
         {% for criterion in wcag.criteria %}
-        <div class="card--a11ytest">
-            <div class="card--a11ytest__start">
+        <label>
                 <input  type="checkbox"
                         class="nysa11y checkbox"
                         data-component="checkbox"
                         data-html="native"
                         aria-label="Mark when {{ wcag.type }} requirement {{ loop.index }} is ensured"
                         aria-describedby="{{ wcag.type }}-desc-{{ loop.index }}">
-            </div>
-            <div class="card--a11ytest__end" id="{{ wcag.type }}-desc-{{ loop.index }}">
-                <h4>{{ criterion.description }}</h4>
+            <span aria-level="4"
+                  class="nysa11y checkbox__label"
+                  id="{{ wcag.type }}-desc-{{ loop.index }}">{{ criterion.description }}</span>
+            <div class="nysa11y checkbox__more">
                 <a href="{{ criterion.uri }}" target="_blank">
                     {{ criterion.sc }}
                 </a>
             </div>
-        </div>
+        </label>
         {% endfor %}
         {% endfor %}
     </section>

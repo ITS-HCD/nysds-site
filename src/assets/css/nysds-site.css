@@ -1721,31 +1721,25 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
             }
         }
 
-        .card--a11ytest {
-            background-color: var(--nys-color-surface, #fff);
-            border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
-            border-radius: var(--nys-radius-sm);
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
+        label:has(.checkbox.tile),
+        .checkbox__tile > label:has(.checkbox) {
+            line-height: 1.1; /* unitless for better zoom */
             padding-block: 1rem;
             padding-inline: 1.25rem;
             &:not(:last-child) {
                 margin-block-end: 1.5rem;
             }
-
-            .card--a11ytest__end {
+            [aria-level="4"] {
+                font-weight: 700;
+                line-height: normal; /* 1.1 */
+            }
+            .checkbox__more {
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1;
-                gap: 0.5rem;
-                h4 {
-                    font-size: 1rem;
-                    line-height: 1.1; /* unitless for better zoom */
-                    margin-block: 0;
-                }
+                row-gap: 0.5rem;
                 ul,
                 li {
+                    line-height: normal; /* 1.1 */
                     margin-block: 0;
                 }
                 li:has(mark) {
