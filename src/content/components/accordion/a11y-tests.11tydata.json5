@@ -12,8 +12,8 @@
 {
   "pattern": "Accordion",
   "tests": {
-    "total": 0,
-    "pass": 0,
+    "total": 10,
+    "pass": 10,
     "fail": 0,
     "toDo": 0
   },
