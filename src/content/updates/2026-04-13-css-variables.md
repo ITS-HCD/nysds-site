@@ -93,7 +93,7 @@ Internally, private tokens often map to their semantic or primitive version. Let
 
 This means:
 - If a public override exists, use it.
-- If not, fall back to the default color, in this scenario --nys-color-theme.
+- If not, fall back to the default color, in this scenario `--nys-color-theme`.
 
 That layering ensures reliability even when variables aren’t explicitly defined.
 
