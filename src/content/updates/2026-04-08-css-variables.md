@@ -3,10 +3,10 @@ permalink: /updates/css-variables/
 title: How CSS Variables Power the NYS Design System
 author: Emily Gorelik
 description: How the NYS Design System uses CSS variables and design tokens to enable consistent, scalable, and customizable UI development across New York State.
-image: /assets/i/2026/css-variables-thumbnail.png
+image: /assets/i/2026/css-vars-article/css-vars-header.png
 image_alt: Illustration of CSS variables
-updatethumbnail: /assets/i/2026/nysds-css-variables-thumbnail.png
-image_header: /assets/i/2026/css-vars-header.svg
+updatethumbnail: /assets/i/2026/css-vars-article/css-variables-thumbnail.png
+image_header: /assets/i/2026/css-vars-article/css-vars-header.svg
 date: 2026-04-08
 tags: article, css variables, design tokens, theme switching, design system
 ---
@@ -104,7 +104,7 @@ One of the most significant advantages of this token structure is theming.
 
 Agency groupings under the NYS umbrella often have distinct brand colors: Environmental uses green, Admin uses orange, Safety uses gray. Instead of rewriting styles, they simply override semantic tokens through the data-theme attribute. So while the default `--nys-color-theme` is set to `var(--nys-color-nys-blue-600)`, by setting `data-theme="admin"` at the top most level of the project, `--nys-color-theme` will instead map to `var(--nys-color-admin-orange-700)`.
 
-IMAGE HERE
+<img src="/assets/i/2026/css-vars-article/themes.png" alt="Image of red color ramp used in the New York State Design System" width="800"/>
 
 All components referencing `--nys-color-theme` automatically adapt to use the proper color ramp of the set theme.
 This design makes the New York State Design System scalable across diverse agencies while maintaining visual unity and predictable behavior.
