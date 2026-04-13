@@ -6,7 +6,7 @@ image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-69517&t=Fz3PChrCAbfpr60Y-4
 navOrder: 18
 ---
 

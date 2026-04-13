@@ -51,8 +51,8 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 
 {% block usagedont %}
 
-  - Don't place it anywhere other than the top of the page.
-  - Don't modify the universal header.
+  - Place it anywhere other than the top of the page.
+  - Modify the universal header.
 
 {% endblock %}
 

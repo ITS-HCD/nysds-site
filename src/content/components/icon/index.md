@@ -162,10 +162,11 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 
 {% block usagedont %}
 
-  - Don’t overuse icons. Too many create visual noise and reduce focus.
-  - Don’t replace meaningful text with icons unless the icon is universally recognized or paired with a label.
-  - Don’t use standalone icons for actions. Use an icon button instead.
-  - Avoid excessive icon customization that breaks design consistency.
+  - Use icons that lack clarity or context for their intended purpose.
+  - Overuse icons. Too many create visual noise and reduce focus.
+  - Replace meaningful text with icons unless the icon is universally recognized or paired with a label.
+  - Use standalone icons for actions. Use an icon button instead.
+  - Use excessive icon customization that breaks design consistency.
 
 {% endblock %}
 

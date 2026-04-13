@@ -6,7 +6,7 @@ image: /assets/img/components/modal.svg
 image_alt: An illustration of a modal.
 image_header: /assets/img/components/modal-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9962-6713&t=Fz3PChrCAbfpr60Y-4
 navOrder: 16
 ---
 
@@ -92,10 +92,10 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 
 {% block usagedont %}
 
-  - Don’t overload with long forms or texts.
-  - Don’t show trivial info.
-  - Don’t stack multiple modals.
-  - Don’t force a mandatory modal unnecessarily.
+  - Overload with long forms or texts.
+  - Show trivial info.
+  - Stack multiple modals.
+  - Force a mandatory modal unnecessarily.
 
 {% endblock %}
 
@@ -303,6 +303,16 @@ modal.addEventListener("nys-close", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
