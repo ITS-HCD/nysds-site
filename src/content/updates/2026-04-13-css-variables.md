@@ -83,7 +83,7 @@ Not every variable is intended for direct use or override. To keep things predic
 
 CSS doesn’t support private variables, so this convention helps our team organize and maintain the system. From a user perspective, you don’t need to worry about which is which—if a variable is safe to override, it will appear on the component’s documentation page under CSS Variables. Please note that most components will NOT have overridable variables, these public variables are rare and created intentionally to ensure a cohesive design system.
 
-Internally, private tokens often map to their semantic or primitive version. Let’s look at the background color of nys-button and follow its token map:
+Internally, private tokens often map to their semantic or primitive version. Let’s look at the background color of `nys-button` and follow its token map:
 
 ```
 --_nys-button-background-color: var(--nys-button-background-color, var(--nys-color-theme));
