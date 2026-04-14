@@ -5,21 +5,17 @@
 @layer nysa11y {
     body:has(.nysa11y) {
         details.nysa11y.accordion[data-component="accordion"][data-html="native"] {
-            --acc-bg: #ededed;
-            --acc-bg-hofo: #d0d0ce;
-            --acc-chevron: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiByb2xlPSJpbWciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0ibnlzLWljb24tLTI0IG55cy1pY29uLS1zdmciIHN0eWxlPSJyb3RhdGU6IDBkZWc7IGNvbG9yOiBjdXJyZW50Y29sb3I7Ij4KICA8bWFzayBpZD0ibWFzazBfMTIzNzJfMTkwIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgogICAgPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ij48L3JlY3Q+CiAgPC9tYXNrPgogIDxnIG1hc2s9InVybCgjbWFzazBfMTIzNzJfMTkwKSI+CiAgICA8cGF0aCBkPSJNMTIgMTQuNzI1TDE5LjM1IDcuMzc1QzE5LjYgNy4xMjUgMTkuODkxNyA3LjAwNDE3IDIwLjIyNSA3LjAxMjVDMjAuNTU4MyA3LjAyMDgzIDIwLjg1IDcuMTUgMjEuMSA3LjRDMjEuMzUgNy42NSAyMS40NzUgNy45NDE2NyAyMS40NzUgOC4yNzVDMjEuNDc1IDguNjA4MzMgMjEuMzUgOC45IDIxLjEgOS4xNUwxMy40MjUgMTYuODVDMTMuMjI1IDE3LjA1IDEzIDE3LjIgMTIuNzUgMTcuM0MxMi41IDE3LjQgMTIuMjUgMTcuNDUgMTIgMTcuNDVDMTEuNzUgMTcuNDUgMTEuNSAxNy40IDExLjI1IDE3LjNDMTEgMTcuMiAxMC43NzUgMTcuMDUgMTAuNTc1IDE2Ljg1TDIuODc0OTkgOS4xNUMyLjYyNDk5IDguOSAyLjUwNDE1IDguNjA0MTcgMi41MTI0OSA4LjI2MjVDMi41MjA4MiA3LjkyMDgzIDIuNjQ5OTkgNy42MjUgMi44OTk5OSA3LjM3NUMzLjE0OTk5IDcuMTI1IDMuNDQxNjUgNyAzLjc3NDk5IDdDNC4xMDgzMiA3IDQuMzk5OTkgNy4xMjUgNC42NDk5OSA3LjM3NUwxMiAxNC43MjVaIiBmaWxsPSJ2YXIoLS1ueXMtaWNvbi1jb2xvciwgY3VycmVudGNvbG9yKSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+Cg==");
-            --acc-chevron-closed: rotate(-90deg);
-            --acc-chevron-open: rotate(0deg);
-            --acc-color: #1b1b1b;
-            --acc-outline: 2px solid #004dd1;
-            --acc-outline-off: 2px;
-            --transition-time: 0.3s;
+            --nysa11y-chevron-rotation-time: 0.3s;
             & summary {
-                background-color: var(--acc-bg);
+                background-color: var(
+                    --nys-accordion-background-color--header,
+                    var(--nys-color-neutral-50, #ededed)
+                );
                 border-radius: 0.25rem;
-                color: var(--acc-color);
+                color: var(--nys-color-ink, #1b1b1b);
                 display: flex;
-                font-size: 1.25rem;
+                font-size: var(--nys-type-size-ui-xl, 20px);
+                font-weight: var(--nys-font-weight-bold, 700);
                 gap: 0.5rem;
                 line-height: 1.5rem;
                 list-style-type: none;
@@ -27,23 +23,27 @@
                 padding-inline: 1rem;
                 word-break: break-word;
                 &::before {
-                    background-image: var(--acc-chevron);
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='%231b1b1b' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A");
                     background-size: contain;
                     content: "";
                     display: inline-block;
                     flex-shrink: 0;
                     height: 1.5rem;
                     width: 1.5rem;
-                    transform: var(--acc-chevron-closed);
-                    transition: transform var(--transition-time);
+                    transform: rotate(0deg);
+                    transition: transform var(--nysa11y-chevron-rotation-time);
                 }
                 &:focus-visible {
-                    outline: var(--acc-outline);
-                    outline-offset: var(--acc-outline-off);
+                    outline: solid var(--nys-border-width-md, 2px)
+                        var(--nys-color-focus, #004dd1);
+                    outline-offset: var(--nys-space-2px, 2px);
                 }
                 &:hover,
                 &:focus {
-                    background-color: var(--acc-bg-hofo);
+                    background-color: var(
+                        --nys-accordion-background-color--header--hover,
+                        var(--nys-color-neutral-100, #d0d0ce)
+                    );
                 }
                 &::-webkit-details-marker,
                 &::marker {
@@ -53,14 +53,15 @@
             }
             &::details-content {
                 opacity: 0;
-                transition: opacity var(--transition-time) ease-in-out;
+                transition: opacity var(--nysa11y-chevron-rotation-time)
+                    ease-in-out;
             }
             &[open] {
                 summary {
                     border-end-end-radius: 0;
                     border-end-start-radius: 0;
                     &::before {
-                        transform: var(--acc-chevron-open);
+                        transform: rotate(90deg);
                     }
                 }
                 &::details-content {
