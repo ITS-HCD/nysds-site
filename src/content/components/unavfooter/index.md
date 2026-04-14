@@ -1,7 +1,7 @@
 ---
 permalink: /components/unav-footer/
 title: UNav Footer
-description: Provide users with access to essential NYS links across all pages.
+description: Required statewide footer displaying the NY.gov logo and links to Agencies, Counties, Events, Programs, and Services.
 image: /assets/img/components/unav-footer.svg
 image_alt: An illustration of a unav footer.
 image_header: /assets/img/components/unav-footer-header.svg
@@ -14,7 +14,7 @@ navOrder: 27
 
 {% block longdescription %}
 
-The `<nys-unavfooter`> is a reusable web component for use in New York State digital products. It helps provide users with access to essential NYS links across all pages.
+The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a standardized statewide footer that displays the NY.gov logo and links to Agencies, App Directory, Counties, Events, Programs, and Services. It is a required element on all New York State websites and applications, ensuring consistent statewide branding and navigation across every digital product.
 
 {% endblock %}
 
@@ -28,30 +28,39 @@ The `<nys-unavfooter`> is a reusable web component for use in New York State dig
 {% block usage %}
 
 ### When to use this component
-  - Use `<nys-unavfooter`> to provide consistent access to essential links across all sites.
+  - Use on every New York State website and application. The Universal Navigation Footer is a required element per NYS web policy.
+  - Place as the very last element in the page, below `<nys-globalfooter>`. Together, these two components form the complete footer structure: the Global Footer provides agency-specific links, and the UNav Footer provides statewide links.
+
 ### When to consider something else
-  - Do not place the `<nys-unavfooter`> anywhere other than the bottom of the page as the final footer.
+  - There is no alternative. This component is required on all NYS sites. Do not replace it with a custom footer.
+  - Do not place the UNav Footer anywhere other than the absolute bottom of the page.
 
 {% endblock %}
 
 {% block usagedo %}
 
-  - Place it only at the bottom of the page as the final footer.
+  - Place the `<nys-unavfooter>` as the last element on every page, immediately after `<nys-globalfooter>`.
+  - Include it on every page of your site, including error pages, login screens, and landing pages.
+  - Use it as-is with no configuration. The component handles its own content and styling.
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't place it anywhere other than the bottom of the page.
+  - Don't place the UNav Footer anywhere other than the absolute bottom of the page.
+  - Don't attempt to customize, restyle, or override the UNav Footer's content or appearance. Consistency across all state sites is the purpose of this component.
+  - Don't omit the UNav Footer from any page on your site.
 
 {% endblock %}
 
 {% block accessibility %}
 
-The `<nys-unavfooter`> component includes the following accessibility-focused features:
+The `<nys-unavfooter>` component includes the following accessibility-focused features:
 
-  - Proper use of `<footer>` and `<a>` elements ensures compatibility with assistive technologies.
-  - Keyboard navigation: Users can tab through all links in the footer.
+  - Renders a `<footer>` landmark element, which screen readers identify as a `contentinfo` region. When both `<nys-globalfooter>` and `<nys-unavfooter>` are present, the page has two `contentinfo` landmarks, both discoverable by assistive technology.
+  - The NY.gov logo link includes an `aria-label` of "logo of New York State" for screen readers.
+  - All statewide navigation links use standard `<a>` elements, ensuring they are keyboard-focusable and announced correctly.
+  - Keyboard navigation: users can `Tab` through all links in the footer in logical reading order.
 {% endblock %}
 
 {% block options %}
@@ -70,6 +79,10 @@ The `nys-unavfooter` does not have any css variables because this component must
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

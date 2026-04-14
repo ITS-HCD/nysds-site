@@ -6,7 +6,7 @@ image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
 image_header: /assets/img/components/avatar-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4019-57057&t=ehyQYJeb6ohvHYV0-4 
 navOrder: 3
 ---
 
@@ -44,7 +44,7 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 {% block usagedo %}
 
   - Use for clear, simple user or entity representation.
-  - On tablets and larger breakpoints, prefer showing the full name next to the avatar.
+  - Prefer showing the full name next to the avatar on tablets and larger breakpoints.
   - Place the full name of the user or entity to the right of the avatar.
   - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
   - Use the `nys-icon` slot only when the icon prop isn't sufficient.
@@ -52,10 +52,10 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 
 {% block usagedont %}
 
-  - Don't skip the `ariaLabel` attribute for screen reader users.
-  - Don't use the `nys-icon` as a slot when icon prop can satisfy your use.
-  - Don't overload the avatar with unnecessary customizations.
-  - Don’t override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.
+  - Skip the `ariaLabel` attribute for screen reader users.
+  - Use the `nys-icon` as a slot when icon prop can satisfy your use.
+  - Overload the avatar with unnecessary customizations.
+  - Override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.
 {% endblock %}
 
 {% block accessibility %}
@@ -140,52 +140,52 @@ You can change the background color of an Avatar. This attribute accepts any val
       <tr>
           <th>Property</th>
           <th>Type</th>
-          <th></th>
+          <th>Default</th>
       </tr>
       <tr>
           <td><code>id</code></td>
           <td>String</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>color</code></td>
           <td>String (CSS HEX, CSS color name, or CSS)</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>icon</code></td>
           <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>image</code></td>
           <td>URL</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>initials</code></td>
           <td>String (2 letters)</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaLabel</code></td>
           <td>String</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>lazy</code></td>
           <td>boolean</td>
-          <td></td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>interactive</code></td>
           <td>boolean</td>
-          <td></td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>disabled</code></td>
           <td>boolean</td>
-          <td></td>
+          <td><code>false</code></td>
       </tr>
   </table>
 </nys-table>
@@ -202,6 +202,20 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

@@ -1,0 +1,77 @@
+---
+permalink: /about/updates/all/
+title: "What's New"
+section: About
+layout: layouts/base.njk
+description: "Complete archive of NYS Design System releases, updates, and articles."
+eleventyExcludeFromCollections: true
+heading_links: false
+---
+
+{% block content %}
+<div class="nys-grid-container-widescreen">
+
+  <header class="page-header">
+    <h1 class="page-title">What's New</h1>
+
+    {%- if description -%}
+      <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
+    {%- endif -%}
+
+  </header>
+
+<style>
+.post-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.card-content {
+  align-self: center;
+}
+.card-start {
+  flex-shrink: 0;
+  width: 120px;
+}
+</style>
+  <section class="nys-grid-row nys-grid-gap">
+    <ul class="post-list nys-grid-container">
+      {%- for post in collections.updates -%}
+      <li class="post-list__item">
+        <div class="card-start">
+          {% if post.data.updatethumbnail %}
+            <div class="release-logo">
+              <img src="{{post.data.updatethumbnail}}" width="120px" alt="">
+            </div>
+          {% else %}
+            <div class="release-logo">
+              <img src="/assets/img/mono-star.png" width="120px" alt="">
+            </div>
+          {% endif %}
+        </div>
+        <div class="card-content">
+          <h2 class="post-list__title">
+            <a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a>
+          </h2>
+          <div class="post-list__description">
+            {{ post.data.description }}
+          </div>
+          <div class="post-list__meta">
+            <div class="post-list__author">
+              by {{ post.data.author }}
+            </div>
+            <time class="post-list__date" datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFull }}</time>
+          </div>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+</div>
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

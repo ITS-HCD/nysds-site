@@ -6,7 +6,7 @@ image: /assets/img/components/backtotop.svg
 image_alt: a circular button with the text back to top written on it.
 image_header: /assets/img/components/backtotop-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4303-1514
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4303-2694&t=ehyQYJeb6ohvHYV0-4
 navOrder: 4
 ---
 
@@ -14,7 +14,7 @@ navOrder: 4
 
 {% block longdescription %}
 
-The `<nys-backtotop>` component provides a button that allows users to quickly return to the top of a page, enhancing user experience and accessibility. The back to top button will appear on a screen after you scroll 1.5 screen lengths.
+The `<nys-backtotop>` component provides a floating button that allows users to quickly scroll back to the top of a page. It auto-appears after scrolling 1.5 viewport heights on pages that are at least 4 screens tall, and renders as a compact circle button on mobile devices.
 
 {% endblock %}
 
@@ -50,36 +50,40 @@ The `<nys-backtotop>` component provides a button that allows users to quickly r
 
 ### When to use this component
 
-- Only use 1 back to top component on a page.
-- Use the component when the content is designed to be longer than the height of the screen.
+- Use on long-form content pages such as state policy documents, agency service directories, and program eligibility guides.
+- Use on pages with extensive search results or data tables, such as a professional license lookup or business registration listing.
+- Use when users need a quick way to return to the top-level navigation after scrolling through detailed content, such as a benefits application FAQ.
 
 ### When to consider something else
 
-- Use when the content is designed to fill the size of the screen and is not scrollable.
+- Don't use on pages where content fits within a single viewport without scrolling.
+- If your page uses anchor-based in-page navigation (e.g., a table of contents), users already have navigation tools and a back-to-top button may be redundant.
 
 {% endblock %}
 
 {% block usagedo %}
 
-  - Only use 1 back to top component on a page.
-  - Use the component when the content is designed to be longer than the height of the screen.
-  - Place the `<nys-backtotop>` component above the `<nys-globalfooter>` in your code.
+  - Place exactly one `<nys-backtotop>` per page, above the `<nys-globalfooter>` in your markup.
+  - Set `position="left"` when the bottom-right corner is occupied by another floating element, such as a chatbot button.
+  - Let the component manage its own visibility. The auto-show behavior activates after 1.5 viewport heights on pages that are at least 4 screens tall.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't add multiple `<nys-backtotop>` components to one page.
-  - Don't use `<nys-backtotop>` when the content fits within the screen and doesn’t scroll.
+  - Don’t add multiple `<nys-backtotop>` components to a single page.
+  - Don’t use `<nys-backtotop>` on pages where the content fits within a single viewport.
+  - Don’t set `visible` in production unless you have a specific reason to override the auto-show behavior. Forcing visibility on short pages creates unnecessary clutter.
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-backtotop>` component includes the following accessibility-focused features:
 
-  - Last focusable element on page load for easy keyboard navigation
-  - Keyboard navigable with `Tab` key
-  - Pressing `Enter` or `Space` activates the `<nys-backtotop>` functionality
-  - Visible only when the user scrolls down the page, ensuring it does not distract from the content
+  - Renders as a `<nys-button>` with the label "Back to top," providing a clear accessible name for screen readers.
+  - Keyboard navigable with the `Tab` key. Pressing `Enter` or `Space` activates the smooth-scroll behavior.
+  - Hidden from the tab order and screen readers when not visible, so it does not interfere with keyboard navigation on short pages.
+  - On mobile, renders as a circle button with an up-chevron icon. The button retains its accessible label.
+  - Uses `position: fixed` positioning, so it remains accessible regardless of scroll position.
 {% endblock %}
 
 {% block options %}
@@ -146,14 +150,22 @@ size="sm"
     <tr>
         <th>Property</th>
         <th>Type</th>
+        <th>Default</th>
     </tr>
     <tr>
-        <td><code>id<code></td>
+        <td><code>id</code></td>
         <td>String</td>
+        <td><code>""</code></td>
     </tr>
     <tr>
-        <td><code>position<code></td>
-        <td>String</td>
+        <td><code>position</code></td>
+        <td><code>"left"</code> , <code>"right"</code></td>
+        <td><code>"right"</code></td>
+    </tr>
+    <tr>
+        <td><code>visible</code></td>
+        <td>boolean</td>
+        <td><code>false</code></td>
     </tr>
   </table>
 </nys-table>
@@ -162,6 +174,43 @@ size="sm"
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+The `<nys-backtotop>` component emits **three** custom Javascript events:
+
+  1.  **`click`** – Emitted when the backtotop is clicked.
+  2.  **`focus`** - Emitted when the backtotop receives focus.
+  3.  **`blur`** - Emitted when the backtotop loses focus.
+
+### Event details
+
+You can listen to these events using JavaScript:
+{% set code %}// Select the backtotop component
+const backtotop = document.querySelector("nys-backtotop");
+// Listen for the 'click' event
+backtotop.addEventListener("click", () => {
+	console.log("Backtotop clicked");
+});
+// Listen for the 'blur' event
+backtotop.addEventListener("blur", () => {
+	console.log("Backtotop lost focus");
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% set showTip = false %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

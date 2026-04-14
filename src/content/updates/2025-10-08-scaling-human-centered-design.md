@@ -1,5 +1,5 @@
 ---
-permalink: /updates/scaling-human-centered-design/
+permalink: /about/updates/scaling-human-centered-design/
 title: Scaling Human-Centered Design with Design Systems
 author: Jesse Gardner and Eric Steinborn
 subtitle: Jesse and Eric discuss scaling human-centered design with the New York State Design System on episode #3 of “ITS a Tech Podcast.”

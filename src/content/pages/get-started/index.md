@@ -8,40 +8,84 @@ navOrder: 1
 
 {% block content %}
 
-# Getting Started
+# Get Started with the NYS Design System
 
-The landscape of web applications and sites for New York State is large and diverse. We built the design system to be flexible and adaptable, so that teams can use it in a way that best suits their needs. 
+The NYS Design System gives your team the tools to build accessible, consistent digital experiences faster. There are three ways to use it, whether you are starting from scratch or working within an existing application.
 
-## Learn The NYS Design System
+## Three Ways to Use the Design System
 
-A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly digital services with the Design System.
+<div class="nys-grid-row nys-grid-gap-lg">
 
-**[Learn The NYS Design System →](/learn/)**
+<div class="nys-grid-col-12" style="background: var(--nys-color-theme-faint); border-left: 4px solid var(--nys-color-theme); padding: var(--nys-space-400); margin-bottom: 24px;">
 
-## Follow Design & Accessibility Guidance
+<nys-badge label="Recommended for new projects"></nys-badge>
 
-Learn best practices for designing clear, accessible user experiences and using UI components effectively.
+### Code: Use the Web Components
 
-**[Explore Design Foundations →](/foundations/accessibility)**
+Build new products and modernize existing ones faster with prebuilt, accessible UI components. Our web components handle responsiveness, keyboard navigation, screen reader support, and theme switching automatically—so your team can focus on application logic, not accessibility infrastructure.
 
-## Adopt Styles & Design Tokens
+Each component is production-ready, thoroughly tested, and built for government use cases: DMV forms, benefits applications, permit systems, and agency dashboards.
 
-For teams working within existing applications, our design tokens for colors, typography, spacing, and more help maintain visual consistency without major overhauls.  
+**[Browse All Components →](/components/)**
 
-**[Learn About Design Tokens →](/foundations/tokens/)**
+</div>
 
-## Use the Web Components
+<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
 
-Build new digital products faster with our library of prebuilt, responsive UI components. Enjoy the benefit of design-to-code parity—what’s designed in Figma matches the code you implement.  
+### Styles: Use Design Tokens and CSS Framework
 
-**[View Web Component Library →](/components/)**
+Don't want to adopt components yet? Use our design tokens and CSS framework to maintain visual consistency across your site. Apply tokens for color, typography, spacing, and borders to custom HTML—no component wrapper needed.
 
-## Next Steps: Find the Right Guide for You
+**[Explore Tokens & Styles](/foundations/styles/)**
 
-The NYS Design System is designed for everyone whether you’re setting strategic direction or diving into component development. Choose your path:
+</div>
 
-- **[Getting Started For Designers](./designers/):** Get started with our Figma libraries and detailed design guidelines.
-- **[Getting Started For Developers](./developers/):** Discover how to integrate our web components and styling options into your projects.
-- **[Understanding the NYS Design System For Agency Leaders & Product Teams](/learn/):** Learn how the NYS Design System drives efficiency and ensures a unified digital experience across New York State.
+<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
+
+### Guidance: Build Accessibly
+
+Learn how to design and build clear, usable digital experiences for all New Yorkers. We cover WCAG compliance, plain language, keyboard navigation, screen reader testing, and accessibility patterns for forms, tables, and complex workflows.
+
+**[Read Accessibility Best Practices](/foundations/accessibility/)**
+
+</div>
+
+</div>
+
+**You can adopt all three approaches or start with what fits your situation.** Many teams begin with styles and tokens in an existing application, then add web components incrementally as their team builds confidence and finds the right moments to refactor.
+
+## Choose Your Path
+
+<div class="nys-grid-row nys-grid-gap-lg">
+<nys-button
+    label="For Designers"
+    href="/get-started/designers/"
+    variant="outline"
+    fullWidth
+    class="nys-tablet:nys-grid-col-4"
+    style="margin-bottom: 16px;"></nys-button>
+<nys-button
+    label="For Developers"
+    href="/get-started/developers/"
+    variant="outline"
+    fullWidth
+    class="nys-tablet:nys-grid-col-4"
+    style="margin-bottom: 16px;"></nys-button>
+<nys-button
+    label="For Agency Leaders"
+    href="/get-started/leadership/"
+    variant="outline"
+    fullWidth
+    class="nys-tablet:nys-grid-col-4"
+    style="margin-bottom: 16px;"></nys-button>
+</div>
+
+- **Designers:** Set up design libraries, use component variants, prototype with system components.
+- **Developers:** Install via npm, integrate with your framework, start using components and tokens.
+- **Agency Leaders:** Understand the value proposition, adoption strategy, and support available.
+
+## Learn the System
+
+The NYS Design System team created a [video tour](/learn/) to walk you through how the system works and how to use it in your team's workflow.
 
 {% endblock %}

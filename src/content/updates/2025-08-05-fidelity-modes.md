@@ -1,5 +1,5 @@
 ---
-permalink: /updates/fidelity-modes-rapid-prototyping/
+permalink: /about/updates/fidelity-modes-rapid-prototyping/
 title: Rapid Wireframes to Prototypes with Fidelity Modes
 author: Leo Vogel
 subtitle: Instantly Transform FigJam Wireframes to Polished Figma Prototypes with a Design System powered by Figma Variables

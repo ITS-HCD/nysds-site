@@ -6,7 +6,7 @@ image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4019-63198&t=Fz3PChrCAbfpr60Y-4
 navOrder: 15
 ---
 
@@ -14,7 +14,7 @@ navOrder: 15
 
 {% block longdescription %}
 
-The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYS Design System includes a curated subset of the Google Material Symbols rounded icon set.
+The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, status, or feedback and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYS Design System includes a curated subset of the Google Material Symbols rounded icon set.
 
 {% endblock %}
 
@@ -252,30 +252,37 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>ariaLabel</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>color</code></td>
       <td>String (CSS HEX, CSS color name, or CSS variable)</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>flip</code></td>
       <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>rotate</code></td>
       <td>integer</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"xs"</code>, <code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"xl"</code>, <code>"2xl"</code>, <code>"3xl"</code>, <code>"4xl"</code>, <code>"5xl"</code>, <code>"12"</code>, <code>"14"</code>, <code>"16"</code>, <code>"18"</code>, <code>"20"</code>, <code>"24"</code>, <code>"32"</code>, <code>"40"</code>, <code>"50"</code></td>
+      <td><code>"md"</code></td>
     </tr>
   </table>
 </nys-table>
@@ -291,25 +298,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   {% include "partials/css-vars.njk" %}
 
 {% endblock %}
-[[TODO]]
-The `<nys->` component emits **three** custom Javascript events:
-1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
-2.  **`focus`** – Fired when the toggle gains focus.
-3.  **`blur`** – Fired when the toggle loses focus.
-4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
+
+This component does not emit any custom events.
 
 {% endblock %}
 

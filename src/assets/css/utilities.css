@@ -606,3 +606,18 @@
  .padding-example * {
     border: solid var(--nys-color-theme) 1px;
  }
+
+.docs-demo-box {
+    background-color: var(--nys-color-theme-weaker);
+    border: 1px solid var(--nys-color-theme-weak);
+    padding: var(--nys-space-200);
+    border-radius: var(--nys-border-radius-sm);
+    font-family: var(--nys-font-family-monospace);
+    font-size: var(--nys-font-size-ui-sm);
+}
+
+.docs-utility-demo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-space-100);
+}

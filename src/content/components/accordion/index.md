@@ -6,8 +6,8 @@ image: /assets/img/components/accordion.svg
 image_alt: An illustration of an accordion
 image_header: /assets/img/components/accordion-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783
-navOrder: 2
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=6468-13132&t=0cK7llM1tFRVIgBx-4
+navOrder: 1
 ---
 
 {% extends "layouts/component.njk" %}
@@ -68,9 +68,9 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 
 {% block usagedont %}
 
-  - Don't hide time-sensitive deadlines or required steps in a collapsed section.
-  - Don't use vague or unclear headings that make it hard to know what is inside.
-  - Don't overuse accordions for content that is short enough to display fully on the page.
+  - Hide time-sensitive deadlines or required steps in a collapsed section.
+  - Use vague or unclear headings that make it hard to know what is inside.
+  - Overuse accordions for content that is short enough to display fully on the page.
 
 {% endblock %}
 
@@ -79,7 +79,8 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 The `nys-accordionitem` component includes the following accessibility-focused features:
 
   - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
-   -Headers are large enough to interact with easily (minimum 44x44px).
+  - Headers are large enough to interact with easily (minimum 44x44px).
+  - The whole header area is clickable, not just the icon.
 
 {% endblock %}
 
@@ -158,31 +159,37 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
       <tr>
           <th>Property</th>
           <th>Type</th>
+          <th>Default</th>
           <th>Component</th>
       </tr>
       <tr>
           <td><code>id</code></td>
           <td>String</td>
+          <td><code>""</code></td>
           <td>both</td>
       </tr>
       <tr>
           <td><code>heading</code></td>
           <td>String</td>
+          <td><code>""</code></td>
           <td><code>nys-accordionitem</code></td>
       </tr>
       <tr>
           <td><code>expanded</code></td>
-          <td>Boolean</td>
+          <td>boolean</td>
+          <td><code>false</code></td>
           <td><code>nys-accordionitem</code></td>
       </tr>
       <tr>
           <td><code>bordered</code></td>
-          <td>Boolean</td>
+          <td>boolean</td>
+          <td><code>false</code></td>
           <td><code>nys-accordion</code></td>
       </tr>
       <tr>
           <td><code>singleSelect</code></td>
-          <td>Boolean</td>
+          <td>boolean</td>
+          <td><code>false</code></td>
           <td><code>nys-accordion</code></td>
       </tr>
   </table>
@@ -228,6 +235,16 @@ accordion.addEventListener("nys-accordionitem-toggle", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -1,105 +1,39 @@
 ---
 permalink: /foundations/utilities/
 title: "Utilities"
-description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
+description: "CSS utility classes for layout, spacing, visibility, and responsive behavior in the NYS Design System."
+section: Foundations
 layout: layouts/3-col.njk
 ---
 
 {% block content %}
 
+<section id="overview">
+
 # Utilities
 
-<section class="nys-grid-row nys-grid-gap">
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url }}/foundations/utilities/display">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Display</div>
-        <div class="card__desc">Utility classes for display.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/flex">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Flexbox</div>
-        <div class="card__desc">These utility classes are used to create a flexbox layout.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/float">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Float</div>
-        <div class="card__desc">Utility classes for float.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/grid">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Grid</div>
-        <div class="card__desc">The grid is mobile-first, powered by flexbox, and based on a 12-column system.</div>
-      </div>
-    </a>
-  </div>  
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url }}/foundations/utilities/margin-padding">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Margin and Padding</div>
-        <div class="card__desc">Utility classes for margin and padding.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url }}/foundations/utilities/opacity">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url }}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Opacity</div>
-        <div class="card__desc">Utility classes for opacity.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/responsive">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url}}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Responsive Utilities</div>
-        <div class="card__desc">Responsive utilities for adjusting applied styles based on screen width.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/typography">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url}}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Typography</div>
-        <div class="card__desc">Utility classes for typography elements.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ site.url | url}}/foundations/utilities/zindex">
-      <div class="card__inner">
-        <div class="card__media">
-          <img src="{{ site.url | url}}/assets/img/components/placeholder.svg" alt=""></div>
-        <div class="card__title">Z-index</div>
-        <div class="card__desc">Utility classes for z-index.</div>
-      </div>
-    </a>
-  </div>
+Utility classes are single-purpose CSS classes that apply one specific style — like hiding an element, adding spacing, or controlling layout direction. They're available through `@nysds/styles` and complement NYSDS components by handling the layout and spacing between them.
+
+All utility classes use the `nys-` prefix. Most support [responsive variants](/foundations/utilities/responsive/) that let you apply styles at specific breakpoints.
+
+</section>
+
+<section id="utility-categories">
+
+## Categories
+
+- **[Display](/foundations/utilities/display/)** — Control element visibility and display behavior
+- **[Flexbox](/foundations/utilities/flex/)** — Build flexible one-dimensional layouts with alignment and ordering
+- **[Float](/foundations/utilities/float/)** — Float elements left or right within a container
+- **[Grid](/foundations/utilities/grid/)** — Structure content with a responsive 12-column flexbox grid
+- **[Margin & Padding](/foundations/utilities/margin-padding/)** — Add consistent spacing inside and outside elements
+- **[Opacity](/foundations/utilities/opacity/)** — Control element transparency
+- **[Overflow](/foundations/utilities/overflow/)** — Manage content overflow and scrolling behavior
+- **[Position](/foundations/utilities/position/)** — Control element positioning (static, relative, absolute, fixed, sticky)
+- **[Responsive](/foundations/utilities/responsive/)** — Apply utility classes at specific screen-width breakpoints
+- **[Typography](/foundations/utilities/typography/)** — Apply font size, weight, and style presets
+- **[Z-index](/foundations/utilities/zindex/)** — Control stacking order of overlapping elements
+
 </section>
 
 {% endblock %}

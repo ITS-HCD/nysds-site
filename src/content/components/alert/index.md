@@ -6,7 +6,7 @@ image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-8784&t=0cK7llM1tFRVIgBx-4
 navOrder: 2
 ---
 
@@ -105,13 +105,13 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 
 {% block usagedont %}
 
-- Do not remove the left icon, it is required for accessibility.
-- Don’t use alerts to highlight actions that should be clear in the UI itself.
-- Do not use error messages to communicate form field validation issues; use field error states instead.
-- Don't include more than two link actions in an alert.
-- Avoid overusing alerts for low-priority info — this can desensitize users.
-- Don't use alerts as toasts. Place them at the top of the page content.
-- Don't add any shadows to alerts.
+- Remove the left icon, it is required for accessibility.
+- Use alerts to highlight actions that should be clear in the UI itself.
+- Use error messages to communicate form field validation issues; use field error states instead.
+- Include more than two link actions in an alert.
+- Overuse alerts for low-priority info — this can desensitize users.
+- Use alerts as toasts. Place them at the top of the page content.
+- Add any shadows to alerts.
 </ul>
 {% endblock %}
 
@@ -255,50 +255,62 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>dismissible</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>duration</code></td>
       <td>integer</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <td><code>heading</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>icon</code></td>
       <td>String (<code>&lt;nys-icon&gt; name</code>)</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>primaryAction</code></td>
       <td>URL</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>primaryLabel</code></td>
       <td>String</td>
+      <td><code>"Learn more"</code></td>
     </tr>
     <tr>
       <td><code>secondaryAction</code></td>
       <td>URL</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>secondaryLabel</code></td>
       <td>String</td>
+      <td><code>"Dismiss"</code></td>
     </tr>
     <tr>
       <td><code>text</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>type</code></td>
       <td><code>"base"</code> , <code>"info"</code> , <code>"success"</code> , <code>"warning"</code> , <code>"danger"</code> , <code>"emergency"</code></td>
+      <td><code>"base"</code></td>
     </tr>
   </table>
 </nys-table>
@@ -348,6 +360,16 @@ alert.addEventListener("nys-close", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>", "<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

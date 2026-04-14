@@ -125,10 +125,14 @@ Set the `inverted` when the tooltip is on a dark background.
 {% block usage %}
 
 ### When to use this component
-  - Use this component to wrap interactive or visual elements like `nys-icon`, `nys-button`, or the listed form-related NYSDS components to provide additional information or context.
+  - Use to provide supplemental hints on form fields, such as explaining what "FEIN" means on a business registration form or clarifying an eligibility requirement.
+  - Use on icon buttons that might need additional context, such as a help icon next to a complex field or an info icon explaining a status indicator.
+  - Use on NYSDS form components (`<nys-textinput>`, `<nys-select>`, `<nys-checkbox>`, etc.) where the tooltip automatically renders as a hint icon next to the label.
+
 ### When to consider something else
-  - When the information is critical for understanding or completing a task. Use inline text instead.
-  - When the information is long or includes links or actions. Tooltips should stay simple and passive.
+  - When the information is critical for completing a task (e.g., required format for a Social Security Number), use inline description text instead. Tooltips are easy to miss.
+  - When the content is long or includes links, actions, or structured content. Tooltips should stay brief and passive.
+  - When users on mobile devices are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.
 {% endblock %}
 
 {% block usagedo %}
@@ -149,11 +153,14 @@ Set the `inverted` when the tooltip is on a dark background.
 
 {% block accessibility %}
 
-The `<nys-tooltip`> component includes the following accessibility-focused features:
+The `<nys-tooltip>` component includes the following accessibility-focused features:
 
-  - Keyboard and mouse support: tooltip appears when users hover with mouse or focus using a keyboard
-  - Tooltip uses `role="tooltip"` for assistive technologies and sets `aria-hidden` based on internal state based on when tooltip is hidden or showing.
-  - Positioning logic: If a position is not manually set, the tooltip will automatically appear in the direction with the most available space.
+  - Tooltip appears on both mouse hover and keyboard focus, ensuring access for all input methods.
+  - Uses `role="tooltip"` and toggles `aria-hidden` based on visibility state, so screen readers announce tooltip content when it appears.
+  - For `<nys-button>` triggers, the tooltip text is passed as `ariaDescription`, so screen readers announce both the button label and the tooltip hint.
+  - For `<nys-icon>` triggers, the tooltip text is passed as `ariaLabel`, making otherwise decorative icons accessible.
+  - Pressing `Escape` dismisses the tooltip without moving focus, following the WAI-ARIA tooltip pattern.
+  - Auto-positioning prevents the tooltip from being clipped by viewport edges, keeping content readable for users who zoom in.
 {% endblock %}
 
 {% block properties %}
@@ -163,26 +170,32 @@ The `<nys-tooltip`> component includes the following accessibility-focused featu
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>text</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>for</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>inverted</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>position</code></td>
       <td><code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, <code>"right"</code></td>
+      <td>auto</td>
     </tr>
   </table>
 </nys-table>
@@ -191,6 +204,10 @@ The `<nys-tooltip`> component includes the following accessibility-focused featu
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

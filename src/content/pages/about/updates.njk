@@ -1,0 +1,122 @@
+---
+permalink: /about/updates/
+title: "Updates"
+navTitle: "Updates"
+navOrder: 4
+section: About
+description: "Stay current with the NYS Design System — releases, new components, and articles."
+---
+
+{% set latestRelease = null %}
+{% set latestArticle = null %}
+{% for post in collections.updates %}
+  {% if not latestRelease and post.data.tags and "release" in post.data.tags %}
+    {% set latestRelease = post %}
+  {% endif %}
+  {% if not latestArticle and post.data.tags and "article" in post.data.tags %}
+    {% set latestArticle = post %}
+  {% endif %}
+{% endfor %}
+
+{% block content %}
+
+<h1>Updates</h1>
+
+<p>Stay current with the NYS Design System. Find the latest releases, component updates, and articles about building accessible digital services for New York State.</p>
+
+<nys-alert type="info" heading="Subscribe to Updates">Email notifications for new releases and articles are coming soon.</nys-alert>
+
+<style>
+.post-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.card-content {
+  align-self: center;
+}
+.card-start {
+  flex-shrink: 0;
+  width: 120px;
+}
+</style>
+
+{% if latestRelease %}
+<section id="latest-release">
+
+<h2>Latest Release</h2>
+
+<ul class="post-list">
+  <li class="post-list__item">
+    <div class="card-start">
+      {% if latestRelease.data.updatethumbnail %}
+        <div class="release-logo">
+          <img src="{{latestRelease.data.updatethumbnail}}" width="120px" alt="">
+        </div>
+      {% else %}
+        <div class="release-logo">
+          <img src="/assets/img/mono-star.png" width="120px" alt="">
+        </div>
+      {% endif %}
+    </div>
+    <div class="card-content">
+      <h3 class="post-list__title">
+        <a href="{{ latestRelease.url }}" class="post-list__link">{{ latestRelease.data.title }}</a>
+      </h3>
+      <div class="post-list__description">
+        {{ latestRelease.data.description }}
+      </div>
+      <div class="post-list__meta">
+        <div class="post-list__author">
+          by {{ latestRelease.data.author }}
+        </div>
+        <time class="post-list__date" datetime="{{ latestRelease.data.date | dateISO }}">{{ latestRelease.data.date | dateFull }}</time>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+{% endif %}
+
+{% if latestArticle %}
+<section id="latest-article">
+
+<h2>Latest Article</h2>
+
+<ul class="post-list">
+  <li class="post-list__item">
+    <div class="card-start">
+      {% if latestArticle.data.updatethumbnail %}
+        <div class="release-logo">
+          <img src="{{latestArticle.data.updatethumbnail}}" width="120px" alt="">
+        </div>
+      {% else %}
+        <div class="release-logo">
+          <img src="/assets/img/mono-star.png" width="120px" alt="">
+        </div>
+      {% endif %}
+    </div>
+    <div class="card-content">
+      <h3 class="post-list__title">
+        <a href="{{ latestArticle.url }}" class="post-list__link">{{ latestArticle.data.title }}</a>
+      </h3>
+      <div class="post-list__description">
+        {{ latestArticle.data.description }}
+      </div>
+      <div class="post-list__meta">
+        <div class="post-list__author">
+          by {{ latestArticle.data.author }}
+        </div>
+        <time class="post-list__date" datetime="{{ latestArticle.data.date | dateISO }}">{{ latestArticle.data.date | dateFull }}</time>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+{% endif %}
+
+<p><a href="/about/updates/all/">View all updates →</a></p>
+
+{% endblock %}

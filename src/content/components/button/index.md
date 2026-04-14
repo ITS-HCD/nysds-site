@@ -6,7 +6,7 @@ image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-65486&t=ehyQYJeb6ohvHYV0-4
 navOrder: 6
 ---
 
@@ -40,16 +40,16 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
 {% block usagedo %}
 
-  - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
+  - Always set the `type` attribute (`submit`, `button`, or `reset`). The default is `button`.
   - Use sentence case for button labels, only capitalizing the first word.
-  - For buttons that open a dropdown, place a `chevron_down` icon on the right.
+  - Place a `chevron_down` icon on the right for buttons that open a dropdown.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
-  - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
+  - Use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
+  - Use icons in buttons without a text label. Very few icons are universally understood.
+  - Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
 {% endblock %}
 
 {% block accessibility %}
@@ -148,6 +148,21 @@ View the full list of [available icons](/components/icon/#usage).
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Slots
+The `<nys-button>` component provides named slots for custom icon content when the prop-based approach is not sufficient:
+
+- **`prefix-icon`** -- Custom icon before the label. Not shown for the `text` variant.
+- **`suffix-icon`** -- Custom icon after the label. Not shown for the `text` variant.
+- **`circle-icon`** -- Custom icon for circle mode. Overrides the `icon` prop.
+
+{% set code %}<nys-button label="Log out">
+  <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+</nys-button>{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+
 ### Circle
 Use the `circle` prop to create a compact, circular button. Ideal for icon-only actions.
 - When `circle` is set, provide the icon using the `icon` prop.
@@ -216,82 +231,102 @@ Set the `inverted` when the button is on a dark background.
       <tr>
           <th>Property</th>
           <th>Type</th>
+          <th>Default</th>
       </tr>
       <tr>
           <td><code>id</code></td>
           <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>name</code></td>
-          <td>String</td>          
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>label</code></td>
-          <td>String</td>          
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>type</code></td>
-          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>         
+          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>
+          <td><code>"button"</code></td>
       </tr>
       <tr>
           <td><code>value</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaLabel</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaDescription</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>disabled</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>fullWidth</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>href</code></td>
-          <td>String (URL)</td>          
+          <td>String (URL)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>inverted</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>onClick</code></td>
-          <td>JS function</td>         
+          <td>JS function</td>
+          <td><code>null</code></td>
       </tr>
       <tr>
           <td><code>prefixIcon</code></td>
-          <td>String (<code><nys-icon name></code>)</td>          
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>size</code></td>
-          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>       
+          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
+          <td><code>"md"</code></td>
       </tr>
       <tr>
           <td><code>suffixIcon</code></td>
-          <td>String (<code><nys-icon name></code>)</td>         
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>target</code></td>
-          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>         
+          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>
+          <td><code>"_self"</code></td>
       </tr>
       <tr>
           <td><code>variant</code></td>
           <td><code>"filled"</code> , <code>"outline"</code> , <code>"ghost"</code> , <code>"text"</code></td>
+          <td><code>"filled"</code></td>
       </tr>
       <tr>
           <td><code>form</code></td>
           <td>String , <code>null</code></td>
+          <td><code>null</code></td>
       </tr>
   </table>
 </nys-table>
 
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 
@@ -331,6 +366,16 @@ button.addEventListener("nys-click", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

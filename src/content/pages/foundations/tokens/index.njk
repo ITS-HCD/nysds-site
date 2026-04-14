@@ -1,7 +1,7 @@
 ---
 permalink: /foundations/tokens/
 title: "Design Tokens"
-description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
+description: "How the NYS Design System uses layered design tokens — primitive, semantic, and theme — to deliver consistent, themeable styles across every component and application."
 navOrder: 40
 heading_links: false
 ---
@@ -10,186 +10,162 @@ heading_links: false
 
 <h1>Design Tokens</h1>
 
-<nys-select id="theme-selector" label="Choose an agency theme" width="md">
-  <nys-option value="default" selected>Default (NYS)</nys-option>
-  <nys-option value="admin">Admin</nys-option>
-  <nys-option value="business">Business</nys-option>
-  <nys-option value="environment">Environment</nys-option>
-  <nys-option value="health">Health</nys-option>
-  <nys-option value="local">Local</nys-option>
-  <nys-option value="safety">Safety</nys-option>
-  <nys-option value="transportation">Transportation</nys-option>
-</nys-select>
+<p>Design tokens are the fundamental design decisions of the NYS Design System — colors, spacing, typography, radii, shadows — stored as named values. Instead of hardcoding <code>#154973</code> for a button background, a component references <code>--nys-color-theme</code>. When the agency theme changes or the design system updates its palette, every component that uses that token updates automatically.</p>
 
-{% for type, tokens in collections.tokens %}
-  <h2 id="{{ type }}"> {{ type | capitalize }} </h2>
-  <div class="token-list">
-    {% for token in tokens %}
-      <div class="token-list__item nys-grid-row nys-grid-gap">
-        <div class="token-list__example nys-tablet:nys-grid-col-3">
-          {% if token.type == "color" %}
-            <div class="{% if "transparent" in token.name %}token-list__swatch--checkerboard{% endif %}">
-              <div class="token-list__swatch {% if ('black' not in token.name) and ('white' in token.name or token.rawvalue in ['#ffffff'] )%} token-list__swatch--white-border{% endif %}" style="background-color: var({{ token.name }});">
-                {% if token.recommendedtype %}
-                  <div class="token-list__text">
-                  {% for textColor, details in token.recommendedtype %}
-                    <span 
-                      class="token-list__text--value" 
-                      style="color: var({{ details.variableName }});" 
-                      data-color="var({{ details.variableName }})"
-                    >
-                      {{ details.contrastRatio }}
-                    </span>
-                  {% endfor %}
-                  </div>
-                {% endif %}
-              </div>
-            </div>
-          {% elif token.type == "font-size" %}
-            <div class="token-list__type" style="font-size: var({{ token.name }});">Aa</div>
-          {% elif token.type == "font-family" %}
-            <div class="token-list__family" style="font-family: var({{ token.name }}); font-size: var(--nys-font-size-9xl)">Aa</div>
-          {% elif token.type == "space" %}
-            <div class="token-list__space" style="width: var({{ token.name }});"></div>
-          {% elif token.type == "size" %}
-            <div class="token-list__size" style="width: var({{ token.name }});"></div>
-          {% elif token.type == "radius" %}
-            <div class="token-list__radius" style="border-radius: var({{ token.name }});"></div>
-          {% elif token.type == "shadow" %}
-            <div class="token-list__shadow" style="box-shadow: var({{ token.name }});"></div>
-          {% endif %}
-          <pre data-no-copy><code class="token-list__raw {{token.name}}">{{ token.rawvalue }}</code></pre>
-        </div>
-        <div class="token-list__details nys-tablet:nys-grid-col-5">
-          <h3 class="token-list__name">{{ token.displayname }}</h3>
-          <p class="token-list__desc">{{ token.description }}</p>
-        </div>      
-        <div class="token-list__info nys-tablet:nys-grid-col-4">
-            <div class="nys-grid-row nys-display-flex nys-flex-align-center">
-              <div class="nys-grid-col-10">
-                <pre data-no-copy><code class="token-list__var">{{ token.name }}</code></pre>
-              </div>
-              <div class="nys-grid-col-2">
-                <div class="copy-button-wrapper" style="position: relative;">
-                  <nys-button
-                    class="copy-btn"
-                    id="copy-{{ loop.index }}"
-                    variant="ghost"
-                    size="sm"
-                    prefixIcon="content_copy">
-                  </nys-button>
-                  <div class="copy-tooltip tokens">Copy</div>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    {% endfor %}
+<p>Tokens are the mechanism that connects design decisions to working code. They are what make it possible to restyle an entire application by switching a single <code>data-theme</code> attribute.</p>
+
+<h2 id="token-architecture">Token Architecture</h2>
+
+<p>NYSDS tokens are organized in three layers. Each layer serves a different purpose, and understanding them will help you choose the right token for your CSS.</p>
+
+<h3>Primitive tokens</h3>
+
+<p>Raw values with no opinion about how they should be used. These are the building blocks — full color palettes, a type scale, spacing increments.</p>
+
+{% set code %}--nys-color-neutral-900: #1b1b1b;
+--nys-color-state-blue-700: #154973;
+--nys-font-size-md: 1rem;
+--nys-space-200: 1rem;{% endset %}
+{% set accordionLabel = "CSS Variables" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+<p><strong>Do not use primitive tokens directly in your stylesheets.</strong> Primitive tokens are the raw material that semantic and theme tokens are built from. If you reference <code>--nys-color-state-blue-700</code> in your CSS, that value will not change when an agency theme is applied. Use semantic or theme tokens instead.</p>
+
+<h3>Semantic (applied) tokens</h3>
+
+<p>Purpose-driven tokens that describe <em>what</em> a value is used for, not <em>what</em> the value is. These are the tokens you should use in your CSS.</p>
+
+{% set code %}--nys-color-text: #1b1b1b;          /* Primary text color */
+--nys-color-link: #004dd1;          /* Default link color */
+--nys-color-success: #1e752e;       /* Success state indicator */
+--nys-color-surface: #ffffff;       /* Default page background */
+--nys-color-focus: #004dd1;         /* Focus ring color */{% endset %}
+{% set accordionLabel = "CSS Variables" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+<p>Semantic tokens point to primitive tokens under the hood. <code>--nys-color-text</code> resolves to <code>--nys-color-neutral-900</code> which resolves to <code>#1b1b1b</code>. But because your code references the semantic name, the system can change the underlying value without breaking your styles.</p>
+
+<p>NYSDS semantic tokens cover colors for text, links, surfaces, status states (success, info, warning, danger, emergency), ink, focus, and base UI elements. Each category includes intensity variants — <code>default</code>, <code>weak</code>, <code>strong</code> — so you can express visual hierarchy without picking arbitrary colors.</p>
+
+<h3>Theme tokens</h3>
+
+<p>A special set of semantic tokens that change based on the active <a href="/foundations/themes/">agency theme</a>. When you apply <code>data-theme="environment"</code> to your page, every <code>--nys-color-theme-*</code> token remaps to the Environment color palette.</p>
+
+{% set code %}/* Default theme (NY.gov) */
+--nys-color-theme: #154973;         /* State Blue 700 */
+
+/* With data-theme="environment" */
+--nys-color-theme: #233f2b;         /* Environment Green 700 */{% endset %}
+{% set accordionLabel = "CSS Variables" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+<p>Theme tokens use a seven-step intensity scale — <code>faint</code>, <code>weaker</code>, <code>weak</code>, <code>mid</code>, <code>default</code> (no suffix), <code>strong</code>, <code>stronger</code> — giving every component the range it needs for hover states, backgrounds, text, and borders. See <a href="/foundations/themes/">Agency Themes</a> for the full list of available themes and how to apply them.</p>
+
+<h2 id="which-tokens-to-use">Which Tokens to Use</h2>
+
+<p>Use <strong>semantic tokens</strong> for anything that has a defined purpose in the system:</p>
+
+{% set code %}/* Correct — adapts to themes and future system updates */
+.card-header {
+  color: var(--nys-color-text);
+  background-color: var(--nys-color-theme-faint);
+  border-bottom: var(--nys-border-width-sm) solid var(--nys-color-base);
+  padding: var(--nys-space-200) var(--nys-space-300);
+}{% endset %}
+{% set accordionLabel = "CSS — Recommended" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+{% set code %}/* Wrong — bypasses the token system, ignores themes */
+.card-header {
+  color: #1b1b1b;
+  background-color: #f7fafd;
+  border-bottom: 1px solid #62666a;
+  padding: 1rem 1.5rem;
+}{% endset %}
+{% set accordionLabel = "CSS — Avoid" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+<p>Use <strong>theme tokens</strong> (<code>--nys-color-theme-*</code>) when a color should change with the agency theme — branded headings, accent backgrounds, active states. Use non-theme semantic tokens (<code>--nys-color-text</code>, <code>--nys-color-success</code>, <code>--nys-color-link</code>) for colors that should stay consistent regardless of theme — body text, status indicators, focus rings.</p>
+
+<p>Use <strong>spacing, size, and radius tokens</strong> to keep your layouts aligned with the system's scale:</p>
+
+{% set code %}.benefits-form-section {
+  margin-bottom: var(--nys-space-600);
+  border-radius: var(--nys-radius-md);
+  padding: var(--nys-space-400);
+}{% endset %}
+{% set accordionLabel = "CSS — Spacing & Radius" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+<h2 id="reverse-and-dark-surfaces">Reverse and Dark Surfaces</h2>
+
+<p>NYSDS provides reverse-variant tokens for content on dark backgrounds — footers, dark hero sections, inverted cards. These are semantic tokens, not a separate "dark mode":</p>
+
+{% set code %}.agency-footer {
+  background-color: var(--nys-color-surface-reverse);  /* Dark background */
+  color: var(--nys-color-text-reverse);                 /* White text */
+}
+
+.agency-footer a {
+  color: var(--nys-color-link-reverse);                 /* Light link color */
+}{% endset %}
+{% set accordionLabel = "CSS — Reverse Tokens" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+<p>Reverse tokens are designed for sections within a light-mode page that need dark backgrounds. They are not a system-wide dark mode toggle. The token names make the intent clear: <code>-reverse</code> means "use this on a dark surface."</p>
+
+<h2 id="tokens-in-components">How Components Use Tokens</h2>
+
+<p>Every NYSDS component references semantic and theme tokens internally. A button uses <code>--nys-color-theme</code> for its background. An alert uses <code>--nys-color-danger</code> for error states. A text input uses <code>--nys-color-text</code> for its value.</p>
+
+<p>Components also expose <strong>CSS custom properties</strong> that let you override specific values without breaking the token chain. These component-level custom properties are documented on each <a href="/components/">component page</a>.</p>
+
+<p>For details on how to install the stylesheets that deliver these tokens to your application, see <a href="/get-started/developers/">Get Started as a Developer</a>. For a deeper look at the CSS framework that bundles tokens with resets, typography, and utilities, see <a href="/foundations/styles/">Styles Framework</a>.</p>
+
+<hr>
+
+<h2 id="token-reference">Token Reference</h2>
+
+<p>Ready to browse all tokens? The interactive token reference lets you see every token in the system with live previews.</p>
+
+<a class="card card--horizontal" href="/tokens/">
+  <div class="card__inner">
+    <div class="card__content">
+      <div class="card__title">Color Tokens</div>
+      <div class="card__desc">Theme, intent, neutral, and transparency colors. Switch between agency themes to see how values change.</div>
+    </div>
   </div>
-{% endfor %}
+</a>
+<a class="card card--horizontal" href="/tokens/typography/">
+  <div class="card__inner">
+    <div class="card__content">
+      <div class="card__title">Typography Tokens</div>
+      <div class="card__desc">Font size and font family tokens that define the typographic scale.</div>
+    </div>
+  </div>
+</a>
+<a class="card card--horizontal" href="/tokens/other/">
+  <div class="card__inner">
+    <div class="card__content">
+      <div class="card__title">Spacing & Layout Tokens</div>
+      <div class="card__desc">Spacing, sizing, border radius, and elevation tokens for consistent layouts.</div>
+    </div>
+  </div>
+</a>
 
-
-{% endblock %}
-
-{% block styles %}
-{% endblock %}
-
-{% block scripts %}
-<script>
-document.querySelectorAll("[id^='copy-']").forEach(button => {
-  button.addEventListener("click", function() {
-    const tokenName = this.closest(".token-list__info").querySelector(".token-list__var").textContent.trim();
-    const copyValue = `var(${tokenName})`; // Wrap token in var()
-
-    const wrapper = this.closest(".copy-button-wrapper");
-    const tooltip = wrapper.querySelector(".copy-tooltip");
-
-    // Copy token name to clipboard
-    navigator.clipboard.writeText(copyValue).then(() => {
-      // Set label to "Copied!"
-      this.setAttribute("prefixIcon", "check");
-
-      // Temporarily change tooltip text to "Copied!"
-      tooltip.innerText = "Copied!";
-      tooltip.classList.add("copied");
-      
-      // Restore icon-only button after 1.5 seconds
-      setTimeout(() => {
-        this.setAttribute("prefixIcon", "content_copy"); // Restores icon
-        tooltip.innerText = "Copy";
-        tooltip.classList.remove("copied");
-      }, 1500);
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".token-list__text--value").forEach(span => {
-    // Show tooltip on hover
-    span.addEventListener("mouseenter", function () {
-      this.setAttribute("data-tooltip", this.getAttribute("data-color"));
-    });
-
-    // Remove tooltip when leaving
-    span.addEventListener("mouseleave", function () {
-      this.removeAttribute("data-tooltip");
-    });
-
-    // Copy to clipboard on click
-    span.addEventListener("click", function () {
-      const colorVar = this.getAttribute("data-color");
-
-      navigator.clipboard.writeText(colorVar).then(() => {
-        this.setAttribute("data-tooltip", "Copied!");
-        setTimeout(() => {
-          this.setAttribute("data-tooltip", colorVar);
-        }, 1500);
-      }).catch(err => {
-        console.error("Failed to copy:", err);
-      });
-    });
-  });
-
-  const themeSelector = document.getElementById("theme-selector");
-
-  themeSelector.addEventListener("nys-change", function (event) {
-    const selectedTheme = event.target.value;
-    const htmlRoot = document.documentElement;
-
-    if (selectedTheme != "default") {
-      htmlRoot.setAttribute('data-theme', selectedTheme);
-    } else {
-      htmlRoot.removeAttribute('data-theme');
-    }
-
-    // Theme vars that need to update in the token list when the theme changes.
-    // We iterate through these in a loop below
-    let themeColors = [
-      '--nys-color-theme',
-      '--nys-color-theme-strong',
-      '--nys-color-theme-stronger',
-      '--nys-color-theme-mid',
-      '--nys-color-theme-weak',
-      '--nys-color-theme-weaker',
-      '--nys-color-theme-faint'
-    ];
-
-    // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
-    // DRAGONS: Remove this delay and it will read the default theme value only.
-    setTimeout(() => {    
-      // Loop through the themeColors array to update the theme color text to change when you switch to a new agency theme group.
-      for (let colorVar of themeColors) {
-        let rawcolorval = document.querySelectorAll(`code.${colorVar}`);
-        let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
-        
-        rawcolorval.forEach(el => {
-          el.innerText = computedColor;
-        });
-      }
-    }, 500);
-  });
-});
-
-</script>
 
 {% endblock %}

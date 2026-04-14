@@ -168,77 +168,97 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>errorMessage</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
-      <td><code>maxLength</code></td>
+      <td><code>maxlength</code></td>
       <td>integer</td>
+      <td><code>null</code></td>
     </tr>
     <tr>
       <td><code>optional</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>placeholder</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>readonly</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>resize</code></td>
       <td><code>"vertical"</code>, <code>"none"</code></td>
+      <td><code>"vertical"</code></td>
     </tr>
     <tr>
       <td><code>rows</code></td>
       <td>integer</td>
+      <td><code>4</code></td>
     </tr>
     <tr>
       <td><code>showError</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>value</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>width</code></td>
       <td><code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"full"</code></td>
+      <td><code>"full"</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String, <code>null</code></td>
+      <td><code>null</code></td>
     </tr>
   </table>
 </nys-table>
+
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 
