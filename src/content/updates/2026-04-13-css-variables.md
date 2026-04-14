@@ -3,9 +3,11 @@ permalink: /updates/css-variables/
 title: How CSS Variables Power the NYS Design System
 author: Emily Gorelik
 description: How the NYS Design System uses CSS variables and design tokens to enable consistent, scalable, and customizable UI development across New York State.
+ogimage: /assets/i/2026/css-vars-article/css-vars-header.png
+thumbnailimage: /assets/i/2026/css-vars-article/css-variables-thumbnail.png
+updatethumbnail: /assets/i/2026/css-vars-article/css-variables-thumbnail.png
 image: /assets/i/2026/css-vars-article/css-vars-header.png
 image_alt: Illustration of CSS variables
-updatethumbnail: /assets/i/2026/css-vars-article/css-variables-thumbnail.png
 date: 2026-04-13
 tags: article, css variables, design tokens, theme switching, design system
 ---
