@@ -19,7 +19,7 @@ Let’s unpack how that works.
 
 A CSS variable works like a variable in any programming language; it holds a value that is then used throughout the stylesheet. Instead of writing the same hex code or pixel value repeatedly, you assign it once and reference it with a name.
 
-```
+```css
 :root {
   --nys-component-background-color: #154973;
 }
@@ -27,7 +27,7 @@ A CSS variable works like a variable in any programming language; it holds a val
 
 Then, anywhere you need that color:
 
-```
+```css
 .nys-component {
   background-color: var(--nys-component-background-color);
 }
@@ -43,7 +43,7 @@ For example, our color system is organized in **ramps**. Each color family has a
 
 <img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800"/>
 
-```
+```css
 --nys-color-red-10
 --nys-color-red-50
 --nys-color-red-100
@@ -59,14 +59,16 @@ These primitives are stable. Their names never change, even if the underlying va
 On top of primitives are semantic tokens, which describe intent rather than raw value. This distinction matters: semantic tokens make it clear what to use where. Rather than leaving developers to guess whether to reach for `--nys-color-red-600` or `-nys-color-red-500`, semantic tokens communicate purpose directly in their name. Primitive tokens should only ever be referenced when mapping them to a semantic token. When codebases skip this layer and reference primitives directly, changes become painful: a single rebrand or accessibility adjustment means hunting down every raw value instead of updating one token.
 
 Instead of referencing `--nys-color-red-600`, we use:
-```
+
+```css
 --nys-color-danger: var(--nys-color-red-600);
 ```
 
 The semantic term "danger," communicates the intent conveyed by the color it maps to. It tells anyone reading the code that "this color indicates an error or destructive action."
 
 If an agency decides their "danger" color shouldn’t be as intense, they can override just one variable:
-```
+
+```css
 --nys-color-danger: var(--nys-color-red-400);
 ```
 
@@ -85,7 +87,7 @@ CSS doesn’t support private variables, so this convention helps our team organ
 
 Internally, private tokens often map to their semantic or primitive version. Let’s look at the background color of `nys-button` and follow its token map:
 
-```
+```css
 --_nys-button-background-color: var(--nys-button-background-color, var(--nys-color-theme));
 ```
 
