@@ -57,11 +57,11 @@ Every NYSDS form component supports a `form` property that associates the compon
 
 Use this when a form component needs to live outside the `<form>` tag but still submit with that form:
 
-{% set code %}<form id="benefits-application">
+{% set code %}
+<form id="benefits-application">
   <nys-textinput name="full_name" label="Full Name" required></nys-textinput>
   <nys-button type="submit" label="Submit Application"></nys-button>
 </form>
-
 <!-- This select lives outside the form but submits with it -->
 <nys-select name="county" label="County of Residence" form="benefits-application" required>
   <option value="albany">Albany</option>
@@ -272,12 +272,11 @@ You can also control errors programmatically by setting both `errorMessage` and 
 
 Or in JavaScript:
 
-{% set code %}const emailInput = document.querySelector('nys-textinput[name="email"]');
-
+{% set code %}
+const emailInput = document.querySelector('nys-textinput[name="email"]');
 // Show a custom error
 emailInput.errorMessage = "This email is already registered";
 emailInput.showError = true;
-
 // Clear the error
 emailInput.showError = false;{% endset %}
 {% set codeLanguage = "javascript" %}
@@ -290,8 +289,8 @@ emailInput.showError = false;{% endset %}
 
 Each NYSDS form component exposes a `checkValidity()` method that returns `true` if the component's current value satisfies its constraints:
 
-{% set code %}const countySelect = document.querySelector('nys-select[name="county"]');
-
+{% set code %}
+const countySelect = document.querySelector('nys-select[name="county"]');
 if (!countySelect.checkValidity()) {
   console.log("County is required");
 }{% endset %}
@@ -360,12 +359,12 @@ Every `nys-input` and `nys-change` event includes a `detail` object with at mini
 
 Events bubble up through the DOM and cross shadow DOM boundaries (via `composed: true`). You can listen on individual components or on a parent element:
 
-{% set code %}// Listen on a single component
+{% set code %}
+// Listen on a single component
 const nameInput = document.querySelector('nys-textinput[name="applicant_name"]');
 nameInput.addEventListener('nys-input', (event) => {
   console.log('Name changed to:', event.detail.value);
 });
-
 // Listen on the form for all change events (event delegation)
 const form = document.getElementById('benefits-application');
 form.addEventListener('nys-change', (event) => {
@@ -427,13 +426,13 @@ Use `<nys-button type="submit">` inside or associated with a `<form>`. When clic
 
 Listen for the standard `submit` event on the `<form>`. If all fields pass validation, the event fires. If any field is invalid, submission is blocked and the first invalid field receives focus.
 
-{% set code %}document.getElementById('license-renewal').addEventListener('submit', (event) => {
+{% set code %}
+document.getElementById('license-renewal')
+  .addEventListener('submit', (event) => {
   event.preventDefault();
-
   const formData = new FormData(event.target);
   console.log('License:', formData.get('license_number'));
   console.log('Office:', formData.get('office'));
-
   // Submit to your API
   fetch('/api/renewal', {
     method: 'POST',
@@ -490,13 +489,12 @@ Use `<nys-button type="reset">` or call `form.reset()` in JavaScript. Every NYSD
 
 Access current values at any time through the `FormData` API:
 
-{% set code %}const form = document.getElementById('benefits-application');
+{% set code %}
+const form = document.getElementById('benefits-application');
 const data = new FormData(form);
-
 // Read individual values
 const name = data.get('full_name');
 const county = data.get('county');
-
 // Iterate all entries
 for (const [key, value] of data.entries()) {
   console.log(`${key}: ${value}`);
@@ -541,9 +539,9 @@ NYSDS does not currently provide a dedicated error summary component, but you ca
 
 Here is the JavaScript to generate and display error summaries:
 
-{% set code %}function showErrorSummary(form) {
+{% set code %}
+function showErrorSummary(form) {
   const errors = [];
-
   // Collect all invalid form elements
   for (const element of form.elements) {
     if (typeof element.checkValidity === 'function' && !element.checkValidity()) {
@@ -551,14 +549,11 @@ Here is the JavaScript to generate and display error summaries:
       errors.push({ label, element });
     }
   }
-
   if (errors.length === 0) return;
-
   // Build the error summary
   const summary = document.getElementById('error-summary');
   summary.setAttribute('type', 'error');
   summary.setAttribute('heading', `${errors.length} field(s) need attention`);
-
   const list = errors
     .map((err) => `<li><a href="#${err.element.id}">${err.label}</a></li>`)
     .join('');
@@ -574,7 +569,6 @@ Here is the JavaScript to generate and display error summaries:
 Here is the HTML for a form with an error summary and the event handler:
 
 {% set code %}<nys-alert id="error-summary" type="error" heading="" style="display:none;"></nys-alert>
-
 <form id="enrollment-form" novalidate>
   <nys-textinput name="full_name" label="Full Name" id="field-name" required></nys-textinput>
   <nys-textinput name="email" label="Email" id="field-email" type="email" required></nys-textinput>
@@ -592,11 +586,10 @@ Here is the HTML for a form with an error summary and the event handler:
 
 {% set code = "" %}{% set accordionLabel = "" %}{% set codeLanguage = "" %}
 
-{% set code %}const form = document.getElementById('enrollment-form');
-
+{% set code %}
+const form = document.getElementById('enrollment-form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-
   // Manually trigger validation on all elements
   let firstInvalid = null;
   for (const element of form.elements) {
@@ -606,14 +599,12 @@ form.addEventListener('submit', (event) => {
       if (!firstInvalid) firstInvalid = element;
     }
   }
-
   if (firstInvalid) {
     showErrorSummary(form);
     document.getElementById('error-summary').style.display = 'block';
     document.getElementById('error-summary').focus();
     return;
   }
-
   // All valid — proceed with submission
   const formData = new FormData(form);
   // ... submit to API
@@ -642,11 +633,10 @@ form.addEventListener('submit', (event) => {
 
 The following example shows a realistic multi-field form using several NYSDS form components with validation and submission handling.
 
-{% set code %}<nys-alert id="form-errors" type="error" heading="" style="display:none;"></nys-alert>
-
+{% set code %}
+<nys-alert id="form-errors" type="error" heading="" style="display:none;"></nys-alert>
 <form id="dmv-appointment" novalidate>
   <h2>Schedule a DMV Appointment</h2>
-
   <div class="nys-grid-row nys-grid-gap">
     <div class="nys-tablet:nys-grid-col-6">
       <nys-textinput name="first_name" id="first-name" label="First Name" required></nys-textinput>
@@ -655,11 +645,8 @@ The following example shows a realistic multi-field form using several NYSDS for
       <nys-textinput name="last_name" id="last-name" label="Last Name" required></nys-textinput>
     </div>
   </div>
-
   <nys-textinput name="email" id="email" label="Email Address" type="email" required description="We'll send your confirmation to this address."></nys-textinput>
-
   <nys-textinput name="phone" id="phone" label="Phone Number" type="tel" optional description="In case we need to reach you about your appointment."></nys-textinput>
-
   <nys-select name="office" id="office" label="DMV Office" required>
     <optgroup label="Capital Region">
       <option value="albany">Albany</option>
@@ -675,7 +662,6 @@ The following example shows a realistic multi-field form using several NYSDS for
       <option value="nyc-queens">Jamaica, Queens</option>
     </optgroup>
   </nys-select>
-
   <nys-radiogroup name="service_type" id="service-type" label="Type of Service" required>
     <nys-radiobutton name="service_type" value="renewal" label="License Renewal"></nys-radiobutton>
     <nys-radiobutton name="service_type" value="new-license" label="New License"></nys-radiobutton>
@@ -683,11 +669,8 @@ The following example shows a realistic multi-field form using several NYSDS for
     <nys-radiobutton name="service_type" value="registration" label="Vehicle Registration"></nys-radiobutton>
     <nys-radiobutton name="service_type" other label="Other (please specify)"></nys-radiobutton>
   </nys-radiogroup>
-
   <nys-textarea name="notes" id="notes" label="Additional Notes" optional description="Any special accommodations or information we should know about."></nys-textarea>
-
   <nys-checkbox name="confirm" id="confirm" label="I confirm the information above is accurate" required errorMessage="You must confirm before submitting"></nys-checkbox>
-
   <div class="nys-grid-row nys-grid-gap" style="margin-top: var(--nys-space-400);">
     <div class="nys-grid-col-auto">
       <nys-button type="submit" label="Schedule Appointment"></nys-button>
@@ -706,12 +689,11 @@ The following example shows a realistic multi-field form using several NYSDS for
 
 Here is the JavaScript to handle validation and submission:
 
-{% set code %}const form = document.getElementById('dmv-appointment');
+{% set code %}
+const form = document.getElementById('dmv-appointment');
 const errorAlert = document.getElementById('form-errors');
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-
   // Validate all fields
   const invalidFields = [];
   for (const el of form.elements) {
@@ -721,7 +703,6 @@ form.addEventListener('submit', (event) => {
       invalidFields.push({ label, id: el.id });
     }
   }
-
   if (invalidFields.length > 0) {
     // Show error summary
     errorAlert.setAttribute('heading', `${invalidFields.length} field(s) need your attention`);
@@ -732,11 +713,9 @@ form.addEventListener('submit', (event) => {
     errorAlert.scrollIntoView({ behavior: 'smooth' });
     return;
   }
-
   // All valid -- submit the form
   errorAlert.style.display = 'none';
   const formData = new FormData(form);
-
   fetch('/api/appointments', {
     method: 'POST',
     body: formData,
@@ -747,7 +726,6 @@ form.addEventListener('submit', (event) => {
     }
   });
 });
-
 // Clear error summary on reset
 form.addEventListener('reset', () => {
   errorAlert.style.display = 'none';
