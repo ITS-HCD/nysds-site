@@ -1,5 +1,7 @@
-/* TODO: add indeterminate state */
-/* TODO: add disabled state */
+/**
+ * NYSA11y Checkbox
+ * <input type="checkbox">
+ */
 @layer nysa11y {
     body:has(.nysa11y) {
         input[type="checkbox"].nysa11y.checkbox[data-component="checkbox"][data-html="native"] {

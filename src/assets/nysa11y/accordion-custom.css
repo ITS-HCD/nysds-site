@@ -1,5 +1,7 @@
-/* TODO: replace base64 chevron with inlined SVG converted to polyline */
-/* TODO: replace spurious custom properties with DS tokens */
+/**
+ * NYSA11y Accordion (custom)
+ * Depends on `accordion-custom.js`
+ */
 @layer nysa11y {
     body:has(.nysa11y) {
         div.nysa11y.accordion[data-component="accordion"][data-html="custom"] {
@@ -52,7 +54,7 @@
                 transition: opacity var(--transition-time) ease-in-out;
                 visibility: hidden;
             }
-            &.open {
+            &.is-open {
                 button[data-part="summary"] {
                     border-end-end-radius: 0;
                     border-end-start-radius: 0;

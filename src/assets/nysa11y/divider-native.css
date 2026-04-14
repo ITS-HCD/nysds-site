@@ -1,3 +1,7 @@
+/**
+ * NYSA11y Divider
+ * <hr>
+ */
 @layer nysa11y {
     body:has(.nysa11y) {
         hr.nysa11y.divider[data-component="divider"][data-html="native"] {
