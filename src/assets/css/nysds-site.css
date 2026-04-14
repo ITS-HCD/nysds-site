@@ -1597,7 +1597,7 @@ kbd {
     padding: 1px 0.25rem;
     font-family: var(--nys-font-family-sans);
     font-size: 0.875rem;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     margin-inline: 1px 2px;
     box-shadow: 0 1px var(--nys-color-neutral-200);
 }
