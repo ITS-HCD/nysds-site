@@ -8,6 +8,7 @@ image_header: /assets/img/components/accordion-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783
 navOrder: 1
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -41,6 +42,14 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+{% block accessibility %}
+<!--
+The `nys-accordionitem` component includes the following accessibility-focused features:
+
+  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
+  - Headers are large enough to interact with easily (minimum 44x44px).-->
+
+{% endblock %}
 
 {% block usage %}
 
@@ -74,14 +83,6 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 
 {% endblock %}
 
-{% block accessibility %}
-
-The `nys-accordionitem` component includes the following accessibility-focused features:
-
-  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
-   -Headers are large enough to interact with easily (minimum 44x44px).
-
-{% endblock %}
 
 {% block options %}
 

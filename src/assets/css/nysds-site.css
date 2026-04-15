@@ -1616,6 +1616,43 @@ kbd {
     white-space: nowrap !important;
 }
 
+.p-adorned {
+    /*
+        Ex. usage:
+        <p class="p-adorned bs" style="--bgap:0">
+    */
+    --bgap: 0.5rem; /* default block gap */
+    --igap: 1rem; /* default inline gap */
+    align-items: start;
+    display: flex;
+    justify-content: start;
+    &.bs,
+    &.is {
+        :first-child {
+            flex-shrink: 1;
+        }
+    }
+    &.be,
+    &.ie {
+        :last-child {
+            flex-shrink: 1;
+        }
+    }
+    &.bs,
+    &.be {
+        flex-direction: column;
+        row-gap: var(--bgap);
+    }
+    &.is,
+    &.ie {
+        flex-direction: row;
+        column-gap: var(--igap);
+    }
+    mark {
+        background-color: transparent;
+    }
+}
+
 /**
  * ---------------------------+
  * Component A11y child pages +
