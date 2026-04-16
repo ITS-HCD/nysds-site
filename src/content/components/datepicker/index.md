@@ -156,6 +156,21 @@ Use this option to guide users toward a relevant time period without preselectin
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Restrict Selectable Dates
+Use `minDate` and `maxDate` to limit which dates a user can select. Dates outside the range are visually disabled in the calendar and rejected if typed directly into the input. Both accept ISO format (`YYYY-MM-DD`).
+
+{% set preview %}
+<nys-datepicker
+  label="Select a date"
+  description="Only dates within April 4/5/2026 - 4/15/2026 are selectable"
+  minDate="2025-04-05"
+  maxDate="2025-04-15"
+></nys-datepicker>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Hiding Buttons
 Hide the Today and Clear buttons to require users to intentionally choose a date. \
 Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
