@@ -178,14 +178,18 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 
 ### Link
 Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
-Set the `target` prop of the `<nys-button>` to specify where to open the linked document. The available targets are:
+Set the `target` prop of the `<nys-button>` to specify where to open the linked document. 
+
+The available targets are:
 - `_self`: Opens the link in the same frame as it was clicked (default).
 - `_blank`: Opens the link in a new tab or window.
 - `_parent`: Opens the link in the parent frame.
 - `_top`: Opens the link in the full body of the window.
 - `framename`: Opens the link in a named iframe.
 
-{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
+**Note**: It is recommended to set the variant on `<nys-button>` to `variant="text"`
+
+{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov" variant="text"></nys-button>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
