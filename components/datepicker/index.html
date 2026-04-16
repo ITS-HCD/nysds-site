@@ -43,7 +43,7 @@
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
     
-    <!-- Latest Build: 2026-04-09T14:56:04.996+00:00 -->
+    <!-- Latest Build: 2026-04-16T18:51:36.395+00:00 -->
   </head>
   
   <body class="single-page page-datepicker section-components">
@@ -625,6 +625,37 @@ Supported widths are:</p>
     </div>
   </div>
 </div>
+<h3 id="restrict-selectable-dates">Restrict Selectable Dates</h3>
+<p>Use <code>minDate</code> and <code>maxDate</code> to limit which dates a user can select. Dates outside the range are visually disabled in the calendar and rejected if typed directly into the input. Both accept ISO format (<code>YYYY-MM-DD</code>).</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2025-04-05" maxDate="2025-04-15"></nys-datepicker>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select a date<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Only dates within April 4/5/2026 - 4/15/2026 are selectable<span class="token punctuation">"</span></span>
+  <span class="token attr-name">minDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2025-04-05<span class="token punctuation">"</span></span>
+  <span class="token attr-name">maxDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2025-04-15<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3 id="hiding-buttons">Hiding Buttons</h3>
 <p>Hide the Today and Clear buttons to require users to intentionally choose a date. <br>
 Use properties <code>hideTodayButton</code> and <code>hideClearButton</code> to toggle off the buttons</p>
@@ -880,7 +911,7 @@ datepicker<span class="token punctuation">.</span><span class="token function">a
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/datepicker/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 9, 2026</p>
+    <p>Last updated: April 16, 2026</p>
   </div>
 
   </div>
