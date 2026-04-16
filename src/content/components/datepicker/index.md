@@ -163,8 +163,8 @@ Use `minDate` and `maxDate` to limit which dates a user can select. Dates outsid
 <nys-datepicker
   label="Select a date"
   description="Only dates within April 4/5/2026 - 4/15/2026 are selectable"
-  minDate="2025-04-05"
-  maxDate="2025-04-15"
+  minDate="2026-04-05"
+  maxDate="2026-04-15"
 ></nys-datepicker>
 {% endset %}
 {% set backgroundSolid = true %}
