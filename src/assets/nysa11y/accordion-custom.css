@@ -1,6 +1,7 @@
 /**
  * NYSA11y Accordion (custom)
- * Depends on `accordion-custom.js`
+ * Path: /assets/nysa11y/accordion-custom.css
+ * Depends on /assets/nysa11y/accordion-custom.js
  */
 @layer nysa11y {
     body:has(.nysa11y) {
