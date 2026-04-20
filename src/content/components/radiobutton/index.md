@@ -54,9 +54,9 @@ The `<nys-radiobutton>` provides users with the ability to choose from a group o
 
 {% block usagedont %}
 
-  - Don't use radio buttons for yes/no questions (consider using `<nys-toggle>` or `<nys-checkbox>`).
-  - Don’t overload users with too many options; simplify or use a dropdown instead.
-  - Don’t leave all options unselected if a helpful default can guide users.
+  - Use radio buttons for yes/no questions (consider using `<nys-toggle>` or `<nys-checkbox>`).
+  - Overload users with too many options; simplify or use a dropdown instead.
+  - Leave all options unselected if a helpful default can guide users.
 
 {% endblock %}
 
@@ -74,6 +74,32 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
 {% endblock %}
 
 {% block options %}
+
+### Partial 
+
+{% set preview %}<nys-radiogroup label="Choose your preferred work operating system.">
+  <nys-radiobutton
+    name="op-system"
+    label="Windows 11"
+    description="HP Elitebook"
+    value="windows"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="op-system"
+    label="Sequoia"
+    description="Macbook Air"
+    value="mac"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="op-system"
+    label="Linux"
+    value="windows"
+    disabled
+  ></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
@@ -192,6 +218,32 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 </nys-radiogroup>{% endset %}
 {% set backgroundSolid = true %}
   {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
+
+### Inverted
+Set the `inverted` on `<nys-radiogroup>` when the component is on a dark background.
+  {% set preview %}<nys-radiogroup label="What is your primary work location?" inverted>
+  <label slot="description">
+    This is the location you use for your in office days.
+    <a href="https://www.ny.gov/" target="__blank">(slot)</a></label
+  >
+  <nys-radiobutton
+    name="office"
+    label="Albany"
+    description="Upstate New York (prop)"
+    value="albany"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="office"
+    label="Manhattan"
+    value="manhattan"
+  >
+    <label slot="description"> New York City <a href="https://www.ny.gov/" target="__blank">(slot)</a></label>
+  </nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% set inverted = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
