@@ -7,139 +7,6 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
-      <title>NYS Design System Release 1.16.1</title>
-      <link>https://designsystem.ny.gov/updates/1.16.1-release/</link>
-      <description><![CDATA[<h2><code>&lt;nys-datepicker&gt;</code> minDate and maxDate support</h2>
-<p>We've added the ability to restrict selectable dates in the datepicker component. See it live in action below. Special thanks to <a href="https://github.com/sqrrl">@Sqrrl</a> for maintaining the base wc-datepicker component our nys-datepicker is based off of.
-<a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
-<div class="code-preview-container">
-  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
-</div>
-  </div>
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
-  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select a date<span class="token punctuation">"</span></span>
-  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Only dates within April 4/5/2026 - 4/15/2026 are selectable<span class="token punctuation">"</span></span>
-  <span class="token attr-name">minDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-05<span class="token punctuation">"</span></span>
-  <span class="token attr-name">maxDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-15<span class="token punctuation">"</span></span>
-<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
-      </div>
-    </div>
-  </div>
-</div>
-<h2>Figma updates</h2>
-<p>Today we’re launching the preview version of the breadcrumb and tab components in our design library.</p>
-<ul>
-<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=fsl0niqeU3xSuzaQ-4">Breadcrumbs</a> now available in Figma</li>
-<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-9968&amp;t=fsl0niqeU3xSuzaQ-4">Tabs</a> now available in Figma</li>
-</ul>
-<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are creating important components!</p>
-<h2>Bug fixes</h2>
-<ul>
-<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
-<li>Update Storybook</li>
-<li>Fix JSX errors</li>
-<li>Simplify border-radius setup</li>
-<li>Fix empty submission bug in <code>&lt;nys-combobox&gt;</code></li>
-<li>Add CSS inverted border to button</li>
-<li>Fix <code>&lt;nys-video&gt;</code> package contents</li>
-</ul>
-<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> fix broken things.</p>
-<h2>🚨 Breaking changes</h2>
-<ul>
-<li>none</li>
-</ul>
-<h2>⚠️ Known issues</h2>
-<ul>
-<li>none</li>
-</ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<h3>That’s it!</h3>
-<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.1">See the full developer release notes for v.1.16.1 →</a></p>
-]]></description>
-      <content><![CDATA[<h2><code>&lt;nys-datepicker&gt;</code> minDate and maxDate support</h2>
-<p>We've added the ability to restrict selectable dates in the datepicker component. See it live in action below. Special thanks to <a href="https://github.com/sqrrl">@Sqrrl</a> for maintaining the base wc-datepicker component our nys-datepicker is based off of.
-<a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
-<div class="code-preview-container">
-  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
-</div>
-  </div>
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
-  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select a date<span class="token punctuation">"</span></span>
-  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Only dates within April 4/5/2026 - 4/15/2026 are selectable<span class="token punctuation">"</span></span>
-  <span class="token attr-name">minDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-05<span class="token punctuation">"</span></span>
-  <span class="token attr-name">maxDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-15<span class="token punctuation">"</span></span>
-<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
-      </div>
-    </div>
-  </div>
-</div>
-<h2>Figma updates</h2>
-<p>Today we’re launching the preview version of the breadcrumb and tab components in our design library.</p>
-<ul>
-<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=fsl0niqeU3xSuzaQ-4">Breadcrumbs</a> now available in Figma</li>
-<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-9968&amp;t=fsl0niqeU3xSuzaQ-4">Tabs</a> now available in Figma</li>
-</ul>
-<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are creating important components!</p>
-<h2>Bug fixes</h2>
-<ul>
-<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
-<li>Update Storybook</li>
-<li>Fix JSX errors</li>
-<li>Simplify border-radius setup</li>
-<li>Fix empty submission bug in <code>&lt;nys-combobox&gt;</code></li>
-<li>Add CSS inverted border to button</li>
-<li>Fix <code>&lt;nys-video&gt;</code> package contents</li>
-</ul>
-<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> fix broken things.</p>
-<h2>🚨 Breaking changes</h2>
-<ul>
-<li>none</li>
-</ul>
-<h2>⚠️ Known issues</h2>
-<ul>
-<li>none</li>
-</ul>
-<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
-<h3>That’s it!</h3>
-<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.1">See the full developer release notes for v.1.16.1 →</a></p>
-]]></content>
-      <pubDate>Thu, 16 Apr 2026 24:00:00 GMT</pubDate>
-      <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.16.1-release/</guid>
-    </item>
-    <item>
       <title>How CSS Variables Power the NYS Design System</title>
       <link>https://designsystem.ny.gov/updates/css-variables/</link>
       <description><![CDATA[<p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
@@ -314,9 +181,142 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 </ul>
 <p>This shared language is what turns our collection of components into a true design system.</p>
 ]]></content>
-      <pubDate>Mon, 13 Apr 2026 24:00:00 GMT</pubDate>
+      <pubDate>Tue, 21 Apr 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
       <guid>https://designsystem.ny.gov/updates/css-variables/</guid>
+    </item>
+    <item>
+      <title>NYS Design System Release 1.16.1</title>
+      <link>https://designsystem.ny.gov/updates/1.16.1-release/</link>
+      <description><![CDATA[<h2><code>&lt;nys-datepicker&gt;</code> minDate and maxDate support</h2>
+<p>We've added the ability to restrict selectable dates in the datepicker component. See it live in action below. Special thanks to <a href="https://github.com/sqrrl">@Sqrrl</a> for maintaining the base wc-datepicker component our nys-datepicker is based off of.
+<a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select a date<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Only dates within April 4/5/2026 - 4/15/2026 are selectable<span class="token punctuation">"</span></span>
+  <span class="token attr-name">minDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-05<span class="token punctuation">"</span></span>
+  <span class="token attr-name">maxDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-15<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Figma updates</h2>
+<p>Today we’re launching the preview version of the breadcrumb and tab components in our design library.</p>
+<ul>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=fsl0niqeU3xSuzaQ-4">Breadcrumbs</a> now available in Figma</li>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-9968&amp;t=fsl0niqeU3xSuzaQ-4">Tabs</a> now available in Figma</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are creating important components!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
+<li>Update Storybook</li>
+<li>Fix JSX errors</li>
+<li>Simplify border-radius setup</li>
+<li>Fix empty submission bug in <code>&lt;nys-combobox&gt;</code></li>
+<li>Add CSS inverted border to button</li>
+<li>Fix <code>&lt;nys-video&gt;</code> package contents</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> fix broken things.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.1">See the full developer release notes for v.1.16.1 →</a></p>
+]]></description>
+      <content><![CDATA[<h2><code>&lt;nys-datepicker&gt;</code> minDate and maxDate support</h2>
+<p>We've added the ability to restrict selectable dates in the datepicker component. See it live in action below. Special thanks to <a href="https://github.com/sqrrl">@Sqrrl</a> for maintaining the base wc-datepicker component our nys-datepicker is based off of.
+<a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select a date<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Only dates within April 4/5/2026 - 4/15/2026 are selectable<span class="token punctuation">"</span></span>
+  <span class="token attr-name">minDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-05<span class="token punctuation">"</span></span>
+  <span class="token attr-name">maxDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-15<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Figma updates</h2>
+<p>Today we’re launching the preview version of the breadcrumb and tab components in our design library.</p>
+<ul>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=fsl0niqeU3xSuzaQ-4">Breadcrumbs</a> now available in Figma</li>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-9968&amp;t=fsl0niqeU3xSuzaQ-4">Tabs</a> now available in Figma</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are creating important components!</p>
+<h2>Bug fixes</h2>
+<ul>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
+<li>Update Storybook</li>
+<li>Fix JSX errors</li>
+<li>Simplify border-radius setup</li>
+<li>Fix empty submission bug in <code>&lt;nys-combobox&gt;</code></li>
+<li>Add CSS inverted border to button</li>
+<li>Fix <code>&lt;nys-video&gt;</code> package contents</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> fix broken things.</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.1">See the full developer release notes for v.1.16.1 →</a></p>
+]]></content>
+      <pubDate>Thu, 16 Apr 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.16.1-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.16.0 “Algonquin”</title>
