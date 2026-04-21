@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How CSS Variables Power the NYS Design System - New York State Design System</title>
+
+<meta name="description" content="How the NYS Design System uses CSS variables and design tokens to enable consistent, scalable, and customizable UI development across New York State.">
+<link rel="canonical" href="https://designsystem.ny.gov/updates/css-variables/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="How CSS Variables Power the NYS Design System">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/updates/css-variables/">
+<meta property="og:description" content="How the NYS Design System uses CSS variables and design tokens to enable consistent, scalable, and customizable UI development across New York State.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/i/2026/css-vars-article/css-vars-header.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+    
+    <!-- Latest Build: 2026-04-21T19:42:44.906Z -->
+  </head>
+  
+  <body class="single-page page-css-variables section-updates">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Updates
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-updates.svg" alt="Updates section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+
+
+
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
+    
+      <section class="page-content">
+
+        <header class="page-header"><div class="page-header__media">
+            <img src="/assets/i/2026/css-vars-article/css-vars-header.png" alt="Illustration of CSS variables">
+          </div><h1 class="page-title" id="how-css-variables-power-the-nys-design-system">
+            How CSS Variables Power the NYS Design System
+          </h1><p class="page-subtitle">How the NYS Design System uses CSS variables and design tokens to enable consistent, scalable, and customizable UI development across New York State.</p><div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+              <span class="page-author__name">Emily Gorelik</span>
+            </div>
+            <time class="page-meta__date" datetime="2026-04-13T00:00:00.000Z">April 13, 2026</time>
+            <div class="page-meta__readtime">7 min read time</div>
+          </div>
+        </header>
+
+        <p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
+<p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <a href="https://www.npmjs.com/package/@nysds/tokens" target="_blank">@nysds/tokens</a> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
+<p>Let’s unpack how that works.</p>
+<h2 id="what-are-css-variables">What Are CSS Variables?</h2>
+<p>A CSS variable works like a variable in any programming language; it holds a value that is then used throughout the stylesheet. Instead of writing the same hex code or pixel value repeatedly, you assign it once and reference it with a name.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> #154973<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Then, anywhere you need that color:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">.nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-component-background-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Change the value once, and every element that uses it updates automatically. That’s the power of variables: <strong>one definition, infinite reuse</strong>. But CSS variables in our design system go beyond convenience: they establish a language for consistency and scalability.</p>
+<h3 id="primitive-tokens-the-foundation">Primitive Tokens — The Foundation</h3>
+<p>Primitive tokens are the building blocks of the design system. They are the raw values (hex codes, spacing units, font sizes, border radii) that everything else references.</p>
+<p>For example, our color system is organized in <strong>ramps</strong>. Each color family has a scale, from light to dark, where smaller values represent a soft tint, while larger values represent a deep, saturated tone. This predictable pattern lets designers and developers discuss color consistently, and in a structured way. The same logic applies to spacing, typography, and radius.</p>
+<img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800">
+<pre class="language-css"><code class="language-css">--nys-color-red-10
+--nys-color-red-50
+--nys-color-red-100
+--nys-color-red-200
+...
+--nys-color-red-900</code></pre>
+<p>These primitives are stable. Their names never change, even if the underlying values are updated over time. <code>--nys-color-red-100</code> might shift to meet new accessibility or brand needs, but the token itself will always exist as a constant in the system.</p>
+<h3 id="semantic-tokens-meaning-and-context">Semantic Tokens — Meaning and Context</h3>
+<p>On top of primitives are semantic tokens, which describe intent rather than raw value. This distinction matters: semantic tokens make it clear what to use where. Rather than leaving developers to guess whether to reach for <code>--nys-color-red-600</code> or <code>-nys-color-red-500</code>, semantic tokens communicate purpose directly in their name. Primitive tokens should only ever be referenced when mapping them to a semantic token. When codebases skip this layer and reference primitives directly, changes become painful: a single rebrand or accessibility adjustment means hunting down every raw value instead of updating one token.</p>
+<p>Instead of referencing <code>--nys-color-red-600</code>, we use:</p>
+<pre class="language-css"><code class="language-css"><span class="token property">--nys-color-danger</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-red-600<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>The semantic term &quot;danger,&quot; communicates the intent conveyed by the color it maps to. It tells anyone reading the code that &quot;this color indicates an error or destructive action.&quot;</p>
+<p>If an agency decides their &quot;danger&quot; color shouldn’t be as intense, they can override just one variable:</p>
+<pre class="language-css"><code class="language-css"><span class="token property">--nys-color-danger</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-red-400<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Every instance of &quot;danger&quot; across their application is automatically updated. They don’t need to hunt through dozens of components or CSS files.</p>
+<p>Semantic tokens abstract meaning from implementation, making the design system adaptable to different contexts (like accessibility needs or branding variations) without compromising structure.</p>
+<h2 id="public-vs-private-tokens">Public vs. Private Tokens</h2>
+<p>Not every variable is intended for direct use or override. To keep things predictable, we use an underscore convention to distinguish between internal and public-facing tokens:</p>
+<ul>
+<li><code>--_nys-button-background-color</code>: internal (used inside the component)</li>
+<li><code>--nys-button-background-color</code>: public (documented and safe to override)</li>
+</ul>
+<p>CSS doesn’t support private variables, so this convention helps our team organize and maintain the system. From a user perspective, you don’t need to worry about which is which—if a variable is safe to override, it will appear on the component’s documentation page under CSS Variables. Please note that most components will NOT have overridable variables, these public variables are rare and created intentionally to ensure a cohesive design system.</p>
+<p>Internally, private tokens often map to their semantic or primitive version. Let’s look at the background color of <code>nys-button</code> and follow its token map:</p>
+<pre class="language-css"><code class="language-css"><span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System">
+<p>This means:</p>
+<ul>
+<li>If a public override exists, use it.</li>
+<li>If not, fall back to the default color, in this scenario <code>--nys-color-theme</code>.</li>
+</ul>
+<p>That layering ensures reliability even when variables aren’t explicitly defined.</p>
+<h3 id="override-hierarchy-and-theming">Override Hierarchy and Theming</h3>
+<p>One of the most significant advantages of this token structure is theming.</p>
+<p>Agency groupings under the NYS umbrella often have distinct brand colors: Environmental uses green, Admin uses orange, Safety uses gray. Instead of rewriting styles, they simply override semantic tokens through the data-theme attribute. So while the default <code>--nys-color-theme</code> is set to <code>var(--nys-color-nys-blue-600)</code>, by setting <code>data-theme=&quot;admin&quot;</code> at the top most level of the project, <code>--nys-color-theme</code> will instead map to <code>var(--nys-color-admin-orange-700)</code>.</p>
+<img src="/assets/i/2026/css-vars-article/theme-override-diag.png" alt="Image of admin color ramp overriding the default NYS theme in the New York State Design System" width="800">
+<p>All components referencing <code>--nys-color-theme</code> automatically adapt to use the proper color ramp of the set theme.
+This design makes the New York State Design System scalable across diverse agencies while maintaining visual unity and predictable behavior.</p>
+<h3 id="when-and-why-overrides-inform-the-system">When (and Why) Overrides Inform the System</h3>
+<p>When multiple teams consistently override the same token in the same way, it suggests a gap in the system.</p>
+<p>For example, if several agencies keep overriding the <code>--nys-button-background-color</code> to the agency’s accent color, that’s valuable data. It tells us that an &quot;accent&quot; button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" target="_blank">submitting a component proposal</a>
+suggesting a new variant or enhancement.</p>
+<p>In other words, overrides help the system evolve organically, guided by real-world use rather than guesswork.</p>
+<h3 id="balancing-flexibility-and-control">Balancing Flexibility and Control</h3>
+<p>Design systems often struggle between two extremes:</p>
+<ul>
+<li>Too rigid: teams can’t adapt the components to their needs.</li>
+<li>Too loose: every team customizes everything, and consistency collapses.</li>
+</ul>
+<p>CSS variables offer a middle ground. They allow overrides for legitimate edge cases without introducing dozens of one-off variants.</p>
+<p>By creating public-facing CSS variables we are not encouraging teams to stray from the provided variants of our existing components, but, instead, we are providing a safe way for them to diverge in these edge-case scenarios where the existing options are not possible to implement.</p>
+<h3 id="naming-conventions-and-readability">Naming Conventions and Readability</h3>
+<p>One final principle: readability beats cleverness.</p>
+<p>Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button maps to  <code>--_nys-button-color</code> rather than to <code>--_nys-button-text-color</code>.</p>
+<p>This one-to-one mapping reduces cognitive load for engineers. No need to remember abbreviations or shorthand. You can look at the variable and instantly know which property it controls.</p>
+<p>Modifiers (<code>--hover</code>, <code>--active</code>, etc.) extend that clarity to states.
+Note: If you override <code>--nys-button-background-color</code>, remember to override the hover and active variants too. Otherwise, your hover state will revert to the default.</p>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>CSS variables are the key to making our web components scalable, flexible, and maintainable.
+Because the CSS variables used the shared vocabulary of the design tokens across the ecosystem, color, spacing, and typography mean the same thing in every product.</p>
+<p>They allow:</p>
+<ul>
+<li><strong>Designers</strong> to define intent once and apply it everywhere.</li>
+<li><strong>Developers</strong> to override safely within a structured system.</li>
+<li><strong>Agencies</strong> to customize branding without rewriting components.</li>
+<li><strong>The NYS Design System team</strong> to evolve the design language based on actual usage.</li>
+</ul>
+<p>This shared language is what turns our collection of components into a true design system.</p>
+
+
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">        
+        <ul class="taglist" data-pagefind-ignore="all">
+          
+          <li class="badge">article</li>
+          
+          <li class="badge"> css variables</li>
+          
+          <li class="badge"> design tokens</li>
+          
+          <li class="badge"> theme switching</li>
+          
+          <li class="badge"> design system</li>
+          
+        </ul>
+        </div>
+        </div>
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div>Up Next: <a href="/updates/1.16.1-release/" title="Read: NYS Design System Release 1.16.1"><b>NYS Design System Release 1.16.1</b></a></div>
+            <div>Previous : <a href="/updates/1.16.0-release/" title="Read: NYS Design System Release 1.16.0 “Algonquin”"><b>NYS Design System Release 1.16.0 “Algonquin”</b></a></div>
+          </div>
+        </div>
+
+        
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2026-04-13-css-variables.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: April 13, 2026</p>
+  </div>
+
+
+      </section>
+    </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+    </aside>
+  </div>
+</div>
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+  
+  </body>
+</html>
