@@ -8,7 +8,7 @@ thumbnailimage: /assets/i/2026/css-vars-article/css-variables-thumbnail.png
 updatethumbnail: /assets/i/2026/css-vars-article/css-variables-thumbnail.png
 image: /assets/i/2026/css-vars-article/css-vars-header.png
 image_alt: Illustration of CSS variables
-date: 2026-04-13
+date: 2026-04-21
 tags: article, css variables, design tokens, theme switching, design system
 ---
 Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.
