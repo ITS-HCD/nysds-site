@@ -310,6 +310,9 @@ Takes any valid regex value.
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-textinput` component with a specific `<form>` element, regardless of its location on the page. This ensures that the text input's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}

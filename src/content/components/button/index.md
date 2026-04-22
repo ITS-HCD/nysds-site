@@ -292,6 +292,8 @@ Set the `inverted` when the button is on a dark background.
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-button` component with a specific `<form>` element, and should be used for form submission.
 
 {% endblock %}
 

@@ -257,6 +257,9 @@ Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-datepicker` component with a specific `<form>` element, regardless of its location on the page. This ensures that the date picker's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}

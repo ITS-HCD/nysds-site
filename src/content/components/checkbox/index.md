@@ -325,6 +325,9 @@ You can set `inverted` on `nys-checkboxgroup` to apply it to all checkboxes, or 
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-checkbox`/`nys-checkboxgroup` component with a specific `<form>` element, regardless of its location on the page. This ensures that the checkbox or checkbox group's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}

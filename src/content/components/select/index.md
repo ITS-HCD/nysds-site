@@ -313,6 +313,8 @@ Set the `inverted` when the component is on a dark background.
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-select` component with a specific `<form>` element, regardless of its location on the page. This ensures that the select's state is included in the form submission, whether it is inside the `<form>` element or outside it.
 
 {% endblock %}
 
