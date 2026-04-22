@@ -6,7 +6,7 @@ image: /assets/img/components/toggle.svg
 image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-7945&t=EXsXvlMbCdRw10ir-4
 navOrder: 25
 ---
 
@@ -52,10 +52,9 @@ navOrder: 25
 
 {% block usagedont %}
 
-  - Don’t use toggles for complex or multi-state choices.
-  - Don’t overuse for minor settings that don’t affect the user experience.
-  - Don’t hide labels unless an accessible alternative is in place.
-
+  - Use toggles for complex or multi-state choices.
+  - Overuse for minor settings that don’t affect the user experience.
+  - Hide labels unless an accessible alternative is in place.
 {% endblock %}
 
 {% block accessibility %}
@@ -70,6 +69,29 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 
 {% block options %}
 
+### Checked
+  {% set preview %}<nys-toggle label="Dark Mode" name="theme" value="dark" checked></nys-toggle>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Help Text
+  {% set preview %}<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
+  <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
+</nys-toggle>
+<br/>
+<br/>
+<nys-toggle
+  label="Toggle Switch"
+  description="This description was passed in as a property"
+  name="toggle-switch"
+  value="access">
+</nys-toggle>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+
 ### Sizes
   {% set preview %}<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
@@ -77,7 +99,7 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
   <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
 {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Slotted Description
 Add help text to the toggle using the `label` and `description` props.
@@ -100,6 +122,20 @@ Descriptions can be provided either through the `description` prop or via the `s
 ### Disable Icon
   {% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
   {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
+### Inverted
+  Set the `inverted` when the component is on a dark background.
+  {% set preview %}<nys-toggle
+  label="Toggle Switch"
+  description="This description was passed in as a property"
+  name="toggle-switch"
+  value="access"
+  inverted>
+</nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set inverted = true %}
   {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
@@ -156,6 +192,10 @@ Descriptions can be provided either through the `description` prop or via the `s
   </table>
 </nys-table>
 
+
+### Form Prop
+  The form attribute associates the `nys-toggle` component with a specific `<form>` element, regardless of its location on the page. This ensures that the toggle's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
@@ -184,6 +224,16 @@ toggle.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

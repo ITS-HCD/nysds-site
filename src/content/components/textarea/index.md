@@ -6,7 +6,7 @@ image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.
 image_header: /assets/img/components/textarea-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4021-71000&t=EXsXvlMbCdRw10ir-4
 navOrder: 23
 ---
 
@@ -49,8 +49,8 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
 
 {% block usagedont %}
 
-  - Don't use the `<nys-textarea>` for short or single-line inputs (use `<nys-input>` instead).
-  - Don’t use for selecting predefined values (use dropdowns or other inputs).
+  - Use the `<nys-textarea>` for short or single-line inputs (use `<nys-input>` instead).
+  - Use for selecting predefined values (use dropdowns or other inputs).
 
 {% endblock %}
 
@@ -157,6 +157,16 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
   {% set preview %}<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>{% endset %}
   {% set code = preview %}
   {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
+### Inverted
+Set the `inverted` when the component is on a dark background.
+
+  {% set preview %}<nys-textarea label="Label" description="Prop: description" inverted></nys-textarea>
+  {% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% set inverted = true %}
   {% include "partials/code-preview.njk" %}
 
 {% endblock %}
@@ -270,6 +280,16 @@ textarea.addEventListener('nys-input', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

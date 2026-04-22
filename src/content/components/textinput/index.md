@@ -6,7 +6,7 @@ image: /assets/img/components/textinput.svg
 image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-3154&t=EXsXvlMbCdRw10ir-4
 navOrder: 24
 ---
 
@@ -46,9 +46,9 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 
 {% block usagedont %}
 
-  - Don’t use for long or detailed responses (use `<nys-textarea>` instead).
-  - Don’t overwhelm users with too many fields; group related inputs.
-  - Don’t use placeholders as labels.
+  - Use for long or detailed responses (use `<nys-textarea>` instead).
+  - Overwhelm users with too many fields; group related inputs.
+  - Use placeholders as labels.
 
 {% endblock %}
 
@@ -203,6 +203,20 @@ Takes any valid regex value.
   {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
+  ### Inverted
+    Set the `inverted` when the component is on a dark background.
+  {% set preview %}
+<nys-textinput
+  name="descriptionProp"
+  label="Label"
+  description="Slot: description"
+  inverted
+></nys-textinput>{% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% set inverted = true %}
+  {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -324,6 +338,16 @@ textinput.addEventListener('nys-input', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
