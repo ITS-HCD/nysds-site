@@ -1,3 +1,10 @@
+{#
+    If multiple code-previews are used on a page,
+    be sure to wrap in a block.
+    11ty accepts arbitrary blocks not defined elsewhere,
+    so invent block names as-needed at point of use.
+    See example: `src/content/components/accordion/a11y-build`
+#}
 <div class="code-preview-container">
 {% if preview %}
   <div class="code-preview__preview {% if inverted %}inverted{% endif %} {% if backgroundSolid %}solid{% endif %}" data-pagefind-ignore="all">

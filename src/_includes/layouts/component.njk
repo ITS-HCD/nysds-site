@@ -18,6 +18,34 @@
     </section>
     <br>
     <section>
+      <h2>Accessibility</h2>
+      {% if hasA11yPages %}
+      <p class="p-adorned is">
+        <mark>
+            <nys-badge label="New" variant="strong" prefixIcon></nys-badge>
+        </mark>
+        <span>
+            For comprehensive insight and guidance, please see
+            <a href="./accessibility-tests.html">Accessibility Checklists</a> and
+            <a href="./accessibility-build.html">Build Accessibly</a>.
+        </span>
+      </p>
+      {% endif %}
+      {%- block accessibility %}{% endblock -%}
+      {% if not hasA11yPages %}
+      <p class="p-adorned is nys-margin-t-150">
+          <mark>
+            <nys-badge label="Note" variant="strong" prefixIcon></nys-badge>
+          </mark>
+          <span class="nys-font-h6">
+            Additional accessibility test and build content is coming soon,
+            in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+          </span>
+      </p>
+      {% endif %}
+    </section>
+    <br>
+    <section>
       <h2>Options</h2>
       {%- block options %}{% endblock -%}
     </section>
@@ -40,11 +68,6 @@
         </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2>Accessibility</h2>
-      {%- block accessibility %}{% endblock -%}
-    </section>
     <br>
     <section>
       <h2>Properties</h2>
@@ -73,5 +96,3 @@
     </div>
   </div>
 </section>
-
-

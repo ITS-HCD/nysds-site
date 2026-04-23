@@ -1,0 +1,112 @@
+<article data-template="a11yBuild">
+    {%- block Introduction  %}
+    <section id="overview">
+        <h1>{{ title_h1 }}</h1>
+        <p>
+            Are you in the right place?
+            If you are constrained to a third-party component library, see the
+            <a href="./accessibility-tests.html">{{ parent }} Accessibility Checklist</a> and ensure that it passes.
+            Otherwise, follow the guidance here to choose the best option for your project.
+        </p>
+    </section>
+    {% endblock -%}
+
+    {%- block RecommendedSolution %}
+    <section class="recommended-solution">
+        <div class="card">
+            <mark>
+                <span class="sr-only">ideal solution</span>
+                <nys-badge label="Recommended" intent="success" prefixIcon></nys-badge>
+            </mark>
+            <h2>Use the NYSDS {{ parent }} Web Component</h2>
+            <p>
+                The NYSDS {{ parent }} is a web component you can drop into your project and use right away.
+                For most teams, this is the simplest way to achieve an accessible component.
+                This means teams don’t need to manually implement accessibility or test for it.
+            </p>
+            <mark class="subhead stronger">What's already handled for you:</mark>
+            <ul class="built-in color-theme--faint">
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Keyboard Navigation</mark>
+                        <p class="nys-font-body-sm">Tab, Enter, Space, and Arrows work as intended</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Screen reader support</mark>
+                        <p class="nys-font-body-sm">Tested with NVDA, JAWS, and VoiceOver</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Focus management</mark>
+                        <p class="nys-font-body-sm">Focus stays where users expect it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Voice control</mark>
+                        <p class="nys-font-body-sm">Supports Windows and macOS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Zoom magnification</mark>
+                        <p class="nys-font-body-sm">Works correctly at 200% browser zoom</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">WCAG 2.2 AA conformant</mark>
+                        <p class="nys-font-body-sm">Meets New York State standards</p>
+                    </div>
+                </li>
+            </ul>
+            <nys-button href="./" label="View NYSDS {{ parent }} Component" fullWidth></nys-button>
+        </div>
+    </section>
+    {% endblock -%}
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="alternative-solutions">
+        <h2>Alternatives</h2>
+        <p>
+            <mark class="subhead strong">For projects not ready to adopt the Design System</mark>
+            Whether you seek to remediate an existing component or build one from scratch,
+            these reference implementations will ensure an accessible outcome.
+            For more details, <a href="#about-this-pattern">read about this pattern</a>.
+        </p>
+        {%- block Alternatives %}
+        {% endblock -%}
+    </section>
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="about-this-pattern">
+        <h2>About this pattern</h2>
+        {%- block AboutThisPattern %}
+        {% endblock -%}
+    </section>
+
+    {% include "partials/a11y-contact-points.njk" %}
+</article>

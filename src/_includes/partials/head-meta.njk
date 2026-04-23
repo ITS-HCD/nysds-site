@@ -32,6 +32,12 @@
 <link href="{{ site.url | url}}/pagefind/pagefind-ui.css" rel="stylesheet">
 <link href="{{ site.url | url }}/assets/css/prism-theme.css" rel="stylesheet">
 <link href="{{ site.url | url }}/assets/css/nysds-site.css" rel="stylesheet">
+{# For nysa11y assets to ease study by remediators #}
+{% if extra_css %}
+    {% for file in extra_css %}
+    <link href="{{ site.url | url}}{{ file }}" rel="stylesheet">
+    {% endfor %}
+{% endif %}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
