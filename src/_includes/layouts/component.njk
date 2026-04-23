@@ -1,98 +1,117 @@
-
-    <section id="overview">
-      <h1>{{ title }}</h1>
-      {%- block longdescription %}{% endblock -%}
-      <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+<section id="overview">
+    <h1>{{ title }}</h1>
+    {%- block longdescription %}{% endblock -%}
+    <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="{{ 'Stable' if stable else 'Unstable' }}" prefixIcon="code"></nys-badge>
         <nys-badge
-          prefixIcon
-          prefixLabel="WCAG 2.2"
-          label="AA"
-          intent="success"
-        ></nys-badge>
+            prefixIcon
+            prefixLabel="WCAG 2.2"
+            label="AA"
+            intent="success"
+            >
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="{{ figma_link or "https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=51-1514" }}" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
-      {%- block example %}{% endblock -%}
-    </section>
-    <br>
-    <section>
-      <h2>Accessibility</h2>
-      {% if hasA11yPages %}
-      <p class="p-adorned is">
+    </div>
+</section>
+
+<section>
+    {%- block example %}{% endblock -%}
+</section><br>
+
+<section>
+    <h2>Accessibility</h2>
+    {% if hasA11yPages %}
+    <h3>{{ pattern | capitalize }} test status</h3>
+
+    <nys-table bordered>
+        <table aria-labelledby="{{ pattern | lower }}-test-status">
+            <caption>
+                <!-- caption visuals are not ideal if WC doesn't render -->
+            </caption>
+        <tr>
+            <th>Total tests</th>
+            <th>Passes</th>
+            <th>Fails</th>
+            <th>To do</th>
+        </tr>
+        <tr>
+            <td>{{ tests.total }}</td>
+            <td>{{ tests.pass }}</td>
+            <td>{{ tests.fail }}</td>
+            <td>{{ tests.toDo }}</td>
+        </tr>
+    </table>
+    </nys-table>
+    <p>
+        For comprehensive insight and guidance, please see
+        <a href="./accessibility-tests.html">Accessibility Checklists</a> and
+        <a href="./accessibility-build.html">Build Accessibly</a>.
+    </p>
+    {% endif %}
+    {%- block accessibility %}{% endblock -%}
+    {% if not hasA11yPages %}
+    <p class="p-adorned is nys-margin-t-150">
         <mark>
-            <nys-badge label="New" variant="strong" prefixIcon></nys-badge>
-        </mark>
-        <span>
-            For comprehensive insight and guidance, please see
-            <a href="./accessibility-tests.html">Accessibility Checklists</a> and
-            <a href="./accessibility-build.html">Build Accessibly</a>.
-        </span>
-      </p>
-      {% endif %}
-      {%- block accessibility %}{% endblock -%}
-      {% if not hasA11yPages %}
-      <p class="p-adorned is nys-margin-t-150">
-          <mark>
             <nys-badge label="Note" variant="strong" prefixIcon></nys-badge>
-          </mark>
-          <span class="nys-font-h6">
+        </mark>
+        <span class="nys-font-h6">
             Additional accessibility test and build content is coming soon,
             in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-          </span>
-      </p>
-      {% endif %}
-    </section>
-    <br>
-    <section>
-      <h2>Options</h2>
-      {%- block options %}{% endblock -%}
-    </section>
-    <br>
-    <section>
-      <h2>Usage</h2>
-      {%- block usage %}{% endblock -%}
-    </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        </span>
+    </p>
+    {% endif %}
+</section><br>
+
+<section>
+    <h2>Options</h2>
+    {%- block options %}{% endblock -%}
+</section><br>
+
+<section>
+    <h2>Usage</h2>
+    {%- block usage %}{% endblock -%}
+</section>
+
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-          {%- block usagedo %}{% endblock -%}
+            <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            {%- block usagedo %}{% endblock -%}
         </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-          {%- block usagedont %}{% endblock -%}
+            <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            {%- block usagedont %}{% endblock -%}
         </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2>Properties</h2>
-      {%- block properties %}{% endblock -%}
-    </section>
-    <br>
-    <section>
-      <h2>Style Overrides</h2>
-      {%- block cssvariables %}{% endblock -%}
-    </section>
-    <br>
-    <section>
-      <h2>Events</h2>
-      {%- block events %}{% endblock -%}
-    </section>
-    <section class="nys-section">
-  <h2>Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+</div><br>
+
+<section>
+    <h2>Properties</h2>
+    {%- block properties %}{% endblock -%}
+</section><br>
+
+<section>
+    <h2>Style Overrides</h2>
+    {%- block cssvariables %}{% endblock -%}
+</section <br>
+
+<section>
+    <h2>Events</h2>
+    {%- block events %}{% endblock -%}
+</section>
+
+<section class="nys-section">
+    <h2>Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
