@@ -6,11 +6,25 @@
     body:has(.nysa11y) {
         details.nysa11y.accordion[data-component="accordion"][data-html="native"] {
             --nysa11y-chevron-rotation-time: 0.3s;
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            font-family:
+                "Proxima Nova",
+                -apple-system,
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica",
+                "Arial",
+                sans-serif,
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol";
             & summary {
-                background-color: var(
-                    --nys-accordion-background-color--header,
-                    var(--nys-color-neutral-50, #ededed)
-                );
+                background-color: var(--nys-color-neutral-50, #ededed);
                 border-radius: 0.25rem;
                 color: var(--nys-color-ink, #1b1b1b);
                 display: flex;
