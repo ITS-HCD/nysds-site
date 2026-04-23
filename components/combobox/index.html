@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-combobox section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox">
@@ -545,10 +568,37 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Don’t auto-select options while typing.
+<ul>
+<li>Only commit a value when the user explicitly selects it (Enter, click, or tap). Auto-selection causes accidental choices and is hard to notice, especially for keyboard and screen-reader users.</li>
+</ul>
+</li>
+<li>Always show meaningful feedback states.
+<ul>
+<li>
+<p>Provide clear loading, empty, and “no results” states so users understand what’s happening and what to do next, rather than assuming the component is broken.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
+
+
 <h3 id="preselected-value">Preselected Value</h3>
 <p>Use the <code>selected</code> attribute on an <code>&lt;option&gt;</code> to set a default value when the combobox loads.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox">
@@ -785,7 +835,7 @@
 </div>
 <h3 id="disabled">Disabled</h3>
 <p>Set the <code>disabled</code> attribute to prevent user interaction with the combobox.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" disabled="">
@@ -870,7 +920,7 @@
 </div>
 <h3 id="required">Required</h3>
 <p>Set <code>required</code> to make the combobox mandatory. The field will be flagged during form validation if left empty.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" required="">
@@ -965,7 +1015,7 @@
 </div>
 <h3 id="optional">Optional</h3>
 <p>Adding the <code>optional</code> prop will add an optional flag to the label.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" optional="">
@@ -1060,7 +1110,7 @@
 </div>
 <h3 id="error-message">Error Message</h3>
 <p>Set an <code>errorMessage</code> to display a validation message. The error will surface automatically on form submission or when the field loses focus without a valid selection.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" required="" errorMessage="County is required">
@@ -1279,7 +1329,7 @@
 </div>
 <h3 id="inverted">Inverted</h3>
 <p>Use the <code>inverted</code> prop when placing the combobox on a dark background.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview inverted solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" inverted="">
@@ -1413,22 +1463,6 @@
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<ul>
-<li>Don’t auto-select options while typing.
-<ul>
-<li>Only commit a value when the user explicitly selects it (Enter, click, or tap). Auto-selection causes accidental choices and is hard to notice, especially for keyboard and screen-reader users.</li>
-</ul>
-</li>
-<li>Always show meaningful feedback states.
-<ul>
-<li>Provide clear loading, empty, and “no results” states so users understand what’s happening and what to do next, rather than assuming the component is broken.</li>
-</ul>
-</li>
-</ul>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -1574,7 +1608,7 @@ combobox<span class="token punctuation">.</span><span class="token function">add
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/combobox/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1673,6 +1707,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

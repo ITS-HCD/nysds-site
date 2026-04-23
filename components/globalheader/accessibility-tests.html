@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Accessibility Checklist - New York State Design System</title>
+
+<meta name="description" content="How to test the accessibility of a global header.">
+<link rel="canonical" href="https://designsystem.ny.gov/components/globalheader/accessibility-tests.html">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Accessibility Checklist">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/components/globalheader/accessibility-tests.html">
+<meta property="og:description" content="How to test the accessibility of a global header.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+  </head>
+  
+  <body class="single-page page-a11y-tests section-components">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="/assets/img/components/global-header-header.svg" alt="Accessibility Checklist">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
+    <span class="accordion__label">Components</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-components" aria-labelledby="accordion-trigger-components" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
+        Accordion
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/alert/">
+        Alert
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/avatar/">
+        Avatar
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/backtotop/">
+        Back To Top
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/badge/">
+        Badge
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/button/">
+        Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/checkbox/">
+        Checkbox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/combobox/">
+        Combobox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/datepicker/">
+        Datepicker
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/divider/">
+        Divider
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/dropdownmenu/">
+        Dropdown Menu
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/">
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/globalfooter/">
+        Global Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/globalheader/">
+        Global Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/">
+        Icon
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/modal/">
+        Modal
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/pagination/">
+        Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/radiobutton/">
+        Radio Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/select/">
+        Select
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/">
+        Skip Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/stepper/">
+        Stepper
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/table/">
+        Table
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/textarea/">
+        Text Area
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/textinput/">
+        Text Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/toggle/">
+        Toggle
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/tooltip/">
+        Tooltip
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/">
+        UNav Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-header/">
+        UNav Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/video/">
+        Video Player
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">  
+    
+<article data-template="a11yTests">
+    <section id="overview">
+        <h1 id="accessibility-checklist">Accessibility Checklist</h1>
+        Any Global Header used in a New York State website should pass these tests and checklists.
+        Also follow this acceptance criteria when building and testing a
+        <a href="./accessibility-build.html">custom Global Header</a>
+        and when evaluating third-party open source or licensed component libraries.
+    </section>
+    
+    
+    <section class="test-status">
+        <nys-table bordered="">
+            <table>
+                <caption>
+                    NYSDS Global header accessibility status
+                </caption>
+                <tr>
+                    <th>Total tests</th>
+                    <th>Passes</th>
+                    <th>Fails</th>
+                    <th>To do</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </nys-table>
+    </section>
+    
+    
+    <section class="anyone-can-do-it">
+        <h2 id="accessibility-tests">Accessibility tests</h2>
+        <div class="card--bisect">
+            <div class="card--bisect__start color-theme--faint">
+                <mark class="subhead nys-font-h6">Anyone can run these accessibility tests, no special tools needed.</mark>
+                <p>
+                    Each passing test removes a real barrier for New Yorkers who navigate by keyboard,
+                    screen reader, or voice control.
+                </p>
+            </div>
+            <div class="card--bisect__end nys-grid-row nys-grid-gap-5">
+                <div class="nys-tablet:nys-grid-col-4">
+                    <i class="color-theme--faint">
+                        <nys-icon color="var(--nys-color-theme)" name="search" size="18"></nys-icon>
+                    </i>
+                    <mark class="subhead stronger">Find what you need</mark>
+                    <p>
+                        All of these tests can be run from your browser.
+                        Each section tells you what to use and where to get it.
+                    </p>
+                </div>
+                <div class="nys-tablet:nys-grid-col-4">
+                    <i class="color-theme--faint">
+                        <nys-icon color="var(--nys-color-theme)" name="edit_square" size="16"></nys-icon>
+                    </i>
+                    <mark class="subhead stronger">Follow the checklists</mark>
+                    <p>
+                        Each checkbox tells you exactly what to do and what a passing result looks or sounds like.
+                    </p>
+                </div>
+                <div class="nys-tablet:nys-grid-col-4">
+                    <i class="color-theme--faint">
+                        <nys-icon color="var(--nys-color-theme)" name="check" size="20"></nys-icon>
+                    </i>
+                    <mark class="subhead stronger">Track and share results</mark>
+                    <p>
+                        Run each test, record what passes and what needs work, and print your results to share with your team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="test-keyboard checkbox__tile">
+        <h3 id="keyboard-navigation">Keyboard navigation</h3>
+        <p>
+            Limit interaction with the component to only the <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Spacebar</kbd> keys.
+            While testing keyboard navigation do not use a mouse whatsoever.
+        </p>
+
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 1 passes" aria-describedby="keyboard-desc-1">
+            <span id="keyboard-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I <kbd>k1</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome k1</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 1</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 2 passes" aria-describedby="keyboard-desc-2">
+            <span id="keyboard-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I <kbd>k2</kbd>, <kbd>k3</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome k1</li>
+                    
+                    <li>THEN outcome k2</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 2</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+    </section>
+    
+    
+    <section class="test-mouse checkbox__tile">
+        <h3 id="mouse">Mouse</h3>
+        <p>
+            Lorem ipsum dolor sit amet.
+        </p>
+
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 1 passes" aria-describedby="mouse-desc-1">
+            <span id="mouse-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I m4</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome m4</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test 1</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 2 passes" aria-describedby="mouse-desc-2">
+            <span id="mouse-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I m5, m6</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome m5</li>
+                    
+                    <li>THEN outcome m6</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test 2</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+    </section>
+    
+    
+    
+    <section class="test-screenreader checkbox__tile">
+        <h3 id="desktop-screen-reader">Desktop screen reader</h3>
+        <p>
+            Test with at least two out of the three most common screen readers.
+            <a href="https://www.nvaccess.org/download/" target="_blank">NVDA</a>
+            runs under Windows and is a free download.
+            <a href="https://support.freedomscientific.com/Downloads/JAWS" target="_blank">JAWS</a>
+            runs under Windows and is a commercial product.
+            <a href="https://support.apple.com/guide/voiceover/welcome/mac" target="_blank">VoiceOver</a>
+            is built into macOS.
+            While using a screen reader do not use a mouse whatsoever.
+        </p>
+
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 1 passes" aria-describedby="screenreader-desc-1">
+            <span id="screenreader-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I sr7</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome sr7</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 1</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 2 passes" aria-describedby="screenreader-desc-2">
+            <span id="screenreader-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I sr8, sr9</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome sr8</li>
+                    
+                    <li>THEN outcome sr9</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 2</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+    </section>
+    
+    
+    <section class="test-screenreader-mobile checkbox__tile">
+        <h3 id="mobile-screen-reader">Mobile screen reader</h3>
+        <p>
+            Test with at least one, ideally both, of the primary mobile screen readers.
+            <a href="https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios" target="_blank">VoiceOver</a>
+            is part of iOS and
+            <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en" target="_blank">TalkBack</a>
+            is included with most Android devices.
+        </p>
+
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 1 passes" aria-describedby="screenreader-mobile-desc-1">
+            <span id="screenreader-mobile-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I srm10</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome srm10</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mobile screen reader test 1</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 2 passes" aria-describedby="screenreader-mobile-desc-2">
+            <span id="screenreader-mobile-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I srm11, srm12</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome srm11</li>
+                    
+                    <li>THEN outcome srm12</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mobile screen reader test 2</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+    </section>
+    
+    
+    <section class="test-voice checkbox__tile">
+        <h3 id="voice">Voice</h3>
+        <p>
+            <a href="https://support.microsoft.com/en-us/topic/get-started-with-voice-access-bd2aa2dc-46c2-486c-93ae-3d75f7d053a4" target="_blank">Voice Access</a>
+            is part of the Windows OS, and
+            <a href="https://support.apple.com/guide/mac-help/get-started-with-voice-control-mchl1a04f324/mac" target="_blank">Voice Control</a>
+            is part of macOS.
+        </p>
+
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 1 passes" aria-describedby="voice-desc-1">
+            <span id="voice-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I v13</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome v13</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">voice test 1</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 2 passes" aria-describedby="voice-desc-2">
+            <span id="voice-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I v14, v15</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome v14</li>
+                    
+                    <li>THEN outcome v15</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">voice test 2</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+    </section>
+    
+    
+    <section class="test-zoom checkbox__tile">
+        <h3 id="zoom">Zoom</h3>
+        <p>
+            All tests in this section require the browser to be zoomed to 200%.
+            On Windows press <kbd>Ctrl</kbd> + <kbd>plus</kbd> and
+            on macOS press <kbd>Cmd</kbd> + <kbd>plus</kbd>.
+        </p>
+
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when zoom test 1 passes" aria-describedby="zoom-desc-1">
+            <span id="zoom-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I z16</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome z16</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">zoom test 1</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when zoom test 2 passes" aria-describedby="zoom-desc-2">
+            <span id="zoom-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I z17, z18</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN outcome z17</li>
+                    
+                    <li>THEN outcome z18</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">zoom test 2</span>
+                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+    </section>
+    
+    
+    <section class="wcag checkbox__tile">
+        <h2 id="use-this-checklist-at-the-design-stage">Use this checklist at the design stage</h2>
+        <p>
+            This checklist breaks down the specific design and interaction requirements behind the tests above,
+            organized by disability type so you can see exactly who each requirement serves and what it means in practice.
+            Each item links to the related
+            <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank">WCAG 2.2 resources</a>.
+        </p>
+        
+        <h3 id="blindness">blindness</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 1 is ensured" aria-describedby="blindness-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-1">Blind 1...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.0 AA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 2 is ensured" aria-describedby="blindness-desc-2">
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-2">Blind 2...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.1 AA
+                </a>
+            </div>
+        </label>
+        
+        
+        <h3 id="cognition">cognition</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when cognition requirement 1 is ensured" aria-describedby="cognition-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="cognition-desc-1">Cognition...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.2 AA
+                </a>
+            </div>
+        </label>
+        
+        
+        <h3 id="color">color</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color requirement 1 is ensured" aria-describedby="color-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="color-desc-1">Color 1...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.3 AA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color requirement 2 is ensured" aria-describedby="color-desc-2">
+            <span aria-level="4" class="nysa11y checkbox__label" id="color-desc-2">Color 2...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.4 AA
+                </a>
+            </div>
+        </label>
+        
+        
+        <h3 id="low-vision">low vision</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 1 is ensured" aria-describedby="low vision-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-1">LowVis 1...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.5 AA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 2 is ensured" aria-describedby="low vision-desc-2">
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-2">LowVis 2...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.6 AA
+                </a>
+            </div>
+        </label>
+        
+        
+        <h3 id="motor">motor</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 1 is ensured" aria-describedby="motor-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-1">Motor 1...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.8 AA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 2 is ensured" aria-describedby="motor-desc-2">
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-2">Motor 2...</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
+                    0.0.9 AA
+                </a>
+            </div>
+        </label>
+        
+        
+    </section>
+    
+
+    <section class="contact-points">
+    <a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3AsOgJ0qBW2ZBGB9h8LxC37mmdQJKwOfLdAmwsOEDD5cY1%40thread.tacv2/conversations?groupId=e9810b17-e32f-499d-a5b0-192e4adcdce3&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/teams-channel.svg">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    NYS Digital Accessibility MS Teams channel
+                </div>
+                <div class="card__desc">
+                    Have a quick question or need immediate guidance? Jump into our Microsoft Teams channel to chat with the team in real-time.
+                    <p></p>
+                    <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/report-bug.svg">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    Report a bug on GitHub
+                </div>
+                <div class="card__desc">
+                    Spotted an issue or a visual glitch? Open a GitHub ticket with a clear description and reproduction steps so we can squash it.
+                    <p></p>
+                    <nys-badge label="Requires a GitHub account"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+</article>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/globalheader/a11y-tests.njk">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: April 23, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

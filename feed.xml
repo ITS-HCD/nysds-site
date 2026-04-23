@@ -480,7 +480,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <h2><code>&lt;nys-combobox&gt;</code> now available</h2>
 <p>The new <code>&lt;nys-combobox&gt;</code> combines a text box with a dropdown list, allowing users to either select a predefined option or type to select a value from the list.</p>
 <p><a href="https://designsystem.ny.gov/components/combobox">Read the full combobox documentation</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" width="lg">
@@ -706,7 +706,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <h2><code>&lt;nys-combobox&gt;</code> now available</h2>
 <p>The new <code>&lt;nys-combobox&gt;</code> combines a text box with a dropdown list, allowing users to either select a predefined option or type to select a value from the list.</p>
 <p><a href="https://designsystem.ny.gov/components/combobox">Read the full combobox documentation</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-combobox label="Choose a county" id="my-combobox" width="lg">
@@ -3189,7 +3189,7 @@ var interval = setInterval(function() {
 <p><code>&lt;nys-select&gt;</code> has been updated to use “native guts.” <strong>If you are running v1.11.0 or higher, you should use native <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code> tags instead of <code>&lt;nys-option&gt;</code>.</strong> Check it out below and on the <a href="https://designsystem.ny.gov/components/select"><code>&lt;nys-select&gt;</code> documentation page</a>.</p>
 <p><nys-alert type="warning" heading="WARNING: Installations prior to v1.11.0 should continue to use `<nys-option>`">
 </nys-alert></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
@@ -3320,7 +3320,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 <p><code>&lt;nys-select&gt;</code> has been updated to use “native guts.” <strong>If you are running v1.11.0 or higher, you should use native <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code> tags instead of <code>&lt;nys-option&gt;</code>.</strong> Check it out below and on the <a href="https://designsystem.ny.gov/components/select"><code>&lt;nys-select&gt;</code> documentation page</a>.</p>
 <p><nys-alert type="warning" heading="WARNING: Installations prior to v1.11.0 should continue to use `<nys-option>`">
 </nys-alert></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
@@ -3515,7 +3515,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
       <link>https://designsystem.ny.gov/updates/1.10.1-release/</link>
       <description><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-globalfooter agencyName="Office of Information Technology Services">
@@ -3584,7 +3584,7 @@ All form field components have been updated with a new property which will inver
 [Robert Chen](https://github.com/novacat35) inverted these properties. -->
 <h2>No more disappearing pagination buttons</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
@@ -3636,7 +3636,7 @@ All form field components have been updated with a new property which will inver
 ]]></description>
       <content><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-globalfooter agencyName="Office of Information Technology Services">
@@ -3705,7 +3705,7 @@ All form field components have been updated with a new property which will inver
 [Robert Chen](https://github.com/novacat35) inverted these properties. -->
 <h2>No more disappearing pagination buttons</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
@@ -3765,7 +3765,7 @@ All form field components have been updated with a new property which will inver
       <description><![CDATA[<!-- 🪡 in the Haystack? -->
 <h2>Multiple pages? No problem</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
@@ -3797,7 +3797,7 @@ All form field components have been updated with a new property which will inver
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> shipped the pagination component!</p>
 <h2>Modal now available</h2>
 <p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
@@ -3924,7 +3924,7 @@ All form field components have been updated with a new property which will inver
       <content><![CDATA[<!-- 🪡 in the Haystack? -->
 <h2>Multiple pages? No problem</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
@@ -3956,7 +3956,7 @@ All form field components have been updated with a new property which will inver
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> shipped the pagination component!</p>
 <h2>Modal now available</h2>
 <p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
@@ -4089,7 +4089,7 @@ All form field components have been updated with a new property which will inver
       <link>https://designsystem.ny.gov/updates/1.9.1-release/</link>
       <description><![CDATA[<h2>Divide up your content</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <h4>Hello World</h4>
@@ -4139,7 +4139,7 @@ All form field components have been updated with a new property which will inver
 ]]></description>
       <content><![CDATA[<h2>Divide up your content</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <h4>Hello World</h4>

@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-datepicker section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -478,7 +501,35 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-datepicker&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Uses native <code>&lt;input type=&quot;date&quot;&gt;</code> semantics for screen reader support</p>
+</li>
+<li>
+<p>Supports keyboard interaction to open and navigate the calendar</p>
+</li>
+<li>
+<p>Applies aria-required, aria-disabled, and validation messaging</p>
+</li>
+<li>
+<p>Error messages are announced via associated error messaging</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <nys-alert heading="Browser behavior" type="info">
   <p>The calendar interface does not appear in Safari or mobile browsers (iOS and Android). In those environments, users enter dates manually or use the native calendar popup.</p>
 </nys-alert>
@@ -760,17 +811,6 @@ Consider memorable date fields (<a href="https://github.com/ITS-HCD/nysds/discus
     </div>
     <br>
     <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-datepicker&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Uses native <code>&lt;input type=&quot;date&quot;&gt;</code> semantics for screen reader support</li>
-<li>Supports keyboard interaction to open and navigate the calendar</li>
-<li>Applies aria-required, aria-disabled, and validation messaging</li>
-<li>Error messages are announced via associated error messaging</li>
-</ul>
-</section>
-    <br>
-    <section>
       <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
@@ -911,7 +951,7 @@ datepicker<span class="token punctuation">.</span><span class="token function">a
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/datepicker/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1010,6 +1050,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

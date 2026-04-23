@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Build Accessibly - New York State Design System</title>
+
+<meta name="description" content="How to code an accessible accordion.">
+<link rel="canonical" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Build Accessibly">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+<meta property="og:description" content="How to code an accessible accordion.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/accordion-native.css" rel="stylesheet">
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/accordion-custom.css" rel="stylesheet">
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/divider-native.css" rel="stylesheet">
+    
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+  </head>
+  
+  <body class="single-page page-a11y-build section-components">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="/assets/img/components/accordion-header.svg" alt="Build Accessibly">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
+    <span class="accordion__label">Components</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-components" aria-labelledby="accordion-trigger-components" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+        
+      
+    
+    <li class="section-nav__item section-nav__item--active-section" aria-expanded="true">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
+        Accordion
+      </a>
+
+      
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item section-nav__item--active">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html" aria-current="page">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/alert/">
+        Alert
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/avatar/">
+        Avatar
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/backtotop/">
+        Back To Top
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/badge/">
+        Badge
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/button/">
+        Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/checkbox/">
+        Checkbox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/combobox/">
+        Combobox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/datepicker/">
+        Datepicker
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/divider/">
+        Divider
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/dropdownmenu/">
+        Dropdown Menu
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/fileinput/">
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/globalfooter/">
+        Global Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/globalheader/">
+        Global Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/icon/">
+        Icon
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/modal/">
+        Modal
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/pagination/">
+        Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/radiobutton/">
+        Radio Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/select/">
+        Select
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/skipnav/">
+        Skip Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/stepper/">
+        Stepper
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/table/">
+        Table
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/textarea/">
+        Text Area
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/textinput/">
+        Text Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/toggle/">
+        Toggle
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/tooltip/">
+        Tooltip
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-footer/">
+        UNav Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/unav-header/">
+        UNav Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="https://designsystem.ny.gov/components/video/">
+        Video Player
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">  
+    <article data-template="a11yBuild">
+    <section id="overview">
+        <h1 id="build-an-accessible-accordion">Build an Accessible Accordion</h1>
+        <p>
+            Are you in the right place?
+            If you are constrained to a third-party component library, see the
+            <a href="./accessibility-tests.html">Accordion Accessibility Checklist</a> and ensure that it passes.
+            Otherwise, follow the guidance here to choose the best option for your project.
+        </p>
+    </section>
+    
+    <section class="recommended-solution">
+        <div class="card">
+            <mark>
+                <span class="sr-only">ideal solution</span>
+                <nys-badge label="Recommended" intent="success" prefixIcon=""></nys-badge>
+            </mark>
+            <h2 id="use-the-nysds-accordion-web-component">Use the NYSDS Accordion Web Component</h2>
+            <p>
+                The NYSDS Accordion is a web component you can drop into your project and use right away.
+                For most teams, this is the simplest way to achieve an accessible component.
+                This means teams don’t need to manually implement accessibility or test for it.
+            </p>
+            <mark class="subhead stronger">What's already handled for you:</mark>
+            <ul class="built-in color-theme--faint">
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Keyboard Navigation</mark>
+                        <p class="nys-font-body-sm">Tab, Enter, Space, and Arrows work as intended</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Screen reader support</mark>
+                        <p class="nys-font-body-sm">Tested with NVDA, JAWS, and VoiceOver</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Focus management</mark>
+                        <p class="nys-font-body-sm">Focus stays where users expect it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Voice control</mark>
+                        <p class="nys-font-body-sm">Supports Windows and macOS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Zoom magnification</mark>
+                        <p class="nys-font-body-sm">Works correctly at 200% browser zoom</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">WCAG 2.2 AA conformant</mark>
+                        <p class="nys-font-body-sm">Meets New York State standards</p>
+                    </div>
+                </li>
+            </ul>
+            <nys-button href="./" label="View NYSDS Accordion Component" fullWidth=""></nys-button>
+        </div>
+    </section>
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="alternative-solutions">
+        <h2 id="alternatives">Alternatives</h2>
+        <p>
+            <mark class="subhead strong">For projects not ready to adopt the Design System</mark>
+            Whether you seek to remediate an existing component or build one from scratch,
+            these reference implementations will ensure an accessible outcome.
+            For more details, <a href="#about-this-pattern">read about this pattern</a>.
+        </p>
+<div class="solution">
+    <div class="card">
+        <h3 id="style-the-native-html-details-element">Style the native HTML <code class="element">details</code> element</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            wants to avoid error-prone semantics programming,
+            and has no hard requirements in excess of what native HTML provides,
+            then the <code class="element">details</code> element is a great option
+            that has built-in accessibility and is effectively unbreakable.
+        </p>
+            <ins>
+        Rely on the required <a href="./accessibility-tests.html">checklists</a>
+        to ensure accessibility is maintained during integration.
+    </ins>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<details class="nysa11y accordion" data-component="accordion" data-html="native">
+    <summary>
+        Native example
+    </summary>
+    Lorem ipsum dolor sit amet.
+</details>
+    </div>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>HTML</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>details</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y accordion<span class="token punctuation">"</span></span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion<span class="token punctuation">"</span></span> <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>summary</span><span class="token punctuation">></span></span>
+        Native example
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>summary</span><span class="token punctuation">></span></span>
+    Lorem ipsum dolor sit amet.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>details</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>CSS</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token comment">/**
+ * NYSA11y Accordion (native)
+ * &lt;details>&lt;summary>
+ */</span>
+<span class="token atrule"><span class="token rule">@layer</span> nysa11y</span> <span class="token punctuation">{</span>
+    <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+        <span class="token selector">details.nysa11y.accordion[data-component="accordion"][data-html="native"]</span> <span class="token punctuation">{</span>
+            <span class="token property">--nysa11y-chevron-rotation-time</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+            <span class="token selector">*,
+            *:before,
+            *:after</span> <span class="token punctuation">{</span>
+                <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span>
+                <span class="token string">"Proxima Nova"</span><span class="token punctuation">,</span>
+                -apple-system<span class="token punctuation">,</span>
+                <span class="token string">"BlinkMacSystemFont"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI"</span><span class="token punctuation">,</span>
+                <span class="token string">"Roboto"</span><span class="token punctuation">,</span>
+                <span class="token string">"Helvetica"</span><span class="token punctuation">,</span>
+                <span class="token string">"Arial"</span><span class="token punctuation">,</span>
+                sans-serif<span class="token punctuation">,</span>
+                <span class="token string">"Apple Color Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Symbol"</span><span class="token punctuation">;</span>
+            <span class="token selector">&amp; summary</span> <span class="token punctuation">{</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-50<span class="token punctuation">,</span> #ededed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">border-radius</span><span class="token punctuation">:</span> 0.25rem<span class="token punctuation">;</span>
+                <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">,</span> #1b1b1b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-type-size-ui-xl<span class="token punctuation">,</span> 20px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-weight-bold<span class="token punctuation">,</span> 700<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">gap</span><span class="token punctuation">:</span> 0.5rem<span class="token punctuation">;</span>
+                <span class="token property">line-height</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                <span class="token property">list-style-type</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                <span class="token property">padding-block</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+                <span class="token property">padding-inline</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+                <span class="token property">word-break</span><span class="token punctuation">:</span> break-word<span class="token punctuation">;</span>
+                <span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='%231b1b1b' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+                    <span class="token property">background-size</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span>
+                    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+                    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+                    <span class="token property">flex-shrink</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token property">height</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                    <span class="token property">width</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">transition</span><span class="token punctuation">:</span> transform <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
+                    <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
+                        <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">&amp;:hover,
+                &amp;:focus</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
+                        --nys-accordion-background-color--header--hover<span class="token punctuation">,</span>
+                        <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-100<span class="token punctuation">,</span> #d0d0ce<span class="token punctuation">)</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">&amp;::-webkit-details-marker,
+                &amp;::marker</span> <span class="token punctuation">{</span>
+                    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+                    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp;::details-content</span> <span class="token punctuation">{</span>
+                <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                <span class="token property">transition</span><span class="token punctuation">:</span> opacity <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span>
+                    ease-in-out<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp;[open]</span> <span class="token punctuation">{</span>
+                <span class="token selector">summary</span> <span class="token punctuation">{</span>
+                    <span class="token property">border-end-end-radius</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token property">border-end-start-radius</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+                        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">&amp;::details-content</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink-reverse<span class="token punctuation">,</span> #ffffff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+                    <span class="token property">padding-block</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+                    <span class="token property">padding-inline</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+</div>
+
+<hr class="nysa11y divider" data-component="divider" data-html="native">
+
+<div class="solution">
+    <div class="card">
+        <h3 id="build-a-custom-accordion-component">Build a custom accordion component</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            but DOES have a hard requirement not provided by native HTML,
+            you may choose to build a custom accordion.
+            Or perhaps your legacy component has been flagged for remediation
+            and you need a high quality reference.
+            This custom example recreates the accessibility built into the
+            NYSDS Accordion and the <code class="element">details</code> element.
+            See the
+            <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank">W3C APG Accordion Pattern</a>
+            for more involved implementations.
+        </p>
+            <ins>
+        Rely on the required <a href="./accessibility-tests.html">checklists</a>
+        to ensure accessibility is maintained during integration.
+    </ins>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nysa11y accordion" data-component="accordion" data-html="custom">
+    <button data-part="summary" aria-expanded="false">
+        Custom example
+    </button>
+    <div data-part="content">
+        Recreation of semantics carries a burden of responsibility.
+        This example is as simple as possible.
+        See the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank">W3C Accordion Pattern</a>
+        for more involved implementations.
+    </div>
+</div>
+    </div>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>HTML</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y accordion<span class="token punctuation">"</span></span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion<span class="token punctuation">"</span></span> <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-part</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>summary<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        Custom example
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">data-part</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        Recreation of semantics carries a burden of responsibility.
+        This example is as simple as possible.
+        See the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.w3.org/WAI/ARIA/apg/patterns/accordion/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>W3C Accordion Pattern<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        for more involved implementations.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>CSS</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token comment">/**
+ * NYSA11y Accordion (custom)
+ * Path: /assets/nysa11y/accordion-custom.css
+ * Depends on /assets/nysa11y/accordion-custom.js
+ */</span>
+<span class="token atrule"><span class="token rule">@layer</span> nysa11y</span> <span class="token punctuation">{</span>
+    <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+        <span class="token selector">div.nysa11y.accordion[data-component="accordion"][data-html="custom"]</span> <span class="token punctuation">{</span>
+            <span class="token property">--nysa11y-chevron-rotation-time</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+            <span class="token selector">*,
+            *:before,
+            *:after</span> <span class="token punctuation">{</span>
+                <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span>
+                <span class="token string">"Proxima Nova"</span><span class="token punctuation">,</span>
+                -apple-system<span class="token punctuation">,</span>
+                <span class="token string">"BlinkMacSystemFont"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI"</span><span class="token punctuation">,</span>
+                <span class="token string">"Roboto"</span><span class="token punctuation">,</span>
+                <span class="token string">"Helvetica"</span><span class="token punctuation">,</span>
+                <span class="token string">"Arial"</span><span class="token punctuation">,</span>
+                sans-serif<span class="token punctuation">,</span>
+                <span class="token string">"Apple Color Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Symbol"</span><span class="token punctuation">;</span>
+            <span class="token selector">&amp; button[data-part="summary"]</span> <span class="token punctuation">{</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-50<span class="token punctuation">,</span> #ededed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                <span class="token property">border-radius</span><span class="token punctuation">:</span> 0.25rem<span class="token punctuation">;</span>
+                <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">,</span> #1b1b1b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+                <span class="token property">font-family</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-type-size-ui-xl<span class="token punctuation">,</span> 20px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-weight-bold<span class="token punctuation">,</span> 700<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">gap</span><span class="token punctuation">:</span> 0.5rem<span class="token punctuation">;</span>
+                <span class="token property">line-height</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                <span class="token property">list-style-type</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                <span class="token property">padding-block</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+                <span class="token property">padding-inline</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+                <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+                <span class="token property">word-break</span><span class="token punctuation">:</span> break-word<span class="token punctuation">;</span>
+                <span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='%231b1b1b' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+                    <span class="token property">background-size</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span>
+                    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+                    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+                    <span class="token property">flex-shrink</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token property">height</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                    <span class="token property">width</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">transition</span><span class="token punctuation">:</span> transform <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
+                    <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
+                        <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">&amp;:hover,
+                &amp;:focus</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
+                        --nys-accordion-background-color--header--hover<span class="token punctuation">,</span>
+                        <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-100<span class="token punctuation">,</span> #d0d0ce<span class="token punctuation">)</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp; div[data-part="content"]</span> <span class="token punctuation">{</span>
+                <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                <span class="token property">transition</span><span class="token punctuation">:</span> opacity <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span>
+                    ease-in-out<span class="token punctuation">;</span>
+                <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp;.is-open</span> <span class="token punctuation">{</span>
+                <span class="token selector">button[data-part="summary"]</span> <span class="token punctuation">{</span>
+                    <span class="token property">border-end-end-radius</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token property">border-end-start-radius</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token selector">&amp;::before</span> <span class="token punctuation">{</span>
+                        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">div[data-part="content"]</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink-reverse<span class="token punctuation">,</span> #ffffff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+                    <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+                    <span class="token property">padding-block</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+                    <span class="token property">padding-inline</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
+                    <span class="token property">visibility</span><span class="token punctuation">:</span> visible<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>JavaScript</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">/**
+ * NYSA11y Accordion (custom)
+ * Path: /assets/nysa11y/accordion-custom.js
+ * Depends on /assets/nysa11y/accordion-custom.css
+ */</span>
+<span class="token keyword">var</span> nysa11y <span class="token operator">=</span> nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">ns</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">"use strict"</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">class</span> <span class="token class-name">Accordion</span> <span class="token punctuation">{</span>
+    #selectorToggle <span class="token operator">=</span>
+      <span class="token string">'[data-component="accordion"].nysa11y [data-part="summary"]'</span><span class="token punctuation">;</span>
+    #selectorParent <span class="token operator">=</span> <span class="token string">'[data-component="accordion"].nysa11y'</span><span class="token punctuation">;</span>
+    #stateOpen <span class="token operator">=</span> <span class="token string">"is-open"</span><span class="token punctuation">;</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>container <span class="token operator">=</span> options<span class="token punctuation">.</span>container <span class="token operator">||</span> document<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>toggles <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>toggles<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">this</span><span class="token punctuation">.</span>toggles<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">toggle</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token comment">// Avoid binding the same event listener multiple times</span>
+        toggle<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Set initial accessibility state</span>
+        <span class="token keyword">const</span> isExpanded <span class="token operator">=</span> toggle
+          <span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorParent<span class="token punctuation">)</span>
+          <span class="token operator">?.</span>classList<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#stateOpen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        toggle<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-expanded"</span><span class="token punctuation">,</span> isExpanded <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function-variable function">#handleToggle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> toggleElement <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> parent <span class="token operator">=</span> toggleElement<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorParent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>parent<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">const</span> isOpen <span class="token operator">=</span> parent<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#stateOpen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      toggleElement<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-expanded"</span><span class="token punctuation">,</span> isOpen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  ns<span class="token punctuation">.</span>Accordion <span class="token operator">=</span> Accordion<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>nysa11y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">new</span> <span class="token class-name">nysa11y<span class="token punctuation">.</span>Accordion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+</div>
+</section>
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="about-this-pattern">
+        <h2 id="about-this-pattern">About this pattern</h2>
+<p>
+    An accordion is a component that presents a binary state button and an adjacent content area.
+    The button toggles the visibility of the content.
+    This component is also known as a "disclosure" or "expander."
+    The native HTML analog is the <code class="element">details</code> element.
+</p>
+<p>
+    <mark class="subhead strong">The Header</mark>
+    The accordion button is commonly called the "header,"
+    since it functions as a descriptive heading for the content.
+    The native analog is the <code class="element">summary</code> element.
+    Because it is activated to use the component, the header MUST be focusable,
+    and its visible label MUST either be the accessible name or be part of
+    the accessible name.
+    Note that the <code class="element">details</code> element
+    automagically gains its accessible name from the text of its
+    <code class="element">summary</code>.
+</p>
+<p>
+    The entire header should function semantically as a button.
+    As such it MUST meet all rules for button accessibility.
+    Because it is an interactive element,
+    the header MUST NOT contain interactive child elements,
+    otherwise it is a nested-interactive WCAG failure.
+</p>
+<p>
+    The binary state (open/expanded vs. closed/collapsed) is inherited
+    "for free" when using <code class="element">details</code> and
+    <code class="element">summary</code>.
+    In a custom component it is recreated with <code>aria-expanded</code>
+    and JavaScript.
+</p>
+<p>
+    <mark class="subhead strong">The Content</mark>
+    When content is hidden, it MUST be fully hidden from assistive technologies,
+    not merely visually hidden.
+    <!--Consult the <a href="/foundations/hiding/">
+        Hiding Content</a> matrix to understand all options. -->
+    The <code class="element">details</code> element properly hides content by default.
+    Note that the native content area is selected in CSS with the
+    <code>::details-content</code> pseudo element.
+</p>
+<p>
+    <mark class="subhead strong">Best Practices</mark>
+    When multiple accordions are composed into a group, some implementations allow mutually exclusive activation, meaning that only one may be open at a time. Many Accessibility professionals consider this to be an anti-pattern. Consider, for example, the use case of comparing content between two accordions. If mutually exclusive behavior is provided, please consider giving the user an option to disable it.
+</p>
+</section>
+
+    <section class="contact-points">
+    <a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3AsOgJ0qBW2ZBGB9h8LxC37mmdQJKwOfLdAmwsOEDD5cY1%40thread.tacv2/conversations?groupId=e9810b17-e32f-499d-a5b0-192e4adcdce3&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/teams-channel.svg">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    NYS Digital Accessibility MS Teams channel
+                </div>
+                <div class="card__desc">
+                    Have a quick question or need immediate guidance? Jump into our Microsoft Teams channel to chat with the team in real-time.
+                    <p></p>
+                    <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/report-bug.svg">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    Report a bug on GitHub
+                </div>
+                <div class="card__desc">
+                    Spotted an issue or a visual glitch? Open a GitHub ticket with a clear description and reproduction steps so we can squash it.
+                    <p></p>
+                    <nys-badge label="Requires a GitHub account"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+</article>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion/a11y-build.njk">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: April 23, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+  
+    <script src="https://designsystem.ny.gov/assets/nysa11y/accordion-custom.js"></script>
+  
+
+
+  
+  </body>
+</html>

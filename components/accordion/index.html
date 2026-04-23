@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-accordion section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active" aria-expanded="true">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/" aria-current="page">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-accordion>
@@ -504,7 +527,26 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p></p><p class="p-adorned is">
+<mark>
+<nys-badge label="New" variant="strong" prefixIcon=""></nys-badge>
+</mark>
+<span>
+For comprehensive insight and guidance, please see
+<a href="./accessibility-tests.html">Accessibility Checklists</a> and
+<a href="./accessibility-build.html">Build Accessibly</a>.
+</span>
+</p><p></p>
+<!--
+The `nys-accordionitem` component includes the following accessibility-focused features:
+
+  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
+  - Headers are large enough to interact with easily (minimum 44x44px).-->
+<p></p></section>
+<br>
+<section>
+<h2 id="options">Options</h2><p></p>
 <h3 id="individual-accordion">Individual accordion</h3>
 <p>The <code>nys-accordionitem</code> toggles open or closed with the <code>expanded</code> prop. Add this prop to a <code>nys-accordionitem</code> to have it open by default when the component first renders.</p>
 <p><b>Note</b>: Always wrap <code>nys-accordionitem</code> components in a <code>nys-accordion</code>.</p>
@@ -597,7 +639,7 @@
 </div>
 <h3 id="bordered">Bordered</h3>
 <p>The <code>bordered</code> prop is available on <code>nys-accordion</code>. When set, all <code>nys-accordionitem</code> inside the wrapper will display borders.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-accordion singleSelect="" bordered="">
@@ -683,15 +725,6 @@
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>nys-accordionitem</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
--Headers are large enough to interact with easily (minimum 44x44px).</li>
-</ul>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -852,7 +885,7 @@ accordion<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -951,6 +984,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-fileinput section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -482,7 +505,32 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-fileinput&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Uses <code>ElementInternals</code> for form association and validation.</p>
+</li>
+<li>
+<p>Keyboard navigable with <code>Tab</code> key</p>
+</li>
+<li>
+<p>Implements ARIA attributes for required and invalid states.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <p>The <code>accept</code> attribute sets the allowed file types using MIME types or file extensions (i.e. image/png, .pdf).</p>
 <p><strong>IMPORTANT:</strong> This component relies on the file extension or MIME type provided by the browser to determine if a file is acceptable. If a file does not match the allowed types, it will still appear in the list with an error message for the user, but it will be excluded from form submission.</p>
 <h3 id="dropzone">Dropzone</h3>
@@ -692,16 +740,6 @@
     </div>
     <br>
     <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-fileinput&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Uses <code>ElementInternals</code> for form association and validation.</li>
-<li>Keyboard navigable with <code>Tab</code> key</li>
-<li>Implements ARIA attributes for required and invalid states.</li>
-</ul>
-</section>
-    <br>
-    <section>
       <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
@@ -849,7 +887,7 @@ fileinput<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/fileinput/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -948,6 +986,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

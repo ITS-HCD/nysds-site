@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput label="This is a text input"></nys-textinput></div>
   </div>
@@ -474,12 +497,40 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-textinput&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</p>
+</li>
+<li>
+<p>Keyboard navigation support, allowing users to tab into the input using the keyboard.</p>
+</li>
+<li>
+<p>Visual focus indicators to help users navigate the component.</p>
+</li>
+<li>
+<p>Include a label property to provide accessible text for screen readers.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <h3 id="width">Width</h3>
 <p>If no <code>width</code> is provided, the <code>&lt;nys-textinput&gt;</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>.</p>
 <p>Width full will take up the full width of the parent container.</p>
 <p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>full</code>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput width="sm" label="This label is sm"></nys-textinput></div>
   </div>
@@ -504,7 +555,7 @@
 <h3 id="type">Type</h3>
 <p>Accepted <code>types</code> are: <code>text</code>, <code>email</code>, <code>number</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code></p>
 <p>Any other input defaults to <code>type=&quot;text&quot;</code></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput type="password" label="Password"></nys-textinput>
 </div>
@@ -528,7 +579,7 @@
   </div>
 </div>
 <h3 id="placeholder">Placeholder</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput></div>
   </div>
@@ -551,7 +602,7 @@
   </div>
 </div>
 <h3 id="disabled">Disabled</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput label="Disabled" disabled=""></nys-textinput>
 </div>
@@ -575,7 +626,7 @@
   </div>
 </div>
 <h3 id="readonly">Readonly</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput readonly="" label="Readonly" value="Read only value"></nys-textinput></div>
   </div>
@@ -599,7 +650,7 @@
 </div>
 <h3 id="min-max-and-step">Min Max and step</h3>
 <p><code>max</code>, <code>min</code>, and <code>step</code> only apply when <code>type=&quot;number&quot;</code></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput type="number" min="0" max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100"></nys-textinput></div>
   </div>
@@ -622,7 +673,7 @@
   </div>
 </div>
 <h3 id="maxlength">Maxlength</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput></div>
   </div>
@@ -646,7 +697,7 @@
 </div>
 <h3 id="pattern">Pattern</h3>
 <p>Takes any valid regex value.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput></div>
   </div>
@@ -670,7 +721,7 @@
 </div>
 <h3 id="required">Required</h3>
 <p>Set <code>required</code> to <code>&lt;nys-textinput&gt;</code> to make it mandatory.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput name="myTextInput7" required="" label="label"></nys-textinput></div>
   </div>
@@ -694,7 +745,7 @@
 </div>
 <h3 id="optional">Optional</h3>
 <p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput name="myTextInput7" optional="" label="label"></nys-textinput></div>
   </div>
@@ -719,7 +770,7 @@
 <h3 id="slotted-description">Slotted Description</h3>
 <p>Add a description using the <code>description</code> prop for plain text, or use the description slot to include custom HTML for more flexibility.
 Takes any valid regex value.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput name="descriptionSlot" label="Label">
   <label slot="description">Slot: description</label>
@@ -750,7 +801,7 @@ Takes any valid regex value.</p>
 <p><strong>Note</strong>: Use a <code>&lt;nys-button&gt;</code> for the slotted button. Do not use both <code>startButton</code> and <code>endButton</code> on the same input.</p>
 <p><strong>Note</strong>: The slotted button will automatically be <code>size=&quot;sm&quot;</code> and <code>variant=&quot;filled&quot;</code> and support the disabled state of the input.</p>
 <p><strong>Note</strong>: Use <code>width=&quot;lg&quot;</code> or <code>width=&quot;full&quot;</code> on <code>&lt;nys-textinput&gt;</code> to give users enough space to enter text when a button is present.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput name="searchInput" type="search" placeholder="Search" id="searchInput">
   <nys-button slot="endButton" type="submit" label="Search" prefixIcon="search" id="searchButton"></nys-button>
@@ -790,7 +841,7 @@ Takes any valid regex value.</p>
 <h3 id="error-message">Error Message</h3>
 <p>Set an error message and choose to activate it. The error message will appear ONLY when the <code>showError</code> attribute is set to <code>true</code>. Setting only <code>errorMessage</code> will not display the error message by default.
 Note: The <code>showError</code> attribute is a boolean that toggles automatically based on other validation. setting <code>showError</code> to <code>true</code> manually will only set the error message to be visible on initial render, once the user interacts with the component, <code>showError</code> will toggle based on validation rules (e.g., required, pattern, etc.)</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput errorMessage="This is an error message" showError="" label="Label with error"></nys-textinput></div>
   </div>
@@ -812,7 +863,7 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput showError="" errorMessage="Cannot be left blank" label="Full Name"></nys-textinput></div>
   </div>
@@ -834,7 +885,7 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput errorMessage="This is an error message" showError="" label="Label with error"></nys-textinput></div>
   </div>
@@ -856,7 +907,7 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textinput showError="" errorMessage="Cannot be left blank" label="Full Name"></nys-textinput></div>
   </div>
@@ -915,17 +966,6 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-textinput&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</li>
-<li>Keyboard navigation support, allowing users to tab into the input using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-</ul>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -1089,7 +1129,7 @@ textinput<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/textinput/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1188,6 +1228,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

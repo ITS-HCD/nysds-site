@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-globalheader section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
 </nys-globalheader></div>
@@ -476,7 +499,29 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-globalheader&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Proper use of <code>&lt;header&gt;</code> and <code>&lt;a&gt;</code> elements ensures compatibility with assistive technologies.</p>
+</li>
+<li>
+<p>Keyboard navigation: Users can tab through all links in the header.</p>
+<p></p><p class="p-adorned is nys-margin-t-150">
+<mark>
+<nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+</mark>
+<span class="nys-font-h6">
+Additional accessibility test and build content is coming soon,
+in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+</span>
+</p><p></p>
+  </li></ul></section>
+  <br>
+  <section>
+    <h2 id="options">Options</h2>
+
+
 <h3 id="with-links">With Links</h3>
 <p>For public-facing sites, the Global Header can include navigation links. To add links, follow this format:</p>
 <ol>
@@ -485,7 +530,7 @@
 </ol>
 <p>Use the prop <code>homepageLink</code> to link your <code>agencyName</code> to your homepage.</p>
 <p><strong>Note:</strong> Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them, especially in mobile or collapsed menus, to aid navigation.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>
@@ -527,7 +572,7 @@
 </div>
 <h3 id="just-agency-name">Just Agency Name</h3>
 <p>Use the prop <code>homepageLink</code> to link your <code>agencyName</code> to your homepage.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-globalheader agencyName="Office of Information Technology Services">
 </nys-globalheader></div>
@@ -552,7 +597,7 @@
   </div>
 </div>
 <h3 id="just-application-name">Just Application Name</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-globalheader appName="NYS Employee Portal">
 </nys-globalheader></div>
@@ -640,15 +685,6 @@
     </div>
     <br>
     <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-globalheader&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper use of <code>&lt;header&gt;</code> and <code>&lt;a&gt;</code> elements ensures compatibility with assistive technologies.</li>
-<li>Keyboard navigation: Users can tab through all links in the header.</li>
-</ul>
-</section>
-    <br>
-    <section>
       <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
@@ -703,7 +739,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/globalheader/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -802,6 +838,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

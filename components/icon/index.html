@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-icon section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon name="check_circle" size="5xl" color="var(--nys-color-success)"></nys-icon></div>
   </div>
@@ -474,7 +497,23 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-icon&gt;</code> component includes the following accessibility-focused features:</p>
+<p><strong>ARIA Hidden by Default</strong>: If no <code>ariaLabel</code> is provided, the icon is hidden from screen readers by setting aria-hidden=&quot;true&quot;.</p>
+<p><strong>Customizable ARIA Label</strong>: If an <code>ariaLabel</code> is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.</p>
+<p></p><p class="p-adorned is nys-margin-t-150">
+<mark>
+<nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+</mark>
+<span class="nys-font-h6">
+Additional accessibility test and build content is coming soon,
+in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+</span>
+</p><p></p>
+<p></p></section>
+<br>
+<section>
+<h2 id="options">Options</h2><p></p>
 <h3 id="size">Size</h3>
 <p>You can scale icons either relatively (based on the parent element’s font size) or literally (with predefined size values). The icons support two sizing systems: relative sizes and literal sizes.</p>
 <h4 id="relative-sizing">Relative Sizing</h4>
@@ -490,7 +529,7 @@
 <li><code>4xl</code> (quadruple extra large): 225% of parent font size</li>
 <li><code>5xl</code> (quintuple extra large): 300% of parent font size</li>
 </ul>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon name="upload_file" size="xs"></nys-icon>
 <nys-icon name="upload_file" size="xl"></nys-icon>
@@ -529,7 +568,7 @@
 <li><code>40</code>: 2.5rem = 40px</li>
 <li><code>50</code>: 3.125rem = 50px</li>
 </ul>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
@@ -557,7 +596,7 @@
 </div>
 <h3 id="color">Color</h3>
 <p>You can override the color of an icon by setting a <code>color</code> prop. You can use CSS HEX values, CSS color names, or CSS variables</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon></div>
   </div>
@@ -581,7 +620,7 @@
 </div>
 <h3 id="rotate">Rotate</h3>
 <p>You can <code>rotate</code> an icon by passing the angle as a number i.e: <code>rotate=&quot;20&quot;</code> will rotate the icon by 20 degrees clockwise.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon></div>
   </div>
@@ -605,7 +644,7 @@
 </div>
 <h3 id="flip">Flip</h3>
 <p>Set an icon to flip horizontally, vertically, or in both directions by using the <code>flip</code> property. Available values are <code>horizontal</code>, <code>vertical</code>, and <code>both</code>. This example is <code>both</code>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon></div>
   </div>
@@ -1307,13 +1346,6 @@
     </div>
     <br>
     <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-icon&gt;</code> component includes the following accessibility-focused features:</p>
-<p><strong>ARIA Hidden by Default</strong>: If no <code>ariaLabel</code> is provided, the icon is hidden from screen readers by setting aria-hidden=&quot;true&quot;.</p>
-<p><strong>Customizable ARIA Label</strong>: If an <code>ariaLabel</code> is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.</p>
-</section>
-    <br>
-    <section>
       <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
@@ -1422,7 +1454,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/icon/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1521,6 +1553,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

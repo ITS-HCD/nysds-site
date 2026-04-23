@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-button section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-button label="Button"></nys-button></div>
   </div>
@@ -474,7 +497,38 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-button&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</p>
+</li>
+<li>
+<p>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</p>
+</li>
+<li>
+<p>Visual focus indicators to help users navigate the component.</p>
+</li>
+<li>
+<p>Include a label property to provide accessible text for screen readers.</p>
+</li>
+<li>
+<p>Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <h3 id="click-action">Click Action</h3>
 <p>When using the <code>&lt;nys-button&gt;</code>, you may want to use the <code>onClick</code> prop instead of adding your own <code>@click</code>, <code>@keydown</code>, or their equivalents in your framework. This makes sure your button responds to both mouse and keyboard interactions (like Enter or Space), keeping it fully accessible.</p>
 <h3 id="button-type">Button Type</h3>
@@ -569,7 +623,7 @@
 <p>Set the <code>prefixIcon</code> prop to include an icon in the button. The icon will appear to the left of the label.</p>
 <p>Set the <code>suffixIcon</code> prop to include an icon in the button. The icon will appear to the right of the label.</p>
 <p>View the full list of <a href="/components/icon/#usage">available icons</a>.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button></div>
   </div>
@@ -757,18 +811,6 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-button&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
-<li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-<li>Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.</li>
-</ul>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -990,7 +1032,7 @@ button<span class="token punctuation">.</span><span class="token function">addEv
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/button/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1089,6 +1131,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-textarea section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea id="quote" label="Enter your favorite quote:" value="Majorities, of course, start with minorities.">
 </nys-textarea></div>
@@ -479,11 +502,39 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-textarea&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</p>
+</li>
+<li>
+<p>Keyboard navigation support, allowing users to tab into the input using the keyboard.</p>
+</li>
+<li>
+<p>Visual focus indicators to help users navigate the component.</p>
+</li>
+<li>
+<p>Include a label property to provide accessible text for screen readers.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <h3 id="rows">Rows</h3>
 <p>The <code>rows</code> attribute specifies the visible height of a text area, in number of lines.</p>
 <p>The default value is <code>4</code></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea></div>
   </div>
@@ -508,7 +559,7 @@
 <h3 id="width">Width</h3>
 <p>If no <code>width</code> is provided, the <code>&lt;nys-textarea&gt;</code> will default to <code>full</code>. Supported widths are <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>full</code>. Setting property <code>width=&quot;full&quot;</code> will take up the full width of the parent container.</p>
 <p>If an invalid option is assigned to <code>width</code>, it will be ignored and default to <code>width=&quot;full&quot;</code></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea width="md" label="This textarea is md"></nys-textarea></div>
   </div>
@@ -533,7 +584,7 @@
 <h3 id="resize-behavior">Resize Behavior</h3>
 <p>By default a user can resize the <code>&lt;nys-textarea&gt;</code> vertically. If you want to disallow resizing altogether add <code>resize=&quot;none&quot;</code>.</p>
 <p><strong>Note:</strong> <code>resize</code> is not affected by setting <code>&lt;nys-textarea&gt;</code> to <code>disabled</code> or <code>readonly</code> as they are independent.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea></div>
   </div>
@@ -557,7 +608,7 @@
 </div>
 <h3 id="description">Description</h3>
 <p>You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea label="Label" description="description property"></nys-textarea>
 <br>
@@ -591,7 +642,7 @@
   </div>
 </div>
 <h3 id="placeholder">Placeholder</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea label="Placeholder" placeholder="this is a placeholder"></nys-textarea></div>
   </div>
@@ -614,7 +665,7 @@
   </div>
 </div>
 <h3 id="disabled">Disabled</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea label="Disabled textarea" disabled=""></nys-textarea></div>
   </div>
@@ -637,7 +688,7 @@
   </div>
 </div>
 <h3 id="readonly">Readonly</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea readonly="" label="Readonly textarea" value="This text cannot be changed"></nys-textarea></div>
   </div>
@@ -660,7 +711,7 @@
   </div>
 </div>
 <h3 id="max-length">Max length</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea></div>
   </div>
@@ -683,7 +734,7 @@
   </div>
 </div>
 <h3 id="required">Required</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea required="" label="Required textarea"></nys-textarea></div>
   </div>
@@ -706,7 +757,7 @@
   </div>
 </div>
 <h3 id="optional">Optional</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea optional="" label="Optional textarea"></nys-textarea></div>
   </div>
@@ -731,7 +782,7 @@
 <h3 id="error-message">Error Message</h3>
 <p>To display an error message, pass in the <code>showError</code> property to the <code>&lt;nys-textarea&gt;</code> component. Setting <code>errorMessage</code> does not display the message without <code>showError</code> set to true.
 Note: The <code>showError</code> attribute is a boolean that toggles automatically based on other validation. setting <code>showError</code> to <code>true</code> manually will only set the error message to be visible on initial render, once the user interacts with the component, <code>showError</code> will toggle based on validation rules (e.g., required, pattern, etc.)</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-textarea showError="" errorMessage="You did not provide a value for this field." label="Describe the incident"></nys-textarea></div>
   </div>
@@ -788,17 +839,6 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-textarea&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.</li>
-<li>Keyboard navigation support, allowing users to tab into the input using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-</ul>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -951,7 +991,7 @@ textarea<span class="token punctuation">.</span><span class="token function">add
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/textarea/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1050,6 +1090,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

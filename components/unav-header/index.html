@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-unavheader section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -451,7 +474,7 @@
 <p>The <code>&lt;nys-unavheader&gt;</code> should only be used on official NYS websites or applications that are <strong>hosted on a ny.gov domain</strong> and <strong>secured with HTTPS encryption</strong>. Intranets and back office applications are not currently required to use the <code>&lt;nys-unavheader&gt;</code>.</p>
 <p>Please refer to the <a target="_blank" href="https://its.ny.gov/system/files/documents/2025/02/nys-s16-001-nys-universal-web-navigation.pdf">New York State Universal Web Navigation Policy (NYS-S16-001)</a> for more details.</p>
 </nys-alert>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-unavheader></nys-unavheader></div>
   </div>
@@ -479,9 +502,31 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-unavheader&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Proper use of <code>&lt;header&gt;</code> and <code>&lt;a&gt;</code> elements ensures compatibility with assistive technologies.</p>
+</li>
+<li>
+<p>Keyboard navigation: Users can tab through all links in the header.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <h3 id="search-off">Search Off</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
     <nys-unavheader hideSearch=""></nys-unavheader>
@@ -508,7 +553,7 @@
 <h3 id="custom-search-endpoint">Custom Search Endpoint</h3>
 <p>The default search URL for the <code>&lt;nys-unavheader&gt;</code> is <code>https://search.its.ny.gov/search/search.html?q=</code>. The <code>searchUrl</code> property allows you to override the search endpoint with a custom url.</p>
 <p><nys-alert type="warning" heading="Make sure the query is included in the string, otherwise it will not correctly append the search result."></nys-alert></p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
     <nys-unavheader searchUrl="https://designsystem.ny.gov/search/?q=" hideTranslate=""></nys-unavheader>
@@ -533,7 +578,7 @@
   </div>
 </div>
 <h3 id="translate-off">Translate Off</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
     <nys-unavheader hideTranslate=""></nys-unavheader>
@@ -674,15 +719,6 @@
     </div>
     <br>
     <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-unavheader&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper use of <code>&lt;header&gt;</code> and <code>&lt;a&gt;</code> elements ensures compatibility with assistive technologies.</li>
-<li>Keyboard navigation: Users can tab through all links in the header.</li>
-</ul>
-</section>
-    <br>
-    <section>
       <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
@@ -730,7 +766,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/unavheader/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -829,6 +865,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

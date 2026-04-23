@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -447,7 +470,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible=""></nys-alert><br>
 <nys-alert type="info" heading="Info status" text="This is an example of an info alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible=""></nys-alert><br>
@@ -503,7 +526,51 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.</li>
+<li>Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.</li>
+<li>Visual focus indicators to help users navigate the component.</li>
+<li>Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.</li>
+</ul>
+<nys-table striped="">
+<table>
+    <tr>
+        <th>ARIA Role</th>
+        <th>Attribute</th>
+        <th>Use Case</th>
+    </tr>
+    <tr>
+        <td><code>role=&quot;alert&quot;</code></td>
+        <td>Important messages that demand the user&#39;s immediate attention.</td>
+        <td>Example: Danger and Emergency alert</td>
+    </tr>
+    <tr>
+        <td><code>role=&quot;status&quot;</code></td>
+        <td>Messages that provide advisory information but do not have the same urgency as alerts.</td>
+        <td>Example: Success alert</td>
+    </tr>
+    <tr>
+        <td><code>role="region"</code></td>
+        <td>Messages that provide information the user would want to be able to easily find, but are not important enough to interrupt user workflow.</td>
+        <td>Information and Warning alert (An <code>aria-label</code> will be added for this role.)</td>
+    </tr>
+</table>
+</nys-table>
+<p></p><p class="p-adorned is nys-margin-t-150">
+<mark>
+<nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+</mark>
+<span class="nys-font-h6">
+Additional accessibility test and build content is coming soon,
+in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+</span>
+</p><p></p>
+<p></p></section>
+<br>
+<section>
+<h2 id="options">Options</h2><p></p>
 <h3 id="theme">Theme</h3>
 <p>Set the <code>type</code> property to customize the alert style (e.g. <code>type=&quot;info&quot;</code>).</p>
 <div class="code-preview-container">
@@ -567,7 +634,7 @@
 <h3 id="dismissible">Dismissible</h3>
 <p>Use the <code>dismissible</code> property to make the alert dismissible.</p>
 <p>The <code>nys-close</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-alert type="info" heading="Information status" dismissible="">
   <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br>
@@ -597,7 +664,7 @@
 </div>
 <h3 id="duration">Duration</h3>
 <p>Set the <code>duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-button onClick="showAlert()" label="Open Alert"></nys-button>
 <div class="alert-container" style="margin-top: 8px"></div></div>
@@ -627,7 +694,7 @@
 </div>
 <h3 id="icon-customization">Icon Customization</h3>
 <p>Override the default theme icon by setting the <code>icon</code> property to any name from the icon library.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-alert type="emergency" heading="Winter storm warning: Dec 10th, 2024." text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." icon="ac_unit">
 </nys-alert></div>
@@ -657,7 +724,7 @@
 </div>
 <h3 id="heading-only">Heading only</h3>
 <p>You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-alert type="info" heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
 </nys-alert></div>
@@ -685,7 +752,7 @@
 </div>
 <h3 id="action-links">Action Links</h3>
 <p>Display <code>primaryAction</code> and <code>secondaryAction</code> as links using the <code>primaryLabel</code> and <code>secondaryLabel</code> for the link text. You must provide both an action label and a URL for each action to ensure proper functionality.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-alert type="emergency" heading="Winter storm warning: Dec 10th, 2024." text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/" primaryLabel="Weather Report" secondaryLabel="Plowing Schedule"></nys-alert></div>
   </div>
@@ -762,41 +829,6 @@
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
-<ul>
-<li>Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.</li>
-<li>Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.</li>
-</ul>
-<nys-table striped="">
-<table>
-    <tr>
-        <th>ARIA Role</th>
-        <th>Attribute</th>
-        <th>Use Case</th>
-    </tr>
-    <tr>
-        <td><code>role=&quot;alert&quot;</code></td>
-        <td>Important messages that demand the user&#39;s immediate attention.</td>
-        <td>Example: Danger and Emergency alert</td>
-    </tr>
-    <tr>
-        <td><code>role=&quot;status&quot;</code></td>
-        <td>Messages that provide advisory information but do not have the same urgency as alerts.</td>
-        <td>Example: Success alert</td>
-    </tr>
-    <tr>
-        <td><code>role="region"</code></td>
-        <td>Messages that provide information the user would want to be able to easily find, but are not important enough to interrupt user workflow.</td>
-        <td>Information and Warning alert (An <code>aria-label</code> will be added for this role.)</td>
-    </tr>
-</table>
-</nys-table>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -988,7 +1020,7 @@ alert<span class="token punctuation">.</span><span class="token function">addEve
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/alert/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -1087,6 +1119,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>

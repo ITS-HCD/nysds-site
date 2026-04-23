@@ -33,6 +33,8 @@
 <link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
 <script>
@@ -42,8 +44,9 @@
 
   gtag('config', 'G-M4JYBJ7BZY');
 </script>
+
     
-    <!-- Latest Build: 2026-04-21T19:45:03.738Z -->
+    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
   </head>
   
   <body class="single-page page-toggle section-components">
@@ -113,12 +116,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/">
         Accordion
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="https://designsystem.ny.gov/components/accordion/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -446,7 +469,7 @@
       </div>
     </section>
     <section>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-toggle label="Dark Mode" description="Enable dark mode for a more comfortable viewing experience." name="toggle-switch" value="access">
 </nys-toggle></div>
@@ -480,9 +503,37 @@
 </section>
     <br>
     <section>
-      <h2 id="options">Options</h2>
+      <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-toggle</code>&gt; component includes the following accessibility-focused features:</p>
+<ul>
+<li>
+<p>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</p>
+</li>
+<li>
+<p>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</p>
+</li>
+<li>
+<p>Visual focus indicators to help users navigate the component.</p>
+</li>
+<li>
+<p>Include a label property to provide accessible text for screen readers.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+        Additional accessibility test and build content is coming soon,
+        in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li></ul></section>
+<br>
+<section>
+  <h2 id="options">Options</h2>
+
+
 <h3 id="sizes">Sizes</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-toggle size="sm" label="Small (size=&quot;sm&quot;)" name="toggle-switch" value="access"></nys-toggle><br>
 <nys-toggle size="md" label="Medium (size=&quot;md&quot;)" name="toggle-switch" value="access"></nys-toggle></div>
@@ -510,7 +561,7 @@
 <p>Add help text to the toggle using the <code>label</code> and <code>description</code> props.
 Descriptions can be provided either through the <code>description</code> prop or via the <code>slot=&quot;description&quot;</code>.</p>
 <p><strong>Note</strong>: Use the prop for simple text. Use the slot when you need custom HTML, such as links or formatting.</p>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
   <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
@@ -537,7 +588,7 @@ Descriptions can be provided either through the <code>description</code> prop or
   </div>
 </div>
 <h3 id="disabled-toggle">Disabled Toggle</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled=""></nys-toggle></div>
   </div>
@@ -560,7 +611,7 @@ Descriptions can be provided either through the <code>description</code> prop or
   </div>
 </div>
 <h3 id="disable-icon">Disable Icon</h3>
-  <div class="code-preview-container">
+<div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-toggle noIcon="" label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle></div>
   </div>
@@ -619,17 +670,6 @@ Descriptions can be provided either through the <code>description</code> prop or
 </div>
       </div>
     </div>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p>The <code>&lt;nys-toggle</code>&gt; component includes the following accessibility-focused features:</p>
-<ul>
-<li>Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.</li>
-<li>Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.</li>
-<li>Visual focus indicators to help users navigate the component.</li>
-<li>Include a label property to provide accessible text for screen readers.</li>
-</ul>
-</section>
     <br>
     <section>
       <h2 id="properties">Properties</h2>
@@ -753,7 +793,7 @@ toggle<span class="token punctuation">.</span><span class="token function">addEv
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/toggle/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 21, 2026</p>
+    <p>Last updated: April 23, 2026</p>
   </div>
 
   </div>
@@ -852,6 +892,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
 
   
   </body>
