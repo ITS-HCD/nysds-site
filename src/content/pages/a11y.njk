@@ -7,12 +7,136 @@ site_nav: false
 heading_links: false
 ---
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <meta charset="utf-8" />
-  <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="/foundations/accessibility/" />
-  <meta http-equiv="refresh" content="0; url=/foundations/accessibility/" />
-  <meta name="robots" content="noindex" />
-  <a href="/foundations/accessibility">Click here if you are not redirected.</a>
-</html>
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<!-- Home Hero -->
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <img src="{{ '/assets/img/a11y-color-bar.png' | url }}" alt="" role="presentation">
+      <h1>Be an <span class="heavy">a11y.</span></h1>
+      <p>Accessible design is better for everyone.</p>
+    </div>
+    <div class="hero__media">
+      <img src="{{ '/assets/img/a11y-banner.png' | url }}" alt="">
+    </div>
+  </div>
+</div>
+
+<style>
+.a11y-card h3 {
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-weight: normal;
+}
+
+.a11y-card .heavy {
+  font-weight: 600;
+}
+
+.a11y-card p {
+  font-size: 1.125rem;
+}
+</style>
+
+<div class="color-theme--weaker nys-top-800 nys-padding-y-800">
+  <div class="nys-grid-container-widescreen">
+    <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+        <img src="/assets/img/a11y-grid-artboard-4-80.jpg" style="clip-path: polygon(7% 7%, 93% 5%, 91% 95%, 5% 87%)">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">a11y</span> is short for <span class="heavy">accessibility</span>.</h3>
+            <p>There are 11 letters between the <span class="heavy">a</span> and <span class="heavy">y</span>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+        <img src="/assets/img/a11y-grid-artboard-5-80.jpg" style="clip-path: polygon(3% 0%, 96% 3%, 94% 92%, 5% 99%)">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">Inclusion</span> isn't optional.</h3>
+            <p>Over 1 billion people globally live with a disability, including <span class="heavy">nearly 1 in 4 New Yorkers.</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+        <img src="/assets/img/a11y-grid-artboard-6-80.jpg" style="clip-path: polygon(1% 10%, 98% 8%, 99% 98%, 0% 96%)">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3>Compliance matters. <span class="heavy">People matter more.</span></h3>
+            <p>Helping New Yorkers access public services is more than just meeting legal requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+        <img src="/assets/img/a11y-grid-artboard-7-80.jpg" style="clip-path: polygon(0% 11%, 100% 9%, 96% 86%, 47% 83%, 47% 93%, 14% 96%, 13% 82%, 2% 81%);
+">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">Champions</span> of <span class="heavy">inclusion.</span></h3>
+            <p>The ITS Accessibility Team partners with dedicated NYS teams to make digital services accessible for every New Yorker.</p>
+          </div>
+        </div>
+      </div>
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+        <img src="/assets/img/a11y-grid-artboard-8-80.jpg" style="clip-path: polygon(5% 7%, 96% 5%, 94% 91%, 6% 84%);">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">Brains</span> work <span class="heavy">differently.</span></h3>
+            <p>Words and design that are clear and simple work better for everyone.</p>
+          </div>
+        </div>
+      </div>
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+        <img src="/assets/img/a11y-grid-artboard-9-80.jpg" style="clip-path: polygon(8% 12%, 95% 5%, 95% 92%, 6% 92%);">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">Accessibility</span> is a <span class="heavy">right.</span></h3>
+            <p>When we build digital services that are inclusive, we effectively serve all New Yorkers with compassion, dignity, and equity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+        <img src="/assets/img/a11y-grid-artboard-1-80.jpg" style="clip-path: polygon(7% 5%, 98% 10%, 97% 93%, 4% 95%);">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">Sound</span> isn't always <span class="heavy">heard.</span>.</h3>
+            <p>Captions and transcripts make content work for everyone.</p>
+          </div>
+        </div>
+      </div>
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+        <img src="/assets/img/a11y-grid-artboard-2-80.jpg" style="clip-path: polygon(2% 8%, 95% 3%, 97% 95%, 2% 94%);">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3><span class="heavy">Accessibility</span> should be <span class="heavy">everywhere.</span></h3>
+            <p>Accessible design is usable by everyone — regardless of ability, age, or circumstance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+        <img src="/assets/img/a11y-grid-artboard-3-80.jpg" style="clip-path: polygon(8% 7%, 93% 6%, 94% 92%, 6% 86%);">
+        <div class="nys-grid-row">
+          <div class="nys-grid-col-10 nys-grid-offset-1">
+            <h3>Compliance matters. <span class="heavy">People matter more.</span></h3>
+            <p>Helping New Yorkers access public services is more than just meeting legal requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ '/assets/fonts/atkinson-hyperlegible/atkinson-hyperlegible.css' | url }}">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
