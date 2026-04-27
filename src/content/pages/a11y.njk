@@ -14,7 +14,12 @@ heading_links: false
 <div class="hero">
   <div class="hero__inner">
     <div class="hero__content">
-      <img src="{{ '/assets/img/a11y-color-bar.png' | url }}" alt="" role="presentation">
+      <svg width="209" height="13" viewBox="0 0 209 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="104.33" width="52.1654" height="12.9576" fill="#FACE00"/>
+        <rect x="156.498" width="52.1654" height="12.9576" fill="#0E324F"/>
+        <rect x="52.166" width="52.1654" height="12.9576" fill="#004DD1"/>
+        <rect width="52.1654" height="12.9576" fill="#A2350A"/>
+      </svg>
       <h1>Be an <span class="heavy">a11y.</span></h1>
       <p>Accessible design is better for everyone.</p>
     </div>
@@ -25,12 +30,36 @@ heading_links: false
 </div>
 
 <style>
-.a11y-card h3 {
+.hero,
+.a11y-card {
+  color: var(--nys-color-theme-strong);
+}
+
+@media (width > 1024px) {
+  .hero h1 {
+    font-size: 96px;
+    line-height: 1;
+  }
+}
+
+@media (width <= 1024px) {
+  .hero__inner {
+    flex-direction: column;
+  }
+}
+.hero p {
+  font-size: var(--nys-font-size-3xl);
+}
+
+.hero h1,
+.hero p,
+.a11y-card h3,
+.a11y-card p {
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   font-weight: normal;
 }
 
-.a11y-card .heavy {
+.heavy {
   font-weight: 600;
 }
 
@@ -42,7 +71,7 @@ heading_links: false
 <div class="color-theme--weaker nys-top-800 nys-padding-y-800">
   <div class="nys-grid-container-widescreen">
     <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-4-80.jpg" style="clip-path: polygon(7% 7%, 93% 5%, 91% 95%, 5% 87%)">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
@@ -51,7 +80,7 @@ heading_links: false
           </div>
         </div>
       </div>
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-5-80.jpg" style="clip-path: polygon(3% 0%, 96% 3%, 94% 92%, 5% 99%)">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
@@ -60,7 +89,7 @@ heading_links: false
           </div>
         </div>
       </div>
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-6-80.jpg" style="clip-path: polygon(1% 10%, 98% 8%, 99% 98%, 0% 96%)">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
@@ -71,7 +100,7 @@ heading_links: false
       </div>
     </div>
     <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-7-80.jpg" style="clip-path: polygon(0% 11%, 100% 9%, 96% 86%, 47% 83%, 47% 93%, 14% 96%, 13% 82%, 2% 81%);
 ">
         <div class="nys-grid-row">
@@ -81,7 +110,7 @@ heading_links: false
           </div>
         </div>
       </div>
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-8-80.jpg" style="clip-path: polygon(5% 7%, 96% 5%, 94% 91%, 6% 84%);">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
@@ -90,7 +119,7 @@ heading_links: false
           </div>
         </div>
       </div>
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-9-80.jpg" style="clip-path: polygon(8% 12%, 95% 5%, 95% 92%, 6% 92%);">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
@@ -101,16 +130,16 @@ heading_links: false
       </div>
     </div>
     <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-1-80.jpg" style="clip-path: polygon(7% 5%, 98% 10%, 97% 93%, 4% 95%);">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
-            <h3><span class="heavy">Sound</span> isn't always <span class="heavy">heard.</span>.</h3>
+            <h3><span class="heavy">Sound</span> isn't always <span class="heavy">heard.</span></h3>
             <p>Captions and transcripts make content work for everyone.</p>
           </div>
         </div>
       </div>
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-800">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-2-80.jpg" style="clip-path: polygon(2% 8%, 95% 3%, 97% 95%, 2% 94%);">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
@@ -119,7 +148,7 @@ heading_links: false
           </div>
         </div>
       </div>
-      <div class="a11y-card nys-grid-col-12 nys-tablet:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+      <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
         <img src="/assets/img/a11y-grid-artboard-3-80.jpg" style="clip-path: polygon(8% 7%, 93% 6%, 94% 92%, 6% 86%);">
         <div class="nys-grid-row">
           <div class="nys-grid-col-10 nys-grid-offset-1">
