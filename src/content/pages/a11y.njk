@@ -68,6 +68,54 @@ heading_links: false
 .a11y-card p {
   font-size: 1.125rem;
 }
+
+.poster-deck-wrapper {
+  padding: 3rem 0 5rem;
+  overflow-x: auto;
+}
+
+.poster-deck {
+  position: relative;
+  width: 700px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+.poster-deck img {
+  width: 170px;
+  height: 100%;
+  display: flex;
+}
+
+.poster-deck a {
+  position: absolute;
+  width: 170px;
+  height: auto;
+  cursor: pointer;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform: rotate(var(--r, 0deg));
+}
+
+
+.poster-deck a:nth-child(1) { z-index: 1; left: 0px;   top: 130px; --r: -16deg; }
+.poster-deck a:nth-child(2) { z-index: 2; left: 65px;  top: 80px;  --r: -11deg; }
+.poster-deck a:nth-child(3) { z-index: 3; left: 130px; top: 45px;  --r: -6deg;  }
+.poster-deck a:nth-child(4) { z-index: 4; left: 195px; top: 20px;  --r: -2deg;  }
+.poster-deck a:nth-child(5) { z-index: 5; left: 265px; top: 10px;  --r: 0deg;   }
+.poster-deck a:nth-child(6) { z-index: 6; left: 335px; top: 20px;  --r: 2deg;   }
+.poster-deck a:nth-child(7) { z-index: 7; left: 400px; top: 45px;  --r: 6deg;   }
+.poster-deck a:nth-child(8) { z-index: 8; left: 465px; top: 80px;  --r: 11deg;  }
+.poster-deck a:nth-child(9) { z-index: 9; left: 530px; top: 130px; --r: 16deg;  }
+
+.poster-deck a:hover,
+.poster-deck a:focus {
+  z-index: 100;
+  transform: rotate(var(--r, 0deg)) translateY(-24px) scale(1.07);
+  box-shadow: 6px 16px 32px rgba(0, 0, 0, 0.4);
+  outline: 3px solid var(--nys-color-theme-strong, #004DD1);
+  outline-offset: 4px;
+}
 </style>
 
 <div class="nys-top-800 nys-padding-y-800">
@@ -160,10 +208,23 @@ heading_links: false
         </div>
       </div>
     </div>
-    <img src="{{ '/assets/img/poster-58.png' | url }}" alt="" role="presentation">
-    <img src="{{ '/assets/img/poster-60.png' | url }}" alt="" role="presentation">
-    <img src="{{ '/assets/img/poster-61.png' | url }}" alt="" role="presentation">
   </div>
+    <div class="poster-deck-wrapper color-theme--weaker nys-margin-t-800">
+      <div class="poster-deck">
+        <a href="#"><img src="{{ '/assets/img/poster-139.png' | url }}" alt="Sound isn't always heard. Captions and transcripts make content work for everyone." ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-140.png' | url }}" alt="Brains work differently. Words and design that are clear and simple work better for everyone." ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-141.png' | url }}" alt="a11y is short for accessibility. (There are 11 letters between the a and y.)" ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-144.png' | url }}" alt="Accessible Design is better for everyone. Red and pink background" ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-145.png' | url }}" alt="Accessible Design is better for everyone. Red and blue background" ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-146.png' | url }}" alt="Accessible Design is better for everyone. Blue and yellow background" ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-147.png' | url }}" alt="Be an ally. Peace sign blue" ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-148.png' | url }}" alt="Be an ally. Peace sign yellow" ></a>
+        <a href="#"><img src="{{ '/assets/img/poster-149.png' | url }}" alt="Be an ally. Peace sign red" ></a>
+      </div>
+      <div style="text-align: center;">
+      <nys-button href="#" label="Download the full set"></nys-button>
+      </div>
+    </div>
 </div>
 
 {% endblock %}
