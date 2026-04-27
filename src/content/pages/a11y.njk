@@ -14,7 +14,7 @@ heading_links: false
 <div class="hero">
   <div class="hero__inner">
     <div class="hero__content">
-      <svg width="150" height="13" viewBox="0 0 209 13" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left:6px;">
+      <svg width="150" height="13" viewBox="0 0 209 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="a11y-color-mark">
         <rect x="104.33" width="52.1654" height="12.9576" fill="#FACE00"/>
         <rect x="156.498" width="52.1654" height="12.9576" fill="#0E324F"/>
         <rect x="52.166" width="52.1654" height="12.9576" fill="#004DD1"/>
@@ -38,9 +38,23 @@ heading_links: false
   letter-spacing: -4px;
 }
 
+.a11y-color-mark {
+  margin-left: -10px;
+}
+
+@media (width > 768px) {
+  .a11y-color-mark {
+    margin-left: 6px;
+  }
+}
+
 .hero *,
 .a11y-card * {
   color: var(--nys-color-theme-strong);
+}
+
+.hero h1 {
+  margin-top: var(--nys-space-50);
 }
 
 @media (width > 1024px) {
@@ -57,6 +71,7 @@ heading_links: false
     flex-direction: column;
   }
 }
+
 .hero p {
   font-size: var(--nys-font-size-5xl);
   line-height: 1.2;
