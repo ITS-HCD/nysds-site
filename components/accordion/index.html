@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-accordion section-components">
@@ -459,16 +459,17 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="accordion">Accordion</h1><p></p>
+    <section id="overview">
+    <h1 id="accordion">Accordion</h1>
 <p>The <code>&lt;nys-accordion&gt;</code> and <code>&lt;nys-accordionitem&gt;</code> components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
@@ -524,29 +525,42 @@
   </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
-<p></p><p class="p-adorned is">
-<mark>
-<nys-badge label="New" variant="strong" prefixIcon=""></nys-badge>
-</mark>
-<span>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
+<p></p><h3 id="accordion-test-status">Accordion test status</h3><p></p>
+<p><nys-table bordered="">
+<table aria-labelledby="accordion-test-status">
+<caption>
+<!-- caption visuals are not ideal if WC doesn't render -->
+</caption>
+<tr>
+<th>Total tests</th>
+<th>Passes</th>
+<th>Fails</th>
+<th>To do</th>
+</tr>
+<tr>
+<td>10</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</table>
+</nys-table>
+</p><p>
 For comprehensive insight and guidance, please see
 <a href="./accessibility-tests.html">Accessibility Checklists</a> and
 <a href="./accessibility-build.html">Build Accessibly</a>.
-</span>
 </p><p></p>
 <!--
 The `nys-accordionitem` component includes the following accessibility-focused features:
 
   - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
   - Headers are large enough to interact with easily (minimum 44x44px).-->
-<p></p></section>
-<br>
+</section><br>
 <section>
-<h2 id="options">Options</h2><p></p>
+    <h2 id="options">Options</h2>
 <h3 id="individual-accordion">Individual accordion</h3>
 <p>The <code>nys-accordionitem</code> toggles open or closed with the <code>expanded</code> prop. Add this prop to a <code>nys-accordionitem</code> to have it open by default when the component first renders.</p>
 <p><b>Note</b>: Always wrap <code>nys-accordionitem</code> components in a <code>nys-accordion</code>.</p>
@@ -687,10 +701,9 @@ The `nys-accordionitem` component includes the following accessibility-focused f
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>Use an accordion when you need to organize related information into expandable sections, reducing the need for users to scroll through long content.</li>
@@ -703,31 +716,30 @@ The `nys-accordionitem` component includes the following accessibility-focused f
 <li>If users need to compare details from multiple sections at once, consider using a table or side-by-side layout instead of an accordion.</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Use accordions for FAQs on state services, like DMV procedures or benefits information.</li>
 <li>Use to break up long program descriptions into manageable sections without overwhelming the reader.</li>
 <li>Label headings clearly so users understand the content before expanding.</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't hide time-sensitive deadlines or required steps in a collapsed section.</li>
 <li>Don't use vague or unclear headings that make it hard to know what is inside.</li>
 <li>Don't overuse accordions for content that is short enough to display fully on the page.</li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
       <tr>
@@ -762,10 +774,9 @@ The `nys-accordionitem` component includes the following accessibility-focused f
       </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2>
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
 <p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
 <div class="code-preview-container">
@@ -823,10 +834,9 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 <p>The <code>&lt;nys-accordionitem&gt;</code> component emits <strong>one</strong> custom Javascript event:</p>
 <ol>
 <li><strong><code>nys-accordionitem-toggle</code></strong> – Emitted when the accordion is clicked.</li>
@@ -868,24 +878,24 @@ accordion<span class="token punctuation">.</span><span class="token function">ad
   </div>
 </div>
 </section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -459,17 +459,18 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="alert">Alert</h1><p></p>
+    <section id="overview">
+    <h1 id="alert">Alert</h1>
 <p>Alert banners are designed to display critical information, updates, or warnings that require the user's attention.</p>
 <p>The <code>&lt;nys-alert&gt;</code> component is a banner-like component that appears at the top of a screen to prominently display important information, along with optional links. Alerts keep users informed of important and sometimes time-sensitive changes.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible=""></nys-alert><br>
@@ -523,10 +524,9 @@
   </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.</li>
@@ -567,10 +567,9 @@ Additional accessibility test and build content is coming soon,
 in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 </span>
 </p><p></p>
-<p></p></section>
-<br>
+</section><br>
 <section>
-<h2 id="options">Options</h2><p></p>
+    <h2 id="options">Options</h2>
 <h3 id="theme">Theme</h3>
 <p>Set the <code>type</code> property to customize the alert style (e.g. <code>type=&quot;info&quot;</code>).</p>
 <div class="code-preview-container">
@@ -782,10 +781,9 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>Use <code>&lt;nys-alert&gt;</code> to communicate important, time-sensitive information to users in a visually prominent way.</li>
@@ -798,10 +796,10 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 <li>Avoid using alerts for repetitive or non-actionable content that could frustrate users.</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Use the appropriate <code>theme</code> (e.g., <code>info</code>, <code>success</code>, <code>warning</code>, or <code>danger</code>) to match the intent of the alert.</li>
 <li>Use the <code>dismissible</code> property for non-critical alerts.</li>
@@ -812,10 +810,10 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 <li>Only use <code>emergency</code> for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Do not remove the left icon, it is required for accessibility.</li>
 <li>Don’t use alerts to highlight actions that should be clear in the UI itself.</li>
@@ -827,11 +825,10 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 </ul>
 
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
     <tr>
@@ -884,10 +881,9 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
     </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2>
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2>
   <div class="css-var-table">
 <p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
 <div class="code-preview-container">
@@ -957,10 +953,9 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 <p>The <code>&lt;nys-alert&gt;</code> component emits <strong>one</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-close</code></strong> – Fired when the button is clicked.</li>
@@ -1003,24 +998,24 @@ alert<span class="token punctuation">.</span><span class="token function">addEve
   </div>
 </div>
 </section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/alert/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

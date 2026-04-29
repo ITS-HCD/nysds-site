@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-select section-components">
@@ -459,16 +459,17 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="select">Select</h1><p></p>
+    <section id="overview">
+    <h1 id="select">Select</h1>
 <p>The <code>&lt;nys-select&gt;</code> is a reusable web component for use in New York State digital products. It allows users to select data from a dropdown to be collected. It accepts the child elements <code>&lt;option&gt;</code> and <code>&lt;optgroup&gt;</code> to define the options in the dropdown.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-select label="Select your favorite borough" id="borough">
@@ -506,10 +507,9 @@
   </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-select&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>
@@ -523,21 +523,20 @@
 </li>
 <li>
 <p>Include a label property to provide accessible text for screen readers.</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
+<p class="p-adorned is nys-margin-t-150">
+    <mark>
         <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
+    </mark>
+    <span class="nys-font-h6">
         Additional accessibility test and build content is coming soon,
         in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-      </span>
-  </p>
-</li></ul></section>
-<br>
+    </span>
+</p>
+</li>
+</ul>
+</section><br>
 <section>
-  <h2 id="options">Options</h2>
-
-
+    <h2 id="options">Options</h2>
 <nys-alert type="warning" heading="Deprecated <nys-option>">
 <p>The <code>&lt;nys-option&gt;</code> component will be deprecated with the 2.0 release of the New York State Design System.</p>
 <p>Use the native  <code>&lt;option&gt;</code> tag for the options in the  <code>&lt;nys-select&gt;</code> component.</p>
@@ -880,10 +879,9 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>When you need to collect data from a dropdown</li>
@@ -894,30 +892,29 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
 <li>When you need to collect multiple items from a list</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Use the <code>&lt;nys-select&gt;</code> component when you need the user to select a single item from a list</li>
 <li>Use the <code>&lt;option&gt;</code> component to define the options in the dropdown</li>
 <li>Use the native <code>&lt;optgroup&gt;</code> to group options in the dropdown</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't use the custom <code>&lt;nys-option&gt;</code> element in the <code>&lt;nys-select&gt;</code> component. This will be deprecated with the 2.0 release</li>
 <li>Use <code>&lt;nys-select multiple&gt;</code> as an input for users to select multiple items from a dropdown. Consider a <a href="/components/checkbox/">checkbox group</a> instead. More guidance from the <a href="https://designsystem.digital.gov/components/select/#when-to-consider-something-else">US Web Design System</a></li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
     <tr>
@@ -997,10 +994,9 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
 There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
 propose a
@@ -1009,10 +1005,9 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 <p>The <code>&lt;nys-select&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-change</code></strong> – Fired when the select state changes. The event detail includes the value of the selected option.</li>
@@ -1052,24 +1047,24 @@ select<span class="token punctuation">.</span><span class="token function">addEv
   </div>
 </div>
 </section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/select/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

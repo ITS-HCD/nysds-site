@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -459,17 +459,18 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="radio-button">Radio Button</h1><p></p>
+    <section id="overview">
+    <h1 id="radio-button">Radio Button</h1>
 <p>The <code>&lt;nys-radiobutton&gt;</code> provides users with the ability to choose from a group of options. Only one option can be selected at a time.</p>
 <p><strong>Note:</strong> <code>&lt;nys-radiogroup&gt;</code> must be used to wrap multiple radio buttons so they function as a single form control.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
@@ -501,10 +502,9 @@
   </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-radiobutton&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>
@@ -523,21 +523,20 @@
 </li>
 <li>
 <p>Include a label property to provide accessible text for screen readers.</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
+<p class="p-adorned is nys-margin-t-150">
+    <mark>
         <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
+    </mark>
+    <span class="nys-font-h6">
         Additional accessibility test and build content is coming soon,
         in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-      </span>
-  </p>
-</li></ul></section>
-<br>
+    </span>
+</p>
+</li>
+</ul>
+</section><br>
 <section>
-  <h2 id="options">Options</h2>
-
-
+    <h2 id="options">Options</h2>
 <h3 id="disabled">Disabled</h3>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
@@ -818,10 +817,9 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>When the user needs to select only one option from a list.</li>
@@ -833,10 +831,10 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
 <li>When there are more than 7 options (consider a dropdown for better space utilization).</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Always wrap a group of <code>&lt;nys-radiobutton&gt;</code> with a <code>&lt;nys-radiogroup&gt;</code></li>
 <li>Group radio buttons vertically for easier scanning, especially when labels are lengthy.</li>
@@ -845,21 +843,20 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
 <li>Group related options under a heading or instruction to provide context.</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't use radio buttons for yes/no questions (consider using <code>&lt;nys-toggle&gt;</code> or <code>&lt;nys-checkbox&gt;</code>).</li>
 <li>Don’t overload users with too many options; simplify or use a dropdown instead.</li>
 <li>Don’t leave all options unselected if a helpful default can guide users.</li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
     <tr>
@@ -944,10 +941,9 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
 There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
 propose a
@@ -956,10 +952,9 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 <p>The <code>&lt;nys-radiogroup&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-change</code></strong> – Fired when the radiobutton state changes (checked/unchecked).</li>
@@ -1001,24 +996,24 @@ radiogroup<span class="token punctuation">.</span><span class="token function">a
   </div>
 </div>
 </section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/radiobutton/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

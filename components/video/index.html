@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-video section-components">
@@ -459,17 +459,18 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="video-player">Video Player</h1><p></p>
+    <section id="overview">
+    <h1 id="video-player">Video Player</h1>
 <p>The <code>&lt;nys-video&gt;</code> component embeds a YouTube video with a clickable thumbnail, responsive sizing, and accessible playback. The YouTube iframe only loads after the user clicks play, improving page performance.</p>
 <p><strong>Note:</strong> Only valid YouTube URLs are supported in v1.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20897-9539" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video></div>
@@ -498,10 +499,9 @@
   </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-video&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>
@@ -512,21 +512,20 @@
 </li>
 <li>
 <p><code>titleText</code> is used as both the visible caption and the iframe's <code>title</code> and <code>aria-label</code> — always provide it.</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
+<p class="p-adorned is nys-margin-t-150">
+    <mark>
         <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
+    </mark>
+    <span class="nys-font-h6">
         Additional accessibility test and build content is coming soon,
         in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-      </span>
-  </p>
-</li></ul></section>
-<br>
+    </span>
+</p>
+</li>
+</ul>
+</section><br>
 <section>
-  <h2 id="options">Options</h2>
-
-
+    <h2 id="options">Options</h2>
 <h3 id="custom-thumbnail">Custom Thumbnail</h3>
 <p>Provide your own thumbnail via the <code>thumbnail</code> property. If not set, the component fetches YouTube's auto-generated thumbnail at: <code>https://img.youtube.com/vi/{video-id}/maxresdefault.jpg</code></p>
 <div class="code-preview-container">
@@ -677,10 +676,9 @@
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>Use video player when motion or audio communicates something better than text or images alone.</li>
@@ -691,10 +689,10 @@
 <li>Avoid using video as the only source of key information — always provide a text alternative.</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Keep <code>titleText</code> to 50–60 characters.</li>
 <li>Use a clear, high-quality thumbnail so users recognize it as a video.</li>
@@ -703,20 +701,19 @@
 <li>Reserve space for the 16:9 ratio box to prevent layout shift.</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't set <code>autoplay</code> without understanding that the video will be <strong>muted</strong> (<code>nys-video</code> enforces this automatically to protect users from unexpected noise).</li>
 <li>Don't rely on video alone to convey critical information.</li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
     <tr>
@@ -775,33 +772,31 @@
     </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2>
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2>
 <p>The <code>nys-video</code> does not have any css variables because this component must remain consistent across applications and sites.</p>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2></section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+</section><br>
+<section>
+    <h2 id="events">Events</h2></section>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/video/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

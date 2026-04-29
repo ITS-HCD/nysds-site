@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-dropdownmenu section-components">
@@ -459,16 +459,17 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="dropdown-menu">Dropdown Menu</h1><p></p>
+    <section id="overview">
+    <h1 id="dropdown-menu">Dropdown Menu</h1>
 <p>The <code>&lt;nys-dropdownmenu&gt;</code> and <code>&lt;nys-dropdownmenuitem&gt;</code> components are a list of actions or options that appears when a user interacts with a trigger, and disappears after a selection or clicking away.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
@@ -505,10 +506,9 @@
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-dropdownmenu&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>
@@ -522,21 +522,20 @@
 </li>
 <li>
 <p>Focus is automatically moved to the first menu item when the dropdown opens, and returned to the trigger on close</p>
-<p></p><p class="p-adorned is nys-margin-t-150">
-<mark>
-<nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-</mark>
-<span class="nys-font-h6">
-Additional accessibility test and build content is coming soon,
-in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-</span>
-</p><p></p>
-  </li></ul></section>
-  <br>
-  <section>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
+      </span>
+  </p>
+</li>
+</ul>
+</section><br>
+<section>
     <h2 id="options">Options</h2>
-
-
 <h3 id="connecting-to-a-trigger">Connecting to a Trigger</h3>
 <p>The <code>&lt;nys-dropdownmenu&gt;</code> anchors itself to a trigger element provided by the user, such as a button or avatar, by matching its <code>for</code> attribute to the trigger's <code>id</code>.</p>
 <div class="code-preview-container">
@@ -784,10 +783,9 @@ Use the <code>nys-click</code> dispatch event to call for specific functions to 
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>To display a list of actions or links under a single trigger.</li>
@@ -803,10 +801,10 @@ Use the <code>nys-click</code> dispatch event to call for specific functions to 
 <li>When the action is always visible and frequently used. Consider a standalone button or <code>&lt;nys-button&gt;</code> instead.</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Keep to 3-7 actions when possible</li>
 <li>Order actions by frequency or importance</li>
@@ -815,21 +813,20 @@ Use the <code>nys-click</code> dispatch event to call for specific functions to 
 <li>Avoid vague labels like “Manage” or “Options”</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't use for form inputs or selectable values — use <code>&lt;nys-select&gt;</code> instead</li>
 <li>Don't use without a label or accessible description on the trigger</li>
 <li>Don't nest dropdown menus inside other dropdown menus</li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <p><code>&lt;nys-dropdownmenu&gt;</code>
 <nys-table striped=""></nys-table></p>
   <table>
@@ -893,10 +890,9 @@ Use the <code>nys-click</code> dispatch event to call for specific functions to 
     </tr>
   </table>
 
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
 There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
 propose a
@@ -905,10 +901,9 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 <p>The <code>&lt;nys-dropdownmenuitem&gt;</code> component emits <strong>one</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-click</code></strong> – Emitted when a dropdown menu item is clicked.</li>
@@ -951,24 +946,24 @@ dropdownmenu<span class="token punctuation">.</span><span class="token function"
   </div>
 </div>
 </section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/dropdownmenu/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

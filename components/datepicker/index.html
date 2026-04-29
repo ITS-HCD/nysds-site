@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-datepicker section-components">
@@ -459,16 +459,17 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="datepicker">Datepicker</h1><p></p>
+    <section id="overview">
+    <h1 id="datepicker">Datepicker</h1>
 <p>The <code>&lt;nys-datepicker&gt;</code> component allows users to select a date from a visual calendar or type a date into the input field.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=15514-1502" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
@@ -498,10 +499,9 @@
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-datepicker&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
 <li>
@@ -515,21 +515,20 @@
 </li>
 <li>
 <p>Error messages are announced via associated error messaging</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
+<p class="p-adorned is nys-margin-t-150">
+    <mark>
         <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
+    </mark>
+    <span class="nys-font-h6">
         Additional accessibility test and build content is coming soon,
         in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-      </span>
-  </p>
-</li></ul></section>
-<br>
+    </span>
+</p>
+</li>
+</ul>
+</section><br>
 <section>
-  <h2 id="options">Options</h2>
-
-
+    <h2 id="options">Options</h2>
 <nys-alert heading="Browser behavior" type="info">
   <p>The calendar interface does not appear in Safari or mobile browsers (iOS and Android). In those environments, users enter dates manually or use the native calendar popup.</p>
 </nys-alert>
@@ -767,10 +766,9 @@ Use properties <code>hideTodayButton</code> and <code>hideClearButton</code> to 
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
 <li>When users need to select a single calendar date</li>
@@ -787,31 +785,30 @@ Consider memorable date fields (<a href="https://github.com/ITS-HCD/nysds/discus
 <li>When time selection is required</li>
 </ul>
 </section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Use for deadlines, scheduling, and future dates</li>
 <li>Pair with labels and helper text for clarity</li>
 <li>Use <code>required</code> when the date must be provided</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don't use for memorable dates, or dates in the past, use a textinput instead</li>
 <li>Don't use without a label or accessible description</li>
 <li>Don't use if relying on browser specific date picker behavior</li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
     <tr>
@@ -880,10 +877,9 @@ Consider memorable date fields (<a href="https://github.com/ITS-HCD/nysds/discus
     </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
 There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
 propose a
@@ -892,10 +888,9 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 <p>The <code>&lt;nys-datepicker&gt;</code> component emits <strong>two</strong> custom Javascript events:</p>
 <ol>
 <li><strong><code>nys-input</code></strong> – Emitted when the datepicker input text changes.</li>
@@ -934,24 +929,24 @@ datepicker<span class="token punctuation">.</span><span class="token function">a
   </div>
 </div>
 </section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/datepicker/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>

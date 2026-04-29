@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-23T18:12:49.903Z -->
+    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
   </head>
   
   <body class="single-page page-icon section-components">
@@ -459,16 +459,17 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <p></p><section id="overview">
-<h1 id="icon">Icon</h1><p></p>
+    <section id="overview">
+    <h1 id="icon">Icon</h1>
 <p>The <code>&lt;nys-icon&gt;</code> is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYS Design System includes a curated subset of the Google Material Symbols rounded icon set.</p>
 <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
-        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
         <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941" target="_blank"></nys-button>
-      </div>
-    </section>
-    <section>
+    </div>
+</section>
+<section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><nys-icon name="check_circle" size="5xl" color="var(--nys-color-success)"></nys-icon></div>
@@ -494,10 +495,9 @@
   </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="accessibility">Accessibility</h2>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-icon&gt;</code> component includes the following accessibility-focused features:</p>
 <p><strong>ARIA Hidden by Default</strong>: If no <code>ariaLabel</code> is provided, the icon is hidden from screen readers by setting aria-hidden=&quot;true&quot;.</p>
 <p><strong>Customizable ARIA Label</strong>: If an <code>ariaLabel</code> is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.</p>
@@ -510,10 +510,9 @@ Additional accessibility test and build content is coming soon,
 in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 </span>
 </p><p></p>
-<p></p></section>
-<br>
+</section><br>
 <section>
-<h2 id="options">Options</h2><p></p>
+    <h2 id="options">Options</h2>
 <h3 id="size">Size</h3>
 <p>You can scale icons either relatively (based on the parent element’s font size) or literally (with predefined size values). The icons support two sizing systems: relative sizes and literal sizes.</p>
 <h4 id="relative-sizing">Relative Sizing</h4>
@@ -666,10 +665,9 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
     </div>
   </div>
 </div>
-</section>
-    <br>
-    <section>
-      <h2 id="usage">Usage</h2>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2>
 <div class="icon-examples">
 <h3 id="core">Core</h3>
 <div class="nys-grid-row nys-grid-gap-2">
@@ -1317,10 +1315,10 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 <li>You need the icon to be focusable and clickable - in that case, use a <code>&lt;nys-button&gt;</code> component with an icon inside instead.</li>
 </ul>
 </div></section>
-    <div class="nys-grid-row nys-grid-gap">
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+<div class="nys-grid-row nys-grid-gap">
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--do nys-flex-fill">
-          <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Include a visual text label paired with the icon. Few icons are universally understood alone.</li>
 <li>Use icons consistently: same icon and label for the same meaning throughout your app.</li>
@@ -1331,10 +1329,10 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 <li>Test icon clarity with real users when possible.</li>
 </ul>
 </div>
-      </div>
-      <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+    </div>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
         <div class="card card--dont nys-flex-fill">
-          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Don’t overuse icons. Too many create visual noise and reduce focus.</li>
 <li>Don’t replace meaningful text with icons unless the icon is universally recognized or paired with a label.</li>
@@ -1342,11 +1340,10 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
 <li>Avoid excessive icon customization that breaks design consistency.</li>
 </ul>
 </div>
-      </div>
     </div>
-    <br>
-    <section>
-      <h2 id="properties">Properties</h2>
+</div><br>
+<section>
+    <h2 id="properties">Properties</h2>
 <nys-table striped="">
   <table>
     <tr>
@@ -1379,10 +1376,9 @@ in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
     </tr>
   </table>
 </nys-table>
-</section>
-    <br>
-    <section>
-      <h2 id="style-overrides">Style Overrides</h2>
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2>
   <div class="css-var-table">
 <p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
 <div class="code-preview-container">
@@ -1432,29 +1428,28 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
 </section>
-    <br>
-    <section>
-      <h2 id="events">Events</h2>
-</section>
-    <section class="nys-section">
-  <h2 id="suggest-a-new-component">Suggest a New Component</h2>
-  <div class="nys-grid-row nys-grid-gap">
-    <div>
-      <p>
-        Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
-      </p>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
     </div>
-    <div class="nys-tablet:nys-grid-col-12">
-      <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
-    </div>
-  </div>
 </section>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/icon/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 23, 2026</p>
+    <p>Last updated: April 29, 2026</p>
   </div>
 
   </div>
