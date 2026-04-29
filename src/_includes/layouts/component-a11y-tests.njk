@@ -1,0 +1,376 @@
+{#
+    Visibility of most blocks in this template is determined by presence of
+    the corresponding JSON member in each component's a11y-test JSON5 file.
+    For example, if the `tests` JSON member is commented-out,
+    the TestStatus block below will not render. <https://json5.org/>
+#}
+<article data-template="a11yTests">
+    {%- block Introduction  %}
+    <section id="overview">
+        <h1>{{ title }}</h1>
+        Any {{ pattern }} used in a New York State website should pass these tests and checklists.
+        Also follow this acceptance criteria when building and testing a
+        <a href="./accessibility-build.html">custom {{ pattern }}</a>
+        and when evaluating third-party open source or licensed component libraries.
+    </section>
+    {% endblock -%}{# Introduction #}
+
+    {%- block TestStatus %}
+    {% if tests %}
+    <section class="test-status">
+        <nys-table bordered>
+            <table>
+                <caption>
+                    NYSDS {{ pattern | capitalize }} accessibility status
+                </caption>
+                <tr>
+                    <th>Total tests</th>
+                    <th>Passes</th>
+                    <th>Fails</th>
+                    <th>To do</th>
+                </tr>
+                <tr>
+                    <td>{{ tests.total }}</td>
+                    <td>{{ tests.pass }}</td>
+                    <td>{{ tests.fail }}</td>
+                    <td>{{ tests.toDo }}</td>
+                </tr>
+            </table>
+        </nys-table>
+    </section>
+    {% endif %}{# Introduction #}
+    {% endblock -%}{# TestStatus #}
+
+    {%- block AnyoneCanDoIt %}
+    <section class="anyone-can-do-it">
+        <h2>Accessibility tests</h2>
+        <div class="card--bisect">
+            <div class="card--bisect__start color-theme--faint">
+                <mark class="subhead nys-font-h6">Anyone can run these accessibility tests, no special tools needed.</mark>
+                <p>
+                    Each passing test removes a real barrier for New Yorkers who navigate by keyboard,
+                    screen reader, or voice control.
+                </p>
+            </div>
+            <div class="card--bisect__end nys-grid-row nys-grid-gap-5">
+                <div class="nys-tablet:nys-grid-col-4">
+                    <i class="color-theme--faint">
+                        <nys-icon color="var(--nys-color-theme)" name="search" size="18"></nys-icon>
+                    </i>
+                    <mark class="subhead stronger">Find what you need</mark>
+                    <p>
+                        All of these tests can be run from your browser.
+                        Each section tells you what to use and where to get it.
+                    </p>
+                </div>
+                <div class="nys-tablet:nys-grid-col-4">
+                    <i class="color-theme--faint">
+                        <nys-icon color="var(--nys-color-theme)" name="edit_square" size="16"></nys-icon>
+                    </i>
+                    <mark class="subhead stronger">Follow the checklists</mark>
+                    <p>
+                        Each checkbox tells you exactly what to do and what a passing result looks or sounds like.
+                    </p>
+                </div>
+                <div class="nys-tablet:nys-grid-col-4">
+                    <i class="color-theme--faint">
+                        <nys-icon color="var(--nys-color-theme)" name="check" size="20"></nys-icon>
+                    </i>
+                    <mark class="subhead stronger">Track and share results</mark>
+                    <p>
+                        Run each test, record what passes and what needs work, and print your results to share with your team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock -%}{# AnyoneCanDoIt #}
+
+    {%- block Keyboard %}
+    {% if keyboard %}
+    <section class="test-keyboard checkbox__tile">
+        <h3>Keyboard navigation</h3>
+        <p>
+            Limit interaction with the component to only the <kbd>Tab</kbd>, <kbd>Enter</kbd>, and <kbd>Spacebar</kbd> keys.
+            While testing keyboard navigation do not use a mouse whatsoever.
+        </p>
+
+        {% for interaction in keyboard.interactions %}
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when keyboard test {{ loop.index }} passes"
+                    aria-describedby="keyboard-desc-{{ loop.index }}">
+            <span id="keyboard-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    {% for requirement in interaction.requirements %}
+                    <li>{{ requirement | safe }}</li>
+                    {% endfor %}
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        {% endfor %}
+    </section>
+    {% endif -%}
+    {% endblock -%}{# Keyboard #}
+
+    {%- block Mouse %}
+    {% if mouse %}
+    <section class="test-mouse checkbox__tile">
+        <h3>Mouse</h3>
+        <p>
+            Lorem ipsum dolor sit amet.
+        </p>
+
+        {% for interaction in mouse.interactions %}
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when mouse test {{ loop.index }} passes"
+                    aria-describedby="mouse-desc-{{ loop.index }}">
+            <span id="mouse-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    {% for requirement in interaction.requirements %}
+                    <li>{{ requirement | safe }}</li>
+                    {% endfor %}
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        {% endfor %}
+    </section>
+    {% endif %}
+    {% endblock -%}{# Mouse #}
+
+    {%- block ScreenReader %}
+    {% if screenReader %}
+    <section class="test-screenreader checkbox__tile">
+        <h3>Desktop screen reader</h3>
+        <p>
+            Test with at least two out of the three most common screen readers.
+            <a href="https://www.nvaccess.org/download/" target="_blank">NVDA</a>
+            runs under Windows and is a free download.
+            <a href="https://support.freedomscientific.com/Downloads/JAWS" target="_blank">JAWS</a>
+            runs under Windows and is a commercial product.
+            <a href="https://support.apple.com/guide/voiceover/welcome/mac" target="_blank">VoiceOver</a>
+            is built into macOS.
+            While using a screen reader do not use a mouse whatsoever.
+        </p>
+
+        {% for interaction in screenReader.interactions %}
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when screen reader test {{ loop.index }} passes"
+                    aria-describedby="screenreader-desc-{{ loop.index }}">
+            <span id="screenreader-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    {% for requirement in interaction.requirements %}
+                    <li>{{ requirement | safe }}</li>
+                    {% endfor %}
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        {% endfor %}
+    </section>
+    {% endif -%}
+    {% endblock -%}{# ScreenReader #}
+
+    {%- block MobileScreenReader %}
+    {% if screenReaderMobile %}
+    <section class="test-screenreader-mobile checkbox__tile">
+        <h3>Mobile screen reader</h3>
+        <p>
+            Test with at least one, ideally both, of the primary mobile screen readers.
+            <a href="https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios" target="_blank">VoiceOver</a>
+            is part of iOS and
+            <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en" target="_blank">TalkBack</a>
+            is included with most Android devices.
+        </p>
+
+        {% for interaction in screenReaderMobile.interactions %}
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when mobile screen reader test {{ loop.index }} passes"
+                    aria-describedby="screenreader-mobile-desc-{{ loop.index }}">
+            <span id="screenreader-mobile-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    {% for requirement in interaction.requirements %}
+                    <li>{{ requirement | safe }}</li>
+                    {% endfor %}
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mobile screen reader test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        {% endfor %}
+    </section>
+    {% endif -%}
+    {% endblock -%}{# MobileScreenReader #}
+
+    {%- block Voice %}
+    {% if voice %}
+    <section class="test-voice checkbox__tile">
+        <h3>Voice</h3>
+        <p>
+            <a href="https://support.microsoft.com/en-us/topic/get-started-with-voice-access-bd2aa2dc-46c2-486c-93ae-3d75f7d053a4" target="_blank">Voice Access</a>
+            is part of the Windows OS, and
+            <a href="https://support.apple.com/guide/mac-help/get-started-with-voice-control-mchl1a04f324/mac" target="_blank">Voice Control</a>
+            is part of macOS.
+        </p>
+
+        {% for interaction in voice.interactions %}
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when voice test {{ loop.index }} passes"
+                    aria-describedby="voice-desc-{{ loop.index }}">
+            <span id="voice-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    {% for requirement in interaction.requirements %}
+                    <li>{{ requirement | safe }}</li>
+                    {% endfor %}
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">voice test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        {% endfor %}
+    </section>
+    {% endif -%}
+    {% endblock -%}{# Voice #}
+
+    {%- block Zoom %}
+    {% if zoom %}
+    <section class="test-zoom checkbox__tile">
+        <h3>Zoom</h3>
+        <p>
+            All tests in this section require the browser to be zoomed to 200%.
+            On Windows press <kbd>Ctrl</kbd> + <kbd>plus</kbd> and
+            on macOS press <kbd>Cmd</kbd> + <kbd>plus</kbd>.
+        </p>
+
+        {% for interaction in zoom.interactions %}
+        <label>
+            <input  type="checkbox"
+                    class="nysa11y checkbox"
+                    data-component="checkbox"
+                    data-html="native"
+                    aria-label="Mark when zoom test {{ loop.index }} passes"
+                    aria-describedby="zoom-desc-{{ loop.index }}">
+            <span id="zoom-desc-{{ loop.index }}"
+                  class="nysa11y checkbox__label"
+                  aria-level="4">{{ interaction.scenario | safe }}</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    {% for requirement in interaction.requirements %}
+                    <li>{{ requirement | safe }}</li>
+                    {% endfor %}
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">zoom test {{loop.index}}</span>
+                    <nys-badge  label="{{ interaction.status[0] }}"
+                                intent="{{ interaction.status[1] }}"
+                                prefixIcon>
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        {% endfor %}
+    </section>
+    {% endif -%}
+    {% endblock -%}{# Zoom #}
+
+    {%- block wcag %}
+    {% if disabilities %}
+    <section class="wcag checkbox__tile">
+        <h2>Use this checklist at the design stage</h2>
+        <p>
+            This checklist breaks down the specific design and interaction requirements behind the tests above,
+            organized by disability type so you can see exactly who each requirement serves and what it means in practice.
+            Each item links to the related
+            <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank">WCAG 2.2 resources</a>.
+        </p>
+        {% for wcag in disabilities %}
+        <h3>{{ wcag.type }}</h3>
+        {% for criterion in wcag.criteria %}
+        <label>
+                <input  type="checkbox"
+                        class="nysa11y checkbox"
+                        data-component="checkbox"
+                        data-html="native"
+                        aria-label="Mark when {{ wcag.type }} requirement {{ loop.index }} is ensured"
+                        aria-describedby="{{ wcag.type }}-desc-{{ loop.index }}">
+            <span aria-level="4"
+                  class="nysa11y checkbox__label"
+                  id="{{ wcag.type }}-desc-{{ loop.index }}">{{ criterion.description }}</span>
+            <div class="nysa11y checkbox__more">
+                <a href="{{ criterion.uri }}" target="_blank">
+                    {{ criterion.sc }}
+                </a>
+            </div>
+        </label>
+        {% endfor %}
+        {% endfor %}
+    </section>
+    {% endif -%}
+    {% endblock -%}{# wcag #}
+
+    {% include "partials/a11y-contact-points.njk" %}
+</article>

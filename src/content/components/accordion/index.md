@@ -6,8 +6,9 @@ image: /assets/img/components/accordion.svg
 image_alt: An illustration of an accordion
 image_header: /assets/img/components/accordion-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=6468-13132&t=0cK7llM1tFRVIgBx-4
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783
 navOrder: 1
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -41,6 +42,14 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+{% block accessibility %}
+<!--
+The `nys-accordionitem` component includes the following accessibility-focused features:
+
+  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
+  - Headers are large enough to interact with easily (minimum 44x44px).-->
+
+{% endblock %}
 
 {% block usage %}
 
@@ -74,15 +83,6 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 
 {% endblock %}
 
-{% block accessibility %}
-
-The `nys-accordionitem` component includes the following accessibility-focused features:
-
-  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
-  - Headers are large enough to interact with easily (minimum 44x44px).
-  - The whole header area is clickable, not just the icon.
-
-{% endblock %}
 
 {% block options %}
 

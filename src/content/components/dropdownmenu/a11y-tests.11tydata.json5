@@ -1,0 +1,183 @@
+/**
+ * --------------------------------------------------------------------+
+ * JSON5 supports comments and much more <https://json5.org/>          +
+ * Values for `interactions.status` must be one of these combinations: +
+ * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
+ * Comment top-level members to prevent their corresponding njk blocks +
+ * from rendering. Members that may be commented are exactly these:    +
+ * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
+ * zoom, disabilities.                                                 +
+ * --------------------------------------------------------------------+
+ */
+{
+  "pattern": "Dropdown Menu",
+  "tests": {
+    "total": 0,
+    "pass": 0,
+    "fail": 0,
+    "toDo": 0
+  },
+
+  "keyboard": {
+    "interactions": [
+      {
+        "scenario": "WHEN I <kbd>k1<\/kbd>",
+        "requirements": ["THEN outcome k1"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I <kbd>k2<\/kbd>, <kbd>k3<\/kbd>",
+        "requirements": ["THEN outcome k1", "THEN outcome k2"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+
+  "mouse": {
+    "interactions": [
+      {
+        "scenario": "WHEN I m4",
+        "requirements": ["THEN outcome m4"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I m5, m6",
+        "requirements": ["THEN outcome m5", "THEN outcome m6"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+
+  "screenReader": {
+    "interactions": [
+      {
+        "scenario": "WHEN I sr7",
+        "requirements": ["THEN outcome sr7"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I sr8, sr9",
+        "requirements": ["THEN outcome sr8", "THEN outcome sr9"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+
+  "screenReaderMobile": {
+    "interactions": [
+      {
+        "scenario": "WHEN I srm10",
+        "requirements": ["THEN outcome srm10"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I srm11, srm12",
+        "requirements": ["THEN outcome srm11", "THEN outcome srm12"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+
+  "voice": {
+    "interactions": [
+      {
+        "scenario": "WHEN I v13",
+        "requirements": ["THEN outcome v13"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I v14, v15",
+        "requirements": ["THEN outcome v14", "THEN outcome v15"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+
+  "zoom": {
+    "interactions": [
+      {
+        "scenario": "WHEN I z16",
+        "requirements": ["THEN outcome z16"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I z17, z18",
+        "requirements": ["THEN outcome z17", "THEN outcome z18"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+
+  "disabilities": [
+    {
+      "type": "blindness",
+      "criteria": [
+        {
+          "description": "Blind 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.0 AA"
+        },
+        {
+          "description": "Blind 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.1 AA"
+        }
+      ]
+    },
+    {
+      "type": "cognition",
+      "criteria": [
+        {
+          "description": "Cognition...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.2 AA"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "criteria": [
+        {
+          "description": "Color 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.3 AA"
+        },
+        {
+          "description": "Color 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.4 AA"
+        }
+      ]
+    },
+    {
+      "type": "low vision",
+      "criteria": [
+        {
+          "description": "LowVis 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.5 AA"
+        },
+        {
+          "description": "LowVis 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.6 AA"
+        }
+      ]
+    },
+    {
+      "type": "motor",
+      "criteria": [
+        {
+          "description": "Motor 1...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.8 AA"
+        },
+        {
+          "description": "Motor 2...",
+          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
+          "sc": "0.0.9 AA"
+        }
+      ]
+    }
+  ]
+}
