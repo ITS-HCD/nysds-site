@@ -77,9 +77,9 @@ The `nys-accordionitem` component includes the following accessibility-focused f
 
 {% block usagedont %}
 
-  - Don't hide time-sensitive deadlines or required steps in a collapsed section.
-  - Don't use vague or unclear headings that make it hard to know what is inside.
-  - Don't overuse accordions for content that is short enough to display fully on the page.
+  - Hide time-sensitive deadlines or required steps in a collapsed section.
+  - Use vague or unclear headings that make it hard to know what is inside.
+  - Overuse accordions for content that is short enough to display fully on the page.
 
 {% endblock %}
 
@@ -229,6 +229,16 @@ accordion.addEventListener("nys-accordionitem-toggle", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

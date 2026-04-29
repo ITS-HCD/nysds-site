@@ -6,7 +6,7 @@ image: /assets/img/components/tooltip.svg
 image_alt: An illustration of a tooltip.
 image_header: /assets/img/components/tooltip-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4298-1477
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4313-1030&t=EXsXvlMbCdRw10ir-4
 navOrder: 26
 ---
 
@@ -141,9 +141,9 @@ Set the `inverted` when the tooltip is on a dark background.
 
 {% block usagedont %}
 
-  - Don't use tooltips for information that is vital to task completion.
-  - Don't use interactive elements such as links or buttons inside a tooltip.
-  - Don't rely on tooltips when you have room to provide more explanation.
+  - Use tooltips for information that is vital to task completion.
+  - Use interactive elements such as links or buttons inside a tooltip.
+  - Rely on tooltips when you have room to provide more explanation.
 
 {% endblock %}
 

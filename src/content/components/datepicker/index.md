@@ -6,7 +6,7 @@ image: /assets/img/components/datepicker.svg
 image_alt: An illustration of a date picker.
 image_header: /assets/img/components/datepicker-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=15514-1502
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=15514-6117&t=YFURmePNl1sEj6Vj-4
 navOrder: 9
 ---
 
@@ -27,6 +27,7 @@ The `<nys-datepicker>` component allows users to select a date from a visual cal
   description="Enter in MM/DD/YYYY format"
 ></nys-datepicker>
 {% endset %}
+{% set showTip = true %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -62,9 +63,9 @@ Consider memorable date fields ([currently under proposal](https://github.com/IT
 
 {% block usagedont %}
 
-  - Don't use for memorable dates, or dates in the past, use a textinput instead
-  - Don't use without a label or accessible description
-  - Don't use if relying on browser specific date picker behavior
+  - Use for memorable dates, or dates in the past, use a textinput instead
+  - Use without a label or accessible description
+  - Use if relying on browser specific date picker behavior
 
 {% endblock %}
 
@@ -271,6 +272,9 @@ Use properties `hideTodayButton` and `hideClearButton` to toggle off the buttons
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-datepicker` component with a specific `<form>` element, regardless of its location on the page. This ensures that the date picker's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
@@ -300,6 +304,16 @@ datepicker.addEventListener('nys-input', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<wc-datepicker>","<nys-icon>","<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

@@ -6,7 +6,7 @@ image: /assets/img/components/fileinput.svg
 image_alt: An illustration of a file input.
 image_header: /assets/img/components/fileinput-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4739-1812
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4739-1994&t=Fz3PChrCAbfpr60Y-4
 navOrder: 12
 ---
 
@@ -55,8 +55,9 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
 
 {% block usagedont %}
 
-  - Don't use when uploading sensitive data without encryption
-  - Don't use `<nys-fileinput>` when it is not necessary for the task.
+  - Use when uploading sensitive data without encryption
+  - Use when you want to let users preview file content
+  - Use when it is not necessary for the task.
 {% endblock %}
 
 {% block accessibility %}
@@ -160,6 +161,24 @@ You can supply a description via our `description` prop for plain text or by emb
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Inverted
+Set the inverted when the component is on a dark background.
+
+{% set preview %}
+<nys-fileinput
+  id="fileinput1"
+  name="fileinput1"
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+  inverted
+></nys-fileinput>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set inverted = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -229,6 +248,9 @@ You can supply a description via our `description` prop for plain text or by emb
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-fileinput` component with a specific `<form>` element, regardless of its location on the page. This ensures that the file input's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
@@ -267,6 +289,16 @@ fileinput.addEventListener("nys-change", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>", "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
