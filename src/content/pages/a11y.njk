@@ -101,12 +101,13 @@ heading_links: false
   margin-top: var(--nys-space-200);
 }
 
-.card-page {
-  height: 420px;
-}
+
 
 @media (width > 1024px) {
   #card-page-container {
+    height: 420px;
+  }
+  .card-page {
     height: 420px;
   }
 }
@@ -174,6 +175,10 @@ heading_links: false
 .full-size-posters a {
   display: inline-block;
   margin-bottom: var(--nys-space-400);
+}
+
+.full-size-posters img {
+  max-width: 100%;
 }
 
 </style>
@@ -285,6 +290,9 @@ heading_links: false
     <div class="poster-deck-wrapper color-theme--weaker nys-margin-t-800">
       <div class="nys-grid-container-widescreen">
         <div class="nys-grid-row full-size-posters">
+          <div class="nys-grid-col-12">
+            <h2>Download and share these posters to spread the word about accessibility!</h2>
+          </div>
           <div class="nys-grid-col-4">
             <a href="/assets/pdf/poster-139.pdf">
             <img src="{{ '/assets/img/poster-139.png' | url }}" alt="Sound isn't always heard. Captions and transcripts make content work for everyone." >
@@ -357,16 +365,6 @@ heading_links: false
 
 {% block scripts %}
 <script>
-  (function () {
-    {# const randNum = Math.floor(Math.random() * 3) + 1;
-
-    const divs = document.querySelectorAll('.card-page');
-    divs.forEach(div => div.style.display = 'none');
-
-    const randomIndex = Math.floor(Math.random() * divs.length);
-    divs[randomIndex].style.display = 'block';
- #}
-  })();
   let currentIndex = 0; // track which div is showing
 
   function showRandomDiv() {
@@ -381,6 +379,8 @@ heading_links: false
     divs[currentIndex].style.display = 'none';
     divs[newIndex].style.display = 'block';
     currentIndex = newIndex;
+
+    document.getElementById('card-page-container').scrollIntoView({ behavior: 'smooth' });
   }
 </script>
 {% endblock %}
