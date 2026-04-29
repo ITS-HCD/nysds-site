@@ -1,18 +1,386 @@
 ---
 permalink: /a11y/
-title: "The New York State Design System"
+title: Accessibility 
 description: "The New York State Design System makes it easier to build accessible, mobile-friendly applications and websites for New York State."
 crawl: false
 site_nav: false
 heading_links: false
 ---
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <meta charset="utf-8" />
-  <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="/foundations/accessibility/" />
-  <meta http-equiv="refresh" content="0; url=/foundations/accessibility/" />
-  <meta name="robots" content="noindex" />
-  <a href="/foundations/accessibility">Click here if you are not redirected.</a>
-</html>
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<!-- Home Hero -->
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <svg width="150" height="13" viewBox="0 0 209 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="a11y-color-mark">
+        <rect x="104.33" width="52.1654" height="12.9576" fill="#FACE00"/>
+        <rect x="156.498" width="52.1654" height="12.9576" fill="#0E324F"/>
+        <rect x="52.166" width="52.1654" height="12.9576" fill="#004DD1"/>
+        <rect width="52.1654" height="12.9576" fill="#A2350A"/>
+      </svg>
+      <h1>Be<span class="letter--tight"> </span>an<span class="letter--tight"> </span><span class="heavy"><span class="letter-not-so--tight">a1</span>1y.</span></h1>
+      <p style="margin-left: 5px;">Accessible design is better for everyone.</p>
+    </div>
+    <div class="hero__media">
+      <img src="{{ '/assets/img/a11y-banner.png' | url }}" style="width: 80%;" alt="">
+    </div>
+  </div>
+</div>
+
+<style>
+.letter--tight {
+  letter-spacing: -6px;
+}
+
+.letter-not-so--tight {
+  letter-spacing: -4px;
+}
+
+.a11y-color-mark {
+  margin-left: -10px;
+}
+
+@media (width > 768px) {
+  .a11y-color-mark {
+    margin-left: 6px;
+  }
+}
+
+.hero *,
+.a11y-card * {
+  color: var(--nys-color-theme-strong);
+}
+
+.hero h1 {
+  margin-top: var(--nys-space-50);
+}
+
+@media (width > 1024px) {
+  .hero h1 {
+    font-size: 96px;
+    line-height: 1;
+    margin-top: var(--nys-space-200);
+    margin-bottom: var(--nys-space-100);
+  }
+}
+
+.hero p {
+  font-size: var(--nys-font-size-5xl);
+  line-height: 1.2;
+}
+
+.hero h1,
+.hero p,
+.a11y-card h3,
+.a11y-card p {
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-weight: 200;
+}
+
+.a11y-card h3 {
+  margin-top: var(--nys-space-200);
+}
+
+.hero p,
+.a11y-card p {
+  font-weight: normal;
+}
+
+.heavy {
+  font-weight: 500;
+}
+
+.a11y-card p {
+  font-size: 1.125rem;
+}
+
+.a11y-card .fake-h3 {
+  font-size: var(--nys-font-size-h3);
+  margin-top: var(--nys-space-200);
+}
+
+
+
+@media (width > 1024px) {
+  #card-page-container {
+    height: 420px;
+  }
+  .card-page {
+    height: 420px;
+  }
+}
+
+.a11y-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+  .poster-deck-wrapper {
+    padding: 3rem 0 5rem;
+    overflow-x: auto;
+  }
+
+.poster-deck img {
+  width: 100px;
+  }
+
+@media (width > 768px) {
+
+  .poster-deck {
+    position: relative;
+    width: 700px;
+    height: 420px;
+    margin: 0 auto;
+  }
+
+  .poster-deck img {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transform: rotate(var(--r, 0deg));
+  }
+
+
+  .poster-deck img:nth-child(1) { z-index: 1; left: 0px;   top: 130px; --r: -16deg; }
+  .poster-deck img:nth-child(2) { z-index: 2; left: 65px;  top: 80px;  --r: -11deg; }
+  .poster-deck img:nth-child(3) { z-index: 3; left: 130px; top: 45px;  --r: -6deg;  }
+  .poster-deck img:nth-child(4) { z-index: 4; left: 195px; top: 20px;  --r: -2deg;  }
+  .poster-deck img:nth-child(5) { z-index: 5; left: 265px; top: 10px;  --r: 0deg;   }
+  .poster-deck img:nth-child(6) { z-index: 6; left: 335px; top: 20px;  --r: 2deg;   }
+  .poster-deck img:nth-child(7) { z-index: 7; left: 400px; top: 45px;  --r: 6deg;   }
+  .poster-deck img:nth-child(8) { z-index: 8; left: 465px; top: 80px;  --r: 11deg;  }
+  .poster-deck img:nth-child(9) { z-index: 9; left: 530px; top: 130px; --r: 16deg;  }
+
+  .poster-deck img:hover,
+  .poster-deck img:focus {
+    z-index: 100;
+    transform: rotate(var(--r, 0deg)) translateY(-24px) scale(1.07);
+    box-shadow: 6px 16px 32px rgba(0, 0, 0, 0.4);
+    /* outline: 3px solid var(--nys-color-theme-strong, #004DD1); */
+    outline-offset: 4px;
+  }
+}
+
+.full-size-posters a {
+  display: inline-block;
+  margin-bottom: var(--nys-space-400);
+}
+
+.full-size-posters img {
+  max-width: 100%;
+}
+
+</style>
+
+<div class="nys-top-800 nys-padding-y-800">
+  <div class="nys-grid-container-widescreen">
+    <div aria-live="polite" aria-atomic="true" id="card-page-announcement" class="a11y-sr-only"></div>
+    <div id="card-page-container">
+      <div class="card-page" id="card-page-1" style="display: block;">
+        <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-4-80.jpg" style="clip-path: polygon(7% 7%, 93% 5%, 91% 95%, 5% 87%)">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">a11y</span> is short for <span class="heavy">accessibility</span>.</p>
+                <p>There are 11 letters between the <span class="heavy">a</span> and <span class="heavy">y</span>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-5-80.jpg" style="clip-path: polygon(3% 0%, 96% 3%, 94% 92%, 5% 99%)">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">Inclusion</span> isn't optional.</p>
+                <p>Over 1 billion people globally live with a disability, including <span class="heavy">nearly 1 in 4 New Yorkers.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-6-80.jpg" style="clip-path: polygon(1% 10%, 98% 8%, 99% 98%, 0% 96%)">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3">Compliance matters. <span class="heavy">People matter more.</span></p>
+                <p>Helping New Yorkers access public services is more than just meeting legal requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-page" id="card-page-2" hidden>
+        <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-7-80.jpg" style="clip-path: polygon(0% 11%, 100% 9%, 96% 86%, 47% 83%, 47% 93%, 14% 96%, 13% 82%, 2% 81%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">Champions</span> of <span class="heavy">inclusion.</span></p>
+                <p>The ITS Accessibility Team partners with dedicated NYS teams to make digital services accessible for every New Yorker.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-8-80.jpg" style="clip-path: polygon(5% 7%, 96% 5%, 94% 91%, 6% 84%);">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">Brains</span> work <span class="heavy">differently.</span></p>
+                <p>Words and design that are clear and simple work better for everyone.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-9-80.jpg" style="clip-path: polygon(8% 12%, 95% 5%, 95% 92%, 6% 92%);">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">Accessibility</span> is a <span class="heavy">right.</span></p>
+                <p>When we build digital services that are inclusive, we effectively serve all New Yorkers with compassion, dignity, and equity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-page" id="card-page-3" hidden>
+        <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-1-80.jpg" style="clip-path: polygon(7% 5%, 98% 10%, 97% 93%, 4% 95%);">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">Sound</span> isn't always <span class="heavy">heard.</span></p>
+                <p>Captions and transcripts make content work for everyone.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-2-80.jpg" style="clip-path: polygon(2% 8%, 95% 3%, 97% 95%, 2% 94%);">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3"><span class="heavy">Accessibility</span> should be <span class="heavy">everywhere.</span></p>
+                <p>Accessible design is usable by everyone — regardless of ability, age, or circumstance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/img/a11y-grid-artboard-3-80.jpg" style="clip-path: polygon(8% 7%, 93% 6%, 94% 92%, 6% 86%);">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <p class="fake-h3">Not everyone <span class="heavy">sees your site.</span></p>
+                <p>Some New Yorkers use screen readers, magnifiers, or high-contrast mode.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nys-grid-col-12" style="text-align: center;">
+        <nys-button variant="outline" label="Show three more accessibility facts" onclick="showRandomDiv(); return false;" suffixIcon="arrow_forward" size="lg"></nys-button>
+      </div>
+    </div>
+  </div>
+    <div class="poster-deck-wrapper color-theme--weaker nys-margin-t-800">
+      <div class="nys-grid-container-widescreen">
+        <div class="nys-grid-row full-size-posters">
+          <div class="nys-grid-col-12">
+            <h2>Download and share these posters to spread the word about accessibility!</h2>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-139.pdf">
+            <img src="{{ '/assets/img/poster-139.png' | url }}" alt="Sound isn't always heard. Captions and transcripts make content work for everyone." >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-140.pdf">
+            <img src="{{ '/assets/img/poster-140.png' | url }}" alt="Brains work differently. Words and design that are clear and simple work better for everyone." >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-141.pdf">
+            <img src="{{ '/assets/img/poster-141.png' | url }}" alt="a11y is short for accessibility. (There are 11 letters between the a and y.)" >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-144.pdf">
+            <img src="{{ '/assets/img/poster-144.png' | url }}" alt="Accessible Design is better for everyone. Red and pink background" >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-145.pdf">
+            <img src="{{ '/assets/img/poster-145.png' | url }}" alt="Accessible Design is better for everyone. Red and blue background" >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-146.pdf">
+            <img src="{{ '/assets/img/poster-146.png' | url }}" alt="Accessible Design is better for everyone. Blue and yellow background" >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-147.pdf">
+            <img src="{{ '/assets/img/poster-147.png' | url }}" alt="Be an ally. Peace sign blue" >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-148.pdf">
+            <img src="{{ '/assets/img/poster-148.png' | url }}" alt="Be an ally. Peace sign yellow" >
+          </a>
+          </div>
+          <div class="nys-grid-col-4">
+            <a href="/assets/pdf/poster-149.pdf">
+            <img src="{{ '/assets/img/poster-149.png' | url }}" alt="Be an ally. Peace sign red" >
+          </a>
+          </div>
+      </div>
+      <div class="poster-deck">
+        <img src="{{ '/assets/img/poster-139.png' | url }}" alt="Sound isn't always heard. Captions and transcripts make content work for everyone." >
+        <img src="{{ '/assets/img/poster-140.png' | url }}" alt="Brains work differently. Words and design that are clear and simple work better for everyone." >
+        <img src="{{ '/assets/img/poster-141.png' | url }}" alt="a11y is short for accessibility. (There are 11 letters between the a and y.)" >
+        <img src="{{ '/assets/img/poster-144.png' | url }}" alt="Accessible Design is better for everyone. Red and pink background" >
+        <img src="{{ '/assets/img/poster-145.png' | url }}" alt="Accessible Design is better for everyone. Red and blue background" >
+        <img src="{{ '/assets/img/poster-146.png' | url }}" alt="Accessible Design is better for everyone. Blue and yellow background" >
+        <img src="{{ '/assets/img/poster-147.png' | url }}" alt="Be an ally. Peace sign blue" >
+        <img src="{{ '/assets/img/poster-148.png' | url }}" alt="Be an ally. Peace sign yellow" >
+        <img src="{{ '/assets/img/poster-149.png' | url }}" alt="Be an ally. Peace sign red" >
+      </div>
+      <div style="text-align: center;">
+      <nys-button href="#" label="Download the complete set" size="lg"></nys-button>
+      </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ '/assets/fonts/atkinson-hyperlegible/atkinson-hyperlegible.css' | url }}">
+{% endblock %}
+
+{% block scripts %}
+<script>
+  let currentIndex = 0; // track which div is showing
+
+  function showRandomDiv() {
+    const divs = document.querySelectorAll('.card-page');
+    
+    // Pick a random index that's different from the current one
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * divs.length);
+    } while (newIndex === currentIndex);
+
+    divs[currentIndex].style.display = 'none';
+    divs[newIndex].style.display = 'block';
+    currentIndex = newIndex;
+
+    document.getElementById('card-page-container').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+{% endblock %}
