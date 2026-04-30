@@ -7,7 +7,7 @@ image_alt: An illustration of a dropdownmenu.
 image_header: /assets/img/components/dropdownmenu-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545
-navOrder: 11
+navOrder: 12
 ---
 
 {% extends "layouts/component.njk" %}
