@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
+    <!-- Latest Build: 2026-04-30T18:48:31.732Z -->
   </head>
   
   <body class="single-page page-select section-components">
@@ -466,7 +466,7 @@
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
         <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
         </nys-badge>
-        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877" target="_blank"></nys-button>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-70151&amp;t=Fz3PChrCAbfpr60Y-4" target="_blank"></nys-button>
     </div>
 </section>
 <section>
@@ -503,7 +503,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -879,6 +879,42 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
+<h3 id="inverted">Inverted</h3>
+<p>Set the <code>inverted</code> when the component is on a dark background.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview inverted solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner"><nys-select label="Select your favorite borough" inverted="">
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>
+</nys-select></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select your favorite borough<span class="token punctuation">"</span></span> <span class="token attr-name">inverted</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bronx<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>The Bronx<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>brooklyn<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Brooklyn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manhattan<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Manhattan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>staten_island<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Staten Island<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>queens<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Queens<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 </section><br>
 <section>
     <h2 id="usage">Usage</h2>
@@ -907,7 +943,7 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
         <div class="card card--dont nys-flex-fill">
             <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't use the custom <code>&lt;nys-option&gt;</code> element in the <code>&lt;nys-select&gt;</code> component. This will be deprecated with the 2.0 release</li>
+<li>Use the custom <code>&lt;nys-option&gt;</code> element in the <code>&lt;nys-select&gt;</code> component. This will be deprecated with the 2.0 release</li>
 <li>Use <code>&lt;nys-select multiple&gt;</code> as an input for users to select multiple items from a dropdown. Consider a <a href="/components/checkbox/">checkbox group</a> instead. More guidance from the <a href="https://designsystem.digital.gov/components/select/#when-to-consider-something-else">US Web Design System</a></li>
 </ul>
 </div>
@@ -994,6 +1030,8 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </tr>
   </table>
 </nys-table>
+<h3 id="form-prop">Form Prop</h3>
+<p>The form attribute associates the <code>nys-select</code> component with a specific <code>&lt;form&gt;</code> element, regardless of its location on the page. This ensures that the select's state is included in the form submission, whether it is inside the <code>&lt;form&gt;</code> element or outside it.</p>
 </section><br>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
@@ -1064,7 +1102,7 @@ select<span class="token punctuation">.</span><span class="token function">addEv
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/select/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 29, 2026</p>
+    <p>Last updated: April 30, 2026</p>
   </div>
 
   </div>

@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
+    <!-- Latest Build: 2026-04-30T18:48:31.732Z -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -466,7 +466,7 @@
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
         <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
         </nys-badge>
-        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10587" target="_blank"></nys-button>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-3154&amp;t=EXsXvlMbCdRw10ir-4" target="_blank"></nys-button>
     </div>
 </section>
 <section>
@@ -491,7 +491,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -928,6 +928,36 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
+<h3 id="inverted">Inverted</h3>
+<p>Set the <code>inverted</code> when the component is on a dark background.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview inverted solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-textinput name="descriptionProp" label="Label" description="Slot: description" inverted=""></nys-textinput></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>descriptionProp<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Slot: description<span class="token punctuation">"</span></span>
+  <span class="token attr-name">inverted</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 </section><br>
 <section>
     <h2 id="usage">Usage</h2>
@@ -957,9 +987,9 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
         <div class="card card--dont nys-flex-fill">
             <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don’t use for long or detailed responses (use <code>&lt;nys-textarea&gt;</code> instead).</li>
-<li>Don’t overwhelm users with too many fields; group related inputs.</li>
-<li>Don’t use placeholders as labels.</li>
+<li>Use for long or detailed responses (use <code>&lt;nys-textarea&gt;</code> instead).</li>
+<li>Overwhelm users with too many fields; group related inputs.</li>
+<li>Use placeholders as labels.</li>
 </ul>
 </div>
     </div>
@@ -1054,6 +1084,8 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </tr>
   </table>
 </nys-table>
+<h3 id="form-prop">Form Prop</h3>
+<p>The form attribute associates the <code>nys-textinput</code> component with a specific <code>&lt;form&gt;</code> element, regardless of its location on the page. This ensures that the text input's state is included in the form submission, whether it is inside the <code>&lt;form&gt;</code> element or outside it.</p>
 </section><br>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
@@ -1124,7 +1156,7 @@ textinput<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/textinput/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 29, 2026</p>
+    <p>Last updated: April 30, 2026</p>
   </div>
 
   </div>

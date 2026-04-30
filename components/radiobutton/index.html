@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-04-29T17:08:03.070Z -->
+    <!-- Latest Build: 2026-04-30T18:48:31.732Z -->
   </head>
   
   <body class="single-page page-radiobutton section-components">
@@ -467,7 +467,7 @@
         <nys-badge label="Stable" prefixIcon="code"></nys-badge>
         <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
         </nys-badge>
-        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487" target="_blank"></nys-button>
+        <nys-button size="sm" variant="text" label="View in Figma" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-69517&amp;t=Fz3PChrCAbfpr60Y-4" target="_blank"></nys-button>
     </div>
 </section>
 <section>
@@ -498,7 +498,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -537,6 +537,52 @@
 </section><br>
 <section>
     <h2 id="options">Options</h2>
+<h3 id="partial">Partial</h3>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner"><nys-radiogroup label="Choose your preferred work operating system.">
+  <nys-radiobutton name="op-system" label="Windows 11" description="HP Elitebook" value="windows"></nys-radiobutton>
+  <nys-radiobutton name="op-system" label="Sequoia" description="Macbook Air" value="mac"></nys-radiobutton>
+  <nys-radiobutton name="op-system" label="Linux" value="windows" disabled=""></nys-radiobutton>
+</nys-radiogroup></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiogroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Choose your preferred work operating system.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>op-system<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Windows 11<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>HP Elitebook<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>windows<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>op-system<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Sequoia<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Macbook Air<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mac<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>op-system<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Linux<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>windows<span class="token punctuation">"</span></span>
+    <span class="token attr-name">disabled</span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiogroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3 id="disabled">Disabled</h3>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
@@ -817,6 +863,56 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
+<h3 id="inverted">Inverted</h3>
+<p>Set the <code>inverted</code> on <code>&lt;nys-radiogroup&gt;</code> when the component is on a dark background.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview inverted solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner"><nys-radiogroup label="What is your primary work location?" inverted="">
+  <label slot="description">
+    This is the location you use for your in office days.
+    <a href="https://www.ny.gov/" target="__blank">(slot)</a></label>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York (prop)" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" value="manhattan">
+    <label slot="description"> New York City <a href="https://www.ny.gov/" target="__blank">(slot)</a></label>
+  </nys-radiobutton>
+</nys-radiogroup></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiogroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>What is your primary work location?<span class="token punctuation">"</span></span> <span class="token attr-name">inverted</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    This is the location you use for your in office days.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>__blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>(slot)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span>
+  <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Albany<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upstate New York (prop)<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>albany<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-radiobutton</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>office<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Manhattan<span class="token punctuation">"</span></span>
+    <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manhattan<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> New York City <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>__blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>(slot)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiobutton</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-radiogroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 </section><br>
 <section>
     <h2 id="usage">Usage</h2>
@@ -848,9 +944,9 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
         <div class="card card--dont nys-flex-fill">
             <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't use radio buttons for yes/no questions (consider using <code>&lt;nys-toggle&gt;</code> or <code>&lt;nys-checkbox&gt;</code>).</li>
-<li>Don’t overload users with too many options; simplify or use a dropdown instead.</li>
-<li>Don’t leave all options unselected if a helpful default can guide users.</li>
+<li>Use radio buttons for yes/no questions (consider using <code>&lt;nys-toggle&gt;</code> or <code>&lt;nys-checkbox&gt;</code>).</li>
+<li>Overload users with too many options; simplify or use a dropdown instead.</li>
+<li>Leave all options unselected if a helpful default can guide users.</li>
 </ul>
 </div>
     </div>
@@ -941,6 +1037,8 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </tr>
   </table>
 </nys-table>
+<h3 id="form-prop">Form Prop</h3>
+<p>The form attribute associates the <code>nys-radiobutton/nys-radiogroup</code> component with a specific <code>&lt;form&gt;</code> element, regardless of its location on the page. This ensures that the radio button/radio group's state is included in the form submission, whether it is inside the <code>&lt;form&gt;</code> element or outside it.</p>
 </section><br>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
@@ -1013,7 +1111,7 @@ radiogroup<span class="token punctuation">.</span><span class="token function">a
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/radiobutton/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 29, 2026</p>
+    <p>Last updated: April 30, 2026</p>
   </div>
 
   </div>
