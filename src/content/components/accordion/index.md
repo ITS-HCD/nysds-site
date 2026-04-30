@@ -7,7 +7,8 @@ image_alt: An illustration of an accordion
 image_header: /assets/img/components/accordion-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4469-1783
-navOrder: 2
+navOrder: 1
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -41,6 +42,14 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+{% block accessibility %}
+<!--
+The `nys-accordionitem` component includes the following accessibility-focused features:
+
+  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
+  - Headers are large enough to interact with easily (minimum 44x44px).-->
+
+{% endblock %}
 
 {% block usage %}
 
@@ -68,20 +77,12 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 
 {% block usagedont %}
 
-  - Don't hide time-sensitive deadlines or required steps in a collapsed section.
-  - Don't use vague or unclear headings that make it hard to know what is inside.
-  - Don't overuse accordions for content that is short enough to display fully on the page.
+  - Hide time-sensitive deadlines or required steps in a collapsed section.
+  - Use vague or unclear headings that make it hard to know what is inside.
+  - Overuse accordions for content that is short enough to display fully on the page.
 
 {% endblock %}
 
-{% block accessibility %}
-
-The `nys-accordionitem` component includes the following accessibility-focused features:
-
-  - Keyboard navigation (e.g. Tab to move between headers, Enter or Space to toggle).
-   -Headers are large enough to interact with easily (minimum 44x44px).
-
-{% endblock %}
 
 {% block options %}
 
@@ -228,6 +229,16 @@ accordion.addEventListener("nys-accordionitem-toggle", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

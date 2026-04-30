@@ -1,0 +1,250 @@
+/**
+ * --------------------------------------------------------------------+
+ * JSON5 supports comments and much more <https://json5.org/>          +
+ * Values for `interactions.status` must be one of these combinations: +
+ * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
+ * Comment top-level members to prevent their corresponding njk blocks +
+ * from rendering. Members that may be commented are exactly these:    +
+ * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
+ * zoom, disabilities.                                                 +
+ * --------------------------------------------------------------------+
+ */
+{
+  "pattern": "Accordion",
+  "tests": {
+    "total": 10,
+    "pass": 10,
+    "fail": 0,
+    "toDo": 0
+  },
+
+  "keyboard": {
+    "interactions": [
+      {
+        "scenario": "WHEN I use <kbd>Tab<\/kbd> to move focus to an accordion",
+        "requirements": [
+          "THEN I see focus is strongly visually indicated on the header by outline and background color."
+        ],
+        "status": ["passes", "success"]
+      },
+      {
+        "scenario": "WHEN I use <kbd>Spacebar<\/kbd> or <kbd>Enter<\/kbd> to activate the header",
+        "requirements": [
+          "THEN I see that focus remains on the header.",
+          "THEN I see the visibility state has toggled."
+        ],
+        "status": ["passes", "success"]
+      }
+    ]
+  },
+
+  // TODO: write acceptance criteria for Mouse interactions
+  /*
+  "mouse": {
+    "interactions": [
+      {
+        "scenario": "WHEN I",
+        "requirements": ["THEN"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      },
+      {
+        "scenario": "WHEN I",
+        "requirements": ["THEN", "THEN"],
+        "status": ["passes, fails, to do", "success, error, warning"]
+      }
+    ]
+  },
+*/
+
+  "screenReader": {
+    "interactions": [
+      {
+        "scenario": "WHEN I use a desktop screen reader and I use either <kbd>Tab<\/kbd> or an <kbd>Arrow<\/kbd> to move focus to the header",
+        "requirements": [
+          "THEN I hear its purpose is clear (name).",
+          "THEN I hear it identifies its role of button or summary.",
+          "THEN I hear it expresses its state (expanded/collapsed)."
+        ],
+        "status": ["passes", "success"]
+      },
+      {
+        "scenario": "WHEN I use <kbd>Spacebar<\/kbd> or <kbd>Enter<\/kbd> to activate the header",
+        "requirements": [
+          "THEN I hear the state has toggled.",
+          "THEN I hear that focus remains on the header."
+        ],
+        "status": ["passes", "success"]
+      }
+    ]
+  },
+
+  "screenReaderMobile": {
+    "interactions": [
+      {
+        "scenario": "WHEN I use a screen reader AND I swipe to focus on a button",
+        "requirements": [
+          "THEN I hear its purpose is clear (name).",
+          "THEN I hear it identifies its role of button or summary.",
+          "THEN I hear it expresses its state (expanded/collapsed)."
+        ],
+        "status": ["passes", "success"]
+      },
+      {
+        "scenario": "WHEN I double-tap with the button in focus",
+        "requirements": ["THEN I hear the intended action occurs."],
+        "status": ["passes", "success"]
+      }
+    ]
+  },
+
+  "voice": {
+    "interactions": [
+      {
+        "scenario": "WHEN I use a voice control system and I command, <q>Click <em>header text<\/em><\/q>",
+        "requirements": [
+          "<mark>If <em>header text<\/em> is recognized as unique, or identified via a multiple match workflow<\/mark>",
+          "THEN I see focus is strongly visually indicated on the header.",
+          "THEN I see the visibility state has toggled."
+        ],
+        "status": ["passes", "success"]
+      }
+    ]
+  },
+
+  "zoom": {
+    "interactions": [
+      {
+        "scenario": "WHEN a closed accordion is in view at the top and start reading order of my browser, and I use various means to magnify the screen to 200%",
+        "requirements": [
+          "THEN I see a graphic (adjacent to the header text) that indicates the component discloses content.",
+          "THEN I see the entire header text without horizontal scrolling."
+        ],
+        "status": ["passes", "success"]
+      },
+      {
+        "scenario": "WHEN the header has focus",
+        "requirements": [
+          "THEN I see focus is strongly visually indicated by background color.",
+          "<mark>And if that focus was set by keyboard<\/mark>",
+          "THEN I see focus is strongly visually indicated by outline."
+        ],
+        "status": ["passes", "success"]
+      },
+      {
+        "scenario": "WHEN I activate the header",
+        "requirements": [
+          "THEN I see the entire header text without horizontal scrolling."
+        ],
+        "status": ["passes", "success"]
+      }
+    ]
+  },
+
+  "disabilities": [
+    {
+      "type": "blindness",
+      "criteria": [
+        {
+          "description": "All non-text content that is purely for decoration or which repeats existing on-screen text nearby should be ignored and skipped over by screen readers",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#non-text-content",
+          "sc": "1.1.1 A"
+        },
+        {
+          "description": "Name, role, state is documented",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#name-role-value",
+          "sc": "4.1.2 A"
+        },
+        {
+          "description": "Conveys the correct name, role, state",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#name-role-value",
+          "sc": "4.1.2 A"
+        },
+        {
+          "description": "Meets criteria across platforms, devices and viewports",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#principle4",
+          "sc": "4.0.0 AA"
+        }
+      ]
+    },
+    {
+      "type": "cognitive",
+      "criteria": [
+        {
+          "description": "Users' adjustments to text spacing do not result in loss of content or functionality.",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#text-spacing",
+          "sc": "1.4.2 AA"
+        }
+      ]
+    },
+    {
+      "type": "color perception",
+      "criteria": [
+        {
+          "description": "Color is not used as the only means of conveying state (expanded/collapsed)",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#use-of-color",
+          "sc": "1.4.1 A"
+        }
+      ]
+    },
+    {
+      "type": "low vision",
+      "criteria": [
+        {
+          "description": "Text has a 4.5:1 minimum contrast ratio",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#contrast-minimum",
+          "sc": "1.4.3 AA"
+        },
+        {
+          "description": "Expanded/collapsed indicator has a 3:1 minimum contrast ratio",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#non-text-contrast",
+          "sc": "1.4.11 A"
+        },
+        {
+          "description": "Expanded/collapsed indicator is in visual proximity to label",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#labels-or-instructions",
+          "sc": "3.3.2 AA"
+        },
+        {
+          "description": "Text can resize up to 200% with no loss of information",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#resize-text",
+          "sc": "1.4.4 AA"
+        }
+      ]
+    },
+    {
+      "type": "motor",
+      "criteria": [
+        {
+          "description": "The accessible name contains the visible label text",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#label-in-name",
+          "sc": "2.5.3 A"
+        },
+        {
+          "description": "The click/tap target area includes the label and is no smaller than 24 by 24 pixels",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#target-size-minimum",
+          "sc": "2.5.8 AA"
+        },
+        {
+          "description": "The click/tap target area includes the label and is no smaller than 44 by 44 pixels",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#target-size-enhanced",
+          "sc": "2.5.5 AAA"
+        },
+        {
+          "description": "The focus indication is visible (in some way)",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#focus-visible",
+          "sc": "2.4.7 AA"
+        },
+        {
+          "description": "The focus indication has a 3:1 minimum contrast ratio against default and adjacent elements",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#focus-appearance",
+          "sc": "2.4.13 AAA"
+        },
+        {
+          "description": "The focus indication has a minimum area equal to the width of the element and 2 pixels in height",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#focus-appearance",
+          "sc": "2.4.13 AAA"
+        }
+      ]
+    }
+  ]
+}
