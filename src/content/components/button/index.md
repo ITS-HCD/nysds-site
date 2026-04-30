@@ -6,7 +6,7 @@ image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-65486&t=ehyQYJeb6ohvHYV0-4
 navOrder: 6
 ---
 
@@ -42,14 +42,14 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
   - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
   - Use sentence case for button labels, only capitalizing the first word.
-  - For buttons that open a dropdown, place a `chevron_down` icon on the right.
+  - Place a `chevron_down` icon on the right for buttons that open a dropdown.
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
-  - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
+  - Use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
+  - Use icons in buttons without a text label. Very few icons are universally understood.
+  - Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
 {% endblock %}
 
 {% block accessibility %}
@@ -296,6 +296,8 @@ Set the `inverted` when the button is on a dark background.
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-button` component with a specific `<form>` element, and should be used for form submission.
 
 {% endblock %}
 
@@ -335,6 +337,16 @@ button.addEventListener("nys-click", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

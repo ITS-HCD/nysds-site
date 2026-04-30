@@ -6,7 +6,7 @@ image: /assets/img/components/divider.svg
 image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=8420-575
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9008-683&t=Vm0dNpR7sqktYZPv-4
 navOrder: 10
 ---
 
@@ -24,6 +24,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 <nys-divider></nys-divider>
 <div>Sample content below</div>
 {% endset %}
+{%set showTip = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
@@ -37,7 +38,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 ### When to consider something else
 
-  - When content is formatted side bys side.
+  - When content is formatted side by side.
   - When content is already organized in groups.
 
 {% endblock %}
@@ -67,7 +68,7 @@ The `<nys-divider>` component includes the following accessibility-focused featu
 
 {% block options %}
 
-### Inverse
+### Inverted
 On dark background, add the `inverted` property to ensure the `<nys-divider>` is visible.
 {% set preview %}
 <div>Sample content above</div>

@@ -6,7 +6,7 @@ image: /assets/img/components/stepper.svg
 image_alt: An illustration of a stepper dropdown.
 image_header: /assets/img/components/stepper-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4897-5811
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=5091-109760&t=EXsXvlMbCdRw10ir-4
 navOrder: 21
 ---
 
@@ -76,8 +76,8 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 
 {% block usagedont %}
 
-- Do not use the stepper if there are only 1 or 2 sections to the form.
-- Do not use the stepper for forms that are nonlinear and can be completed in any order.
+- Use the stepper if there are only 1 or 2 sections to the form.
+- Use the stepper for forms that are nonlinear and can be completed in any order.
 {% endblock %}
 
 {% block accessibility %}
@@ -395,6 +395,16 @@ stepper.addEventListener("nys-step-click", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

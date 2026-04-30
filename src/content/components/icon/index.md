@@ -6,7 +6,7 @@ image: /assets/img/components/icon.svg
 image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9941
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4019-63198&t=Fz3PChrCAbfpr60Y-4
 navOrder: 15
 ---
 
@@ -14,7 +14,7 @@ navOrder: 15
 
 {% block longdescription %}
 
-The `<nys-icon>` is a visual symbol used to concisely convey meaning or action and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYS Design System includes a curated subset of the Google Material Symbols rounded icon set.
+The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, status, or feedback and can add to visual appearance. Icons are meant to enhance, not replace, textual information. NYS Design System includes a curated subset of the Google Material Symbols rounded icon set.
 
 {% endblock %}
 
@@ -56,7 +56,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
   {% set name = "phone_in_talk" %}{% include "partials/icon-preview.njk" %}
   {% set name = "progress_activity" %}{% include "partials/icon-preview.njk" %}
   {% set name = "publish" %}{% include "partials/icon-preview.njk" %}
-  {% set name = "search" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "search" %}{% include "partials/icon-preview.njk" %} 
   {% set name = "share" %}{% include "partials/icon-preview.njk" %}
   {% set name = "sort" %}{% include "partials/icon-preview.njk" %}
   {% set name = "sms" %}{% include "partials/icon-preview.njk" %}
@@ -162,10 +162,11 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning or action a
 
 {% block usagedont %}
 
-  - Don’t overuse icons. Too many create visual noise and reduce focus.
-  - Don’t replace meaningful text with icons unless the icon is universally recognized or paired with a label.
-  - Don’t use standalone icons for actions. Use an icon button instead.
-  - Avoid excessive icon customization that breaks design consistency.
+  - Use icons that lack clarity or context for their intended purpose.
+  - Overuse icons. Too many create visual noise and reduce focus.
+  - Replace meaningful text with icons unless the icon is universally recognized or paired with a label.
+  - Use standalone icons for actions. Use an icon button instead.
+  - Use excessive icon customization that breaks design consistency.
 
 {% endblock %}
 
