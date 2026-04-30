@@ -7,7 +7,7 @@ image_alt: An illustration of a table.
 image_header: /assets/img/components/table-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=13670-31069
-navOrder: 22
+navOrder: 23
 ---
 
 {% extends "layouts/component.njk" %}
@@ -381,7 +381,7 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block cssvariables %}
   {% set variables = [
-  { name: "--nys-table-padding--cell-y", description: "Vertical padding for table cells"}
+  { name: "--nys-table-padding--cell--y", description: "Vertical padding for table cells"}
 ]%}
 {% include "partials/css-vars.njk" %}{% endblock %}
 
