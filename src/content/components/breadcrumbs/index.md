@@ -228,6 +228,21 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
 {% endblock %}
 
 {% block events %}
+The `<nys-breadcrumbs>` component emits **one** custom Javascript events:
+
+1.  **`nys-expand`** – Fired when the button is clicked.
+
+You can listen to these events using JavaScript:
+{% set code %}// Select the breadcrumbs component
+const breadcrumbs = document.querySelector('nys-breadcrumbs');
+// Listen for the 'nys-expand' event
+breadcrumbs.addEventListener("nys-expand", () => {
+	console.log("Breadcrumbs expanded");
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}
