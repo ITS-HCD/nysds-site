@@ -82,6 +82,8 @@ The `<nys-breadcrumbs>` component includes the following accessibility-focused f
 
 Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The last `<li>` should be plain text (the current page).
 
+**Note:** If you prefer not to display the current page in the breadcrumb trail, simply leave it out.
+
 {% set preview %}
 <nys-breadcrumbs>
   <ol>
