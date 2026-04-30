@@ -228,7 +228,8 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
 {% endblock %}
 
 {% block events %}
-The `<nys-breadcrumbs>` component emits **one** custom Javascript events:
+
+The `<nys-breadcrumbs>` component emits **one** custom Javascript event:
 
 1.  **`nys-expand`** – Fired when the button is clicked.
 
