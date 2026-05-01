@@ -6,7 +6,7 @@ image: /assets/img/components/breadcrumbs.svg
 image_alt: An illustration of a breadcrumbs.
 image_header: /assets/img/components/breadcrumbs-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=24282-39188
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=24282-39250
 navOrder: 6
 ---
 
