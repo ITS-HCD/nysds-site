@@ -7,6 +7,235 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.17.0 “Grace”</title>
+      <link>https://designsystem.ny.gov/updates/1.17.0-release/</link>
+      <description><![CDATA[<h2>“Grace” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Grace” after the 42<sup>nd</sup> highest peak in New York: Grace Peak. Grace Peak has an elevation of 4,012 ft (1,223 m).</p>
+<p><a href="https://en.wikipedia.org/wiki/Grace_Peak">Learn more about Grace Peak.</a></p>
+<h2><code>&lt;nys-breadcrumbs&gt;</code> now available</h2>
+<p>The new <code>&lt;nys-breadcrumbs&gt;</code> component shows users their location within a site's structure and provides links to navigate back through parent pages. The new component provides a couple of customization options like size and background color. It should be placed near the main content of your web pages.</p>
+<p><a href="https://designsystem.ny.gov/components/breadcrumbs">Read the full breadcrumbs documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-breadcrumbs>
+  <ol>
+    <li><a href="https://designsystem.ny.gov/">Home</a></li>
+    <li><a href="https://designsystem.ny.gov/services">Services</a></li>
+    <li><a href="https://designsystem.ny.gov/tickets">Ticket System</a></li>
+    <li>Current Page</li>
+  </ol>
+</nys-breadcrumbs>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-breadcrumbs</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/tickets<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Ticket System<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Current Page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-breadcrumbs</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> followed the trail of breadcrumbs</p>
+<h2><code>&lt;nys-button&gt;</code> text variant now allows <code>prefixIcon</code> and <code>suffixIcon</code></h2>
+<p>Our initial design of the <code>text</code> variant of the button restricted use of icons. We were presented with use cases for adding the icons to the text buttons, so we added the ability to use a <code>prefixIcon</code> or <code>suffixIcon</code> along with the text variant of the <code>&lt;nys-button&gt;</code>.</p>
+<p><a href="https://designsystem.ny.gov/components/button/#icons">Read the full icon button documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-button variant="text" label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" suffixIcon="open_in_new">
+</nys-button>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
+  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Review Component Proposals<span class="token punctuation">"</span></span>
+  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals<span class="token punctuation">"</span></span>
+  <span class="token attr-name">suffixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open_in_new<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> is an icon</p>
+<h2>Figma updates</h2>
+<p>Today we’re launching the official version of the breadcrumbs component in our design library.</p>
+<ul>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=Fv66oTxBBMgtAtuq-4">Breadcrumbs</a> now available in Figma</li>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-10050&amp;t=9hHHEkhwWPA4QtUq-4">Tabs</a> now available as a “preview” version in Figma</li>
+</ul>
+<p><a href="https://github.com/mashyamumin">Mashya Mumin</a> designed her first component this sprint!</p>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> tabbed to the tabs</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Added more Web Test Runner tests</li>
+<li>Unable to set null values to form components</li>
+<li><code>&lt;nys-pagination&gt;</code> properly announces the current page</li>
+<li>Bundle the CEM and token data into MCP server</li>
+<li>Align <code>&lt;nys-datepicker&gt;</code> error message display</li>
+<li><code>&lt;nys-dropdown&gt;</code> focus ring too persistent</li>
+<li>First push to address ElementInternals standardization across all components</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> fix broken things</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.17.0">See the full developer release notes for v.1.17.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>“Grace” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Grace” after the 42<sup>nd</sup> highest peak in New York: Grace Peak. Grace Peak has an elevation of 4,012 ft (1,223 m).</p>
+<p><a href="https://en.wikipedia.org/wiki/Grace_Peak">Learn more about Grace Peak.</a></p>
+<h2><code>&lt;nys-breadcrumbs&gt;</code> now available</h2>
+<p>The new <code>&lt;nys-breadcrumbs&gt;</code> component shows users their location within a site's structure and provides links to navigate back through parent pages. The new component provides a couple of customization options like size and background color. It should be placed near the main content of your web pages.</p>
+<p><a href="https://designsystem.ny.gov/components/breadcrumbs">Read the full breadcrumbs documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-breadcrumbs>
+  <ol>
+    <li><a href="https://designsystem.ny.gov/">Home</a></li>
+    <li><a href="https://designsystem.ny.gov/services">Services</a></li>
+    <li><a href="https://designsystem.ny.gov/tickets">Ticket System</a></li>
+    <li>Current Page</li>
+  </ol>
+</nys-breadcrumbs>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-breadcrumbs</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/services<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/tickets<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Ticket System<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Current Page<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-breadcrumbs</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/novacat35">Robert Chen</a> followed the trail of breadcrumbs</p>
+<h2><code>&lt;nys-button&gt;</code> text variant now allows <code>prefixIcon</code> and <code>suffixIcon</code></h2>
+<p>Our initial design of the <code>text</code> variant of the button restricted use of icons. We were presented with use cases for adding the icons to the text buttons, so we added the ability to use a <code>prefixIcon</code> or <code>suffixIcon</code> along with the text variant of the <code>&lt;nys-button&gt;</code>.</p>
+<p><a href="https://designsystem.ny.gov/components/button/#icons">Read the full icon button documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-button variant="text" label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" suffixIcon="open_in_new">
+</nys-button>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
+  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Review Component Proposals<span class="token punctuation">"</span></span>
+  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals<span class="token punctuation">"</span></span>
+  <span class="token attr-name">suffixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open_in_new<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> is an icon</p>
+<h2>Figma updates</h2>
+<p>Today we’re launching the official version of the breadcrumbs component in our design library.</p>
+<ul>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=Fv66oTxBBMgtAtuq-4">Breadcrumbs</a> now available in Figma</li>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-10050&amp;t=9hHHEkhwWPA4QtUq-4">Tabs</a> now available as a “preview” version in Figma</li>
+</ul>
+<p><a href="https://github.com/mashyamumin">Mashya Mumin</a> designed her first component this sprint!</p>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> tabbed to the tabs</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Added more Web Test Runner tests</li>
+<li>Unable to set null values to form components</li>
+<li><code>&lt;nys-pagination&gt;</code> properly announces the current page</li>
+<li>Bundle the CEM and token data into MCP server</li>
+<li>Align <code>&lt;nys-datepicker&gt;</code> error message display</li>
+<li><code>&lt;nys-dropdown&gt;</code> focus ring too persistent</li>
+<li>First push to address ElementInternals standardization across all components</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> fix broken things</p>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.17.0">See the full developer release notes for v.1.17.0 →</a></p>
+]]></content>
+      <pubDate>Thu, 30 Apr 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.17.0-release/</guid>
+    </item>
+    <item>
       <title>How CSS Variables Power the NYS Design System</title>
       <link>https://designsystem.ny.gov/updates/css-variables/</link>
       <description><![CDATA[<p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
