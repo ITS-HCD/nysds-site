@@ -22,7 +22,7 @@ heading_links: false
       </svg>
       <h1>Be<span class="letter--tight"> </span>an<span class="letter--tight"> </span><span class="heavy"><span class="letter-not-so--tight">a1</span>1y.</span></h1>
       <p style="margin-left: 5px;"><span class="heavy">a11y</span> is short for <span class="heavy">accessibility</span>.<br>
-      There are <span class="heavy">11 letters</span> between the a and y.</p>
+      There are <span class="heavy">11 letters</span> between the <span class="non-breaking-space">a and y.</span></p>
     </div>
     <div class="hero__media">
       <img src="{{ '/assets/img/a11y-banner.png' | url }}" style="width: 80%;" alt="">
@@ -419,6 +419,11 @@ main[role="main"] {
     height: 0;
   }
 }
+
+.non-breaking-space {
+  white-space: nowrap;
+}
+
 </style>
 {% endblock %}
 
