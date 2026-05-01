@@ -21,7 +21,8 @@ heading_links: false
         <rect width="52.1654" height="12.9576" fill="#A2350A"/>
       </svg>
       <h1>Be<span class="letter--tight"> </span>an<span class="letter--tight"> </span><span class="heavy"><span class="letter-not-so--tight">a1</span>1y.</span></h1>
-      <p style="margin-left: 5px;">Accessible design is better for everyone.</p>
+      <p style="margin-left: 5px;"><span class="heavy">a11y</span> is short for <span class="heavy">accessibility</span>.<br>
+      There are 11 letters between the a and y.</p>
     </div>
     <div class="hero__media">
       <img src="{{ '/assets/img/a11y-banner.png' | url }}" style="width: 80%;" alt="">
@@ -123,20 +124,25 @@ heading_links: false
 
   .poster-deck-wrapper {
     padding: 3rem 0 5rem;
-    overflow-x: auto;
   }
 
 .poster-deck img {
   width: 100px;
   }
 
+.poster-deck {
+  display: none;
+  margin-top: var(--nys-space-800);
+}
+
 @media (width > 768px) {
 
   .poster-deck {
+    display: block;
     position: relative;
     width: 700px;
     height: 420px;
-    margin: 0 auto;
+    margin: var(--nys-space-800) auto 0 auto;
   }
 
   .poster-deck img {
@@ -175,13 +181,27 @@ heading_links: false
 
 .full-size-posters img {
   max-width: 100%;
+  margin-bottom: var(--nys-space-200);
 }
 
+.full-size-posters {
+  text-align: center;
+}
+
+.responsive-grid-break {
+  padding: 0!important;
+}
+
+@media (width > 1024px) {
+  .responsive-grid-break {
+    flex-basis: 100%;
+    height: 0;
+  }
+}
 </style>
 
 <div class="nys-padding-y-800">
   <div class="nys-grid-container-widescreen">
-    <div aria-live="polite" aria-atomic="true" id="card-page-announcement" class="a11y-sr-only"></div>
     <div id="card-page-container">
       <div class="card-page" id="card-page-1" style="display: block;">
         <div class="nys-grid-row nys-grid-gap-6 nys-flex-justify-center">
@@ -279,66 +299,75 @@ heading_links: false
         </div>
       </div>
       <div class="nys-grid-col-12" style="text-align: center;">
-        <nys-button variant="outline" label="Show three more accessibility facts" onclick="showRandomDiv(); return false;" suffixIcon="arrow_forward" size="lg"></nys-button>
+        <nys-button variant="text" label="Show three different accessibility facts" onclick="showRandomDiv(); return false;" suffixIcon="arrow_forward" size="lg"></nys-button>
       </div>
     </div>
   </div>
     <div class="poster-deck-wrapper color-theme--weaker nys-margin-t-800">
       <div class="nys-grid-container-widescreen">
-        <div class="nys-grid-row full-size-posters nys-flex-justify-center">
-          <div class="nys-grid-col-12">
-            <h2>Poster downloads</h2>
-            <p>This set of letter-sized posters is free to download and can be displayed as a reminder to consider accessibility in your next NYS project. We’d love to see how you display them!</p>
+        <div class="nys-grid-row nys-flex-justify-center" style="margin-bottom: var(--nys-space-400);">
+          <div class="nys-grid-col-9">
+            <h2>Spread the word about accessibility</h2>
+            <p>Download these free letter-size posters and display them as a reminder when you consider accessibility in your next NYS project.<br>
+            We’d love to see how you use them! Please send us pics, and we’ll share: <a href="mailto:ally@email.address.ny.gov">ally@email.address.ny.gov</a></p>
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-139.pdf" class="nys-padding-400">
+        </div>
+        <div class="nys-grid-row nys-flex-justify-center nys-grid-gap-6 full-size-posters">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            
             <img src="{{ '/assets/img/poster-139.png' | url }}" alt="Sound isn't always heard. Captions and transcripts make content work for everyone." >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 1" variant="outline" suffixIcon="download"></nys-button>
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-140.pdf" class="nys-padding-400">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
             <img src="{{ '/assets/img/poster-140.png' | url }}" alt="Brains work differently. Words and design that are clear and simple work better for everyone." >
-          </a>
+                    <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 2" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-141.pdf" class="nys-padding-400">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            
             <img src="{{ '/assets/img/poster-141.png' | url }}" alt="a11y is short for accessibility. (There are 11 letters between the a and y.)" >
-          </a>
+                    <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 3" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-12"></div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-144.pdf" class="nys-padding-400">
+          <div class="responsive-grid-break"></div>
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
             <img src="{{ '/assets/img/poster-144.png' | url }}" alt="Accessible Design is better for everyone. Red and pink background" >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 4" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-145.pdf" class="nys-padding-400">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+
             <img src="{{ '/assets/img/poster-145.png' | url }}" alt="Accessible Design is better for everyone. Red and blue background" >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 5" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-146.pdf" class="nys-padding-400">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+
             <img src="{{ '/assets/img/poster-146.png' | url }}" alt="Accessible Design is better for everyone. Blue and yellow background" >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 6" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-12"></div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-147.pdf" class="nys-padding-400">
+          <div class="responsive-grid-break"></div>
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+
             <img src="{{ '/assets/img/poster-147.png' | url }}" alt="Be an ally. Peace sign blue" >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 7" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-148.pdf" class="nys-padding-400">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+
             <img src="{{ '/assets/img/poster-148.png' | url }}" alt="Be an ally. Peace sign yellow" >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 8" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
-          <div class="nys-grid-col-3">
-            <a href="/assets/pdf/poster-149.pdf" class="nys-padding-400">
+          <div class="nys-grid-col-12 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+
             <img src="{{ '/assets/img/poster-149.png' | url }}" alt="Be an ally. Peace sign red" >
-          </a>
+          <nys-button href="/assets/pdf/poster-139.pdf" label="Download poster 9" variant="outline" suffixIcon="download"></nys-button>
+
           </div>
       </div>
-      <div class="poster-deck">
+      <div class="poster-deck ">
         <img src="{{ '/assets/img/poster-139.png' | url }}" alt="Sound isn't always heard. Captions and transcripts make content work for everyone." >
         <img src="{{ '/assets/img/poster-140.png' | url }}" alt="Brains work differently. Words and design that are clear and simple work better for everyone." >
         <img src="{{ '/assets/img/poster-141.png' | url }}" alt="a11y is short for accessibility. (There are 11 letters between the a and y.)" >
@@ -350,7 +379,7 @@ heading_links: false
         <img src="{{ '/assets/img/poster-149.png' | url }}" alt="Be an ally. Peace sign red" >
       </div>
       <div style="text-align: center;">
-      <nys-button href="#" label="Download the complete set" size="lg"></nys-button>
+      <nys-button href="#" label="Download the complete set" size="lg" suffixIcon="download"></nys-button>
       </div>
       </div>
     </div>
@@ -379,7 +408,11 @@ heading_links: false
     divs[newIndex].style.display = 'block';
     currentIndex = newIndex;
 
-    document.getElementById('card-page-container').scrollIntoView({ behavior: 'smooth' });
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+      document.getElementById('card-page-container').scrollIntoView({ behavior: 'smooth' });
+    }
   }
 </script>
 {% endblock %}
