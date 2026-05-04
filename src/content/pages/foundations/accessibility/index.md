@@ -239,10 +239,8 @@ navOrder: 2
         </div>
         <div class="card__content">
           <div class="card__title">Accessibility Microsoft Teams channel</div>
-          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.
-            <p></p>
-            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
-          </div>
+          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.</div>
+          <div class="card__category"><nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge></div>
         </div>
       </div>
     </div>
@@ -292,7 +290,8 @@ navOrder: 2
   }
 
   .a11y-hero__tagline {
-    margin: 0 0 var(--nys-space-400) 0;
+    margin: 0;
+    margin-block-end: var(--nys-space-400);
     font-style: italic;
     color: var(--nys-color-neutral-400);
     text-align: center;
@@ -327,7 +326,7 @@ navOrder: 2
     align-items: center;
     justify-content: center;
     background: var(--nys-color-neutral-10);
-    border-radius: 50%;
+    border-radius: var(--nys-radius-round);
   }
 
   .pour-icon img {
@@ -346,7 +345,7 @@ navOrder: 2
 
   .a11y-feature-card {
     background: var(--nys-color-theme-faint);
-    border-radius: 8px;
+    border-radius: var(--nys-radius-lg);
     padding: var(--nys-space-150);
     display: flex;
     flex-direction: column;
@@ -356,7 +355,7 @@ navOrder: 2
   .a11y-feature-card__header {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--nys-space-100);
   }
 
   .a11y-feature-card p {
