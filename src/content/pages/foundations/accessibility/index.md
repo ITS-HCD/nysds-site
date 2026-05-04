@@ -11,10 +11,8 @@ navOrder: 2
 
 <h1>Accessibility</h1>
 
-<div class="a11y-hero">
-  <img src="/assets/img/accessibility_image.svg" alt="" role="presentation">
-  <p class="a11y-hero__tagline">usable by all</p>
-</div>
+<img class="a11y-hero" src="/assets/img/accessibility_image.svg" alt="" role="presentation">
+<p class="a11y-hero__tagline">usable by all</p>
 
 <section id="what-is-accessibility">
 
@@ -288,23 +286,16 @@ navOrder: 2
 {% block styles %}
 <style>
   .a11y-hero {
-    background: var(--nys-color-neutral-10);
-    border-radius: 8px;
-    padding: var(--nys-space-400) var(--nys-space-200);
-    text-align: center;
-    margin-bottom: var(--nys-space-400);
-  }
-
-  .a11y-hero img {
-    max-width: 200px;
-    display: inline-block;
-    margin-bottom: var(--nys-space-100);
+    width: 100%;
+    display: block;
+    margin-block-end: var(--nys-space-100);
   }
 
   .a11y-hero__tagline {
-    margin: 0;
+    margin: 0 0 var(--nys-space-400) 0;
     font-style: italic;
     color: var(--nys-color-neutral-400);
+    text-align: center;
   }
 
   .pour-list {
