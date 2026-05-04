@@ -214,6 +214,10 @@ The `nys-video` does not have any css variables because this component must rema
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}
