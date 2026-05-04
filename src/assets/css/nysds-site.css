@@ -403,9 +403,18 @@ main[role=main] {
     background-color: var(--nys-color-surface, #fff);
 }
 
+.card:not(:has(.card__media)) {
+    padding: var(--nys-space-300);
+}
+
+.card__desc :last-child,
+.card__desc:last-child {
+    margin-block-end: 0;
+}
+
 .card__inner {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     height: auto;
     justify-content: flex-start;
 }

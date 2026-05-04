@@ -11,42 +11,212 @@ navOrder: 2
 
 <h1>Accessibility</h1>
 
-<img src="/assets/img/accessibility_image.svg" style="width: 100%; display: block; margin-bottom: 32px;" alt="Illustration showing categories of accessibility needs: visual, hearing, mobility, and cognitive" role="presentation">
+<div class="a11y-hero">
+  <img src="/assets/img/accessibility_image.svg" alt="" role="presentation">
+  <p class="a11y-hero__tagline">usable by all</p>
+</div>
 
 <section id="what-is-accessibility">
 
-<h2>What Is Accessibility</h2>
+<h2>What is accessibility?</h2>
 
 <p>Accessibility is a subset of inclusivity. It asks a specific question: can people with disabilities access, understand, interact with, and benefit from this product?</p>
 
-<p>When New York State builds a digital service, it reaches 20 million residents. Some of those residents navigate by keyboard. Some use screen readers. Some process information differently. Accessibility means designing so that none of those differences become barriers.</p>
+<p>When New York State builds a digital service, it reaches 20 million residents. Some navigate by keyboard. Some use screen readers. Some process information differently. Accessibility means designing so none of those differences become barriers.</p>
 
 <nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text="Accessibility is not only about permanent disabilities. It also covers temporary conditions, like a broken arm, and situational ones, like using a phone in direct sunlight. Designing for accessibility benefits everyone."></nys-alert>
 
 <p>The Web Content Accessibility Guidelines (WCAG) organize accessibility around four principles:</p>
 
-<ul>
-  <li><strong>Perceivable</strong> — Can all users perceive the content? (text alternatives, captions, sufficient contrast)</li>
-  <li><strong>Operable</strong> — Can all users operate the interface? (keyboard access, enough time, no seizure triggers)</li>
-  <li><strong>Understandable</strong> — Can all users understand the content and interface behavior? (readable text, predictable navigation, input assistance)</li>
-  <li><strong>Robust</strong> — Does the content work with current and future assistive technologies? (valid markup, proper ARIA usage)</li>
-</ul>
-
-<div style="border-left: 4px solid var(--nys-color-neutral-100); padding: var(--nys-space-100) var(--nys-space-200); margin-top: var(--nys-space-100);">
-  <blockquote>
-    "The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect."
-  </blockquote>
-  <cite>— Sir Tim Berners-Lee</cite>
+<div class="pour-list">
+  <div class="pour-item">
+    <div class="pour-icon">
+      <img src="/assets/img/pour-perceivable.svg" alt="" role="presentation">
+    </div>
+    <div>
+      <strong>Perceivable</strong>
+      <p>Can all users perceive the content?</p>
+      <p class="pour-test">Test for: text alternatives, captions, sufficient contrast.</p>
+    </div>
+  </div>
+  <div class="pour-item">
+    <div class="pour-icon">
+      <img src="/assets/img/pour-operable.svg" alt="" role="presentation">
+    </div>
+    <div>
+      <strong>Operable</strong>
+      <p>Can all users operate the interface?</p>
+      <p class="pour-test">Test for: keyboard access, enough time, no seizure triggers.</p>
+    </div>
+  </div>
+  <div class="pour-item">
+    <div class="pour-icon">
+      <img src="/assets/img/pour-understandable.svg" alt="" role="presentation">
+    </div>
+    <div>
+      <strong>Understandable</strong>
+      <p>Can all users understand the content and interface behavior?</p>
+      <p class="pour-test">Test for: readable text, predictable navigation, input assistance.</p>
+    </div>
+  </div>
+  <div class="pour-item">
+    <div class="pour-icon">
+      <img src="/assets/img/pour-robust.svg" alt="" role="presentation">
+    </div>
+    <div>
+      <strong>Robust</strong>
+      <p>Does the content work with current and future assistive technologies?</p>
+      <p class="pour-test">Test for: valid markup, proper ARIA usage.</p>
+    </div>
+  </div>
 </div>
+
+</section>
+
+<section id="how-the-design-system-helps">
+
+<h2>How the design system helps</h2>
+
+<p>The NYSDS team embeds accessibility into every component. When you build with the design system, you start with a foundation that has already been tested for common accessibility requirements.</p>
+
+<p><b>Here's what is already handled for you:</b></p>
+
+<div class="nys-grid-row nys-grid-gap-lg a11y-features">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="a11y-feature-card nys-flex-fill">
+      <div class="a11y-feature-card__header">
+        <nys-icon name="check_circle" size="24" color="var(--nys-color-theme-strong)"></nys-icon>
+        <strong>Keyboard Navigation</strong>
+      </div>
+      <p>All components are fully operable without a mouse. Tab, Enter, Space all work.</p>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="a11y-feature-card nys-flex-fill">
+      <div class="a11y-feature-card__header">
+        <nys-icon name="check_circle" size="24" color="var(--nys-color-theme-strong)"></nys-icon>
+        <strong>Focus management</strong>
+      </div>
+      <p>Every interactive element has a visible focus indicator where users expect it.</p>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="a11y-feature-card nys-flex-fill">
+      <div class="a11y-feature-card__header">
+        <nys-icon name="check_circle" size="24" color="var(--nys-color-theme-strong)"></nys-icon>
+        <strong>Zoom magnification</strong>
+      </div>
+      <p>Works correctly at 200% browser zoom with no loss of content.</p>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="a11y-feature-card nys-flex-fill">
+      <div class="a11y-feature-card__header">
+        <nys-icon name="check_circle" size="24" color="var(--nys-color-theme-strong)"></nys-icon>
+        <strong>Screen reader support</strong>
+      </div>
+      <p>Tested with NVDA, JAWS, and VoiceOver across desktop and mobile devices.</p>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="a11y-feature-card nys-flex-fill">
+      <div class="a11y-feature-card__header">
+        <nys-icon name="check_circle" size="24" color="var(--nys-color-theme-strong)"></nys-icon>
+        <strong>Voice control</strong>
+      </div>
+      <p>Supports Voice Access on Windows and Voice Control on macOS out of the box.</p>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="a11y-feature-card nys-flex-fill">
+      <div class="a11y-feature-card__header">
+        <nys-icon name="check_circle" size="24" color="var(--nys-color-theme-strong)"></nys-icon>
+        <strong>WCAG 2.2 AA compliant</strong>
+      </div>
+      <p>Every component meets New York State's digital accessibility standards.</p>
+    </div>
+  </div>
+</div>
+
+<p>Using NYSDS components does not guarantee your site is accessible — it gives you a strong starting point. You are still responsible for proper heading structure, meaningful content, correct page-level landmarks, and testing your assembled pages.</p>
+
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__title">Accessibility test checklists</div>
+        <div class="card__desc">Component-by-component accessibility testing checklists and compliance documentation to verify conformance.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__title">Build accessible guides</div>
+        <div class="card__desc">Step-by-step guidance for building accessible interfaces, with or without NYSDS web components.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section id="resources-by-role">
+
+<h2>Resources by role</h2>
+
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-12">
+    <a class="card card--horizontal" href="/foundations/accessibility/developers/">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/accessibility-eye-card.svg" alt="" role="presentation" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">For Developers</div>
+          <div class="card__desc">Tools, testing techniques, and resources for building accessible websites and applications.</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12">
+    <a class="card card--horizontal" href="/foundations/accessibility/content/">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/accessibility-card.svg" alt="" role="presentation" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">For Content Creators</div>
+          <div class="card__desc">Guidance on accessible documents, plain language, and multimedia.</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12">
+    <a class="card card--horizontal" href="/foundations/accessibility/leadership/">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/accessibility-card.svg" alt="" role="presentation" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">For Leadership</div>
+          <div class="card__desc">Compliance requirements, policy details, and procurement language for accessibility.</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<p>Looking to build your accessibility knowledge? See our <a href="/foundations/accessibility/learn/">Learning Resources</a> for courses, references, and checklists.</p>
 
 </section>
 
 <section id="compliance-deadlines">
 
-<h2>Compliance Deadlines</h2>
+<h2>Compliance deadlines</h2>
 
 <nys-alert type="warning" heading="Upcoming compliance deadlines">
-  <p>Two deadlines are approaching that affect every New York State digital service:</p>
+  <p>Two regulatory deadlines affect every New York State digital service:</p>
   <ul>
     <li><strong>April 2026</strong> — DOJ Rule requires all web content and mobile applications conform to <strong>WCAG 2.1 Level AA</strong>.</li>
     <li><strong>January 2027</strong> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to <strong>WCAG 2.2 Level AA</strong>.</li>
@@ -56,78 +226,160 @@ navOrder: 2
 
 </section>
 
-<section id="how-the-design-system-helps">
+<section id="nys-internal-resources">
 
-<h2>How the Design System Helps</h2>
+<h2>NYS internal resources</h2>
 
-<p>The NYSDS team embeds accessibility into every component. When you build with the design system, you start with a foundation that has already been tested for common accessibility requirements:</p>
+<p>The following guidance, tools, and courses are available to New York State staff:</p>
 
-<ul>
-  <li><strong>Color contrast</strong> — All component color pairings meet WCAG AA contrast ratios. We verify with tools like WebAIM's contrast checker.</li>
-  <li><strong>Element sizing</strong> — Interactive targets meet minimum size requirements so users can activate them reliably on any device.</li>
-  <li><strong>Focus states</strong> — Every interactive element has a visible focus indicator. Users navigating by keyboard always know where they are.</li>
-  <li><strong>Screen reader testing</strong> — Components are tested with NVDA and VoiceOver to confirm they convey the right information to assistive technology.</li>
-  <li><strong>Keyboard navigation</strong> — All components are fully operable without a mouse, using standard keyboard patterns (Tab, Enter, Space, Escape, arrow keys).</li>
-</ul>
+<div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-col-12">
+    <div class="card card--horizontal">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/teams-channel.svg" alt="" role="presentation" />
+        </div>
+        <div class="card__content">
+          <div class="card__title">Accessibility Microsoft Teams channel</div>
+          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.
+            <p></p>
+            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>Using NYSDS components does not guarantee your site is accessible — it gives you a strong starting point. You are still responsible for proper heading structure, meaningful content, correct page-level landmarks, and testing your assembled pages.</p>
-
-</section>
-
-<section id="categories-of-need">
-
-<h2>Categories of Accessible User Needs</h2>
-
-<p>Accessible design addresses a range of human needs. These categories overlap — a single person may have needs in multiple areas.</p>
-
-<h3>Visual</h3>
-<p>Includes blindness, low vision, and color vision deficiency. Users may rely on screen readers, screen magnifiers, high contrast modes, or customized text sizes.</p>
-
-<h3>Hearing</h3>
-<p>Includes deafness and hard of hearing. Users need captions for video, transcripts for audio, and visual alternatives to sound-based alerts.</p>
-
-<h3>Mobility</h3>
-<p>Includes limited fine motor control, paralysis, and missing limbs. Users may navigate with keyboards, switches, voice commands, or eye tracking. Interactive targets must be large enough and spaced far enough apart.</p>
-
-<h3>Cognitive and Learning</h3>
-<p>Includes attention differences, memory difficulties, learning disabilities, and processing differences. Users benefit from clear language, consistent navigation, minimal distraction, and generous time limits.</p>
-
-</section>
-
-<section id="common-concerns">
-
-<h2>Common Accessibility Concerns</h2>
-
-<p>These are the issues that come up most often in state web applications. Every team building for New York State should be aware of them:</p>
-
-<ul>
-  <li><strong>Keyboard operability</strong> — Every function available by mouse must also be available by keyboard.</li>
-  <li><strong>Focus indicators</strong> — Interactive elements must show a visible outline when they receive keyboard focus.</li>
-  <li><strong>Form labels</strong> — Every form field needs a visible, programmatically associated label. Placeholder text is not a label.</li>
-  <li><strong>Alternative text</strong> — Images that convey information need descriptive alt text. Decorative images need empty alt attributes.</li>
-  <li><strong>Heading hierarchy</strong> — Headings must follow a logical order (h1, h2, h3) without skipping levels. They define the document outline for screen reader users.</li>
-  <li><strong>Video captions</strong> — All pre-recorded video with audio must have synchronized captions. Live video should have captions when feasible.</li>
-  <li><strong>Color contrast</strong> — Text and interactive elements must meet minimum contrast ratios against their backgrounds (4.5:1 for normal text, 3:1 for large text).</li>
-  <li><strong>Motion controls</strong> — Animations and auto-playing content must be pausable. Respect the <code>prefers-reduced-motion</code> media query.</li>
-  <li><strong>Tagged PDFs</strong> — PDF documents must be tagged with a logical reading order, headings, and alt text so screen readers can parse them.</li>
-</ul>
-
-</section>
-
-<section id="audience-resources">
-
-<h2>Resources by Role</h2>
-
-<p>Accessibility is a team responsibility. We provide focused guidance for three key audiences:</p>
-
-<ul>
-  <li><strong><a href="/foundations/accessibility/developers/">For Developers</a></strong> — Tools, testing techniques, and resources for building accessible websites and applications.</li>
-  <li><strong><a href="/foundations/accessibility/content/">For Content Creators</a></strong> — Guidance on accessible documents, plain language, and multimedia.</li>
-  <li><strong><a href="/foundations/accessibility/leadership/">For Leadership</a></strong> — Compliance requirements, policy details, and procurement language for accessibility.</li>
-</ul>
-
-<p>Looking to build your accessibility knowledge? See our <a href="/foundations/accessibility/learn/">Learning Resources</a> for courses, references, and checklists.</p>
+<div class="nys-grid-row nys-grid-gap-lg" style="margin-top: var(--nys-space-200);">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
+        <div class="card__title">Get started, by role</div>
+        <div class="card__desc">Get up to speed by focusing on priorities for your job duties.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
+        <div class="card__title">NYS accessibility 101</div>
+        <div class="card__desc">Find the basics on accessibility, including those pertaining to NYS.</div>
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <div class="card nys-flex-fill">
+      <div class="card__inner">
+        <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
+        <div class="card__title">Understand WCAG</div>
+        <div class="card__desc">Use the "POUR" principle to learn and apply a11y standards.</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </section>
 
+{% endblock %}
+
+{% block styles %}
+<style>
+  .a11y-hero {
+    background: var(--nys-color-neutral-10);
+    border-radius: 8px;
+    padding: var(--nys-space-400) var(--nys-space-200);
+    text-align: center;
+    margin-bottom: var(--nys-space-400);
+  }
+
+  .a11y-hero img {
+    max-width: 200px;
+    display: inline-block;
+    margin-bottom: var(--nys-space-100);
+  }
+
+  .a11y-hero__tagline {
+    margin: 0;
+    font-style: italic;
+    color: var(--nys-color-neutral-400);
+  }
+
+  .pour-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-space-300);
+    margin: var(--nys-space-200) 0;
+  }
+
+  .pour-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--nys-space-200);
+  }
+
+  .pour-item strong {
+    font-size: var(--nys-font-size-ui-xl);
+  }
+
+  .pour-item p {
+    margin: 0;
+  }
+
+  .pour-icon {
+    flex: 0 0 80px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--nys-color-neutral-10);
+    border-radius: 50%;
+  }
+
+  .pour-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pour-test {
+    color: var(--nys-color-neutral-400);
+  }
+
+  .a11y-features {
+    margin-bottom: var(--nys-space-300);
+    row-gap: var(--nys-space-250);
+  }
+
+  .a11y-feature-card {
+    background: var(--nys-color-theme-faint);
+    border-radius: 8px;
+    padding: var(--nys-space-150);
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-space-100);
+  }
+
+  .a11y-feature-card__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .a11y-feature-card p {
+    margin: 0;
+    font-size: var(--nys-font-size-ui-sm, 14px);
+    line-height: var(--nys-font-lineheight-ui-sm, 24px);
+  }
+
+  #nys-internal-resources .card__category {
+    margin-bottom: var(--nys-space-200);
+  }
+
+</style>
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}
