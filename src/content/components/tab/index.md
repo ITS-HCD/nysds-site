@@ -53,6 +53,31 @@ The `<nys-tab>` acts as a clickable interface to toggle between different sets o
 
 {% block options %}
 
+### Pre-selected Tab
+To pre-select a tab on load, add the `selected` attribute to a `<nys-tab>` element. If no tab has `selected`, the first tab is activated by default.
+
+{% set preview %}
+<nys-tabgroup>
+    <nys-tab label="Marcy"></nys-tab>
+    <nys-tab label="Algonquin" selected></nys-tab>
+    <nys-tab label="Haystack"></nys-tab>
+    <nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
+    <nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+    <nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+</nys-tabgroup>
+{% endset %}
+{% set code %}
+<nys-tabgroup>
+    <nys-tab label="Marcy"></nys-tab>
+    <nys-tab label="Algonquin" selected></nys-tab>
+    ...rest of the tabs...
+    <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+    <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+    ...rest of the tabpanels...
+</nys-tabgroup>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
 ### Disabled Tabs
 To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disabled tabs will not be clickable and will have a different visual style to indicate that they are inactive.
 
@@ -80,8 +105,7 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 <nys-tabgroup>
     <nys-tab label="Marcy"></nys-tab>
     <nys-tab label="Algonquin"></nys-tab>
-    <nys-tab label="Gore (Not a High Peak)" disabled></nys-tab>
-    ...rest of the tabs...
+    ...
     <nys-tab label="Gore (Not a High Peak)" disabled></nys-tab>
     <nys-tabpanel>content inside the tab panel</nys-tabpanel>
     <nys-tabpanel>content inside the tab panel</nys-tabpanel>
@@ -134,7 +158,9 @@ The `nys-tab` component includes the following accessibility-focused features:
 {% endblock %}
 
 {% block cssvariables %}
-
+  {% set variables = [
+    { name: "--nys-tabpanel-max-height", description: "Maximum height of the tab panel content area." }
+  ]%}
 {% include "partials/css-vars.njk" %}
 
 {% endblock %}
@@ -155,18 +181,53 @@ The `nys-tab` component includes the following accessibility-focused features:
     <tr>
       <td><code>name</code></td>
       <td>String</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
+      <td><code>&lt;nys-tabgroup&gt;</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
       <td><code>&lt;nys-tab&gt;</code></td>
     </tr>
-   
+    <tr>
+      <td><code>selected</code></td>
+      <td>Boolean</td>
+      <td><code>&lt;nys-tab&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>disabled</code></td>
+      <td>Boolean</td>
+      <td><code>&lt;nys-tab&gt;</code></td>
+    </tr>
   </table>
 </nys-table>
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+The `<nys-tab>` component emits **three** custom JavaScript events:
+1. **`nys-tab-select`** – Fired when a tab is activated via click or Enter / Space.
+2. **`nys-tab-focus`** – Fired when a tab receives focus.
+3. **`nys-tab-blur`** – Fired when a tab loses focus.
+
+### Event details
+The `nys-tab-select` event includes a detail object with the following properties:
+  - id (string): The id of the activated tab.
+  - label (string): The label of the activated tab.
+
+The `nys-tab-focus` and `nys-tab-blur` events include:
+  - id (string): The id of the tab.
+
+You can listen to these events using JavaScript:
+{% set code %}const tabgroup = document.querySelector('nys-tabgroup');
+tabgroup.addEventListener('nys-tab-select', (event) => {
+  const { id, label } = event.detail;
+  console.log(`Tab selected — id: ${id}, label: ${label}`);
+});{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+
+{% endblock %}
 
 {% block updates %}{% endblock %}
