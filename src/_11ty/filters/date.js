@@ -7,9 +7,9 @@ const { DateTime } = require("luxon");
  * @return {String} formatted date
  */
 
-const dateISO = function(date) {
+const dateISO = function (date) {
     const jsDate = new Date(date);
-    const dt = DateTime.fromJSDate(jsDate);
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
     return dt.toISO();
 };
 
@@ -21,9 +21,9 @@ const dateISO = function(date) {
  * @return {String} formatted date
  */
 
-const dateFull = function(date, locale = "en") {
+const dateFull = function (date, locale = "en") {
     const jsDate = new Date(date);
-    const dt = DateTime.fromJSDate(jsDate);
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
     return dt.setLocale(locale).toLocaleString(DateTime.DATE_FULL);
 };
 
@@ -35,9 +35,9 @@ const dateFull = function(date, locale = "en") {
  * @return {String} formatted date
  */
 
-const dateFullWeekday = function(date, locale = "en") {
+const dateFullWeekday = function (date, locale = "en") {
     const jsDate = new Date(date);
-    const dt = DateTime.fromJSDate(jsDate);
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
     return dt.setLocale(locale).toLocaleString(DateTime.DATE_FULL_WITH_WEEKDAY);
 };
 
@@ -48,10 +48,10 @@ const dateFullWeekday = function(date, locale = "en") {
  * @return {String} formatted year
  */
 
-const dateYear = function(date) {
+const dateYear = function (date) {
     const jsDate = new Date(date);
-    const fullYear = jsDate.getFullYear();
-    return fullYear;
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
+    return dt.year;
 }
 
 /**
@@ -61,9 +61,9 @@ const dateYear = function(date) {
  * @return {String} formatted year
  */
 
-const dateFeed = function(date) {
+const dateFeed = function (date) {
     const jsDate = new Date(date);
-    const dt = DateTime.fromJSDate(jsDate);
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
     return dt.toHTTP();
 }
 

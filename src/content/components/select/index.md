@@ -6,7 +6,7 @@ image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-70151&t=Fz3PChrCAbfpr60Y-4
 navOrder: 19
 ---
 
@@ -50,7 +50,7 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 
 {% block usagedont %}
 
-  - Don't use the custom `<nys-option>` element in the `<nys-select>` component. This will be deprecated with the 2.0 release
+  - Use the custom `<nys-option>` element in the `<nys-select>` component. This will be deprecated with the 2.0 release
   - Use `<nys-select multiple>` as an input for users to select multiple items from a dropdown. Consider a [checkbox group](/components/checkbox/) instead. More guidance from the [US Web Design System](https://designsystem.digital.gov/components/select/#when-to-consider-something-else)
 
 {% endblock %}
@@ -215,6 +215,20 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Inverted
+Set the `inverted` when the component is on a dark background.
+  {% set preview %}<nys-select label="Select your favorite borough" inverted>
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>
+</nys-select>{% endset %}
+  {% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% set inverted = true %}
+  {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -299,6 +313,8 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
   </table>
 </nys-table>
 
+### Form Prop
+  The form attribute associates the `nys-select` component with a specific `<form>` element, regardless of its location on the page. This ensures that the select's state is included in the form submission, whether it is inside the `<form>` element or outside it.
 
 {% endblock %}
 
@@ -330,6 +346,16 @@ select.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

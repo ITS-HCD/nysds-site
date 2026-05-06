@@ -6,7 +6,7 @@ image: /assets/img/components/pagination.svg
 image_alt: An illustration of a pagination.
 image_header: /assets/img/components/pagination-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=10600-10347
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4664-1589&p=f&t=7RVQI38uIhRVCBjL-0
 navOrder: 17
 ---
 
@@ -48,8 +48,8 @@ The `<nys-pagination>` provides users with the ability to to navigate through a 
 
 {% block usagedont %}
 
-  - If the displayed collection can fit on less than 3 or 4 pages, consider displaying all items at once and using a scroll.
-  - For interactive pages or collecting information, instead consider the `<nys-stepper>`
+  - Use if the displayed collection can fit on less than 3 or 4 pages, consider displaying all items at once and using a scroll.
+  - Use for interactive pages or collecting information, instead consider the `<nys-stepper>`
 
 {% endblock %}
 
@@ -133,6 +133,16 @@ pagination.addEventListener("nys-change", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
