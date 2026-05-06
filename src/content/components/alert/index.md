@@ -7,7 +7,7 @@ image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-8784&t=0cK7llM1tFRVIgBx-4
-navOrder: 2
+
 ---
 
 {% extends "layouts/component.njk" %}

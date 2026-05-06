@@ -4,7 +4,6 @@ title: Web Components
 description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
 section: Components
 layout: layouts/2-col.njk
-navOrder: -1
 ---
 
 {% block content %}

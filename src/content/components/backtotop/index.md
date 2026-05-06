@@ -7,7 +7,7 @@ image_alt: a circular button with the text back to top written on it.
 image_header: /assets/img/components/backtotop-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4303-2694&t=ehyQYJeb6ohvHYV0-4
-navOrder: 4
+
 ---
 
 {% extends "layouts/component.njk" %}

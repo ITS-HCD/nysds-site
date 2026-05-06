@@ -32,11 +32,19 @@ module.exports = function (collectionApi) {
     });
   });
 
-  // Third pass: Sort top-level pages & their children by `navOrder`
-  Object.values(sections).forEach((section) => {
-    section.topLevel.sort((a, b) => (a.data.navOrder || 99) - (b.data.navOrder || 99));
+  // Third pass: Sort top-level pages & their children alphabetically by title
+  Object.entries(sections).forEach(([sectionName, section]) => {
+    const sectionSlug = sectionName.toLowerCase().replace(/\s+/g, "-");
+    const sectionIndexUrl = `/${sectionSlug}/`;
+    section.topLevel.sort((a, b) => {
+      const aIsHeading = a.url === sectionIndexUrl;
+      const bIsHeading = b.url === sectionIndexUrl;
+      if (aIsHeading) return -1;
+      if (bIsHeading) return 1;
+      return (a.data.title || "").localeCompare(b.data.title || "");
+    });
     section.all.forEach((page) => {
-      page.children.sort((a, b) => (a.data.navOrder || 99) - (b.data.navOrder || 99));
+      page.children.sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""));
     });
   });
 

@@ -2,7 +2,7 @@
 permalink: /foundations/
 title: Foundations
 description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
-navOrder: 10
+
 ---
 
 {% block content %}
