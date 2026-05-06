@@ -50,7 +50,7 @@ The following sections break the layout grid down and describe how it works.
 ### Additional functionality
 
 - **Equal-width columns:** With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of `nys-grid-col` will display as one-quarter-width columns across all sizes. Refer to the [auto-layout columns](#auto-layout-columns) section for more examples.
-- **Gutters:** Rows and columns don’t have any gutters by default, but gutters can be added by including `nys-grid-gap-sm`, `nys-grid-gap`, or `nys-grid-gap-lg` at the row level. Refer to [gutters](#gutters) for more info.
+- **Gutters:** Rows and columns don’t have any gutters by default, but gutters can be added by including `nys-grid-gap-2px`, `nys-grid-gap`, or `nys-grid-gap-300` at the row level. Refer to [gutters](#gutters) for more info.
 - **Media queries:** Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., `nys-tablet:col-4` applies to tablet, desktop, and widescreen devices but not at `nys-mobile-lg` or any width below the tablet breakpoint). Refer to [responsive classes](#responsive-classes) for a full list.
 </section>
 
@@ -453,7 +453,7 @@ Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in
 `nys-grid-gap-*` classes allow you to customize the gutter width. The following options are available:
 
 *   `nys-grid-gap-0` — No gap
-*   `nys-grid-gap-1` — 1px gap
+*   `nys-grid-gap-1px` — 1px gap
 *   `nys-grid-gap-2px` — 2px gap
 *   `nys-grid-gap-50` — 4px gap (0.25rem)
 *   `nys-grid-gap-100` — 8px gap (0.5rem)

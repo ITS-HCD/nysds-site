@@ -11,7 +11,7 @@ navOrder: 10
 
 Let's start by defining the parts of the system. The NYS Design System includes:
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
     <div class="card card__no-border card__flat nys-flex-fill">
       <div class="card__inner">
