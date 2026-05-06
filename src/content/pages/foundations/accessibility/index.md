@@ -4,7 +4,7 @@ redirect_from: /a11y/
 title: "Accessibility"
 description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
 section: "Foundations"
-
+navOrder: 20
 ---
 
 {% block content %}
