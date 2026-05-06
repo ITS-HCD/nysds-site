@@ -7,7 +7,7 @@ image_alt: An illustration of a checkbox.
 image_header: /assets/img/components/checkbox-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-68534&t=ehyQYJeb6ohvHYV0-4
-navOrder: 7
+navOrder: 8
 ---
 
 {% extends "layouts/component.njk" %}

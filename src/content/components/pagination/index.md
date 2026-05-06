@@ -7,7 +7,7 @@ image_alt: An illustration of a pagination.
 image_header: /assets/img/components/pagination-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4664-1589&p=f&t=7RVQI38uIhRVCBjL-0
-navOrder: 17
+navOrder: 18
 ---
 
 {% extends "layouts/component.njk" %}
