@@ -7,7 +7,7 @@ image_alt: An illustration of a tab.
 image_header: /assets/img/components/tab-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20950-976
-navOrder: 22
+navOrder: 23
 ---
 
 {% extends "layouts/component.njk" %}
