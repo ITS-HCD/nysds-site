@@ -30,7 +30,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 <div class="icon-examples">
 
 ### Core
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "account_circle" %}{% include "partials/icon-preview.njk" %}
   {% set name = "attach_file" %}{% include "partials/icon-preview.njk" %}
   {% set name = "calendar_month" %}{% include "partials/icon-preview.njk" %}
@@ -72,7 +72,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Social
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "social_bluesky" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_facebook" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_flickr" %}{% include "partials/icon-preview.njk" %}
@@ -92,7 +92,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Arrows
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "arrow_back" %}{% include "partials/icon-preview.njk" %}
   {% set name = "arrow_downward" %}{% include "partials/icon-preview.njk" %}
   {% set name = "arrow_forward" %}{% include "partials/icon-preview.njk" %}
@@ -100,7 +100,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Chevrons
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "chevron_down" %}{% include "partials/icon-preview.njk" %}
   {% set name = "chevron_up" %}{% include "partials/icon-preview.njk" %}
   {% set name = "chevron_left" %}{% include "partials/icon-preview.njk" %}
@@ -108,7 +108,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Environmental
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "ac_unit" %}{% include "partials/icon-preview.njk" %}
   {% set name = "air" %}{% include "partials/icon-preview.njk" %}
   {% set name = "clear_day" %}{% include "partials/icon-preview.njk" %}
@@ -117,7 +117,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Intent
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "check_circle" %}{% include "partials/icon-preview.njk" %}
   {% set name = "emergency_home" %}{% include "partials/icon-preview.njk" %}
   {% set name = "error" %}{% include "partials/icon-preview.njk" %}
@@ -126,7 +126,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Filled
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "account_balance_filled" %}{% include "partials/icon-preview.njk" %}
   {% set name = "cancel_filled" %}{% include "partials/icon-preview.njk" %}
   {% set name = "language_filled" %}{% include "partials/icon-preview.njk" %}
