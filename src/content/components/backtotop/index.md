@@ -124,8 +124,7 @@ size="sm"
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    --_nys-button-border-radius--start: var(--nys-radius-round);
-    --_nys-button-border-radius--end: var(--nys-radius-round);
+    --_nys-button-border-radius: var(--nys-radius-round);
   }
 </style>
 {% endset %}
