@@ -2,7 +2,7 @@
 'use strict';
 
 const { createHash } = require('node:crypto');
-const { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, statSync } = require('node:fs');
+const { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync } = require('node:fs');
 const { join, extname, relative, dirname } = require('node:path');
 const sharp = require('sharp');
 const { optimize } = require('svgo');
@@ -43,9 +43,8 @@ function saveCache(cache) {
   writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
 }
 
-async function compressPngJpeg(filePath) {
+async function compressPngJpeg(filePath, input) {
   const ext = extname(filePath).toLowerCase();
-  const input = readFileSync(filePath);
   let output;
   if (ext === '.png') {
     output = await sharp(input).png({ quality: 80, compressionLevel: 9 }).toBuffer();
@@ -60,15 +59,16 @@ async function compressPngJpeg(filePath) {
   return { before: input.length, after: input.length, hash: sha256(input) };
 }
 
-function compressSvg(filePath) {
-  const input = readFileSync(filePath, 'utf8');
-  const result = optimize(input, { path: filePath });
+function compressSvg(filePath, input) {
+  const inputStr = input.toString('utf8');
+  const result = optimize(inputStr, { path: filePath });
   const output = result.data;
-  if (output.length < input.length) {
+  const outputBuf = Buffer.from(output);
+  if (outputBuf.length < input.length) {
     writeFileSync(filePath, output, 'utf8');
-    return { before: Buffer.byteLength(input), after: Buffer.byteLength(output), hash: sha256(Buffer.from(output)) };
+    return { before: input.length, after: outputBuf.length, hash: sha256(outputBuf) };
   }
-  return { before: Buffer.byteLength(input), after: Buffer.byteLength(input), hash: sha256(Buffer.from(input)) };
+  return { before: input.length, after: input.length, hash: sha256(input) };
 }
 
 async function main() {
@@ -95,9 +95,9 @@ async function main() {
 
     let result;
     if (ext === SVG_EXT) {
-      result = compressSvg(filePath);
+      result = compressSvg(filePath, content);
     } else {
-      result = await compressPngJpeg(filePath);
+      result = await compressPngJpeg(filePath, content);
     }
 
     cache[key] = result.hash;
