@@ -325,7 +325,7 @@ main[role="main"] {
     margin-bottom: var(--nys-space-600);
 }
 
-.page-content pre {
+.page-css-variables pre {
     padding: var(--nys-space-1px) var(--nys-space-2px);
     border-radius: var(--nys-radius-md);
     color: var(--nys-color-red-600);

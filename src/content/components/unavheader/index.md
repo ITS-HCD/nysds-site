@@ -6,7 +6,7 @@ image: /assets/img/components/unav-header.svg
 image_alt: An illustration of a unav header.
 image_header: /assets/img/components/unav-header-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11902
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4024-7292&t=EXsXvlMbCdRw10ir-4
 navOrder: 28
 ---
 
@@ -31,6 +31,7 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block usage %}
@@ -51,8 +52,8 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 
 {% block usagedont %}
 
-  - Don't place it anywhere other than the top of the page.
-  - Don't modify the universal header.
+  - Place it anywhere other than the top of the page.
+  - Modify the universal header.
 
 {% endblock %}
 

@@ -6,7 +6,7 @@ image: /assets/img/components/radiobutton.svg
 image_alt: An illustration of a radiobutton.
 image_header: /assets/img/components/radio-button-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4136-3487
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-69517&t=Fz3PChrCAbfpr60Y-4
 navOrder: 18
 ---
 
@@ -54,9 +54,9 @@ The `<nys-radiobutton>` provides users with the ability to choose from a group o
 
 {% block usagedont %}
 
-  - Don't use radio buttons for yes/no questions (consider using `<nys-toggle>` or `<nys-checkbox>`).
-  - Don’t overload users with too many options; simplify or use a dropdown instead.
-  - Don’t leave all options unselected if a helpful default can guide users.
+  - Use radio buttons for yes/no questions (consider using `<nys-toggle>` or `<nys-checkbox>`).
+  - Overload users with too many options; simplify or use a dropdown instead.
+  - Leave all options unselected if a helpful default can guide users.
 
 {% endblock %}
 
@@ -74,6 +74,32 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
 {% endblock %}
 
 {% block options %}
+
+### Partial 
+
+{% set preview %}<nys-radiogroup label="Choose your preferred work operating system.">
+  <nys-radiobutton
+    name="op-system"
+    label="Windows 11"
+    description="HP Elitebook"
+    value="windows"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="op-system"
+    label="Sequoia"
+    description="Macbook Air"
+    value="mac"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="op-system"
+    label="Linux"
+    value="windows"
+    disabled
+  ></nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
@@ -194,6 +220,32 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Inverted
+Set the `inverted` on `<nys-radiogroup>` when the component is on a dark background.
+  {% set preview %}<nys-radiogroup label="What is your primary work location?" inverted>
+  <label slot="description">
+    This is the location you use for your in office days.
+    <a href="https://www.ny.gov/" target="__blank">(slot)</a></label
+  >
+  <nys-radiobutton
+    name="office"
+    label="Albany"
+    description="Upstate New York (prop)"
+    value="albany"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="office"
+    label="Manhattan"
+    value="manhattan"
+  >
+    <label slot="description"> New York City <a href="https://www.ny.gov/" target="__blank">(slot)</a></label>
+  </nys-radiobutton>
+</nys-radiogroup>{% endset %}
+  {% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% set inverted = true %}
+  {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -282,6 +334,9 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
     </tr>
   </table>
 </nys-table>
+
+### Form Prop
+  The form attribute associates the `nys-radiobutton/nys-radiogroup` component with a specific `<form>` element, regardless of its location on the page. This ensures that the radio button/radio group's state is included in the form submission, whether it is inside the `<form>` element or outside it.
 
 {% endblock %}
 
