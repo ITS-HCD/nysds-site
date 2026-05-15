@@ -7,7 +7,7 @@ image_alt: An illustration of a unav header.
 image_header: /assets/img/components/unav-header-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4024-7292&t=EXsXvlMbCdRw10ir-4
-navOrder: 30
+
 ---
 
 {% extends "layouts/component.njk" %}

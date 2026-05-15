@@ -47,7 +47,7 @@ The NYS Design System is designed to speed up and standardize UI design. Here’
 
 The NYS Design System isn’t just about using components—it’s about creating better, more accessible digital experiences for New Yorkers.
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
 <nys-button 
     label="Learn More About Foundations"
     href="/foundations"

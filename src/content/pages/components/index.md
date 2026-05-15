@@ -16,7 +16,7 @@ navOrder: -1
     </div>
   </header>
 
-<section class="nys-grid-row nys-grid-gap-lg">
+<section class="nys-grid-row nys-grid-gap-300">
   {%- for post in collections.components -%}
   {# Prevent child pages from rendering a card: child pages have a `parent` variable; component pages do NOT #}
   <!-- DO NOT EDIT the lines that generate the cards in this section. 11ty likes to take template code like this and treat the code-only lines (like the if statements) as empty lines and inserts empty P tags in place, causing all sorts of layout issues. So as much as it pains us to concatenate the beginning or end of an if statement inline with the code, placing it on it's own line (so it looks nicer) just can't happen using .md files Thar be dragons -->

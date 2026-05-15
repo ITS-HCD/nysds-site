@@ -7,7 +7,7 @@ image_alt: An illustration of a badge.
 image_header: /assets/img/components/badge-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=8557-16575&t=ehyQYJeb6ohvHYV0-4
-navOrder: 5
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -71,7 +71,7 @@ The `<nys-badge>` component provides a visual indicator of text values like cate
 Below are the available badge intents, each showcasing its unique style and purpose. The default intent is `neutral`.
 
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-1">
+<div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Neutral" prefixIcon></nys-badge>
   <nys-badge label="Error" intent="error" prefixIcon></nys-badge>
   <nys-badge label="Warning" intent="warning" prefixIcon></nys-badge>
@@ -90,7 +90,7 @@ Below are the available badge intents, each showcasing its unique style and purp
 Add `variant="strong"` for badges on a raised surface or for more emphasis.
 
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-1">
+<div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Neutral" variant="strong" prefixIcon></nys-badge>
   <nys-badge label="Error" intent="error" variant="strong" prefixIcon></nys-badge>
   <nys-badge label="Warning" intent="warning" variant="strong" prefixIcon></nys-badge>
@@ -109,7 +109,7 @@ Add `variant="strong"` for badges on a raised surface or for more emphasis.
 Badge can include icons as either a prefix or suffix. The icons can be specified using the `prefixIcon` or `suffixIcon` attributes. Pass in the attribute as a boolean to use the default icon, or pass in a string to use a specific icon. Icons do not appear by default and must be explicitly specified.
 
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-1">
+<div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Default neutral" prefixIcon></nys-badge>
   <nys-badge label="Default neutral" suffixIcon></nys-badge>
   <nys-badge label="Custom neutral" prefixIcon="check"></nys-badge>
@@ -131,7 +131,7 @@ Badge is available in two sizes: `md` and `sm`. The size can be specified using 
 **Note:** Do not mix sizes within a group of badges.
 
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-1">
+<div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Medium"></nys-badge>
   <nys-badge label="Small" size="sm"></nys-badge>
 </div>
@@ -147,7 +147,7 @@ Badge is available in two sizes: `md` and `sm`. The size can be specified using 
 Badge can include a prefix label, which is a short text that appears before the main label. The prefix label can be specified using the `prefixLabel` attribute.
 
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-1">
+<div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Stable" prefixIcon="code"></nys-badge>
   <nys-badge prefixLabel="WCAG 2.2" label="AA" intent="success" prefixIcon></nys-badge>
 </div>
