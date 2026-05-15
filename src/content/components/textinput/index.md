@@ -7,7 +7,7 @@ image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-3154&t=EXsXvlMbCdRw10ir-4
-navOrder: 24
+
 ---
 
 {% extends "layouts/component.njk" %}

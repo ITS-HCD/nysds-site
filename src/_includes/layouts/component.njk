@@ -1,7 +1,7 @@
 <section id="overview">
     <h1>{{ title }}</h1>
     {%- block longdescription %}{% endblock -%}
-    <div class="nys-grid-row nys-grid-gap-1 nys-flex-align-center">
+    <div class="nys-grid-row nys-grid-gap-100 nys-flex-align-center">
         <nys-badge label="{{ 'Stable' if stable else 'Unstable' }}" prefixIcon="code"></nys-badge>
         <nys-badge
             prefixIcon
@@ -20,13 +20,10 @@
 
 <section>
     <h2>Accessibility</h2>
-    {% if hasA11yPages %}
-    <h3>{{ pattern | capitalize }} test status</h3>
-
-    <nys-table bordered>
+    {% if hasA11yPages %}<nys-table bordered>
         <table aria-labelledby="{{ pattern | lower }}-test-status">
             <caption>
-                <!-- caption visuals are not ideal if WC doesn't render -->
+                {{ pattern | capitalize }} test status
             </caption>
         <tr>
             <th>Total tests</th>

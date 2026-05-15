@@ -1367,8 +1367,7 @@ li>.section-nav__list {
     border-left: var(--nys-border-width-sm, 1px) solid
         var(--nys-color-neutral-50, #ededed);
     background: var(--nys-color-transparent, rgba(255, 255, 255, 0));
-    --_nys-button-border-radius--start: 0;
-    --_nys-button-border-radius--end: 0;
+    --_nys-button-border-radius: 0;
 }
 
 .code-preview__code-container {
