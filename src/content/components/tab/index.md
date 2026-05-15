@@ -13,7 +13,7 @@ figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20950-97
 
 {% block longdescription %}
 
-The `<nys-tab>` acts as a clickable interface to toggle between different sets of information without leaving the page. It is not intended for navigation.
+The `<nys-tab>` acts as a clickable interface to toggle between different sets of information without leaving the page. It is not intended for page navigation.
 
 {% endblock %}
 
@@ -137,16 +137,16 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 
 {% block usagedo %}
 
-- Keep it Simple: Use 2–9 short, clear labels.
-- Limit to One Row: Avoid wrapping, as it makes navigation confusing.
-- Only one Tab should ever be in the active state.
+- Keep it simple: Use 2–9 short, clear labels.
+- Limit tab labels to one row: Avoid wrapping, as it makes navigation confusing.
+- Only one tab should ever be in the active state.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Don't Nest: Avoid putting tabs inside other tabs; it creates a poor user experience.
-- Do not use Tabs for navigation.
+- Don't nest: Avoid putting tabs inside other tabs; it creates a poor user experience.
+- Do not use tabs for page navigation.
 
 {% endblock %}
 
