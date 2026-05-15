@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeSelector = document.getElementById("theme-selector");
 
   themeSelector.addEventListener("nys-change", function (event) {
-    const selectedTheme = event.target.value;
+    const selectedTheme = event.detail?.value ?? event.target.value;
     const htmlRoot = document.documentElement;
 
     if (selectedTheme != "default") {
@@ -162,9 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
       htmlRoot.removeAttribute('data-theme');
     }
 
-    // Theme vars that need to update in the token list when the theme changes.
-    // We iterate through these in a loop below
-    let themeColors = [
+    const themeColors = [
       '--nys-color-theme',
       '--nys-color-theme-strong',
       '--nys-color-theme-stronger',
@@ -174,19 +172,14 @@ document.addEventListener("DOMContentLoaded", function () {
       '--nys-color-theme-faint'
     ];
 
-    // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
-    // DRAGONS: Remove this delay and it will read the default theme value only.
-    setTimeout(() => {    
-      // Loop through the themeColors array to update the theme color text to change when you switch to a new agency theme group.
-      for (let colorVar of themeColors) {
-        let rawcolorval = document.querySelectorAll(`code.${colorVar}`);
-        let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
-        
-        rawcolorval.forEach(el => {
-          el.innerText = computedColor;
-        });
-      }
-    }, 500);
+    const swatch = document.querySelector('.token-list__swatch');
+    const cs = window.getComputedStyle(swatch);
+    for (const colorVar of themeColors) {
+      const value = cs.getPropertyValue(colorVar).trim();
+      document.querySelectorAll(`code.${colorVar}`).forEach(el => {
+        el.innerText = value;
+      });
+    }
   });
 });
 
