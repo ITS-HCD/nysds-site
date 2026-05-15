@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-05-01T17:55:37.528Z -->
+    <!-- Latest Build: 2026-05-15T19:08:00.777Z -->
   </head>
   
   <body class="single-page page-grid section-foundations">
@@ -282,7 +282,7 @@
 <h1 id="grid">Grid</h1>
 <p>Use our flexible grid system to structure website content. The grid is mobile-first, powered by flexbox, and based on a 12-column system.</p>
 <h2 id="how-it-works">How it works</h2>
-<p>The grid system uses a series of containers, rows, and columns to lay out and align content. The following row and corresponding code are an example of and  in-depth look at how the grid comes together.</p>
+<p>The grid system uses a series of containers, rows, and columns to lay out and align content. The following row and corresponding code are an example of and in-depth look at how the grid comes together.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
@@ -335,7 +335,7 @@
 <h3 id="additional-functionality">Additional functionality</h3>
 <ul>
 <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of <code>nys-grid-col</code> will display as one-quarter-width columns across all sizes. Refer to the <a href="#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
-<li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code>nys-grid-gap-sm</code>, <code>nys-grid-gap</code>, or <code>nys-grid-gap-lg</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
+<li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by including <code>nys-grid-gap-2px</code>, <code>nys-grid-gap</code>, or <code>nys-grid-gap-300</code> at the row level. Refer to <a href="#gutters">gutters</a> for more info.</li>
 <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., <code>nys-tablet:col-4</code> applies to tablet, desktop, and widescreen devices but not at <code>nys-mobile-lg</code> or any width below the tablet breakpoint). Refer to <a href="#responsive-classes">responsive classes</a> for a full list.</li>
 </ul>
 </section>
@@ -842,17 +842,27 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 <h3 id="gutter-sizing">Gutter sizing</h3>
-<p><code>nys-grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than <code>nys-grid-gap</code>. The default large-gap width is 32px. There is also a <code>.nys-grid-gap-sm</code> (2px). Also, you can add the following system values with <code>nys-grid-gap</code>:</p>
+<p><code>nys-grid-gap-*</code> classes allow you to customize the gutter width. The following options are available:</p>
 <ul>
-<li><code>nys-grid-gap-2px</code></li>
-<li><code>nys-grid-gap-05</code></li>
-<li><code>nys-grid-gap-1</code></li>
-<li><code>nys-grid-gap-2</code></li>
-<li><code>nys-grid-gap-3</code></li>
-<li><code>nys-grid-gap-4</code></li>
-<li><code>nys-grid-gap-5</code></li>
-<li><code>nys-grid-gap-6</code></li>
+<li><code>nys-grid-gap-0</code> — No gap</li>
+<li><code>nys-grid-gap-1px</code> — 1px gap</li>
+<li><code>nys-grid-gap-2px</code> — 2px gap</li>
+<li><code>nys-grid-gap-50</code> — 4px gap (0.25rem)</li>
+<li><code>nys-grid-gap-100</code> — 8px gap (0.5rem)</li>
+<li><code>nys-grid-gap-150</code> — 12px gap (0.75rem)</li>
+<li><code>nys-grid-gap-200</code> — 16px gap (1rem)</li>
+<li><code>nys-grid-gap-250</code> — 20px gap (1.25rem)</li>
+<li><code>nys-grid-gap-300</code> — 24px gap (1.5rem)</li>
+<li><code>nys-grid-gap-400</code> — 32px gap (2rem)</li>
+<li><code>nys-grid-gap-500</code> — 40px gap (2.5rem)</li>
+<li><code>nys-grid-gap-600</code> — 48px gap (3rem)</li>
+<li><code>nys-grid-gap-700</code> — 56px gap (3.5rem)</li>
+<li><code>nys-grid-gap-800</code> — 64px gap (4rem)</li>
+<li><code>nys-grid-gap-1200</code> — 96px gap (6rem)</li>
 </ul>
+<nys-alert type="warning" heading="Gutter variables have changed!" primaryLabel="See full conversion guide" primaryAction="/updates/1.18.0-release/#breaking-changes">
+<p>The previous semantic gutter variables (<code>-sm</code>, <code>-md</code>, and <code>-lg</code>) and the <code>nys-grid-gap-[1-6]</code> ramp, have been updated to align with current size/space ramps. If you were previously using one of the old gutter variables, update your code to use the new options as soon as possible to avoid any issues with future releases.</p>
+</nys-alert>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner"><div class="nys-grid-row border-left bg-white">
@@ -894,7 +904,7 @@ Columns are always 50% wide, on mobile and desktop
   </div>
 </div>
 <div class="docs-grid-example">
-  <div class="nys-grid-row nys-grid-gap-lg">
+  <div class="nys-grid-row nys-grid-gap-50">
     <div class="nys-grid-col-4">
       <div>.nys-grid-col-4</div>
     </div>
@@ -920,7 +930,7 @@ Columns are always 50% wide, on mobile and desktop
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-grid-gap-lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-grid-gap-50<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>.nys-grid-col-4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -941,7 +951,7 @@ Columns are always 50% wide, on mobile and desktop
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/utilities/grid.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: May 1, 2026</p>
+    <p>Last updated: May 15, 2026</p>
   </div>
 
   </div>

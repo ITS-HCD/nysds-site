@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NYS Design System Release 1.18.0 “Cascade” - New York State Design System</title>
+
+<meta name="description" content="Releasing the new &lt;nys-tab&gt; component! We fixed some responsive utility CSS, as well as a few React and Preact bugs. BREAKING CHANGE to grid-gap CSS classes, read release notes for more info.
+">
+<link rel="canonical" href="https://designsystem.ny.gov/updates/1.18.0-release/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="NYS Design System Release 1.18.0 “Cascade”">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/updates/1.18.0-release/">
+<meta property="og:description" content="Releasing the new &lt;nys-tab&gt; component! We fixed some responsive utility CSS, as well as a few React and Preact bugs. BREAKING CHANGE to grid-gap CSS classes, read release notes for more info.
+">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/mono-star.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-05-15T19:08:00.777Z -->
+  </head>
+  
+  <body class="single-page page-release-1.18.0 section-updates">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Updates
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-updates.svg" alt="Updates section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+
+
+
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
+    
+      <section class="page-content">
+
+        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-18-0-cascade">
+            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.18.0 “Cascade”
+          </h1><p class="page-subtitle">Releasing the new &lt;nys-tab&gt; component! We fixed some responsive utility CSS, as well as a few React and Preact bugs. BREAKING CHANGE to grid-gap CSS classes, read release notes for more info.
+</p><div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+              <span class="page-author__name">Eric Steinborn</span>
+            </div>
+            <time class="page-meta__date" datetime="2026-05-14T00:00:00.000Z">May 14, 2026</time>
+            <div class="page-meta__readtime">3 min read time</div>
+          </div>
+        </header>
+
+        <p><nys-alert heading="BREAKING CHANGES in 1.18.0" text="Read the grid-gap documentation below to see how to migrate" type="danger"></nys-alert></p>
+<h2 id="cascade">“Cascade” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Cascade” after the 36<sup>th</sup> highest peak in New York: Cascade Mountain. Cascade Mountain has an elevation of 4,098 ft (1,249 m). That is just over 4 Empire State Buildings tall (1,050 ft to roof)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Cascade_Mountain_(New_York)">Learn more about Cascade Mountain</a></p>
+<h2 id="nys-tab-now-available"><code>&lt;nys-tab&gt;</code> now available</h2>
+<p>The <code>&lt;nys-tab&gt;</code> acts as a clickable interface to toggle between different sets of information without leaving the page. It is not intended for page navigation.</p>
+<p><a href="/components/tab">Read the full tabs documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-tabgroup>
+<nys-tab label="Marcy"></nys-tab>
+<nys-tab label="Algonquin"></nys-tab>
+<nys-tab label="Haystack"></nys-tab>
+<nys-tab label="Skylight" id="tab4"></nys-tab>
+<nys-tab label="Whiteface" id="tab5"></nys-tab>
+<nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.
+</nys-tabpanel>
+<nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
+</nys-tabgroup>
+<p style="padding: 1rem;">
+    <strong>Note:</strong> The content in the tab panels was gathered from <a href="https://www.lakeplacid.com/do/outdoors/summerfall/hiking">lakeplacid.com</a> and may not be completely accurate. This is meant to be a demo of how the component works, not a hiking guide.
+</p>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabgroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tab</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Marcy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tab</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tab</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Algonquin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tab</span><span class="token punctuation">></span></span>
+    ...rest of the tabs...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabpanel</span><span class="token punctuation">></span></span>content inside the tab panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabpanel</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabpanel</span><span class="token punctuation">></span></span>content inside the tab panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabpanel</span><span class="token punctuation">></span></span>
+    ...rest of the tabpanels...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabgroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> tabbed her way to the summit</p>
+<h2 id="figma-updates">Figma updates</h2>
+<ul>
+<li>A new Figma-only <code>Link</code> component was released this week</li>
+<li>Lots of research into the upcoming Card component. Stay tuned for your chance to contribute to the Card discussion!</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are designing the future of New York State</p>
+<h2 id="bug-fixes">Bug fixes</h2>
+<ul>
+<li>Adjust <code>&lt;nys-icon&gt;</code> alignment. Icons are now aligned in the text variant of <code>&lt;nys-button&gt;</code></li>
+<li>Grid Gap classes were changed to use NYSDS ramps instead of USWDS ramps</li>
+<li>Inverted options we not passing WCAG contrast specs, so they have been removed</li>
+<li>Fixed no heading bug in <code>&lt;nys-alert&gt;</code></li>
+<li>Datepicker out-of-range month now visible</li>
+<li><code>&lt;nys-tooltip&gt;</code> no longer resets to the top left of the screen when you change the tooltip content</li>
+<li>Accessibility fixes for <code>&lt;nys-backtotop&gt;</code></li>
+<li>Accessibility fixes for <code>&lt;nys-badge&gt;</code></li>
+<li>Slotted content is now properly updated for React and Preact environments</li>
+<li>Fixed responsive utility classes to cascade (get it?) better</li>
+<li>Updated lagging GitHub Actions from v4 to v6</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> ain't afraid of no bugs!</p>
+<h2 id="breaking-changes">🚨 Breaking changes</h2>
+<h3 id="grid-gap-utility-classes-renamed">Grid gap utility classes renamed</h3>
+<p>The <code>$grid-gaps</code> SCSS map now uses the standard NYSDS ramp. Update any old grid gap classes in your project:</p>
+<nys-table striped="" style="--nys-table-padding--cell--y: var(--nys-space-100)">
+  <table style="width: fit-content;">
+    <thead>
+      <tr>
+        <th>Old class</th>
+        <th></th>
+        <th>New class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>nys-grid-gap-sm</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-2px</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-md</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-200</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-lg</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-300</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-05</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-50</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-1</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-100</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-2</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-200</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-3</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-300</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-4</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-400</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-5</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-500</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-6</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-600</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
+<p>Additional options were added but are not breaking changes. <a href="/foundations/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> bridged the gap</p>
+<h2 id="known-issues">⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3 id="that-s-it">That’s it!</h3>
+<h4 id="for-full-component-updates-bug-fixes-and-the-detailed-changelog">For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.18.0">See the full developer release notes for v.1.18.0 →</a></p>
+
+
+        <div class="nys-grid-row nys-margin-t-200">
+          <div class="nys-grid-col">        
+        <ul class="taglist" data-pagefind-ignore="all">
+          
+          <li class="badge">release</li>
+          
+          <li class="badge"> tab</li>
+          
+        </ul>
+        </div>
+        </div>
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div></div>
+            <div>Previous : <a href="/updates/1.17.0-release/" title="Read: NYS Design System Release 1.17.0 “Grace”"><b>NYS Design System Release 1.17.0 “Grace”</b></a></div>
+          </div>
+        </div>
+
+        
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2026-05-14-release-1.18.0.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: May 14, 2026</p>
+  </div>
+
+
+      </section>
+    </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+    </aside>
+  </div>
+</div>
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

@@ -7,6 +7,317 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.18.0 “Cascade”</title>
+      <link>https://designsystem.ny.gov/updates/1.18.0-release/</link>
+      <description><![CDATA[<p><nys-alert heading="BREAKING CHANGES in 1.18.0" text="Read the grid-gap documentation below to see how to migrate" type="danger"></nys-alert></p>
+<h2>“Cascade” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Cascade” after the 36<sup>th</sup> highest peak in New York: Cascade Mountain. Cascade Mountain has an elevation of 4,098 ft (1,249 m). That is just over 4 Empire State Buildings tall (1,050 ft to roof)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Cascade_Mountain_(New_York)">Learn more about Cascade Mountain</a></p>
+<h2><code>&lt;nys-tab&gt;</code> now available</h2>
+<p>The <code>&lt;nys-tab&gt;</code> acts as a clickable interface to toggle between different sets of information without leaving the page. It is not intended for page navigation.</p>
+<p><a href="https://designsystem.ny.gov/components/tab">Read the full tabs documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-tabgroup>
+<nys-tab label="Marcy"></nys-tab>
+<nys-tab label="Algonquin"></nys-tab>
+<nys-tab label="Haystack"></nys-tab>
+<nys-tab label="Skylight" id="tab4"></nys-tab>
+<nys-tab label="Whiteface" id="tab5"></nys-tab>
+<nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.
+</nys-tabpanel>
+<nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
+</nys-tabgroup>
+<p style="padding: 1rem;">
+    <strong>Note:</strong> The content in the tab panels was gathered from <a href="https://www.lakeplacid.com/do/outdoors/summerfall/hiking">lakeplacid.com</a> and may not be completely accurate. This is meant to be a demo of how the component works, not a hiking guide.
+</p>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabgroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tab</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Marcy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tab</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tab</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Algonquin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tab</span><span class="token punctuation">></span></span>
+    ...rest of the tabs...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabpanel</span><span class="token punctuation">></span></span>content inside the tab panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabpanel</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabpanel</span><span class="token punctuation">></span></span>content inside the tab panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabpanel</span><span class="token punctuation">></span></span>
+    ...rest of the tabpanels...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabgroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> tabbed her way to the summit</p>
+<h2>Figma updates</h2>
+<ul>
+<li>A new Figma-only <code>Link</code> component was released this week</li>
+<li>Lots of research into the upcoming Card component. Stay tuned for your chance to contribute to the Card discussion!</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are designing the future of New York State</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Adjust <code>&lt;nys-icon&gt;</code> alignment. Icons are now aligned in the text variant of <code>&lt;nys-button&gt;</code></li>
+<li>Grid Gap classes were changed to use NYSDS ramps instead of USWDS ramps</li>
+<li>Inverted options we not passing WCAG contrast specs, so they have been removed</li>
+<li>Fixed no heading bug in <code>&lt;nys-alert&gt;</code></li>
+<li>Datepicker out-of-range month now visible</li>
+<li><code>&lt;nys-tooltip&gt;</code> no longer resets to the top left of the screen when you change the tooltip content</li>
+<li>Accessibility fixes for <code>&lt;nys-backtotop&gt;</code></li>
+<li>Accessibility fixes for <code>&lt;nys-badge&gt;</code></li>
+<li>Slotted content is now properly updated for React and Preact environments</li>
+<li>Fixed responsive utility classes to cascade (get it?) better</li>
+<li>Updated lagging GitHub Actions from v4 to v6</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> ain't afraid of no bugs!</p>
+<h2>🚨 Breaking changes</h2>
+<h3>Grid gap utility classes renamed</h3>
+<p>The <code>$grid-gaps</code> SCSS map now uses the standard NYSDS ramp. Update any old grid gap classes in your project:</p>
+<nys-table striped="" style="--nys-table-padding--cell--y: var(--nys-space-100)">
+  <table style="width: fit-content;">
+    <thead>
+      <tr>
+        <th>Old class</th>
+        <th></th>
+        <th>New class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>nys-grid-gap-sm</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-2px</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-md</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-200</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-lg</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-300</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-05</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-50</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-1</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-100</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-2</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-200</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-3</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-300</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-4</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-400</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-5</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-500</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-6</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-600</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
+<p>Additional options were added but are not breaking changes. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> bridged the gap</p>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.18.0">See the full developer release notes for v.1.18.0 →</a></p>
+]]></description>
+      <content><![CDATA[<p><nys-alert heading="BREAKING CHANGES in 1.18.0" text="Read the grid-gap documentation below to see how to migrate" type="danger"></nys-alert></p>
+<h2>“Cascade” 🏔️</h2>
+<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Cascade” after the 36<sup>th</sup> highest peak in New York: Cascade Mountain. Cascade Mountain has an elevation of 4,098 ft (1,249 m). That is just over 4 Empire State Buildings tall (1,050 ft to roof)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Cascade_Mountain_(New_York)">Learn more about Cascade Mountain</a></p>
+<h2><code>&lt;nys-tab&gt;</code> now available</h2>
+<p>The <code>&lt;nys-tab&gt;</code> acts as a clickable interface to toggle between different sets of information without leaving the page. It is not intended for page navigation.</p>
+<p><a href="https://designsystem.ny.gov/components/tab">Read the full tabs documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-tabgroup>
+<nys-tab label="Marcy"></nys-tab>
+<nys-tab label="Algonquin"></nys-tab>
+<nys-tab label="Haystack"></nys-tab>
+<nys-tab label="Skylight" id="tab4"></nys-tab>
+<nys-tab label="Whiteface" id="tab5"></nys-tab>
+<nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.
+</nys-tabpanel>
+<nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
+<nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
+</nys-tabgroup>
+<p style="padding: 1rem;">
+    <strong>Note:</strong> The content in the tab panels was gathered from <a href="https://www.lakeplacid.com/do/outdoors/summerfall/hiking">lakeplacid.com</a> and may not be completely accurate. This is meant to be a demo of how the component works, not a hiking guide.
+</p>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabgroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tab</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Marcy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tab</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tab</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Algonquin<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tab</span><span class="token punctuation">></span></span>
+    ...rest of the tabs...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabpanel</span><span class="token punctuation">></span></span>content inside the tab panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabpanel</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tabpanel</span><span class="token punctuation">></span></span>content inside the tab panel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabpanel</span><span class="token punctuation">></span></span>
+    ...rest of the tabpanels...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tabgroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> tabbed her way to the summit</p>
+<h2>Figma updates</h2>
+<ul>
+<li>A new Figma-only <code>Link</code> component was released this week</li>
+<li>Lots of research into the upcoming Card component. Stay tuned for your chance to contribute to the Card discussion!</li>
+</ul>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are designing the future of New York State</p>
+<h2>Bug fixes</h2>
+<ul>
+<li>Adjust <code>&lt;nys-icon&gt;</code> alignment. Icons are now aligned in the text variant of <code>&lt;nys-button&gt;</code></li>
+<li>Grid Gap classes were changed to use NYSDS ramps instead of USWDS ramps</li>
+<li>Inverted options we not passing WCAG contrast specs, so they have been removed</li>
+<li>Fixed no heading bug in <code>&lt;nys-alert&gt;</code></li>
+<li>Datepicker out-of-range month now visible</li>
+<li><code>&lt;nys-tooltip&gt;</code> no longer resets to the top left of the screen when you change the tooltip content</li>
+<li>Accessibility fixes for <code>&lt;nys-backtotop&gt;</code></li>
+<li>Accessibility fixes for <code>&lt;nys-badge&gt;</code></li>
+<li>Slotted content is now properly updated for React and Preact environments</li>
+<li>Fixed responsive utility classes to cascade (get it?) better</li>
+<li>Updated lagging GitHub Actions from v4 to v6</li>
+</ul>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> ain't afraid of no bugs!</p>
+<h2>🚨 Breaking changes</h2>
+<h3>Grid gap utility classes renamed</h3>
+<p>The <code>$grid-gaps</code> SCSS map now uses the standard NYSDS ramp. Update any old grid gap classes in your project:</p>
+<nys-table striped="" style="--nys-table-padding--cell--y: var(--nys-space-100)">
+  <table style="width: fit-content;">
+    <thead>
+      <tr>
+        <th>Old class</th>
+        <th></th>
+        <th>New class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>nys-grid-gap-sm</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-2px</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-md</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-200</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-lg</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-300</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-05</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-50</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-1</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-100</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-2</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-200</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-3</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-300</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-4</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-400</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-5</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-500</code></td>
+      </tr>
+      <tr>
+        <td><code>nys-grid-gap-6</code></td>
+        <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
+        <td><code>nys-grid-gap-600</code></td>
+      </tr>
+    </tbody>
+  </table>
+</nys-table>
+<p>Additional options were added but are not breaking changes. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> bridged the gap</p>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h3>That’s it!</h3>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.18.0">See the full developer release notes for v.1.18.0 →</a></p>
+]]></content>
+      <pubDate>Thu, 14 May 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/updates/1.18.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.17.0 “Grace”</title>
       <link>https://designsystem.ny.gov/updates/1.17.0-release/</link>
       <description><![CDATA[<h2>“Grace” 🏔️</h2>
@@ -239,7 +550,7 @@
       <title>How CSS Variables Power the NYS Design System</title>
       <link>https://designsystem.ny.gov/updates/css-variables/</link>
       <description><![CDATA[<p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
-<p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <a href="https://www.npmjs.com/package/@nysds/tokens" target="_blank">@nysds/tokens</a> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
+<p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
 <p>Let’s unpack how that works.</p>
 <h2>What Are CSS Variables?</h2>
 <p>A CSS variable works like a variable in any programming language; it holds a value that is then used throughout the stylesheet. Instead of writing the same hex code or pixel value repeatedly, you assign it once and reference it with a name.</p>
@@ -295,7 +606,7 @@
 This design makes the New York State Design System scalable across diverse agencies while maintaining visual unity and predictable behavior.</p>
 <h3>When (and Why) Overrides Inform the System</h3>
 <p>When multiple teams consistently override the same token in the same way, it suggests a gap in the system.</p>
-<p>For example, if several agencies keep overriding the <code>--nys-button-background-color</code> to the agency’s accent color, that’s valuable data. It tells us that an &quot;accent&quot; button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" target="_blank">submitting a component proposal</a>
+<p>For example, if several agencies keep overriding the <code>--nys-button-background-color</code> to the agency’s accent color, that’s valuable data. It tells us that an &quot;accent&quot; button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by <nys-button variant="text" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" target="_blank" label="submitting a component proposal" suffixIcon="open_in_new"></nys-button>
 suggesting a new variant or enhancement.</p>
 <p>In other words, overrides help the system evolve organically, guided by real-world use rather than guesswork.</p>
 <h3>Balancing Flexibility and Control</h3>
@@ -325,7 +636,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p>This shared language is what turns our collection of components into a true design system.</p>
 ]]></description>
       <content><![CDATA[<p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
-<p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <a href="https://www.npmjs.com/package/@nysds/tokens" target="_blank">@nysds/tokens</a> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
+<p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
 <p>Let’s unpack how that works.</p>
 <h2>What Are CSS Variables?</h2>
 <p>A CSS variable works like a variable in any programming language; it holds a value that is then used throughout the stylesheet. Instead of writing the same hex code or pixel value repeatedly, you assign it once and reference it with a name.</p>
@@ -381,7 +692,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 This design makes the New York State Design System scalable across diverse agencies while maintaining visual unity and predictable behavior.</p>
 <h3>When (and Why) Overrides Inform the System</h3>
 <p>When multiple teams consistently override the same token in the same way, it suggests a gap in the system.</p>
-<p>For example, if several agencies keep overriding the <code>--nys-button-background-color</code> to the agency’s accent color, that’s valuable data. It tells us that an &quot;accent&quot; button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" target="_blank">submitting a component proposal</a>
+<p>For example, if several agencies keep overriding the <code>--nys-button-background-color</code> to the agency’s accent color, that’s valuable data. It tells us that an &quot;accent&quot; button might deserve to become an official variant. If you find your team doing this often, consider helping us (and ultimately you) by <nys-button variant="text" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" target="_blank" label="submitting a component proposal" suffixIcon="open_in_new"></nys-button>
 suggesting a new variant or enhancement.</p>
 <p>In other words, overrides help the system evolve organically, guided by real-world use rather than guesswork.</p>
 <h3>Balancing Flexibility and Control</h3>
@@ -4425,7 +4736,7 @@ All form field components have been updated with a new property which will inver
       <link>https://designsystem.ny.gov/updates/1.8.0-release/</link>
       <description><![CDATA[<h2>Step by step</h2>
 <p>The new <code>&lt;nys-stepper&gt;</code> component helps you break down a complex process into simple steps. It is built with options to make it &quot;dumb&quot; (simple HREF links for steps) or &quot;smart&quot; (can use JS to trigger events <code>onClick()</code>). For more information, <a href="https://designsystem.ny.gov/components/stepper">read the full documentation for the <code>&lt;nys-stepper&gt;</code></a>.</p>
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile</h3>
     <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
@@ -4477,7 +4788,7 @@ All form field components have been updated with a new property which will inver
 ]]></description>
       <content><![CDATA[<h2>Step by step</h2>
 <p>The new <code>&lt;nys-stepper&gt;</code> component helps you break down a complex process into simple steps. It is built with options to make it &quot;dumb&quot; (simple HREF links for steps) or &quot;smart&quot; (can use JS to trigger events <code>onClick()</code>). For more information, <a href="https://designsystem.ny.gov/components/stepper">read the full documentation for the <code>&lt;nys-stepper&gt;</code></a>.</p>
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile</h3>
     <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
@@ -4537,7 +4848,7 @@ All form field components have been updated with a new property which will inver
       <description><![CDATA[<h2>Learn the NYS Design System</h2>
 <p><a href="https://designsystem.ny.gov/learn">Visit the &quot;Learn&quot; page</a> on this site to view A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
 <p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
-<div class="nys-grid-row nys-grid-gap-lg nys-display-flex">
+<div class="nys-grid-row nys-grid-gap-300 nys-display-flex">
 <div class="nys-tablet:nys-grid-col-4">
 <a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" title="Watch Video: Introducing the NYS Design System">
               <div class="card__inner">               
@@ -4632,7 +4943,7 @@ All form field components have been updated with a new property which will inver
       <content><![CDATA[<h2>Learn the NYS Design System</h2>
 <p><a href="https://designsystem.ny.gov/learn">Visit the &quot;Learn&quot; page</a> on this site to view A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
 <p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
-<div class="nys-grid-row nys-grid-gap-lg nys-display-flex">
+<div class="nys-grid-row nys-grid-gap-300 nys-display-flex">
 <div class="nys-tablet:nys-grid-col-4">
 <a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" title="Watch Video: Introducing the NYS Design System">
               <div class="card__inner">               
