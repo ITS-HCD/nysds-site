@@ -6,8 +6,8 @@ image: /assets/img/components/pagination.svg
 image_alt: An illustration of a pagination.
 image_header: /assets/img/components/pagination-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=10600-10347
-navOrder: 17
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4664-1589&p=f&t=7RVQI38uIhRVCBjL-0
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -171,6 +171,16 @@ pagination.addEventListener("nys-change", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

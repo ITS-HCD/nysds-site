@@ -7,7 +7,7 @@ image_alt: An illustration of a date picker.
 image_header: /assets/img/components/datepicker-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=15514-6117&t=YFURmePNl1sEj6Vj-4
-navOrder: 9
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -110,7 +110,6 @@ The `value` prop accepts a `Date` object or an ISO date string (`YYYY-MM-DD`). T
 #### Valid value examples
 {% set code %}// Using a Date object (month is 0-indexed)
 datepicker.value = new Date(2025, 5, 1); // June 1, 2025
-
 // Using an ISO string (recommended)
 datepicker.value = "2025-06-01";{% endset %}
 {% set accordionLabel = "Sample Code" %}
@@ -184,7 +183,9 @@ Set `required` to make the date field mandatory. The component displays a "Requi
 {% set preview %}
 <nys-datepicker
   label="Application submission date"
-  required
+  description="Only dates within April 4/5/2026 - 4/15/2026 are selectable"
+  minDate="2026-04-05"
+  maxDate="2026-04-15"
 ></nys-datepicker>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -341,6 +342,7 @@ Set `disabled` to prevent interaction. The calendar button and input are both di
   </table>
 </nys-table>
 
+### Form Prop
 The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}

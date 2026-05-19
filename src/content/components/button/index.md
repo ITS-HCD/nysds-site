@@ -7,7 +7,7 @@ image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-65486&t=ehyQYJeb6ohvHYV0-4
-navOrder: 6
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -193,14 +193,18 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 
 ### Link
 Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
-Set the `target` prop of the `<nys-button>` to specify where to open the linked document. The available targets are:
+Set the `target` prop of the `<nys-button>` to specify where to open the linked document. 
+
+The available targets are:
 - `_self`: Opens the link in the same frame as it was clicked (default).
 - `_blank`: Opens the link in a new tab or window.
 - `_parent`: Opens the link in the parent frame.
 - `_top`: Opens the link in the full body of the window.
 - `framename`: Opens the link in a named iframe.
 
-{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
+**Note**: It is recommended to set the variant on `<nys-button>` to `variant="text"`
+
+{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov" variant="text"></nys-button>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -326,6 +330,7 @@ Set the `inverted` when the button is on a dark background.
   </table>
 </nys-table>
 
+### Form Prop
 The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}

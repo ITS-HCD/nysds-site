@@ -6,8 +6,8 @@ image: /assets/img/components/select.svg
 image_alt: An illustration of a select dropdown.
 image_header: /assets/img/components/select-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9877
-navOrder: 19
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-70151&t=Fz3PChrCAbfpr60Y-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -50,7 +50,7 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 
 {% block usagedont %}
 
-  - Don't use the custom `<nys-option>` element in the `<nys-select>` component. This will be deprecated with the 2.0 release
+  - Use the custom `<nys-option>` element in the `<nys-select>` component. This will be deprecated with the 2.0 release
   - Use `<nys-select multiple>` as an input for users to select multiple items from a dropdown. Consider a [checkbox group](/components/checkbox/) instead. More guidance from the [US Web Design System](https://designsystem.digital.gov/components/select/#when-to-consider-something-else)
 
 {% endblock %}
@@ -68,8 +68,8 @@ The `<nys-select>` component includes the following accessibility-focused featur
 {% block options %}
 
 <nys-alert type="warning" heading="Deprecated <nys-option>">
-<p>The <code>&lt;nys-option&gt;</code> component will be deprecated with the 2.0 release of the New York State Design System.</p>
-<p>Use the native  <code>&lt;option&gt;</code> tag for the options in the  <code>&lt;nys-select&gt;</code> component.</p>
+<p>The <code>&lt;nys-option&gt;</code> component is deprecated and will be fully removed with the 2.0 release of the New York State Design System.</p>
+<p>Use the native <code>&lt;option&gt;</code> tag for the options in the <code>&lt;nys-select&gt;</code> component.</p>
 </nys-alert>
 
 ### Default Value
@@ -215,6 +215,20 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Inverted
+Set the `inverted` when the component is on a dark background.
+  {% set preview %}<nys-select label="Select your favorite borough" inverted>
+  <option value="bronx" label="The Bronx"></option>
+  <option value="brooklyn" label="Brooklyn"></option>
+  <option value="manhattan" label="Manhattan"></option>
+  <option value="staten_island" label="Staten Island"></option>
+  <option value="queens" label="Queens"></option>
+</nys-select>{% endset %}
+  {% set backgroundSolid = true %}
+  {% set code = preview %}
+  {% set inverted = true %}
+  {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -314,6 +328,7 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
   </table>
 </nys-table>
 
+### Form Prop
 The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
@@ -346,6 +361,16 @@ select.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -6,8 +6,8 @@ image: /assets/img/components/table.svg
 image_alt: An illustration of a table.
 image_header: /assets/img/components/table-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=13670-31069
-navOrder: 22
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=13839-40623&t=EXsXvlMbCdRw10ir-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -388,7 +388,7 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block cssvariables %}
   {% set variables = [
-  { name: "--nys-table-padding--cell-y", description: "Vertical padding for table cells"}
+  { name: "--nys-table-padding--cell--y", description: "Vertical padding for table cells"}
 ]%}
 {% include "partials/css-vars.njk" %}{% endblock %}
 
@@ -417,6 +417,17 @@ table.addEventListener('nys-column-sort', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>,<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

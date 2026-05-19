@@ -90,7 +90,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
 
 {% set preview %}
 
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-1">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-1</span>
@@ -112,7 +112,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-2">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-2</span>
@@ -130,7 +130,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center"> </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-3">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-3</span>
@@ -149,7 +149,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-4">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-4</span>
@@ -168,7 +168,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-5">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-5</span>
@@ -187,7 +187,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-6">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-6</span>
@@ -206,7 +206,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-7">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-7</span>
@@ -225,7 +225,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-8">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-8</span>
@@ -244,7 +244,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-9">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-9</span>
@@ -263,7 +263,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-10">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-10</span>
@@ -282,7 +282,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-11">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-11</span>
@@ -301,7 +301,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-12">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-12</span>
@@ -320,7 +320,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-auto">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-auto</span>
@@ -339,7 +339,7 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-fill">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-fill</span>
@@ -1178,7 +1178,7 @@ All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-fir
 
 {% set preview %}
 
-<div class="nys-grid-row nys-grid-gap-sm">
+<div class="nys-grid-row nys-grid-gap-2px">
     <div class="nys-grid-col-auto nys-order-11">
       <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
         <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 1</span>
