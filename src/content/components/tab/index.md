@@ -8,6 +8,7 @@ image_header: /assets/img/components/tab-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20950-976
 
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}

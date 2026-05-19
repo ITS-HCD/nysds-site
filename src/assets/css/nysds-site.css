@@ -352,7 +352,7 @@ main[role="main"] {
 }
 
 .page-subtitle,
-.page-subtitle>* {
+.page-subtitle > * {
     font-size: var(--nys-font-size-h4);
     line-height: var(--nys-font-lineheight-xl);
     font-weight: var(--nys-font-weight-light);
@@ -515,7 +515,6 @@ a.card:focus-visible {
 /* Horizontal card variant (>= 640px) */
 
 @media (min-width: 640px) {
-
     .card--horizontal .card__inner {
         flex-direction: row;
         align-items: stretch;
@@ -562,7 +561,6 @@ a.card:focus-visible {
 
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-
     .card,
     .card * {
         transition: none !important;
@@ -785,7 +783,7 @@ a.card:focus-visible {
 }
 
 /* Remove border from nested tables */
-li>.section-nav__list {
+li > .section-nav__list {
     border: none;
 }
 
@@ -822,13 +820,15 @@ li>.section-nav__list {
     position: absolute;
 }
 
-.section-nav__list>.section-nav__item:first-child.section-nav__item--active-section:first-child::after {
+.section-nav__list
+    > .section-nav__item:first-child.section-nav__item--active-section:first-child::after {
     border-top-left-radius: var(--nys-radius-md);
     top: calc(var(--nys-border-width-md) * -1);
     height: calc(100% + var(--nys-border-width-md));
 }
 
-.section-nav__list>.section-nav__item:last-child.section-nav__item--active-section:last-child::after {
+.section-nav__list
+    > .section-nav__item:last-child.section-nav__item--active-section:last-child::after {
     border-bottom-left-radius: var(--nys-radius-md);
     bottom: var(--nys-border-width-md);
     height: calc(100% + var(--nys-border-width-md));
@@ -836,7 +836,8 @@ li>.section-nav__list {
 
 /* Hide nested section nav children when parent not active */
 
-.section-nav__item:not(.section-nav__item--active-section)>.section-nav__list {
+.section-nav__item:not(.section-nav__item--active-section)
+    > .section-nav__list {
     display: none;
 }
 
@@ -861,7 +862,11 @@ li>.section-nav__list {
     color: var(--nys-color-link-strong);
 }
 
-.section-nav__list>.section-nav__item:last-child>.section-nav__list>.section-nav__item:last-child>.section-nav__link {
+.section-nav__list
+    > .section-nav__item:last-child
+    > .section-nav__list
+    > .section-nav__item:last-child
+    > .section-nav__link {
     border-bottom-width: 0;
 }
 
@@ -884,7 +889,6 @@ li>.section-nav__list {
 
 /* Hide section nav on mobile, show toggle button */
 @media (max-width: 1023px) {
-
     /* .section-nav__list {
         display: none;
     } */
@@ -927,8 +931,8 @@ li>.section-nav__list {
     padding: var(--nys-space-2px, 2px) var(--nys-space-150, 8px);
     gap: var(--nys-space-50, 4px);
     border-radius: var(--nys-radius-round, 1776px);
-    border: var(--nys-border-width-sm, 1px) solid var(--nys-color-base, #62666A);
-    background: var(--nys-color-base-weak, #F6F6F6);
+    border: var(--nys-border-width-sm, 1px) solid var(--nys-color-base, #62666a);
+    background: var(--nys-color-base-weak, #f6f6f6);
     font-family: var(--nys-font-family-ui);
     font-size: var(--nys-font-size-ui-xs);
     font-weight: var(--nys-font-weight-semibold, 600);
@@ -1148,10 +1152,26 @@ li>.section-nav__list {
 
 .token-list__swatch--checkerboard {
     background-image:
-        linear-gradient(45deg, var(--nys-color-neutral-40, #f6f6f6) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--nys-color-neutral-40, #f6f6f6) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, var(--nys-color-neutral-40, #f6f6f6) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--nys-color-neutral-40, #f6f6f6) 75%);
+        linear-gradient(
+            45deg,
+            var(--nys-color-neutral-40, #f6f6f6) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            -45deg,
+            var(--nys-color-neutral-40, #f6f6f6) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 75%,
+            var(--nys-color-neutral-40, #f6f6f6) 75%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 75%,
+            var(--nys-color-neutral-40, #f6f6f6) 75%
+        );
     background-size: 20px 20px;
     background-position:
         0 0,
@@ -1272,10 +1292,26 @@ li>.section-nav__list {
     padding: var(--nys-space-300, 24px);
     background-color: var(--nys-color-ink-reverse, #ffffff);
     background-image:
-        linear-gradient(45deg, var(--nys-color-neutral-10, #f6f6f6) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--nys-color-neutral-10, #f6f6f6) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, var(--nys-color-neutral-10, #f6f6f6) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--nys-color-neutral-10, #f6f6f6) 75%);
+        linear-gradient(
+            45deg,
+            var(--nys-color-neutral-10, #f6f6f6) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            -45deg,
+            var(--nys-color-neutral-10, #f6f6f6) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 75%,
+            var(--nys-color-neutral-10, #f6f6f6) 75%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 75%,
+            var(--nys-color-neutral-10, #f6f6f6) 75%
+        );
     background-size: 20px 20px;
     background-position:
         0 0,
@@ -1290,10 +1326,26 @@ li>.section-nav__list {
     color: var(--nys-color-ink-reverse, #ffffff);
     background-color: var(--nys-color-ink, #1b1b1b);
     background-image:
-        linear-gradient(45deg, var(--nys-color-neutral-800, #323435) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--nys-color-neutral-800, #323435) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, var(--nys-color-neutral-800, #323435) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--nys-color-neutral-800, #323435) 75%);
+        linear-gradient(
+            45deg,
+            var(--nys-color-neutral-800, #323435) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            -45deg,
+            var(--nys-color-neutral-800, #323435) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 75%,
+            var(--nys-color-neutral-800, #323435) 75%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 75%,
+            var(--nys-color-neutral-800, #323435) 75%
+        );
 }
 
 .code-preview__preview.solid {
@@ -1458,10 +1510,11 @@ li>.section-nav__list {
     transform: translateX(-50%);
     width: 15px;
     height: 10px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="6" viewBox="0 0 15 6" fill="none"><path d="M8.15079 5.44218C7.7763 5.76317 7.2237 5.76317 6.84921 5.44218L0.5 0H14.5L8.15079 5.44218Z" fill="%231B1B1B"/></svg>') no-repeat center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="6" viewBox="0 0 15 6" fill="none"><path d="M8.15079 5.44218C7.7763 5.76317 7.2237 5.76317 6.84921 5.44218L0.5 0H14.5L8.15079 5.44218Z" fill="%231B1B1B"/></svg>')
+        no-repeat center;
 }
 
-.copy-btn:hover~.copy-tooltip,
+.copy-btn:hover ~ .copy-tooltip,
 .copy-tooltip.copied {
     opacity: 1;
 }
@@ -1608,14 +1661,15 @@ tr:hover {
 
 kbd {
     background-color: var(--nys-color-surface, #fff);
-    border: 1px solid var(--nys-color-neutral-200);
     border-radius: 0.25rem;
-    padding: 1px 0.25rem;
+    border: 1px solid var(--nys-color-neutral-200);
+    box-shadow: 0 1px var(--nys-color-neutral-200);
     font-family: var(--nys-font-family-sans);
     font-size: 0.875rem;
     font-weight: 400 !important;
     margin-inline: 1px 2px;
-    box-shadow: 0 1px var(--nys-color-neutral-200);
+    padding: 1px 0.25rem;
+    text-transform: capitalize;
 }
 
 .sr-only {
