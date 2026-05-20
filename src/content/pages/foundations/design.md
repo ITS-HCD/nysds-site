@@ -58,7 +58,7 @@ The design system gives you standard components and patterns. The XD team helps 
 
 Once your team has defined the strategy, scope, and structure of your service, the design system provides the building blocks for the interface layer:
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
     <div class="card card__no-border card__flat nys-flex-fill">
       <div class="card__inner">

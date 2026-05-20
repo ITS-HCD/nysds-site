@@ -107,7 +107,7 @@ When content changes without a full page reload:
 
 The following resources are available to New York State staff:
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12">
     <div class="card card--horizontal">
       <div class="card__inner">

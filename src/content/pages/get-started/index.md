@@ -14,7 +14,7 @@ The NYS Design System gives your team the tools to build accessible, consistent 
 
 ## Three Ways to Use the Design System
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
 
 <div class="nys-grid-col-12" style="background: var(--nys-color-theme-faint); border-left: 4px solid var(--nys-color-theme); padding: var(--nys-space-400); margin-bottom: 24px;">
 
@@ -56,7 +56,7 @@ Learn how to design and build clear, usable digital experiences for all New York
 
 ## Choose Your Path
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
 <nys-button
     label="For Designers"
     href="/get-started/designers/"

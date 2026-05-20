@@ -19,7 +19,7 @@ Whether you are building a new application with NYSDS components or integrating 
 
 How the design system is built — the token layers, styling framework, theming system, component architecture, and accessibility standards that power everything.
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
     <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/accessibility/">
       <div class="card__inner">
@@ -66,7 +66,7 @@ How the design system is built — the token layers, styling framework, theming 
 
 Practical references for building interfaces with the design system — typography, form patterns, layout utilities, and the broader design process.
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
     <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/design/">
       <div class="card__inner">
@@ -105,7 +105,7 @@ Practical references for building interfaces with the design system — typograp
 
 Need to look up a specific token value or component API? These are also always available in the main navigation.
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
     <a class="card card__no-border card__flat nys-flex-fill" href="/tokens/">
       <div class="card__inner">

@@ -79,7 +79,7 @@ navOrder: 2
 
 <p><b>Here's what is already handled for you:</b></p>
 
-<div class="nys-grid-row nys-grid-gap-lg a11y-features">
+<div class="nys-grid-row nys-grid-gap-300 a11y-features">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
     <div class="a11y-feature-card nys-flex-fill">
       <div class="a11y-feature-card__header">
@@ -138,7 +138,7 @@ navOrder: 2
 
 <p>Using NYSDS components does not guarantee your site is accessible — it gives you a strong starting point. You are still responsible for proper heading structure, meaningful content, correct page-level landmarks, and testing your assembled pages.</p>
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <div class="card nys-flex-fill">
       <div class="card__inner">
@@ -163,7 +163,7 @@ navOrder: 2
 
 <h2>Resources by role</h2>
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12">
     <a class="card card--horizontal" href="/foundations/accessibility/developers/">
       <div class="card__inner">
@@ -230,7 +230,7 @@ navOrder: 2
 
 <p>The following guidance, tools, and courses are available to New York State staff:</p>
 
-<div class="nys-grid-row nys-grid-gap-lg">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12">
     <div class="card card--horizontal">
       <div class="card__inner">
@@ -247,7 +247,7 @@ navOrder: 2
   </div>
 </div>
 
-<div class="nys-grid-row nys-grid-gap-lg" style="margin-top: var(--nys-space-200);">
+<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-200);">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
     <div class="card nys-flex-fill">
       <div class="card__inner">
