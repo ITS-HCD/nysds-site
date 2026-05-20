@@ -227,6 +227,18 @@ main[role="main"] {
   padding-bottom: 0;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .letter--tight {
   letter-spacing: -6px;
 }
@@ -417,7 +429,7 @@ main[role="main"] {
     divs[currentIndex].style.display = 'none';
     currentIndex = (currentIndex + 1) % divs.length;
     divs[currentIndex].style.display = 'block';
-    
+
     if (isMobile) {
       document.getElementById('card-page-container').scrollIntoView({ behavior: 'smooth' });
     }
