@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Overflow - New York State Design System</title>
+
+<meta name="description" content="Utility classes for managing content overflow and scrolling behavior in the NYS Design System.">
+<link rel="canonical" href="https://designsystem.ny.gov/foundations/utilities/overflow/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Overflow">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/foundations/utilities/overflow/">
+<meta property="og:description" content="Utility classes for managing content overflow and scrolling behavior in the NYS Design System.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-05-20T15:10:15.498Z -->
+  </head>
+  
+  <body class="single-page page-overflow section-foundations">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Foundations
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-foundations.svg" alt="Foundations section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-foundations" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-foundations">
+    <span class="accordion__label">Foundations</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-foundations" aria-labelledby="accordion-trigger-foundations" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/">
+        Foundations
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/design/">
+        Design
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/foundations/accessibility/">
+        Accessibility
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/developers/">
+                Developers
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/content/">
+                Content Creators
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/leadership/">
+                Leadership
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/learn/">
+                Learning Resources
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/styles/">
+        CSS
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/tokens/">
+        Design Tokens
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/themes/">
+        Theming
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/forms/">
+        Forms
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/typography/">
+        Typography
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section" aria-expanded="true">
+      <a class="section-nav__link" href="/foundations/utilities/">
+        Utilities
+      </a>
+
+      
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/display/">
+                Display
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/flex/">
+                Flexbox
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/float/">
+                Float
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/grid/">
+                Grid
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/margin-padding/">
+                Margin and Padding
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/opacity/">
+                Opacity
+              </a>
+            </li>
+          
+            <li class="section-nav__item section-nav__item--active">
+              <a class="section-nav__link" href="/foundations/utilities/overflow/" aria-current="page">
+                Overflow
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/position/">
+                Position
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/responsive/">
+                Responsive Utilities
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/typography/">
+                Typography
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/zindex/">
+                Z-Index
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/hiding/">
+        Hiding Content
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">  
+    <section id="overview">
+<h1 id="overflow">Overflow</h1>
+<p>Overflow utilities control what happens when content is larger than its container. Use them to clip content, add scrollbars, or allow content to overflow visibly.</p>
+</section>
+<section id="overflow-classes">
+<h2 id="overflow-classes">Overflow classes</h2>
+<p><nys-table striped=""><table></table></nys-table></p>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-overflow-auto</code></td>
+<td><code>overflow: auto</code></td>
+<td>Adds scrollbars only when content overflows</td>
+</tr>
+<tr>
+<td><code>.nys-overflow-hidden</code></td>
+<td><code>overflow: hidden</code></td>
+<td>Clips overflowing content with no scrollbar</td>
+</tr>
+<tr>
+<td><code>.nys-overflow-scroll</code></td>
+<td><code>overflow: scroll</code></td>
+<td>Always shows scrollbars</td>
+</tr>
+<tr>
+<td><code>.nys-overflow-visible</code></td>
+<td><code>overflow: visible</code></td>
+<td>Content overflows visibly (default)</td>
+</tr>
+</tbody>
+
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap">
+  <div class="nys-grid-col-6">
+    <p style="margin-top: 0;"><strong>overflow-auto</strong></p>
+    <div class="nys-overflow-auto docs-overflow-box">
+      <div class="docs-overflow-content">
+        The NYS Office of General Services manages state buildings, procurement contracts, and fleet vehicles across the Capital District and beyond. Their services support every state agency's operations.
+      </div>
+    </div>
+  </div>
+  <div class="nys-grid-col-6">
+    <p style="margin-top: 0;"><strong>overflow-hidden</strong></p>
+    <div class="nys-overflow-hidden docs-overflow-box">
+      <div class="docs-overflow-content">
+        The NYS Office of General Services manages state buildings, procurement contracts, and fleet vehicles across the Capital District and beyond. Their services support every state agency's operations.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Scrollbar only when needed --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-overflow-auto<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">max-height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+  Long content here...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<p><span class="token comment">&lt;!-- Clip overflowing content --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>nys-overflow-hidden<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">max-height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+Long content here...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></p></code></pre>
+</div>
+</div><p></p>
+  </div>
+</div>
+</section>
+<section id="axis-overflow">
+<h2 id="axis-specific-overflow">Axis-specific overflow</h2>
+<p>Control overflow on a single axis with <code>-x</code> and <code>-y</code> variants. This is useful for horizontal scrolling containers or vertically clipped content.</p>
+<h3 id="overflow-x">Overflow-x</h3>
+<p><nys-table striped=""><table></table></nys-table></p>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-overflow-x-auto</code></td>
+<td><code>overflow-x: auto</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-x-hidden</code></td>
+<td><code>overflow-x: hidden</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-x-scroll</code></td>
+<td><code>overflow-x: scroll</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-x-visible</code></td>
+<td><code>overflow-x: visible</code></td>
+</tr>
+</tbody>
+
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-overflow-x-auto" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">
+  <div style="white-space: nowrap; font-family: var(--nys-font-family-monospace); font-size: var(--nys-font-size-ui-sm);">
+    Albany &bull; Buffalo &bull; Rochester &bull; Syracuse &bull; Yonkers &bull; New Rochelle &bull; Mount Vernon &bull; Schenectady &bull; Utica &bull; White Plains &bull; Hempstead &bull; Troy &bull; Niagara Falls &bull; Binghamton &bull; Freeport &bull; Valley Stream
+  </div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Horizontal scroll when content overflows --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-overflow-x-auto<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+    Wide content that may exceed the container width...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="overflow-y">Overflow-y</h3>
+<p><nys-table striped=""><table></table></nys-table></p>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-overflow-y-auto</code></td>
+<td><code>overflow-y: auto</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-y-hidden</code></td>
+<td><code>overflow-y: hidden</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-y-scroll</code></td>
+<td><code>overflow-y: scroll</code></td>
+</tr>
+<tr>
+<td><code>.nys-overflow-y-visible</code></td>
+<td><code>overflow-y: visible</code></td>
+</tr>
+</tbody>
+
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-overflow-y-auto" style="max-height: 120px; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">
+  <p style="margin-top: 0;"><strong>NYS Department of Transportation</strong> — Maintains over 100,000 miles of highway and more than 7,500 bridges statewide.</p>
+  <p><strong>Thruway Authority</strong> — Operates the 570-mile New York State Thruway, one of the longest toll highways in the United States.</p>
+  <p><strong>MTA</strong> — Provides public transit in the New York metropolitan area, serving millions of riders daily across subway, bus, and rail.</p>
+  <p><strong>NYSDOT Regions</strong> — Divided into 11 regional offices to manage construction, maintenance, and traffic operations locally.</p>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Vertical scroll when content overflows --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-overflow-y-auto<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">max-height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+  Tall content that may exceed the container height...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="responsive">
+<h2 id="responsive-variants">Responsive variants</h2>
+<p>All overflow utilities support responsive prefixes. See <a href="/foundations/utilities/responsive/">Responsive Utilities</a> for breakpoint details.</p>
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Scroll on mobile, visible on desktop --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-overflow-auto nys-desktop:nys-overflow-visible<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  Content that scrolls on small screens
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+</section>
+<link rel="stylesheet" href="https://designsystem.ny.gov/assets/css/utilities.css">
+<style>
+  .docs-overflow-box {
+    max-height: 80px;
+    border: 1px solid var(--nys-color-theme-weak);
+    border-radius: var(--nys-border-radius-md);
+    padding: var(--nys-space-200);
+  }
+  .docs-overflow-content {
+    font-size: var(--nys-font-size-ui-sm);
+  }
+</style>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/utilities/overflow.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: May 20, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typography - New York State Design System</title>
+
+<meta name="description" content="How the NYS Design System handles fonts, typography tokens, and type scale across New York State digital products.">
+<link rel="canonical" href="https://designsystem.ny.gov/foundations/typography/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Typography">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/foundations/typography/">
+<meta property="og:description" content="How the NYS Design System handles fonts, typography tokens, and type scale across New York State digital products.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-05-20T15:10:15.498Z -->
+  </head>
+  
+  <body class="single-page page-typography section-foundations">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Foundations
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-foundations.svg" alt="Foundations section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-foundations" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-foundations">
+    <span class="accordion__label">Foundations</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-foundations" aria-labelledby="accordion-trigger-foundations" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/">
+        Foundations
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/design/">
+        Design
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/foundations/accessibility/">
+        Accessibility
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/developers/">
+                Developers
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/content/">
+                Content Creators
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/leadership/">
+                Leadership
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/accessibility/learn/">
+                Learning Resources
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/styles/">
+        CSS
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/tokens/">
+        Design Tokens
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/themes/">
+        Theming
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/forms/">
+        Forms
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      <a class="section-nav__link" href="/foundations/typography/" aria-current="page">
+        Typography
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/foundations/utilities/">
+        Utilities
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/display/">
+                Display
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/flex/">
+                Flexbox
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/float/">
+                Float
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/grid/">
+                Grid
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/margin-padding/">
+                Margin and Padding
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/opacity/">
+                Opacity
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/overflow/">
+                Overflow
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/position/">
+                Position
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/responsive/">
+                Responsive Utilities
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/typography/">
+                Typography
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/foundations/utilities/zindex/">
+                Z-Index
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/foundations/hiding/">
+        Hiding Content
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">  
+    <section id="overview">
+<h1 id="typography">Typography</h1>
+<p>Typography in the NYS Design System establishes a consistent, accessible reading experience across all New York State digital products. The system provides a curated set of typefaces, a two-layer token architecture for type properties, and utility classes for rapid development.</p>
+</section>
+<section id="core-fonts">
+<h2 id="core-fonts">Core Fonts</h2>
+<p>The NYS Design System uses three typefaces, each with a specific role:</p>
+<ul>
+<li><strong>Proxima Nova</strong> — The primary typeface for body text, headings, UI elements, and display text. Its neutral character and large x-height make it highly legible at all sizes, from form labels to page titles.</li>
+<li><strong>D Sari</strong> — The brand font, used exclusively for agency, program, and initiative titles (e.g. in the global header). Do not use D Sari for body text or general headings.</li>
+<li><strong>Oswald</strong> — An optional supporting typeface for content-heavy sites that need a distinctive heading treatment. Not used by default in any NYSDS component.</li>
+</ul>
+<p>Every font family token includes a fallback stack. If the primary font is unavailable, the system falls back to system fonts so content remains readable.</p>
+<h3 id="licensing">Licensing</h3>
+<p>These fonts are <strong>not included</strong> in the open-source NYS Design System packages. They are proprietary typefaces licensed exclusively for New York State government agencies and their digital products.</p>
+<p>NYS teams can access the fonts through the <a href="https://github.com/ITS-HCD/nysds-fonts">NYS Design System Fonts repository</a> (internal, requires NYS GitHub access). If the fonts are not installed, all typography tokens resolve to system font fallbacks — your application will still work, just without the branded typefaces.</p>
+</section>
+<section id="typography-tokens">
+<h2 id="typography-tokens">Typography Tokens</h2>
+<p>The NYS Design System defines typography as <a href="/foundations/tokens/">design tokens</a> — CSS custom properties that encode font family, size, weight, line height, and letter spacing. These tokens are organized into two layers: <strong>primitive</strong> and <strong>semantic</strong>.</p>
+<h3 id="primitive-tokens">Primitive Tokens</h3>
+<p>Primitive tokens are the raw typographical building blocks. They define a range of values without any opinion about where those values should be used.</p>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Example Token</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Family</td>
+      <td><code>--nys-font-family-sans</code></td>
+      <td>"Proxima Nova", -apple-system, ...</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td><code>--nys-font-size-md</code></td>
+      <td>1rem</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td><code>--nys-font-weight-bold</code></td>
+      <td>700</td>
+    </tr>
+    <tr>
+      <td>Line height</td>
+      <td><code>--nys-font-lineheight-md</code></td>
+      <td>1.5625rem</td>
+    </tr>
+    <tr>
+      <td>Letter spacing</td>
+      <td><code>--nys-font-letterspacing-400</code></td>
+      <td>0.003rem</td>
+    </tr>
+  </table>
+</nys-table>
+<p>Do <strong>not</strong> use primitive tokens directly in your stylesheets. They exist to define the semantic layer. If you reference <code>--nys-font-size-5xl</code> directly and the design team later reassigns heading sizes, your layout will not update.</p>
+<h3 id="semantic-tokens">Semantic Tokens</h3>
+<p>Semantic tokens map primitive values to specific roles — headings, body text, UI labels, display text, and agency titles. Use these in your stylesheets.</p>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Token</th>
+      <th>Role</th>
+      <th>Resolves To</th>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-body</code></td>
+      <td>Body text</td>
+      <td>var(--nys-font-family-sans)</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-heading</code></td>
+      <td>Headings</td>
+      <td>var(--nys-font-family-sans)</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-ui</code></td>
+      <td>UI labels and controls</td>
+      <td>var(--nys-font-family-sans)</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-display</code></td>
+      <td>Display / hero text</td>
+      <td>var(--nys-font-family-sans)</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-family-agency</code></td>
+      <td>Agency titles</td>
+      <td>"D Sari", Arial, sans-serif</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-h1</code></td>
+      <td>Heading 1 size</td>
+      <td>var(--nys-font-size-7xl) = 2.5rem</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-body-md</code></td>
+      <td>Medium body size</td>
+      <td>var(--nys-font-size-md) = 1rem</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-size-ui-md</code></td>
+      <td>Medium UI size</td>
+      <td>var(--nys-font-size-md) = 1rem</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-lineheight-h1</code></td>
+      <td>Heading 1 line height</td>
+      <td>2.5rem</td>
+    </tr>
+    <tr>
+      <td><code>--nys-font-letterspacing-h1</code></td>
+      <td>Heading 1 letter spacing</td>
+      <td>var(--nys-font-letterspacing-0) = 0</td>
+    </tr>
+  </table>
+</nys-table>
+<p>Semantic tokens exist for every heading level (h1--h6), body sizes (xs, sm, md, lg), UI sizes (xs--xl), display sizes (sm--xl), and agency sizes (md--xl). Browse the complete list in the <a href="/tokens/typography/">typography token reference</a>.</p>
+<p>For a deeper explanation of how primitive and semantic token layers work together, see <a href="/foundations/tokens/">Design Tokens</a>.</p>
+</section>
+<section id="installing-fonts">
+<h2 id="installing-fonts">Installing Fonts</h2>
+<h3 id="in-a-nysds-application">In a NYSDS Application</h3>
+<ol>
+<li>Download the font bundle from the <a href="https://github.com/ITS-HCD/nysds-fonts">NYS Design System Fonts repository</a> (internal, requires NYS GitHub access).</li>
+<li>Extract the fonts into your project's assets directory.</li>
+<li>Reference the provided stylesheet in your HTML <code>&lt;head&gt;</code>:</li>
+</ol>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/fonts/nysds-fonts.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>NYSDS web components use typography tokens internally, so once the fonts are installed and the stylesheet is loaded, components will render with the correct typefaces automatically.</p>
+<p>For full project setup instructions including npm installation and script references, see <a href="/get-started/developers/">Getting Started for Developers</a>.</p>
+<h3 id="on-desktop-for-designers">On Desktop (for Designers)</h3>
+<p>Designers working in design tools need the font files installed on their local machine. Download the font package from the <a href="https://github.com/ITS-HCD/nysds-fonts">NYS Design System Fonts repository</a> and install the <code>.otf</code> or <code>.ttf</code> files using your operating system's font manager.</p>
+</section>
+<section id="font-preloading">
+<h2 id="font-preloading">Font Preloading</h2>
+<p>When a browser loads a page, it may briefly display text in a fallback font before the web font finishes loading. This is called a Flash of Unstyled Text (FOUT). Preloading critical fonts tells the browser to start downloading them earlier, reducing or eliminating the flash.</p>
+<p>Add <code>&lt;link rel=&quot;preload&quot;&gt;</code> tags for the font weights your application uses most. For most NYS applications, this is Proxima Nova Regular:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preload<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/fonts/proximanova-regular.woff2<span class="token punctuation">"</span></span> <span class="token attr-name">as</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font/woff2<span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anonymous<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Only preload fonts you are certain will be used on the page. Preloading too many fonts wastes bandwidth and can slow down initial page load.</p>
+<p>For more on web font performance, see Google's <a href="https://fonts.google.com/knowledge/using_type/using_web_fonts">Using Web Fonts</a> guide.</p>
+</section>
+<section id="using-typography">
+<h2 id="using-typography-in-a-project">Using Typography in a Project</h2>
+<p>The full NYSDS stylesheet (<code>nysds-full.min.css</code>) includes predefined typography styles that handle most use cases. If you include this stylesheet, headings, body text, and common elements will use the correct fonts, sizes, and line heights automatically. See <a href="/foundations/styles/">Styles Framework</a> for full installation and usage instructions.</p>
+<p>If you need to customize beyond the defaults or can't use the full stylesheet, you can use typography tokens and utility classes directly:</p>
+<h3 id="tokens-via-css-custom-properties">Tokens via CSS Custom Properties</h3>
+<p>Apply semantic tokens directly in your CSS using <code>var()</code>:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">.service-description</span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-family-body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-size-body-md<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-body-md<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">letter-spacing</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-letterspacing-body-md<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<p><span class="token selector">.section-heading</span> <span class="token punctuation">{</span>
+<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-family-heading<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-size-h2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-h2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">letter-spacing</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-letterspacing-h2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></p></code></pre>
+</div>
+</div><p></p>
+  </div>
+</div>
+<p>Each property must be set individually — CSS does not support setting multiple properties at once with <code>var()</code>. This is fine when building reusable components, but can be verbose for one-off styling. That is where utility classes help.</p>
+<h3 id="utility-classes">Utility Classes</h3>
+<p>The NYS Design System provides <code>.nys-font-*</code> utility classes that bundle the correct font family, size, line height, and letter spacing for common text roles. Apply them directly in your HTML:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-h1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Apply for Benefits<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-body-md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  Use this form to apply for health insurance, food assistance,
+  or other programs administered by New York State.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-font-ui-sm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Required fields are marked with an asterisk (*)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>For the complete list of typography utility classes with live previews, see <a href="/foundations/utilities/typography/">Typography Utilities</a>.</p>
+</section>
+<section id="best-practices">
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li>
+<p><strong>Use semantic tokens, not primitives.</strong> Semantic tokens like <code>--nys-font-size-h1</code> will stay correct if the design team adjusts the type scale. Primitive tokens like <code>--nys-font-size-5xl</code> will not.</p>
+</li>
+<li>
+<p><strong>Use utility classes for rapid development.</strong> The <code>.nys-font-*</code> classes combine multiple token properties into a single class. Use them for content areas and page layouts where you need consistent type styling without writing custom CSS.</p>
+</li>
+<li>
+<p><strong>Preload critical fonts.</strong> Add <code>&lt;link rel=&quot;preload&quot;&gt;</code> for the one or two font files your application uses most. This eliminates the flash of unstyled text on initial load.</p>
+</li>
+<li>
+<p><strong>Extend existing components before building custom ones.</strong> NYSDS web components already reference typography tokens. Override specific CSS custom properties on a component rather than rebuilding its type styling from scratch.</p>
+</li>
+<li>
+<p><strong>Maintain heading hierarchy.</strong> Use heading levels (h1--h6) for document structure, not visual sizing. If you need a heading that looks like an h2 but is structurally an h3, apply the <code>.nys-font-h2</code> utility class to the <code>&lt;h3&gt;</code> element.</p>
+</li>
+</ol>
+</section>
+<section id="resources">
+<h2 id="resources">Resources</h2>
+<div class="nys-grid-row nys-grid-gap-300">
+  <div class="nys-grid-col-12">
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds-fonts">
+      <div class="card__inner">
+        <div class="card__media card__media--thin">
+          <img src="/assets/img/font-card.svg">
+        </div>
+        <div class="card__content">
+          <div class="card__title">NYSDS Fonts Repository</div>
+          <div class="card__desc">Download the complete NYSDS font bundle including Proxima Nova, D Sari, and Oswald. Available to NYS staff only.
+            <p></p>
+            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<ul>
+<li><a href="/foundations/utilities/typography/">Typography Utility Classes</a> — full reference with live previews</li>
+<li><a href="/foundations/tokens/">Design Tokens</a> — how primitive and semantic token layers work</li>
+<li><a href="/tokens/typography/">Typography Tokens</a> — browse font size and font family tokens</li>
+<li><a href="https://fonts.google.com/knowledge/using_type/using_web_fonts">Using Web Fonts</a> — Google's guide to web font performance</li>
+</ul>
+</section>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/typography.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: May 20, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

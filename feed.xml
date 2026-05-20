@@ -108,7 +108,7 @@
         <td><code>nys-grid-gap-200</code></td>
       </tr>
       <tr>
-        <td><code>nys-grid-gap-lg</code></td>
+        <td><code>nys-grid-gap-300</code></td>
         <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
         <td><code>nys-grid-gap-300</code></td>
       </tr>
@@ -260,7 +260,7 @@
         <td><code>nys-grid-gap-200</code></td>
       </tr>
       <tr>
-        <td><code>nys-grid-gap-lg</code></td>
+        <td><code>nys-grid-gap-300</code></td>
         <td><nys-icon name="arrow_forward" size="4xl"></nys-icon></td>
         <td><code>nys-grid-gap-300</code></td>
       </tr>
@@ -1472,9 +1472,9 @@ Because the CSS variables used the shared vocabulary of the design tokens across
     </item>
     <item>
       <title>NYS Design System Release 1.14.0 “Marcy”</title>
-      <link>https://designsystem.ny.gov/updates/1.14.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.14.0-release/</link>
       <description><![CDATA[<h2>Why “Marcy?” 🏔️</h2>
-<p>Mount Marcy is huge. This release is a huge milestone for us too. This is our <a href="https://designsystem.ny.gov/updates/1.14.0-release/">one year anniversary</a> of the 1.0 release of the NYS Design System, so we figured we'd go with the biggest mountain around! Marcy is the highest peak in New York, with an elevation of 5,343.1 ft (1,628.6 m)!</p>
+<p>Mount Marcy is huge. This release is a huge milestone for us too. This is our <a href="https://designsystem.ny.gov/about/updates/1.14.0-release/">one year anniversary</a> of the 1.0 release of the NYS Design System, so we figured we'd go with the biggest mountain around! Marcy is the highest peak in New York, with an elevation of 5,343.1 ft (1,628.6 m)!</p>
 <p><a href="https://en.wikipedia.org/wiki/Mount_Marcy">Learn more about Mount Marcy.</a></p>
 <h2>New approach to agency themes</h2>
 <p>New agency theme files have been added back to the <code>@nysds/styles</code> package. They are no longer minified so they are easier to read. To get the new agency themes to work, you'll need to either link to the separate file, or add a data-theme attribute to your body or HTML tags.</p>
@@ -1654,7 +1654,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.14.0">See the full developer release notes for v.1.14.0 →</a></p>
 ]]></description>
       <content><![CDATA[<h2>Why “Marcy?” 🏔️</h2>
-<p>Mount Marcy is huge. This release is a huge milestone for us too. This is our <a href="https://designsystem.ny.gov/updates/1.14.0-release/">one year anniversary</a> of the 1.0 release of the NYS Design System, so we figured we'd go with the biggest mountain around! Marcy is the highest peak in New York, with an elevation of 5,343.1 ft (1,628.6 m)!</p>
+<p>Mount Marcy is huge. This release is a huge milestone for us too. This is our <a href="https://designsystem.ny.gov/about/updates/1.14.0-release/">one year anniversary</a> of the 1.0 release of the NYS Design System, so we figured we'd go with the biggest mountain around! Marcy is the highest peak in New York, with an elevation of 5,343.1 ft (1,628.6 m)!</p>
 <p><a href="https://en.wikipedia.org/wiki/Mount_Marcy">Learn more about Mount Marcy.</a></p>
 <h2>New approach to agency themes</h2>
 <p>New agency theme files have been added back to the <code>@nysds/styles</code> package. They are no longer minified so they are easier to read. To get the new agency themes to work, you'll need to either link to the separate file, or add a data-theme attribute to your body or HTML tags.</p>
@@ -1835,11 +1835,11 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 ]]></content>
       <pubDate>Thu, 19 Feb 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.14.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.14.0-release/</guid>
     </item>
     <item>
       <title>Happy Birthday NYS Design System!</title>
-      <link>https://designsystem.ny.gov/updates/happy-birthday-nysds/</link>
+      <link>https://designsystem.ny.gov/about/updates/happy-birthday-nysds/</link>
       <description><![CDATA[<h2>Happy first birthday NYS Design System!</h2>
 <p>Thanks to <a href="https://github.com/dougbartow">Doug Bartow</a> and <a href="https://github.com/goodship11">Kevin Luddy</a> for designing and animating the perfect birthday badge for our one year anniversary!</p>
 <div class="badge-container">
@@ -1946,7 +1946,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <h2>Quicker access to the things you need</h2>
 <p>Improved the search function on the website to fit into the unav header (top white bar on this page). This allowed us to remove a separate search link in the header and implements the unified unav search pattern.</p>
 <h2>New contribute page</h2>
-<p>There are multiple ways to contribute to the NYS Design System. Our new <a href="https://designsystem.ny.gov/get-started/contribute">contributing page</a> provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!</p>
+<p>There are multiple ways to contribute to the NYS Design System. Our new <a href="https://designsystem.ny.gov/about/contribute/">contributing page</a> provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!</p>
 <p>Thanks to <a href="https://github.com/mashyamumin">Mashya Mumin</a>, <a href="https://github.com/ksorrentino">Kristin Sorrentino</a>, and <a href="https://github.com/dougbartow">Doug Bartow</a> for this new style!</p>
 <style>
 .badge-container { width: 500px; max-width: 90vw; }
@@ -2336,7 +2336,7 @@ var interval = setInterval(function() {
 <h2>Quicker access to the things you need</h2>
 <p>Improved the search function on the website to fit into the unav header (top white bar on this page). This allowed us to remove a separate search link in the header and implements the unified unav search pattern.</p>
 <h2>New contribute page</h2>
-<p>There are multiple ways to contribute to the NYS Design System. Our new <a href="https://designsystem.ny.gov/get-started/contribute">contributing page</a> provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!</p>
+<p>There are multiple ways to contribute to the NYS Design System. Our new <a href="https://designsystem.ny.gov/about/contribute/">contributing page</a> provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!</p>
 <p>Thanks to <a href="https://github.com/mashyamumin">Mashya Mumin</a>, <a href="https://github.com/ksorrentino">Kristin Sorrentino</a>, and <a href="https://github.com/dougbartow">Doug Bartow</a> for this new style!</p>
 <style>
 .badge-container { width: 500px; max-width: 90vw; }
@@ -2622,11 +2622,11 @@ var interval = setInterval(function() {
 </script>]]></content>
       <pubDate>Thu, 19 Feb 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/happy-birthday-nysds/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/happy-birthday-nysds/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.13.1</title>
-      <link>https://designsystem.ny.gov/updates/1.13.1-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.13.1-release/</link>
       <description><![CDATA[<h2>Customize your search engine in <code>&lt;nys-unavheader&gt;</code></h2>
 <p>The <code>&lt;nys-unavheader&gt;</code> now supports a custom search url. Simply change the property <code>&quot;searchUrl&quot;</code> to point to a valid search endpoint and be sure to include the search parameter (Usually &quot;q=&quot;, but your mileage may vary). To see an example of the search, use the search at the very top right of this page to search this site. <a href="https://designsystem.ny.gov/components/unav-header/#custom-search-endpoint">Read the custom search endpoint documentation for <code>&lt;nys-unavheader&gt;</code></a>.</p>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> searched for this solution.</p>
@@ -2767,11 +2767,11 @@ var interval = setInterval(function() {
 ]]></content>
       <pubDate>Thu, 05 Feb 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.13.1-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.13.1-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.13.0 “TableTop”</title>
-      <link>https://designsystem.ny.gov/updates/1.13.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.13.0-release/</link>
       <description><![CDATA[<h2>Why “TableTop?” 🏔️</h2>
 <p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we felt it appropriate to name it after the <code>&lt;nys-table&gt;</code> component. TableTop is the 19th highest peak in New York, with an elevation of 4,427 feet (1,349 m)!</p>
 <p><a href="https://en.wikipedia.org/wiki/Table_Top_Mountain_(New_York)">Learn more about TableTop Mountain.</a></p>
@@ -3194,11 +3194,11 @@ var interval = setInterval(function() {
 ]]></content>
       <pubDate>Thu, 22 Jan 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.13.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.13.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.12.1</title>
-      <link>https://designsystem.ny.gov/updates/1.12.1-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.12.1-release/</link>
       <description><![CDATA[<h2>NYS Design System 2025 wrapped</h2>
 <p>Visit our <a href="https://designsystem.ny.gov/2025-wrapped">NYS Design System 2025 Wrapped</a> page to see our highlighted accomplishments for the Design System over the last year. We shipped 34 releases featuring a lot of capabilities and configuration options. Design Tokens made available as CSS variables will transform any old UI into an NYS-branded UI in a short amount of time!</p>
 <h2>Figma updates</h2>
@@ -3265,11 +3265,11 @@ var interval = setInterval(function() {
 ]]></content>
       <pubDate>Wed, 31 Dec 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.12.1-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.12.1-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.12.0 “Skylight”</title>
-      <link>https://designsystem.ny.gov/updates/1.12.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.12.0-release/</link>
       <description><![CDATA[<h2>Why “Skylight?” 🏔️</h2>
 <p>When we name our releases, we pick from a list of Adirondack high peaks. For this release, we held a vote in our teams channel and Office Hours. After a total of 34 responses, our winner is <strong>Skylight</strong> with 17 votes! Skylight is the fourth-highest peak in New York, with an elevation of 4,924 feet (1,501 m)!</p>
 <p><a href="https://en.wikipedia.org/wiki/Mount_Skylight">Learn more about Mount Skylight.</a></p>
@@ -3566,11 +3566,11 @@ var interval = setInterval(function() {
 ]]></content>
       <pubDate>Thu, 11 Dec 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.12.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.12.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.11.3</title>
-      <link>https://designsystem.ny.gov/updates/1.11.3-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.11.3-release/</link>
       <description><![CDATA[<h2>Community Figma file now publicly available to non-NYS employees</h2>
 <p>The Figma Library for the New York State Design System is now available in the Figma Community for non-NYS Employees. If you are an NYS Employee, contractor, or vendor of NYS please use the actual Figma library.</p>
 <p>The Community library contains all of the components in the system, the project template, and you can even configure a custom theme so local governments within New York State can adopt the design system. Use the <a href="https://www.figma.com/community/file/1574803287825265318">NYS Design System Figma file today</a>.</p>
@@ -3657,11 +3657,11 @@ var interval = setInterval(function() {
 ]]></content>
       <pubDate>Wed, 26 Nov 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.11.3-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.11.3-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.11.2</title>
-      <link>https://designsystem.ny.gov/updates/1.11.2-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.11.2-release/</link>
       <description><![CDATA[<h2>Notable bug fixes</h2>
 <ul>
 <li><code>&lt;nys-fileinput&gt;</code> used to double click on keyboard. This is no longer the case, a single click is all you will get now!</li>
@@ -3716,11 +3716,11 @@ var interval = setInterval(function() {
 ]]></content>
       <pubDate>Thu, 13 Nov 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.11.2-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.11.2-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.11.0 “Gothics”</title>
-      <link>https://designsystem.ny.gov/updates/1.11.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.11.0-release/</link>
       <description><![CDATA[<!-- SPOOKY RELEASE!!! 👻 -->
 <h2>Why “Gothics?”</h2>
 <p>When we name our releases, we pick from a list of Adirondack high peaks. This week's release is named <strong>Gothics</strong>. We wanted to take advantage of spooky season and find an appropriate name! BOO! 👻</p>
@@ -3818,7 +3818,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 <h2>Other notable code changes</h2>
 <ul>
 <li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
-<li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
+<li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/tokens/other/#elevation">Check out the elevation tokens</a>.</li>
 <li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
 </ul>
 <p><a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>, Thank you.</p>
@@ -3949,7 +3949,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 <h2>Other notable code changes</h2>
 <ul>
 <li>Keyboard controls work with buttons again - <a href="https://github.com/ITS-HCD/nysds/issues/935">#935</a>.</li>
-<li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/foundations/tokens/#elevation">Check out the elevation tokens</a>.</li>
+<li>New <code>elevation</code> design tokens - <a href="https://designsystem.ny.gov/tokens/other/#elevation">Check out the elevation tokens</a>.</li>
 <li>Better accessibility in <code>&lt;nys-globalfooter&gt;</code> - The agencyname value now prints as an <code>&lt;h2&gt;</code>.</li>
 </ul>
 <p><a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/emilygorelik">Emily Gorelik</a>, Thank you.</p>
@@ -3985,11 +3985,11 @@ This release includes <strong>major changes</strong> to the icon size system to 
 ]]></content>
       <pubDate>Fri, 31 Oct 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.11.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.11.0-release/</guid>
     </item>
     <item>
       <title>October Website Improvements</title>
-      <link>https://designsystem.ny.gov/updates/october-website-improvements/</link>
+      <link>https://designsystem.ny.gov/about/updates/october-website-improvements/</link>
       <description><![CDATA[<h2>Site Search Now Available</h2>
 <p>We added a search feature to the site. You can click the <a href="https://designsystem.ny.gov/search">Search</a> link in the site navigation to search the whole site.</p>
 <nys-textinput name="q" type="search" placeholder="Search" id="q" label="Search the NYS Design System" width="lg">
@@ -4048,11 +4048,11 @@ This release includes <strong>major changes</strong> to the icon size system to 
 ]]></content>
       <pubDate>Fri, 24 Oct 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/october-website-improvements/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/october-website-improvements/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.10.1</title>
-      <link>https://designsystem.ny.gov/updates/1.10.1-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.10.1-release/</link>
       <description><![CDATA[<h2>You can add columns of links to your footer now</h2>
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
 <div class="code-preview-container">
@@ -4297,11 +4297,11 @@ All form field components have been updated with a new property which will inver
 ]]></content>
       <pubDate>Thu, 16 Oct 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.10.1-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.10.1-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.10.0 “Haystack”</title>
-      <link>https://designsystem.ny.gov/updates/1.10.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.10.0-release/</link>
       <description><![CDATA[<!-- 🪡 in the Haystack? -->
 <h2>Multiple pages? No problem</h2>
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
@@ -4622,11 +4622,11 @@ All form field components have been updated with a new property which will inver
 ]]></content>
       <pubDate>Fri, 03 Oct 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.10.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.10.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.9.1</title>
-      <link>https://designsystem.ny.gov/updates/1.9.1-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.9.1-release/</link>
       <description><![CDATA[<h2>Divide up your content</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
 <div class="code-preview-container">
@@ -4729,25 +4729,25 @@ All form field components have been updated with a new property which will inver
 ]]></content>
       <pubDate>Thu, 18 Sep 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.9.1-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.9.1-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.8.0 “Adirondack”</title>
-      <link>https://designsystem.ny.gov/updates/1.8.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.8.0-release/</link>
       <description><![CDATA[<h2>Step by step</h2>
 <p>The new <code>&lt;nys-stepper&gt;</code> component helps you break down a complex process into simple steps. It is built with options to make it &quot;dumb&quot; (simple HREF links for steps) or &quot;smart&quot; (can use JS to trigger events <code>onClick()</code>). For more information, <a href="https://designsystem.ny.gov/components/stepper">read the full documentation for the <code>&lt;nys-stepper&gt;</code></a>.</p>
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile</h3>
-    <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
+    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile Expanded</h3>
-    <img src="https://designsystem.ny.gov/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
+    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Desktop</h3>
-    <img src="https://designsystem.ny.gov/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
+    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
   </div>
 </div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> poured sweat and tears into this component!</p>
@@ -4791,15 +4791,15 @@ All form field components have been updated with a new property which will inver
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile</h3>
-    <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
+    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile Expanded</h3>
-    <img src="https://designsystem.ny.gov/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
+    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Desktop</h3>
-    <img src="https://designsystem.ny.gov/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
+    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
   </div>
 </div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> poured sweat and tears into this component!</p>
@@ -4840,11 +4840,11 @@ All form field components have been updated with a new property which will inver
 ]]></content>
       <pubDate>Fri, 05 Sep 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.8.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.8.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.7.0 “Hudson”</title>
-      <link>https://designsystem.ny.gov/updates/1.7.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.7.0-release/</link>
       <description><![CDATA[<h2>Learn the NYS Design System</h2>
 <p><a href="https://designsystem.ny.gov/learn">Visit the &quot;Learn&quot; page</a> on this site to view A video tour by the NYS Design System team to help you learn how to quickly build accessible, mobile-friendly, user-friendly digital services with the Design System.</p>
 <p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
@@ -4915,11 +4915,11 @@ All form field components have been updated with a new property which will inver
 </div>
 <h2>Weird Al Yankovic would be proud</h2>
 <p>Add collapsible sections to your content with <a href="https://designsystem.ny.gov/components/accordion">the new <code>nys-accordion</code> component</a>. You can create a one-off accordion, or group a set together.</p>
-<p><img src="https://designsystem.ny.gov/assets/i/2025/accordion.gif" alt="GIF of an accordion opening and closing" /></p>
+<p><img src="https://designsystem.ny.gov/about/assets/i/2025/accordion.gif" alt="GIF of an accordion opening and closing" /></p>
 <p>Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) plays a mean accordion.</p>
 <h2>Show us your badges</h2>
 <p><a href="https://designsystem.ny.gov/components/badge">The new <code>nys-badge</code> component</a> is a rounded, styled text label which can be used to display categories, tags, or other non-interactable labels for content. You can see examples of the nys-badge at the top of each page.</p>
-<p><img src="https://designsystem.ny.gov/assets/i/2025/badges.png" alt="Picture of the badge element" /></p>
+<p><img src="https://designsystem.ny.gov/about/assets/i/2025/badges.png" alt="Picture of the badge element" /></p>
 <p>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) knocked this out of the park!</p>
 <h2>New icons available</h2>
 <p>New additions: <code>code</code>,  <code>social_bluesky</code>, and <code>social_threads</code></p>
@@ -5010,11 +5010,11 @@ All form field components have been updated with a new property which will inver
 </div>
 <h2>Weird Al Yankovic would be proud</h2>
 <p>Add collapsible sections to your content with <a href="https://designsystem.ny.gov/components/accordion">the new <code>nys-accordion</code> component</a>. You can create a one-off accordion, or group a set together.</p>
-<p><img src="https://designsystem.ny.gov/assets/i/2025/accordion.gif" alt="GIF of an accordion opening and closing" /></p>
+<p><img src="https://designsystem.ny.gov/about/assets/i/2025/accordion.gif" alt="GIF of an accordion opening and closing" /></p>
 <p>Robert Chen (<a href="https://github.com/novacat35">@novacat35</a>) plays a mean accordion.</p>
 <h2>Show us your badges</h2>
 <p><a href="https://designsystem.ny.gov/components/badge">The new <code>nys-badge</code> component</a> is a rounded, styled text label which can be used to display categories, tags, or other non-interactable labels for content. You can see examples of the nys-badge at the top of each page.</p>
-<p><img src="https://designsystem.ny.gov/assets/i/2025/badges.png" alt="Picture of the badge element" /></p>
+<p><img src="https://designsystem.ny.gov/about/assets/i/2025/badges.png" alt="Picture of the badge element" /></p>
 <p>Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>) knocked this out of the park!</p>
 <h2>New icons available</h2>
 <p>New additions: <code>code</code>,  <code>social_bluesky</code>, and <code>social_threads</code></p>
@@ -5037,14 +5037,14 @@ All form field components have been updated with a new property which will inver
 ]]></content>
       <pubDate>Fri, 22 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.7.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.7.0-release/</guid>
     </item>
     <item>
       <title>Release 1.6.0</title>
-      <link>https://designsystem.ny.gov/updates/1.6.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.6.0-release/</link>
       <description><![CDATA[<h2>Phone fields just got smarter</h2>
 <p>Typing a phone number now auto-formats as you type in <code>&lt;nys-textinput type=&quot;tel&quot;&gt;</code>.</p>
-<p><img src="https://designsystem.ny.gov/assets/i/2025/telephone-input-mask.gif" alt="GIF of a form field typing out a well-formatted phone number" /></p>
+<p><img src="https://designsystem.ny.gov/about/assets/i/2025/telephone-input-mask.gif" alt="GIF of a form field typing out a well-formatted phone number" /></p>
 <p>Nice work by <a href="https://github.com/emilygorelik">Emily Gorelik</a>!</p>
 <h2>Fresh icons for better wayfinding</h2>
 <p>New additions: <code>mail</code>, <code>link</code>, <code>arrow_forward</code>, <code>arrow_upward</code>, and <code>arrow_downward</code>.</p>
@@ -5063,7 +5063,7 @@ All form field components have been updated with a new property which will inver
 ]]></description>
       <content><![CDATA[<h2>Phone fields just got smarter</h2>
 <p>Typing a phone number now auto-formats as you type in <code>&lt;nys-textinput type=&quot;tel&quot;&gt;</code>.</p>
-<p><img src="https://designsystem.ny.gov/assets/i/2025/telephone-input-mask.gif" alt="GIF of a form field typing out a well-formatted phone number" /></p>
+<p><img src="https://designsystem.ny.gov/about/assets/i/2025/telephone-input-mask.gif" alt="GIF of a form field typing out a well-formatted phone number" /></p>
 <p>Nice work by <a href="https://github.com/emilygorelik">Emily Gorelik</a>!</p>
 <h2>Fresh icons for better wayfinding</h2>
 <p>New additions: <code>mail</code>, <code>link</code>, <code>arrow_forward</code>, <code>arrow_upward</code>, and <code>arrow_downward</code>.</p>
@@ -5082,11 +5082,11 @@ All form field components have been updated with a new property which will inver
 ]]></content>
       <pubDate>Thu, 07 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.6.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.6.0-release/</guid>
     </item>
     <item>
       <title>Rapid Wireframes to Prototypes with Fidelity Modes</title>
-      <link>https://designsystem.ny.gov/updates/fidelity-modes-rapid-prototyping/</link>
+      <link>https://designsystem.ny.gov/about/updates/fidelity-modes-rapid-prototyping/</link>
       <description><![CDATA[<div class="nys-margin-b-400">
 <nys-alert type="info" class="nys-padding-b-400" heading="Fidelity Modes Tutorial">
   To experiment with this fidelity modes approach in Figma, you can try out our: 
@@ -5257,11 +5257,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Tue, 05 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/fidelity-modes-rapid-prototyping/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/fidelity-modes-rapid-prototyping/</guid>
     </item>
     <item>
       <title>Release 1.5.3</title>
-      <link>https://designsystem.ny.gov/updates/1.5.3-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.5.3-release/</link>
       <description><![CDATA[<h2>Forms behave again</h2>
 <p>Text Input no longer overflows its container — forms are back to being predictable and easy to use.<br />
 ↳ Big thanks to <a href="https://github.com/emilygorelik">Emily Gorelik</a> for tracking this down.</p>
@@ -5306,11 +5306,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Fri, 01 Aug 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.5.3-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.5.3-release/</guid>
     </item>
     <item>
       <title>Release 1.5.0</title>
-      <link>https://designsystem.ny.gov/updates/1.5.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.5.0-release/</link>
       <description><![CDATA[<h2>Welcome, tooltips!</h2>
 <p><code>&lt;nys-tooltip&gt;</code> has officially joined the design system family. Wrap it around a <code>&lt;nys-button&gt;</code> or <code>&lt;nys-icon&gt;</code> and you’ll get clear, accessible context on hover or focus.<br />
 ↳ Built with care by <a href="https://github.com/NovaCat35">Robert Chen</a>.</p>
@@ -5347,11 +5347,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 24 Jul 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.5.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.5.0-release/</guid>
     </item>
     <item>
       <title>Release 1.4.0</title>
-      <link>https://designsystem.ny.gov/updates/1.4.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.4.0-release/</link>
       <description><![CDATA[<h2>File uploads arrive</h2>
 <p>Say hello to <code>&lt;nys-fileinput&gt;</code>, a new component for handling file uploads in your forms. It supports multiple files, drag-and-drop, MIME type filtering, and more.</p>
 <p><img src="https://github.com/user-attachments/assets/a92741ce-7497-43b2-8cc3-e0d1e8cb255c" alt="Screenshot of the nys-fileinput component" /><br />
@@ -5404,11 +5404,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 10 Jul 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.4.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.4.0-release/</guid>
     </item>
     <item>
       <title>Release 1.3.0</title>
-      <link>https://designsystem.ny.gov/updates/1.3.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.3.0-release/</link>
       <description><![CDATA[<h2>Figma libraries streamlined</h2>
 <p>Designers, this one’s for you. We merged the Components and Foundations library, which makes them easier to use with branching and will be a better experience when we publish to the community. This also sets the stage for powerful new “modes” (like wireframing)... coming soon.</p>
 <p>And good news: <code>&lt;nys-tooltip&gt;</code> has already landed in Figma, and will be available in code soon!</p>
@@ -5463,11 +5463,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 26 Jun 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.3.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.3.0-release/</guid>
     </item>
     <item>
       <title>Release 1.2.0</title>
-      <link>https://designsystem.ny.gov/updates/1.2.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.2.0-release/</link>
       <description><![CDATA[<h2>Automated testing kicks in</h2>
 <p>You won't see it, but this is a big deal. <code>&lt;nys-icon&gt;</code> and <code>&lt;nys-textarea&gt;</code> now have automated tests running in CI. If a test fails, the build fails, which makes it easier for us to catch bugs before publishing releases.</p>
 <p>↳ Thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for putting testing in place.</p>
@@ -5514,11 +5514,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 12 Jun 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.2.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.2.0-release/</guid>
     </item>
     <item>
       <title>Release 1.1.9</title>
-      <link>https://designsystem.ny.gov/updates/1.1.9-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.9-release/</link>
       <description><![CDATA[<h2>Testing takes center stage</h2>
 <p>Seven components, including <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, <code>&lt;nys-button&gt;</code>, <code>&lt;nys-alert&gt;</code>, and <code>&lt;nys-textinput&gt;</code>, now run automated tests in CI. This means more reliable builds and fewer surprises in production.</p>
 <p>↳ Thanks for all the hard work from <a href="https://github.com/NovaCat35">Robert Chen</a> and <a href="https://github.com/esteinborn">Eric Steinborn</a> to make this a reality.</p>
@@ -5589,11 +5589,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 29 May 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.9-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.9-release/</guid>
     </item>
     <item>
       <title>Release 1.1.8</title>
-      <link>https://designsystem.ny.gov/updates/1.1.8-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.8-release/</link>
       <description><![CDATA[<h2>Skip straight to the good stuff</h2>
 <p>Say hello to <code>&lt;nys-skipnav&gt;</code>, our brand-new skip navigation component. It provides a visible link for keyboard and screen reader users to jump right to the main content. Include it at the very top of pages for to make it easier for people to skip directly to the content.</p>
 <p>↳ Big thanks to <a href="https://github.com/NovaCat35">Robert Chen</a> for this accessibility win.</p>
@@ -5636,11 +5636,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 15 May 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.8-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.8-release/</guid>
     </item>
     <item>
       <title>Release 1.1.7</title>
-      <link>https://designsystem.ny.gov/updates/1.1.7-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.7-release/</link>
       <description><![CDATA[<h2>Smarter buttons</h2>
 <p><code>&lt;nys-button&gt;</code> now accepts a <code>target</code> property, giving you control over where links open. (Only works when you set the <code>href</code> property.)
 ↳ 🎯 A bullseye by <a href="https://github.com/NovaCat35">Robert Chen</a></p>
@@ -5665,22 +5665,22 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Wed, 30 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.7-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.7-release/</guid>
     </item>
     <item>
       <title>Scaling Human-Centered Design with Design Systems</title>
-      <link>https://designsystem.ny.gov/updates/scaling-human-centered-design/</link>
+      <link>https://designsystem.ny.gov/about/updates/scaling-human-centered-design/</link>
       <description><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/TBfFzt0150Q?si=PV7FIjQaEwC63ZF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 ]]></description>
       <content><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/TBfFzt0150Q?si=PV7FIjQaEwC63ZF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 ]]></content>
       <pubDate>Thu, 17 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/scaling-human-centered-design/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/scaling-human-centered-design/</guid>
     </item>
     <item>
       <title>Release 1.1.6</title>
-      <link>https://designsystem.ny.gov/updates/1.1.6-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.6-release/</link>
       <description><![CDATA[<h2>Components load more gracefully</h2>
 <p>Undefined components no longer flash unstyled layouts before JavaScript kicks in — they now wait until they’re fully defined before displaying.<br />
 ↳ Fix by <a href="https://github.com/emilygorelik">Emily Gorelik</a>.</p>
@@ -5715,11 +5715,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 17 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.6-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.6-release/</guid>
     </item>
     <item>
       <title>Release 1.1.5</title>
-      <link>https://designsystem.ny.gov/updates/1.1.5-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.5-release/</link>
       <description><![CDATA[<h2>Figma Code Connect everywhere</h2>
 <p>All components now have Figma Code Connect wired up, making it easier for designers and engineers to stay in sync, and setting the stage for future design-to-code automation.<br />
 ↳ Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a>.</p>
@@ -5744,11 +5744,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Fri, 04 Apr 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.5-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.5-release/</guid>
     </item>
     <item>
       <title>Release 1.1.1</title>
-      <link>https://designsystem.ny.gov/updates/1.1.1-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.1-release/</link>
       <description><![CDATA[<h2>Fresh tokens, fresh vibes</h2>
 <p>Figma variables and design tokens in code have been brought up to date, making things more consistent across design and engineering.</p>
 <p>↳ Thanks to <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/leo-vogel">Leo Vogel</a> for leading the charge.</p>
@@ -5795,11 +5795,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Mon, 24 Mar 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.1-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.1-release/</guid>
     </item>
     <item>
       <title>Release 1.1.0</title>
-      <link>https://designsystem.ny.gov/updates/1.1.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.1.0-release/</link>
       <description><![CDATA[<h2>First-class form elements</h2>
 <p>Custom NYS Design System form elements now participate in standard HTML forms just like standard HTML elements, thanks to <code>elementInternals</code>. This means form-based web components behave the way native form elements should, with values, validation, and accessibility. More information about the <code>elementInternals</code> interface can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals">MDN Web Docs →</a><br />
 ↳ Big collaborative effort between <a href="https://github.com/novacat35">Robert Chen</a> and <a href="https://github.com/plasticmind">Jesse Gardner</a></p>
@@ -5850,11 +5850,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Wed, 26 Feb 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.1.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.1.0-release/</guid>
     </item>
     <item>
       <title>Release 1.0.0</title>
-      <link>https://designsystem.ny.gov/updates/1.0.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.0.0-release/</link>
       <description><![CDATA[<h2>🎉 Our first major design system release!</h2>
 <p>It’s official: the New York State Design System has hit <strong>1.0.0</strong>! This marks our first stable release of the component library and design libraries. You can now explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>.</p>
 <p>We set out to ship 15 web components for v1.0.0 — and delivered 17. ✨</p>
@@ -5931,11 +5931,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Fri, 07 Feb 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.0.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.0.0-release/</guid>
     </item>
     <item>
       <title>Release 0.0.9-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.9-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.9-alpha-release/</link>
       <description><![CDATA[<p>This release introduces the new Global Header and Footer components, improves form elements, and updates core dependencies.<br />
 ↳ Thanks to Robert Chen (<a href="https://github.com/NovaCat35">@NovaCat35</a>), Emily Gorelik (<a href="https://github.com/emilygorelik">@emilygorelik</a>), Jesse Gardner (<a href="https://github.com/plasticmind">@plasticmind</a>), and Eric Steinborn (<a href="https://github.com/esteinborn">@esteinborn</a>) for the collaborative effort.</p>
 <h2>New Components: Global Header + Global Footer</h2>
@@ -5974,11 +5974,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Wed, 29 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.9-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.9-alpha-release/</guid>
     </item>
     <item>
       <title>Release 0.0.8-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.8-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.8-alpha-release/</link>
       <description><![CDATA[<h2>Styles now have their own home</h2>
 <p>Big news: <a href="https://www.npmjs.com/package/@nysds/styles"><code>@nysds/styles</code></a> has officially joined the family. It brings:</p>
 <ul>
@@ -6013,11 +6013,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Wed, 22 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.8-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.8-alpha-release/</guid>
     </item>
     <item>
       <title>Release 0.0.7-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.7-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.7-alpha-release/</link>
       <description><![CDATA[<p>We’re excited to announce that the New York State Design System is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
 <h2>What's New</h2>
 <h3>New Component: nys-avatar</h3>
@@ -6118,11 +6118,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Wed, 15 Jan 2025 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.7-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.7-alpha-release/</guid>
     </item>
     <item>
       <title>Release 0.0.4-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.4-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.4-alpha-release/</link>
       <description><![CDATA[<h1>Release Notes</h1>
 <p>We’re excited to announce that the New York State Design System is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
 <h2>What's New</h2>
@@ -6203,11 +6203,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Mon, 23 Dec 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.4-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.4-alpha-release/</guid>
     </item>
     <item>
       <title>Release 0.0.3-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.3-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.3-alpha-release/</link>
       <description><![CDATA[<h2>What's New</h2>
 <ul>
 <li>New component: <code>&lt;nys-radiobutton&gt;</code> created by <a href="https://github.com/emilygorelik">@emilygorelik</a>
@@ -6288,11 +6288,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Fri, 29 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.3-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.3-alpha-release/</guid>
     </item>
     <item>
       <title>Release 0.0.2-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.2-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.2-alpha-release/</link>
       <description><![CDATA[<h2>What's Changed</h2>
 <ul>
 <li>Added two new components <code>nys-icon</code> and <code>nys-checkbox</code></li>
@@ -6309,11 +6309,11 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Thu, 21 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.2-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.2-alpha-release/</guid>
     </item>
     <item>
       <title>Release 0.0.1-alpha</title>
-      <link>https://designsystem.ny.gov/updates/0.0.1-alpha-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/0.0.1-alpha-release/</link>
       <description><![CDATA[<h2>Ever Upward!</h2>
 <p>Today marks a huge milestone: the very first <strong>alpha release</strong> of the NYS Design System (early codename)! This release lays the foundation for everything that will come after—our build process, our standards, and the collaborative spirit of the team.</p>
 <p>Big thanks to <a href="https://github.com/plasticmind">Jesse Gardner</a> for laying down so much of the early groundwork, and to the whole ITS HCD team for helping bring the NYS Design System to life. This is just the beginning.</p>
@@ -6346,7 +6346,7 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></content>
       <pubDate>Wed, 06 Nov 2024 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/0.0.1-alpha-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/0.0.1-alpha-release/</guid>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Primitive Tokens - New York State Design System</title>
+
+<meta name="description" content="Raw color, typography, and spacing values that semantic tokens are built from. Use semantic tokens instead when possible.">
+<link rel="canonical" href="https://designsystem.ny.gov/tokens/primitives/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Primitive Tokens">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/tokens/primitives/">
+<meta property="og:description" content="Raw color, typography, and spacing values that semantic tokens are built from. Use semantic tokens instead when possible.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-05-20T15:10:15.498Z -->
+  </head>
+  
+  <body class="single-page page-primitives section-tokens no-heading-links">
+  <nys-skipnav></nys-skipnav>
+  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Tokens
+        </div>
+        <div class="section-header__media">
+            
+                <img src="https://designsystem.ny.gov/assets/img/sections/section-tokens.svg" alt="Tokens section header">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-tokens" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-tokens">
+    <span class="accordion__label">Tokens</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-tokens" aria-labelledby="accordion-trigger-tokens" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/tokens/">
+        Color
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/tokens/typography/">
+        Typography
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/tokens/other/">
+        Spacing &amp; Layout
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      <a class="section-nav__link" href="/tokens/primitives/" aria-current="page">
+        Primitives
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-8">  
+    
+<h1 id="primitive-tokens">Primitive Tokens</h1>
+
+<nys-alert type="warning" heading="Prefer semantic tokens"><span>Primitive tokens are the raw building blocks that semantic tokens reference. In most cases, you should use <a href="/tokens/">color</a> or <a href="/tokens/typography/">typography</a> semantic tokens instead. Primitives don't adapt to themes or convey purpose — they're fixed values. Use them only when you need a specific value that no semantic token covers.</span></nys-alert>
+
+
+<h2 id="color-neutral">Color — Neutral</h2>
+<p>The neutral gray scale from 900 (near-black) to 10 (near-white). Use for borders, dividers, backgrounds, and subtle UI elements. For purpose-driven colors, see <a href="/tokens/#semantic">semantic color tokens</a>.</p>
+<div class="token-list">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-900);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-900">#1b1b1b</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-900">Color Neutral 900</h3>
+    <p class="token-list__desc">Darkest neutral color.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-900</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-900" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-800);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-800">#323435</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-800">Color Neutral 800</h3>
+    <p class="token-list__desc">Very dark neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-800</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-800" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-700);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-700">#4a4d4f</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-700">Color Neutral 700</h3>
+    <p class="token-list__desc">Dark neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-700</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-700" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-600);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-600">#62666a</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-600">Color Neutral 600</h3>
+    <p class="token-list__desc">Medium-dark neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-600</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-600" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-500);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-500">#797c7f</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-500">Color Neutral 500</h3>
+    <p class="token-list__desc">Mid-range neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-500</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-500" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-400);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-400">#909395</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-400">Color Neutral 400</h3>
+    <p class="token-list__desc">Medium-light neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-400</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-400" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-300);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-300">#a7a9ab</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-300">Color Neutral 300</h3>
+    <p class="token-list__desc">Soft gray neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-300</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-300" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-200);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-200">#bec0c1</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-200">Color Neutral 200</h3>
+    <p class="token-list__desc">Pale gray neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-200</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-200" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-100);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-100">#d0d0ce</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-100">Color Neutral 100</h3>
+    <p class="token-list__desc">Very light gray neutral</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-100</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-100" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-50);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-50">#ededed</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-50">Color Neutral 50</h3>
+    <p class="token-list__desc">Soft off-white neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-50</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-50" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-neutral-10);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-neutral-10">#f6f6f6</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-neutral-10">Color Neutral 10</h3>
+    <p class="token-list__desc">Lightest visible neutral.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-neutral-10</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-neutral-10" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+<h2 id="color-transparency">Color — Transparency</h2>
+<p>Black and white overlays at ten opacity steps. Use for scrims, hover states, and layered surfaces. For purpose-driven colors, see <a href="/tokens/#semantic">semantic color tokens</a>.</p>
+<div class="token-list">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-50);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-50">#ffffff</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-50">Color Black Transparent 50</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-50</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-50" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-100);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-100">#000000</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-100">Color Black Transparent 100</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-100</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-100" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-200);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-200">hsla(0, 0%, 100%, 0)</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-200">Color Black Transparent 200</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-200</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-200" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-300);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-300">#a7a9ab</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-300">Color Black Transparent 300</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-300</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-300" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-400);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-400">#909395</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-400">Color Black Transparent 400</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-400</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-400" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-500);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-500">#797C7F</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-500">Color Black Transparent 500</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-500</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-500" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-600);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-600">#62666a</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-600">Color Black Transparent 600</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-600</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-600" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-700);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-700">#4a4d4f</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-700">Color Black Transparent 700</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-700</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-700" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-800);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-800">#323435</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-800">Color Black Transparent 800</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-800</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-800" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch " style="background-color: var(--nys-color-black-transparent-900);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-black-transparent-900">#1b1b1b</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-black-transparent-900">Color Black Transparent 900</h3>
+    <p class="token-list__desc">A black transparent overlay to be used with light backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-black-transparent-900</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-black-transparent-900" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-50);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-50">#ffffff</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-50">Color White Transparent 50</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-50</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-50" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-100);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-100">#000000</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-100">Color White Transparent 100</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-100</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-100" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-200);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-200">hsla(0, 0%, 100%, 0)</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-200">Color White Transparent 200</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-200</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-200" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-300);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-300">#a7a9ab</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-300">Color White Transparent 300</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-300</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-300" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-400);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-400">#909395</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-400">Color White Transparent 400</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-400</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-400" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-500);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-500">#797c7f</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-500">Color White Transparent 500</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-500</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-500" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-600);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-600">#62666a</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-600">Color White Transparent 600</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-600</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-600" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-700);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-700">#4a4d4f</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-700">Color White Transparent 700</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-700</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-700" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-800);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-800">#323435</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-800">Color White Transparent 800</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-800</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-800" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__swatch--checkerboard">
+        <div class="token-list__swatch  token-list__swatch--white-border" style="background-color: var(--nys-color-white-transparent-900);">
+          
+        </div>
+      </div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-color-white-transparent-900">#1b1b1b</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="color-white-transparent-900">Color White Transparent 900</h3>
+    <p class="token-list__desc">A white transparent overlay to be used with dark backgrounds.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-color-white-transparent-900</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-color-white-transparent-900" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+</div>
+
+
+<h2 id="font-size">Font Size</h2>
+<p>The raw type scale from <code>2xs</code> to <code>9xl</code>. Semantic tokens map to these — see <a href="/tokens/typography/#font-size">semantic font sizes</a>.</p>
+<div class="token-list">
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-2xs);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-2xs"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-2xs">Font Size, 2XS</h3>
+    <p class="token-list__desc">Extra-extra-small font size. Typically used for fine print or disclaimers. → 10px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-2xs</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-2xs" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-xs);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-xs"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-xs">Font Size, XS</h3>
+    <p class="token-list__desc">Extra-small font size. Used for less prominent labels or captions. → 12px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-xs</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-xs" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-sm);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-sm"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-sm">Font Size, SM</h3>
+    <p class="token-list__desc">Small font size. Commonly used for secondary text or labels. → 14px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-sm</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-sm" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-md);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-md"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-md">Font Size, MD</h3>
+    <p class="token-list__desc">Medium font size. Default body text size. → 16px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-md</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-md" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-lg);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-lg"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-lg">Font Size, LG</h3>
+    <p class="token-list__desc">Large font size. Used for subheadings or larger labels. → 18px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-lg</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-lg" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-xl">Font Size, XL</h3>
+    <p class="token-list__desc">Extra-large font size. Used for headings or standout elements. → 20px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-2xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-2xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-2xl">Font Size, 2XL</h3>
+    <p class="token-list__desc">Double extra-large font size. Commonly used for secondary headings. → 22px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-2xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-2xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-3xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-3xl">Font Size, 3XL</h3>
+    <p class="token-list__desc">Triple extra-large font size. Used for primary headings or key text. → 24px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-3xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-3xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-4xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-4xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-4xl">Font Size, 4XL</h3>
+    <p class="token-list__desc">Quadruple extra-large font size. Typically used for prominent headlines. → 28px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-4xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-4xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-5xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-5xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-5xl">Font Size, 5XL</h3>
+    <p class="token-list__desc">Quintuple extra-large font size. Reserved for key marketing or hero sections. → 32px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-5xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-5xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-6xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-6xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-6xl">Font Size, 6XL</h3>
+    <p class="token-list__desc">Six times extra-large font size. Used for impactful hero text. → 36px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-6xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-6xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-7xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-7xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-7xl">Font Size, 7XL</h3>
+    <p class="token-list__desc">Seven times extra-large font size. Highly prominent text. → 40px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-7xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-7xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-8xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-8xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-8xl">Font Size, 8XL</h3>
+    <p class="token-list__desc">Eight times extra-large font size. Typically for titles or splash content. → 44px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-8xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-8xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-size: var(--nys-font-size-9xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-size-9xl"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-size-9xl">Font Size, 9XL</h3>
+    <p class="token-list__desc">Nine times extra-large font size. Maximum size for hero content. → 50px</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-size-9xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-size-9xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+<h2 id="font-family">Font Family</h2>
+<p>The base font stacks. Use <a href="/tokens/typography/#font-family">semantic font families</a> (body, heading, display, ui) instead of referencing these directly.</p>
+<div class="token-list">
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__family" style="font-family: var(--nys-font-family-sans); font-size: var(--nys-font-size-9xl)">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-family-sans"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-family-sans">Font Family, Sans</h3>
+    <p class="token-list__desc">Primary brand font, used for content, headers, and UI text. → Proxima Nova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-family-sans</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-family-sans" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__family" style="font-family: var(--nys-font-family-agency); font-size: var(--nys-font-size-9xl)">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-family-agency"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-family-agency">Font Family, Agency</h3>
+    <p class="token-list__desc">Brand font used only for agency, program, and initiative titles. → D Sari, Arial, sans-serif</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-family-agency</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-family-agency" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__family" style="font-family: var(--nys-font-family-alt); font-size: var(--nys-font-size-9xl)">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-family-alt"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-family-alternate">Font Family, Alternate</h3>
+    <p class="token-list__desc">Alternate brand font, used sparingly for accent in public-facing sites. → Oswald, Arial, sans-serif</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-family-alt</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-family-alt" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__family" style="font-family: var(--nys-font-family-monospace); font-size: var(--nys-font-size-9xl)">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-family-monospace"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-family-monospace">Font Family, Monospace</h3>
+    <p class="token-list__desc">Monospace font stack for code and preformatted text.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-family-monospace</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-family-monospace" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__family" style="font-family: var(--nys-font-family-serif); font-size: var(--nys-font-size-9xl)">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-family-serif"></code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-family-serif">Font Family, Serif</h3>
+    <p class="token-list__desc">Serif font stack for traditional or editorial contexts.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-family-serif</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-family-serif" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+</div>
+
+<h2 id="font-weight">Font Weight</h2>
+<p>Nine weight values from thin (100) to black (900).</p>
+<div class="token-list">
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-thin); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-thin">100</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-thin">Font Weight, Thin</h3>
+    <p class="token-list__desc">Thinnest available weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-thin</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-thin" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-extralight); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-extralight">200</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-extralight">Font Weight, Extralight</h3>
+    <p class="token-list__desc">Extra-light weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-extralight</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-extralight" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-light); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-light">300</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-light">Font Weight, Light</h3>
+    <p class="token-list__desc">Light weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-light</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-light" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-regular); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-regular">400</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-regular">Font Weight, Regular</h3>
+    <p class="token-list__desc">Regular (default) weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-regular</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-regular" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-medium); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-medium">500</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-medium">Font Weight, Medium</h3>
+    <p class="token-list__desc">Medium weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-medium</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-medium" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-semibold); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-semibold">600</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-semibold">Font Weight, Semibold</h3>
+    <p class="token-list__desc">Semi-bold weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-semibold</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-semibold" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-bold); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-bold">700</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-bold">Font Weight, Bold</h3>
+    <p class="token-list__desc">Bold weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-bold</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-bold" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-extrabold); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-extrabold">800</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-extrabold">Font Weight, Extrabold</h3>
+    <p class="token-list__desc">Extra-bold weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-extrabold</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-extrabold" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="font-weight: var(--nys-font-weight-black); font-size: var(--nys-font-size-3xl);">Aa</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-weight-black">900</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="font-weight-black">Font Weight, Black</h3>
+    <p class="token-list__desc">Heaviest available weight.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-weight-black</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-weight-black" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+</div>
+
+<h2 id="line-height">Line Height</h2>
+<p>The raw line height scale. See <a href="/tokens/typography/#line-height">semantic line heights</a> for role-based values.</p>
+<div class="token-list">
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-2xs); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-2xs">18px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-2xs">Line Height, 2XS</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-2xs</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-2xs" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-xs); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-xs">21px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-xs">Line Height, XS</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-xs</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-xs" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-sm); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-sm">22px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-sm">Line Height, SM</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-sm</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-sm" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-md); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-md">25px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-md">Line Height, MD</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-md</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-md" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-lg); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-lg">28px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-lg">Line Height, LG</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-lg</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-lg" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-xl); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-xl">31px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-xl">Line Height, XL</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-2xl); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-2xl">39px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-2xl">Line Height, 2XL</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-2xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-2xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-3xl); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-3xl">45px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-3xl">Line Height, 3XL</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-3xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-3xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="line-height: var(--nys-font-lineheight-4xl); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-lineheight-4xl">57px</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="line-height-4xl">Line Height, 4XL</h3>
+    <p class="token-list__desc">Primitive line height value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-lineheight-4xl</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-lineheight-4xl" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+<h2 id="letter-spacing">Letter Spacing</h2>
+<p>The raw letter spacing scale including negative values for tighter tracking on large display text. See <a href="/tokens/typography/#letter-spacing">semantic letter spacing</a> for role-based values.</p>
+<div class="token-list">
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-0); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-0">0rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-0">Letter Spacing, 0</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-0</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-0" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-100); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-100">.001rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-100">Letter Spacing, 100</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-100</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-100" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-200); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-200">.001rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-200">Letter Spacing, 200</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-200</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-200" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-300); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-300">.002rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-300">Letter Spacing, 300</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-300</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-300" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-400); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-400">.003rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-400">Letter Spacing, 400</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-400</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-400" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-500); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-500">.003rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-500">Letter Spacing, 500</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-500</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-500" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-600); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-600">.004rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-600">Letter Spacing, 600</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-600</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-600" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-negative-100); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-negative-100">-.01rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-negative-100">Letter Spacing, Negative-100</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-negative-100</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-negative-100" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+    <div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    
+      <div class="token-list__type" style="letter-spacing: var(--nys-font-letterspacing-negative-200); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    
+    <pre data-no-copy=""><code class="token-list__raw --nys-font-letterspacing-negative-200">-.02rem</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name" id="letter-spacing-negative-200">Letter Spacing, Negative-200</h3>
+    <p class="token-list__desc">Primitive letter spacing value.</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy=""><code class="token-list__var">--nys-font-letterspacing-negative-200</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button class="copy-btn" id="copy-nys-font-letterspacing-negative-200" variant="ghost" size="sm" prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+<script>
+document.querySelectorAll("[id^='copy-']").forEach(button => {
+  button.addEventListener("click", function() {
+    const tokenName = this.closest(".token-list__info").querySelector(".token-list__var").textContent.trim();
+    const copyValue = `var(${tokenName})`;
+
+    const wrapper = this.closest(".copy-button-wrapper");
+    const tooltip = wrapper.querySelector(".copy-tooltip");
+
+    navigator.clipboard.writeText(copyValue).then(() => {
+      this.setAttribute("prefixIcon", "check");
+      tooltip.innerText = "Copied!";
+      tooltip.classList.add("copied");
+
+      setTimeout(() => {
+        this.setAttribute("prefixIcon", "content_copy");
+        tooltip.innerText = "Copy";
+        tooltip.classList.remove("copied");
+      }, 1500);
+    });
+  });
+});
+</script>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/tokens/primitives.njk">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: May 20, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>
