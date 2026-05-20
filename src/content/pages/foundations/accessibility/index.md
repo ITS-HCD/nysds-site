@@ -335,7 +335,7 @@ navOrder: 2
   }
 
   .pour-test {
-    color: var(--nys-color-neutral-400);
+    color: var(--nys-color-neutral-600);
   }
 
   .a11y-features {
