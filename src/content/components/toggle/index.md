@@ -91,7 +91,6 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-
 ### Sizes
   {% set preview %}<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
@@ -148,53 +147,64 @@ Descriptions can be provided either through the `description` prop or via the `s
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>checked</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>noIcon</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"sm"</code> , <code>"md"</code></td>
+      <td><code>"md"</code></td>
     </tr>
     <tr>
       <td><code>value</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String , <code>null</code></td>
+      <td><code>null</code></td>
     </tr>
   </table>
 </nys-table>
 
 
 ### Form Prop
-  The form attribute associates the `nys-toggle` component with a specific `<form>` element, regardless of its location on the page. This ensures that the toggle's state is included in the form submission, whether it is inside the `<form>` element or outside it.
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 
