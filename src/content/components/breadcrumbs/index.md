@@ -8,6 +8,7 @@ image_header: /assets/img/components/breadcrumbs-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=24282-39250
 
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -21,6 +22,7 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 {% block example %}
 {% set preview %}
 <nys-breadcrumbs>
+
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -38,31 +40,31 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 
 ### When to use this component
 
-  - For pages in hierarchies with more than 2 levels. The breadcrumb should be displayed starting at the level 2 page and persist on all child pages in the hierarchy. For example, if a level 2 page has child pages, all pages starting at that level 2 page would need a breadcrumb.
-  - Users may land on a page from search or external links and need context.
-  - Users may want to go back to a broader category or section.
+- For pages in hierarchies with more than 2 levels. The breadcrumb should be displayed starting at the level 2 page and persist on all child pages in the hierarchy. For example, if a level 2 page has child pages, all pages starting at that level 2 page would need a breadcrumb.
+- Users may land on a page from search or external links and need context.
+- Users may want to go back to a broader category or section.
 
 ### When to consider something else
 
-  - Top-level pages (e.g., homepage).
-  - Pages with only one or two levels and no deeper hierarchy.
-  - Linear flows (e.g., multi-step forms or processes), use a stepper instead.
-  - When breadcrumbs do not add meaningful context or navigation value.
+- Top-level pages (e.g., homepage).
+- Pages with only one or two levels and no deeper hierarchy.
+- Linear flows (e.g., multi-step forms or processes), use a stepper instead.
+- When breadcrumbs do not add meaningful context or navigation value.
   {% endblock %}
 
 {% block usagedo %}
 
-  - Place breadcrumb below the header and above the main content.
-  - For the home page of a site, do not use icons or just "Home". This ensures that the main site home page is differentiated from other types of landing pages on the site (e.g., “myBenefits Home” instead of just “Home”).
-  - Breadcrumbs should show the site hierarchy, not the path a user took.
+- Place breadcrumb below the header and above the main content.
+- For the home page of a site, do not use icons or just "Home". This ensures that the main site home page is differentiated from other types of landing pages on the site (e.g., “myBenefits Home” instead of just “Home”).
+- Breadcrumbs should show the site hierarchy, not the path a user took.
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't make the current page clickable.
-  - Don't use breadcrumbs as the only navigation method.
-  - Don't use breadcrumbs for sequential processes (wizards, forms).
+- Don't make the current page clickable.
+- Don't use breadcrumbs as the only navigation method.
+- Don't use breadcrumbs for sequential processes (wizards, forms).
   {% endblock %}
 
 {% block accessibility %}
@@ -86,6 +88,7 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 
 {% set preview %}
 <nys-breadcrumbs>
+
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -103,6 +106,7 @@ Add the `backToParent` prop to collapse the full breadcrumb trail into a single 
 
 {% set preview %}
 <nys-breadcrumbs backToParent>
+
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/government">Government</a></li>
@@ -122,11 +126,12 @@ Add the `backToParent` prop to collapse the full breadcrumb trail into a single 
 
 Set the `size` prop to adjust text size. Available sizes:
 
-  - `md`: Default size (16px)
-  - `sm`: Smaller text (14px)
+- `md`: Default size (16px)
+- `sm`: Smaller text (14px)
 
 {% set preview %}
 <nys-breadcrumbs size="sm">
+
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/government">Government</a></li>
@@ -144,6 +149,7 @@ Add the `backgroundBar` prop to display breadcrumbs on a light gray background b
 
 {% set preview %}
 <nys-breadcrumbs backgroundBar>
+
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -156,10 +162,12 @@ Add the `backgroundBar` prop to display breadcrumbs on a light gray background b
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
+
 Add the `disabled` prop to disable all links in the breadcrumbs.
 
 {% set preview %}
 <nys-breadcrumbs disabled>
+
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -238,7 +246,7 @@ You can listen to these events using JavaScript:
 const breadcrumbs = document.querySelector('nys-breadcrumbs');
 // Listen for the 'nys-expand' event
 breadcrumbs.addEventListener("nys-expand", () => {
-	console.log("Breadcrumbs expanded");
+console.log("Breadcrumbs expanded");
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

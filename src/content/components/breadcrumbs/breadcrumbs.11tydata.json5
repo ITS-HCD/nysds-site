@@ -1,0 +1,232 @@
+/**
+ * --------------------------------------------------------------------+
+ * JSON5 supports comments and much more <https://json5.org/>          +
+ * Values for `interactions.status` must be one of these combinations: +
+ * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
+ * Comment top-level members to prevent their corresponding njk blocks +
+ * from rendering. Members that may be commented are exactly these:    +
+ * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
+ * zoom, disabilities.                                                 +
+ * --------------------------------------------------------------------+
+ */
+{
+    "pattern": "Breadcrumbs",
+    "tests": {
+        "total": 22,
+        "pass": 22,
+        "fail": 0,
+        "toDo": 0
+    },
+
+    "keyboard": {
+        "interactions": [
+            {
+                "scenario": "WHEN I use the <kbd>tab</kbd> key to move focus to a link",
+                "requirements": ["THEN I see focus is strongly visually indicated on that link"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I use the <kbd>enter</kbd> key to activate a link",
+                "requirements": ["THEN I see focus is strongly visually indicated on that button"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN the Breadcrumb is in a collapsed state and I use the <kbd>tab</kbd> key to move focus to the revealer button",
+                "requirements": ["THEN I see focus is strongly visually indicated on that button"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I use the <kbd>space</kbd> or <kbd>enter</kbd> key to activate the button",
+                "requirements": ["THEN I see intermediate links appear and focus is strongly visually indicated on the first of them"],
+                "status": ["passes", "success"]
+            }
+        ]
+    },
+
+    "mouse": {
+        "interactions": [
+            {
+                "scenario": "WHEN I use a mouse and I hover over a link",
+                "requirements": ["THEN I see hover is strongly visually indicated"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I focus a link without activating it (mouse down, slide off, mouse up)",
+                "requirements": ["THEN I see focus is strongly visually indicated and the link is <strong>not</strong> followed"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN the breadcrumb is collapsed and I focus the revealer button without activating it (mouse down, slide off, mouse up)",
+                "requirements": ["THEN I see focus is strongly visually indicated and intermediate links are <strong>not</strong> shown"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I click a link",
+                "requirements": ["THEN I see my browser navigates"],
+                "status": ["passes", "success"]
+            },
+        ]
+    },
+
+    "screenReader": {
+        "interactions": [
+            {
+                "scenario": "WHEN I use a desktop screen reader and I use the <kbd>tab</kbd> key to move focus to, or an <kbd>arrow</kbd> key to navigate into, a Breadcrumb component",
+                "requirements": ["THEN I hear I am within a navigation landmark that is unique on this page","THEN I hear a link identify as a link"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I use the <kbd>tab</kbd> or <kbd>arrow</kbd> keys to navigate between Breadcrumb items",
+                "requirements": ["THEN I hear link names correspond to their destinations"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I use the <kbd>tab</kbd> or <kbd>arrow</kbd> keys to navigate to the final Breadcrumb item",
+                "requirements": ["THEN I hear either the plain text name of the current page or a link to the parent page","<mark>And if I hear it is a link to the current page</mark>","THEN I hear it identify as <q>current</q>"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I use the <kbd>tab</kbd> or <kbd>arrow</kbd> keys to navigate to the revealer button",
+                "requirements": ["THEN I hear the button identify as <q>show more links</q>"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN focus is on the revealer button and I activate it with the <kbd>Space</kbd> or <kbd>enter</kbd> keys",
+                "requirements": ["THEN focus is moved to the first revealed link and I hear its name"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I use the <kbd>enter</kbd> key to activate a link",
+                "requirements": ["THEN I hear my browser navigates"],
+                "status": ["passes", "success"]
+            }
+        ]
+    },
+
+    "screenReaderMobile": {
+        "interactions": [
+            {
+                "scenario": "WHEN I use a screen reader and I swipe up or down to focus on a link",
+                "requirements": ["THEN I hear the component is discoverable with screen reader shortcuts as a navigation landmark","THEN I hear the link names correspond to their destinations"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I double-tap with a link in focus",
+                "requirements": ["THEN I hear my browser navigates"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I swipe left or right to focus on the revealer button",
+                "requirements": ["THEN I hear the button announces as <q>show more links</q>"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I double-tap with the revealer button in focus",
+                "requirements": ["THEN I hear focus has moved to the first revealed link and its name"],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN I swipe left or right to focus on the final Breadcrumb item",
+                "requirements": ["THEN I hear either the plain text name of the current page or a link to the parent page","<mark>And if I hear it is a link to the current page</mark>","THEN I hear it identify as <q>current</q>"],
+                "status": ["passes", "success"]
+            }
+        ]
+    },
+
+    "voice": {
+        "interactions": [
+            {
+                "scenario": "WHEN I use a voice control system and I command, <q>Click <em>link text</em></q>",
+                "requirements": [
+                    "<mark>And if that <em>link text</em> is recognized as unique, or identified via a multiple match workflow</mark>",
+                    "THEN I see my browser navigates"
+                ],
+                "status": ["passes", "success"]
+            },
+            {
+                "scenario": "WHEN the Breadcrumb is collapsed, and there is a visible revealer button, and I activate that button",
+                "requirements": ["THEN I see the button disappears","THEN I see one or more intermediate links appear","THEN I see focus is strongly indicated on the first intermediate link"],
+                "status": ["passes", "success"]
+            },
+        ]
+    },
+
+    "zoom": {
+        "interactions": [
+            {
+                "scenario": "WHEN a Breadcrumb is in view at the top and start reading order of my browser, and I magnify the screen to 200%",
+                "requirements": [
+                    "THEN I see links (and if present, a revealer button) scale and are readable and legible",
+                    "<mark>And if the list of links exceeds horizontal space either on page load or after activating the revealer button</mark>",
+                    "THEN I see links wrap",
+                    "<mark>And if scrolling is necessary</mark>",
+                    "THEN I see scrolling is in one dimension (preferably vertical)"
+                ],
+                "status": ["passes", "success"]
+            },
+        ]
+    },
+
+    "disabilities": [
+        {
+            "type": "blindness",
+            "criteria": [
+                {
+                    "description": "Name, role, state is documented",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#name-role-value",
+                    "sc": "4.1.2 A"
+                },
+                {
+                    "description": "Meets criteria across platforms, devices and viewports",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#name-role-value",
+                    "sc": "Principle 4 - Robust"
+                }
+            ]
+        },
+        {
+            "type": "cognition",
+            "criteria": [
+                {
+                    "description": "Users' adjustments to text spacing do not result in loss of content or functionality",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#text-spacing",
+                    "sc": "1.4.12 AA"
+                }
+            ]
+        },
+        {
+            "type": "low vision",
+            "criteria": [
+                {
+                    "description": "Text can resize up to 200% with no loss of information",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#resize-text",
+                    "sc": "1.4.4 AA"
+                },
+                {
+                    "description": "Text has a 4.5:1 minimum contrast ratio",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum",
+                    "sc": "1.4.3 AA"
+                }
+            ]
+        },
+        {
+            "type": "motor",
+            "criteria": [
+                {
+                    "description": "The focus indication is visible (in some way)",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#focus-visible",
+                    "sc": "2.4.7 AA"
+                },
+                {
+                    "description": "The focus indication has a 3:1 minimum contrast ratio against default and adjacent elements",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance",
+                    "sc": "2.4.13 AAA"
+                },
+                {
+                    "description": "The focus indication has a minimum area equal to the width of the element and 2px in height",
+                    "uri": "https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance",
+                    "sc": "2.4.13 AAA"
+                }
+            ]
+        }
+    ]
+}
