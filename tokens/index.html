@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-05-20T15:26:28.436Z -->
+    <!-- Latest Build: 2026-05-20T19:01:06.921Z -->
   </head>
   
   <body class="single-page page-tokens section-tokens no-heading-links">
@@ -2267,16 +2267,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // This requires a slight delay to ensure the new styles are applied before reading the computed style from the DOM again.
     // DRAGONS: Remove this delay and it will read the default theme value only.
-    setTimeout(() => {
       for (let colorVar of themeColors) {
-        let rawcolorval = document.querySelectorAll(`code.${colorVar}`);
-        let computedColor = window.getComputedStyle(document.querySelector('.token-list__swatch')).getPropertyValue(colorVar);
-
-        rawcolorval.forEach(el => {
-          el.innerText = computedColor;
+        // Find each swatch that uses this variable via its inline style. Reading getPropertyValue() on a CSS
+        // custom property returns the raw var() string, not the resolved hex — use backgroundColor instead,
+        // which is always fully resolved by the time getComputedStyle is called.
+        document.querySelectorAll(`.token-list__swatch[style*="var(${colorVar})"]`).forEach(swatch => {
+          const codeEl = swatch.closest('.token-list__example')?.querySelector('code.token-list__raw');
+          if (!codeEl) return;
+          const rgb = getComputedStyle(swatch).backgroundColor;
+          const m = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+          if (m) codeEl.innerText = '#' + [m[1], m[2], m[3]].map(n => (+n).toString(16).padStart(2, '0')).join('');
         });
       }
-    }, 500);
   });
 });
 </script>
