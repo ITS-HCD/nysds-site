@@ -255,50 +255,62 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>dismissible</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>duration</code></td>
       <td>integer</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <td><code>heading</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>icon</code></td>
       <td>String (<code>&lt;nys-icon&gt; name</code>)</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>primaryAction</code></td>
       <td>URL</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>primaryLabel</code></td>
       <td>String</td>
+      <td><code>"Learn more"</code></td>
     </tr>
     <tr>
       <td><code>secondaryAction</code></td>
       <td>URL</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>secondaryLabel</code></td>
       <td>String</td>
+      <td><code>"Dismiss"</code></td>
     </tr>
     <tr>
       <td><code>text</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>type</code></td>
       <td><code>"base"</code> , <code>"info"</code> , <code>"success"</code> , <code>"warning"</code> , <code>"danger"</code> , <code>"emergency"</code></td>
+      <td><code>"base"</code></td>
     </tr>
   </table>
 </nys-table>
