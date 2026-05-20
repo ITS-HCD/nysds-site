@@ -434,7 +434,7 @@ main[role="main"] {
 /* Media */
 
 .card__media {
-    margin-bottom: var(--nys-space-100);
+    margin-bottom: var(--nys-space-200);
 }
 
 .card__media--thin {
