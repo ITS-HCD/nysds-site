@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@nysds/components": "^1.18.1",
-    "@nysds/styles": "^1.18.1"
+    "@nysds/styles": "^1.18.1",
+    "svgo": "^4.0.1"
   }
 }
