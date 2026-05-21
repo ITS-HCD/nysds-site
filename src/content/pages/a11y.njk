@@ -1,18 +1,438 @@
 ---
 permalink: /a11y/
-title: "The New York State Design System"
+title: Accessibility 
 description: "The New York State Design System makes it easier to build accessible, mobile-friendly applications and websites for New York State."
 crawl: false
 site_nav: false
 heading_links: false
 ---
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <meta charset="utf-8" />
-  <title>Redirecting&hellip;</title>
-  <link rel="canonical" href="/foundations/accessibility/" />
-  <meta http-equiv="refresh" content="0; url=/foundations/accessibility/" />
-  <meta name="robots" content="noindex" />
-  <a href="/foundations/accessibility">Click here if you are not redirected.</a>
-</html>
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<!-- Home Hero -->
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <svg width="150" height="13" viewBox="0 0 209 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="a11y-color-mark" role="presentation">
+        <rect x="104.33" width="52.1654" height="12.9576" fill="#FACE00"/>
+        <rect x="156.498" width="52.1654" height="12.9576" fill="#0E324F"/>
+        <rect x="52.166" width="52.1654" height="12.9576" fill="#004DD1"/>
+        <rect width="52.1654" height="12.9576" fill="#A2350A"/>
+      </svg>
+      <h1 aria-label="Be an ally">Be<span class="letter--tight"> </span>an<span class="letter--tight"> </span><span class="heavy"><span class="letter-not-so--tight">a1</span>1y.</span></h1>
+      <p style="margin-left: 5px;"><span class="heavy">a11y</span> is short for <span class="heavy">accessibility</span>.<br>
+      There are <span class="heavy">11 letters</span> between the <span class="non-breaking-space">a and y.</span></p>
+    </div>
+    <div class="hero__media">
+      <img src="{{ '/assets/i/2026/gaad-2026/a11y-banner.png' | url }}" style="width: 80%;" alt="A 4-pane image. Clockwise from top left: a person sitting behind a laptop with an office backscape. A woman holding a phone in her hand with a city backscape behind her. A young child with a hearing device in his right ear with a classroom backkscape. A woman standing in front of a blue backdrop holding up the sign language sign for the letter R.">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="nys-padding-t-800">
+  <div class="nys-grid-container-widescreen">
+    <div id="card-page-container" aria-label="Here are three accessibility facts" aria-live="polite" aria-atomic="true">
+      <div class="card-page" id="card-page-1" style="display: block;">
+        <div class="nys-grid-row nys-grid-gap nys-flex-justify-center">
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-7-80.jpg" style="clip-path: polygon(0% 11%, 100% 9%, 96% 86%, 47% 83%, 47% 93%, 14% 96%, 13% 82%, 2% 81%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">Champions</span> of <span class="heavy">inclusion.</span></h2>
+                <p>The ITS Accessibility Team partners with dedicated NYS teams to make digital services accessible for every New Yorker.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-8-80.jpg" style="clip-path: polygon(5% 7%, 96% 5%, 94% 91%, 6% 84%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">Brains</span> work <span class="heavy">differently.</span></h2>
+                <p>Words and design that are clear and simple work better for everyone.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-9-80.jpg" style="clip-path: polygon(8% 12%, 95% 5%, 95% 92%, 6% 92%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">Accessibility</span> is a <span class="heavy">right.</span></h2>
+                <p>When we build digital services that are inclusive, we effectively serve all New Yorkers with compassion, dignity, and equity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-page" id="card-page-2" hidden>
+        <div class="nys-grid-row nys-grid-gap nys-flex-justify-center">
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-4-80.jpg" style="clip-path: polygon(7% 7%, 93% 5%, 91% 95%, 5% 87%)" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">a11y</span> is short for <span class="heavy">accessibility</span>.</h2>
+                <p>There are 11 letters between the <span class="non-breaking-space"><span class="heavy">a</span> and <span class="heavy">y</span>.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-5-80.jpg" style="clip-path: polygon(3% 0%, 96% 3%, 94% 92%, 5% 99%)" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">Inclusion</span> isn’t optional.</h2>
+                <p>Over 1 billion people globally live with a disability, including <span class="heavy">nearly 1 in 4 New Yorkers.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-6-80.jpg" style="clip-path: polygon(1% 10%, 98% 8%, 99% 98%, 0% 96%)" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2>Compliance matters. <span class="heavy">People matter more.</span></h2>
+                <p>Helping New Yorkers access public services is more than just meeting legal requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-page" id="card-page-3" hidden>
+        <div class="nys-grid-row nys-grid-gap nys-flex-justify-center">
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-1-80.jpg" style="clip-path: polygon(7% 5%, 98% 10%, 97% 93%, 4% 95%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">Sound</span> isn’t always <span class="heavy">heard.</span></h2>
+                <p>Captions and transcripts make content work for everyone.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-2-80.jpg" style="clip-path: polygon(2% 8%, 95% 3%, 97% 95%, 2% 94%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2><span class="heavy">Accessibility</span> should be <span class="heavy">everywhere.</span></h2>
+                <p>Accessible design is usable by everyone — regardless of ability, age, or circumstance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="a11y-card nys-tablet:nys-grid-col-7 nys-desktop:nys-grid-col-3 nys-display-flex nys-flex-column nys-margin-b-200">
+            <img src="/assets/i/2026/gaad-2026/a11y-grid-artboard-3-80.jpg" style="clip-path: polygon(8% 7%, 93% 6%, 94% 92%, 6% 86%);" alt="">
+            <div class="nys-grid-row">
+              <div class="nys-grid-col-12">
+                <h2>Not everyone <span class="heavy">sees your site.</span></h2>
+                <p>Some New Yorkers use screen readers, magnifiers, or high-contrast mode.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nys-grid-col-12" style="text-align: center;">
+        <nys-button variant="text" label="Show three different accessibility facts" onclick="showRandomDiv(); return false;" suffixIcon="refresh" size="lg"></nys-button>
+      </div>
+    </div>
+
+
+    <div class="nys-grid-row nys-flex-justify-center" style="margin-bottom: var(--nys-space-400);">
+      <div class="nys-grid-col-12 nys-desktop:nys-grid-col-9" style="margin-top: var(--nys-space-800);">
+        <div class="card card--horizontal">
+            <div class="card__inner">
+                <div class="card__media card__media--thin">
+                    <img src="/assets/i/2026/gaad-2026/gaad-a11y-cta.svg"  alt=""/>
+                </div>
+                <div class="card__content">
+                    <div class="card__title">
+                        Learn how NYS uses design to improve accessibility
+                    </div>
+                    <div class="card__desc">
+                        Get up to speed on accessibility basics and discover how the NYS Design System supports state agencies in building websites and apps for people with disabilities.
+                        <p></p>
+                        <nys-button href="/foundations/accessibility/" label="Go to accessibility foundations" variant="text" suffixIcon="arrow_forward"></nys-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="poster-deck-wrapper color-theme--weaker nys-margin-t-800">
+      <div class="nys-grid-container-widescreen">
+        <div class="nys-grid-row nys-flex-justify-center">
+          <div class="nys-grid-col-12 nys-mobile-lg:nys-grid-col-9">
+            <h2>Spread the word about accessibility</h2>
+            <p>Be an a11y. Download these letter-sized posters and display them as a reminder to prioritize accessibility in your next NYS project. Download 1 of 5 sets or the complete collection as a PDF below.</p>
+          </div>
+        </div>
+        <div class="nys-grid-row nys-flex-justify-center">
+          <div class="nys-grid-col-12" style="margin-bottom: var(--nys-space-800);">
+            <div class="poster-deck">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-162.jpg' | url }}" alt="poster with red background, and dark blue icons at the top. Icons represent different disabilities, including an eye, an ear, a head, and a hand. The text reads: Be an a11y. Accessible design is better for everyone">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-163.jpg' | url }}" alt="poster with a pink background and pink icons on top of a dark blue background. Icons represent different disabilities, including an eye, an ear, a head, and a hand.">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-164.jpg' | url }}" alt="Poster with a dark yellow background with a light yellow set of icons over top. Icons represent different disabilities, including an eye, an ear, a head, and a hand. There is a large hand making a peace sign with a black outline. The hand says a11y at the bottom">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-165.jpg' | url }}" alt="poster with a woman standing in front of a yellow background with a white slanted box at the top. The woman standing in front is wearing a yellow shirt and is making the sign for: help. The text at the top says Be an a11y. Accessible design is better for everyone.">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-166.jpg' | url }}" alt="poster with a dark blue background with lighter blue icons over it. Icons represent different disabilities, including an eye, an ear, a head, and a hand. The text reads: Be an a11y. Accessible design is better for everyone. a 1 1 y is short for accessibility. (There are 11 letters between the a and y)">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-167.jpg' | url }}" alt="poster with a woman sitting in a wheelchair in front of a purple background with a white slanted box at the bottom. The woman is wearing a green shirt and grey pants. The text at the top says Be an a11y. Accessible design is better for everyone">
+            </div>
+            <div class="poster-fan">
+              <img src="{{ '/assets/i/2026/gaad-2026/poster-fan-flat.jpg' | url }}" alt="a fanned out display of posters for the GAAD celebration">
+            </div>
+            <div style="text-align: center;">
+              <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-full-poster-set.pdf' | url }}" label="Download the full set of posters" size="lg" suffixIcon="download"></nys-button>
+            </div>
+          </div>
+        </div>
+        <div class="nys-grid-row nys-flex-justify-center nys-grid-gap nys-grid-gap-600 full-size-posters">
+          <div class="nys-grid-col-9 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            <img src="{{ '/assets/i/2026/gaad-2026/poster-168.jpg' | url }}" alt="poster with a dark blue background with lighter blue icons over it. A yellow angled block at the bottom. Icons represent different disabilities, including an eye, an ear, a head, and a hand. The text reads: Be an a11y. Accessible design is better for everyone">
+            <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-icon-poster-set.pdf' | url }}" label="Download icon set" variant="outline" suffixIcon="download"></nys-button>
+          </div>
+          <div class="nys-grid-col-9 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            <img src="{{ '/assets/i/2026/gaad-2026/poster-169.jpg' | url }}" alt="poster with a man standing in front of a yellow background with a white slanted box at the bottom. The man standing in front is wearing a red shirt and is making the sign for: interpret. The text at the top says Be an a11y. Accessible design is better for everyone. it also includes a QR code to the website design system dot ny dot gov slasy a 1 1 y">
+            <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-bliss-poster-set.pdf' | url }}" label="Download bliss set" variant="outline" suffixIcon="download"></nys-button>
+          </div>
+          <div class="nys-grid-col-9 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            <img src="{{ '/assets/i/2026/gaad-2026/poster-170.jpg' | url }}"  alt="poster with a light blue background and icons on top of a dark blue background. Icons represent different disabilities, including an eye, an ear, a head, and a hand. there is a logo at the bottom and a QR code that takes you to design system dot ny dot gov slasy a 1 1 y">
+            <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-graphic-poster-set.pdf' | url }}" label="Download graphic set" variant="outline" suffixIcon="download"></nys-button>
+          </div>
+          <div class="responsive-grid-break"></div>
+          <div class="nys-grid-col-9 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            <img src="{{ '/assets/i/2026/gaad-2026/poster-171.jpg' | url }}"  alt="poster with a dark blue background with lighter blue icons over it. Icons represent different disabilities, including an eye, an ear, a head, and a hand. The text reads: not everyone sees your site. Some New Yorkers use screen readers, magnifiers, or high-contrast mode. there is a logo at the bottom and a QR code that takes you to design system dot ny dot gov slasy a 1 1 y">
+            <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-type-poster-set.pdf' | url }}" label="Download type set" variant="outline" suffixIcon="download"></nys-button>
+          </div>
+          <div class="nys-grid-col-9 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            <img src="{{ '/assets/i/2026/gaad-2026/poster-172.jpg' | url }}"  alt="Poster with a dark red background with a light red set of icons over top. Icons represent different disabilities, including an eye, an ear, a head, and a hand. There is a large hand making a peace sign with a white outline. The hand says a11y at the bottom">
+            <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-peace-poster-set.pdf' | url }}" label="Download peace set" variant="outline" suffixIcon="download"></nys-button>
+          </div>
+          <div class="nys-grid-col-9 nys-tablet:nys-grid-col-5 nys-desktop:nys-grid-col-3" style="margin-bottom: var(--nys-space-600);">
+            <img src="{{ '/assets/i/2026/gaad-2026/poster-thumbnail.png' | url }}" alt="Four stacked images in a thumbnail for the stack of posters to download">
+            <nys-button href="{{ '/assets/files/gaad-2026/gaad-2026-full-poster-set.pdf' | url }}" label="Download full set" variant="primary" suffixIcon="download"></nys-button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ '/assets/fonts/atkinson-hyperlegible/atkinson-hyperlegible.css' | url }}">
+<style>
+
+main[role="main"] {
+  padding-bottom: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.letter--tight {
+  letter-spacing: -6px;
+}
+
+.letter-not-so--tight {
+  letter-spacing: -4px;
+}
+
+.a11y-color-mark {
+  margin-left: -10px;
+}
+
+@media (width > 768px) {
+  .a11y-color-mark {
+    margin-left: 6px;
+  }
+}
+
+.hero *,
+.a11y-card * {
+  color: var(--nys-color-theme-strong);
+}
+
+.hero h1 {
+  margin-top: var(--nys-space-50);
+  font-size: var(--nys-font-size-9xl);
+}
+
+@media (width > 1024px) {
+  .hero h1 {
+    font-size: 96px;
+    line-height: 1;
+    margin-top: var(--nys-space-200);
+    margin-bottom: var(--nys-space-100);
+  }
+}
+
+.hero p {
+  font-size: var(--nys-font-size-5xl);
+  line-height: 1.2;
+}
+
+.hero h1,
+.hero p,
+.a11y-card h2,
+.a11y-card p {
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-weight: 200;
+}
+
+.a11y-card h2 {
+  font-size: var(--nys-font-size-h3);
+  margin-top: var(--nys-space-200);
+}
+
+.hero p,
+.a11y-card p {
+  font-weight: normal;
+}
+
+.heavy {
+  font-weight: 500;
+}
+
+.a11y-card p {
+  font-size: 1.125rem;
+}
+
+@media (width > 1024px) {
+  .card-page {
+    height: 420px;
+  }
+}
+
+.a11y-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+  .poster-deck-wrapper {
+    padding: 3rem 0 5rem;
+  }
+
+.poster-deck img {
+  width: 100px;
+  }
+
+.poster-deck {
+  display: none;
+  margin-top: var(--nys-space-800);
+}
+
+.poster-fan {
+  display: inline-block;
+}
+
+.poster-fan img {
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (width > 768px) {
+
+  .poster-deck {
+    display: block;
+    position: relative;
+    width: 700px;
+    height: 420px;
+    margin: var(--nys-space-800) auto 0 auto;
+  }
+
+  .poster-deck img {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transform: rotate(var(--r, 0deg));
+  }
+
+  .poster-deck img:nth-child(1) { z-index: 1; left: 40px; top: 110px; --r: -16deg; }
+  .poster-deck img:nth-child(2) { z-index: 2; left: 125px; top: 45px;  --r: -8deg;  }
+  .poster-deck img:nth-child(3) { z-index: 3; left: 215px; top: 10px;  --r: -2deg;  }
+  .poster-deck img:nth-child(4) { z-index: 4; left: 305px; top: 10px;  --r: 2deg;   }
+  .poster-deck img:nth-child(5) { z-index: 5; left: 395px; top: 45px;  --r: 8deg;   }
+  .poster-deck img:nth-child(6) { z-index: 6; left: 480px; top: 110px; --r: 16deg;  }
+
+  .poster-deck img:hover,
+  .poster-deck img:focus {
+    z-index: 100;
+    transform: rotate(var(--r, 0deg)) translateY(-24px) scale(1.07);
+    box-shadow: 6px 16px 32px rgba(0, 0, 0, 0.4);
+    /* outline: 3px solid var(--nys-color-theme-strong, #004DD1); */
+    outline-offset: 4px;
+  }
+
+  .poster-fan {
+    display: none;
+  }
+}
+
+.full-size-posters a {
+  display: inline-block;
+}
+
+.full-size-posters img {
+  max-width: 100%;
+  margin-bottom: var(--nys-space-200);
+}
+
+.full-size-posters {
+  text-align: center;
+}
+
+.responsive-grid-break {
+  padding: 0!important;
+}
+
+@media (width > 1024px) {
+  .responsive-grid-break {
+    flex-basis: 100%;
+    height: 0;
+  }
+}
+
+.non-breaking-space {
+  white-space: nowrap;
+}
+
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  let currentIndex = 0; // track which div is showing
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  function showRandomDiv() {
+    const divs = document.querySelectorAll('.card-page');
+
+    divs[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex + 1) % divs.length;
+    divs[currentIndex].style.display = 'block';
+
+    if (isMobile) {
+      document.getElementById('card-page-container').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+{% endblock %}
