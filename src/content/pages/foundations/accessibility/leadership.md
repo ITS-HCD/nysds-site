@@ -18,14 +18,18 @@ Accessibility compliance is a legal requirement for every New York State digital
 
 ## Compliance Deadlines
 
-Two federal and state mandates set concrete deadlines:
+There are two federal and state mandates that apply to New York State digital services. Both require conformance to the Web Content Accessibility Guidelines (WCAG) at Level AA, but they have different deadlines and scope. Here's what you need to know:
 
-<nys-alert type="warning" heading="April 24, 2026 — DOJ Rule (28 CFR Part 35)">
-  All state and local government web content and mobile apps must meet <strong>WCAG 2.1 Level AA</strong>. This applies to entities serving populations of 50,000 or more.
-</nys-alert>
+### January 2027
 
-<nys-alert type="warning" heading="January 2027 — NYS Technology Law (STL §103-d)">
-  All New York State entity websites must meet <strong>WCAG 2.2 Level AA</strong>. This is a higher standard than the federal rule and applies to all state agencies, including third-party vendor-managed sites.
+[NYS Technology Law (STL §103-d)](https://www.nysenate.gov/legislation/laws/STT/103-D) - New York State websites must meet <strong>WCAG 2.2 Level AA</strong>. This is a higher standard than the federal rule and applies to all state agencies, including third-party vendor-managed sites.
+
+### April 2027 
+
+[DOJ Rule (28 CFR Part 35)](https://www.ecfr.gov/current/title-28/part-35#p-35.200(b)(1)) - All state and local government web content (including PDFs) and mobile apps must meet **WCAG 2.1 Level AA**. This applies to entities serving populations of 50,000 or more.
+
+<nys-alert type="info" heading="Which WCAG version should we target?">
+WCAG 2.2 builds on previous versions. Target that version now to meet both deadlines with a single effort.
 </nys-alert>
 
 </section>
@@ -36,8 +40,8 @@ Two federal and state mandates set concrete deadlines:
 
 ITS Policy NYS-P08-005 establishes minimum accessibility requirements for all Information and Communication Technology (ICT) developed, procured, maintained, or used by State Entities. The policy requires:
 
-- **WCAG 2.1 Level AA conformance** for all web content and mobile applications by April 2026 (DOJ Rule).
 - **WCAG 2.2 Level AA conformance** for all SE websites, including those provided by third parties, by January 2027 (STL Section 103-d).
+- **WCAG 2.1 Level AA conformance** for all web content and mobile applications by April 2027 (DOJ Rule).
 - **Manual testing** of ICT before production use, prior to any fundamental alterations, and biennially thereafter.
 - **Documented testing reports** maintained for each ICT until the next testing cycle.
 - **An inventory** of all ICTs and their current compliance status.

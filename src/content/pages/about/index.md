@@ -40,7 +40,7 @@ We design for the entire state, not for any single agency.
 
 ## Our Values
 
-**Accessibility first.** Every component is built and tested for [WCAG 2.2 compliance](/foundations/accessibility/) from the start. Accessibility is not an afterthought or a remediation task. It is built in. This helps agencies meet legal deadlines — the U.S. Department of Justice requires WCAG 2.1 AA compliance by April 2026, and New York State's Technology Law sets a January 2027 deadline for WCAG 2.2 — without expensive rework.
+**Accessibility first.** Every component is built and tested for [WCAG 2.2 compliance](/foundations/accessibility/) from the start. Accessibility is not an afterthought or a remediation task. It is built in. This helps agencies meet legal deadlines — New York State's Technology Law sets a January 2027 deadline for WCAG 2.2, and the U.S. Department of Justice requires WCAG 2.1 AA compliance by April 2027 — without expensive rework.
 
 **Real-world tested.** We don't design in a vacuum. The design system is built on patterns used across 45+ agencies, tested with real teams, and refined based on feedback from developers, designers, and residents using state services.
 

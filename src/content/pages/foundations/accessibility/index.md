@@ -168,7 +168,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/developers/">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-eye-card.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-code.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Developers</div>
@@ -181,7 +181,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/content/">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-card.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-people.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Content Creators</div>
@@ -194,7 +194,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/leadership/">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-card.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-edit.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Leadership</div>
@@ -214,12 +214,11 @@ navOrder: 2
 <h2>Compliance deadlines</h2>
 
 <nys-alert type="warning" heading="Upcoming compliance deadlines">
-  <p>Two regulatory deadlines affect every New York State digital service:</p>
   <ul>
-    <li><strong>April 2026</strong> — DOJ Rule requires all web content and mobile applications conform to <strong>WCAG 2.1 Level AA</strong>.</li>
-    <li><strong>January 2027</strong> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to <strong>WCAG 2.2 Level AA</strong>.</li>
+    <li><b>January 2027</b> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to WCAG 2.2 Level AA.</li>
+    <li><b>April 2027</b> — DOJ Rule requires all web content and mobile applications conform to WCAG 2.1 Level AA.</li>
   </ul>
-  <p>For full policy details, compliance requirements, and planning guidance, see <a href="/foundations/accessibility/leadership/">Accessibility for Leadership</a>.</p>
+  <p>Don't get lost in the deadline math. Our standard is <b>WCAG 2.2 AA</b>. That's what New York requires, that's our accessibility team tests against, and that's what teams should be building to. For full policy details, compliance requirements, and planning guidance, see <a href="/foundations/accessibility/leadership/">Accessibility for Leadership</a>.</p>
 </nys-alert>
 
 </section>
@@ -230,50 +229,50 @@ navOrder: 2
 
 <p>The following guidance, tools, and courses are available to New York State staff:</p>
 
-<div class="nys-grid-row nys-grid-gap-300">
+<div class="nys-grid-row">
   <div class="nys-grid-col-12">
-    <div class="card card--horizontal">
+    <a class="card card--horizontal" href="https://on.ny.gov/a11yteam" target="_blank" rel="noopener">
       <div class="card__inner">
         <div class="card__media card__media--thin">
           <img src="/assets/img/teams-channel.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
-          <div class="card__title">Accessibility Microsoft Teams channel</div>
-          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.</div>
           <div class="card__category"><nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge></div>
+          <div class="card__title">Join ITS Accessibility Community</div>
+          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.</div>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
-<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-200);">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <div class="card nys-flex-fill">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/Get-started.aspx?csf=1&web=1&share=IQB9OPiWlWK1QKiLwKnt_SlnAVxD3SO_eebbKlc69RlRYqc&e=vC8jYt">
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Get started, by role</div>
         <div class="card__desc">Get up to speed by focusing on priorities for your job duties.</div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <div class="card nys-flex-fill">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/t/its.365.DigitalAccessibility/IQBIx-MmHr1GQ4uxf38xsCJ6AeLh-P7wopABIBERADnNM6o?e=hmbMw1">
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
-        <div class="card__title">NYS accessibility 101</div>
+        <div class="card__title">Tools & Guides</div>
         <div class="card__desc">Find the basics on accessibility, including those pertaining to NYS.</div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <div class="card nys-flex-fill">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/POUR%20-%202%20-%20Perceivable.aspx?csf=1&web=1&share=IQAB9ZZ94vMPRoUR8ylezZ-mAYgCg3vubPaZJHvFk_f2KfM&e=c0pJHD">
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Understand WCAG</div>
         <div class="card__desc">Use the "POUR" principle to learn and apply a11y standards.</div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
