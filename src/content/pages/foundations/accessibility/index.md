@@ -243,7 +243,7 @@ navOrder: 2
         <div class="card__content">
           <div class="card__category"><nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge></div>
           <div class="card__title">Join ITS Accessibility Community</div>
-          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.</div>
+          <div class="card__desc">Ask questions, share findings, get alerted about internal office hours, and get help from the accessibility community across NYS agencies.</div>
         </div>
       </div>
     </a>
