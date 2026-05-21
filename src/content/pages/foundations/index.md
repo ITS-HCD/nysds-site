@@ -1,77 +1,128 @@
 ---
 permalink: /foundations/
 title: Foundations
-description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
-navOrder: 10
+description: "The building blocks, conventions, and architecture behind the NYS Design System — from tokens and themes to typography, forms, and accessibility."
+navOrder: 1
 ---
 
 {% block content %}
 
 # Foundations
 
-Let's start by defining the parts of the system. The NYS Design System includes:
+The NYS Design System is more than a collection of components. It is a set of shared decisions — about color, spacing, typography, accessibility, and interaction — that make those components consistent, themeable, and predictable across every New York State agency.
+
+Foundations are where those decisions live. They define how components get their styles, how themes change an entire site's appearance without touching component code, how forms validate and submit, and how accessibility is built in from the start.
+
+Whether you are building a new application with NYSDS components or integrating the design system's styles into an existing site, understanding these foundations will help you work with the system instead of around it.
+
+## System Foundations
+
+How the design system is built — the token layers, styling framework, theming system, component architecture, and accessibility standards that power everything.
 
 <div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-    <div class="card card__no-border card__flat nys-flex-fill">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/accessibility/">
       <div class="card__inner">
-        <div class="card__media">
-          <img src="/assets/img/toggle-card.svg" alt="toggle graphic">
-        </div>
-        <div class="card__title">Component Library</div>
-        <div class="card__desc">A collection of common front-end code grouped together in components that can be shared and reused across multiple codebases, often with design, state, and default behavior built-in.</div>
+        <div class="card__title">Accessibility</div>
+        <div class="card__desc">How the design system supports WCAG 2.2 AA compliance, with guidance for developers, content creators, and leadership.</div>
       </div>
-    </div>
+    </a>
   </div>
-  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-    <div class="card card__no-border card__flat nys-flex-fill">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/styles/">
       <div class="card__inner">
-        <div class="card__media">
-            <img src="/assets/img/flex-card.svg" alt="flex"></div>
-        <div class="card__title">Design Libraries</div>
-        <div class="card__desc">A library of icons, styles, components, and variables that can be shared and reused across multiple design files for consistent design and prototyping.</div>
+        <div class="card__title">Styles Framework</div>
+        <div class="card__desc">The <code>@nysds/styles</code> CSS package — design tokens as custom properties, a CSS reset, typography classes, and layout utilities.</div>
       </div>
-    </div>
+    </a>
   </div>
-  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-    <div class="card card__no-border card__flat nys-flex-fill">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/themes/">
       <div class="card__inner">
-        <div class="card__media">
-            <img src="/assets/img/4-up-card.svg" alt="4 up graphic"></div>
+        <div class="card__title">Agency Themes</div>
+        <div class="card__desc">Apply agency-specific color palettes with a single attribute — build once, switch themes, and every component updates automatically.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/tokens/">
+      <div class="card__inner">
         <div class="card__title">Design Tokens</div>
-        <div class="card__desc">A collection of design decisions stored in key-value pairs, abstracted so they can easily be used across a wide range of platforms, design and code.</div>
+        <div class="card__desc">The shared language of colors, spacing, and typography values — how primitive, semantic, and theme tokens connect design decisions to code.</div>
       </div>
-    </div>
+    </a>
   </div>
-  <div class="nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-    <div class="card card__no-border card__flat nys-flex-fill">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/components/">
       <div class="card__inner">
-        <div class="card__media">
-            <img src="/assets/img/font-card.svg" alt="fonts"></div>
-        <div class="card__title">Fonts</div>
-        <div class="card__desc">A collection of standard NYS brand-approved typefaces that need to be used in both design and development product work.</div>
+        <div class="card__title">How Components Work</div>
+        <div class="card__desc">Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.</div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
-## Why Foundations Matter
+## Implementation Guides
 
-A great design system isn't just about reusable components—it’s about the consistency and predictability that allow those components to work together seamlessly.
+Practical references for building interfaces with the design system — typography, form patterns, layout utilities, and the broader design process.
 
-Here are a few examples:
+<div class="nys-grid-row nys-grid-gap-300">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/design/">
+      <div class="card__inner">
+        <div class="card__title">Design</div>
+        <div class="card__desc">Where the design system fits in the broader UX process — from strategy and scope to the interface layer.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/typography/">
+      <div class="card__inner">
+        <div class="card__title">Typography</div>
+        <div class="card__desc">Core typefaces, typography tokens, font installation, and utility classes for consistent, accessible type across your application.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/forms/">
+      <div class="card__inner">
+        <div class="card__title">Form Patterns</div>
+        <div class="card__desc">Form association, validation strategies, event handling, and submission patterns that work across all NYSDS form components.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/utilities/">
+      <div class="card__inner">
+        <div class="card__title">Utilities</div>
+        <div class="card__desc">Layout grid, flexbox, spacing, display, and responsive utility classes for rapid, consistent page layout.</div>
+      </div>
+    </a>
+  </div>
+</div>
 
-  - **Standardizing design values with design tokens** means that when designers select a primary button or an alert in their design tool, that same values are applied in code, creating a 1:1 design-to-development experience.
-  - **Building components with a consistent set of color values** makes it possible to apply the design system to different NYS agencies while maintaining a unified user experience.
-  - **Starting with inclusivity as a requirement (not an afterthought)**, we've built with WCAG 2.2 AA accessibility standards in mind. Components are built and tested for accessibility, which can help teams avoid costly rework.
+## Reference
 
-Without a strong foundation, a design system becomes just another collection of UI elements. This section helps teams understand how NYS Design System components are built and why they work the way they do.
+Need to look up a specific token value or component API? These are also always available in the main navigation.
 
-## Explore Foundations
-
-- [Accessibility](/foundations/accessibility/) – What you should know about accessibility and how the NYS Design System can help.
-- [Design Tokens](/foundations/tokens/) – The shared language of colors, spacing, typography, and UI styles, available in both design and code.
-- [Utilities](/foundations/utilities) – Practical ways to adapt the NYS Design System to different needs. Layout, mobile-responsiveness, and agency theming.
+<div class="nys-grid-row nys-grid-gap-300">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/tokens/">
+      <div class="card__inner">
+        <div class="card__title">Token Browser</div>
+        <div class="card__desc">Browse all design tokens — colors, spacing, typography, and theme values — with an interactive theme switcher.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <a class="card card__no-border card__flat nys-flex-fill" href="/components/">
+      <div class="card__inner">
+        <div class="card__title">Component Catalog</div>
+        <div class="card__desc">All 27 NYSDS components — properties, events, accessibility details, and copy-paste examples.</div>
+      </div>
+    </a>
+  </div>
+</div>
 
 {% endblock %}
 

@@ -15,7 +15,7 @@ function showDraft(data) {
 module.exports = () => {
     return {
         layout: 'layouts/update.njk',
-        permalink: '/updates/{{ title | slugify }}/',
+        permalink: '/about/updates/{{ title | slugify }}/',
         section: 'Updates',
         ogtype: 'article',
         "changefreq": "monthly",
