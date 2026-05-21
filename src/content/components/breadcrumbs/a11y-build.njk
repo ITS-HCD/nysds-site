@@ -24,48 +24,99 @@ extra_js:
 {% block Alternatives %}
 <div class="solution">
     <div class="card">
-        <h3>Build a custom Breadcrumb <code class="element">nav</code></h3>
+        <h3>Custom Breadcrumb <code class="element">nav</code> ("symbol" revealer)</h3>
         <p>
             <mark class="subhead strong">When to use</mark>
-
+            If your team has source-level control over UI code,
+            but DOES have a hard requirement not provided by native HTML,
+            you may choose to build a custom Breadcrumb.
+            Or perhaps your legacy component has been flagged for remediation
+            and you need a high quality reference.
+            This custom example recreates the accessibility built into the
+            NYSDS Breadcrumbs.
         </p>
+        <p>
+            <mark class="subhead strong">How is it different</mark>
+            This Breadcrumb expresses the look-and-feel of the design system with most aspects
+            modeled after the NYSDS Tab component.
+            The concept of "collapsed links," and the implementation of a "revealer" button to show them,
+            differentiate this Breadcrumb from a simple list of links.
+            The significant accessibility implications of this design choice are discussed in
+            <a href="#about-this-pattern">About this pattern</a>.
+        </p>
+        <p>
+            <mark class="subhead strong">About the first demo</mark>
+            On this page there are two demos of the same component.
+            A "Reveal links/Collapse links" button is provided to reset each demo when playing with it.
+            This button is <em>not</em> part of the Breadcrumb component.
+        </p>
+        <ul>
+            <li>
+                This first Breadcrumb provides a "symbol" appearance (the three dots "...") for the revealer button,
+                which has the addressable <code>aria-label</code> "show more links"
+            </li>
+            <li>
+                It terminates with the non-linked "current page"
+            </li>
+            <li>
+                It gains an accessible name by being <code>aria-labelledby</code> the <code>h4</code> heading above it,
+                which also provides a visually hidden context hint
+            </li>
+        </ul>
         {% include "partials/a11y-rely-checks.njk" %}
     </div>
 
     {% block HTMLNative %}
     {% set preview %}
 <div class="breadcrumb-demo">
-    <h4 id="some-page-header">Path to this page</h4>
+    <h4 id="some-page-header">
+        Department of Environmental Conservation
+        <span class="sr-only">path to this page</span>
+    </h4>
     <button aria-controls="sourdough">Reveal links</button>
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
 
+    <!-- Breadcrumb "sourdough" -->
     <nav
         aria-labelledby="some-page-header"
         class="nysa11y breadcrumb"
         data-component="breadcrumb"
+        data-revealer="symbol"
+        data-html="custom"
         data-state="min"
         id="sourdough">
         <ol>
             <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide (APG)</a>
+                <a href="https://dec.ny.gov/">Home</a>
             </li>
             <li data-part="revealer">
                 <button class="revealer" aria-label="show more links"></button>
             </li>
             <li class="intermediate">
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">Patterns top</a>
+                <a href="https://dec.ny.gov/environmental-protection">
+                    Environmental Protection
+                </a>
             </li>
             <li class="intermediate">
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/#patterns">Patterns content</a>
+                <a href="https://dec.ny.gov/environmental-protection/water">
+                    Water
+                </a>
             </li>
             <li class="intermediate">
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/">Breadcrumb top</a>
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality">
+                    Water Quality Management
+                </a>
             </li>
             <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#example">Breadcrumb example</a>
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality/stormwater">
+                    Stormwater
+                </a>
             </li>
-            <li>Breadcrumb Example</li>
+            <li>Construction Stormwater Toolbox</li>
         </ol>
     </nav>
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
 </div>
     {% endset %}
     {% set accordionLabel = "HTML" %}
@@ -82,20 +133,24 @@ extra_js:
 
 <div class="solution">
     <div class="card">
-        <h3>Build a custom accordion component</h3>
+        <h3>Custom Breadcrumb <code class="element">nav</code> ("text" revealer)</h3>
         <p>
-            <mark class="subhead strong">When to use</mark>
-            If your team has source-level control over UI code,
-            but DOES have a hard requirement not provided by native HTML,
-            you may choose to build a custom accordion.
-            Or perhaps your legacy component has been flagged for remediation
-            and you need a high quality reference.
-            This custom example recreates the accessibility built into the
-            NYSDS Accordion and the <code class="element">details</code> element.
-            See the
-            <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank">W3C APG Accordion Pattern</a>
-            for more involved implementations.
+            <mark class="subhead strong">About the second demo</mark>
         </p>
+        <ul>
+            <li>
+                This second Breadcrumb provides a "text" appearance ("More...") for the revealer button,
+                which also has the addressable <code>aria-label</code> "show more links"
+            </li>
+            <li>
+                Initially it terminates with a linked "parent page," but adds the final, non-linked,
+                current page when the revealer is activated
+            </li>
+            <li>
+                Its accessible name comes from an <code>aria-label</code> set on the component <code class="element">nav</code>,
+                which also provides a context hint
+            </li>
+        </ul>
         {% include "partials/a11y-rely-checks.njk" %}
     </div>
 
@@ -103,34 +158,49 @@ extra_js:
     {% set preview %}
 <div class="breadcrumb-demo">
     <button aria-controls="ciabatta">Reveal links</button>
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
 
+    <!-- Breadcrumb "ciabatta" -->
     <nav
-        aria-label="Path to this page"
-        class="nysa11y breadcrumb"
+        aria-label="Department of Environmental Conservation, path to this page"
+        class="nysa11y breadcrumb background"
         data-component="breadcrumb"
+        data-html="custom"
+        data-revealer="text"
         data-state="min"
         id="ciabatta">
         <ol>
             <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide (APG)</a>
+                <a href="https://dec.ny.gov/">Home</a>
             </li>
             <li data-part="revealer">
                 <button class="revealer" aria-label="show more links"></button>
             </li>
             <li class="intermediate">
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">Patterns top</a>
+                <a href="https://dec.ny.gov/environmental-protection">
+                    Environmental Protection
+                </a>
             </li>
             <li class="intermediate">
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/#patterns">Patterns content</a>
+                <a href="https://dec.ny.gov/environmental-protection/water">
+                    Water
+                </a>
             </li>
             <li class="intermediate">
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/">Breadcrumb top</a>
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality">
+                    Water Quality Management
+                </a>
             </li>
             <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#example">Breadcrumb example</a>
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality/stormwater">
+                    Stormwater
+                </a>
             </li>
+            <li class="intermediate">Construction Stormwater Toolbox</li>
         </ol>
     </nav>
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
 </div>
     {% endset %}
     {% set accordionLabel = "HTML" %}

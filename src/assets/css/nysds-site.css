@@ -1661,14 +1661,15 @@ tr:hover {
 
 kbd {
     background-color: var(--nys-color-surface, #fff);
-    border: 1px solid var(--nys-color-neutral-200);
     border-radius: 0.25rem;
-    padding: 1px 0.25rem;
+    border: 1px solid var(--nys-color-neutral-200);
+    box-shadow: 0 1px var(--nys-color-neutral-200);
     font-family: var(--nys-font-family-sans);
     font-size: 0.875rem;
     font-weight: 400 !important;
     margin-inline: 1px 2px;
-    box-shadow: 0 1px var(--nys-color-neutral-200);
+    padding: 1px 0.25rem;
+    text-transform: capitalize;
 }
 
 .sr-only {
