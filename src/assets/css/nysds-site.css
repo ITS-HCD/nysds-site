@@ -415,6 +415,15 @@ main[role="main"] {
     background-color: var(--nys-color-surface, #fff);
 }
 
+.card:not(:has(.card__media)) {
+    padding: var(--nys-space-300);
+}
+
+.card__desc :last-child,
+.card__desc:last-child {
+    margin-block-end: 0;
+}
+
 .card__inner {
     display: flex;
     flex-direction: column;
@@ -425,7 +434,7 @@ main[role="main"] {
 /* Media */
 
 .card__media {
-    margin-bottom: var(--nys-space-100);
+    margin-bottom: var(--nys-space-200);
 }
 
 .card__media--thin {
@@ -1113,6 +1122,10 @@ li > .section-nav__list {
 }
 
 /* Token List */
+.token-list {
+    margin-top: var(--nys-space-300);
+}
+
 .token-list__item {
     margin-bottom: var(--nys-space-400);
 }
@@ -1126,6 +1139,8 @@ li > .section-nav__list {
 .token-list__raw {
     color: var(--nys-color-neutral-600);
     font-size: var(--nys-font-size-xs);
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 .token-list__info > div {
@@ -1523,6 +1538,13 @@ li > .section-nav__list {
 
 code {
     font-family: "Monaspace Neon";
+}
+
+.code-preview__code-block code,
+.code-preview__code-block pre,
+.code-preview__code-block pre[class*="language-"],
+.code-preview__code-block code[class*="language-"] {
+    font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 /* Byline on homepage */

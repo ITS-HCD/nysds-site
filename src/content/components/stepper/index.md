@@ -268,8 +268,10 @@ The `nys-stepper` can be used in both multi-page and single-page applications.
 ### Compact
 On small screens, the `nys-stepper` will render in a compact mode where the progress is indicated by bars rather than complete steps. You can expand to see the names of steps by clicking on "Step x of y"
 
-### Actions Slot
-- You can add actions to the stepper by using the `actions` slot. The action slot only accepts `nys-button` and will render at the top of the `nys-stepper` on desktop and at the end of the stepper on mobile.
+### Slots
+The `<nys-stepper>` component provides one named slot:
+
+- **`actions`** -- Navigation buttons (e.g., Back, Continue). Must be wrapped in `<nys-button>` elements. Renders at the top of the stepper on desktop and at the end on mobile.
 
 ## Step Options
 Each step is represented by a `<nys-step>` element inside the `<nys-stepper>`.
@@ -332,41 +334,49 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
       <th>Component</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-stepper&gt;</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-stepper&gt;</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>selected</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
     <tr>
       <td><code>current</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
     <tr>
       <td><code>href</code></td>
       <td>String (URL)</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
     <tr>
       <td><code>onClick</code></td>
       <td>JS function</td>
+      <td><code>undefined</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
   </table>
