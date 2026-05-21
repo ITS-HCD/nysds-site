@@ -24,7 +24,9 @@ navOrder: 2
 
 <nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text="Accessibility is not only about permanent disabilities. It also covers temporary conditions, like a broken arm, and situational ones, like using a phone in direct sunlight. Designing for accessibility benefits everyone."></nys-alert>
 
-<p>The Web Content Accessibility Guidelines (WCAG) organize accessibility around four principles:</p>
+<h2>What is WCAG?</h2>
+
+<p class="nys-margin-b-400">The Web Content Accessibility Guidelines (WCAG) is a set of technical standards for making web content accessible to people with disabilities. WCAG is organized around four core principles, often remembered by the acronym POUR:</p>
 
 <div class="pour-list">
   <div class="pour-item">
@@ -71,7 +73,7 @@ navOrder: 2
 
 </section>
 
-<section id="how-the-design-system-helps">
+<section id="how-the-design-system-helps" class="nys-margin-t-800 nys-margin-b-400">
 
 <h2>How the design system helps</h2>
 
@@ -138,6 +140,7 @@ navOrder: 2
 
 <p>Using NYSDS components does not guarantee your site is accessible — it gives you a strong starting point. You are still responsible for proper heading structure, meaningful content, correct page-level landmarks, and testing your assembled pages.</p>
 
+<!-- 
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <div class="card nys-flex-fill">
@@ -155,13 +158,15 @@ navOrder: 2
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 </section>
 
 <section id="resources-by-role">
 
 <h2>Resources by role</h2>
+
+<p>Below is a list of responsibilities of resources for each person in the accessibility ecosystem. For even more resources to expand your accessibility knowledge, see our <a href="/foundations/accessibility/learn/">Learning Resources</a> for courses, references, and checklists.</p>
 
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12">
@@ -205,20 +210,19 @@ navOrder: 2
   </div>
 </div>
 
-<p>Looking to build your accessibility knowledge? See our <a href="/foundations/accessibility/learn/">Learning Resources</a> for courses, references, and checklists.</p>
 
 </section>
 
-<section id="compliance-deadlines">
+<section id="compliance-dates">
 
-<h2>Compliance deadlines</h2>
+<h2>Compliance dates</h2>
 
-<nys-alert type="warning" heading="Upcoming compliance deadlines">
+<nys-alert type="warning" heading="Upcoming compliance dates">
+  <p>Don't get lost in the deadline math. Our standard is <b>WCAG 2.2 AA</b>. That's what New York requires, that's our accessibility team tests against, and that's what teams should be building to. For full policy details, compliance requirements, and planning guidance, see our <a href="/foundations/accessibility/leadership/">Leadership Guidance</a>.</p>
   <ul>
     <li><b>January 2027</b> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to WCAG 2.2 Level AA.</li>
     <li><b>April 2027</b> — DOJ Rule requires all web content and mobile applications conform to WCAG 2.1 Level AA.</li>
   </ul>
-  <p>Don't get lost in the deadline math. Our standard is <b>WCAG 2.2 AA</b>. That's what New York requires, that's our accessibility team tests against, and that's what teams should be building to. For full policy details, compliance requirements, and planning guidance, see <a href="/foundations/accessibility/leadership/">Accessibility for Leadership</a>.</p>
 </nys-alert>
 
 </section>
