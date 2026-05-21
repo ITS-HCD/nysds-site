@@ -277,6 +277,7 @@ navOrder: 2
         <div class="card__desc">Use the "POUR" principle to learn accessibility standards in plain language.</div>
       </div>
     </a>
+    </a>
   </div>
 </div>
 
@@ -365,10 +366,6 @@ navOrder: 2
     margin: 0;
     font-size: var(--nys-font-size-ui-sm, 14px);
     line-height: var(--nys-font-lineheight-ui-sm, 24px);
-  }
-
-  #nys-internal-resources .card__category {
-    margin-bottom: var(--nys-space-200);
   }
 
 </style>
