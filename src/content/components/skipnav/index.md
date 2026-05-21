@@ -126,14 +126,17 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>href</code></td>
       <td>String (URL)</td>
+      <td><code>"#main-content"</code></td>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
   </table>
 </nys-table>
@@ -142,6 +145,10 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

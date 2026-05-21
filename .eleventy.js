@@ -103,6 +103,12 @@ module.exports = async function (eleventyConfig) {
     });
   });
 
+  // Image compression on watch
+  // Runs before every build (including watch rebuilds)
+  eleventyConfig.on('eleventy.beforeWatch', async () => {
+    await import('./scripts/compress-images.js');
+  });
+
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({ "./src/static/": "/" });
   eleventyConfig.addPassthroughCopy("./src/assets/img/");
