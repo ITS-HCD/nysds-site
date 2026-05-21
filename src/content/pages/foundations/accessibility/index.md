@@ -9,10 +9,21 @@ navOrder: 2
 
 {% block content %}
 
-<h1>Accessibility</h1>
+<h1 class="nys-display-sr-only">Accessibility</h1>
 
-<img class="a11y-hero" src="/assets/img/accessibility_image.svg" alt="" role="presentation">
-<p class="a11y-hero__tagline">usable by all</p>
+<div class="a11y-hero">
+  <div class="a11y-hero__text">
+    <div class="a11y-hero__stripe" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <p class="a11y-hero__heading">Be an <strong>a11y.</strong></p>
+    <p class="a11y-hero__subheading">a11y is short for accessibility.</p>
+    <p class="a11y-hero__caption">There are 11 letters between the a and y.</p>
+  </div>
+  <div class="a11y-hero__media">
+    <img src="/assets/i/2026/gaad-2026/a11y-banner.png" alt="A collage of four photos showing people with diverse abilities using technology and engaging with the world.">
+  </div>
+</div>
 
 <section id="what-is-accessibility">
 
@@ -288,17 +299,86 @@ navOrder: 2
 {% block styles %}
 <style>
   .a11y-hero {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--nys-space-400);
+    background: var(--nys-color-theme-faint);
+    border-radius: var(--nys-radius-lg);
+    padding: var(--nys-space-400);
+    margin-block-end: var(--nys-space-400);
+    overflow: hidden;
+  }
+
+  .a11y-hero__text {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .a11y-hero__stripe {
+    display: flex;
+    margin-block-end: var(--nys-space-200);
+  }
+
+  .a11y-hero__stripe span {
     display: block;
+    width: 36px;
+    height: 8px;
+  }
+
+  .a11y-hero__stripe span:nth-child(1) { background: #B1420C; }
+  .a11y-hero__stripe span:nth-child(2) { background: #1660AA; }
+  .a11y-hero__stripe span:nth-child(3) { background: #FFC508; }
+  .a11y-hero__stripe span:nth-child(4) { background: #1B3B5A; }
+
+  .a11y-hero__heading {
+    margin: 0;
+    font-family: var(--nys-font-family-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--nys-color-ink);
     margin-block-end: var(--nys-space-100);
   }
 
-  .a11y-hero__tagline {
+  .a11y-hero__heading strong {
+    font-weight: 700;
+  }
+
+  .a11y-hero__subheading {
     margin: 0;
-    margin-block-end: var(--nys-space-400);
-    font-style: italic;
-    color: var(--nys-color-neutral-400);
-    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: var(--nys-color-ink);
+    margin-block-end: var(--nys-space-050);
+  }
+
+  .a11y-hero__caption {
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--nys-color-neutral-500);
+  }
+
+  .a11y-hero__media {
+    flex: 1 1 45%;
+    min-width: 0;
+  }
+
+  .a11y-hero__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    .a11y-hero {
+      flex-direction: column-reverse;
+      padding: var(--nys-space-300);
+    }
+
+    .a11y-hero__text,
+    .a11y-hero__media {
+      flex: 1 1 100%;
+    }
   }
 
   .pour-list {
