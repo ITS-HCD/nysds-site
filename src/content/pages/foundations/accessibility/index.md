@@ -256,7 +256,7 @@ navOrder: 2
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Get started, by role</div>
-        <div class="card__desc">Get up to speed by focusing on priorities for your job duties.</div>
+        <div class="card__desc">Target the accessibility priorities and resources for your individual job role.</div>
       </div>
     </a>
   </div>
@@ -265,7 +265,7 @@ navOrder: 2
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Tools & Guides</div>
-        <div class="card__desc">Find the basics on accessibility, including those pertaining to NYS.</div>
+        <div class="card__desc">Get up to speed on the basics on accessibility and accessibility tools, including NYS-specific guidance.</div>
       </div>
     </a>
   </div>
@@ -274,7 +274,7 @@ navOrder: 2
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Understand WCAG</div>
-        <div class="card__desc">Use the "POUR" principle to learn and apply a11y standards.</div>
+        <div class="card__desc">Use the "POUR" principle to learn accessibility standards in plain language.</div>
       </div>
     </a>
   </div>
