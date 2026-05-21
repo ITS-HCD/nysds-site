@@ -40,7 +40,7 @@ This consistency doesn't just improve user experience — it reduces duplicate w
 
 Building truly accessible digital experiences is complex. It requires ARIA knowledge, keyboard testing, color contrast analysis, form validation patterns, and testing with assistive technology. When teams design and build without guidance, accessibility often comes late — after the visual design is complete, after code is written.
 
-Late-stage accessibility work is expensive. Issues found after launch require rework. Teams may face legal pressure to remediate. Agencies scramble to meet deadlines. The U.S. Department of Justice requires WCAG 2.1 AA compliance by April 2026. New York State's Technology Law sets a January 2027 deadline for WCAG 2.2 compliance.
+Late-stage accessibility work is expensive. Issues found after launch require rework. Teams may face legal pressure to remediate. Agencies scramble to meet deadlines. New York State's Technology Law sets a January 2027 deadline for WCAG 2.2 compliance. The U.S. Department of Justice requires WCAG 2.1 AA compliance by April 2027.
 
 The design system puts accessibility in the foundation. Every component is tested against WCAG 2.2 standards before release. Every interaction pattern includes ARIA, keyboard navigation, and focus management. Agencies adopting the system get accessibility built in, not bolted on. This approach:
 

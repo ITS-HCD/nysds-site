@@ -9,10 +9,21 @@ navOrder: 2
 
 {% block content %}
 
-<h1>Accessibility</h1>
+<h1 class="nys-display-sr-only">Accessibility</h1>
 
-<img class="a11y-hero" src="/assets/img/accessibility_image.svg" alt="" role="presentation">
-<p class="a11y-hero__tagline">usable by all</p>
+<div class="a11y-hero">
+  <div class="a11y-hero__text">
+    <div class="a11y-hero__stripe" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <p class="a11y-hero__heading">Be an <strong>a11y.</strong></p>
+    <p class="a11y-hero__subheading">a11y is short for accessibility.</p>
+    <p class="a11y-hero__caption">There are 11 letters between the a and y.</p>
+  </div>
+  <div class="a11y-hero__media">
+    <img src="/assets/i/2026/gaad-2026/a11y-banner.png" alt="A collage of four photos showing people with diverse abilities using technology and engaging with the world.">
+  </div>
+</div>
 
 <section id="what-is-accessibility">
 
@@ -24,7 +35,9 @@ navOrder: 2
 
 <nys-alert type="info" heading="Everyone will need accessibility support at some point in their life" text="Accessibility is not only about permanent disabilities. It also covers temporary conditions, like a broken arm, and situational ones, like using a phone in direct sunlight. Designing for accessibility benefits everyone."></nys-alert>
 
-<p>The Web Content Accessibility Guidelines (WCAG) organize accessibility around four principles:</p>
+<h2>What is WCAG?</h2>
+
+<p class="nys-margin-b-400">The Web Content Accessibility Guidelines (WCAG) is a set of technical standards for making web content accessible to people with disabilities. WCAG is organized around four core principles, often remembered by the acronym POUR:</p>
 
 <div class="pour-list">
   <div class="pour-item">
@@ -71,7 +84,7 @@ navOrder: 2
 
 </section>
 
-<section id="how-the-design-system-helps">
+<section id="how-the-design-system-helps" class="nys-margin-t-800 nys-margin-b-400">
 
 <h2>How the design system helps</h2>
 
@@ -138,6 +151,7 @@ navOrder: 2
 
 <p>Using NYSDS components does not guarantee your site is accessible — it gives you a strong starting point. You are still responsible for proper heading structure, meaningful content, correct page-level landmarks, and testing your assembled pages.</p>
 
+<!-- 
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <div class="card nys-flex-fill">
@@ -155,7 +169,7 @@ navOrder: 2
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 </section>
 
@@ -163,12 +177,14 @@ navOrder: 2
 
 <h2>Resources by role</h2>
 
+<p>Below is a list of responsibilities of resources for each person in the accessibility ecosystem. For even more resources to expand your accessibility knowledge, see our <a href="/foundations/accessibility/learn/">Learning Resources</a> for courses, references, and checklists.</p>
+
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12">
     <a class="card card--horizontal" href="/foundations/accessibility/developers/">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-eye-card.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-code.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Developers</div>
@@ -181,7 +197,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/content/">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-card.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-people.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Content Creators</div>
@@ -194,7 +210,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/leadership/">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-card.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-edit.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Leadership</div>
@@ -205,21 +221,19 @@ navOrder: 2
   </div>
 </div>
 
-<p>Looking to build your accessibility knowledge? See our <a href="/foundations/accessibility/learn/">Learning Resources</a> for courses, references, and checklists.</p>
 
 </section>
 
-<section id="compliance-deadlines">
+<section id="compliance-dates">
 
-<h2>Compliance deadlines</h2>
+<h2>Compliance dates</h2>
 
-<nys-alert type="warning" heading="Upcoming compliance deadlines">
-  <p>Two regulatory deadlines affect every New York State digital service:</p>
+<nys-alert type="warning" heading="Upcoming compliance dates">
+  <p>Don't get lost in the deadline math. Our standard is <b>WCAG 2.2 AA</b>. That's what New York requires, that's our accessibility team tests against, and that's what teams should be building to. For full policy details, compliance requirements, and planning guidance, see our <a href="/foundations/accessibility/leadership/">Leadership Guidance</a>.</p>
   <ul>
-    <li><strong>April 2026</strong> — DOJ Rule requires all web content and mobile applications conform to <strong>WCAG 2.1 Level AA</strong>.</li>
-    <li><strong>January 2027</strong> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to <strong>WCAG 2.2 Level AA</strong>.</li>
+    <li><b>January 2027</b> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to WCAG 2.2 Level AA.</li>
+    <li><b>April 2027</b> — DOJ Rule requires all web content and mobile applications conform to WCAG 2.1 Level AA.</li>
   </ul>
-  <p>For full policy details, compliance requirements, and planning guidance, see <a href="/foundations/accessibility/leadership/">Accessibility for Leadership</a>.</p>
 </nys-alert>
 
 </section>
@@ -230,50 +244,51 @@ navOrder: 2
 
 <p>The following guidance, tools, and courses are available to New York State staff:</p>
 
-<div class="nys-grid-row nys-grid-gap-300">
+<div class="nys-grid-row">
   <div class="nys-grid-col-12">
-    <div class="card card--horizontal">
+    <a class="card card--horizontal" href="https://on.ny.gov/a11yteam" target="_blank" rel="noopener">
       <div class="card__inner">
         <div class="card__media card__media--thin">
           <img src="/assets/img/teams-channel.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
-          <div class="card__title">Accessibility Microsoft Teams channel</div>
-          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies. Contact the Design System team for an invite.</div>
           <div class="card__category"><nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge></div>
+          <div class="card__title">Join ITS Accessibility Community</div>
+          <div class="card__desc">Ask questions, share findings, get alerted about internal office hours, and get help from the accessibility community across NYS agencies.</div>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
-<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-200);">
+<div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <div class="card nys-flex-fill">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/Get-started.aspx?csf=1&web=1&share=IQB9OPiWlWK1QKiLwKnt_SlnAVxD3SO_eebbKlc69RlRYqc&e=vC8jYt">
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Get started, by role</div>
-        <div class="card__desc">Get up to speed by focusing on priorities for your job duties.</div>
+        <div class="card__desc">Target the accessibility priorities and resources for your individual job role.</div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <div class="card nys-flex-fill">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/t/its.365.DigitalAccessibility/IQBIx-MmHr1GQ4uxf38xsCJ6AeLh-P7wopABIBERADnNM6o?e=hmbMw1">
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
-        <div class="card__title">NYS accessibility 101</div>
-        <div class="card__desc">Find the basics on accessibility, including those pertaining to NYS.</div>
+        <div class="card__title">Tools & Guides</div>
+        <div class="card__desc">Get up to speed on the basics on accessibility and accessibility tools, including NYS-specific guidance.</div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <div class="card nys-flex-fill">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/POUR%20-%202%20-%20Perceivable.aspx?csf=1&web=1&share=IQAB9ZZ94vMPRoUR8ylezZ-mAYgCg3vubPaZJHvFk_f2KfM&e=c0pJHD">
       <div class="card__inner">
         <div class="card__category"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Understand WCAG</div>
-        <div class="card__desc">Use the "POUR" principle to learn and apply a11y standards.</div>
+        <div class="card__desc">Use the "POUR" principle to learn accessibility standards in plain language.</div>
       </div>
-    </div>
+    </a>
+    </a>
   </div>
 </div>
 
@@ -284,17 +299,86 @@ navOrder: 2
 {% block styles %}
 <style>
   .a11y-hero {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--nys-space-400);
+    background: var(--nys-color-theme-faint);
+    border-radius: var(--nys-radius-lg);
+    padding: var(--nys-space-400);
+    margin-block-end: var(--nys-space-400);
+    overflow: hidden;
+  }
+
+  .a11y-hero__text {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .a11y-hero__stripe {
+    display: flex;
+    margin-block-end: var(--nys-space-200);
+  }
+
+  .a11y-hero__stripe span {
     display: block;
+    width: 36px;
+    height: 8px;
+  }
+
+  .a11y-hero__stripe span:nth-child(1) { background: #B1420C; }
+  .a11y-hero__stripe span:nth-child(2) { background: #1660AA; }
+  .a11y-hero__stripe span:nth-child(3) { background: #FFC508; }
+  .a11y-hero__stripe span:nth-child(4) { background: #1B3B5A; }
+
+  .a11y-hero__heading {
+    margin: 0;
+    font-family: var(--nys-font-family-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--nys-color-ink);
     margin-block-end: var(--nys-space-100);
   }
 
-  .a11y-hero__tagline {
+  .a11y-hero__heading strong {
+    font-weight: 700;
+  }
+
+  .a11y-hero__subheading {
     margin: 0;
-    margin-block-end: var(--nys-space-400);
-    font-style: italic;
-    color: var(--nys-color-neutral-400);
-    text-align: center;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: var(--nys-color-ink);
+    margin-block-end: var(--nys-space-050);
+  }
+
+  .a11y-hero__caption {
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--nys-color-neutral-500);
+  }
+
+  .a11y-hero__media {
+    flex: 1 1 45%;
+    min-width: 0;
+  }
+
+  .a11y-hero__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    .a11y-hero {
+      flex-direction: column-reverse;
+      padding: var(--nys-space-300);
+    }
+
+    .a11y-hero__text,
+    .a11y-hero__media {
+      flex: 1 1 100%;
+    }
   }
 
   .pour-list {
@@ -362,10 +446,6 @@ navOrder: 2
     margin: 0;
     font-size: var(--nys-font-size-ui-sm, 14px);
     line-height: var(--nys-font-lineheight-ui-sm, 24px);
-  }
-
-  #nys-internal-resources .card__category {
-    margin-bottom: var(--nys-space-200);
   }
 
 </style>
