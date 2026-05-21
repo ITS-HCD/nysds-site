@@ -24,7 +24,7 @@ extra_js:
 {% block Alternatives %}
 <div class="solution">
     <div class="card">
-        <h3>Custom Breadcrumb <code class="element">nav</code> ("symbol" revealer)</h3>
+        <h3>Custom Breadcrumb - "symbol" revealer</h3>
         <p>
             <mark class="subhead strong">When to use</mark>
             If your team has source-level control over UI code,
@@ -73,10 +73,10 @@ extra_js:
         Department of Environmental Conservation
         <span class="sr-only">path to this page</span>
     </h4>
-    <button aria-controls="sourdough">Reveal links</button>
+    <button aria-controls="symbol">Reveal links</button>
     <hr class="nysa11y divider" data-component="divider" data-html="native">
 
-    <!-- Breadcrumb "sourdough" -->
+    <!-- Breadcrumb "symbol" -->
     <nav
         aria-labelledby="some-page-header"
         class="nysa11y breadcrumb"
@@ -84,7 +84,7 @@ extra_js:
         data-revealer="symbol"
         data-html="custom"
         data-state="min"
-        id="sourdough">
+        id="symbol">
         <ol>
             <li>
                 <a href="https://dec.ny.gov/">Home</a>
@@ -133,7 +133,7 @@ extra_js:
 
 <div class="solution">
     <div class="card">
-        <h3>Custom Breadcrumb <code class="element">nav</code> ("text" revealer)</h3>
+        <h3>Custom Breadcrumb - "text" revealer</h3>
         <p>
             <mark class="subhead strong">About the second demo</mark>
         </p>
@@ -157,10 +157,10 @@ extra_js:
     {% block HTMLCustom %}
     {% set preview %}
 <div class="breadcrumb-demo">
-    <button aria-controls="ciabatta">Reveal links</button>
+    <button aria-controls="text">Reveal links</button>
     <hr class="nysa11y divider" data-component="divider" data-html="native">
 
-    <!-- Breadcrumb "ciabatta" -->
+    <!-- Breadcrumb "text" -->
     <nav
         aria-label="Department of Environmental Conservation, path to this page"
         class="nysa11y breadcrumb background"
@@ -168,7 +168,7 @@ extra_js:
         data-html="custom"
         data-revealer="text"
         data-state="min"
-        id="ciabatta">
+        id="text">
         <ol>
             <li>
                 <a href="https://dec.ny.gov/">Home</a>
