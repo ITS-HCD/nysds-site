@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-05-22T14:36:06.812Z -->
+    <!-- Latest Build: 2026-05-22T16:44:30.398Z -->
   </head>
   
   <body class="single-page page-tab section-components">
@@ -380,12 +380,32 @@
   
     
     
-    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active" aria-expanded="true">
       <a class="section-nav__link" href="/components/tab/" aria-current="page">
         Tab
       </a>
 
       
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -545,23 +565,34 @@
 </section><br>
 <section>
     <h2 id="accessibility">Accessibility</h2>
+    <nys-table bordered="">
+        <table aria-labelledby="tab-test-status">
+            <caption>
+                Tab test status
+            </caption>
+        <tr>
+            <th>Total tests</th>
+            <th>Passes</th>
+            <th>Fails</th>
+            <th>To do</th>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>25</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+    </nys-table>
+    <p>
+        For comprehensive insight and guidance, please see
+        <a href="./accessibility-tests.html">Accessibility Checklists</a> and
+        <a href="./accessibility-build.html">Build Accessibly</a>.
+    </p>
 <p>The <code>nys-tab</code> component includes the following accessibility-focused features:</p>
 <ul>
-<li>
-<p><strong>Keyboard Navigation</strong>: Users can navigate between tabs using the arrow keys, and activate a tab with the Enter or Space key.</p>
-</li>
-<li>
-<p><strong>ARIA Roles and Attributes</strong>: The component uses appropriate ARIA roles (e.g., <code>tablist</code>, <code>tab</code>, <code>tabpanel</code>) and attributes (e.g., <code>aria-selected</code>, <code>aria-controls</code>) to ensure that assistive technologies can correctly interpret the structure and state of the tabs.</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
-          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
-          Additional accessibility test and build content is coming soon,
-          in a <a href="/components/accordion/accessibility-tests.html">new format</a>.
-      </span>
-  </p>
-</li>
+<li><strong>Keyboard Navigation</strong>: Users can navigate between tabs using the arrow keys, and activate a tab with the Enter or Space key.</li>
+<li><strong>ARIA Roles and Attributes</strong>: The component uses appropriate ARIA roles (e.g., <code>tablist</code>, <code>tab</code>, <code>tabpanel</code>) and attributes (e.g., <code>aria-selected</code>, <code>aria-controls</code>) to ensure that assistive technologies can correctly interpret the structure and state of the tabs.</li>
 </ul>
 </section><br>
 <section>
@@ -700,15 +731,15 @@
     <h2 id="usage">Usage</h2>
 <h3 id="when-to-use-this-component">When to use this component</h3>
 <ul>
-<li>Use a tabs component to organize related content into distinct, manageable sections, reducing cognitive load and saving screen space</li>
+<li>Use a tabs component to organize related content into distinct, manageable sections, reducing cognitive load and saving screen space</li>
 <li>When you need to categorize related, but separate, information within the same context (e.g., Overview, Specs, Reviews).</li>
 <li>When you need to display a large amount of content without making the page overwhelmingly long.</li>
 </ul>
 <h3 id="when-to-consider-something-else">When to consider something else</h3>
 <ul>
-<li>Comparing Data: If the user needs to compare information between sections simultaneously, tabs are poor, as they require clicking back and forth.</li>
-<li>Linear Process: If the content represents a strict, step-by-step process, use a Stepper component indicator instead.</li>
-<li>Too Few Categories: If you only have two small pieces of content, it might be better to just display them consecutively.</li>
+<li>Comparing Data: If the user needs to compare information between sections simultaneously, tabs are poor, as they require clicking back and forth.</li>
+<li>Linear Process: If the content represents a strict, step-by-step process, use a Stepper component indicator instead.</li>
+<li>Too Few Categories: If you only have two small pieces of content, it might be better to just display them consecutively.</li>
 </ul>
 </section>
 <div class="nys-grid-row nys-grid-gap">
@@ -716,8 +747,8 @@
         <div class="card card--do nys-flex-fill">
             <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Keep it simple: Use 2–9 short, clear labels.</li>
-<li>Limit tab labels to one row: Avoid wrapping, as it makes navigation confusing.</li>
+<li>Keep it simple: Use 2–9 short, clear labels.</li>
+<li>Limit tab labels to one row: Avoid wrapping, as it makes navigation confusing.</li>
 <li>Only one tab should ever be in the active state.</li>
 </ul>
 </div>
@@ -726,7 +757,7 @@
         <div class="card card--dont nys-flex-fill">
             <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't nest: Avoid putting tabs inside other tabs; it creates a poor user experience.</li>
+<li>Don't nest: Avoid putting tabs inside other tabs; it creates a poor user experience.</li>
 <li>Do not use tabs for page navigation.</li>
 </ul>
 </div>
