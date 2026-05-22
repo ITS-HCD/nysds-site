@@ -54,7 +54,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-05-22T19:13:13.394Z -->
+    <!-- Latest Build: 2026-05-22T19:40:21.239Z -->
   </head>
   
   <body class="single-page page-a11y-build section-components">
@@ -203,12 +203,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="/components/breadcrumbs/">
         Breadcrumbs
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-tests.html">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-build.html">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -513,7 +533,7 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-8">  
-    <article data-template="a11yBuild">
+    <article data-template="a11yBuild" data-pattern="accordion">
     <section id="overview">
         <h1 id="build-an-accessible-accordion">Build an Accessible Accordion</h1>
         <p>
@@ -696,8 +716,9 @@
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-css"><code class="language-css"><span class="token comment">/**
- * NYSA11y Accordion (native)
- * &lt;details>&lt;summary>
+ * NYSA11y Accordion (native &lt;details>+&lt;summary>)
+ * Path: /assets/nysa11y/accordion-native.css
+ * No JavaScript required
  */</span>
 <span class="token atrule"><span class="token rule">@layer</span> nysa11y</span> <span class="token punctuation">{</span>
     <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
@@ -745,8 +766,7 @@
                     <span class="token property">transition</span><span class="token punctuation">:</span> transform <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token punctuation">}</span>
                 <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
-                    <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
-                        <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
                     <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token punctuation">}</span>
                 <span class="token selector">&amp;:hover,
@@ -764,8 +784,7 @@
             <span class="token punctuation">}</span>
             <span class="token selector">&amp;::details-content</span> <span class="token punctuation">{</span>
                 <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-                <span class="token property">transition</span><span class="token punctuation">:</span> opacity <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span>
-                    ease-in-out<span class="token punctuation">;</span>
+                <span class="token property">transition</span><span class="token punctuation">:</span> opacity <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-chevron-rotation-time<span class="token punctuation">)</span> ease-in-out<span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
             <span class="token selector">&amp;[open]</span> <span class="token punctuation">{</span>
                 <span class="token selector">summary</span> <span class="token punctuation">{</span>
