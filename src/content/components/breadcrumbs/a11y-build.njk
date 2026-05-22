@@ -297,8 +297,8 @@ li:has(a)::after {
 <p>
     Very commonly a Breadcrumb displays at small font sizes.
     Ensure that link tap targets respect an absolute minimum dimension of 24 pixels square
-    or have sufficient non-interactive space between them.
-    This can be done with CSS <code>line-height</code> or <code>padding</code> and other means.
+    or equivalent non-interactive horizontal and vertical space between them.
+    This can be done with CSS <code>gap</code> or <code>line-height</code> or <code>padding</code>, or other means.
 </p>
 <p>
     When the final Breadcrumb item echoes the name of the current page, render it as plain text, not as a link.
@@ -362,7 +362,7 @@ li:has(a)::after {
         This will communicate the number and index of links to screen reader users.
     </dd>
     <dt>
-        Ensure the smallest tap target is 44 pixels square with at least that same amount of non-interactive space between them.
+        Ensure the smallest tap target is 24 pixels square with at least that same amount of non-interactive space between them.
     </dt>
     <dd>
         This helps all touch device users to make the selections they intend.

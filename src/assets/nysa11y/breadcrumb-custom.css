@@ -42,6 +42,7 @@
                 list-style: none;
                 margin: 0 !important; /* defensive */
                 padding-inline: 0;
+                row-gap: 0.75rem;
 
                 & li {
                     align-items: center;
@@ -55,6 +56,7 @@
                     &:has(a, button) {
                         padding-inline: 0;
                         &::after {
+                            align-self: baseline;
                             content: "\276F" / "";
                             display: flex;
                             justify-content: center;
@@ -85,10 +87,14 @@
                         font-weight: 600;
                         text-decoration: none;
                         &:hover {
-                            text-decoration: underline;
+                            text-decoration-line: underline;
+                            text-decoration-style: solid;
+                            text-decoration-skip-ink: auto;
+                            text-decoration-thickness: 14%;
+                            text-underline-offset: auto;
                         }
                         &:active {
-                            text-decoration-thickness: 1.8px;
+                            color: var(--nys-color-neutral-900, #1b1b1b) !important;
                         }
                     }
                 }
@@ -131,6 +137,7 @@
                     }
                     &:active {
                         background-color: var(--nys-color-theme-weak, #cddde9);
+                        color: var(--nys-color-neutral-900, #1b1b1b) !important;
                     }
                 }
             }
