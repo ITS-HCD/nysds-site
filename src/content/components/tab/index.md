@@ -138,29 +138,29 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 
 ### When to use this component
 
-- Use a tabs component to organize related content into distinct, manageable sections, reducing cognitive load and saving screen space
+- Use a tabs component to organize related content into distinct, manageable sections, reducing cognitive load and saving screen space
 - When you need to categorize related, but separate, information within the same context (e.g., Overview, Specs, Reviews).
 - When you need to display a large amount of content without making the page overwhelmingly long.
 
 ### When to consider something else
 
-- Comparing Data: If the user needs to compare information between sections simultaneously, tabs are poor, as they require clicking back and forth.
-- Linear Process: If the content represents a strict, step-by-step process, use a Stepper component indicator instead.
-- Too Few Categories: If you only have two small pieces of content, it might be better to just display them consecutively.
+- Comparing Data: If the user needs to compare information between sections simultaneously, tabs are poor, as they require clicking back and forth.
+- Linear Process: If the content represents a strict, step-by-step process, use a Stepper component indicator instead.
+- Too Few Categories: If you only have two small pieces of content, it might be better to just display them consecutively.
 
 {% endblock %}
 
 {% block usagedo %}
 
-- Keep it simple: Use 2–9 short, clear labels.
-- Limit tab labels to one row: Avoid wrapping, as it makes navigation confusing.
+- Keep it simple: Use 2–9 short, clear labels.
+- Limit tab labels to one row: Avoid wrapping, as it makes navigation confusing.
 - Only one tab should ever be in the active state.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Don't nest: Avoid putting tabs inside other tabs; it creates a poor user experience.
+- Don't nest: Avoid putting tabs inside other tabs; it creates a poor user experience.
 - Do not use tabs for page navigation.
 
 {% endblock %}
