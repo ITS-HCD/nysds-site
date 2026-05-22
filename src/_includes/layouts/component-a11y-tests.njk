@@ -4,7 +4,7 @@
     For example, if the `tests` JSON member is commented-out,
     the TestStatus block below will not render. <https://json5.org/>
 #}
-<article data-template="a11yTests">
+<article data-template="a11yTests" data-pattern="{{ pattern | lower }}">
     {%- block Introduction  %}
     <section id="overview">
         <h1>{{ title }}</h1>

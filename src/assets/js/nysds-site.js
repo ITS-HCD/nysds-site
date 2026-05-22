@@ -15,23 +15,23 @@ const showAlert = () => {
 
 // Trigger dropdown to show the source code
 const showSourceCode = (clickedDropdown) => {
-    // Find the nearest parent container
-    const container = clickedDropdown.closest(".code-preview-container");
-    if (!container) return;
+  // Find the nearest parent container
+  const container = clickedDropdown.closest(".code-preview-container");
+  if (!container) return;
 
-    // Get the code block inside this container
-    const codeBlock = container.querySelector(".code-preview__code-container");
-    if (!codeBlock) return;
+  // Get the code block inside this container
+  const codeBlock = container.querySelector(".code-preview__code-container");
+  if (!codeBlock) return;
 
-    // Toggle the expanded class
-    const isOpen = codeBlock.classList.toggle("expanded");
+  // Toggle the expanded class
+  const isOpen = codeBlock.classList.toggle("expanded");
 
-    // Update chevron icon
-    const chevronIcon = container.querySelector(".code-preview__dropdown-icon");
-    chevronIcon.setAttribute("name", isOpen ? "chevron_down" : "chevron_right");
+  // Update chevron icon
+  const chevronIcon = container.querySelector(".code-preview__dropdown-icon");
+  chevronIcon.setAttribute("name", isOpen ? "chevron_down" : "chevron_right");
 
-    // Update ARIA attributes for accessibility
-    clickedDropdown.setAttribute("aria-expanded", isOpen.toString());
+  // Update ARIA attributes for accessibility
+  clickedDropdown.setAttribute("aria-expanded", isOpen.toString());
 };
 
 // Trigger copy code to clipboard and show tooltip
@@ -62,8 +62,7 @@ const copyCode = async (clickedCopyButton) => {
 
 // On this page navigation JS
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = Array.from(document.querySelectorAll("section[id]"))
-    .filter(section => section.id !== "header");
+  const sections = Array.from(document.querySelectorAll("section[id]")).filter((section) => section.id !== "header");
   const navItems = Array.from(document.querySelectorAll(".navigator__item"));
   let ticking = false; // This is a performance thing
 
@@ -123,12 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     pre.parentNode.insertBefore(containerWrapper, pre);
     containerWrapper.appendChild(pre);
-    
+
     // Make the <pre> scrollable (if content overflows)
     pre.style.overflow = "auto";
   });
 });
-
 
 // Add Copy to clipboard to all icon examples
 document.addEventListener("DOMContentLoaded", function () {
@@ -170,16 +168,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     card.addEventListener("mouseleave", async () => {
       const paragraph = document.querySelector(".hover-message");
-    
+
       if (paragraph) {
         card.parentElement.removeChild(paragraph);
-        hasParagraph = false
+        hasParagraph = false;
       }
       cardDesc.innerHTML = cardText;
     });
   });
 });
-
 
 // Load with <script defer> so the DOM exists
 (function () {
@@ -212,67 +209,66 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 // Add anchor links to all headings (h1..h6)
-document.addEventListener('DOMContentLoaded', function () {
-  if (document.body.classList.contains('no-heading-links')) {
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.body.classList.contains("no-heading-links")) {
     return;
   } else {
-  // Grab all headings from h2 to h6
-  const headings = Array.from(document.querySelectorAll('h2,h3,h4,h5,h6'));
-  if (!headings.length) return;
+    // Grab all headings from h2 to h6
+    const headings = Array.from(document.querySelectorAll("h2,h3,h4,h5,h6"));
+    if (!headings.length) return;
 
-  headings.forEach((h) => {
-    // If there's already an explicit anchor link to this heading id, skip
-    const existingId = h.id;
-    if (existingId && h.querySelector(`a[href="#${existingId}"]`)) return;
+    headings.forEach((h) => {
+      // If there's already an explicit anchor link to this heading id, skip
+      const existingId = h.id;
+      if (existingId && h.querySelector(`a[href="#${existingId}"]`)) return;
 
-    // Determine or generate an id
-    let id = existingId;
+      // Determine or generate an id
+      let id = existingId;
 
-    // If heading already contains an anchor that links to this id, skip
-    if (h.querySelector(`a[href="#${id}"]`)) return;
+      // If heading already contains an anchor that links to this id, skip
+      if (h.querySelector(`a[href="#${id}"]`)) return;
 
-    // Need to relatively position the headsing so we can absolutely position the icon
-    h.style.position = 'relative';
+      // Need to relatively position the headsing so we can absolutely position the icon
+      h.style.position = "relative";
 
-    // Create our tooltip element
-    const tooltip = document.createElement('nys-tooltip');
-    // tooltip.setAttribute('text', `Copy link to ${h.textContent.trim()}`);
-    tooltip.setAttribute('text', `Copy link`);
-    tooltip.setAttribute('focusable', true);
-    tooltip.setAttribute('for', `heading-link-icon-${id}`);
-    tooltip.style.display = 'inline-flex';
-    tooltip.style.padding = '0 0 0 var(--nys-space-50)';
+      // Create our tooltip element
+      const tooltip = document.createElement("nys-tooltip");
+      // tooltip.setAttribute('text', `Copy link to ${h.textContent.trim()}`);
+      tooltip.setAttribute("text", `Copy link`);
+      tooltip.setAttribute("focusable", true);
+      tooltip.setAttribute("for", `heading-link-icon-${id}`);
+      tooltip.style.display = "inline-flex";
+      tooltip.style.padding = "0 0 0 var(--nys-space-50)";
 
-    // Create our link icon element
-    const linkIcon = document.createElement('nys-icon');
-    linkIcon.setAttribute('name', 'link');
-    linkIcon.setAttribute('id', `heading-link-icon-${id}`);
+      // Create our link icon element
+      const linkIcon = document.createElement("nys-icon");
+      linkIcon.setAttribute("name", "link");
+      linkIcon.setAttribute("id", `heading-link-icon-${id}`);
 
-    // Create an anchor that will hold the URL to copy for this heading
-    // anchor is in memory, not added to the DOM
-    const anchor = document.createElement('nys-button');
-    anchor.setAttribute('href', `#${id}`);
+      // Create an anchor that will hold the URL to copy for this heading
+      // anchor is in memory, not added to the DOM
+      const anchor = document.createElement("nys-button");
+      anchor.setAttribute("href", `#${id}`);
 
-    // When you click on the copy icon, copy the heading URL to clipboard
-    // change the tooltip text to "Copied!" temporarily
-    linkIcon.addEventListener('click', (e) => {
-      // Stop the page from scrolling when you click this link
-      e.preventDefault();
-      // Copy the Full URL to the clipboard
-      copyHeadingUrl(anchor);
-      tooltip.setAttribute('text', 'Copied link!');
+      // When you click on the copy icon, copy the heading URL to clipboard
+      // change the tooltip text to "Copied!" temporarily
+      linkIcon.addEventListener("click", (e) => {
+        // Stop the page from scrolling when you click this link
+        e.preventDefault();
+        // Copy the Full URL to the clipboard
+        copyHeadingUrl(anchor);
+        tooltip.setAttribute("text", "Copied link!");
 
-      setTimeout(() => {
-        tooltip.setAttribute('text', 'Copy link');
-      }, 1500);
+        setTimeout(() => {
+          tooltip.setAttribute("text", "Copy link");
+        }, 1500);
+      });
+
+      // insert both the tooltip and linkicon elements after the heading text
+      h.insertAdjacentElement("beforeend", tooltip);
+      h.insertAdjacentElement("beforeend", linkIcon);
     });
-
-    // insert both the tooltip and linkicon elements after the heading text
-    h.insertAdjacentElement('beforeend', tooltip);
-    h.insertAdjacentElement('beforeend', linkIcon);
-
-  });
-}
+  }
 });
 
 // Trigger copy URL to clipboard
@@ -287,3 +283,25 @@ const copyHeadingUrl = async (clickedHeadingLink) => {
     console.error("Failed to copy:", err);
   }
 };
+
+/**
+ * A11y Test+Build
+ */
+document.querySelectorAll('article[data-pattern="breadcrumbs"] .breadcrumb-demo').forEach((demo) => {
+  let bcState = "min";
+  const bt = demo.querySelector("[aria-controls]");
+  const bc = demo.querySelector('[data-component="breadcrumb"]');
+  demo.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+      bcState = bcState === "min" ? "max" : "min";
+      bc.setAttribute("data-state", bcState);
+      if (bcState === "min") {
+        bt.textContent = "Reveal links";
+        bt.ariaExpanded = "false"; // not passed into shadowDOM, thus use `button` instead of `nys-button`
+      } else {
+        bt.textContent = "Collapse links";
+        bt.ariaExpanded = "true";
+      }
+    }
+  });
+});
