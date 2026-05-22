@@ -1,6 +1,7 @@
 /**
- * NYSA11y Accordion (native)
- * <details><summary>
+ * NYSA11y Accordion (native <details>+<summary>)
+ * Path: /assets/nysa11y/accordion-native.css
+ * No JavaScript required
  */
 @layer nysa11y {
     body:has(.nysa11y) {
@@ -48,8 +49,7 @@
                     transition: transform var(--nysa11y-chevron-rotation-time);
                 }
                 &:focus-visible {
-                    outline: solid var(--nys-border-width-md, 2px)
-                        var(--nys-color-focus, #004dd1);
+                    outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
                     outline-offset: var(--nys-space-2px, 2px);
                 }
                 &:hover,
@@ -67,8 +67,7 @@
             }
             &::details-content {
                 opacity: 0;
-                transition: opacity var(--nysa11y-chevron-rotation-time)
-                    ease-in-out;
+                transition: opacity var(--nysa11y-chevron-rotation-time) ease-in-out;
             }
             &[open] {
                 summary {

@@ -1,3 +1,8 @@
+/**
+ * NYSA11y Breadcrumb
+ * Path: /assets/nysa11y/breadcrumb-custom.js
+ * Depends on /assets/nysa11y/breadcrub-custom.css
+ */
 class Breadcrumb {
   // Private fields for internal state and DOM elements
   #container;
@@ -125,29 +130,4 @@ class Breadcrumb {
 // Initialize all breadcrumbs when the DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   Breadcrumb.initializeAll();
-});
-
-/* ------------------------------------------------------------------------------------- */
-/*
-  Demo-only toggle.
-  The value of the 'data-state' attribute determines component rendering and functionality.
-*/
-
-document.querySelectorAll(".breadcrumb-demo").forEach((demo) => {
-  let bcState = "min";
-  const st = demo.querySelector("[aria-controls]");
-  const bc = demo.querySelector('[data-component="breadcrumb"]');
-  demo.addEventListener("click", (e) => {
-    if (e.target.tagName === "BUTTON") {
-      bcState = bcState === "min" ? "max" : "min";
-      bc.setAttribute("data-state", bcState);
-      if (bcState === "min") {
-        st.textContent = "Reveal links";
-        st.ariaExpanded = "false"; // not passed into shadowDOM, thus use `button` instead of `nys-button`
-      } else {
-        st.textContent = "Collapse links";
-        st.ariaExpanded = "true"; // not passed into shadowDOM, thus use `button` instead of `nys-button`
-      }
-    }
-  });
 });

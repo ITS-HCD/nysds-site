@@ -55,7 +55,7 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 {% block usagedo %}
 
 - Place breadcrumb below the header and above the main content.
-- For the home page of a site, do not use icons or just "Home". This ensures that the main site home page is differentiated from other types of landing pages on the site (e.g., “myBenefits Home” instead of just “Home”).
+- For the home page of a site, do not use icons or just "Home". This ensures that the main site home page is differentiated from other types of landing pages on the site (e.g., "myBenefits Home" instead of just "Home").
 - Breadcrumbs should show the site hierarchy, not the path a user took.
 
 {% endblock %}

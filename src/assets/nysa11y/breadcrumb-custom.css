@@ -1,5 +1,7 @@
 /**
- * NYSA11y Breadcrumb (custom)
+ * NYSA11y Breadcrumb
+ * Path: /assets/nysa11y/breadcrumb-custom.css
+ * Depends on /assets/nysa11y/breadcrub-custom.js
  */
 @layer nysa11y {
     body:has(.nysa11y) {
@@ -38,7 +40,7 @@
                 flex-wrap: wrap;
                 font-size: inherit;
                 list-style: none;
-                margin: 0 !important;
+                margin: 0 !important; /* defensive */
                 padding-inline: 0;
 
                 & li {
@@ -47,7 +49,7 @@
                     display: flex;
                     font-size: inherit;
                     height: 1.5rem;
-                    margin: 0 !important;
+                    margin: 0 !important; /* defensive */
                     padding-inline: var(--nysa11y-breadcrumb-pad-inline);
                     white-space: nowrap;
                     &:has(a, button) {
@@ -67,7 +69,7 @@
                         align-self: stretch;
                         background-color: transparent;
                         border-radius: 0.25rem;
-                        color: var(--nys-color-text-weak, #4a4d4f) !important;
+                        color: var(--nys-color-text-weak, #4a4d4f) !important; /* defensive */
                         cursor: pointer;
                         font-size: inherit;
                         line-height: 1.5rem;
@@ -116,7 +118,7 @@
                 & button.revealer {
                     background-color: var(--nys-color-surface, #ffffff);
                     border: 1.5px solid var(--nys-color-theme, #154973);
-                    color: var(--nys-color-theme, #154973) !important;
+                    color: var(--nys-color-theme, #154973) !important; /* defensive */
                     cursor: pointer;
                     margin-inline: var(--nysa11y-breadcrumb-pad-inline);
                     &::after {

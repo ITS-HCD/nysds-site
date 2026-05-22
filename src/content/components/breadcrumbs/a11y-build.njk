@@ -24,7 +24,7 @@ extra_js:
 {% block Alternatives %}
 <div class="solution">
     <div class="card">
-        <h3>Custom Breadcrumb - "symbol" revealer</h3>
+        <h3>Custom Breadcrumb ("symbol")</h3>
         <p>
             <mark class="subhead strong">When to use</mark>
             If your team has source-level control over UI code,
@@ -52,7 +52,7 @@ extra_js:
         </p>
         <ul>
             <li>
-                This first Breadcrumb provides a "symbol" appearance (the three dots "...") for the revealer button,
+                This first Breadcrumb provides a "symbol" appearance (three dots "...") for the revealer button,
                 which has the addressable <code>aria-label</code> "show more links"
             </li>
             <li>
@@ -74,7 +74,6 @@ extra_js:
         <span class="sr-only">path to this page</span>
     </h4>
     <button aria-controls="symbol">Reveal links</button>
-    <hr class="nysa11y divider" data-component="divider" data-html="native">
 
     <!-- Breadcrumb "symbol" -->
     <nav
@@ -115,8 +114,6 @@ extra_js:
             <li>Construction Stormwater Toolbox</li>
         </ol>
     </nav>
-
-    <hr class="nysa11y divider" data-component="divider" data-html="native">
 </div>
     {% endset %}
     {% set accordionLabel = "HTML" %}
@@ -133,7 +130,7 @@ extra_js:
 
 <div class="solution">
     <div class="card">
-        <h3>Custom Breadcrumb - "text" revealer</h3>
+        <h3>Custom Breadcrumb ("text")</h3>
         <p>
             <mark class="subhead strong">About the second demo</mark>
         </p>
@@ -158,7 +155,6 @@ extra_js:
     {% set preview %}
 <div class="breadcrumb-demo">
     <button aria-controls="text">Reveal links</button>
-    <hr class="nysa11y divider" data-component="divider" data-html="native">
 
     <!-- Breadcrumb "text" -->
     <nav
@@ -199,8 +195,6 @@ extra_js:
             <li class="intermediate">Construction Stormwater Toolbox</li>
         </ol>
     </nav>
-
-    <hr class="nysa11y divider" data-component="divider" data-html="native">
 </div>
     {% endset %}
     {% set accordionLabel = "HTML" %}
@@ -391,7 +385,7 @@ li:has(a)::after {
     </dt>
     <dd>
         Correct configuration directly influences search engine optimization, which makes your content easier to find for all users.
-        See Google’s
+        See Google's
         <a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb" target="_blank">
             Breadcrumblist structured data</a> documentation.
     </dd>
