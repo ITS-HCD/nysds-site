@@ -101,66 +101,61 @@ When content changes without a full page reload:
 
 </section>
 
-<section id="nys-resources">
+<section id="nys-internal-resources">
 
-## NYS Internal Resources
+<h2>NYS internal resources</h2>
 
-The following resources are available to New York State staff:
+<p>The following guidance, tools, and courses are available to New York State staff:</p>
 
-<div class="nys-grid-row nys-grid-gap-300">
+<div class="nys-grid-row">
   <div class="nys-grid-col-12">
-    <div class="card card--horizontal">
+    <a class="card card--horizontal" href="https://on.ny.gov/a11yteam" target="_blank" rel="noopener">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/teams-channel.svg" />
+          <img src="/assets/img/teams-channel.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
-          <div class="card__title">Accessibility Teams Channel</div>
-          <div class="card__desc">Ask questions, share findings, and get help from the accessibility community across NYS agencies.
-            <p></p>
-            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
-          </div>
+          <div class="card__category nys-margin-b-200"><nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge></div>
+          <div class="card__title">Join ITS Accessibility Community</div>
+          <div class="card__desc">Ask questions, share findings, get alerted about internal office hours, and get help from the accessibility community across NYS agencies.</div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="nys-grid-col-12">
-    <div class="card card--horizontal">
-      <div class="card__inner">
-        <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-card.svg" />
-        </div>
-        <div class="card__content">
-          <div class="card__title">Accessibility SharePoint</div>
-          <div class="card__desc">Policies, templates, and internal guidance documents for accessibility compliance.
-            <p></p>
-            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="nys-grid-col-12">
-    <div class="card card--horizontal">
-      <div class="card__inner">
-        <div class="card__media card__media--thin">
-          <img src="/assets/img/accessibility-card.svg" />
-        </div>
-        <div class="card__content">
-          <div class="card__title">Accessibility Review Request</div>
-          <div class="card__desc">Submit your site or application for review by the ITS Accessibility Team.
-            <p></p>
-            <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
-          </div>
-        </div>
-      </div>
-    </div>
+    </a>
   </div>
 </div>
 
-Contact the ITS Accessibility Team for links to these internal resources.
+<div class="nys-grid-row nys-grid-gap-300">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/Get-started.aspx?csf=1&web=1&share=IQB9OPiWlWK1QKiLwKnt_SlnAVxD3SO_eebbKlc69RlRYqc&e=vC8jYt">
+      <div class="card__inner">
+        <div class="card__category nys-margin-b-200"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
+        <div class="card__title">Get started, by role</div>
+        <div class="card__desc">Target the accessibility priorities and resources for your individual job role.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/t/its.365.DigitalAccessibility/IQBIx-MmHr1GQ4uxf38xsCJ6AeLh-P7wopABIBERADnNM6o?e=hmbMw1">
+      <div class="card__inner">
+        <div class="card__category nys-margin-b-200"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
+        <div class="card__title">Tools & Guides</div>
+        <div class="card__desc">Get up to speed on the basics on accessibility and accessibility tools, including NYS-specific guidance.</div>
+      </div>
+    </a>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/POUR%20-%202%20-%20Perceivable.aspx?csf=1&web=1&share=IQAB9ZZ94vMPRoUR8ylezZ-mAYgCg3vubPaZJHvFk_f2KfM&e=c0pJHD">
+      <div class="card__inner">
+        <div class="card__category nys-margin-b-200"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
+        <div class="card__title">Understand WCAG</div>
+        <div class="card__desc">Use the "POUR" principle to learn accessibility standards in plain language.</div>
+      </div>
+    </a>
+  </div>
+</div>
 
 </section>
+
 
 <section id="further-reading">
 
