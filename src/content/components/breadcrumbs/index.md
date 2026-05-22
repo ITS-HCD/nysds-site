@@ -20,17 +20,14 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 {% endblock %}
 
 {% block example %}
-{% set preview %}
-<nys-breadcrumbs>
-
+{% set preview %}<nys-breadcrumbs>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/tickets">Ticket System</a></li>
     <li>Current Page</li>
   </ol>
-</nys-breadcrumbs>  
-  {% endset %}
+</nys-breadcrumbs>{% endset %}
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
@@ -67,17 +64,6 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 - Don't use breadcrumbs for sequential processes (wizards, forms).
   {% endblock %}
 
-{% block accessibility %}
-
-The `<nys-breadcrumbs>` component includes the following accessibility-focused features:
-
-- Proper semantic HTML with `<nav>` and `<ol>` elements.
-- ARIA labels to identify the navigation as breadcrumbs.
-- Separators hidden from screen readers to avoid repetitive announcements.
-- Keyboard navigation support for all links.
-
-{% endblock %}
-
 {% block options %}
 
 ### Basic Usage
@@ -86,17 +72,14 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 
 **Note:** If you prefer not to display the current page in the breadcrumb trail, simply leave it out.
 
-{% set preview %}
-<nys-breadcrumbs>
-
+{% set preview %}<nys-breadcrumbs>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/tickets">Ticket System</a></li>
     <li>Del Water Gap</li>
   </ol>
-</nys-breadcrumbs>
-{% endset %}
+</nys-breadcrumbs>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -104,9 +87,7 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 
 Add the `backToParent` prop to collapse the full breadcrumb trail into a single "back to parent" button on screens narrower than 767px. The component automatically determines which crumb represents the parent of the current page. Resize your browser to a small width to see it in action.
 
-{% set preview %}
-<nys-breadcrumbs backToParent>
-
+{% set preview %}<nys-breadcrumbs backToParent>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/government">Government</a></li>
@@ -117,8 +98,7 @@ Add the `backToParent` prop to collapse the full breadcrumb trail into a single 
     <li><a href="/parks/state-parks/delaware/water-gap">Delaware Water Gap</a></li>
     <li>Trail Conditions</li>
   </ol>
-</nys-breadcrumbs>
-{% endset %}
+</nys-breadcrumbs>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -129,17 +109,14 @@ Set the `size` prop to adjust text size. Available sizes:
 - `md`: Default size (16px)
 - `sm`: Smaller text (14px)
 
-{% set preview %}
-<nys-breadcrumbs size="sm">
-
+{% set preview %}<nys-breadcrumbs size="sm">
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/government">Government</a></li>
     <li><a href="/government/agencies">Agencies</a></li>
     <li>Parks & Recreation</li>
   </ol>
-</nys-breadcrumbs>
-{% endset %}
+</nys-breadcrumbs>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -147,17 +124,14 @@ Set the `size` prop to adjust text size. Available sizes:
 
 Add the `backgroundBar` prop to display breadcrumbs on a light gray background bar.
 
-{% set preview %}
-<nys-breadcrumbs backgroundBar>
-
+{% set preview %}<nys-breadcrumbs backgroundBar>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/tickets">Ticket System</a></li>
     <li>Del Water Gap</li>
   </ol>
-</nys-breadcrumbs>
-{% endset %}
+</nys-breadcrumbs>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -165,17 +139,14 @@ Add the `backgroundBar` prop to display breadcrumbs on a light gray background b
 
 Add the `disabled` prop to disable all links in the breadcrumbs.
 
-{% set preview %}
-<nys-breadcrumbs disabled>
-
+{% set preview %}<nys-breadcrumbs disabled>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/tickets">Ticket System</a></li>
     <li>Del Water Gap</li>
   </ol>
-</nys-breadcrumbs>
-{% endset %}
+</nys-breadcrumbs>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -242,6 +213,7 @@ The `<nys-breadcrumbs>` component emits **one** custom Javascript event:
 1.  **`nys-expand`** – Fired when the button is clicked.
 
 You can listen to these events using JavaScript:
+
 {% set code %}// Select the breadcrumbs component
 const breadcrumbs = document.querySelector('nys-breadcrumbs');
 // Listen for the 'nys-expand' event
