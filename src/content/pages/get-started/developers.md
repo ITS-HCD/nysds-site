@@ -54,35 +54,15 @@ Then use NYSDS components directly in your HTML:
 
 **Accessibility** — All components are WCAG 2.2 compliant with keyboard navigation and screen reader support. See [accessibility](/foundations/accessibility/).
 
-## CDN Alternative
-
-If your project cannot use npm (legacy .NET, static sites, prototypes), load from a CDN:
-
-{% set code %}<!-- Load NYSDS from CDN -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@nysds/components/dist/nysds.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nysds/styles/dist/nysds-full.min.css" />{% endset %}
-{% set accordionLabel = "CDN Setup" %}
-{% set codeExpanded = true %}
-{% include "partials/code-preview.njk" %}
-
-Pin to a specific version for production:
-
-{% set code %}<!-- Pin to a specific version -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@nysds/components@1.13.0/dist/nysds.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nysds/styles@1.13.0/dist/nysds-full.min.css" />{% endset %}
-{% set accordionLabel = "Pinned Version" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
 ## Framework Guides
 
-NYSDS components are standard web components. They work in any framework. Below are the key setup steps for common frameworks used across New York State agencies.
+NYSDS components are standard web components. They work in any framework. Below are sample setup steps for common frameworks used across New York State agencies. If you notice a bug in these configurations, [drop a bug report issue in GitHub](https://github.com/ITS-HCD/nysds/issues/new/choose).
 
 ### React
 
 Web components work in React, but React's synthetic event system does not automatically listen to custom events from web components. Use `ref` callbacks or `addEventListener` for NYSDS events like `nys-change`.
 
-{% set code %}import '@nysds/components';
+{% set code %}import '@nysds/components/react';
 function LicenseRenewalForm() {
   const handleChange = (e) => {
     console.log('Selected:', e.detail.value);
@@ -103,6 +83,8 @@ function LicenseRenewalForm() {
 
 ### Angular
 
+<nys-alert heading="Angular support is currently in ALPHA"></nys-alert>
+
 Add `CUSTOM_ELEMENTS_SCHEMA` to your module:
 
 {% set code %}// app.module.ts
@@ -118,7 +100,9 @@ export class AppModule {}{% endset %}
 
 ### Vue
 
-Configure Vite to recognize `nys-` tags as custom elements:
+<nys-alert heading="Vue support is currently in ALPHA"></nys-alert>
+
+We package the Vue JSX files in the @nysds/components/react package. Configure Vite to recognize `nys-` tags as custom elements:
 
 {% set code %}// vite.config.js
 import vue from '@vitejs/plugin-vue';
@@ -139,11 +123,13 @@ export default {
 
 ### .NET / Blazor
 
-Load NYSDS in your layout via CDN or local path:
+Load NYSDS in your layout via local path:
 
 {% set code %}<!-- In _Layout.cshtml or _Host.cshtml -->
-<script type="module" src="https://cdn.jsdelivr.net/npm/@nysds/components/dist/nysds.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nysds/styles/dist/nysds-full.min.css" />{% endset %}
+<!-- Load the NYS Design System JavaScript library -->
+<script type="module" src="node_modules/@nysds/components/dist/nysds.js"></script>
+<!-- Load the full NYS Design System CSS -->
+<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />{% endset %}
 {% set accordionLabel = ".NET Layout" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
@@ -161,7 +147,7 @@ Copy `.vscode/` from `node_modules/@nysds/components/dist/.vscode/` to your proj
 
 - **NPM Packages:** [@nysds/components](https://www.npmjs.com/package/@nysds/components), [@nysds/styles](https://www.npmjs.com/package/@nysds/styles)
 - **GitHub:** [ITS-HCD/nysds](https://github.com/ITS-HCD/nysds)
-- **Component Reference:** Browse all [26 components](/components/)
+- **Component Reference:** Browse all [components](/components/)
 - **Release Notes:** Read the latest [updates](/about/updates/)
 - **Report Issues:** [GitHub Issues](https://github.com/ITS-HCD/nysds/issues)
 - **ITS Teams:** [Troubleshooting channel](https://teams.microsoft.com/l/channel/19%3A0228156e2bb5419c8152047f596a7bfb%40thread.tacv2/Troubleshooting?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7) (ITS staff only)
