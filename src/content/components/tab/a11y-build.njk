@@ -1,0 +1,948 @@
+---
+permalink: /components/tab/accessibility-build.html
+title: Build Accessibly
+title_h1: Build an Accessible Tablist
+description: How to code an accessible tab.
+image: /assets/img/components/tab.svg
+image_alt: An illustration of a tab.
+image_header: /assets/img/components/tab-header.svg
+stable: true
+parent: Tab
+navOrder: 2
+extra_css:
+  - "/assets/nysa11y/tablist-custom.css"
+  - "/assets/nysa11y/divider-native.css"
+extra_js:
+  - "/assets/nysa11y/tablist-custom.js"
+---
+
+{% extends "layouts/component-a11y-build.njk" %}
+{# block Introduction #}
+{# block RecommendedSolution #}
+
+
+{% block Alternatives %}
+<div class="solution">
+    <div class="card">
+        <h3>Custom Tablist (first demo)</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            and either can't use Web Components or have a pressing need for unique
+            functionality not provided by the NYSDS Tab component,
+            you may choose to build a custom tablist.
+            Or perhaps your legacy component has been flagged for remediation
+            and you need a high quality reference.
+        </p>
+        <p>
+            <mark class="subhead strong">How is it different</mark>
+            This tablist expresses the look-and-feel of the design system with many aspects
+            modeled after the NYSDS Tab component. The ways in which it differs show how to
+            honor the spirit of the design system when alternative accessible interaction
+            and layout features are implemented. Specifically, when tab headers scroll
+            horizontally, this tablist shows scroll buttons with large, generous targets
+            to ease use with touch interfaces (such as tablets) and pointing devices
+            (such as mice) by people with motor disabilities.
+        </p>
+        <p>
+            <mark class="subhead strong">About the first demo</mark>
+            On this page there are two demos of the same component.
+            This first demo has limited content and thus appears simple.
+        </p>
+        <ul>
+            <li>
+                In this demo the tabset gains its accessible name by being
+                <code>aria-labelledby</code> the <code>h4</code> heading above it
+            </li>
+            <li>
+                The scroll buttons, which will not appear in this example,
+                are nevertheless <code>aria-describedby</code> the same heading
+            </li>
+            <li>
+                The tabset has an optional, custom CSS class to set its height and margin
+            </li>
+        </ul>
+        {% include "partials/a11y-rely-checks.njk" %}
+    </div>
+
+    {% block HTMLNative %}
+    {% set preview %}
+<style>
+    .tab-custom-1 {
+        height: 360px;
+        margin-block-end: 2rem;
+    }
+</style>
+
+<h4 id="Tab1Title">
+    Some notable 20th-century French classical composers
+</h4>
+<div
+    aria-labelledby="Tab1Title"
+    class="nysa11y tablist tab-custom-1"
+    data-component="tablist"
+    data-html="custom"
+    role="tablist">
+
+    <div data-part="tabs">
+        <div data-part="scrollButtons">
+            <button aria-describedby="Tab1Title" data-scroll="to-start" type="button">
+                <span class="sr-only">visual scroll toward start</span>
+            </button>
+            <button aria-describedby="Tab1Title" data-scroll="to-end" type="button">
+                <span class="sr-only">visual scroll toward end</span>
+            </button>
+        </div>
+
+        <div data-part="tabsEnclosure">
+
+            <!-- ==================================== -->
+            <i class="tabs__scroll-affordance-start"></i>
+            <!-- ==================================== -->
+
+            <div data-part="scrollContainer">
+
+                <!-- ======================== -->
+                <s data-part="sentinelStart"></s>
+                <!-- ======================== -->
+
+                <!-- //////// Tab state and associations.
+                | ---------------------------------------
+                | role="tab"        REQUIRED: hardcode
+                | aria-controls=""  Managed by JavaScript
+                | aria-selected=""  Managed by JavaScript
+                | id=""             Managed by JavaScript
+                | tabindex=""       Managed by JavaScript
+                | type="button"     Recommended: hardcode
+                | ---------------------------------------
+                | Inspect with DevTools. \\\\\\\\\\\\ -->
+
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Georges Auric</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Claude Debussy</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Gabriel Fauré</button>
+
+                <!-- ====================== -->
+                <s data-part="sentinelEnd"></s>
+                <!-- ====================== -->
+
+            </div>
+
+            <!-- ================================== -->
+            <i class="tabs__scroll-affordance-end"></i>
+            <!-- ================================== -->
+
+        </div>
+    </div>
+
+    <div data-part="tabpanels" tabindex="0">
+
+        <!-- ///// Tabpanel state and associations.
+        | -----------------------------------------
+        | role="tabpanel"     REQUIRED: hardcode
+        | aria-labelledby=""  Managed by JavaScript
+        | id=""               Managed by JavaScript
+        | hidden              Managed by JavaScript
+        | -----------------------------------------
+        | Inspect with DevTools. \\\\\\\\\\\\\\ -->
+
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Georges_Auric"
+                    lang="fr">Georges Auric</a>
+                (15 February 1899 – 23 July 1983) was a French
+                composer, born in
+                <span lang="fr">Lodève, Hérault,</span> France. He
+                was considered one of
+                <span lang="fr">Les Six</span>—The Group of Six—a
+                group of artists informally associated with
+                <span lang="fr">Jean Cocteau</span> and
+                <span lang="fr">Erik Satie</span>. Before he turned
+                20 he had orchestrated and written incidental music
+                for several ballets and stage productions. He also
+                had a long and distinguished career as a film
+                composer.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. In sit amet massa auctor quam viverra
+                malesuada. Maecenas eu lorem a ex ullamcorper
+                rhoncus non vitae eros. Morbi tincidunt egestas
+                lacus, eget consectetur nibh vestibulum aliquam.
+                Nulla erat quam, hendrerit id congue suscipit,
+                luctus ultricies urna. Nullam erat nisl, posuere id
+                blandit non, porta eget justo. Integer faucibus sem
+                ac maximus auctor. Aliquam et orci tempus, volutpat
+                nisl sed, rhoncus eros. Praesent egestas felis
+                risus, id feugiat purus ullamcorper a. Nunc
+                malesuada, erat sit amet interdum fringilla, magna
+                est iaculis diam, vitae vehicula mi elit eu erat.
+                Praesent congue tortor ultrices, sagittis risus
+                eget, suscipit orci. Vivamus eu vestibulum mauris.
+                Suspendisse vel diam mauris. Sed ante enim, eleifend
+                vel quam in, dignissim porttitor ipsum. Nunc
+                suscipit felis nec elit blandit sollicitudin.
+            </p>
+            <p>
+                Vivamus ac porttitor risus. Nulla convallis, libero
+                at consectetur viverra, nulla dolor tempus ipsum,
+                quis iaculis orci lacus quis ex. Fusce ac turpis
+                vehicula, efficitur quam sit amet, tristique lectus.
+                Duis quis semper lectus. Vestibulum semper ligula et
+                congue vestibulum. Quisque laoreet lacinia sapien ut
+                faucibus. Suspendisse id molestie lectus. Etiam
+                faucibus nec lacus sit amet egestas. Mauris quis
+                congue mi, posuere pellentesque dolor. Mauris eget
+                sodales nibh. Vestibulum ultrices quam id finibus
+                euismod. Curabitur eleifend lorem non fringilla
+                feugiat.
+            </p>
+            <p>
+                Maecenas efficitur et lorem sit amet bibendum. Sed a
+                molestie odio, nec iaculis velit. Duis ut porta
+                quam. Etiam aliquam fermentum erat, sed consequat
+                neque viverra quis. Etiam vitae ante consequat,
+                pretium nulla et, tempus risus. Cras eleifend ex
+                mauris, sit amet faucibus velit fermentum vel.
+                Integer malesuada, sapien vitae pellentesque
+                lobortis, erat ligula viverra tellus, quis
+                scelerisque nunc risus nec arcu. Quisque tincidunt
+                tempor risus ac pulvinar. Aenean efficitur massa eu
+                leo iaculis sagittis in sit amet velit. Sed egestas
+                enim efficitur, facilisis tortor varius, fringilla
+                tellus. Morbi pellentesque eleifend nulla, in
+                malesuada sapien molestie id. Cras pharetra erat
+                lectus, at mattis arcu imperdiet eget.
+            </p>
+            <p>
+                Aliquam ullamcorper mauris ut scelerisque ultrices.
+                Maecenas dapibus, elit vitae interdum finibus,
+                ligula velit interdum enim, id iaculis quam tortor
+                non justo. In dapibus elit sed dolor tempus tempus.
+                Quisque nunc nisi, suscipit a tellus a, accumsan
+                varius arcu. Morbi interdum erat non auctor tempus.
+                Praesent viverra dolor vel rutrum semper.
+                Suspendisse iaculis massa sit amet mauris commodo
+                faucibus. Etiam tempor velit dolor, vitae lobortis
+                sem lacinia at. Nam viverra sapien eget mi suscipit
+                tincidunt sed semper sapien. Maecenas ut turpis eu
+                ligula ultrices dapibus. Nullam facilisis ipsum
+                vitae rutrum laoreet. Donec euismod pretium tempor.
+                Nullam velit ex, ullamcorper in consectetur ut,
+                accumsan ac nulla. Suspendisse sem velit, elementum
+                vitae leo et, suscipit volutpat urna.
+            </p>
+            <p>
+                Proin mattis eros vel nulla dapibus, id placerat
+                tortor convallis. In a velit vel ex vestibulum
+                egestas quis sed massa. Vestibulum eu nibh vel ex
+                bibendum consectetur. Quisque sed purus ut mauris
+                gravida bibendum. Ut dui nibh, volutpat nec
+                tincidunt sed, laoreet vel purus. Vestibulum varius
+                purus in justo laoreet, eu scelerisque tortor
+                mollis. Proin efficitur ullamcorper magna, at
+                finibus nisl fringilla id. Vivamus viverra vulputate
+                quam sed aliquam. Nullam massa quam, viverra eget
+                dictum vel, cursus vitae libero. Morbi lacinia, nisi
+                quis blandit tristique, urna ex volutpat lectus,
+                eget rutrum libero dolor ut arcu. Cras porta purus
+                ac convallis mattis.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Claude_Debussy"
+                    lang="fr">Claude Debussy</a>
+                (22 August 1862 – 25 March 1918) was a French
+                composer. He is sometimes seen as the first
+                Impressionist composer, although he vigorously
+                rejected the term. He was among the most influential
+                composers of the late 19th and early 20th centuries.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Gabriel_Fauré"
+                    lang="fr">Gabriel Fauré</a>
+                (12 May 1845 – 4 November 1924) was a French
+                composer, organist, pianist and teacher. He was one
+                of the foremost French composers of his generation,
+                and his musical style influenced many 20th-century
+                composers. Among his best-known works are his
+                <span lang="fr">Pavane, Requiem, Sicilienne,</span>
+                nocturnes for piano and the songs
+                <span lang="fr">"Après un rêve"</span> and
+                <span lang="fr">"Clair de lune"</span>. Although his
+                best-known and most accessible compositions are
+                generally his earlier ones,
+                <span lang="fr">Fauré</span> composed many of his
+                most highly regarded works in his later years, in a
+                more harmonically and melodically complex style.
+            </p>
+        </div>
+    </div>
+</div>
+    {% endset %}
+    {% set accordionLabel = "HTML" %}
+    {% set code = preview %}
+    {% set backgroundSolid = true %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "html" %}
+    {% set showTip = false %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# HTMLNative #}
+</div>
+
+<hr class="nysa11y divider" data-component="divider" data-html="native">
+
+<div class="solution">
+    <div class="card">
+        <h3>Custom Tablist (second demo)</h3>
+        <p>
+            <mark class="subhead strong">About the second demo</mark>
+            This demo has a large number of tabs in order to force scrolling, as well as a footer.
+        </p>
+        <ul>
+            <li>
+                In this demo the tabset gains its accessible name from an
+                <code>aria-label</code> set on the component <code class="element">div</code>
+            </li>
+            <li>
+                The scroll buttons, which do appear in this example,
+                are <code>aria-describedby</code> the <code>ID</code> of the
+                component <code class="element">div</code>
+            </li>
+            <li>
+                The scroll buttons change state depending on the extent of scroll in
+                either direction. When changes occur there are multiple affordances
+                (mouse, keyboard, screen reader), particularly when a button becomes
+                <code>aria-disabled</code>
+            <li>
+                Footer content height subtracts from whatever explicit height is assigned
+                the tabset.
+            </li>
+        </ul>
+        {% include "partials/a11y-rely-checks.njk" %}
+    </div>
+
+    {% block HTMLCustom %}
+    {% set preview %}
+<style>
+    .tab-custom-2 {
+        height: 420px;
+        margin-block: 1rem;
+    }
+</style>
+<div
+    aria-label="A partial list of French composers active in the 20th century"
+    class="nysa11y tablist tab-custom-2"
+    data-component="tablist"
+    data-html="custom"
+    role="tablist"
+    id="TabTwo">
+
+    <div data-part="tabs">
+        <div data-part="scrollButtons">
+            <button aria-describedby="TabTwo" data-scroll="to-start" type="button">
+                <span class="sr-only">visual scroll toward start</span>
+            </button>
+            <button aria-describedby="TabTwo" data-scroll="to-end" type="button">
+                <span class="sr-only">visual scroll toward end</span>
+            </button>
+        </div>
+
+        <div data-part="tabsEnclosure">
+
+            <!-- ==================================== -->
+            <i class="tabs__scroll-affordance-start"></i>
+            <!-- ==================================== -->
+
+            <div data-part="scrollContainer">
+
+                <!-- ======================== -->
+                <s data-part="sentinelStart"></s>
+                <!-- ======================== -->
+
+                <!-- //////// Tab state and associations.
+                | ---------------------------------------
+                | role="tab"        REQUIRED: hardcode
+                | aria-controls=""  Managed by JavaScript
+                | aria-selected=""  Managed by JavaScript
+                | id=""             Managed by JavaScript
+                | tabindex=""       Managed by JavaScript
+                | type="button"     Recommended: hardcode
+                | ---------------------------------------
+                | Inspect with DevTools. \\\\\\\\\\\\ -->
+
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Georges Auric</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Claude Debussy</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Gabriel Fauré</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Jean Françaix</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">André Jolivet</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Charles Koechlin</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Darius Milhaud</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Francis Poulenc</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Erik Satie</button>
+                <button
+                    role="tab"
+                    aria-controls=""
+                    aria-selected=""
+                    id=""
+                    tabindex=""
+                    type="button"
+                    lang="fr">Henri Sauguet</button>
+
+                <!-- ====================== -->
+                <s data-part="sentinelEnd"></s>
+                <!-- ====================== -->
+
+            </div>
+
+            <!-- ================================== -->
+            <i class="tabs__scroll-affordance-end"></i>
+            <!-- ================================== -->
+
+        </div>
+    </div>
+
+    <div data-part="tabpanels" tabindex="0">
+
+    <!-- ///// Tabpanel state and associations.
+    | -----------------------------------------
+    | role="tabpanel"     REQUIRED: hardcode
+    | aria-labelledby=""  Managed by JavaScript
+    | id=""               Managed by JavaScript
+    | hidden              Managed by JavaScript
+    | -----------------------------------------
+    | Inspect with DevTools. \\\\\\\\\\\\\\ -->
+
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Georges_Auric"
+                    lang="fr">Georges Auric</a>
+                (15 February 1899 – 23 July 1983) was a French
+                composer, born in
+                <span lang="fr">Lodève, Hérault,</span> France. He
+                was considered one of
+                <span lang="fr">Les Six</span>—The Group of Six—a
+                group of artists informally associated with
+                <span lang="fr">Jean Cocteau</span> and
+                <span lang="fr">Erik Satie</span>. Before he turned
+                20 he had orchestrated and written incidental music
+                for several ballets and stage productions. He also
+                had a long and distinguished career as a film
+                composer.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. In sit amet massa auctor quam viverra
+                malesuada. Maecenas eu lorem a ex ullamcorper
+                rhoncus non vitae eros. Morbi tincidunt egestas
+                lacus, eget consectetur nibh vestibulum aliquam.
+                Nulla erat quam, hendrerit id congue suscipit,
+                luctus ultricies urna. Nullam erat nisl, posuere id
+                blandit non, porta eget justo. Integer faucibus sem
+                ac maximus auctor. Aliquam et orci tempus, volutpat
+                nisl sed, rhoncus eros. Praesent egestas felis
+                risus, id feugiat purus ullamcorper a. Nunc
+                malesuada, erat sit amet interdum fringilla, magna
+                est iaculis diam, vitae vehicula mi elit eu erat.
+                Praesent congue tortor ultrices, sagittis risus
+                eget, suscipit orci. Vivamus eu vestibulum mauris.
+                Suspendisse vel diam mauris. Sed ante enim, eleifend
+                vel quam in, dignissim porttitor ipsum. Nunc
+                suscipit felis nec elit blandit sollicitudin.
+            </p>
+            <p>
+                Vivamus ac porttitor risus. Nulla convallis, libero
+                at consectetur viverra, nulla dolor tempus ipsum,
+                quis iaculis orci lacus quis ex. Fusce ac turpis
+                vehicula, efficitur quam sit amet, tristique lectus.
+                Duis quis semper lectus. Vestibulum semper ligula et
+                congue vestibulum. Quisque laoreet lacinia sapien ut
+                faucibus. Suspendisse id molestie lectus. Etiam
+                faucibus nec lacus sit amet egestas. Mauris quis
+                congue mi, posuere pellentesque dolor. Mauris eget
+                sodales nibh. Vestibulum ultrices quam id finibus
+                euismod. Curabitur eleifend lorem non fringilla
+                feugiat.
+            </p>
+            <p>
+                Maecenas efficitur et lorem sit amet bibendum. Sed a
+                molestie odio, nec iaculis velit. Duis ut porta
+                quam. Etiam aliquam fermentum erat, sed consequat
+                neque viverra quis. Etiam vitae ante consequat,
+                pretium nulla et, tempus risus. Cras eleifend ex
+                mauris, sit amet faucibus velit fermentum vel.
+                Integer malesuada, sapien vitae pellentesque
+                lobortis, erat ligula viverra tellus, quis
+                scelerisque nunc risus nec arcu. Quisque tincidunt
+                tempor risus ac pulvinar. Aenean efficitur massa eu
+                leo iaculis sagittis in sit amet velit. Sed egestas
+                enim efficitur, facilisis tortor varius, fringilla
+                tellus. Morbi pellentesque eleifend nulla, in
+                malesuada sapien molestie id. Cras pharetra erat
+                lectus, at mattis arcu imperdiet eget.
+            </p>
+            <p>
+                Aliquam ullamcorper mauris ut scelerisque ultrices.
+                Maecenas dapibus, elit vitae interdum finibus,
+                ligula velit interdum enim, id iaculis quam tortor
+                non justo. In dapibus elit sed dolor tempus tempus.
+                Quisque nunc nisi, suscipit a tellus a, accumsan
+                varius arcu. Morbi interdum erat non auctor tempus.
+                Praesent viverra dolor vel rutrum semper.
+                Suspendisse iaculis massa sit amet mauris commodo
+                faucibus. Etiam tempor velit dolor, vitae lobortis
+                sem lacinia at. Nam viverra sapien eget mi suscipit
+                tincidunt sed semper sapien. Maecenas ut turpis eu
+                ligula ultrices dapibus. Nullam facilisis ipsum
+                vitae rutrum laoreet. Donec euismod pretium tempor.
+                Nullam velit ex, ullamcorper in consectetur ut,
+                accumsan ac nulla. Suspendisse sem velit, elementum
+                vitae leo et, suscipit volutpat urna.
+            </p>
+            <p>
+                Proin mattis eros vel nulla dapibus, id placerat
+                tortor convallis. In a velit vel ex vestibulum
+                egestas quis sed massa. Vestibulum eu nibh vel ex
+                bibendum consectetur. Quisque sed purus ut mauris
+                gravida bibendum. Ut dui nibh, volutpat nec
+                tincidunt sed, laoreet vel purus. Vestibulum varius
+                purus in justo laoreet, eu scelerisque tortor
+                mollis. Proin efficitur ullamcorper magna, at
+                finibus nisl fringilla id. Vivamus viverra vulputate
+                quam sed aliquam. Nullam massa quam, viverra eget
+                dictum vel, cursus vitae libero. Morbi lacinia, nisi
+                quis blandit tristique, urna ex volutpat lectus,
+                eget rutrum libero dolor ut arcu. Cras porta purus
+                ac convallis mattis.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Claude_Debussy"
+                    lang="fr">Claude Debussy</a>
+                (22 August 1862 – 25 March 1918) was a French
+                composer. He is sometimes seen as the first
+                Impressionist composer, although he vigorously
+                rejected the term. He was among the most influential
+                composers of the late 19th and early 20th centuries.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Gabriel_Fauré"
+                    lang="fr">Gabriel Fauré</a>
+                (12 May 1845 – 4 November 1924) was a French
+                composer, organist, pianist and teacher. He was one
+                of the foremost French composers of his generation,
+                and his musical style influenced many 20th-century
+                composers. Among his best-known works are his
+                <span lang="fr">Pavane, Requiem, Sicilienne,</span>
+                nocturnes for piano and the songs
+                <span lang="fr">"Après un rêve"</span> and
+                <span lang="fr">"Clair de lune"</span>. Although his
+                best-known and most accessible compositions are
+                generally his earlier ones,
+                <span lang="fr">Fauré</span> composed many of his
+                most highly regarded works in his later years, in a
+                more harmonically and melodically complex style.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Jean_Françaix"
+                    lang="fr">Jean Françaix</a>
+                (23 May 1912 – 25 September 1997) was a French
+                neoclassical composer, pianist, and orchestrator
+                known for his prolific output and vibrant style.
+                <span lang="fr">Françaix</span> composed for various
+                genres, and is particularly known for his chamber
+                works for piano as well as winds.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/André_Jolivet"
+                    lang="fr">André Jolivet</a>
+                (8 August 1905 – 20 December 1974) was a French
+                composer. Known for his devotion to French culture
+                and musical thought,
+                <span lang="fr">Jolivet</span> drew on his interest
+                in acoustics and atonality, as well as both ancient
+                and modern musical influences, particularly on
+                instruments used in ancient times. He composed in a
+                wide variety of forms for many different types of
+                ensembles.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Charles_Koechlin"
+                    lang="fr">Charles Koechlin</a>
+                (27 November 1867 – 31 December 1950), commonly
+                known as <span lang="fr">Charles Koechlin</span>,
+                was a French composer, teacher and musicologist.
+                Among his better known works is
+                <span lang="fr">Les Heures persanes</span>, a set of
+                piano pieces based on the novel
+                <span lang="fr">Vers Ispahan</span> by
+                <span lang="fr">Pierre Loti</span> and The Seven
+                Stars Symphony, a 7 movement symphony where each
+                movement is themed around a different film star (all
+                Silent era stars) who were popular at the time of
+                the piece's writing (1933).
+            </p>
+            <p>
+                He was a political radical all his life and a
+                passionate enthusiast for such diverse things as
+                medieval music, The Jungle Book of Rudyard Kipling,
+                <span lang="de">Johann Sebastian Bach</span>, film
+                stars (especially Lilian Harvey and Ginger Rogers),
+                traveling, stereoscopic photography and socialism.
+                He once said: "The artist needs an ivory tower, not
+                as an escape from the world, but as a place where he
+                can view the world and be himself. This tower is for
+                the artist like a lighthouse shining out across the
+                world."
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Darius_Milhaud"
+                    lang="fr">Darius Milhaud</a>
+                (4 September 1892 – 22 June 1974) was a French
+                composer, conductor, and teacher. He was a member of
+                <span lang="fr">Les Six</span>—The Group of Six—and
+                one of the most prolific composers of the 20th
+                century. His compositions are influenced by jazz and
+                Brazilian music and make extensive use of
+                polytonality. Milhaud is considered one of the key
+                modernist composers. He taught many future jazz and
+                classical composers, including Burt Bacharach, Dave
+                Brubeck, Philip Glass, Steve Reich,
+                <span lang="hu">György Kurtág</span>,
+                <span lang="de">Karlheinz Stockhausen</span> and
+                <span lang="el">Iannis Xenakis</span> among others.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Francis_Poulenc"
+                    lang="fr">Francis Poulenc</a>
+                (7 January 1899 – 30 January 1963) was a French
+                composer and pianist. His compositions include
+                songs, solo piano works, chamber music, choral
+                pieces, operas, ballets, and orchestral concert
+                music. Among the best-known are the piano suite
+                <span lang="fr">Trois mouvements perpétuels</span>
+                (1919), the ballet
+                <span lang="fr">Les biches</span> (1923), the
+                <span lang="fr">Concert champêtre</span> (1928) for
+                harpsichord and orchestra, the Organ Concerto
+                (1938), the opera
+                <span lang="fr">Dialogues des Carmélites</span>
+                (1957), and the Gloria (1959) for soprano, choir,
+                and orchestra.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Erik Satie"
+                    lang="fr">Erik Alfred Leslie Satie</a>
+                (17 May 1866 – 1 July 1925), better known as
+                <span lang="fr">Erik Satie</span>, was a French
+                composer and pianist. The son of a French father and
+                a British mother, he studied at the Paris
+                Conservatoire but was undistinguished and did not
+                obtain a diploma. In the 1880s he worked as a
+                pianist in café-cabarets in
+                <span lang="fr">Montmartre</span>, Paris, and began
+                composing works, mostly for solo piano, such as his
+                <span lang="fr">Gymnopédies</span> and
+                <span lang="fr">Gnossiennes</span>. He also wrote
+                music for a Rosicrucian sect to which he was briefly
+                attached.
+            </p>
+        </div>
+        <div
+            role="tabpanel"
+            aria-labelledby=""
+            id=""
+            hidden
+        >
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Henri_Sauguet"
+                    lang="fr">Henri Sauguet</a>
+                (18 May 1901 – 22 June 1989) was a French composer.
+                Born in <span lang="fr">Bordeaux</span>, he adopted
+                his mother's maiden name as part of his professional
+                pseudonym. His output includes operas, ballets, four
+                symphonies (1945, 1949, 1955, 1971), concertos,
+                chamber and choral music and numerous songs, as well
+                as film music. Although he experimented with
+                <span lang="fr">musique concrète</span> and expanded
+                tonality, he remained opposed to particular systems
+                and his music evolved little: he developed tonal or
+                modal ideas in smooth curves, producing an art of
+                clarity, simplicity and restraint.
+            </p>
+        </div>
+    </div>
+    <div data-part="tabfooter">
+        <h3>Footer</h3>
+        <p>
+            When a Tablist is assigned a height value, if a footer is present as a direct child of the tablist,
+            the footer will steal height from the tabpanel.<br>
+        </p>
+    </div>
+</div>
+    {% endset %}
+    {% set accordionLabel = "HTML" %}
+    {% set code = preview %}
+    {% set backgroundSolid = true %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "html" %}
+    {% set showTip = false %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# HTMLCustom #}
+
+    {% block CSSCustom %}
+    {% set code %}
+    {% include "../../../assets/nysa11y/tablist-custom.css" %}
+    {% endset %}
+    {% set accordionLabel = "CSS" %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "css" %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# CSSCustom #}
+
+
+    {% block JSCustom %}
+    {% set code %}
+    {% include "../../../assets/nysa11y/tablist-custom.js" %}
+    {% endset %}
+    {% set accordionLabel = "JavaScript" %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "js" %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# JSCustom #}
+</div>
+{% endblock %}{# Alternatives #}
+
+{% block AboutThisPattern %}
+
+<p>
+    A <strong>tablist</strong>
+    (<a href="https://w3c.github.io/aria/#tablist">ARIA <code class="element">role="tablist"</code></a>)
+    contains and associates a set of <strong>tab</strong> <em>content selectors</em>
+    (<a href="https://w3c.github.io/aria/#tab">ARIA <code class="element">role="tab"</code></a>)
+    and <strong>tabpanel</strong> <em>content items</em>
+    (<a href="https://w3c.github.io/aria/#tabpanel">ARIA <code class="element">role="tabpanel"</code></a>)
+    with a <em>display area</em>. All tabs are present at all times.
+    Only one tabpanel may appear in the display area at a time; the others are hidden until invoked by activation of a tab.
+    Tablists are not used for navigation, though sometimes network activity may be needed to populate content.
+    Rather, they are used to "shuffle" or "swap" content chunks in the display area.
+    There is no native HTML tablist element; the name is taken from the ARIA role.
+</p>
+
+<mark class="subhead strong">Tab and Tabpanel</mark>
+
+<p>
+    The display of a tabpanel is controlled by activation of the tab that labels the content.
+    Tabs are button-like and option-like, and as a group they are list-like.
+    Responsibilities of a tab include being able to take focus, to reflect selection state, and to be activated.
+    Tabpanels may contain any valid HTML content.
+    Tabs and tabpanels are typically closely co-located both visually and in code.
+</p>
+
+<p>
+    Success of the component depends primarily on effective interaction with a tab and the resulting changes in state to the tab and its paired tabpanel.
+    At any given time only one of the set is presented.
+    This state of being selected must be communicated visually, semantically, aurally, and programmatically with affordances:
+</p>
+
+<ul>
+    <li>A selected tab is visually distinct</li>
+    <li>When reached by a screen reader all tabs must announce their names, but when selected must also identify as such</li>
+    <li>The tab must respond to its visible name when invoked by voice control systems</li>
+    <li>While keyboard navigation between tabs occurs by <kbd>Arrow</kbd>, movement between tab and tabpanel occurs by <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd>.</li>
+</ul>
+
+<p>For assistive technologies most affordances depend on correct use of ARIA:</p>
+
+<ul>
+    <li>If the tablist component has a visible label, such as an <code class="element">h3</code> element, associate them with <code>aria-labelledby="ID"</code>. Otherwise, set an <code>aria-label="<em>descriptive string</em>"</code>.</li>
+    <li>Ensure each tab <code>aria-controls="ID"</code> its associated tabpanel.</li>
+    <li>Dynamically set the active tab to <code>aria-selected="true"</code> and the others to <code>false</code>.</li>
+    <li>Each tabpanel must be <code>aria-labelledby="ID"</code> its associated tab.</li>
+    <li>When the set of tabs is vertical in visual presentation, the parent tablist requires <code>aria-orientation="vertical"</code>.</li>
+</ul>
+
+<mark class="subhead strong">Best Practices</mark>
+
+<p>
+    Screen reader users benefit from tab announcements that include the total number of tabs in the parent tablist.
+    Screen reader and keyboard users benefit from placing the tabpanel perimeter in focus order with <code>tabindex="0"</code>.
+    It is safer to require manual rather than automatic loading of tabpanel content.
+    This makes selection more explicitly determined by user choice and guards against performance problems with heavy tabpanel content.
+</p>
+
+<p>The NYSDS Tab component implements all of the above.</p>
+
+{% endblock %}{# AboutThisPattern #}
