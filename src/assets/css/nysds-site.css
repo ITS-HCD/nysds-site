@@ -1482,7 +1482,7 @@ li > .section-nav__list {
 /* Additional Tweaks */
 
 code {
-    font-family: "Monaspace Neon";
+    font-family: "Monaspace Neon", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 .code-preview__code-block code,
