@@ -29,7 +29,7 @@ The design system works with any back-end technology. Whether your team uses .NE
 
 ### Accessibility compliance is built in
 
-Every component is tested against WCAG 2.2 standards. The U.S. Department of Justice requires state and local government websites to meet WCAG 2.1 AA by **April 2026**. New York State's Technology Law sets a **January 2027** deadline for WCAG 2.2 compliance. Agencies using the NYS Design System get a significant head start on meeting both deadlines.
+Every component is tested against WCAG 2.2 standards. New York State's Technology Law sets a **January 2027** deadline for WCAG 2.2 compliance. The U.S. Department of Justice requires state and local government websites to meet WCAG 2.1 AA by **April 2027**. Agencies using the NYS Design System get a significant head start on meeting both deadlines.
 
 For more on accessibility policy and compliance strategy, see [Accessibility for Leadership](/foundations/accessibility/leadership/).
 
