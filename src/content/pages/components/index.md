@@ -17,9 +17,9 @@ navOrder: -1
   </header>
 
 <section class="nys-grid-row nys-grid-gap-300">
+  <!-- DO NOT EDIT the lines that generate the cards in this section. 11ty likes to take template code like this and treat the code-only lines (like the if statements) as empty lines and inserts empty P tags in place, causing all sorts of layout issues. So as much as it pains us to concatenate the beginning or end of an if statement inline with the code, placing it on it's own line (so it looks nicer) just can't happen using .md files Thar be dragons -->
   {%- for post in collections.components -%}
   {# Prevent child pages from rendering a card: child pages have a `parent` variable; component pages do NOT #}
-  <!-- DO NOT EDIT the lines that generate the cards in this section. 11ty likes to take template code like this and treat the code-only lines (like the if statements) as empty lines and inserts empty P tags in place, causing all sorts of layout issues. So as much as it pains us to concatenate the beginning or end of an if statement inline with the code, placing it on it's own line (so it looks nicer) just can't happen using .md files Thar be dragons -->
   {% if post.data.parent is not defined %}
   <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
     <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
