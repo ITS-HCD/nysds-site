@@ -738,6 +738,16 @@ Use the `inverted` prop when placing the combobox on a dark background.
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block usagedo %}
 
   - Use when there are more than 15 options to choose from.

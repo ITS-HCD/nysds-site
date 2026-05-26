@@ -152,6 +152,16 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block properties %}
 
 <nys-table striped>

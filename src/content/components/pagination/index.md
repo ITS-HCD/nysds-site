@@ -175,9 +175,7 @@ pagination.addEventListener("nys-change", (event) => {
 
 {% block dependencies %}
 
-{% set dependencies = [
-   "<nys-button>"
-  ] %}
+{% set dependencies = ["<nys-button>"] %}
 
 {% include "partials/dependencies.njk" %}
 

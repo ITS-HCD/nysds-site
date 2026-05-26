@@ -409,9 +409,7 @@ stepper.addEventListener("nys-step-click", () => {
 
 {% block dependencies %}
 
-{% set dependencies = [
-   "<nys-button>"
-  ] %}
+{% set dependencies = ["<nys-step>", "<nys-button>"] %}
 
 {% include "partials/dependencies.njk" %}
 

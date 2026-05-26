@@ -121,6 +121,13 @@ Set the `inverted` when the tooltip is on a dark background.
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
 
 {% block usage %}
 

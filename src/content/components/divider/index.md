@@ -82,6 +82,13 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
 
 {% block properties %}
 

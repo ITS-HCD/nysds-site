@@ -210,9 +210,7 @@ This component does not emit any custom events.
 
 {% block dependencies %}
 
-{% set dependencies = [
-  "<nys-icon>"
-] %}
+{% set dependencies = ["<nys-icon>"] %}
 
 {% include "partials/dependencies.njk" %}
 

@@ -70,6 +70,14 @@ The `<nys-video>` component includes the following accessibility-focused feature
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block options %}
 
 ### Custom Thumbnail

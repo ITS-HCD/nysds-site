@@ -132,6 +132,14 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block properties %}
 
 <nys-table striped>

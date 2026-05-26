@@ -375,9 +375,7 @@ button.addEventListener("nys-click", () => {
 
 {% block dependencies %}
 
-{% set dependencies = [
-  "<nys-icon>"
-] %}
+{% set dependencies = ["<nys-icon>"] %}
 
 {% include "partials/dependencies.njk" %}
 

@@ -134,6 +134,14 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block usage %}
 
 ### When to use this component

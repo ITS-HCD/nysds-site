@@ -7,11 +7,9 @@ image_alt: An illustration of a text input field.
 image_header: /assets/img/components/textinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-3154&t=EXsXvlMbCdRw10ir-4
-
 ---
 
 {% extends "layouts/component.njk" %}
-
 
 {% block longdescription %}
 
@@ -20,35 +18,38 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-textinput label="This is a text input"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput label="This is a text input"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usage %}
 
 ### When to use this component
-  - To collect short, single-line text input from the user (e.g., names, email addresses, or short descriptions).
-  - For open-ended, user-specific input.
+
+- To collect short, single-line text input from the user (e.g., names, email addresses, or short descriptions).
+- For open-ended, user-specific input.
+
 ### When to consider something else
-  - If you need to collect multiple lines of input, use textarea instead.
-  - If the input can be chosen from predefined options, use select, radiobutton, or checkbox.
-{% endblock %}
+
+- If you need to collect multiple lines of input, use textarea instead.
+- If the input can be chosen from predefined options, use select, radiobutton, or checkbox.
+  {% endblock %}
 
 {% block usagedo %}
 
-  - Use clear, concise labels that describe the expected input.
-  - Add helper texts with the `description` property for context. 
-  - Validate input live to catch errors early (e.g., invalid email formats).
-{% endblock %}
+- Use clear, concise labels that describe the expected input.
+- Add helper texts with the `description` property for context.
+- Validate input live to catch errors early (e.g., invalid email formats).
+  {% endblock %}
 
 {% block usagedont %}
 
-  - Use for long or detailed responses (use `<nys-textarea>` instead).
-  - Overwhelm users with too many fields; group related inputs.
-  - Use placeholders as labels.
+- Use for long or detailed responses (use `<nys-textarea>` instead).
+- Overwhelm users with too many fields; group related inputs.
+- Use placeholders as labels.
 
 {% endblock %}
 
@@ -56,166 +57,181 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 
 The `<nys-textinput>` component includes the following accessibility-focused features:
 
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
-  - Keyboard navigation support, allowing users to tab into the input using the keyboard.
-  - Visual focus indicators to help users navigate the component.
-  - Include a label property to provide accessible text for screen readers.
-{% endblock %}
+- Proper ARIA roles and attributes to ensure screen readers can interpret the label correctly.
+- Keyboard navigation support, allowing users to tab into the input using the keyboard.
+- Visual focus indicators to help users navigate the component.
+- Include a label property to provide accessible text for screen readers.
+  {% endblock %}
 
 {% block options %}
 
 ### Width
+
 If no `width` is provided, the `<nys-textinput>` will default to `full`. Supported widths are `sm`, `md`, `lg`, and `full`.
 
 Width full will take up the full width of the parent container.
 
 If an invalid option is assigned to `width`, it will be ignored and default to `full`.
 
-  {% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Type
+
 Accepted `types` are: `text`, `email`, `number`, `password`, `search`, `tel`, `url`
 
 Any other input defaults to `type="text"`
 
-  {% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
+{% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
 {% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Placeholder
-  {% set preview %}<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+
+{% set preview %}<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Disabled
-  {% set preview %}<nys-textinput label="Disabled" disabled></nys-textinput>
+
+{% set preview %}<nys-textinput label="Disabled" disabled></nys-textinput>
 {% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Readonly
-  {% set preview %}<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+
+{% set preview %}<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Min Max and step
 
 `max`, `min`, and `step` only apply when `type="number"`
 
-  {% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Maxlength
-  {% set preview %}<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+
+{% set preview %}<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Pattern
+
 Takes any valid regex value.
-  {% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Required
+
 Set `required` to `<nys-textinput>` to make it mandatory.
-  {% set preview %}<nys-textinput name="myTextInput7" required label="label"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput name="myTextInput7" required label="label"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Optional
+
 Adding the `optional` prop will add an optional flag to the input.
-  {% set preview %}<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Slotted Description
+
 Add a description using the `description` prop for plain text, or use the description slot to include custom HTML for more flexibility.
 Takes any valid regex value.
-  {% set preview %}<nys-textinput name="descriptionSlot" label="Label">
-  <label slot="description">Slot: description</label>
+{% set preview %}<nys-textinput name="descriptionSlot" label="Label">
+<label slot="description">Slot: description</label>
 </nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Slotted Button
-  You can add a button to the input by adding a `slot="startButton"` or `slot="endButton"`. This will add a button to the left or right of the input respectively.
 
-  **Note**: Use a `<nys-button>` for the slotted button. Do not use both `startButton` and `endButton` on the same input.
+You can add a button to the input by adding a `slot="startButton"` or `slot="endButton"`. This will add a button to the left or right of the input respectively.
 
-  **Note**: The slotted button will automatically be `size="sm"` and `variant="filled"` and support the disabled state of the input.
+**Note**: Use a `<nys-button>` for the slotted button. Do not use both `startButton` and `endButton` on the same input.
 
-  **Note**: Use `width="lg"` or `width="full"` on `<nys-textinput>` to give users enough space to enter text when a button is present.
+**Note**: The slotted button will automatically be `size="sm"` and `variant="filled"` and support the disabled state of the input.
 
-  {% set preview %}<nys-textinput 
-  name="searchInput"
-  type="search" 
-  placeholder="Search"
-  id="searchInput"
->
-  <nys-button
-  slot="endButton"
-  type="submit"
-  label="Search"
-  prefixIcon="search"
-  id="searchButton"
-  ></nys-button>
-</nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+**Note**: Use `width="lg"` or `width="full"` on `<nys-textinput>` to give users enough space to enter text when a button is present.
+
+{% set preview %}<nys-textinput
+name="searchInput"
+type="search"
+placeholder="Search"
+id="searchInput"
+
+> <nys-button
+> slot="endButton"
+> type="submit"
+> label="Search"
+> prefixIcon="search"
+> id="searchButton"
+> </nys-button>
+> </nys-textinput>{% endset %}
+> {% set code = preview %}
+> {% set backgroundSolid = true %}
+> {% include "partials/code-preview.njk" %}
 
 ### Error Message
-  Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to `true`. Setting only `errorMessage` will not display the error message by default.
-  Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
-  {% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to `true`. Setting only `errorMessage` will not display the error message by default.
+Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
-  {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
-  {% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
-  {% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
-  ### Inverted
+{% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
+
+### Inverted
+
     Set the `inverted` when the component is on a dark background.
-  {% set preview %}
+
+{% set preview %}
 <nys-textinput
-  name="descriptionProp"
-  label="Label"
-  description="Slot: description"
-  inverted
-></nys-textinput>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% set inverted = true %}
-  {% include "partials/code-preview.njk" %}
+name="descriptionProp"
+label="Label"
+description="Slot: description"
+inverted
+
+> </nys-textinput>{% endset %}
+> {% set code = preview %}
+> {% set backgroundSolid = true %}
+> {% set inverted = true %}
+> {% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
@@ -332,6 +348,7 @@ Takes any valid regex value.
 </nys-table>
 
 ### Form Prop
+
 The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
@@ -341,22 +358,25 @@ The `form` property associates this component with a `<form>` element by ID, eve
 {% block events %}
 
 The `<nys-textinput>` component emits **three** custom Javascript events:
+
 1.  **`nys-input`** – Fired when the textinput state changes.
 2.  **`nys-focus`** – Fired when the textinput gains focus.
 3.  **`nys-blur`** – Fired when the textinput loses focus.
 
 ### Event details
+
 The `nys-input` event includes a detail object with the following properties:
-  - id (string): The id of the textinput.
-  - value (string): The currently selected text.
+
+- id (string): The id of the textinput.
+- value (string): The currently selected text.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the textinput component
 const textinput = document.querySelector('nys-textinput');
 // Listen for the 'nys-input' event
 textinput.addEventListener('nys-input', (event) => {
-  const { id, value } = event.detail;
-  console.log(`Text input (${id}) changed:`, value);
+const { id, value } = event.detail;
+console.log(`Text input (${id}) changed:`, value);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
@@ -366,9 +386,7 @@ textinput.addEventListener('nys-input', (event) => {
 
 {% block dependencies %}
 
-{% set dependencies = [
-   "<nys-icon>"
-  ] %}
+{% set dependencies = ["<nys-button>"] %}
 
 {% include "partials/dependencies.njk" %}
 

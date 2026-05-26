@@ -179,6 +179,14 @@ The `<nys-icon>` component includes the following accessibility-focused features
 **Customizable ARIA Label**: If an `ariaLabel` is provided, the component automatically adds an aria-label attribute, making the icon accessible to screen readers.
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block options %}
 
 ### Size

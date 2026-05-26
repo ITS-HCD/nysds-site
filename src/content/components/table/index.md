@@ -421,12 +421,9 @@ table.addEventListener('nys-column-sort', (event) => {
 
 {% block dependencies %}
 
-{% set dependencies = [
-   "<nys-icon>,<nys-button>"
-  ] %}
+{% set dependencies = [] %}
 
 {% include "partials/dependencies.njk" %}
-
 
 {% endblock %}
 

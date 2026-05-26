@@ -65,6 +65,14 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
   - Keyboard navigation: Users can tab through all links in the header.
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block options %}
 
 ### Search Off

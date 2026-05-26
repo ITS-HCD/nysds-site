@@ -71,6 +71,14 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block accessibility %}
 
 The `<nys-skipnav>` component includes the following accessibility-focused features:

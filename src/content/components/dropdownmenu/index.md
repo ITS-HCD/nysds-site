@@ -7,7 +7,6 @@ image_alt: An illustration of a dropdownmenu.
 image_header: /assets/img/components/dropdownmenu-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -22,10 +21,10 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 {% set preview %}
 <nys-button id="my-trigger-id" label="Dropdown Trigger"></nys-button>
 <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -89,8 +88,8 @@ The `<nys-dropdownmenu>` anchors itself to a trigger element provided by the use
 {% set code %}
 <nys-button id="my-trigger-id" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="my-trigger-id">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set codeExpanded = true %}
@@ -150,15 +149,15 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 {% set preview %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-    <nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
-        <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
-    </nys-button>
+<nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
+<nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
+</nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu1" for="my-user-actions" position="bottom-end">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -333,9 +332,9 @@ The `<nys-dropdownmenuitem>` component emits **one** custom Javascript events:
 
 The `nys-click` event includes a detail object with the following properties:
 
-  - `id` (string): The id of the clicked item.
-  - `label` (string): The label of the clicked item.
-  - `href` (string): The href of the clicked item. **Only present if `href` was provided.**
+- `id` (string): The id of the clicked item.
+- `label` (string): The label of the clicked item.
+- `href` (string): The href of the clicked item. **Only present if `href` was provided.**
 
 You can listen to these events using JavaScript:
 {% set code %}
@@ -343,12 +342,12 @@ You can listen to these events using JavaScript:
 const dropdownmenu = document.querySelector("nys-dropdownmenu");
 // Listen for the 'nys-click' event
 dropdownmenu.addEventListener('nys-click', (event) => {
-    const { id, label, href } = event.detail;
-    if (href) {
-        console.log(`Link item clicked (${id}): ${label} with href = ${href}`);
-    } else {
-        console.log(`Action item clicked (${id}): ${label}`);
-    }
+const { id, label, href } = event.detail;
+if (href) {
+console.log(`Link item clicked (${id}): ${label} with href = ${href}`);
+} else {
+console.log(`Action item clicked (${id}): ${label}`);
+}
 });{% endset %}
 {% set preview ="" %}
 {% set accordionLabel = "Sample Code" %}
@@ -360,9 +359,7 @@ dropdownmenu.addEventListener('nys-click', (event) => {
 
 {% block dependencies %}
 
-{% set dependencies = [
-  "<nys-icon>"
-] %}
+{% set dependencies = ["<nys-dropdownmenuitem>", "<nys-icon>"] %}
 
 {% include "partials/dependencies.njk" %}
 

@@ -67,6 +67,14 @@ The `<nys-unavfooter>` component includes the following accessibility-focused fe
 There are no configurable options for this component. It is intended to be used as-is to ensure consistency across all New York State digital products.
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block properties %}
 
 There are no properties for this component.

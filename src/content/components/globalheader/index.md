@@ -149,6 +149,14 @@ The NYS Brand Logo can be toggled on via the `nysLogo` property for back-office 
 
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block properties %}
 
 <nys-table striped>

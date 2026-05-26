@@ -73,6 +73,14 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
   - Include a label property to provide accessible text for screen readers.
 {% endblock %}
 
+{% block dependencies %}
+
+{% set dependencies = [] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block options %}
 
 ### Partial 
