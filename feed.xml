@@ -8,7 +8,7 @@
     <language>en</language>
     <item>
       <title>NYS Design System Release 1.18.0 “Cascade”</title>
-      <link>https://designsystem.ny.gov/updates/1.18.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.18.0-release/</link>
       <description><![CDATA[<p><nys-alert heading="BREAKING CHANGES in 1.18.0" text="Read the grid-gap documentation below to see how to migrate" type="danger"></nys-alert></p>
 <h2>“Cascade” 🏔️</h2>
 <p>We held a vote during our office hours this week, and the winning vote was for naming this release “Cascade” after the 36<sup>th</sup> highest peak in New York: Cascade Mountain. Cascade Mountain has an elevation of 4,098 ft (1,249 m). That is just over 4 Empire State Buildings tall (1,050 ft to roof)!</p>
@@ -315,11 +315,11 @@
 ]]></content>
       <pubDate>Thu, 14 May 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.18.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.18.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.17.0 “Grace”</title>
-      <link>https://designsystem.ny.gov/updates/1.17.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.17.0-release/</link>
       <description><![CDATA[<h2>“Grace” 🏔️</h2>
 <p>We held a vote during our office hours this week, and the winning vote was for naming this release “Grace” after the 42<sup>nd</sup> highest peak in New York: Grace Peak. Grace Peak has an elevation of 4,012 ft (1,223 m).</p>
 <p><a href="https://en.wikipedia.org/wiki/Grace_Peak">Learn more about Grace Peak.</a></p>
@@ -544,11 +544,11 @@
 ]]></content>
       <pubDate>Thu, 30 Apr 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.17.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.17.0-release/</guid>
     </item>
     <item>
       <title>How CSS Variables Power the NYS Design System</title>
-      <link>https://designsystem.ny.gov/updates/css-variables/</link>
+      <link>https://designsystem.ny.gov/about/updates/css-variables/</link>
       <description><![CDATA[<p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
 <p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
 <p>Let’s unpack how that works.</p>
@@ -723,11 +723,11 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 ]]></content>
       <pubDate>Tue, 21 Apr 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/css-variables/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/css-variables/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.16.1</title>
-      <link>https://designsystem.ny.gov/updates/1.16.1-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.16.1-release/</link>
       <description><![CDATA[<h2><code>&lt;nys-datepicker&gt;</code> minDate and maxDate support</h2>
 <p>We've added the ability to restrict selectable dates in the datepicker component. See it live in action below. Special thanks to <a href="https://github.com/sqrrl">@Sqrrl</a> for maintaining the base wc-datepicker component our nys-datepicker is based off of.
 <a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
@@ -856,11 +856,11 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 ]]></content>
       <pubDate>Thu, 16 Apr 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.16.1-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.16.1-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.16.0 “Algonquin”</title>
-      <link>https://designsystem.ny.gov/updates/1.16.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.16.0-release/</link>
       <description><![CDATA[<h2>“Algonquin” 🏔️</h2>
 <p>We held a vote during our office hours this week, and the winning vote was for naming this release “Algonquin” after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
 <p><a href="https://en.wikipedia.org/wiki/Algonquin_Peak">Learn more about Algonquin Peak.</a></p>
@@ -1009,11 +1009,11 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 ]]></content>
       <pubDate>Thu, 02 Apr 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.16.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.16.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.15.0 “Nye”</title>
-      <link>https://designsystem.ny.gov/updates/1.15.0-release/</link>
+      <link>https://designsystem.ny.gov/about/updates/1.15.0-release/</link>
       <description><![CDATA[<h2>“Nye” 🏔️</h2>
 <p>This is our 35<sup>th</sup> release of the New York State Design System. Nye is the 45<sup>th</sup> highest peak in New York, with an elevation of 3,895 ft (1,187 m)!</p>
 <p><a href="https://en.wikipedia.org/wiki/Nye_Mountain">Learn more about Nye Mountain.</a></p>
@@ -1468,7 +1468,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 ]]></content>
       <pubDate>Fri, 06 Mar 2026 24:00:00 GMT</pubDate>
       <dc:creator>NYS ITS Design System Team</dc:creator>
-      <guid>https://designsystem.ny.gov/updates/1.15.0-release/</guid>
+      <guid>https://designsystem.ny.gov/about/updates/1.15.0-release/</guid>
     </item>
     <item>
       <title>NYS Design System Release 1.14.0 “Marcy”</title>

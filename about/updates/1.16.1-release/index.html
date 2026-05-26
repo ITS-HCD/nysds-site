@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NYS Design System Release 1.16.0 “Algonquin” - New York State Design System</title>
+<title>NYS Design System Release 1.16.1 - New York State Design System</title>
 
-<meta name="description" content="&lt;nys-video&gt; component released as stable. Added flex-gap classes for better customizing flexbox layouts. Sped up build time, and fixed a mountain of smaller issues.
+<meta name="description" content="&lt;nys-video&gt; width fixes, &lt;nys-datepicker&gt; minDate, maxDate, and “Day 1” bug fixes.
 ">
-<link rel="canonical" href="https://designsystem.ny.gov/updates/1.16.0-release/">
+<link rel="canonical" href="https://designsystem.ny.gov/about/updates/1.16.1-release/">
 <link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="NYSDS">
 
-<meta property="og:title" content="NYS Design System Release 1.16.0 “Algonquin”">
+<meta property="og:title" content="NYS Design System Release 1.16.1">
 <meta property="og:site_name" content="New York State Design System">
-<meta property="og:url" content="https://designsystem.ny.gov/updates/1.16.0-release/">
-<meta property="og:description" content="&lt;nys-video&gt; component released as stable. Added flex-gap classes for better customizing flexbox layouts. Sped up build time, and fixed a mountain of smaller issues.
+<meta property="og:url" content="https://designsystem.ny.gov/about/updates/1.16.1-release/">
+<meta property="og:description" content="&lt;nys-video&gt; width fixes, &lt;nys-datepicker&gt; minDate, maxDate, and “Day 1” bug fixes.
 ">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 
-<meta property="og:image" content="https://designsystem.ny.gov/assets/i/2026/release-1.16.0.png">
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -48,10 +48,10 @@
 </script>
 
     
-    <!-- Latest Build: 2026-05-22T19:40:21.239Z -->
+    <!-- Latest Build: 2026-05-26T13:31:33.253Z -->
   </head>
   
-  <body class="single-page page-release-1.16.0 section-updates">
+  <body class="single-page page-release-1.16.1 section-updates">
   <nys-skipnav></nys-skipnav>
   <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
@@ -96,30 +96,27 @@
     
       <section class="page-content">
 
-        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-16-0-algonquin">
-            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.16.0 “Algonquin”
-          </h1><p class="page-subtitle">&lt;nys-video&gt; component released as stable. Added flex-gap classes for better customizing flexbox layouts. Sped up build time, and fixed a mountain of smaller issues.
+        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-16-1">
+            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.16.1
+          </h1><p class="page-subtitle">&lt;nys-video&gt; width fixes, &lt;nys-datepicker&gt; minDate, maxDate, and “Day 1” bug fixes.
 </p><div class="page-meta">
             
             <div class="page-author">
               <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
               <span class="page-author__name">Eric Steinborn</span>
             </div>
-            <time class="page-meta__date" datetime="2026-04-02T00:00:00.000Z">April 2, 2026</time>
-            <div class="page-meta__readtime">2 min read time</div>
+            <time class="page-meta__date" datetime="2026-04-16T00:00:00.000Z">April 16, 2026</time>
+            <div class="page-meta__readtime">1 min read time</div>
           </div>
         </header>
 
-        <h2 id="algonquin">“Algonquin” 🏔️</h2>
-<p>We held a vote during our office hours this week, and the winning vote was for naming this release “Algonquin” after the 2<sup>nd</sup> highest peak in New York: Algonquin Peak. Algonquin Peak has an elevation of 5,114 ft (1,558 m).</p>
-<p><a href="https://en.wikipedia.org/wiki/Algonquin_Peak">Learn more about Algonquin Peak.</a></p>
-<h2 id="nys-video-now-available"><code>&lt;nys-video&gt;</code> now available</h2>
-<p>The new <code>&lt;nys-video&gt;</code> embeds a YouTube video with a clickable thumbnail and on-demand playback. The iframe loads only after interaction by default, helping improve page performance while keeping the experience responsive and accessible.</p>
-<p><a href="/components/video">Read the full video documentation</a>.</p>
+        <h2 id="nys-datepicker-mindate-and-maxdate-support"><code>&lt;nys-datepicker&gt;</code> minDate and maxDate support</h2>
+<p>We've added the ability to restrict selectable dates in the datepicker component. See it live in action below. Special thanks to <a href="https://github.com/sqrrl">@Sqrrl</a> for maintaining the base wc-datepicker component our nys-datepicker is based off of.
+<a href="/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
-<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
+<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
 </div>
   </div>
   <div class="code-preview__source">
@@ -135,53 +132,46 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-video</span>
-  <span class="token attr-name">videourl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.youtube.com/watch?v=TBfFzt0150Q<span class="token punctuation">"</span></span>
-  <span class="token attr-name">titleText</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>IT'S a Tech Podcast, Episode 3: Human-Centered Design<span class="token punctuation">"</span></span>
-<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-video</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select a date<span class="token punctuation">"</span></span>
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Only dates within April 4/5/2026 - 4/15/2026 are selectable<span class="token punctuation">"</span></span>
+  <span class="token attr-name">minDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-05<span class="token punctuation">"</span></span>
+  <span class="token attr-name">maxDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-15<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
 </div>
-<p><a href="https://github.com/novacat35">Robert Chen</a> pressed play on this one.</p>
-<h2 id="nys-flex-gap-classes-now-available"><code>.nys-flex-gap</code> classes now available</h2>
-<p>We've added flex gap configuration classes to the NYS DS styles package. You can use them in your HTML to set gap widths that fit your application needs.</p>
-<p><a href="/foundations/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
-<p><a href="https://github.com/emilygorelik">Emily Gorelik</a> Flexed her muscles on this one.</p>
 <h2 id="figma-updates">Figma updates</h2>
-<p>Today we’re launching the official version of the video component in our design library.</p>
+<p>Today we’re launching the preview version of the breadcrumb and tab components in our design library.</p>
 <ul>
-<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=20897-9561&amp;t=Y3c7CNRjerknJQgj-4">Video Player</a> now available in Figma</li>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24282-39186&amp;t=fsl0niqeU3xSuzaQ-4">Breadcrumbs</a> now available in Figma</li>
+<li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=24027-9968&amp;t=fsl0niqeU3xSuzaQ-4">Tabs</a> now available in Figma</li>
 </ul>
-<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> is creating important components!</p>
+<p><a href="https://github.com/ksorrentino">Kristin Sorrentino</a> and <a href="https://github.com/mashyamumin">Mashya Mumin</a> are creating important components!</p>
 <h2 id="bug-fixes">Bug fixes</h2>
 <ul>
-<li><code>&lt;nys-dropdownmenu&gt;</code> in v1.15.0 had z-index issues. They have been resolved in this release.</li>
-<li><code>maxLength</code> fixed in <code>&lt;nys-textinput&gt;</code></li>
-<li>React support has expanded to add react wrappers and JSX definitions for React-like</li>
-<li>Dispatch events now bubble up and are composed</li>
-<li>Project build time reduced significantly</li>
-<li>Fixed table sort event not firing</li>
-<li>Globalheader no longer scheduling updates</li>
-<li>Fixes to build scripts</li>
-<li>Focus and logic fixes for <code>&lt;nys-checkboxgroup&gt;</code></li>
-<li>Removed extraneous getButtonElement() function from <code>&lt;nys-modal&gt;</code></li>
-<li>Icon alignment fixes</li>
-<li>MCP server fixes</li>
+<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
+<li>Update Storybook</li>
+<li>Fix JSX errors</li>
+<li>Simplify border-radius setup</li>
+<li>Fix empty submission bug in <code>&lt;nys-combobox&gt;</code></li>
+<li>Add CSS inverted border to button</li>
+<li>Fix <code>&lt;nys-video&gt;</code> package contents</li>
 </ul>
-<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>,  <a href="https://github.com/esteinborn">Eric Steinborn</a>, and <a href="https://github.com/plasticmind">Jesse Gardner</a> fix broken things.</p>
+<p><a href="https://github.com/emilygorelik">Emily Gorelik</a>, <a href="https://github.com/novacat35">Robert Chen</a>, and <a href="https://github.com/esteinborn">Eric Steinborn</a> fix broken things.</p>
 <h2 id="breaking-changes">🚨 Breaking changes</h2>
 <ul>
 <li>none</li>
 </ul>
 <h2 id="known-issues">⚠️ Known issues</h2>
 <ul>
-<li><a href="https://github.com/ITS-HCD/nysds/issues/1451">BUG: <code>nys-video</code> min-width breaks out of mobile viewports</a></li>
+<li>none</li>
 </ul>
 <p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
 <h3 id="that-s-it">That’s it!</h3>
 <h4 id="for-full-component-updates-bug-fixes-and-the-detailed-changelog">For full component updates, bug fixes, and the detailed changelog:</h4>
-<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.0">See the full developer release notes for v.1.16.0 →</a></p>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.16.1">See the full developer release notes for v.1.16.1 →</a></p>
 
 
         <div class="nys-grid-row nys-margin-t-200">
@@ -192,7 +182,7 @@
           
           <li class="badge"> video</li>
           
-          <li class="badge"> flex-gap</li>
+          <li class="badge"> datepicker</li>
           
         </ul>
         </div>
@@ -200,15 +190,15 @@
     
         <div class="nys-grid-row nys-margin-t-400">
           <div class="nys-grid-col">
-            <div>Up Next: <a href="/updates/1.16.1-release/" title="Read: NYS Design System Release 1.16.1"><b>NYS Design System Release 1.16.1</b></a></div>
-            <div>Previous : <a href="/updates/1.15.0-release/" title="Read: NYS Design System Release 1.15.0 “Nye”"><b>NYS Design System Release 1.15.0 “Nye”</b></a></div>
+            <div>Up Next: <a href="/about/updates/css-variables/" title="Read: How CSS Variables Power the NYS Design System"><b>How CSS Variables Power the NYS Design System</b></a></div>
+            <div>Previous : <a href="/about/updates/1.16.0-release/" title="Read: NYS Design System Release 1.16.0 “Algonquin”"><b>NYS Design System Release 1.16.0 “Algonquin”</b></a></div>
           </div>
         </div>
 
         
   <div class="edit-page-link" data-pagefind-ignore="all">
-    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2026-04-02-release-1.16.0.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: April 2, 2026</p>
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2026-04-16-release-1.16.1.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: April 16, 2026</p>
   </div>
 
 
