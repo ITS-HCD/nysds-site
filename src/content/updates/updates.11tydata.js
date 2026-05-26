@@ -18,7 +18,7 @@ module.exports = () => {
         permalink: '/about/updates/{{ title | slugify }}/',
         section: 'Updates',
         ogtype: 'article',
-        "changefreq": "monthly",
+        "changefreq": "weekly",
         "priority": "0.8",
         eleventyComputed: {
             eleventyExcludeFromCollections: data => showDraft(data) ? data.eleventyExcludeFromCollections : true,
