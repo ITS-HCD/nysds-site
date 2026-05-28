@@ -4989,7 +4989,7 @@ All form field components have been updated with a new property which will inver
 <p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
 <div class="nys-grid-row nys-grid-gap-300 nys-display-flex">
 <div class="nys-tablet:nys-grid-col-4">
-<a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" title="Watch Video: Introducing the NYS Design System">
+<a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" aria-label="Watch Video: Introducing the NYS Design System">
               <div class="card__inner">               
                 <div class="card__media">
                   <img src="https://i.ytimg.com/vi/-AzYrquG7E4/hq720.jpg" alt="Thumbnail image" />
@@ -5010,7 +5010,7 @@ All form field components have been updated with a new property which will inver
             </a>
 </div>
 <div class="nys-tablet:nys-grid-col-4">
-<a class="card" href="https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/" title="Watch Video: Intro to Designing with the New York State Design System">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/" aria-label="Watch Video: Intro to Designing with the New York State Design System">
               <div class="card__inner">
                 <div class="card__media">
                   <img src="https://i.ytimg.com/vi/hSpJv_i-hIg/hq720.jpg" alt="Thumbnail image" />
@@ -5031,7 +5031,7 @@ All form field components have been updated with a new property which will inver
             </a>
 </div>
 <div class="nys-tablet:nys-grid-col-4">
-<a class="card" href="https://designsystem.ny.gov/videos/intro-to-nysds-web-components/" title="Watch Video: Intro to NYS Design System Web Components">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-nysds-web-components/" aria-label="Watch Video: Intro to NYS Design System Web Components">
               <div class="card__inner">
                 <div class="card__media">
                   <img src="https://i.ytimg.com/vi/NM5PFClfBgA/hq720.jpg" alt="Thumbnail image" />
@@ -5084,7 +5084,7 @@ All form field components have been updated with a new property which will inver
 <p>In this series, we’ll explain what a “design system” is and how ours works. Most importantly, we’ll show the value it can bring to you and to the residents that use what you build with it. Whether you’ve never used a design system before or you’re just new to ours, you’ll learn tips and ideas that will help you build better web applications and sites more quickly.</p>
 <div class="nys-grid-row nys-grid-gap-300 nys-display-flex">
 <div class="nys-tablet:nys-grid-col-4">
-<a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" title="Watch Video: Introducing the NYS Design System">
+<a class="card" href="https://designsystem.ny.gov/videos/introducing-the-nys-design-system/" aria-label="Watch Video: Introducing the NYS Design System">
               <div class="card__inner">               
                 <div class="card__media">
                   <img src="https://i.ytimg.com/vi/-AzYrquG7E4/hq720.jpg" alt="Thumbnail image" />
@@ -5105,7 +5105,7 @@ All form field components have been updated with a new property which will inver
             </a>
 </div>
 <div class="nys-tablet:nys-grid-col-4">
-<a class="card" href="https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/" title="Watch Video: Intro to Designing with the New York State Design System">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/" aria-label="Watch Video: Intro to Designing with the New York State Design System">
               <div class="card__inner">
                 <div class="card__media">
                   <img src="https://i.ytimg.com/vi/hSpJv_i-hIg/hq720.jpg" alt="Thumbnail image" />
@@ -5126,7 +5126,7 @@ All form field components have been updated with a new property which will inver
             </a>
 </div>
 <div class="nys-tablet:nys-grid-col-4">
-<a class="card" href="https://designsystem.ny.gov/videos/intro-to-nysds-web-components/" title="Watch Video: Intro to NYS Design System Web Components">
+<a class="card" href="https://designsystem.ny.gov/videos/intro-to-nysds-web-components/" aria-label="Watch Video: Intro to NYS Design System Web Components">
               <div class="card__inner">
                 <div class="card__media">
                   <img src="https://i.ytimg.com/vi/NM5PFClfBgA/hq720.jpg" alt="Thumbnail image" />
