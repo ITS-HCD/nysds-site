@@ -31,6 +31,8 @@ Responsive utilities are written as their screen size followed by a colon, follo
   - [Float](../float)
   - [Grid](../grid)
   - [Opacity](../opacity)
+  - [Overflow](../overflow)
+  - [Position](../position)
   - [Z-index](../zindex)
 
 **Currently unsupported:**

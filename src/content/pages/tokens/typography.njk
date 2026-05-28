@@ -1,0 +1,55 @@
+---
+permalink: /tokens/typography/
+title: Typography Tokens
+navTitle: Typography
+navOrder: 2
+description: "Browse semantic NYSDS typography tokens — font sizes, families, line heights, and letter spacing for headings, body, display, and UI text."
+---
+
+<h1>Typography Tokens</h1>
+
+<p>Semantic typography tokens describe purpose — heading, body, display, UI — and should be your first choice. Each maps to a primitive value shown in the raw value column. Click the copy button next to any token to copy it as a <code>var()</code> expression.</p>
+
+<p>Looking for the raw type scale, font stacks, weights, or spacing values? Those are on the <a href="/tokens/primitives/#font-size">Primitives</a> page.</p>
+
+<h2 id="font-size">Font Size</h2>
+<p>Use these for headings, body text, display text, UI elements, and agency names. Each maps to a primitive size token.</p>
+<div class="token-list">
+{% for token in collections.tokens["font-size"] %}
+  {% if token.typographyCategory == "semantic" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="font-family">Font Family</h2>
+<p>Role-based font stacks. Use these instead of referencing primitive font families directly.</p>
+<div class="token-list">
+{% for token in collections.tokens["font-family"] %}
+  {% if token.typographyCategory == "semantic" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="line-height">Line Height</h2>
+<p>Line heights paired with each semantic font size role. Use alongside the matching font size token.</p>
+<div class="token-list">
+{% for token in collections.tokens["line-height"] %}
+  {% if token.typographyCategory == "semantic" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="letter-spacing">Letter Spacing</h2>
+<p>Letter spacing values paired with each semantic font size role. Each maps to a primitive spacing value.</p>
+<div class="token-list">
+{% for token in collections.tokens["letter-spacing"] %}
+  {% if token.typographyCategory == "semantic" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+{% include "partials/token-copy-scripts.njk" %}

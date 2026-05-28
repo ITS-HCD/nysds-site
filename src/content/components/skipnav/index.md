@@ -6,8 +6,8 @@ image: /assets/img/components/skipnav.svg
 image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10102
-navOrder: 20
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-9829&t=EXsXvlMbCdRw10ir-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -126,14 +126,17 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>href</code></td>
       <td>String (URL)</td>
+      <td><code>"#main-content"</code></td>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
   </table>
 </nys-table>
@@ -142,6 +145,10 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

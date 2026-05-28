@@ -47,10 +47,22 @@ function getContrastRatio(fg_hex, bg_hex) {
   return Math.round(ratio * 100) / 100; // Round to 2 decimal places (let's be sensible)
 }
 
+function getColorCategory(name) {
+  if (name.includes('-transparent-')) return 'transparency';
+  if (name.startsWith('--nys-color-theme')) return 'theme';
+  if (/^--nys-color-(accent|info|success|warning|danger|emergency)/.test(name)) return 'intent';
+  if (name.startsWith('--nys-color-neutral-')) return 'neutral';
+  if (/^--nys-color-(base|ink|text|link|focus|surface)/.test(name)) return 'semantic';
+  return 'semantic';
+}
+
 module.exports = function(collectionApi) {
   const tokens = collectionApi.items[0].data.tokens; // Pull tokens from _data/
 
   tokens.forEach(token => {
+      if (token.type === "color") {
+          token.colorCategory = getColorCategory(token.name);
+      }
       if (token.type === "color" && token.recommendedtype) {
           Object.entries(token.recommendedtype).forEach(([textColor, fgColor]) => {
               let bgColor = token.rawvalue; // Background should be token.rawvalue

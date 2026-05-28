@@ -1,0 +1,30 @@
+---
+permalink: /components/breadcrumbs/accessibility-tests/
+title: Accessibility Checklist
+description: How to test the accessibility of a breadcrumbs.
+image: /assets/img/components/breadcrumbs.svg
+image_alt: An illustration of a breadcrumbs
+image_header: /assets/img/components/breadcrumbs-header.svg
+stable: true
+parent: Breadcrumbs
+navOrder: 1
+extra_css:
+  - "/assets/nysa11y/checkbox-native.css"
+---
+
+{% extends "layouts/component-a11y-tests.njk" %}
+
+{#
+  In breadcrumbs.11tydata.json5:
+  Comment top-level members to determine which njk blocks will render.
+
+  Members that may be commented are exactly these:
+  disabilities
+  keyboard
+  mouse
+  screenReader
+  screenReaderMobile
+  tests
+  voice
+  zoom
+#}

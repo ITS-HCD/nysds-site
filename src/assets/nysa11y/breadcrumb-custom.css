@@ -1,0 +1,146 @@
+/**
+ * NYSA11y Breadcrumb
+ * Path: /assets/nysa11y/breadcrumb-custom.css
+ * Depends on /assets/nysa11y/breadcrub-custom.js
+ */
+@layer nysa11y {
+    body:has(.nysa11y) {
+        nav.nysa11y.breadcrumb[data-component="breadcrumb"][data-html="custom"] {
+            --nysa11y-breadcrumb-bg-default: transparent;
+            --nysa11y-breadcrumb-pad-inline: 4px;
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            background-color: var(--nysa11y-breadcrumb-bg-default);
+            color: var(--nys-color-text-weak, #4a4d4f);
+            font-family:
+                "Proxima Nova",
+                -apple-system,
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica",
+                "Arial",
+                sans-serif,
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol";
+            font-size: 1rem;
+            padding-block: 0.75rem;
+            padding-inline: calc(2rem - var(--nysa11y-breadcrumb-pad-inline));
+            &.background {
+                background-color: var(--nys-color-theme-faint, #f7fafd);
+            }
+
+            & ol {
+                background-color: inherit;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: inherit;
+                list-style: none;
+                margin: 0 !important; /* defensive */
+                padding-inline: 0;
+                row-gap: 0.75rem;
+
+                & li {
+                    align-items: center;
+                    background-color: var(--nysa11y-breadcrumb-bg-default);
+                    display: flex;
+                    font-size: inherit;
+                    height: 1.5rem;
+                    margin: 0 !important; /* defensive */
+                    padding-inline: var(--nysa11y-breadcrumb-pad-inline);
+                    white-space: nowrap;
+                    &:has(a, button) {
+                        padding-inline: 0;
+                        &::after {
+                            align-self: baseline;
+                            content: "\276F" / "";
+                            display: flex;
+                            justify-content: center;
+                            width: 1.5rem;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    & a,
+                    & button {
+                        align-items: center;
+                        align-self: stretch;
+                        background-color: transparent;
+                        border-radius: 0.25rem;
+                        color: var(--nys-color-text-weak, #4a4d4f) !important; /* defensive */
+                        cursor: pointer;
+                        font-size: inherit;
+                        line-height: 1.5rem;
+                        min-width: 1.5rem;
+                        padding-inline: 4px;
+                        &:focus-visible {
+                            outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
+                            outline-offset: var(--nys-border-width-md, 2px);
+                        }
+                    }
+
+                    & a {
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration-line: underline;
+                            text-decoration-style: solid;
+                            text-decoration-skip-ink: auto;
+                            text-decoration-thickness: 14%;
+                            text-underline-offset: auto;
+                        }
+                        &:active {
+                            color: var(--nys-color-neutral-900, #1b1b1b) !important;
+                        }
+                    }
+                }
+            }
+            &[data-revealer] button {
+                display: flex;
+                justify-content: center;
+            }
+            &[data-revealer="symbol"] {
+                & button.revealer {
+                    border: none;
+                    &::after {
+                        content: "\2026" / "";
+                        font-size: 1.2rem;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                        text-decoration-thickness: 1.2px;
+                        text-underline-offset: 2px;
+                        &:active {
+                            text-decoration-thickness: 1.8px;
+                        }
+                    }
+                }
+            }
+            &[data-revealer="text"] {
+                & button.revealer {
+                    background-color: var(--nys-color-surface, #ffffff);
+                    border: 1.5px solid var(--nys-color-theme, #154973);
+                    color: var(--nys-color-theme, #154973) !important; /* defensive */
+                    cursor: pointer;
+                    margin-inline: var(--nysa11y-breadcrumb-pad-inline);
+                    &::after {
+                        content: "More..." / "";
+                        font-size: 0.85rem;
+                    }
+                    &:hover,
+                    &:focus-visible {
+                        background-color: var(--nys-color-theme-weaker, #eff6fb);
+                    }
+                    &:active {
+                        background-color: var(--nys-color-theme-weak, #cddde9);
+                        color: var(--nys-color-neutral-900, #1b1b1b) !important;
+                    }
+                }
+            }
+        }
+    }
+}

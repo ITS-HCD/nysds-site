@@ -1,0 +1,393 @@
+---
+permalink: /components/breadcrumbs/accessibility-build/
+title: Build Accessibly
+title_h1: Build an Accessible Breadcrumb
+description: How to code an accessible breadcrumb.
+image: /assets/img/components/breadcrumbs.svg
+image_alt: An illustration of an breadcrumbs
+image_header: /assets/img/components/breadcrumbs-header.svg
+stable: true
+parent: Breadcrumbs
+navOrder: 2
+extra_css:
+  - "/assets/nysa11y/breadcrumb-custom.css"
+  - "/assets/nysa11y/divider-native.css"
+extra_js:
+  - "/assets/nysa11y/breadcrumb-custom.js"
+---
+
+{% extends "layouts/component-a11y-build.njk" %}
+{# block Introduction #}
+{# block RecommendedSolution #}
+
+
+{% block Alternatives %}
+<div class="solution">
+    <div class="card">
+        <h3>Custom Breadcrumb ("symbol")</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            but DOES have a hard requirement not provided by native HTML,
+            you may choose to build a custom Breadcrumb.
+            Or perhaps your legacy component has been flagged for remediation
+            and you need a high quality reference.
+            This custom example recreates the accessibility built into the
+            NYSDS Breadcrumbs.
+        </p>
+        <p>
+            <mark class="subhead strong">How is it different</mark>
+            This Breadcrumb expresses the look-and-feel of the design system with most aspects
+            modeled after the NYSDS Tab component.
+            The concept of "collapsed links," and the implementation of a "revealer" button to show them,
+            differentiate this Breadcrumb from a simple list of links.
+            The significant accessibility implications of this design choice are discussed in
+            <a href="#about-this-pattern">About this pattern</a>.
+        </p>
+        <p>
+            <mark class="subhead strong">About the first demo</mark>
+            On this page there are two demos of the same component.
+            A "Reveal links/Collapse links" button is provided to reset each demo when playing with it.
+            This button is <em>not</em> part of the Breadcrumb component.
+        </p>
+        <ul>
+            <li>
+                This first Breadcrumb provides a "symbol" appearance (three dots "...") for the revealer button,
+                which has the addressable <code>aria-label</code> "show more links"
+            </li>
+            <li>
+                It terminates with the non-linked "current page"
+            </li>
+            <li>
+                It gains an accessible name by being <code>aria-labelledby</code> the <code>h4</code> heading above it,
+                which also provides a visually hidden context hint
+            </li>
+        </ul>
+        {% include "partials/a11y-rely-checks.njk" %}
+    </div>
+
+    {% block HTMLNative %}
+    {% set preview %}
+<div class="breadcrumb-demo">
+    <h4 id="some-page-header">
+        Department of Environmental Conservation
+        <span class="sr-only">path to this page</span>
+    </h4>
+    <button aria-controls="symbol">Reveal links</button>
+
+    <!-- Breadcrumb "symbol" -->
+    <nav
+        aria-labelledby="some-page-header"
+        class="nysa11y breadcrumb"
+        data-component="breadcrumb"
+        data-revealer="symbol"
+        data-html="custom"
+        data-state="min"
+        id="symbol">
+        <ol>
+            <li>
+                <a href="https://dec.ny.gov/">Home</a>
+            </li>
+            <li data-part="revealer">
+                <button class="revealer" aria-label="show more links"></button>
+            </li>
+            <li class="intermediate">
+                <a href="https://dec.ny.gov/environmental-protection">
+                    Environmental Protection
+                </a>
+            </li>
+            <li class="intermediate">
+                <a href="https://dec.ny.gov/environmental-protection/water">
+                    Water
+                </a>
+            </li>
+            <li class="intermediate">
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality">
+                    Water Quality Management
+                </a>
+            </li>
+            <li>
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality/stormwater">
+                    Stormwater
+                </a>
+            </li>
+            <li>Construction Stormwater Toolbox</li>
+        </ol>
+    </nav>
+</div>
+    {% endset %}
+    {% set accordionLabel = "HTML" %}
+    {% set code = preview %}
+    {% set codeExpanded = true %}
+    {% set codeLanguage = "html" %}
+    {% set backgroundSolid = true %}
+    {% set showTip = false %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# HTMLNative #}
+</div>
+
+<hr class="nysa11y divider" data-component="divider" data-html="native">
+
+<div class="solution">
+    <div class="card">
+        <h3>Custom Breadcrumb ("text")</h3>
+        <p>
+            <mark class="subhead strong">About the second demo</mark>
+        </p>
+        <ul>
+            <li>
+                This second Breadcrumb provides a "text" appearance ("More...") for the revealer button,
+                which also has the addressable <code>aria-label</code> "show more links"
+            </li>
+            <li>
+                Initially it terminates with a linked "parent page," but adds the final, non-linked,
+                current page when the revealer is activated
+            </li>
+            <li>
+                Its accessible name comes from an <code>aria-label</code> set on the component <code class="element">nav</code>,
+                which also provides a context hint
+            </li>
+        </ul>
+        {% include "partials/a11y-rely-checks.njk" %}
+    </div>
+
+    {% block HTMLCustom %}
+    {% set preview %}
+<div class="breadcrumb-demo">
+    <button aria-controls="text">Reveal links</button>
+
+    <!-- Breadcrumb "text" -->
+    <nav
+        aria-label="Department of Environmental Conservation, path to this page"
+        class="nysa11y breadcrumb background"
+        data-component="breadcrumb"
+        data-html="custom"
+        data-revealer="text"
+        data-state="min"
+        id="text">
+        <ol>
+            <li>
+                <a href="https://dec.ny.gov/">Home</a>
+            </li>
+            <li data-part="revealer">
+                <button class="revealer" aria-label="show more links"></button>
+            </li>
+            <li class="intermediate">
+                <a href="https://dec.ny.gov/environmental-protection">
+                    Environmental Protection
+                </a>
+            </li>
+            <li class="intermediate">
+                <a href="https://dec.ny.gov/environmental-protection/water">
+                    Water
+                </a>
+            </li>
+            <li class="intermediate">
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality">
+                    Water Quality Management
+                </a>
+            </li>
+            <li>
+                <a href="https://dec.ny.gov/environmental-protection/water/water-quality/stormwater">
+                    Stormwater
+                </a>
+            </li>
+            <li class="intermediate">Construction Stormwater Toolbox</li>
+        </ol>
+    </nav>
+</div>
+    {% endset %}
+    {% set accordionLabel = "HTML" %}
+    {% set code = preview %}
+    {% set codeExpanded = true %}
+    {% set codeLanguage = "html" %}
+    {% set backgroundSolid = true %}
+    {% set showTip = false %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# HTMLCustom #}
+
+    {% block CSSCustom %}
+    {% set code %}
+    {% include "../../../assets/nysa11y/breadcrumb-custom.css" %}
+    {% endset %}
+    {% set accordionLabel = "CSS" %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "css" %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# CSSCustom #}
+
+    {% block JSCustom %}
+    {% set code %}
+    {% include "../../../assets/nysa11y/breadcrumb-custom.js" %}
+    {% endset %}
+    {% set accordionLabel = "JavaScript" %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "js" %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# JSCustom #}
+</div>
+{% endblock %}{# Alternatives #}
+
+{% block AboutThisPattern %}
+<p>
+    A Breadcrumb is a navigation region containing a set of one or more anchor links to different pages, structured in a hierarchy.
+    This hierarchy typically extends from the site home page or web application entry point to the current page or its immediate parent.
+    Rather than an outline, like side navigation, or a tree, like a site map,
+    a Breadcrumb is like a ladder with discrete linear steps between beginning and end.
+    A Breadcrumb makes it easier to understand complex sites,
+    particularly when users arrive at a page from search results or from a different website.
+    A Breadcrumb can orient users when a deep site hierarchy is not made adequately clear by other navigation cues.
+</p>
+<p>
+    <mark class="subhead strong">Key points</mark>
+    Communicate the nature and purpose of a Breadcrumb with explicit semantics
+    (<code class="element">nav</code> or <code>role="navigation"</code>) and informative
+    naming (<code>aria-label</code>) or association (<code>aria-labelledby</code>).
+</p>
+<p>
+    The established visual convention for a Breadcrumb is a horizontal list of links separated by a text or graphic glyph.
+    If a glyph indicates visual direction
+    <a href="https://rtlstyling.com/posts/rtl-styling/#breadcrumbs" target="_blank">it must change direction accordingly</a>
+    when the page is rendered for right-to-left (<code>dir="rtl"</code>) locales.
+    Note that glyphs are also subject to level AA requirements for text color contrast.
+</p>
+<p>Breadcrumb links must follow all accessibility rules for links.</p>
+<ul>
+    <li>They must be distinguished from body text</li>
+    <li>They must take focus and indicate focus</li>
+    <li>They must be activated by <kbd>Enter</kbd> as well as by mouse click, tap, and voice command</li>
+    <li>They must navigate to a new page or application view</li>
+    <li>This destination must be adequately represented by the link name</li>
+</ul>
+
+<p>
+    Breadcrumb separator glyphs must be hidden from screen readers (three techniques shown below).
+    If glyphs are coded within their own list item, hide the entire item.
+</p>
+
+{% set code %}
+<li>
+    <a href="./parent.html">Parent</a>
+    <span class="separator" aria-hidden="true">&rarr;</span>
+</li>
+{% endset %}
+{% set accordionLabel = "Example 1" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code %}
+<li><a href="./parent.html">Parent</a></li>
+<li class="separator" aria-hidden="true">&rarr;</li>
+<li><a href="./child.html">Child</a></li>
+{% endset %}
+{% set accordionLabel = "Example 2" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+{% set code %}
+li:has(a)::after {
+    content: ">" / "";
+}
+{% endset %}
+{% set accordionLabel = "Example 3" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+<br>
+<p>
+    Very commonly a Breadcrumb displays at small font sizes.
+    Ensure that link tap targets respect an absolute minimum dimension of 24 pixels square
+    or equivalent non-interactive horizontal and vertical space between them.
+    This can be done with CSS <code>gap</code> or <code>line-height</code> or <code>padding</code>, or other means.
+</p>
+<p>
+    When the final Breadcrumb item echoes the name of the current page, render it as plain text, not as a link.
+    This avoids redundancy and potential confusion that navigation is still necessary or possible.
+</p>
+<p>
+    <mark class="subhead strong">Interactivity</mark>
+    Our non-scientific expectation is that a Breadcrumb will more often be read for orientation than activated for navigation.
+    Considerations of additional interactivity should weigh effort against likely usage.
+    An existing paradigm, followed by the <a href="./">NYSDS Breadcrumbs</a>,
+    is to hide a certain number of Breadcrumb links when certain viewport rules and component configuration options are in effect.
+    In their place a button is provided, that when clicked reveals the hidden links and then hides itself from interaction,
+    or even deletes itself from the DOM entirely.
+</p>
+<p>
+    Considering accessibility, focus management is the first challenge with a dynamic revealer button.
+    Upon activation, the revealer — which has focus at the time of activation — is itself hidden.
+    At that moment focus will be lost unless it is explicitly set, in this case on the first link that is newly revealed.
+</p>
+<p>
+    <mark class="subhead strong">Full disclosure: the voice control case</mark>
+    The second challenge is activation of the revealer by voice control.
+    The two main systems, Windows Voice Access (WVA) and macOS Voice Control (MVC),
+    both allow activation of elements by grid number and by name or partial name.
+    When using the <a href="./">NYSDS Breadcrumbs</a>, WVA users can invoke the entire string
+    "Show more links" or any one of "show," "more," "links."
+    As of last test, MVC was not so capable.
+</p>
+<p>
+    Given that the current revealer button implementation is graphical rather than text,
+    we do not have a way to easily discover the button's addressable name.
+    A tooltip is a possibility, though not a recommendation,
+    as it would add yet more complexity to a component primarily used for display.
+    Activation by name should be the faster experience,
+    but if the name is not discoverable the slower identification by number must be used.
+    In practice this may be only marginally slower,
+    and anyway is now the only available option under macOS.
+</p>
+<p>
+    Clearly, such a simple-seeming functional addition dramatically increases technical and accessibility considerations,
+    so approach such interaction design decisions with great care.
+</p>
+<p>
+    <mark class="subhead strong">Best Practices</mark>
+    The NYSDS Breadcrumb component implements several of these best practices.
+</p>
+<dl>
+    <dt>
+        Allow Breadcrumb lists to wrap, and do not truncate link item labels.
+    </dt>
+    <dd>
+        A link someone cannot see is one they cannot use.
+    </dd>
+    <dd>
+        A link someone cannot understand or distinguish from another is one they may be afraid to use.
+    </dd>
+    <dt>
+        Within a semantic navigation region, use a semantic, ordered list.
+    </dt>
+    <dd>
+        This will communicate the number and index of links to screen reader users.
+    </dd>
+    <dt>
+        Ensure the smallest tap target is 24 pixels square with at least that same amount of non-interactive space between them.
+    </dt>
+    <dd>
+        This helps all touch device users to make the selections they intend.
+    </dd>
+    <dt>
+        If the final Breadcrumb item must be a redundant link to the current page,
+        mark it up with the attribute <code>aria-current="page"</code>.
+    </dt>
+    <dd>
+        This best identifies the current item within a container or set of related elements.
+    </dd>
+    <dt>
+        If a "revealer" button is implemented, give it a visible label, such as "more."
+    </dt>
+    <dd>
+        This aids all users in understanding and manipulation.
+    </dd>
+    <dt>
+        Take structured data into account when building and integrating a Breadcrumb.
+    </dt>
+    <dd>
+        Correct configuration directly influences search engine optimization, which makes your content easier to find for all users.
+        See Google's
+        <a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb" target="_blank">
+            Breadcrumblist structured data</a> documentation.
+    </dd>
+</dl>
+{% endblock %}{# AboutThisPattern #}

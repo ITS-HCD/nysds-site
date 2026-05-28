@@ -6,8 +6,8 @@ image: /assets/img/components/toggle.svg
 image_alt: An illustration of a toggle switch.
 image_header: /assets/img/components/toggle-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9988
-navOrder: 25
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-7945&t=EXsXvlMbCdRw10ir-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -52,10 +52,9 @@ navOrder: 25
 
 {% block usagedont %}
 
-  - Don’t use toggles for complex or multi-state choices.
-  - Don’t overuse for minor settings that don’t affect the user experience.
-  - Don’t hide labels unless an accessible alternative is in place.
-
+  - Use toggles for complex or multi-state choices.
+  - Overuse for minor settings that don’t affect the user experience.
+  - Hide labels unless an accessible alternative is in place.
 {% endblock %}
 
 {% block accessibility %}
@@ -70,6 +69,28 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 
 {% block options %}
 
+### Checked
+  {% set preview %}<nys-toggle label="Dark Mode" name="theme" value="dark" checked></nys-toggle>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Help Text
+  {% set preview %}<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
+  <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
+</nys-toggle>
+<br/>
+<br/>
+<nys-toggle
+  label="Toggle Switch"
+  description="This description was passed in as a property"
+  name="toggle-switch"
+  value="access">
+</nys-toggle>{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Sizes
   {% set preview %}<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
@@ -77,7 +98,7 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
   <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
 {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Slotted Description
 Add help text to the toggle using the `label` and `description` props.
@@ -103,6 +124,20 @@ Descriptions can be provided either through the `description` prop or via the `s
   {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
+### Inverted
+  Set the `inverted` when the component is on a dark background.
+  {% set preview %}<nys-toggle
+  label="Toggle Switch"
+  description="This description was passed in as a property"
+  name="toggle-switch"
+  value="access"
+  inverted>
+</nys-toggle>{% endset %}
+  {% set code = preview %}
+  {% set inverted = true %}
+  {% set backgroundSolid = true %}
+  {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -112,49 +147,64 @@ Descriptions can be provided either through the `description` prop or via the `s
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>checked</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>noIcon</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"sm"</code> , <code>"md"</code></td>
+      <td><code>"md"</code></td>
     </tr>
     <tr>
       <td><code>value</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String , <code>null</code></td>
+      <td><code>null</code></td>
     </tr>
   </table>
 </nys-table>
+
+
+### Form Prop
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 
@@ -184,6 +234,16 @@ toggle.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

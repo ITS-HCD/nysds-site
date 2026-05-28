@@ -6,8 +6,8 @@ image: /assets/img/components/textarea.svg
 image_alt: An illustration of a textarea field.
 image_header: /assets/img/components/textarea-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-10108
-navOrder: 23
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4021-71000&t=EXsXvlMbCdRw10ir-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -49,8 +49,8 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
 
 {% block usagedont %}
 
-  - Don't use the `<nys-textarea>` for short or single-line inputs (use `<nys-input>` instead).
-  - Don’t use for selecting predefined values (use dropdowns or other inputs).
+  - Use the `<nys-textarea>` for short or single-line inputs (use `<nys-input>` instead).
+  - Use for selecting predefined values (use dropdowns or other inputs).
 
 {% endblock %}
 
@@ -159,6 +159,16 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
   {% set backgroundSolid = true %}
   {% include "partials/code-preview.njk" %}
 
+### Inverted
+Set the `inverted` when the component is on a dark background.
+
+  {% set preview %}<nys-textarea label="Label" description="Prop: description" inverted></nys-textarea>
+  {% endset %}
+  {% set code = preview %}
+  {% set backgroundSolid = true %}
+  {% set inverted = true %}
+  {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
@@ -168,77 +178,98 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>errorMessage</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
-      <td><code>maxLength</code></td>
+      <td><code>maxlength</code></td>
       <td>integer</td>
+      <td><code>null</code></td>
     </tr>
     <tr>
       <td><code>optional</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>placeholder</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>readonly</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>resize</code></td>
       <td><code>"vertical"</code>, <code>"none"</code></td>
+      <td><code>"vertical"</code></td>
     </tr>
     <tr>
       <td><code>rows</code></td>
       <td>integer</td>
+      <td><code>4</code></td>
     </tr>
     <tr>
       <td><code>showError</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>value</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>width</code></td>
       <td><code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"full"</code></td>
+      <td><code>"full"</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String, <code>null</code></td>
+      <td><code>null</code></td>
     </tr>
   </table>
 </nys-table>
+
+### Form Prop
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 
@@ -270,6 +301,16 @@ textarea.addEventListener('nys-input', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

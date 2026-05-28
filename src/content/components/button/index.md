@@ -7,7 +7,7 @@ image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-65486&t=ehyQYJeb6ohvHYV0-4
-navOrder: 6
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -40,7 +40,7 @@ The `<nys-button>` component is used for actions that have an immediate result i
 
 {% block usagedo %}
 
-  - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
+  - Always set the `type` attribute (`submit`, `button`, or `reset`). The default is `button`.
   - Use sentence case for button labels, only capitalizing the first word.
   - Place a `chevron_down` icon on the right for buttons that open a dropdown.
 {% endblock %}
@@ -148,6 +148,21 @@ View the full list of [available icons](/components/icon/#usage).
   {% set code = preview %}
   {% include "partials/code-preview.njk" %}
 
+### Slots
+The `<nys-button>` component provides named slots for custom icon content when the prop-based approach is not sufficient:
+
+- **`prefix-icon`** -- Custom icon before the label. Not shown for the `text` variant.
+- **`suffix-icon`** -- Custom icon after the label. Not shown for the `text` variant.
+- **`circle-icon`** -- Custom icon for circle mode. Overrides the `icon` prop.
+
+{% set code %}<nys-button label="Log out">
+  <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+</nys-button>{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+
 ### Circle
 Use the `circle` prop to create a compact, circular button. Ideal for icon-only actions.
 - When `circle` is set, provide the icon using the `icon` prop.
@@ -178,14 +193,18 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 
 ### Link
 Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
-Set the `target` prop of the `<nys-button>` to specify where to open the linked document. The available targets are:
+Set the `target` prop of the `<nys-button>` to specify where to open the linked document. 
+
+The available targets are:
 - `_self`: Opens the link in the same frame as it was clicked (default).
 - `_blank`: Opens the link in a new tab or window.
 - `_parent`: Opens the link in the parent frame.
 - `_top`: Opens the link in the full body of the window.
 - `framename`: Opens the link in a named iframe.
 
-{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
+**Note**: It is recommended to set the variant on `<nys-button>` to `variant="text"`
+
+{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov" variant="text"></nys-button>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -216,82 +235,103 @@ Set the `inverted` when the button is on a dark background.
       <tr>
           <th>Property</th>
           <th>Type</th>
+          <th>Default</th>
       </tr>
       <tr>
           <td><code>id</code></td>
           <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>name</code></td>
-          <td>String</td>          
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>label</code></td>
-          <td>String</td>          
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>type</code></td>
-          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>         
+          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>
+          <td><code>"button"</code></td>
       </tr>
       <tr>
           <td><code>value</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaLabel</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaDescription</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>disabled</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>fullWidth</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>href</code></td>
-          <td>String (URL)</td>          
+          <td>String (URL)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>inverted</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>onClick</code></td>
-          <td>JS function</td>         
+          <td>JS function</td>
+          <td><code>null</code></td>
       </tr>
       <tr>
           <td><code>prefixIcon</code></td>
-          <td>String (<code><nys-icon name></code>)</td>          
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>size</code></td>
-          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>       
+          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
+          <td><code>"md"</code></td>
       </tr>
       <tr>
           <td><code>suffixIcon</code></td>
-          <td>String (<code><nys-icon name></code>)</td>         
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>target</code></td>
-          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>         
+          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>
+          <td><code>"_self"</code></td>
       </tr>
       <tr>
           <td><code>variant</code></td>
           <td><code>"filled"</code> , <code>"outline"</code> , <code>"ghost"</code> , <code>"text"</code></td>
+          <td><code>"filled"</code></td>
       </tr>
       <tr>
           <td><code>form</code></td>
           <td>String , <code>null</code></td>
+          <td><code>null</code></td>
       </tr>
   </table>
 </nys-table>
 
+### Form Prop
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 

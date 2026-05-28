@@ -6,8 +6,8 @@ image: /assets/img/components/stepper.svg
 image_alt: An illustration of a stepper dropdown.
 image_header: /assets/img/components/stepper-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=4897-5811
-navOrder: 21
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=5091-109760&t=EXsXvlMbCdRw10ir-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -76,8 +76,8 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 
 {% block usagedont %}
 
-- Do not use the stepper if there are only 1 or 2 sections to the form.
-- Do not use the stepper for forms that are nonlinear and can be completed in any order.
+- Use the stepper if there are only 1 or 2 sections to the form.
+- Use the stepper for forms that are nonlinear and can be completed in any order.
 {% endblock %}
 
 {% block accessibility %}
@@ -268,8 +268,10 @@ The `nys-stepper` can be used in both multi-page and single-page applications.
 ### Compact
 On small screens, the `nys-stepper` will render in a compact mode where the progress is indicated by bars rather than complete steps. You can expand to see the names of steps by clicking on "Step x of y"
 
-### Actions Slot
-- You can add actions to the stepper by using the `actions` slot. The action slot only accepts `nys-button` and will render at the top of the `nys-stepper` on desktop and at the end of the stepper on mobile.
+### Slots
+The `<nys-stepper>` component provides one named slot:
+
+- **`actions`** -- Navigation buttons (e.g., Back, Continue). Must be wrapped in `<nys-button>` elements. Renders at the top of the stepper on desktop and at the end on mobile.
 
 ## Step Options
 Each step is represented by a `<nys-step>` element inside the `<nys-stepper>`.
@@ -332,41 +334,49 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
       <th>Component</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-stepper&gt;</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-stepper&gt;</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
       <td>both</td>
     </tr>
     <tr>
       <td><code>selected</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
     <tr>
       <td><code>current</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
     <tr>
       <td><code>href</code></td>
       <td>String (URL)</td>
+      <td><code>""</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
     <tr>
       <td><code>onClick</code></td>
       <td>JS function</td>
+      <td><code>undefined</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
   </table>
@@ -395,6 +405,16 @@ stepper.addEventListener("nys-step-click", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

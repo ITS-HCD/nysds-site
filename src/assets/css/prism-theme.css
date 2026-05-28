@@ -6,32 +6,30 @@
 
 /* Monaspace Neon: Regular */
 @font-face {
-    font-family: 'Monaspace Neon';
-    src: url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff') format('woff'),
-        url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Monaspace Neon';
+  src: url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff') format('woff'),
+    url('../fonts/monaspaceneon/MonaspaceNeon-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Monaspace Neon: Bold */
 @font-face {
-    font-family: 'Monaspace Neon';
-    src: url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff') format('woff'),
-        url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  
+  font-family: 'Monaspace Neon';
+  src: url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff') format('woff'),
+    url('../fonts/monaspaceneon/MonaspaceNeon-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*********************************************************
 * General
 */
 pre[class*="language-"],
 code[class*="language-"],
 code {
-  color: var(--nys-color-ink);
-  /* font-size: var(--nys-font-size-body-sm); */
   text-shadow: none;
   font-family: "Monaspace Neon", Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
@@ -48,6 +46,7 @@ code {
   -ms-hyphens: none;
   hyphens: none;
 }
+
 pre[class*="language-"]::selection,
 code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
@@ -57,41 +56,49 @@ code::mozselection {
   text-shadow: none;
   background: var(--nys-color-neutral-100);
 }
+
 @media print {
+
   pre[class*="language-"],
   code[class*="language-"],
   code {
     text-shadow: none;
   }
 }
+
 pre[class*="language-"] {
   padding: var(--nys-space-200);
   margin: var(--nys-space-100) 0;
   overflow: auto;
   background: var(--nys-color-white);
 }
-:not(pre) > code[class*="language-"],
- :not(pre) > code {
+
+:not(pre)>code[class*="language-"],
+:not(pre)>code {
   padding: var(--nys-space-1px) var(--nys-space-2px);
   border-radius: var(--nys-radius-md);
   color: var(--nys-color-red-600);
   background: var(--nys-color-neutral-10);
 }
+
 /*********************************************************
 * Tokens
 */
 .namespace {
   opacity: .7;
 }
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: var(--nys-color-neutral-600);
 }
+
 .token.punctuation {
   color: var(--nys-color-neutral-600);
 }
+
 .token.property,
 .token.tag,
 .token.boolean,
@@ -101,6 +108,7 @@ pre[class*="language-"] {
 .token.deleted {
   color: var(--nys-color-neutral-600);
 }
+
 .token.selector,
 .token.attr-name,
 .token.char,
@@ -108,6 +116,7 @@ pre[class*="language-"] {
 .token.inserted {
   color: var(--nys-color-red-600);
 }
+
 .token.operator,
 .token.entity,
 .token.url,
@@ -116,39 +125,48 @@ pre[class*="language-"] {
   color: var(--nys-color-neutral-600);
   background: var(--nys-color-white);
 }
+
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: var(--nys-color-blue-600);
 }
+
 .token.function {
   color: var(--nys-color-red-600);
 }
+
 .token.regex,
 .token.important,
 .token.variable {
   color: var(--nys-color-green-500);
 }
+
 .token.important,
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
+
 .token.entity {
   cursor: help;
 }
+
 /*********************************************************
 * Line highlighting
 */
 pre[data-line] {
   position: relative;
 }
-pre[class*="language-"] > code[class*="language-"] {
+
+pre[class*="language-"]>code[class*="language-"] {
   position: relative;
   z-index: 1;
 }
+
 .line-highlight {
   position: absolute;
   left: 0;

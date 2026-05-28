@@ -1,0 +1,23 @@
+<script>
+document.querySelectorAll("[id^='copy-']").forEach(button => {
+  button.addEventListener("click", function() {
+    const tokenName = this.closest(".token-list__info").querySelector(".token-list__var").textContent.trim();
+    const copyValue = `var(${tokenName})`;
+
+    const wrapper = this.closest(".copy-button-wrapper");
+    const tooltip = wrapper.querySelector(".copy-tooltip");
+
+    navigator.clipboard.writeText(copyValue).then(() => {
+      this.setAttribute("prefixIcon", "check");
+      tooltip.innerText = "Copied!";
+      tooltip.classList.add("copied");
+
+      setTimeout(() => {
+        this.setAttribute("prefixIcon", "content_copy");
+        tooltip.innerText = "Copy";
+        tooltip.classList.remove("copied");
+      }, 1500);
+    });
+  });
+});
+</script>

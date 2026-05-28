@@ -1,15 +1,25 @@
 ---
 permalink: /foundations/utilities/flex/
 title: Flexbox
-description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: Utility classes for building flexible one-dimensional layouts with alignment, wrapping, and ordering in the NYS Design System.
 section: Foundations
 parent: Utilities
 layout: layouts/3-col.njk
 ---
 
+{% block content %}
+
+<section id="overview">
+
 # Flexbox
 
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
+
+All flexbox utilities support [responsive prefixes](/foundations/utilities/responsive/).
+
+</section>
+
+<section id="display-flex">
 
 ## Display Flex
 
@@ -71,11 +81,16 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-grid-rows">
+
 ## Flex Grid Rows
 
 {% set preview %}
 
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-1">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-1</span>
@@ -97,7 +112,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-2">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-2</span>
@@ -115,7 +130,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center"> </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-3">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-3</span>
@@ -134,7 +149,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-4">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-4</span>
@@ -153,7 +168,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-5">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-5</span>
@@ -172,7 +187,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-6">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-6</span>
@@ -191,7 +206,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-7">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-7</span>
@@ -210,7 +225,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-8">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-8</span>
@@ -229,7 +244,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-9">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-9</span>
@@ -248,7 +263,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-10">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-10</span>
@@ -267,7 +282,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-11">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-11</span>
@@ -286,7 +301,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-12">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-12</span>
@@ -305,7 +320,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-auto">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-auto</span>
@@ -324,7 +339,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-fill">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-fill</span>
@@ -405,6 +420,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-direction">
+
 ## Flex-direction
 
 {% set preview %}
@@ -466,6 +486,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>
 {% endset %}
 {% include "partials/code-preview.njk" %}
+
+
+</section>
+
+<section id="flex-wrap">
 
 ## Flex-wrap
 
@@ -534,6 +559,10 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col-4"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+</section>
+
+<section id="flex-align">
 
 ## Flex-align
 
@@ -751,6 +780,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-align-self">
+
 ## Flex-align-self
 
 {% set preview %}
@@ -807,6 +841,11 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-flex-align-self-stretch"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+
+</section>
+
+<section id="flex-justify">
 
 ## Flex-justify
 
@@ -943,6 +982,43 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="example"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+</section>
+
+<section id="order">
+
+## Order
+
+Order utilities change the visual order of flex items without changing the DOM order. Use `.nys-order-first` to move an item to the beginning, `.nys-order-last` to the end, or `.nys-order-0` through `.nys-order-11` for specific positions.
+
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-order-first</code></td>
+<td><code>order: -1</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-last</code></td>
+<td><code>order: 999</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-initial</code></td>
+<td><code>order: 0</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-0</code> – <code>.nys-order-11</code></td>
+<td><code>order: 0</code> – <code>order: 11</code></td>
+</tr>
+</tbody>
+</table></nys-table>
+
+All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-first`).
 
 ## Flex-gap
 
@@ -1102,7 +1178,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 
 {% set preview %}
 
-<div class="nys-grid-row nys-grid-gap-sm">
+<div class="nys-grid-row nys-grid-gap-2px">
     <div class="nys-grid-col-auto nys-order-11">
       <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
         <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 1</span>
@@ -1213,6 +1289,10 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
   <div class="nys-grid-col nys-order-first"></div>
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
+
+</section>
+
+{% endblock %}
 
 {% block styles %}
 

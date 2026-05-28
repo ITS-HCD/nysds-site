@@ -7,7 +7,7 @@ image_alt: An illustration of an icon.
 image_header: /assets/img/components/icon-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4019-63198&t=Fz3PChrCAbfpr60Y-4
-navOrder: 15
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -30,7 +30,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 <div class="icon-examples">
 
 ### Core
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "account_circle" %}{% include "partials/icon-preview.njk" %}
   {% set name = "attach_file" %}{% include "partials/icon-preview.njk" %}
   {% set name = "calendar_month" %}{% include "partials/icon-preview.njk" %}
@@ -72,7 +72,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Social
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "social_bluesky" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_facebook" %}{% include "partials/icon-preview.njk" %}
   {% set name = "social_flickr" %}{% include "partials/icon-preview.njk" %}
@@ -92,7 +92,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Arrows
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "arrow_back" %}{% include "partials/icon-preview.njk" %}
   {% set name = "arrow_downward" %}{% include "partials/icon-preview.njk" %}
   {% set name = "arrow_forward" %}{% include "partials/icon-preview.njk" %}
@@ -100,7 +100,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Chevrons
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "chevron_down" %}{% include "partials/icon-preview.njk" %}
   {% set name = "chevron_up" %}{% include "partials/icon-preview.njk" %}
   {% set name = "chevron_left" %}{% include "partials/icon-preview.njk" %}
@@ -108,7 +108,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Environmental
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "ac_unit" %}{% include "partials/icon-preview.njk" %}
   {% set name = "air" %}{% include "partials/icon-preview.njk" %}
   {% set name = "clear_day" %}{% include "partials/icon-preview.njk" %}
@@ -117,7 +117,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Intent
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "check_circle" %}{% include "partials/icon-preview.njk" %}
   {% set name = "emergency_home" %}{% include "partials/icon-preview.njk" %}
   {% set name = "error" %}{% include "partials/icon-preview.njk" %}
@@ -126,7 +126,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </div>
 
 ### Filled
-<div class="nys-grid-row nys-grid-gap-2">
+<div class="nys-grid-row nys-grid-gap-200">
   {% set name = "account_balance_filled" %}{% include "partials/icon-preview.njk" %}
   {% set name = "cancel_filled" %}{% include "partials/icon-preview.njk" %}
   {% set name = "language_filled" %}{% include "partials/icon-preview.njk" %}
@@ -162,10 +162,11 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 
 {% block usagedont %}
 
-  - Don’t overuse icons. Too many create visual noise and reduce focus.
-  - Don’t replace meaningful text with icons unless the icon is universally recognized or paired with a label.
-  - Don’t use standalone icons for actions. Use an icon button instead.
-  - Avoid excessive icon customization that breaks design consistency.
+  - Use icons that lack clarity or context for their intended purpose.
+  - Overuse icons. Too many create visual noise and reduce focus.
+  - Replace meaningful text with icons unless the icon is universally recognized or paired with a label.
+  - Use standalone icons for actions. Use an icon button instead.
+  - Use excessive icon customization that breaks design consistency.
 
 {% endblock %}
 
@@ -252,30 +253,37 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>ariaLabel</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>color</code></td>
       <td>String (CSS HEX, CSS color name, or CSS variable)</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>flip</code></td>
       <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>rotate</code></td>
       <td>integer</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <td><code>size</code></td>
       <td><code>"xs"</code>, <code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"xl"</code>, <code>"2xl"</code>, <code>"3xl"</code>, <code>"4xl"</code>, <code>"5xl"</code>, <code>"12"</code>, <code>"14"</code>, <code>"16"</code>, <code>"18"</code>, <code>"20"</code>, <code>"24"</code>, <code>"32"</code>, <code>"40"</code>, <code>"50"</code></td>
+      <td><code>"md"</code></td>
     </tr>
   </table>
 </nys-table>
@@ -291,25 +299,10 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   {% include "partials/css-vars.njk" %}
 
 {% endblock %}
-[[TODO]]
-The `<nys->` component emits **three** custom Javascript events:
-1.  **`change`** – Fired when the toggle state changes (checked/unchecked).
-2.  **`focus`** – Fired when the toggle gains focus.
-3.  **`blur`** – Fired when the toggle loses focus.
-4.  **`keydown`** – Fired when a key is pressed while the toggle is focused.
-
-You can listen to these events using JavaScript:
-{% highlight "js" %}
-// Select the toggle component
-  const toggle = document.querySelector('nys-toggle');
-
-  // Listen for the 'change' event
-  toggle.addEventListener('change', (event) => {
-    console.log('Checkbox changed:', event.target.checked);
-  });
-{% endhighlight %}
 
 {% block events %}
+
+This component does not emit any custom events.
 
 {% endblock %}
 

@@ -1,0 +1,45 @@
+---
+permalink: /tokens/other/
+title: Spacing & Layout Tokens
+navTitle: Spacing & Layout
+navOrder: 3
+description: "Browse NYSDS spacing, sizing, border radius, and elevation tokens used to build consistent layouts."
+---
+
+<h1>Spacing & Layout Tokens</h1>
+
+<p>Tokens for spacing, sizing, border radius, and elevation that keep layouts consistent across the system. Click the copy button next to any token to copy it as a <code>var()</code> expression.</p>
+
+<h2 id="spacing">Spacing</h2>
+<p>A thirteen-step scale for margins, padding, and gaps. Use these to maintain consistent spatial rhythm across your application.</p>
+<div class="token-list">
+{% for token in collections.tokens.space %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+<h2 id="sizing">Sizing</h2>
+<p>Dimension tokens for widths, heights, and other fixed measurements.</p>
+<div class="token-list">
+{% for token in collections.tokens.size %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+<h2 id="border-radius">Border Radius</h2>
+<p>Six radius tokens from subtle rounding to fully circular. Components use these internally — apply them to your own elements to match the system's corner styles.</p>
+<div class="token-list">
+{% for token in collections.tokens.radius %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+<h2 id="elevation">Elevation</h2>
+<p>Box shadow tokens that create depth. Use <code>raised</code> for cards and <code>overlay</code> for modals and dropdowns.</p>
+<div class="token-list">
+{% for token in collections.tokens.shadow %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+{% include "partials/token-copy-scripts.njk" %}

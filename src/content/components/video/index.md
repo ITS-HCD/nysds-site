@@ -7,7 +7,7 @@ image_alt: An illustration of a video player.
 image_header: /assets/img/components/videoplayer-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20897-9539
-navOrder: 29
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -214,6 +214,10 @@ The `nys-video` does not have any css variables because this component must rema
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

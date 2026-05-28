@@ -1,0 +1,113 @@
+/**
+ * NYSA11y Checkbox
+ * <input type="checkbox">
+ */
+@layer nysa11y {
+    body:has(.nysa11y) {
+        input[type="checkbox"].nysa11y.checkbox[data-component="checkbox"][data-html="native"] {
+            appearance: none;
+            background-color: var(--nys-color-ink-reverse, #ffffff);
+            border-radius: var(--nys-radius-md, 4px);
+            border: solid 2px var(--nys-color-neutral-600, #62666a);
+            cursor: pointer;
+            height: var(--nys-size-400, 32px);
+            width: var(--nys-size-400, 32px);
+            &:hover {
+                background-color: var(--nys-color-neutral-50, #ededed);
+                border-color: var(--nys-color-ink, #1b1b1b);
+            }
+            &[disabled] {
+                background-color: var(--nys-color-ink-reverse, #ffffff);
+                border-color: var(--nys-color-neutral-400, #909395);
+                cursor: not-allowed; /* pointer-events: none; */ /* one or the other, not both */
+            }
+            &:active {
+                background-color: var(--nys-color-neutral-100, #d0d0ce);
+                border-color: var(--nys-color-ink, #1b1b1b);
+            }
+            &:checked {
+                background-color: var(--nys-color-theme, #154973);
+                /* When inlined, encode`#` as `%23` */
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23FFFFFF' d='m9.55 15.15 8.475-8.475.7-.3.7.3.3.713-.3.712-9.175 9.2-.7.3-.7-.3-4.3-4.3-.288-.713.313-.712.712-.3.713.3z'/%3E%3C/svg%3E%0A");
+                background-position: center;
+                border-color: var(--nys-color-theme, #154973);
+                &:hover {
+                    background-color: var(--nys-color-theme-strong, #0e324f);
+                    border-color: var(--nys-color-theme-strong, #0e324f);
+                }
+                &:disabled {
+                    background-color: var(--nys-color-neutral-100, #d0d0ce);
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23bec0c1' d='m9.55 15.15 8.475-8.475.7-.3.7.3.3.713-.3.712-9.175 9.2-.7.3-.7-.3-4.3-4.3-.288-.713.313-.712.712-.3.713.3z'/%3E%3C/svg%3E%0A");
+                    border-color: var(--nys-color-neutral-100, #d0d0ce);
+                }
+            }
+            &:focus-within {
+                outline-offset: var(--nys-space-2px, 2px);
+                outline: solid var(--nys-border-width-md, 2px)
+                    var(--nys-color-focus, #004dd1);
+                &:hover,
+                &:active {
+                    outline-color: var(--nys-color-theme, #154973);
+                }
+            }
+        }
+        label:has([data-component="checkbox"].nysa11y.checkbox) {
+            align-items: center;
+            column-gap: 0.75rem;
+            cursor: pointer;
+            display: inline-flex;
+            flex-direction: row;
+            /* requires both */
+            &:has(.checkbox__label):has(.checkbox__more) {
+                align-items: start;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-template-rows: auto auto;
+                row-gap: 0.5rem;
+                .checkbox {
+                    grid-column: 1;
+                    grid-row: span 2;
+                }
+                .checkbox__label {
+                    padding-block-start: 0.125rem;
+                }
+                .checkbox__more {
+                    /* style to taste, e.g., */
+                    /*font-size: 0.875rem;
+                    font-weight: 300;*/
+                    /* to pass linter (no empty) */
+                    background-color: transparent;
+                }
+            }
+            &:has(.tile),
+            .checkbox__tile > & {
+                border: solid var(--nys-size-1px) var(--nys-color-neutral-200);
+                border-radius: 0.25rem;
+                padding-block: 0.6rem;
+                padding-inline: 0.75rem;
+                &:hover {
+                    border-color: var(--nys-color-ink, #1b1b1b);
+                    outline: 1px solid;
+                }
+                &:has(.checkbox:focus-within) {
+                    border-color: var(--nys-color-focus, #004dd1);
+                    outline: 1px solid var(--nys-color-focus, #004dd1);
+                }
+                &:has(.checkbox:checked) {
+                    background-color: var(--nys-color-theme-faint, #f7fafd);
+                    border-color: var(--nys-color-theme-mid, #457aa5);
+                    &:hover {
+                        border-color: var(--nys-color-theme, #154973);
+                        outline-color: var(--nys-color-theme, #154973);
+                    }
+                }
+                &:has(.checkbox:active) {
+                    background-color: var(--nys-color-neutral-50, #ededed);
+                }
+                .checkbox__label {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

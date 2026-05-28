@@ -1,0 +1,65 @@
+<div class="token-list__item nys-grid-row nys-grid-gap">
+  <div class="token-list__example nys-tablet:nys-grid-col-3">
+    {% if token.type == "color" %}
+      <div class="{% if "transparent" in token.name %}token-list__swatch--checkerboard{% endif %}">
+        <div class="token-list__swatch {% if ('black' not in token.name) and ('white' in token.name or token.rawvalue in ['#ffffff'] )%} token-list__swatch--white-border{% endif %}" style="background-color: var({{ token.name }});">
+          {% if token.recommendedtype %}
+            <div class="token-list__text">
+            {% for textColor, details in token.recommendedtype %}
+              <span
+                class="token-list__text--value"
+                style="color: var({{ details.variableName }});"
+                data-color="var({{ details.variableName }})"
+              >
+                {{ details.contrastRatio }}
+              </span>
+            {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% elif token.type == "font-size" %}
+      <div class="token-list__type" style="font-size: var({{ token.name }});">Aa</div>
+    {% elif token.type == "font-family" %}
+      <div class="token-list__family" style="font-family: var({{ token.name }}); font-size: var(--nys-font-size-9xl)">Aa</div>
+    {% elif token.type == "font-weight" %}
+      <div class="token-list__type" style="font-weight: var({{ token.name }}); font-size: var(--nys-font-size-3xl);">Aa</div>
+    {% elif token.type == "line-height" %}
+      <div class="token-list__type" style="line-height: var({{ token.name }}); font-size: var(--nys-font-size-sm);">Line<br>height</div>
+    {% elif token.type == "letter-spacing" %}
+      <div class="token-list__type" style="letter-spacing: var({{ token.name }}); font-size: var(--nys-font-size-xl); text-transform: uppercase;">Abc</div>
+    {% elif token.type == "space" %}
+      <div class="token-list__space" style="width: var({{ token.name }});"></div>
+    {% elif token.type == "size" %}
+      <div class="token-list__size" style="width: var({{ token.name }});"></div>
+    {% elif token.type == "radius" %}
+      <div class="token-list__radius" style="border-radius: var({{ token.name }});"></div>
+    {% elif token.type == "shadow" %}
+      <div class="token-list__shadow" style="box-shadow: var({{ token.name }});"></div>
+    {% endif %}
+    <pre data-no-copy><code class="token-list__raw {{token.name}}">{{ token.rawvalue }}</code></pre>
+  </div>
+  <div class="token-list__details nys-tablet:nys-grid-col-5">
+    <h3 class="token-list__name">{{ token.displayname }}</h3>
+    <p class="token-list__desc">{{ token.description }}</p>
+  </div>
+  <div class="token-list__info nys-tablet:nys-grid-col-4">
+      <div class="nys-grid-row nys-display-flex nys-flex-align-center">
+        <div class="nys-grid-col-10">
+          <pre data-no-copy><code class="token-list__var">{{ token.name }}</code></pre>
+        </div>
+        <div class="nys-grid-col-2">
+          <div class="copy-button-wrapper" style="position: relative;">
+            <nys-button
+              class="copy-btn"
+              id="copy-{{ token.name | replace('--', '') }}"
+              variant="ghost"
+              size="sm"
+              prefixIcon="content_copy">
+            </nys-button>
+            <div class="copy-tooltip tokens">Copy</div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

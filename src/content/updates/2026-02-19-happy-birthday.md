@@ -1,5 +1,5 @@
 ---
-permalink: /updates/happy-birthday-nysds/
+permalink: /about/updates/happy-birthday-nysds/
 title: Happy Birthday NYS Design System!
 author: Eric Steinborn
 description: |
@@ -125,7 +125,7 @@ Improved the search function on the website to fit into the unav header (top whi
 
 ## New contribute page
 
-There are multiple ways to contribute to the NYS Design System. Our new [contributing page](/get-started/contribute) provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!
+There are multiple ways to contribute to the NYS Design System. Our new [contributing page](/about/contribute/) provides multiple ways you can contribute to the NYS Design System. We've included a link for requesting new components and enhancements, a link for reporting bugs, and a link to join the conversation in our MS Teams channel. We love contributions!
 
 Thanks to [Mashya Mumin](https://github.com/mashyamumin), [Kristin Sorrentino](https://github.com/ksorrentino), and [Doug Bartow](https://github.com/dougbartow) for this new style!
 

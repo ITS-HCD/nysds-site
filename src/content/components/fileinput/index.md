@@ -7,7 +7,7 @@ image_alt: An illustration of a file input.
 image_header: /assets/img/components/fileinput-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4739-1994&t=Fz3PChrCAbfpr60Y-4
-navOrder: 12
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -188,65 +188,83 @@ Set the inverted when the component is on a dark background.
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>label</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>description</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>width</code></td>
       <td><code>"full"</code> , <code>"lg"</code></td>
+      <td><code>"full"</code></td>
     </tr>
     <tr>
       <td><code>multiple</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>accept</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>required</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>disabled</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>errorMessage</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>showError</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>dropzone</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>optional</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>form</code></td>
       <td>String , <code>null</code></td>
+      <td><code>null</code></td>
     </tr>
   </table>
 </nys-table>
+
+### Form Prop
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 

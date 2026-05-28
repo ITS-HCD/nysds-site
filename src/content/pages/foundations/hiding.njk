@@ -1,0 +1,507 @@
+---
+permalink: /foundations/hiding/
+title: "Hiding Content"
+description: "Not all techniques for hiding web content are created equal. The choice of which to use can have dramatic consequences for accessibility."
+layout: layouts/2-col.njk
+section: Foundations
+navOrder: 100
+---
+
+<style>
+dl {
+    dt {
+        font-weight: 600;
+    }
+    dd {
+        margin-inline-start: 0;
+        margin-block-end: 0.5rem;
+    }
+}
+.ex {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 2rem;
+    :nth-child(2):not(:last-child) {
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+}
+
+.display {
+  display: none;
+}
+
+.mask {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+  contain: paint !important;
+}
+
+input {
+  width: 3rem;
+}
+
+.visibility {
+  visibility: hidden;
+
+  .visibility {
+    visibility: visible;
+  }
+}
+
+#vp {
+  .pointer {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.pointer {
+  pointer-events: none;
+}
+
+.position {
+  position: absolute;
+}
+
+.contents {
+  display: contents;
+}
+
+:target {
+  background-color: var(--nys-color-success-weak);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+</style>
+<h1>{{ title }}</h1>
+<blockquote>{{ description }}</blockquote>
+<p>
+    Use of this guide can reduce mystery about why this happens and how to do better.
+    The matrix here provides the full range of options on the Web Platform, with the helpful inclusion of testable examples.
+    Thanks to Vincent Valentin for generously providing this as a resource to the web development community.
+</p>
+<h2>Access types</h2>
+<p>
+    What makes this an interesting study is the large number of distinct and overlapping types of hiding.
+    When content is hidden, access to it <em>may</em> be completely removed,
+    but just as likely may only be partially restricted, with an overlapping set of access types still in effect.
+    For example, a very common digital accessibility failure is to hide content <em>visually</em>
+    but neglect to truly <em>remove</em> it from perception by assistive technologies.
+</p>
+<p>
+    A key understanding is that there are not two simple states, such as "visible and hidden."
+    Depending on the technique, there are at least 13 composite states of access to partially hidden web content.
+    Before considering them in combination, let's define each access type.
+</p>
+<h3>Definitions</h3>
+<dl>
+    <dt>DOM access</dt>
+	<dd>The element is in the document.</dd>
+    <dt>Visual access</dt>
+	<dd>The element is visible in the document.</dd>
+    <dt>Layout access</dt>
+	<dd>The element fills a space that will affect the rest of the layout.</dd>
+    <dt>Semantic access</dt>
+	<dd>The element has a meaning (title, list, emphasis…) that can be returned to user agents (screen readers, search engines…).</dd>
+    <dt>Content access</dt>
+	<dd>The information embedded in the element will be available.</dd>
+    <dt>Keyboard access</dt>
+	<dd>The element is reachable and usable by navigating on the keyboard (if it allows it natively).</dd>
+    <dt>Pointer access</dt>
+	<dd>The element is reachable and usable by navigating with a mouse or a tactile device (if it allows it natively).</dd>
+    <dt>Styles access</dt>
+	<dd>The element is always reachable via CSS and can be modified graphically.</dd>
+    <dt>Subtree reverse access</dt>
+	<dd>It is possible to reverse the removal on children.</dd>
+</dl>
+<h2>Techniques</h2>
+<div style="overflow-x: auto">
+<nys-table bordered>
+   <table>
+    <caption>Access matrix</caption>
+    <tr>
+        <th><small>Technique</small></th>
+        <th><small>DOM</small></th>
+        <th><small>Visual</small></th>
+        <th><small>Layout</small></th>
+        <th><small>Semantic</small></th>
+        <th><small>Content</small></th>
+        <th><small>Keyboard</small></th>
+        <th><small>Pointer</small></th>
+        <th><small>Styles</small></th>
+        <th><small>Subtree reverse</small></th>
+    </tr>
+    <tr>
+		<td><small><a href="#remove">JS <code>.remove()</code></a></small></small></td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#comment">HTML <code>&lt;!-- -- &gt;</code></a></small></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse); padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#display">CSS <code>display: none</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#hidden">HTML <code>hidden="hidden"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#type">HTML <code>type="hidden"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#visibility">CSS <code>visibility: hidden</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+    </tr>
+    <tr>
+		<td><small><a href="#inert">HTML <code>inert="inert"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#mask">CSS <code>.mask</code>, <code>.sr-only</code>…</a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#aria">HTML <code>aria-hidden="true"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#disabled">HTML <code>disabled="disabled"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#contents">CSS <code>display: contents</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+    </tr>
+    <tr>
+		<td><small><a href="#opacity">CSS <code>opacity: 0</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#position">CSS <code>position: absolute</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#tabindex">HTML <code>tabindex="-1"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+    </tr>
+    <tr>
+		<td><small><a href="#presentation">HTML <code>role="presentation"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+    </tr>
+    <tr>
+		<td><small><a href="#none">HTML <code>role="none"</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+    </tr>
+    <tr>
+		<td><small><a href="#pointer">CSS <code>pointer-events: none</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-warning);padding:0.25rem 0.625rem;">no</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+    </tr>
+    <tr>
+		<td><small><a href="#default"><code>Default</code></a></small></td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+		<td style="background-color:var(--nys-color-theme-mid);color:var(--nys-color-ink-reverse);padding:0.25rem 0.625rem;">yes</td>
+    </tr>
+</table>
+<nys-table>
+</div>
+<h3>Test demos</h3>
+<hr>
+<h4>Default</h4>
+<div class="ex" id="default">
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+</div>
+<hr>
+<h4><code>Remove()</code></h4>
+<div class="ex" id="remove">
+  <a href="#">1</a>
+  <a href="#" class="remove">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>&lt;!-- --&gt;</code></h4>
+<div class="ex" id="comment">
+  <a href="#">1</a>
+  <!-- <a href="#">2</a> -->
+  <a class="comment" href="#">3</a>
+</div>
+
+<hr>
+<h4><code>display: none</code></h4>
+<div class="ex" id="display">
+  <a href="#">1</a>
+  <a href="#" class="display">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>hidden="hidden"</code></h4>
+<div class="ex" id="hidden">
+  <a href="#">1</a>
+  <a href="#" hidden="hidden">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>type="hidden"</code></h4>
+<form action="#" class="ex" id="type">
+  <input type="text" value="1" />
+  <input type="hidden" value="2" />
+  <input type="text" value="3" />
+</form>
+
+<hr>
+<h4><code>visibility: hidden</code></h4>
+<div class="ex" id="visibility">
+  <a href="#">1</a>
+  <a href="#" class="visibility">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>aria-hidden="true"</code></h4>
+<div class="ex" id="aria">
+  <a href="#">1</a>
+  <a href="#" aria-hidden="true">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>.mask</code></h4>
+<div class="ex" id="mask">
+  <a href="#">1</a>
+  <a href="#" class="mask">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>disabled="disabled"</code></h4>
+<form action="#" class="ex" id="disabled">
+  <input type="text" value="1" />
+  <input type="text" value="2" disabled="disabled" />
+  <input type="text" value="3" />
+</form>
+
+<hr>
+<h4><code>display: contents</code></h4>
+<div class="ex" id="contents">
+  <a href="#">1</a>
+  <a href="#" class="contents">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>inert="inert"</code></h4>
+<div class="ex" id="inert">
+  <a href="#">1</a>
+  <a href="#" inert="inert">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>opacity: 0</code></h4>
+<div class="ex" id="opacity">
+  <a href="#">1</a>
+  <a href="#" class="opacity">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>position: absolute</code></h4>
+<div class="ex" id="position">
+  <a href="#">1</a>
+  <a href="#" class="position">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>role="presentation"</code></h4>
+<div class="ex" id="presentation">
+  <a href="#">1</a>
+  <a href="#" role="presentation">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>role="none"</code></h4>
+<div class="ex" id="none">
+  <a href="#">1</a>
+  <a href="#" role="none">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>tabindex="-1"</code></h4>
+<div class="ex" id="tabindex">
+  <a href="#">1</a>
+  <a href="#" tabindex="-1">2</a>
+  <a href="#">3</a>
+</div>
+
+<hr>
+<h4><code>pointer-events: none</code></h4>
+<div class="ex" id="pointer">
+  <a href="#">1</a>
+  <a href="#" class="pointer">2</a>
+  <a href="#">3</a>
+</div>

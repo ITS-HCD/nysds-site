@@ -1,0 +1,275 @@
+/**
+ * --------------------------------------------------------------------+
+ * JSON5 supports comments and much more <https://json5.org/>          +
+ * Values for `interactions.status` must be one of these combinations: +
+ * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
+ * Comment top-level members to prevent their corresponding njk blocks +
+ * from rendering. Members that may be commented are exactly these:    +
+ * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
+ * zoom, disabilities.                                                 +
+ * --------------------------------------------------------------------+
+ */
+{
+  "pattern": "Tab",
+  "tests": {
+    "total": 25,
+    "pass": 25,
+    "fail": 0,
+    "toDo": 0
+  },
+
+  "keyboard": {
+        "interactions": [
+        {
+            "scenario": "WHEN I use the <kbd>tab</kbd> key to move focus into a tablist from <em>before</em> the tablist",
+            "requirements": ["THEN I see focus is strongly visually indicated on the active tab"],
+            "status": ["passes", "success"]
+        },
+        {
+            "scenario": "WHEN focus is on a tab and I use the <kbd>left arrow</kbd> and <kbd>right arrow</kbd> keys",
+            "requirements": ["THEN I see focus moves to other tabs"],
+            "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is on a tab and I use the <kbd>left arrow</kbd> and <kbd>right arrow</kbd> keys and focus moves past the last tab in either direction",
+        "requirements": ["THEN I see focus is contained within the tabs; focus moves to the first tab, if using the right arrow, or the last tab, if using the left arrow"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is on a tab and I use the <kbd>spacebar</kbd> or <kbd>enter</kbd> key to activate the tab",
+        "requirements": ["THEN I see the tab is focused and active and its associated tabpanel is displayed"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is on a tab and I use the <kbd>tab</kbd> key",
+        "requirements": ["THEN I see focus moves to the activated tabpanel"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I use the <kbd>shift</kbd> + <kbd>tab</kbd> keys to move focus into a tablist from <em>after</em> the tablist",
+        "requirements": ["<mark>If there is no focusable element in the active tabpanel</mark>","THEN I see focus is strongly visually indicated on the tabpanel boundary"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I use the <kbd>shift</kbd> + <kbd>tab</kbd> keys to move focus from the active tabpanel boundary",
+        "requirements": ["THEN I see focus is strongly visually indicated on the active tab"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I use the <kbd>shift</kbd> + <kbd>tab</kbd> keys to move focus from the active tab",
+        "requirements": ["THEN I see focus moves to the previous focusable element before the tablist on the page"],
+        "status": ["passes", "success"]
+        },
+        ]
+    },
+  "mouse": {
+        "interactions": [
+        {
+            "scenario": "WHEN I use a mouse and I hover over a tab",
+            "requirements": ["THEN I see the hover is strongly visually indicated"],
+            "status": ["passes", "success"]
+        },
+        {
+            "scenario": "WHEN I use a mouse and I give focus to a tab without activating it (mouse down, slide off, mouse up)",
+            "requirements": ["THEN I see the focus is strongly visually indicated on that tab but the associated tabpanel is <em>not</em> shown"],
+            "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I use a mouse and I click a tab",
+        "requirements": ["THEN I see focus is strongly visually indicated on that tab","THEN I see the content of the associated tabpanel"],
+        "status": ["passes", "success"]
+        },
+
+        ]
+  },
+
+  "screenReader": {
+    "interactions": [
+
+        {
+        "scenario": "WHEN I use a desktop screen reader and I enter it with <kbd>Arrow</kbd> key navigation or <kbd>tab</kbd> from a position <em>before</em> the tablist",
+        "requirements": ["THEN I should hear the name of the tablist","THEN I must hear it announce itself as a tab","THEN I should hear it announce its number in the list of tabs and the total number of tabs","<mark>And if it is the active tab</mark>","THEN I must hear it announce its state as selected"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN a tab has either cursor or browser focus and I use the <kbd>left arrow</kbd> and <kbd>right arrow</kbd> keys",
+        "requirements": ["THEN I must hear focus moves to other tabs"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I use the <kbd>spacebar</kbd> or <kbd>enter</kbd> key to activate a tab",
+        "requirements": ["THEN I should hear the tab is activated"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is on a tab and I activate the <kbd>tab</kbd> key",
+        "requirements": ["THEN I should hear focus move to the active tabpanel boundary"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is within the tabpanel or after the tablist and I activate <kbd>shift</kbd> + <kbd>tab</kbd>",
+        "requirements": ["<mark>If there is no focusable element within the active tabpanel</mark>","THEN I should hear focus move to the active tabpanel"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is on the tabpanel boundary and I activate <kbd>shift</kbd> + <kbd>tab</kbd>",
+        "requirements": ["THEN I should hear focus move to the active tab"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN focus is on the tabpanel boundary and I activate back-<kbd>Arrow</kbd>",
+        "requirements": ["THEN I should hear focus move to the final tab in the set of tabs"],
+        "status": ["passes", "success"]
+        }
+    ]
+  },
+
+  "screenReaderMobile": {
+    "interactions": [
+        {
+        "scenario": "WHEN I use a screen reader and I swipe to focus on a tab",
+        "requirements": ["THEN I hear its label and purpose is clear (name)","THEN I hear it identifies itself as a tab","THEN I hear it expresses its state (selected/pressed/checked)"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I double-tap with the tab in focus",
+        "requirements": ["THEN I hear the tab is activated"],
+        "status": ["passes", "success"]
+        }
+    ]
+  },
+
+  "voice": {
+    "interactions": [
+        {
+        "scenario": "WHEN I use a voice control system and I command, <q>Click <em>tab label</em></q>",
+        "requirements": ["<mark>If <em>tab label</em> is recognized as unique, or identified via a multiple match workflow</mark>","THEN I see focus is strongly visually indicated on that tab","THEN I see the content of the associated tabpanel"],
+        "status": ["passes", "success"]
+        }
+    ]
+  },
+
+  "zoom": {
+    "interactions": [
+        {
+        "scenario": "WHEN a tablist is in view at the top and start reading order of my browser, and I use various means to magnify the screen to 200%",
+        "requirements": ["THEN I see all tabs","<mark>If I do not see all tabs</mark>","THEN I see indication that some tabs are off-screen"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN some tabs are off-screen",
+        "requirements": ["THEN I see there is at least one means to bring them into view","THEN I see they may be brought into view without horizontal scrolling the entire page"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN a tab has focus",
+        "requirements": ["THEN I see focus is strongly visually indicated"],
+        "status": ["passes", "success"]
+        },
+        {
+        "scenario": "WHEN I activate a tab",
+        "requirements": ["THEN I see the tab is activated","THEN I see its tabpanel content without horizontal scrolling"],
+        "status": ["passes", "success"]
+        }
+
+        ]
+  },
+
+  "disabilities": [
+    {
+      "type": "blindness",
+      "criteria": [
+        {
+          "description": "Name, role, state is documented",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#name-role-value",
+          "sc": "4.1.2 A"
+        },
+        {
+          "description": "Meets criteria across platforms, devices and viewports",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#principle4",
+          "sc": "Principle 4 - Robust"
+        }
+      ]
+    },
+    {
+      "type": "cognition",
+      "criteria": [
+        {
+          "description": "Users' adjustments to text spacing do not result in loss of content or functionality",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#text-spacing",
+          "sc": "1.4.12 AA"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "criteria": [
+        {
+          "description": "Color is not used as the only means of conveying state (selected/unselected)",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#use-of-color",
+          "sc": "1.4.1 A"
+        }
+      ]
+    },
+    {
+      "type": "low vision",
+      "criteria": [
+        {
+          "description": "Color is not used as the only means of conveying state (selected/unselected)",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#use-of-color",
+          "sc": "1.4.1 A"
+        },
+        {
+          "description": "Text has a 4.5:1 minimum contrast ratio",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#contrast-minimum",
+          "sc": "1.4.3 AA"
+        },
+        {
+          "description": "Text can resize up to 200% with no loss of information",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#resize-text",
+          "sc": "1.4.4 AA"
+        },
+        {
+          "description": "The selected state indication has a 3:1 minimum contrast ratio",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#non-text-contrast",
+          "sc": "1.4.11 AA"
+        }
+      ]
+    },
+    {
+      "type": "motor",
+      "criteria": [
+        {
+          "description": "Keyboard actions are documented",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#keyboard",
+          "sc": "2.1.1 A"
+        },
+        {
+          "description": "The click/tap target area includes the label and is no smaller than 24 pixels square",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#target-size-minimum",
+          "sc": "2.5.8 AA"
+        },
+        {
+          "description": "The click/tap target area includes the label and is no smaller than 44 pixels square",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#target-size-enhanced",
+          "sc": "2.5.5 AAA"
+        },
+        {
+          "description": "The selected and focus states have a 3:1 minimum contrast ratio against default",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#focus-appearance",
+          "sc": "2.4.13 AAA"
+        },
+        {
+          "description": "The focus indication has a 3:1 minimum contrast ratio against default and adjacent elements",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#focus-appearance",
+          "sc": "2.4.13 AAA"
+        },
+        {
+          "description": "The focus indication has a minimum area equal to the width of the element and 2px in height",
+          "uri": "https:\/\/www.w3.org\/WAI\/WCAG22\/quickref\/#focus-appearance",
+          "sc": "2.4.13 AAA"
+        }
+      ]
+    }
+  ]
+}

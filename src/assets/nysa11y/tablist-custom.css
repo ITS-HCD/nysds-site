@@ -1,0 +1,248 @@
+/**
+ * NYSA11y Tablist
+ * Path: /assets/nysa11y/tablist-custom.css
+ * Depends on /assets/nysa11y/tablist-custom.js
+ */
+@layer nysa11y {
+    body:has(.nysa11y) {
+        div.nysa11y.tablist[data-component="tablist"][data-html="custom"] {
+            --nysa11y-divider-thickness: 3px;
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            font-family:
+                "Proxima Nova",
+                -apple-system,
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica",
+                "Arial",
+                sans-serif;
+            display: flex;
+            flex-direction: column;
+
+            & [data-part="tabs"] {
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 3 3' width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h3v3H0z' fill='%23ededed'/%3E%3C/svg%3E%0A");
+                background-position: bottom;
+                background-repeat: repeat-x;
+                display: flex;
+                & [data-part="scrollButtons"] {
+                    & button[data-scroll] {
+                        background-color: var(
+                            --nys-color-theme-weaker,
+                            #eff6fb
+                        );
+                        border-color: var(--nys-color-theme-weak, #cddde9);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 0;
+                        height: 100%;
+                        min-width: 44px;
+                        border-inline: none;
+                        border-block-start: none;
+                        border-block-end-width: 3px;
+                        border-start-end-radius: var(--nys-radius-md, 4px);
+                        border-start-start-radius: var(--nys-radius-md, 4px);
+                        border-end-start-radius: 0;
+                        border-end-end-radius: 0;
+                        margin-inline-end: 1px;
+                        &:focus-visible {
+                            outline: solid var(--nys-border-width-md, 2px)
+                                var(--nys-color-focus, #004dd1);
+                            outline-offset: calc(
+                                var(--nys-space-2px, 2px) * -1
+                            );
+                        }
+                        &[data-scroll="to-start"] {
+                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='%23154973' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A");
+                            background-size: contain;
+                            transform: scaleX(-1);
+                            &[aria-disabled="true"] {
+                                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='gray' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+                        &[data-scroll="to-end"] {
+                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='%23154973' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A");
+                            background-size: contain;
+                            &[aria-disabled="true"] {
+                                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='gray' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+                        &[aria-disabled="true"] {
+                            background-color: var(
+                                --nys-color-neutral-10,
+                                #f6f6f6
+                            );
+                            border-color: transparent;
+                            pointer-events: none;
+                            &:focus-visible {
+                                outline: dashed var(--nys-border-width-md, 2px)
+                                    var(--nys-color-neutral-100, #d0d0ce);
+                            }
+                        }
+                    }
+                }
+                & [data-part="tabsEnclosure"] {
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    & .tabs__scroll-affordance-start,
+                    & .tabs__scroll-affordance-end {
+                        height: calc(100% - var(--nysa11y-divider-thickness));
+                        pointer-events: none;
+                        position: absolute;
+                        width: var(--nys-space-200, 16px);
+                        z-index: 10;
+                        &[class$="-start"] {
+                            background-image: linear-gradient(
+                                to left,
+                                transparent,
+                                var(--nys-color-neutral-100, #d0d0ce)
+                            );
+                            left: 0px;
+                        }
+                        &[class$="-end"] {
+                            background-image: linear-gradient(
+                                to right,
+                                transparent,
+                                var(--nys-color-neutral-100, #d0d0ce)
+                            );
+                            right: 0px;
+                        }
+                    }
+
+                    & [data-part="scrollContainer"] {
+                        display: flex;
+                        overflow-x: auto;
+                        scroll-behavior: smooth;
+                        scrollbar-width: none;
+
+                        & [data-part^="sentinel"] {
+                            height: 1px;
+                            width: 1px;
+                            flex-shrink: 0;
+                            flex-grow: 0;
+                        }
+
+                        & button[role="tab"] {
+                            background-color: var(--nys-color-surface, #ffffff);
+                            border-color: var(--nys-color-neutral-50, #ededed);
+                            border-start-end-radius: var(--nys-radius-md, 4px);
+                            border-start-start-radius: var(
+                                --nys-radius-md,
+                                4px
+                            );
+                            border-style: none none solid;
+                            border-width: var(--nysa11y-divider-thickness);
+                            color: var(--nys-color-ink, #1b1b1b);
+                            cursor: pointer;
+                            display: grid;
+                            font-family: var(
+                                --nys-font-family-ui,
+                                Proxima Nova,
+                                -apple-system,
+                                BlinkMacSystemFont,
+                                Segoe UI,
+                                Roboto,
+                                Helvetica,
+                                Arial,
+                                sans-serif,
+                                Apple Color Emoji,
+                                Segoe UI Emoji,
+                                Segoe UI Symbol
+                            );
+                            font-size: var(--nys-font-size-ui-md, 16px);
+                            font-weight: var(--nys-font-weight-semibold, 600);
+                            line-height: var(--nys-size-200, 16px);
+                            margin-inline-end: 8px;
+                            padding: var(--nys-space-200, 16px)
+                                var(--nys-space-150, 12px);
+                            place-content: center;
+                            white-space: nowrap;
+                            &:last-of-type {
+                                margin-inline-end: 1px;
+                            }
+                            &:focus-visible {
+                                outline: solid var(--nys-border-width-md, 2px)
+                                    var(--nys-color-focus, #004dd1);
+                                outline-offset: calc(
+                                    var(--nys-space-2px, 2px) * -1
+                                );
+                            }
+                            &:hover {
+                                background-color: var(
+                                    --nys-color-theme-weaker,
+                                    #eff6fb
+                                );
+                                border-color: var(
+                                    --nys-color-theme-weak,
+                                    #cddde9
+                                );
+                            }
+                            &[aria-selected="true"] {
+                                background-color: var(
+                                    --nys-color-neutral-10,
+                                    #f6f6f6
+                                );
+                                border-color: var(--nys-color-theme, #154973);
+                                &:hover {
+                                    background-color: var(
+                                        --nys-color-theme-weaker,
+                                        #eff6fb
+                                    );
+                                    border-color: var(
+                                        --nys-color-theme-strong,
+                                        #0e324f
+                                    );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & [data-part="tabpanels"] {
+                flex-grow: 1;
+                margin: 1rem;
+                overflow: auto;
+                overscroll-behavior: none;
+                padding: 1rem;
+                &:focus-visible {
+                    outline: solid var(--nys-border-width-md, 2px)
+                        var(--nys-color-focus, #004dd1);
+                }
+                & [role="tabpanel"] {
+                    /* customize per content */
+                }
+            }
+
+            & [data-part="tabfooter"] {
+                /* customize per content */
+            }
+        }
+
+        /* Non-Tablist classes
+           Placed here, these take effect both inside and outside the Tablist */
+        a:link:focus-visible {
+            outline: solid var(--nys-border-width-md, 2px)
+                var(--nys-color-focus, #004dd1);
+            outline-offset: var(--nys-space-2px, 2px);
+        }
+        .sr-only {
+            border: 0 !important;
+            clip: rect(1px, 1px, 1px, 1px) !important;
+            -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+            height: 1px !important;
+            overflow: hidden !important;
+            margin: -1px !important;
+            padding: 0 !important;
+            position: absolute !important;
+            width: 1px !important;
+            white-space: nowrap !important;
+        }
+    }
+}

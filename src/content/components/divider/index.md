@@ -7,7 +7,7 @@ image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9008-683&t=Vm0dNpR7sqktYZPv-4
-navOrder: 10
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -53,7 +53,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 {% block usagedont %}
 
   - Overuse dividers and clutter the interface, reducing scannability.
-  - Use the divider to separate content appearing side bys side. 
+  - Use the divider to separate content appearing side by side. 
   - Use the `inverted` option on light backgrounds.
 
 {% endblock %}
@@ -90,10 +90,12 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>inverted</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
   </table>
 </nys-table>

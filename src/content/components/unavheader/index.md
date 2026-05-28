@@ -6,8 +6,8 @@ image: /assets/img/components/unav-header.svg
 image_alt: An illustration of a unav header.
 image_header: /assets/img/components/unav-header-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-11902
-navOrder: 28
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4024-7292&t=EXsXvlMbCdRw10ir-4
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -31,6 +31,7 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
   {% set code = preview %}
   {% set showTip = true %}
   {% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block usage %}
@@ -51,8 +52,8 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 
 {% block usagedont %}
 
-  - Don't place it anywhere other than the top of the page.
-  - Don't modify the universal header.
+  - Place it anywhere other than the top of the page.
+  - Modify the universal header.
 
 {% endblock %}
 
@@ -136,18 +137,22 @@ You also can override the default translate behavior to work with JavaScript rat
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>searchUrl</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>hideSearch</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
-    <tr><
+    <tr>
       <td><code>hideTranslate</code></td>
-      <td>Boolean</td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
   </table>
 </nys-table>
@@ -160,6 +165,10 @@ The `nys-unavheader` does not have any css variables because this component must
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

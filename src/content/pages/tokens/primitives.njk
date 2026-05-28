@@ -1,0 +1,83 @@
+---
+permalink: /tokens/primitives/
+title: Primitive Tokens
+navTitle: Primitives
+navOrder: 4
+description: "Raw color, typography, and spacing values that semantic tokens are built from. Use semantic tokens instead when possible."
+---
+
+<h1>Primitive Tokens</h1>
+
+<nys-alert type="warning" heading="Prefer semantic tokens"><span>Primitive tokens are the raw building blocks that semantic tokens reference. In most cases, you should use <a href="/tokens/">color</a> or <a href="/tokens/typography/">typography</a> semantic tokens instead. Primitives don't adapt to themes or convey purpose — they're fixed values. Use them only when you need a specific value that no semantic token covers.</span></nys-alert>
+
+
+<h2 id="color-neutral">Color — Neutral</h2>
+<p>The neutral gray scale from 900 (near-black) to 10 (near-white). Use for borders, dividers, backgrounds, and subtle UI elements. For purpose-driven colors, see <a href="/tokens/#semantic">semantic color tokens</a>.</p>
+<div class="token-list">
+{% for token in collections.tokens.color %}
+  {% if token.colorCategory == "neutral" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="color-transparency">Color — Transparency</h2>
+<p>Black and white overlays at ten opacity steps. Use for scrims, hover states, and layered surfaces. For purpose-driven colors, see <a href="/tokens/#semantic">semantic color tokens</a>.</p>
+<div class="token-list">
+{% for token in collections.tokens.color %}
+  {% if token.colorCategory == "transparency" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+
+<h2 id="font-size">Font Size</h2>
+<p>The raw type scale from <code>2xs</code> to <code>9xl</code>. Semantic tokens map to these — see <a href="/tokens/typography/#font-size">semantic font sizes</a>.</p>
+<div class="token-list">
+{% for token in collections.tokens["font-size"] %}
+  {% if token.typographyCategory == "primitive" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="font-family">Font Family</h2>
+<p>The base font stacks. Use <a href="/tokens/typography/#font-family">semantic font families</a> (body, heading, display, ui) instead of referencing these directly.</p>
+<div class="token-list">
+{% for token in collections.tokens["font-family"] %}
+  {% if token.typographyCategory == "primitive" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="font-weight">Font Weight</h2>
+<p>Nine weight values from thin (100) to black (900).</p>
+<div class="token-list">
+{% for token in collections.tokens["font-weight"] %}
+  {% include "partials/token-item.njk" %}
+{% endfor %}
+</div>
+
+<h2 id="line-height">Line Height</h2>
+<p>The raw line height scale. See <a href="/tokens/typography/#line-height">semantic line heights</a> for role-based values.</p>
+<div class="token-list">
+{% for token in collections.tokens["line-height"] %}
+  {% if token.typographyCategory == "primitive" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="letter-spacing">Letter Spacing</h2>
+<p>The raw letter spacing scale including negative values for tighter tracking on large display text. See <a href="/tokens/typography/#letter-spacing">semantic letter spacing</a> for role-based values.</p>
+<div class="token-list">
+{% for token in collections.tokens["letter-spacing"] %}
+  {% if token.typographyCategory == "primitive" %}
+    {% include "partials/token-item.njk" %}
+  {% endif %}
+{% endfor %}
+</div>
+
+{% include "partials/token-copy-scripts.njk" %}

@@ -7,7 +7,7 @@ image_alt: An illustration of a combobox.
 image_header: /assets/img/components/combobox-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=17435-36797&
-navOrder: 8
+
 ---
 
 {% extends "layouts/component.njk" %}
@@ -842,6 +842,9 @@ Use the `inverted` prop when placing the combobox on a dark background.
     </tr>
   </table>
 </nys-table>
+
+### Form Prop
+  The form attribute associates the `nys-combobox` component with a specific `<form>` element, regardless of its location on the page. This ensures that the combobox's state is included in the form submission, whether it is inside the `<form>` element or outside it.
 
 {% endblock %}
 
