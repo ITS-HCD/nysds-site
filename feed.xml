@@ -4739,15 +4739,15 @@ All form field components have been updated with a new property which will inver
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile</h3>
-    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile Expanded</h3>
-    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Desktop</h3>
-    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
   </div>
 </div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> poured sweat and tears into this component!</p>
@@ -4791,15 +4791,15 @@ All form field components have been updated with a new property which will inver
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile</h3>
-    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper2.png" alt="image of nys-stepper in mobile viewport" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Mobile Expanded</h3>
-    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper3.png" alt="image of nys-stepper in mobile, but is expanded" />
   </div>
   <div class="nys-desktop:nys-grid-col-4">
   <h3>Desktop</h3>
-    <img src="https://designsystem.ny.gov/about/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
+    <img src="https://designsystem.ny.gov/assets/i/2025/stepper1.png" alt="image of nys-stepper in desktop viewport" />
   </div>
 </div>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> poured sweat and tears into this component!</p>
