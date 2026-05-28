@@ -70,7 +70,7 @@ heading_links: false
   <h2>Foundational principles and visual identity</h2>
   <div class="nys-grid-row nys-grid-gap-300">
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/foundations/tokens">
+      <a class="card nys-flex-fill" href="/foundations/tokens" aria-label="Design Tokens">
         <div class="card__inner">
           <div class="card__media">
               <img src="/assets/img/design-token-card.svg" alt="">
@@ -81,7 +81,7 @@ heading_links: false
       </a>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/foundations/accessibility/">
+      <a class="card nys-flex-fill" href="/foundations/accessibility/" aria-label="Accessibility">
         <div class="card__inner">
           <div class="card__media">
               <img src="/assets/img/accessibility-card.svg" alt="">
@@ -92,7 +92,7 @@ heading_links: false
       </a>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/components/">
+      <a class="card nys-flex-fill" href="/components/" aria-label="Web Components">
         <div class="card__inner">
           <div class="card__media">
               <img src="/assets/img/web-component-card.svg" alt="">
@@ -103,7 +103,7 @@ heading_links: false
       </a>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/foundations/utilities/typography/">
+      <a class="card nys-flex-fill" href="/foundations/utilities/typography/" aria-label="Typography">
         <div class="card__inner">
           <div class="card__media">
               <img src="/assets/img/typography-card.svg" alt="">
@@ -152,7 +152,7 @@ heading_links: false
         {% if post.data.tags | hasReleaseTag %}
           {% if not found_release %}
             {% set found_release = true %}
-            <a class="card card--horizontal" href="{{ post.url | url }}">
+            <a class="card card--horizontal" href="{{ post.url | url }}" aria-label="{{ post.data.title }}">
               <div class="card__inner">
                 <div class="card__media card__media--thin">
                   <img src="{{ post.data.thumbnailimage }}" alt="" role="presentation" />
@@ -179,7 +179,7 @@ heading_links: false
         {% if post.data.tags | hasArticleTag %}
           {% if not found_article %}
             {% set found_article = true %}
-            <a class="card card--horizontal" href="{{ post.url | url }}">
+            <a class="card card--horizontal" href="{{ post.url | url }}" aria-label="{{ post.data.title }}">
               <div class="card__inner">
                 <div class="card__media card__media--thin">
                   <img src="{{ post.data.thumbnailimage }}" alt="" role="presentation" />
