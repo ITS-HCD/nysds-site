@@ -20,10 +20,10 @@ Install the core libraries:
 
 Reference the files in your HTML:
 
-{% set code %}<!-- Load the NYS Design System JavaScript library -->
-<script type="module" src="node_modules/@nysds/components/dist/nysds.js"></script>
-<!-- Load the full NYS Design System CSS -->
+{% set code %}<!-- Load the full NYS Design System CSS. Link should go in head. -->
 <link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />
+<!-- Load the NYS Design System JS library. Should go before the closing body tag -->
+<script type="module" src="node_modules/@nysds/components/dist/nysds.js"></script>
 {% endset %}
 {% set accordionLabel = "HTML Snippet" %}
 {% set codeExpanded = true %}

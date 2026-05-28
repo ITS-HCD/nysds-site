@@ -32,12 +32,15 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 ### Core
 <div class="nys-grid-row nys-grid-gap-200">
   {% set name = "account_circle" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "add" %}{% include "partials/icon-preview.njk" %}
   {% set name = "attach_file" %}{% include "partials/icon-preview.njk" %}
   {% set name = "calendar_month" %}{% include "partials/icon-preview.njk" %}
   {% set name = "cancel" %}{% include "partials/icon-preview.njk" %}
   {% set name = "code" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "content_copy" %}{% include "partials/icon-preview.njk" %}
   {% set name = "check" %}{% include "partials/icon-preview.njk" %}
   {% set name = "close" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "delete" %}{% include "partials/icon-preview.njk" %}
   {% set name = "download" %}{% include "partials/icon-preview.njk" %}
   {% set name = "download_done" %}{% include "partials/icon-preview.njk" %}
   {% set name = "drive_folder_upload" %}{% include "partials/icon-preview.njk" %}
@@ -56,6 +59,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
   {% set name = "phone_in_talk" %}{% include "partials/icon-preview.njk" %}
   {% set name = "progress_activity" %}{% include "partials/icon-preview.njk" %}
   {% set name = "publish" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "remove" %}{% include "partials/icon-preview.njk" %}
   {% set name = "search" %}{% include "partials/icon-preview.njk" %} 
   {% set name = "share" %}{% include "partials/icon-preview.njk" %}
   {% set name = "sort" %}{% include "partials/icon-preview.njk" %}
@@ -66,9 +70,6 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
   {% set name = "visibility" %}{% include "partials/icon-preview.njk" %}
   {% set name = "visibility_off" %}{% include "partials/icon-preview.njk" %}
   {% set name = "notifications" %}{% include "partials/icon-preview.njk" %}
-  {% set name = "add" %}{% include "partials/icon-preview.njk" %}
-  {% set name = "remove" %}{% include "partials/icon-preview.njk" %}
-  {% set name = "content_copy" %}{% include "partials/icon-preview.njk" %}
 </div>
 
 ### Social
