@@ -22,7 +22,7 @@ navOrder: -1
   {# Prevent child pages from rendering a card: child pages have a `parent` variable; component pages do NOT #}
   {% if post.data.parent is not defined %}
   <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ post.url | url }}" title="{{ post.data.title }} Component">
+    <a class="card nys-flex-fill" href="{{ post.url | url }}" aria-label="{{ post.data.title }} Component">
       <div class="card__inner">
         <div class="card__media">{% if post.data.image %}
           <img src="{{ post.data.image | url }}" alt="{{ post.data.image_alt }}"></div>{% else %}
