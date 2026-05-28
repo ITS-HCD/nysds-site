@@ -263,7 +263,7 @@ For the complete list of typography utility classes with live previews, see [Typ
 
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12">
-    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds-fonts">
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds-fonts" aria-label="NYSDS Fonts Repository">
       <div class="card__inner">
         <div class="card__media card__media--thin">
           <img src="/assets/img/font-card.svg" />
