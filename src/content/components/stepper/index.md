@@ -7,7 +7,6 @@ image_alt: An illustration of a stepper dropdown.
 image_header: /assets/img/components/stepper-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=5091-109760&t=EXsXvlMbCdRw10ir-4
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -19,7 +18,8 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 {% endblock %}
 
 {% block example %}
-  {% set preview %}
+{% set preview %}
+
 <div class="nys-grid-row">
   <nys-stepper
     label="Register for Design System Office Hours"
@@ -55,29 +55,18 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usage %}
-
-### When to use this component
-- Use a stepper for linear, ordered forms with more than 2 sections.
-- Use a stepper to show progress through a multi-step process.
-
-### When to consider something else
-- If there are only 1 or 2 sections to a form do not use a stepper.
-- Forms that are nonlinear and can be completed in any order should not use a stepper.
-
-{% endblock %}
-
 {% block usagedo %}
 
-- Use a stepper for linear, ordered forms with more than 2 sections.
-- Use a stepper to show progress through a multi-step process.
-- Ensure that users can navigate back to previous steps to review or change information.
+- Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.
+- Ensure users can navigate back to previous steps to review or change information.
+
 {% endblock %}
 
 {% block usagedont %}
 
-- Use the stepper if there are only 1 or 2 sections to the form.
-- Use the stepper for forms that are nonlinear and can be completed in any order.
+- Use when a form has only 1 or 2 sections.
+- Use for forms that are nonlinear and can be completed in any order.
+
 {% endblock %}
 
 {% block accessibility %}
@@ -93,20 +82,24 @@ The `nys-stepper` component includes the following accessibility-focused feature
 {% block options %}
 
 ### Multi Page vs. Single Page Stepper
+
 The `nys-stepper` can be used in both multi-page and single-page applications.
 
 #### Multi-Page
+
 - The `href` should contain the URL of the page to navigate to when the step is clicked.
 - You will be responsible for managing the `current` and `selected` states of the steps as the user progresses through the pages.
 - Be sure to add the `nys-stepper` to each page of the multi-page application, since each step will be a separate page load.
 
 #### Single-Page
+
 - The `href` should contain only the inner HTML of the step, not a full page URL.
 - The `selected` step will dynamically update as the user clicks on different steps.
 - You will be responsible for managing the `current` state of the steps as the user progresses through the steps.
 - You will need to listen for the `nys-step-click` event to load the content of the step into a container on the page.
 
 {% set preview %}
+
 <div class="nys-grid-row">
   <nys-stepper
     label="Register for Design System Office Hours"
@@ -266,17 +259,21 @@ The `nys-stepper` can be used in both multi-page and single-page applications.
 {% include "partials/code-preview.njk" %}
 
 ### Compact
+
 On small screens, the `nys-stepper` will render in a compact mode where the progress is indicated by bars rather than complete steps. You can expand to see the names of steps by clicking on "Step x of y"
 
 ### Slots
+
 The `<nys-stepper>` component provides one named slot:
 
 - **`actions`** -- Navigation buttons (e.g., Back, Continue). Must be wrapped in `<nys-button>` elements. Renders at the top of the stepper on desktop and at the end on mobile.
 
 ## Step Options
+
 Each step is represented by a `<nys-step>` element inside the `<nys-stepper>`.
 
 ### Label
+
 {% set preview = null %}
 {% set code %}<nys-step label="Personal Details">{% endset %}
 {% set accordionLabel = "Sample Code" %}
@@ -285,6 +282,7 @@ Each step is represented by a `<nys-step>` element inside the `<nys-stepper>`.
 {% include "partials/code-preview.njk" %}
 
 ### href and onClick
+
 Add a `href` if the content of the step is plain html:
 
 {% set code %}<nys-step 
@@ -310,11 +308,13 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 ### States
 
 #### Selected
+
 - Represents which step is being displayed to the user.
 - The `selected` step by default will match `current` step if `selected` is not defined.
 - `selected` cannot exist on a step later than the `current` step, if this is done by mistake it will correct to match `current`.
 
 #### Current
+
 - Represents which step is the user is up to in the stepper's progress.
 - This is the last step the user is able to navigate to.
 - Users can go back and review past completed steps, therefor `current` and `selected` might not be the same at a given moment.
@@ -322,6 +322,7 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 - if `current` is not defined, the first step is marked by default.
 
 #### Previous
+
 - This prop is automatically applied to all steps before the `current` step and is used to style the steps properly.
 - Do not add `previous` to a step on the implementation side.
 
@@ -390,7 +391,7 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 The `<nys-stepper>` component emits the following events:
 
-1. **`nys-step-click`** -  Emitted when a `nys-step` is clicked
+1. **`nys-step-click`** - Emitted when a `nys-step` is clicked
 
 You can listen to these events using JavaScript:
 
@@ -399,7 +400,7 @@ You can listen to these events using JavaScript:
 const stepper = document.querySelector("nys-stepper");
 // Listen for the 'nys-step-click' event
 stepper.addEventListener("nys-step-click", () => {
-	console.log("nys-step clicked");
+console.log("nys-step clicked");
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
