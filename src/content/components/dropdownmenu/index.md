@@ -7,7 +7,6 @@ image_alt: An illustration of a dropdownmenu.
 image_header: /assets/img/components/dropdownmenu-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=18397-10545
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -22,10 +21,10 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 {% set preview %}
 <nys-button id="my-trigger-id" label="Dropdown Trigger"></nys-button>
 <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -33,39 +32,23 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usage %}
-
-### When to use this component
-
-- To display a list of actions or links under a single trigger.
-- To provide the user with a way to easily switch context or perform actions within the application. They’re used for navigation or commands, where an action is initiated based on the selection.
-- User profile access, giving users the option to log in, an icon or username in the header can act as a dropdown trigger.
-- Dropdown menus are typically used when you have 5-15 items to choose from.
-
-### When to consider something else
-
-- When you need users to select a value from a list for form input. Consider the `<nys-select>` component instead.
-- When users need to filter or search through many options for form input. Consider the `<nys-combobox>` component instead.
-- When the menu is not intended for navigation links or action menus.
-- When the action is always visible and frequently used. Consider a standalone button or `<nys-button>` instead.
-
-{% endblock %}
-
 {% block usagedo %}
 
-- Keep to 3-7 actions when possible
-- Order actions by frequency or importance
-- Separate destructive actions with a divider
-- Use clear labels (e.g., “Profile”, “Account Settings”, “Sign out”)
-- Avoid vague labels like “Manage” or “Options”
+- Use to display a list of 5–15 actions or links under a single trigger, such as navigation, commands, or user profile access.
+- Keep to 3–7 actions when possible.
+- Order actions by frequency or importance.
+- Separate destructive actions with a divider.
+- Use clear, specific labels (e.g., "Profile", "Account Settings", "Sign out").
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Use for form inputs or selectable values — use `<nys-select>` instead
-- Use without a label or accessible description on the trigger
-- Nest dropdown menus inside other dropdown menus
+- Use for form inputs or selectable values—use `<nys-select>` for standard selection or `<nys-combobox>` when users need to filter or search through many options.
+- Use when the action is always visible and frequently used—use `<nys-button>` instead.
+- Use without a label or accessible description on the trigger.
+- Nest dropdown menus inside other dropdown menus.
+- Use vague labels like "Manage" or "Options".
 
 {% endblock %}
 
@@ -89,8 +72,8 @@ The `<nys-dropdownmenu>` anchors itself to a trigger element provided by the use
 {% set code %}
 <nys-button id="my-trigger-id" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="my-trigger-id">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set codeExpanded = true %}
@@ -150,15 +133,15 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 {% set preview %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-    <nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
-        <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
-    </nys-button>
+<nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
+<nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
+</nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu1" for="my-user-actions" position="bottom-end">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -333,9 +316,9 @@ The `<nys-dropdownmenuitem>` component emits **one** custom Javascript events:
 
 The `nys-click` event includes a detail object with the following properties:
 
-  - `id` (string): The id of the clicked item.
-  - `label` (string): The label of the clicked item.
-  - `href` (string): The href of the clicked item. **Only present if `href` was provided.**
+- `id` (string): The id of the clicked item.
+- `label` (string): The label of the clicked item.
+- `href` (string): The href of the clicked item. **Only present if `href` was provided.**
 
 You can listen to these events using JavaScript:
 {% set code %}
@@ -343,12 +326,12 @@ You can listen to these events using JavaScript:
 const dropdownmenu = document.querySelector("nys-dropdownmenu");
 // Listen for the 'nys-click' event
 dropdownmenu.addEventListener('nys-click', (event) => {
-    const { id, label, href } = event.detail;
-    if (href) {
-        console.log(`Link item clicked (${id}): ${label} with href = ${href}`);
-    } else {
-        console.log(`Action item clicked (${id}): ${label}`);
-    }
+const { id, label, href } = event.detail;
+if (href) {
+console.log(`Link item clicked (${id}): ${label} with href = ${href}`);
+} else {
+console.log(`Action item clicked (${id}): ${label}`);
+}
 });{% endset %}
 {% set preview ="" %}
 {% set accordionLabel = "Sample Code" %}

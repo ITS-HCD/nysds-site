@@ -7,7 +7,6 @@ image_alt: An illustration of a modal.
 image_header: /assets/img/components/modal-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9962-6713&t=Fz3PChrCAbfpr60Y-4
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -20,6 +19,7 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 
 {% block example %}
 {% set preview %}
+
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal1')"></nys-button>
   <nys-modal
@@ -65,37 +65,21 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usage %}
-
-### When to use this component
-
-- When you need to confirm an important action (e.g., “Are you sure you want to delete this?”).
-- When you need to present a form without navigating away (e.g., login, signup, feedback).
-- When you need to show alerts or notifications that require acknowledgment.
-- When you want to display additional information without leaving the current page.
-
-### When to consider something else
-
-- When your content is long or complex - consider a dedicated page instead.
-- When you only need to show inline status - use a banner or `nys-alert`.
-- When you want to provide quick hints for form fields - use a `nys-tooltip`.
-{% endblock %}
-
 {% block usagedo %}
 
-  - Use for actions that need confirmation.
-  - Keep content short and focused.
-  - Use the `mandatory` prop to disable the dismiss button when the user must make a critical decision or acknowledge essential information.
-  - Keep the `subheading` short and use `<p>` tag within the modal for longer information.
+- Use to confirm important actions, present focused forms (e.g., login, feedback), or require acknowledgment of alerts without navigating away from the page.
+- Keep content short and focused—use a dedicated page for long or complex content.
+- Keep the `subheading` short and use `<p>` tags within the modal for longer information.
+- Use the `mandatory` prop to disable the dismiss button only when the user must make a critical decision or acknowledge essential information.
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Overload with long forms or texts.
-  - Show trivial info.
-  - Stack multiple modals.
-  - Force a mandatory modal unnecessarily.
+- Stack multiple modals.
+- Use for trivial information or inline status messages—use `<nys-alert>` instead.
+- Use for quick hints on form fields—use `<nys-tooltip>` instead.
+- Force the `mandatory` prop unnecessarily.
 
 {% endblock %}
 
@@ -103,33 +87,37 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 
 The `<nys-modal>` component includes the following accessibility-focused features:
 
-  - Trap focus inside the modal so keyboard users can’t tab to background content.
-  - Return focus to the triggering element when the modal closes.
-  - Support keyboard interaction: allow "esc" key to close the modal.
-  - Announce the modal to screen readers using role="dialog".
-  - Prevent background scroll so users don’t lose context.
+- Trap focus inside the modal so keyboard users can’t tab to background content.
+- Return focus to the triggering element when the modal closes.
+- Support keyboard interaction: allow "esc" key to close the modal.
+- Announce the modal to screen readers using role="dialog".
+- Prevent background scroll so users don’t lose context.
 
 {% endblock %}
 
 {% block options %}
 
 ### Slots
+
 The `<nys-modal>` component provides two slots:
 
 - **Default slot** -- Body content such as text, forms, or other elements displayed inside the modal.
 - **`actions`** -- Action buttons displayed in the modal footer. Buttons auto-resize on mobile. By convention, place the secondary/cancel button first, followed by the primary/confirm button.
 
 ### Scrolling Behavior
+
 Avoid content-heavy modals. If the content is too long, consider using a dedicated page or a Stepper.
 
-**IMPORTANT:**  `<nys-modal>` blocks page scrolling to keep focus within the modal.
+**IMPORTANT:** `<nys-modal>` blocks page scrolling to keep focus within the modal.
 
 ### Adding basic slots
+
 Use the default slot to add content such as text, links, or other elements inside the modal.
 
 **Note:** The `heading` is required for the modal title, while `subheading` is optional for extra context or instructions.
 
 {% set preview %}
+
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal2')"></nys-button>
   <nys-modal id="modal2" heading="System Maintenance Notice" subheading="Scheduled downtime will occur this weekend.">
@@ -155,11 +143,13 @@ Use the default slot to add content such as text, links, or other elements insid
 {% include "partials/code-preview.njk" %}
 
 ### Adding action buttons
+
 Control a modal’s visibility with the `open` (boolean) property on `<nys-modal>`. Place action buttons (typically `<nys-button>`) inside the actions slot to close the modal or confirm a task by updating the `open` property.
 
 **Tip**: By convention, the secondary/cancel button is usually placed first, followed by the primary/confirm button. This helps maintain consistent UX and accessibility patterns.
 
 {% set preview %}
+
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal3')"></nys-button>
   <nys-modal id="modal3" heading="Update password?">
@@ -185,11 +175,13 @@ Control a modal’s visibility with the `open` (boolean) property on `<nys-modal
 {% include "partials/code-preview.njk" %}
 
 ### Mandatory Action
+
 A forced action modal requires users to make a choice before continuing. Set the `mandatory` prop, which turns off the dismissible button.
 
 **Note:** You must provide an action button to allow the user to exit the modal!
 
 {% set preview %}
+
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal4')"></nys-button>
   <nys-modal
@@ -284,11 +276,9 @@ A forced action modal requires users to make a choice before continuing. Set the
   </table>
 </nys-table>
 
-
 {% endblock %}
 
 {% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 
 {% block events %}
 
@@ -298,23 +288,23 @@ The `<nys-modal>` component emits **two** custom Javascript events:
 2.  **`nys-close`** – Fired when the modal is closed.
 
 ### Event details
+
 The `nys-open` and `nys-close` events include a detail object with the following properties:
 
 - id (string): The id of the file input.
-
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the modal component
 const modal = document.querySelector("nys-modal");
 // Listen for the 'nys-open' event
 modal.addEventListener("nys-open", (event) => {
-  const { id } = event.detail;
-  console.log(`Modal (${id}) is opened`);
+const { id } = event.detail;
+console.log(`Modal (${id}) is opened`);
 });
 // Listen for the 'nys-close' event
 modal.addEventListener("nys-close", (event) => {
-  const { id, reason } = event.detail;
-  console.log(`Modal (${id}) is closed.`);
+const { id, reason } = event.detail;
+console.log(`Modal (${id}) is closed.`);
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
