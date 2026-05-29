@@ -7,7 +7,6 @@ image_alt: An illustration of a unav footer.
 image_header: /assets/img/components/unav-footer-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=3950-17615&p=f&t=918yJHrW82nLa5QX-0
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -19,37 +18,26 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-unavfooter></nys-unavfooter>{% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block usage %}
-
-### When to use this component
-  - Use on every New York State website and application. The Universal Navigation Footer is a required element per NYS web policy.
-  - Place as the very last element in the page, below `<nys-globalfooter>`. Together, these two components form the complete footer structure: the Global Footer provides agency-specific links, and the UNav Footer provides statewide links.
-
-### When to consider something else
-  - There is no alternative. This component is required on all NYS sites. Do not replace it with a custom footer.
-  - Do not place the UNav Footer anywhere other than the absolute bottom of the page.
-
+{% set preview %}<nys-unavfooter></nys-unavfooter>{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
-  - Place the `<nys-unavfooter>` as the last element on every page, immediately after `<nys-globalfooter>`.
-  - Include it on every page of your site, including error pages, login screens, and landing pages.
-  - Use it as-is with no configuration. The component handles its own content and styling.
+- Place the `<nys-unavfooter>` as the last element on every public-facing page, immediately after `<nys-globalfooter>`.
+  - Use on every page of every NYS site and application—this component is required per NYS web policy, including on error pages, login screens, and landing pages.
+  - Place as the very last element on the page, immediately after `<nys-globalfooter>`.
+  - Use as-is with no configuration—the component handles its own content and styling.
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't place the UNav Footer anywhere other than the absolute bottom of the page.
-  - Don't attempt to customize, restyle, or override the UNav Footer's content or appearance. Consistency across all state sites is the purpose of this component.
-  - Don't omit the UNav Footer from any page on your site.
+- Don't use on back office applications or intranets that are not public-facing.
+- Place anywhere other than the absolute bottom of the page.
+- Customize, restyle, or override the component's content or appearance—consistency across all state sites is the purpose of this component.
 
 {% endblock %}
 
@@ -57,11 +45,11 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 
 The `<nys-unavfooter>` component includes the following accessibility-focused features:
 
-  - Renders a `<footer>` landmark element, which screen readers identify as a `contentinfo` region. When both `<nys-globalfooter>` and `<nys-unavfooter>` are present, the page has two `contentinfo` landmarks, both discoverable by assistive technology.
-  - The NY.gov logo link includes an `aria-label` of "logo of New York State" for screen readers.
-  - All statewide navigation links use standard `<a>` elements, ensuring they are keyboard-focusable and announced correctly.
-  - Keyboard navigation: users can `Tab` through all links in the footer in logical reading order.
-{% endblock %}
+- Renders a `<footer>` landmark element, which screen readers identify as a `contentinfo` region. When both `<nys-globalfooter>` and `<nys-unavfooter>` are present, the page has two `contentinfo` landmarks, both discoverable by assistive technology.
+- The NY.gov logo link includes an `aria-label` of "logo of New York State" for screen readers.
+- All statewide navigation links use standard `<a>` elements, ensuring they are keyboard-focusable and announced correctly.
+- Keyboard navigation: users can `Tab` through all links in the footer in logical reading order.
+  {% endblock %}
 
 {% block options %}
 There are no configurable options for this component. It is intended to be used as-is to ensure consistency across all New York State digital products.
