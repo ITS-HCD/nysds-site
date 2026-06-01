@@ -481,6 +481,7 @@ main[role="main"] {
 
 .card__desc {
     line-height: var(--nys-font-lineheight-sm);
+    margin-bottom: var(--nys-space-200);
 }
 
 .card__action {
