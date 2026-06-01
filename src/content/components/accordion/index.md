@@ -23,7 +23,6 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 {% set preview %}
 <nys-accordion>
 <nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?" expanded>
-
 <p>
 You can apply for or renew a U.S. passport through the U.S. Department
 of State. Some renewals can be done by mail.
@@ -84,12 +83,8 @@ The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add thi
  <nys-accordionitem
 id="individualAcc1"
 heading="Liberty Ipsum: Bridges & Boroughs"
-expanded
-
->
-
+expanded>
     <p>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit.</p>
-
   </nys-accordionitem>
 </nys-accordion>
 {% endset %}

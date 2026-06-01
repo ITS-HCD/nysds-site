@@ -349,7 +349,7 @@ const alert = document.querySelector("nys-alert");
   // Listen for the 'nys-close' event
   alert.addEventListener("nys-close", (event) => {
   const { id, type, label } = event.detail;
-  console.log(`Alert ${id} closed. Type: ${type}, Label: ${label}`);
+  console.log(\`Alert ${id} closed. Type: ${type}, Label: ${label}\`);
   });{% endset %}
   {% set accordionLabel = "Sample Code" %}
   {% set codeExpanded = true %}
