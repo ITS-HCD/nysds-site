@@ -7,7 +7,6 @@ image_alt: An illustration of a global footer.
 image_header: /assets/img/components/global-footer-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4024-12187&t=EXsXvlMbCdRw10ir-4
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -19,73 +18,69 @@ The `<nys-globalfooter>` component renders an agency-branded footer section that
 {% endblock %}
 
 {% block example %}
-  {% set preview %}
+{% set preview %}
 <nys-globalfooter agencyName="Office of Information Technology Services">
 </nys-globalfooter>{% endset %}  
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block usage %}
-
-### When to use this component
- - Use on every agency site and application. The Global Footer is a required page element that provides consistent agency branding and secondary navigation.
- - Use to surface essential links such as contact information, privacy policies, accessibility statements, and related program pages.
- - Use with slotted `<ul>` content for single-list links, or nested `<ul>` with `<span>` headings for multi-column layouts.
-
-### When to consider something else
- - Don’t use the Global Footer for primary navigation. Primary navigation belongs in `<nys-globalheader>`.
- - Don’t use the Global Footer for page-specific content or calls to action. Footer content should be relevant site-wide.
- - If you need statewide universal links (Agencies, Services, Counties), those belong in `<nys-unavfooter>`, which renders below this component.
+ {% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
- - Set `agencyName` to your agency's full official name (e.g., "Office of Information Technology Services").
- - Set `homepageLink` to make the agency name a clickable link back to your site's homepage.
- - Keep footer link lists concise. Group related links under `<span>` headings when you have more than 5-6 links.
- - Place `<nys-globalfooter>` above `<nys-unavfooter>` and below your page content and `<nys-backtotop>`.
+- Use on every agency site and application—the Global Footer is a required page element.
+- Use to surface essential site-wide links such as contact information, privacy policies, accessibility statements, and related program pages.
+- Set `agencyName` to your agency's full official name (e.g., "Office of Information Technology Services").
+- Set `homepageLink` to make the agency name a clickable link back to your site's homepage.
+- Keep footer link lists concise. Group related links under `<span>` headings when you have more than 5–6 links.
+- Use slotted `<ul>` content for single-list links, or nested `<ul>` with `<span>` headings for multi-column layouts.
+- Place `<nys-globalfooter>` above `<nys-unavfooter>` and below your page content and `<nys-backtotop>`.
+
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't use the Global Footer for primary navigation or interactive features. Use `<nys-globalheader>` for primary navigation.
-  - Don't include page-specific content that only applies to certain sections of your site.
-  - Don't embed `<script>`, `<iframe>`, `<object>`, or `<img>` elements in slotted content. These are sanitized and removed by the component for security.
+- Don't use for primary navigation—that belongs in `<nys-globalheader>`.
+- Don't include page-specific content or calls to action—footer content should be relevant site-wide.
+- Don't use for statewide universal links (Agencies, Services, Counties)—those belong in `<nys-unavfooter>`, which renders below this component.
+- Don't embed `<script>`, `<iframe>`, `<object>`, or `<img>` elements in slotted content—these are sanitized and removed by the component for security.
+
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-globalfooter>` component includes the following accessibility-focused features:
 
- - Renders a `<footer>` landmark element, which screen readers identify as a `contentinfo` region. This allows users to navigate directly to the footer using landmark shortcuts.
- - The agency name is rendered as an `<h2>` heading, providing a clear content hierarchy within the footer region.
- - All links use standard `<a>` elements, ensuring they are keyboard-focusable and announced correctly by assistive technologies.
- - Keyboard navigation: users can `Tab` through all links in the footer in a logical reading order.
- - When `homepageLink` is set, the agency name becomes a link, providing an additional path back to the agency homepage.
-{% endblock %}
+- Renders a `<footer>` landmark element, which screen readers identify as a `contentinfo` region. This allows users to navigate directly to the footer using landmark shortcuts.
+- The agency name is rendered as an `<h2>` heading, providing a clear content hierarchy within the footer region.
+- All links use standard `<a>` elements, ensuring they are keyboard-focusable and announced correctly by assistive technologies.
+- Keyboard navigation: users can `Tab` through all links in the footer in a logical reading order.
+- When `homepageLink` is set, the agency name becomes a link, providing an additional path back to the agency homepage.
+  {% endblock %}
 
 {% block options %}
 
 ### Without Links
+
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://its.ny.gov">
+{% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://its.ny.gov">
 </nys-globalfooter>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### With Links
+
 For simpler footers or public-facing sites, the Global Footer can include a single list of navigation links. To add links, follow this format:
 
-1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
+1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot.
 
 2. Each list item (`<li>`) should contain an anchor (`<a href="">`) linking to the desired URL.
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+{% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+
   <ul>
     <li><a href="https://its.ny.gov">ITS Home</a></li>
     <li><a href="https://its.ny.gov/about">About ITS</a></li>
@@ -95,9 +90,10 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
   {% include "partials/code-preview.njk" %}
 
 ### With Column Links
+
 For sites that need to organize multiple navigation sections, the Global Footer supports column-based links. To add column links, follow this format:
 
-1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot. 
+1. Use an unordered list (`<ul>`) inside the `<nys-globalfooter>` slot.
 
 2. Group related links into columns by giving each column a parent list item (`<li>`) with a heading (`<span>`).
 
@@ -107,7 +103,8 @@ For sites that need to organize multiple navigation sections, the Global Footer 
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-  {% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+{% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
+
   <ul>
     <li>
       <span>About</span>
