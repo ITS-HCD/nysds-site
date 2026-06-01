@@ -20,60 +20,26 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-alert
-type="base"
-heading="Default status"
-text="This is an example of an neutral base alert."
-primaryLabel="Learn more on ny.gov"
-primaryAction="https://www.ny.gov/"
-secondaryLabel="Alternate action link"
-secondaryAction="https://www.ny.gov/"
-dismissible
-
-> </nys-alert><br>
-> <nys-alert
-> type="info"
-> heading="Info status"
-> text="This is an example of an info alert."
-> primaryLabel="Learn more on ny.gov"
-> primaryAction="https://www.ny.gov/"
-> secondaryLabel="Alternate action link"
-> secondaryAction="https://www.ny.gov/"
-> dismissible
-> </nys-alert><br>
-> <nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-> <nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-> <nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-> <nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>{% endset %}
-> {% set code %}
-> <nys-alert
-> type="base"
-> heading="Default status"
-> text="This is an example of an neutral base alert."
-> primaryLabel="Learn more on ny.gov"
-> primaryAction="https://www.ny.gov/"
-> secondaryLabel="Alternate action link"
-> secondaryAction="https://www.ny.gov/"
-> dismissible
-> </nys-alert>
-> <nys-alert
-> type="info"
-> heading="Info status"
-> text="This is an example of an info alert."
-> primaryLabel="Learn more on ny.gov"
-> primaryAction="https://www.ny.gov/"
-> secondaryLabel="Alternate action link"
-> secondaryAction="https://www.ny.gov/"
-> dismissible
-> </nys-alert>
-> <nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-> <nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-> <nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-> <nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-> {% endset %}
-> {% set showTip = true %}
-> {% include "partials/code-preview.njk" %}
-> {% endblock %}
+{% set preview %}
+<nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible>
+</nys-alert><br>
+<nys-alert type="info" heading="Info status" text="This is an example of an info alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible>
+</nys-alert><br>
+<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
+<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
+<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
+<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>{% endset %}
+{% set code %}
+<nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible></nys-alert>
+<nys-alert type="info" heading="Info status" text="This is an example of an info alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible></nys-alert>
+<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+{% endset %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
 
 {% block usagedo %}
 
