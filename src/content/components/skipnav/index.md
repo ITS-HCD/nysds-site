@@ -25,15 +25,15 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 </p>
 <script type="module">
   customElements.whenDefined('nys-skipnav').then(async () => {
-    const skipnavs = document.querySelectorAll('.skipnav-demo');
-    // Wait until the Lit component finishes updating
-    await skipnavs.updateComplete;
-    skipnavs.forEach((skipnav) => {
-      const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
-      if (link) {
-        link.classList.add('show');
-      }
-    })
+  const skipnavs = document.querySelectorAll('.skipnav-demo');
+  // Wait until the Lit component finishes updating
+  await skipnavs.updateComplete;
+  skipnavs.forEach((skipnav) => {
+  const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
+  if (link) {
+  link.classList.add('show');
+  }
+  })
   });
 </script>
 {% endset %}

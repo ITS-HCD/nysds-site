@@ -25,13 +25,13 @@ The `<nys-backtotop>` component provides a floating button that allows users to 
 <nys-backtotop id="backtotop-demo" visible></nys-backtotop>
 <script type="module">
   customElements.whenDefined('nys-backtotop').then(async () => {
-    const backtotop = document.getElementById('backtotop-demo');
-    // Wait until the Lit component finishes updating
-    await backtotop.updateComplete;
-    const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
-    if (backBtn) {
-        backBtn.style.position = 'absolute';
-    }
+  const backtotop = document.getElementById('backtotop-demo');
+  // Wait until the Lit component finishes updating
+  await backtotop.updateComplete;
+  const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
+  if (backBtn) {
+  backBtn.style.position = 'absolute';
+  }
   });
 </script>
 {% endset %}
@@ -83,40 +83,40 @@ By default, `<nys-backtotop>` will be set on the bottom-right corner. If the bot
 <div style="padding: 2rem 1rem; background-color: #fff;">
   <h2 style="margin: 0;">Sample Content on page</h2>
   <p  style="margin: 0;">
-      This is a sample content area used to demonstrate the functionality of
-      the Back to Top button. In an actual application,
-      <code>nys-backtotop</code> would not be visible until the user scrolls
-      down the page.
+    This is a sample content area used to demonstrate the functionality of
+    the Back to Top button. In an actual application,
+    <code>nys-backtotop</code> would not be visible until the user scrolls
+    down the page.
   </p>
 </div>
 <nys-button
-id="chatbot"
-prefixIcon="sms"
-variant="outline"
-label="Chat With Us"
-size="sm"
-></nys-button>
-<nys-unavfooter></nys-unavfooter>
-<nys-backtotop id="backtotop-demo2" position="left" visible></nys-backtotop>
-<script type="module">
-  customElements.whenDefined('nys-backtotop').then(async () => {
+  id="chatbot"
+  prefixIcon="sms"
+  variant="outline"
+  label="Chat With Us"
+  size="sm"
+  ></nys-button>
+  <nys-unavfooter></nys-unavfooter>
+  <nys-backtotop id="backtotop-demo2" position="left" visible></nys-backtotop>
+  <script type="module">
+    customElements.whenDefined('nys-backtotop').then(async () => {
     const backtotop = document.getElementById('backtotop-demo2');
     // Wait until the Lit component finishes updating
     await backtotop.updateComplete;
     const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
     if (backBtn) {
-        backBtn.style.position = 'absolute';
+    backBtn.style.position = 'absolute';
     }
-  });
-</script>
-<style>
-  #chatbot {
+    });
+  </script>
+  <style>
+    #chatbot {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     --_nys-button-border-radius: var(--nys-radius-round);
-  }
-</style>
+    }
+  </style>
 {% endset %}
 {% set code %}
 <nys-backtotop position="left"></nys-backtotop>

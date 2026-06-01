@@ -111,21 +111,21 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
 
 {% set preview %}
 <nys-globalheader
-appName="User Registration Form"
-agencyName="Office of Information Technology Services"
->   <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
-    <nys-avatar
-      slot="prefix-icon"
-      ariaLabel="User avatar"
-      initials="JS"
+  appName="User Registration Form"
+  agencyName="Office of Information Technology Services"
+  >   <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
+  <nys-avatar
+    slot="prefix-icon"
+    ariaLabel="User avatar"
+    initials="JS"
     ></nys-avatar>
   </nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu" for="my-action-slot">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set code = preview %}

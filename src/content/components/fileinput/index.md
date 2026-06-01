@@ -20,107 +20,107 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
 {% block example %}
 {% set preview %}
 <nys-fileinput
-id="fileinput1"
-name="fileinput1"
-label="Upload a file"
-description="Accepted file types: .jpg, .png, .pdf"
-accept="image/png, image/jpeg, .pdf"
-> </nys-fileinput>
-> {% endset %}
-> {% set backgroundSolid = true %}
-> {% set code = preview %}
-> {% set showTip = true %}
-> {% include "partials/code-preview.njk" %}
-> {% endblock %}
-{% block usagedo %}
-- Use when a form requires file upload, including when multiple file selection or drag-and-drop is needed.
-{% endblock %}
-{% block usagedont %}
-- Use when uploading large files that require resumable upload logic.
-- Use when selecting only from camera input or other device-native features.
-- Use when uploading sensitive data without encryption.
-- Use when file preview of uploaded content is needed.
-- Use when file upload is not necessary for the task.
-{% endblock %}
-{% block accessibility %}
-The `<nys-fileinput>` component includes the following accessibility-focused features:
-- Uses `ElementInternals` for form association and validation.
-- Keyboard navigable with `Tab` key
-- Implements ARIA attributes for required and invalid states.
-{% endblock %}
-{% block options %}
-The `accept` attribute sets the allowed file types using MIME types or file extensions (i.e. image/png, .pdf).
-**IMPORTANT:** This component relies on the file extension or MIME type provided by the browser to determine if a file is acceptable. If a file does not match the allowed types, it will still appear in the list with an error message for the user, but it will be excluded from form submission.
-### Dropzone
-Use the `dropzone` attribute to allow users to drag and drop files instead of (or in addition to) clicking the "Choose file" button.
-{% set preview %}
-<nys-fileinput
-label="Upload a file"
-description="Accepted file types: .jpg, .png, .pdf"
-accept="image/png, image/jpeg, .pdf"
-dropzone
-> </nys-fileinput>
-> {% endset %}
-> {% set backgroundSolid = true %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
-### Width
-Available width values are: `full` (default) and `lg`
-{% set preview %}
-<nys-fileinput
-id="fileinput1"
-name="fileinput1"
-label="Upload a file"
-description="Accepted file types: .jpg, .png, .pdf"
-accept="image/png, image/jpeg, .pdf"
-> </nys-fileinput>
-> {% endset %}
-> {% set backgroundSolid = true %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
-### Multiple files
-Set `multiple` to `true` to allow the selection of more than one file. Each selected file will display its own item in the list with progress and validation feedback.
-{% set preview %}
-<nys-fileinput
-id="fileinput1"
-name="fileinput1"
-label="Upload a file"
-description="Accepted file types: .jpg, .png, .pdf"
-accept="image/png, image/jpeg, .pdf"
-multiple
-> </nys-fileinput>
-> {% endset %}
-> {% set backgroundSolid = true %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
-### Disabled
-Set `disabled` to prevent interaction with the file input. Useful when the input should not be used under certain form conditions.
-{% set preview %}
-<nys-fileinput
-id="fileinput1"
-name="fileinput1"
-label="Upload a file"
-description="Accepted file types: .jpg, .png, .pdf"
-accept="image/png, image/jpeg, .pdf"
-disabled
-> </nys-fileinput>
-> {% endset %}
-> {% set backgroundSolid = true %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
-### Description Slot
-You can supply a description via our `description` prop for plain text or by embedding HTML within our component via our slot for higher customization.
-{% set preview %}
-<nys-fileinput
-id="fileinput-slot"
-name="fileinput-slot"
-label="Upload a file"
-width="full"
->   <span slot="description">
-    Learn more at
-    <a href="https://www.ny.gov" target="_blank" rel="noopener">ny.gov</a>
-  </span>
-</nys-fileinput>
+  id="fileinput1"
+  name="fileinput1"
+  label="Upload a file"
+  description="Accepted file types: .jpg, .png, .pdf"
+  accept="image/png, image/jpeg, .pdf"
+  > </nys-fileinput>
+  > {% endset %}
+  > {% set backgroundSolid = true %}
+  > {% set code = preview %}
+  > {% set showTip = true %}
+  > {% include "partials/code-preview.njk" %}
+  > {% endblock %}
+  {% block usagedo %}
+  - Use when a form requires file upload, including when multiple file selection or drag-and-drop is needed.
+  {% endblock %}
+  {% block usagedont %}
+  - Use when uploading large files that require resumable upload logic.
+  - Use when selecting only from camera input or other device-native features.
+  - Use when uploading sensitive data without encryption.
+  - Use when file preview of uploaded content is needed.
+  - Use when file upload is not necessary for the task.
+  {% endblock %}
+  {% block accessibility %}
+  The `<nys-fileinput>` component includes the following accessibility-focused features:
+  - Uses `ElementInternals` for form association and validation.
+  - Keyboard navigable with `Tab` key
+  - Implements ARIA attributes for required and invalid states.
+  {% endblock %}
+  {% block options %}
+  The `accept` attribute sets the allowed file types using MIME types or file extensions (i.e. image/png, .pdf).
+  **IMPORTANT:** This component relies on the file extension or MIME type provided by the browser to determine if a file is acceptable. If a file does not match the allowed types, it will still appear in the list with an error message for the user, but it will be excluded from form submission.
+  ### Dropzone
+  Use the `dropzone` attribute to allow users to drag and drop files instead of (or in addition to) clicking the "Choose file" button.
+  {% set preview %}
+  <nys-fileinput
+    label="Upload a file"
+    description="Accepted file types: .jpg, .png, .pdf"
+    accept="image/png, image/jpeg, .pdf"
+    dropzone
+    > </nys-fileinput>
+    > {% endset %}
+    > {% set backgroundSolid = true %}
+    > {% set code = preview %}
+    > {% include "partials/code-preview.njk" %}
+    ### Width
+    Available width values are: `full` (default) and `lg`
+    {% set preview %}
+    <nys-fileinput
+      id="fileinput1"
+      name="fileinput1"
+      label="Upload a file"
+      description="Accepted file types: .jpg, .png, .pdf"
+      accept="image/png, image/jpeg, .pdf"
+      > </nys-fileinput>
+      > {% endset %}
+      > {% set backgroundSolid = true %}
+      > {% set code = preview %}
+      > {% include "partials/code-preview.njk" %}
+      ### Multiple files
+      Set `multiple` to `true` to allow the selection of more than one file. Each selected file will display its own item in the list with progress and validation feedback.
+      {% set preview %}
+      <nys-fileinput
+        id="fileinput1"
+        name="fileinput1"
+        label="Upload a file"
+        description="Accepted file types: .jpg, .png, .pdf"
+        accept="image/png, image/jpeg, .pdf"
+        multiple
+        > </nys-fileinput>
+        > {% endset %}
+        > {% set backgroundSolid = true %}
+        > {% set code = preview %}
+        > {% include "partials/code-preview.njk" %}
+        ### Disabled
+        Set `disabled` to prevent interaction with the file input. Useful when the input should not be used under certain form conditions.
+        {% set preview %}
+        <nys-fileinput
+          id="fileinput1"
+          name="fileinput1"
+          label="Upload a file"
+          description="Accepted file types: .jpg, .png, .pdf"
+          accept="image/png, image/jpeg, .pdf"
+          disabled
+          > </nys-fileinput>
+          > {% endset %}
+          > {% set backgroundSolid = true %}
+          > {% set code = preview %}
+          > {% include "partials/code-preview.njk" %}
+          ### Description Slot
+          You can supply a description via our `description` prop for plain text or by embedding HTML within our component via our slot for higher customization.
+          {% set preview %}
+          <nys-fileinput
+            id="fileinput-slot"
+            name="fileinput-slot"
+            label="Upload a file"
+            width="full"
+            >   <span slot="description">
+            Learn more at
+            <a href="https://www.ny.gov" target="_blank" rel="noopener">ny.gov</a>
+          </span>
+        </nys-fileinput>
 {% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}

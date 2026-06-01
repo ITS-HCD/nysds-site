@@ -22,19 +22,19 @@ The `<nys-tab>` acts as a clickable interface to toggle between different sets o
 {% block example %}
 {% set preview %}
 <nys-tabgroup>
-<nys-tab label="Marcy"></nys-tab>
-<nys-tab label="Algonquin"></nys-tab>
-<nys-tab label="Haystack"></nys-tab>
-<nys-tab label="Skylight"></nys-tab>
-<nys-tab label="Whiteface"></nys-tab>
-<nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tab label="Marcy"></nys-tab>
+  <nys-tab label="Algonquin"></nys-tab>
+  <nys-tab label="Haystack"></nys-tab>
+  <nys-tab label="Skylight"></nys-tab>
+  <nys-tab label="Whiteface"></nys-tab>
+  <nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
 </nys-tabgroup>
 <p style="padding: 1rem;">
-<strong>Note:</strong> The content in the tab panels was gathered from <a href="https://www.lakeplacid.com/do/outdoors/summerfall/hiking">lakeplacid.com</a> and may not be completely accurate. This is meant to be a demo of how the component works, not a hiking guide.
+  <strong>Note:</strong> The content in the tab panels was gathered from <a href="https://www.lakeplacid.com/do/outdoors/summerfall/hiking">lakeplacid.com</a> and may not be completely accurate. This is meant to be a demo of how the component works, not a hiking guide.
 </p>
 {% endset %}
 {% set code %}
@@ -63,12 +63,12 @@ To pre-select a tab on load, add the `selected` attribute to a `<nys-tab>` eleme
 
 {% set preview %}
 <nys-tabgroup>
-<nys-tab label="Marcy"></nys-tab>
-<nys-tab label="Algonquin" selected></nys-tab>
-<nys-tab label="Haystack"></nys-tab>
-<nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tab label="Marcy"></nys-tab>
+  <nys-tab label="Algonquin" selected></nys-tab>
+  <nys-tab label="Haystack"></nys-tab>
+  <nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
 </nys-tabgroup>
 {% endset %}
 {% set code %}
@@ -89,18 +89,18 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 
 {% set preview %}
 <nys-tabgroup>
-<nys-tab label="Marcy"></nys-tab>
-<nys-tab label="Algonquin"></nys-tab>
-<nys-tab label="Haystack"></nys-tab>
-<nys-tab label="Skylight"></nys-tab>
-<nys-tab label="Whiteface"></nys-tab>
-<nys-tab label="Gore (Not a High Peak)" disabled></nys-tab>
-<nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
-<nys-tabpanel>Gore content, doesn't matter since disabled</nys-tabpanel>
+  <nys-tab label="Marcy"></nys-tab>
+  <nys-tab label="Algonquin"></nys-tab>
+  <nys-tab label="Haystack"></nys-tab>
+  <nys-tab label="Skylight"></nys-tab>
+  <nys-tab label="Whiteface"></nys-tab>
+  <nys-tab label="Gore (Not a High Peak)" disabled></nys-tab>
+  <nys-tabpanel>Mount Marcy is the tallest peak in the Adirondacks. It has an elevation of 5344 feet with 3166 feet of elevation gain. The roundtrip hike to the top is 14.8 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Algonquin Peak is the 2nd tallest peak in the Adirondacks. It has an elevation of 5114 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.8 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Mount Haystack is the 3rd tallest peak in the Adirondacks. It has an elevation of 4960 feet with 4000 feet of elevation gain. The roundtrip hike to the top is 16.4 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Mount Skylight is the 4th tallest peak in the Adirondacks. It has an elevation of 4926 feet with 5100 feet of elevation gain. The roundtrip hike to the top is 16 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Whiteface is the 5th tallest peak in the Adirondacks. It has an elevation of 4867 feet with 3050 feet of elevation gain. The roundtrip hike to the top is 7.2 miles and is an out-and-back route.</nys-tabpanel>
+  <nys-tabpanel>Gore content, doesn't matter since disabled</nys-tabpanel>
 </nys-tabgroup>
 {% endset %}
 {% set code %}
@@ -120,12 +120,12 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 
 {% set preview %}
 <nys-tabgroup id="explicit-ordering">
-<nys-tab label="1st Tab" id="tab1"></nys-tab>
-<nys-tab label="2nd Tab" id="tab2"></nys-tab>
-<nys-tab label="3rd Tab" id="tab3"></nys-tab>
-<nys-tabpanel aria-labelledby="tab2">Content for tab 2</nys-tabpanel>
-<nys-tabpanel aria-labelledby="tab3">Content for tab 3</nys-tabpanel>
-<nys-tabpanel aria-labelledby="tab1">Content for tab 1</nys-tabpanel>
+  <nys-tab label="1st Tab" id="tab1"></nys-tab>
+  <nys-tab label="2nd Tab" id="tab2"></nys-tab>
+  <nys-tab label="3rd Tab" id="tab3"></nys-tab>
+  <nys-tabpanel aria-labelledby="tab2">Content for tab 2</nys-tabpanel>
+  <nys-tabpanel aria-labelledby="tab3">Content for tab 3</nys-tabpanel>
+  <nys-tabpanel aria-labelledby="tab1">Content for tab 1</nys-tabpanel>
 </nys-tabgroup>
 {% endset %}
 {% set code = preview %}

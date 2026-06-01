@@ -22,19 +22,19 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 {% block example %}
 {% set preview %}
 <nys-accordion>
-<nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?" expanded>
-<p>
-You can apply for or renew a U.S. passport through the U.S. Department
-of State. Some renewals can be done by mail.
-</p>
-<div style="display: flex; gap: 0.5rem; font-size: 1rem;">
-<a href="https://www.ny.gov" target="_blank">Check your registration</a>
-<a href="https://www.ny.gov" target="_blank">Fill out application</a>
-</div>
-</nys-accordionitem>
-<nys-accordionitem id="accordionId2" heading="How can I find out if I’m registered to vote?">
-<p>You can check your registration status, update your information, or find out how to register through the National Association of Secretaries of State.</p>
-</nys-accordionitem>
+  <nys-accordionitem id="accordionId1" heading="How do I renew my passport or apply for a new one?" expanded>
+    <p>
+      You can apply for or renew a U.S. passport through the U.S. Department
+      of State. Some renewals can be done by mail.
+    </p>
+    <div style="display: flex; gap: 0.5rem; font-size: 1rem;">
+      <a href="https://www.ny.gov" target="_blank">Check your registration</a>
+      <a href="https://www.ny.gov" target="_blank">Fill out application</a>
+    </div>
+  </nys-accordionitem>
+  <nys-accordionitem id="accordionId2" heading="How can I find out if I’m registered to vote?">
+    <p>You can check your registration status, update your information, or find out how to register through the National Association of Secretaries of State.</p>
+  </nys-accordionitem>
 </nys-accordion>
 {% endset %}
 {% set code = preview %}
@@ -79,11 +79,11 @@ The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add thi
 <b>Note</b>: Always wrap `nys-accordionitem` components in a `nys-accordion`.
 
 {% set preview %}
-<nys-accordion>  
- <nys-accordionitem
-id="individualAcc1"
-heading="Liberty Ipsum: Bridges & Boroughs"
-expanded>
+<nys-accordion>
+  <nys-accordionitem
+    id="individualAcc1"
+    heading="Liberty Ipsum: Bridges & Boroughs"
+    expanded>
     <p>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit.</p>
   </nys-accordionitem>
 </nys-accordion>
@@ -99,8 +99,8 @@ When the `singleSelect` boolean property is set, only one `nys-accordionitem` in
 
 {% set preview %}
 <nys-accordion singleSelect>
-<nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
-   <p>Learn about state programs, services, and resources available at
+  <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
+    <p>Learn about state programs, services, and resources available at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
   </nys-accordionitem>
@@ -121,8 +121,8 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 {% set preview %}
 <nys-accordion singleSelect bordered>
-<nys-accordionitem heading="We are a group of accordions">
-   <p>Stronger together! Learn more at
+  <nys-accordionitem heading="We are a group of accordions">
+    <p>Stronger together! Learn more at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
   </nys-accordionitem>

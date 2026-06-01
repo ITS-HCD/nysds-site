@@ -97,9 +97,9 @@ You also can override the default list of languages offered if your translation 
 <script>
   const header = document.querySelector('#my-header');
   header.languages = [
-    { code: 'en', label: 'English' },
-    { code: 'es', label: 'Español' , url: '"https://ny.gov/?lang=es"'},
-    { code: 'fr', label: 'Français', url: '"https://ny.gov/?lang=fr"'},
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Español' , url: '"https://ny.gov/?lang=es"'},
+  { code: 'fr', label: 'Français', url: '"https://ny.gov/?lang=fr"'},
   ];
 </script>
 {% endset %}
@@ -112,9 +112,9 @@ You also can override the default translate behavior to work with JavaScript rat
 <nys-unavheader id="my-header2" hideSearch></nys-unavheader>
 <script>
   document.querySelector('#my-header2').addEventListener('nys-language-select', (event) => {
-    event.preventDefault();
-    const selectedLanguage = event.detail.language.label;
-    alert(`Language changed to: ${selectedLanguage}`);
+  event.preventDefault();
+  const selectedLanguage = event.detail.language.label;
+  alert(`Language changed to: ${selectedLanguage}`);
   });
 </script>
 {% endset %}

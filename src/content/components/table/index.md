@@ -71,7 +71,7 @@ Adding the `striped` property can improve readability by visually grouping row c
 {% set preview %}
 <nys-table id="table2" name="table2" striped>
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -117,7 +117,7 @@ Adding the `bordered` property can improve readability by adding a line between 
 {% set preview %}
 <nys-table id="table3" name="table3" bordered>
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -167,7 +167,7 @@ Adding the `sortable` property allows for the table to be reordered in ascending
 {% set preview %}
 <nys-table id="table4" name="table4" sortable>
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -213,7 +213,7 @@ Adding the `download` property adds a button which downloads the data that is be
 {% set preview %}
 <nys-table id="table5" name="table5" download="path/to/downloadable-data.csv">
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -259,7 +259,7 @@ By default, column widths are determined by the content within each cell. Howeve
 {% set preview %}
 <nys-table id="table6" name="table6" bordered>
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>

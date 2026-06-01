@@ -81,7 +81,7 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 {% set preview %}
 <nys-avatar ariaLabel="User avatar"></nys-avatar>
 <nys-avatar ariaLabel="Youtube avatar" color="#f2efee">
-<nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
+  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
 </nys-avatar>
 <nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
 {% set code = preview %}

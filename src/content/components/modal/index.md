@@ -25,13 +25,13 @@ The `<nys-modal>` component appears centered on the page and requires the user t
     id="modal1"
     heading="Update Available"
     subheading="A new version of this application is ready to install."
-  >
+    >
     <p>
-        Would you like to install the latest version? Albany ipsum dolor sit
-        Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-        incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-        veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-        Cuomo consequat.
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      Cuomo consequat.
     </p>
     <div slot="actions">
       <nys-button label="Not now" variant="text" onClick="closeModal('modal1')"></nys-button>
@@ -185,7 +185,7 @@ A forced action modal requires users to make a choice before continuing. Set the
     heading="Your session has expired. 🪡"
     subheading="You will need to log in again in order to continue."
     mandatory
-  >
+    >
     <div slot="actions">
       <nys-button label="Login" onClick="closeModal('modal4', 'Logging In...')"></nys-button>
     </div>

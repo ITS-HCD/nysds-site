@@ -23,92 +23,92 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
   <nys-stepper
     label="Register for Design System Office Hours"
     class="nys-desktop:nys-grid-col-4"
-  >
+    >
     <nys-step
       label="Personal Details"
-    ></nys-step>
-    <nys-step
-      label="Team Info"
-      selected
-    ></nys-step>
-    <nys-step
-      label="Usage Survey"
-      current
-    ></nys-step>
-    <nys-step
-      label="Newsletter Opt-In"
-    ></nys-step>
-  </nys-stepper>
-  <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content">
-    <div style="padding: 2rem; background-color: #fff;">
-      <h2>Team Information</h2>
-      <p>Provide details about your team. Who are you working with? What is your role?</p>
-      <nys-textinput label="Agency Name" required width="md"></nys-textinput>
-      <nys-textinput label="Team Name" required width="md"></nys-textinput>
-    </div>
-  </div>
-</div>
-  {% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-{% block usagedo %}
-- Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.
-- Ensure users can navigate back to previous steps to review or change information.
-{% endblock %}
-{% block usagedont %}
-- Use when a form has only 1 or 2 sections.
-- Use for forms that are nonlinear and can be completed in any order.
-{% endblock %}
-{% block accessibility %}
-The `nys-stepper` component includes the following accessibility-focused features:
-- Proper ARIA roles and attributes to ensure screen readers can interpret the steps correctly.
-- Keyboard navigation support, allowing users to iterate the steps using the keyboard.
-- Visual focus indicators to help users navigate the component.
-{% endblock %}
-{% block options %}
-### Multi Page vs. Single Page Stepper
-The `nys-stepper` can be used in both multi-page and single-page applications.
-#### Multi-Page
-- The `href` should contain the URL of the page to navigate to when the step is clicked.
-- You will be responsible for managing the `current` and `selected` states of the steps as the user progresses through the pages.
-- Be sure to add the `nys-stepper` to each page of the multi-page application, since each step will be a separate page load.
-#### Single-Page
-- The `href` should contain only the inner HTML of the step, not a full page URL.
-- The `selected` step will dynamically update as the user clicks on different steps.
-- You will be responsible for managing the `current` state of the steps as the user progresses through the steps.
-- You will need to listen for the `nys-step-click` event to load the content of the step into a container on the page.
-{% set preview %}
-<div class="nys-grid-row">
-  <nys-stepper
-    label="Register for Design System Office Hours"
-    class="nys-desktop:nys-grid-col-4"
-    id="nys-stepper-dynamic"
-  >
-    <nys-step
-      label="Personal Details"
-      href="/stepper-pages/personal.html"
-    ></nys-step>
-    <nys-step
-      label="Team Info"
-      selected
-      href="/stepper-pages/team.html"
-    ></nys-step>
-    <nys-step
-      label="Usage Survey"
-      current
-      href="/stepper-pages/survey.html"
-    ></nys-step>
-    <nys-step
-      label="Newsletter Opt-In"
-      href="/stepper-pages/newsletter.html"
-    ></nys-step>
-  </nys-stepper>
-  <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content-dynamic">
-    Loading...
-  </div>
-</div>
+      ></nys-step>
+      <nys-step
+        label="Team Info"
+        selected
+        ></nys-step>
+        <nys-step
+          label="Usage Survey"
+          current
+          ></nys-step>
+          <nys-step
+            label="Newsletter Opt-In"
+            ></nys-step>
+          </nys-stepper>
+          <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content">
+            <div style="padding: 2rem; background-color: #fff;">
+              <h2>Team Information</h2>
+              <p>Provide details about your team. Who are you working with? What is your role?</p>
+              <nys-textinput label="Agency Name" required width="md"></nys-textinput>
+              <nys-textinput label="Team Name" required width="md"></nys-textinput>
+            </div>
+          </div>
+        </div>
+        {% endset %}
+        {% set code = preview %}
+        {% set showTip = true %}
+        {% include "partials/code-preview.njk" %}
+        {% endblock %}
+        {% block usagedo %}
+        - Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.
+        - Ensure users can navigate back to previous steps to review or change information.
+        {% endblock %}
+        {% block usagedont %}
+        - Use when a form has only 1 or 2 sections.
+        - Use for forms that are nonlinear and can be completed in any order.
+        {% endblock %}
+        {% block accessibility %}
+        The `nys-stepper` component includes the following accessibility-focused features:
+        - Proper ARIA roles and attributes to ensure screen readers can interpret the steps correctly.
+        - Keyboard navigation support, allowing users to iterate the steps using the keyboard.
+        - Visual focus indicators to help users navigate the component.
+        {% endblock %}
+        {% block options %}
+        ### Multi Page vs. Single Page Stepper
+        The `nys-stepper` can be used in both multi-page and single-page applications.
+        #### Multi-Page
+        - The `href` should contain the URL of the page to navigate to when the step is clicked.
+        - You will be responsible for managing the `current` and `selected` states of the steps as the user progresses through the pages.
+        - Be sure to add the `nys-stepper` to each page of the multi-page application, since each step will be a separate page load.
+        #### Single-Page
+        - The `href` should contain only the inner HTML of the step, not a full page URL.
+        - The `selected` step will dynamically update as the user clicks on different steps.
+        - You will be responsible for managing the `current` state of the steps as the user progresses through the steps.
+        - You will need to listen for the `nys-step-click` event to load the content of the step into a container on the page.
+        {% set preview %}
+        <div class="nys-grid-row">
+          <nys-stepper
+            label="Register for Design System Office Hours"
+            class="nys-desktop:nys-grid-col-4"
+            id="nys-stepper-dynamic"
+            >
+            <nys-step
+              label="Personal Details"
+              href="/stepper-pages/personal.html"
+              ></nys-step>
+              <nys-step
+                label="Team Info"
+                selected
+                href="/stepper-pages/team.html"
+                ></nys-step>
+                <nys-step
+                  label="Usage Survey"
+                  current
+                  href="/stepper-pages/survey.html"
+                  ></nys-step>
+                  <nys-step
+                    label="Newsletter Opt-In"
+                    href="/stepper-pages/newsletter.html"
+                    ></nys-step>
+                  </nys-stepper>
+                  <div class="nys-desktop:nys-grid-col-8" id="nys-stepper-content-dynamic">
+                    Loading...
+                  </div>
+                </div>
 {% endset %}
 {% set css%}
 <style>

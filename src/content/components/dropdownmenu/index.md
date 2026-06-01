@@ -21,10 +21,10 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 {% set preview %}
 <nys-button id="my-trigger-id" label="Dropdown Trigger"></nys-button>
 <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
-<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Organizations" href="/organizations"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -94,18 +94,18 @@ Supported positions are:
 
 {% set preview %}
 <div style="display: flex; gap: 16px; justify-content: center; margin: 80px;">
-    <nys-button id="trigger-bottom-start" label='"bottom-start"'></nys-button>
-    <nys-dropdownmenu for="trigger-bottom-start" position="bottom-start">
-      <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-      <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
-      <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
-    </nys-dropdownmenu>
-    <nys-button id="trigger-bottom-end" label='"top-end"'></nys-button>
-    <nys-dropdownmenu for="trigger-bottom-end" position="top-end">
+  <nys-button id="trigger-bottom-start" label='"bottom-start"'></nys-button>
+  <nys-dropdownmenu for="trigger-bottom-start" position="bottom-start">
     <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
-    </nys-dropdownmenu>
+  </nys-dropdownmenu>
+  <nys-button id="trigger-bottom-end" label='"top-end"'></nys-button>
+  <nys-dropdownmenu for="trigger-bottom-end" position="top-end">
+    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  </nys-dropdownmenu>
 </div>
 {% endset %}
 {% set codeLanguage = "html" %}
@@ -132,15 +132,15 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 {% set preview %}
 <nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-<nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
-<nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
-</nys-button>
+  <nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
+    <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
+  </nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu1" for="my-user-actions" position="bottom-end">
-<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set backgroundSolid = true %}
