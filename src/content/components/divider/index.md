@@ -19,7 +19,6 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 {% block example %}
 {% set preview %}
-
 <div>Sample content above</div>
 <nys-divider></nys-divider>
 <div>Sample content below</div>
@@ -59,7 +58,6 @@ The `<nys-divider>` component includes the following accessibility-focused featu
 
 On dark background, add the `inverted` property to ensure the `<nys-divider>` is visible.
 {% set preview %}
-
 <div>Sample content above</div>
 <nys-divider inverted></nys-divider>
 <div>Sample content below</div>

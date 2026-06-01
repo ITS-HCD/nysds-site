@@ -100,7 +100,6 @@ When the `singleSelect` boolean property is set, only one `nys-accordionitem` in
 {% set preview %}
 <nys-accordion singleSelect>
 <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
-
    <p>Learn about state programs, services, and resources available at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
@@ -123,7 +122,6 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 {% set preview %}
 <nys-accordion singleSelect bordered>
 <nys-accordionitem heading="We are a group of accordions">
-
    <p>Stronger together! Learn more at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>

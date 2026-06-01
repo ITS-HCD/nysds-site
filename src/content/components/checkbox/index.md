@@ -99,14 +99,10 @@ Set the size property of the `<nys-checkboxgroup>` to have all `<nys-checkbox>` 
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Tile
-
 The `tile` prop will change the styling of the checkbox to a tile. This is useful when you want a larger clickable area for the user.
-
 - The `tile` prop can be applied to the `<nys-checkboxgroup>` or the `<nys-checkbox>` component. If applied to the `<nys-checkboxgroup>`, all checkboxes will be displayed as tiles. If applied to the `<nys-checkbox>`, only that checkbox will be displayed as a tile.
 - Do not use the `tile` prop on a checkbox if it is inside a `<nys-checkboxgroup>`. All checkboxes in a group should be the same size and style.
-
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile>
 <nys-checkbox name="landmarks" label="Adirondacks" value="adirondacks" checked></nys-checkbox>
@@ -119,11 +115,8 @@ The `tile` prop will change the styling of the checkbox to a tile. This is usefu
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Required
-
 Set `required` to make a checkbox or group of checkboxes mandatory. It can be applied to either `<nys-checkboxgroup>` (no need to add it to individual children) or directly to an individual `<nys-checkbox>`.
-
 {% set preview %}
 <nys-checkbox
 label="Subscribe to NYS Government Updates"
@@ -132,16 +125,12 @@ id="subscribe-checkbox-disabled-checked"
 name="subscribe"
 value="email-updates"
 required
-
 > </nys-checkbox>{% endset %}
 > {% set backgroundSolid = true %}
 > {% set code = preview %}
 > {% include "partials/code-preview.njk" %}
-
 ### Optional
-
 Adding the `optional` prop will add an optional flag to the input.
-
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" optional>
 <nys-checkbox name="landmarks" value="adirondacks" label="Adirondacks"></nys-checkbox>
@@ -151,15 +140,10 @@ Adding the `optional` prop will add an optional flag to the input.
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Other
-
 Use the `other` option to allow a custom response when none of the listed choices apply. When selected, a text input appears and the `<nys-checkbox>` value becomes whatever the user enters.
-
 If no `label` is provided, it defaults to "Other." You can provide a custom label such as "Something else" or "Other (please specify)."
-
 **Note:** Place this option as the last `<nys-checkbox>` within `<nys-checkboxgroup>`.
-
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below">
 <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks" errorMessage="You must select this box to continue" checked></nys-checkbox>
@@ -170,13 +154,9 @@ If no `label` is provided, it defaults to "Other." You can provide a custom labe
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Error
-
 Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
-
 Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkbox>` components.
-
 {% set preview %}
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError errorMessage="You must select at least one option to continue.">
 <nys-checkbox name="landmarks" label="Adirondacks" value="adirondacks" ></nys-checkbox>
@@ -186,11 +166,8 @@ Errors can be assigned to both `<nys-checkboxgroup>` and individual `<nys-checkb
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Slotted Description
-
 When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.
-
 {% set preview %}
 <nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
 <label slot="description">Read about our <a href="https://www.ny.gov/" target="__blank">previous updates</a></label>
@@ -198,20 +175,15 @@ When the description requires more complexity than a simple string, use the desc
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Inverted
-
 Set the `inverted` when the component is on a dark background.
 You can set `inverted` on `nys-checkboxgroup` to apply it to all checkboxes, or on a single `nys-checkbox` if only one needs it.
-
 {% set preview %}
 <nys-checkboxgroup
 label="Select your favorite New York landmarks"
 description="Choose from the options below"
 inverted
-
 >
-
     <nys-checkbox
       label="Adirondacks"
       name="landmarks"
@@ -224,7 +196,6 @@ inverted
     <nys-checkbox name="landmarks" value="niagara-falls" label="Niagara Falls" checked></nys-checkbox>
     <nys-checkbox name="landmarks" value="coney-island" label="Coney Island"></nys-checkbox>
     <nys-checkbox label="Mount Greylock" description="This is disabled because it's not in New York." disabled></nys-checkbox>
-
   </nys-checkboxgroup>
 {% endset %}
 {% set backgroundSolid = true %}

@@ -20,7 +20,6 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 {% block example %}
 {% set preview %}
 <nys-skipnav class="skipnav-demo" href="#main-content"></nys-skipnav>
-
 <p style="margin-top:55px;">
   The skip link is visible here for demo purposes. In a real world mockup below, it appears first in the body tag.
 </p>

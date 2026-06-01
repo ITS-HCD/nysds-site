@@ -93,7 +93,6 @@ Supported positions are:
 **Note:** If the preferred position does not fit within the viewport, the component will automatically find the best alternative.
 
 {% set preview %}
-
 <div style="display: flex; gap: 16px; justify-content: center; margin: 80px;">
     <nys-button id="trigger-bottom-start" label='"bottom-start"'></nys-button>
     <nys-dropdownmenu for="trigger-bottom-start" position="bottom-start">
@@ -153,7 +152,6 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 Use the `prefixIcon` property on `<nys-dropdownmenuitem>` to add an icon before the label.
 
 {% set preview %}
-
 <div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-icons" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-icons">
@@ -180,7 +178,6 @@ Use the `prefixIcon` property on `<nys-dropdownmenuitem>` to add an icon before 
 
 Use the `disabled` attribute on individual `<nys-dropdownmenuitem>` elements to prevent interaction.
 {% set preview %}
-
 <div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-disabled" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-disabled">
@@ -207,7 +204,6 @@ Omit the `href` property to render items as `<button>` elements for action-based
 Use the `nys-click` dispatch event to call for specific functions to execute actions
 
 {% set preview %}
-
 <div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-actions" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-actions">

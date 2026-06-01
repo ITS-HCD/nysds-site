@@ -20,7 +20,6 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% block example %}
 {% set preview %}
 <nys-table>
-
   <table id="table1" name="table1">
     <caption>
       New York State High Peaks and Popular Hikes
@@ -71,7 +70,6 @@ Adding the `striped` property can improve readability by visually grouping row c
 
 {% set preview %}
 <nys-table id="table2" name="table2" striped>
-
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -118,7 +116,6 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 {% set preview %}
 <nys-table id="table3" name="table3" bordered>
-
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -169,7 +166,6 @@ Adding the `sortable` property allows for the table to be reordered in ascending
 
 {% set preview %}
 <nys-table id="table4" name="table4" sortable>
-
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -216,7 +212,6 @@ Adding the `download` property adds a button which downloads the data that is be
 
 {% set preview %}
 <nys-table id="table5" name="table5" download="path/to/downloadable-data.csv">
-
   <table>
      <caption>
       New York State High Peaks and Popular Hikes
@@ -263,7 +258,6 @@ By default, column widths are determined by the content within each cell. Howeve
 
 {% set preview %}
 <nys-table id="table6" name="table6" bordered>
-
   <table>
      <caption>
       New York State High Peaks and Popular Hikes

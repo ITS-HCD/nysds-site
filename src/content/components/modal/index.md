@@ -19,7 +19,6 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 
 {% block example %}
 {% set preview %}
-
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal1')"></nys-button>
   <nys-modal
@@ -117,7 +116,6 @@ Use the default slot to add content such as text, links, or other elements insid
 **Note:** The `heading` is required for the modal title, while `subheading` is optional for extra context or instructions.
 
 {% set preview %}
-
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal2')"></nys-button>
   <nys-modal id="modal2" heading="System Maintenance Notice" subheading="Scheduled downtime will occur this weekend.">
@@ -149,7 +147,6 @@ Control a modal’s visibility with the `open` (boolean) property on `<nys-modal
 **Tip**: By convention, the secondary/cancel button is usually placed first, followed by the primary/confirm button. This helps maintain consistent UX and accessibility patterns.
 
 {% set preview %}
-
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal3')"></nys-button>
   <nys-modal id="modal3" heading="Update password?">
@@ -181,7 +178,6 @@ A forced action modal requires users to make a choice before continuing. Set the
 **Note:** You must provide an action button to allow the user to exit the modal!
 
 {% set preview %}
-
 <div>
   <nys-button label="Open Modal" onClick="showModal('modal4')"></nys-button>
   <nys-modal

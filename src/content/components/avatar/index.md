@@ -86,13 +86,9 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 <nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Interactive
-
 Enable the `interactive` prop to apply interactive styling states and keyboard focus.
-
 {% set preview %}
-
 <div style="display:flex; gap:5px;">
   <nys-avatar ariaLabel="User avatar" icon="account_circle" interactive></nys-avatar>
   <nys-avatar ariaLabel="New York Initial" initials="NY" interactive></nys-avatar>

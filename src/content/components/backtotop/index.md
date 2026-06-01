@@ -19,25 +19,21 @@ The `<nys-backtotop>` component provides a floating button that allows users to 
 
 {% block example %}
 {% set preview %}
-
 <p style="margin-bottom:75px;">
   This Back to Top button is always visible for demo purposes. In a real-world scenario, it typically remains hidden until you scroll down the page and appears in the bottom-right corner, unless specified.
 </p>
 <nys-backtotop id="backtotop-demo" visible></nys-backtotop>
-
 <script type="module">
   customElements.whenDefined('nys-backtotop').then(async () => {
     const backtotop = document.getElementById('backtotop-demo');
     // Wait until the Lit component finishes updating
     await backtotop.updateComplete;
-
     const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
     if (backBtn) {
         backBtn.style.position = 'absolute';
     }
   });
 </script>
-
 {% endset %}
 {% set code %}
 <nys-backtotop id="backtotop-demo"></nys-backtotop>
@@ -84,7 +80,6 @@ By default, `<nys-backtotop>` will be set on the bottom-right corner. If the bot
 {% set preview %}
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 <nys-globalheader appName="Back to Top Example"></nys-globalheader>
-
 <div style="padding: 2rem 1rem; background-color: #fff;">
   <h2 style="margin: 0;">Sample Content on page</h2>
   <p  style="margin: 0;">
@@ -103,13 +98,11 @@ size="sm"
 ></nys-button>
 <nys-unavfooter></nys-unavfooter>
 <nys-backtotop id="backtotop-demo2" position="left" visible></nys-backtotop>
-
 <script type="module">
   customElements.whenDefined('nys-backtotop').then(async () => {
     const backtotop = document.getElementById('backtotop-demo2');
     // Wait until the Lit component finishes updating
     await backtotop.updateComplete;
-
     const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
     if (backBtn) {
         backBtn.style.position = 'absolute';
@@ -124,7 +117,6 @@ size="sm"
     --_nys-button-border-radius: var(--nys-radius-round);
   }
 </style>
-
 {% endset %}
 {% set code %}
 <nys-backtotop position="left"></nys-backtotop>
