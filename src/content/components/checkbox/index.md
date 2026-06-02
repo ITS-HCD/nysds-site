@@ -43,8 +43,8 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 
 {% block usagedont %}
 
-- Use when users need to select only one option—use a radio button for 1–6 choices or a select for 7 or more.
-- Use a checkbox when changing its state immediately affects the system—use a toggle instead (e.g., enabling Dark Mode).
+- Use when users need to select only one option. Use a radio button for 1–6 choices or a select for 7 or more.
+- Use a checkbox when changing its state immediately affects the system. Use a toggle instead (e.g., enabling Dark Mode).
 - Use when you have more than 10 options to choose from.
 - Change the state of one checkbox based on another being clicked.
 

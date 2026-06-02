@@ -64,7 +64,7 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 - Use alerts to highlight actions that should be clear in the UI itself.
 - Use error messages to communicate form field validation issues; use field error states instead.
 - Include more than two link actions in an alert.
-- Overuse alerts for low-priority info — this can desensitize users.
+- Overuse alerts for low-priority info. This can desensitize users.
 - Use alerts as toasts. Place them at the top of the page content.
 - Add any shadows to alerts.
 

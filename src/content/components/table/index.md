@@ -307,8 +307,8 @@ By default, column widths are determined by the content within each cell. Howeve
 
 {% block usagedont %}
 
-- Use in place of a layout grid—table content should follow a consistent structure using headers and logical columns and rows.
-- Use for non-tabular content—consider definition lists or hierarchical lists instead.
+- Use in place of a layout grid. Table content should follow a consistent structure using headers and logical columns and rows.
+- Use for non-tabular content. Consider definition lists or hierarchical lists instead.
 - Use when cell content is long-form; table cells should be brief and scannable. If you need multiple bullet points or paragraphs in a cell, consider page headers or an accordion instead.
 - Add `rowspan` or `colspan` with the `sortable` property.
 

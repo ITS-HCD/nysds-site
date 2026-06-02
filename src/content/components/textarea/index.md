@@ -37,8 +37,8 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
 
 {% block usagedont %}
 
-- Use for short or single-line input—use `<nys-textinput>` instead.
-- Use when input should be selected from predefined options—use `<nys-select>`, `<nys-radiobutton>`, or `<nys-checkbox>` instead.
+- Use for short or single-line input. Use `<nys-textinput>` instead.
+- Use when input should be selected from predefined options. Use `<nys-select>`, `<nys-radiobutton>`, or `<nys-checkbox>` instead.
 
 {% endblock %}
 

@@ -763,7 +763,7 @@ Use the `inverted` prop when placing the combobox on a dark background.
 
 {% block usagedont %}
 
-- Use when the number of options is small—use `<nys-select>` or `<nys-radiobutton>` instead.
+- Use when the number of options is small. Use `<nys-select>` or `<nys-radiobutton>` instead.
 - Use when options are unfamiliar to users and browsing the full list is necessary.
 
 {% endblock %}

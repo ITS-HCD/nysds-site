@@ -34,17 +34,17 @@ The `<nys-datepicker>` component lets users select a single date by typing into 
   > {% include "partials/code-preview.njk" %}
   > {% endblock %}
   {% block usagedo %}
-  - Use when users need to select a single calendar date—such as scheduling an appointment or choosing a filing deadline—especially when the day of the week matters.
-  - Set the `label` property to clearly describe what date is being collected—every datepicker needs one for accessibility.
+  - Use when users need to select a single calendar date, such as scheduling an appointment or choosing a filing deadline, especially when the day of the week matters.
+  - Set the `label` property to clearly describe what date is being collected. Every datepicker needs one for accessibility.
   - Add `description` text to specify the expected format or provide context.
   - Set `required` when the date is mandatory for form submission; don't set both `required` and `optional` on the same component.
   - Use `startDate` to open the calendar to a relevant month when the expected date is far from today.
   - Pass date values as ISO strings (`"YYYY-MM-DD"`) rather than `Date` objects to avoid timezone issues.
   {% endblock %}
   {% block usagedont %}
-  - Don't use for dates users know from memory, such as date of birth or document issue dates—a text input with separate month/day/year fields is more efficient.
+  - Don't use for dates users know from memory, such as date of birth or document issue dates. A text input with separate month/day/year fields is more efficient.
   - Don't use when users need to select multiple dates or a date range, or when time selection is required alongside the date.
-  - Don't rely on the calendar popup alone—Safari and mobile browsers use the native date picker instead.
+  - Don't rely on the calendar popup alone. Safari and mobile browsers use the native date picker instead.
   - Don't use `hideTodayButton` and `hideClearButton` together unless users must select a specific date and cannot be allowed to clear it.
   {% endblock %}
   {% block accessibility %}

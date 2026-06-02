@@ -141,11 +141,11 @@ Set the `inverted` when the tooltip is on a dark background.
 
 {% block usagedont %}
 
-- Use for information critical to task completion—use inline description text instead, as tooltips are easy to miss.
+- Use for information critical to task completion. Use inline description text instead, as tooltips are easy to miss.
 - Use when content is long or includes links, actions, or structured content.
 - Use interactive elements such as links or buttons inside a tooltip.
 - Rely on tooltips when you have room to provide inline explanation.
-- Use when mobile users are a primary audience—tooltips rely on hover, which is unavailable on touch devices.
+- Use when mobile users are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.
 
 {% endblock %}
 

@@ -28,7 +28,7 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 
 {% block usagedo %}
 
-- Use for clear, simple user or entity representation in UIs—such as profiles, account settings, or comment threads.
+- Use for clear, simple user or entity representation in UIs such as profiles, account settings, or comment threads.
 - Prefer showing the full name next to the avatar on tablets and larger breakpoints.
 - Place the full name of the user or entity to the right of the avatar.
 - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
@@ -40,7 +40,7 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 
 - Skip the `ariaLabel` attribute for screen reader users.
 - Use the `nys-icon` as a slot when the icon prop can satisfy your use.
-- Overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential—doing so creates inconsistency across NYS interfaces.
+- Overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential. Doing so creates inconsistency across NYS interfaces.
 - Use an avatar when a large visual representation is needed; use a photo instead.
 - Replace an avatar with a simple label or text when that would communicate the information more clearly.
 

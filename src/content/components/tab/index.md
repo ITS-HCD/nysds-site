@@ -134,17 +134,17 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 {% endblock %}
 {% block usagedo %}
 
-- Use to organize related content into distinct sections within the same context (e.g., Overview, Specs, Reviews)—especially when a page would otherwise be overwhelmingly long.
-- Keep tab labels short and clear, limited to 2–9 tabs and one row—avoid wrapping.
+- Use to organize related content into distinct sections within the same context (e.g., Overview, Specs, Reviews), especially when a page would otherwise be overwhelmingly long.
+- Keep tab labels short and clear, limited to 2–9 tabs and one row. Avoid wrapping.
 - Only one tab should ever be in the active state.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Use when users need to compare information across sections simultaneously—tabs require clicking back and forth.
-- Use for linear, step-by-step processes—use a stepper instead.
-- Use when you only have two small pieces of content—display them consecutively instead.
+- Use when users need to compare information across sections simultaneously. Tabs require clicking back and forth.
+- Use for linear, step-by-step processes. Use a stepper instead.
+- Use when you only have two small pieces of content. Display them consecutively instead.
 - Nest tabs inside other tabs.
 - Use tabs for page navigation.
 

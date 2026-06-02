@@ -30,7 +30,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 {% block usagedo %}
 
-- Use to separate dense content or to help users understand structure and hierarchy—prefer white space when content is already easy to parse.
+- Use to separate dense content or to help users understand structure and hierarchy. Prefer white space when content is already easy to parse.
 - Ensure consistent padding/margin above and below dividers to avoid crowding.
 - Use the `inverted` option on dark backgrounds.
 
@@ -38,7 +38,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 {% block usagedont %}
 
-- Overuse dividers—if content is already organized in groups, additional dividers reduce scannability.
+- Overuse dividers. If content is already organized in groups, additional dividers reduce scannability.
 - Use dividers to separate content appearing side by side.
 - Use the `inverted` option on light backgrounds.
 

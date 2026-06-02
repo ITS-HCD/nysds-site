@@ -27,9 +27,9 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 {% block usagedo %}
 
 - Place the `<nys-unavfooter>` as the last element on every public-facing page, immediately after `<nys-globalfooter>`.
-  - Use on every page of every NYS site and application—this component is required per NYS web policy, including on error pages, login screens, and landing pages.
+  - Use on every page of every NYS site and application. This component is required per NYS web policy, including on error pages, login screens, and landing pages.
   - Place as the very last element on the page, immediately after `<nys-globalfooter>`.
-  - Use as-is with no configuration—the component handles its own content and styling.
+  - Use as-is with no configuration. The component handles its own content and styling.
 
 {% endblock %}
 
@@ -37,7 +37,7 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 
 - Don't use on back office applications or intranets that are not public-facing.
 - Place anywhere other than the absolute bottom of the page.
-- Customize, restyle, or override the component's content or appearance—consistency across all state sites is the purpose of this component.
+- Customize, restyle, or override the component's content or appearance. Consistency across all state sites is the purpose of this component.
 
 {% endblock %}
 

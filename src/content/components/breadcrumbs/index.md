@@ -36,10 +36,10 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 
 {% block usagedo %}
 
-- Use on pages at level 2 and deeper in a site hierarchy—if a level 2 page has child pages, all pages starting at that level should include a breadcrumb.
+- Use on pages at level 2 and deeper in a site hierarchy. If a level 2 page has child pages, all pages starting at that level should include a breadcrumb.
 - Place breadcrumb below the header and above the main content.
 - Show the site hierarchy, not the path a user took.
-- For the home page of a site, use a specific label rather than a generic "Home"—this differentiates the main site home from other landing pages (e.g., "myBenefits Home" instead of just "Home").
+- For the home page of a site, use a specific label rather than a generic "Home." This differentiates the main site home from other landing pages (e.g., "myBenefits Home" instead of just "Home").
 
 {% endblock %}
 
@@ -48,7 +48,7 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 - Don't use on top-level pages, or on sites with only one or two levels of hierarchy.
 - Don't make the current page clickable.
 - Don't use breadcrumbs as the only navigation method.
-- Don't use breadcrumbs for sequential processes like multi-step forms or wizards—use a stepper instead.
+- Don't use breadcrumbs for sequential processes like multi-step forms or wizards. Use a stepper instead.
 - Don't add breadcrumbs when they don't provide meaningful context or navigation value.
 
 {% endblock %}

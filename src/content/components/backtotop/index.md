@@ -55,7 +55,7 @@ The `<nys-backtotop>` component provides a floating button that allows users to 
 
 - Don't add multiple `<nys-backtotop>` components to a single page.
 - Don't use on pages where content fits within a single viewport without scrolling.
-- Don't use if your page already has anchor-based in-page navigation, such as a table of contents—a back-to-top button is likely redundant.
+- Don't use if your page already has anchor-based in-page navigation such as a table of contents. A back-to-top button is likely redundant.
 - Don't set `visible` in production unless you have a specific reason to override the auto-show behavior. Forcing visibility on short pages creates unnecessary clutter.
 
 {% endblock %}

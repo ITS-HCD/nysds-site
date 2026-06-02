@@ -40,9 +40,9 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 
 {% block usagedont %}
 
-- Use when users need to select multiple items—use a checkbox group instead.
-- Use the custom `<nys-option>` element—it will be deprecated in the 2.0 release.
-- Use `<nys-select multiple>`—use a checkbox group instead.
+- Use when users need to select multiple items. Use a checkbox group instead.
+- Use the custom `<nys-option>` element. It will be deprecated in the 2.0 release.
+- Use `<nys-select multiple>`. Use a checkbox group instead.
 
 {% endblock %}
 

@@ -32,7 +32,7 @@ The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 
 {% block usagedo %}
 
-- Use when toggling immediately affects the UI or system state (e.g., enabling dark mode)—ideal for settings pages, feature toggles, or user preferences.
+- Use when toggling immediately affects the UI or system state (e.g., enabling dark mode). This is ideal for settings pages, feature toggles, or user preferences.
 - Provide a clear label and optional description to explain what the toggle controls.
 - Ensure the page clearly reflects the toggle's on/off state through visible changes.
 
@@ -40,8 +40,8 @@ The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 
 {% block usagedont %}
 
-- Use for forms where immediate action isn't expected—use `<nys-checkbox>` instead.
-- Use for selecting one or more options from a list—use `<nys-checkbox>` or `<nys-radiobutton>` instead.
+- Use for forms where immediate action isn't expected. Use `<nys-checkbox>` instead.
+- Use for selecting one or more options from a list. Use `<nys-checkbox>` or `<nys-radiobutton>` instead.
 - Use for complex or multi-state choices.
 - Overuse for minor settings that don't affect the user experience.
 - Hide labels unless an accessible alternative is in place.

@@ -44,8 +44,8 @@ titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
 {% block usagedont %}
 
 - Use video if the same message can be delivered clearly with text or a static image.
-- Rely on video alone to convey critical information—always provide a text alternative.
-- Set `autoplay` without understanding that the video will be muted—`nys-video` enforces this automatically to protect users from unexpected noise.
+- Rely on video alone to convey critical information. Always provide a text alternative.
+- Set `autoplay` without understanding that the video will be muted. `nys-video` enforces this automatically to protect users from unexpected noise.
 
 {% endblock %}
 

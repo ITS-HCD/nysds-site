@@ -30,7 +30,7 @@ The `<nys-pagination>` component provides Previous/Next buttons and numbered pag
 - Use for large result sets such as search results, data tables, or directory listings where loading everything at once would hurt performance or usability.
 - Use when users need to navigate to a specific part of a result set.
 - Set `totalPages` based on your data set and page size; update `currentPage` in response to `nys-change` events.
-- Don't set `currentPage` to a value greater than `totalPages`—the component clamps the value automatically, but your application logic should prevent this.
+- Don't set `currentPage` to a value greater than `totalPages`. The component clamps the value automatically, but your application logic should prevent this.
 - Position the pagination component below the content it controls.
 - Scroll users to the top of the results area when they change pages.
 
@@ -38,8 +38,8 @@ The `<nys-pagination>` component provides Previous/Next buttons and numbered pag
 
 {% block usagedont %}
 
-- Use when content fits on a single page (fewer than 3–4 screen heights)—show all items instead.
-- Use for step-based workflows where users complete tasks in order—use `<nys-stepper>` instead.
+- Use when content fits on a single page (fewer than 3–4 screen heights). Show all items instead.
+- Use for step-based workflows where users complete tasks in order. Use `<nys-stepper>` instead.
 - Use for infinite-scroll patterns such as a news feed.
 
 {% endblock %}

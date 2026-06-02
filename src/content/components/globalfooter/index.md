@@ -28,7 +28,7 @@ The `<nys-globalfooter>` component renders an agency-branded footer section that
 
 {% block usagedo %}
 
-- Use on every agency site and application—the Global Footer is a required page element.
+- Use on every agency site and application. The Global Footer is a required page element.
 - Use to surface essential site-wide links such as contact information, privacy policies, accessibility statements, and related program pages.
 - Set `agencyName` to your agency's full official name (e.g., "Office of Information Technology Services").
 - Set `homepageLink` to make the agency name a clickable link back to your site's homepage.
@@ -40,10 +40,10 @@ The `<nys-globalfooter>` component renders an agency-branded footer section that
 
 {% block usagedont %}
 
-- Don't use for primary navigation—that belongs in `<nys-globalheader>`.
-- Don't include page-specific content or calls to action—footer content should be relevant site-wide.
-- Don't use for statewide universal links (Agencies, Services, Counties)—those belong in `<nys-unavfooter>`, which renders below this component.
-- Don't embed `<script>`, `<iframe>`, `<object>`, or `<img>` elements in slotted content—these are sanitized and removed by the component for security.
+- Don't use for primary navigation. That belongs in `<nys-globalheader>`.
+- Don't include page-specific content or calls to action. Footer content should be relevant site-wide.
+- Don't use for statewide universal links (Agencies, Services, Counties). Those belong in `<nys-unavfooter>`, which renders below this component.
+- Don't embed `<script>`, `<iframe>`, `<object>`, or `<img>` elements in slotted content. These are sanitized and removed by the component for security.
 
 {% endblock %}
 

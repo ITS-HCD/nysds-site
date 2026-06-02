@@ -36,9 +36,9 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 
 {% block usagedont %}
 
-- Use for long or multi-line responses—use `<nys-textarea>` instead.
-- Use when input can be chosen from predefined options—use `<nys-select>`, `<nys-radiobutton>`, or `<nys-checkbox>` instead.
-- Overwhelm users with too many fields—group related inputs.
+- Use for long or multi-line responses. Use `<nys-textarea>` instead.
+- Use when input can be chosen from predefined options. Use `<nys-select>`, `<nys-radiobutton>`, or `<nys-checkbox>` instead.
+- Overwhelm users with too many fields. Group related inputs.
 - Use placeholders as labels.
 
 {% endblock %}

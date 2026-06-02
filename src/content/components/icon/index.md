@@ -27,7 +27,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 {% block usagedo %}
 
 - Use icons to draw attention to actions, help users scan for key information, or enhance recognizable common actions (e.g., search, download, share).
-- Pair icons with a text label—few icons are universally understood alone.
+- Pair icons with a text label. Few icons are universally understood alone.
 - Use icons consistently: same icon and label for the same meaning throughout your app.
 - Use `ariaLabel` when the icon conveys meaning, so screen readers can announce its purpose.
 - Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).
@@ -37,11 +37,11 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 
 {% block usagedont %}
 
-- Use an icon if its meaning isn't immediately clear—if you suspect users won't recognize it, remove it.
+- Use an icon if its meaning isn't immediately clear. If you suspect users won't recognize it, remove it.
 - Use icons to compensate for unclear page hierarchy or confusing content organization.
-- Use standalone icons for actions—use `<nys-button>` with an icon inside instead.
+- Use standalone icons for actions. Use `<nys-button>` with an icon inside instead.
 - Replace meaningful text with icons unless the icon is universally recognized or paired with a label.
-- Overuse icons—too many create visual noise and reduce focus.
+- Overuse icons. Too many create visual noise and reduce focus.
 - Use excessive icon customization that breaks design consistency.
 
 {% endblock %}

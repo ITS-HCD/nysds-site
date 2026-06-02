@@ -44,8 +44,8 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 
 {% block usagedont %}
 
-- Use for form inputs or selectable values—use `<nys-select>` for standard selection or `<nys-combobox>` when users need to filter or search through many options.
-- Use when the action is always visible and frequently used—use `<nys-button>` instead.
+- Use for form inputs or selectable values. Use `<nys-select>` for standard selection or `<nys-combobox>` when users need to filter or search through many options.
+- Use when the action is always visible and frequently used. Use `<nys-button>` instead.
 - Use without a label or accessible description on the trigger.
 - Nest dropdown menus inside other dropdown menus.
 - Use vague labels like "Manage" or "Options".
