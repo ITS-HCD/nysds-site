@@ -124,6 +124,7 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 {% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
+<div class="icon-examples">
 
 ### Core
 
@@ -236,7 +237,106 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   {% set name = "language_filled" %}{% include "partials/icon-preview.njk" %}
   {% set name = "lock_filled" %}{% include "partials/icon-preview.njk" %}
 </div>
+</div><!-- icon_examples closing DIV -->
 
+## Loading external libraries
+
+When using the nys-icon component, you can choose to use the default library, the library that comes standard with nys-icon. But you can also choose to load in icons from any other library, whether serving the icons locally, or via CDN. Below you will find two examples serving icons from Font Awesome and Material.
+
+### Font Awesome
+
+<section class="library-section">
+    <h2>Font Awesome Library <span class="badge badge-fa">FA Free</span></h2>
+    <p>
+      Free solid SVGs from <code>@fortawesome/fontawesome-free</code>, registered as the
+      <code>"font-awesome"</code> library via <code>registerIconLibrary()</code>.
+    </p>
+<div class="icon-examples">
+{% set library="font-awesome" %}
+<div class="nys-grid-row nys-grid-gap-200">
+    {% set name = "arrows-rotate" %}{% include "partials/icon-preview.njk" %}
+    {% set name="user" %}{% include "partials/icon-preview.njk" %}
+    {% set name="star" %}{% include "partials/icon-preview.njk" %}
+    {% set name="heart" %}{% include "partials/icon-preview.njk" %}
+    {% set name="bell" %}{% include "partials/icon-preview.njk" %}
+    {% set name="magnifying-glass" %}{% include "partials/icon-preview.njk" %}
+    {% set name="circle-check" %}{% include "partials/icon-preview.njk" %}
+    {% set name="triangle-exclamation" %}{% include "partials/icon-preview.njk" %}
+    {% set name="circle-info" %}{% include "partials/icon-preview.njk" %}
+    {% set name="circle-xmark" %}{% include "partials/icon-preview.njk" %}
+    {% set name="download" %}{% include "partials/icon-preview.njk" %}
+    {% set name="upload" %}{% include "partials/icon-preview.njk" %}
+    {% set name="trash" %}{% include "partials/icon-preview.njk" %}
+    {% set name="pen" %}{% include "partials/icon-preview.njk" %}
+    {% set name="gear" %}{% include "partials/icon-preview.njk" %}
+    {% set name="envelope" %}{% include "partials/icon-preview.njk" %}
+    {% set name="phone" %}{% include "partials/icon-preview.njk" %}
+    {% set name="calendar-days" %}{% include "partials/icon-preview.njk" %}
+    {% set name="map-pin" %}{% include "partials/icon-preview.njk" %}
+    {% set name="lock" %}{% include "partials/icon-preview.njk" %}
+</div>
+</div>
+  </section>
+
+<section class="library-section">
+    <h2>Material Symbols Library <span class="badge badge-mat">Material</span></h2>
+    <p>
+      Outlined SVGs from <code>@material-symbols/svg-400</code>, registered as the
+      <code>"material"</code> library via <code>registerIconLibrary()</code>.
+    </p>
+    <div class="icon-examples">
+    {% set library="material" %}
+<div class="nys-grid-row nys-grid-gap-200">
+    {% set name="home" %} {% include "partials/icon-preview.njk" %}
+    {% set name="person" %}{% include "partials/icon-preview.njk" %}
+    {% set name="star" %}{% include "partials/icon-preview.njk" %}
+    {% set name="favorite" %}{% include "partials/icon-preview.njk" %}
+    {% set name="notifications" %}{% include "partials/icon-preview.njk" %}
+    {% set name="search" %}{% include "partials/icon-preview.njk" %}
+    {% set name="check_circle" %}{% include "partials/icon-preview.njk" %}
+    {% set name="warning" %}{% include "partials/icon-preview.njk" %}
+    {% set name="info" %}{% include "partials/icon-preview.njk" %}
+    {% set name="cancel" %}{% include "partials/icon-preview.njk" %}
+    {% set name="download" %}{% include "partials/icon-preview.njk" %}
+    {% set name="upload" %}{% include "partials/icon-preview.njk" %}
+    {% set name="delete" %}{% include "partials/icon-preview.njk" %}
+    {% set name="edit" %}{% include "partials/icon-preview.njk" %}
+    {% set name="settings" %}{% include "partials/icon-preview.njk" %}
+    {% set name="email" %}{% include "partials/icon-preview.njk" %}
+    {% set name="phone" %}{% include "partials/icon-preview.njk" %}
+    {% set name="event" %}{% include "partials/icon-preview.njk" %}
+    {% set name="location_on" %}{% include "partials/icon-preview.njk" %}
+    {% set name="lock" %}{% include "partials/icon-preview.njk" %}
+</div>
+</div>
+</section>
+
+  <script>
+    window.__nysIconRegistry = window.__nysIconRegistry || new Map();
+    window.__nysIconWatchers = window.__nysIconWatchers || new Map();
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    // ── Font Awesome (solid) ─────────────────────────────────────────────────
+NYSDS.registerIconLibrary("font-awesome", {
+  resolver: (name) =>
+    `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+  mutator: (svg) => {
+    svg.setAttribute("fill", "currentColor");
+  },
+});
+
+NYSDS.registerIconLibrary("material", {
+  resolver: (name) =>
+    `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
+  mutator: (svg) => {
+    svg.setAttribute("fill", "currentColor");
+  },
+});
+    });
+</script>
 {% endblock %}
 
 {% block properties %}
@@ -264,6 +364,11 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
       <td><code>""</code></td>
     </tr>
     <tr>
+      <td><code>library</code></td>
+      <td>String</td>
+      <td><code>"default"</code></td>
+    </tr>
+    <tr>
       <td><code>name</code></td>
       <td>String</td>
       <td><code>""</code></td>
@@ -289,7 +394,6 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
   { name: "--nys-icon-size", description: "Width and height of the component"}
 ]%}
 {% include "partials/css-vars.njk" %}
-
 {% endblock %}
 
 {% block events %}
@@ -299,3 +403,9 @@ This component does not emit any custom events.
 {% endblock %}
 
 {% block updates %}{% endblock %}
+
+{% block scripts %}
+
+
+
+{% endblock %}
