@@ -193,19 +193,20 @@ You may find having just a heading without description as a good compact version
 
 Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` and `secondaryLabel` for the link text. You must provide both an action label and a URL for each action to ensure proper functionality.
 
-{% set preview %}<nys-alert
-type="emergency"
-heading="Winter storm warning: Dec 10th, 2024."
-text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
-primaryAction="https://www.ny.gov/"
-secondaryAction="https://www.ny.gov/"
-primaryLabel="Weather Report"
-secondaryLabel="Plowing Schedule"
-
-> </nys-alert>{% endset %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
-> {% endblock %}
+{% set preview %}
+<nys-alert
+  type="emergency"
+  heading="Winter storm warning: Dec 10th, 2024."
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
+  primaryAction="https://www.ny.gov/"
+  secondaryAction="https://www.ny.gov/"
+  primaryLabel="Weather Report"
+  secondaryLabel="Plowing Schedule"
+></nys-alert>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
 
 {% block properties %}
 

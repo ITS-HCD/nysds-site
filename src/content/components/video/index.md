@@ -20,15 +20,15 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-
-> </nys-video>{% endset %}
-> {% set code = preview %}
-> {% set showTip = true %}
-> {% include "partials/code-preview.njk" %}
-> {% endblock %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+></nys-video>{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
 
 {% block usagedo %}
 
@@ -65,15 +65,15 @@ The `<nys-video>` component includes the following accessibility-focused feature
 
 Provide your own thumbnail via the `thumbnail` property. If not set, the component fetches YouTube's auto-generated thumbnail at: `https://img.youtube.com/vi/{video-id}/maxresdefault.jpg`
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design
-"
-thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-
-> </nys-video>{% endset %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+></nys-video>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Autoplay
 
@@ -84,40 +84,43 @@ thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2
 
 The iframe loads immediately and plays muted. Sound is always off when `autoplay` is set — this is intentional and cannot be overridden.
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-autoplay
-
-> </nys-video>{% endset %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  autoplay
+></nys-video>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Disabled
 
 Prevents playback. The thumbnail and play button are visible but non-interactive.
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-disabled
-
-> </nys-video>{% endset %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  disabled
+></nys-video>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Start Time
 
 Use `starttime` (in seconds) to begin playback at a specific point.
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-starttime="43"
-
-> </nys-video>{% endset %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  starttime="43"
+></nys-video>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Sizes
 
