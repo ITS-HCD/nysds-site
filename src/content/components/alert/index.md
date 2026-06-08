@@ -21,23 +21,13 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 
 {% block example %}
 {% set preview %}
-<nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible>
-</nys-alert><br>
-<nys-alert type="info" heading="Info status" text="This is an example of an info alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible>
-</nys-alert><br>
-<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>{% endset %}
-{% set code %}
-<nys-alert type="base" heading="Default status" text="This is an example of an neutral base alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible></nys-alert>
-<nys-alert type="info" heading="Info status" text="This is an example of an info alert." primaryLabel="Learn more on ny.gov" primaryAction="https://www.ny.gov/" secondaryLabel="Alternate action link" secondaryAction="https://www.ny.gov/" dismissible></nys-alert>
-<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
+<nys-alert 
+  heading="Default status" 
+  text="This is an example of an neutral base alert." 
+></nys-alert>
 {% endset %}
 {% set showTip = true %}
+{% set code = preview %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
@@ -110,13 +100,34 @@ The `<nys-alert>` component includes the following accessibility-focused feature
 
 ### Theme
 
-Set the `type` property to customize the alert style (e.g. `type="info"`).
+Set the `type` property to customize the alert style. Valid options are `base` (default), `info`, `success`, `warning`, `danger`, and `emergency`.
 
-{% set preview %}<nys-alert
- type="info"
- heading="Information status"
- text="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>{% endset %}
+{% set preview %}
+<nys-alert 
+  type="base" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="info" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="success" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="warning" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="danger" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="emergency" 
+  heading="Emergency status" 
+></nys-alert>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -126,11 +137,22 @@ Add descriptive content to your alert using the `text` prop or the our slot feat
 
 Use the `text` prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
 
-{% set preview %}<nys-alert type="success" heading="Custom Descriptions">
+{% set preview %}
+<nys-alert
+  type="info"
+  heading="Text passed in through the prop"
+  text="Here is more information that will be very helpful for readers."
+></nys-alert>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
-<p>This is a custom alert with <strong>HTML content</strong>.</p>
-<a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
-</nys-alert>{% endset %}
+{% set preview %}
+<nys-alert type="success" heading="Custom Descriptions">
+  <p>This is a custom alert with <strong>HTML content</strong>.</p>
+  <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+</nys-alert>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -140,25 +162,23 @@ Use the `dismissible` property to make the alert dismissible.
 
 The `nys-close` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
-{% set preview %}<nys-alert type="info" heading="Information status" dismissible>
-
-  <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
-  <p><a href="https://www.ny.gov/" target="_blank">Visit NY.GOV</a> for more info.</p>
-</nys-alert>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-alert heading="This is a dismissible alert" dismissible></nys-alert>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Duration
 
 Set the `duration` property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
-{% set preview %}<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
-
-<div class="alert-container" style="margin-top: 8px"></div>{% endset %}
-  {% set code %}
+{% set preview %}
+<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+<div class="alert-container" style="margin-top: 8px"></div>
+{% endset %}
+{% set code %}
 <nys-alert 
   type="info" 
-  heading="Duration 3sec" 
+  heading="Duration 3 seconds" 
   duration="3000" 
   text="Auto-dismiss after 3 seconds">
 </nys-alert>
@@ -169,23 +189,14 @@ Set the `duration` property to automatically hide the alert after a specified ti
 
 Override the default theme icon by setting the `icon` property to any name from the icon library.
 
-{% set preview %}<nys-alert
-  type="emergency"
-  heading="Winter storm warning: Dec 10th, 2024."
-  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
-  icon="ac_unit">
-</nys-alert>{% endset %}
-{% set code = preview %}
-{% include "partials/code-preview.njk" %}
-
-### Heading only
-
-You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
-
-{% set preview %}<nys-alert
-  type="info"
-  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>{% endset %}
+{% set preview %}
+<nys-alert 
+  type="emergency" 
+  heading="Winter storm warning: Dec 10th, 2024." 
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
+  icon="ac_unit"
+></nys-alert>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
