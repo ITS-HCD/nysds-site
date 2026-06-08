@@ -165,28 +165,29 @@ If no `label` is provided, it defaults to “Other.” You can provide a custom 
 
 **Note:** Place this option as the last `<nys-radiobutton>` within `<nys-radiogroup>`.
 
-{% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days.">
-<nys-radiobutton
-name="office"
-label="Albany"
-description="Upstate New York"
-value="albany"
-
-> </nys-radiobutton>
-> <nys-radiobutton
->   name="office"
->   label="Manhattan"
->   description="New York City"
->   value="manhattan"
-> </nys-radiobutton>
-> <nys-radiobutton
->   name="office"
->   other
-> </nys-radiobutton>
-> </nys-radiogroup>{% endset %}
-> {% set backgroundSolid = true %}
-> {% set code = preview %}
-> {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days.">
+  <nys-radiobutton
+    name="office"
+    label="Albany"
+    description="Upstate New York"
+    value="albany"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="office"
+    label="Manhattan"
+    description="New York City"
+    value="manhattan"
+  ></nys-radiobutton>
+  <nys-radiobutton
+    name="office"
+    other
+  ></nys-radiobutton>
+</nys-radiogroup>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Error
 

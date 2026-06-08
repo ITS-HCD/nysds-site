@@ -163,23 +163,25 @@ You can add a button to the input by adding a `slot="startButton"` or `slot="end
 
 **Note**: Use `width="lg"` or `width="full"` on `<nys-textinput>` to give users enough space to enter text when a button is present.
 
-{% set preview %}<nys-textinput
-name="searchInput"
-type="search"
-placeholder="Search"
-id="searchInput"
-
-> <nys-button
-> slot="endButton"
-> type="submit"
-> label="Search"
-> prefixIcon="search"
-> id="searchButton"
-> </nys-button>
-> </nys-textinput>{% endset %}
-> {% set code = preview %}
-> {% set backgroundSolid = true %}
-> {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-textinput
+  name="searchInput"
+  type="search"
+  placeholder="Search"
+  id="searchInput"
+>
+  <nys-button
+    slot="endButton"
+    type="submit"
+    label="Search"
+    prefixIcon="search"
+    id="searchButton"
+  ></nys-button>
+</nys-textinput>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Error Message
 
@@ -208,20 +210,20 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
 
 ### Inverted
 
-    Set the `inverted` when the component is on a dark background.
+Set the `inverted` when the component is on a dark background.
 
 {% set preview %}
 <nys-textinput
-name="descriptionProp"
-label="Label"
-description="Slot: description"
-inverted
-
-> </nys-textinput>{% endset %}
-> {% set code = preview %}
-> {% set backgroundSolid = true %}
-> {% set inverted = true %}
-> {% include "partials/code-preview.njk" %}
+  name="descriptionProp"
+  label="Label"
+  description="Slot: description"
+  inverted
+></nys-textinput>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% set inverted = true %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

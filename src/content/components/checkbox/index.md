@@ -43,7 +43,7 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 
 {% block usagedont %}
 
-- Use when users need to select only one option. Use a radio button for 1–6 choices or a select for 7 or more.
+- Use when users need to select only one option. Use a <`nys-radiobutton>` for 1–6 choices or a `<nys-select>` for 7 or more.
 - Use a checkbox when changing its state immediately affects the system. Use a toggle instead (e.g., enabling Dark Mode).
 - Use when you have more than 10 options to choose from.
 - Change the state of one checkbox based on another being clicked.
@@ -117,6 +117,7 @@ The `tile` prop will change the styling of the checkbox to a tile. This is usefu
 {% include "partials/code-preview.njk" %}
 ### Required
 Set `required` to make a checkbox or group of checkboxes mandatory. It can be applied to either `<nys-checkboxgroup>` (no need to add it to individual children) or directly to an individual `<nys-checkbox>`.
+
 {% set preview %}
 <nys-checkbox
   label="Subscribe to NYS Government Updates"
@@ -125,10 +126,12 @@ Set `required` to make a checkbox or group of checkboxes mandatory. It can be ap
   name="subscribe"
   value="email-updates"
   required
-  > </nys-checkbox>{% endset %}
-  > {% set backgroundSolid = true %}
-  > {% set code = preview %}
-  > {% include "partials/code-preview.njk" %}
+></nys-checkbox>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
   ### Optional
   Adding the `optional` prop will add an optional flag to the input.
   {% set preview %}

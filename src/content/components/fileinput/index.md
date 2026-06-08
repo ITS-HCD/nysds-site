@@ -59,11 +59,11 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
     description="Accepted file types: .jpg, .png, .pdf"
     accept="image/png, image/jpeg, .pdf"
     dropzone
-    > </nys-fileinput>
-    > {% endset %}
-    > {% set backgroundSolid = true %}
-    > {% set code = preview %}
-    > {% include "partials/code-preview.njk" %}
+    ></nys-fileinput>
+    {% endset %}
+    {% set backgroundSolid = true %}
+    {% set code = preview %}
+    {% include "partials/code-preview.njk" %}
     ### Width
     Available width values are: `full` (default) and `lg`
     {% set preview %}
@@ -74,10 +74,10 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
       description="Accepted file types: .jpg, .png, .pdf"
       accept="image/png, image/jpeg, .pdf"
       > </nys-fileinput>
-      > {% endset %}
-      > {% set backgroundSolid = true %}
-      > {% set code = preview %}
-      > {% include "partials/code-preview.njk" %}
+      {% endset %}
+      {% set backgroundSolid = true %}
+      {% set code = preview %}
+      {% include "partials/code-preview.njk" %}
       ### Multiple files
       Set `multiple` to `true` to allow the selection of more than one file. Each selected file will display its own item in the list with progress and validation feedback.
       {% set preview %}

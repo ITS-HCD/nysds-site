@@ -32,7 +32,7 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 - Prefer showing the full name next to the avatar on tablets and larger breakpoints.
 - Place the full name of the user or entity to the right of the avatar.
 - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
-- Use the `nys-icon` slot only when the icon prop isn't sufficient.
+- Use the `<nys-icon>` slot only when the icon prop isn't sufficient.
 
 {% endblock %}
 
