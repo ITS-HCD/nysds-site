@@ -36,9 +36,7 @@ hasA11yPages: true
       of State. Some renewals can be done by mail.
     </p>
     <div style="display: flex; gap: 0.5rem; font-size: 1rem;">
-      <a href="https://www.ny.gov" target="_blank"
-        >Check your registration</a
-      >
+      <a href="https://www.ny.gov" target="_blank">Check your registration</a>
       <a href="https://www.ny.gov" target="_blank">Fill out application</a>
     </div>
   </nys-accordionitem>
@@ -87,86 +85,86 @@ The `nys-accordionitem` component includes the following accessibility-focused f
 {% endblock %}
 
 {% block options %}
-  ### Individual accordion The `nys-accordionitem` toggles open or closed with
-  the `expanded` prop. Add this prop to a `nys-accordionitem` to have it open by
-  default when the component first renders.
 
-  <b>Note</b>: Always wrap `nys-accordionitem` components in a `nys-accordion`.
-  {% set preview %}
-    <nys-accordion>
-      <nys-accordionitem
-        id="individualAcc1"
-        heading="Liberty Ipsum: Bridges & Boroughs"
-        expanded
-      >
-        <p>
-          Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
-          Park, consectetur adipiscing elit.
-        </p>
-      </nys-accordionitem>
-    </nys-accordion>
-  {% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
-  ### Accordion wrapper The `nys-accordion` is a wrapper that holds a group of
-  `nys-accordionitem` components. When the `singleSelect` boolean property is
-  set, only one `nys-accordionitem` in the wrapper can be open at a time.
-  {% set preview %}
-    <nys-accordion singleSelect>
-      <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
-        <p>
-          Learn about state programs, services, and resources available at
-          <a href="https://www.ny.gov" target="_blank">ny.gov</a>
-        </p>
-      </nys-accordionitem>
-      <nys-accordionitem
-        id="accordion2"
-        heading="Liberty Ipsum: Bridges & Boroughs"
-      >
-        <p>
-          Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
-          Park, consectetur adipiscing elit.
-        </p>
-      </nys-accordionitem>
-      <nys-accordionitem
-        id="accordion3"
-        heading="Hudson Ipsum: Riverfront Stories"
-      >
-        <p>
-          From the banks of the Hudson to the peaks of the Adirondacks, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </nys-accordionitem>
-    </nys-accordion>
-  {% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
-  ### Bordered The `bordered` prop is available on `nys-accordion`. When set,
-  all `nys-accordionitem` inside the wrapper will display borders.
-  {% set preview %}
-    <nys-accordion singleSelect bordered>
-      <nys-accordionitem heading="We are a group of accordions">
-        <p>
-          Stronger together! Learn more at
-          <a href="https://www.ny.gov" target="_blank">ny.gov</a>
-        </p>
-      </nys-accordionitem>
-      <nys-accordionitem heading="Liberty Ipsum: Bridges & Boroughs">
-        <p>
-          Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
-          Park, consectetur adipiscing elit.
-        </p>
-      </nys-accordionitem>
-      <nys-accordionitem heading="Hudson Ipsum: Riverfront Stories">
-        <p>
-          From the banks of the Hudson to the peaks of the Adirondacks, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </nys-accordionitem>
-    </nys-accordion>
-  {% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+### Individual accordion 
+The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add this prop to a `nys-accordionitem` to have it open by default when the component first renders.
+
+<b>Note</b>: Always wrap `nys-accordionitem` components in a `nys-accordion`.
+
+{% set preview %}
+<nys-accordion>
+  <nys-accordionitem
+    id="individualAcc1"
+    heading="Liberty Ipsum: Bridges & Boroughs"
+    expanded
+  >
+    <p>
+      Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
+      Park, consectetur adipiscing elit.
+    </p>
+  </nys-accordionitem>
+</nys-accordion>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Accordion wrapper 
+The `nys-accordion` is a wrapper that holds a group of `nys-accordionitem` components. When the `singleSelect` boolean property is
+set, only one `nys-accordionitem` in the wrapper can be open at a time.
+
+{% set preview %}
+<nys-accordion singleSelect>
+  <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
+    <p>
+      Learn about state programs, services, and resources available at
+      <a href="https://www.ny.gov" target="_blank">ny.gov</a>
+    </p>
+  </nys-accordionitem>
+  <nys-accordionitem id="accordion2" heading="Liberty Ipsum: Bridges & Boroughs">
+    <p>
+      Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
+      Park, consectetur adipiscing elit.
+    </p>
+  </nys-accordionitem>
+  <nys-accordionitem id="accordion3" heading="Hudson Ipsum: Riverfront Stories">
+    <p>
+      From the banks of the Hudson to the peaks of the Adirondacks, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </nys-accordionitem>
+</nys-accordion>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Bordered The `bordered` prop is available on `nys-accordion`. When set,
+all `nys-accordionitem` inside the wrapper will display borders.
+
+{% set preview %}
+<nys-accordion singleSelect bordered>
+  <nys-accordionitem heading="We are a group of accordions">
+    <p>
+      Stronger together! Learn more at
+      <a href="https://www.ny.gov" target="_blank">ny.gov</a>
+    </p>
+  </nys-accordionitem>
+  <nys-accordionitem heading="Liberty Ipsum: Bridges & Boroughs">
+    <p>
+      Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
+      Park, consectetur adipiscing elit.
+    </p>
+  </nys-accordionitem>
+  <nys-accordionitem heading="Hudson Ipsum: Riverfront Stories">
+    <p>
+      From the banks of the Hudson to the peaks of the Adirondacks, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </nys-accordionitem>
+</nys-accordion>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block properties %}
