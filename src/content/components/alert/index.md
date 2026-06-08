@@ -306,23 +306,25 @@ The `nys-close` event includes a detail object with the following properties:
 - label (string): The alert’s heading text.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the alert component
-const alert = document.querySelector("nys-alert");
-/\*\*
 
-- Consider persisting dismissal state (e.g., to localStorage or analytics)
-- This can be used to prevent the alert from appearing again
-  \*/
-  // Listen for the 'nys-close' event
-  alert.addEventListener("nys-close", (event) => {
+{% set code %}
+// Select the alert component
+const alert = document.querySelector("nys-alert");
+/*
+  Consider persisting dismissal state (e.g., to localStorage or analytics)
+  This can be used to prevent the alert from appearing again
+*/
+// Listen for the 'nys-close' event
+alert.addEventListener("nys-close", (event) => {
   const { id, type, label } = event.detail;
   console.log(\`Alert ${id} closed. Type: ${type}, Label: ${label}\`);
-  });{% endset %}
-  {% set accordionLabel = "Sample Code" %}
-  {% set codeExpanded = true %}
-  {% set codeLanguage = "js" %}
-  {% include "partials/code-preview.njk" %}
-  {% endblock %}
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
 
 {% block dependencies %}
 
