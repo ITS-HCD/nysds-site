@@ -33,9 +33,9 @@ The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 
 {% block usagedo %}
 
-- Use when toggling immediately affects the UI or system state (e.g., enabling dark mode). This is ideal for settings pages, feature toggles, or user preferences.
 - Provide a clear label and optional description to explain what the toggle controls.
 - Ensure the page clearly reflects the toggle's on/off state through visible changes.
+- Use when the state change will be implemented immediately.
 
 {% endblock %}
 
