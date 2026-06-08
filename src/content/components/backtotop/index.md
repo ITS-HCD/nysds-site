@@ -25,13 +25,13 @@ The `<nys-backtotop>` component provides a floating button that allows users to 
 <nys-backtotop id="backtotop-demo" visible></nys-backtotop>
 <script type="module">
   customElements.whenDefined('nys-backtotop').then(async () => {
-  const backtotop = document.getElementById('backtotop-demo');
-  // Wait until the Lit component finishes updating
-  await backtotop.updateComplete;
-  const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
-  if (backBtn) {
-  backBtn.style.position = 'absolute';
-  }
+    const backtotop = document.getElementById('backtotop-demo');
+    // Wait until the Lit component finishes updating
+    await backtotop.updateComplete;
+    const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
+    if (backBtn) {
+      backBtn.style.position = 'absolute';
+    }
   });
 </script>
 {% endset %}

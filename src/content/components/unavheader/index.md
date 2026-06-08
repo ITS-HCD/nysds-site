@@ -26,7 +26,9 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 <p>Please refer to the <a target="_blank" href="https://its.ny.gov/system/files/documents/2025/02/nys-s16-001-nys-universal-web-navigation.pdf">New York State Universal Web Navigation Policy (NYS-S16-001)</a> for more details.</p>
 </nys-alert>
 
-{% set preview %}<nys-unavheader></nys-unavheader>{% endset %}
+{% set preview %}
+<nys-unavheader></nys-unavheader>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
@@ -42,7 +44,7 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 
 {% block usagedont %}
 
-- Use on back office applications or intranets that are not public-facing, insted use the `<nys-globalheader>` with the `nysLogo` property applied.
+- Use on back office applications or internal sites that are not public-facing, instead use the `<nys-globalheader>` with the `nysLogo` property applied.
 - Place anywhere other than the top of the page.
 - Modify the universal header.
 

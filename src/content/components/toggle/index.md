@@ -18,12 +18,13 @@ The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-toggle 
+{% set preview %}
+<nys-toggle 
   label="Dark Mode"
   description="Enable dark mode for a more comfortable viewing experience."
   name="toggle-switch"
-  value="access">
-</nys-toggle>{% endset %}
+  value="access"
+></nys-toggle>{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% set showTip = true %}

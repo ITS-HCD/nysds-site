@@ -37,14 +37,13 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
   });
 </script>
 {% endset %}
-
 {% set code %}
 <nys-skipnav id="skipnav-demo" href="#main-content"></nys-skipnav>
 {% endset %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
-
 {% endblock %}
+
 {% block usagedo %}
 
 - Use on pages with a large header, navigation, or other repeated content before the main section.

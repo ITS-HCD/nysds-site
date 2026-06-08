@@ -20,18 +20,19 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-breadcrumbs>
-
+{% set preview %}
+<nys-breadcrumbs>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/tickets">Ticket System</a></li>
     <li>Current Page</li>
   </ol>
-</nys-breadcrumbs>{% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
+</nys-breadcrumbs>
+{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}

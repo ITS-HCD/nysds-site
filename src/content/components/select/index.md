@@ -18,19 +18,21 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-select label="Select your favorite borough" id="borough">
-
+{% set preview %}
+<nys-select label="Select your favorite borough" id="borough">
   <option value="bronx" label="The Bronx"></option>
   <option value="brooklyn" label="Brooklyn"></option>
   <option value="manhattan" label="Manhattan"></option>
   <option value="staten_island" label="Staten Island"></option>
   <option value="queens" label="Queens"></option>      
-</nys-select>{% endset %}
+</nys-select>
+{% endset %}
 {% set backgroundSolid = true %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
+
 {% block usagedo %}
 
 - Use when a user needs to select a single item from a dropdown list.

@@ -26,13 +26,13 @@ The `<nys-datepicker>` component lets users select a single date by typing into 
   description="Enter in MM/DD/YYYY format"
   required
 ></nys-datepicker>
-  {% endset %}
-  {% set showTip = true %}
-  {% set backgroundSolid = true %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-  {% endblock %}
+{% endset %}
+{% set showTip = true %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
   
   {% block usagedo %}
 

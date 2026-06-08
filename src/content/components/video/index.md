@@ -24,7 +24,8 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 <nys-video
   videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
   titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-></nys-video>{% endset %}
+></nys-video>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}

@@ -31,7 +31,7 @@ The `<nys-modal>` component appears centered on the page and requires the user t
       Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
       incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
       veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
+      consequat.
     </p>
     <div slot="actions">
       <nys-button label="Not now" variant="text" onClick="closeModal('modal1')"></nys-button>
@@ -52,7 +52,7 @@ The `<nys-modal>` component appears centered on the page and requires the user t
       Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
       incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
       veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
+      consequat.
   </p>
   <div slot="actions">
     <nys-button label="Not now" variant="text" onClick="yourCloseFunction()"></nys-button>

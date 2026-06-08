@@ -18,16 +18,18 @@ The `<nys-tooltip>` component is used to provide short, supplemental information
 {% endblock %}
 
 {% block example %}
-{% set preview %}<div style="margin-top:30px">
+{% set preview %}
+<div style="margin-top:30px">
+  <nys-tooltip for="my-button" text="I am a tooltip."></nys-tooltip>
+  <nys-button id="my-button" label="Hover Me"></nys-button>
+</div>
+{% endset %}
+{% set code %}
 <nys-tooltip for="my-button" text="I am a tooltip."></nys-tooltip>
 <nys-button id="my-button" label="Hover Me"></nys-button>
-
-</div>{% endset %}
-{% set code %}<nys-tooltip for="my-button" text="I am a tooltip."></nys-tooltip>
-<nys-button id="my-button" label="Hover Me"></nys-button>
 {% endset %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block options %}
@@ -48,8 +50,8 @@ The `<nys-tooltip>` supports the following NYS components:
 
 **These components are either:**
 
-- a form-related web component.
-- standard components used for tooltips (i.e., `nys-icon` and `nys-button`).
+- A form-related web component.
+- Standard components used for tooltips (i.e., `nys-icon` and `nys-button`).
 
 To attach `<nys-tooltip>` to a NYS component, see the section below.
 
@@ -57,8 +59,10 @@ To attach `<nys-tooltip>` to a NYS component, see the section below.
 
 To attach a `<nys-tooltip>` to a support NYSDS component, set the tooltip’s `for` attribute to the target component's `id`. **Both values MUST match.**
 
-{% set code %}<nys-tooltip for="btn1" text="More details"></nys-tooltip>
-<nys-button id="btn1" label="Submit"></nys-button>{% endset %}
+{% set code %}
+<nys-tooltip for="btn1" text="More details"></nys-tooltip>
+<nys-button id="btn1" label="Submit"></nys-button>
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
@@ -70,8 +74,8 @@ Valid positions are: `top`, `bottom`, `left`, `right`
 
 **Note:** If no position is provided, the tooltip will automatically choose the best position based on the available space.
 
-{% set preview %}<div style="display: flex; justify-content: center;">
-
+{% set preview %}
+<div style="display: flex; justify-content: center;">
   <div style="display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
@@ -83,7 +87,8 @@ Valid positions are: `top`, `bottom`, `left`, `right`
     <nys-icon id="my-icon2" name="info" size="3xl"></nys-icon>
   </div>
 </div>{% endset %}
-  {% set code %}<p>Hover over the icon</p>
+{% set code %}
+<p>Hover over the icon</p>
 <nys-tooltip for="my-icon2" text="I am a tooltip." position="right"></nys-tooltip>
 <nys-icon id="my-icon2" name="info" size="3xl"></nys-icon>
 {% endset %}
@@ -93,13 +98,30 @@ Valid positions are: `top`, `bottom`, `left`, `right`
 
 When a `<nys-tooltip>` is added to an NYS form component, it appears as a hint icon next to the label. \
 Tooltip positioning is automatic (`top`/auto), so you don’t need to set a position prop.
-{% set preview %}<div style="margin-top:30px">
-<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
-<nys-textinput id="my-textinput" name='fullName' label="Full name" description='Enter your full legal name' width="lg" required></nys-textinput>
 
-</div>{% endset %}
-{% set code %}<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
-<nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="lg" required></nys-textinput>
+{% set preview %}
+<div style="margin-top:30px">
+  <nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+  <nys-textinput 
+    id="my-textinput" 
+    name='fullName' 
+    label="Full name" 
+    description='Enter your full legal name' 
+    width="lg" 
+    required
+  ></nys-textinput>
+</div>
+{% endset %}
+{% set code %}
+<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+<nys-textinput 
+  id="my-textinput" 
+  name="fullName" 
+  label="Full name" 
+  description="Enter your full legal name" 
+  width="lg" 
+  required
+></nys-textinput>
 {% endset %}
 {% include "partials/code-preview.njk" %}
 

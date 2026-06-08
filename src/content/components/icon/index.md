@@ -18,7 +18,13 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-icon name="check_circle" size="5xl" color="var(--nys-color-success)"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon 
+  name="check_circle" 
+  size="5xl" 
+  color="var(--nys-color-success)"
+></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}

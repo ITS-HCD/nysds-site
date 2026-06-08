@@ -20,8 +20,9 @@ The `<nys-globalfooter>` component renders an agency-branded footer section that
 {% block example %}
 {% set preview %}
 <nys-globalfooter agencyName="Office of Information Technology Services">
-</nys-globalfooter>{% endset %}  
- {% set code = preview %}
+</nys-globalfooter>
+{% endset %}  
+{% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}

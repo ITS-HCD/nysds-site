@@ -18,8 +18,12 @@ The `<nys-globalheader>` component renders an agency-branded header with applica
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
-</nys-globalheader>{% endset %}
+{% set preview %}
+<nys-globalheader 
+  appName="User Registration Form" 
+  agencyName="Office of Information Technology Services"
+></nys-globalheader>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}

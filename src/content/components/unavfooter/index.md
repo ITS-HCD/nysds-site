@@ -18,7 +18,9 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-unavfooter></nys-unavfooter>{% endset %}
+{% set preview %}
+<nys-unavfooter></nys-unavfooter>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
@@ -35,7 +37,7 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 
 {% block usagedont %}
 
-- Don't use on back office applications or intranets that are not public-facing.
+- Don't use on back office applications or internal sites that are not public-facing.
 - Place anywhere other than the absolute bottom of the page.
 - Customize, restyle, or override the component's content or appearance. Consistency across all state sites is the purpose of this component.
 

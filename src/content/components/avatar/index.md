@@ -20,7 +20,9 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-avatar ariaLabel="User avatar"></nys-avatar>{% endset %}
+{% set preview %}
+<nys-avatar ariaLabel="User avatar"></nys-avatar>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}

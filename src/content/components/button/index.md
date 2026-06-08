@@ -18,7 +18,9 @@ The `<nys-button>` component is used for actions that have an immediate result i
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-button label="Button"></nys-button>{% endset %}
+{% set preview %}
+<nys-button label="Button"></nys-button>
+{% endset %}
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}

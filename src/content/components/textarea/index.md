@@ -18,11 +18,13 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-textarea
+{% set preview %}
+<nys-textarea
   id="quote"
   label="Enter your favorite quote:"
-  value="Majorities, of course, start with minorities.">
-</nys-textarea>{% endset %}
+  value="Majorities, of course, start with minorities."
+></nys-textarea>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% set showTip = true %}

@@ -18,7 +18,8 @@ The `<nys-pagination>` component provides Previous/Next buttons and numbered pag
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-pagination currentPage="2" totalPages="7"></nys-pagination>
+{% set preview %}
+<nys-pagination currentPage="2" totalPages="7"></nys-pagination>
 {% endset %}
 {% set code = preview %}
 {% set showTip = true %}

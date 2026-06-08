@@ -20,10 +20,26 @@ The `<nys-radiobutton>` provides users with the ability to choose from a group o
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." size="md">
-<nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" checked></nys-radiobutton>
-<nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
-</nys-radiogroup>{% endset %}
+{% set preview %}
+<nys-radiogroup 
+  label="What is your primary work location?" 
+  description="This is the location you use for your in office days." 
+>
+  <nys-radiobutton 
+    name="office" 
+    label="Albany" 
+    description="Upstate New York" 
+    value="albany" 
+    checked
+  ></nys-radiobutton>
+  <nys-radiobutton 
+    name="office" 
+    label="Manhattan" 
+    description="New York City" 
+    value="manhattan"
+  ></nys-radiobutton>
+</nys-radiogroup>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% set showTip = true %}

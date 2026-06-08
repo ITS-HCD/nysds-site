@@ -18,7 +18,9 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 {% endblock %}
 
 {% block example %}
-{% set preview %}<nys-textinput label="This is a text input"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput label="This is a text input"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% set showTip = true %}

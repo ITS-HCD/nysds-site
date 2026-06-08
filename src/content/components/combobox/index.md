@@ -18,7 +18,6 @@ The `<nys-combobox>` is a reusable web component for use in New York State digit
 {% endblock %}
 
 {% block example %}
-
 {% set preview %}
 <nys-combobox label="Choose a county" id='my-combobox'>
   <option value="albany">Albany</option>
@@ -87,7 +86,6 @@ The `<nys-combobox>` is a reusable web component for use in New York State digit
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox'>
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
