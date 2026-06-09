@@ -21,7 +21,6 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 
 {% block example %}
 {% set preview %}<nys-breadcrumbs>
-
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -34,24 +33,36 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+{% block usage %}
+
+### When to use this component
+
+- For pages in hierarchies with more than 2 levels. The breadcrumb should be displayed starting at the level 2 page and persist on all child pages in the hierarchy. For example, if a level 2 page has child pages, all pages starting at that level 2 page would need a breadcrumb.
+- Users may land on a page from search or external links and need context.
+- Users may want to go back to a broader category or section.
+
+### When to consider something else
+
+- Top-level pages (e.g., homepage).
+- Pages with only one or two levels and no deeper hierarchy.
+- Linear flows (e.g., multi-step forms or processes), use a stepper instead.
+- When breadcrumbs do not add meaningful context or navigation value.
+  {% endblock %}
+
 {% block usagedo %}
 
-- Use on pages at level 2 and deeper in a site hierarchy—if a level 2 page has child pages, all pages starting at that level should include a breadcrumb.
 - Place breadcrumb below the header and above the main content.
-- Show the site hierarchy, not the path a user took.
-- For the home page of a site, use a specific label rather than a generic "Home"—this differentiates the main site home from other landing pages (e.g., "myBenefits Home" instead of just "Home").
+- For the home page of a site, do not use icons or just "Home". This ensures that the main site home page is differentiated from other types of landing pages on the site (e.g., "myBenefits Home" instead of just "Home").
+- Breadcrumbs should show the site hierarchy, not the path a user took.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Don't use on top-level pages, or on sites with only one or two levels of hierarchy.
 - Don't make the current page clickable.
 - Don't use breadcrumbs as the only navigation method.
-- Don't use breadcrumbs for sequential processes like multi-step forms or wizards—use a stepper instead.
-- Don't add breadcrumbs when they don't provide meaningful context or navigation value.
-
-{% endblock %}
+- Don't use breadcrumbs for sequential processes (wizards, forms).
+  {% endblock %}
 
 {% block options %}
 
@@ -62,7 +73,6 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 **Note:** If you prefer not to display the current page in the breadcrumb trail, simply leave it out.
 
 {% set preview %}<nys-breadcrumbs>
-
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -78,7 +88,6 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 Add the `backToParent` prop to collapse the full breadcrumb trail into a single "back to parent" button on screens narrower than 767px. The component automatically determines which crumb represents the parent of the current page. Resize your browser to a small width to see it in action.
 
 {% set preview %}<nys-breadcrumbs backToParent>
-
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/government">Government</a></li>
@@ -101,7 +110,6 @@ Set the `size` prop to adjust text size. Available sizes:
 - `sm`: Smaller text (14px)
 
 {% set preview %}<nys-breadcrumbs size="sm">
-
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/government">Government</a></li>
@@ -117,7 +125,6 @@ Set the `size` prop to adjust text size. Available sizes:
 Add the `backgroundBar` prop to display breadcrumbs on a light gray background bar.
 
 {% set preview %}<nys-breadcrumbs backgroundBar>
-
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -133,7 +140,6 @@ Add the `backgroundBar` prop to display breadcrumbs on a light gray background b
 Add the `disabled` prop to disable all links in the breadcrumbs.
 
 {% set preview %}<nys-breadcrumbs disabled>
-
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>

@@ -36,14 +36,13 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
     <p>You can check your registration status, update your information, or find out how to register through the National Association of Secretaries of State.</p>
   </nys-accordionitem>
 </nys-accordion>
-{% endset %}
-{% set code = preview %}
-{% set showTip = true %}
-{% include "partials/code-preview.njk" %}
+  {% endset %}
+  {% set code = preview %}
+  {% set showTip = true %}
+  {% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block accessibility %}
-
 <!--
 The `nys-accordionitem` component includes the following accessibility-focused features:
 
@@ -52,23 +51,38 @@ The `nys-accordionitem` component includes the following accessibility-focused f
 
 {% endblock %}
 
+{% block usage %}
+
+### When to use this component
+
+  - Use an accordion when you need to organize related information into expandable sections, reducing the need for users to scroll through long content.
+  - Ideal for supplemental details like optional steps, extra instructions, or secondary eligibility notes—similar to FAQs.
+  - Helpful in mobile layouts to keep pages compact while still allowing access to full details.
+
+
+### When to consider something else
+
+  - Do not hide essential, universal information such as critical deadlines, main eligibility criteria, or urgent alerts inside collapsed panels. Keep these visible by default!
+  - If users need to compare details from multiple sections at once, consider using a table or side-by-side layout instead of an accordion.
+
+{% endblock %}
+
 {% block usagedo %}
 
-- Use accordions for FAQs on state services, like DMV procedures or benefits information.
-- Use to break up long program descriptions or supplemental details—like optional steps, extra instructions, or secondary eligibility notes—into manageable sections without overwhelming the reader.
-- Label headings clearly so users understand the content before expanding.
-- Consider accordions in mobile layouts to keep pages compact while still allowing access to full details.
+  - Use accordions for FAQs on state services, like DMV procedures or benefits information.
+  - Use to break up long program descriptions into manageable sections without overwhelming the reader.
+  - Label headings clearly so users understand the content before expanding.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Hide time-sensitive deadlines, required steps, or critical eligibility criteria in a collapsed section—keep essential information visible by default.
-- Use vague or unclear headings that make it hard to know what is inside.
-- Overuse accordions for content that is short enough to display fully on the page.
-- Use an accordion when users need to compare details from multiple sections at once—consider a table or side-by-side layout instead.
+  - Hide time-sensitive deadlines or required steps in a collapsed section.
+  - Use vague or unclear headings that make it hard to know what is inside.
+  - Overuse accordions for content that is short enough to display fully on the page.
 
 {% endblock %}
+
 
 {% block options %}
 
@@ -79,11 +93,12 @@ The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add thi
 <b>Note</b>: Always wrap `nys-accordionitem` components in a `nys-accordion`.
 
 {% set preview %}
-<nys-accordion>
+<nys-accordion>        
   <nys-accordionitem
     id="individualAcc1"
     heading="Liberty Ipsum: Bridges & Boroughs"
-    expanded>
+    expanded
+  >
     <p>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit.</p>
   </nys-accordionitem>
 </nys-accordion>
@@ -92,7 +107,6 @@ The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add thi
 {% include "partials/code-preview.njk" %}
 
 ### Accordion wrapper
-
 The `nys-accordion` is a wrapper that holds a group of `nys-accordionitem` components.
 
 When the `singleSelect` boolean property is set, only one `nys-accordionitem` in the wrapper can be open at a time.
@@ -100,7 +114,7 @@ When the `singleSelect` boolean property is set, only one `nys-accordionitem` in
 {% set preview %}
 <nys-accordion singleSelect>
   <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
-    <p>Learn about state programs, services, and resources available at
+   <p>Learn about state programs, services, and resources available at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
   </nys-accordionitem>
@@ -116,13 +130,12 @@ When the `singleSelect` boolean property is set, only one `nys-accordionitem` in
 {% include "partials/code-preview.njk" %}
 
 ### Bordered
-
 The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordionitem` inside the wrapper will display borders.
 
 {% set preview %}
 <nys-accordion singleSelect bordered>
   <nys-accordionitem heading="We are a group of accordions">
-    <p>Stronger together! Learn more at
+   <p>Stronger together! Learn more at
       <a href="https://www.ny.gov" target="_blank">ny.gov</a>
     </p>
   </nys-accordionitem>
@@ -185,7 +198,7 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 {% endblock %}
 
 {% block cssvariables %}
-{% set variables = [
+  {% set variables = [
     { name: "--nys-accordion-background-color--header", description: "Background color of the accordion header"},
     { name: "--nys-accordion-background-color--header--hover", description: "Background hover color of the accordion header"},
     { name: "--nys-accordion-content-max-width", description: "Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability."}
@@ -198,26 +211,25 @@ The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordio
 
 The `<nys-accordionitem>` component emits **one** custom Javascript event:
 
-1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
+  1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
 
 ### Event details
-
 The `nys-accordionitem-toggle` event includes a detail object with the following properties:
 
-- id (string): The id of the accordion.
-- heading (string): The accordion’s heading text.
-- expanded (boolean): true if the accordion is expanded, otherwise false.
+  - id (string): The id of the accordion.
+  - heading (string): The accordion’s heading text.
+  - expanded (boolean): true if the accordion is expanded, otherwise false.
 
 You can listen to these events using JavaScript:
 {% set code %}// Select the accordion component
 const accordion = document.querySelector("nys-accordionitem");
 // Listen for the 'nys-accordionitem-toggle' event
 accordion.addEventListener("nys-accordionitem-toggle", (event) => {
-console.log("Accordion toggled:", {
-id: event.detail.id,
-heading: event.detail.heading,
-expanded: event.detail.expanded
-});
+  console.log("Accordion toggled:", {
+    id: event.detail.id,
+    heading: event.detail.heading,
+    expanded: event.detail.expanded
+  });
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
