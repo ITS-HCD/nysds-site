@@ -357,19 +357,19 @@ The `nys-input` event includes a `detail` object with the following properties:
 The `nys-blur` event is a plain `Event` with no additional detail.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the datepicker component
+{% set code %}
+// Select the datepicker component
 const datepicker = document.querySelector("nys-datepicker");
-
 // Listen for date selection
 datepicker.addEventListener("nys-input", (event) => {
-const { id, value } = event.detail;
-console.log(`Datepicker (${id}) date selected:`, value);
+  const { id, value } = event.detail;
+  console.log(`Datepicker (${id}) date selected:`, value);
 });
-
 // Listen for blur (triggers validation)
 datepicker.addEventListener("nys-blur", () => {
-console.log("Datepicker lost focus");
-});{% endset %}
+  console.log("Datepicker lost focus");
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

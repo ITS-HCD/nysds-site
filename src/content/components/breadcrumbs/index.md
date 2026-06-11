@@ -133,15 +133,16 @@ Add the `backgroundBar` prop to display breadcrumbs on a light gray background b
 
 Add the `disabled` prop to disable all links in the breadcrumbs.
 
-{% set preview %}<nys-breadcrumbs disabled>
-
+{% set preview %}
+<nys-breadcrumbs disabled>
   <ol>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/tickets">Ticket System</a></li>
     <li>Del Water Gap</li>
   </ol>
-</nys-breadcrumbs>{% endset %}
+</nys-breadcrumbs>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 

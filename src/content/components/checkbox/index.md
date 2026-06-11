@@ -348,14 +348,14 @@ The `nys-change` event includes a detail object with the following properties:
 - value (string): The checkbox’s value attribute.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the checkbox component
+{% set code %}
+// Select the checkbox component
 const checkbox = document.querySelector('nys-checkbox');
 // Listen for the 'nys-change' event
 checkbox.addEventListener('nys-change', (event) => {
-const { id, checked, name, value } = event.detail;
-console.log(`Checkbox ${id} changed: checked=${checked}, name=${name}, value=${value}`);
+  const { id, checked, name, value } = event.detail;
+  console.log(`Checkbox ${id} changed: checked=${checked}, name=${name}, value=${value}`);
 });
-
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
