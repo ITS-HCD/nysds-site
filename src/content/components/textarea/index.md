@@ -62,7 +62,9 @@ The `rows` attribute specifies the visible height of a text area, in number of l
 
 The default value is `4`
 
-{% set preview %}<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea label="This textarea renders with 6 rows" rows="6"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -73,7 +75,9 @@ If no `width` is provided, the `<nys-textarea>` will default to `full`. Supporte
 
 If an invalid option is assigned to `width`, it will be ignored and default to `width="full"`
 
-{% set preview %}<nys-textarea width="md" label="This textarea is md"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea width="md" label="This textarea is md"></nys-textarea>{
+  % endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -84,7 +88,9 @@ By default a user can resize the `<nys-textarea>` vertically. If you want to dis
 
 **Note:** `resize` is not affected by setting `<nys-textarea>` to `disabled` or `readonly` as they are independent.
 
-{% set preview %}<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea label="This textarea is not resizable" resize="none"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -114,42 +120,54 @@ You can include a description to provide additional context for the user. This i
 
 ### Placeholder
 
-{% set preview %}<nys-textarea label="Placeholder" placeholder="this is a placeholder"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea label="Placeholder" placeholder="this is a placeholder"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
-{% set preview %}<nys-textarea label="Disabled textarea" disabled></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea label="Disabled textarea" disabled></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Readonly
 
-{% set preview %}<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea readonly label="Readonly textarea" value="This text cannot be changed"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Max length
 
-{% set preview %}<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Required
 
-{% set preview %}<nys-textarea required label="Required textarea"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea required label="Required textarea"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Optional
 
-{% set preview %}<nys-textarea optional label="Optional textarea"></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea optional label="Optional textarea"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}

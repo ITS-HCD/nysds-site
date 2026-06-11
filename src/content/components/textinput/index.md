@@ -135,7 +135,9 @@ Any other input defaults to `type="text"`
 ### Pattern
 
 Takes any valid regex value.
-{% set preview %}<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput placeholder="N00000000" pattern="N[0-9]{8}" label="Please enter your Employee number" description="include the N prefix" maxlength="9" id="nID"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -143,7 +145,9 @@ Takes any valid regex value.
 ### Required
 
 Set `required` to `<nys-textinput>` to make it mandatory.
-{% set preview %}<nys-textinput name="myTextInput7" required label="label"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput name="myTextInput7" required label="label"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -151,7 +155,9 @@ Set `required` to `<nys-textinput>` to make it mandatory.
 ### Optional
 
 Adding the `optional` prop will add an optional flag to the input.
-{% set preview %}<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput name="myTextInput7" optional label="label"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -160,9 +166,11 @@ Adding the `optional` prop will add an optional flag to the input.
 
 Add a description using the `description` prop for plain text, or use the description slot to include custom HTML for more flexibility.
 Takes any valid regex value.
-{% set preview %}<nys-textinput name="descriptionSlot" label="Label">
+{% set preview %}
+<nys-textinput name="descriptionSlot" label="Label">
 <label slot="description">Slot: description</label>
-</nys-textinput>{% endset %}
+</nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -202,22 +210,30 @@ You can add a button to the input by adding a `slot="startButton"` or `slot="end
 Set an error message and choose to activate it. The error message will appear ONLY when the `showError` attribute is set to `true`. Setting only `errorMessage` will not display the error message by default.
 Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
-{% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
-{% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
-{% set preview %}<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput errorMessage="This is an error message" showError label="Label with error"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
-{% set preview %}<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput showError errorMessage="Cannot be left blank" label="Full Name"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}

@@ -64,25 +64,27 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 
 ### Checked
 
-{% set preview %}<nys-toggle label="Dark Mode" name="theme" value="dark" checked></nys-toggle>{% endset %}
+{% set preview %}
+<nys-toggle label="Dark Mode" name="theme" value="dark" checked></nys-toggle>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Help Text
 
-{% set preview %}<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
-
+{% set preview %}
+<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
   <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
 </nys-toggle>
-<br/>
 <br/>
 <nys-toggle
   label="Toggle Switch"
   description="This description was passed in as a property"
   name="toggle-switch"
   value="access">
-</nys-toggle>{% endset %}
+</nys-toggle>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -93,10 +95,7 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
 <nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
 {% endset %}
-{% set code %}
-<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
-<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
-{% endset %}
+{% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
@@ -106,24 +105,29 @@ Add help text to the toggle using the `label` and `description` props.
 Descriptions can be provided either through the `description` prop or via the `slot="description"`.
 
 **Note**: Use the prop for simple text. Use the slot when you need custom HTML, such as links or formatting.
-{% set preview %}<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
-
+{% set preview %}
+<nys-toggle label="Toggle Switch" name="toggle-switch" value="access">
   <p slot="description">This slot is called 'description' (<a href="https://www.ny.gov/" target="_blank">learn more</a>)</p>
-</nys-toggle>{% endset %}
-  {% set code = preview %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+</nys-toggle>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Disabled Toggle
 
-{% set preview %}<nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled></nys-toggle>{% endset %}
+{% set preview %}
+<nys-toggle label="Disabled Unchecked" name="toggle-switch" value="access" disabled></nys-toggle>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Disable Icon
 
-{% set preview %}<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>{% endset %}
+{% set preview %}
+<nys-toggle noIcon label="No Icon on the toggle" name="toggle-switch" value="access"></nys-toggle>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -131,13 +135,15 @@ Descriptions can be provided either through the `description` prop or via the `s
 ### Inverted
 
 Set the `inverted` when the component is on a dark background.
-{% set preview %}<nys-toggle
+{% set preview %}
+<nys-toggle
   label="Toggle Switch"
   description="This description was passed in as a property"
   name="toggle-switch"
   value="access"
   inverted>
-</nys-toggle>{% endset %}
+</nys-toggle>
+{% endset %}
 {% set code = preview %}
 {% set inverted = true %}
 {% set backgroundSolid = true %}
