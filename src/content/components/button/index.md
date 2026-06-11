@@ -376,7 +376,7 @@ You can listen to these events using JavaScript:
 const button = document.querySelector('nys-button');
 // Listen for the 'nys-click' event
 button.addEventListener("nys-click", () => {
-console.log("Button clicked");
+    console.log("Button clicked");
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
