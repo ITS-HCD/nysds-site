@@ -89,11 +89,14 @@ The `<nys-toggle`> component includes the following accessibility-focused featur
 
 ### Sizes
 
-{% set preview %}<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
-<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+{% set preview %}
+<nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle><br>
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
+{% endset %}
 {% set code %}
 <nys-toggle size="sm" label='Small (size="sm")' name="toggle-switch" value="access"></nys-toggle>
-<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>{% endset %}
+<nys-toggle size="md" label='Medium (size="md")' name="toggle-switch" value="access"></nys-toggle>
+{% endset %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
