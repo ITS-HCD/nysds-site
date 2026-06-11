@@ -402,13 +402,15 @@ The `nys-change` event includes a detail object with the following properties:
 - value (string): The radiobutton’s value.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the radiogroup component
+{% set code %}
+// Select the radiogroup component
 const radiogroup = document.querySelector('nys-radiogroup');
 // Listen for the 'nys-change' event
 radiogroup.addEventListener('nys-change', (event) => {
-const { id, checked, name, value } = event.detail;
-console.log(`Radiobutton with id="${id}" in group "${name}" was selected. Value="${value}", checked=${checked}`);
-});{% endset %}
+  const { id, checked, name, value } = event.detail;
+  console.log(`Radiobutton with id="${id}" in group "${name}" was selected. Value="${value}", checked=${checked}`);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
