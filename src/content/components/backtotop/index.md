@@ -167,15 +167,16 @@ The `<nys-backtotop>` component emits **three** custom Javascript events:
 ### Event details
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the backtotop component
+{% set code %}
+// Select the backtotop component
 const backtotop = document.querySelector("nys-backtotop");
 // Listen for the 'click' event
 backtotop.addEventListener("click", () => {
-console.log("Backtotop clicked");
+  console.log("Backtotop clicked");
 });
 // Listen for the 'blur' event
 backtotop.addEventListener("blur", () => {
-console.log("Backtotop lost focus");
+  console.log("Backtotop lost focus");
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}

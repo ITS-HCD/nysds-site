@@ -365,13 +365,15 @@ The `nys-input` event includes a detail object with the following properties:
 - value (string): The currently selected text.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the textinput component
+{% set code %}
+// Select the textinput component
 const textinput = document.querySelector('nys-textinput');
 // Listen for the 'nys-input' event
 textinput.addEventListener('nys-input', (event) => {
-const { id, value } = event.detail;
-console.log(`Text input (${id}) changed:`, value);
-});{% endset %}
+  const { id, value } = event.detail;
+  console.log(`Text input (${id}) changed:`, value);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

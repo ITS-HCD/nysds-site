@@ -296,13 +296,15 @@ The `nys-input` and `nys-select` event includes a detail object with the followi
 - value (string): The currently selected text.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the textarea component
+{% set code %}
+// Select the textarea component
 const textarea = document.querySelector('nys-textarea');
 // Listen for the 'nys-input' event
 textarea.addEventListener('nys-input', (event) => {
-const { id, value } = event.detail;
-console.log(`Textarea (${id}) changed:`, value);
-});{% endset %}
+  const { id, value } = event.detail;
+  console.log(`Textarea (${id}) changed:`, value);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

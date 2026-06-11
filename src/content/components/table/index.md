@@ -388,13 +388,15 @@ The `nys-column-sort` event includes a detail object with the following properti
 - sortDirection (string): The resulting sort direction — `"asc"`, `"desc"`, or `"none"`.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the table component
+{% set code %}
+// Select the table component
 const table = document.querySelector('nys-table');
 // Listen for the 'nys-column-sort' event
 table.addEventListener('nys-column-sort', (event) => {
-const { columnIndex, columnLabel, sortDirection } = event.detail;
-console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
-});{% endset %}
+  const { columnIndex, columnLabel, sortDirection } = event.detail;
+  console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

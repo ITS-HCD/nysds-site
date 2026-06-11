@@ -290,18 +290,20 @@ The `nys-open` and `nys-close` events include a detail object with the following
 - id (string): The id of the file input.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the modal component
+{% set code %}
+// Select the modal component
 const modal = document.querySelector("nys-modal");
 // Listen for the 'nys-open' event
 modal.addEventListener("nys-open", (event) => {
-const { id } = event.detail;
-console.log(`Modal (${id}) is opened`);
+  const { id } = event.detail;
+  console.log(`Modal (${id}) is opened`);
 });
 // Listen for the 'nys-close' event
 modal.addEventListener("nys-close", (event) => {
-const { id, reason } = event.detail;
-console.log(`Modal (${id}) is closed.`);
-});{% endset %}
+  const { id, reason } = event.detail;
+  console.log(`Modal (${id}) is closed.`);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

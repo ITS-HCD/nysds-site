@@ -228,13 +228,15 @@ The `nys-change` event includes a detail object with the following properties:
 - checked (boolean): Whether the toggle is currently checked.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the toggle component
+{% set code %}
+// Select the toggle component
 const toggle = document.querySelector('nys-toggle');
 // Listen for the 'nys-change' event
 toggle.addEventListener('nys-change', (event) => {
-const { checked } = event.detail;
-console.log('Toggle changed. Checked:', checked);
-});{% endset %}
+  const { checked } = event.detail;
+  console.log('Toggle changed. Checked:', checked);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

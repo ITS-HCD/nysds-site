@@ -372,12 +372,14 @@ The `<nys-button>` component emits **three** custom Javascript events:
 3.  **`nys-blur`** – Fired when the button loses focus.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the button component
+{% set code %}
+// Select the button component
 const button = document.querySelector('nys-button');
 // Listen for the 'nys-click' event
 button.addEventListener("nys-click", () => {
     console.log("Button clicked");
-});{% endset %}
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

@@ -210,12 +210,14 @@ The `<nys-breadcrumbs>` component emits **one** custom Javascript event:
 
 You can listen to these events using JavaScript:
 
-{% set code %}// Select the breadcrumbs component
+{% set code %}
+// Select the breadcrumbs component
 const breadcrumbs = document.querySelector('nys-breadcrumbs');
 // Listen for the 'nys-expand' event
 breadcrumbs.addEventListener("nys-expand", () => {
-console.log("Breadcrumbs expanded");
-});{% endset %}
+  console.log("Breadcrumbs expanded");
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

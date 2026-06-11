@@ -159,12 +159,14 @@ The `nys-change` event includes a detail object with the following properties:
 - page (integer): The new value of `currentPage`
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the pagination component
+{% set code %}
+// Select the pagination component
 const pagination = document.querySelector("nys-pagination");
 // Listen for the 'nys-change' event
 pagination.addEventListener("nys-change", (event) => {
-console.log("Pagination is changed to page ${event.detail.page}");
-});{% endset %}
+  console.log("Pagination is changed to page ${event.detail.page}");
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
