@@ -34,88 +34,88 @@ The `<nys-datepicker>` component lets users select a single date by typing into 
 {% include "partials/code-preview.njk" %}
 {% endblock %}
   
-  {% block usagedo %}
+{% block usagedo %}
 
-  - Use when users need to select a single calendar date, such as scheduling an appointment or choosing a filing deadline, especially when the day of the week matters.
-  - Set the `label` property to clearly describe what date is being collected. Every datepicker needs one for accessibility.
-  - Add `description` text to specify the expected format or provide context.
-  - Set `required` when the date is mandatory for form submission; don't set both `required` and `optional` on the same component.
-  - Use `startDate` to open the calendar to a relevant month when the expected date is far from today.
-  - Pass date values as ISO strings (`"YYYY-MM-DD"`) rather than `Date` objects to avoid timezone issues.
+- Use when users need to select a single calendar date, such as scheduling an appointment or choosing a filing deadline, especially when the day of the week matters.
+- Set the `label` property to clearly describe what date is being collected. Every datepicker needs one for accessibility.
+- Add `description` text to specify the expected format or provide context.
+- Set `required` when the date is mandatory for form submission; don't set both `required` and `optional` on the same component.
+- Use `startDate` to open the calendar to a relevant month when the expected date is far from today.
+- Pass date values as ISO strings (`"YYYY-MM-DD"`) rather than `Date` objects to avoid timezone issues.
 
-  {% endblock %}
-  {% block usagedont %}
+{% endblock %}
+{% block usagedont %}
 
-  - Don't use for dates users know from memory, such as date of birth or document issue dates. A text input with separate month/day/year fields is more efficient.
-  - Don't use when users need to select multiple dates or a date range, or when time selection is required alongside the date.
-  - Don't rely on the calendar popup alone. Safari and mobile browsers use the native date picker instead.
-  - Don't use `hideTodayButton` and `hideClearButton` together unless users must select a specific date and cannot be allowed to clear it.
-  
-  {% endblock %}
+- Don't use for dates users know from memory, such as date of birth or document issue dates. A text input with separate month/day/year fields is more efficient.
+- Don't use when users need to select multiple dates or a date range, or when time selection is required alongside the date.
+- Don't rely on the calendar popup alone. Safari and mobile browsers use the native date picker instead.
+- Don't use `hideTodayButton` and `hideClearButton` together unless users must select a specific date and cannot be allowed to clear it.
 
-  {% block accessibility %}
+{% endblock %}
 
-  The `<nys-datepicker>` component includes the following accessibility features:
-  - Built on a native `<input type="date">`, so screen readers announce the field correctly
-  - The calendar button has `aria-haspopup="dialog"` and `aria-expanded` to communicate popup state
-  - The calendar popup uses `role="dialog"` with `aria-modal` and traps focus when open
-  - Press **Space** on the input to open the calendar; press **Escape** to close it and return focus to the input
-  - **Tab** and **Shift+Tab** cycle through focusable elements inside the calendar without escaping
-  - When `required` is set, `aria-required="true"` is applied and validation fires on blur
-  - Error messages are rendered via `<nys-errormessage>` and associated with the input for assistive technology
-  {% endblock %}
+{% block accessibility %}
 
-  {% block options %}
+The `<nys-datepicker>` component includes the following accessibility features:
+- Built on a native `<input type="date">`, so screen readers announce the field correctly
+- The calendar button has `aria-haspopup="dialog"` and `aria-expanded` to communicate popup state
+- The calendar popup uses `role="dialog"` with `aria-modal` and traps focus when open
+- Press **Space** on the input to open the calendar; press **Escape** to close it and return focus to the input
+- **Tab** and **Shift+Tab** cycle through focusable elements inside the calendar without escaping
+- When `required` is set, `aria-required="true"` is applied and validation fires on blur
+- Error messages are rendered via `<nys-errormessage>` and associated with the input for assistive technology
+{% endblock %}
 
-  <nys-alert heading="Browser behavior" type="info">
-    <p>The calendar popup does not appear in Safari or mobile browsers (iOS and Android). In those environments, users enter dates manually or use the native date picker provided by the operating system.</p>
-  </nys-alert>
+{% block options %}
 
-  ### Value and form output
-  The `value` prop accepts a `Date` object or an ISO date string (`YYYY-MM-DD`). The input displays the date in `MM/DD/YYYY` format. Internally, the component stores and submits the value as a string in ISO format (`YYYY-MM-DD`).
-  <nys-alert heading="Date object warning" type="info">
-    <p>
-      Passing <code>new Date("YYYY-MM-DD")</code> to <code>value</code> can result in an off-by-one-day error due to UTC versus local time conversion. The component handles this internally when you pass an ISO string attribute.
-      <br />
-      <a href="https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off">
-        Why this happens
-      </a>
-    </p>
-    <p>
-      Prefer setting the value as an ISO string attribute: <code>&lt;nys-datepicker value="2025-06-01"&gt;</code>. If you must use a <code>Date</code> object in JavaScript, construct it with explicit year/month/day to avoid UTC shifting: <code>new Date(2025, 5, 1)</code>.
-    </p>
-  </nys-alert>
+<nys-alert heading="Browser behavior" type="info">
+  <p>The calendar popup does not appear in Safari or mobile browsers (iOS and Android). In those environments, users enter dates manually or use the native date picker provided by the operating system.</p>
+</nys-alert>
 
-  #### Valid value examples
-  {% set code %}
+### Value and form output
+The `value` prop accepts a `Date` object or an ISO date string (`YYYY-MM-DD`). The input displays the date in `MM/DD/YYYY` format. Internally, the component stores and submits the value as a string in ISO format (`YYYY-MM-DD`).
+<nys-alert heading="Date object warning" type="info">
+  <p>
+    Passing <code>new Date("YYYY-MM-DD")</code> to <code>value</code> can result in an off-by-one-day error due to UTC versus local time conversion. The component handles this internally when you pass an ISO string attribute.
+    <br />
+    <a href="https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off">
+      Why this happens
+    </a>
+  </p>
+  <p>
+    Prefer setting the value as an ISO string attribute: <code>&lt;nys-datepicker value="2025-06-01"&gt;</code>. If you must use a <code>Date</code> object in JavaScript, construct it with explicit year/month/day to avoid UTC shifting: <code>new Date(2025, 5, 1)</code>.
+  </p>
+</nys-alert>
+
+#### Valid value examples
+{% set code %}
 // Using a Date object (month is 0-indexed)
 datepicker.value = new Date(2025, 5, 1); // June 1, 2025
 // Using an ISO string (recommended)
 datepicker.value = "2025-06-01";
-  {% endset %}
-  {% set accordionLabel = "Sample Code" %}
-  {% set codeExpanded = true %}
-  {% set codeLanguage = "js" %}
-  {% include "partials/code-preview.njk" %}
-  {% set code %}
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{% set code %}
 <nys-datepicker
   label="Benefits enrollment deadline"
   value="2025-06-01"
-  ></nys-datepicker>
+></nys-datepicker>
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
 
-  {% set code %}
+{% set code %}
 // FormData submits the value as a string in YYYY-MM-DD format
 // e.g. "2025-06-01"
-  {% endset %}
-  {% set accordionLabel = "Sample Code" %}
-  {% set codeExpanded = true %}
-  {% set codeLanguage = "js" %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 
   ### Width
   Set the `width` prop to adjust the width of the input field. Supported values:

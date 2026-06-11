@@ -94,10 +94,9 @@ When there are only a handful of pages, all page numbers are shown without ellip
 
 When `totalPages` is `1`, the component renders nothing. Pagination is unnecessary when all content fits on one page.
 
-{% set code %}<nys-pagination currentPage="1" totalPages="1"></nys-pagination>
-
-<!-- Nothing renders -->{% endset %}
-
+{% set code %}
+<nys-pagination currentPage="1" totalPages="1"></nys-pagination>
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "html" %}

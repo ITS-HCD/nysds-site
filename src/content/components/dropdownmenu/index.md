@@ -72,8 +72,8 @@ The `<nys-dropdownmenu>` anchors itself to a trigger element provided by the use
 {% set code %}
 <nys-button id="my-trigger-id" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="my-trigger-id">
-<nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-<nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% set codeExpanded = true %}
@@ -114,14 +114,14 @@ Supported positions are:
 {% set code %}
 <nys-button id="trigger-bottom-start" label="trigger"></nys-button>
 <nys-dropdownmenu for="trigger-bottom-start" position="bottom-start">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 <nys-dropdownmenu for="trigger-bottom-end" position="top-end">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Settings" href="/settings"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% include "partials/code-preview.njk" %}
@@ -166,10 +166,10 @@ Use the `prefixIcon` property on `<nys-dropdownmenuitem>` to add an icon before 
 {% set code %}
 <nys-button id="trigger-icons" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="trigger-icons">
-    <nys-dropdownmenuitem label="Action 1" prefixIcon="lock_filled"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 3" prefixIcon="visibility" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 4" prefixIcon="sms"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 1" prefixIcon="lock_filled"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 3" prefixIcon="visibility" disabled></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 4" prefixIcon="sms"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset%}
 {% include "partials/code-preview.njk" %}
@@ -191,9 +191,9 @@ Use the `disabled` attribute on individual `<nys-dropdownmenuitem>` elements to 
 {% set code %}
 <nys-button id="trigger-disabled" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="trigger-disabled">
-    <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Organizations" href="/organizations" disabled></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Sign out" href="/logout"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% include "partials/code-preview.njk" %}
@@ -218,10 +218,10 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
 {% set code %}
 <nys-button id="trigger-actions" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="trigger-actions">
-    <nys-dropdownmenuitem label="Action 1"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 2"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 3" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 4"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 1"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 2"></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 3" disabled></nys-dropdownmenuitem>
+  <nys-dropdownmenuitem label="Action 4"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset %}
 {% include "partials/code-preview.njk" %}

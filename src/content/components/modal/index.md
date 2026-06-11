@@ -41,18 +41,18 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 </div>
 {% endset %}
 {% set code %}
-  <nys-button label="Open Modal" onClick="yourOpenModalFunction()"></nys-button>
+<nys-button label="Open Modal" onClick="yourOpenModalFunction()"></nys-button>
 <nys-modal
   id="modal1"
   heading="Update Available"
   subheading="A new version of this application is ready to install."
 >
   <p>
-      Would you like to install the latest version? Albany ipsum dolor sit
-      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      consequat.
+    Would you like to install the latest version? Albany ipsum dolor sit
+    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+    consequat.
   </p>
   <div slot="actions">
     <nys-button label="Not now" variant="text" onClick="yourCloseFunction()"></nys-button>
