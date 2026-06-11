@@ -39,12 +39,12 @@ The `<nys-tab>` acts as a clickable interface to toggle between different sets o
 {% endset %}
 {% set code %}
 <nys-tabgroup>
-<nys-tab label="Marcy"></nys-tab>
-<nys-tab label="Algonquin"></nys-tab>
-...rest of the tabs...
-<nys-tabpanel>content inside the tab panel</nys-tabpanel>
-<nys-tabpanel>content inside the tab panel</nys-tabpanel>
-...rest of the tabpanels...
+  <nys-tab label="Marcy"></nys-tab>
+  <nys-tab label="Algonquin"></nys-tab>
+  ...rest of the tabs...
+  <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+  <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+  ...rest of the tabpanels...
 </nys-tabgroup>
 {% endset %}
 {% set showTip = true %}
@@ -73,12 +73,12 @@ To pre-select a tab on load, add the `selected` attribute to a `<nys-tab>` eleme
 {% endset %}
 {% set code %}
 <nys-tabgroup>
-<nys-tab label="Marcy"></nys-tab>
-<nys-tab label="Algonquin" selected></nys-tab>
-...rest of the tabs...
-<nys-tabpanel>content inside the tab panel</nys-tabpanel>
-<nys-tabpanel>content inside the tab panel</nys-tabpanel>
-...rest of the tabpanels...
+  <nys-tab label="Marcy"></nys-tab>
+  <nys-tab label="Algonquin" selected></nys-tab>
+  ...rest of the tabs...
+  <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+  <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+  ...rest of the tabpanels...
 </nys-tabgroup>
 {% endset %}
 {% include "partials/code-preview.njk" %}
@@ -105,13 +105,13 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 {% endset %}
 {% set code %}
 <nys-tabgroup>
-<nys-tab label="Marcy"></nys-tab>
-<nys-tab label="Algonquin"></nys-tab>
-...
-<nys-tab label="Gore (Not a High Peak)" disabled></nys-tab>
-<nys-tabpanel>content inside the tab panel</nys-tabpanel>
-<nys-tabpanel>content inside the tab panel</nys-tabpanel>
-...rest of the tabpanels...
+  <nys-tab label="Marcy"></nys-tab>
+  <nys-tab label="Algonquin"></nys-tab>
+  ...
+  <nys-tab label="Gore (Not a High Peak)" disabled></nys-tab>
+  <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+  <nys-tabpanel>content inside the tab panel</nys-tabpanel>
+  ...rest of the tabpanels...
 </nys-tabgroup>
 {% endset %}
 {% include "partials/code-preview.njk" %}
@@ -225,11 +225,13 @@ The `nys-tab-focus` and `nys-tab-blur` events include:
 - id (string): The id of the tab.
 
 You can listen to these events using JavaScript:
-{% set code %}const tabgroup = document.querySelector('nys-tabgroup');
+{% set code %}
+const tabgroup = document.querySelector('nys-tabgroup');
 tabgroup.addEventListener('nys-tab-select', (event) => {
-const { id, label } = event.detail;
-console.log(`Tab selected — id: ${id}, label: ${label}`);
-});{% endset %}
+  const { id, label } = event.detail;
+  console.log(`Tab selected — id: ${id}, label: ${label}`);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

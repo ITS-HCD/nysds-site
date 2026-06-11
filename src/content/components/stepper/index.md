@@ -257,7 +257,8 @@ Add a `href` if the content of the step is plain html:
 <nys-step 
   label="Personal Details"
   href="/nys-stepper/personal.html"
-></nys-step>{% endset %}
+></nys-step>
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "html" %}
@@ -371,7 +372,7 @@ You can listen to these events using JavaScript:
 const stepper = document.querySelector("nys-stepper");
 // Listen for the 'nys-step-click' event
 stepper.addEventListener("nys-step-click", () => {
-console.log("nys-step clicked");
+  console.log("nys-step clicked");
 });{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}

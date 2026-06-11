@@ -367,9 +367,10 @@ You can listen to these events using JavaScript:
 const select = document.querySelector('nys-select');
 // Listen for the 'nys-change' event
 select.addEventListener('nys-change', (event) => {
-const { id, value } = event.detail;
-console.log(`Select (${id}) changed to: ${value}`);
-});{% endset %}
+  const { id, value } = event.detail;
+  console.log(`Select (${id}) changed to: ${value}`);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}

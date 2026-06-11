@@ -92,22 +92,25 @@ By default a user can resize the `<nys-textarea>` vertically. If you want to dis
 
 You can include a description to provide additional context for the user. This is useful for providing instructions or clarifying the input. You can include a description as a property or slot it into the element.
 
-{% set preview %}<nys-textarea label="Label" description="description property"></nys-textarea>
+{% set preview %}
+<nys-textarea label="Label" description="description property"></nys-textarea>
 <br />
 <nys-textarea label="Label">
-
   <p slot="description">Description slot 
     <a href="https://ny.gov">providing more options</a>
   </p>
-</nys-textarea>{% endset %}
-  {% set code %}<nys-textarea label="Label" description="description property"></nys-textarea>
+</nys-textarea>
+{% endset %}
+{% set code %}
+<nys-textarea label="Label" description="description property"></nys-textarea>
 <nys-textarea label="Label">
   <p slot="description">Description slot 
     <a href="https://ny.gov">providing more options</a>
   </p>
-</nys-textarea>{% endset %}
+</nys-textarea>
+{% endset %}
 {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% include "partials/code-preview.njk" %}
 
 ### Placeholder
 
