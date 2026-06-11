@@ -14,13 +14,9 @@ hasA11yPages: true
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
-  The `<nys-accordion
-    >` and `<nys-accordionitem
-      >` components are vertically stacked list of headers that can be clicked
-      to reveal or hide associated content, helping to organize and condense
-      information.
-    </nys-accordionitem></nys-accordion
-  >
+
+The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.
+
 {% endblock %}
 
 {% block example %}
