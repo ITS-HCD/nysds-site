@@ -58,23 +58,55 @@ Then use NYSDS components directly in your HTML:
 
 NYSDS components are standard web components. They work in any framework. Below are sample setup steps for common frameworks used across New York State agencies. If you notice a bug in these configurations, [drop a bug report issue in GitHub](https://github.com/ITS-HCD/nysds/issues/new/choose).
 
+
 ### React
+<nys-alert type="warning" heading="Undergoing Revisions" text="This section is undergoing massive documentation revisions and changes. Please reach out to the NYSDS team for the latest updates on React change or see the React Demo tutorial page" primaryLabel="React Demo Tutorial" primaryAction="https://its-hcd.github.io/nysds-react-demo/tutorial"></nys-alert>
 
-Web components work in React, but React's synthetic event system does not automatically listen to custom events from web components. Use `ref` callbacks or `addEventListener` for NYSDS events like `nys-change`.
+While our default web component works React. We recommend using our React wrapper components.
+Import directly from `@nysds/components/react`. This path gives you React-wrapped versions of each web component - event bindings included.
 
-{% set code %}import '@nysds/components/react';
+{% set code %}
+import { NysButton } from "@nysds/components/react";
+<NysButton label="Submit" variant="primary" />
+{% endset %}
+{% set accordionLabel = "React Example" %}
+{% set codeExpanded = false %}
+{% include "partials/code-preview.njk" %}
+
+#### Handling React Events
+React's synthetic event system does not automatically listen to custom events from web components. Instead, NYSDS React wrappers map these to callback props like `onNysChange` and `onNysInput`, but the underlying type is still a DOM Event.
+
+{% set code %}
+// ❌ This won't work! NysTextinput doesn't fire a native change event
+<NysTextinput onChange={(e) => setValue(e.target.value)} />
+// ✅ Use the NYSDS custom event binding
+<NysTextinput
+  name="email"
+  onNysInput={(e) => {
+    const value = (e as CustomEvent).detail.value;
+    setValue(value);
+  }}
+/>}{% endset %}
+{% set accordionLabel = "React Example" %}
+{% set codeExpanded = false %}
+{% include "partials/code-preview.njk" %}
+
+
+You may also fund using `ref` callbacks or `addEventListener` helpful for NYSDS events.
+
+{% set code %}import { NysSelect } from "@nysds/components/react";
 function LicenseRenewalForm() {
   const handleChange = (e) => {
     console.log('Selected:', e.detail.value);
   };
   return (
-    <nys-select
+    <NysSelect
       label="License type"
       ref={(el) => el?.addEventListener('nys-change', handleChange)}
     >
       <option value="driver">Driver License</option>
       <option value="commercial">Commercial Driver License</option>
-    </nys-select>
+    </NysSelect>
   );
 }{% endset %}
 {% set accordionLabel = "React Example" %}
