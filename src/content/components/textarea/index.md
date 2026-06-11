@@ -76,8 +76,8 @@ If no `width` is provided, the `<nys-textarea>` will default to `full`. Supporte
 If an invalid option is assigned to `width`, it will be ignored and default to `width="full"`
 
 {% set preview %}
-<nys-textarea width="md" label="This textarea is md"></nys-textarea>{
-  % endset %}
+<nys-textarea width="md" label="This textarea is md"></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -178,7 +178,7 @@ To display an error message, pass in the `showError` property to the `<nys-texta
 Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
 {% set preview %}
-<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
+<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident"></nys-textarea>
 {% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
