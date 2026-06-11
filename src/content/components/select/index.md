@@ -120,17 +120,18 @@ description="This is for demo purposes and the list might not be exhaustive."
 
 ### Disabled
 
-{% set preview %}<nys-select label="Select your favorite borough" id="borough" disabled>
-
+{% set preview %}
+<nys-select label="Select your favorite borough" id="borough" disabled>
   <option value="bronx" label="The Bronx"></option>
   <option value="brooklyn" label="Brooklyn"></option>
   <option value="manhattan" label="Manhattan"></option>
   <option value="staten_island" label="Staten Island"></option>
   <option value="queens" label="Queens"></option>      
-</nys-select>{% endset %}
+</nys-select>
+{% endset %}
 {% set backgroundSolid = true %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Required
 

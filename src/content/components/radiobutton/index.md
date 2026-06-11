@@ -150,10 +150,11 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
 - `sm`: Set to 24px in width and height
 - `md`: The default size. Set to 32px in width and height.
 
-{% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
-<nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
-<nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
- <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
+{% set preview %}
+<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." size="sm">
+  <nys-radiobutton name="agency" checked label="Department of Health" value="doh" ></nys-radiobutton>
+  <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its" ></nys-radiobutton>  
+  <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" ></nys-radiobutton>
 </nys-radiogroup>{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
@@ -164,11 +165,13 @@ Set the `size` prop of the `<nys-radiogroup>` to have all `<nys-radiobutton>` be
 The `tile` prop will change the styling of the radio button to a tile. This is useful when you want a larger clickable area for the user.\
  **Note:** The `tile` prop is applied to the `<nys-radiogroup>` component, not the `<nys-radiobutton>`. Each `<nys-radiobutton>` in the `<nys-radiogroup>` will be set to tile.
 
-{% set preview %}<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." tile>
-<nys-radiobutton name="agency" checked label="Department of Health" value="doh"></nys-radiobutton>
-<nys-radiobutton name="agency" label="Office of Information Technology Services" value="its"></nys-radiobutton>  
- <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" disabled></nys-radiobutton>
-</nys-radiogroup>{% endset %}
+{% set preview %}
+<nys-radiogroup label="Select your agency" description="This is the agency, department, or office you work for." tile>
+  <nys-radiobutton name="agency" checked label="Department of Health" value="doh"></nys-radiobutton>
+  <nys-radiobutton name="agency" label="Office of Information Technology Services" value="its"></nys-radiobutton>  
+  <nys-radiobutton name="agency" label="Office of the New York State Attorney General" value="ag" disabled></nys-radiobutton>
+</nys-radiogroup>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -210,10 +213,18 @@ If no `label` is provided, it defaults to “Other.” You can provide a custom 
 To display an error message, pass in the `showError` property to the `<nys-radiogroup>` component. Set an error message and choose to activate it. Setting `errorMessage` does not display the message without boolean prop `showError`.
 Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
-{% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required showError errorMessage="You must select one of the above options to continue">
-<nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
-<nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
-</nys-radiogroup>{% endset %}
+{% set preview %}
+<nys-radiogroup 
+  label="What is your primary work location?" 
+  description="This is the location you use for your in office days." 
+  required 
+  showError 
+  errorMessage="You must select one of the above options to continue"
+>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany" ></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City"  value="manhattan"></nys-radiobutton>
+</nys-radiogroup>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -241,35 +252,19 @@ Both `<nys-radiobutton>` and `<nys-radiogroup>` support the description slot.
 ### Inverted
 
 Set the `inverted` on `<nys-radiogroup>` when the component is on a dark background.
-{% set preview %}<nys-radiogroup label="What is your primary work location?" inverted>
-<label slot="description">
-This is the location you use for your in office days.
-<a href="https://www.ny.gov/" target="__blank">(slot)</a></label
-
-> <nys-radiobutton
-
-    name="office"
-    label="Albany"
-    description="Upstate New York (prop)"
-    value="albany"
-
-> </nys-radiobutton>
->   <nys-radiobutton
-
-    name="office"
-    label="Manhattan"
-    value="manhattan"
-
->
-
+{% set preview %}
+<nys-radiogroup label="What is your primary work location?" inverted>
+  <label slot="description">This is the location you use for your in office days.<a href="https://www.ny.gov/" target="__blank">(slot)</a></label>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York (prop)" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" value="manhattan">
     <label slot="description"> New York City <a href="https://www.ny.gov/" target="__blank">(slot)</a></label>
-
   </nys-radiobutton>
-</nys-radiogroup>{% endset %}
-  {% set backgroundSolid = true %}
-  {% set code = preview %}
-  {% set inverted = true %}
-  {% include "partials/code-preview.njk" %}
+</nys-radiogroup>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% set inverted = true %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

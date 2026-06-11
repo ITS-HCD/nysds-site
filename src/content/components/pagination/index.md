@@ -62,7 +62,9 @@ The `<nys-pagination>` component includes the following accessibility-focused fe
 
 When `currentPage` is `1`, the Previous button is disabled. The component shows the first few page numbers and the last page.
 
-{% set preview %}<nys-pagination currentPage="1" totalPages="12"></nys-pagination>{% endset %}
+{% set preview %}
+<nys-pagination currentPage="1" totalPages="12"></nys-pagination>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -70,7 +72,9 @@ When `currentPage` is `1`, the Previous button is disabled. The component shows 
 
 When the user is in the middle of the result set, the component shows ellipsis on both sides with the current page centered.
 
-{% set preview %}<nys-pagination currentPage="6" totalPages="12"></nys-pagination>{% endset %}
+{% set preview %}
+<nys-pagination currentPage="6" totalPages="12"></nys-pagination>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -78,7 +82,9 @@ When the user is in the middle of the result set, the component shows ellipsis o
 
 When `currentPage` equals `totalPages`, the Next button is disabled. The component shows the first page and the last few page numbers.
 
-{% set preview %}<nys-pagination currentPage="12" totalPages="12"></nys-pagination>{% endset %}
+{% set preview %}
+<nys-pagination currentPage="12" totalPages="12"></nys-pagination>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -86,7 +92,9 @@ When `currentPage` equals `totalPages`, the Next button is disabled. The compone
 
 When there are only a handful of pages, all page numbers are shown without ellipsis.
 
-{% set preview %}<nys-pagination currentPage="2" totalPages="3"></nys-pagination>{% endset %}
+{% set preview %}
+<nys-pagination currentPage="2" totalPages="3"></nys-pagination>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
