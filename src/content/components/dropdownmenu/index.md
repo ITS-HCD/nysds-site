@@ -322,13 +322,14 @@ You can listen to these events using JavaScript:
 const dropdownmenu = document.querySelector("nys-dropdownmenu");
 // Listen for the 'nys-click' event
 dropdownmenu.addEventListener('nys-click', (event) => {
-const { id, label, href } = event.detail;
-if (href) {
-console.log(`Link item clicked (${id}): ${label} with href = ${href}`);
-} else {
-console.log(`Action item clicked (${id}): ${label}`);
-}
-});{% endset %}
+  const { id, label, href } = event.detail;
+  if (href) {
+    console.log(`Link item clicked (${id}): ${label} with href = ${href}`);
+  } else {
+    console.log(`Action item clicked (${id}): ${label}`);
+  }
+});
+{% endset %}
 {% set preview ="" %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
