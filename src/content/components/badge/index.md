@@ -76,7 +76,8 @@ Below are the available badge intents, each showcasing its unique style and purp
   <nys-badge label="Success" intent="success" prefixIcon></nys-badge>
 </div>
 {% endset %}
-{% set code %}<nys-badge label="Neutral" prefixIcon></nys-badge>
+{% set code %}
+<nys-badge label="Neutral" prefixIcon></nys-badge>
 <nys-badge label="Error" intent="error" prefixIcon></nys-badge>
 <nys-badge label="Warning" intent="warning" prefixIcon></nys-badge>
 <nys-badge label="Success" intent="success" prefixIcon></nys-badge>
@@ -96,7 +97,8 @@ Add `variant="strong"` for badges on a raised surface or for more emphasis.
   <nys-badge label="Success" intent="success" variant="strong" prefixIcon></nys-badge>
 </div>
 {% endset %}
-{% set code %}<nys-badge label="Neutral" variant="strong" prefixIcon></nys-badge>
+{% set code %}
+<nys-badge label="Neutral" variant="strong" prefixIcon></nys-badge>
 <nys-badge label="Error" intent="error" variant="strong" prefixIcon></nys-badge>
 <nys-badge label="Warning" intent="warning" variant="strong" prefixIcon></nys-badge>
 <nys-badge label="Success" intent="success" variant="strong" prefixIcon></nys-badge>

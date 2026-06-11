@@ -157,9 +157,11 @@ The `<nys-button>` component provides named slots for custom icon content when t
 - **`suffix-icon`** -- Custom icon after the label. Not shown for the `text` variant.
 - **`circle-icon`** -- Custom icon for circle mode. Overrides the `icon` prop.
 
-{% set code %}<nys-button label="Log out">
-<nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
-</nys-button>{% endset %}
+{% set code %}
+<nys-button label="Log out">
+    <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+</nys-button>
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "html" %}
@@ -174,7 +176,9 @@ Use the `circle` prop to create a compact, circular button. Ideal for icon-only 
 - If a `label` is provided, it won’t be shown visually, but it will be used as the aria-label.
 
 Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `circle` prop.
-{% set preview %}<nys-button circle icon="close"></nys-button>{% endset %}
+{% set preview %}
+<nys-button circle icon="close"></nys-button>
+{% endset %}
 {% set code %}
 <nys-button circle icon="close"></nys-button>
 {% endset %}
@@ -182,13 +186,14 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 
 ### Disabled
 
-{% set preview %}<div class="nys-grid-row">
-
-<div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
-<div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
-<div class="nys-grid-col"><nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button></div>
-</div>{% endset %}
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
+    <div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
+    <div class="nys-grid-col"><nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+</div>
+{% endset %}
 {% set code %}
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
 <nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
@@ -220,13 +225,14 @@ The available targets are:
 
 Set the `inverted` when the button is on a dark background.
 
-{% set preview %}<div class="nys-grid-row">
-
-<div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
-<div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
-<div class="nys-grid-col"><nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button></div>
-</div>{% endset %}
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
+    <div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
+    <div class="nys-grid-col"><nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+</div>
+{% endset %}
 {% set code %}
 <nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 <nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>

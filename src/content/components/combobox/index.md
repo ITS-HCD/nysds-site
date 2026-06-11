@@ -92,10 +92,10 @@ The `<nys-combobox>` is a reusable web component for use in New York State digit
   <option value="broome">Broome</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% set backgroundSolid = true %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set backgroundSolid = true %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block options %}
@@ -172,7 +172,6 @@ Use the `selected` attribute on an `<option>` to set a default value when the co
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox'>
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
@@ -181,9 +180,9 @@ Use the `selected` attribute on an `<option>` to set a default value when the co
   <option value="saratoga" selected>Saratoga</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Option Groups
 
@@ -276,7 +275,6 @@ Use `<optgroup>` to organize options into labeled categories, making long lists 
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox'>
-
   <optgroup label="New York City">
     <option value="bronx">Bronx</option>
     ...rest of options...
@@ -324,15 +322,14 @@ Set the `disabled` attribute to prevent user interaction with the combobox.
 {% set backgroundSolid = true %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox' disabled>
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
   <option value="broome">Broome</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% include "partials/code-preview.njk" %}
 
 ### Disabled Options
 
@@ -430,16 +427,15 @@ Set `required` to make the combobox mandatory. The field will be flagged during 
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox' required>
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
   <option value="broome">Broome</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Optional
 
@@ -513,16 +509,15 @@ Adding the `optional` prop will add an optional flag to the label.
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox' optional>
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
   <option value="broome">Broome</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Error Message
 
@@ -596,16 +591,15 @@ Set an `errorMessage` to display a validation message. The error will surface au
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox' required errorMessage="County is required">
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
   <option value="broome">Broome</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% set backgroundSolid = true %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
 
 ### Width
 
@@ -737,17 +731,16 @@ Use the `inverted` prop when placing the combobox on a dark background.
 {% endset %}
 {% set code %}
 <nys-combobox label="Choose a county" id='my-combobox' inverted>
-
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
   <option value="broome">Broome</option>
   ...rest of options...
 </nys-combobox>
-  {% endset %}
-  {% set backgroundSolid = true %}
-  {% set inverted = true %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% set backgroundSolid = true %}
+{% set inverted = true %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
@@ -874,13 +867,13 @@ You can listen to these events using JavaScript:
 const combobox = document.querySelector('nys-combobox');
 // Listen for the 'nys-change' event
 combobox.addEventListener('nys-change', (event) => {
-const { id, value } = event.detail;
-console.log(`Combobox ${id} changed: value=${value}`);
+  const { id, value } = event.detail;
+  console.log(`Combobox ${id} changed: value=${value}`);
 });
 // Listen for the 'nys-input' event
 combobox.addEventListener('nys-input', (event) => {
-const { id, value } = event.detail;
-console.log(`Combobox ${id} input: value=${value}`);
+  const { id, value } = event.detail;
+  console.log(`Combobox ${id} input: value=${value}`);
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}

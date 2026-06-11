@@ -182,8 +182,8 @@ Set the `duration` property to automatically hide the alert after a specified ti
   duration="3000" 
   text="Auto-dismiss after 3 seconds">
 </nys-alert>
-  {% endset %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% include "partials/code-preview.njk" %}
 
 ### Icon Customization
 

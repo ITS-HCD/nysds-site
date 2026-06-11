@@ -218,27 +218,36 @@ all `nys-accordionitem` inside the wrapper will display borders.
 {% endblock %}
 
 {% block events %}
-  The `<nys-accordionitem
-    >` component emits **one** custom Javascript event: 1.
-    **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked. ###
-    Event details The `nys-accordionitem-toggle` event includes a detail object
-    with the following properties: - id (string): The id of the accordion. -
-    heading (string): The accordion’s heading text. - expanded (boolean): true
-    if the accordion is expanded, otherwise false. You can listen to these
-    events using JavaScript:
-    {% set code %}
-      // Select the accordion component const accordion =
-      document.querySelector("nys-accordionitem"); // Listen for the
-      'nys-accordionitem-toggle' event
-      accordion.addEventListener("nys-accordionitem-toggle", (event) => {
-      console.log("Accordion toggled:", { id: event.detail.id, heading:
-      event.detail.heading, expanded: event.detail.expanded }); });
-    {% endset %}
-    {% set accordionLabel = "Sample Code" %}
-    {% set codeExpanded = true %}
-    {% set codeLanguage = "js" %}
-    {% include "partials/code-preview.njk" %}
-  </nys-accordionitem>
+
+The `<nys-accordionitem>` component emits **one** custom Javascript event:
+
+  1.  **`nys-accordionitem-toggle`** – Emitted when the accordion is clicked.
+
+### Event details
+
+The `nys-accordionitem-toggle` event includes a detail object with the following properties:
+
+- id (string): The id of the accordion.
+- heading (string): The accordion’s heading text.
+- expanded (boolean): true if the accordion is expanded, otherwise false.
+
+You can listen to these events using JavaScript:
+{% set code %}
+// Select the accordion component
+const accordion = document.querySelector("nys-accordionitem");
+// Listen for the 'nys-accordionitem-toggle' event
+accordion.addEventListener("nys-accordionitem-toggle", (event) => {
+  console.log("Accordion toggled:", {
+    id: event.detail.id,
+    heading: event.detail.heading,
+    expanded: event.detail.expanded
+  });
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block dependencies %}
