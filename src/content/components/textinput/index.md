@@ -65,7 +65,9 @@ Width full will take up the full width of the parent container.
 
 If an invalid option is assigned to `width`, it will be ignored and default to `full`.
 
-{% set preview %}<nys-textinput width="sm" label="This label is sm"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput width="sm" label="This label is sm"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -76,7 +78,8 @@ Accepted `types` are: `text`, `email`, `number`, `password`, `search`, `tel`, `u
 
 Any other input defaults to `type="text"`
 
-{% set preview %}<nys-textinput type="password" label="Password"></nys-textinput>
+{% set preview %}
+<nys-textinput type="password" label="Password"></nys-textinput>
 {% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
@@ -84,14 +87,17 @@ Any other input defaults to `type="text"`
 
 ### Placeholder
 
-{% set preview %}<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput label="Placeholder" placeholder="this is a placeholder"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
-{% set preview %}<nys-textinput label="Disabled" disabled></nys-textinput>
+{% set preview %}
+<nys-textinput label="Disabled" disabled></nys-textinput>
 {% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
@@ -99,7 +105,9 @@ Any other input defaults to `type="text"`
 
 ### Readonly
 
-{% set preview %}<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput readonly label="Readonly" value="Read only value"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -108,14 +116,18 @@ Any other input defaults to `type="text"`
 
 `max`, `min`, and `step` only apply when `type="number"`
 
-{% set preview %}<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput type="number" min="0"  max="100" step="10" label="Max/Min Example" description="Must be between 0 and 100" ></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 ### Maxlength
 
-{% set preview %}<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>{% endset %}
+{% set preview %}
+<nys-textinput maxlength="10" label="Max Length" description="You cannot type more than 10 characters in the below field"></nys-textinput>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}

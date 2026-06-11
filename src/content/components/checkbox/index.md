@@ -76,17 +76,28 @@ The `<nys-checkbox>` component includes the following accessibility-focused feat
 
 The `<nys-checkboxgroup>` component can be used to group multiple checkboxes, allowing them to function as a single form control. This is useful when you want to allow users to select multiple options from a list.
 
-{% set preview %}<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
-<nys-checkbox name="legal" label="I have read the terms and conditions." id="terms-conditions" value="terms-conditions"></nys-checkbox>
-<nys-checkbox name="legal" label="I agree to the NDA" id="legal" value="legal"></nys-checkbox>
-</nys-checkboxgroup>{% endset %}
+{% set preview %}
+<nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
+  <nys-checkbox name="legal" label="I have read the terms and conditions." id="terms-conditions" value="terms-conditions"></nys-checkbox>
+  <nys-checkbox name="legal" label="I agree to the NDA" id="legal" value="legal"></nys-checkbox>
+</nys-checkboxgroup>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
-{% set preview %}<nys-checkbox disabled checked label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>{% endset %}
+{% set preview %}
+<nys-checkbox 
+  disabled 
+  checked 
+  label="I agree to the terms and conditions" 
+  description="This option is currently unavailable." 
+  name="earlyVoting" 
+  value="early-voting"
+></nys-checkbox>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}

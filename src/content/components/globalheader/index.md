@@ -79,8 +79,8 @@ The component automatically highlights the active link based on the current URL 
 
 **Note:** On screens below 1024px, navigation links collapse into a mobile menu. A "MENU" button appears to the left of the header content and toggles the full link list. Applications using the Global Header typically do not include links in the application or agency name to reduce distractions. Public-facing sites may include them to aid navigation.
 
-{% set preview %}<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
-
+{% set preview %}
+<nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
   <ul>
     <li><a href="https://its.ny.gov/services">Services</a></li>
     <li><a href="https://its.ny.gov/get-help">Help Center</a></li>
@@ -89,23 +89,27 @@ The component automatically highlights the active link based on the current URL 
     <li><a href="https://its.ny.gov/procurement">Procurement</a></li>
     <li><a href="https://its.ny.gov/about-us">About Us</a></li>
   </ul>
-</nys-globalheader>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+</nys-globalheader>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Just Agency Name
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-{% set preview %}<nys-globalheader agencyName="Office of Information Technology Services">
-</nys-globalheader>{% endset %}
+{% set preview %}
+<nys-globalheader agencyName="Office of Information Technology Services">
+</nys-globalheader>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Just Application Name
 
-{% set preview %}<nys-globalheader appName="NYS Employee Portal">
-</nys-globalheader>{% endset %}
+{% set preview %}
+<nys-globalheader appName="NYS Employee Portal"></nys-globalheader>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -114,15 +118,13 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 The `<nys-globalheader>` component includes a named slot called `user-actions`. This slot allows you to insert custom HTML content, such as user profile links, settings, or logout buttons, into the header.
 
 {% set preview %}
-<nys-globalheader
-  appName="User Registration Form"
-  agencyName="Office of Information Technology Services"
-  >   <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
-  <nys-avatar
-    slot="prefix-icon"
-    ariaLabel="User avatar"
-    initials="JS"
-    ></nys-avatar>
+<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+  <nys-button id="my-action-slot" slot="user-actions" label="John Smith" prefixIcon="slotted">
+    <nys-avatar
+      slot="prefix-icon"
+      ariaLabel="User avatar"
+      initials="JS"
+      ></nys-avatar>
   </nys-button>
 </nys-globalheader>
 <nys-dropdownmenu id="dropdownmenu" for="my-action-slot">

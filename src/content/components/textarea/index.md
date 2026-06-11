@@ -159,7 +159,9 @@ You can include a description to provide additional context for the user. This i
 To display an error message, pass in the `showError` property to the `<nys-textarea>` component. Setting `errorMessage` does not display the message without `showError` set to true.
 Note: The `showError` attribute is a boolean that toggles automatically based on other validation. setting `showError` to `true` manually will only set the error message to be visible on initial render, once the user interacts with the component, `showError` will toggle based on validation rules (e.g., required, pattern, etc.)
 
-{% set preview %}<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>{% endset %}
+{% set preview %}
+<nys-textarea showError errorMessage="You did not provide a value for this field." label="Describe the incident" ></nys-textarea>
+{% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
@@ -168,7 +170,8 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
 
 Set the `inverted` when the component is on a dark background.
 
-{% set preview %}<nys-textarea label="Label" description="Prop: description" inverted></nys-textarea>
+{% set preview %}
+<nys-textarea label="Label" description="Prop: description" inverted></nys-textarea>
 {% endset %}
 {% set code = preview %}
 {% set backgroundSolid = true %}

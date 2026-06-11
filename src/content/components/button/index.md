@@ -93,11 +93,11 @@ Set the `size` prop of the `<nys-button>` to adjust the height of the button. Th
 
 Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
-{% set preview %}<div class="nys-grid-row">
-
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
-<div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
+    <div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
 </div>
 <nys-button class="nys-margin-y-100" fullWidth size="sm" id="button4" name="button4" label="Small full"></nys-button>
 <nys-button class="nys-margin-y-100" fullWidth id="button5" name="button5" label="Medium full"></nys-button>
@@ -122,13 +122,14 @@ Set the variant prop of the `<nys-button>` to adjust the appearance of the butto
 - `ghost`: Use for uncommon actions.
 - `text`: Use for inline actions.
 
-{% set preview %}<div class="nys-grid-row">
-
-<div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
-<div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
-<div class="nys-grid-col"><nys-button id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button id="button4" name="button4" label="Text" variant="text"></nys-button></div>
-</div>{% endset %}
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
+    <div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
+    <div class="nys-grid-col"><nys-button id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+</div>
+{% endset %}
 {% set code %}
 <nys-button id="button1" name="button1" label="Filled"></nys-button>
 <nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button>
@@ -145,7 +146,9 @@ Set the `suffixIcon` prop to include an icon in the button. The icon will appear
 
 View the full list of [available icons](/components/icon/#usage).
 
-{% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>{% endset %}
+{% set preview %}
+<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -217,7 +220,9 @@ The available targets are:
 
 **Note**: It is recommended to set the variant on `<nys-button>` to `variant="text"`
 
-{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov" variant="text"></nys-button>{% endset %}
+{% set preview %}
+<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov" variant="text"></nys-button>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 

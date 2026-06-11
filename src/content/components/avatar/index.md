@@ -64,7 +64,9 @@ The `<nys-avatar>` component includes the following accessibility-focused featur
 
 To display an image in the avatar, set the `image` and `ariaLabel` attributes. Images will take **priority** and **override** initials and icons. You can also enable lazy loading for avatar images by setting the `lazy` boolean attribute.
 
-{% set preview %}<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>{% endset %}
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -72,7 +74,9 @@ To display an image in the avatar, set the `image` and `ariaLabel` attributes. I
 
 If an image is unavailable, you can set the `initials` attribute to display a personalized placeholder instead of an icon. Initials will take **priority** and **override** icons.
 
-{% set preview %}<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>{% endset %}
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 

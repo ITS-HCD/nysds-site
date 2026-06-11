@@ -128,19 +128,19 @@ Tooltip positioning is automatic (`top`/auto), so you don’t need to set a posi
 ### Inverted
 
 Set the `inverted` when the tooltip is on a dark background.
-{% set preview %}<div style="display: flex; justify-content: center; margin-top:30px">
-
+{% set preview %}
+<div style="display: flex; justify-content: center; margin-top:30px">
   <div style="color: #fff; display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip
       for="my-tooltip3"
       text="I am a tooltip."
       inverted
-    >
-    </nys-tooltip>
+    ></nys-tooltip>
     <nys-icon id="my-tooltip3" name="info" size="3xl"></nys-icon>
   </div>
-</div>{% endset %}
+</div>
+{% endset %}
 {% set code %}
 <div style="color: #fff; display: flex; gap: 5px">
   <p>Hover over the icon</p>

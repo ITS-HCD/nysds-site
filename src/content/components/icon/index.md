@@ -81,9 +81,11 @@ To scale an icon relative to the inherited font size, pass a size variant like `
 - `4xl` (quadruple extra large): 225% of parent font size
 - `5xl` (quintuple extra large): 300% of parent font size
 
-{% set preview %}<nys-icon name="upload_file" size="xs"></nys-icon>
+{% set preview %}
+<nys-icon name="upload_file" size="xs"></nys-icon>
 <nys-icon name="upload_file" size="xl"></nys-icon>
-<nys-icon name="upload_file" size="5xl"></nys-icon>{% endset %}
+<nys-icon name="upload_file" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -101,9 +103,11 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 - `40`: 2.5rem = 40px
 - `50`: 3.125rem = 50px
 
-{% set preview %}<nys-icon name="upload_file" size="16"></nys-icon>
+{% set preview %}
+<nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
-<nys-icon name="upload_file" size="50"></nys-icon>{% endset %}
+<nys-icon name="upload_file" size="50"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -111,7 +115,9 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
 You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-{% set preview %}<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -119,7 +125,9 @@ You can override the color of an icon by setting a `color` prop. You can use CSS
 
 You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` will rotate the icon by 20 degrees clockwise.
 
-{% set preview %}<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -127,7 +135,9 @@ You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` wil
 
 Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
 
-{% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 

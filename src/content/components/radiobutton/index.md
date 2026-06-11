@@ -81,41 +81,39 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
 
 ### Partial
 
-{% set preview %}<nys-radiogroup label="Choose your preferred work operating system.">
-<nys-radiobutton
-name="op-system"
-label="Windows 11"
-description="HP Elitebook"
-value="windows"
-
-> </nys-radiobutton>
->   <nys-radiobutton
-
+{% set preview %}
+<nys-radiogroup label="Choose your preferred work operating system.">
+  <nys-radiobutton
+    name="op-system"
+    label="Windows 11"
+    description="HP Elitebook"
+    value="windows"
+  ></nys-radiobutton>
+  <nys-radiobutton
     name="op-system"
     label="Sequoia"
     description="Macbook Air"
     value="mac"
-
-> </nys-radiobutton>
->   <nys-radiobutton
-
+  </nys-radiobutton>
+  <nys-radiobutton
     name="op-system"
     label="Linux"
     value="windows"
     disabled
-
-> </nys-radiobutton>
-> </nys-radiogroup>{% endset %}
->   {% set backgroundSolid = true %}
->   {% set code = preview %}
->   {% include "partials/code-preview.njk" %}
+  </nys-radiobutton>
+</nys-radiogroup>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Disabled
 
-{% set preview %}<nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
-<nys-radiobutton name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked disabled></nys-radiobutton>
-<nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
-<nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
+{% set preview %}
+<nys-radiogroup label="Current Title:" description="Note: You cannot change your title.">
+  <nys-radiobutton name="title" label="Software Engineer 1" description="<1 year experience" value="eng-1" checked disabled></nys-radiobutton>
+  <nys-radiobutton name="title" label="Software Engineer 2" description="1-3 years experience" value="eng-2" disabled></nys-radiobutton>
+  <nys-radiobutton name="title" label="Software Engineer 3" description="3-5 years experience" value="eng-3" disabled></nys-radiobutton>
 </nys-radiogroup>{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
@@ -124,9 +122,10 @@ value="windows"
 ### Required
 
 Set `required` to `<radiogroup>` to make selecting an option mandatory.
-{% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required>
-<nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
-<nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+{% set preview %}
+<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." required>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
@@ -135,9 +134,10 @@ Set `required` to `<radiogroup>` to make selecting an option mandatory.
 ### Optional
 
 Adding the `optional` prop will add an optional flag to the input.
-{% set preview %}<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." optional>
-<nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
-<nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
+{% set preview %}
+<nys-radiogroup label="What is your primary work location?" description="This is the location you use for your in office days." optional>
+  <nys-radiobutton name="office" label="Albany" description="Upstate New York" value="albany"></nys-radiobutton>
+  <nys-radiobutton name="office" label="Manhattan" description="New York City" value="manhattan"></nys-radiobutton>
 </nys-radiogroup>{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}

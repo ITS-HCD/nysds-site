@@ -68,14 +68,15 @@ The `<nys-select>` component includes the following accessibility-focused featur
 ### Default Value
 
 You can set a default value by adding the `selected` attribute to the desired `<option>`.
-{% set preview %}<nys-select label="Select your favorite borough" id="borough">
-
+{% set preview %}
+<nys-select label="Select your favorite borough" id="borough">
   <option value="bronx" label="The Bronx"></option>
   <option value="brooklyn" label="Brooklyn" selected></option>
   <option value="manhattan" label="Manhattan"></option>
   <option value="staten_island" label="Staten Island"></option>
   <option value="queens" label="Queens"></option>      
-</nys-select>{% endset %}
+</nys-select>
+{% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -226,18 +227,19 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
 ### Inverted
 
 Set the `inverted` when the component is on a dark background.
-{% set preview %}<nys-select label="Select your favorite borough" inverted>
-
+{% set preview %}
+<nys-select label="Select your favorite borough" inverted>
   <option value="bronx" label="The Bronx"></option>
   <option value="brooklyn" label="Brooklyn"></option>
   <option value="manhattan" label="Manhattan"></option>
   <option value="staten_island" label="Staten Island"></option>
   <option value="queens" label="Queens"></option>
-</nys-select>{% endset %}
-  {% set backgroundSolid = true %}
-  {% set code = preview %}
-  {% set inverted = true %}
-  {% include "partials/code-preview.njk" %}
+</nys-select>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% set inverted = true %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 

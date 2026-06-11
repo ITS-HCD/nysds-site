@@ -65,8 +65,9 @@ The `<nys-globalfooter>` component includes the following accessibility-focused 
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-{% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://its.ny.gov">
-</nys-globalfooter>{% endset %}
+{% set preview %}
+<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://its.ny.gov"></nys-globalfooter>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -80,15 +81,16 @@ For simpler footers or public-facing sites, the Global Footer can include a sing
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-{% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
-
+{% set preview %}
+<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
   <ul>
     <li><a href="https://its.ny.gov">ITS Home</a></li>
     <li><a href="https://its.ny.gov/about">About ITS</a></li>
   </ul>
-</nys-globalfooter>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+</nys-globalfooter>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### With Column Links
 
@@ -104,8 +106,8 @@ For sites that need to organize multiple navigation sections, the Global Footer 
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
-{% set preview %}<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
-
+{% set preview %}
+<nys-globalfooter agencyName="Office of Information Technology Services" homepageLink="https://ny.gov">
   <ul>
     <li>
       <span>About</span>
@@ -125,8 +127,8 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
     </li>
   </ul>
 </nys-globalfooter>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
