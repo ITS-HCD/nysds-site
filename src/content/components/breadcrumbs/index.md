@@ -75,6 +75,29 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Collapsed
+
+Add the `collapsed` prop to render the breadcrumb trail in its collapsed state. Users can expand the full trail by selecting the ellipsis.
+
+Breadcrumbs automatically collapse when the trail exceeds 5 items on desktop or 3 items on mobile.
+
+{% set preview %}
+<nys-breadcrumbs collapsed>
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/government">Government</a></li>
+    <li><a href="/government/agencies">Agencies</a></li>
+    <li><a href="/government/agencies/parks">Parks & Recreation</a></li>
+    <li><a href="/parks/state-parks">State Parks</a></li>
+    <li><a href="/parks/state-parks/delaware">Delaware Region</a></li>
+    <li><a href="/parks/state-parks/delaware/water-gap">Delaware Water Gap</a></li>
+    <li>Trail Conditions</li>
+  </ol>
+</nys-breadcrumbs>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Back to Parent (Mobile Only)
 
 Add the `backToParent` prop to collapse the full breadcrumb trail into a single "back to parent" button on screens narrower than 767px. The component automatically determines which crumb represents the parent of the current page. Resize your browser to a small width to see it in action.
