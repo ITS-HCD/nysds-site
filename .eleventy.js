@@ -95,6 +95,9 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("onlySeries", onlySeries);
   eleventyConfig.addFilter("shuffle", shuffle);
   eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
+  eleventyConfig.addFilter("trimCode", (str) =>
+    String(str ?? "").replace(/^[ \t]*\n/gm, "").trim()
+  );
 
   // Pagefind
   eleventyConfig.on("eleventy.after", () => {
