@@ -27,7 +27,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 {% block usagedo %}
 
 - Use icons to draw attention to actions, help users scan for key information, or enhance recognizable common actions (e.g., search, download, share).
-- Pair icons with a text label—few icons are universally understood alone.
+- Pair icons with a text label. Few icons are universally understood alone.
 - Use icons consistently: same icon and label for the same meaning throughout your app.
 - Use `ariaLabel` when the icon conveys meaning, so screen readers can announce its purpose.
 - Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).
@@ -37,11 +37,11 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 
 {% block usagedont %}
 
-- Use an icon if its meaning isn't immediately clear—if you suspect users won't recognize it, remove it.
+- Use an icon if its meaning isn't immediately clear. If you suspect users won't recognize it, remove it.
 - Use icons to compensate for unclear page hierarchy or confusing content organization.
-- Use standalone icons for actions—use `<nys-button>` with an icon inside instead.
+- Use standalone icons for actions. Use `<nys-button>` with an icon inside instead.
 - Replace meaningful text with icons unless the icon is universally recognized or paired with a label.
-- Overuse icons—too many create visual noise and reduce focus.
+- Overuse icons. Too many create visual noise and reduce focus.
 - Use excessive icon customization that breaks design consistency.
 
 {% endblock %}
@@ -95,9 +95,11 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 - `40`: 2.5rem = 40px
 - `50`: 3.125rem = 50px
 
-{% set preview %}<nys-icon name="upload_file" size="16"></nys-icon>
+{% set preview %}
+<nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
-<nys-icon name="upload_file" size="50"></nys-icon>{% endset %}
+<nys-icon name="upload_file" size="50"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -105,7 +107,9 @@ For fixed, predefined sizes, you can use literal sizes. These sizes are defined 
 
 You can override the color of an icon by setting a `color` prop. You can use CSS HEX values, CSS color names, or CSS variables
 
-{% set preview %}<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -113,7 +117,9 @@ You can override the color of an icon by setting a `color` prop. You can use CSS
 
 You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` will rotate the icon by 20 degrees clockwise.
 
-{% set preview %}<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -121,10 +127,11 @@ You can `rotate` an icon by passing the angle as a number i.e: `rotate="20"` wil
 
 Set an icon to flip horizontally, vertically, or in both directions by using the `flip` property. Available values are `horizontal`, `vertical`, and `both`. This example is `both`.
 
-{% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>{% endset %}
+{% set preview %}
+<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-<div class="icon-examples">
 
 ### Core
 

@@ -1,8 +1,1 @@
-<svg width="272" height="143" viewBox="0 0 272 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="272" height="143" rx="8" fill="#EDEDED"/>
-<path d="M26 33H246C248.209 33 250 34.7909 250 37V114C250 116.209 248.209 118 246 118H26C23.7909 118 22 116.209 22 114V37C22 34.7909 23.7909 33 26 33Z" fill="white" stroke="#BEC0C1" stroke-width="2"/>
-<path d="M23 23C23 21.3431 24.3431 20 26 20H98C99.6569 20 101 21.3431 101 23C101 24.6569 99.6569 26 98 26H26C24.3431 26 23 24.6569 23 23Z" fill="#457AA5"/>
-<path d="M237 118L250 105" stroke="#BEC0C1" stroke-width="2"/>
-<path d="M242 118L250 110" stroke="#BEC0C1" stroke-width="2"/>
-<path d="M30 40V52.5" stroke="#BEC0C1" stroke-width="2" stroke-linecap="round"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="143" fill="none" viewBox="0 0 272 143"><rect width="272" height="143" fill="#ededed" rx="8"/><path fill="#fff" stroke="#bec0c1" stroke-width="2" d="M26 33h220a4 4 0 0 1 4 4v77a4 4 0 0 1-4 4H26a4 4 0 0 1-4-4V37a4 4 0 0 1 4-4Z"/><path fill="#457aa5" d="M23 23a3 3 0 0 1 3-3h72a3 3 0 1 1 0 6H26a3 3 0 0 1-3-3"/><path stroke="#bec0c1" stroke-width="2" d="m237 118 13-13m-8 13 8-8"/><path stroke="#bec0c1" stroke-linecap="round" stroke-width="2" d="M30 40v12.5"/></svg>

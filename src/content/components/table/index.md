@@ -6,8 +6,7 @@ image: /assets/img/components/table.svg
 image_alt: An illustration of a table.
 image_header: /assets/img/components/table-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=13670-31069
-navOrder: 22
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=13839-40623&t=EXsXvlMbCdRw10ir-4
 ---
 
 {% extends "layouts/component.njk" %}
@@ -21,7 +20,6 @@ The `<nys-table>` is a reusable web component for use in New York State digital 
 {% block example %}
 {% set preview %}
 <nys-table>
-
   <table id="table1" name="table1">
     <caption>
       New York State High Peaks and Popular Hikes
@@ -72,9 +70,8 @@ Adding the `striped` property can improve readability by visually grouping row c
 
 {% set preview %}
 <nys-table id="table2" name="table2" striped>
-
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -119,9 +116,8 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 {% set preview %}
 <nys-table id="table3" name="table3" bordered>
-
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -164,15 +160,14 @@ Adding the `bordered` property can improve readability by adding a line between 
 
 Adding the `sortable` property allows for the table to be reordered in ascending or descending order.
 
-<nys-alert type="warning">
+<nys-alert type="warning" heading="Sortable support">
 <p>Currently the <code>sortable</code> property does <strong>NOT</strong> support <code>rowspan</code> or <code>colspan</code>.</p>
 </nys-alert>
 
 {% set preview %}
 <nys-table id="table4" name="table4" sortable>
-
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -217,9 +212,8 @@ Adding the `download` property adds a button which downloads the data that is be
 
 {% set preview %}
 <nys-table id="table5" name="table5" download="path/to/downloadable-data.csv">
-
   <table>
-     <caption>
+    <caption>
       New York State High Peaks and Popular Hikes
     </caption>
     <tr>
@@ -258,34 +252,66 @@ Adding the `download` property adds a button which downloads the data that is be
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Adjusted Column Widths
+
+By default, column widths are determined by the content within each cell. However, you can adjust column widths by applying inline styles to the `<th>` elements in the table header row. This allows you to set specific widths for each column as needed.
+
+{% set preview %}
+<nys-table id="table6" name="table6" bordered>
+  <table>
+    <caption>
+      New York State High Peaks and Popular Hikes
+    </caption>
+    <tr>
+      <th style="width: 10%;">Mountain</th>
+      <th style="width: 80%;">Peak Height (ft)</th>
+      <th style="width: 10%;">Hike Name</th>
+    </tr>
+    <tr>
+      <td>Marcy</td>
+      <td>5,344</td>
+      <td>Van Hoevenberg Trail</td>
+    </tr>
+    <tr>
+      <td>Algonquin</td>
+      <td>5,114</td>
+      <td>Northeast Trail</td>
+    </tr>
+    <tr>
+      <td>Haystack</td>
+      <td>4,960</td>
+      <td>Johns Brook Trail</td>
+    </tr>
+    <tr>
+      <td>Skylight</td>
+      <td>4,926</td>
+      <td>Lake Tear Trail</td>
+    </tr>
+    <tr>
+      <td>Whiteface</td>
+      <td>4,867</td>
+      <td>Whiteface Mountain Trail</td>
+    </tr>
+  </table>
+</nys-table>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
-
-{% block usage %}
-
-### When to use this component
-
-- Displaying tabular data. When you need to display tabular information, such as statistical data.
-- Displaying directories. When listing locations or resources that have similarly structured content for many items.
-
-### When to consider something else
-
-- Non-tabular data. Depending on the type of content, consider using other presentation formats, such as definition lists or hierarchical lists.
-- Dashboards and other layouts. Don't use tables in place of a layout grid. Table content should follow a consistent structure using headers and logical columns and rows.
-- Long-form content. Table cell content should be brief and scannable. If you find yourself drafting multiple bullet points or paragraphs within a single table cell, the content is likely better off under conventional page headers or in an accordion.
-
-{% endblock %}
-
 {% block usagedo %}
 
-- Use for displaying tabular data.
-- Use for displaying directories.
+- Use to display tabular data such as statistical information or directories of locations and resources with consistent structure.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Use for layouts
-- Add `rowspan` or `colspan` with the `sortable` property
+- Use in place of a layout grid. Table content should follow a consistent structure using headers and logical columns and rows.
+- Use for non-tabular content. Consider definition lists or hierarchical lists instead.
+- Use when cell content is long-form; table cells should be brief and scannable. If you need multiple bullet points or paragraphs in a cell, consider page headers or an accordion instead.
+- Add `rowspan` or `colspan` with the `sortable` property.
+
 {% endblock %}
 
 {% block accessibility %}
@@ -298,22 +324,92 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block properties %}
 
-| Property   | Type    |
-| ---------- | ------- |
-| `id`       | String  |
-| `name`     | String  |
-| `striped`  | Boolean |
-| `bordered` | Boolean |
-| `sortable` | Boolean |
-| `download` | String  |
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>striped</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>bordered</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>sortable</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>download</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+{% set variables = [
+  { name: "--nys-table-padding--cell--y", description: "Vertical padding for table cells"}
+]%}
+{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
-The `<nys-table>` component does not emit any events.
+The `<nys-table>` component emits **two** custom Javascript events:
+
+1. **`nys-click`** – Fired when the download button or a sortable column header is clicked.
+2. **`nys-column-sort`** – Fired when a sortable column header is clicked. Can be prevented by calling `event.preventDefault()` to override the default sort behavior.
+
+### Event details
+
+The `nys-column-sort` event includes a detail object with the following properties:
+
+- columnIndex (number): The zero-based index of the clicked column.
+- columnLabel (string): The text label of the clicked column header.
+- sortDirection (string): The resulting sort direction — `"asc"`, `"desc"`, or `"none"`.
+
+You can listen to these events using JavaScript:
+{% set code %}
+// Select the table component
+const table = document.querySelector('nys-table');
+// Listen for the 'nys-column-sort' event
+table.addEventListener('nys-column-sort', (event) => {
+  const { columnIndex, columnLabel, sortDirection } = event.detail;
+  console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-icon>,<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

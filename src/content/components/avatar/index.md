@@ -6,8 +6,7 @@ image: /assets/img/components/avatar.svg
 image_alt: An illustration of an avatar icon.
 image_header: /assets/img/components/avatar-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-9063
-navOrder: 3
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4019-57057&t=ehyQYJeb6ohvHYV0-4
 ---
 
 {% extends "layouts/component.njk" %}
@@ -21,59 +20,53 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-avatar ariaLabel="User avatar"></nys-avatar>{% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block usage %}
-
-### When to use this component
-
-- To visually represent users, objects, or entities in a UI.
-- Ideal for profiles, account settings, or comment threads.
-
-### When to consider something else
-
-  - If you need to show a large visual representation of a user or entity, use a photo.
-  - When a simple label or text works better.
-
+{% set preview %}
+<nys-avatar ariaLabel="User avatar"></nys-avatar>
+{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
-  - Use for clear, simple user or entity representation.
-  - On tablets and larger breakpoints, prefer showing the full name next to the avatar.
-  - Place the full name of the user or entity to the right of the avatar.
-  - Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
-  - Use the `nys-icon` slot only when the icon prop isn't sufficient.
+- Use for clear, simple user or entity representation in UIs such as profiles, account settings, or comment threads.
+- Prefer showing the full name next to the avatar on tablets and larger breakpoints.
+- Place the full name of the user or entity to the right of the avatar.
+- Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
+- Use the `<nys-icon>` slot only when the icon prop isn't sufficient.
+
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don't skip the `ariaLabel` attribute for screen reader users.
-  - Don't use the `nys-icon` as a slot when icon prop can satisfy your use.
-  - Don't overload the avatar with unnecessary customizations.
-  - Don’t override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.
+- Skip the `ariaLabel` attribute for screen reader users.
+- Use the `nys-icon` as a slot when the icon prop can satisfy your use.
+- Overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential. Doing so creates inconsistency across NYS interfaces.
+- Use an avatar when a large visual representation is needed; use a photo instead.
+- Replace an avatar with a simple label or text when that would communicate the information more clearly.
+
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-avatar>` component includes the following accessibility-focused features:
 
-  - For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: `alt="John Smith"`
-  - For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: `alt="Photo of John Smith"`
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
-  - A `ariaLabel` property to provide accessible text for screen readers.
-{% endblock %}
+- For initial avatars, include the person's full name as descriptive alt text if the person's full name is not shown next to the avatar: `alt="John Smith"`
+- For photo avatars, describe the avatar, and include the person's full name if it is not shown next to the avatar: `alt="Photo of John Smith"`
+- Proper ARIA roles and attributes to ensure screen readers can interpret the avatar correctly.
+- A `ariaLabel` property to provide accessible text for screen readers.
+  {% endblock %}
 
 {% block options %}
 
 ### Images
+
 To display an image in the avatar, set the `image` and `ariaLabel` attributes. Images will take **priority** and **override** initials and icons. You can also enable lazy loading for avatar images by setting the `lazy` boolean attribute.
 
-{% set preview %}<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>{% endset %}
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -81,7 +74,9 @@ To display an image in the avatar, set the `image` and `ariaLabel` attributes. I
 
 If an image is unavailable, you can set the `initials` attribute to display a personalized placeholder instead of an icon. Initials will take **priority** and **override** icons.
 
-{% set preview %}<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>{% endset %}
+{% set preview %}
+<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -97,11 +92,8 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 <nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
 ### Interactive
-
 Enable the `interactive` prop to apply interactive styling states and keyboard focus.
-
 {% set preview %}
 <div style="display:flex; gap:5px;">
   <nys-avatar ariaLabel="User avatar" icon="account_circle" interactive></nys-avatar>
@@ -136,72 +128,86 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% block properties %}
 <nys-table striped>
+
   <table>
       <tr>
           <th>Property</th>
           <th>Type</th>
-          <th></th>
+          <th>Default</th>
       </tr>
       <tr>
           <td><code>id</code></td>
           <td>String</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>color</code></td>
           <td>String (CSS HEX, CSS color name, or CSS)</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>icon</code></td>
           <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>image</code></td>
           <td>URL</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>initials</code></td>
           <td>String (2 letters)</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaLabel</code></td>
           <td>String</td>
-          <td></td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>lazy</code></td>
           <td>boolean</td>
-          <td></td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>interactive</code></td>
           <td>boolean</td>
-          <td></td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>disabled</code></td>
           <td>boolean</td>
-          <td></td>
+          <td><code>false</code></td>
       </tr>
   </table>
 </nys-table>
-
 
 {% endblock %}
 
 {% block cssvariables %}
 
-  {% set variables = [
+{% set variables = [
   { name: "--nys-avatar-size", description: "Width and height of the component"}
 ]%}
-  {% include "partials/css-vars.njk" %}
+{% include "partials/css-vars.njk" %}
 
 {% endblock %}
 
-{% block events %}{% endblock %}
+{% block events %}
+
+This component does not emit any custom events.
+
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
 
 {% block updates %}{% endblock %}

@@ -1,3 +1,10 @@
+{#
+    If multiple code-previews are used on a page,
+    be sure to wrap in a block.
+    11ty accepts arbitrary blocks not defined elsewhere,
+    so invent block names as-needed at point of use.
+    See example: `src/content/components/accordion/a11y-build`
+#}
 <div class="code-preview-container">
 {% if preview %}
   <div class="code-preview__preview {% if inverted %}inverted{% endif %} {% if backgroundSolid %}solid{% endif %}" data-pagefind-ignore="all">
@@ -18,13 +25,13 @@
     <div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
       <div class="code-preview__code-block">
         {% set lang = codeLanguage or "html" %}{% highlight lang %}
-        {{ code | safe }}
+        {{ code | trimCode | safe }}
         {% endhighlight %}
       </div>
     </div>
 {% if showTip %}
   <div class="code-preview__code-tip">
-    <p>Can't use NYS design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
 {% endif %}
   </div>

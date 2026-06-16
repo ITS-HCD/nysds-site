@@ -6,8 +6,7 @@ image: /assets/img/components/alert.svg
 image_alt: An illustration of an alert message.
 image_header: /assets/img/components/alert-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8845
-navOrder: 2
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-8784&t=0cK7llM1tFRVIgBx-4
 ---
 
 {% extends "layouts/component.njk" %}
@@ -21,108 +20,54 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-alert
-  type="base"
-  heading="Default status"
-  text="This is an example of an neutral base alert."
-  primaryLabel="Learn more on ny.gov"
-  primaryAction="https://www.ny.gov/"
-  secondaryLabel="Alternate action link"
-  secondaryAction="https://www.ny.gov/"
-  dismissible
-></nys-alert><br>
-<nys-alert
-  type="info"
-  heading="Info status"
-  text="This is an example of an info alert."
-  primaryLabel="Learn more on ny.gov"
-  primaryAction="https://www.ny.gov/"
-  secondaryLabel="Alternate action link"
-  secondaryAction="https://www.ny.gov/"
-  dismissible
-></nys-alert><br>
-<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert><br>
-<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>{% endset %}
-  {% set code %}
-<nys-alert
-  type="base"
-  heading="Default status"
-  text="This is an example of an neutral base alert."
-  primaryLabel="Learn more on ny.gov"
-  primaryAction="https://www.ny.gov/"
-  secondaryLabel="Alternate action link"
-  secondaryAction="https://www.ny.gov/"
-  dismissible
+{% set preview %}
+<nys-alert 
+  heading="Default status" 
+  text="This is an example of an neutral base alert." 
 ></nys-alert>
-<nys-alert
-  type="info"
-  heading="Info status"
-  text="This is an example of an info alert."
-  primaryLabel="Learn more on ny.gov"
-  primaryAction="https://www.ny.gov/"
-  secondaryLabel="Alternate action link"
-  secondaryAction="https://www.ny.gov/"
-  dismissible
-></nys-alert>
-<nys-alert type="success" heading="Success status" text="This is an example of a success alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert type="warning" heading="Warning status" text="This is an example of a warning alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert type="danger" heading="Danger status" text="This is an example of a danger alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-<nys-alert type="emergency" heading="Emergency status" text="This is an example of an emergency alert." dismissible primaryLabel="Learn more on ny.gov" secondaryLabel="Alternate action link" primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/"></nys-alert>
-  {% endset %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-
-{% block usage %}
-
-### When to use this component
-
-  - Use `<nys-alert>` to communicate important, time-sensitive information to users in a visually prominent way.
-  - Ideal for messages such as success notifications, danger alerts, warnings, or informational updates.
-  - Use for dismissible or temporary alerts when the message is not critical to user workflow.
-
-### When to consider something else
-
-  - If the information is not time-sensitive or critical, consider using an inline message.
-  - Avoid using alerts for repetitive or non-actionable content that could frustrate users.
-
+{% endset %}
+{% set showTip = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
-  - Use the appropriate `theme` (e.g., `info`, `success`, `warning`, or `danger`) to match the intent of the alert.
-  - Use the `dismissible` property for non-critical alerts.
-  - Keep the alert content concise and focused on the message.
-  - Limit alerts to one per page.
-  - Use `success` type to confirm a positive system status to users such as saving a form.
-  - Use `danger` type to display system status error messages.
-  - Only use `emergency` for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.
+- Communicate important, time-sensitive information to users in a visually prominent way.
+- Use for messages such as success notifications, danger alerts, warnings, or informational updates.
+- Use for dismissible or temporary alerts when the message is not critical to user workflow.
+- Use the appropriate `theme` (e.g., `info`, `success`, `warning`, or `danger`) to match the intent of the alert.
+- Use the `dismissible` property for non-critical alerts.
+- Keep the alert content concise and focused on the message.
+- Limit alerts to one per page.
+- Use `success` type to confirm a positive system status to users such as saving a form.
+- Use `danger` type to display system status error messages.
+- Only use `emergency` for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Do not remove the left icon, it is required for accessibility.
-- Don’t use alerts to highlight actions that should be clear in the UI itself.
-- Do not use error messages to communicate form field validation issues; use field error states instead.
-- Don't include more than two link actions in an alert.
-- Avoid overusing alerts for low-priority info — this can desensitize users.
-- Don't use alerts as toasts. Place them at the top of the page content.
-- Don't add any shadows to alerts.
-</ul>
+- Use alerts for information that is not time-sensitive or critical; consider using an inline message instead.
+- Use alerts for repetitive or non-actionable content that could frustrate users.
+- Remove the left icon, it is required for accessibility.
+- Use alerts to highlight actions that should be clear in the UI itself.
+- Use error messages to communicate form field validation issues; use field error states instead.
+- Include more than two link actions in an alert.
+- Overuse alerts for low-priority info. This can desensitize users.
+- Use alerts as toasts. Place them at the top of the page content.
+- Add any shadows to alerts.
+
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-alert>` component includes the following accessibility-focused features:
 
-  - Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
-  - Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.
-  - Visual focus indicators to help users navigate the component.
-  - Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.
+- Users with colorblindness use the alert's icon to differentiate the alert type; for accessibility it is best to use the default icon.
+- Keyboard navigation support, allowing users to use voiceover to read the alert using the keyboard.
+- Visual focus indicators to help users navigate the component.
+- Each alert theme contains an ARIA role attribute that can notify assistive technologies of time-sensitive and important messages.
 
 <nys-table striped>
 <table>
@@ -155,26 +100,59 @@ The `<nys-alert>` component includes the following accessibility-focused feature
 
 ### Theme
 
-Set the `type` property to customize the alert style (e.g. `type="info"`).
+Set the `type` property to customize the alert style. Valid options are `base` (default), `info`, `success`, `warning`, `danger`, and `emergency`.
 
-{% set preview %}<nys-alert
- type="info"
- heading="Information status"
- text="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>{% endset %}
+{% set preview %}
+<nys-alert 
+  type="base" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="info" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="success" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="warning" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="danger" 
+  heading="Default status" 
+></nys-alert><br>
+<nys-alert 
+  type="emergency" 
+  heading="Emergency status" 
+></nys-alert>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Custom text description
 
-Add descriptive content to your alert using the `text` prop or the our slot feature. 
+Add descriptive content to your alert using the `text` prop or the our slot feature.
 
 Use the `text` prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.
 
-{% set preview %}<nys-alert type="success" heading="Custom Descriptions">
-<p>This is a custom alert with <strong>HTML content</strong>.</p>
-<a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
-</nys-alert>{% endset %}
+{% set preview %}
+<nys-alert
+  type="info"
+  heading="Text passed in through the prop"
+  text="Here is more information that will be very helpful for readers."
+></nys-alert>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview %}
+<nys-alert type="success" heading="Custom Descriptions">
+  <p>This is a custom alert with <strong>HTML content</strong>.</p>
+  <a href="https://www.ny.gov/" target="_blank">Learn more about our accessibility services</a>
+</nys-alert>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -184,58 +162,50 @@ Use the `dismissible` property to make the alert dismissible.
 
 The `nys-close` custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.
 
-{% set preview %}<nys-alert type="info" heading="Information status" dismissible>
-  <p>Adirondack peaks auctor Hudson River flows semper Statue of Liberty est. <br/>
-  <p><a href="https://www.ny.gov/" target="_blank">Visit NY.GOV</a> for more info.</p>
-</nys-alert>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-alert heading="This is a dismissible alert" dismissible></nys-alert>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Duration
 
 Set the `duration` property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.
 
-{% set preview %}<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
-<div class="alert-container" style="margin-top: 8px"></div>{% endset %}
-  {% set code %}
+{% set preview %}
+<nys-button onClick="showAlert()" label="Open Alert"></nys-button>
+<div class="alert-container" style="margin-top: 8px"></div>
+{% endset %}
+{% set code %}
 <nys-alert 
   type="info" 
-  heading="Duration 3sec" 
+  heading="Duration 3 seconds" 
   duration="3000" 
   text="Auto-dismiss after 3 seconds">
 </nys-alert>
-  {% endset %}
-  {% include "partials/code-preview.njk" %}
+{% endset %}
+{% include "partials/code-preview.njk" %}
 
 ### Icon Customization
 
 Override the default theme icon by setting the `icon` property to any name from the icon library.
 
-{% set preview %}<nys-alert
-  type="emergency"
-  heading="Winter storm warning: Dec 10th, 2024."
-  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
-  icon="ac_unit">
-</nys-alert>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
-       
-### Heading only
-
-You may find having just a heading without description as a good compact version of the alert, ideal for short contexts. An empty description will center the text and icon for a cleaner layout.
-
-{% set preview %}<nys-alert
-  type="info"
-  heading="Adirondack peaks auctor Hudson River flows semper Statue of Liberty est.">
-</nys-alert>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-alert 
+  type="emergency" 
+  heading="Winter storm warning: Dec 10th, 2024." 
+  text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." 
+  icon="ac_unit"
+></nys-alert>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### Action Links
 
 Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` and `secondaryLabel` for the link text. You must provide both an action label and a URL for each action to ensure proper functionality.
 
-{% set preview %}<nys-alert
+{% set preview %}
+<nys-alert
   type="emergency"
   heading="Winter storm warning: Dec 10th, 2024."
   text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving."
@@ -243,9 +213,10 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
   secondaryAction="https://www.ny.gov/"
   primaryLabel="Weather Report"
   secondaryLabel="Plowing Schedule"
-></nys-alert>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+></nys-alert>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block properties %}
@@ -255,50 +226,62 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
     <tr>
       <th>Property</th>
       <th>Type</th>
+      <th>Default</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>dismissible</code></td>
       <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>duration</code></td>
       <td>integer</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <td><code>heading</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>icon</code></td>
       <td>String (<code>&lt;nys-icon&gt; name</code>)</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>primaryAction</code></td>
       <td>URL</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>primaryLabel</code></td>
       <td>String</td>
+      <td><code>"Learn more"</code></td>
     </tr>
     <tr>
       <td><code>secondaryAction</code></td>
       <td>URL</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>secondaryLabel</code></td>
       <td>String</td>
+      <td><code>"Dismiss"</code></td>
     </tr>
     <tr>
       <td><code>text</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>type</code></td>
       <td><code>"base"</code> , <code>"info"</code> , <code>"success"</code> , <code>"warning"</code> , <code>"danger"</code> , <code>"emergency"</code></td>
+      <td><code>"base"</code></td>
     </tr>
   </table>
 </nys-table>
@@ -307,7 +290,7 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 {% block cssvariables %}
 
-  {% set variables = [
+{% set variables = [
   { name: "--nys-alert-color", description: "Text color of heading and description"},
   { name: "--nys-alert-color--link", description: "Text color of action links" },
   { name: "--nys-alert-color--link--hover", description: "Text color of action links when hovered" },
@@ -315,7 +298,7 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
   { name: "--nys-alert-border-color", description: "Color of border accent color" },
   { name: "--nys-alert-background-color", description: "Background color of component" }
 ]%}
-  {% include "partials/css-vars.njk" %}
+{% include "partials/css-vars.njk" %}
 
 {% endblock %}
 
@@ -326,28 +309,42 @@ The `<nys-alert>` component emits **one** custom Javascript events:
 1.  **`nys-close`** – Fired when the button is clicked.
 
 ### Event details
+
 The `nys-close` event includes a detail object with the following properties:
 
-  - id (string): The id of the alert.
-  - type (string): The alert’s type (e.g., "success", "error", "info").
-  - label (string): The alert’s heading text.
+- id (string): The id of the alert.
+- type (string): The alert’s type (e.g., "success", "error", "info").
+- label (string): The alert’s heading text.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the alert component
+
+{% set code %}
+// Select the alert component
 const alert = document.querySelector("nys-alert");
-/** 
- * Consider persisting dismissal state (e.g., to localStorage or analytics)
- * This can be used to prevent the alert from appearing again
- */
+/*
+  Consider persisting dismissal state (e.g., to localStorage or analytics)
+  This can be used to prevent the alert from appearing again
+*/
 // Listen for the 'nys-close' event
 alert.addEventListener("nys-close", (event) => {
   const { id, type, label } = event.detail;
-  console.log(`Alert ${id} closed. Type: ${type}, Label: ${label}`);
-});{% endset %}
+  console.log(\`Alert ${id} closed. Type: ${type}, Label: ${label}\`);
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>", "<nys-button>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

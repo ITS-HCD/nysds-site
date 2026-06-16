@@ -1,17 +1,30 @@
 ---
 permalink: /foundations/utilities/flex/
 title: Flexbox
-description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+description: Utility classes for building flexible one-dimensional layouts with alignment, wrapping, and ordering in the NYS Design System.
 section: Foundations
 parent: Utilities
 layout: layouts/3-col.njk
 ---
 
+{% block content %}
+
+<section id="overview">
+
 # Flexbox
+
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
 
+All flexbox utilities support [responsive prefixes](/foundations/utilities/responsive/).
+
+</section>
+
+<section id="display-flex">
+
 ## Display Flex
+
 {% set preview %}
+
 <div class="border padding-1 radius-md margin-bottom-2">
   <div class="padding-bottom-4 border-bottom margin-bottom-2">
     <span class="utility-class">.nys-display-flex</span>
@@ -68,9 +81,16 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-grid-rows">
+
 ## Flex Grid Rows
+
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-1">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-1</span>
@@ -92,7 +112,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-2">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-2</span>
@@ -110,7 +130,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     <div class="height-6 width-full nys-display-flex nys-flex-align-center border border-base-dark bg-white nys-flex-justify-center"> </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-3">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-3</span>
@@ -129,7 +149,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-4">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-4</span>
@@ -148,7 +168,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-5">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-5</span>
@@ -167,7 +187,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-6">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-6</span>
@@ -186,7 +206,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-7">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-7</span>
@@ -205,7 +225,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-8">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-8</span>
@@ -224,7 +244,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-9">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-9</span>
@@ -243,7 +263,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-10">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-10</span>
@@ -262,7 +282,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-11">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-11</span>
@@ -281,7 +301,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-12">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-12</span>
@@ -300,7 +320,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-auto">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-auto</span>
@@ -319,7 +339,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
     </div>
   </div>
 </div>
-<div class="nys-grid-row nys-grid-gap-sm margin-bottom-1">
+<div class="nys-grid-row nys-grid-gap-2px margin-bottom-1">
   <div class="nys-grid-col nys-flex-fill">
     <div class="height-6 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center padding-x-105">
       <span class="utility-class text-no-wrap">.nys-flex-fill</span>
@@ -400,8 +420,15 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-direction">
+
 ## Flex-direction
+
 {% set preview %}
+
 <div class="border padding-1 radius-md margin-bottom-2">
   <span class="utility-class">.nys-flex-column</span>
   <div class="nys-grid-row nys-flex-column margin-top-2">
@@ -460,8 +487,15 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-wrap">
+
 ## Flex-wrap
+
 {% set preview %}
+
 <div class="border padding-1 radius-md margin-bottom-2">
     <span class="utility-class">.nys-flex-wrap</span>
     <div class="nys-grid-row nys-flex-wrap margin-top-2">
@@ -526,8 +560,14 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+</section>
+
+<section id="flex-align">
+
 ## Flex-align
+
 {% set preview %}
+
   <div class="border padding-1 radius-md margin-bottom-2">
     <div class="padding-bottom-4 border-bottom margin-bottom-2">
       <span class="utility-class">.nys-flex-column</span>
@@ -740,8 +780,15 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-align-self">
+
 ## Flex-align-self
+
 {% set preview %}
+
 <div class="border padding-1 radius-md margin-bottom-2">
   <div class="padding-bottom-4 border-bottom margin-bottom-2">
     <span class="utility-class">.nys-flex-column</span>
@@ -795,14 +842,21 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+
+</section>
+
+<section id="flex-justify">
+
 ## Flex-justify
+
 {% set preview %}
+
 <div class="border padding-1 radius-md margin-bottom-2">
   <div class="padding-bottom-4 border-bottom margin-bottom-2">
     <span class="utility-class">.nys-flex-row</span>
   </div>
     <span class="utility-class">.nys-flex-justify</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -821,7 +875,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-start</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -840,7 +894,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-center</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -859,7 +913,7 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-end</span>
-      <div class="nys-grid-row nys-flex- nys-flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+      <div class="nys-grid-row nys-flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
         <div class="nys-grid-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
@@ -929,9 +983,202 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+</section>
+
+<section id="order">
+
 ## Order
+
+Order utilities change the visual order of flex items without changing the DOM order. Use `.nys-order-first` to move an item to the beginning, `.nys-order-last` to the end, or `.nys-order-0` through `.nys-order-11` for specific positions.
+
+<nys-table striped><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-order-first</code></td>
+<td><code>order: -1</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-last</code></td>
+<td><code>order: 999</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-initial</code></td>
+<td><code>order: 0</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-0</code> – <code>.nys-order-11</code></td>
+<td><code>order: 0</code> – <code>order: 11</code></td>
+</tr>
+</tbody>
+</table></nys-table>
+
+All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-first`).
+
+## Flex-gap
+
 {% set preview %}
-<div class="nys-grid-row nys-grid-gap-sm">
+
+<div class="nys-display-grid">
+  <span class="utility-class">.nys-flex-gap-1px</span>
+  <div class="nys-display-flex nys-grid-row nys-flex-gap-1px">
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>
+  <span class="utility-class">.nys-flex-gap-2px</span>
+  <div class="nys-display-flex nys-flex-gap-2px">
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>
+  <span class="utility-class">.nys-flex-gap-50</span>
+  <div class="nys-display-flex nys-flex-gap-50">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-100</span>
+  <div class="nys-display-flex nys-flex-gap-100">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-150</span>
+  <div class="nys-display-flex nys-flex-gap-150">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-200</span>
+  <div class="nys-display-flex nys-flex-gap-200">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-250</span>
+  <div class="nys-display-flex nys-flex-gap-250">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-300</span>
+  <div class="nys-display-flex nys-flex-gap-300">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-400</span>
+  <div class="nys-display-flex nys-flex-gap-400">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-500</span>
+  <div class="nys-display-flex nys-flex-gap-500">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-600</span>
+  <div class="nys-display-flex nys-flex-gap-600">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-700</span>
+  <div class="nys-display-flex nys-flex-gap-700">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-800</span>
+  <div class="nys-display-flex nys-flex-gap-800">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+  <span class="utility-class">.nys-flex-gap-1200</span>
+  <div class="nys-display-flex nys-flex-gap-1200">    
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+    <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
+  </div>  
+</div>
+{% endset %}
+{% set code %}
+<div class="nys-display-flex nys-flex-gap-1px">
+  <div class="example"></div>
+  <div class="example"></div>
+  <div class="example"></div>
+  <div class="example"></div>
+</div>
+<div class="nys-display-flex nys-flex-gap-2px">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-50">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-100">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-150">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-200">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-250">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-300">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-400">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-500">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-600">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-700">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-800">
+  ...
+</div>
+<div class="nys-display-flex nys-flex-gap-1200">
+  ...
+</div>
+{% endset %}
+{% include "partials/code-preview.njk" %}
+
+## Order
+
+{% set preview %}
+
+<div class="nys-grid-row nys-grid-gap-2px">
     <div class="nys-grid-col-auto nys-order-11">
       <div class="padding-x-1 padding-y-1 border border-secondary-light bg-white margin-y-1px nys-display-flex nys-flex-column nys-flex-align-start">
         <span class="font-lang-3xs text-red-warm-50v margin-bottom-2">intital: 1</span>
@@ -1043,7 +1290,12 @@ These utility classes are used to create a flexbox layout. Flexbox is a one-dime
 </div>{% endset %}
 {% include "partials/code-preview.njk" %}
 
+</section>
+
+{% endblock %}
+
 {% block styles %}
+
 <link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
 {% endblock %}
 

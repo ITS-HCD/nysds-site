@@ -6,8 +6,7 @@ image: /assets/img/components/button.svg
 image_alt: An illustration of a button.
 image_header: /assets/img/components/button-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=3981-8292
-navOrder: 6
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4020-65486&t=ehyQYJeb6ohvHYV0-4
 ---
 
 {% extends "layouts/component.njk" %}
@@ -19,49 +18,45 @@ The `<nys-button>` component is used for actions that have an immediate result i
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-button label="Button"></nys-button>{% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block usage %}
-
-### When to use this component
-  - Use for the most important actions you want users to take on your site, such as Download, Sign up or Log out.
-  - Use Fill for the primary action on the page; use sparingly, there should be only one primary action on each page.
-  - Use Outline for secondary actions; should be placed next to the primary action / Fill button.
-  - Use Ghost buttons when there are additional actions beyond primary and secondary.
-  - Use Text buttons when an action needs to appear within a text block.
-
-### When to consider something else
-  - Text Buttons do something, whereas Links go somewhere. Use a Link instead of a text button if clicking the element takes the user somewhere else.
+{% set preview %}
+<nys-button label="Button"></nys-button>
+{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
-  - Always set the `type` attribute (`submit`, `button`, or `reset`). If omitted, the default is `submit`.
-  - Use sentence case for button labels, only capitalizing the first word.
-  - For buttons that open a dropdown, place a `chevron_down` icon on the right.
+- Use for the most important actions you want users to take, such as Download, Sign up, or Log out.
+- Use Fill for the primary action on the page. There should be only one primary action per page.
+- Use Outline for secondary actions, placed next to the primary Fill button.
+- Use Ghost buttons for additional actions beyond primary and secondary.
+- Use Text buttons when an action needs to appear within a text block. If clicking takes the user somewhere else, use a Link instead.
+- Always set the `type` attribute (`submit`, `button`, or `reset`). The default is `button`.
+- Use sentence case for button labels, only capitalizing the first word.
+- Place a `chevron_down` icon on the right for buttons that open a dropdown.
+
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use buttons for external navigation. Use an HTML link (&lt;a&gt;) or a Text button instead.
-  - Don't use icons in buttons without a text label. Very few icons are universally understood.
-  - Avoid creating custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
+- Use buttons for navigation. Use an `<a>` element or Text button for links that take users somewhere else.
+- Use icons in buttons without a text label. Very few icons are universally understood.
+- Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
+
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-button>` component includes the following accessibility-focused features:
 
-  - Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
-  - Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
-  - Visual focus indicators to help users navigate the component.
-  - Include a label property to provide accessible text for screen readers.
-  - Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.
-{% endblock %}
+- Proper ARIA roles and attributes to ensure screen readers can interpret the toggle correctly.
+- Keyboard navigation support, allowing users to toggle the toggle switch using the keyboard.
+- Visual focus indicators to help users navigate the component.
+- Include a label property to provide accessible text for screen readers.
+- Screen readers treat buttons and links differently. Use buttons (including text buttons) for actions and links for navigation. Buttons are announced consistently by assistive tech and are activated by both Enter and Space, while links are activated by Enter only.
+  {% endblock %}
 
 {% block content %}
 
@@ -77,28 +72,32 @@ Button labels need to be clear and predictable. Users should be able to anticipa
 {% block options %}
 
 ### Click Action
+
 When using the `<nys-button>`, you may want to use the `onClick` prop instead of adding your own `@click`, `@keydown`, or their equivalents in your framework. This makes sure your button responds to both mouse and keyboard interactions (like Enter or Space), keeping it fully accessible.
 
 ### Button Type
 
 Set the `type` prop of the `<nys-button>` to define the button's behavior in a form context. The available types are:
 
- - `button` (default): A standard button that does not submit a form.
- - `submit`: Submits the nearest form when clicked.
- - `reset`: Resets all inputs in the nearest form to their default values.
+- `button` (default): A standard button that does not submit a form.
+- `submit`: Submits the nearest form when clicked.
+- `reset`: Resets all inputs in the nearest form to their default values.
 
 ### Size
+
 Set the `size` prop of the `<nys-button>` to adjust the height of the button. The width of the button is determined by the label. Our current sizes are:
+
 - `sm`: Set to 40px in height
 - `md`: The default size. Set to 48px in height.
 - `lg`: Set to 56px in height.
 
 Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
-{% set preview %}<div class="nys-grid-row">
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
-<div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
+    <div class="nys-grid-col"><nys-button size="lg" id="button3" name="button3" label="Large"></nys-button></div>
 </div>
 <nys-button class="nys-margin-y-100" fullWidth size="sm" id="button4" name="button4" label="Small full"></nys-button>
 <nys-button class="nys-margin-y-100" fullWidth id="button5" name="button5" label="Medium full"></nys-button>
@@ -118,17 +117,19 @@ Add the `fullWidth` prop to make the button take the width of its container. Def
 
 Set the variant prop of the `<nys-button>` to adjust the appearance of the button. Our current variants are:
 
- - `filled`: The default variant. Use for primary actions.
- - `outline`: Use for secondary actions.
- - `ghost`: Use for uncommon actions.
- - `text`: Use for inline actions.
+- `filled`: The default variant. Use for primary actions.
+- `outline`: Use for secondary actions.
+- `ghost`: Use for uncommon actions.
+- `text`: Use for inline actions.
 
-{% set preview %}<div class="nys-grid-row">
-<div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
-<div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
-<div class="nys-grid-col"><nys-button id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button id="button4" name="button4" label="Text" variant="text"></nys-button></div>
-</div>{% endset %}
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
+    <div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
+    <div class="nys-grid-col"><nys-button id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+</div>
+{% endset %}
 {% set code %}
 <nys-button id="button1" name="button1" label="Filled"></nys-button>
 <nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button>
@@ -138,36 +139,64 @@ Set the variant prop of the `<nys-button>` to adjust the appearance of the butto
 {% include "partials/code-preview.njk" %}
 
 ### Icons
+
 Set the `prefixIcon` prop to include an icon in the button. The icon will appear to the left of the label.
 
 Set the `suffixIcon` prop to include an icon in the button. The icon will appear to the right of the label.
 
 View the full list of [available icons](/components/icon/#usage).
 
-  {% set preview %}<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>{% endset %}
-  {% set code = preview %}
-  {% include "partials/code-preview.njk" %}
+{% set preview %}
+<nys-button id="button1" name="button1" label="Button" prefixIcon="chevron_left" suffixIcon="chevron_right"></nys-button>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Slots
+
+The `<nys-button>` component provides named slots for custom icon content when the prop-based approach is not sufficient:
+
+- **`prefix-icon`** -- Custom icon before the label. Not shown for the `text` variant.
+- **`suffix-icon`** -- Custom icon after the label. Not shown for the `text` variant.
+- **`circle-icon`** -- Custom icon for circle mode. Overrides the `icon` prop.
+
+{% set code %}
+<nys-button label="Log out">
+    <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+</nys-button>
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
 
 ### Circle
+
 Use the `circle` prop to create a compact, circular button. Ideal for icon-only actions.
+
 - When `circle` is set, provide the icon using the `icon` prop.
 - If no `label` is given, the `icon` value will be used as the aria-label for accessibility.
 - If a `label` is provided, it won’t be shown visually, but it will be used as the aria-label.
 
 Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `circle` prop.
-{% set preview %}<nys-button circle icon="close"></nys-button>{% endset %}
+{% set preview %}
+<nys-button circle icon="close"></nys-button>
+{% endset %}
 {% set code %}
 <nys-button circle icon="close"></nys-button>
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
-{% set preview %}<div class="nys-grid-row">
-<div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
-<div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
-<div class="nys-grid-col"><nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button></div>
-</div>{% endset %}
+
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
+    <div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
+    <div class="nys-grid-col"><nys-button disabled id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button disabled id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+</div>
+{% endset %}
 {% set code %}
 <nys-button disabled id="button1" name="button1" label="Filled"></nys-button>
 <nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button>
@@ -177,27 +206,38 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 {% include "partials/code-preview.njk" %}
 
 ### Link
+
 Set the `href` prop when using the button to navigate to a different page. This will render the `nys-button` as an `<a>` tag.\
-Set the `target` prop of the `<nys-button>` to specify where to open the linked document. The available targets are:
+Set the `target` prop of the `<nys-button>` to specify where to open the linked document.
+
+The available targets are:
+
 - `_self`: Opens the link in the same frame as it was clicked (default).
 - `_blank`: Opens the link in a new tab or window.
 - `_parent`: Opens the link in the parent frame.
 - `_top`: Opens the link in the full body of the window.
 - `framename`: Opens the link in a named iframe.
 
-{% set preview %}<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov"></nys-button>{% endset %}
+**Note**: It is recommended to set the variant on `<nys-button>` to `variant="text"`
+
+{% set preview %}
+<nys-button href="https://www.ny.gov/" target="_blank" id="button1" name="button1" label="Visit NY.gov" variant="text"></nys-button>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Inverted
+
 Set the `inverted` when the button is on a dark background.
 
-{% set preview %}<div class="nys-grid-row">
-<div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
-<div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
-<div class="nys-grid-col"><nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
-<div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button></div>
-</div>{% endset %}
+{% set preview %}
+<div class="nys-grid-row">
+    <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
+    <div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
+    <div class="nys-grid-col"><nys-button inverted id="button3" name="button3" label="Ghost" variant="ghost"></nys-button></div>
+    <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button inverted id="button4" name="button4" label="Text" variant="text"></nys-button></div>
+</div>
+{% endset %}
 {% set code %}
 <nys-button inverted id="button1" name="button1" label="Filled"></nys-button>
 <nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button>
@@ -216,88 +256,110 @@ Set the `inverted` when the button is on a dark background.
       <tr>
           <th>Property</th>
           <th>Type</th>
+          <th>Default</th>
       </tr>
       <tr>
           <td><code>id</code></td>
           <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>name</code></td>
-          <td>String</td>          
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>label</code></td>
-          <td>String</td>          
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>type</code></td>
-          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>         
+          <td><code>"submit"</code> , <code>"reset"</code> , <code>"button"</code></td>
+          <td><code>"button"</code></td>
       </tr>
       <tr>
           <td><code>value</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaLabel</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>ariaDescription</code></td>
-          <td>String</td>         
+          <td>String</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>disabled</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>fullWidth</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>href</code></td>
-          <td>String (URL)</td>          
+          <td>String (URL)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>inverted</code></td>
-          <td>boolean</td>          
+          <td>boolean</td>
+          <td><code>false</code></td>
       </tr>
       <tr>
           <td><code>onClick</code></td>
-          <td>JS function</td>         
+          <td>JS function</td>
+          <td><code>null</code></td>
       </tr>
       <tr>
           <td><code>prefixIcon</code></td>
-          <td>String (<code><nys-icon name></code>)</td>          
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>size</code></td>
-          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>       
+          <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
+          <td><code>"md"</code></td>
       </tr>
       <tr>
           <td><code>suffixIcon</code></td>
-          <td>String (<code><nys-icon name></code>)</td>         
+          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
+          <td><code>""</code></td>
       </tr>
       <tr>
           <td><code>target</code></td>
-          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>         
+          <td><code>"_self"</code> , <code>"_blank"</code> , <code>"_parent"</code> , <code>"_top"</code> , <code>"framename"</code></td>
+          <td><code>"_self"</code></td>
       </tr>
       <tr>
           <td><code>variant</code></td>
           <td><code>"filled"</code> , <code>"outline"</code> , <code>"ghost"</code> , <code>"text"</code></td>
+          <td><code>"filled"</code></td>
       </tr>
       <tr>
           <td><code>form</code></td>
           <td>String , <code>null</code></td>
+          <td><code>null</code></td>
       </tr>
   </table>
 </nys-table>
 
+### Form Prop
+
+The `form` property associates this component with a `<form>` element by ID, even if the component is not a descendant of that form. See [Form Patterns](/foundations/forms/) for details on form association and ElementInternals.
 
 {% endblock %}
 
 {% block cssvariables %}
 
-  {% set variables = [
+{% set variables = [
   { name: "--nys-button-color", description: "Text color of label"},
   { name: "--nys-button-color--hover", description: "Text color of label when hovered"},
   { name: "--nys-button-color--active", description: "Text color of label when active"},
@@ -308,7 +370,7 @@ Set the `inverted` when the button is on a dark background.
   { name: "--nys-button-border-color--hover", description: "Border color of component when hovered"},
   { name: "--nys-button-border-color--active", description: "Border color of component when active"}
 ]%}
-  {% include "partials/css-vars.njk" %}
+{% include "partials/css-vars.njk" %}
 
 {% endblock %}
 
@@ -321,16 +383,28 @@ The `<nys-button>` component emits **three** custom Javascript events:
 3.  **`nys-blur`** – Fired when the button loses focus.
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the button component
+{% set code %}
+// Select the button component
 const button = document.querySelector('nys-button');
 // Listen for the 'nys-click' event
 button.addEventListener("nys-click", () => {
-	console.log("Button clicked");
-});{% endset %}
+    console.log("Button clicked");
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

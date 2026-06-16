@@ -6,50 +6,42 @@ image: /assets/img/components/pagination.svg
 image_alt: An illustration of a pagination.
 image_header: /assets/img/components/pagination-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=10600-10347
-navOrder: 17
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4664-1589&p=f&t=7RVQI38uIhRVCBjL-0
 ---
 
 {% extends "layouts/component.njk" %}
 
 {% block longdescription %}
 
-The `<nys-pagination>` provides users with the ability to to navigate through a large set of content or data that has been divided into smaller, more manageable sections or "pages."
+The `<nys-pagination>` component provides Previous/Next buttons and numbered page links for navigating large sets of content or data. It auto-collapses page numbers with ellipses when there are many pages, and renders a compact layout on mobile.
 
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-pagination currentPage="2" totalPages="7"></nys-pagination>
- {% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-
-{% block usage %}
-
-### When to use this component
-  - When displaying large data sets or search results that would be overwhelming to display all at once
-  - When users need control and orientation to navigate to a specific part of the content, such as page 5 of search results
-  - When performance and load times matter, since pagination lets you fetch and render smaller chunks of data instead of everything at once.
-
-### When to consider something else
-  - If the collection is shorter than 3–4 screen lengths, it’s better to display all items at once rather than using pagination.
-  - When you need to show progress through a series of tasks that must be completed in order—such as an onboarding process—use the `<nys-stepper>` component.
+{% set preview %}
+<nys-pagination currentPage="2" totalPages="7"></nys-pagination>
+{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
-  - Use when content would be better to be spread across multiple pages.
-  - When there is too much content to display all at once.
-  - For tables and search results.
+- Use for large result sets such as search results, data tables, or directory listings where loading everything at once would hurt performance or usability.
+- Use when users need to navigate to a specific part of a result set.
+- Set `totalPages` based on your data set and page size; update `currentPage` in response to `nys-change` events.
+- Don't set `currentPage` to a value greater than `totalPages`. The component clamps the value automatically, but your application logic should prevent this.
+- Position the pagination component below the content it controls.
+- Scroll users to the top of the results area when they change pages.
+
 {% endblock %}
 
 {% block usagedont %}
 
-  - If the displayed collection can fit on less than 3 or 4 pages, consider displaying all items at once and using a scroll.
-  - For interactive pages or collecting information, instead consider the `<nys-stepper>`
+- Use when content fits on a single page (fewer than 3–4 screen heights). Show all items instead.
+- Use for step-based workflows where users complete tasks in order. Use `<nys-stepper>` instead.
+- Use for infinite-scroll patterns such as a news feed.
 
 {% endblock %}
 
@@ -57,25 +49,70 @@ The `<nys-pagination>` provides users with the ability to to navigate through a 
 
 The `<nys-pagination>` component includes the following accessibility-focused features:
 
-- Fewer buttons on a pagination interface are preferable because they minimize cognitive load, reduce visual clutter, and improve usability, especially on smaller screens. A simpler design helps users focus on the content and prevents analysis paralysis. Larger paginations use more space without proportional increases to the component’s functionality.
-- Provide a clear, visible focus indicator for buttons so users can see where they are.
-- Keyboard navigation support, allowing users to toggle the pages using the keyboard.
-- Visual focus indicators to help users navigate the component.
-{% endblock %}
+- Each page button includes an `ariaLabel` of "Page N" so screen readers announce the page number clearly.
+- Previous and Next buttons are disabled (not removed) when at the first or last page, so screen readers can still discover them and understand the navigation range.
+- On mobile, Previous and Next buttons switch to icon-only versions with `ariaLabel` attributes ("Previous Page" / "Next Page") to maintain accessibility without visible labels.
+- All buttons are keyboard-focusable. Users can `Tab` through pagination controls and activate them with `Enter` or `Space`.
+- The component auto-collapses page numbers with ellipsis buttons to reduce cognitive load, especially on smaller screens.
+  {% endblock %}
 
 {% block options %}
 
-### Small Screens
+### First Page
 
-  The `<nys-pagination>` component automatically renders in a condensed format on small screens.
+When `currentPage` is `1`, the Previous button is disabled. The component shows the first few page numbers and the last page.
 
-**Note:** If totalPages is 1 then the `<nys-pagination>` component will not be visible.
+{% set preview %}
+<nys-pagination currentPage="1" totalPages="12"></nys-pagination>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
-### Current Page
-The prop `currentPage` takes in the page number you are currently on. This value cannot be larger than the value of totalPages. If a value larger than totalPages is passed in, it will return the last available page. The default value is 1.
+### Middle Page
 
-### Total Pages
-The prop `totalPages` takes in the number of total pages to view.
+When the user is in the middle of the result set, the component shows ellipsis on both sides with the current page centered.
+
+{% set preview %}
+<nys-pagination currentPage="6" totalPages="12"></nys-pagination>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Last Page
+
+When `currentPage` equals `totalPages`, the Next button is disabled. The component shows the first page and the last few page numbers.
+
+{% set preview %}
+<nys-pagination currentPage="12" totalPages="12"></nys-pagination>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Few Pages
+
+When there are only a handful of pages, all page numbers are shown without ellipsis.
+
+{% set preview %}
+<nys-pagination currentPage="2" totalPages="3"></nys-pagination>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Single Page
+
+When `totalPages` is `1`, the component renders nothing. Pagination is unnecessary when all content fits on one page.
+
+{% set code %}
+<nys-pagination currentPage="1" totalPages="1"></nys-pagination>
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+
+### Responsive Behavior
+
+On screens below 768px, the component automatically switches to a condensed layout: Previous and Next buttons become icon-only, and neighboring page numbers are hidden to save space.
 
 {% endblock %}
 
@@ -86,22 +123,27 @@ The prop `totalPages` takes in the number of total pages to view.
     <tr>
       <th>Property</th>
       <th>Type</th>
-    </tr> 
+      <th>Default</th>
+    </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
       <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>currentPage</code></td>
       <td>Number</td>
+      <td><code>1</code></td>
     </tr>
     <tr>
       <td><code>totalPages</code></td>
       <td>Number</td>
+      <td><code>1</code></td>
     </tr>
   </table>
 </nys-table>
@@ -117,22 +159,35 @@ The `<nys-pagination>` component emits <strong>one</strong> custom Javascript ev
 1.  **`nys-change`** – Fired when the `currentPage` value is changed.
 
 ### Event details
+
 The `nys-change` event includes a detail object with the following properties:
 
-  - id (string): The id of the pagination component.
-  - page (integer): The new value of `currentPage`
+- id (string): The id of the pagination component.
+- page (integer): The new value of `currentPage`
 
 You can listen to these events using JavaScript:
-{% set code %}// Select the pagination component
+{% set code %}
+// Select the pagination component
 const pagination = document.querySelector("nys-pagination");
 // Listen for the 'nys-change' event
 pagination.addEventListener("nys-change", (event) => {
-	console.log("Pagination is changed to page ${event.detail.page}");
-});{% endset %}
+  console.log("Pagination is changed to page ${event.detail.page}");
+});
+{% endset %}
 {% set accordionLabel = "Sample Code" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+   "<nys-button>"
+  ] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}
