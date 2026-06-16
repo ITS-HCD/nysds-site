@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
+    <!-- Latest Build: 2026-06-16T18:33:36.621Z -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -235,7 +235,9 @@
 <h2 id="framework-guides">Framework Guides</h2>
 <p>NYSDS components are standard web components. They work in any framework. Below are sample setup steps for common frameworks used across New York State agencies. If you notice a bug in these configurations, <a href="https://github.com/ITS-HCD/nysds/issues/new/choose">drop a bug report issue in GitHub</a>.</p>
 <h3 id="react">React</h3>
-<p>Web components work in React, but React's synthetic event system does not automatically listen to custom events from web components. Use <code>ref</code> callbacks or <code>addEventListener</code> for NYSDS events like <code>nys-change</code>.</p>
+<p><nys-alert type="warning" heading="Undergoing Revisions" text="This section is undergoing massive documentation revisions and changes. Please reach out to the NYSDS team for the latest updates on React change or see the React Demo tutorial page" primaryLabel="React Demo Tutorial" primaryAction="https://its-hcd.github.io/nysds-react-demo/tutorial"></nys-alert></p>
+<p>While our default web component works React. We recommend using our React wrapper components.
+Import directly from <code>@nysds/components/react</code>. This path gives you React-wrapped versions of each web component - event bindings included.</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -250,19 +252,70 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html">import '@nysds/components/react';
+        <pre class="language-html"><code class="language-html">import { NysButton } from "@nysds/components/react";
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysButton</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Submit<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="handling-react-events">Handling React Events</h4>
+<p>React's synthetic event system does not automatically listen to custom events from web components. Instead, NYSDS React wrappers map these to callback props like <code>onNysChange</code> and <code>onNysInput</code>, but the underlying type is still a DOM Event.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>React Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">// ❌ This won't work! NysTextinput doesn't fire a native change event
+&lt;NysTextinput onChange={(e) => setValue(e.target.value)} />
+// ✅ Use the NYSDS custom event binding
+&lt;NysTextinput
+  name="email"
+  onNysInput={(e) => {
+    const value = (e as CustomEvent).detail.value;
+    setValue(value);
+  }}
+/>}</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>You may also fund using <code>ref</code> callbacks or <code>addEventListener</code> helpful for NYSDS events.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>React Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">import { NysSelect } from "@nysds/components/react";
 function LicenseRenewalForm() {
   const handleChange = (e) => {
     console.log('Selected:', e.detail.value);
   };
   return (
-    &lt;nys-select
+    &lt;NysSelect
       label="License type"
       ref={(el) => el?.addEventListener('nys-change', handleChange)}
     >
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>driver<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Driver License<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>commercial<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Commercial Driver License<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysSelect</span><span class="token punctuation">></span></span>
   );
 }</code></pre>
       </div>
