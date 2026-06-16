@@ -95,6 +95,9 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("onlySeries", onlySeries);
   eleventyConfig.addFilter("shuffle", shuffle);
   eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
+  eleventyConfig.addFilter("trimCode", (str) =>
+    String(str ?? "").replace(/^[ \t]*\n/gm, "").trim()
+  );
 
   // Pagefind
   eleventyConfig.on("eleventy.after", () => {
@@ -105,7 +108,7 @@ module.exports = async function (eleventyConfig) {
 
   // Image compression on watch
   // Runs before every build (including watch rebuilds)
-  eleventyConfig.on('eleventy.beforeWatch', async () => {
+  eleventyConfig.on('eleventy.before', async () => {
     await import('./scripts/compress-images.js');
   });
 

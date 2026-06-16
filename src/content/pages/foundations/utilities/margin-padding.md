@@ -23,7 +23,8 @@ Spacing utilities add margin (space outside an element) and padding (space insid
 
 All margin and padding utilities use the same spacing scale:
 
-<nys-table striped><table>
+<nys-table striped>
+<table>
 <thead>
 <tr>
 <th>Scale value</th>
@@ -103,7 +104,8 @@ All margin and padding utilities use the same spacing scale:
 <td><code>.nys-margin-1200</code></td>
 </tr>
 </tbody>
-</table></nys-table>
+</table>
+</nys-table>
 
 </section>
 
@@ -257,6 +259,7 @@ Combine margin and padding utilities with layout utilities to space content in a
   </div>
 </div>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code %}
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-grid-col-6">

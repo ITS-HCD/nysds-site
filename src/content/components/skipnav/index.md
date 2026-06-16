@@ -7,7 +7,6 @@ image_alt: An illustration of a skip navigation button.
 image_header: /assets/img/components/skipnav-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=4023-9829&t=EXsXvlMbCdRw10ir-4
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -26,58 +25,47 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 </p>
 <script type="module">
   customElements.whenDefined('nys-skipnav').then(async () => {
-    const skipnavs = document.querySelectorAll('.skipnav-demo');
-    // Wait until the Lit component finishes updating
-    await skipnavs.updateComplete;
-    skipnavs.forEach((skipnav) => {
-      const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
-      if (link) {
-        link.classList.add('show');
-      }
-    })
+  const skipnavs = document.querySelectorAll('.skipnav-demo');
+  // Wait until the Lit component finishes updating
+  await skipnavs.updateComplete;
+  skipnavs.forEach((skipnav) => {
+  const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
+  if (link) {
+  link.classList.add('show');
+  }
+  })
   });
 </script>
 {% endset %}
-
 {% set code %}
 <nys-skipnav id="skipnav-demo" href="#main-content"></nys-skipnav>
 {% endset %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block usage %}
-
-### When to use this component
-  - When your page has a large header or navigation before the main content
-  - When you want to improve keyboard and screen reader accessibility
-### When to consider something else
-
-  - If your layout already starts with the main content and has no navigation to skip
 {% endblock %}
 
 {% block usagedo %}
 
-  - Use on pages with repeated navigation or other content before the main section
-  - Make sure the `href` on `<nys-skipnav>` matches the `id` of the main content container
+- Use on pages with a large header, navigation, or other repeated content before the main section.
+- Ensure the `href` on `<nys-skipnav>` matches the `id` of the main content container.
 
 {% endblock %}
 
 {% block usagedont %}
 
-  - Don’t use if there’s nothing to skip over
-  - Don’t mismatch the `href` and target `id`
+- Use if your layout already starts with the main content and there is nothing to skip over.
+- Mismatch the `href` and target `id`.
 
 {% endblock %}
 
 {% block accessibility %}
 
 The `<nys-skipnav>` component includes the following accessibility-focused features:
-  - First focusable element on page load for easy keyboard navigation
-  - Visible only on focus, with a clear focus indicator that meets WCAG 2.2
-  - Pressing Enter moves focus to the main content section
-  - Screen readers correctly announce the link and shift focus on activation
+
+- First focusable element on page load for easy keyboard navigation
+- Visible only on focus, with a clear focus indicator that meets WCAG 2.2
+- Pressing Enter moves focus to the main content section
+- Screen readers correctly announce the link and shift focus on activation
 
 {% endblock %}
 
@@ -87,18 +75,20 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 **IMPORTANT:** To work correctly, `<nys-skipnav>` should be the first focusable element. Ideally right after the opening `<body>` tag, before any headers or nav elements.
 
-{% set preview %}<nys-skipnav class="skipnav-demo" href="#main-content1"></nys-skipnav>
+{% set preview %}
+<nys-skipnav class="skipnav-demo" href="#main-content1"></nys-skipnav>
 <nys-unavheader hideTranslate hideSearch></nys-unavheader>
 <div id="main-content1" style="padding:10px 30px; background-color: #f0f0f0;">
   <h2>Main Content</h2>
   <p style="display:flex; align-items:top; gap:10px;">
-      <nys-icon name="info" size="2xl"></nys-icon>
-      Press Tab to focus on the hidden "Skip to main content" link. This feature 
-      allows screen reader users and keyboard navigators to jump directly to the 
-      main content section, improving accessibility and usability.
+    <nys-icon name="info" size="2xl"></nys-icon>
+    Press Tab to focus on the hidden "Skip to main content" link. This feature 
+    allows screen reader users and keyboard navigators to jump directly to the 
+    main content section, improving accessibility and usability.
   </p>
 </div>
-<nys-unavfooter></nys-unavfooter>{% endset %}
+<nys-unavfooter></nys-unavfooter>
+{% endset %}
 {% set code %}
 <body>
   <nys-skipnav href="#main-content1"></nys-skipnav>
@@ -106,10 +96,10 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
   <div id="main-content1" style="padding:10px 30px; background-color: #f0f0f0;">
     <h2>Main Content</h2>
     <p style="display:flex; align-items:top; gap:10px;">
-        <nys-icon name="info" size="2xl"></nys-icon>
-        Press Tab to focus on the hidden "Skip to main content" link. This feature 
-        allows screen reader users and keyboard navigators to jump directly to the 
-        main content section, improving accessibility and usability.
+      <nys-icon name="info" size="2xl"></nys-icon>
+      Press Tab to focus on the hidden "Skip to main content" link. This feature 
+      allows screen reader users and keyboard navigators to jump directly to the 
+      main content section, improving accessibility and usability.
     </p>
   </div>
   <nys-unavfooter></nys-unavfooter>
