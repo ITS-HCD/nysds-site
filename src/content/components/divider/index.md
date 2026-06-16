@@ -6,7 +6,8 @@ image: /assets/img/components/divider.svg
 image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9008-683&t=Vm0dNpR7sqktYZPv-4
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=8420-575
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}
@@ -23,24 +24,36 @@ The `<nys-divider>` component visually separates content or sections within an i
 <nys-divider></nys-divider>
 <div>Sample content below</div>
 {% endset %}
-{%set showTip = true %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+{% block usage %}
+
+### When to use this component
+
+  - Use dividers for dense copy or when separating content helps users digest content, otherwise use white space.
+  - Make sure the divider is helping users understand structure or hierarchy — not just adding visual decoration.
+
+### When to consider something else
+
+  - When content is formatted side bys side.
+  - When content is already organized in groups.
+
+{% endblock %}
+
 {% block usagedo %}
 
-- Use to separate dense content or to help users understand structure and hierarchy. Prefer white space when content is already easy to parse.
-- Ensure consistent padding/margin above and below dividers to avoid crowding.
-- Use the `inverted` option on dark backgrounds.
+  - Ensure consistent padding/margin above and below dividers to avoid crowding.
+  - Use the `inverted` option on dark backgrounds.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Overuse dividers. If content is already organized in groups, additional dividers reduce scannability.
-- Use dividers to separate content appearing side by side.
-- Use the `inverted` option on light backgrounds.
+  - Overuse dividers and clutter the interface, reducing scannability.
+  - Use the divider to separate content appearing side bys side. 
+  - Use the `inverted` option on light backgrounds.
 
 {% endblock %}
 
@@ -48,14 +61,13 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 The `<nys-divider>` component includes the following accessibility-focused features:
 
-- The native `<hr>` element is used to ensure ARIA compliance
+  - The native `<hr>` element is used to ensure ARIA compliance
 
 {% endblock %}
 
 {% block options %}
 
-### Inverted
-
+### Inverse
 On dark background, add the `inverted` property to ensure the `<nys-divider>` is visible.
 {% set preview %}
 <div>Sample content above</div>
@@ -69,6 +81,7 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 
 {% endblock %}
 
+
 {% block properties %}
 
 <nys-table striped>
@@ -76,12 +89,10 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
     <tr>
       <th>Property</th>
       <th>Type</th>
-      <th>Default</th>
     </tr>
     <tr>
       <td><code>inverted</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
+      <td>Boolean</td>
     </tr>
   </table>
 </nys-table>

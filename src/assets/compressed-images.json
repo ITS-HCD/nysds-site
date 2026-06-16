@@ -213,5 +213,8 @@
   "src/assets/i/2026/release-1.17.0.png": "08fa3d6545c1678f85c336f0a248859603d2866e84bcfa942985402e947bc703",
   "src/assets/i/2026/release-1.18.0-thumbnail.png": "0edb2c3155ad648b78e552b5ad8f4143925a34310847963e0c7333c2c669b8a5",
   "src/assets/i/2026/release-1.18.0.png": "3a79e5c572faf87c11293edaf12a4397db2461456f6a1f654240fa5fef833f02",
-  "src/assets/i/2026/tabletop-badge.png": "55b4b87b7bebacbd7a9023107e864971047af8dc7d35bb647443d7943de7ef5f"
+  "src/assets/i/2026/tabletop-badge.png": "55b4b87b7bebacbd7a9023107e864971047af8dc7d35bb647443d7943de7ef5f",
+  "src/assets/i/2026/release-1.19.0-thumbnail.png": "0da4355764d6ff60a0b9297b55170b42c3cb68f19c71e1982fe9f2b6c5009284",
+  "src/assets/i/2026/release-1.19.0.png": "645fec4b88db25b410c84b9cf40afb86761117d3038b749ccb7dfe299d0bcaf6",
+  "src/assets/i/2026/upper-wolf-jaw-badge.png": "016f1d9321728b3289bbba28ce2ea81ede6bdd6192f09293f885d2ba47c1ba91"
 }
