@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-badge section-components">
@@ -588,15 +588,15 @@
 </li>
 <li>
 <p>Always position <code>&lt;nys-badge&gt;</code> so that it's easy to understand what content it's related to.</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -767,23 +767,13 @@
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>To indicate the status of an item, such as &quot;new&quot;, &quot;updated&quot;, or &quot;beta&quot;.</li>
-<li>To provide additional context or information about an item without cluttering the interface.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>When the information is too complex to be conveyed in a small badge.</li>
-<li>When the badge would not add significant value to the user experience.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
+<li>Indicate the status of an item, such as &quot;new&quot;, &quot;updated&quot;, or &quot;beta&quot;.</li>
+<li>Provide additional context or information about an item without cluttering the interface.</li>
 <li>Keep badge labels short -- one or two words like &quot;New&quot;, &quot;Beta&quot;, or &quot;Updated&quot;.</li>
 <li>Use the <code>intent</code> property to match the badge's visual style to its meaning (e.g., <code>success</code> for positive statuses, <code>warning</code> for caution).</li>
 <li>Place badges near the element they describe so the relationship is clear.</li>
@@ -791,11 +781,13 @@
 <li>Apply the <code>strong</code> variant when the badge appears on a raised surface or needs extra emphasis.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
+<li>Use badges when the information is too complex to be conveyed in a small badge.</li>
+<li>Use badges when they would not add significant value to the user experience.</li>
 <li>Don't use badges as interactive elements -- they are not buttons or links.</li>
 <li>Don't pack long sentences or multiple values into a single badge label.</li>
 <li>Don't mix badge sizes within the same group; pick either <code>md</code> or <code>sm</code> and stay consistent.</li>
@@ -803,8 +795,9 @@
 <li>Don't stack multiple badges on a single element unless each communicates a distinct, necessary status.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -882,7 +875,9 @@ Proposal</a>.
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -890,7 +885,6 @@ Proposal</a>.
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/badge/index.md">Edit this page on GitHub</a> (Permissions required)</p>

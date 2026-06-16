@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-divider section-components">
@@ -572,15 +572,15 @@
 <ul>
 <li>
 <p>The native <code>&lt;hr&gt;</code> element is used to ensure ARIA compliance</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -621,39 +621,29 @@
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use dividers for dense copy or when separating content helps users digest content, otherwise use white space.</li>
-<li>Make sure the divider is helping users understand structure or hierarchy — not just adding visual decoration.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>When content is formatted side by side.</li>
-<li>When content is already organized in groups.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
+<li>Use to separate dense content or to help users understand structure and hierarchy. Prefer white space when content is already easy to parse.</li>
 <li>Ensure consistent padding/margin above and below dividers to avoid crowding.</li>
 <li>Use the <code>inverted</code> option on dark backgrounds.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Overuse dividers and clutter the interface, reducing scannability.</li>
-<li>Use the divider to separate content appearing side by side.</li>
+<li>Overuse dividers. If content is already organized in groups, additional dividers reduce scannability.</li>
+<li>Use dividers to separate content appearing side by side.</li>
 <li>Use the <code>inverted</code> option on light backgrounds.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -691,7 +681,9 @@ Proposal</a>.
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -699,7 +691,6 @@ Proposal</a>.
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/divider/index.md">Edit this page on GitHub</a> (Permissions required)</p>

@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-datepicker section-components">
@@ -592,15 +592,15 @@
 </li>
 <li>
 <p>Error messages are rendered via <code>&lt;nys-errormessage&gt;</code> and associated with the input for assistive technology</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -610,8 +610,8 @@
   <p>The calendar popup does not appear in Safari or mobile browsers (iOS and Android). In those environments, users enter dates manually or use the native date picker provided by the operating system.</p>
 </nys-alert>
 <h3 id="value-and-form-output">Value and form output</h3>
-<p>The <code>value</code> prop accepts a <code>Date</code> object or an ISO date string (<code>YYYY-MM-DD</code>). The input displays the date in <code>MM/DD/YYYY</code> format. Internally, the component stores and submits the value as a string in ISO format (<code>YYYY-MM-DD</code>).</p>
-<nys-alert heading="Date object warning" type="info">
+<p>The <code>value</code> prop accepts a <code>Date</code> object or an ISO date string (<code>YYYY-MM-DD</code>). The input displays the date in <code>MM/DD/YYYY</code> format. Internally, the component stores and submits the value as a string in ISO format (<code>YYYY-MM-DD</code>).
+<nys-alert heading="Date object warning" type="info"></nys-alert></p>
   <p>
     Passing <code>new Date("YYYY-MM-DD")</code> to <code>value</code> can result in an off-by-one-day error due to UTC versus local time conversion. The component handles this internally when you pass an ISO string attribute.
     <br>
@@ -622,7 +622,7 @@
   <p>
     Prefer setting the value as an ISO string attribute: <code>&lt;nys-datepicker value="2025-06-01"&gt;</code>. If you must use a <code>Date</code> object in JavaScript, construct it with explicit year/month/day to avoid UTC shifting: <code>new Date(2025, 5, 1)</code>.
   </p>
-</nys-alert>
+
 <h4 id="valid-value-examples">Valid value examples</h4>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -698,11 +698,11 @@ datepicker<span class="token punctuation">.</span>value <span class="token opera
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
-<div style="display: flex; flex-direction: column; gap: 16px;">
-  <nys-datepicker label="Medium width" width="md"></nys-datepicker>
-  <nys-datepicker label="Large width" width="lg"></nys-datepicker>
-  <nys-datepicker label="Full width" width="full"></nys-datepicker>
-</div>
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <nys-datepicker label="Medium width" width="md"></nys-datepicker>
+    <nys-datepicker label="Large width" width="lg"></nys-datepicker>
+    <nys-datepicker label="Full width" width="full"></nys-datepicker>
+  </div>
 </div>
   </div>
   <div class="code-preview__source">
@@ -719,10 +719,10 @@ datepicker<span class="token punctuation">.</span>value <span class="token opera
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span> <span class="token property">gap</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Medium width<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Large width<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full width<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>full<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Medium width<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Large width<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full width<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>full<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -732,7 +732,9 @@ datepicker<span class="token punctuation">.</span>value <span class="token opera
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
-<nys-datepicker label="Fiscal year start date" description="Select the first day of the fiscal year" startDate="2026-04-01"></nys-datepicker>
+<nys-datepicker label="Fiscal year start date" description="Select the first day of the fiscal year" startDate="2026-04-01" <blockquote="">
+</nys-datepicker>
+
 </div>
   </div>
   <div class="code-preview__source">
@@ -749,9 +751,9 @@ datepicker<span class="token punctuation">.</span>value <span class="token opera
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-datepicker</span>
-  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Fiscal year start date<span class="token punctuation">"</span></span>
-  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select the first day of the fiscal year<span class="token punctuation">"</span></span>
-  <span class="token attr-name">startDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-01<span class="token punctuation">"</span></span>
+<span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Fiscal year start date<span class="token punctuation">"</span></span>
+<span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select the first day of the fiscal year<span class="token punctuation">"</span></span>
+<span class="token attr-name">startDate</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2026-04-01<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-datepicker</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
@@ -938,46 +940,33 @@ datepicker<span class="token punctuation">.</span>value <span class="token opera
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>When users need to select a single calendar date, such as scheduling an appointment or choosing a filing deadline</li>
-<li>When the day of the week matters and a calendar view helps users orient themselves</li>
-<li>When a form requires consistent date formatting across browsers</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>For familiar dates where users already know the value without a calendar, such as date of birth or document issue dates. Consider memorable date fields (<a href="https://github.com/ITS-HCD/nysds/discussions/1193">currently under proposal</a>).</li>
-<li>When users need to select multiple dates or a span of time. Consider a date range component (possible version 2 of <code>nys-datepicker</code>).</li>
-<li>When time selection is required alongside the date.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Set the <code>label</code> property to clearly describe what date is being collected</li>
-<li>Add <code>description</code> text to specify the expected format or provide context</li>
-<li>Set <code>required</code> when the date is mandatory for form submission</li>
-<li>Use <code>startDate</code> to open the calendar to a relevant month when the expected date is far from today</li>
-<li>Pass date values as ISO strings (<code>&quot;YYYY-MM-DD&quot;</code>) rather than <code>Date</code> objects to avoid timezone issues</li>
+<li>Use when users need to select a single calendar date, such as scheduling an appointment or choosing a filing deadline, especially when the day of the week matters.</li>
+<li>Set the <code>label</code> property to clearly describe what date is being collected. Every datepicker needs one for accessibility.</li>
+<li>Add <code>description</code> text to specify the expected format or provide context.</li>
+<li>Set <code>required</code> when the date is mandatory for form submission; don't set both <code>required</code> and <code>optional</code> on the same component.</li>
+<li>Use <code>startDate</code> to open the calendar to a relevant month when the expected date is far from today.</li>
+<li>Pass date values as ISO strings (<code>&quot;YYYY-MM-DD&quot;</code>) rather than <code>Date</code> objects to avoid timezone issues.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't omit the <code>label</code> -- every datepicker needs one for accessibility</li>
-<li>Don't use this component for dates users know from memory, like date of birth. A text input with separate month/day/year fields is more efficient.</li>
-<li>Don't rely on the calendar popup alone -- Safari and mobile browsers use the native date picker instead</li>
-<li>Don't set both <code>required</code> and <code>optional</code> on the same component</li>
-<li>Don't use <code>hideTodayButton</code> and <code>hideClearButton</code> together unless users must select a specific date and should not be able to clear it</li>
+<li>Don't use for dates users know from memory, such as date of birth or document issue dates. A text input with separate month/day/year fields is more efficient.</li>
+<li>Don't use when users need to select multiple dates or a date range, or when time selection is required alongside the date.</li>
+<li>Don't rely on the calendar popup alone. Safari and mobile browsers use the native date picker instead.</li>
+<li>Don't use <code>hideTodayButton</code> and <code>hideClearButton</code> together unless users must select a specific date and cannot be allowed to clear it.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1119,17 +1108,17 @@ Proposal</a>.
       <div class="code-preview__code-block">
         <pre class="language-js"><code class="language-js"><span class="token comment">// Select the datepicker component</span>
 <span class="token keyword">const</span> datepicker <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"nys-datepicker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<p><span class="token comment">// Listen for date selection</span>
-datepicker<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;nys-input&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-<span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string"><code>&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Datepicker (&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;id&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;) date selected:&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;</code></span></span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></p>
-<p><span class="token comment">// Listen for blur (triggers validation)</span>
-datepicker<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;nys-blur&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Datepicker lost focus&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></p></code></pre>
-</div>
-</div><p></p>
+<span class="token comment">// Listen for date selection</span>
+datepicker<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-input"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Datepicker (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) date selected:</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Listen for blur (triggers validation)</span>
+datepicker<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-blur"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Datepicker lost focus"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
   </div>
 </div>
 </section>
@@ -1138,7 +1127,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -1146,7 +1137,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/datepicker/index.md">Edit this page on GitHub</a> (Permissions required)</p>

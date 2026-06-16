@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-pagination section-components">
@@ -536,8 +536,9 @@
 <section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-pagination currentPage="2" totalPages="7"></nys-pagination>
- </div>
+<div class="code-preview__preview-root-inner">
+<nys-pagination currentPage="2" totalPages="7"></nys-pagination>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -597,7 +598,9 @@
 <p>When <code>currentPage</code> is <code>1</code>, the Previous button is disabled. The component shows the first few page numbers and the last page.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-pagination currentPage="1" totalPages="12"></nys-pagination></div>
+<div class="code-preview__preview-root-inner">
+<nys-pagination currentPage="1" totalPages="12"></nys-pagination>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -621,7 +624,9 @@
 <p>When the user is in the middle of the result set, the component shows ellipsis on both sides with the current page centered.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-pagination currentPage="6" totalPages="12"></nys-pagination></div>
+<div class="code-preview__preview-root-inner">
+<nys-pagination currentPage="6" totalPages="12"></nys-pagination>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -645,7 +650,9 @@
 <p>When <code>currentPage</code> equals <code>totalPages</code>, the Next button is disabled. The component shows the first page and the last few page numbers.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-pagination currentPage="12" totalPages="12"></nys-pagination></div>
+<div class="code-preview__preview-root-inner">
+<nys-pagination currentPage="12" totalPages="12"></nys-pagination>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -669,7 +676,9 @@
 <p>When there are only a handful of pages, all page numbers are shown without ellipsis.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-pagination currentPage="2" totalPages="3"></nys-pagination></div>
+<div class="code-preview__preview-root-inner">
+<nys-pagination currentPage="2" totalPages="3"></nys-pagination>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -693,7 +702,9 @@
 <p>When <code>totalPages</code> is <code>1</code>, the component renders nothing. Pagination is unnecessary when all content fits on one page.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-pagination currentPage="2" totalPages="3"></nys-pagination></div>
+<div class="code-preview__preview-root-inner">
+<nys-pagination currentPage="2" totalPages="3"></nys-pagination>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -708,8 +719,7 @@
     </div>
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-pagination</span> <span class="token attr-name">currentPage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">totalPages</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-pagination</span><span class="token punctuation">></span></span>
-<span class="token comment">&lt;!-- Nothing renders --></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-pagination</span> <span class="token attr-name">currentPage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">totalPages</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-pagination</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -718,43 +728,32 @@
 <p>On screens below 768px, the component automatically switches to a condensed layout: Previous and Next buttons become icon-only, and neighboring page numbers are hidden to save space.</p>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use for search results, such as a professional license lookup that returns hundreds of matches across the state.</li>
-<li>Use for data tables, such as paginated case records, permit applications, or document listings.</li>
-<li>Use when performance matters. Pagination lets you fetch and render smaller data chunks instead of loading everything at once.</li>
-<li>Use when users need to navigate to a specific part of a result set, such as jumping to page 5 of an agency directory.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>If the result set is short enough to display on a single page (fewer than 3-4 screen heights), show all items and skip pagination.</li>
-<li>When you need to show progress through a series of sequential tasks -- such as a benefits enrollment workflow -- use the <code>&lt;nys-stepper&gt;</code> component instead.</li>
-<li>For infinite-scroll patterns (e.g., a news feed), pagination is not the right fit.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Set <code>totalPages</code> based on your data set and page size. Update <code>currentPage</code> in response to <code>nys-change</code> events.</li>
-<li>Position the pagination component below the content it controls, so users see results before navigating.</li>
-<li>Scroll users to the top of the results area when they change pages, so they start reading from the beginning of the new page.</li>
-</ul>
-</div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Don't use pagination when content fits on a single scrollable page. Splitting short content across multiple pages adds unnecessary clicks.</li>
-<li>Don't use pagination for step-based workflows where users complete tasks in order. Use <code>&lt;nys-stepper&gt;</code> instead.</li>
+<li>Use for large result sets such as search results, data tables, or directory listings where loading everything at once would hurt performance or usability.</li>
+<li>Use when users need to navigate to a specific part of a result set.</li>
+<li>Set <code>totalPages</code> based on your data set and page size; update <code>currentPage</code> in response to <code>nys-change</code> events.</li>
 <li>Don't set <code>currentPage</code> to a value greater than <code>totalPages</code>. The component clamps the value automatically, but your application logic should prevent this.</li>
+<li>Position the pagination component below the content it controls.</li>
+<li>Scroll users to the top of the results area when they change pages.</li>
 </ul>
 </div>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Use when content fits on a single page (fewer than 3–4 screen heights). Show all items instead.</li>
+<li>Use for step-based workflows where users complete tasks in order. Use <code>&lt;nys-stepper&gt;</code> instead.</li>
+<li>Use for infinite-scroll patterns such as a news feed.</li>
+</ul>
+</div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -829,7 +828,7 @@ Proposal</a>.
 <span class="token keyword">const</span> pagination <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"nys-pagination"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-change' event</span>
 pagination<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Pagination is changed to page ${event.detail.page}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Pagination is changed to page ${event.detail.page}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -841,7 +840,9 @@ pagination<span class="token punctuation">.</span><span class="token function">a
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -849,7 +850,6 @@ pagination<span class="token punctuation">.</span><span class="token function">a
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/pagination/index.md">Edit this page on GitHub</a> (Permissions required)</p>

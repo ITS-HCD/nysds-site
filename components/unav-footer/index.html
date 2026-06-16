@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-unavfooter section-components">
@@ -536,7 +536,9 @@
 <section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-unavfooter></nys-unavfooter></div>
+<div class="code-preview__preview-root-inner">
+<nys-unavfooter></nys-unavfooter>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -575,15 +577,15 @@
 </li>
 <li>
 <p>Keyboard navigation: users can <code>Tab</code> through all links in the footer in logical reading order.</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -592,40 +594,33 @@
 There are no configurable options for this component. It is intended to be used as-is to ensure consistency across all New York State digital products.
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use on every New York State website and application. The Universal Navigation Footer is a required element per NYS web policy.</li>
-<li>Place as the very last element in the page, below <code>&lt;nys-globalfooter&gt;</code>. Together, these two components form the complete footer structure: the Global Footer provides agency-specific links, and the UNav Footer provides statewide links.</li>
+<li>Place the <code>&lt;nys-unavfooter&gt;</code> as the last element on every public-facing page, immediately after <code>&lt;nys-globalfooter&gt;</code>.
+<ul>
+<li>Use on every page of every NYS site and application. This component is required per NYS web policy, including on error pages, login screens, and landing pages.</li>
+<li>Place as the very last element on the page, immediately after <code>&lt;nys-globalfooter&gt;</code>.</li>
+<li>Use as-is with no configuration. The component handles its own content and styling.</li>
 </ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>There is no alternative. This component is required on all NYS sites. Do not replace it with a custom footer.</li>
-<li>Do not place the UNav Footer anywhere other than the absolute bottom of the page.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Place the <code>&lt;nys-unavfooter&gt;</code> as the last element on every page, immediately after <code>&lt;nys-globalfooter&gt;</code>.</li>
-<li>Include it on every page of your site, including error pages, login screens, and landing pages.</li>
-<li>Use it as-is with no configuration. The component handles its own content and styling.</li>
+</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don't place the UNav Footer anywhere other than the absolute bottom of the page.</li>
-<li>Don't attempt to customize, restyle, or override the UNav Footer's content or appearance. Consistency across all state sites is the purpose of this component.</li>
-<li>Don't omit the UNav Footer from any page on your site.</li>
+<li>Don't use on back office applications or internal sites that are not public-facing.</li>
+<li>Place anywhere other than the absolute bottom of the page.</li>
+<li>Customize, restyle, or override the component's content or appearance. Consistency across all state sites is the purpose of this component.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <p>There are no properties for this component.</p>
@@ -643,7 +638,9 @@ There are no configurable options for this component. It is intended to be used 
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -651,7 +648,6 @@ There are no configurable options for this component. It is intended to be used 
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/unavfooter/index.md">Edit this page on GitHub</a> (Permissions required)</p>

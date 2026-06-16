@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-tooltip section-components">
@@ -536,10 +536,12 @@
 <section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><div style="margin-top:30px">
-<nys-tooltip for="my-button" text="I am a tooltip."></nys-tooltip>
-<nys-button id="my-button" label="Hover Me"></nys-button>
-</div></div>
+<div class="code-preview__preview-root-inner">
+<div style="margin-top:30px">
+  <nys-tooltip for="my-button" text="I am a tooltip."></nys-tooltip>
+  <nys-button id="my-button" label="Hover Me"></nys-button>
+</div>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -585,15 +587,15 @@
 </li>
 <li>
 <p>Auto-positioning prevents the tooltip from being clipped by viewport edges, keeping content readable for users who zoom in.</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -614,8 +616,8 @@
 </ul>
 <p><strong>These components are either:</strong></p>
 <ul>
-<li>a form-related web component.</li>
-<li>standard components used for tooltips (i.e., <code>nys-icon</code> and <code>nys-button</code>).</li>
+<li>A form-related web component.</li>
+<li>Standard components used for tooltips (i.e., <code>nys-icon</code> and <code>nys-button</code>).</li>
 </ul>
 <p>To attach <code>&lt;nys-tooltip&gt;</code> to a NYS component, see the section below.</p>
 <h3 id="linking-tooltip-to-an-component">Linking Tooltip to an Component</h3>
@@ -646,7 +648,8 @@ Valid positions are: <code>top</code>, <code>bottom</code>, <code>left</code>, <
 <p><strong>Note:</strong> If no position is provided, the tooltip will automatically choose the best position based on the available space.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center;">
+<div class="code-preview__preview-root-inner">
+<div style="display: flex; justify-content: center;">
   <div style="display: flex; gap: 5px">
     <p>Hover over the icon</p>
     <nys-tooltip for="my-icon2" text="I am a tooltip." position="right">
@@ -680,10 +683,12 @@ Valid positions are: <code>top</code>, <code>bottom</code>, <code>left</code>, <
 Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to set a position prop.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><div style="margin-top:30px">
+<div class="code-preview__preview-root-inner">
+<div style="margin-top:30px">
   <nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
   <nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="lg" required=""></nys-textinput>
-</div></div>
+</div>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -699,7 +704,14 @@ Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to
     <div class="code-preview__code-container expanded">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-tooltip</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I am a tooltip.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-tooltip</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fullName<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full name<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your full legal name<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> 
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-textinput<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fullName<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Full name<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Enter your full legal name<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lg<span class="token punctuation">"</span></span> 
+  <span class="token attr-name">required</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -708,14 +720,15 @@ Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to
 <p>Set the <code>inverted</code> when the tooltip is on a dark background.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview inverted " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center; margin-top:30px">
+<div class="code-preview__preview-root-inner">
+<div style="display: flex; justify-content: center; margin-top:30px">
   <div style="color: #fff; display: flex; gap: 5px">
     <p>Hover over the icon</p>
-    <nys-tooltip for="my-tooltip3" text="I am a tooltip." inverted="">
-    </nys-tooltip>
+    <nys-tooltip for="my-tooltip3" text="I am a tooltip." inverted=""></nys-tooltip>
     <nys-icon id="my-tooltip3" name="info" size="3xl"></nys-icon>
   </div>
-</div></div>
+</div>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -741,42 +754,32 @@ Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use to provide supplemental hints on form fields, such as explaining what &quot;FEIN&quot; means on a business registration form or clarifying an eligibility requirement.</li>
-<li>Use on icon buttons that might need additional context, such as a help icon next to a complex field or an info icon explaining a status indicator.</li>
+<li>Use to provide supplemental hints on form fields (e.g., explaining what &quot;FEIN&quot; means) or on icon buttons that need additional context.</li>
 <li>Use on NYSDS form components (<code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-select&gt;</code>, <code>&lt;nys-checkbox&gt;</code>, etc.) where the tooltip automatically renders as a hint icon next to the label.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>When the information is critical for completing a task (e.g., required format for a Social Security Number), use inline description text instead. Tooltips are easy to miss.</li>
-<li>When the content is long or includes links, actions, or structured content. Tooltips should stay brief and passive.</li>
-<li>When users on mobile devices are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Provide brief and helpful content inside the tooltip.</li>
-<li>Add tooltips to icons that do not have visible labels and require additional context.</li>
-<li>Position tooltips so they don’t block related content.</li>
+<li>Keep tooltip content brief and helpful.</li>
+<li>Position tooltips so they don't block related content.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Use tooltips for information that is vital to task completion.</li>
+<li>Use for information critical to task completion. Use inline description text instead, as tooltips are easy to miss.</li>
+<li>Use when content is long or includes links, actions, or structured content.</li>
 <li>Use interactive elements such as links or buttons inside a tooltip.</li>
-<li>Rely on tooltips when you have room to provide more explanation.</li>
+<li>Rely on tooltips when you have room to provide inline explanation.</li>
+<li>Use when mobile users are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -834,7 +837,9 @@ Proposal</a>.
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -842,7 +847,6 @@ Proposal</a>.
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/tooltip/index.md">Edit this page on GitHub</a> (Permissions required)</p>

@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-skipnav section-components">
@@ -543,15 +543,15 @@
 </p>
 <script type="module">
   customElements.whenDefined('nys-skipnav').then(async () => {
-    const skipnavs = document.querySelectorAll('.skipnav-demo');
-    // Wait until the Lit component finishes updating
-    await skipnavs.updateComplete;
-    skipnavs.forEach((skipnav) => {
-      const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
-      if (link) {
-        link.classList.add('show');
-      }
-    })
+  const skipnavs = document.querySelectorAll('.skipnav-demo');
+  // Wait until the Lit component finishes updating
+  await skipnavs.updateComplete;
+  skipnavs.forEach((skipnav) => {
+  const link = skipnav?.shadowRoot?.querySelector('.nys-skipnav__link');
+  if (link) {
+  link.classList.add('show');
+  }
+  })
   });
 </script>
 </div>
@@ -593,15 +593,15 @@
 </li>
 <li>
 <p>Screen readers correctly announce the link and shift focus on activation</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -611,18 +611,20 @@
 <p><strong>IMPORTANT:</strong> To work correctly, <code>&lt;nys-skipnav&gt;</code> should be the first focusable element. Ideally right after the opening <code>&lt;body&gt;</code> tag, before any headers or nav elements.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-skipnav class="skipnav-demo" href="#main-content1"></nys-skipnav>
+<div class="code-preview__preview-root-inner">
+<nys-skipnav class="skipnav-demo" href="#main-content1"></nys-skipnav>
 <nys-unavheader hideTranslate="" hideSearch=""></nys-unavheader>
 <div id="main-content1" style="padding:10px 30px; background-color: #f0f0f0;">
   <h2 id="main-content">Main Content</h2>
   <p style="display:flex; align-items:top; gap:10px;">
-      <nys-icon name="info" size="2xl"></nys-icon>
-      Press Tab to focus on the hidden "Skip to main content" link. This feature 
-      allows screen reader users and keyboard navigators to jump directly to the 
-      main content section, improving accessibility and usability.
+    <nys-icon name="info" size="2xl"></nys-icon>
+    Press Tab to focus on the hidden "Skip to main content" link. This feature 
+    allows screen reader users and keyboard navigators to jump directly to the 
+    main content section, improving accessibility and usability.
   </p>
 </div>
-<nys-unavfooter></nys-unavfooter></div>
+<nys-unavfooter></nys-unavfooter>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -643,10 +645,10 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content1<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">padding</span><span class="token punctuation">:</span>10px 30px<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #f0f0f0<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>Main Content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span> <span class="token property">align-items</span><span class="token punctuation">:</span>top<span class="token punctuation">;</span> <span class="token property">gap</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-        Press Tab to focus on the hidden "Skip to main content" link. This feature 
-        allows screen reader users and keyboard navigators to jump directly to the 
-        main content section, improving accessibility and usability.
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+      Press Tab to focus on the hidden "Skip to main content" link. This feature 
+      allows screen reader users and keyboard navigators to jump directly to the 
+      main content section, improving accessibility and usability.
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-unavfooter</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-unavfooter</span><span class="token punctuation">></span></span>
@@ -657,37 +659,27 @@
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>When your page has a large header or navigation before the main content</li>
-<li>When you want to improve keyboard and screen reader accessibility</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>If your layout already starts with the main content and has no navigation to skip</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Use on pages with repeated navigation or other content before the main section</li>
-<li>Make sure the <code>href</code> on <code>&lt;nys-skipnav&gt;</code> matches the <code>id</code> of the main content container</li>
+<li>Use on pages with a large header, navigation, or other repeated content before the main section.</li>
+<li>Ensure the <code>href</code> on <code>&lt;nys-skipnav&gt;</code> matches the <code>id</code> of the main content container.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don’t use if there’s nothing to skip over</li>
-<li>Don’t mismatch the <code>href</code> and target <code>id</code></li>
+<li>Use if your layout already starts with the main content and there is nothing to skip over.</li>
+<li>Mismatch the <code>href</code> and target <code>id</code>.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -730,7 +722,9 @@ Proposal</a>.
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -738,7 +732,6 @@ Proposal</a>.
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/skipnav/index.md">Edit this page on GitHub</a> (Permissions required)</p>

@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-modal section-components">
@@ -541,11 +541,11 @@
   <nys-button label="Open Modal" onClick="showModal('modal1')"></nys-button>
   <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
     <p>
-        Would you like to install the latest version? Albany ipsum dolor sit
-        Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-        incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-        veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-        Cuomo consequat.
+      Would you like to install the latest version? Albany ipsum dolor sit
+      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+      consequat.
     </p>
     <div slot="actions">
       <nys-button label="Not now" variant="text" onClick="closeModal('modal1')"></nys-button>
@@ -575,11 +575,11 @@
   <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
-      Would you like to install the latest version? Albany ipsum dolor sit
-      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
+    Would you like to install the latest version? Albany ipsum dolor sit
+    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+    consequat.
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">yourCloseFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
@@ -612,15 +612,15 @@
 </li>
 <li>
 <p>Prevent background scroll so users don’t lose context.</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -634,7 +634,7 @@
 </ul>
 <h3 id="scrolling-behavior">Scrolling Behavior</h3>
 <p>Avoid content-heavy modals. If the content is too long, consider using a dedicated page or a Stepper.</p>
-<p><strong>IMPORTANT:</strong>  <code>&lt;nys-modal&gt;</code> blocks page scrolling to keep focus within the modal.</p>
+<p><strong>IMPORTANT:</strong> <code>&lt;nys-modal&gt;</code> blocks page scrolling to keep focus within the modal.</p>
 <h3 id="adding-basic-slots">Adding basic slots</h3>
 <p>Use the default slot to add content such as text, links, or other elements inside the modal.</p>
 <p><strong>Note:</strong> The <code>heading</code> is required for the modal title, while <code>subheading</code> is optional for extra context or instructions.</p>
@@ -788,45 +788,31 @@
   </script>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>When you need to confirm an important action (e.g., “Are you sure you want to delete this?”).</li>
-<li>When you need to present a form without navigating away (e.g., login, signup, feedback).</li>
-<li>When you need to show alerts or notifications that require acknowledgment.</li>
-<li>When you want to display additional information without leaving the current page.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>When your content is long or complex - consider a dedicated page instead.</li>
-<li>When you only need to show inline status - use a banner or <code>nys-alert</code>.</li>
-<li>When you want to provide quick hints for form fields - use a <code>nys-tooltip</code>.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Use for actions that need confirmation.</li>
-<li>Keep content short and focused.</li>
-<li>Use the <code>mandatory</code> prop to disable the dismiss button when the user must make a critical decision or acknowledge essential information.</li>
-<li>Keep the <code>subheading</code> short and use <code>&lt;p&gt;</code> tag within the modal for longer information.</li>
+<li>Use to confirm important actions, present focused forms (e.g., login, feedback), or require acknowledgment of alerts without navigating away from the page.</li>
+<li>Keep content short and focused. Use a dedicated page for long or complex content.</li>
+<li>Keep the <code>subheading</code> short and use <code>&lt;p&gt;</code> tags within the modal for longer information.</li>
+<li>Use the <code>mandatory</code> prop to disable the dismiss button only when the user must make a critical decision or acknowledge essential information.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Overload with long forms or texts.</li>
-<li>Show trivial info.</li>
 <li>Stack multiple modals.</li>
-<li>Force a mandatory modal unnecessarily.</li>
+<li>Use for trivial information or inline status messages. Use <code>&lt;nys-alert&gt;</code> instead.</li>
+<li>Use for quick hints on form fields. Use <code>&lt;nys-tooltip&gt;</code> instead.</li>
+<li>Force the <code>mandatory</code> prop unnecessarily.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -929,7 +915,9 @@ modal<span class="token punctuation">.</span><span class="token function">addEve
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -937,7 +925,6 @@ modal<span class="token punctuation">.</span><span class="token function">addEve
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/modal/index.md">Edit this page on GitHub</a> (Permissions required)</p>

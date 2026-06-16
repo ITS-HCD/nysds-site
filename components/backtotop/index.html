@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-backtotop section-components">
@@ -546,10 +546,9 @@
     const backtotop = document.getElementById('backtotop-demo');
     // Wait until the Lit component finishes updating
     await backtotop.updateComplete;
-
     const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
     if (backBtn) {
-        backBtn.style.position = 'absolute';
+      backBtn.style.position = 'absolute';
     }
   });
 </script>
@@ -595,15 +594,15 @@
 </li>
 <li>
 <p>Uses <code>position: fixed</code> positioning, so it remains accessible regardless of scroll position.</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -619,35 +618,34 @@
 <div style="padding: 2rem 1rem; background-color: #fff;">
   <h2 style="margin: 0;" id="sample-content-on-page">Sample Content on page</h2>
   <p style="margin: 0;">
-      This is a sample content area used to demonstrate the functionality of
-      the Back to Top button. In an actual application,
-      <code>nys-backtotop</code> would not be visible until the user scrolls
-      down the page.
+    This is a sample content area used to demonstrate the functionality of
+    the Back to Top button. In an actual application,
+    <code>nys-backtotop</code> would not be visible until the user scrolls
+    down the page.
   </p>
 </div>
 <nys-button id="chatbot" prefixIcon="sms" variant="outline" label="Chat With Us" size="sm"></nys-button>
-<nys-unavfooter></nys-unavfooter>
-<nys-backtotop id="backtotop-demo2" position="left" visible=""></nys-backtotop>
-<script type="module">
-  customElements.whenDefined('nys-backtotop').then(async () => {
+  <nys-unavfooter></nys-unavfooter>
+  <nys-backtotop id="backtotop-demo2" position="left" visible=""></nys-backtotop>
+  <script type="module">
+    customElements.whenDefined('nys-backtotop').then(async () => {
     const backtotop = document.getElementById('backtotop-demo2');
     // Wait until the Lit component finishes updating
     await backtotop.updateComplete;
-
     const backBtn = backtotop?.shadowRoot?.querySelector('.nys-backtotop');
     if (backBtn) {
-        backBtn.style.position = 'absolute';
+    backBtn.style.position = 'absolute';
     }
-  });
-</script>
-<style>
-  #chatbot {
+    });
+  </script>
+  <style>
+    #chatbot {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     --_nys-button-border-radius: var(--nys-radius-round);
-  }
-</style>
+    }
+  </style>
 </div>
   </div>
   <div class="code-preview__source">
@@ -670,41 +668,31 @@
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
-<ul>
-<li>Use on long-form content pages such as state policy documents, agency service directories, and program eligibility guides.</li>
-<li>Use on pages with extensive search results or data tables, such as a professional license lookup or business registration listing.</li>
-<li>Use when users need a quick way to return to the top-level navigation after scrolling through detailed content, such as a benefits application FAQ.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>Don't use on pages where content fits within a single viewport without scrolling.</li>
-<li>If your page uses anchor-based in-page navigation (e.g., a table of contents), users already have navigation tools and a back-to-top button may be redundant.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Place exactly one <code>&lt;nys-backtotop&gt;</code> per page, above the <code>&lt;nys-globalfooter&gt;</code> in your markup.</li>
+<li>Use on long-form content pages such as state policy documents, agency service directories, program eligibility guides, extensive search results, or data tables.</li>
 <li>Set <code>position=&quot;left&quot;</code> when the bottom-right corner is occupied by another floating element, such as a chatbot button.</li>
 <li>Let the component manage its own visibility. The auto-show behavior activates after 1.5 viewport heights on pages that are at least 4 screens tall.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Don’t add multiple <code>&lt;nys-backtotop&gt;</code> components to a single page.</li>
-<li>Don’t use <code>&lt;nys-backtotop&gt;</code> on pages where the content fits within a single viewport.</li>
-<li>Don’t set <code>visible</code> in production unless you have a specific reason to override the auto-show behavior. Forcing visibility on short pages creates unnecessary clutter.</li>
+<li>Don't add multiple <code>&lt;nys-backtotop&gt;</code> components to a single page.</li>
+<li>Don't use on pages where content fits within a single viewport without scrolling.</li>
+<li>Don't use if your page already has anchor-based in-page navigation such as a table of contents. A back-to-top button is likely redundant.</li>
+<li>Don't set <code>visible</code> in production unless you have a specific reason to override the auto-show behavior. Forcing visibility on short pages creates unnecessary clutter.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -771,11 +759,11 @@ Proposal</a>.
 <span class="token keyword">const</span> backtotop <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"nys-backtotop"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'click' event</span>
 backtotop<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Backtotop clicked"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Backtotop clicked"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'blur' event</span>
 backtotop<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"blur"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Backtotop lost focus"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Backtotop lost focus"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -787,7 +775,9 @@ backtotop<span class="token punctuation">.</span><span class="token function">ad
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -795,7 +785,6 @@ backtotop<span class="token punctuation">.</span><span class="token function">ad
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/backtotop/index.md">Edit this page on GitHub</a> (Permissions required)</p>

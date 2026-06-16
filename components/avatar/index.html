@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:03:07.297Z -->
+    <!-- Latest Build: 2026-06-16T18:04:54.308Z -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -537,7 +537,9 @@
 <section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar"></nys-avatar></div>
+<div class="code-preview__preview-root-inner">
+<nys-avatar ariaLabel="User avatar"></nys-avatar>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -576,15 +578,15 @@
 </li>
 <li>
 <p>A <code>ariaLabel</code> property to provide accessible text for screen readers.</p>
-<p class="p-adorned is nys-margin-t-150">
-    <mark>
-        <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-    </mark>
-    <span class="nys-font-h6">
-        Additional accessibility test and build content is coming soon,
-        in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-    </span>
-</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
 </li>
 </ul>
 </section><br>
@@ -594,7 +596,9 @@
 <p>To display an image in the avatar, set the <code>image</code> and <code>ariaLabel</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code>lazy</code> boolean attribute.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy=""></nys-avatar></div>
+<div class="code-preview__preview-root-inner">
+<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy="">
+</nys-avatar></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -618,7 +622,9 @@
 <p>If an image is unavailable, you can set the <code>initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar></div>
+<div class="code-preview__preview-root-inner">
+<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -757,43 +763,33 @@
 </div>
 </section><br>
 <section>
-    <h2 id="usage">Usage</h2>
-<h3 id="when-to-use-this-component">When to use this component</h3>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>To visually represent users, objects, or entities in a UI.</li>
-<li>Ideal for profiles, account settings, or comment threads.</li>
-</ul>
-<h3 id="when-to-consider-something-else">When to consider something else</h3>
-<ul>
-<li>If you need to show a large visual representation of a user or entity, use a photo.</li>
-<li>When a simple label or text works better.</li>
-</ul>
-</section>
-<div class="nys-grid-row nys-grid-gap">
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--do nys-flex-fill">
-            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-<ul>
-<li>Use for clear, simple user or entity representation.</li>
+<li>Use for clear, simple user or entity representation in UIs such as profiles, account settings, or comment threads.</li>
 <li>Prefer showing the full name next to the avatar on tablets and larger breakpoints.</li>
 <li>Place the full name of the user or entity to the right of the avatar.</li>
 <li>Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.</li>
-<li>Use the <code>nys-icon</code> slot only when the icon prop isn't sufficient.</li>
+<li>Use the <code>&lt;nys-icon&gt;</code> slot only when the icon prop isn't sufficient.</li>
 </ul>
 </div>
-    </div>
-    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-        <div class="card card--dont nys-flex-fill">
-            <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
 <li>Skip the <code>ariaLabel</code> attribute for screen reader users.</li>
-<li>Use the <code>nys-icon</code> as a slot when icon prop can satisfy your use.</li>
-<li>Overload the avatar with unnecessary customizations.</li>
-<li>Override default avatar icons unless additional context is essential, doing so creates inconsistency across NYS interfaces.</li>
+<li>Use the <code>nys-icon</code> as a slot when the icon prop can satisfy your use.</li>
+<li>Overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential. Doing so creates inconsistency across NYS interfaces.</li>
+<li>Use an avatar when a large visual representation is needed; use a photo instead.</li>
+<li>Replace an avatar with a simple label or text when that would communicate the information more clearly.</li>
 </ul>
 </div>
+        </div>
     </div>
-</div><br>
+</section><br>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -853,7 +849,7 @@
 </section><br>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
-  <div class="css-var-table">
+<div class="css-var-table">
 <p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
 <div class="code-preview-container">
   <div class="code-preview__source">
@@ -912,7 +908,9 @@ Proposal</a>.
     <div class="nys-grid-row nys-grid-gap">
         <div>
             <p>
-                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in our GitHub discussions board to see if someone already proposed something similar. If not, feel free to submit one.
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
             </p>
         </div>
         <div class="nys-tablet:nys-grid-col-12">
@@ -920,7 +918,6 @@ Proposal</a>.
         </div>
     </div>
 </section>
-
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/avatar/index.md">Edit this page on GitHub</a> (Permissions required)</p>
