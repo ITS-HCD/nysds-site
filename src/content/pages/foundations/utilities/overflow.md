@@ -21,7 +21,8 @@ Overflow utilities control what happens when content is larger than its containe
 
 ## Overflow classes
 
-<nys-table striped><table>
+<nys-table striped>
+<table>
 <thead>
 <tr>
 <th>Class</th>
@@ -51,7 +52,8 @@ Overflow utilities control what happens when content is larger than its containe
 <td>Content overflows visibly (default)</td>
 </tr>
 </tbody>
-</table></nys-table>
+</table>
+</nys-table>
 
 {% set preview %}
 <div class="nys-grid-row nys-grid-gap">
@@ -73,6 +75,7 @@ Overflow utilities control what happens when content is larger than its containe
   </div>
 </div>
 {% endset %}
+{% set backgroundSolid = true %}
 {% set code %}
 <!-- Scrollbar only when needed -->
 <div class="nys-overflow-auto" style="max-height: 100px;">
@@ -96,7 +99,8 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 
 ### Overflow-x
 
-<nys-table striped><table>
+<nys-table striped>
+<table>
 <thead>
 <tr>
 <th>Class</th>
@@ -121,7 +125,8 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 <td><code>overflow-x: visible</code></td>
 </tr>
 </tbody>
-</table></nys-table>
+</table>
+</nys-table>
 
 {% set preview %}
 <div class="nys-overflow-x-auto" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">
@@ -142,7 +147,8 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 
 ### Overflow-y
 
-<nys-table striped><table>
+<nys-table striped>
+<table>
 <thead>
 <tr>
 <th>Class</th>
@@ -167,7 +173,8 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 <td><code>overflow-y: visible</code></td>
 </tr>
 </tbody>
-</table></nys-table>
+</table>
+</nys-table>
 
 {% set preview %}
 <div class="nys-overflow-y-auto" style="max-height: 120px; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">

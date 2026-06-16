@@ -21,7 +21,8 @@ For font concepts, tokens, installation, and best practices, see [Typography Fou
 
 ## Utility Classes
 
-<nys-table striped><table>
+<nys-table striped>
+<table>
 <thead>
 <tr>
 <th>Class Name</th>
@@ -126,7 +127,8 @@ For font concepts, tokens, installation, and best practices, see [Typography Fou
 <td><div class="nys-font-agency">New York State Department of Transportation</div></td>
 </tr>
 </tbody>
-</table></nys-table>
+</table>
+</nys-table>
 
 </section>
 {% endblock %}
