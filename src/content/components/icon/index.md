@@ -97,84 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Override default library" %}
 {% include "partials/code-preview.njk" %}
 
-### Load the Font Awesome library
-
-You can load the Font Awesome library locally or by using their Content Delivery Network (CDN).
-
-{% set preview = "" %}
-{% set code %}
-<script src="nysds.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // ── Font Awesome (loaded from CDN) ────────
-  NYSDS.registerIconLibrary("font-awesome", {
-    resolver: (name) =>
-      `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
-    mutator: (svg) => {
-      svg.setAttribute("fill", "currentColor");
-    },
-  });
-});
-</script>
-{% endset %}
-{% set language = "javascript" %}
-{% set showTip = false %}
-{% set accordionLabel = "Load Font Awesome library" %}
-{% include "partials/code-preview.njk" %}
-
-#### Font Awesome example (loaded via CDN)
-
-<div class="icon-examples">
-{% set library="font-awesome" %}
-<div class="nys-grid-row nys-grid-gap-200">
-    {% set name="house" %}{% include "partials/icon-preview.njk" %}
-    {% set name="user" %}{% include "partials/icon-preview.njk" %}
-    {% set name="star" %}{% include "partials/icon-preview.njk" %}
-    {% set name="heart" %}{% include "partials/icon-preview.njk" %}
-    {% set name="bell" %}{% include "partials/icon-preview.njk" %}
-    {% set name="magnifying-glass" %}{% include "partials/icon-preview.njk" %}
-    {% set name="circle-check" %}{% include "partials/icon-preview.njk" %}
-    {% set name="triangle-exclamation" %}{% include "partials/icon-preview.njk" %}
-</div>
-</div>
-
-
-### Load the Material library
-
-This demo assumes you have installed the material icon NPM package and want to reference it locally, rather than via CDN.
-
-{% set code %}
-<script src="nysds.js"></script>
-<script>
-  // ── Material (loaded from local file system) ────────
-  NYSDS.registerIconLibrary("material", {
-    resolver: (name) =>
-      `./node_modules/@material-symbols/svg-400/outlined/${name}.svg`,
-    mutator: (svg) => {
-      svg.setAttribute("fill", "currentColor");
-    },
-  });
-</script>
-{% endset %}
-{% set showTip = false %}
-{% set accordionLabel = "Load local Material icons" %}
-{% include "partials/code-preview.njk" %}
-
-#### Material icon example (loaded locally)
-
-<div class="icon-examples">
-{% set library="material" %}
-<div class="nys-grid-row nys-grid-gap-200">
-    {% set name="home" %} {% include "partials/icon-preview.njk" %}
-    {% set name="person" %}{% include "partials/icon-preview.njk" %}
-    {% set name="star" %}{% include "partials/icon-preview.njk" %}
-    {% set name="favorite" %}{% include "partials/icon-preview.njk" %}
-    {% set name="notifications" %}{% include "partials/icon-preview.njk" %}
-    {% set name="search" %}{% include "partials/icon-preview.njk" %}
-    {% set name="check_circle" %}{% include "partials/icon-preview.njk" %}
-    {% set name="warning" %}{% include "partials/icon-preview.njk" %}
-</div>
-</div>
 
 {% endblock %}
 
@@ -278,11 +200,92 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 {% set preview %}<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
+
+### Load the Font Awesome library
+
+You can load the Font Awesome library locally or by using their Content Delivery Network (CDN).
+
+{% set preview = "" %}
+{% set code %}
+<script src="nysds.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ── Font Awesome (loaded from CDN) ────────
+  NYSDS.registerIconLibrary("font-awesome", {
+    resolver: (name) =>
+      `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+    mutator: (svg) => {
+      svg.setAttribute("fill", "currentColor");
+    },
+  });
+});
+</script>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = "Load Font Awesome library" %}
+{% include "partials/code-preview.njk" %}
+
+#### Font Awesome example (loaded via CDN)
+
+<div class="icon-examples">
+{% set library="font-awesome" %}
+<div class="nys-grid-row nys-grid-gap-200">
+    {% set name="house" %}{% include "partials/icon-preview.njk" %}
+    {% set name="user" %}{% include "partials/icon-preview.njk" %}
+    {% set name="star" %}{% include "partials/icon-preview.njk" %}
+    {% set name="heart" %}{% include "partials/icon-preview.njk" %}
+    {% set name="bell" %}{% include "partials/icon-preview.njk" %}
+    {% set name="magnifying-glass" %}{% include "partials/icon-preview.njk" %}
+    {% set name="circle-check" %}{% include "partials/icon-preview.njk" %}
+    {% set name="triangle-exclamation" %}{% include "partials/icon-preview.njk" %}
+</div>
+</div>
+
+
+### Load the Material library
+
+This demo assumes you have installed the material icon NPM package and want to reference it locally, rather than via CDN.
+
+{% set code %}
+<script src="nysds.js"></script>
+<script>
+  // ── Material (loaded from local file system) ────────
+  NYSDS.registerIconLibrary("material", {
+    resolver: (name) =>
+      `./node_modules/@material-symbols/svg-400/outlined/${name}.svg`,
+    mutator: (svg) => {
+      svg.setAttribute("fill", "currentColor");
+    },
+  });
+</script>
+{% endset %}
+{% set showTip = false %}
+{% set accordionLabel = "Load local Material icons" %}
+{% include "partials/code-preview.njk" %}
+
+#### Material icon example (loaded locally)
+
+<div class="icon-examples">
+{% set library="material" %}
+<div class="nys-grid-row nys-grid-gap-200">
+    {% set name="home" %} {% include "partials/icon-preview.njk" %}
+    {% set name="person" %}{% include "partials/icon-preview.njk" %}
+    {% set name="star" %}{% include "partials/icon-preview.njk" %}
+    {% set name="favorite" %}{% include "partials/icon-preview.njk" %}
+    {% set name="notifications" %}{% include "partials/icon-preview.njk" %}
+    {% set name="search" %}{% include "partials/icon-preview.njk" %}
+    {% set name="check_circle" %}{% include "partials/icon-preview.njk" %}
+    {% set name="warning" %}{% include "partials/icon-preview.njk" %}
+</div>
+</div>
+
 <div class="icon-examples">
 
 ## Default icons
 
 Here are the icons available in the "default" icon set.
+{% set library="default" %}
 
 ### Core
 <div class="nys-grid-row nys-grid-gap-200">
