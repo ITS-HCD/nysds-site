@@ -7,6 +7,465 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.19.0 “Upper Wolf Jaw”</title>
+      <link>https://designsystem.ny.gov/about/updates/1.19.0-release/</link>
+      <description><![CDATA[<nys-alert heading="Breaking Changes in 1.19.0" type="danger">
+<p>Read the <a href="https://designsystem.ny.gov/about/updates/1.19.0-release/#custom-icon-library-support">nys-icon</a> and <a href="https://designsystem.ny.gov/about/updates/1.19.0-release/#grid-gap-vertical-spacing">grid-gap</a> documentation below to see how to migrate</p>
+</nys-alert>
+<h2>“Upper Wolf Jaw” 🏔️</h2>
+<p>The winning vote during Office Hours this week was for naming this release “Upper Wolf Jaw” after the 29<sup>th</sup> highest peak in New York: Upper Wolfjaw Mountain. The Mountain has an elevation of 4,185 ft (1,276 m). That is as tall as 50,400 New York bagels !</p>
+<p><a href="https://en.wikipedia.org/wiki/Upper_Wolfjaw_Mountain">Learn more about Upper Wolfjaw Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Custom icon library support</h2>
+<p><nys-badge label="BREAKING CHANGE" intent="error" prefixIcon=""></nys-badge></p>
+<p>When using the <code>&lt;nys-icon&gt;</code>, you can now choose to load in icons from any other library. You can serve the icons locally or via a Content Delivery Network (CDN).</p>
+<h3>Migrating to the new <code>&lt;nys-icon&gt;</code></h3>
+<p>To migrate to the new <code>&lt;nys-icon&gt;</code> libraries, you'll need to ensure your icon files are in the correct location, and you may need to configure the &quot;default&quot; library to point to your icon files. <a href="https://designsystem.ny.gov/components/icon/#managing-your-icon-library">Learn how to manage your libraries.</a></p>
+<h3>Custom icon library demos</h3>
+<p>Below, you will find two examples which retrieve icons from Font Awesome and Material:</p>
+<h4>Font Awesome demo</h4>
+<div class="icon-examples">
+<div class="nys-grid-row nys-grid-gap-200">
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="house" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">house</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="user" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">user</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="star" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">star</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="heart" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">heart</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="bell" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">bell</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="magnifying-glass" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">magnifying-glass</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="circle-check" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">circle-check</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="triangle-exclamation" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">triangle-exclamation</div>
+    </div>
+</div>
+</div>
+</div>
+<h4>Material demo</h4>
+<div class="icon-examples">
+<div class="nys-grid-row nys-grid-gap-200">
+     <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="home" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">home</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="person" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">person</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="star" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">star</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="favorite" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">favorite</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="notifications" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">notifications</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="search" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">search</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="check_circle" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">check_circle</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="warning" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">warning</div>
+    </div>
+</div>
+</div>
+</div>
+<h2>Grid-gap vertical spacing</h2>
+<p>We enhanced the functionality of the <code>grid-gap</code> classes to add vertical spacing in addition to the pre-existing horizontal spacing. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Add vertical space to your grid layouts today!</a></p>
+<h2>New <code>&lt;nys-divider&gt;</code> subtle variant</h2>
+<p>The <code>&lt;nys-divider&gt;</code> component got a new <code>subtle</code> attribute that provides a more understated visual separation between content. The subtle divider is ideal for use in situations where a less prominent division is desired.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+Content above the divider.
+<nys-divider subtle=""></nys-divider>
+Content below the divider.
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-divider</span> <span class="token attr-name">subtle</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-divider</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Align dev environment linting processes and prettier the Sass</li>
+<li>Remove horizontal padding of text buttons</li>
+<li>Fix href and fullWidth button configurations</li>
+<li>Rework <code>&lt;nys-radiobutton&gt;</code> for better accessibility</li>
+<li>Updated security vulnerabilities</li>
+<li>Fix missing color fill on certain <code>&lt;nys-icon&gt;</code> glyphs</li>
+<li>New tokens for underline regular and strong styles</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-icon&gt;</code> libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fix</a></li>
+<li><code>nys-grid-gap</code> added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.19.0">See the full developer release notes for v.1.19.0 →</a></p>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+  // ── Font Awesome (solid) ─────────────────────────────────────────────────
+    NYSDS.registerIconLibrary("font-awesome", {
+      resolver: (name) =>
+        `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+      mutator: (svg) => {
+        svg.setAttribute("fill", "currentColor");
+      },
+    });
+
+    // ── Material (outlined) ─────────────────────────────────────────────────
+    NYSDS.registerIconLibrary("material", {
+      resolver: (name) =>
+        `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
+      mutator: (svg) => {
+        svg.setAttribute("fill", "currentColor");
+      },
+    });
+  });
+</script>
+]]></description>
+      <content><![CDATA[<nys-alert heading="Breaking Changes in 1.19.0" type="danger">
+<p>Read the <a href="https://designsystem.ny.gov/about/updates/1.19.0-release/#custom-icon-library-support">nys-icon</a> and <a href="https://designsystem.ny.gov/about/updates/1.19.0-release/#grid-gap-vertical-spacing">grid-gap</a> documentation below to see how to migrate</p>
+</nys-alert>
+<h2>“Upper Wolf Jaw” 🏔️</h2>
+<p>The winning vote during Office Hours this week was for naming this release “Upper Wolf Jaw” after the 29<sup>th</sup> highest peak in New York: Upper Wolfjaw Mountain. The Mountain has an elevation of 4,185 ft (1,276 m). That is as tall as 50,400 New York bagels !</p>
+<p><a href="https://en.wikipedia.org/wiki/Upper_Wolfjaw_Mountain">Learn more about Upper Wolfjaw Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Custom icon library support</h2>
+<p><nys-badge label="BREAKING CHANGE" intent="error" prefixIcon=""></nys-badge></p>
+<p>When using the <code>&lt;nys-icon&gt;</code>, you can now choose to load in icons from any other library. You can serve the icons locally or via a Content Delivery Network (CDN).</p>
+<h3>Migrating to the new <code>&lt;nys-icon&gt;</code></h3>
+<p>To migrate to the new <code>&lt;nys-icon&gt;</code> libraries, you'll need to ensure your icon files are in the correct location, and you may need to configure the &quot;default&quot; library to point to your icon files. <a href="https://designsystem.ny.gov/components/icon/#managing-your-icon-library">Learn how to manage your libraries.</a></p>
+<h3>Custom icon library demos</h3>
+<p>Below, you will find two examples which retrieve icons from Font Awesome and Material:</p>
+<h4>Font Awesome demo</h4>
+<div class="icon-examples">
+<div class="nys-grid-row nys-grid-gap-200">
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="house" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">house</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="user" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">user</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="star" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">star</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="heart" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">heart</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="bell" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">bell</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="magnifying-glass" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">magnifying-glass</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="circle-check" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">circle-check</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="triangle-exclamation" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">triangle-exclamation</div>
+    </div>
+</div>
+</div>
+</div>
+<h4>Material demo</h4>
+<div class="icon-examples">
+<div class="nys-grid-row nys-grid-gap-200">
+     <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="home" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">home</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="person" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">person</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="star" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">star</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="favorite" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">favorite</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="notifications" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">notifications</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="search" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">search</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="check_circle" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">check_circle</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="warning" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">warning</div>
+    </div>
+</div>
+</div>
+</div>
+<h2>Grid-gap vertical spacing</h2>
+<p>We enhanced the functionality of the <code>grid-gap</code> classes to add vertical spacing in addition to the pre-existing horizontal spacing. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Add vertical space to your grid layouts today!</a></p>
+<h2>New <code>&lt;nys-divider&gt;</code> subtle variant</h2>
+<p>The <code>&lt;nys-divider&gt;</code> component got a new <code>subtle</code> attribute that provides a more understated visual separation between content. The subtle divider is ideal for use in situations where a less prominent division is desired.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+Content above the divider.
+<nys-divider subtle=""></nys-divider>
+Content below the divider.
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-divider</span> <span class="token attr-name">subtle</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-divider</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Align dev environment linting processes and prettier the Sass</li>
+<li>Remove horizontal padding of text buttons</li>
+<li>Fix href and fullWidth button configurations</li>
+<li>Rework <code>&lt;nys-radiobutton&gt;</code> for better accessibility</li>
+<li>Updated security vulnerabilities</li>
+<li>Fix missing color fill on certain <code>&lt;nys-icon&gt;</code> glyphs</li>
+<li>New tokens for underline regular and strong styles</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-icon&gt;</code> libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fix</a></li>
+<li><code>nys-grid-gap</code> added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.19.0">See the full developer release notes for v.1.19.0 →</a></p>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+  // ── Font Awesome (solid) ─────────────────────────────────────────────────
+    NYSDS.registerIconLibrary("font-awesome", {
+      resolver: (name) =>
+        `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+      mutator: (svg) => {
+        svg.setAttribute("fill", "currentColor");
+      },
+    });
+
+    // ── Material (outlined) ─────────────────────────────────────────────────
+    NYSDS.registerIconLibrary("material", {
+      resolver: (name) =>
+        `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
+      mutator: (svg) => {
+        svg.setAttribute("fill", "currentColor");
+      },
+    });
+  });
+</script>
+]]></content>
+      <pubDate>Thu, 11 Jun 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.19.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.18.3</title>
       <link>https://designsystem.ny.gov/about/updates/1.18.3-release/</link>
       <description><![CDATA[<h2>New <code>&lt;nys-icon&gt;</code>: <nys-icon name="delete"></nys-icon> &quot;delete&quot;</h2>

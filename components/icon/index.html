@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-16T18:33:36.621Z -->
+    <!-- Latest Build: 2026-06-17T19:22:12.523Z -->
   </head>
   
   <body class="single-page page-icon section-components">
@@ -536,9 +536,7 @@
 <section>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon name="check_circle" size="5xl" color="var(--nys-color-success)"></nys-icon>
-</div>
+<div class="code-preview__preview-root-inner"><nys-icon name="check_circle" size="5xl" color="var(--nys-color-success)"></nys-icon></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -553,16 +551,94 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> 
-  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check_circle<span class="token punctuation">"</span></span> 
-  <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5xl<span class="token punctuation">"</span></span> 
-  <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>var(--nys-color-success)<span class="token punctuation">"</span></span>
-<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check_circle<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5xl<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>var(--nys-color-success)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   <div class="code-preview__code-tip">
     <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
+  </div>
+</div>
+<h2 id="managing-your-icon-library">Managing your icon <code>library</code></h2>
+<p>When using the <code>&lt;nys-icon&gt;</code>, you can choose to load in icons from any <code>library</code>. You can serve the icons locally or via a Content Delivery Network (CDN). Below, you will find three examples. The first will re-configure the default library to point to another local location. The second will configure a Font Awesome library via CDN. The third configures a Material Icon library referencing the icon files locally.</p>
+<h3 id="the-default">The <code>&quot;default&quot;</code></h3>
+<p>New in v1.19.0, the <code>&lt;nys-icon&gt;</code> loads icon files from a subfolder relative to <code>nysds.js</code>. If you load your icons and JS in this structure, you don't have to change anything in 1.19.0.</p>
+<p><strong>Required file structure:</strong></p>
+<pre class="language-html"><code class="language-html">📁 /   (any folder)
+├── 📄 nysds.js
+└── 📁 icons/
+    ├── 🖼 home.svg
+    ├── 🖼 search.svg
+    └── 🖼 external_link.svg</code></pre>
+<h4 id="override-the-default-library">Override the <code>&quot;default&quot;</code> library</h4>
+<p><nys-alert heading="Note for React and Angular" text="You will ALWAYS need to override the default library in React, Angular, and other bundling frameworks" type="warning"></nys-alert></p>
+<p>Sometimes building your application places your icon files in a different location than &quot;default&quot;. If that happens:</p>
+<ol>
+<li>Copy icons to your filesystem</li>
+<li>Verify the icon location</li>
+<li>Reference them there</li>
+</ol>
+<p>Below covers the Vite way to copy the icons to the location we'll set the default library to.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Vite config: Copy icon files</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'node_modules/@nysds/components/dist/icons/*.svg',
+          dest: 'assets/icons',
+          rename: { stripBase: true },
+        },
+      ],
+    }),
+  ],
+})</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Override default library</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// ── Font Awesome (loaded from CDN) ────────</span>
+  <span class="token constant">NYSDS</span><span class="token punctuation">.</span><span class="token function">registerIconLibrary</span><span class="token punctuation">(</span><span class="token string">"default"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">resolver</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/assets/icons/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
   </div>
 </div>
 </section><br>
@@ -600,11 +676,9 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </ul>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon name="upload_file" size="xs"></nys-icon>
+<div class="code-preview__preview-root-inner"><nys-icon name="upload_file" size="xs"></nys-icon>
 <nys-icon name="upload_file" size="xl"></nys-icon>
-<nys-icon name="upload_file" size="5xl"></nys-icon>
-</div>
+<nys-icon name="upload_file" size="5xl"></nys-icon></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -641,11 +715,9 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </ul>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon name="upload_file" size="16"></nys-icon>
+<div class="code-preview__preview-root-inner"><nys-icon name="upload_file" size="16"></nys-icon>
 <nys-icon name="upload_file" size="32"></nys-icon>
-<nys-icon name="upload_file" size="50"></nys-icon>
-</div>
+<nys-icon name="upload_file" size="50"></nys-icon></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -671,9 +743,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <p>You can override the color of an icon by setting a <code>color</code> prop. You can use CSS HEX values, CSS color names, or CSS variables</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon>
-</div>
+<div class="code-preview__preview-root-inner"><nys-icon ariaLabel="Upload file icon" name="upload_file" color="#db117d" size="5xl"></nys-icon></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -697,9 +767,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <p>You can <code>rotate</code> an icon by passing the angle as a number i.e: <code>rotate=&quot;20&quot;</code> will rotate the icon by 20 degrees clockwise.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon>
-</div>
+<div class="code-preview__preview-root-inner"><nys-icon rotate="20" ariaLabel="Upload file icon" name="upload_file" size="5xl"></nys-icon></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -723,9 +791,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <p>Set an icon to flip horizontally, vertically, or in both directions by using the <code>flip</code> property. Available values are <code>horizontal</code>, <code>vertical</code>, and <code>both</code>. This example is <code>both</code>.</p>
 <div class="code-preview-container">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon>
-</div>
+<div class="code-preview__preview-root-inner"><nys-icon flip="both" ariaLabel="Upload file icon" name="social_linkedin" size="5xl"></nys-icon></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -745,12 +811,217 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     </div>
   </div>
 </div>
+<h3 id="load-the-font-awesome-library">Load the Font Awesome library</h3>
+<p>You can load the Font Awesome library locally or by using their Content Delivery Network (CDN).</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Load Font Awesome library</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// ── Font Awesome (loaded from CDN) ────────</span>
+  <span class="token constant">NYSDS</span><span class="token punctuation">.</span><span class="token function">registerIconLibrary</span><span class="token punctuation">(</span><span class="token string">"font-awesome"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">resolver</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token function-variable function">mutator</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">svg</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      svg<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"fill"</span><span class="token punctuation">,</span> <span class="token string">"currentColor"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="font-awesome-example-loaded-via-cdn">Font Awesome example (loaded via CDN)</h4>
+<div class="icon-examples">
+<div class="nys-grid-row nys-grid-gap-200">
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="house" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">house</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="user" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">user</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="star" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">star</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="heart" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">heart</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="bell" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">bell</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="magnifying-glass" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">magnifying-glass</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="circle-check" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">circle-check</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="triangle-exclamation" size="4xl" library="font-awesome"></nys-icon>
+        </div>
+        <div class="card__desc">triangle-exclamation</div>
+    </div>
+</div>
+</div>
+</div>
+<h3 id="load-the-material-library">Load the Material library</h3>
+<p>This demo assumes you have installed the material icon NPM package and want to reference it locally, rather than via CDN.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Load local Material icons</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token comment">// ── Material (loaded from local file system) ────────</span>
+  <span class="token constant">NYSDS</span><span class="token punctuation">.</span><span class="token function">registerIconLibrary</span><span class="token punctuation">(</span><span class="token string">"material"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">resolver</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./node_modules/@material-symbols/svg-400/outlined/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token function-variable function">mutator</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">svg</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      svg<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"fill"</span><span class="token punctuation">,</span> <span class="token string">"currentColor"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="material-icon-example-loaded-locally">Material icon example (loaded locally)</h4>
+<div class="icon-examples">
+<div class="nys-grid-row nys-grid-gap-200">
+     <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="home" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">home</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="person" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">person</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="star" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">star</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="favorite" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">favorite</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="notifications" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">notifications</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="search" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">search</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="check_circle" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">check_circle</div>
+    </div>
+</div>
+    <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
+    <div class="card nys-flex-fill">
+        <div class="card__title">
+            <nys-icon name="warning" size="4xl" library="material"></nys-icon>
+        </div>
+        <div class="card__desc">warning</div>
+    </div>
+</div>
+</div>
+</div>
+<div class="icon-examples">
+<h2 id="default-icons">Default icons</h2>
+<p>Here are the icons available in the &quot;default&quot; icon set.</p>
 <h3 id="core">Core</h3>
 <div class="nys-grid-row nys-grid-gap-200">
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="account_circle" size="4xl"></nys-icon>
+            <nys-icon name="account_circle" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">account_circle</div>
     </div>
@@ -758,7 +1029,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="add" size="4xl"></nys-icon>
+            <nys-icon name="add" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">add</div>
     </div>
@@ -766,7 +1037,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="attach_file" size="4xl"></nys-icon>
+            <nys-icon name="attach_file" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">attach_file</div>
     </div>
@@ -774,7 +1045,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="calendar_month" size="4xl"></nys-icon>
+            <nys-icon name="calendar_month" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">calendar_month</div>
     </div>
@@ -782,7 +1053,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="cancel" size="4xl"></nys-icon>
+            <nys-icon name="cancel" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">cancel</div>
     </div>
@@ -790,7 +1061,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="code" size="4xl"></nys-icon>
+            <nys-icon name="code" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">code</div>
     </div>
@@ -798,7 +1069,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="content_copy" size="4xl"></nys-icon>
+            <nys-icon name="content_copy" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">content_copy</div>
     </div>
@@ -806,7 +1077,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="check" size="4xl"></nys-icon>
+            <nys-icon name="check" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">check</div>
     </div>
@@ -814,7 +1085,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="close" size="4xl"></nys-icon>
+            <nys-icon name="close" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">close</div>
     </div>
@@ -822,7 +1093,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="delete" size="4xl"></nys-icon>
+            <nys-icon name="delete" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">delete</div>
     </div>
@@ -830,7 +1101,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="download" size="4xl"></nys-icon>
+            <nys-icon name="download" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">download</div>
     </div>
@@ -838,7 +1109,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="download_done" size="4xl"></nys-icon>
+            <nys-icon name="download_done" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">download_done</div>
     </div>
@@ -846,7 +1117,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="drive_folder_upload" size="4xl"></nys-icon>
+            <nys-icon name="drive_folder_upload" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">drive_folder_upload</div>
     </div>
@@ -854,7 +1125,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="edit_square" size="4xl"></nys-icon>
+            <nys-icon name="edit_square" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">edit_square</div>
     </div>
@@ -862,7 +1133,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="expand_all" size="4xl"></nys-icon>
+            <nys-icon name="expand_all" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">expand_all</div>
     </div>
@@ -870,7 +1141,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="filter_list" size="4xl"></nys-icon>
+            <nys-icon name="filter_list" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">filter_list</div>
     </div>
@@ -878,7 +1149,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="filter_alt" size="4xl"></nys-icon>
+            <nys-icon name="filter_alt" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">filter_alt</div>
     </div>
@@ -886,7 +1157,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="help" size="4xl"></nys-icon>
+            <nys-icon name="help" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">help</div>
     </div>
@@ -894,7 +1165,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="language" size="4xl"></nys-icon>
+            <nys-icon name="language" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">language</div>
     </div>
@@ -902,7 +1173,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="link" size="4xl"></nys-icon>
+            <nys-icon name="link" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">link</div>
     </div>
@@ -910,7 +1181,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="mail" size="4xl"></nys-icon>
+            <nys-icon name="mail" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">mail</div>
     </div>
@@ -918,7 +1189,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="menu" size="4xl"></nys-icon>
+            <nys-icon name="menu" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">menu</div>
     </div>
@@ -926,7 +1197,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="more_vert" size="4xl"></nys-icon>
+            <nys-icon name="more_vert" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">more_vert</div>
     </div>
@@ -934,7 +1205,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="open_in_new" size="4xl"></nys-icon>
+            <nys-icon name="open_in_new" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">open_in_new</div>
     </div>
@@ -942,7 +1213,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="print" size="4xl"></nys-icon>
+            <nys-icon name="print" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">print</div>
     </div>
@@ -950,7 +1221,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="phone_in_talk" size="4xl"></nys-icon>
+            <nys-icon name="phone_in_talk" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">phone_in_talk</div>
     </div>
@@ -958,7 +1229,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="progress_activity" size="4xl"></nys-icon>
+            <nys-icon name="progress_activity" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">progress_activity</div>
     </div>
@@ -966,7 +1237,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="publish" size="4xl"></nys-icon>
+            <nys-icon name="publish" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">publish</div>
     </div>
@@ -974,7 +1245,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="remove" size="4xl"></nys-icon>
+            <nys-icon name="remove" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">remove</div>
     </div>
@@ -982,7 +1253,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="search" size="4xl"></nys-icon>
+            <nys-icon name="search" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">search</div>
     </div>
@@ -990,7 +1261,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="share" size="4xl"></nys-icon>
+            <nys-icon name="share" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">share</div>
     </div>
@@ -998,7 +1269,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="sort" size="4xl"></nys-icon>
+            <nys-icon name="sort" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">sort</div>
     </div>
@@ -1006,7 +1277,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="sms" size="4xl"></nys-icon>
+            <nys-icon name="sms" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">sms</div>
     </div>
@@ -1014,7 +1285,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="thumb_down" size="4xl"></nys-icon>
+            <nys-icon name="thumb_down" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">thumb_down</div>
     </div>
@@ -1022,7 +1293,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="thumb_up" size="4xl"></nys-icon>
+            <nys-icon name="thumb_up" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">thumb_up</div>
     </div>
@@ -1030,7 +1301,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="upload_file" size="4xl"></nys-icon>
+            <nys-icon name="upload_file" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">upload_file</div>
     </div>
@@ -1038,7 +1309,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="visibility" size="4xl"></nys-icon>
+            <nys-icon name="visibility" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">visibility</div>
     </div>
@@ -1046,7 +1317,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="visibility_off" size="4xl"></nys-icon>
+            <nys-icon name="visibility_off" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">visibility_off</div>
     </div>
@@ -1054,7 +1325,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="notifications" size="4xl"></nys-icon>
+            <nys-icon name="notifications" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">notifications</div>
     </div>
@@ -1065,7 +1336,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_bluesky" size="4xl"></nys-icon>
+            <nys-icon name="social_bluesky" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_bluesky</div>
     </div>
@@ -1073,7 +1344,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_facebook" size="4xl"></nys-icon>
+            <nys-icon name="social_facebook" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_facebook</div>
     </div>
@@ -1081,7 +1352,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_flickr" size="4xl"></nys-icon>
+            <nys-icon name="social_flickr" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_flickr</div>
     </div>
@@ -1089,7 +1360,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_google_play" size="4xl"></nys-icon>
+            <nys-icon name="social_google_play" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_google_play</div>
     </div>
@@ -1097,7 +1368,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_instagram" size="4xl"></nys-icon>
+            <nys-icon name="social_instagram" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_instagram</div>
     </div>
@@ -1105,7 +1376,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_linkedin" size="4xl"></nys-icon>
+            <nys-icon name="social_linkedin" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_linkedin</div>
     </div>
@@ -1113,7 +1384,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_pinterest" size="4xl"></nys-icon>
+            <nys-icon name="social_pinterest" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_pinterest</div>
     </div>
@@ -1121,7 +1392,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_rss" size="4xl"></nys-icon>
+            <nys-icon name="social_rss" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_rss</div>
     </div>
@@ -1129,7 +1400,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_snapchat" size="4xl"></nys-icon>
+            <nys-icon name="social_snapchat" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_snapchat</div>
     </div>
@@ -1137,7 +1408,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_soundcloud" size="4xl"></nys-icon>
+            <nys-icon name="social_soundcloud" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_soundcloud</div>
     </div>
@@ -1145,7 +1416,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_tiktok" size="4xl"></nys-icon>
+            <nys-icon name="social_tiktok" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_tiktok</div>
     </div>
@@ -1153,7 +1424,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_threads" size="4xl"></nys-icon>
+            <nys-icon name="social_threads" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_threads</div>
     </div>
@@ -1161,7 +1432,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_tumblr" size="4xl"></nys-icon>
+            <nys-icon name="social_tumblr" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_tumblr</div>
     </div>
@@ -1169,7 +1440,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_vimeo" size="4xl"></nys-icon>
+            <nys-icon name="social_vimeo" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_vimeo</div>
     </div>
@@ -1177,7 +1448,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_x" size="4xl"></nys-icon>
+            <nys-icon name="social_x" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_x</div>
     </div>
@@ -1185,7 +1456,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="social_youtube" size="4xl"></nys-icon>
+            <nys-icon name="social_youtube" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">social_youtube</div>
     </div>
@@ -1196,7 +1467,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="arrow_back" size="4xl"></nys-icon>
+            <nys-icon name="arrow_back" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">arrow_back</div>
     </div>
@@ -1204,7 +1475,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="arrow_downward" size="4xl"></nys-icon>
+            <nys-icon name="arrow_downward" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">arrow_downward</div>
     </div>
@@ -1212,7 +1483,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="arrow_forward" size="4xl"></nys-icon>
+            <nys-icon name="arrow_forward" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">arrow_forward</div>
     </div>
@@ -1220,7 +1491,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="arrow_upward" size="4xl"></nys-icon>
+            <nys-icon name="arrow_upward" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">arrow_upward</div>
     </div>
@@ -1231,7 +1502,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="chevron_down" size="4xl"></nys-icon>
+            <nys-icon name="chevron_down" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">chevron_down</div>
     </div>
@@ -1239,7 +1510,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="chevron_up" size="4xl"></nys-icon>
+            <nys-icon name="chevron_up" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">chevron_up</div>
     </div>
@@ -1247,7 +1518,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="chevron_left" size="4xl"></nys-icon>
+            <nys-icon name="chevron_left" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">chevron_left</div>
     </div>
@@ -1255,7 +1526,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="chevron_right" size="4xl"></nys-icon>
+            <nys-icon name="chevron_right" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">chevron_right</div>
     </div>
@@ -1266,7 +1537,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="ac_unit" size="4xl"></nys-icon>
+            <nys-icon name="ac_unit" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">ac_unit</div>
     </div>
@@ -1274,7 +1545,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="air" size="4xl"></nys-icon>
+            <nys-icon name="air" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">air</div>
     </div>
@@ -1282,7 +1553,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="clear_day" size="4xl"></nys-icon>
+            <nys-icon name="clear_day" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">clear_day</div>
     </div>
@@ -1290,7 +1561,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="coronavirus" size="4xl"></nys-icon>
+            <nys-icon name="coronavirus" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">coronavirus</div>
     </div>
@@ -1298,7 +1569,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="rainy" size="4xl"></nys-icon>
+            <nys-icon name="rainy" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">rainy</div>
     </div>
@@ -1309,7 +1580,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="check_circle" size="4xl"></nys-icon>
+            <nys-icon name="check_circle" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">check_circle</div>
     </div>
@@ -1317,7 +1588,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="emergency_home" size="4xl"></nys-icon>
+            <nys-icon name="emergency_home" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">emergency_home</div>
     </div>
@@ -1325,7 +1596,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="error" size="4xl"></nys-icon>
+            <nys-icon name="error" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">error</div>
     </div>
@@ -1333,7 +1604,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="info" size="4xl"></nys-icon>
+            <nys-icon name="info" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">info</div>
     </div>
@@ -1341,7 +1612,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="warning" size="4xl"></nys-icon>
+            <nys-icon name="warning" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">warning</div>
     </div>
@@ -1352,7 +1623,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="account_balance_filled" size="4xl"></nys-icon>
+            <nys-icon name="account_balance_filled" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">account_balance_filled</div>
     </div>
@@ -1360,7 +1631,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="cancel_filled" size="4xl"></nys-icon>
+            <nys-icon name="cancel_filled" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">cancel_filled</div>
     </div>
@@ -1368,7 +1639,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="language_filled" size="4xl"></nys-icon>
+            <nys-icon name="language_filled" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">language_filled</div>
     </div>
@@ -1376,12 +1647,35 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
   <div class="nys-grid-col-6 nys-tablet:nys-grid-col-3">
     <div class="card nys-flex-fill">
         <div class="card__title">
-            <nys-icon name="lock_filled" size="4xl"></nys-icon>
+            <nys-icon name="lock_filled" size="4xl" library="default"></nys-icon>
         </div>
         <div class="card__desc">lock_filled</div>
     </div>
 </div>
 </div>
+</div><!-- icon_examples closing DIV -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+  // ── Font Awesome (solid) ─────────────────────────────────────────────────
+    NYSDS.registerIconLibrary("font-awesome", {
+      resolver: (name) =>
+        `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+      mutator: (svg) => {
+        svg.setAttribute("fill", "currentColor");
+      },
+    });
+
+    // ── Material (outlined) ─────────────────────────────────────────────────
+    NYSDS.registerIconLibrary("material", {
+      resolver: (name) =>
+        `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
+      mutator: (svg) => {
+        svg.setAttribute("fill", "currentColor");
+      },
+    });
+  });
+</script>
 </section><br>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
@@ -1390,7 +1684,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
                 <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
 <li>Use icons to draw attention to actions, help users scan for key information, or enhance recognizable common actions (e.g., search, download, share).</li>
-<li>Pair icons with a text label. Few icons are universally understood alone.</li>
+<li>Pair icons with a text label—few icons are universally understood alone.</li>
 <li>Use icons consistently: same icon and label for the same meaning throughout your app.</li>
 <li>Use <code>ariaLabel</code> when the icon conveys meaning, so screen readers can announce its purpose.</li>
 <li>Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).</li>
@@ -1402,11 +1696,11 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
             <div class="card card--dont nys-flex-fill">
                 <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
 <ul>
-<li>Use an icon if its meaning isn't immediately clear. If you suspect users won't recognize it, remove it.</li>
+<li>Use an icon if its meaning isn't immediately clear—if you suspect users won't recognize it, remove it.</li>
 <li>Use icons to compensate for unclear page hierarchy or confusing content organization.</li>
-<li>Use standalone icons for actions. Use <code>&lt;nys-button&gt;</code> with an icon inside instead.</li>
+<li>Use standalone icons for actions—use <code>&lt;nys-button&gt;</code> with an icon inside instead.</li>
 <li>Replace meaningful text with icons unless the icon is universally recognized or paired with a label.</li>
-<li>Overuse icons. Too many create visual noise and reduce focus.</li>
+<li>Overuse icons—too many create visual noise and reduce focus.</li>
 <li>Use excessive icon customization that breaks design consistency.</li>
 </ul>
 </div>
@@ -1436,6 +1730,11 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
       <td><code>flip</code></td>
       <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
       <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>library</code></td>
+      <td>String</td>
+      <td><code>"default"</code></td>
     </tr>
     <tr>
       <td><code>name</code></td>
@@ -1529,7 +1828,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/icon/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: June 16, 2026</p>
+    <p>Last updated: June 17, 2026</p>
   </div>
 
   </div>
@@ -1628,7 +1927,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <nys-unavfooter></nys-unavfooter>
 
-  <script type="module" src="https://designsystem.ny.gov/assets/js/vendor/nysds.js" async=""></script>
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
 <script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
 
 

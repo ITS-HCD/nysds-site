@@ -922,7 +922,7 @@ li > .section-nav__list {
     display: flex;
     flex-wrap: wrap;
     gap: var(--nys-space-100);
-    margin: 0 0 var(--nys-space-250);
+    margin: var(--nys-space-250) 0;
     padding: 0;
     list-style: none;
 }
