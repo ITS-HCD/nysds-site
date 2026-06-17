@@ -1,7 +1,11 @@
         {% if tags %}
-        <ul class="taglist" data-pagefind-ignore="all">
+        <ul class="nys-margin-t-200 taglist" data-pagefind-ignore="all">
           {% for tag in tags %}
-          <li class="badge">{{ tag }}</li>
+            {% if tag == 'BREAKING CHANGES' %}
+              <li><nys-badge label="{{ tag }}" intent="error" prefixIcon></nys-badge></li>
+            {% else %}
+              <li><nys-badge label="{{ tag }}"></nys-badge></li>
+            {% endif %}
           {% endfor %}
         </ul>
         {% endif %}
