@@ -239,13 +239,86 @@ Set an icon to flip horizontally, vertically, or in both directions by using the
 </div>
 </div><!-- icon_examples closing DIV -->
 
-## Load an external library
+## Managing your `library`
 
-When using the `<nys-icon>`, you can choose to load in icons from any other library. You can serve the icons locally or via a Content Delivery Network (CDN). Below, you will find two examples which retreive icons from Font Awesome and Material.
+When using the `<nys-icon>`, you can choose to load in icons from any `library`. You can serve the icons locally or via a Content Delivery Network (CDN). Below, you will find three examples. The first will re-configure the default library to point to another local location. The second will configure a Font Awesome library via CDN. The third configures a Material Icon library referencing the icon files locally.
+
+
+### The `"default"`
+
+New in v1.19.0, the `<nys-icon>` loads icon files from a subfolder relative to `nysds.js`. If you load your icons and JS in this structure, you don't have to change anything in 1.19.0.
+
+**Required file structure:**
+```html
+📁 /   (any folder)
+├── 📄 nysds.js
+└── 📁 icons/
+    ├── 🖼 home.svg
+    ├── 🖼 search.svg
+    └── 🖼 external_link.svg
+```
+
+#### Override the `"default"` library
+
+<nys-alert heading="Note for React and Angular" text="You will ALWAYS need to override the default library in React, Angular, and other bundling frameworks" type="warning"></nys-alert>
+
+Sometimes building your application places your icon files in a different location than "default". If that happens:
+
+  1. Copy icons to your filesystem
+  2. Verify the icon location
+  3. Reference them there
+
+Below covers the Vite way to copy the icons to the location we'll set the default library to.
+
+{% set preview = "" %}
+{% set language = "javascript" %}
+{% set code %}
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'node_modules/@nysds/components/dist/icons/*.svg',
+          dest: 'assets/icons',
+          rename: { stripBase: true },
+        },
+      ],
+    }),
+  ],
+})
+{% endset %}
+{% set showTip = false %}
+{% set accordionLabel = "Vite config: Copy icon files" %}
+{% include "partials/code-preview.njk" %}
+
+{% set preview = "" %}
+{% set code %}
+<script src="nysds.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ── Font Awesome (loaded from CDN) ────────
+  NYSDS.registerIconLibrary("default", {
+    resolver: (name) =>
+      `/assets/icons/${name}.svg`,
+  });
+});
+</script>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = "Override default library" %}
+{% include "partials/code-preview.njk" %}
 
 <section>
 
-### Font Awesome icon demo
+### Load the Font Awesome library
+
+You can load the Font Awesome library locally or by using their Content Delivery Network (CDN).
+
 {% set preview = "" %}
 {% set code %}
 <script src="nysds.js"></script>
@@ -264,8 +337,10 @@ document.addEventListener("DOMContentLoaded", () => {
 {% endset %}
 {% set language = "javascript" %}
 {% set showTip = false %}
-{% set accordionLabel = "Load Font Awesome icons" %}
+{% set accordionLabel = "Load Font Awesome library" %}
 {% include "partials/code-preview.njk" %}
+
+#### Font Awesome example (loaded via CDN)
 
 <div class="icon-examples">
 {% set library="font-awesome" %}
@@ -284,14 +359,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <section>
 
-### Material icon demo
+### Load the Material library
+
+This demo assumes you have installed the material icon NPM package and want to reference it locally, rather than via CDN.
+
 {% set code %}
 <script src="nysds.js"></script>
 <script>
   // ── Material (loaded from local file system) ────────
   NYSDS.registerIconLibrary("material", {
     resolver: (name) =>
-      `./my_local_filesystem/icons/${name}.svg`,
+      `./node_modules/@material-symbols/svg-400/outlined/${name}.svg`,
     mutator: (svg) => {
       svg.setAttribute("fill", "currentColor");
     },
@@ -299,8 +377,11 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 {% endset %}
 {% set showTip = false %}
-{% set accordionLabel = "Load Material icons" %}
+{% set accordionLabel = "Load local Material icons" %}
 {% include "partials/code-preview.njk" %}
+
+#### Material icon example (loaded locally)
+
 <div class="icon-examples">
 {% set library="material" %}
 <div class="nys-grid-row nys-grid-gap-200">
