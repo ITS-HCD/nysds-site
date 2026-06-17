@@ -247,7 +247,6 @@ main[role="main"] {
 }
 
 .section-header__title {
-    line-height: 1;
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 5px;
