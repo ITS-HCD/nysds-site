@@ -135,6 +135,7 @@ The `<nys-globalheader>` component includes a named slot called `user-actions`. 
 </nys-dropdownmenu>
 {% endset %}
 {% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 ### NYS Brand Logo
 
