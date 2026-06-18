@@ -76,7 +76,7 @@ export default defineConfig({
 })
 {% endset %}
 {% set showTip = false %}
-{% set accordionLabel = "Vite config: Copy icon files" %}
+{% set accordionLabel = "Copy icon files (with Vite)" %}
 {% include "partials/code-preview.njk" %}
 
 {% set preview = "" %}
@@ -84,7 +84,7 @@ export default defineConfig({
 <script src="nysds.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // ── Font Awesome (loaded from CDN) ────────
+
   NYSDS.registerIconLibrary("default", {
     resolver: (name) =>
       `/assets/icons/${name}.svg`,
@@ -94,9 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
 {% endset %}
 {% set language = "javascript" %}
 {% set showTip = false %}
-{% set accordionLabel = "Override default library" %}
+{% set accordionLabel = "Override default library in plain JS" %}
 {% include "partials/code-preview.njk" %}
 
+{% set preview = "" %}
+{% set code %}
+import { registerIconLibrary } from '@nysds/components';
+
+registerIconLibrary('default', {
+  resolver: name =>
+    `/nysds-react-demo/assets/icons/${name}.svg`,
+});
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = "Override default library in React-like frameworks" %}
+{% include "partials/code-preview.njk" %}
 
 {% endblock %}
 
