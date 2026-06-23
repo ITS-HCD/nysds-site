@@ -321,6 +321,7 @@ Here are the icons available in the "default" icon set.
   {% set name = "filter_alt" %}{% include "partials/icon-preview.njk" %}
   {% set name = "help" %}{% include "partials/icon-preview.njk" %}
   {% set name = "language" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "location_on" %}{% include "partials/icon-preview.njk" %}
   {% set name = "link" %}{% include "partials/icon-preview.njk" %}
   {% set name = "mail" %}{% include "partials/icon-preview.njk" %}
   {% set name = "menu" %}{% include "partials/icon-preview.njk" %}
@@ -334,6 +335,7 @@ Here are the icons available in the "default" icon set.
   {% set name = "search" %}{% include "partials/icon-preview.njk" %} 
   {% set name = "share" %}{% include "partials/icon-preview.njk" %}
   {% set name = "sort" %}{% include "partials/icon-preview.njk" %}
+  {% set name = "schedule" %}{% include "partials/icon-preview.njk" %}
   {% set name = "sms" %}{% include "partials/icon-preview.njk" %}
   {% set name = "thumb_down" %}{% include "partials/icon-preview.njk" %}
   {% set name = "thumb_up" %}{% include "partials/icon-preview.njk" %}
