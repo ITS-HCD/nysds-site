@@ -7,6 +7,7 @@ image_alt: An illustration of a vertical navigation menu.
 image_header: /assets/img/components/verticalnav-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=27438-7659
+eleventyExcludeFromCollections: true
 ---
 
 {% extends "layouts/component.njk" %}
