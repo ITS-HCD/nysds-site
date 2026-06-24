@@ -209,6 +209,7 @@ all `nys-accordionitem` inside the wrapper will display borders.
 {% block cssvariables %}
   {%
     set variables = [
+      { name: "--nys-accordion-color--header", description: "Text color of the accordion header"},
       { name: "--nys-accordion-background-color--header", description: "Background color of the accordion header"},
       { name: "--nys-accordion-background-color--header--hover", description: "Background hover color of the accordion header"},
       { name: "--nys-accordion-content-max-width", description: "Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability."}
