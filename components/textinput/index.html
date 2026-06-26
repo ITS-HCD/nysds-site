@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-06-26T18:34:35.634Z -->
+    <!-- Latest Build: 2026-06-26T18:58:28.420Z -->
   </head>
   
   <body class="single-page page-textinput section-components">
@@ -671,6 +671,34 @@
     </div>
   </div>
 </div>
+<h3 id="aria-label">Aria Label</h3>
+<p>Use the visible <code>label</code> property for nearly every field. It provides a visible, programmatically associated label, which is what most forms need and is required for accessibility.</p>
+<p>Use the <code>ariaLabel</code> property only for narrow cases where a visible label genuinely doesn't fit the pattern, such as a standalone &quot;other&quot; input next to a checkbox. It gives the field an accessible name for screen readers without rendering visible label text.</p>
+<p>If a visible <code>label</code> (or <code>description</code>) is provided, it takes precedence and <code>ariaLabel</code> is ignored. Do not use <code>placeholder</code> as a substitute for either, as it is not exposed as an accessible label.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  solid" data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-textinput ariaLabel="Other reason" placeholder="Other reason"></nys-textinput>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Other reason<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Other reason<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h3 id="disabled">Disabled</h3>
 <div class="code-preview-container">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
@@ -1024,37 +1052,6 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </div>
   </div>
 </div>
-<h3 id="inverted">Inverted</h3>
-<p>Set the <code>inverted</code> when the component is on a dark background.</p>
-<div class="code-preview-container">
-  <div class="code-preview__preview inverted solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-textinput name="descriptionProp" label="Label" description="Slot: description" inverted=""></nys-textinput>
-</div>
-  </div>
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Example Code</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span>
-  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>descriptionProp<span class="token punctuation">"</span></span>
-  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Label<span class="token punctuation">"</span></span>
-  <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Slot: description<span class="token punctuation">"</span></span>
-  <span class="token attr-name">inverted</span>
-<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
-      </div>
-    </div>
-  </div>
-</div>
 </section><br>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
@@ -1112,6 +1109,16 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
         <td><code>""</code></td>
     </tr>
     <tr>
+        <td><code>ariaLabel</code></td>
+        <td>String</td>
+        <td><code>""</code></td>
+    </tr>
+    <tr>
+        <td><code>tooltip</code></td>
+        <td>String</td>
+        <td><code>""</code></td>
+    </tr>
+    <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
@@ -1153,6 +1160,11 @@ Note: The <code>showError</code> attribute is a boolean that toggles automatical
     </tr>
     <tr>
       <td><code>readonly</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>inverted</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
     </tr>
