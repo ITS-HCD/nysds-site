@@ -77,10 +77,10 @@ import { NysButton } from "@nysds/components/react";
 React's synthetic event system does not automatically listen to custom events from web components. Instead, NYSDS React wrappers map these to callback props like `onNysChange` and `onNysInput`, but the underlying type is still a DOM Event.
 
 {% set code %}
-// ❌ This won't work! NysTextInput doesn't fire a native change event
-<NysTextInput onChange={(e) => setValue(e.target.value)} />
+// ❌ This won't work! NysTextinput doesn't fire a native change event
+<NysTextinput onChange={(e) => setValue(e.target.value)} />
 // ✅ Use the NYSDS custom event binding
-<NysTextInput
+<NysTextinput
   name="email"
   onNysInput={(e) => {
     const value = (e as CustomEvent).detail.value;
