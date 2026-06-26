@@ -118,10 +118,16 @@ datepicker.value = "2025-06-01";
 {% include "partials/code-preview.njk" %}
 
   ### Width
+
+  <nys-alert heading="Default Width Changed (version 1.19.2+)" type="warning">
+    <p>The default width for datepicker has been changed from <code>md</code> to <code>full</code> starting from v1.19.2</p>
+  </nys-alert>
+  <br/>
+
   Set the `width` prop to adjust the width of the input field. Supported values:
-  - `md`: 200px _(default)_
+  - `md`: 200px
   - `lg`: 384px
-  - `full`: takes the full width of the parent container
+  - `full`: takes the full width of the parent container _(default)_
   {% set preview %}
   <div style="display: flex; flex-direction: column; gap: 16px;">
     <nys-datepicker label="Medium width" width="md"></nys-datepicker>

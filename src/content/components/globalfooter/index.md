@@ -61,7 +61,19 @@ The `<nys-globalfooter>` component includes the following accessibility-focused 
 
 {% block options %}
 
-### Without Links
+### With Agency Subheading
+Use `agencySubheading` to display a short description beneath the agency name.
+
+{% set preview %}
+<nys-globalfooter
+  agencyName="Office of Information Technology Services"
+  agencySubheading="Innovating Technology for a Better New York"
+>
+</nys-globalfooter>{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Linking Agency Name
 
 Use the prop `homepageLink` to link your `agencyName` to your homepage.
 

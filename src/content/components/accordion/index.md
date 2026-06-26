@@ -206,6 +206,7 @@ all `nys-accordionitem` inside the wrapper will display borders.
   </nys-table>
 {% endblock %}
 
+
 {% block cssvariables %}
   {%
     set variables = [
