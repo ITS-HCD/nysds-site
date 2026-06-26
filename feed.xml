@@ -7,6 +7,177 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.19.2</title>
+      <link>https://designsystem.ny.gov/about/updates/1.19.2-release/</link>
+      <description><![CDATA[<nys-alert heading="Breaking Changes in 1.19.0" type="danger">
+<p>Read the <a href="https://designsystem.ny.gov/about/updates/1.19.0-release/">1.19.0 release notes</a> and <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/#breaking-changes">1.19.2 breaking changes</a> to see how to migrate</p>
+</nys-alert>
+<h2>New <code>subheading</code> for <code>&lt;nys-globalfooter&gt;</code></h2>
+<p>Use <code>agencySubheading</code> to display a short description beneath the agency name.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-globalfooter agencyName="NYS Design System" agencySubheading="A product of the NYS Office of Information Technology Services">
+</nys-globalfooter></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span>
+  <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span>
+  <span class="token attr-name">agencySubheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A product of the NYS Office of Information Technology Services<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta" style="background-color: var(--nys-color-theme-weaker); padding-top: var(--nys-space-100); padding-bottom: var(--nys-space-100); padding-left: var(--nys-space-200); padding-right: var(--nys-space-200); margin-bottom: var(--nys-space-800); border-radius: var(--nys-radius-md); border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);">
+<div class="page-author">
+<nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+<a href="https://github.com/novacat35">Robert Chen</a> played some footie ⚽ with the footer!
+</div>
+</div>
+<h2>Two new icons</h2>
+<p>We added two new icons to the icon library:</p>
+<p><nys-icon name="schedule" size="5xl"></nys-icon> <code>schedule</code>
+<br />
+<nys-icon name="location_on" size="5xl"></nys-icon> <code>location_on</code></p>
+<p><strong>Reminder:</strong> When using the <code>&lt;nys-icon&gt;</code>, you can now choose to <a href="https://designsystem.ny.gov/components/icon/#managing-your-icon-library">load in icons from any other library</a>. You can serve the icons locally or via a Content Delivery Network (CDN).</p>
+<div class="page-meta" style="background-color: var(--nys-color-theme-weaker); padding-top: var(--nys-space-100); padding-bottom: var(--nys-space-100); padding-left: var(--nys-space-200); padding-right: var(--nys-space-200); margin-bottom: var(--nys-space-800); border-radius: var(--nys-radius-md); border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);">
+<div class="page-author">
+<nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+<a href="https://github.com/novacat35">Robert Chen</a> was on location scheduling this update.
+</div>
+</div>
+<h2>Quarterly audit fixes</h2>
+<p>We take stock of our progress every quarter. We do this to ensure that we're being consistent and that we speak with one voice. We need to check for new accessibility issues, and general bugs.</p>
+<p>During our quarterly audit we <a href="https://github.com/ITS-HCD/nysds/pull/1611">uncovered 89 findings <nys-icon name="open_in_new"></nys-icon></a> and remediated them. Here is a summarized list of fixes that were implemented:</p>
+<ul>
+<li><code>&lt;nys-button&gt;</code> could execute arbitrary code</li>
+<li><code>&lt;nys-backtotop&gt;</code> broke server-side rendering</li>
+<li>Missing <code>sideEffects</code> risked breaking tree-shaking changes</li>
+<li>Accessibility issues resolved for <code>&lt;nys-breadcrumb&gt;</code> and <code>&lt;nys-datepicker&gt;</code></li>
+<li>Multiple security vulnerabilities patched</li>
+<li>Tooling changes</li>
+</ul>
+<div class="page-meta" style="background-color: var(--nys-color-theme-weaker); padding-top: var(--nys-space-100); padding-bottom: var(--nys-space-100); padding-left: var(--nys-space-200); padding-right: var(--nys-space-200); margin-bottom: var(--nys-space-800); border-radius: var(--nys-radius-md); border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);">
+<div class="page-author">
+<nys-avatar image="/assets/img/authors/jesse-gardner.jpg"></nys-avatar>
+<a href="https://github.com/plasticmind">Jesse Gardner</a> verified the findings of this audit.
+</div>
+</div>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-icon&gt;</code> in 1.19.0 libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fixed in 1.19.1</a></li>
+<li><code>nys-grid-gap</code> in 1.19.0 added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+<li><code>&lt;nys-datepicker&gt;</code> default <code>width</code> changed from <code>md</code> to <code>full</code>. <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/components/datepicker/#width">See note about width</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.19.2">See the full developer release notes for v.1.19.2 →</a></p>
+]]></description>
+      <content><![CDATA[<nys-alert heading="Breaking Changes in 1.19.0" type="danger">
+<p>Read the <a href="https://designsystem.ny.gov/about/updates/1.19.0-release/">1.19.0 release notes</a> and <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/#breaking-changes">1.19.2 breaking changes</a> to see how to migrate</p>
+</nys-alert>
+<h2>New <code>subheading</code> for <code>&lt;nys-globalfooter&gt;</code></h2>
+<p>Use <code>agencySubheading</code> to display a short description beneath the agency name.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-globalfooter agencyName="NYS Design System" agencySubheading="A product of the NYS Office of Information Technology Services">
+</nys-globalfooter></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-globalfooter</span>
+  <span class="token attr-name">agencyName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span>
+  <span class="token attr-name">agencySubheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A product of the NYS Office of Information Technology Services<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-globalfooter</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta" style="background-color: var(--nys-color-theme-weaker); padding-top: var(--nys-space-100); padding-bottom: var(--nys-space-100); padding-left: var(--nys-space-200); padding-right: var(--nys-space-200); margin-bottom: var(--nys-space-800); border-radius: var(--nys-radius-md); border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);">
+<div class="page-author">
+<nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+<a href="https://github.com/novacat35">Robert Chen</a> played some footie ⚽ with the footer!
+</div>
+</div>
+<h2>Two new icons</h2>
+<p>We added two new icons to the icon library:</p>
+<p><nys-icon name="schedule" size="5xl"></nys-icon> <code>schedule</code>
+<br />
+<nys-icon name="location_on" size="5xl"></nys-icon> <code>location_on</code></p>
+<p><strong>Reminder:</strong> When using the <code>&lt;nys-icon&gt;</code>, you can now choose to <a href="https://designsystem.ny.gov/components/icon/#managing-your-icon-library">load in icons from any other library</a>. You can serve the icons locally or via a Content Delivery Network (CDN).</p>
+<div class="page-meta" style="background-color: var(--nys-color-theme-weaker); padding-top: var(--nys-space-100); padding-bottom: var(--nys-space-100); padding-left: var(--nys-space-200); padding-right: var(--nys-space-200); margin-bottom: var(--nys-space-800); border-radius: var(--nys-radius-md); border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);">
+<div class="page-author">
+<nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+<a href="https://github.com/novacat35">Robert Chen</a> was on location scheduling this update.
+</div>
+</div>
+<h2>Quarterly audit fixes</h2>
+<p>We take stock of our progress every quarter. We do this to ensure that we're being consistent and that we speak with one voice. We need to check for new accessibility issues, and general bugs.</p>
+<p>During our quarterly audit we <a href="https://github.com/ITS-HCD/nysds/pull/1611">uncovered 89 findings <nys-icon name="open_in_new"></nys-icon></a> and remediated them. Here is a summarized list of fixes that were implemented:</p>
+<ul>
+<li><code>&lt;nys-button&gt;</code> could execute arbitrary code</li>
+<li><code>&lt;nys-backtotop&gt;</code> broke server-side rendering</li>
+<li>Missing <code>sideEffects</code> risked breaking tree-shaking changes</li>
+<li>Accessibility issues resolved for <code>&lt;nys-breadcrumb&gt;</code> and <code>&lt;nys-datepicker&gt;</code></li>
+<li>Multiple security vulnerabilities patched</li>
+<li>Tooling changes</li>
+</ul>
+<div class="page-meta" style="background-color: var(--nys-color-theme-weaker); padding-top: var(--nys-space-100); padding-bottom: var(--nys-space-100); padding-left: var(--nys-space-200); padding-right: var(--nys-space-200); margin-bottom: var(--nys-space-800); border-radius: var(--nys-radius-md); border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);">
+<div class="page-author">
+<nys-avatar image="/assets/img/authors/jesse-gardner.jpg"></nys-avatar>
+<a href="https://github.com/plasticmind">Jesse Gardner</a> verified the findings of this audit.
+</div>
+</div>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li><code>&lt;nys-icon&gt;</code> in 1.19.0 libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fixed in 1.19.1</a></li>
+<li><code>nys-grid-gap</code> in 1.19.0 added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+<li><code>&lt;nys-datepicker&gt;</code> default <code>width</code> changed from <code>md</code> to <code>full</code>. <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/components/datepicker/#width">See note about width</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>none</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.19.2">See the full developer release notes for v.1.19.2 →</a></p>
+]]></content>
+      <pubDate>Wed, 24 Jun 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.19.2-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.19.0 “Upper Wolf Jaw”</title>
       <link>https://designsystem.ny.gov/about/updates/1.19.0-release/</link>
       <description><![CDATA[<nys-alert heading="Breaking Changes in 1.19.0" type="danger">
