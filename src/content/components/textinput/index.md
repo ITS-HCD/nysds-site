@@ -94,6 +94,21 @@ Any other input defaults to `type="text"`
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
+### Aria Label
+
+Use the visible `label` property for nearly every field. It provides a visible, programmatically associated label, which is what most forms need and is required for accessibility.
+
+Use the `ariaLabel` property only for narrow cases where a visible label genuinely doesn't fit the pattern, such as a standalone "other" input next to a checkbox. It gives the field an accessible name for screen readers without rendering visible label text.
+
+If a visible `label` (or `description`) is provided, it takes precedence and `ariaLabel` is ignored. Do not use `placeholder` as a substitute for either, as it is not exposed as an accessible label.
+
+{% set preview %}
+<nys-textinput ariaLabel="Other reason" placeholder="Other reason"></nys-textinput>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
+
 ### Disabled
 
 {% set preview %}
@@ -287,6 +302,16 @@ Set the `inverted` when the component is on a dark background.
         <td><code>""</code></td>
     </tr>
     <tr>
+        <td><code>ariaLabel</code></td>
+        <td>String</td>
+        <td><code>""</code></td>
+    </tr>
+    <tr>
+        <td><code>tooltip</code></td>
+        <td>String</td>
+        <td><code>""</code></td>
+    </tr>
+    <tr>
       <td><code>disabled</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
@@ -328,6 +353,11 @@ Set the `inverted` when the component is on a dark background.
     </tr>
     <tr>
       <td><code>readonly</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>inverted</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
     </tr>
