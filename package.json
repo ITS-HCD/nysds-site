@@ -35,8 +35,8 @@
     "rimraf": "^6.1.3"
   },
   "dependencies": {
-    "@nysds/components": "^1.19.1",
-    "@nysds/styles": "^1.19.1",
+    "@nysds/components": "^1.19.2",
+    "@nysds/styles": "^1.19.2",
     "svgo": "^4.0.1"
   }
 }
