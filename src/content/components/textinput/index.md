@@ -253,23 +253,6 @@ Note: The `showError` attribute is a boolean that toggles automatically based on
 {% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
-### Inverted
-
-Set the `inverted` when the component is on a dark background.
-
-{% set preview %}
-<nys-textinput
-  name="descriptionProp"
-  label="Label"
-  description="Slot: description"
-  inverted
-></nys-textinput>
-{% endset %}
-{% set code = preview %}
-{% set backgroundSolid = true %}
-{% set inverted = true %}
-{% include "partials/code-preview.njk" %}
-
 {% endblock %}
 
 {% block properties %}
