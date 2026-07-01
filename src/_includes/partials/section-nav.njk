@@ -1,4 +1,4 @@
-<nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+{# <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button
     id="accordion-trigger-{{ section | slug }}"
     class="section-nav__toggle accordion__trigger"
@@ -18,15 +18,15 @@
 
 {% if section in collections.sections %}
   {% set top = collections.sections[section].topLevel %}
-  {% set list = top %}
+  {% set list = top %} #}
 
   {# If this section is the video series, sort by series_order #}
-  {% if section | lower == "videos" %}
+  {# {% if section | lower == "videos" %}
     {% set list = top | onlySeries | sortBySeriesOrder %}
-  {% endif %}
+  {% endif %} #}
 
   {# Loop through only top-level pages (kept identical) #}
-  {% for page in list %}
+  {# {% for page in list %}
     {% set isActive = (page.url == currentPageUrl) %}
     {% for child in page.children %}
       {% if child.url == currentPageUrl %}
@@ -37,10 +37,10 @@
         {% if page.children | length > 0 %} aria-expanded="{% if isActive %}true{% else %}false{% endif %}" {% endif %}>
       <a class="section-nav__link" href="{{ page.url }}" {% if page.url == currentPageUrl %} aria-current="page" {% endif %}>
         {{ page.data.navTitle or page.data.title }}
-      </a>
+      </a> #}
 
       {# Render child pages inside their parent (unchanged; videos typically have none) #}
-      {% if page.children | length > 0 %}
+      {# {% if page.children | length > 0 %}
         <ul class="section-nav__list" {% if not isActive %} hidden {% endif %}>
           {% for child in page.children %}
             <li class="section-nav__item{% if child.url == currentPageUrl %} section-nav__item--active{% endif %}">
@@ -56,4 +56,60 @@
 {% endif %}
 
   </ul>
-</nav>
+</nav> #}
+
+{% if section in collections.sections %}
+ {% set top = collections.sections[section].topLevel %}
+ {% set list = top %}
+
+  {# If this section is the video series, sort by series_order #}
+  {% if section | lower == "videos" %}
+    {% set list = top | onlySeries | sortBySeriesOrder %}
+  {% endif %}
+
+  <nys-verticalnav header="{{ section }}" hideHeader data-pagefind-ignore="all">
+    <ul>
+      {# Loop through only top-level pages (kept identical) #}
+      {% for page in list %}
+        {% set isActive = (page.url == currentPageUrl) %}
+        {% for child in page.children %}
+          {% if child.url == currentPageUrl %}
+            {% set isActive = true %}
+          {% endif %}
+        {% endfor %}
+
+      {% if page.children | length > 0 %}
+        <li>
+          <nys-verticalnavgroup
+            label="{{ page.data.navTitle or page.data.title }}"
+            {% if isActive %}expanded{% endif %}>
+            <ul>
+              <li>
+                <a href="{{ page.url }}"
+                  {% if page.url == currentPageUrl %}aria-current="page"{% endif %}>
+                  {{ page.data.navTitle or page.data.title }}
+                </a>
+              </li>
+              {% for child in page.children %}
+                <li>
+                  <a href="{{ child.url }}"
+                    {% if child.url == currentPageUrl %}aria-current="page"{% endif %}>
+                    {{ child.data.navTitle or child.data.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nys-verticalnavgroup>
+        </li>
+      {% else %}
+        <li>
+          <a href="{{ page.url }}"
+            {% if page.url == currentPageUrl %}aria-current="page"{% endif %}>
+            {{ page.data.navTitle or page.data.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </nys-verticalnav>
+{% endif %}
