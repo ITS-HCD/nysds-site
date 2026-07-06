@@ -107,6 +107,10 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
       <td><code>inverted</code></td>
       <td>Boolean</td>
     </tr>
+    <tr>
+      <td><code>subtle</code></td>
+      <td>Boolean</td>
+    </tr>
   </table>
 </nys-table>
 
