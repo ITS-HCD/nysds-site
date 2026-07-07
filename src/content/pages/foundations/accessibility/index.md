@@ -21,7 +21,7 @@ navOrder: 2
     <p class="a11y-hero__caption">There are 11 letters between the a and y.</p>
   </div>
   <div class="a11y-hero__media">
-    <img src="/assets/i/2026/gaad-2026/a11y-banner.png" alt="A collage of four photos showing people with diverse abilities using technology and engaging with the world.">
+    <img src="/assets/img/a11y-foundations-banner.png" alt="A collage of four photos showing people with diverse abilities using technology and engaging with the world.">
   </div>
 </div>
 
@@ -197,7 +197,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/content/" aria-label="Accessibility for Content Creators">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/icon-people.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-edit.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Content Creators</div>
@@ -210,7 +210,7 @@ navOrder: 2
     <a class="card card--horizontal" href="/foundations/accessibility/leadership/" aria-label="Accessibility for Leadership">
       <div class="card__inner">
         <div class="card__media card__media--thin">
-          <img src="/assets/img/icon-edit.svg" alt="" role="presentation" />
+          <img src="/assets/img/icon-people.svg" alt="" role="presentation" />
         </div>
         <div class="card__content">
           <div class="card__title">For Leadership</div>
@@ -297,12 +297,19 @@ navOrder: 2
 {% endblock %}
 
 {% block styles %}
+<link rel="stylesheet" href="{{ '/assets/fonts/atkinson-hyperlegible/atkinson-hyperlegible.css' | url }}">
+
 <style>
+  .a11y-hero p {
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    font-weight: 200;
+  }
+
   .a11y-hero {
     display: flex;
     align-items: center;
     gap: var(--nys-space-400);
-    background: var(--nys-color-theme-faint);
+    background: var(--nys-color-info-weak);
     border-radius: var(--nys-radius-lg);
     padding: var(--nys-space-400);
     margin-block-end: var(--nys-space-400);
@@ -332,7 +339,6 @@ navOrder: 2
 
   .a11y-hero__heading {
     margin: 0;
-    font-family: var(--nys-font-family-display);
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     line-height: 1.1;
     font-weight: 400;
@@ -354,8 +360,8 @@ navOrder: 2
 
   .a11y-hero__caption {
     margin: 0;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: var(--nys-color-neutral-500);
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: var(--nys-color-ink);
   }
 
   .a11y-hero__media {

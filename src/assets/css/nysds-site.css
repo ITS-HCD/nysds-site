@@ -237,6 +237,11 @@ main[role="main"] {
     color: var(--nys-color-theme-weak, #fff);
 }
 
+.section-tokens .section-header {
+    background-color: var(--nys-color-theme-stronger);
+    color: var(--nys-color-theme-weak, #fff);
+}
+
 .section-header__inner {
     padding-top: var(--nys-space-200);
     padding-bottom: var(--nys-space-200);
