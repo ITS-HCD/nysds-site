@@ -110,7 +110,7 @@
   "src/assets/img/sections/section-get-started.svg": "ff2342971820e49118e907a137d6076114fc35203eb60e41fe44898a4eb1153c",
   "src/assets/img/sections/section-learn.svg": "a88b6309008c85e85e26e240a32a8f56ce1d9d901ac5727a6908ca9daca8c7ce",
   "src/assets/img/sections/section-search.svg": "91a770238c5c75a4b9323a354c1a2a75eb585f5ae3e521edadcd0121f6e25163",
-  "src/assets/img/sections/section-tokens.svg": "700570cd6fefa5efe105f5b18a1fa12ec40cba9919c2a91e2c9e5432ffeabf18",
+  "src/assets/img/sections/section-tokens.svg": "4774609c04899301a17e262bf5ffcd339d3ccedf497ef8cbb1ba482dd8e41728",
   "src/assets/img/sections/section-updates.svg": "d2931a0e374ee7be11f9b1f38a030310e7b2a823d7b3df53dcc48148df29020b",
   "src/assets/img/sections/section-videos.svg": "d7fdbd4f4f9ef286f2a8511291ee71ed04732a23b751dc1b4ad6baa0650f8853",
   "src/assets/img/star.svg": "1af1857fe8f119b4609d306fec65038b5b706806f3c54bbd8590af6de4f9368f",
@@ -217,5 +217,6 @@
   "src/assets/i/2026/release-1.19.0-thumbnail.png": "0da4355764d6ff60a0b9297b55170b42c3cb68f19c71e1982fe9f2b6c5009284",
   "src/assets/i/2026/release-1.19.0.png": "645fec4b88db25b410c84b9cf40afb86761117d3038b749ccb7dfe299d0bcaf6",
   "src/assets/i/2026/upper-wolf-jaw-badge.png": "016f1d9321728b3289bbba28ce2ea81ede6bdd6192f09293f885d2ba47c1ba91",
-  "src/assets/img/authors/robert-chen.jpg": "615aa88ddd28c2841b779e833d47c3e30390ca7dd5a9165d71870fb59f8f50da"
+  "src/assets/img/authors/robert-chen.jpg": "615aa88ddd28c2841b779e833d47c3e30390ca7dd5a9165d71870fb59f8f50da",
+  "src/assets/img/a11y-foundations-banner.png": "e178b2a46f284e9ad0566f04320ffa9f5ef30e26715d06000694bb22a82230cd"
 }
