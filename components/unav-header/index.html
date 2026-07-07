@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-07-07T16:51:58.297Z -->
+    <!-- Latest Build: 2026-07-07T16:52:30.018Z -->
   </head>
   
   <body class="single-page page-unavheader section-components">
@@ -806,7 +806,15 @@
 </section><br>
 <section>
     <h2 id="events">Events</h2>
-<p>This component does not emit any custom events.</p>
+<p>This component emits <strong>two</strong> custom Javascript events:</p>
+<ol>
+<li>
+<p><strong><code>nys-language-select</code></strong> - Emitted when a user selects a language from the translate dropdown. The event detail contains the selected language object.</p>
+</li>
+<li>
+<p><strong><code>nys-search-submit</code></strong> - Emitted when a user submits a search query. The event detail contains the search query string.</p>
+</li>
+</ol>
 </section>
 <section class="nys-section">
     <h2 id="suggest-a-new-component">Suggest a New Component</h2>
