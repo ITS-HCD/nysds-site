@@ -162,7 +162,11 @@ The `nys-unavheader` does not have any css variables because this component must
 
 {% block events %}
 
-This component does not emit any custom events.
+This component emits **two** custom Javascript events:
+
+1. **`nys-language-select`** - Emitted when a user selects a language from the translate dropdown. The event detail contains the selected language object.
+
+2. **`nys-search-submit`** - Emitted when a user submits a search query. The event detail contains the search query string.
 
 {% endblock %}
 
