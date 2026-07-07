@@ -6806,7 +6806,7 @@ By starting in FigJam you force yourself not to think about component properties
       <title>Release 0.0.7-alpha</title>
       <link>https://designsystem.ny.gov/about/updates/0.0.7-alpha-release/</link>
       <description><![CDATA[<p>We’re excited to announce that the New York State Design System is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
-<h2>What's New</h2>
+<h2>What’s New</h2>
 <h3>New Component: nys-avatar</h3>
 <p>This is a UI element for displaying a user icon or image.</p>
 <p>Features:</p>
@@ -6855,7 +6855,7 @@ By starting in FigJam you force yourself not to think about component properties
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.7-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.7-alpha">See the full developer release notes for v0.0.7-alpha →</a></p>
 ]]></description>
       <content><![CDATA[<p>We’re excited to announce that the New York State Design System is now available for use! You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes one new component <code>nys-avatar</code> and our new <code>nys-styles</code> package to style the components and make design tokens available for use.</p>
-<h2>What's New</h2>
+<h2>What’s New</h2>
 <h3>New Component: nys-avatar</h3>
 <p>This is a UI element for displaying a user icon or image.</p>
 <p>Features:</p>
@@ -6912,7 +6912,7 @@ By starting in FigJam you force yourself not to think about component properties
       <link>https://designsystem.ny.gov/about/updates/0.0.4-alpha-release/</link>
       <description><![CDATA[<h1>Release Notes</h1>
 <p>We’re excited to announce that the New York State Design System is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
-<h2>What's New</h2>
+<h2>What’s New</h2>
 <h3>New Component: nys-textarea</h3>
 <p>Description: UI element for entering multiline text input.</p>
 <p>Features:</p>
@@ -6951,7 +6951,7 @@ By starting in FigJam you force yourself not to think about component properties
 ]]></description>
       <content><![CDATA[<h1>Release Notes</h1>
 <p>We’re excited to announce that the New York State Design System is now live on NPM! 🎉 You can explore and install our published packages here: <a href="https://www.npmjs.com/org/nysds">NYS Design System on NPM</a>. This release includes two new components—<code>&lt;nys-textarea&gt;</code> and <code>&lt;nys-toggle&gt;</code>—and significant improvements to our build and publishing workflows.</p>
-<h2>What's New</h2>
+<h2>What’s New</h2>
 <h3>New Component: nys-textarea</h3>
 <p>Description: UI element for entering multiline text input.</p>
 <p>Features:</p>
@@ -6995,7 +6995,7 @@ By starting in FigJam you force yourself not to think about component properties
     <item>
       <title>Release 0.0.3-alpha</title>
       <link>https://designsystem.ny.gov/about/updates/0.0.3-alpha-release/</link>
-      <description><![CDATA[<h2>What's New</h2>
+      <description><![CDATA[<h2>What’s New</h2>
 <ul>
 <li>New component: <code>&lt;nys-radiobutton&gt;</code> created by <a href="https://github.com/emilygorelik">@emilygorelik</a>
 <ul>
@@ -7034,7 +7034,7 @@ By starting in FigJam you force yourself not to think about component properties
 <h3>For full component updates, bug fixes, and the detailed changelog:</h3>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v0.0.3-alpha" title="https://github.com/its-hcd/nysds/releases/tag/v0.0.3-alpha">See the full developer release notes for v0.0.3-alpha →</a></p>
 ]]></description>
-      <content><![CDATA[<h2>What's New</h2>
+      <content><![CDATA[<h2>What’s New</h2>
 <ul>
 <li>New component: <code>&lt;nys-radiobutton&gt;</code> created by <a href="https://github.com/emilygorelik">@emilygorelik</a>
 <ul>
