@@ -30,7 +30,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 </nys-alert>
 </br>
 
-When using the `<nys-icon>`, you can choose to load in icons from any `library`. You can serve the icons locally or via a Content Delivery Network (CDN). Below, you will find two examples. The first will re-configure the default library to point to another local location. The second will configure a Font Awesome library via CDN. The third configures a Material Icon library referencing the icon files locally.
+When using the `<nys-icon>`, you can choose to load in icons from any `library`. By default, `<nys-icon>` can load icons from any registered library, served locally or via a CDN. Below are three examples: pointing the default library to a different local location, adding a Font Awesome library via CDN, and adding a Material Icon library from local files.
 
 
 #### Override the `"default"` library
