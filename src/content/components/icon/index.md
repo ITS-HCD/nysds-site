@@ -53,9 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Override default library in plain JS" %}
 {% include "partials/code-preview.njk" %}
 
-#### Using the `library` prop
-Once you've registered one or more additional libraries, use the `library` prop on `<nys-icon>` to tell the component which library to pull a given icon from. Icons with no `library` prop set will continue to use the `"default"` library.
-
+#### Overriding the `"default"` library in React-like Frameworks
 {% set preview = "" %}
 {% set code %}
 import { registerIconLibrary } from '@nysds/components';
@@ -80,6 +78,9 @@ registerIconLibrary('material', {
 {% set showTip = false %}
 {% set accordionLabel = "Register additional libraries in React-like frameworks" %}
 {% include "partials/code-preview.njk" %}
+
+#### Using the `library` prop
+Once you've registered one or more additional libraries, use the `library` prop on `<nys-icon>` to tell the component which library to pull a given icon from. Icons with no `library` prop set will continue to use the `"default"` library.
 
 {% set preview = "" %}
 {% set code %}
