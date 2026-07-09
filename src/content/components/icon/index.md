@@ -81,6 +81,22 @@ registerIconLibrary('material', {
 {% set accordionLabel = "Register additional libraries in React-like frameworks" %}
 {% include "partials/code-preview.njk" %}
 
+{% set preview = "" %}
+{% set code %}
+/** Font-awesome **/
+<NysIcon name="house" library="font-awesome"></NysIcon>
+/** Material **/
+<NysIcon name="home" library="material"></NysIcon>
+/** Default (no "library" prop needed) **/
+<NysIcon name="upload_file"></NysIcon>
+<NysIcon name="schedule"></NysIcon>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = 'Using the "library" prop' %}
+{% include "partials/code-preview.njk" %}
+
+
 {% endblock %}
 
 {% block usagedo %}
