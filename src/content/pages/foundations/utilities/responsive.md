@@ -34,8 +34,6 @@ Responsive utilities are written as their screen size followed by a colon, follo
   - [Overflow](../overflow)
   - [Position](../position)
   - [Z-index](../zindex)
-
-**Currently unsupported:**
   - [Margin and Padding](../margin-padding)
 
 ## Same utility on all breakpoints
