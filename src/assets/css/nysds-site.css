@@ -365,6 +365,17 @@ main[role="main"] {
 
 /* Page Meta */
 
+.author-card {
+    background-color: var(--nys-color-theme-weaker);
+    padding-top: var(--nys-space-100);
+    padding-bottom: var(--nys-space-100);
+    padding-left: var(--nys-space-200);
+    padding-right: var(--nys-space-200);
+    margin-bottom: var(--nys-space-800);
+    border-radius: var(--nys-radius-md);
+    border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);
+}
+
 .page-meta {
     display: flex;
     align-items: center;
