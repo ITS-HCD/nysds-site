@@ -232,8 +232,7 @@ navOrder: 2
   <p>Don't get lost in the deadline math. Our standard is <b>WCAG 2.2 AA</b>. That's what New York requires, that's our accessibility team tests against, and that's what teams should be building to. For full policy details, compliance requirements, and planning guidance, see our <a href="/foundations/accessibility/leadership/">Leadership Guidance</a>.</p>
   <ul>
     <li><b>January 2027</b> — NYS Technology Law (STL Section 103-d) requires all State Entity websites conform to WCAG 2.2 Level AA.</li>
-    <li><b>April 26, 2027</b> — DOJ Rule requires web content and mobile applications to conform to WCAG 2.1 Level AA (public entities serving 50,000 or more people).</li>
-    <li><b>April 26, 2028</b> — DOJ Rule deadline for entities serving fewer than 50,000 people and special district governments.</li>
+    <li><b>April 26, 2027</b> — DOJ Rule requires all web content and mobile applications conform to WCAG 2.1 Level AA.</li>
   </ul>
 </nys-alert>
 
