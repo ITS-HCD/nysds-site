@@ -225,6 +225,19 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Load Font Awesome library" %}
 {% include "partials/code-preview.njk" %}
 
+Use the `library` prop to connect
+{% set preview = "" %}
+{% set code %}
+/** Font-awesome **/
+<NysIcon name="house" library="font-awesome"></NysIcon>
+/** Default (no "library" prop needed) **/
+<NysIcon name="upload_file"></NysIcon>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = 'Using the "library" prop' %}
+{% include "partials/code-preview.njk" %}
+
 #### Font Awesome example (loaded via CDN)
 
 <div class="icon-examples">
@@ -261,6 +274,19 @@ This demo assumes you have installed the material icon NPM package and want to r
 {% endset %}
 {% set showTip = false %}
 {% set accordionLabel = "Load local Material icons" %}
+{% include "partials/code-preview.njk" %}
+
+Use the `library` prop to connect
+{% set preview = "" %}
+{% set code %}
+/** Material **/
+<NysIcon name="home" library="material"></NysIcon>
+/** Default (no "library" prop needed) **/
+<NysIcon name="upload_file"></NysIcon>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = 'Using the "library" prop' %}
 {% include "partials/code-preview.njk" %}
 
 #### Material icon example (loaded locally)
