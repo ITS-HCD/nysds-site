@@ -26,7 +26,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 ## Managing your icon `library`
 
 <nys-alert heading="Note for React and Angular" type="warning">
- <p>Note: Version <code>1.19.3</code> fixes a number of <code>nys-icon</code> issues introduced in <code>1.19.0</code>. If you registered an override for the <code>"default"</code> library as a workaround when upgrading to 1.19.x, you can safely remove that override after upgrading to <code>1.19.3</code>.</p>
+ <p>Note: Version <code>1.19.3</code> fixes a number of <code><nys-icon></code> issues introduced in <code>1.19.0</code>. If you registered an override for the <code>"default"</code> library as a workaround when upgrading to 1.19.x, you can safely remove that override after upgrading to <code>1.19.3</code>.</p>
 </nys-alert>
 </br>
 
@@ -53,9 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Override default library in plain JS" %}
 {% include "partials/code-preview.njk" %}
 
-#### Using the `library` prop
-Once you've registered one or more additional libraries, use the `library` prop on `<nys-icon>` to tell the component which library to pull a given icon from. Icons with no `library` prop set will continue to use the `"default"` library.
-
+#### Overriding the `"default"` library in React-like Frameworks
 {% set preview = "" %}
 {% set code %}
 import { registerIconLibrary } from '@nysds/components';
@@ -80,6 +78,9 @@ registerIconLibrary('material', {
 {% set showTip = false %}
 {% set accordionLabel = "Register additional libraries in React-like frameworks" %}
 {% include "partials/code-preview.njk" %}
+
+#### Using the `library` prop
+Once you've registered one or more additional libraries, use the `library` prop on `<nys-icon>` to tell the component which library to pull a given icon from. Icons with no `library` prop set will continue to use the `"default"` library.
 
 {% set preview = "" %}
 {% set code %}
