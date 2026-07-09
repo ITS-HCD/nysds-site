@@ -7,6 +7,195 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.19.3</title>
+      <link>https://designsystem.ny.gov/about/updates/1.19.3-release/</link>
+      <description><![CDATA[<nys-alert heading="[1.19.0-1.19.2] Breaking Changes fixed in 1.19.3" type="warning">
+<p>We documented a workaround for a bug in nys-icon in <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/#breaking-changes">1.19.2 breaking changes</a>.</p>
+<p>Those changes are <strong>no longer required</strong> to get the default library to work.</p>
+</nys-alert>
+<h2>Responsive margin and padding classes now available</h2>
+<p>Check out the updated documentation for <a href="https://designsystem.ny.gov/foundations/utilities/responsive/">Responsive utility classes</a> featuring Margin and Padding variants!</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> writes all of his notes in the margins
+  </div>
+</div>
+<h2>Style overrides added for <code>&lt;nys-accordionitem&gt;</code> header text color</h2>
+<p>You can now override the accordion item header text color by modifying the <code>--nys-accordion-color--header</code> variable in your CSS.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> imagined a rainbow accordion
+  </div>
+</div>
+<h2>MCP server updates</h2>
+<p>We made quite a few changes to the MCP server this release:</p>
+<ul>
+<li>Revamp all component code examples in source JSDocs</li>
+<li>Clarify when to enable <code>nysLogo</code> in <code>&lt;nys-globalheader&gt;</code></li>
+<li>Document <code>user-actions</code> slot in <code>&lt;nys-globalheader&gt;</code></li>
+<li>Document events fired by <code>&lt;nys-unavheader&gt;</code></li>
+</ul>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> enhanced the JSDocs
+  </div>
+</div>
+<h2><code>&lt;nys-button&gt;</code> acts more like native <code>&lt;button&gt;</code> now</h2>
+<p>You can now label an <code>&lt;nys-button&gt;</code> like a native button:</p>
+<p><code>&lt;nys-button&gt;This didn't work before 1.19.3!&lt;/nys-button&gt;</code></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> preferred the native implementation
+  </div>
+</div>
+<h2>Default <code>&lt;nys-icon&gt;</code> library redux</h2>
+<p>We made a significant improvement to <code>&lt;nys-icon&gt;</code> in v1.19.0. We added the ability to load in custom icons from any icon library. Unfortunately, this led to a break in the default icon library. We created a workaround for the issue, but we felt it was still lacking a ZERO-CONFIG option.</p>
+<p>v1.19.3 &quot;reverts&quot; the change to the default library, while continuing to support defining external libraries. <a href="https://designsystem.ny.gov/components/icon/#managing-your-icon-library">Learn how to implement a custom library in 1.19.3</a>.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+    <a href="https://github.com/esteinborn">Eric Steinborn</a> thanks Jesse for this idea
+  </div>
+</div>
+<h2>Expose files/value accessors in <code>&lt;nys-fileinput&gt;</code></h2>
+<p>We were missing the native functionality of a file input component. The native functionality lists the files as a value. This fix aligns <code>&lt;nys-fileinput&gt;</code> with native requirements.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/jesse-gardner.jpg"></nys-avatar>
+    <a href="https://github.com/plasticmind">Jesse Gardner</a> filed this under "done"
+  </div>
+</div>
+<h2>Continuing our automation journey</h2>
+<p>One of our guiding principles for the NYS Design System is to automate everything that is easily repeatable. In an effort to automate our documentation generation, Emily wrote a script that scans the source code Typescript file for @JSDoc-compatible comments and extracts the documentation automatically.</p>
+<p>This change removed over 35 MDX files which was functionally duplicate code from our stories files. So we now generate our Storybook stories directly from the component source code, reducing the amount of duplication across the entire repository. Next up? Automating that documentation directly to this website.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> is automatically automated
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Translate icon fixed in unavheader</li>
+<li>Accordion height tweaks</li>
+<li>Modal width and height cap removed</li>
+<li>Fix overlapping text in <code>&lt;nys-alert&gt;</code>, <code>&lt;nys-badge&gt;</code>, and <code>&lt;nys-icon&gt;</code></li>
+<li>Checkbox label weight parity</li>
+<li>Fix checkbox for Drupal</li>
+<li>Lit as peer dep of packages</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>Users running NYSDS 1.19.0 through 1.19.2 should immediately upgrade to 1.19.3 to fix the default icon library bug introduced in 1.19.0.</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.19.3">See the full developer release notes for v.1.19.3 →</a></p>
+]]></description>
+      <content><![CDATA[<nys-alert heading="[1.19.0-1.19.2] Breaking Changes fixed in 1.19.3" type="warning">
+<p>We documented a workaround for a bug in nys-icon in <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/#breaking-changes">1.19.2 breaking changes</a>.</p>
+<p>Those changes are <strong>no longer required</strong> to get the default library to work.</p>
+</nys-alert>
+<h2>Responsive margin and padding classes now available</h2>
+<p>Check out the updated documentation for <a href="https://designsystem.ny.gov/foundations/utilities/responsive/">Responsive utility classes</a> featuring Margin and Padding variants!</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> writes all of his notes in the margins
+  </div>
+</div>
+<h2>Style overrides added for <code>&lt;nys-accordionitem&gt;</code> header text color</h2>
+<p>You can now override the accordion item header text color by modifying the <code>--nys-accordion-color--header</code> variable in your CSS.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> imagined a rainbow accordion
+  </div>
+</div>
+<h2>MCP server updates</h2>
+<p>We made quite a few changes to the MCP server this release:</p>
+<ul>
+<li>Revamp all component code examples in source JSDocs</li>
+<li>Clarify when to enable <code>nysLogo</code> in <code>&lt;nys-globalheader&gt;</code></li>
+<li>Document <code>user-actions</code> slot in <code>&lt;nys-globalheader&gt;</code></li>
+<li>Document events fired by <code>&lt;nys-unavheader&gt;</code></li>
+</ul>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> enhanced the JSDocs
+  </div>
+</div>
+<h2><code>&lt;nys-button&gt;</code> acts more like native <code>&lt;button&gt;</code> now</h2>
+<p>You can now label an <code>&lt;nys-button&gt;</code> like a native button:</p>
+<p><code>&lt;nys-button&gt;This didn't work before 1.19.3!&lt;/nys-button&gt;</code></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> preferred the native implementation
+  </div>
+</div>
+<h2>Default <code>&lt;nys-icon&gt;</code> library redux</h2>
+<p>We made a significant improvement to <code>&lt;nys-icon&gt;</code> in v1.19.0. We added the ability to load in custom icons from any icon library. Unfortunately, this led to a break in the default icon library. We created a workaround for the issue, but we felt it was still lacking a ZERO-CONFIG option.</p>
+<p>v1.19.3 &quot;reverts&quot; the change to the default library, while continuing to support defining external libraries. <a href="https://designsystem.ny.gov/components/icon/#managing-your-icon-library">Learn how to implement a custom library in 1.19.3</a>.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+    <a href="https://github.com/esteinborn">Eric Steinborn</a> thanks Jesse for this idea
+  </div>
+</div>
+<h2>Expose files/value accessors in <code>&lt;nys-fileinput&gt;</code></h2>
+<p>We were missing the native functionality of a file input component. The native functionality lists the files as a value. This fix aligns <code>&lt;nys-fileinput&gt;</code> with native requirements.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/jesse-gardner.jpg"></nys-avatar>
+    <a href="https://github.com/plasticmind">Jesse Gardner</a> filed this under "done"
+  </div>
+</div>
+<h2>Continuing our automation journey</h2>
+<p>One of our guiding principles for the NYS Design System is to automate everything that is easily repeatable. In an effort to automate our documentation generation, Emily wrote a script that scans the source code Typescript file for @JSDoc-compatible comments and extracts the documentation automatically.</p>
+<p>This change removed over 35 MDX files which was functionally duplicate code from our stories files. So we now generate our Storybook stories directly from the component source code, reducing the amount of duplication across the entire repository. Next up? Automating that documentation directly to this website.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> is automatically automated
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Translate icon fixed in unavheader</li>
+<li>Accordion height tweaks</li>
+<li>Modal width and height cap removed</li>
+<li>Fix overlapping text in <code>&lt;nys-alert&gt;</code>, <code>&lt;nys-badge&gt;</code>, and <code>&lt;nys-icon&gt;</code></li>
+<li>Checkbox label weight parity</li>
+<li>Fix checkbox for Drupal</li>
+<li>Lit as peer dep of packages</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>Users running NYSDS 1.19.0 through 1.19.2 should immediately upgrade to 1.19.3 to fix the default icon library bug introduced in 1.19.0.</li>
+</ul>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.19.3">See the full developer release notes for v.1.19.3 →</a></p>
+]]></content>
+      <pubDate>Wed, 08 Jul 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.19.3-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.19.2</title>
       <link>https://designsystem.ny.gov/about/updates/1.19.2-release/</link>
       <description><![CDATA[<nys-alert heading="Breaking Changes in 1.19.0" type="danger">

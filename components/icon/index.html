@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-07-09T13:25:33.046Z -->
+    <!-- Latest Build: 2026-07-09T20:26:48.195Z -->
   </head>
   
   <body class="single-page page-icon section-components">
@@ -560,59 +560,12 @@
   </div>
 </div>
 <h2 id="managing-your-icon-library">Managing your icon <code>library</code></h2>
-<p>When using the <code>&lt;nys-icon&gt;</code>, you can choose to load in icons from any <code>library</code>. You can serve the icons locally or via a Content Delivery Network (CDN). Below, you will find three examples. The first will re-configure the default library to point to another local location. The second will configure a Font Awesome library via CDN. The third configures a Material Icon library referencing the icon files locally.</p>
-<h3 id="the-default">The <code>&quot;default&quot;</code></h3>
-<p>New in v1.19.0, the <code>&lt;nys-icon&gt;</code> loads icon files from a subfolder relative to <code>nysds.js</code>. If you load your icons and JS in this structure, you don't have to change anything in 1.19.0.</p>
-<p><strong>Required file structure:</strong></p>
-<pre class="language-html"><code class="language-html">📁 /   (any folder)
-├── 📄 nysds.js
-└── 📁 icons/
-    ├── 🖼 home.svg
-    ├── 🖼 search.svg
-    └── 🖼 external_link.svg</code></pre>
+<nys-alert heading="Note for React and Angular" type="warning">
+ <p>Note: Version <code>1.19.3</code> fixes a number of <code><nys-icon></nys-icon></code> issues introduced in <code>1.19.0</code>. If you registered an override for the <code>"default"</code> library as a workaround when upgrading to 1.19.x, you can safely remove that override after upgrading to <code>1.19.3</code>.</p>
+</nys-alert>
+<br>
+<p>When using the <code>&lt;nys-icon&gt;</code>, you can choose to load in icons from any <code>library</code>. By default, <code>&lt;nys-icon&gt;</code> can load icons from any registered library, served locally or via a CDN. Below are three examples: pointing the default library to a different local location, adding a Font Awesome library and Material Icon library, and using the <code>library</code> property.</p>
 <h4 id="override-the-default-library">Override the <code>&quot;default&quot;</code> library</h4>
-<p><nys-alert heading="Note for React and Angular" text="You will ALWAYS need to override the default library in React, Angular, and other bundling frameworks" type="warning"></nys-alert></p>
-<p>Sometimes building your application places your icon files in a different location than &quot;default&quot;. If that happens:</p>
-<ol>
-<li>Copy icons to your filesystem</li>
-<li>Verify the icon location</li>
-<li>Reference them there</li>
-</ol>
-<p>Below covers the Vite way to copy the icons to the location we'll set the default library to.</p>
-<div class="code-preview-container">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Copy icon files (with Vite)</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html">import { defineConfig } from 'vite'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'node_modules/@nysds/components/dist/icons/*.svg',
-          dest: 'assets/icons',
-          rename: { stripBase: true },
-        },
-      ],
-    }),
-  ],
-})</code></pre>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -640,12 +593,13 @@ document<span class="token punctuation">.</span><span class="token function">add
     </div>
   </div>
 </div>
+<h4 id="overriding-the-default-library-in-react-like-frameworks">Overriding the <code>&quot;default&quot;</code> library in React-like Frameworks</h4>
 <div class="code-preview-container">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
         <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Override default library in React-like frameworks</p>
+        <p>Register additional libraries in React-like frameworks</p>
       </button>
       <div class="copy-button-wrapper" data-pagefind-ignore="all">
         <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
@@ -655,10 +609,49 @@ document<span class="token punctuation">.</span><span class="token function">add
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html">import { registerIconLibrary } from '@nysds/components';
-registerIconLibrary('default', {
+// Font Awesome Library
+registerIconLibrary('font-awesome', {
   resolver: name =>
-    `/nysds-react-demo/assets/icons/${name}.svg`,
+    `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+  mutator: (svg) => {
+    svg.setAttribute("fill", "currentColor");
+  },
+});
+// Material Library
+registerIconLibrary('material', {
+  resolver: name =>
+    `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
+  mutator: (svg) => {
+    svg.setAttribute("fill", "currentColor");
+  },
 });</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="using-the-library-prop">Using the <code>library</code> prop</h4>
+<p>Once you've registered one or more additional libraries, use the <code>library</code> prop on <code>&lt;nys-icon&gt;</code> to tell the component which library to pull a given icon from. Icons with no <code>library</code> prop set will continue to use the <code>&quot;default&quot;</code> library.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Using the &quot;library&quot; prop</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">/** Font-awesome **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>house<span class="token punctuation">"</span></span> <span class="token attr-name">library</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font-awesome<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span>
+/** Material **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>home<span class="token punctuation">"</span></span> <span class="token attr-name">library</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span>
+/** Default (no "library" prop needed) **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>schedule<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -866,6 +859,29 @@ document<span class="token punctuation">.</span><span class="token function">add
     </div>
   </div>
 </div>
+<p>Use the <code>library</code> prop to connect</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Using the &quot;library&quot; prop</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">/** Font-awesome **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>house<span class="token punctuation">"</span></span> <span class="token attr-name">library</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font-awesome<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span>
+/** Default (no "library" prop needed) **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
 <h4 id="font-awesome-example-loaded-via-cdn">Font Awesome example (loaded via CDN)</h4>
 <div class="icon-examples">
 <div class="nys-grid-row nys-grid-gap-200">
@@ -956,12 +972,35 @@ document<span class="token punctuation">.</span><span class="token function">add
   <span class="token comment">// ── Material (loaded from local file system) ────────</span>
   <span class="token constant">NYSDS</span><span class="token punctuation">.</span><span class="token function">registerIconLibrary</span><span class="token punctuation">(</span><span class="token string">"material"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token function-variable function">resolver</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=></span>
-      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./node_modules/@material-symbols/svg-400/outlined/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/default/24px.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
     <span class="token function-variable function">mutator</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">svg</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
       svg<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"fill"</span><span class="token punctuation">,</span> <span class="token string">"currentColor"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Use the <code>library</code> prop to connect</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Using the &quot;library&quot; prop</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">/** Material **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>home<span class="token punctuation">"</span></span> <span class="token attr-name">library</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span>
+/** Default (no "library" prop needed) **/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NysIcon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>upload_file<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>NysIcon</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
