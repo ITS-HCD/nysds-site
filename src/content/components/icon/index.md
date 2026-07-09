@@ -26,7 +26,7 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 ## Managing your icon `library`
 
 <nys-alert heading="Note for React and Angular" type="warning">
- <p>Note: Version <code>1.19.3</code> fixes a number of <code><nys-icon></code> issues introduced in <code>1.19.0</code>. If you registered an override for the <code>"default"</code> library as a workaround when upgrading to 1.19.x, you can safely remove that override after upgrading to <code>1.19.3</code>.</p>
+ <p>Note: Version <code>1.19.3</code> fixes a number of <code>nys-icon</code> issues introduced in <code>1.19.0</code>. If you registered an override for the <code>"default"</code> library as a workaround when upgrading to 1.19.x, you can safely remove that override after upgrading to <code>1.19.3</code>.</p>
 </nys-alert>
 </br>
 
