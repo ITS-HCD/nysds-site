@@ -31,7 +31,7 @@
                 color: var(--nys-color-ink, #1b1b1b);
                 display: flex;
                 font-family: inherit;
-                font-size: var(--nys-type-size-ui-xl, 20px);
+                font-size: var(--nys-font-size-ui-xl, 20px);
                 font-weight: var(--nys-font-weight-bold, 700);
                 gap: 0.5rem;
                 line-height: 1.5rem;
