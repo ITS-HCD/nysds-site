@@ -69,6 +69,24 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addCollection("updates", updates);
   eleventyConfig.addCollection("videos", videos);
 
+  // Redirects: any page can declare `redirect_from` (string or array of old
+  // URLs) in its front matter. This collection flattens those into {from, to}
+  // pairs, which src/redirects.njk paginates into static redirect stubs — the
+  // GitHub Pages-friendly way to keep old URLs working after a page moves.
+  eleventyConfig.addCollection("redirects", (collectionApi) => {
+    const redirects = [];
+    for (const page of collectionApi.getAll()) {
+      const from = page.data.redirect_from;
+      if (!from) continue;
+      const froms = Array.isArray(from) ? from : [from];
+      for (const url of froms) {
+        // Normalize: strip trailing slash so the permalink can append one.
+        redirects.push({ from: url.replace(/\/+$/, ""), to: page.url });
+      }
+    }
+    return redirects;
+  });
+
   // CSS
   eleventyConfig.addWatchTarget("./src/css/");
 
