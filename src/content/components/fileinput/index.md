@@ -267,8 +267,10 @@ The `<nys-fileinput>` component emits **one** custom Javascript events:
 
 The `nys-change` event includes a detail object with the following properties:
 
-- id (string): The id of the file input.
-- files (Array of file entries): A list of files with status and progress information.
+- **id** (string): The id of the file input.
+- **files** (Array of file entries): The full current selection.
+- **changedFiles** (Array of file entries): The entries added or removed by this action.
+- Each entry in `files` and `changedFiles` has the same shape:
   - file (File): The raw File object.
   - progress (number): Upload or processing progress (0–100).
   - status ("pending" | "processing" | "done" | "error"): Current state of the file.
@@ -281,13 +283,13 @@ You can listen to these events using JavaScript:
 const fileinput = document.querySelector('nys-fileinput');
 // Listen for the 'nys-change' event
 fileinput.addEventListener("nys-change", () => {
-  console.log("Files have changed:", event.detail.files);
   // Getting more specific details about each file(s)
-  const { id, files } = event.detail;
+  const { id, files, changedFiles } = event.detail;
   console.log(`Fileinput (${id}) changed:`);
-  files.forEach(({ file, progress, status, errorMsg }) => {
+  changedFiles.forEach(({ file, progress, status, errorMsg }) => {
     console.log(`- ${file.name} (${status}, ${progress}%)`, errorMsg || "");
   });
+  console.log("Full current selection:", files);
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
