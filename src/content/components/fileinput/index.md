@@ -269,10 +269,10 @@ The `nys-change` event includes a detail object with the following properties:
 
 - id (string): The id of the file input.
 - files (Array of file entries): A list of files with status and progress information.
-- file (File): The raw File object.
-- progress (number): Upload or processing progress (0–100).
-- status ("pending" | "processing" | "done" | "error"): Current state of the file.
-- errorMsg (string): Optional error message if status is "error".
+  - file (File): The raw File object.
+  - progress (number): Upload or processing progress (0–100).
+  - status ("pending" | "processing" | "done" | "error"): Current state of the file.
+  - errorMsg (string): Optional error message if status is "error".
 
 You can listen to these events using JavaScript:
 
