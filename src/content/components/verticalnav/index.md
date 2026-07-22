@@ -324,12 +324,6 @@ Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalna
       <td><code>false</code></td>
       <td>Set automatically when the group contains the active link. Not meant to be set manually.</td>
     </tr>
-    <tr>
-      <td><code>expanded</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Whether the mobile accordion is expanded. Can be controlled via the <code>open()</code>, <code>close()</code>, and <code>toggle()</code> methods.</td>
-    </tr>
   </table>
 </nys-table>
 {% endblock %}
