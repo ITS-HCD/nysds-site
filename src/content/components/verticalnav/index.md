@@ -247,12 +247,36 @@ This example uses the [NYSDS grid](/foundations/utilities/grid/) to lay out the 
 
 ### Mobile controls
 Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalnav` to control the mobile accordion programmatically.
+
+**Note:** useful for a hamburger button or other trigger placed outside the nav itself. These methods only have a visible effect below the 1024px breakpoint, where the nav renders as an accordion; at desktop widths the nav is always visible.
+
 {% set preview %}
 <nys-verticalnav id="my-nav">
-  ...
+  <ul>
+    <li><a href="/">Foundations</a></li>
+    <li><a href="/components">Components</a></li>
+    <li>
+      <nys-verticalnavgroup label="Accessibility">
+        <ul>
+          <li><a href="">WCAG Guidelines</a></li>
+          <li><a href="">Screen Readers</a></li>
+          <li><a href="">Color Contrast</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+    <li>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="">Design Tokens</a></li>
+        <li><a href="">Utilities</a></li>
+      </ul>
+    </li>
+  </ul>
 </nys-verticalnav>
-<nys-button label="Toggle navigation" onclick="document.querySelector('#my-nav').toggle()"></nys-button>
+<nys-button label="Toggle navigation (mobile view only)" onclick="document.querySelector('#my-nav').toggle()"></nys-button>
 {% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
 
 
 {% endblock %}
