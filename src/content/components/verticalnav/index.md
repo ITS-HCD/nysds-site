@@ -7,7 +7,7 @@ image_alt: An illustration of a vertical navigation menu.
 image_header: /assets/img/components/verticalnav-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=27438-7659
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 ---
 
 {% extends "layouts/component.njk" %}
@@ -20,7 +20,7 @@ The `<nys-verticalnav>` component renders a side navigation menu on desktop and 
 
 {% block example %}
 {% set preview %}
-<nys-verticalnav header="Freshwater Fishing" headerLevel="h2">
+<nys-verticalnav heading="Freshwater Fishing" headingLevel="h2">
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -70,16 +70,18 @@ The `<nys-verticalnav>` component includes the following accessibility-focused f
 - A link with `aria-current="page"` automatically gets active styling, and any containing `nys-verticalnavgroup` auto-expands so the active link is visible on load.
 - `nys-verticalnavgroup` triggers are real `<button>` elements with `aria-expanded` reflecting open/closed state.
 
+**Note:** `<a>` elements have no native `disabled` attribute, so `<nys-verticalnavgroup disabled>` only disables the group's own toggle button — it doesn't affect the links inside. To mark an individual link as disabled, add `aria-disabled="true"` to that `<a>` directly:
+
 {% endblock %}
 
 {% block options %}
 
-### Header slot
+### Heading slot
 
-Replace the default heading with custom markup using the `header` slot.
+Replace the default heading with custom markup using the `heading` slot.
 
 {% set preview %}
-<nys-verticalnav header="Freshwater Fishing" headerLevel="h2">
+<nys-verticalnav heading="Freshwater Fishing" headingLevel="h2">
   <div slot="header">
     <h2>Freshwater Fishing</h2>
     <p>2026 Season Open</p>
@@ -98,7 +100,7 @@ Replace the default heading with custom markup using the `header` slot.
 Add extra content below the links, like a divider and contact info.
 
 {% set preview %}
-<nys-verticalnav header="Freshwater Fishing" headerLevel="h2">
+<nys-verticalnav heading="Freshwater Fishing" headingLevel="h2">
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/services">Services</a></li>
@@ -118,7 +120,7 @@ Add extra content below the links, like a divider and contact info.
 Use `<nys-verticalnavgroup>` for a set of links that expand and collapse. Add `expanded` to open it by default, or `disabled` to prevent interaction.
 
 {% set preview %}
-<nys-verticalnav header="NYS Design System" headerLevel="h2">
+<nys-verticalnav heading="NYS Design System" headingLevel="h2">
   <ul>
     <li><a href="/">Foundations</a></li>
     <li>
@@ -141,7 +143,7 @@ Use `<nys-verticalnavgroup>` for a set of links that expand and collapse. Add `e
 Set `aria-current="page"` on a link to mark it active. If it's inside a `nys-verticalnavgroup`, the group auto-expands.
 
 {% set preview %}
-<nys-verticalnav header="NYS Design System" headerLevel="h2">
+<nys-verticalnav heading="NYS Design System" headingLevel="h2">
   <ul>
     <li><a href="/">Foundations</a></li>
     <li>
@@ -158,12 +160,43 @@ Set `aria-current="page"` on a link to mark it active. If it's inside a `nys-ver
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-### Hidden header 
+### Disabled state
 
-Use `hideHeader` when the nav doesn't need a visible heading. The `header` text is still used as the accessible label for the accordion in smaller screens.
+Add `disabled` to `nys-verticalnavgroup` to prevent the whole group from being toggled. For individual links outside a group, add `aria-disabled="true"` directly to the `<a>`. Links have no native `disabled` attribute, so this is the only way to mark one as unavailable.
 
 {% set preview %}
-<nys-verticalnav header="Section nav" hideHeader>
+<nys-verticalnav heading="NYS Design System" headingLevel="h2">
+  <ul>
+    <li><a href="/">Foundations</a></li>
+    <li><a href="/components">Components</a></li>
+    <li>
+      <nys-verticalnavgroup disabled label="Accessibility">
+        <ul>
+          <li><a aria-disabled="true">WCAG Guidelines</a></li>
+          <li><a href="">Screen Readers</a></li>
+          <li><a href="">Color Contrast</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+    <li>
+      <h3>Resources</h3>
+      <ul>
+        <li><a aria-disabled="true">Design Tokens</a></li>
+        <li><a href="">Utilities</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-verticalnav>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Hidden heading 
+
+Use `hideHeading` when the nav doesn't need a visible heading. The `heading` text is still used as the accessible label for the accordion in smaller screens.
+
+{% set preview %}
+<nys-verticalnav heading="Section nav" hideHeading>
   <ul>
     <li><a href="/home">Home</a></li>
   </ul>
@@ -172,34 +205,28 @@ Use `hideHeader` when the nav doesn't need a visible heading. The `header` text 
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+
 ### Page layout
 
 Use `<nys-verticalnav>` alongside a global header and footer to build a full page layout. On screens below 1024px, the nav collapses into an accordion automatically.
 
-**Note:** The example below is for guidance only. Adjust the styles to fit your application's layout needs.
+This example uses the [NYSDS grid](/foundations/utilities/grid/) to lay out the nav and main content side by side, switching to a stacked layout at the `nys-desktop` breakpoint (1024px). This approach matches the width at which `<nys-verticalnav>` itself collapses into an accordion.
+
+**Note:** The example below is for guidance only. Adjust the styles to fit your application's layout needs. `<nys-verticalnav>` doesn't add its own outer spacing, so wrap it (like `.page-layout__nav` below) and add padding yourself to match your site's layout.
 
 {% set preview %}
 <style>
-  .page-layout {
-    display: flex;
-    flex-direction: column;
-  }
   .page-layout__body {
-    display: flex;
-    flex: 1;
+    background-color: var(--nys-color-white, #ffffff);
+  }
+  .page-layout__nav {
+    padding: var(--nys-space-300, 24px) var(--nys-space-50, 4px) var(--nys-space-300, 24px) 0;
   }
   .page-layout__main {
-    flex: 1;
     padding: var(--nys-space-400, 32px);
   }
-  @media (max-width: 1023px) {
-    .page-layout__body {
-      flex-direction: column;
-      padding: var(--nys-space-400, 32px);
-    }
-  }
 </style>
-<div class="page-layout">
+<div>
   <nys-unavheader></nys-unavheader>
   <nys-globalheader homepageLink="https://ny.gov" agencyName="Office of Information Technology Services">
     <ul>
@@ -208,31 +235,37 @@ Use `<nys-verticalnav>` alongside a global header and footer to build a full pag
     </ul>
   </nys-globalheader>
   <div class="page-layout__body">
-    <nys-verticalnav header="NYS Design System" headerLevel="h2">
-      <ul>
-        <li><a href="/">Foundations</a></li>
-        <li><a href="/components">Components</a></li>
-        <li>
-          <nys-verticalnavgroup label="Accessibility">
+    <div class="nys-grid-container nys-grid-gap-400">
+      <div class="nys-grid-row">
+        <div class="nys-desktop:nys-grid-col page-layout__nav">
+          <nys-verticalnav heading="NYS Design System" headingLevel="h2">
             <ul>
-              <li><a href="">WCAG Guidelines</a></li>
-              <li><a href="">Screen Readers</a></li>
-              <li><a href="">Color Contrast</a></li>
+              <li><a href="/">Foundations</a></li>
+              <li><a href="/components">Components</a></li>
+              <li>
+                <nys-verticalnavgroup label="Accessibility">
+                  <ul>
+                    <li><a href="">WCAG Guidelines</a></li>
+                    <li><a href="">Screen Readers</a></li>
+                    <li><a href="">Color Contrast</a></li>
+                  </ul>
+                </nys-verticalnavgroup>
+              </li>
+              <li>
+                <h3>Resources</h3>
+                <ul>
+                  <li><a href="">Design Tokens</a></li>
+                  <li><a href="">Utilities</a></li>
+                </ul>
+              </li>
             </ul>
-          </nys-verticalnavgroup>
-        </li>
-        <li>
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="">Design Tokens</a></li>
-            <li><a href="">Utilities</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nys-verticalnav>
-    <main class="page-layout__main">
-      <p>Place content here.</p>
-    </main>
+          </nys-verticalnav>
+        </div>
+        <main class="nys-desktop:nys-grid-col page-layout__main">
+          <p>Place content here.</p>
+        </main>
+      </div>
+    </div>
   </div>
   <nys-globalfooter agencyName="Agency Name" homepageLink="https://ny.gov">
     <ul>
@@ -245,6 +278,40 @@ Use `<nys-verticalnav>` alongside a global header and footer to build a full pag
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
+
+### Mobile controls
+Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalnav` to control the mobile accordion programmatically.
+
+**Note:** useful for a hamburger button or other trigger placed outside the nav itself. These methods only have a visible effect below the 1024px breakpoint, where the nav renders as an accordion; at desktop widths the nav is always visible.
+
+{% set preview %}
+<nys-verticalnav id="my-nav">
+  <ul>
+    <li><a href="/">Foundations</a></li>
+    <li><a href="/components">Components</a></li>
+    <li>
+      <nys-verticalnavgroup label="Accessibility">
+        <ul>
+          <li><a href="">WCAG Guidelines</a></li>
+          <li><a href="">Screen Readers</a></li>
+          <li><a href="">Color Contrast</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+    <li>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="">Design Tokens</a></li>
+        <li><a href="">Utilities</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-verticalnav>
+<nys-button label="Toggle navigation (mobile view only)" onclick="document.querySelector('#my-nav').toggle()"></nys-button>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 
 {% endblock %}
 
@@ -261,22 +328,22 @@ Use `<nys-verticalnav>` alongside a global header and footer to build a full pag
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>header</code></td>
+      <td><code>heading</code></td>
       <td>String</td>
       <td><code>"Page navigation"</code></td>
-      <td>Heading text, and the accessible label when <code>hideHeader</code> is set.</td>
+      <td>Heading text, and the accessible label when <code>hideHeading</code> is set.</td>
     </tr>
     <tr>
-      <td><code>headerLevel</code></td>
+      <td><code>headingLevel</code></td>
       <td><code>"h1" | "h2" | "h3" | "h4" | "h5" | "h6"</code></td>
       <td><code>"h2"</code></td>
-      <td>Heading tag used for the auto-generated header.</td>
+      <td>Heading tag used for the auto-generated heading.</td>
     </tr>
     <tr>
-      <td><code>hideHeader</code></td>
+      <td><code>hideHeading</code></td>
       <td>Boolean</td>
       <td><code>false</code></td>
-      <td>Hides the visible heading. <code>header</code> is still used as the nav's accessible label.</td>
+      <td>Hides the visible heading. <code>heading</code> is still used as the nav's accessible label.</td>
     </tr>
   </table>
 </nys-table>
@@ -323,7 +390,40 @@ Use `<nys-verticalnav>` alongside a global header and footer to build a full pag
 
 {% block events %}
 
-This component does not emit any custom events.
+The `<nys-verticalnav>` component emits **one** custom Javascript event:
+
+1.  **`nys-verticalnav-toggle`** – Fired when the mobile accordion is expanded or collapsed. This only applies on smaller screens, where the nav collapses into an accordion (see [Page layout](#page-layout)). On desktop the nav is always visible and this event does not fire.
+
+### Event details
+
+The `nys-verticalnav-toggle` event includes a detail object with the following properties:
+
+- id (string): The id of the vertical nav.
+- expanded (boolean): Whether the nav is now expanded.
+
+You can listen to these events using JavaScript:
+{% set code %}
+// Select the vertical nav component
+const verticalnav = document.querySelector('nys-verticalnav');
+// Listen for the 'nys-verticalnav-toggle' event (mobile accordion only)
+verticalnav.addEventListener('nys-verticalnav-toggle', (event) => {
+  const { id, expanded } = event.detail;
+  console.log(`Vertical nav with id="${id}" is now ${expanded ? "expanded" : "collapsed"}.`);
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{% endblock %}
+
+{% block dependencies %}
+
+{% set dependencies = [
+"<nys-accordion>", "<nys-accordionitem>", "<nys-verticalnavgroup>"
+] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 
