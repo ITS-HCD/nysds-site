@@ -70,6 +70,8 @@ The `<nys-verticalnav>` component includes the following accessibility-focused f
 - A link with `aria-current="page"` automatically gets active styling, and any containing `nys-verticalnavgroup` auto-expands so the active link is visible on load.
 - `nys-verticalnavgroup` triggers are real `<button>` elements with `aria-expanded` reflecting open/closed state.
 
+**Note:** `<a>` elements have no native `disabled` attribute, so `<nys-verticalnavgroup disabled>` only disables the group's own toggle button — it doesn't affect the links inside. To mark an individual link as disabled, add `aria-disabled="true"` to that `<a>` directly:
+
 {% endblock %}
 
 {% block options %}
@@ -158,6 +160,37 @@ Set `aria-current="page"` on a link to mark it active. If it's inside a `nys-ver
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Disabled state
+
+Add `disabled` to `nys-verticalnavgroup` to prevent the whole group from being toggled. For individual links outside a group, add `aria-disabled="true"` directly to the `<a>`. Links have no native `disabled` attribute, so this is the only way to mark one as unavailable.
+
+{% set preview %}
+<nys-verticalnav heading="NYS Design System" headingLevel="h2">
+  <ul>
+    <li><a href="/">Foundations</a></li>
+    <li><a href="/components">Components</a></li>
+    <li>
+      <nys-verticalnavgroup disabled label="Accessibility">
+        <ul>
+          <li><a aria-disabled="true">WCAG Guidelines</a></li>
+          <li><a href="">Screen Readers</a></li>
+          <li><a href="">Color Contrast</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+    <li>
+      <h3>Resources</h3>
+      <ul>
+        <li><a aria-disabled="true">Design Tokens</a></li>
+        <li><a href="">Utilities</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-verticalnav>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Hidden heading 
 
 Use `hideHeading` when the nav doesn't need a visible heading. The `heading` text is still used as the accessible label for the accordion in smaller screens.
@@ -171,6 +204,7 @@ Use `hideHeading` when the nav doesn't need a visible heading. The `heading` tex
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
+
 
 ### Page layout
 
