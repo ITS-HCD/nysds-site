@@ -203,7 +203,7 @@ This example uses the [NYSDS grid](/foundations/utilities/grid/) to lay out the 
   <div class="page-layout__body">
     <div class="nys-grid-container nys-grid-gap-400">
       <div class="nys-grid-row">
-        <div class="nys-desktop:nys-grid-col-3 page-layout__nav">
+        <div class="nys-desktop:nys-grid-col page-layout__nav">
           <nys-verticalnav heading="NYS Design System" headingLevel="h2">
             <ul>
               <li><a href="/">Foundations</a></li>
