@@ -156,7 +156,11 @@ You also can override the default translate behavior to work with JavaScript rat
 
 {% block cssvariables %}
 
-The `nys-unavheader` does not have any css variables because this component must remain consistent across applications and sites.
+  {%
+    set variables = [
+      { name: "--_nys-unavheader-max-width--content", description: "The maximum width of the inner main content area. Use this only to align header, footer, or breadcrumb components with the main page content when needed."}
+    ]
+  %}
 
 {% endblock %}
 
