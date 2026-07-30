@@ -62,7 +62,9 @@ const copyCode = async (clickedCopyButton) => {
 
 // On this page navigation JS
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = Array.from(document.querySelectorAll("section[id]")).filter((section) => section.id !== "header");
+  const sections = Array.from(document.querySelectorAll("section[id]")).filter(
+    (section) => section.id !== "header",
+  );
   const navItems = Array.from(document.querySelectorAll(".navigator__item"));
   let ticking = false; // This is a performance thing
 
@@ -83,7 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // If no section is detected (at top), default to the first item
       if (!current && navItems.length > 0) {
-        current = navItems[0].querySelector(".navigator__link").getAttribute("href").substring(1);
+        current = navItems[0]
+          .querySelector(".navigator__link")
+          .getAttribute("href")
+          .substring(1);
       }
 
       // Update active state and aria role
@@ -214,7 +219,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   } else {
     // Grab all headings from h2 to h6
-    const headings = Array.from(document.querySelectorAll("h2,h3,h4,h5,h6"));
+    const headings = Array.from(
+      document.querySelectorAll("h2,h3,h4,h5,h6"),
+    ).filter((h) => !h.closest(".code-preview-container"));
     if (!headings.length) return;
 
     headings.forEach((h) => {
@@ -275,7 +282,8 @@ document.addEventListener("DOMContentLoaded", function () {
 const copyHeadingUrl = async (clickedHeadingLink) => {
   // console.log(clickedHeadingLink);
   const headingUrl = clickedHeadingLink.getAttribute("href");
-  const fullUrl = window.location.origin + window.location.pathname + headingUrl;
+  const fullUrl =
+    window.location.origin + window.location.pathname + headingUrl;
 
   try {
     await navigator.clipboard.writeText(fullUrl.trim());
@@ -287,21 +295,23 @@ const copyHeadingUrl = async (clickedHeadingLink) => {
 /**
  * A11y Test+Build
  */
-document.querySelectorAll('article[data-pattern="breadcrumbs"] .breadcrumb-demo').forEach((demo) => {
-  let bcState = "min";
-  const bt = demo.querySelector("[aria-controls]");
-  const bc = demo.querySelector('[data-component="breadcrumb"]');
-  demo.addEventListener("click", (e) => {
-    if (e.target.tagName === "BUTTON") {
-      bcState = bcState === "min" ? "max" : "min";
-      bc.setAttribute("data-state", bcState);
-      if (bcState === "min") {
-        bt.textContent = "Reveal links";
-        bt.ariaExpanded = "false"; // not passed into shadowDOM, thus use `button` instead of `nys-button`
-      } else {
-        bt.textContent = "Collapse links";
-        bt.ariaExpanded = "true";
+document
+  .querySelectorAll('article[data-pattern="breadcrumbs"] .breadcrumb-demo')
+  .forEach((demo) => {
+    let bcState = "min";
+    const bt = demo.querySelector("[aria-controls]");
+    const bc = demo.querySelector('[data-component="breadcrumb"]');
+    demo.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        bcState = bcState === "min" ? "max" : "min";
+        bc.setAttribute("data-state", bcState);
+        if (bcState === "min") {
+          bt.textContent = "Reveal links";
+          bt.ariaExpanded = "false"; // not passed into shadowDOM, thus use `button` instead of `nys-button`
+        } else {
+          bt.textContent = "Collapse links";
+          bt.ariaExpanded = "true";
+        }
       }
-    }
+    });
   });
-});

@@ -81,6 +81,23 @@ The `<nys-verticalnav>` component includes the following accessibility-focused f
 Replace the default heading with custom markup using the `heading` slot.
 
 {% set preview %}
+<style>
+  [slot="header"] {
+    padding-left: var(--nys-space-100, 8px);
+    padding-top: var(--nys-space-100, 8px);
+  }
+  [slot="header"] h2 {
+    margin: 0;
+    font-size: var(--nys-font-size-h4, 1.25rem);
+    color: var(--nys-color-theme, #154973);
+  }
+  [slot="header"] p {
+    font-size: var(--nys-font-size-xs, 0.75rem);
+    color: var(--nys-color-success, #2e7d32);
+    font-weight: 500;
+    margin: 0;
+  }
+</style>
 <nys-verticalnav heading="Freshwater Fishing" headingLevel="h2">
   <div slot="header">
     <h2>Freshwater Fishing</h2>
@@ -100,6 +117,23 @@ Replace the default heading with custom markup using the `heading` slot.
 Add extra content below the links, like a divider and contact info.
 
 {% set preview %}
+<style>
+  [slot="footer"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-space-100, 8px);
+    padding: 0 var(--nys-space-100, 8px) var(--nys-space-100, 8px);
+  }
+  [slot="footer"] p {
+    margin: 0;
+    font-size: var(--nys-font-size-xs, 0.75rem);
+    color: var(--nys-color-text-weak, #4a4d4f);
+  }
+  [slot="footer"] a {
+    font-size: var(--nys-font-size-sm, 0.875rem);
+    color: var(--nys-color-theme, #154973);
+  }
+</style>
 <nys-verticalnav heading="Freshwater Fishing" headingLevel="h2">
   <ul>
     <li><a href="/">Home</a></li>
@@ -193,7 +227,9 @@ Add `disabled` to `nys-verticalnavgroup` to prevent the whole group from being t
 
 ### Hidden heading 
 
-Use `hideHeading` when the nav doesn't need a visible heading. The `heading` text is still used as the accessible label for the accordion in smaller screens.
+A `heading` is required for the vertical navigation. If a visible heading is not needed on desktop, use `hideHeading` to visually hide it.
+
+**Note:** The `heading` text is still used as the accessible label for the accordion on smaller screens and mobile devices (resize the screen to see this in action).
 
 {% set preview %}
 <nys-verticalnav heading="Section nav" hideHeading>
@@ -307,9 +343,34 @@ Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalna
     </li>
   </ul>
 </nys-verticalnav>
+<br/>
 <nys-button label="Toggle navigation (mobile view only)" onclick="document.querySelector('#my-nav').toggle()"></nys-button>
 {% endset %}
-{% set code = preview %}
+{% set code %}
+<nys-verticalnav id="my-nav">
+  <ul>
+    <li><a href="/">Foundations</a></li>
+    <li><a href="/components">Components</a></li>
+    <li>
+      <nys-verticalnavgroup label="Accessibility">
+        <ul>
+          <li><a href="">WCAG Guidelines</a></li>
+          <li><a href="">Screen Readers</a></li>
+          <li><a href="">Color Contrast</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+    <li>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="">Design Tokens</a></li>
+        <li><a href="">Utilities</a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-verticalnav>
+<nys-button label="Toggle navigation (mobile view only)" onclick="document.querySelector('#my-nav').toggle()"></nys-button>
+{% endset %}
 {% include "partials/code-preview.njk" %}
 
 
