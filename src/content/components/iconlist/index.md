@@ -112,48 +112,34 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
 
 {% block properties %}
 
-### `<nys-iconlist>`
-
 <nys-table striped>
   <table>
     <tr>
       <th>Property</th>
       <th>Type</th>
       <th>Default</th>
+      <th>Component</th>
     </tr>
     <tr>
       <td><code>id</code></td>
       <td>String</td>
-      <td>auto-generated</td>
+      <td><code>""</code></td>
+      <td><code>&lt;nys-iconlist&gt;</code></td>
     </tr>
     <tr>
       <td><code>divider</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-### `<nys-iconlistitem>`
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
+      <td><code>&lt;nys-iconlist&gt;</code></td>
     </tr>
     <tr>
       <td><code>icon</code></td>
       <td>String</td>
       <td><code>""</code></td>
+      <td><code>&lt;nys-iconlistitem&gt;</code></td>
     </tr>
   </table>
 </nys-table>
-
-**Slots:** the default slot holds the primary label. Use `<span slot="secondary">` for an optional second line of text.
-
-**Note:** `<nys-iconlistitem>` also has a `divider` property, but it is set by the parent `<nys-iconlist divider>` and is not intended to be set directly.
 
 {% endblock %}
 
