@@ -96,6 +96,7 @@ You also can override the default list of languages offered if your translation 
 
 {% set preview %}
 <nys-unavheader id="my-header"></nys-unavheader>
+
 <script>
   const header = document.querySelector('#my-header');
   header.languages = [
@@ -104,6 +105,7 @@ You also can override the default list of languages offered if your translation 
   { code: 'fr', label: 'Français', url: '"https://ny.gov/?lang=fr"'},
   ];
 </script>
+
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -112,6 +114,7 @@ You also can override the default translate behavior to work with JavaScript rat
 
 {% set preview %}
 <nys-unavheader id="my-header2" hideSearch></nys-unavheader>
+
 <script>
   document.querySelector('#my-header2').addEventListener('nys-language-select', (event) => {
   event.preventDefault();
@@ -119,6 +122,7 @@ You also can override the default translate behavior to work with JavaScript rat
   alert(`Language changed to: ${selectedLanguage}`);
   });
 </script>
+
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -156,11 +160,10 @@ You also can override the default translate behavior to work with JavaScript rat
 
 {% block cssvariables %}
 
-  {%
-    set variables = [
-      { name: "--_nys-unavheader-max-width--content", description: "The maximum width of the inner main content area. Use this only to align header, footer, or breadcrumb components with the main page content when needed."}
-    ]
-  %}
+{% set variables = [
+  { name: "--_nys-unavheader-max-width--content", description: "The maximum width of the inner main content area. Use this only to align header, footer, or breadcrumb components with the main page content when needed."}
+]%}
+{% include "partials/css-vars.njk" %}
 
 {% endblock %}
 
