@@ -15,7 +15,7 @@ figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS
 
 The `<nys-unavheader>` is a reusable web component for use in New York State digital products. It helps provide users with a small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 
-**Note:** The Universal Navigation Header remains consistent across all sites.
+**Note:** The Universal Navigation Header remains consistent across all sites. It also carries the built-in [statewide alert](#statewide-alerts), which lets New York State deliver an urgent message to every NYS site at once.
 
 {% endblock %}
 
@@ -39,6 +39,7 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 
 - Place at the top of every public-facing page.
 - Toggle search (`hideSearch`) and translate (`hideTranslate`) on/off depending on your needs.
+- Design your page so content below the header can shift down, since a statewide alert can appear at any time and adds height to the header.
 
 {% endblock %}
 
@@ -56,6 +57,7 @@ The `<nys-unavheader>` component includes the following accessibility-focused fe
 
 - Proper use of `<header>` and `<a>` elements ensures compatibility with assistive technologies.
 - Keyboard navigation: Users can tab through all links in the header.
+- Statewide alerts inherit the accessibility of `<nys-alert>`, and their links accept an `aria-label` from the feed when the visible label is not descriptive on its own.
   {% endblock %}
 
 {% block options %}
@@ -125,6 +127,30 @@ You also can override the default translate behavior to work with JavaScript rat
 
 {% endset %}
 {% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+### Statewide Alerts
+
+When New York State publishes an urgent message, such as a severe weather event or a public health emergency, the header renders it as a full-width banner directly below the header content. This is **not configurable**: on page load, the header reads the statewide alert feed at `https://alerts-cta.static-assets.ny.gov/alerts.json` and renders whatever is currently published. There is no property, slot, or script to add, and sites never author the content, so the same message reads identically everywhere it appears. If nothing is published or the feed cannot be reached, the header renders normally.
+
+{% set preview = "" %}
+{% set code %}
+{
+"alert": {
+"status": "off",
+"severity": "low",
+"headline": "Winter Storm Warning",
+"description": "Areas Affected: Bronx; Kings (Brooklyn); New York (Manhattan); Northeast Suffolk; Northern Nassau; Northern Queens; Northern Westchester; Northwest Suffolk; Orange; Putnam; Richmond (Staten Is.); Rockland; Southeast Suffolk; Southern Nassau; Southern Queens; Southern Westchester; Southwest Suffolk",
+"linkAriaLabel": "Many areas are affected by the snow in the state. See more details via this link.",
+"link": "https://governor.ny.gov/",
+"linkTitle": "Learn More",
+"icon": "Snowflake"
+}
+}
+{% endset %}
+{% set accordionLabel = "Sample Feed" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "json" %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
