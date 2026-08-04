@@ -25,6 +25,8 @@ The `<nys-divider>` component visually separates content or sections within an i
 <div>Sample content below</div>
 {% endset %}
 {% set code = preview %}
+{% set backgroundSolid = true %}
+{% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
@@ -67,6 +69,17 @@ The `<nys-divider>` component includes the following accessibility-focused featu
 
 {% block options %}
 
+### Subtle
+Add the `subtle` property to make the `<nys-divider>` less visually prominent.
+{% set preview %}
+<div>Sample content above</div>
+<nys-divider subtle></nys-divider>
+<div>Sample content below</div>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
+
 ### Inverse
 On dark background, add the `inverted` property to ensure the `<nys-divider>` is visible.
 {% set preview %}
@@ -76,7 +89,7 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 {% endset %}
 {% set inverted = true %}
 {% set code = preview %}
-{% set showTip = true %}
+{% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
@@ -92,6 +105,10 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
     </tr>
     <tr>
       <td><code>inverted</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>subtle</code></td>
       <td>Boolean</td>
     </tr>
   </table>

@@ -25,59 +25,15 @@ The `<nys-icon>` is a visual symbol used to concisely convey meaning, action, st
 
 ## Managing your icon `library`
 
-When using the `<nys-icon>`, you can choose to load in icons from any `library`. You can serve the icons locally or via a Content Delivery Network (CDN). Below, you will find three examples. The first will re-configure the default library to point to another local location. The second will configure a Font Awesome library via CDN. The third configures a Material Icon library referencing the icon files locally.
+<nys-alert heading="Note for React and Angular" type="warning">
+ <p>Note: Version <code>1.19.3</code> fixes a number of <code><nys-icon></code> issues introduced in <code>1.19.0</code>. If you registered an override for the <code>"default"</code> library as a workaround when upgrading to 1.19.x, you can safely remove that override after upgrading to <code>1.19.3</code>.</p>
+</nys-alert>
+</br>
 
+When using the `<nys-icon>`, you can choose to load in icons from any `library`. By default, `<nys-icon>` can load icons from any registered library, served locally or via a CDN. Below are three examples: pointing the default library to a different local location, adding a Font Awesome library and Material Icon library, and using the `library` property.
 
-### The `"default"`
-
-New in v1.19.0, the `<nys-icon>` loads icon files from a subfolder relative to `nysds.js`. If you load your icons and JS in this structure, you don't have to change anything in 1.19.0.
-
-**Required file structure:**
-```html
-📁 /   (any folder)
-├── 📄 nysds.js
-└── 📁 icons/
-    ├── 🖼 home.svg
-    ├── 🖼 search.svg
-    └── 🖼 external_link.svg
-```
 
 #### Override the `"default"` library
-
-<nys-alert heading="Note for React and Angular" text="You will ALWAYS need to override the default library in React, Angular, and other bundling frameworks" type="warning"></nys-alert>
-
-Sometimes building your application places your icon files in a different location than "default". If that happens:
-
-  1. Copy icons to your filesystem
-  2. Verify the icon location
-  3. Reference them there
-
-Below covers the Vite way to copy the icons to the location we'll set the default library to.
-
-{% set preview = "" %}
-{% set language = "javascript" %}
-{% set code %}
-import { defineConfig } from 'vite'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'node_modules/@nysds/components/dist/icons/*.svg',
-          dest: 'assets/icons',
-          rename: { stripBase: true },
-        },
-      ],
-    }),
-  ],
-})
-{% endset %}
-{% set showTip = false %}
-{% set accordionLabel = "Copy icon files (with Vite)" %}
-{% include "partials/code-preview.njk" %}
 
 {% set preview = "" %}
 {% set code %}
@@ -97,19 +53,50 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Override default library in plain JS" %}
 {% include "partials/code-preview.njk" %}
 
+#### Overriding the `"default"` library in React-like Frameworks
 {% set preview = "" %}
 {% set code %}
 import { registerIconLibrary } from '@nysds/components';
-
-registerIconLibrary('default', {
+// Font Awesome Library
+registerIconLibrary('font-awesome', {
   resolver: name =>
-    `/nysds-react-demo/assets/icons/${name}.svg`,
+    `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+  mutator: (svg) => {
+    svg.setAttribute("fill", "currentColor");
+  },
+});
+// Material Library
+registerIconLibrary('material', {
+  resolver: name =>
+    `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
+  mutator: (svg) => {
+    svg.setAttribute("fill", "currentColor");
+  },
 });
 {% endset %}
 {% set language = "javascript" %}
 {% set showTip = false %}
-{% set accordionLabel = "Override default library in React-like frameworks" %}
+{% set accordionLabel = "Register additional libraries in React-like frameworks" %}
 {% include "partials/code-preview.njk" %}
+
+#### Using the `library` prop
+Once you've registered one or more additional libraries, use the `library` prop on `<nys-icon>` to tell the component which library to pull a given icon from. Icons with no `library` prop set will continue to use the `"default"` library.
+
+{% set preview = "" %}
+{% set code %}
+/** Font-awesome **/
+<NysIcon name="house" library="font-awesome"></NysIcon>
+/** Material **/
+<NysIcon name="home" library="material"></NysIcon>
+/** Default (no "library" prop needed) **/
+<NysIcon name="upload_file"></NysIcon>
+<NysIcon name="schedule"></NysIcon>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = 'Using the "library" prop' %}
+{% include "partials/code-preview.njk" %}
+
 
 {% endblock %}
 
@@ -239,6 +226,19 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Load Font Awesome library" %}
 {% include "partials/code-preview.njk" %}
 
+Use the `library` prop to connect
+{% set preview = "" %}
+{% set code %}
+/** Font-awesome **/
+<NysIcon name="house" library="font-awesome"></NysIcon>
+/** Default (no "library" prop needed) **/
+<NysIcon name="upload_file"></NysIcon>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = 'Using the "library" prop' %}
+{% include "partials/code-preview.njk" %}
+
 #### Font Awesome example (loaded via CDN)
 
 <div class="icon-examples">
@@ -266,7 +266,7 @@ This demo assumes you have installed the material icon NPM package and want to r
   // ── Material (loaded from local file system) ────────
   NYSDS.registerIconLibrary("material", {
     resolver: (name) =>
-      `./node_modules/@material-symbols/svg-400/outlined/${name}.svg`,
+      `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/${name}/default/24px.svg`,
     mutator: (svg) => {
       svg.setAttribute("fill", "currentColor");
     },
@@ -275,6 +275,19 @@ This demo assumes you have installed the material icon NPM package and want to r
 {% endset %}
 {% set showTip = false %}
 {% set accordionLabel = "Load local Material icons" %}
+{% include "partials/code-preview.njk" %}
+
+Use the `library` prop to connect
+{% set preview = "" %}
+{% set code %}
+/** Material **/
+<NysIcon name="home" library="material"></NysIcon>
+/** Default (no "library" prop needed) **/
+<NysIcon name="upload_file"></NysIcon>
+{% endset %}
+{% set language = "javascript" %}
+{% set showTip = false %}
+{% set accordionLabel = 'Using the "library" prop' %}
 {% include "partials/code-preview.njk" %}
 
 #### Material icon example (loaded locally)
