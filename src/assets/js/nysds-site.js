@@ -219,9 +219,8 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   } else {
     // Grab all headings from h2 to h6
-    const headings = Array.from(
-      document.querySelectorAll("h2,h3,h4,h5,h6"),
-    ).filter((h) => !h.closest(".code-preview-container"));
+    const headings = Array.from(document.querySelectorAll("h2,h3,h4,h5,h6"))
+                          .filter((h) => !h.closest(".code-preview-container")); // Exclude any headings that are inside code preview containers
     if (!headings.length) return;
 
     headings.forEach((h) => {
