@@ -67,49 +67,51 @@
     {% set list = top | onlySeries | sortBySeriesOrder %}
   {% endif %}
 
-  <nys-verticalnav header="{{ section }}" hideHeader data-pagefind-ignore="all">
-    <ul>
-      {# Loop through only top-level pages (kept identical) #}
-      {% for page in list %}
-        {% set isActive = (page.url == currentPageUrl) %}
-        {% for child in page.children %}
-          {% if child.url == currentPageUrl %}
-            {% set isActive = true %}
-          {% endif %}
-        {% endfor %}
+  <div class="verticalnav-container">
+    <nys-verticalnav header="{{ section }}" hideHeader data-pagefind-ignore="all">
+      <ul>
+        {# Loop through only top-level pages (kept identical) #}
+        {% for page in list %}
+          {% set isActive = (page.url == currentPageUrl) %}
+          {% for child in page.children %}
+            {% if child.url == currentPageUrl %}
+              {% set isActive = true %}
+            {% endif %}
+          {% endfor %}
 
-      {% if page.children | length > 0 %}
-        <li>
-          <nys-verticalnavgroup
-            label="{{ page.data.navTitle or page.data.title }}"
-            {% if isActive %}expanded{% endif %}>
-            <ul>
-              <li>
-                <a href="{{ page.url }}"
-                  {% if page.url == currentPageUrl %}aria-current="page"{% endif %}>
-                  {{ page.data.navTitle or page.data.title }}
-                </a>
-              </li>
-              {% for child in page.children %}
+        {% if page.children | length > 0 %}
+          <li>
+            <nys-verticalnavgroup
+              label="{{ page.data.navTitle or page.data.title }}"
+              {% if isActive %}expanded{% endif %}>
+              <ul>
                 <li>
-                  <a href="{{ child.url }}"
-                    {% if child.url == currentPageUrl %}aria-current="page"{% endif %}>
-                    {{ child.data.navTitle or child.data.title }}
+                  <a href="{{ page.url }}"
+                    {% if page.url == currentPageUrl %}aria-current="page"{% endif %}>
+                    {{ page.data.navTitle or page.data.title }}
                   </a>
                 </li>
-              {% endfor %}
-            </ul>
-          </nys-verticalnavgroup>
-        </li>
-      {% else %}
-        <li>
-          <a href="{{ page.url }}"
-            {% if page.url == currentPageUrl %}aria-current="page"{% endif %}>
-            {{ page.data.navTitle or page.data.title }}
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </nys-verticalnav>
+                {% for child in page.children %}
+                  <li>
+                    <a href="{{ child.url }}"
+                      {% if child.url == currentPageUrl %}aria-current="page"{% endif %}>
+                      {{ child.data.navTitle or child.data.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nys-verticalnavgroup>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ page.url }}"
+              {% if page.url == currentPageUrl %}aria-current="page"{% endif %}>
+              {{ page.data.navTitle or page.data.title }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </nys-verticalnav>
+  </div>
 {% endif %}
