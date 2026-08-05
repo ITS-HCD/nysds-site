@@ -106,7 +106,7 @@ Card media is presentational, so keep any information the user needs in the card
 {% set preview %}
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
-    media="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+    media="/assets/i/2026/adk-card-media.jpg"
     heading="Explore state parks"
     description="Find trails, campgrounds, and day-use areas across New York."
   ></nys-card>
@@ -122,7 +122,7 @@ Set `inset` to add padding around the media so it sits visually inside the card 
 {% set preview %}
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
-    media="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+    media="/assets/i/2026/adk-card-media.jpg"
     heading="Explore state parks"
     description="Inset adds padding around the media to visually contain it."
     inset
@@ -141,10 +141,10 @@ Because the accent is part of the image area, repeat the full date in the card's
 {% set preview %}
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
-    media="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+    media="/assets/i/2026/jbt-card-media.jpg"
     mediaAccent="10/16"
     heading="Fall foliage walk"
-    description="October 16, 2026 at Minnewaska State Park Preserve."
+    description="October 16, 2026 at John Boyd Thacher State Park."
   ></nys-card>
 </div>
 {% endset %}
@@ -156,10 +156,10 @@ Because the accent is part of the image area, repeat the full date in the card's
 {% set preview %}
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
-    media="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+    media="/assets/i/2026/jbt-card-media.jpg"
     mediaAccent="10/16"
     heading="Fall foliage walk"
-    description="October 16, 2026 at Minnewaska State Park Preserve."
+    description="October 16, 2026 at John Boyd Thacher State Park."
     inset
   ></nys-card>
 </div>
