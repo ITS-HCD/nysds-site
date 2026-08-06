@@ -2,6 +2,9 @@
 permalink: /components/card/
 title: Card
 description: A self-contained container that groups related content and actions about a single subject.
+image: /assets/img/components/card.svg
+image_alt: An illustration of a card.
+image_header: /assets/img/components/card-header.svg
 stable: true
 ---
 
@@ -221,8 +224,8 @@ Signal that the card is interactive by putting an icon in the `footer` slot.
     href="https://www.ny.gov/"
     target="_blank"
     heading="Visit NY.gov"
-    description="The whole card is one link. To visually indicate this you should add the arrow icon to the footer slot."
   >
+    <p>The whole card is one link. To visually indicate this you should add the <code>open_in_new</code> icon to the footer slot</p>
     <nys-icon slot="footer" name="open_in_new" size="5xl" style="justify-content: end;"></nys-icon>
   </nys-card>
 </div>
@@ -239,8 +242,8 @@ Give the card a click handler to make the whole card a single `<button>`. Use th
   <nys-card
     onclick="alert('you clicked me')"
     heading="Heading"
-    description="The whole card is one button. To visually indicate this you should add the arrow icon to the footer slot."
   >
+    <p>The whole card is one button. To visually indicate this you should add the <code>arrow_forward</code> icon to the footer slot.</p>
     <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
   </nys-card>
 </div>
