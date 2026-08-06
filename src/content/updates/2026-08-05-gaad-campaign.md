@@ -15,20 +15,18 @@ tags: article,accessibility,GAAD,a11y,accessible design
 
 Our dedicated NYS Design System Team partnered with the Digital Accessibility Team at NYS ITS to develop a first-of-its-kind 2026 Global Accessibility Awareness Day (GAAD) campaign and live public demonstration. Together, we set out to address a fundamental challenge: **increasing awareness of the needs of people with disabilities while encouraging the adoption of accessible design practices across New York State government websites and web applications.**
 
-<figure>
-    <div class="nys-grid-row nys-grid-gap-100">
-        <img 
-            class="nys-tablet:nys-grid-col-6" 
-            src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-03.jpg" 
-            alt="TODO"
-            width="100%">
-        <img 
-            class="nys-tablet:nys-grid-col-6" 
-            src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-12.jpg" 
-            alt="TODO"
-            width="100%">
-        <figcaption>TODO</figcaption>
-    </div>
+<figure class="nys-grid-row nys-grid-gap-100">
+    <img 
+        class="nys-tablet:nys-grid-col-6" 
+        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-03.jpg" 
+        alt="TODO"
+        width="100%">
+    <img 
+        class="nys-tablet:nys-grid-col-6" 
+        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-12.jpg" 
+        alt="TODO"
+        width="100%">
+    <figcaption>TODO We worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign  and live event. This included advance advertising on the Empire State Concourse monitors and ITS social media streams.</figcaption>
 </figure>
 
 
