@@ -324,12 +324,10 @@ main[role="main"] {
 }
 
 .page-content figure img {
-    border: solid red;
     margin: 0;
 }
 
 .page-content figure figcaption {
-    border: solid green;
     margin: 0;
 }
 
