@@ -64,6 +64,7 @@ To coincide with Global Accessibility Awareness Day, we hosted an in-person even
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/poster-layout.jpg"
+        style="max-height: 600px;"
         alt="TODO">
     <figcaption>We designed 30 different NYS a11y posters as shareable digital downloads available on our campaign page: <nys-button variant="text" suffixicon="open_in_new" href="https://designsystem.ny.gov/a11y/" target="_blank">https://designsystem.ny.gov/a11y/</nys-button></figcaption>
 </figure>
@@ -83,13 +84,12 @@ https://its-hcd.github.io/project-a11y-disability-simulators/chris/
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/demo-screenshot.png"
-        width="500"
         alt="TODO">
     <figcaption>Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design. </figcaption>
 </figure>
  
 
-<figure>
+<figure class="figure-row nys-grid-row">
     <img 
         class="nys-tablet:nys-grid-col-6"
         src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-04.jpg"
@@ -105,19 +105,29 @@ https://its-hcd.github.io/project-a11y-disability-simulators/chris/
     <figcaption>Visitors took home a pocket-sized guide to digital accessibility at New York State along with a set of four collectible “Be an a11y” stickers. Each piece encouraged continued learning by directing users to the campaign website and additional accessibility resources on the NYS Design System reference site.</figcaption>
 </figure>
 
-<figure>
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/replace.jpg"
+<figure class="figure-row">
+    <img
+        src="/assets/i/2026/gaad-campaign-article/brochure-flat.jpg"
+        style="max-height: 500px;"
         alt="TODO">
     <figcaption>Our "Be an a11y" brochure folds into a convenient pocket-sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway and a workplace reminder of accessibility best practices.</figcaption>
 </figure>
 
 <figure>
     <img 
-        src="/assets/i/2026/gaad-campaign-article/replace.jpg"
+        src="/assets/i/2026/gaad-campaign-article/poster-01.jpg"
         alt="TODO">
     <img 
-        src="/assets/i/2026/gaad-campaign-article/replace.jpg"
+        src="/assets/i/2026/gaad-campaign-article/poster-02.jpg"
+        alt="TODO">
+    <img 
+        src="/assets/i/2026/gaad-campaign-article/poster-03.jpg"
+        alt="TODO">
+    <img 
+        src="/assets/i/2026/gaad-campaign-article/poster-04.jpg"
+        alt="TODO">
+    <img 
+        src="/assets/i/2026/gaad-campaign-article/poster-05.jpg"
         alt="TODO">
     <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
 </figure>
