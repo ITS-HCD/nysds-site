@@ -2,6 +2,9 @@
 permalink: /components/processlist/
 title: Process List
 description: Displays a sequence of numbered steps to communicate a multi-step process.
+image: /assets/img/components/process-list.svg
+image_alt: An illustration of a process list.
+image_header: /assets/img/components/process-list-header.svg
 stable: true
 ---
 

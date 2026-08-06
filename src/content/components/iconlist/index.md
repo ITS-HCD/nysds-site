@@ -2,6 +2,9 @@
 permalink: /components/iconlist/
 title: Icon List
 description: Displays a collection of items paired with visual icons to create structured, scannable lists.
+image: /assets/img/components/icon-list.svg
+image_alt: An illustration of an icon list.
+image_header: /assets/img/components/icon-list-header.svg
 stable: true
 ---
 
