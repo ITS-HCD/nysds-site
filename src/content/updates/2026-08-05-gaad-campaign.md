@@ -17,11 +17,18 @@ Our dedicated NYS Design System Team partnered with the Digital Accessibility Te
 
 <figure>
     <div class="nys-grid-row nys-grid-gap-100">
-        <img class="nys-tablet:nys-grid-col-6" src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-03.jpg" width="100%">
-        <img class="nys-tablet:nys-grid-col-6" src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-12.jpg" width="100%">
-        <figcaption>Needs caption</figcaption>
+        <img 
+            class="nys-tablet:nys-grid-col-6" 
+            src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-03.jpg" 
+            alt="TODO"
+            width="100%">
+        <img 
+            class="nys-tablet:nys-grid-col-6" 
+            src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-12.jpg" 
+            alt="TODO"
+            width="100%">
+        <figcaption>TODO</figcaption>
     </div>
-    
 </figure>
 
 
