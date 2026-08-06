@@ -9,7 +9,8 @@ p,
 ul,
 ol,
 dl,
-blockquote {
+blockquote,
+figure {
     font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
     margin-bottom: var(--nys-space-150);
 }
@@ -320,6 +321,16 @@ main[role="main"] {
     max-width: 100%;
     height: auto;
     margin: var(--nys-space-200) 0;
+}
+
+.page-content figure img {
+    border: solid red;
+    margin: 0;
+}
+
+.page-content figure figcaption {
+    border: solid green;
+    margin: 0;
 }
 
 /* Page Header */
