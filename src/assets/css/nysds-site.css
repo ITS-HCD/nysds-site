@@ -9,7 +9,8 @@ p,
 ul,
 ol,
 dl,
-blockquote {
+blockquote,
+figure {
     font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
     margin-bottom: var(--nys-space-150);
 }
@@ -315,11 +316,42 @@ main[role="main"] {
 }
 
 /* Page Content */
+.page-content figure img,
+.page-content figure figcaption {
+    margin: 0;
+}
 
-.page-content img {
+/* Row of images sized by height instead of width. Needs to be a class:
+   an html height attribute loses to .page-content img { height: auto }. */
+.page-content figure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--nys-space-100, 8px);
+    width: fit-content;
     max-width: 100%;
+}
+
+/* The images live in their own row so the caption can still sit below them.
+   They never wrap: when the row runs out of width every image shrinks by the
+   same proportion, so the shared height is kept. */
+.page-content figure{
+    display: flex;
+    justify-content: center;
+    gap: var(--nys-space-100, 8px);
+    width: 100%;
+}
+
+.page-content figure img {
     height: auto;
-    margin: var(--nys-space-200) 0;
+    width: auto;
+    max-height: 300px;
+    /* Without this, images refuse to shrink past their intrinsic width. */
+    min-width: 0;
+}
+
+.page-content figure figcaption {
+    flex-basis: 100%;
 }
 
 /* Page Header */
