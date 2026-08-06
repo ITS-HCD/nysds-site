@@ -323,22 +323,35 @@ main[role="main"] {
 
 /* Row of images sized by height instead of width. Needs to be a class:
    an html height attribute loses to .page-content img { height: auto }. */
-.page-content .figure-row {
+.page-content figure {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--nys-space-100, 8px);
     border: solid teal;
     width: fit-content;
-}
-
-.page-content .figure-row.img-group img {
-    height: 300px;
-    width: auto;
     max-width: 100%;
 }
 
-.page-content .figure-row figcaption {
+/* The images live in their own row so the caption can still sit below them.
+   They never wrap: when the row runs out of width every image shrinks by the
+   same proportion, so the shared height is kept. */
+.page-content figure{
+    display: flex;
+    justify-content: center;
+    gap: var(--nys-space-100, 8px);
+    width: 100%;
+}
+
+.page-content figure img {
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    /* Without this, images refuse to shrink past their intrinsic width. */
+    min-width: 0;
+}
+
+.page-content figure figcaption {
     flex-basis: 100%;
 }
 
