@@ -328,7 +328,6 @@ main[role="main"] {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--nys-space-100, 8px);
-    border: solid teal;
     width: fit-content;
     max-width: 100%;
 }
