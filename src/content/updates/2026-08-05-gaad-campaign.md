@@ -33,9 +33,7 @@ Our "Be an a11y" awareness campaign launched in May 2026 and combined compelling
 The term "a11y" is a widely recognized abbreviation for "accessibility"—there are 11 letters between the a and the y. Using this familiar shorthand helped create a memorable campaign that introduced accessibility in an approachable way while encouraging conversations across the State workforce. 
 
 <figure>
-    <img src="/assets/i/2026/gaad-campaign-article/concourse-monitor.jpg"
-        alt="alt text here">
-    <img src="/assets/i/2026/gaad-campaign-article/be-an-a11y-square.jpg"
+    <img src="/assets/i/2026/gaad-campaign-article/monitor.png"
         alt="alt text here">
     <figcaption>We worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign  and live event. This included advance advertising on the Empire State Concourse monitors and ITS social media streams.</figcaption>
 </figure>
@@ -101,7 +99,7 @@ https://its-hcd.github.io/project-a11y-disability-simulators/chris/
 
 <figure class="figure-row">
     <img
-        src="/assets/i/2026/gaad-campaign-article/brochure-flat.jpg"
+        src="/assets/i/2026/gaad-campaign-article/brochure-flat.png"
         style="max-height: 500px;"
         alt="TODO">
     <figcaption>Our "Be an a11y" brochure folds into a convenient pocket-sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway and a workplace reminder of accessibility best practices.</figcaption>
@@ -109,19 +107,7 @@ https://its-hcd.github.io/project-a11y-disability-simulators/chris/
 
 <figure>
     <img 
-        src="/assets/i/2026/gaad-campaign-article/poster-01.jpg"
-        alt="TODO">
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/poster-02.jpg"
-        alt="TODO">
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/poster-03.jpg"
-        alt="TODO">
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/poster-04.jpg"
-        alt="TODO">
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/poster-05.jpg"
+        src="/assets/i/2026/gaad-campaign-article/posters.jpg"
         alt="TODO">
     <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
 </figure>
