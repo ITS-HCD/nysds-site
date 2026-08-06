@@ -329,9 +329,10 @@ main[role="main"] {
     justify-content: center;
     gap: var(--nys-space-100, 8px);
     border: solid teal;
+    width: fit-content;
 }
 
-.page-content .figure-row img {
+.page-content .figure-row.img-group img {
     height: 300px;
     width: auto;
     max-width: 100%;
