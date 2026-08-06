@@ -6,9 +6,9 @@ subtitle: A collaboration between the NYS Design System and NYS Digital Accessib
 description: A collaboration between the NYS Design System and NYS Digital Accessibility Teams 
 image: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
 image_alt: Be an ally. Accessible design is better for everyone.
-updatethumbnail: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
-ogimage: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
-thumbnailimage: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
+updatethumbnail: /assets/i/2026/gaad-campaign-article/gaad-thumbnail.png
+ogimage: /assets/i/2026/gaad-campaign-article/gaad-thumbnail.png
+thumbnailimage: /assets/i/2026/gaad-campaign-article/gaad-thumbnail-alt.png
 date: 2026-08-05
 tags: article,accessibility,GAAD,a11y,accessible design
 ---
