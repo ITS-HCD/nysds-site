@@ -71,15 +71,17 @@ To coincide with Global Accessibility Awareness Day, we hosted an in-person even
 
 ## Disability simulators
 
-<figure>
-    <img 
-        style="max-height: 200px;"
-        src="/assets/i/2026/gaad-campaign-article/demo-screenshot.png"
-        alt="TODO">
-    <figcaption>Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.
-    <nys-button variant="text" href="https://its-hcd.github.io/project-a11y-disability-simulators/chris/" target="_blank" suffixicon="open_in_new">Try out the simulator for yourself</nys-button></figcaption>
-</figure>
- 
+Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design. Try out the simulator for yourself by clicking the Start button below.
+
+<div class="nys-display-flex nys-flex-justify-center nys-margin-b-200">
+    <nys-button style="--_nys-button-font-size: 5rem; --_nys-button-height: 8rem; --_nys-button-padding--x: 2rem;"
+        href="https://its-hcd.github.io/project-a11y-disability-simulators/chris/" 
+        target="_blank"
+        aria-label="Start the disability simulator to experience navigating the web with either low vision or a physical disability"
+        >
+        START
+    </nys-button>
+</div>
 
 <figure class="figure-row nys-grid-row">
     <img 
