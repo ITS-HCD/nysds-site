@@ -316,19 +316,29 @@ main[role="main"] {
 }
 
 /* Page Content */
-
-.page-content img {
-    max-width: 100%;
-    height: auto;
-    margin: var(--nys-space-200) 0;
-}
-
-.page-content figure img {
-    margin: 0;
-}
-
+.page-content figure img,
 .page-content figure figcaption {
     margin: 0;
+}
+
+/* Row of images sized by height instead of width. Needs to be a class:
+   an html height attribute loses to .page-content img { height: auto }. */
+.page-content .figure-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--nys-space-100, 8px);
+    border: solid teal;
+}
+
+.page-content .figure-row img {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+}
+
+.page-content .figure-row figcaption {
+    flex-basis: 100%;
 }
 
 /* Page Header */
