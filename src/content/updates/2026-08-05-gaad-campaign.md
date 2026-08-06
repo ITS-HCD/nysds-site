@@ -4,11 +4,11 @@ title: Our 2026 Global Accessibility Awareness Day (GAAD) Campaign
 author: Doug Bartow
 subtitle: A collaboration between the NYS Design System and NYS Digital Accessibility Teams 
 description: A collaboration between the NYS Design System and NYS Digital Accessibility Teams 
-image: /assets/i/2025/fidelity-modes-thumbnail.png
-image_alt: Illustration of a fidelity mode switcher
-updatethumbnail: /assets/i/2025/nysds-fidelity-modes-thumbnail.png
-ogimage: /assets/i/2026/release-1.20.0.png
-thumbnailimage: /assets/i/2026/release-1.20.0-thumbnail.png
+image: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
+image_alt: Be an ally. Accessible design is better for everyone.
+updatethumbnail: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
+ogimage: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
+thumbnailimage: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
 date: 2026-08-05
 tags: article,accessibility,GAAD,a11y,accessible design
 ---
@@ -16,8 +16,12 @@ tags: article,accessibility,GAAD,a11y,accessible design
 Our dedicated NYS Design System Team partnered with the Digital Accessibility Team at NYS ITS to develop a first-of-its-kind 2026 Global Accessibility Awareness Day (GAAD) campaign and live public demonstration. Together, we set out to address a fundamental challenge: **increasing awareness of the needs of people with disabilities while encouraging the adoption of accessible design practices across New York State government websites and web applications.**
 
 <figure>
-    <img src="/assets/i/2026/release-1.20.0-thumbnail.png" width="300">
-    <img src="/assets/i/2026/release-1.20.0-thumbnail.png" width="300">
+    <div class="nys-grid-row nys-grid-gap-100">
+        <img class="nys-tablet:nys-grid-col-6" src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-03.jpg" width="100%">
+        <img class="nys-tablet:nys-grid-col-6" src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-12.jpg" width="100%">
+        <figcaption>Needs caption</figcaption>
+    </div>
+    
 </figure>
 
 
