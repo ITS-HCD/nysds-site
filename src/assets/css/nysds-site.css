@@ -9,8 +9,7 @@ p,
 ul,
 ol,
 dl,
-blockquote,
-figure {
+blockquote {
     font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
     margin-bottom: var(--nys-space-150);
 }
@@ -316,6 +315,10 @@ main[role="main"] {
 }
 
 /* Page Content */
+.page-content figure {
+    margin-bottom: var(--nys-space-200, 16px);
+}
+
 .page-content figure img,
 .page-content figure figcaption {
     margin: 0;
@@ -352,6 +355,8 @@ main[role="main"] {
 
 .page-content figure figcaption {
     flex-basis: 100%;
+    max-width: 780px;
+    margin: 0 var(--nys-space-250);
 }
 
 /* Page Header */

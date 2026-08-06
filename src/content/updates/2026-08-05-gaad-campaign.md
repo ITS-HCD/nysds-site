@@ -73,6 +73,7 @@ To coincide with Global Accessibility Awareness Day, we hosted an in-person even
 
 <figure>
     <img 
+        style="max-height: 200px;"
         src="/assets/i/2026/gaad-campaign-article/demo-screenshot.png"
         alt="TODO">
     <figcaption>Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.
