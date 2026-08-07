@@ -316,34 +316,23 @@ main[role="main"] {
 }
 
 /* Page Content */
+
+/* A row of images sized by height instead of width, with the caption below.
+   The images share one flex line: when the row runs out of width they each
+   shrink by the same proportion, so their common height is kept. Only the
+   caption wraps, onto its own line, via flex-basis: 100%. */
 .page-content figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--nys-space-100, 8px);
+  width: 100%;
   margin-bottom: var(--nys-space-400, 32px);
 }
 
 .page-content figure img,
 .page-content figure figcaption {
   margin: 0;
-}
-
-/* Row of images sized by height instead of width. Needs to be a class:
-   an html height attribute loses to .page-content img { height: auto }. */
-.page-content figure {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--nys-space-100, 8px);
-  width: fit-content;
-  max-width: 100%;
-}
-
-/* The images live in their own row so the caption can still sit below them.
-   They never wrap: when the row runs out of width every image shrinks by the
-   same proportion, so the shared height is kept. */
-.page-content figure {
-  display: flex;
-  justify-content: center;
-  gap: var(--nys-space-100, 8px);
-  width: 100%;
 }
 
 .page-content figure img {
