@@ -301,7 +301,7 @@ fileinput.addEventListener("nys-change", () => {
 {% block dependencies %}
 
 {% set dependencies = [
-"<nys-icon>", "<nys-button>"
+  "<nys-button>", "<nys-errormessage>", "<nys-icon>", "<nys-label>"
 ] %}
 
 {% include "partials/dependencies.njk" %}

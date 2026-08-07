@@ -257,4 +257,15 @@ breadcrumbs.addEventListener("nys-expand", () => {
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block updates %}{% endblock %}

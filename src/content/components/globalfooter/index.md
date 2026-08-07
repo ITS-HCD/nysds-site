@@ -189,4 +189,15 @@ This component does not emit any custom events.
 
 {% endblock %}
 
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-divider>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block updates %}{% endblock %}

@@ -203,4 +203,15 @@ This component emits **two** custom Javascript events:
 
 {% endblock %}
 
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-alert>", "<nys-button>", "<nys-icon>", "<nys-textinput>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block updates %}{% endblock %}
