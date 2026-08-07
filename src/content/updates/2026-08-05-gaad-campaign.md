@@ -1,9 +1,9 @@
 ---
 permalink: /about/updates/a11y/
-title: Our 2026 Global Accessibility Awareness Day (GAAD) Campaign  
+title: Our 2026 Global Accessibility Awareness Day (GAAD) Campaign
 author: Doug Bartow
-subtitle: A collaboration between the NYS Design System and NYS Digital Accessibility Teams 
-description: A collaboration between the NYS Design System and NYS Digital Accessibility Teams 
+subtitle: A collaboration between the NYS Design System and NYS Digital Accessibility Teams
+description: A collaboration between the NYS Design System and NYS Digital Accessibility Teams
 image: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
 image_alt: Be an ally. Accessible design is better for everyone.
 updatethumbnail: /assets/i/2026/gaad-campaign-article/gaad-thumbnail.png
@@ -25,12 +25,11 @@ Our dedicated NYS Design System Team partnered with the Digital Accessibility Te
     <figcaption>TODO</figcaption>
 </figure>
 
-
 ## Be an a11y
 
-Our "Be an a11y" awareness campaign launched in May 2026 and combined compelling messaging with an engaging visual identity. The campaign included a dedicated landing page, a foldout brochure and poster, digital communications, a diverse collection of downloadable a11y posters, promotional sticker sets, and supporting outreach materials that reached employees across multiple New York State agencies and office locations. 
+Our "Be an a11y" awareness campaign launched in May 2026 and combined compelling messaging with an engaging visual identity. The campaign included a dedicated landing page, a foldout brochure and poster, digital communications, a diverse collection of downloadable a11y posters, promotional sticker sets, and supporting outreach materials that reached employees across multiple New York State agencies and office locations.
 
-The term "a11y" is a widely recognized abbreviation for "accessibility"—there are 11 letters between the a and the y. Using this familiar shorthand helped create a memorable campaign that introduced accessibility in an approachable way while encouraging conversations across the State workforce. 
+The term "a11y" is a widely recognized abbreviation for "accessibility"—there are 11 letters between the a and the y. Using this familiar shorthand helped create a memorable campaign that introduced accessibility in an approachable way while encouraging conversations across the State workforce.
 
 <figure>
     <img src="/assets/i/2026/gaad-campaign-article/monitor.png"
@@ -101,7 +100,7 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
 
 <figure class="figure-row">
     <img
-        src="/assets/i/2026/gaad-campaign-article/brochure-flat.png"
+        src="/assets/i/2026/gaad-campaign-article/brochure+poster.png"
         style="max-height: 500px;"
         alt="TODO">
     <figcaption>Our "Be an a11y" brochure folds into a convenient pocket-sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway and a workplace reminder of accessibility best practices.</figcaption>
@@ -114,6 +113,6 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
     <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
 </figure>
 
-The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government. 
+The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.
 
-Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there. 
+Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.
