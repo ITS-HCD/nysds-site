@@ -63,19 +63,17 @@ To coincide with Global Accessibility Awareness Day, we hosted an in-person even
 
 ## Disability simulators
 
-Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.
+Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event.
 
-Try out the simulator for yourself by clicking the Start button below.
+With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.
 
-<div class="nys-display-flex nys-flex-justify-center nys-margin-b-200">
-    <nys-button style="--_nys-button-font-size: 5rem; --_nys-button-height: 8rem; --_nys-button-padding--x: 2rem;"
-        href="https://its-hcd.github.io/project-a11y-disability-simulators/chris/" 
-        target="_blank"
-        aria-label="Start the disability simulator to experience navigating the web with either low vision or a physical disability"
-        >
-        START
-    </nys-button>
-</div>
+Team members invited passersby to step up to the interactive simulators and try navigating the web under real disability constraints, experiencing firsthand the difference between a well-coded site and a broken one.
+
+The team created two simulators:
+
+- **Physical Disability**: One demonstration simulated a physical disability such as rheumatoid arthritis. People were unable to use the mouse entirely. Users had to rely on keyboard shortcuts, including arrows, tab, and spacebar just to read and act. Horizontal scrolling became a repeated obstacle, forcing users to hunt for the right shortcut just to find and enter information. Try the <nys-button href="https://its-hcd.github.io/project-a11y-disability-simulators/chris/task/" target="_blank" suffixicon="open_in_new" variant="text">physical disability simulator</nys-button> for yourself.
+
+- **Low Vision**: The second demonstration simulated a low vision user. The simulator blew up 14-point text by 400% to 70-point text and flipped the screen to white text on black. Text ran off the page, forcing long horizontal scrolls. In the "fail" example, right-aligned radio buttons disappeared off-screen, leaving users with no idea an action was even required. Try the <nys-button href="https://its-hcd.github.io/project-a11y-disability-simulators/claudia/task/" target="_blank" suffixicon="open_in_new" variant="text">low vision simulator</nys-button> for yourself.
 
 ## Promotional and informational materials
 
