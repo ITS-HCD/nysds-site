@@ -22,6 +22,7 @@ A card fills the width of its container, so place it inside a grid column to con
 
 {% block example %}
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -41,6 +42,7 @@ A card fills the width of its container, so place it inside a grid column to con
 Use `preheading` to add a short label above the heading, such as a category or content type.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     preheading="Preheading"
@@ -58,6 +60,7 @@ Use `preheading` to add a short label above the heading, such as a category or c
 Use `subheading` to add supporting text directly below the heading.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -74,6 +77,7 @@ Use `subheading` to add supporting text directly below the heading.
 The card heading renders as a real heading element. It defaults to `h2`. Use `headingLevel` to set it to `h1` through `h6` so the card fits the page's heading hierarchy.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -90,6 +94,7 @@ The card heading renders as a real heading element. It defaults to `h2`. Use `he
 Use `description` for the card's body text. It takes plain text only. When the body needs rich text or more content, use the default slot instead.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -107,6 +112,7 @@ Use the `media` slot to add an image to the top of the card. Pass a standard `<i
 Card media is presentational, so mark it with `role="presentation"` and keep any information the user needs in the card's text.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -128,6 +134,7 @@ Card media is presentational, so mark it with `role="presentation"` and keep any
 Set `inset` to add padding around the media so it sits visually inside the card rather than running to its edges.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -152,6 +159,7 @@ Use the `media-accent` slot to display a badge over the media, typically a date.
 Because the accent sits in the image area, repeat the full date in the card's text for anyone who needs it in context.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -175,6 +183,7 @@ Because the accent sits in the image area, repeat the full date in the card's te
 The `media-accent` slot can be combined with `inset`.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -201,6 +210,7 @@ The `media-accent` slot can be combined with `inset`.
 Set `elevated` to add a drop shadow, giving the card a raised appearance. Use it to lift a card off a tinted background, not to rank cards against one another.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -219,6 +229,7 @@ Set `href` to make the whole card a single link. The card renders as one `<a>`, 
 Signal that the card is interactive by putting an icon in the `footer` slot.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     href="https://www.ny.gov/"
@@ -238,6 +249,7 @@ Signal that the card is interactive by putting an icon in the `footer` slot.
 Give the card a click handler to make the whole card a single `<button>`. Use the `onClick` property (or an inline `onclick`) rather than binding `@click` yourself, so the card stays keyboard accessible.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     onclick="alert('you clicked me')"
@@ -258,6 +270,7 @@ An interactive card is one control, so keep its slots free of buttons, links, an
 Use the `preheading` slot for content above the heading block, such as a badge or status label.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card
     heading="Heading"
@@ -275,6 +288,7 @@ Use the `preheading` slot for content above the heading block, such as a badge o
 Use the default slot for the card's main body when `description` is not enough, such as rich text or another component.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card heading="What's included">
     <nys-iconlist divider>
@@ -293,6 +307,7 @@ Use the default slot for the card's main body when `description` is not enough, 
 Use the `footer` slot for actions at the bottom of the card, such as a button or link.
 
 {% set preview %}
+
 <div class="nys-tablet:nys-grid-col-6">
   <nys-card heading="Heading" description="A card with actions in the footer slot.">
     <nys-button slot="footer" label="Learn more" href="https://www.ny.gov"></nys-button>
@@ -309,25 +324,26 @@ A card fills the width of its container. To lay out several cards, place each on
 By default a card is only as tall as its content, so cards in the same row can end up uneven. Set `--nys-card-height: 100%` to stretch each card to the height of its column. The extra height is absorbed by the main content area, which keeps the `footer` slot pinned to the bottom of every card. The column also has to give the card a height to fill, so add `nys-display-flex` to it.
 
 {% set preview %}
+
 <div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%">
   <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex">
     <nys-card
       heading="Roosevelt Island Four Freedoms State Park"
       description="A memorial park on Roosevelt Island dedicated to Franklin D. Roosevelt, featuring sweeping lawns, formal gardens, and panoramic views of the Manhattan and Queens waterfronts on all sides."
     >
-      <img slot="media" src="/assets/i/2026/jbt-card-media.jpg" role="presentation" />
+      <img slot="media" src="/assets/img/components/card-media/manhattan-card-media.png" role="presentation" />
       <nys-button slot="footer" label="Visit Manhattan" fullWidth></nys-button>
     </nys-card>
   </div>
   <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex">
     <nys-card heading="Astoria Park" description="A waterfront park.">
-      <img slot="media" src="/assets/i/2026/adk-card-media.jpg" role="presentation" />
+      <img slot="media" src="/assets/img/components/card-media/astoria-card-media.jpg" role="presentation" />
       <nys-button slot="footer" label="Visit Queens" fullWidth></nys-button>
     </nys-card>
   </div>
   <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex">
     <nys-card heading="Brooklyn Bridge Park" description="A park.">
-      <img slot="media" src="/assets/i/2026/giantmtn-card-media.jpg" role="presentation" />
+      <img slot="media" src="/assets/img/components/card-media/brooklyn-card-media.png" role="presentation" />
       <nys-button slot="footer" label="Visit Brooklyn" fullWidth></nys-button>
     </nys-card>
   </div>
@@ -519,7 +535,7 @@ You can listen to these events using JavaScript:
 const card = document.querySelector('nys-card');
 // Listen for the 'nys-click' event
 card.addEventListener("nys-click", () => {
-    console.log("Card clicked");
+console.log("Card clicked");
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
