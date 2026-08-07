@@ -96,18 +96,7 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
     <figcaption>Our "Be an a11y" brochure folds into a convenient pocket-sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway and a workplace reminder of accessibility best practices.</figcaption>
 </figure>
 
-<figure>
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/posters.jpg"
-        alt="TODO">
-    <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
-</figure>
-
-The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.
-
-Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.
-
-<div class="color-theme--faint nys-top-800 nys-padding-y-800">
+<div class="color-theme--faint nys-margin-y-800  nys-padding-y-800">
   <div class="nys-grid-container-widescreen" style="text-align:center;">
     <div class="nys-grid-row">
       <div class="nys-grid-col-12">
@@ -128,5 +117,16 @@ Building on this momentum, we look forward to expanding the campaign and celebra
     </div>
   </div>
 </div>
+
+<figure>
+    <img 
+        src="/assets/i/2026/gaad-campaign-article/posters.jpg"
+        alt="TODO">
+    <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
+</figure>
+
+The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.
+
+Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.
 
 <p>Event photos: Jesse Gardner</p>
