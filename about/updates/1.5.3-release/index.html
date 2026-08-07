@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Release 1.5.3 - New York State Design System</title>
+<title>Release 1.5.3</title>
 
 <meta name="description" content="Hotfixes for nys-textinput, nys-unavheader accessibility, and nys-backtotop behavior.">
 <link rel="canonical" href="https://designsystem.ny.gov/about/updates/1.5.3-release/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-release-1.5.3 section-updates">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -197,6 +198,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

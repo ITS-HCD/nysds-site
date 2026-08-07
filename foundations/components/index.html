@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>How Components Work - New York State Design System</title>
+<title>How Components Work</title>
 
 <meta name="description" content="Understand how NYSDS web components work — custom elements, shadow DOM, slots, CSS custom properties, and the patterns you need to use them effectively.">
 <link rel="canonical" href="https://designsystem.ny.gov/foundations/components/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-components section-foundations">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-foundations" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-foundations">
     <span class="accordion__label">Foundations</span>
@@ -359,7 +360,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     <h1 id="how-components-work">How Components Work</h1>
 <p>The NYS Design System component library is a set of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">web components</a> — custom HTML elements built on web standards. Web components are framework-agnostic by design, meaning they work natively in the browser regardless of your tech stack.</p>
 <p>This page explains the key concepts behind how these components are built, how they behave, and what you need to know to use them effectively. For installation and setup, see <a href="/get-started/developers/">Get Started as a Developer</a>.</p>
@@ -600,7 +601,7 @@ dateField<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/components.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -629,6 +630,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

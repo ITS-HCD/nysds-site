@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Card</title>
+
+<meta name="description" content="A self-contained container that groups related content and actions about a single subject.">
+<link rel="canonical" href="https://designsystem.ny.gov/components/card/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Card">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/components/card/">
+<meta property="og:description" content="A self-contained container that groups related content and actions about a single subject.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
+  </head>
+  
+  <body class="single-page page-card section-components">
+  <nys-skipnav></nys-skipnav>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="section-header__title">
+            Components
+        </div>
+        <div class="section-header__media">
+            
+                <img src="/assets/img/components/card-header.svg" alt="Card">
+            
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-auto">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
+    <span class="accordion__label">Components</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-components" aria-labelledby="accordion-trigger-components" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/accordion/">
+        Accordion
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/accordion/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/accordion/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/alert/">
+        Alert
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/avatar/">
+        Avatar
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/backtotop/">
+        Back To Top
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/badge/">
+        Badge
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/breadcrumbs/">
+        Breadcrumbs
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/button/">
+        Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      <a class="section-nav__link" href="/components/card/" aria-current="page">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/checkbox/">
+        Checkbox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/combobox/">
+        Combobox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/datepicker/">
+        Datepicker
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/divider/">
+        Divider
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/dropdownmenu/">
+        Dropdown Menu
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/fileinput/">
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/globalfooter/">
+        Global Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/globalheader/">
+        Global Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/icon/">
+        Icon
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/modal/">
+        Modal
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/pagination/">
+        Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/radiobutton/">
+        Radio Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/select/">
+        Select
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/skipnav/">
+        Skip Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/stepper/">
+        Stepper
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/tab/">
+        Tab
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/table/">
+        Table
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/textarea/">
+        Text Area
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/textinput/">
+        Text Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/toggle/">
+        Toggle
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/tooltip/">
+        Tooltip
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/unav-footer/">
+        UNav Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/unav-header/">
+        UNav Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/video/">
+        Video Player
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-fill">  
+    <section id="overview">
+    <h1 id="card">Card</h1>
+<p>The <code>&lt;nys-card&gt;</code> component is a flexible container that groups related content and actions about a single subject, such as a program, an event, or a news item.</p>
+<p>Text content is supplied through the <code>preheading</code>, <code>heading</code>, <code>subheading</code>, and <code>description</code> properties. For richer content, use the <code>preheading</code>, default, and <code>footer</code> slots to project custom markup such as badges, lists, buttons, or links. Images go in the <code>media</code> slot.</p>
+<p>A card fills the width of its container, so place it inside a grid column to control its size.</p>
+<div class="nys-grid-row nys-grid-gap-100 nys-flex-align-center">
+        <nys-badge label="Stable" prefixIcon="code"></nys-badge>
+        <nys-badge prefixIcon="" prefixLabel="WCAG 2.2" label="AA" intent="success">
+        </nys-badge>
+        <nys-button size="sm" variant="text" label="View in Figma" href="
+            https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=51-1514" target="_blank"></nys-button>
+    </div>
+</section>
+<section>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A short description of the card's subject."></nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A short description of the card's subject.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+</section><br>
+<section>
+    <h2 id="accessibility">Accessibility</h2>
+<p>The <code>&lt;nys-card&gt;</code> component includes the following accessibility-focused features:</p>
+<ul>
+<li>The <code>heading</code> renders as a real heading element, so the card appears in the page's heading outline and can be reached with screen reader heading navigation.</li>
+<li><code>headingLevel</code> sets that element to <code>h1</code> through <code>h6</code>, so cards fit the surrounding hierarchy rather than forcing a fixed level. It defaults to <code>h2</code>.</li>
+<li>A card with <code>href</code> renders as a real <code>&lt;a&gt;</code>, and a card with a click handler renders as a real <code>&lt;button&gt;</code>, so it is focusable, activates from the keyboard, and is announced with the correct role.</li>
+<li>Using <code>onClick</code> instead of binding your own <code>@click</code> keeps keyboard activation working. A click listener on a plain container is mouse-only.</li>
+<li>An interactive card takes its accessible name from its text content, so give it a <code>heading</code> that describes where it goes or what it does.</li>
+<li>A card without <code>href</code> or a click handler is a container, not a control. Anything interactive is a real button or link placed in a slot, and each stays individually focusable and keeps its position in the tab order.</li>
+<li>Slotted content stays in the light DOM, so its own semantics and accessible names are preserved.</li>
+<li>Text uses design system typography tokens and scales with browser zoom and user font-size settings.</li>
+</ul>
+<p>Keep the following in mind when using card media:</p>
+<ul>
+<li>
+<p>You supply the <code>&lt;img&gt;</code> in the <code>media</code> slot, so you control its alternative text. Card media is decorative in this pattern: mark it <code>role=&quot;presentation&quot;</code> and never place information only in the image.</p>
+</li>
+<li>
+<p>The <code>media-accent</code> slot renders its content visually over the media. Repeat the full date in the <code>heading</code>, <code>subheading</code>, or <code>description</code> so it is available to everyone.</p>
+  <p class="p-adorned is nys-margin-t-150">
+      <mark>
+          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
+      </mark>
+      <span class="nys-font-h6">
+          Additional accessibility test and build content is coming soon,
+          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
+      </span>
+  </p>
+</li>
+</ul>
+</section><br>
+<section>
+    <h2 id="options">Options</h2>
+<h3 id="preheading">Preheading</h3>
+<p>Use <code>preheading</code> to add a short label above the heading, such as a category or content type.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card preheading="Preheading" heading="Heading" description="A short description of the card's subject."></nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">preheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Preheading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A short description of the card's subject.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="subheading">Subheading</h3>
+<p>Use <code>subheading</code> to add supporting text directly below the heading.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" subheading="Subheading" description="A short description of the card's subject."></nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Subheading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A short description of the card's subject.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="heading-level">Heading Level</h3>
+<p>The card heading renders as a real heading element. It defaults to <code>h2</code>. Use <code>headingLevel</code> to set it to <code>h1</code> through <code>h6</code> so the card fits the page's heading hierarchy.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" headingLevel="h3" description="Set the heading level to fit the page's heading hierarchy."></nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h3<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Set the heading level to fit the page's heading hierarchy.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="description">Description</h3>
+<p>Use <code>description</code> for the card's body text. It takes plain text only. When the body needs rich text or more content, use the default slot instead.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A short description of the card's subject."></nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A short description of the card's subject.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="media-slot">Media Slot</h3>
+<p>Use the <code>media</code> slot to add an image to the top of the card. Pass a standard <code>&lt;img&gt;</code> element, so you control the source, loading behavior, and alternative text.</p>
+<p>Card media is presentational, so mark it with <code>role=&quot;presentation&quot;</code> and keep any information the user needs in the card's text.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A card with a media image.">
+    <img slot="media" src="/assets/img/components/card-media/minnewaska-card-media.jpg" role="presentation">
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A card with a media image.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+      <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/minnewaska-card-media.jpg<span class="token punctuation">"</span></span>
+      <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="inset-media">Inset Media</h3>
+<p>Set <code>inset</code> to add padding around the media so it sits visually inside the card rather than running to its edges.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="Inset adds padding around the media to visually contain it." inset="">
+    <img slot="media" src="/assets/img/components/card-media/minnewaska-card-media.jpg" role="presentation">
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Inset adds padding around the media to visually contain it.<span class="token punctuation">"</span></span>
+    <span class="token attr-name">inset</span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+      <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/minnewaska-card-media.jpg<span class="token punctuation">"</span></span>
+      <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="media-accent-slot">Media Accent Slot</h3>
+<p>Use the <code>media-accent</code> slot to display a badge over the media, typically a date. Pass a wrapper holding two elements: the first renders as the month line, the second as the day line. The accent only renders when the <code>media</code> slot has content.</p>
+<p>Because the accent sits in the image area, repeat the full date in the card's text for anyone who needs it in context.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A card with a media image and a date accent.">
+    <img slot="media" src="/assets/img/components/card-media/minnewaska-card-media.jpg" role="presentation">
+    <div slot="media-accent">
+      <span>Oct</span>
+      <span>16</span>
+    </div>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A card with a media image and a date accent.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+      <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/minnewaska-card-media.jpg<span class="token punctuation">"</span></span>
+      <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media-accent<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Oct<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>16<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>The <code>media-accent</code> slot can be combined with <code>inset</code>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A card with a media image and a date accent." inset="">
+    <img slot="media" src="/assets/img/components/card-media/minnewaska-card-media.jpg" role="presentation">
+    <div slot="media-accent">
+      <span>Oct</span>
+      <span>16</span>
+    </div>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A card with a media image and a date accent.<span class="token punctuation">"</span></span>
+    <span class="token attr-name">inset</span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+      <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/minnewaska-card-media.jpg<span class="token punctuation">"</span></span>
+      <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media-accent<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Oct<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>16<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="elevated">Elevated</h3>
+<p>Set <code>elevated</code> to add a drop shadow, giving the card a raised appearance. Use it to lift a card off a tinted background, not to rank cards against one another.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="Elevated adds a drop shadow to give the card a raised appearance." elevated=""></nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Elevated adds a drop shadow to give the card a raised appearance.<span class="token punctuation">"</span></span>
+    <span class="token attr-name">elevated</span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="link-card">Link Card</h3>
+<p>Set <code>href</code> to make the whole card a single link. The card renders as one <code>&lt;a&gt;</code>, so the entire surface is the target. Use <code>target</code> to control where the link opens.</p>
+<p>Signal that the card is interactive by putting an icon in the <code>footer</code> slot.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card href="https://www.ny.gov/" target="_blank" heading="Visit NY.gov">
+    <p>The whole card is one link. To visually indicate this you should add the <code>open_in_new</code> icon to the footer slot</p>
+    <nys-icon slot="footer" name="open_in_new" size="5xl" style="justify-content: end;"></nys-icon>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov/<span class="token punctuation">"</span></span>
+    <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit NY.gov<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>The whole card is one link. To visually indicate this you should add the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span>open_in_new<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span> icon to the footer slot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open_in_new<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5xl<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">justify-content</span><span class="token punctuation">:</span> end<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="clickable-card">Clickable Card</h3>
+<p>Give the card a click handler to make the whole card a single <code>&lt;button&gt;</code>. Use the <code>onClick</code> property (or an inline <code>onclick</code>) rather than binding <code>@click</code> yourself, so the card stays keyboard accessible.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card onclick="alert('you clicked me')" heading="Heading">
+    <p>The whole card is one button. To visually indicate this you should add the <code>arrow_forward</code> icon to the footer slot.</p>
+    <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'you clicked me'</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>The whole card is one button. To visually indicate this you should add the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span>arrow_forward<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span> icon to the footer slot.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>arrow_forward<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>An interactive card is one control, so keep its slots free of buttons, links, and other interactive elements. Nesting them inside the card control is invalid HTML and leaves them unreachable for keyboard and screen reader users.</p>
+<h3 id="preheading-slot">Preheading Slot</h3>
+<p>Use the <code>preheading</code> slot for content above the heading block, such as a badge or status label.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A card with content in the preheading slot.">
+    <nys-badge slot="preheading" label="New" intent="success"></nys-badge>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A card with content in the preheading slot.<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preheading<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>New<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="default-slot">Default Slot</h3>
+<p>Use the default slot for the card's main body when <code>description</code> is not enough, such as rich text or another component.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="What's included">
+    <nys-iconlist divider="">
+      <nys-iconlistitem icon="check">First item</nys-iconlistitem>
+      <nys-iconlistitem icon="check">Second item</nys-iconlistitem>
+      <nys-iconlistitem icon="check">Third item</nys-iconlistitem>
+    </nys-iconlist>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>What's included<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlist</span> <span class="token attr-name">divider</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>First item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Second item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>check<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Third item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlist</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="footer-slot">Footer Slot</h3>
+<p>Use the <code>footer</code> slot for actions at the bottom of the card, such as a button or link.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6">
+  <nys-card heading="Heading" description="A card with actions in the footer slot.">
+    <nys-button slot="footer" label="Learn more" href="https://www.ny.gov"></nys-button>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Heading<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A card with actions in the footer slot.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Learn more<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.ny.gov<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="card-grid">Card Grid</h3>
+<p>A card fills the width of its container. To lay out several cards, place each one in a grid column.</p>
+<p>By default a card is only as tall as its content, so cards in the same row can end up uneven. Set <code>--nys-card-height: 100%</code> to stretch each card to the height of its column. The extra height is absorbed by the main content area, which keeps the <code>footer</code> slot pinned to the bottom of every card. The column also has to give the card a height to fill, so add <code>nys-display-flex</code> to it.</p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <nys-card heading="Roosevelt Island Four Freedoms State Park" description="A memorial park on Roosevelt Island dedicated to Franklin D. Roosevelt, featuring sweeping lawns, formal gardens, and panoramic views of the Manhattan and Queens waterfronts on all sides.">
+      <img slot="media" src="/assets/img/components/card-media/manhattan-card-media.png" role="presentation">
+      <nys-button slot="footer" label="Visit Manhattan" fullWidth=""></nys-button>
+    </nys-card>
+  </div>
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <nys-card heading="Astoria Park" description="A waterfront park.">
+      <img slot="media" src="/assets/img/components/card-media/astoria-card-media.jpg" role="presentation">
+      <nys-button slot="footer" label="Visit Queens" fullWidth=""></nys-button>
+    </nys-card>
+  </div>
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex">
+    <nys-card heading="Brooklyn Bridge Park" description="A park.">
+      <img slot="media" src="/assets/img/components/card-media/brooklyn-card-media.png" role="presentation">
+      <nys-button slot="footer" label="Visit Brooklyn" fullWidth=""></nys-button>
+    </nys-card>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row nys-grid-gap<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--nys-card-height</span><span class="token punctuation">:</span> 100%</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span>
+      <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Roosevelt Island Four Freedoms State Park<span class="token punctuation">"</span></span>
+      <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A memorial park on Roosevelt Island dedicated to Franklin D. Roosevelt, featuring sweeping lawns, formal gardens, and panoramic views of the Manhattan and Queens waterfronts on all sides.<span class="token punctuation">"</span></span>
+    <span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/manhattan-card-media.png<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit Manhattan<span class="token punctuation">"</span></span> <span class="token attr-name">fullWidth</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Astoria Park<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A waterfront park.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/astoria-card-media.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit Queens<span class="token punctuation">"</span></span> <span class="token attr-name">fullWidth</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Brooklyn Bridge Park<span class="token punctuation">"</span></span> <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A park.<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/img/components/card-media/brooklyn-card-media.png<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Visit Brooklyn<span class="token punctuation">"</span></span> <span class="token attr-name">fullWidth</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+</section><br>
+<section>
+    <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--do nys-flex-fill">
+                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+<ul>
+<li>Use a card to group content and actions about a single subject, such as one program, event, or news item.</li>
+<li>Set <code>headingLevel</code> so the card heading fits the surrounding page hierarchy.</li>
+<li>Keep headings short and specific, so a card is understandable on its own.</li>
+<li>Put actions in the <code>footer</code> slot as real buttons or links.</li>
+<li>Use <code>href</code> or <code>onClick</code> when the whole card leads to one destination or performs one action, and add an icon to the <code>footer</code> slot so the interaction is visible.</li>
+<li>Keep cards in the same group consistent in structure, so they are easy to scan and compare.</li>
+<li>Repeat any information shown in the media or the <code>media-accent</code> slot in the card's text.</li>
+<li>Place each card in a grid column to control its width, and set <code>--nys-card-height: 100%</code> when a row of cards should share one height.</li>
+</ul>
+</div>
+        </div>
+        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+            <div class="card card--dont nys-flex-fill">
+                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+<ul>
+<li>Use a card as a substitute for a page section heading or for content that belongs in the page flow.</li>
+<li>Put buttons, links, or other interactive elements in the slots of a card that has <code>href</code> or a click handler. That card is already a single control.</li>
+<li>Set both <code>href</code> and a click handler on the same card.</li>
+<li>Put more than one primary action in a card.</li>
+<li>Rely on the media image or the <code>media-accent</code> slot to convey information that appears nowhere else.</li>
+<li>Mix <code>elevated</code> and non-elevated cards within the same group.</li>
+<li>Skip heading levels to get a particular text size. Use <code>headingLevel</code> for structure, not for styling.</li>
+<li>Use cards for long-form content that a user needs to read in order.</li>
+</ul>
+</div>
+        </div>
+    </div>
+</section><br>
+<section>
+    <h2 id="properties">Properties</h2>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>Unique identifier. Auto-generated if not provided.</td>
+    </tr>
+    <tr>
+      <td><code>preheading</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>Appears above the heading text.</td>
+    </tr>
+    <tr>
+      <td><code>heading</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>Heading text in the card.</td>
+    </tr>
+    <tr>
+      <td><code>headingLevel</code></td>
+      <td><code>"h1"</code>–<code>"h6"</code></td>
+      <td><code>"h2"</code></td>
+      <td>Heading level used for the card heading.</td>
+    </tr>
+    <tr>
+      <td><code>subheading</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>Appears below the heading text.</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>Appears below the subheading. Plain text only. Use the default slot for rich content.</td>
+    </tr>
+    <tr>
+      <td><code>inset</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td>Adds padding around the media to visually contain it.</td>
+    </tr>
+    <tr>
+      <td><code>elevated</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td>Adds a drop shadow, giving the card a raised appearance.</td>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>URL to navigate to. Makes the whole card a single <code>&lt;a&gt;</code>. Keep the card's slots free of other interactive elements when using this.</td>
+    </tr>
+    <tr>
+      <td><code>target</code></td>
+      <td><code>"_self"</code>, <code>"_blank"</code>, <code>"_parent"</code>, <code>"_top"</code>, or a frame name</td>
+      <td><code>"_self"</code></td>
+      <td>Where the link opens. Only used with <code>href</code>.</td>
+    </tr>
+    <tr>
+      <td><code>onClick</code></td>
+      <td>Function</td>
+      <td><code>null</code></td>
+      <td>Click handler. Makes the whole card a single <code>&lt;button&gt;</code>. Use instead of <code>@click</code> to ensure keyboard accessibility.</td>
+    </tr>
+  </table>
+</nys-table>
+<p><strong>Slots:</strong></p>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Slot</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>preheading</code></td>
+      <td>Content rendered above the heading block, such as a badge or label.</td>
+    </tr>
+    <tr>
+      <td>(default)</td>
+      <td>The card's main body. Use for rich content when the <code>description</code> property is not enough.</td>
+    </tr>
+    <tr>
+      <td><code>footer</code></td>
+      <td>Content rendered at the bottom of the card, typically actions like buttons or links.</td>
+    </tr>
+    <tr>
+      <td><code>media</code></td>
+      <td>Visual content displayed at the top of the card, typically an <code>&lt;img&gt;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>media-accent</code></td>
+      <td>Accent badge displayed over the media, typically a date. Pass a wrapper holding two elements: the first renders as the month line, the second as the day line. Only renders when the <code>media</code> slot has content.</td>
+    </tr>
+  </table>
+</nys-table>
+</section><br>
+<section>
+    <h2 id="style-overrides">Style Overrides</h2>
+<div class="css-var-table">
+<p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--nys-component-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<nys-table striped="">
+      <table>
+        <thead>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<p><tr>
+<td><code>--nys-card-height</code></td>
+<td>Height of the card. Defaults to fit-content. Set to 100% to stretch the card to its container's height, so a row of cards renders at an equal height. The extra height is absorbed by the main content area, which keeps the footer slot pinned to the bottom of the card. The container must give the card a height to fill, for example a grid column with nys-display-flex.</td>
+</tr></p>
+<p><tr>
+<td colspan="2" class="css-var-table__tip">
+Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
+new one with a
+<a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+Proposal</a>.
+</td>
+</tr></p>
+<p></p></tbody>
+</table>
+</nys-table><p></p>
+</div>
+</section><br>
+<section>
+    <h2 id="events">Events</h2>
+<p>An interactive card, one with <code>href</code> or a click handler, emits <strong>three</strong> custom Javascript events:</p>
+<ol>
+<li><strong><code>nys-click</code></strong> – Fired when the card is activated with the mouse or the keyboard.</li>
+<li><strong><code>nys-focus</code></strong> – Fired when the card gains focus.</li>
+<li><strong><code>nys-blur</code></strong> – Fired when the card loses focus.</li>
+</ol>
+<p>You can listen to these events using JavaScript:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Sample Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">// Select the card component</span>
+<span class="token keyword">const</span> card <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-card'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Listen for the 'nys-click' event</span>
+card<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Card clicked"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="nys-section">
+    <h2 id="suggest-a-new-component">Suggest a New Component</h2>
+    <div class="nys-grid-row nys-grid-gap">
+        <div>
+            <p>
+                Do you have an idea for a new NYS Design System web component? Look through the existing proposals in
+                our GitHub discussions board to see if someone already proposed something similar. If not, feel free to
+                submit one.
+            </p>
+        </div>
+        <div class="nys-tablet:nys-grid-col-12">
+            <nys-button label="Review component proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals"></nys-button>
+        </div>
+    </div>
+</section>
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/card/index.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: August 7, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all">
+  <p><strong>On this page</strong></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

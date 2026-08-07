@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Accordion - New York State Design System</title>
+<title>Accordion</title>
 
 <meta name="description" content="Vertically stacked list of headers that reveal or hide associated content.">
 <link rel="canonical" href="https://designsystem.ny.gov/components/accordion/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-accordion section-components">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
     <span class="accordion__label">Components</span>
@@ -236,6 +237,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/card/">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/checkbox/">
         Checkbox
       </a>
@@ -335,6 +347,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/modal/">
         Modal
       </a>
@@ -348,6 +371,17 @@
     <li class="section-nav__item">
       <a class="section-nav__link" href="/components/pagination/">
         Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
       </a>
 
       
@@ -509,6 +543,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/video/">
         Video Player
       </a>
@@ -522,7 +567,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     <section id="overview">
     <h1 id="accordion">Accordion</h1>
 <p>The <code>&lt;nys-accordion&gt;</code> and <code>&lt;nys-accordionitem&gt;</code> components are vertically stacked list of headers that can be clicked to reveal or hide associated content, helping to organize and condense information.</p>
@@ -819,24 +864,24 @@ set, only one <code>nys-accordionitem</code> in the wrapper can be open at a tim
         <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
             <div class="card card--do nys-flex-fill">
                 <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-  - Use accordions for FAQs on state services like DMV procedures or benefits
-  information. - Break up long program descriptions or supplemental details
-  (such as optional steps, extra instructions, or secondary eligibility notes)
-  into manageable sections without overwhelming the reader. - Label headings
-  clearly so users understand the content before expanding. - Consider
-  accordions in mobile layouts to keep pages compact while still allowing access
-  to full details.
+<ul>
+<li>Use accordions for FAQs on state services like DMV procedures or benefits
+information.</li>
+<li>Break up long program descriptions or supplemental details (such as optional steps, extra instructions, or secondary eligibility notes) into manageable sections without overwhelming the reader.</li>
+<li>Label headings  clearly so users understand the content before expanding.</li>
+<li>Consider  accordions in mobile layouts to keep pages compact while still allowing access to full details.</li>
+</ul>
 </div>
         </div>
         <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
             <div class="card card--dont nys-flex-fill">
                 <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-  - Hide time-sensitive deadlines, required steps, or critical eligibility
-  criteria in a collapsed section. Keep essential information visible by
-  default. - Use vague or unclear headings that make it hard to know what is
-  inside. - Overuse accordions for content that is short enough to display fully
-  on the page. - Use an accordion when users need to compare details from
-  multiple sections at once. Consider a table or side-by-side layout instead.
+<ul>
+<li>Hide time-sensitive deadlines, required steps, or critical eligibility criteria in a collapsed section. Keep essential information visible by default.</li>
+<li>Use vague or unclear headings that make it hard to know what is inside.</li>
+<li>Overuse accordions for content that is short enough to display fully on the page.</li>
+<li>Use an accordion when users need to compare details from multiple sections at once. Consider a table or side-by-side layout instead.</li>
+</ul>
 </div>
         </div>
     </div>
@@ -1005,7 +1050,7 @@ accordion<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -1034,6 +1079,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

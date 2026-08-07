@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>File Input - New York State Design System</title>
+<title>File Input</title>
 
 <meta name="description" content="Used for selecting and uploading one or more files from the user’s device.">
 <link rel="canonical" href="https://designsystem.ny.gov/components/fileinput/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-fileinput section-components">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
     <span class="accordion__label">Components</span>
@@ -236,6 +237,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/card/">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/checkbox/">
         Checkbox
       </a>
@@ -335,6 +347,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/modal/">
         Modal
       </a>
@@ -348,6 +371,17 @@
     <li class="section-nav__item">
       <a class="section-nav__link" href="/components/pagination/">
         Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
       </a>
 
       
@@ -509,6 +543,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/video/">
         Video Player
       </a>
@@ -522,7 +567,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     <section id="overview">
     <h1 id="file-input">File Input</h1>
 <p>The <code>&lt;nys-fileinput&gt;</code> component is a reusable web component that allows users to select and upload one or more files from their device (like a computer or phone) to a server or app.</p>
@@ -928,12 +973,17 @@ Proposal</a>.
 <h3 id="event-details">Event details</h3>
 <p>The <code>nys-change</code> event includes a detail object with the following properties:</p>
 <ul>
-<li>id (string): The id of the file input.</li>
-<li>files (Array of file entries): A list of files with status and progress information.</li>
+<li><strong>id</strong> (string): The id of the file input.</li>
+<li><strong>files</strong> (Array of file entries): The full current selection.</li>
+<li><strong>changedFiles</strong> (Array of file entries): The entries added or removed by this action.</li>
+<li>Each entry in <code>files</code> and <code>changedFiles</code> has the same shape:
+<ul>
 <li>file (File): The raw File object.</li>
 <li>progress (number): Upload or processing progress (0–100).</li>
 <li>status (&quot;pending&quot; | &quot;processing&quot; | &quot;done&quot; | &quot;error&quot;): Current state of the file.</li>
 <li>errorMsg (string): Optional error message if status is &quot;error&quot;.</li>
+</ul>
+</li>
 </ul>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
@@ -954,13 +1004,13 @@ Proposal</a>.
 <span class="token keyword">const</span> fileinput <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-fileinput'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-change' event</span>
 fileinput<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Files have changed:"</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>files<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token comment">// Getting more specific details about each file(s)</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> files <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> files<span class="token punctuation">,</span> changedFiles <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Fileinput (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) changed:</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  files<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> file<span class="token punctuation">,</span> progress<span class="token punctuation">,</span> status<span class="token punctuation">,</span> errorMsg <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  changedFiles<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> file<span class="token punctuation">,</span> progress<span class="token punctuation">,</span> status<span class="token punctuation">,</span> errorMsg <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">- </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>status<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>progress<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">%)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> errorMsg <span class="token operator">||</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Full current selection:"</span><span class="token punctuation">,</span> files<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -985,7 +1035,7 @@ fileinput<span class="token punctuation">.</span><span class="token function">ad
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/fileinput/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -1014,6 +1064,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

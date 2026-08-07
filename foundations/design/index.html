@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Design - New York State Design System</title>
+<title>Design</title>
 
 <meta name="description" content="Good design starts before pixels. How the NYS Design System fits into the broader UX process.">
 <link rel="canonical" href="https://designsystem.ny.gov/foundations/design/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-design section-foundations">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-foundations" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-foundations">
     <span class="accordion__label">Foundations</span>
@@ -359,7 +360,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     <h1 id="design">Design</h1>
 <p>Good design does not start with what you see. It starts with understanding who you are building for, what they need, and how your service fits into their life. The NYS Design System helps teams build accessible, consistent digital products — but using components alone does not guarantee good design.</p>
 <section id="elements-of-ux">
@@ -448,7 +449,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/design.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -477,6 +478,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

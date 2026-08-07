@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Accessibility Checklist - New York State Design System</title>
+<title>Accessibility Checklist</title>
 
 <meta name="description" content="How to test the accessibility of a video player.">
 <link rel="canonical" href="https://designsystem.ny.gov/components/video/accessibility-tests/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-a11y-tests section-components">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
     <span class="accordion__label">Components</span>
@@ -236,6 +237,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/card/">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/checkbox/">
         Checkbox
       </a>
@@ -335,6 +347,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/modal/">
         Modal
       </a>
@@ -348,6 +371,17 @@
     <li class="section-nav__item">
       <a class="section-nav__link" href="/components/pagination/">
         Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
       </a>
 
       
@@ -509,6 +543,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/video/">
         Video Player
       </a>
@@ -522,7 +567,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     
 <article data-template="a11yTests" data-pattern="video player">
     <section id="overview">
@@ -1054,7 +1099,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/video/a11y-tests.njk">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -1083,6 +1128,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Breadcrumbs - New York State Design System</title>
+<title>Breadcrumbs</title>
 
 <meta name="description" content="Help users understand their location within a site’s hierarchy and navigate between different levels of content.">
 <link rel="canonical" href="https://designsystem.ny.gov/components/breadcrumbs/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-breadcrumbs section-components">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
     <span class="accordion__label">Components</span>
@@ -236,6 +237,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/card/">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/checkbox/">
         Checkbox
       </a>
@@ -335,6 +347,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/modal/">
         Modal
       </a>
@@ -348,6 +371,17 @@
     <li class="section-nav__item">
       <a class="section-nav__link" href="/components/pagination/">
         Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
       </a>
 
       
@@ -509,6 +543,17 @@
     
     
     <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
       <a class="section-nav__link" href="/components/video/">
         Video Player
       </a>
@@ -522,7 +567,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     <section id="overview">
     <h1 id="breadcrumbs">Breadcrumbs</h1>
 <p>The <code>&lt;nys-breadcrumbs&gt;</code> component shows users their location within a site's structure and provides links to navigate back through parent pages.</p>
@@ -945,13 +990,53 @@ For comprehensive insight and guidance, please see
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
-<p></p><p>
-There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
-propose a
+<p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--nys-component-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<nys-table striped="">
+      <table>
+        <thead>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<p><tr>
+<td><code>--nys-breadcrumbs-max-width--content</code></td>
+<td>The maximum width of the inner main content area. Use this only to align header, footer, or breadcrumb components with the main page content when needed.</td>
+</tr></p>
+<p><tr>
+<td colspan="2" class="css-var-table__tip">
+Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
 new one with a
 <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
 Proposal</a>.
-</p><p></p>
+</td>
+</tr></p>
+<p></p></tbody>
+</table>
+</nys-table><p></p>
 </div>
 </section><br>
 <section>
@@ -1004,7 +1089,7 @@ breadcrumbs<span class="token punctuation">.</span><span class="token function">
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/breadcrumbs/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -1033,6 +1118,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

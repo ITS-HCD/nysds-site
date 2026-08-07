@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NYS Design System Release 1.19.3 - New York State Design System</title>
+<title>NYS Design System Release 1.19.3</title>
 
 <meta name="description" content="Responsive margin and padding, &lt;nys-accordionitem&gt; style overrides, MCP server updates, added more native functionality to &lt;nys-button&gt; and &lt;nys-icon&gt;, fixes to &lt;nys-fileinput&gt;, and continuing our automation journey!
 ">
@@ -48,12 +48,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-release-1.19.3 section-updates">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -231,7 +232,7 @@
     
         <div class="nys-grid-row nys-margin-t-400">
           <div class="nys-grid-col">
-            <div></div>
+            <div>Up Next: <a href="/about/updates/a11y/" title="Read: Our 2026 Global Accessibility Awareness Day (GAAD) Campaign"><b>Our 2026 Global Accessibility Awareness Day (GAAD) Campaign</b></a></div>
             <div>Previous : <a href="/about/updates/1.19.2-release/" title="Read: NYS Design System Release 1.19.2"><b>NYS Design System Release 1.19.2</b></a></div>
           </div>
         </div>
@@ -270,6 +271,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

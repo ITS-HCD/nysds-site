@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get Started as a Leader - New York State Design System</title>
+<title>Get Started as a Leader</title>
 
 <meta name="description" content="A guide for agency leaders and product teams to understand what the NYS Design System is, why it matters, and how to get your team started.">
 <link rel="canonical" href="https://designsystem.ny.gov/get-started/leadership/">
@@ -46,12 +46,13 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-04T14:51:09.670Z -->
+    <!-- Latest Build: 2026-08-07T18:09:42.064Z -->
   </head>
   
   <body class="single-page page-leadership section-get-started">
   <nys-skipnav></nys-skipnav>
-  <nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
 
   <nys-globalheader appName="NYS Design System" homepageLink="/">
   <ul data-pagefind-ignore="all">
@@ -86,7 +87,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
+  <aside class="nys-desktop:nys-grid-col-auto">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-get-started" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-get-started">
     <span class="accordion__label">Get Started</span>
@@ -154,7 +155,7 @@
   </ul>
 </nav>
   </aside>
-  <div class="nys-desktop:nys-grid-col-8">  
+  <div class="nys-desktop:nys-grid-col-fill">  
     <h1 id="get-started-as-an-agency-leader">Get Started as an Agency Leader</h1>
 <p>Your agency's websites and applications are how New Yorkers access services. When those digital experiences are inconsistent, inaccessible, or slow to build, residents pay the price. The NYS Design System gives your team a shared foundation so they can deliver better digital services, faster.</p>
 <p>This page explains what the design system is, what your agency gains by adopting it, and how to get your team started.</p>
@@ -199,7 +200,7 @@ Reach out at <a href="mailto:designsystem@its.ny.gov">designsystem@its.ny.gov</a
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/leadership.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: August 4, 2026</p>
+    <p>Last updated: August 7, 2026</p>
   </div>
 
   </div>
@@ -228,6 +229,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [];
 
   document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
     const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
     heading.id = id;
 

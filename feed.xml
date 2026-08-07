@@ -7,6 +7,622 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.20.0 “Giant”</title>
+      <link>https://designsystem.ny.gov/about/updates/1.20.0-release/</link>
+      <description><![CDATA[<h2>“Giant” 🏔️</h2>
+<p>We packed so much into this release, it really is giant! The winning vote during Office Hours was for naming this release “Giant” after the 12<sup>th</sup> highest peak in New York: Giant Mountain. The Mountain has an elevation of 4,627 ft (1,410 m). That is 15 Statues of Liberty 🗽 (plus a Yankee Stadium foul pole ⚾) tall! We didn't coordinate naming for this, it was a happy coincidence!</p>
+<p><a href="https://en.wikipedia.org/wiki/Giant_Mountain">Learn more about Giant Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2><code>&lt;nys-card&gt;</code> released!</h2>
+<p>The new <code>&lt;nys-card&gt;</code> component is a flexible container for content that can include a heading, subheading, media, and body content. It is designed to be used in a variety of contexts, such as displaying information about a location, product, or service.</p>
+<p><a href="https://designsystem.ny.gov/components/card">Read the &lt;nys-card&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">
+  <nys-card heading="Giant Mountain" subheading="12th highest peak in New York">
+    <img slot="media" src="https://designsystem.ny.gov/assets/i/2026/giant-mountain-card.jpg" role="presentation" />
+    <p>Giant Mountain is a mountain located in the Adirondack Mountains of New York. It is the 12th highest peak in the state, with an elevation of 4,627 feet (1,410 m). The mountain is part of the Great Range and is known for its challenging hiking trails and stunning views from the summit.</p>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Giant Mountain<span class="token punctuation">"</span></span> <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>12th highest peak in New York<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/i/2026/giant-mountain-card.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Giant Mountain is a mountain located in the Adirondack Mountains of New York. It is the 12th highest peak in the state, with an elevation of 4,627 feet (1,410 m). The mountain is part of the Great Range and is known for its challenging hiking trails and stunning views from the summit.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> is a card counter!
+  </div>
+</div>
+<h2><code>&lt;nys-iconlist&gt;</code> released!</h2>
+<p>The <code>&lt;nys-iconlist&gt;</code> component displays a collection of items paired with visual icons, making it easy to create structured, scannable lists across web projects. It is commonly used to present event details, requirements checklists, or contact information.</p>
+<p><a href="https://designsystem.ny.gov/components/iconlist">Read the &lt;nys-iconlist&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-iconlist id="event-details">
+<nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
+<nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
+<nys-iconlistitem icon="location_on">Central Park West</nys-iconlistitem>
+</nys-iconlist>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlist</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>event-details<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar_month<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>July 4, 2026<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>schedule<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>5:00 PM<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>location_on<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Central Park West<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlist</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> is an icon!
+  </div>
+</div>
+<h2><code>&lt;nys-processlist&gt;</code> released!</h2>
+<p>The <code>&lt;nys-processlist&gt;</code> is a component that informs users about instructions that appear in sequence. This component is not for interactive flows. For guiding users through multi-step interactive flows, please use <code>&lt;nys-stepper&gt;</code>.</p>
+<p>Add <code>&lt;nys-processlistitem&gt;</code> elements as children of <code>&lt;nys-processlist&gt;</code>. Each item takes a <code>label</code> and an optional <code>description</code>. Steps are numbered by the list, so items never set their own number.</p>
+<p><a href="https://designsystem.ny.gov/components/processlist">Read the &lt;nys-processlist&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-processlist id="application-steps">
+<nys-processlistitem label="Gather your documents"></nys-processlistitem>
+<nys-processlistitem label="Complete the application"></nys-processlistitem>
+<nys-processlistitem label="Submit and await review"></nys-processlistitem>
+</nys-processlist>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlist</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application-steps<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlistitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Gather your documents<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlistitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Complete the application<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlistitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Submit and await review<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlist</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> processed these changes!
+  </div>
+</div>
+<h2><code>&lt;nys-verticalnav&gt;</code> released!</h2>
+<p>The <code>&lt;nys-verticalnav&gt;</code> component renders a side navigation menu on desktop and collapses into an accordion on tablet and mobile. It's built for sites with many links that don't fit in a horizontal nav.</p>
+<p><a href="https://designsystem.ny.gov/components/verticalnav">Read the &lt;nys-verticalnav&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-verticalnav heading="NYS Design System" headingLevel="h2">
+  <ul>
+    <li><a href="https://designsystem.ny.gov/">Foundations</a></li>
+    <li>
+      <nys-verticalnavgroup label="Accessibility">
+        <ul>
+          <li><a aria-current="page" href="https://designsystem.ny.gov/about/updates/1.20.0-release/">WCAG Guidelines</a></li>
+          <li><a href="https://designsystem.ny.gov/about/updates/1.20.0-release/">Screen Readers</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+  </ul>
+</nys-verticalnav></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnav</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span> <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Foundations<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnavgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accessibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">aria-current</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>WCAG Guidelines<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Screen Readers<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-verticalnavgroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-verticalnav</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> navigated the code!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Fix multiple instances of shadowDOM label association</li>
+<li>feat(a11y): cross-shadow label association + fix inert error association by @plasticmind</li>
+<li>Fix: nys-datepicker to dispatch input event on &quot;clear&quot; &amp; &quot;today&quot; button by @NovaCat35</li>
+<li>Fix: Add focus ring on invalid submissions for nys-radiobutton and nys-fileinput by @NovaCat35</li>
+<li>Enhancement: Make nys-datepicker position auto by @NovaCat35</li>
+<li>Fix: read component dependencies from package.json by @emilygorelik</li>
+<li>Fix: Change nys-change event files value by @NovaCat35</li>
+<li>Enhancement: style overrides for headers, nys-globalfooter, breadcrumb by @NovaCat35</li>
+<li>Fix the customElements.define of nys-fileitem by @NovaCat35</li>
+<li>FIX: unav header how you know focus state by @emilygorelik</li>
+<li>Fix/textinput search clear focus by @emilygorelik</li>
+<li>ENHANCEMENT: Unav Header alert by @emilygorelik</li>
+<li>ENHANCEMENT: button a11y improvements by @emilygorelik</li>
+<li>Fix: nys-dropdown to toggle via keyboard once by @NovaCat35</li>
+<li>Fix: radiobutton rework by @NovaCat35</li>
+<li>FIX: scheduled an update by @emilygorelik</li>
+<li>Component: Card (try 2) by @emilygorelik</li>
+<li>feat(a11y): ElementInternals accessibility layer + WCAG 2.2 AA remediation across all components by @plasticmind</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>You may notice that external CSS may impact the styles of a few design system components in this release (table and accordion, specifically). You can override the styles yourself to correct anything that doesn't look right. Future releases should resolve these CSS override issues. You can report any style issues in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.20.0">See the full developer release notes for v.1.20.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>“Giant” 🏔️</h2>
+<p>We packed so much into this release, it really is giant! The winning vote during Office Hours was for naming this release “Giant” after the 12<sup>th</sup> highest peak in New York: Giant Mountain. The Mountain has an elevation of 4,627 ft (1,410 m). That is 15 Statues of Liberty 🗽 (plus a Yankee Stadium foul pole ⚾) tall! We didn't coordinate naming for this, it was a happy coincidence!</p>
+<p><a href="https://en.wikipedia.org/wiki/Giant_Mountain">Learn more about Giant Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2><code>&lt;nys-card&gt;</code> released!</h2>
+<p>The new <code>&lt;nys-card&gt;</code> component is a flexible container for content that can include a heading, subheading, media, and body content. It is designed to be used in a variety of contexts, such as displaying information about a location, product, or service.</p>
+<p><a href="https://designsystem.ny.gov/components/card">Read the &lt;nys-card&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">
+  <nys-card heading="Giant Mountain" subheading="12th highest peak in New York">
+    <img slot="media" src="https://designsystem.ny.gov/assets/i/2026/giant-mountain-card.jpg" role="presentation" />
+    <p>Giant Mountain is a mountain located in the Adirondack Mountains of New York. It is the 12th highest peak in the state, with an elevation of 4,627 feet (1,410 m). The mountain is part of the Great Range and is known for its challenging hiking trails and stunning views from the summit.</p>
+  </nys-card>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-card</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Giant Mountain<span class="token punctuation">"</span></span> <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>12th highest peak in New York<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>media<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/assets/i/2026/giant-mountain-card.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Giant Mountain is a mountain located in the Adirondack Mountains of New York. It is the 12th highest peak in the state, with an elevation of 4,627 feet (1,410 m). The mountain is part of the Great Range and is known for its challenging hiking trails and stunning views from the summit.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-card</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> is a card counter!
+  </div>
+</div>
+<h2><code>&lt;nys-iconlist&gt;</code> released!</h2>
+<p>The <code>&lt;nys-iconlist&gt;</code> component displays a collection of items paired with visual icons, making it easy to create structured, scannable lists across web projects. It is commonly used to present event details, requirements checklists, or contact information.</p>
+<p><a href="https://designsystem.ny.gov/components/iconlist">Read the &lt;nys-iconlist&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-iconlist id="event-details">
+<nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
+<nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
+<nys-iconlistitem icon="location_on">Central Park West</nys-iconlistitem>
+</nys-iconlist>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlist</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>event-details<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar_month<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>July 4, 2026<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>schedule<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>5:00 PM<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-iconlistitem</span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>location_on<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Central Park West<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-iconlist</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> is an icon!
+  </div>
+</div>
+<h2><code>&lt;nys-processlist&gt;</code> released!</h2>
+<p>The <code>&lt;nys-processlist&gt;</code> is a component that informs users about instructions that appear in sequence. This component is not for interactive flows. For guiding users through multi-step interactive flows, please use <code>&lt;nys-stepper&gt;</code>.</p>
+<p>Add <code>&lt;nys-processlistitem&gt;</code> elements as children of <code>&lt;nys-processlist&gt;</code>. Each item takes a <code>label</code> and an optional <code>description</code>. Steps are numbered by the list, so items never set their own number.</p>
+<p><a href="https://designsystem.ny.gov/components/processlist">Read the &lt;nys-processlist&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-processlist id="application-steps">
+<nys-processlistitem label="Gather your documents"></nys-processlistitem>
+<nys-processlistitem label="Complete the application"></nys-processlistitem>
+<nys-processlistitem label="Submit and await review"></nys-processlistitem>
+</nys-processlist>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlist</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>application-steps<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlistitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Gather your documents<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlistitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Complete the application<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-processlistitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Submit and await review<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlistitem</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-processlist</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> processed these changes!
+  </div>
+</div>
+<h2><code>&lt;nys-verticalnav&gt;</code> released!</h2>
+<p>The <code>&lt;nys-verticalnav&gt;</code> component renders a side navigation menu on desktop and collapses into an accordion on tablet and mobile. It's built for sites with many links that don't fit in a horizontal nav.</p>
+<p><a href="https://designsystem.ny.gov/components/verticalnav">Read the &lt;nys-verticalnav&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<nys-verticalnav heading="NYS Design System" headingLevel="h2">
+  <ul>
+    <li><a href="https://designsystem.ny.gov/">Foundations</a></li>
+    <li>
+      <nys-verticalnavgroup label="Accessibility">
+        <ul>
+          <li><a aria-current="page" href="https://designsystem.ny.gov/about/updates/1.20.0-release/">WCAG Guidelines</a></li>
+          <li><a href="https://designsystem.ny.gov/about/updates/1.20.0-release/">Screen Readers</a></li>
+        </ul>
+      </nys-verticalnavgroup>
+    </li>
+  </ul>
+</nys-verticalnav></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Example Code</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnav</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span> <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Foundations<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnavgroup</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Accessibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">aria-current</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>page<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>WCAG Guidelines<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Screen Readers<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-verticalnavgroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-verticalnav</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  <div class="code-preview__code-tip">
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+  </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> navigated the code!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Fix multiple instances of shadowDOM label association</li>
+<li>feat(a11y): cross-shadow label association + fix inert error association by @plasticmind</li>
+<li>Fix: nys-datepicker to dispatch input event on &quot;clear&quot; &amp; &quot;today&quot; button by @NovaCat35</li>
+<li>Fix: Add focus ring on invalid submissions for nys-radiobutton and nys-fileinput by @NovaCat35</li>
+<li>Enhancement: Make nys-datepicker position auto by @NovaCat35</li>
+<li>Fix: read component dependencies from package.json by @emilygorelik</li>
+<li>Fix: Change nys-change event files value by @NovaCat35</li>
+<li>Enhancement: style overrides for headers, nys-globalfooter, breadcrumb by @NovaCat35</li>
+<li>Fix the customElements.define of nys-fileitem by @NovaCat35</li>
+<li>FIX: unav header how you know focus state by @emilygorelik</li>
+<li>Fix/textinput search clear focus by @emilygorelik</li>
+<li>ENHANCEMENT: Unav Header alert by @emilygorelik</li>
+<li>ENHANCEMENT: button a11y improvements by @emilygorelik</li>
+<li>Fix: nys-dropdown to toggle via keyboard once by @NovaCat35</li>
+<li>Fix: radiobutton rework by @NovaCat35</li>
+<li>FIX: scheduled an update by @emilygorelik</li>
+<li>Component: Card (try 2) by @emilygorelik</li>
+<li>feat(a11y): ElementInternals accessibility layer + WCAG 2.2 AA remediation across all components by @plasticmind</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>You may notice that external CSS may impact the styles of a few design system components in this release (table and accordion, specifically). You can override the styles yourself to correct anything that doesn't look right. Future releases should resolve these CSS override issues. You can report any style issues in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.20.0">See the full developer release notes for v.1.20.0 →</a></p>
+]]></content>
+      <pubDate>Thu, 06 Aug 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.20.0-release/</guid>
+    </item>
+    <item>
+      <title>Our 2026 Global Accessibility Awareness Day (GAAD) Campaign</title>
+      <link>https://designsystem.ny.gov/about/updates/a11y/</link>
+      <description><![CDATA[<p>Our dedicated NYS Design System Team partnered with the Digital Accessibility Team at NYS ITS to develop a first-of-its-kind 2026 Global Accessibility Awareness Day (GAAD) campaign and live public demonstration. Together, we set out to address a fundamental challenge: <strong>increasing awareness of the needs of people with disabilities while encouraging the adoption of accessible design practices across New York State government websites and web applications.</strong></p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/roadshow-g1.png" alt="At the Empire State Concourse in Albany, NY, on May 21, 2026, members of the NYS Digital Accessibility team engage with visitors at the GAAD tables and exhibit." />
+    <figcaption>An exhibit set up in the Empire State concourse invited passersby to experience life on the web as people with disabilities do every day.  Team members guided the digital experiences, answered questions, and handed out brochures and stickers to promote the annual GAAD campaign.</figcaption>
+</figure>
+<h2>Be an a11y</h2>
+<p>Our &quot;Be an a11y&quot; awareness campaign launched in May 2026 and combined compelling messaging with an engaging visual identity. The campaign included a dedicated landing page, a foldout brochure and poster, digital communications, a diverse collection of downloadable a11y posters, promotional sticker sets, and supporting outreach materials that reached employees across multiple New York State agencies and office locations.</p>
+<p>The term &quot;a11y&quot; is a widely recognized abbreviation for &quot;accessibility&quot;—there are 11 letters between the a and the y. Using this familiar shorthand helped create a memorable campaign that introduced accessibility in an approachable way while encouraging conversations across the State workforce.</p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/monitor.png" alt="A monitor attached to the ceiling of the Empire State concourse shows a 'Be an A11y' campaign banner reading 'Be an a11y.  Accessible design is better for everyone.  Learn more:  on.ny.gov/a11y'" />
+    <figcaption>The A11y team worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign and live event. This included advertising in advance of the event on the monitor system in the Empire State Concourse, as well as ITS social media streams.</figcaption>
+</figure>
+<h2>Event and engagement</h2>
+<p>To coincide with Global Accessibility Awareness Day, we hosted an in-person event on Thursday, May 21, 2026, in the Empire State Plaza Concourse. Visitors experienced live demonstrations presented by members of the Digital Accessibility Team, explored interactive accessibility simulations, and received educational materials and campaign giveaways. By presenting accessibility in an engaging and memorable way, the initiative helped shift the conversation beyond simply meeting compliance requirements toward creating inclusive, user-centered digital experiences that benefit everyone.</p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/roadshow-g2.png" alt="People gather at an exhibit table. Michele Bruno, digital accessibility team lead, stands at a table which includes brochures and stickers, a sign-up sheet, and a disability simulator on a laptop. " />
+    <figcaption>Visitors at the event took away a11y stickers and brochures that included QR codes to find more accessibility information via the NYS Design System website.  People also signed up to receive more information and pass along more specific questions for the Digital Accessibility team.</figcaption>
+</figure>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/poster-layout.jpg" style="max-height: 600px;" alt="A series of poster designs are laid out in a grid.  The designs were created to promote accessibility in New York State." />
+    <figcaption>The Digital Innovation Team's graphic designers created 30 unique NYS a11y posters that were made available as free digital downloads through our <nys-button variant="text" href="https://designsystem.ny.gov/a11y/">accessibility campaign page</nys-button> — encouraging employees to promote inclusive design throughout their agencies while reinforcing that accessibility is everyone's responsibility.</figcaption>
+</figure>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/gaad-roadshow-06.jpg" width="600" alt="A11y team member Ethan Ligon demonstrates at a table how a screen reader works for a group of passersby." />
+    <figcaption>Ethan Ligon, a member of the NYS Digital Accessibility Team, demonstrates to visitors how a person who is blind navigates the web using a screen reader. The software reads web content aloud, enabling low-vision users to browse websites, complete forms, and perform everyday online tasks independently. </figcaption>
+</figure>
+<h2>Disability simulators</h2>
+<p>Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event.</p>
+<p>With the press of a &quot;Start&quot; button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.</p>
+<p>Team members invited passersby to step up to the interactive simulators and try navigating the web under real disability constraints, experiencing firsthand the difference between a well-coded site and a broken one.</p>
+<p>The team created two simulators:</p>
+<ul>
+<li>
+<p><strong>Physical Disability</strong>: One demonstration simulated a physical disability such as rheumatoid arthritis. People were unable to use the mouse entirely. Users had to rely on keyboard shortcuts, including arrows, tab, and spacebar just to read and act. Horizontal scrolling became a repeated obstacle, forcing users to hunt for the right shortcut just to find and enter information. <br /> <nys-button href="https://its-hcd.github.io/project-a11y-disability-simulators/chris/task/" target="_blank" suffixicon="open_in_new" variant="text">Try the physical disability simulator</nys-button></p>
+</li>
+<li>
+<p><strong>Low Vision</strong>: The second demonstration simulated a low vision user. The simulator blew up 14-point text by 400% to 70-point text and flipped the screen to white text on black. Text ran off the page, forcing long horizontal scrolls. In the &quot;fail&quot; example, right-aligned radio buttons disappeared off-screen, leaving users with no idea an action was even required. <br /> <nys-button href="https://its-hcd.github.io/project-a11y-disability-simulators/claudia/task/" target="_blank" suffixicon="open_in_new" variant="text">Try the low vision simulator</nys-button></p>
+</li>
+</ul>
+<h2>Promotional and informational materials</h2>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/brochure+stickers.jpg" alt="The A11y brochure and stickers are shown, with 1 sticker featuring a hand showing a peace sign, and three more with the word 'a11y' featured." />
+</figure>
+<p>Visitors took home a pocket-sized guide to digital accessibility at New York State along with a set of four collectible “Be an a11y” stickers created by the Digital Innovation Team’s graphic designers. Each piece encouraged continued learning by directing users to the campaign website and additional accessibility resources on the NYS Design System reference site.</p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/brochure+poster.png" style="max-height: 500px;" alt="A flattened New York State Digital Accessibility campaign brochure features photos of people with disabilities and diverse users alongside messages promoting accessible design. Panels highlight topics including accessibility, inclusion, brain work differently, people matter more, captions and transcripts, and 'Be an a11y. Accessible design is better for everyone.' Additionally, A bright yellow accessibility awareness poster shows a large hand making a peace sign with the word 'a11y' inside the hand. The poster includes New York State Office of Information Technology Services branding and a QR code linking accessibility resources." />
+    <figcaption>Our Digital Accessibility Pocket Guide brochure folds into a conveniently sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway piece and a displayable workplace reminder of accessibility best practices.</figcaption>
+</figure>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/posters.jpg" alt="Five posters include these statements: 'a11y is short for accessibility,' 'Not everyone sees your site,' 'Some people can't use a mouse,' 'Brains work differently,' and  'Celebrating the Americans with Disabilities Act.'" />
+    <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
+</figure>
+<div class="color-theme--faint nys-margin-y-800  nys-padding-y-800">
+  <div class="nys-grid-container-widescreen" style="text-align:center;">
+    <div class="nys-grid-row">
+      <div class="nys-grid-col-12">
+        <svg width="100px" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.65 0C10.5885 0 0 10.5884 0 23.65V86H86V0H23.65Z" fill="#BBD5EE"></path>
+          <path d="M14.6992 50.6422C14.6992 38.8673 21.4246 28.0575 30.2636 21.6875L37.3732 27.4784C31.2243 31.5321 25.6519 39.2533 25.0754 45.4303C25.2676 45.4303 26.6127 45.2373 27.5734 45.2373C32.9537 45.2373 36.7967 49.2909 36.7967 55.0819C36.7967 60.6798 32.3772 65.3125 26.6127 65.3125C20.2716 65.3125 14.6992 60.1007 14.6992 50.6422ZM45.4436 50.6422C45.4436 38.8673 52.1689 28.0575 61.0079 21.6875L68.1176 27.4784C61.9687 31.5321 56.5884 39.2533 55.8198 45.4303C56.012 45.4303 57.357 45.2373 58.3178 45.2373C63.6981 45.2373 67.7333 49.2909 67.7333 55.0819C67.7333 60.6798 63.1216 65.3125 57.357 65.3125C51.016 65.3125 45.4436 60.1007 45.4436 50.6422Z" fill="#004DD1"></path>
+        </svg>
+      </div>
+      <div class="nys-tablet:nys-grid-col-10 nys-tablet:nys-grid-offset-1">
+        <p class="article-quote">Our team is responsible for ensuring digital accessibility at our agency, and we are always looking for additional training.  So, when we saw the chance for hands-on discussions with our colleagues from the Digital Accessibility and NYS Design System teams, we jumped on it.</p>
+        <p class="article-quote">We came away with a new understanding of screen reader best practices, experience with simulators, and the chance to connect with others in the field as we all work toward digital accessibility. The Be an a11y awareness campaign provides invaluable tools that underscore the importance of digital accessibility. And a11y events like this one present information in an engaging and powerful way that attendees (like our team) will take back with them, share with others, and put into practice.</p>
+      </div>
+      <div class="nys-grid-col-12">
+            <strong>- Laura Fallon</strong><br />
+            Assistant Public Information Officer, Office of Communications<br />
+            New York State Department of Taxation and Finance 
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Making an impact, now and in the future</h2>
+<p>The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.</p>
+<p>Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.</p>
+<p>Event photos: Jesse Gardner</p>
+]]></description>
+      <content><![CDATA[<p>Our dedicated NYS Design System Team partnered with the Digital Accessibility Team at NYS ITS to develop a first-of-its-kind 2026 Global Accessibility Awareness Day (GAAD) campaign and live public demonstration. Together, we set out to address a fundamental challenge: <strong>increasing awareness of the needs of people with disabilities while encouraging the adoption of accessible design practices across New York State government websites and web applications.</strong></p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/roadshow-g1.png" alt="At the Empire State Concourse in Albany, NY, on May 21, 2026, members of the NYS Digital Accessibility team engage with visitors at the GAAD tables and exhibit." />
+    <figcaption>An exhibit set up in the Empire State concourse invited passersby to experience life on the web as people with disabilities do every day.  Team members guided the digital experiences, answered questions, and handed out brochures and stickers to promote the annual GAAD campaign.</figcaption>
+</figure>
+<h2>Be an a11y</h2>
+<p>Our &quot;Be an a11y&quot; awareness campaign launched in May 2026 and combined compelling messaging with an engaging visual identity. The campaign included a dedicated landing page, a foldout brochure and poster, digital communications, a diverse collection of downloadable a11y posters, promotional sticker sets, and supporting outreach materials that reached employees across multiple New York State agencies and office locations.</p>
+<p>The term &quot;a11y&quot; is a widely recognized abbreviation for &quot;accessibility&quot;—there are 11 letters between the a and the y. Using this familiar shorthand helped create a memorable campaign that introduced accessibility in an approachable way while encouraging conversations across the State workforce.</p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/monitor.png" alt="A monitor attached to the ceiling of the Empire State concourse shows a 'Be an A11y' campaign banner reading 'Be an a11y.  Accessible design is better for everyone.  Learn more:  on.ny.gov/a11y'" />
+    <figcaption>The A11y team worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign and live event. This included advertising in advance of the event on the monitor system in the Empire State Concourse, as well as ITS social media streams.</figcaption>
+</figure>
+<h2>Event and engagement</h2>
+<p>To coincide with Global Accessibility Awareness Day, we hosted an in-person event on Thursday, May 21, 2026, in the Empire State Plaza Concourse. Visitors experienced live demonstrations presented by members of the Digital Accessibility Team, explored interactive accessibility simulations, and received educational materials and campaign giveaways. By presenting accessibility in an engaging and memorable way, the initiative helped shift the conversation beyond simply meeting compliance requirements toward creating inclusive, user-centered digital experiences that benefit everyone.</p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/roadshow-g2.png" alt="People gather at an exhibit table. Michele Bruno, digital accessibility team lead, stands at a table which includes brochures and stickers, a sign-up sheet, and a disability simulator on a laptop. " />
+    <figcaption>Visitors at the event took away a11y stickers and brochures that included QR codes to find more accessibility information via the NYS Design System website.  People also signed up to receive more information and pass along more specific questions for the Digital Accessibility team.</figcaption>
+</figure>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/poster-layout.jpg" style="max-height: 600px;" alt="A series of poster designs are laid out in a grid.  The designs were created to promote accessibility in New York State." />
+    <figcaption>The Digital Innovation Team's graphic designers created 30 unique NYS a11y posters that were made available as free digital downloads through our <nys-button variant="text" href="https://designsystem.ny.gov/a11y/">accessibility campaign page</nys-button> — encouraging employees to promote inclusive design throughout their agencies while reinforcing that accessibility is everyone's responsibility.</figcaption>
+</figure>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/gaad-roadshow-06.jpg" width="600" alt="A11y team member Ethan Ligon demonstrates at a table how a screen reader works for a group of passersby." />
+    <figcaption>Ethan Ligon, a member of the NYS Digital Accessibility Team, demonstrates to visitors how a person who is blind navigates the web using a screen reader. The software reads web content aloud, enabling low-vision users to browse websites, complete forms, and perform everyday online tasks independently. </figcaption>
+</figure>
+<h2>Disability simulators</h2>
+<p>Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event.</p>
+<p>With the press of a &quot;Start&quot; button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.</p>
+<p>Team members invited passersby to step up to the interactive simulators and try navigating the web under real disability constraints, experiencing firsthand the difference between a well-coded site and a broken one.</p>
+<p>The team created two simulators:</p>
+<ul>
+<li>
+<p><strong>Physical Disability</strong>: One demonstration simulated a physical disability such as rheumatoid arthritis. People were unable to use the mouse entirely. Users had to rely on keyboard shortcuts, including arrows, tab, and spacebar just to read and act. Horizontal scrolling became a repeated obstacle, forcing users to hunt for the right shortcut just to find and enter information. <br /> <nys-button href="https://its-hcd.github.io/project-a11y-disability-simulators/chris/task/" target="_blank" suffixicon="open_in_new" variant="text">Try the physical disability simulator</nys-button></p>
+</li>
+<li>
+<p><strong>Low Vision</strong>: The second demonstration simulated a low vision user. The simulator blew up 14-point text by 400% to 70-point text and flipped the screen to white text on black. Text ran off the page, forcing long horizontal scrolls. In the &quot;fail&quot; example, right-aligned radio buttons disappeared off-screen, leaving users with no idea an action was even required. <br /> <nys-button href="https://its-hcd.github.io/project-a11y-disability-simulators/claudia/task/" target="_blank" suffixicon="open_in_new" variant="text">Try the low vision simulator</nys-button></p>
+</li>
+</ul>
+<h2>Promotional and informational materials</h2>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/brochure+stickers.jpg" alt="The A11y brochure and stickers are shown, with 1 sticker featuring a hand showing a peace sign, and three more with the word 'a11y' featured." />
+</figure>
+<p>Visitors took home a pocket-sized guide to digital accessibility at New York State along with a set of four collectible “Be an a11y” stickers created by the Digital Innovation Team’s graphic designers. Each piece encouraged continued learning by directing users to the campaign website and additional accessibility resources on the NYS Design System reference site.</p>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/brochure+poster.png" style="max-height: 500px;" alt="A flattened New York State Digital Accessibility campaign brochure features photos of people with disabilities and diverse users alongside messages promoting accessible design. Panels highlight topics including accessibility, inclusion, brain work differently, people matter more, captions and transcripts, and 'Be an a11y. Accessible design is better for everyone.' Additionally, A bright yellow accessibility awareness poster shows a large hand making a peace sign with the word 'a11y' inside the hand. The poster includes New York State Office of Information Technology Services branding and a QR code linking accessibility resources." />
+    <figcaption>Our Digital Accessibility Pocket Guide brochure folds into a conveniently sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway piece and a displayable workplace reminder of accessibility best practices.</figcaption>
+</figure>
+<figure>
+    <img src="https://designsystem.ny.gov/assets/i/2026/gaad-campaign-article/posters.jpg" alt="Five posters include these statements: 'a11y is short for accessibility,' 'Not everyone sees your site,' 'Some people can't use a mouse,' 'Brains work differently,' and  'Celebrating the Americans with Disabilities Act.'" />
+    <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
+</figure>
+<div class="color-theme--faint nys-margin-y-800  nys-padding-y-800">
+  <div class="nys-grid-container-widescreen" style="text-align:center;">
+    <div class="nys-grid-row">
+      <div class="nys-grid-col-12">
+        <svg width="100px" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.65 0C10.5885 0 0 10.5884 0 23.65V86H86V0H23.65Z" fill="#BBD5EE"></path>
+          <path d="M14.6992 50.6422C14.6992 38.8673 21.4246 28.0575 30.2636 21.6875L37.3732 27.4784C31.2243 31.5321 25.6519 39.2533 25.0754 45.4303C25.2676 45.4303 26.6127 45.2373 27.5734 45.2373C32.9537 45.2373 36.7967 49.2909 36.7967 55.0819C36.7967 60.6798 32.3772 65.3125 26.6127 65.3125C20.2716 65.3125 14.6992 60.1007 14.6992 50.6422ZM45.4436 50.6422C45.4436 38.8673 52.1689 28.0575 61.0079 21.6875L68.1176 27.4784C61.9687 31.5321 56.5884 39.2533 55.8198 45.4303C56.012 45.4303 57.357 45.2373 58.3178 45.2373C63.6981 45.2373 67.7333 49.2909 67.7333 55.0819C67.7333 60.6798 63.1216 65.3125 57.357 65.3125C51.016 65.3125 45.4436 60.1007 45.4436 50.6422Z" fill="#004DD1"></path>
+        </svg>
+      </div>
+      <div class="nys-tablet:nys-grid-col-10 nys-tablet:nys-grid-offset-1">
+        <p class="article-quote">Our team is responsible for ensuring digital accessibility at our agency, and we are always looking for additional training.  So, when we saw the chance for hands-on discussions with our colleagues from the Digital Accessibility and NYS Design System teams, we jumped on it.</p>
+        <p class="article-quote">We came away with a new understanding of screen reader best practices, experience with simulators, and the chance to connect with others in the field as we all work toward digital accessibility. The Be an a11y awareness campaign provides invaluable tools that underscore the importance of digital accessibility. And a11y events like this one present information in an engaging and powerful way that attendees (like our team) will take back with them, share with others, and put into practice.</p>
+      </div>
+      <div class="nys-grid-col-12">
+            <strong>- Laura Fallon</strong><br />
+            Assistant Public Information Officer, Office of Communications<br />
+            New York State Department of Taxation and Finance 
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Making an impact, now and in the future</h2>
+<p>The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.</p>
+<p>Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.</p>
+<p>Event photos: Jesse Gardner</p>
+]]></content>
+      <pubDate>Wed, 05 Aug 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/a11y/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.19.3</title>
       <link>https://designsystem.ny.gov/about/updates/1.19.3-release/</link>
       <description><![CDATA[<nys-alert heading="[1.19.0-1.19.2] Breaking Changes fixed in 1.19.3" type="warning">
