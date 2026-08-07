@@ -114,7 +114,7 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
         <p class="article-quote">We came away with a new understanding of screen reader best practices, experience with simulators, and the chance to connect with others in the field as we all work toward digital accessibility. The Be an a11y awareness campaign provides invaluable tools that underscore the importance of digital accessibility. And a11y events like this one present information in an engaging and powerful way that attendees (like our team) will take back with them, share with others, and put into practice.</p>
       </div>
       <div class="nys-grid-col-12">
-            - Laura Fallon<br />
+            <strong>- Laura Fallon</strong><br />
             Assistant Public Information Officer, Office of Communications<br />
             New York State Department of Taxation and Finance 
       </div>
