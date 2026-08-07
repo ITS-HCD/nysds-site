@@ -135,4 +135,4 @@ The enthusiastic response to both the awareness campaign and the live event esta
 
 Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.
 
-<p>Event photos: Jesse Gardner</p>
+Event photos: Jesse Gardner
