@@ -76,9 +76,9 @@ The `<nys-verticalnav>` component includes the following accessibility-focused f
 
 {% block options %}
 
-### Heading slot
+### Header slot
 
-Replace the default heading with custom markup using the `heading` slot.
+Replace the default heading with custom markup using the `header` slot.
 
 {% set preview %}
 <style>
