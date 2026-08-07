@@ -227,7 +227,12 @@
 </ul>
 <h2>⚠️ Known issues</h2>
 <ul>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+<li>
+<p>The <code>&lt;nys-accordion&gt;</code> component headings are now titled with an <code>&lt;h3&gt;</code> by default. If you need to change the heading level, you can use the <code>headingLevel</code> attribute to set it the correct hierarchy for your page. For example, <code>&lt;nys-accordion headingLevel=&quot;h2&quot;&gt;</code> will render the heading as an <code>&lt;h2&gt;</code>.</p>
+</li>
+<li>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+</li>
 </ul>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.20.0">See the full developer release notes for v.1.20.0 →</a></p>
@@ -450,7 +455,12 @@
 </ul>
 <h2>⚠️ Known issues</h2>
 <ul>
-<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+<li>
+<p>The <code>&lt;nys-accordion&gt;</code> component headings are now titled with an <code>&lt;h3&gt;</code> by default. If you need to change the heading level, you can use the <code>headingLevel</code> attribute to set it the correct hierarchy for your page. For example, <code>&lt;nys-accordion headingLevel=&quot;h2&quot;&gt;</code> will render the heading as an <code>&lt;h2&gt;</code>.</p>
+</li>
+<li>
+<p>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></p>
+</li>
 </ul>
 <h4>For full component updates, bug fixes, and the detailed changelog:</h4>
 <p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.20.0">See the full developer release notes for v.1.20.0 →</a></p>
