@@ -5,7 +5,7 @@ author: Doug Bartow
 subtitle: A collaboration between the NYS Design System and NYS Digital Accessibility Teams
 description: A collaboration between the NYS Design System and NYS Digital Accessibility Teams
 image: /assets/i/2026/gaad-campaign-article/a11y-header.jpg
-image_alt: Be an ally. Accessible design is better for everyone.
+image_alt: Be an a11y. Accessible design is better for everyone.
 updatethumbnail: /assets/i/2026/gaad-campaign-article/gaad-thumbnail.png
 ogimage: /assets/i/2026/gaad-campaign-article/gaad-thumbnail.png
 thumbnailimage: /assets/i/2026/gaad-campaign-article/gaad-thumbnail-alt.png
@@ -18,8 +18,8 @@ Our dedicated NYS Design System Team partnered with the Digital Accessibility Te
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/roadshow-g1.png" 
-        alt="TODO">
-    <figcaption>TODO</figcaption>
+        alt="At the Empire State Concourse in Albany, NY, on May 21, 2026, members of the NYS Digital Accessibility team engage with visitors at the GAAD tables and exhibit.">
+    <figcaption>An exhibit set up in the Empire State concourse invited passersby to experience life on the web as people with disabilities do every day.  Team members guided the digital experiences, answered questions, and handed out brochures and stickers to promote the annual GAAD campaign.</figcaption>
 </figure>
 
 ## Be an a11y
@@ -30,45 +30,42 @@ The term "a11y" is a widely recognized abbreviation for "accessibility"—there 
 
 <figure>
     <img src="/assets/i/2026/gaad-campaign-article/monitor.png"
-        alt="alt text here">
-    <figcaption>We worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign  and live event. This included advance advertising on the Empire State Concourse monitors and ITS social media streams.</figcaption>
+        alt="A monitor attached to the ceiling of the Empire State concourse shows a 'Be an A11y' campaign banner reading 'Be an a11y.  Accessible design is better for everyone.  Learn more:  on.ny.gov/a11y'">
+    <figcaption>The A11y team worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign and live event. This included advertising in advance of the event on the monitor system in the Empire State Concourse, as well as ITS social media streams.</figcaption>
 </figure>
 
-## Special event on the concourse
+## Event and engagement
 
 To coincide with Global Accessibility Awareness Day, we hosted an in-person event on Thursday, May 21, 2026, in the Empire State Plaza Concourse. Visitors experienced live demonstrations presented by members of the Digital Accessibility Team, explored interactive accessibility simulations, and received educational materials and campaign giveaways. By presenting accessibility in an engaging and memorable way, the initiative helped shift the conversation beyond simply meeting compliance requirements toward creating inclusive, user-centered digital experiences that benefit everyone.
 
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/roadshow-g2.png"
-        alt="TODO">
-</figure>
-<figure>
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/booth-retouched.jpg"
-        alt="TODO">
-    <figcaption>At our May 21 event in the Empire State Concourse, visitors could experience web accessibility firsthand through screen-reader demos, as well as test-driving two simulators designed for low vision and physical disabilities.  Attendees left the exhibit carrying educational brochures and a promotional sticker set, which pointed viewers to our a11y campaign page. That page was designed to funnel users to our permanent accessibility page on the NYS Design System reference site.</figcaption>
+        alt="People gather at an exhibit table. Michele Bruno, digital accessibility team lead, stands at a table which includes brochures and stickers, a sign-up sheet, and a disability simulator on a laptop. ">
+    <figcaption>Visitors at the event took away a11y stickers and brochures that included QR codes to find more accessibility information via the NYS Design System website.  People also signed up to receive more information and pass along more specific questions for the Digital Accessibility team.</figcaption>
 </figure>
 
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/poster-layout.jpg"
         style="max-height: 600px;"
-        alt="TODO">
-    <figcaption>We designed 30 different NYS a11y posters as shareable digital downloads available on our campaign page: <nys-button variant="text" suffixicon="open_in_new" href="https://designsystem.ny.gov/a11y/" target="_blank">https://designsystem.ny.gov/a11y/</nys-button></figcaption>
+        alt="A series of poster designs are laid out in a grid.  The designs were created to promote accessibility in New York State.">
+    <figcaption>The Digital Innovation Team's graphic designers created 30 unique NYS a11y posters that were made available as free digital downloads through our <nys-button variant="text" href="https://designsystem.ny.gov/a11y/">accessibility campaign page</nys-button> — encouraging employees to promote inclusive design throughout their agencies while reinforcing that accessibility is everyone's responsibility.</figcaption>
 </figure>
 
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-06.jpg"
         width="600"
-        alt="TODO">
-    <figcaption>Ethan Ligon, a member of the NYS Digital Accessibility team, demonstrates how a blind person navigates the web using a screenreader, a device that reads web pages aloud so users can hear the content as well as take actions to complete tasks.</figcaption>
+        alt="A11y team member Ethan Ligon demonstrates at a table how a screen reader works for a group of passersby.">
+    <figcaption>Ethan Ligon, a member of the NYS Digital Accessibility Team, demonstrates to visitors how a person who is blind navigates the web using a screen reader. The software reads web content aloud, enabling low-vision users to browse websites, complete forms, and perform everyday online tasks independently. </figcaption>
 </figure>
 
 ## Disability simulators
 
-Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design. Try out the simulator for yourself by clicking the Start button below.
+Two interactive laptop stations welcomed visitors to our Empire State Plaza Concourse exhibit as part of our Global Disability Awareness Day event. With the press of a "Start" button, each simulator immersed participants in the experience of navigating the web with either low vision or a physical disability, helping them better understand the barriers many users encounter and the importance of accessible design.
+
+Try out the simulator for yourself by clicking the Start button below.
 
 <div class="nys-display-flex nys-flex-justify-center nys-margin-b-200">
     <nys-button style="--_nys-button-font-size: 5rem; --_nys-button-height: 8rem; --_nys-button-padding--x: 2rem;"
@@ -80,24 +77,29 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
     </nys-button>
 </div>
 
-## Handouts and feedback (workshop section title)
+## Promotional and informational materials
 
 <figure>
     <img 
-        src="/assets/i/2026/gaad-campaign-article/roadshow-g3.png"
-        alt="TODO">
-    <img 
         src="/assets/i/2026/gaad-campaign-article/brochure+stickers.jpg"
-        alt="TODO">
-    <figcaption>Visitors took home a pocket-sized guide to digital accessibility at New York State along with a set of four collectible “Be an a11y” stickers. Each piece encouraged continued learning by directing users to the campaign website and additional accessibility resources on the NYS Design System reference site.</figcaption>
+        alt="The A11y brochure and stickers are shown, with 1 sticker featuring a hand showing a peace sign, and three more with the word 'a11y' featured.">
 </figure>
+
+Visitors took home a pocket-sized guide to digital accessibility at New York State along with a set of four collectible “Be an a11y” stickers created by the Digital Innovation Team’s graphic designers. Each piece encouraged continued learning by directing users to the campaign website and additional accessibility resources on the NYS Design System reference site.
 
 <figure>
     <img
         src="/assets/i/2026/gaad-campaign-article/brochure+poster.png"
         style="max-height: 500px;"
-        alt="Image 1- Flat layout of a New York State Digital Accessibility campaign brochure featuring photos of people with disabilities and diverse users alongside messages promoting accessible design. Panels highlight topics including accessibility, inclusion, brain work differently, people matter more, captions and transcripts, and 'Be an a11y. Accessible design is better for everyone.' The brochure also includes a QR code and an NYS Digital Accessibility pocket guide. Image 2- Bright yellow accessibility awareness poster featuring a large hand making a peace sign with the word 'a11y' inside the hand. The poster includes New York State Office of Information Technology Services branding and a QR code linking to accessibility resources.">
-    <figcaption>Our "Be an a11y" brochure folds into a convenient pocket-sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway and a workplace reminder of accessibility best practices.</figcaption>
+        alt="A flattened New York State Digital Accessibility campaign brochure features photos of people with disabilities and diverse users alongside messages promoting accessible design. Panels highlight topics including accessibility, inclusion, brain work differently, people matter more, captions and transcripts, and 'Be an a11y. Accessible design is better for everyone.' Additionally, A bright yellow accessibility awareness poster shows a large hand making a peace sign with the word 'a11y' inside the hand. The poster includes New York State Office of Information Technology Services branding and a QR code linking accessibility resources.">
+    <figcaption>Our Digital Accessibility Pocket Guide brochure folds into a conveniently sized handout while unfolding into a large educational poster on the reverse side, allowing it to serve as both an event takeaway piece and a displayable workplace reminder of accessibility best practices.</figcaption>
+</figure>
+
+<figure>
+    <img 
+        src="/assets/i/2026/gaad-campaign-article/posters.jpg"
+        alt="Five posters include these statements: 'a11y is short for accessibility,' 'Not everyone sees your site,' 'Some people can't use a mouse,' 'Brains work differently,' and  'Celebrating the Americans with Disabilities Act.'">
+    <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
 </figure>
 
 <div class="color-theme--faint nys-margin-y-800  nys-padding-y-800">
@@ -121,13 +123,6 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
     </div>
   </div>
 </div>
-
-<figure>
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/posters.jpg"
-        alt="TODO">
-    <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
-</figure>
 
 ## Making an impact, now and in the future
 
