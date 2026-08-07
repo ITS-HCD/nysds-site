@@ -379,6 +379,11 @@ main[role="main"] {
     margin-top: 0;
 }
 
+.page-content p.article-quote {
+    font-size: var(--nys-font-size-body-lg);
+    font-weight: var(--nys-font-weight-bold);
+}
+
 /* Featured Image */
 .page-header__media img {
     max-width: 100%;

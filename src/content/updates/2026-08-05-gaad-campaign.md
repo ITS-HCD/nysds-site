@@ -116,3 +116,27 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
 The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.
 
 Building on this momentum, we look forward to expanding the campaign and celebrating the next Global Accessibility Awareness Day on May 20, 2027. We hope to see you there.
+
+<div class="color-theme--faint nys-top-800 nys-padding-y-800">
+  <div class="nys-grid-container-widescreen" style="text-align:center;">
+    <div class="nys-grid-row">
+      <div class="nys-grid-col-12">
+        <svg width="100px" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.65 0C10.5885 0 0 10.5884 0 23.65V86H86V0H23.65Z" fill="#BBD5EE"/>
+          <path d="M14.6992 50.6422C14.6992 38.8673 21.4246 28.0575 30.2636 21.6875L37.3732 27.4784C31.2243 31.5321 25.6519 39.2533 25.0754 45.4303C25.2676 45.4303 26.6127 45.2373 27.5734 45.2373C32.9537 45.2373 36.7967 49.2909 36.7967 55.0819C36.7967 60.6798 32.3772 65.3125 26.6127 65.3125C20.2716 65.3125 14.6992 60.1007 14.6992 50.6422ZM45.4436 50.6422C45.4436 38.8673 52.1689 28.0575 61.0079 21.6875L68.1176 27.4784C61.9687 31.5321 56.5884 39.2533 55.8198 45.4303C56.012 45.4303 57.357 45.2373 58.3178 45.2373C63.6981 45.2373 67.7333 49.2909 67.7333 55.0819C67.7333 60.6798 63.1216 65.3125 57.357 65.3125C51.016 65.3125 45.4436 60.1007 45.4436 50.6422Z" fill="#004DD1"/>
+        </svg>
+      </div>
+      <div class="nys-tablet:nys-grid-col-8 nys-tablet:nys-grid-offset-2">
+        <p class="article-quote">Our team is responsible for ensuring digital accessibility at our agency, and we are always looking for additional training.  So, when we saw the chance for hands-on discussions with our colleagues from the Digital Accessibility and NYS Design System teams, we jumped on it.</p>
+        <p class="article-quote">We came away with a new understanding of screen reader best practices, experience with simulators, and the chance to connect with others in the field as we all work toward digital accessibility. The Be an a11y awareness campaign provides invaluable tools that underscore the importance of digital accessibility. And a11y events like this one present information in an engaging and powerful way that attendees (like our team) will take back with them, share with others, and put into practice.</p>
+      </div>
+      <div class="nys-grid-col-12">
+            - Laura Fallon<br />
+            Assistant Public Information Officer, Office of Communications<br />
+            New York State Department of Taxation and Finance 
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Event photos: Jesse Gardner</p>
