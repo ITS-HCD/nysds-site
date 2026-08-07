@@ -34,6 +34,8 @@ The term "a11y" is a widely recognized abbreviation for "accessibility"—there 
     <figcaption>We worked closely with the ITS Comms Team to maximize our exposure and build interest in the campaign  and live event. This included advance advertising on the Empire State Concourse monitors and ITS social media streams.</figcaption>
 </figure>
 
+## Special event on the concourse
+
 To coincide with Global Accessibility Awareness Day, we hosted an in-person event on Thursday, May 21, 2026, in the Empire State Plaza Concourse. Visitors experienced live demonstrations presented by members of the Digital Accessibility Team, explored interactive accessibility simulations, and received educational materials and campaign giveaways. By presenting accessibility in an engaging and memorable way, the initiative helped shift the conversation beyond simply meeting compliance requirements toward creating inclusive, user-centered digital experiences that benefit everyone.
 
 <figure>
@@ -124,6 +126,8 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
         alt="TODO">
     <figcaption>A series of NYS Accessibility Facts posters was displayed on easels throughout our Empire State Plaza Concourse exhibit. The colorful displays attracted passersby, sparked conversations, and highlighted practical accessibility tips and interesting facts that encouraged visitors to stop, learn, and ask questions.</figcaption>
 </figure>
+
+## Making an impact, now and in the future
 
 The enthusiastic response to both the awareness campaign and the live event established Global Accessibility Awareness Day as a meaningful statewide opportunity to continue advancing digital accessibility awareness and adoption. By combining education, interactive experiences, and practical resources, the initiative demonstrated how digital accessibility can become a shared responsibility across New York State government.
 
