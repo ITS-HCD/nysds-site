@@ -120,7 +120,7 @@ Card media is presentational, so mark it with `role="presentation"` and keep any
   >
     <img
       slot="media"
-      src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+      src="/assets/img/components/card-media/minnewaska-card-media.jpg"
       role="presentation"
     />
   </nys-card>
@@ -143,7 +143,7 @@ Set `inset` to add padding around the media so it sits visually inside the card 
   >
     <img
       slot="media"
-      src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+      src="/assets/img/components/card-media/minnewaska-card-media.jpg"
       role="presentation"
     />
   </nys-card>
@@ -167,7 +167,7 @@ Because the accent sits in the image area, repeat the full date in the card's te
   >
     <img
       slot="media"
-      src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+      src="/assets/img/components/card-media/minnewaska-card-media.jpg"
       role="presentation"
     />
     <div slot="media-accent">
@@ -192,7 +192,7 @@ The `media-accent` slot can be combined with `inset`.
   >
     <img
       slot="media"
-      src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop"
+      src="/assets/img/components/card-media/minnewaska-card-media.jpg"
       role="presentation"
     />
     <div slot="media-accent">
