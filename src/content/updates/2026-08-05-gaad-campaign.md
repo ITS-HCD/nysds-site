@@ -80,6 +80,8 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
     </nys-button>
 </div>
 
+## Handouts and feedback (workshop section title)
+
 <figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/roadshow-g3.png"
