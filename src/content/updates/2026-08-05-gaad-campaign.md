@@ -17,10 +17,7 @@ Our dedicated NYS Design System Team partnered with the Digital Accessibility Te
 
 <figure>
     <img 
-        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-05.jpg" 
-        alt="TODO">
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-12.jpg" 
+        src="/assets/i/2026/gaad-campaign-article/roadshow-g1.png" 
         alt="TODO">
     <figcaption>TODO</figcaption>
 </figure>
@@ -41,11 +38,10 @@ To coincide with Global Accessibility Awareness Day, we hosted an in-person even
 
 <figure>
     <img 
-        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-10.jpg"
+        src="/assets/i/2026/gaad-campaign-article/roadshow-g2.png"
         alt="TODO">
-    <img 
-        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-05.jpg"
-        alt="TODO">
+</figure>
+<figure>
     <img 
         src="/assets/i/2026/gaad-campaign-article/booth-retouched.jpg"
         alt="TODO">
@@ -82,23 +78,17 @@ Two interactive laptop stations welcomed visitors to our Empire State Plaza Conc
     </nys-button>
 </div>
 
-<figure class="figure-row nys-grid-row">
+<figure>
     <img 
-        class="nys-tablet:nys-grid-col-6"
-        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-04.jpg"
+        src="/assets/i/2026/gaad-campaign-article/roadshow-g3.png"
         alt="TODO">
     <img 
-        class="nys-tablet:nys-grid-col-6"
-        src="/assets/i/2026/gaad-campaign-article/gaad-roadshow-08.jpg"
-        alt="TODO">
-    <img 
-        class="nys-tablet:nys-grid-col-12"
         src="/assets/i/2026/gaad-campaign-article/brochure+stickers.jpg"
         alt="TODO">
     <figcaption>Visitors took home a pocket-sized guide to digital accessibility at New York State along with a set of four collectible “Be an a11y” stickers. Each piece encouraged continued learning by directing users to the campaign website and additional accessibility resources on the NYS Design System reference site.</figcaption>
 </figure>
 
-<figure class="figure-row">
+<figure>
     <img
         src="/assets/i/2026/gaad-campaign-article/brochure+poster.png"
         style="max-height: 500px;"

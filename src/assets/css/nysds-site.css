@@ -317,7 +317,7 @@ main[role="main"] {
 
 /* Page Content */
 .page-content figure {
-  margin-bottom: var(--nys-space-200, 16px);
+  margin-bottom: var(--nys-space-400, 32px);
 }
 
 .page-content figure img,
