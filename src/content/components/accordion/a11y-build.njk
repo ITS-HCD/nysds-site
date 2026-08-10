@@ -24,7 +24,7 @@ extra_js:
 
 {% block Alternatives %}
 <div class="solution">
-    <div class="card">
+    <nys-card>
         <h3>Style the native HTML <code class="element">details</code> element</h3>
         <p>
             <mark class="subhead strong">When to use</mark>
@@ -35,7 +35,7 @@ extra_js:
             that has built-in accessibility and is effectively unbreakable.
         </p>
         {% include "partials/a11y-rely-checks.njk" %}
-    </div>
+    </nys-card>
 
     {% block HTMLNative %}
     {% set preview %}
@@ -68,7 +68,7 @@ extra_js:
 <hr class="nysa11y divider" data-component="divider" data-html="native">
 
 <div class="solution">
-    <div class="card">
+    <nys-card>
         <h3>Build a custom accordion component</h3>
         <p>
             <mark class="subhead strong">When to use</mark>
@@ -84,7 +84,7 @@ extra_js:
             for more involved implementations.
         </p>
         {% include "partials/a11y-rely-checks.njk" %}
-    </div>
+    </nys-card>
 
     {% block HTMLCustom %}
     {% set preview %}

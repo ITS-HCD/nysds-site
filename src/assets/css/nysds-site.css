@@ -447,6 +447,16 @@ main[role="main"] {
   color: white;
 }
 
+/* Card Headings */
+nys-card > h1,
+nys-card > h2,
+nys-card > h3,
+nys-card > h4,
+nys-card > h5,
+nys-card > h6 {
+  color: var(--nys-color-ink);
+}
+
 /* Usage Cards */
 
 .component-usage {
