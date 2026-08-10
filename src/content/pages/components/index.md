@@ -22,7 +22,7 @@ navOrder: -1
   {%- for post in collections.components -%}
   {# Prevent child pages from rendering a card: child pages have a `parent` variable; component pages do NOT #}
   {% if post.data.parent is not defined %}
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex"  style="--nys-card-height: 100%">
+  <div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex"  style="--nys-card-height: 100%">
     <nys-card 
       heading="{{post.data.title}}" 
       description="{{ post.data.description }}" 
