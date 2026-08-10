@@ -447,6 +447,32 @@ main[role="main"] {
   color: white;
 }
 
+/* Usage Cards */
+
+.component-usage {
+  --_nys-card-border-color: transparent;
+}
+
+.component-usage > h3 {
+  margin: 0;
+}
+
+.component-usage.do {
+  --_nys-card-background-color: var(--nys-color-success-weak);
+}
+
+.component-usage.do > h3 {
+  color: var(--nys-color-success);
+}
+
+.component-usage.dont {
+  --_nys-card-background-color: var(--nys-color-danger-weak);
+}
+
+.component-usage.dont > h3 {
+  color: var(--nys-color-danger);
+}
+
 /* Card */
 
 .card {
