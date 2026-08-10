@@ -8,6 +8,7 @@ navOrder: -1
 ---
 
 {% block content %}
+
 <div class="nys-grid-container-widescreen">
   <header class="page-header">
     <h1 class="page-title">Web Components</h1>
@@ -21,16 +22,25 @@ navOrder: -1
   {%- for post in collections.components -%}
   {# Prevent child pages from rendering a card: child pages have a `parent` variable; component pages do NOT #}
   {% if post.data.parent is not defined %}
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ post.url | url }}" aria-label="{{ post.data.title }} Component">
-      <div class="card__inner">
-        <div class="card__media">{% if post.data.image %}
-          <img src="{{ post.data.image | url }}" alt="{{ post.data.image_alt }}"></div>{% else %}
-          <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>{% endif %}
-          <div class="card__title">{{ post.data.title }}</div>
-          <div class="card__desc">{{ post.data.description }}</div>
-      </div>
-    </a>
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex"  style="--nys-card-height: 100%">
+    <nys-card 
+      heading="{{post.data.title}}" 
+      description="{{ post.data.description }}" 
+      inset 
+      href="{{ post.url | url }}"
+    >
+      {% if post.data.image %}<img
+        slot="media"
+        src="{{ post.data.image | url }}"
+        alt="{{ post.data.image_alt }}"
+        role="presentation"
+      />{% else %}<img
+        slot="media"
+        src="../assets/img/components/placeholder.svg"
+        alt="Placeholder"
+        role="presentation"
+      />{% endif %}
+    </nys-card>
   </div>
   {% endif %}
   {%- endfor -%}
