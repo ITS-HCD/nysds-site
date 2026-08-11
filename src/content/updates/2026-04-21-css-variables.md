@@ -14,7 +14,7 @@ tags: article, css variables, design tokens, theme switching, design system
 ---
 Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.
 
-At the heart of that consistency are **design tokens**.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.
+At the heart of that consistency are **design tokens**. Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.
 
 Let’s unpack how that works.
 
@@ -57,7 +57,7 @@ For example, our color system is organized in **ramps**. Each color family has a
 
 These primitives are stable. Their names never change, even if the underlying values are updated over time. `--nys-color-red-100` might shift to meet new accessibility or brand needs, but the token itself will always exist as a constant in the system.
 
-### Semantic Tokens — Meaning and Context 
+### Semantic Tokens — Meaning and Context
 
 On top of primitives are semantic tokens, which describe intent rather than raw value. This distinction matters: semantic tokens make it clear what to use where. Rather than leaving developers to guess whether to reach for `--nys-color-red-600` or `-nys-color-red-500`, semantic tokens communicate purpose directly in their name. Primitive tokens should only ever be referenced when mapping them to a semantic token. When codebases skip this layer and reference primitives directly, changes become painful: a single rebrand or accessibility adjustment means hunting down every raw value instead of updating one token.
 
@@ -94,9 +94,10 @@ Internally, private tokens often map to their semantic or primitive version. Let
 --_nys-button-background-color: var(--nys-button-background-color, var(--nys-color-theme));
 ```
 
-<img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System"/>
+<img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System" width="800"/>
 
 This means:
+
 - If a public override exists, use it.
 - If not, fall back to the default color, in this scenario `--nys-color-theme`.
 
@@ -131,13 +132,13 @@ Design systems often struggle between two extremes:
 
 CSS variables offer a middle ground. They allow overrides for legitimate edge cases without introducing dozens of one-off variants.
 
-By creating public-facing CSS variables we are not encouraging teams to stray from the provided variants of our existing components, but, instead, we are providing a safe way for them to diverge in these edge-case scenarios where the existing options are not possible to implement. 
+By creating public-facing CSS variables we are not encouraging teams to stray from the provided variants of our existing components, but, instead, we are providing a safe way for them to diverge in these edge-case scenarios where the existing options are not possible to implement.
 
 ### Naming Conventions and Readability
 
 One final principle: readability beats cleverness.
 
-Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button maps to  `--_nys-button-color` rather than to `--_nys-button-text-color`.
+Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button maps to `--_nys-button-color` rather than to `--_nys-button-text-color`.
 
 This one-to-one mapping reduces cognitive load for engineers. No need to remember abbreviations or shorthand. You can look at the variable and instantly know which property it controls.
 
@@ -150,6 +151,7 @@ CSS variables are the key to making our web components scalable, flexible, and m
 Because the CSS variables used the shared vocabulary of the design tokens across the ecosystem, color, spacing, and typography mean the same thing in every product.
 
 They allow:
+
 - **Designers** to define intent once and apply it everywhere.
 - **Developers** to override safely within a structured system.
 - **Agencies** to customize branding without rewriting components.
