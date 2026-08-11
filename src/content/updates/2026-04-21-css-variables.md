@@ -12,6 +12,7 @@ image_alt: Illustration of CSS variables
 date: 2026-04-21
 tags: article, css variables, design tokens, theme switching, design system
 ---
+
 Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.
 
 At the heart of that consistency are **design tokens**. Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.
@@ -44,7 +45,9 @@ Primitive tokens are the building blocks of the design system. They are the raw 
 
 For example, our color system is organized in **ramps**. Each color family has a scale, from light to dark, where smaller values represent a soft tint, while larger values represent a deep, saturated tone. This predictable pattern lets designers and developers discuss color consistently, and in a structured way. The same logic applies to spacing, typography, and radius.
 
-<img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800"/>
+<figure>
+  <img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800"/>
+</figure>
 
 ```css
 --nys-color-red-10
@@ -93,8 +96,9 @@ Internally, private tokens often map to their semantic or primitive version. Let
 ```css
 --_nys-button-background-color: var(--nys-button-background-color, var(--nys-color-theme));
 ```
-
-<img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System" width="800"/>
+<figure>
+  <img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System" width="800"/>
+</figure>
 
 This means:
 
@@ -109,7 +113,9 @@ One of the most significant advantages of this token structure is theming.
 
 Agency groupings under the NYS umbrella often have distinct brand colors: Environmental uses green, Admin uses orange, Safety uses gray. Instead of rewriting styles, they simply override semantic tokens through the data-theme attribute. So while the default `--nys-color-theme` is set to `var(--nys-color-nys-blue-600)`, by setting `data-theme="admin"` at the top most level of the project, `--nys-color-theme` will instead map to `var(--nys-color-admin-orange-700)`.
 
-<img src="/assets/i/2026/css-vars-article/theme-override-diag.png" alt="Image of admin color ramp overriding the default NYS theme in the New York State Design System" width="800"/>
+<figure>
+  <img src="/assets/i/2026/css-vars-article/theme-override-diag.png" alt="Image of admin color ramp overriding the default NYS theme in the New York State Design System" width="800"/>
+</figure>
 
 All components referencing `--nys-color-theme` automatically adapt to use the proper color ramp of the set theme.
 This design makes the New York State Design System scalable across diverse agencies while maintaining visual unity and predictable behavior.
