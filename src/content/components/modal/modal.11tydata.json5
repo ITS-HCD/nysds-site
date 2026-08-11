@@ -1,151 +1,355 @@
-/**
- * --------------------------------------------------------------------+
- * JSON5 supports comments and much more <https://json5.org/>          +
- * Values for `interactions.status` must be one of these combinations: +
- * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
- * Comment top-level members to prevent their corresponding njk blocks +
- * from rendering. Members that may be commented are exactly these:    +
- * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
- * zoom, disabilities.                                                 +
- * --------------------------------------------------------------------+
- */
 {
-  "pattern": "Modal",
+  "pattern": "Modal Dialog",
   "tests": {
-    "total": 0,
-    "pass": 0,
+    "total": 26,
+    "pass": 25,
     "fail": 0,
-    "toDo": 0
+    "toDo": 1
   },
-
   "keyboard": {
     "interactions": [
       {
-        "scenario": "WHEN I <kbd>k1<\/kbd>",
-        "requirements": ["THEN outcome k1"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I use the <kbd>tab</kbd> key to move focus to a button programmed to launch a dialog, and use <kbd>spacebar</kbd> or <kbd>enter</kbd> key to activate the button",
+        "requirements": [
+          "THEN I see a dialog opens",
+          "THEN I see focus moves to a <em>landing point</em> either on the boundary of the dialog, or its heading, or a close-X button, or else the first focusable element in dialog content",
+          "THEN I see the page content behind the dialog appears dimmed",
+          "THEN I see the dialog has a heading to indicate its purpose",
+          "THEN I see there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I <kbd>k2<\/kbd>, <kbd>k3<\/kbd>",
-        "requirements": ["THEN outcome k1", "THEN outcome k2"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN focus is on the dialog landing point and I repeatedly activate <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I see focus descends along the logical tabindex of interactive elements within the dialog",
+          "<mark>And if I <kbd>tab</kbd> past the last interactive element within the dialog</mark>",
+          "THEN I see focus returns to the first interactive element in the dialog and does <strong>not</strong> re-enter main page content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is on the dialog landing point and I repeatedly activate <kbd>shift</kbd> + <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I see focus ascends along the logical tabindex of interactive elements within the dialog",
+          "<mark>And if I <kbd>shift</kbd> + <kbd>tab</kbd> past the first interactive element within the dialog</mark>",
+          "THEN I see focus returns to the last interactive element in the dialog and does <strong>not</strong> re-enter main page content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "GIVEN the dialog contains an HTML <code class='element'>select</code> or any UI element that responds to the <kbd>escape</kbd> key; WHEN I <kbd>tab</kbd> to the element, open it with <kbd>spacebar</kbd> or <kbd>enter</kbd>, and activate <kbd>escape</kbd>",
+        "requirements": [
+          "THEN I see the UI component closes",
+          "THEN I see focus remains on the UI component",
+          "THEN I see the dialog remains and does <strong>not</strong> close"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is within the dialog but <strong>not</strong> within an interactive element that responds to <kbd>escape</kbd>, and I activate <kbd>escape</kbd>",
+        "requirements": [
+          "THEN I see the dialog closes",
+          "THEN I see the main content is no longer dimmed",
+          "THEN I see focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is on a dialog dismiss button and I activate it with <kbd>enter</kbd> or <kbd>spacebar</kbd>",
+        "requirements": [
+          "THEN I see the dialog closes",
+          "THEN I see the main content is no longer dimmed",
+          "THEN I see focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "mouse": {
     "interactions": [
       {
-        "scenario": "WHEN I m4",
-        "requirements": ["THEN outcome m4"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I click a button programmed to launch a dialog",
+        "requirements": [
+          "THEN I see a dialog opens",
+          "THEN I see focus moves to a <em>landing point</em> either on the boundary of the dialog, or its heading, or a close-X button, or else the first focusable element in dialog content",
+          "THEN I see the page content behind the dialog appears dimmed",
+          "THEN I see the dialog has a heading to indicate its purpose",
+          "THEN I see there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I m5, m6",
-        "requirements": ["THEN outcome m5", "THEN outcome m6"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN a dialog is open and I try to click elements behind the dialog in main page content",
+        "requirements": [
+          "THEN I see there is no action taken, nothing happens"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN a dialog is open and contains one or more dismiss buttons, and I click any of them",
+        "requirements": [
+          "THEN I see the dialog closes",
+          "THEN I see the main content is no longer dimmed",
+          "THEN I see focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I use a mouse and I give focus to a dismiss button without activating it (mouse down, slide off, mouse up)",
+        "requirements": [
+          "THEN I see focus remains on the button",
+          "THEN I see the dialog remains and does <strong>not</strong> close"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "screenReader": {
     "interactions": [
       {
-        "scenario": "WHEN I sr7",
-        "requirements": ["THEN outcome sr7"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I move focus to a button programmed to launch a dialog, and use <kbd>spacebar</kbd> or <kbd>enter</kbd> key to activate the button",
+        "requirements": [
+          "THEN I hear a dialog announces itself as a dialog",
+          "THEN I hear the dialog announces its title or description"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I sr8, sr9",
-        "requirements": ["THEN outcome sr8", "THEN outcome sr9"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I navigate both forward and back through dialog content by <kbd>arrow</kbd>, <kbd>tab</kbd>, link, form element, region, or any other idiomatic means",
+        "requirements": [
+          "THEN I hear that both focus and my cursor wrap around dialong content from end-to-end, are contained within the dialog, and do <strong>not</strong> re-enter main page content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I navigate through the entire dialog content",
+        "requirements": [
+          "THEN I hear there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "GIVEN the dialog contains an HTML <code class='element'>select</code> or any UI element that responds to the <kbd>escape</kbd> key; WHEN I navigate to the element, interactively enter it, and activate <kbd>escape</kbd>",
+        "requirements": [
+          "THEN I hear the UI component closes",
+          "THEN I hear focus remains on the UI component",
+          "THEN I do <strong>not</strong> hear the dialog closes",
+          "THEN minimal actions confirm that the dialog remains and did <strong>not</strong> close"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is within the dialog but <strong>not</strong> within an interactive element that responds to <kbd>escape</kbd>, and I activate <kbd>escape</kbd>",
+        "requirements": [
+          "THEN I hear focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is on a dialog dismiss button and I activate it with <kbd>enter</kbd> or <kbd>spacebar</kbd>",
+        "requirements": [
+          "THEN I hear focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "screenReaderMobile": {
     "interactions": [
       {
-        "scenario": "WHEN I srm10",
-        "requirements": ["THEN outcome srm10"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I swipe up or down to focus on a button programmed to launch a dialog and doubletap with the button in focus",
+        "requirements": [
+          "THEN I hear a dialog announces itself as a dialog",
+          "THEN I hear the dialog announces its title or description"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I srm11, srm12",
-        "requirements": ["THEN outcome srm11", "THEN outcome srm12"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I explore the entire dialog content",
+        "requirements": [
+          "THEN I hear focus remains within the dialog and does <strong>not</strong> re-enter main page content",
+          "THEN I hear there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I have a dismiss button in focus and doubletap",
+        "requirements": [
+          "THEN I hear focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "voice": {
     "interactions": [
       {
-        "scenario": "WHEN I v13",
-        "requirements": ["THEN outcome v13"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN there is a button programmed to launch a dialog, and I activate the button by the command <q>Click <em>launch button label</em></q>",
+        "requirements": [
+          "THEN I see a dialog opens",
+          "THEN I see focus moves to a <em>landing point</em> either on the boundary of the dialog, or its heading, or a close-X button, or else the first focusable element in dialog content",
+          "THEN I see the page content behind the dialog appears dimmed",
+          "THEN I see the dialog has a heading to indicate its purpose",
+          "THEN I see there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I v14, v15",
-        "requirements": ["THEN outcome v14", "THEN outcome v15"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN a dialog is open and I command to click a button behind the dialog in main page content",
+        "requirements": [
+          "THEN I see there is no action taken, nothing happens"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN a dialog is open and contains a button with the label in the appearance of <q>X</q> and I command <q>Click close</q> or <q>Click dismiss</q> or <q>Click X</q>",
+        "requirements": [
+          "THEN I see at least one of these commands causes the dialog to close",
+          "THEN I see the main content is no longer dimmed",
+          "THEN I see focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN a dialog is open and I command <q>Press escape</q>",
+        "requirements": [
+          "THEN I see the dialog closes",
+          "THEN I see the main content is no longer dimmed",
+          "THEN I see focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN a dialog is open and contains one or more dismiss buttons, each with a <em>text label</em>, and I command <q>Click <em>text label</em></q>",
+        "requirements": [
+          "THEN I see the dialog closes",
+          "THEN I see the main content is no longer dimmed",
+          "THEN I see focus returns to the launch button"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "zoom": {
     "interactions": [
       {
-        "scenario": "WHEN I z16",
-        "requirements": ["THEN outcome z16"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN the webpage is set to 400% zoom and a dialog is open",
+        "requirements": [
+          "THEN I see modal content is still visible"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I z17, z18",
-        "requirements": ["THEN outcome z17", "THEN outcome z18"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "TODO",
+        "requirements": [
+          "Refine this section"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "disabilities": [
     {
       "type": "blindness",
       "criteria": [
         {
-          "description": "Blind 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.0 AA"
+          "description": "Name and role is documented",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#name-role-value",
+          "sc": "4.1.2 A"
         },
         {
-          "description": "Blind 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.1 AA"
+          "description": "Meets criteria across platforms, devices and viewports",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#principle4",
+          "sc": "Principle 4 - Robust"
         }
       ]
     },
     {
-      "type": "cognition",
+      "type": "cognitive",
       "criteria": [
         {
-          "description": "Cognition...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.2 AA"
-        }
-      ]
-    },
-    {
-      "type": "color",
-      "criteria": [
-        {
-          "description": "Color 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.3 AA"
-        },
-        {
-          "description": "Color 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.4 AA"
+          "description": "Users' adjustments to text spacing do not result in loss of content or functionality",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#text-spacing",
+          "sc": "1.4.12 AA"
         }
       ]
     },
@@ -153,14 +357,14 @@
       "type": "low vision",
       "criteria": [
         {
-          "description": "LowVis 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.5 AA"
+          "description": "Text can resize up to 200% with no loss of information",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#resize-text",
+          "sc": "1.4.4 AA"
         },
         {
-          "description": "LowVis 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.6 AA"
+          "description": "Text has a 4.5:1 minimum contrast ratio",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum",
+          "sc": "1.4.3 AA"
         }
       ]
     },
@@ -168,14 +372,19 @@
       "type": "motor",
       "criteria": [
         {
-          "description": "Motor 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.8 AA"
+          "description": "Keyboard actions are documented",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#keyboard",
+          "sc": "2.1.1 A"
         },
         {
-          "description": "Motor 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.9 AA"
+          "description": "The focus indication has a 3:1 minimum contrast ratio against default and adjacent elements",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance",
+          "sc": "2.4.13 AAA"
+        },
+        {
+          "description": "The focus indication has a minimum area equal to the width of the element and 2px in height",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance",
+          "sc": "2.4.13 AAA"
         }
       ]
     }
