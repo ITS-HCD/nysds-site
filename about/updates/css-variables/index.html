@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-08-07T20:58:31.066Z -->
+    <!-- Latest Build: 2026-08-11T18:06:45.652Z -->
   </head>
   
   <body class="single-page page-css-variables section-updates">
@@ -137,7 +137,7 @@
         </header>
 
         <p>Consistency is one of the hardest problems in design. When dozens of teams and agencies each build their own products, even the most minor deviations, like different shades of red or slightly larger border radii, can fragment the user experience. We built the New York State Design System, in part, to solve these issues: to give teams a shared foundation that’s flexible enough for their needs, yet structured enough to remain consistent.</p>
-<p>At the heart of that consistency are <strong>design tokens</strong>.  Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
+<p>At the heart of that consistency are <strong>design tokens</strong>. Design tokens are not just an abstract concept, they are named design decisions that map to specific values and can be reused across platforms. In the NYS Design System, tokens are actual defined values that live in the <nys-button label="@nysds/tokens" href="https://www.npmjs.com/package/@nysds/tokens" target="_blank" variant="text"></nys-button> package. One of their key strengths is that they are platform-agnostic: the same token definitions can be compiled down into different formats depending on the target platform, such as XML for Android or Swift for iOS. In our case, they are rendered into CSS custom properties (more commonly called CSS variables). These design tokens connect design intent and implementation, enabling the systematic definition, reuse, and override of values. In the NYS Design System, design tokens are created at a primitive level that then map to a semantic level above that. Then in the components themselves, these design tokens are applied to CSS custom properties (more commonly called variables) that have the same syntax structure of the tokens themselves.</p>
 <p>Let’s unpack how that works.</p>
 <h2 id="what-are-css-variables">What Are CSS Variables?</h2>
 <p>A CSS variable works like a variable in any programming language; it holds a value that is then used throughout the stylesheet. Instead of writing the same hex code or pixel value repeatedly, you assign it once and reference it with a name.</p>
@@ -152,7 +152,9 @@
 <h3 id="primitive-tokens-the-foundation">Primitive Tokens — The Foundation</h3>
 <p>Primitive tokens are the building blocks of the design system. They are the raw values (hex codes, spacing units, font sizes, border radii) that everything else references.</p>
 <p>For example, our color system is organized in <strong>ramps</strong>. Each color family has a scale, from light to dark, where smaller values represent a soft tint, while larger values represent a deep, saturated tone. This predictable pattern lets designers and developers discuss color consistently, and in a structured way. The same logic applies to spacing, typography, and radius.</p>
-<img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800">
+<figure>
+  <img src="/assets/i/2026/css-vars-article/red-ramp.png" alt="Image of red color ramp used in the New York State Design System" width="800">
+</figure>
 <pre class="language-css"><code class="language-css">--nys-color-red-10
 --nys-color-red-50
 --nys-color-red-100
@@ -178,7 +180,9 @@
 <p>CSS doesn’t support private variables, so this convention helps our team organize and maintain the system. From a user perspective, you don’t need to worry about which is which—if a variable is safe to override, it will appear on the component’s documentation page under CSS Variables. Please note that most components will NOT have overridable variables, these public variables are rare and created intentionally to ensure a cohesive design system.</p>
 <p>Internally, private tokens often map to their semantic or primitive version. Let’s look at the background color of <code>nys-button</code> and follow its token map:</p>
 <pre class="language-css"><code class="language-css"><span class="token property">--_nys-button-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-button-background-color<span class="token punctuation">,</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System">
+<figure>
+  <img src="/assets/i/2026/css-vars-article/vars-path.png" alt="Image of how raw values map to useable tokens in the New York State Design System" width="800">
+</figure>
 <p>This means:</p>
 <ul>
 <li>If a public override exists, use it.</li>
@@ -188,7 +192,9 @@
 <h3 id="override-hierarchy-and-theming">Override Hierarchy and Theming</h3>
 <p>One of the most significant advantages of this token structure is theming.</p>
 <p>Agency groupings under the NYS umbrella often have distinct brand colors: Environmental uses green, Admin uses orange, Safety uses gray. Instead of rewriting styles, they simply override semantic tokens through the data-theme attribute. So while the default <code>--nys-color-theme</code> is set to <code>var(--nys-color-nys-blue-600)</code>, by setting <code>data-theme=&quot;admin&quot;</code> at the top most level of the project, <code>--nys-color-theme</code> will instead map to <code>var(--nys-color-admin-orange-700)</code>.</p>
-<img src="/assets/i/2026/css-vars-article/theme-override-diag.png" alt="Image of admin color ramp overriding the default NYS theme in the New York State Design System" width="800">
+<figure>
+  <img src="/assets/i/2026/css-vars-article/theme-override-diag.png" alt="Image of admin color ramp overriding the default NYS theme in the New York State Design System" width="800">
+</figure>
 <p>All components referencing <code>--nys-color-theme</code> automatically adapt to use the proper color ramp of the set theme.
 This design makes the New York State Design System scalable across diverse agencies while maintaining visual unity and predictable behavior.</p>
 <h3 id="when-and-why-overrides-inform-the-system">When (and Why) Overrides Inform the System</h3>
@@ -206,7 +212,7 @@ suggesting a new variant or enhancement.</p>
 <p>By creating public-facing CSS variables we are not encouraging teams to stray from the provided variants of our existing components, but, instead, we are providing a safe way for them to diverge in these edge-case scenarios where the existing options are not possible to implement.</p>
 <h3 id="naming-conventions-and-readability">Naming Conventions and Readability</h3>
 <p>One final principle: readability beats cleverness.</p>
-<p>Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button maps to  <code>--_nys-button-color</code> rather than to <code>--_nys-button-text-color</code>.</p>
+<p>Every variable name in our design system maps directly to its CSS property name. For instance, the text color of a button maps to <code>--_nys-button-color</code> rather than to <code>--_nys-button-text-color</code>.</p>
 <p>This one-to-one mapping reduces cognitive load for engineers. No need to remember abbreviations or shorthand. You can look at the variable and instantly know which property it controls.</p>
 <p>Modifiers (<code>--hover</code>, <code>--active</code>, etc.) extend that clarity to states.
 Note: If you override <code>--nys-button-background-color</code>, remember to override the hover and active variants too. Otherwise, your hover state will revert to the default.</p>
