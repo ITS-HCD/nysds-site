@@ -1,4 +1,4 @@
-{# <script src="https://global.localizecdn.com/localize.js"></script>
+<script src="https://global.localizecdn.com/localize.js"></script>
 <script>(function(a){if(!a.Localize){a.Localize={X:[]};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","getSourceLanguage","detectLanguage","getAvailableLanguages","setWidgetLanguages","hideLanguagesInWidget","untranslatePage","bootstrap","prefetch","on","off","hideWidget","showWidget"],t=0;t<e.length;t++)a.Localize[e[t]]=(function(m){return function(){a.Localize.X.push([m,arguments]);};})(e[t]);}})(window);</script>
 
 <script>
@@ -8,8 +8,9 @@
     autoApprove: true,
   });
 </script>
-<nys-unavheader id="my-header"></nys-unavheader>
+<nys-unavheader id="my-header" searchUrl="/search/?q="></nys-unavheader>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('#my-header');
   header.languages = [
     {
@@ -26,6 +27,23 @@
   event.preventDefault();
   const selectedLanguage = event.detail.language.code;
   Localize.setLanguage(selectedLanguage);
+
+  const translateDisclaimer = document.createElement('nys-alert');
+  translateDisclaimer.setAttribute('heading', 'Translation Alert!');
+  translateDisclaimer.setAttribute('notranslate', 'true');
+  translateDisclaimer.setAttribute('dismissible', 'true');
+  translateDisclaimer.innerHTML = `
+  <p>Las traducciones automáticas no son perfectas y no pretenden reemplazar a los traductores humanos. Es posible que algunas páginas o parte del contenido no estén traducidos de forma precisa debido a las limitaciones del software de traducción. <a href="https://ny.gov/web-translation-services" target ="_blank">Lea la exención de responsabilidad completa</a></p>
+  `;
+  Object.assign(translateDisclaimer.style, {
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+    width: '100%',
+    zIndex: '9999'
   });
-</script> #}
-<nys-unavheader searchUrl="/search/?q=" hideTranslate></nys-unavheader>
+  document.body.appendChild(translateDisclaimer);
+  });
+});
+</script>
+{# <nys-unavheader searchUrl="/search/?q=" hideTranslate></nys-unavheader> #}
