@@ -2,12 +2,17 @@
  * NYSA11y Dialog (native modal)
  * Path: /assets/nysa11y/dialog-native.css
  * Depends on /assets/nysa11y/dialog-native.js
- * All uses of `!important` are defensive.
  */
 @layer nysa11y {
+    html:has(dialog.nysa11y[open]) {
+        /* prevent `body` scrolling */
+        overflow: hidden;
+        scrollbar-gutter: stable;
+    }
     body:has(.nysa11y) {
-        font-size: 16px; /* 1.0rem */
+        font-size: 16px; /* Set the 1.0rem baseline */
         dialog.nysa11y.dialog[data-component="dialog"][data-html="native"] {
+            --nysa11y-dialog-min-usable-height: 4.5rem;
             *,
             *:before,
             *:after {
@@ -28,9 +33,14 @@
                 "Segoe UI Symbol"
             );
             border-radius: var(--nys-radius-lg, 0.5rem);
-            border: var(--nys-color-neutral-200, #bec0c1), 1px solid;
+            border:
+                var(--nys-color-neutral-200, #bec0c1),
+                1px solid;
             color: var(--nys-color-text, #1b1b1b);
             font-size: 1rem;
+            min-height: var(--nysa11y-dialog-min-usable-height);
+            overflow: hidden; /* prevent `body` scrolling */
+            overscroll-behavior: contain; /* prevent `body` scrolling */
             padding: 1.5rem;
             width: var(--nysa11y-dialog-width);
 
@@ -42,6 +52,12 @@
 
             &::backdrop {
                 background-color: var(--nys-color-black-transparent-700, rgba(27, 27, 27, 0.7));
+                overflow: hidden; /* prevent `body` scrolling */
+                overscroll-behavior: contain; /* prevent `body` scrolling */
+            }
+
+            &:has(main:not(:empty)) {
+                min-height: 18rem;
             }
 
             & header {
@@ -60,25 +76,22 @@
                     & h1 {
                         border-radius: var(--nys-radius-lg, 0.5rem);
                         display: inline-flex;
-                        font-size: 1.5rem !important;
-                        font-weight: 700 !important;
-                        line-height: inherit !important;
-                        margin-block: 0.5rem 0 !important;
+                        font-size: 1.5rem !important; /* defensive */
+                        font-weight: 700 !important; /* defensive */
+                        line-height: inherit !important; /* defensive */
+                        margin-block: 0.5rem 0 !important; /* defensive */
                         &:focus {
-                          outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
-                          outline-offset: var(--nys-border-width-md, 6px);
+                            outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
+                            outline-offset: var(--nys-border-width-md, 6px);
                         }
                     }
                 }
+                /* Modification of the `ghost` button style
+                   to better fit this usage */
                 & [data-part="exit"] {
-                    align-items: center;
-                    background-color: transparent;
-                    border-radius: 0.75rem;
                     border: 1px solid transparent;
-                    color: inherit;
                     display: flex;
                     font-size: 0.75rem;
-                    font-weight: 600;
                     gap: 0.25rem;
                     grid-area: close;
                     min-height: 2.5rem;
@@ -96,6 +109,8 @@
                         background-color: var(--nys-color-black-transparent-200, #00000033);
                     }
                 }
+                /* `mark` communicates that text is "highlighted,"
+                    to set it off from body text */
                 & mark {
                     background-color: transparent;
                     font-size: var(--nys-font-size-lg, 1.125rem);
@@ -103,6 +118,16 @@
                     grid-area: subtitle;
                     line-height: var(--nys-font-lineheight-body-lg, 1.75rem);
                 }
+            }
+
+            & main {
+                flex-grow: 1;
+                overflow: auto;
+                &:not(:empty) {
+                    min-height: var(--nysa11y-dialog-min-usable-height);
+                }
+                /* better accommodate focus ring of side-aligned focusable elements */
+                padding: 1px;
             }
 
             & footer {
@@ -116,35 +141,35 @@
     @media (max-width: 479px) {
         body:has(.nysa11y) {
             dialog.nysa11y.dialog[data-component="dialog"][data-html="native"] {
-            --nysa11y-dialog-width: 90vw;
+                --nysa11y-dialog-width: 90vw;
             }
         }
     }
     @media (min-width: 480px) {
         body:has(.nysa11y) {
             dialog.nysa11y.dialog[data-component="dialog"][data-html="native"] {
-              --nysa11y-dialog-width: 85vw; /* 439px */
+                --nysa11y-dialog-width: 85vw;
             }
         }
     }
     @media (min-width: 768px) {
         body:has(.nysa11y) {
             dialog.nysa11y.dialog[data-component="dialog"][data-html="native"] {
-              --nysa11y-dialog-width: 80vw; /* 600px */
+                --nysa11y-dialog-width: 80vw;
             }
         }
     }
     @media (min-width: 1024px) {
         body:has(.nysa11y) {
             dialog.nysa11y.dialog[data-component="dialog"][data-html="native"] {
-              --nysa11y-dialog-width: 75vw; /* 752px */
+                --nysa11y-dialog-width: 75vw;
             }
         }
     }
     @media (min-width: 1280px) {
         body:has(.nysa11y) {
             dialog.nysa11y.dialog[data-component="dialog"][data-html="native"] {
-              --nysa11y-dialog-width: 70vw; /* 840px */
+                --nysa11y-dialog-width: 70vw;
             }
         }
     }

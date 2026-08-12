@@ -38,12 +38,14 @@ class Dialog {
   enter(dialogEl) {
     if (!dialogEl || typeof dialogEl.showModal !== "function") return;
     if (dialogEl.open) return;
+    /* invoke the native method to open `dialog` with modality */
     dialogEl.showModal();
   }
 
   exit(dialogEl) {
     if (!dialogEl || typeof dialogEl.close !== "function") return;
     if (!dialogEl.open) return;
+    /* invoke the native method to close `dialog` */
     dialogEl.close();
   }
 
@@ -65,13 +67,12 @@ class Dialog {
     if (!dialogEl) return;
     this.exit(dialogEl);
   };
-
 }
 
 nysa11y.Dialog = Dialog;
 
-window.exitDialog = (callback) => {
-  const openDialog = document.querySelector('dialog[open]');
+window.exitDialog = () => {
+  const openDialog = document.querySelector("dialog[open]");
   if (openDialog && nysa11y.dialogInstance) {
     nysa11y.dialogInstance.exit(openDialog);
   }
