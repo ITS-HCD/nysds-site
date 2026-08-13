@@ -12,16 +12,24 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('#my-header');
-  header.languages = [
-    {
-        code: 'en',
-        label: 'English'
-    },
-    {
-        code: 'ko',
-        label: 'Korean'
-    },
-    ];
+  // header.languages = [
+  //   {
+  //       code: 'en',
+  //       label: 'English'
+  //   },
+  //   {
+  //       code: 'ko',
+  //       label: 'Korean'
+  //   },
+  //   {
+  //       code: 'es',
+  //       label: 'Spanish'
+  //   },
+  //   {
+  //       code: 'zh',
+  //       label: 'Chinese'
+  //   }
+  //   ];
 
   document.querySelector('#my-header').addEventListener('nys-language-select', (event) => {
   event.preventDefault();
