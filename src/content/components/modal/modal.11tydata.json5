@@ -1,10 +1,10 @@
 {
   "pattern": "Modal",
   "tests": {
-    "total": 26,
-    "pass": 25,
+    "total": 28,
+    "pass": 28,
     "fail": 0,
-    "toDo": 1
+    "toDo": 0
   },
   "keyboard": {
     "interactions": [
