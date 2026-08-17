@@ -27,7 +27,7 @@
         "requirements": [
           "THEN I see focus descends along the logical tabindex of interactive elements within the dialog",
           "<mark>And if I <kbd>tab</kbd> past the last interactive element within the dialog</mark>",
-          "THEN I see focus returns to the first interactive element in the dialog and does <strong>not</strong> re-enter main page content"
+          "THEN I see focus <em>either</em> returns to the first interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the first interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content"
         ],
         "status": [
           "passes",
@@ -39,7 +39,7 @@
         "requirements": [
           "THEN I see focus ascends along the logical tabindex of interactive elements within the dialog",
           "<mark>And if I <kbd>shift</kbd> + <kbd>tab</kbd> past the first interactive element within the dialog</mark>",
-          "THEN I see focus returns to the last interactive element in the dialog and does <strong>not</strong> re-enter main page content"
+          "THEN I see focus <em>either</em> returns to the last interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the last interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content"
         ],
         "status": [
           "passes",
@@ -149,9 +149,33 @@
         ]
       },
       {
-        "scenario": "WHEN I navigate both forward and back through dialog content by <kbd>arrow</kbd>, <kbd>tab</kbd>, link, form element, region, or any other idiomatic means",
+        "scenario": "WHEN I navigate forward through dialog content by <kbd>tab</kbd>",
         "requirements": [
-          "THEN I hear that both focus and my cursor wrap around dialong content from end-to-end, are contained within the dialog, and do <strong>not</strong> re-enter main page content"
+          "THEN I hear focus descends along the logical tabindex of interactive elements within the dialog",
+          "<mark>And if while within the dialog I <kbd>tab</kbd> past the last interactive element</mark>",
+          "THEN I hear focus <em>either</em> returns to the first interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the first interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I navigate backward through dialog content by <kbd>shift</kbd> + <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I hear focus ascends along the logical tabindex of interactive elements within the dialog",
+          "<mark>And if while within the dialog I <kbd>shift</kbd> + <kbd>tab</kbd> past the first interactive element</mark>",
+          "THEN I hear focus <em>either</em> returns to the last interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the last interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I navigate both forward and back through dialog content by <kbd>arrow</kbd>, link, form element, region, or any other idiomatic non-<kbd>tab</kbd> means",
+        "requirements": [
+          "THEN I hear my screen reader cursor is stopped at both ends of the dialog content, is fully contained within the dialog, and does <strong>not</strong> re-enter main page content"
         ],
         "status": [
           "passes",
@@ -306,9 +330,11 @@
   "zoom": {
     "interactions": [
       {
-        "scenario": "WHEN the webpage is set to 400% zoom and a dialog is open",
+        "scenario": "GIVEN the browser is configured to test Text Resize; WHEN a dialog is open",
         "requirements": [
-          "THEN I see modal content is still visible"
+          "THEN I see all text adapts to the font size",
+          "THEN I see all text is visible without clipping or truncation",
+          "THEN I see no text overlaps other text, or overlaps any other user interface element"
         ],
         "status": [
           "passes",
@@ -316,9 +342,11 @@
         ]
       },
       {
-        "scenario": "TODO",
+        "scenario": "GIVEN the browser is configured to test Reflow; WHEN a dialog is open",
         "requirements": [
-          "Refine this section"
+          "THEN I see there is no loss of information, meaning, or functionality",
+          "THEN I see when scrolling is required, it is only in one dimension (preferably vertical)",
+          "THEN I see when scrolling is required in two dimensions, it is limited to <a href='https://www.w3.org/WAI/WCAG22/Understanding/reflow.html#content-that-meets-exceptions-for-reflow' target='_blank'>content that meets exceptions for reflow</a>"
         ],
         "status": [
           "passes",
