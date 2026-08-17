@@ -7,6 +7,8 @@ image_alt: An illustration of a modal dialog.
 image_header: /assets/img/components/modal-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9962-6713&t=Fz3PChrCAbfpr60Y-4
+
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -295,13 +297,13 @@ You can listen to these events using JavaScript:
 const modal = document.querySelector("nys-modal");
 // Listen for the 'nys-open' event
 modal.addEventListener("nys-open", (event) => {
-  const { id } = event.detail;
-  console.log(`Modal (${id}) is opened`);
+const { id } = event.detail;
+console.log(`Modal (${id}) is opened`);
 });
 // Listen for the 'nys-close' event
 modal.addEventListener("nys-close", (event) => {
-  const { id, reason } = event.detail;
-  console.log(`Modal (${id}) is closed.`);
+const { id, reason } = event.detail;
+console.log(`Modal (${id}) is closed.`);
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
