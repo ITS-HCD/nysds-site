@@ -1775,6 +1775,10 @@ kbd {
  */
 
 body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
+  a:link:focus-visible {
+    outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
+    outline-offset: var(--nys-space-2px, 2px);
+  }
   h2,
   h3,
   h4,
@@ -2010,7 +2014,13 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
         }
       }
     }
-  }
+    &[data-pattern="table"] {
+        table.nysa11y.table {
+            td.demo-entity-example {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 @media (width < 640px) {
   body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
