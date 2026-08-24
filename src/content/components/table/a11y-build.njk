@@ -122,23 +122,271 @@ extra_js:
 
 {% block AboutThisPattern %}
 <p>
-
+    <mark class="subhead strong">What is a table?</mark>
+    "Table" is the name given to the presentation of two-dimensional information.
+    Its most common form is an ordered set of cells, corresponding to individual data, grouped into a grid structure that can be simple or complex.
+    The horizontal dimension of cells is called a row and the vertical is called a column.
+    When a table represents a matrix, a cell is understood as the literal intersection of each row and column in its grid.
 </p>
 <p>
-    <mark class="subhead strong">Mark!</mark>
-
+    Unlike a list, a table can incorporate headers for any or all rows and columns, and even spans of both.
+    Row- and column-headers are integral to the information they describe.
+    In code, headers are semantically distinct from other cells, and this relationship can be made even more explicit with optional attributes in cases of complex table structure.
+</p>
+<blockquote>
+    <p>
+        The point of a table is that it is rigid.
+        Information is easily interpreted by making visual associations between row and column headers.
+    </p>
+    <cite>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#how_does_a_table_work"
+        target="_blank">Mozilla Developer Network</a>
+    </cite>
+</blockquote>
+<p>
+    <mark class="subhead strong">HTML <code class="element">table</code> history in a nutshell</mark>
+    Semantic definition of parts was arguably the foremost design goal in the lineage of markup languages that led to HTML.
+    In IBM's <a href="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language">GML</a> (1969), there was already provision for tabular data rendering.
+    This was inherited by <a href="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language">SGML</a>,
+    which can be considered the <a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/MarkUp.html">mother and superset of HTML</a> and XML, among others.
+    <q>SGML was originally designed to enable the sharing of
+    <a href="https://en.wikipedia.org/wiki/Machine-readable_data" title="Machine-readable data">machine-readable</a>
+    large-project documents in government, law, and industry.</q><sup><a href="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language#History">1</a></sup>
+    With such a requirement, strict formal definitions were essential.
+    Essentially at the behest of the United States Department of Defense, SGML includes the <a href="https://en.wikipedia.org/wiki/CALS_Table_Model">CALS Table Model</a>,
+    developed by Harvey W. Bingham <sup><a href="https://www.wiumlie.no/2006/phd/archive/users.rcn.com/hwbingham/tables/calstbhs.htm">2</a></sup>.
+    Since nearly all the original group of SGML and <a href="https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html">HTML language developers</a>
+    were research scientists or doing applied science in industry, academia, or government, data interchange standardization remained a core concern.
+    So it was only natural that <a href="https://www.rfc-editor.org/info/rfc1942/">RFC 1942: HTML Tables</a> (1996),
+    in which <a href="https://en.wikipedia.org/wiki/Dave_Raggett">Dave Raggett</a> added <code class="element">table</code> to what became
+    <a href="https://www.w3.org/TR/2018/SPSD-html32-20180315/">HTML 3.2</a>, derived in a simplified form from the CALS model.
+    By the time of HTML 4.01 (1999) the HTML <code class="element">table</code> elements and attributes grew to include <code class="element">caption</code>, <code class="element">colgroup</code>, <code class="element">col</code>,
+    <code>scope</code>, <code class="element">thead</code>, <code class="element">tr</code>, <code class="element">th</code>, <code class="element">tbody</code>, and <code class="element">tfoot</code> (among others).
 </p>
 <p>
-
+    <mark class="subhead strong">Early warning signs</mark>
+    Unfortunately for actual enforcement of semantics in authoring, implementation of the native HTML table element by browser vendors has from the start been very permissive, and remains so today.
+    The negative implications of this were evident from the start.
+    1999, the year of HTML 4.01, was also notable for the debut of the Web Content Accessibility Guidelines, in which it was already necessary to call significant attention to the <em>misuse</em> of markup tags.
+    Key points are equally pertinent today and worth quoting, edited for length and relevance, and emphases added.
 </p>
 <p>
-
+    <mark class="subhead">Excerpts from <a href="https://www.w3.org/TR/WAI-WEBCONTENT/" target="_blank">WCAG 1.0</a>, May 1999:</mark>
+<blockquote class="doc">
+    <h3>Mark up documents with the proper structural elements. Control presentation with style sheets rather than with presentation elements and attributes.</h3>
+    <p>
+      Using markup improperly &mdash; not according to specification &mdash; <strong>hinders accessibility</strong>.
+      Misusing markup for a presentation effect (e.g., using a table for layout or a header to change the font size)
+      makes it difficult for users with specialized software to understand the organization of the page or to navigate through it.
+    <p>
+    <p>
+      Furthermore, using presentation markup rather than structural markup to convey structure
+      (e.g., constructing what looks like a table of data with an HTML PRE element) makes it difficult to render a page intelligibly to other devices
+      (refer to the description of <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#content-structure" target="_blank">difference between content, structure, and presentation</a>).
+    <p>
+    <p><ins>[...]</ins></p>
+    <h3 id="ensure-tables-have-necessary-markup">Ensure that tables have necessary markup to be transformed by accessible browsers and other user agents.</h3>
+    <p>
+      Tables should be used to mark up truly <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#tabular-information" target="_blank">tabular information</a> ("data tables").
+      Content developers should avoid using them to lay out pages ("layout tables").
+      Tables for any use also present special problems to users of <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#screen-reader" target="_blank">screen readers</a>.
+      Some <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#user-agent" title="Definition of user agent">user agents</a>
+      allow users to navigate among table cells and access header and other table cell information.
+      Unless marked-up properly, these tables will not provide user agents with the appropriate information.
+    </p>
+    <p>
+      The following checkpoints will directly benefit people who access a table through auditory means
+      (e.g., a screen reader or an automobile-based personal computer) or who view only a portion of the page at a time
+      (e.g., users with blindness or low vision using speech output or a <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#braille-display" target="_blank">braille display,</a>
+      or other users of devices with small displays, etc).
+    </p>
+    <h4>Checkpoints:</h4>
+    <p>
+      <strong>5.1</strong> For data tables, identify row and column headers.
+      For example, in HTML, use TD to identify data cells and TH to identify headers.
+    </p>
+    <p>
+      <strong>5.2</strong> For data tables that have two or more logical levels of row or column headers, use markup to associate data cells and header cells.<br>
+      <ins>[NYS A11y: specifically, associate headers and data with the <code>scope</code> attribute]</ins><br>
+      For example, in HTML, use THEAD, TFOOT, and TBODY to group rows <ins>[...]</ins>
+    </p>
+    <p>
+      <strong>5.5</strong> Provide summaries for tables. <ins>[...]</ins><br>
+      <ins>[NYS A11y: specifically, use the <code>caption</code> child element]</ins>
+    </p>
+</blockquote>
 </p>
 <p>
-    <mark class="subhead strong">Mark!</mark>
+    <mark class="subhead strong">Semantic structure</mark>
+    Since 1999 the number and quality of screen readers and other assistive technologies has increased, but what has not changed is their profound reliance on HTML semantics.
+    This is the core semantic structure of a table:
+    <ul>
+        <li>
+            table
+            <ul>
+                <li>caption</li>
+                <li>
+                    thead
+                    <ul>
+                        <li>
+                            tr
+                            <ul>
+                                <li>th scope</li>
+                                <li>td</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    tbody
+                    <ul>
+                        <li>
+                            tr
+                            <ul>
+                                <li>th scope</li>
+                                <li>td</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    tfoot
+                    <ul>
+                        <li>
+                            tr
+                            <ul>
+                                <li>th scope</li>
+                                <li>td</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </p>
 <p>
-    <mark class="subhead strong">Best Practices</mark>
+  If a <code>table</code> has an <code>aria-label</code> string or is associated to a heading with <code>aria-labelledby</code>,
+  its <a href="https://developer.mozilla.org/en-US/docs/Glossary/Accessible_name" target="_blank">accessible name</a> will be calculated from one of them.
+  If the same table also has a <code>caption</code>, the accessibility tree interprets the caption to be the table's
+  <a href="https://developer.mozilla.org/en-US/docs/Glossary/Accessible_description" target="_blank">accessible description</a>.
+  Depending on navigation method, a screen reader may announce both the ARIA text and the caption text.
+  However if a table has <em>only</em> a caption and no<code>aria-label</code> or <code>aria-labelledby</code>, the caption becomes the table's accessible name.
+  This remains true when the caption is visually hidden but still accessible in the DOM.
+  A valid caption is nearly always announced by screen readers.
+</p>
 
+<p>The <code class="element">caption</code> child element may contain nearly all types of content, not only text.</p>
+<p>The <code class="element">thead</code> child element may contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the head of a table with information about the table's columns.</p>
+<p>The <code class="element">tbody</code> child element may contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the body of a table's (main) data.</p>
+<p>The <code class="element">tfoot</code> child element many contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the foot of a table with information about the table's columns.</p>
+<p>The <code class="element">tr</code> descendant element may contain only <code class="element">th</code> and <code class="element">td</code> table cell elements. Its semantic purpose is to identify a row of cells in a table.</p>
+<p>The <code class="element">th</code> descendant element defines a cell as the header of a group of table cells. Setting a <code>scope</code> attribute is a best practice with simple tables and a necessity with complex tables, since it explicitly reinforces structural relationships between a header and relevant data cells. The two most common scope attributes are <code>row</code>, which associates the header with all cells an author wishes to be represented as in its row, and <code>col</code>, which does the same for column.</p>
+<p>The <code class="element">td</code> descendant element defines a cell of a table, the generic container for most tabular data.</p>
+
+<p>
+  <mark class="subhead strong">Form equals function</mark>
+  As a consequence of the ancestral (SGML) concern with data exchange, these markup elements are mirrored in the JavaScript
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement target="_blank">HTMLTableElement DOM API</a> built into every browser engine.
+  This means a table with correct HTML tag semantics is one that can be effectively programmed.
+  And it is this same valid construction that when parsed by assistive technologies allows them to improve a wide range of user experiences.
+</p>
+<p>
+  The table is such a critical HTML element that it gets special treatment by many screen readers.
+  NVDA, JAWS, and VoiceOver all provide single-key page navigation to tables.
+  Once a table boundary is reached, they identify it as a table, then attempt to announce its name, description, and number of columns and rows.
+  These attempts will succeed if the table is coded correctly.
+  If our screen reader user descends into the table, their screen readers seamlessly switch into a special cell-navigation mode.
+  When the user moves between columns or rows with headings while browsing data cells, the new heading is announced.
+  Depending on the screen reader used, there are usually more table-specific capabilities, but these are the baseline.
+</p>
+<p>
+  <mark class="subhead strong">What would happen if the table below was loaded into browser DOM?</mark>
+  <ul>
+    <li>JavaScript could reference it by ID <code>CALS</code>, and then freely manipulate any of its constituent parts since they are present and validly map to the HTMLTableElement DOM API</li>
+    <li>A screen reader could navigate to this table and instantly be oriented that its subject is <em>"What came first"</em></li>
+    <li>(And much more)
+  </ul>
+</p>
+{% set code %}
+<table id="CALS">
+	<caption>What came first?</caption>
+	<thead>
+		<tr>
+			<th scope="col">HEADER 1</th>
+			<th scope="col">HEADER 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>BODY CELL 1</td>
+			<td>BODY CELL 2</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>FOOTER CELL 1</td>
+			<td>FOOTER CELL 2</td>
+		</tr>
+	</tfoot>
+</table>
+{% endset %}
+{% set accordionLabel = "Semantic table" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+<p>How might we expect user experience to change when tables are sortable?</p>
+<p>
+  <mark class="subhead strong">Sortable tables</mark>
+  A sortable table is one that can be dynamically rearranged by the user to display its entries in different order. Most often, the data in a single column is toggled to be ascending or descending by alphanumeric order, and all rows reshuffle according. Sorting is a powerful capability intended to help users understand relationships, find patterns in large lists, and make easier comparisons between many similar items.
+</p>
+<p>
+  Not all tables benefit from being sortable, and some may suffer from it or be technically incompatible with sorting. If the original order of display is itself the main meaning of a table, sorting may dilute that meaning. If a table has cells that span multiple rows or columns, sorting may be impossible, or technically convoluted, or actively confuse the data presentation even if technically achieved.
+</p>
+<p>
+  Sorting is not a native feature of the HTML <code class="element">table</code>, meaning its interaction design and appropriate semantics must be carefully considered, implemented, and tested. The goal is to arrive at the simplest composition that provides an optimal baseline user experience for as many user personas as possible.
+</p>
+<p>
+  <mark class="subhead strong">Basic column sorting</mark>
+  Sorting requires activation of an element to toggle data state; in our case some content of a column header will be activated to sort by that column.
+  Should we program event handlers directly on <code class="element">th</code> elements? No!&mdash;a native HTML <code class="element">button</code> is a far better choice:
+  it responds to every form of activation; it fires events; it supports states; it can contain a variety of content; and it is amenable to CSS styling.
+  Our button will fill the entire available space of each <code class="element">th</code> of each sortable column.
+</p>
+<p>
+  For visual users, symbolic reinforcement to make current state explicit is important.
+  Widely understood glyphs representing <em>unsorted</em>, <em>sorted ascending</em>, and <em>sorted descending</em> are needed.
+  These symbols will be rendered inside each button, adjacent to text.
+  Since these symbols are for visual users only, they will be removed from the accessibility tree with <code>aria-hidden</code> or an empty <code>alt</code> attribute,
+  depending on the source of the glyph.
+  Also visual, our buttons must adhere to all rules for interactive components:
+  they must clearly show focus; they must have sufficient color contrast with their surroundings;
+  they must have sufficient color contrast with interior text and between interaction states.
+  We must use CSS to enhance this where the native browsers styles for button fall short, and in particular the sorted state must be unambiguously evident.
+</p>
+<p>
+  Despite all this focus on header buttons, there is one essential job for the <code class="element">th</code>.
+  The key state semantic to convey for assistive technology is set not on the button but on its containing <code class="element">th</code>.
+  This makes sense if you consider the button to be just a visual-interactive label of the semantic column header,
+  which can only be the actual <code class="element">th</code>.
+  This is done by dynamic injection of <code>aria-sort="[ascending|descending]"</code> as an attribute of the <code class="element">th</code>.
+  Columns that are not sorted should have this attribute entirely removed.
+  The baseline screen reader experience thus created is <em>at the very least</em> the sorted column will announce itself as "sorted, ascending" during navigation through table headers.
+  Even better, NVDA and JAWS reliably announce this as the sort interaction takes place.
+  VoiceOver may emit a beep, upon which a user can invoke the screen reader to read back the column and quickly confirm its sort state.
+</p>
+<p>
+    <mark class="subhead strong">Sort hints for screen readers</mark>
+    If a table is initialized already sorted, for example, by the first column, and a user navigates by button into the header row,
+    they may quickly infer the purpose of the header buttons from an announcement like: "button, HEADER 1, sorted ascending."
+    This is easily learned and remembered for future use.
+    However it would be ideal to offer more affordance for first-time or infrequent users.
+    From the benefit of his immense experience,
+    Adrian Roselli advises us <a href="https://adrianroselli.com/2021/04/sortable-table-columns.html#Caption" target="_blank">there is no one ideal method for this</a>.
+    Our aural UX design decision adopts Roselli's most straightforward option:
+    add a visually-hidden usage hint to the end of the caption text.
+    Though there is a risk that fast-moving or impatient users may move past this hint before hearing it,
+    the advantage is that it will be announced whenever the table is entered,
+    regardless of the navigation means (<kbd>Arrown</kbd>, <kbd>Tab</kbd>, <kbd>T</kbd>) or the direction of movement (descending or ascending through the table in the DOM).
+    This leaves us with a table that has "HTML named entities" as its visual caption, and "HTML named entities, column headers with buttons are sortable," as its aural caption.
 </p>
 {% endblock %}{# AboutThisPattern #}

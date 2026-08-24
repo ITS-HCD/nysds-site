@@ -1779,6 +1779,23 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     outline: solid var(--nys-border-width-md, 2px) var(--nys-color-focus, #004dd1);
     outline-offset: var(--nys-space-2px, 2px);
   }
+
+  blockquote {
+    margin-block: 1rem;
+    padding-block: 1rem;
+    padding-inline: 5%;
+    & * {
+      font-size: 1.125rem;
+    }
+    & cite::before {
+      content: "\2014" / "";
+    }
+    &.doc {
+        background-color: var(--nys-color-base-weak, #ededed);
+        border: 2px dotted var(--nys-color-base, #62666a);
+        padding-block-start: 0.5rem;
+    }
+  }
   h2,
   h3,
   h4,

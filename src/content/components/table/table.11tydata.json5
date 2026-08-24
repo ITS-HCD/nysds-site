@@ -1,8 +1,8 @@
 {
   "pattern": "Table",
   "tests": {
-    "total": 0,
-    "pass": 0,
+    "total": 19,
+    "pass": 19,
     "fail": 0,
     "toDo": 0
   },
