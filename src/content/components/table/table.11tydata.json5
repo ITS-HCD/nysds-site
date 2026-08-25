@@ -156,7 +156,7 @@
         "requirements": [
           "<mark>And if I am using Windows NVDA or JAWS</mark>",
           "THEN I hear the column is sorted and whether the new direction is ascending or descending",
-          "<mark>And if I am using macOS VoiceOver and activate the key chord <kbd>ctrl</kbd> <kbd>alt</kbd> + <kbd>C</kbd> <kbd>C</kbd></mark>",
+          "<mark>And if I am using macOS VoiceOver and activate the key chord <kbd>ctrl</kbd> <kbd>alt</kbd> + <kbd>C</kbd></mark>",
           "THEN I hear the column is sorted and whether the new direction is ascending or descending"
         ],
         "status": [

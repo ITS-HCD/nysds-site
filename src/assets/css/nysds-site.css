@@ -1784,7 +1784,7 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     margin-block: 1rem;
     padding-block: 1rem;
     padding-inline: 5%;
-    & * {
+    & *:not(h1,h2,h3,h4,h5,h6) {
       font-size: 1.125rem;
     }
     & cite::before {
@@ -1799,9 +1799,14 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
             padding-top: 0;
         }
         h1, h2, h3, h4, h5, h6 {
-            line-height: 1;
+            line-height: 1.1;
         }
     }
+  }
+  figure {
+      figcaption {
+          font-style: italic;
+      }
   }
   h2,
   h3,
