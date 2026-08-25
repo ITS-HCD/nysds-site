@@ -1792,8 +1792,15 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     }
     &.doc {
         background-color: var(--nys-color-base-weak, #ededed);
-        border: 2px dotted var(--nys-color-base, #62666a);
-        padding-block-start: 0.5rem;
+        border: 1px dashed var(--nys-color-base, #62666a);
+        padding-block: 1.75rem;
+        > :first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1;
+        }
     }
   }
   h2,
