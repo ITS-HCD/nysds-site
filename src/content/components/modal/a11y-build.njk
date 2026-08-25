@@ -1,0 +1,326 @@
+---
+permalink: /components/modal/accessibility-build/
+title: Build Accessibly
+title_h1: Build an Accessible Modal Dialog
+description: How to code an accessible modal dialog.
+image: /assets/img/components/modal.svg
+image_alt: An illustration of a modal dialog
+image_header: /assets/img/components/modal-header.svg
+stable: true
+parent: Modal
+navOrder: 2
+extra_css:
+  - "/assets/nysa11y/button-native.css"
+  - "/assets/nysa11y/dialog-native.css"
+  - "/assets/nysa11y/divider-native.css"
+extra_js:
+  - "/assets/nysa11y/dialog-native.js"
+---
+
+{% extends "layouts/component-a11y-build.njk" %}
+{# block Introduction #}
+{# block RecommendedSolution #}
+
+
+{% block Alternatives %}
+<div class="solution">
+    <div class="card">
+        <h3>Configure the native HTML <code class="element">dialog</code> element</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            wants to avoid error-prone recreation of semantics, z-index, backdrop, and focus management,
+            and has no hard requirements in excess of what native HTML provides,
+            then the <code class="element">dialog</code> element invoked as a modal is the number one recommendation.
+        </p>
+        {% include "partials/a11y-rely-checks.njk" %}
+    </div>
+
+    {% block HTMLNative %}
+    {% set preview %}
+<!-- This trigger button is configured (in the JavaScript file)
+     to activate a dialog that has the ID passed to `data-nysa11y-dialog` -->
+<button type="button"
+        class="nysa11y button"
+        data-component="button"
+        data-html="native"
+        data-nysa11y-dialog="#myModal">Show me places to go</button>
+
+<!-- This is the native HTML5 `dialog`.
+     It opens with modal behavior due to being invoked
+     with the native method `.showModal()` -->
+<dialog aria-labelledby="VNYS"
+        class="nysa11y dialog"
+        data-component="dialog"
+        data-html="native"
+        id="myModal">
+    <header>
+        <div class="heading">
+            <!-- This heading is the accessible name,
+                 first focused element, and visual and aural title
+                 of the dialog. Tested across operating systems,
+                 browsers, devices, and screen readers for
+                 maximum dependability. -->
+            <h1 autofocus tabindex="-1" id="VNYS">Visit New York State</h1>
+        </div>
+        <!-- In JavaScript, activation of `data-part="exit"`
+             is wired to the native `.close()` method -->
+        <button data-part="exit"
+                data-component="button"
+                data-html="native"
+                class="nysa11y button ghost"
+                type="button">Close</button>
+        <mark class="subhead">Expand your horizons by exploring ours!</mark>
+    </header>
+    <main aria-label="dialog content">
+        <p>
+            This is the main content region.
+            When the dialog opens do you perceive
+            <strong>focus</strong> strongly evident on the heading?
+        </p>
+        <div>
+            <nys-select label="Keyboard interaction test" width="md">
+                <span slot="description">
+                    Activate the <code class="element">nys-select</code> component to open it,
+                    but before making a selection dismiss it with the <kbd>Escape</kbd> key.
+                    Ensure this action affects only the <code class="element">nys-select</code>,
+                    and the dialog remains open.
+                    Once the <code class="element">nys-select</code> closes,
+                    activate <kbd>Escape</kbd> again.
+                    The dialog should then close.
+                </span>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>4,567,890</option>
+            </nys-select>
+        </div>
+        <hr class="nysa11y divider" data-component="divider" data-html="native">
+        <h2 aria-label="I love New York">I❤️New York</h2>
+        <p>
+            New York State is <a href="https://www.iloveny.com/things-to-do/history/" target="_blank">historic</a>.
+            It's untamed. It's iconic. But more importantly, it's anything you want it to be.
+            From the lights of <a href="https://www.iloveny.com/places-to-go/new-york-city/city-guide-new-york-city/" target="_blank">Times Square</a>
+            to the mists of <a href="https://www.iloveny.com/places-to-go/niagara/spotlight-buffalo-niagara-falls/" target="_blank">Niagara Falls</a>,
+            <a href="https://www.iloveny.com/places-to-go/adirondacks/city-guide-lake-placid/" target="_blank">Lake Placid's</a> Olympic legacy to
+            <a href="https://www.iloveny.com/places-to-go/central/spotlight-cooperstown/" target="_blank">Cooperstown's</a> baseball roots,
+            <a href="https://www.iloveny.com/places-to-go/capital-saratoga/albany-city-guide/" target="_blank">Albany's</a> 400-year history to
+            <a href="https://www.iloveny.com/places-to-go/chautauqua-allegheny/jamestown-spotlight/" target="_blank">Jamestown's</a> comedy treasures, the castles of the
+            <a href="https://www.iloveny.com/places-to-go/1000-islands/" target="_blank">Thousand Islands</a> to
+            <a href="https://www.iloveny.com/places-to-go/long-island/spotlight-long-island/" target="_blank">Long Island's</a>
+            <a href="https://www.iloveny.com/listing/gold-coast-mansions-of-long-island/14992/" target="_blank">Gold Coast mansions</a>, the
+            <a href="https://www.iloveny.com/places-to-go/hudson-valley/" target="_blank">Hudson Valley</a>'s inspiring landscapes to the
+            <a href="https://www.iloveny.com/places-to-go/catskills/" target="_blank">Catskills'</a> sweeping mountain views and stunning
+            <a href="https://www.iloveny.com/places-to-go/finger-lakes/" target="_blank">Finger Lakes</a> wine country—there's something for everyone.
+        </p>
+    </main>
+    <footer aria-label="dialog actions">
+        <button data-component="button"
+                data-html="native"
+                class="nysa11y button ghost"
+                type="button"
+                onClick="alert('Perhaps the Adirondacks will interest you?');">
+            <span class="button__accname">Not now</span>
+        </button>
+        <!-- In JavaScript, activation of `exitDialog()`
+             is wired to the native `.close()` method -->
+        <button data-component="button"
+                data-html="native"
+                class="nysa11y button"
+                type="button"
+                onClick="exitDialog();">
+            <span class="button__accname">Plan my trip</span>
+        </button>
+    </footer>
+</dialog>
+    {% endset %}
+    {% set accordionLabel = "HTML" %}
+    {% set code = preview %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "html" %}
+    {% set showTip = false %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# HTMLNative #}
+
+    {% block CSSNative %}
+    {% set code %}
+    {% include "../../../assets/nysa11y/dialog-native.css" %}
+    {% endset %}
+    {% set accordionLabel = "CSS" %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "css" %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# CSSNative #}
+
+    {% block JSNative %}
+    {% set code %}
+    {% include "../../../assets/nysa11y/dialog-native.js" %}
+    {% endset %}
+    {% set accordionLabel = "JavaScript" %}
+    {% set codeExpanded = false %}
+    {% set codeLanguage = "js" %}
+    {% include "partials/code-preview.njk" %}
+    {% endblock %}{# JSCustom #}
+</div>
+
+{% endblock %}{# Alternatives #}
+
+{% block AboutThisPattern %}
+<p>
+    The dialog experience is a dramatic re-framing of users' context and focus, second only to a full page navigation.
+    In fact, native operating system dialogs and early World Wide Web browser dialogs were actual new system or application windows displayed above the window of origination.
+</p>
+<p>
+    Subsequent to the late 1990s,
+    most web browser dialogs were faked to visually appear like independent windows without actually being so.
+    The ensuing years of inconsistency and poor accessibility led many user interface experts to
+    <a href="https://www.nngroup.com/articles/modal-nonmodal-dialog/#toc-disadvantages-of-modal-dialogs-1" target="_blank">recommend caution</a>
+    in the use of so-called dialogs.
+    Even today, designers may reasonably consider
+    <a href="https://modalzmodalzmodalz.com" target="_blank">different forms</a>
+    of disclosure and navigation as alternative paradigms.
+</p>
+<p>
+    Decades of creative experimentation led to the addition of a
+    <a href="https://html.spec.whatwg.org/dev/interactive-elements.html#the-dialog-element" target="_blank"><code class="element">dialog</code></a>
+    element to the official HTML5 specification.
+    This native element, which reached <a href="https://caniuse.com/?search=dialog" target="_blank">baseline browser support</a>
+    in 2022, allows authors leeway to craft a range of user experiences.
+    The HTML5 <code class="element">dialog</code> is the basis of the implementation shown here, and is the number one recommendation for any custom dialog development today.
+    Though it is easier than ever to produce an accessible dialog, knowledge and care are still required to ensure this outcome.
+    Let's deepen our understanding.
+</p>
+<h3 id="high-level-presentation">High level presentation</h3>
+<p>
+    A dialog is a real or apparent window that presents separately from the primary user interface surface.
+</p>
+<ul>
+  <li>Visually, dialogs appear in the foreground "above" the main screen</li>
+  <li>Aurally, dialogs are perceived as discrete, self-contained areas</li>
+  <li>A dialog may be automatically opened and closed by an operating system or application, or manually activated by the user; manual control is preferred</li>
+  <li>In the majority of cases, a user will interact with dialog content in order to effect an outcome that closes the dialog and moves the user to the primary surface</li>
+  <li>There is no set size for dialogs</li>
+  <li>It is possible, though not recommended, for dialogs to completely fill a visual viewport by default; designers should account for cases in which this is actually the best user experience, for example in screen magnification and mobile portrait orientation scenarios</li>
+  <li>More commonly, dialogs are presented visually as relatively small boxes centrally located on screen</li>
+</ul>
+<h3 id="what-is-a-modal">What is a "modal"?</h3>
+<p>A "modal" is an intensification of the dialog pattern.</p>
+<ul>
+  <li>Typically the primary content "below" a modal dialog is visually dimmed to varying extents; with modals, non-dialog content should be literally inert, unreachable, and non-interactive</li>
+  <li>Interaction with other application or operating system interfaces is substantially blocked, with focus held within the dialog, until required actions are complete</li>
+  <li>
+      The <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement#instance_methods" target="_blank">HTMLDialogElement Web API</a>
+      allows authors to determine modality merely by the choice of native instance method to open a dialog:
+      <ul>
+          <li><code>.show()</code> opens a <strong>non-modal</strong> dialog</li>
+          <li><code>.showModal()</code> opens a <strong>modal</strong> dialog</li>
+      </ul>
+  </li>
+</ul>
+<h3 id="responsiveness">Responsiveness</h3>
+<p>
+    Like any content, a dialog should gracefully adapt to orientation change, mobile viewports, text size increase, and screen magnification.
+Design, test, and build for scenarios in which a dialog may fill an entire screen, may require scrollbars, and may accommodate a 200% font size increase.
+</p>
+<h3 id="focus-movement">Focus movement</h3>
+<p>
+    Whether it is visible or not, some page element always has programmatic focus, even if it happens to be the <code class="element">body</code>, which typically has focus on page load.
+    Mouse users take note: generally any element clicked by a mouse gains focus at that moment.
+</p>
+<p>
+    A proper modal dialog <strong>must</strong> pull focus into itself upon opening.
+    It is essential that this happen, and likewise that while the dialog remains open focus be almost entirely trapped within.
+    As described in the corresponding <a href="../accessibility-tests/">Modal Accessibility Checklist</a>, in the majority of cases <code>tabindex</code> will remain inside the dialog, wrapping between the top and bottom of the dialog's user interface.
+</p>
+<p>
+    Let's consider a scenario in which a user activates a button in main content to open a modal dialog.
+    The button interaction (whether by mouse, keyboard, voice command, or double-tap) sets focus on the button for a short period of time (miliseconds), until the dialog user interface is ready to gain focus.
+    This button is the last element in main content to have focus and is the interaction trigger that spawns the dialog.
+    Consequently when the dialog is closed, focus <strong>must</strong> return whence it came back to this trigger button, provided the main user interface has not changed so dramatically that the button is no longer present.
+    Failure to return focus from a dialog to its trigger is a severe and unfortunately common issue.
+</p>
+<p>
+    Usefully, authors may choose exactly <a href="https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html" target="_blank">where focus lands</a> in a new dialog.
+    While the various considerations are beyond the scope of this guide
+    (see also the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboardinteraction" target="_blank">Keyboard Interaction &rarr; Note</a> aside),
+    one of the most effective techniques is to use the placement of focus to ensure the dialog's accessible name is immediately discovered.
+</p>
+<h3 id="an-accessible-name">An accessible name</h3>
+<p>
+    A dialog <strong>must</strong> identify itself clearly to all users upon opening.
+    The best accessibility is one that works for everyone, preferably relying on the in-built capabilities of the web platform.
+    A single label, title, or heading can serve all users equitably with minimal effort.
+    In our example, a single <code class="element">H1</code> element is the visual, aural, and semantic label for the dialog by virtue of element choice, DOM placement, and attribute settings.
+    Across devices it consistently demands first focus, without the need for explicit JavaScript <code>.focus()</code>.
+    In a browser's accessibility tree, the text content of this <code class="element">H1</code> is literally the
+    <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/" target="_blank">accessible name</a> of the dialog.
+</p>
+
+{% set code %}
+<dialog aria-labelledby="my-dialog-heading">
+    <h1 id="my-dialog-heading" tabindex="-1" autofocus>My Dialog</h1>
+</dialog>
+{% endset %}
+{% set accordionLabel = "Dialog heading" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+<h3 id="traverse-and-close">Traverse and close</h3>
+<p>
+    Once inside a modal dialog, all content structure and interaction rules apply the same as on the primary surface; they are just contained within a (usually) smaller space.
+    The key difference is in the conventions to uphold for dialog dismissal:
+</p>
+<ul>
+  <li>
+      Activation of the <kbd>Escape</kbd> key <strong>must</strong> close the dialog, <em>except</em> while the user interacts with a child element that has its own response to <kbd>Escape</kbd>,
+      for example, a native HTML <code class="element">select</code>.
+      However, not every user has access to an <kbd>Escape</kbd> key.
+  </li>
+  <li>
+      The BBC Accessibility program founders
+      <a href="https://a11yquest.com/pro/guides/patterns/modal-dialog/#accessible-controls" target="_blank">advise</a>:<br>
+      <q><em>All modal dialogs <strong>must</strong> have a visible, accessible control within the dialog content, allowing the user to close the dialog;
+          for example, a button labeled <em>Close</em> or a submit button for a dialog with a form.
+          Do not assume that the user can press an <kbd>Escape</kbd> key or click outside the content area, for example.</em></q>
+  </li>
+</ul>
+<h3 id="best-quality-references">Best quality references</h3>
+<p>
+    This document describes and presents nearly the simplest possible modal dialog.
+    More is possible and may be reasonably demanded by your particular set of users.
+    When building upon our solid foundation, these resources are the best available:
+</p>
+<ul>
+    <li>
+        <a href="https://a11yquest.com/pro/guides/patterns/modal-dialog/" target="_blank">Modal Dialog</a>
+        from A11y Quest (ex-BBC)
+    </li>
+    <li>
+        <a href="https://www.atomica11y.com/accessible-web/dialog-modal/" target="_blank">Dialog Modal HTML</a>
+        and
+        <a href="https://www.atomica11y.com/accessible-design/dialog-modal/" target="_blank">Dialog Modal Design</a>
+        from Atomic Accessibility
+    </li>
+    <li>
+        <a href="https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html" target="_blank">Where to Put Focus When Opening a Modal Dialog</a>
+        from <a href="https://adrianroselli.com/bio" target="_blank">Adrian Roselli</a>
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" target="_blank">MDN HTML <code>dialog</code> element</a>
+        from the Mozilla Developer Network
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement" target="_blank">MDN Web APIs &rarr; HTMLDialogElement</a>
+        from the Mozilla Developer Network
+    </li>
+    <li>
+        <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank">Dialog (Modal) Pattern</a>
+        from the W3C ARIA Authoring Practices Guide
+    </li>
+    <li>
+        <a href="https://html.spec.whatwg.org/dev/interactive-elements.html#the-dialog-element" target="_blank">The dialog element</a>
+        from HTML: The Living Standard
+    </li>
+</ul>
+
+{% endblock %}{# AboutThisPattern #}
