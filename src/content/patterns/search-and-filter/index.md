@@ -40,7 +40,7 @@ The following locator directory simulates a searchable archive of **New York Sta
     </div>
   </form>
 
-  <!-- Live Dynamic Results Header & Counter -->
+  <!-- Live Dynamic Results Header and Counter -->
   <div style="border-bottom: 2px solid var(--nys-color-base); padding-bottom: var(--nys-space-150); margin-bottom: var(--nys-space-300); display: flex; justify-content: space-between; align-items: center;">
     <h3 id="results-heading" style="margin: 0; font-size: 1.25rem; font-weight: bold; color: var(--nys-color-text); outline: none;" tabindex="-1">
       State Park Directory
@@ -199,9 +199,9 @@ The following locator directory simulates a searchable archive of **New York Sta
 </script>
 {% endset %}
 
-{% set accordionLabel = "Directory Markup & Controller Script" %}
+{% set accordionLabel = "Directory Markup and Controller Script" %}
 {% set code %}
-<!-- HTML Filter Controls & Results Markup -->
+<!-- HTML Filter Controls and Results Markup -->
 <style>
   #dir-input-search,
   #dir-select-region {
@@ -218,7 +218,7 @@ The following locator directory simulates a searchable archive of **New York Sta
   </div>
 </form>
 
-<!-- Heading & Polite Alert Count Container -->
+<!-- Heading and Polite Alert Count Container -->
 <div class="results-header">
   <h3 id="results-heading" tabindex="-1">State Park Directory</h3>
   <div id="dir-results-counter" role="status" aria-live="polite">Loading...</div>
@@ -285,7 +285,7 @@ To satisfy strict WCAG accessibility compliance standards, implement the followi
 * In the pagination event handler, call `.focus()` on the heading.
 * This aligns the screen reader and keyboard virtual cursor back to the top of the new page, preventing keyboard users from getting stranded at the bottom of the viewport.
 
-### 3. Accessible Forms & Labels
+### 3. Accessible Forms and Labels
 * Group all search and filter components within a standard `<form>` tag.
 * Ensure all form controllers (`nys-textinput`, `nys-select`, `nys-checkbox`) are properly configured with unique element IDs and descriptive label properties.
 

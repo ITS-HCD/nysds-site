@@ -21,7 +21,7 @@ The following simulator demonstrates an **Identity Verification** upload workflo
 {% set preview %}
 <div class="upload-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
-  <!-- Upload Header & Input -->
+  <!-- Upload Header and Input -->
   <div style="margin-bottom: var(--nys-space-400);">
     <h3 style="margin: 0 0 var(--nys-space-100) 0; font-size: 1.3rem; font-weight: bold; color: var(--nys-color-text);">
       Submit Required Documents
@@ -244,7 +244,7 @@ The following simulator demonstrates an **Identity Verification** upload workflo
 </script>
 {% endset %}
 
-{% set accordionLabel = "Upload Queue Markup & Simulation Script" %}
+{% set accordionLabel = "Upload Queue Markup and Simulation Script" %}
 {% set code %}
 <!-- HTML Component Form Structure -->
 <div style="margin-bottom: var(--nys-space-400);">

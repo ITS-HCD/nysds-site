@@ -178,7 +178,7 @@ The following interactive form simulates an address validation workflow. Enter a
 </script>
 {% endset %}
 
-{% set accordionLabel = "Address Form & Verification Controller Wiring" %}
+{% set accordionLabel = "Address Form and Verification Controller Wiring" %}
 {% set code %}
 <!-- HTML Form Field Layout -->
 <form id="address-form" novalidate>
