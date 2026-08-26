@@ -51,10 +51,10 @@
                     &:not([aria-sort]) button span::after {
                         content: "\2195";
                     }
-                    &[aria-sort="descending"] span::after {
+                    &[aria-sort="descending"] button span::after {
                         content: "\2193";
                     }
-                    &[aria-sort="ascending"] span::after {
+                    &[aria-sort="ascending"] button span::after {
                         content: "\2191";
                     }
                     &:has(button) {

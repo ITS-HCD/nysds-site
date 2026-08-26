@@ -377,7 +377,12 @@ extra_js:
   Columns that are not sorted should have this attribute entirely removed.
   The baseline screen reader experience thus created is <em>at the very least</em> the sorted column will announce itself as "sorted, ascending" during navigation through table headers.
   Even better, NVDA and JAWS reliably announce this as the sort interaction takes place.
-  VoiceOver may emit a beep, upon which a user can invoke the screen reader to read back the column and quickly confirm its sort state.
+  macOS VoiceOver emits a beep, upon which a user can invoke the screen reader to read back the column and quickly confirm its sort state.
+  iOS VoiceOver also emits a beep, but has poor support for dynamically updated <code>aria-sort</code> values.
+  Not only will it not announce upon update, re-swiping the header may report the old value.
+  iOS VoiceOver users must swipe down to confirm the following row content has changed.
+  This lack of affordance is a <a href="https://a11ysupport.io/tests/tech__aria__aria-sort" target="_blank">known issue</a>,
+  but isn't the worst hardship as long as the table actually re-sorts; the user does get what they want!
 </p>
 <p>
     <mark class="subhead strong">Sort hints for screen readers</mark>

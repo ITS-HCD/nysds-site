@@ -1,8 +1,8 @@
 {
   "pattern": "Table",
   "tests": {
-    "total": 19,
-    "pass": 19,
+    "total": 20,
+    "pass": 20,
     "fail": 0,
     "toDo": 0
   },
@@ -230,12 +230,28 @@
   "screenReaderMobile": {
     "interactions": [
       {
-        "scenario": "WHEN I use a mobile screen reader and I swipe left or right to focus on a table column header",
+        "scenario": "WHEN I swipe left to enter a table with a caption that includes a visually hidden usage hint",
         "requirements": [
           "THEN I hear the table has a title or description of purpose",
+          "THEN I hear the usage hint",
           "THEN I hear I am within a table",
+          "THEN I hear the number of rows and columns"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I am on a table caption and I swipe right to focus on the first table column header",
+        "requirements": [
+          "THEN I hear the cell name or text content",
+          "THEN I hear I am on a column header",
+          "THEN I hear which row and column I am on",
+          "<mark>And if the column header content is a button</mark>",
+          "THEN I hear that I am on a button",
           "<mark>And if the table was already sorted by this column</mark>",
-          "THEN I hear the column is sorted and whether the direction is ascending or descending"
+          "THEN I hear the column has a sort state of either ascending or descending"
         ],
         "status": [
           "passes",
