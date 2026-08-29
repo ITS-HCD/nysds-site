@@ -90,6 +90,7 @@ When content changes without a full page reload:
 
 - Use `aria-live` regions to announce updates to screen readers. Use `aria-live="polite"` for non-urgent updates and `aria-live="assertive"` sparingly for critical alerts.
 - Manage focus intentionally. When a modal opens, move focus into it. When it closes, return focus to the element that triggered it. NYSDS components like [`nys-modal`](/components/modal/) handle this automatically.
+- Worked example: [Modal focus and screen-reader failure analysis](https://frontendatlas.com/incidents/modal-screen-reader-failure) — diagnose missing dialog semantics, escaped focus, and failed focus return, then protect the behavior with a keyboard-focused regression test.
 - Avoid moving focus unexpectedly. If a user action triggers a content change, let the user initiate the next navigation step.
 
 ### Images and Media
