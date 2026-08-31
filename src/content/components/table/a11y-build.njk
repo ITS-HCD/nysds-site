@@ -226,8 +226,19 @@ extra_js:
     </ul>
 
     <dl aria-labelledby="semantic-structure">
-        <dt><code>table</code>,</dt>
-        <dt><code>caption</code></dt>
+        <dt><code>table</code> and <code>caption</code></dt>
+        <dd>
+            A <code class="element">table</code> may contain only
+            <code class="element">caption</code>,
+            <code class="element">colgroup</code>,
+            <code class="element">thead</code>,
+            <code class="element">tbody</code>,
+            <code class="element">tr</code>, and
+            <code class="element">tfoot</code>
+            elements,
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table#technical_summary" target="_blank">in specific order and number</a>.
+        </dd>
+        <dd>The <code class="element">caption</code> child element may contain nearly all types of content, not only text.</dd>
         <dd>
             If a <code>table</code> has an <code>aria-label</code> string or is associated to a heading with <code>aria-labelledby</code>,
             its <a href="https://developer.mozilla.org/en-US/docs/Glossary/Accessible_name" target="_blank">accessible name</a> will be calculated from one of them.
@@ -238,7 +249,6 @@ extra_js:
             This remains true when the caption is visually hidden but still accessible in the DOM.
             A valid caption is nearly always announced by screen readers.
         </dd>
-        <dd>The <code class="element">caption</code> child element may contain nearly all types of content, not only text.</dd>
         <dt><code>thead</code></dt>
         <dd>The <code class="element">thead</code> child element may contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the head of a table with information about the table's columns.</dd>
         <dt><code>tbody</code></dt>
@@ -247,8 +257,9 @@ extra_js:
         <dd>The <code class="element">tfoot</code> child element many contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the foot of a table with information about the table's columns.</dd>
         <dt><code>tr</code></dt>
         <dd>The <code class="element">tr</code> descendant element may contain only <code class="element">th</code> and <code class="element">td</code> table cell elements. Its semantic purpose is to identify a row of cells in a table.</dd>
-        <dt><code>th</code></dt>
-        <dd>The <code class="element">th</code> descendant element defines a cell as the header of a group of table cells. Setting a <code>scope</code> attribute is a best practice with simple tables and a necessity with complex tables, since it explicitly reinforces structural relationships between a header and relevant data cells. The two most common scope attributes are <code>row</code>, which associates the header with all cells an author wishes to be represented as in its row, and <code>col</code>, which does the same for column.</dd>
+        <dt><code>th</code> and <code>scope=[col|row]</code></dt>
+        <dd>The <code class="element">th</code> descendant element defines a cell as the header of a group of table cells.</dd>
+        <dd>Setting the <code>scope</code> attribute on headers&mdash;<code class="element">th scope="col"</code>&mdash;is a best practice with simple tables and a necessity with complex tables, since it explicitly reinforces structural relationships between a header and relevant data cells. The two most common scope attributes are <code>row</code>, which associates the header with all cells an author wishes to be represented as in its row, and <code>col</code>, which does the same for column.</dd>
         <dt><code>td</code></dt>
         <dd>The <code class="element">td</code> descendant element defines a cell of a table, the generic container for most tabular data.</dd>
     </dl>

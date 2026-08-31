@@ -1824,12 +1824,12 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
       font-weight: 600;
       margin-block-end: 0.25rem;
       &:not(:first-child) {
-        margin-block-start: 0.25rem;
+        margin-block-start: 1rem;
       }
     }
     dd {
       display: list-item;
-      margin-inline-start: 1.25rem;
+      margin-inline-start: 2rem;
     }
   }
   nys-badge {
