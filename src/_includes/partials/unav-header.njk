@@ -1,4 +1,4 @@
-{# <script src="https://global.localizecdn.com/localize.js"></script>
+<script src="https://global.localizecdn.com/localize.js"></script>
 <script>(function(a){if(!a.Localize){a.Localize={X:[]};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","getSourceLanguage","detectLanguage","getAvailableLanguages","setWidgetLanguages","hideLanguagesInWidget","untranslatePage","bootstrap","prefetch","on","off","hideWidget","showWidget"],t=0;t<e.length;t++)a.Localize[e[t]]=(function(m){return function(){a.Localize.X.push([m,arguments]);};})(e[t]);}})(window);</script>
 
 <script>
@@ -26,6 +26,9 @@
   event.preventDefault();
   const selectedLanguage = event.detail.language.code;
   Localize.setLanguage(selectedLanguage);
+
+  // Refresh the page after Localize has switched languages. 
+  Localize.on('setLanguage', function handleLanguageChange(data) { if (data.to === selectedLanguage) { Localize.off('setLanguage', handleLanguageChange); window.location.reload(); } });
   });
-</script> #}
-<nys-unavheader searchUrl="/search/?q=" hideTranslate></nys-unavheader>
+</script>
+{# <nys-unavheader searchUrl="/search/?q=" hideTranslate></nys-unavheader> #}
