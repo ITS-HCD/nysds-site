@@ -70,7 +70,7 @@ The following interactive workspace simulates a global header banner alert syste
     <div class="nys-grid-row nys-grid-gap-200" style="margin-bottom: var(--nys-space-200);"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-critical" label="Trigger Critical (Red)" variant="primary" style="width: 100%;"></nys-button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-warning" label="Trigger Warning (Yellow)" variant="secondary" style="width: 100%;"></nys-button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-info" label="Trigger Info (Blue)" variant="secondary" style="width: 100%;"></nys-button></div></div>
 
     <div style="text-align: center; border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300); margin-top: var(--nys-space-200);">
-      <nys-button id="btn-restore-banner" label="Reset & Restore Banner" variant="secondary" size="sm" style="display: none;"></nys-button>
+      <nys-button id="btn-restore-banner" label="Reset and Restore Banner" variant="secondary" size="sm" style="display: none;"></nys-button>
     </div>
   </div>
 
@@ -202,7 +202,7 @@ The following interactive workspace simulates a global header banner alert syste
 </script>
 {% endset %}
 
-{% set accordionLabel = "Emergency Banner Markup & State Management" %}
+{% set accordionLabel = "Emergency Banner Markup and State Management" %}
 {% set code %}
 <!-- HTML Global Header Alert Markup -->
 <div id="alert-banner-viewport">
