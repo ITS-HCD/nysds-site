@@ -114,7 +114,9 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("shuffle", shuffle);
   eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
   eleventyConfig.addFilter("trimCode", (str) =>
-    String(str ?? "").replace(/^[ \t]*\n/gm, "").trim()
+    String(str ?? "")
+      .replace(/^[ \t]*\n/gm, "")
+      .trim(),
   );
 
   // Pagefind
@@ -126,8 +128,8 @@ module.exports = async function (eleventyConfig) {
 
   // Image compression on watch
   // Runs before every build (including watch rebuilds)
-  eleventyConfig.on('eleventy.before', async () => {
-    await import('./scripts/compress-images.js');
+  eleventyConfig.on("eleventy.before", async () => {
+    await import("./scripts/compress-images.js");
   });
 
   // Passthrough copy
@@ -162,6 +164,16 @@ module.exports = async function (eleventyConfig) {
                     frameborder="0"
                     allowfullscreen>
             </iframe>`;
+  });
+
+  eleventyConfig.addCollection("videoPageCollection", function (collectionApi) {
+    // 1. Grab all files in your specific directory
+    return collectionApi.getFilteredByGlob("./src/content/videos/*.md").sort((a, b) => {
+      // 2. Sort by the 'series_order' front matter key (default to 0 if missing)
+      const orderA = a.data.series_order || 0;
+      const orderB = b.data.series_order || 0;
+      return orderA - orderB;
+    });
   });
 
   // ------------+
