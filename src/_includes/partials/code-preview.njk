@@ -17,24 +17,15 @@
     </div>
 
     {% set frameworkList = frameworks or ["html", "react", "angular"] %}
-
-    <div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
-      {% if frameworkList.length > 1 %}
-        <div class="code-preview__tabs" role="tablist">
-          {% for framework in frameworkList %}
-            <button
-              class="code-preview__tab"
-              role="tab"
-              data-framework="{{ framework }}"
-              aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
-              tabindex="{% if loop.first %}0{% else %}-1{% endif %}">
-              {% if framework === "html" %}HTML{% elif framework === "react" %}React{% elif framework === "angular" %}Angular{% endif %}
-            </button>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {% for framework in frameworkList %}
+<div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
+{%- if frameworkList.length > 1 %}
+<div class="code-preview__tabs" role="tablist">
+{%- for framework in frameworkList %}
+<button class="code-preview__tab" role="tab" data-framework="{{ framework }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" tabindex="{% if loop.first %}0{% else %}-1{% endif %}">{% if framework === "html" %}HTML{% elif framework === "react" %}React{% elif framework === "angular" %}Angular{% endif %}</button>
+{%- endfor %}
+</div>
+{%- endif %}
+{%- for framework in frameworkList %}
         {% if framework === "html" %}
           <div class="code-preview__code-block" role="tabpanel" data-framework="html">
             {% set lang = codeLanguage or "html" %}{% highlight lang %}
