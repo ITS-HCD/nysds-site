@@ -2,13 +2,13 @@ import { LitElement as N, unsafeCSS as k, html as u, nothing as Mn } from "lit";
 import { property as a, state as C, query as Un } from "lit/decorators.js";
 import { ifDefined as b } from "lit/directives/if-defined.js";
 /*!
-   * New York State Design System v1.20.0
+   * New York State Design System v1.20.1
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
  */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -119,13 +119,13 @@ const Ql = /* @__PURE__ */ Qa(N), Jl = (r) => {
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Icon Component v1.20.0
+   * Icon Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -150,7 +150,7 @@ const nc = (r) => {
 }, oc = /* @__PURE__ */ nc(N), Xs = globalThis.__nysIconRegistry ??= /* @__PURE__ */ new Map(), Ar = globalThis.__nysIconWatchers ??= /* @__PURE__ */ new Map();
 let Vi = null, Ui = null;
 async function rc() {
-  return Vi || (Ui ??= import("./nys-icon.library-Bu3noJqZ-1mvg_e5Y.js").then(
+  return Vi || (Ui ??= import("./nys-icon.library-DHBltclg-BYYeCcpo.js").then(
     (r) => Vi = r.default
   ), Ui);
 }
@@ -298,7 +298,7 @@ function wc(r) {
     case "object": {
       if (r === null)
         return Go(r);
-      const e = r, t = Et(e, "toString");
+      const e = r, t = St(e, "toString");
       if (typeof t == "function") {
         const n = t(e);
         return typeof n == "string" ? n : Go(n);
@@ -309,7 +309,7 @@ function wc(r) {
       return Go(r);
   }
 }
-function Et(r, e) {
+function St(r, e) {
   for (; r !== null; ) {
     const n = pc(r, e);
     if (n) {
@@ -332,7 +332,7 @@ function kc(r) {
     return !1;
   }
 }
-const ea = Ae(["a", "abbr", "acronym", "address", "area", "article", "aside", "audio", "b", "bdi", "bdo", "big", "blink", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "content", "data", "datalist", "dd", "decorator", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "element", "em", "fieldset", "figcaption", "figure", "font", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "img", "input", "ins", "kbd", "label", "legend", "li", "main", "map", "mark", "marquee", "menu", "menuitem", "meter", "nav", "nobr", "ol", "optgroup", "option", "output", "p", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "search", "section", "select", "shadow", "slot", "small", "source", "spacer", "span", "strike", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "tr", "track", "tt", "u", "ul", "var", "video", "wbr"]), Ms = Ae(["svg", "a", "altglyph", "altglyphdef", "altglyphitem", "animatecolor", "animatemotion", "animatetransform", "circle", "clippath", "defs", "desc", "ellipse", "enterkeyhint", "exportparts", "filter", "font", "g", "glyph", "glyphref", "hkern", "image", "inputmode", "line", "lineargradient", "marker", "mask", "metadata", "mpath", "part", "path", "pattern", "polygon", "polyline", "radialgradient", "rect", "stop", "style", "switch", "symbol", "text", "textpath", "title", "tref", "tspan", "view", "vkern"]), Ps = Ae(["feBlend", "feColorMatrix", "feComponentTransfer", "feComposite", "feConvolveMatrix", "feDiffuseLighting", "feDisplacementMap", "feDistantLight", "feDropShadow", "feFlood", "feFuncA", "feFuncB", "feFuncG", "feFuncR", "feGaussianBlur", "feImage", "feMerge", "feMergeNode", "feMorphology", "feOffset", "fePointLight", "feSpecularLighting", "feSpotLight", "feTile", "feTurbulence"]), Cc = Ae(["animate", "color-profile", "cursor", "discard", "font-face", "font-face-format", "font-face-name", "font-face-src", "font-face-uri", "foreignobject", "hatch", "hatchpath", "mesh", "meshgradient", "meshpatch", "meshrow", "missing-glyph", "script", "set", "solidcolor", "unknown", "use"]), Ns = Ae(["math", "menclose", "merror", "mfenced", "mfrac", "mglyph", "mi", "mlabeledtr", "mmultiscripts", "mn", "mo", "mover", "mpadded", "mphantom", "mroot", "mrow", "ms", "mspace", "msqrt", "mstyle", "msub", "msup", "msubsup", "mtable", "mtd", "mtext", "mtr", "munder", "munderover", "mprescripts"]), $c = Ae(["maction", "maligngroup", "malignmark", "mlongdiv", "mscarries", "mscarry", "msgroup", "mstack", "msline", "msrow", "semantics", "annotation", "annotation-xml", "mprescripts", "none"]), ta = Ae(["#text"]), na = Ae(["accept", "action", "align", "alt", "autocapitalize", "autocomplete", "autopictureinpicture", "autoplay", "background", "bgcolor", "border", "capture", "cellpadding", "cellspacing", "checked", "cite", "class", "clear", "color", "cols", "colspan", "command", "commandfor", "controls", "controlslist", "coords", "crossorigin", "datetime", "decoding", "default", "dir", "disabled", "disablepictureinpicture", "disableremoteplayback", "download", "draggable", "enctype", "enterkeyhint", "exportparts", "face", "for", "headers", "height", "hidden", "high", "href", "hreflang", "id", "inert", "inputmode", "integrity", "ismap", "kind", "label", "lang", "list", "loading", "loop", "low", "max", "maxlength", "media", "method", "min", "minlength", "multiple", "muted", "name", "nonce", "noshade", "novalidate", "nowrap", "open", "optimum", "part", "pattern", "placeholder", "playsinline", "popover", "popovertarget", "popovertargetaction", "poster", "preload", "pubdate", "radiogroup", "readonly", "rel", "required", "rev", "reversed", "role", "rows", "rowspan", "spellcheck", "scope", "selected", "shape", "size", "sizes", "slot", "span", "srclang", "start", "src", "srcset", "step", "style", "summary", "tabindex", "title", "translate", "type", "usemap", "valign", "value", "width", "wrap", "xmlns"]), Bs = Ae(["accent-height", "accumulate", "additive", "alignment-baseline", "amplitude", "ascent", "attributename", "attributetype", "azimuth", "basefrequency", "baseline-shift", "begin", "bias", "by", "class", "clip", "clippathunits", "clip-path", "clip-rule", "color", "color-interpolation", "color-interpolation-filters", "color-profile", "color-rendering", "cx", "cy", "d", "dx", "dy", "diffuseconstant", "direction", "display", "divisor", "dominant-baseline", "dur", "edgemode", "elevation", "end", "exponent", "fill", "fill-opacity", "fill-rule", "filter", "filterunits", "flood-color", "flood-opacity", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "fx", "fy", "g1", "g2", "glyph-name", "glyphref", "gradientunits", "gradienttransform", "height", "href", "id", "image-rendering", "in", "in2", "intercept", "k", "k1", "k2", "k3", "k4", "kerning", "keypoints", "keysplines", "keytimes", "lang", "lengthadjust", "letter-spacing", "kernelmatrix", "kernelunitlength", "lighting-color", "local", "marker-end", "marker-mid", "marker-start", "markerheight", "markerunits", "markerwidth", "maskcontentunits", "maskunits", "max", "mask", "mask-type", "media", "method", "mode", "min", "name", "numoctaves", "offset", "operator", "opacity", "order", "orient", "orientation", "origin", "overflow", "paint-order", "path", "pathlength", "patterncontentunits", "patterntransform", "patternunits", "points", "preservealpha", "preserveaspectratio", "primitiveunits", "r", "rx", "ry", "radius", "refx", "refy", "repeatcount", "repeatdur", "restart", "result", "rotate", "scale", "seed", "shape-rendering", "slope", "specularconstant", "specularexponent", "spreadmethod", "startoffset", "stddeviation", "stitchtiles", "stop-color", "stop-opacity", "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit", "stroke-opacity", "stroke", "stroke-width", "style", "surfacescale", "systemlanguage", "tabindex", "tablevalues", "targetx", "targety", "transform", "transform-origin", "text-anchor", "text-decoration", "text-orientation", "text-rendering", "textlength", "type", "u1", "u2", "unicode", "values", "viewbox", "visibility", "version", "vert-adv-y", "vert-origin-x", "vert-origin-y", "width", "word-spacing", "wrap", "writing-mode", "xchannelselector", "ychannelselector", "x", "x1", "x2", "xmlns", "y", "y1", "y2", "z", "zoomandpan"]), oa = Ae(["accent", "accentunder", "align", "bevelled", "close", "columnalign", "columnlines", "columnspacing", "columnspan", "denomalign", "depth", "dir", "display", "displaystyle", "encoding", "fence", "frame", "height", "href", "id", "largeop", "length", "linethickness", "lquote", "lspace", "mathbackground", "mathcolor", "mathsize", "mathvariant", "maxsize", "minsize", "movablelimits", "notation", "numalign", "open", "rowalign", "rowlines", "rowspacing", "rowspan", "rspace", "rquote", "scriptlevel", "scriptminsize", "scriptsizemultiplier", "selection", "separator", "separators", "stretchy", "subscriptshift", "supscriptshift", "symmetric", "voffset", "width", "xmlns"]), gr = Ae(["xlink:href", "xml:id", "xlink:title", "xml:space", "xmlns:xlink"]), Ec = Te(/{{[\w\W]*|^[\w\W]*}}/g), Sc = Te(/<%[\w\W]*|^[\w\W]*%>/g), Ac = Te(/\${[\w\W]*/g), Lc = Te(/^data-[\-\w.\u00B7-\uFFFF]+$/), Tc = Te(/^aria-[\-\w]+$/), ra = Te(
+const ea = Ae(["a", "abbr", "acronym", "address", "area", "article", "aside", "audio", "b", "bdi", "bdo", "big", "blink", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "content", "data", "datalist", "dd", "decorator", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "element", "em", "fieldset", "figcaption", "figure", "font", "footer", "form", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hgroup", "hr", "html", "i", "img", "input", "ins", "kbd", "label", "legend", "li", "main", "map", "mark", "marquee", "menu", "menuitem", "meter", "nav", "nobr", "ol", "optgroup", "option", "output", "p", "picture", "pre", "progress", "q", "rp", "rt", "ruby", "s", "samp", "search", "section", "select", "shadow", "slot", "small", "source", "spacer", "span", "strike", "strong", "style", "sub", "summary", "sup", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "tr", "track", "tt", "u", "ul", "var", "video", "wbr"]), Ms = Ae(["svg", "a", "altglyph", "altglyphdef", "altglyphitem", "animatecolor", "animatemotion", "animatetransform", "circle", "clippath", "defs", "desc", "ellipse", "enterkeyhint", "exportparts", "filter", "font", "g", "glyph", "glyphref", "hkern", "image", "inputmode", "line", "lineargradient", "marker", "mask", "metadata", "mpath", "part", "path", "pattern", "polygon", "polyline", "radialgradient", "rect", "stop", "style", "switch", "symbol", "text", "textpath", "title", "tref", "tspan", "view", "vkern"]), Ps = Ae(["feBlend", "feColorMatrix", "feComponentTransfer", "feComposite", "feConvolveMatrix", "feDiffuseLighting", "feDisplacementMap", "feDistantLight", "feDropShadow", "feFlood", "feFuncA", "feFuncB", "feFuncG", "feFuncR", "feGaussianBlur", "feImage", "feMerge", "feMergeNode", "feMorphology", "feOffset", "fePointLight", "feSpecularLighting", "feSpotLight", "feTile", "feTurbulence"]), Cc = Ae(["animate", "color-profile", "cursor", "discard", "font-face", "font-face-format", "font-face-name", "font-face-src", "font-face-uri", "foreignobject", "hatch", "hatchpath", "mesh", "meshgradient", "meshpatch", "meshrow", "missing-glyph", "script", "set", "solidcolor", "unknown", "use"]), Ns = Ae(["math", "menclose", "merror", "mfenced", "mfrac", "mglyph", "mi", "mlabeledtr", "mmultiscripts", "mn", "mo", "mover", "mpadded", "mphantom", "mroot", "mrow", "ms", "mspace", "msqrt", "mstyle", "msub", "msup", "msubsup", "mtable", "mtd", "mtext", "mtr", "munder", "munderover", "mprescripts"]), $c = Ae(["maction", "maligngroup", "malignmark", "mlongdiv", "mscarries", "mscarry", "msgroup", "mstack", "msline", "msrow", "semantics", "annotation", "annotation-xml", "mprescripts", "none"]), ta = Ae(["#text"]), na = Ae(["accept", "action", "align", "alt", "autocapitalize", "autocomplete", "autopictureinpicture", "autoplay", "background", "bgcolor", "border", "capture", "cellpadding", "cellspacing", "checked", "cite", "class", "clear", "color", "cols", "colspan", "command", "commandfor", "controls", "controlslist", "coords", "crossorigin", "datetime", "decoding", "default", "dir", "disabled", "disablepictureinpicture", "disableremoteplayback", "download", "draggable", "enctype", "enterkeyhint", "exportparts", "face", "for", "headers", "height", "hidden", "high", "href", "hreflang", "id", "inert", "inputmode", "integrity", "ismap", "kind", "label", "lang", "list", "loading", "loop", "low", "max", "maxlength", "media", "method", "min", "minlength", "multiple", "muted", "name", "nonce", "noshade", "novalidate", "nowrap", "open", "optimum", "part", "pattern", "placeholder", "playsinline", "popover", "popovertarget", "popovertargetaction", "poster", "preload", "pubdate", "radiogroup", "readonly", "rel", "required", "rev", "reversed", "role", "rows", "rowspan", "spellcheck", "scope", "selected", "shape", "size", "sizes", "slot", "span", "srclang", "start", "src", "srcset", "step", "style", "summary", "tabindex", "title", "translate", "type", "usemap", "valign", "value", "width", "wrap", "xmlns"]), Bs = Ae(["accent-height", "accumulate", "additive", "alignment-baseline", "amplitude", "ascent", "attributename", "attributetype", "azimuth", "basefrequency", "baseline-shift", "begin", "bias", "by", "class", "clip", "clippathunits", "clip-path", "clip-rule", "color", "color-interpolation", "color-interpolation-filters", "color-profile", "color-rendering", "cx", "cy", "d", "dx", "dy", "diffuseconstant", "direction", "display", "divisor", "dominant-baseline", "dur", "edgemode", "elevation", "end", "exponent", "fill", "fill-opacity", "fill-rule", "filter", "filterunits", "flood-color", "flood-opacity", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-weight", "fx", "fy", "g1", "g2", "glyph-name", "glyphref", "gradientunits", "gradienttransform", "height", "href", "id", "image-rendering", "in", "in2", "intercept", "k", "k1", "k2", "k3", "k4", "kerning", "keypoints", "keysplines", "keytimes", "lang", "lengthadjust", "letter-spacing", "kernelmatrix", "kernelunitlength", "lighting-color", "local", "marker-end", "marker-mid", "marker-start", "markerheight", "markerunits", "markerwidth", "maskcontentunits", "maskunits", "max", "mask", "mask-type", "media", "method", "mode", "min", "name", "numoctaves", "offset", "operator", "opacity", "order", "orient", "orientation", "origin", "overflow", "paint-order", "path", "pathlength", "patterncontentunits", "patterntransform", "patternunits", "points", "preservealpha", "preserveaspectratio", "primitiveunits", "r", "rx", "ry", "radius", "refx", "refy", "repeatcount", "repeatdur", "restart", "result", "rotate", "scale", "seed", "shape-rendering", "slope", "specularconstant", "specularexponent", "spreadmethod", "startoffset", "stddeviation", "stitchtiles", "stop-color", "stop-opacity", "stroke-dasharray", "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit", "stroke-opacity", "stroke", "stroke-width", "style", "surfacescale", "systemlanguage", "tabindex", "tablevalues", "targetx", "targety", "transform", "transform-origin", "text-anchor", "text-decoration", "text-orientation", "text-rendering", "textlength", "type", "u1", "u2", "unicode", "values", "viewbox", "visibility", "version", "vert-adv-y", "vert-origin-x", "vert-origin-y", "width", "word-spacing", "wrap", "writing-mode", "xchannelselector", "ychannelselector", "x", "x1", "x2", "xmlns", "y", "y1", "y2", "z", "zoomandpan"]), oa = Ae(["accent", "accentunder", "align", "bevelled", "close", "columnalign", "columnlines", "columnspacing", "columnspan", "denomalign", "depth", "dir", "display", "displaystyle", "encoding", "fence", "frame", "height", "href", "id", "largeop", "length", "linethickness", "lquote", "lspace", "mathbackground", "mathcolor", "mathsize", "mathvariant", "maxsize", "minsize", "movablelimits", "notation", "numalign", "open", "rowalign", "rowlines", "rowspacing", "rowspan", "rspace", "rquote", "scriptlevel", "scriptminsize", "scriptsizemultiplier", "selection", "separator", "separators", "stretchy", "subscriptshift", "supscriptshift", "symmetric", "voffset", "width", "xmlns"]), gr = Ae(["xlink:href", "xml:id", "xlink:title", "xml:space", "xmlns:xlink"]), Sc = Te(/{{[\w\W]*|^[\w\W]*}}/g), Ec = Te(/<%[\w\W]*|^[\w\W]*%>/g), Ac = Te(/\${[\w\W]*/g), Lc = Te(/^data-[\-\w.\u00B7-\uFFFF]+$/), Tc = Te(/^aria-[\-\w]+$/), ra = Te(
   /^(?:(?:(?:f|ht)tps?|mailto|tel|callto|sms|cid|xmpp|matrix):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i
   // eslint-disable-line no-useless-escape
 ), Dc = Te(/^(?:\w+script|data):/i), zc = Te(
@@ -400,7 +400,7 @@ function tl() {
   r.DocumentFragment;
   const s = r.HTMLTemplateElement, i = r.Node, d = r.Element, y = r.NodeFilter;
   r.NamedNodeMap === void 0 && (r.NamedNodeMap || r.MozNamedAttrMap), r.HTMLFormElement;
-  const g = r.DOMParser, m = r.trustedTypes, w = d.prototype, V = Et(w, "cloneNode"), re = Et(w, "remove"), Ge = Et(w, "nextSibling"), oe = Et(w, "childNodes"), q = Et(w, "parentNode"), ht = Et(w, "shadowRoot"), be = Et(w, "attributes"), D = i && i.prototype ? Et(i.prototype, "nodeType") : null, H = i && i.prototype ? Et(i.prototype, "nodeName") : null;
+  const g = r.DOMParser, m = r.trustedTypes, w = d.prototype, V = St(w, "cloneNode"), re = St(w, "remove"), Ge = St(w, "nextSibling"), oe = St(w, "childNodes"), q = St(w, "parentNode"), ht = St(w, "shadowRoot"), be = St(w, "attributes"), D = i && i.prototype ? St(i.prototype, "nodeType") : null, H = i && i.prototype ? St(i.prototype, "nodeName") : null;
   if (typeof s == "function") {
     const c = t.createElement("template");
     c.content && c.content.ownerDocument && (t = c.content.ownerDocument);
@@ -426,10 +426,10 @@ function tl() {
   }, ls = function() {
     return go || (pn = Nc(m, o), go = !0), pn;
   }, It = t, fn = It.implementation, xo = It.createNodeIterator, cs = It.createDocumentFragment, ds = It.getElementsByTagName, hs = n.importNode;
-  let E = aa();
+  let S = aa();
   e.isSupported = typeof Ja == "function" && typeof q == "function" && fn && fn.createHTMLDocument !== void 0;
-  const us = Ec, ys = Sc, ps = Ac, fs = Lc, bs = Tc, vs = Dc, wo = zc, _s = Oc;
-  let ko = ra, S = null;
+  const us = Sc, ys = Ec, ps = Ac, fs = Lc, bs = Tc, vs = Dc, wo = zc, _s = Oc;
+  let ko = ra, E = null;
   const Co = O({}, [...ea, ...Ms, ...Ps, ...Ns, ...ta]);
   let A = null;
   const $o = O({}, [...na, ...Bs, ...oa, ...gr]);
@@ -452,7 +452,7 @@ function tl() {
       enumerable: !0,
       value: !1
     }
-  })), bt = null, Eo = null;
+  })), bt = null, So = null;
   const $e = Object.seal(eo(null, {
     tagCheck: {
       writable: !0,
@@ -467,7 +467,7 @@ function tl() {
       value: null
     }
   }));
-  let So = !0, bn = !0, Ao = !1, Lo = !0, Ee = !1, Se = !0, Fe = !1, vn = !1, _n = null, gn = null, mn = !1, Je = !1, Ot = !1, Rt = !1, To = !0, Do = !1;
+  let Eo = !0, bn = !0, Ao = !1, Lo = !0, Se = !1, Ee = !0, Fe = !1, vn = !1, _n = null, gn = null, mn = !1, Je = !1, Ot = !1, Rt = !1, To = !0, Do = !1;
   const zo = "user-content-";
   let xn = !0, wn = !1, et = {}, se = null;
   const kn = O({}, [
@@ -511,9 +511,9 @@ function tl() {
   const Oo = O({}, ["audio", "video", "img", "source", "image", "track"]);
   let Cn = null;
   const Ro = O({}, ["alt", "class", "for", "id", "label", "name", "pattern", "placeholder", "role", "summary", "title", "value", "style", "xmlns"]), Mt = "http://www.w3.org/1998/Math/MathML", Pt = "http://www.w3.org/2000/svg", ie = "http://www.w3.org/1999/xhtml";
-  let tt = ie, $n = !1, En = null;
+  let tt = ie, $n = !1, Sn = null;
   const gs = O({}, [Mt, Pt, ie], Rs), Mo = Ae(["mi", "mo", "mn", "ms", "mtext"]);
-  let Sn = O({}, Mo);
+  let En = O({}, Mo);
   const Po = Ae(["annotation-xml"]);
   let An = O({}, Po);
   const ms = O({}, ["title", "style", "font", "a", "script"]);
@@ -527,11 +527,11 @@ function tl() {
     if (nt && nt === c)
       return;
     (!c || typeof c != "object") && (c = {}), c = Ve(c), vt = // eslint-disable-next-line unicorn/prefer-includes
-    xs.indexOf(c.PARSER_MEDIA_TYPE) === -1 ? ws : c.PARSER_MEDIA_TYPE, $ = vt === "application/xhtml+xml" ? Rs : Qo, S = Jt(c, "ALLOWED_TAGS", Co, {
+    xs.indexOf(c.PARSER_MEDIA_TYPE) === -1 ? ws : c.PARSER_MEDIA_TYPE, $ = vt === "application/xhtml+xml" ? Rs : Qo, E = Jt(c, "ALLOWED_TAGS", Co, {
       transform: $
     }), A = Jt(c, "ALLOWED_ATTR", $o, {
       transform: $
-    }), En = Jt(c, "ALLOWED_NAMESPACES", gs, {
+    }), Sn = Jt(c, "ALLOWED_NAMESPACES", gs, {
       transform: Rs
     }), Cn = Jt(c, "ADD_URI_SAFE_ATTR", Ro, {
       transform: $,
@@ -543,11 +543,11 @@ function tl() {
       transform: $
     }), bt = Jt(c, "FORBID_TAGS", Ve({}), {
       transform: $
-    }), Eo = Jt(c, "FORBID_ATTR", Ve({}), {
+    }), So = Jt(c, "FORBID_ATTR", Ve({}), {
       transform: $
-    }), et = ge(c, "USE_PROFILES") ? c.USE_PROFILES && typeof c.USE_PROFILES == "object" ? Ve(c.USE_PROFILES) : c.USE_PROFILES : !1, So = c.ALLOW_ARIA_ATTR !== !1, bn = c.ALLOW_DATA_ATTR !== !1, Ao = c.ALLOW_UNKNOWN_PROTOCOLS || !1, Lo = c.ALLOW_SELF_CLOSE_IN_ATTR !== !1, Ee = c.SAFE_FOR_TEMPLATES || !1, Se = c.SAFE_FOR_XML !== !1, Fe = c.WHOLE_DOCUMENT || !1, Je = c.RETURN_DOM || !1, Ot = c.RETURN_DOM_FRAGMENT || !1, Rt = c.RETURN_TRUSTED_TYPE || !1, mn = c.FORCE_BODY || !1, To = c.SANITIZE_DOM !== !1, Do = c.SANITIZE_NAMED_PROPS || !1, xn = c.KEEP_CONTENT !== !1, wn = c.IN_PLACE || !1, ko = kc(c.ALLOWED_URI_REGEXP) ? c.ALLOWED_URI_REGEXP : ra, tt = typeof c.NAMESPACE == "string" ? c.NAMESPACE : ie, Sn = ge(c, "MATHML_TEXT_INTEGRATION_POINTS") && c.MATHML_TEXT_INTEGRATION_POINTS && typeof c.MATHML_TEXT_INTEGRATION_POINTS == "object" ? Ve(c.MATHML_TEXT_INTEGRATION_POINTS) : O({}, Mo), An = ge(c, "HTML_INTEGRATION_POINTS") && c.HTML_INTEGRATION_POINTS && typeof c.HTML_INTEGRATION_POINTS == "object" ? Ve(c.HTML_INTEGRATION_POINTS) : O({}, Po);
+    }), et = ge(c, "USE_PROFILES") ? c.USE_PROFILES && typeof c.USE_PROFILES == "object" ? Ve(c.USE_PROFILES) : c.USE_PROFILES : !1, Eo = c.ALLOW_ARIA_ATTR !== !1, bn = c.ALLOW_DATA_ATTR !== !1, Ao = c.ALLOW_UNKNOWN_PROTOCOLS || !1, Lo = c.ALLOW_SELF_CLOSE_IN_ATTR !== !1, Se = c.SAFE_FOR_TEMPLATES || !1, Ee = c.SAFE_FOR_XML !== !1, Fe = c.WHOLE_DOCUMENT || !1, Je = c.RETURN_DOM || !1, Ot = c.RETURN_DOM_FRAGMENT || !1, Rt = c.RETURN_TRUSTED_TYPE || !1, mn = c.FORCE_BODY || !1, To = c.SANITIZE_DOM !== !1, Do = c.SANITIZE_NAMED_PROPS || !1, xn = c.KEEP_CONTENT !== !1, wn = c.IN_PLACE || !1, ko = kc(c.ALLOWED_URI_REGEXP) ? c.ALLOWED_URI_REGEXP : ra, tt = typeof c.NAMESPACE == "string" ? c.NAMESPACE : ie, En = ge(c, "MATHML_TEXT_INTEGRATION_POINTS") && c.MATHML_TEXT_INTEGRATION_POINTS && typeof c.MATHML_TEXT_INTEGRATION_POINTS == "object" ? Ve(c.MATHML_TEXT_INTEGRATION_POINTS) : O({}, Mo), An = ge(c, "HTML_INTEGRATION_POINTS") && c.HTML_INTEGRATION_POINTS && typeof c.HTML_INTEGRATION_POINTS == "object" ? Ve(c.HTML_INTEGRATION_POINTS) : O({}, Po);
     const l = ge(c, "CUSTOM_ELEMENT_HANDLING") && c.CUSTOM_ELEMENT_HANDLING && typeof c.CUSTOM_ELEMENT_HANDLING == "object" ? Ve(c.CUSTOM_ELEMENT_HANDLING) : eo(null);
-    if (L = eo(null), ge(l, "tagNameCheck") && No(l.tagNameCheck) && (L.tagNameCheck = l.tagNameCheck), ge(l, "attributeNameCheck") && No(l.attributeNameCheck) && (L.attributeNameCheck = l.attributeNameCheck), ge(l, "allowCustomizedBuiltInElements") && typeof l.allowCustomizedBuiltInElements == "boolean" && (L.allowCustomizedBuiltInElements = l.allowCustomizedBuiltInElements), Te(L), Ee && (bn = !1), Ot && (Je = !0), et && (S = O({}, ta), A = eo(null), et.html === !0 && (O(S, ea), O(A, na)), et.svg === !0 && (O(S, Ms), O(A, Bs), O(A, gr)), et.svgFilters === !0 && (O(S, Ps), O(A, Bs), O(A, gr)), et.mathMl === !0 && (O(S, Ns), O(A, oa), O(A, gr))), $e.tagCheck = null, $e.attributeCheck = null, ge(c, "ADD_TAGS") && (typeof c.ADD_TAGS == "function" ? $e.tagCheck = c.ADD_TAGS : tn(c.ADD_TAGS) && (S === Co && (S = Ve(S)), O(S, c.ADD_TAGS, $))), ge(c, "ADD_ATTR") && (typeof c.ADD_ATTR == "function" ? $e.attributeCheck = c.ADD_ATTR : tn(c.ADD_ATTR) && (A === $o && (A = Ve(A)), O(A, c.ADD_ATTR, $))), ge(c, "ADD_URI_SAFE_ATTR") && tn(c.ADD_URI_SAFE_ATTR) && O(Cn, c.ADD_URI_SAFE_ATTR, $), ge(c, "FORBID_CONTENTS") && tn(c.FORBID_CONTENTS) && (se === kn && (se = Ve(se)), O(se, c.FORBID_CONTENTS, $)), ge(c, "ADD_FORBID_CONTENTS") && tn(c.ADD_FORBID_CONTENTS) && (se === kn && (se = Ve(se)), O(se, c.ADD_FORBID_CONTENTS, $)), xn && (S["#text"] = !0), Fe && O(S, ["html", "head", "body"]), S.table && (O(S, ["tbody"]), delete bt.tbody), c.TRUSTED_TYPES_POLICY) {
+    if (L = eo(null), ge(l, "tagNameCheck") && No(l.tagNameCheck) && (L.tagNameCheck = l.tagNameCheck), ge(l, "attributeNameCheck") && No(l.attributeNameCheck) && (L.attributeNameCheck = l.attributeNameCheck), ge(l, "allowCustomizedBuiltInElements") && typeof l.allowCustomizedBuiltInElements == "boolean" && (L.allowCustomizedBuiltInElements = l.allowCustomizedBuiltInElements), Te(L), Se && (bn = !1), Ot && (Je = !0), et && (E = O({}, ta), A = eo(null), et.html === !0 && (O(E, ea), O(A, na)), et.svg === !0 && (O(E, Ms), O(A, Bs), O(A, gr)), et.svgFilters === !0 && (O(E, Ps), O(A, Bs), O(A, gr)), et.mathMl === !0 && (O(E, Ns), O(A, oa), O(A, gr))), $e.tagCheck = null, $e.attributeCheck = null, ge(c, "ADD_TAGS") && (typeof c.ADD_TAGS == "function" ? $e.tagCheck = c.ADD_TAGS : tn(c.ADD_TAGS) && (E === Co && (E = Ve(E)), O(E, c.ADD_TAGS, $))), ge(c, "ADD_ATTR") && (typeof c.ADD_ATTR == "function" ? $e.attributeCheck = c.ADD_ATTR : tn(c.ADD_ATTR) && (A === $o && (A = Ve(A)), O(A, c.ADD_ATTR, $))), ge(c, "ADD_URI_SAFE_ATTR") && tn(c.ADD_URI_SAFE_ATTR) && O(Cn, c.ADD_URI_SAFE_ATTR, $), ge(c, "FORBID_CONTENTS") && tn(c.FORBID_CONTENTS) && (se === kn && (se = Ve(se)), O(se, c.FORBID_CONTENTS, $)), ge(c, "ADD_FORBID_CONTENTS") && tn(c.ADD_FORBID_CONTENTS) && (se === kn && (se = Ve(se)), O(se, c.ADD_FORBID_CONTENTS, $)), xn && (E["#text"] = !0), Fe && O(E, ["html", "head", "body"]), E.table && (O(E, ["tbody"]), delete bt.tbody), c.TRUSTED_TYPES_POLICY) {
       if (typeof c.TRUSTED_TYPES_POLICY.createHTML != "function")
         throw In('TRUSTED_TYPES_POLICY configuration option must provide a "createHTML" hook.');
       if (typeof c.TRUSTED_TYPES_POLICY.createScriptURL != "function")
@@ -562,19 +562,19 @@ function tl() {
     } else c.TRUSTED_TYPES_POLICY === null ? (z = void 0, Be = "") : (z === void 0 && (z = ls()), z && typeof Be == "string" && (Be = Qe("")));
     Ae && Ae(c), nt = c;
   }, Bo = O({}, [...Ms, ...Ps, ...Cc]), Fo = O({}, [...Ns, ...$c]), Cs = function(c, l, h) {
-    return l.namespaceURI === ie ? c === "svg" : l.namespaceURI === Mt ? c === "svg" && (h === "annotation-xml" || Sn[h]) : !!Bo[c];
+    return l.namespaceURI === ie ? c === "svg" : l.namespaceURI === Mt ? c === "svg" && (h === "annotation-xml" || En[h]) : !!Bo[c];
   }, $s = function(c, l, h) {
     return l.namespaceURI === ie ? c === "math" : l.namespaceURI === Pt ? c === "math" && An[h] : !!Fo[c];
-  }, Es = function(c, l, h) {
-    return l.namespaceURI === Pt && !An[h] || l.namespaceURI === Mt && !Sn[h] ? !1 : !Fo[c] && (ms[c] || !Bo[c]);
-  }, Ss = function(c) {
+  }, Ss = function(c, l, h) {
+    return l.namespaceURI === Pt && !An[h] || l.namespaceURI === Mt && !En[h] ? !1 : !Fo[c] && (ms[c] || !Bo[c]);
+  }, Es = function(c) {
     let l = q(c);
     (!l || !l.tagName) && (l = {
       namespaceURI: tt,
       tagName: "template"
     });
     const h = Qo(c.tagName), p = Qo(l.tagName);
-    return En[c.namespaceURI] ? c.namespaceURI === Pt ? Cs(h, l, p) : c.namespaceURI === Mt ? $s(h, l, p) : c.namespaceURI === ie ? Es(h, l, p) : !!(vt === "application/xhtml+xml" && En[c.namespaceURI]) : !1;
+    return Sn[c.namespaceURI] ? c.namespaceURI === Pt ? Cs(h, l, p) : c.namespaceURI === Mt ? $s(h, l, p) : c.namespaceURI === ie ? Ss(h, l, p) : !!(vt === "application/xhtml+xml" && Sn[c.namespaceURI]) : !1;
   }, Oe = function(c) {
     Zn(e.removed, {
       element: c
@@ -654,7 +654,7 @@ function tl() {
           l.push(p[v]);
     }
   }, Ls = function(c) {
-    if (!Se)
+    if (!Ee)
       return;
     const l = [c];
     for (; l.length > 0; ) {
@@ -778,7 +778,7 @@ function tl() {
     });
   }
   const Ts = function(c, l) {
-    return !!(Se && c.hasChildNodes() && !_t(c.firstElementChild) && ve(sa, c.textContent) && ve(sa, c.innerHTML) || Se && c.namespaceURI === ie && l === "style" && _t(c.firstElementChild) || c.nodeType === rt.processingInstruction || Se && c.nodeType === rt.comment && ve(ia, c.data));
+    return !!(Ee && c.hasChildNodes() && !_t(c.firstElementChild) && ve(sa, c.textContent) && ve(sa, c.innerHTML) || Ee && c.namespaceURI === ie && l === "style" && _t(c.firstElementChild) || c.nodeType === rt.processingInstruction || Ee && c.nodeType === rt.comment && ve(ia, c.data));
   }, Ds = function(c, l) {
     if (!bt[l] && jo(l) && (L.tagNameCheck instanceof RegExp && ve(L.tagNameCheck, l) || L.tagNameCheck instanceof Function && L.tagNameCheck(l)))
       return !1;
@@ -794,36 +794,36 @@ function tl() {
     }
     return Oe(c), !0;
   }, Vo = function(c, l) {
-    if (ae(E.beforeSanitizeElements, c, null), c !== l && q(c) === null)
+    if (ae(S.beforeSanitizeElements, c, null), c !== l && q(c) === null)
       return !0;
     if (Ft(c))
       return Oe(c), !0;
     const h = $(H ? H(c) : c.nodeName);
-    if (ae(E.uponSanitizeElement, c, {
+    if (ae(S.uponSanitizeElement, c, {
       tagName: h,
-      allowedTags: S
+      allowedTags: E
     }), c !== l && q(c) === null)
       return !0;
     if (Ts(c, h))
       return Oe(c), !0;
-    if (bt[h] || !($e.tagCheck instanceof Function && $e.tagCheck(h)) && !S[h]) {
+    if (bt[h] || !($e.tagCheck instanceof Function && $e.tagCheck(h)) && !E[h]) {
       const p = Ds(c, h);
-      return p === !1 && ae(E.afterSanitizeElements, c, null), p;
+      return p === !1 && ae(S.afterSanitizeElements, c, null), p;
     }
-    if ((D ? D(c) : c.nodeType) === rt.element && !Ss(c) || (h === "noscript" || h === "noembed" || h === "noframes") && ve(Rc, c.innerHTML))
+    if ((D ? D(c) : c.nodeType) === rt.element && !Es(c) || (h === "noscript" || h === "noembed" || h === "noframes") && ve(Rc, c.innerHTML))
       return Oe(c), !0;
-    if (Ee && c.nodeType === rt.text) {
+    if (Se && c.nodeType === rt.text) {
       const p = Bt(c.textContent);
       c.textContent !== p && (Zn(e.removed, {
         element: c.cloneNode()
       }), c.textContent = p);
     }
-    return ae(E.afterSanitizeElements, c, null), !1;
+    return ae(S.afterSanitizeElements, c, null), !1;
   }, Uo = function(c, l, h) {
-    if (Eo[l] || Se && l === "patchsrc" || Se && l === "for" && c !== "label" && c !== "output" || To && (l === "id" || l === "name") && (h in t || h in ks))
+    if (So[l] || Ee && l === "patchsrc" || Ee && l === "for" && c !== "label" && c !== "output" || To && (l === "id" || l === "name") && (h in t || h in ks))
       return !1;
     const p = A[l] || $e.attributeCheck instanceof Function && $e.attributeCheck(l, c);
-    if (!(bn && ve(fs, l)) && !(So && ve(bs, l))) {
+    if (!(bn && ve(fs, l)) && !(Eo && ve(bs, l))) {
       if (p) {
         if (!Cn[l] && !ve(ko, Yo(h, wo, "")) && !((l === "src" || l === "xlink:href" || l === "href") && c !== "script" && Xi(h, "data:") === 0 && Io[c]) && !(Ao && !ve(vs, Yo(h, wo, ""))) && h)
           return !1;
@@ -855,7 +855,7 @@ function tl() {
       qe(l, c);
     }
   }, Wo = function(c) {
-    ae(E.beforeSanitizeAttributes, c, null);
+    ae(S.beforeSanitizeAttributes, c, null);
     const l = c.attributes;
     if (!l || Ft(c))
       return;
@@ -871,7 +871,7 @@ function tl() {
     for (; p--; ) {
       const _ = l[p], x = _.name, P = _.namespaceURI, de = _.value, G = $(x), U = de;
       let I = x === "value" ? U : vc(U);
-      if (h.attrName = G, h.attrValue = I, h.keepAttr = !0, h.forceKeepAttr = void 0, ae(E.uponSanitizeAttribute, c, h), I = h.attrValue, Do && (G === "id" || G === "name") && Xi(I, zo) !== 0 && (qe(x, c), I = zo + I), Se && ve(/((--!?|])>)|<\/(style|script|title|xmp|textarea|noscript|iframe|noembed|noframes)/i, I)) {
+      if (h.attrName = G, h.attrValue = I, h.keepAttr = !0, h.forceKeepAttr = void 0, ae(S.uponSanitizeAttribute, c, h), I = h.attrValue, Do && (G === "id" || G === "name") && Xi(I, zo) !== 0 && (qe(x, c), I = zo + I), Ee && ve(/((--!?|])>)|<\/(style|script|title|xmp|textarea|noscript|iframe|noembed|noframes)/i, I)) {
         qe(x, c);
         continue;
       }
@@ -888,23 +888,23 @@ function tl() {
           qe(x, c);
           continue;
         }
-        if (Ee && (I = Bt(I)), !Uo(v, G, I)) {
+        if (Se && (I = Bt(I)), !Uo(v, G, I)) {
           qe(x, c);
           continue;
         }
         I = Is(v, G, P, I), I !== U && Os(c, x, P, I);
       }
     }
-    ae(E.afterSanitizeAttributes, c, null);
+    ae(S.afterSanitizeAttributes, c, null);
   }, qt = function(c) {
     let l = null;
     const h = Ho(c);
-    for (ae(E.beforeSanitizeShadowDOM, c, null); l = h.nextNode(); )
-      if (ae(E.uponSanitizeShadowNode, l, null), Vo(l, c), Wo(l), ot(l.content) && qt(l.content), (D ? D(l) : l.nodeType) === rt.element) {
+    for (ae(S.beforeSanitizeShadowDOM, c, null); l = h.nextNode(); )
+      if (ae(S.uponSanitizeShadowNode, l, null), Vo(l, c), Wo(l), ot(l.content) && qt(l.content), (D ? D(l) : l.nodeType) === rt.element) {
         const p = ht(l);
         ot(p) && (zn(p), qt(p));
       }
-    ae(E.afterSanitizeShadowDOM, c, null);
+    ae(S.afterSanitizeShadowDOM, c, null);
   }, zn = function(c) {
     const l = [{
       node: c,
@@ -951,14 +951,14 @@ function tl() {
       throw In("dirty is not a string, aborting");
     if (!e.isSupported)
       return c;
-    vn ? (S = _n, A = gn) : Ln(l), (E.uponSanitizeElement.length > 0 || E.uponSanitizeAttribute.length > 0) && (S = Ve(S)), E.uponSanitizeAttribute.length > 0 && (A = Ve(A)), e.removed = [];
+    vn ? (E = _n, A = gn) : Ln(l), (S.uponSanitizeElement.length > 0 || S.uponSanitizeAttribute.length > 0) && (E = Ve(E)), S.uponSanitizeAttribute.length > 0 && (A = Ve(A)), e.removed = [];
     const x = wn && typeof c != "string" && _t(c);
     if (x) {
       Ls(c);
       const U = H ? H(c) : c.nodeName;
       if (typeof U == "string") {
         const I = $(U);
-        if (!S[I] || bt[I])
+        if (!E[I] || bt[I])
           throw Nt(c), In("root node is forbidden and cannot be sanitized in-place");
       }
       if (Ft(c))
@@ -971,7 +971,7 @@ function tl() {
     } else if (_t(c))
       h = qo("<!---->"), p = h.ownerDocument.importNode(c, !0), p.nodeType === rt.element && p.nodeName === "BODY" || p.nodeName === "HTML" ? h = p : h.appendChild(p), zn(p);
     else {
-      if (!Je && !Ee && !Fe && // eslint-disable-next-line unicorn/prefer-includes
+      if (!Je && !Se && !Fe && // eslint-disable-next-line unicorn/prefer-includes
       c.indexOf("<") === -1)
         return z && Rt ? Qe(c) : c;
       if (h = qo(c), !h)
@@ -990,9 +990,9 @@ function tl() {
     if (x)
       return Kn(e.removed, (U) => {
         U.element && Tn(U.element);
-      }), Ee && Dn(c), c;
+      }), Se && Dn(c), c;
     if (Je) {
-      if (Ee && Dn(h), Ot)
+      if (Se && Dn(h), Ot)
         for (_ = cs.call(h.ownerDocument); h.firstChild; )
           _.appendChild(h.firstChild);
       else
@@ -1000,11 +1000,11 @@ function tl() {
       return (A.shadowroot || A.shadowrootmode) && (_ = hs.call(n, _, !0)), _;
     }
     let G = Fe ? h.outerHTML : h.innerHTML;
-    return Fe && S["!doctype"] && h.ownerDocument && h.ownerDocument.doctype && h.ownerDocument.doctype.name && ve(Ic, h.ownerDocument.doctype.name) && (G = "<!DOCTYPE " + h.ownerDocument.doctype.name + `>
-` + G), Ee && (G = Bt(G)), z && Rt ? Qe(G) : G;
+    return Fe && E["!doctype"] && h.ownerDocument && h.ownerDocument.doctype && h.ownerDocument.doctype.name && ve(Ic, h.ownerDocument.doctype.name) && (G = "<!DOCTYPE " + h.ownerDocument.doctype.name + `>
+` + G), Se && (G = Bt(G)), z && Rt ? Qe(G) : G;
   }, e.setConfig = function() {
     let c = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    Ln(c), vn = !0, _n = S, gn = A;
+    Ln(c), vn = !0, _n = E, gn = A;
   }, e.clearConfig = function() {
     nt = null, vn = !1, _n = null, gn = null, z = pn, Be = "";
   }, e.isValidAttribute = function(c, l, h) {
@@ -1012,19 +1012,19 @@ function tl() {
     const p = $(c), v = $(l);
     return Uo(p, v, h);
   }, e.addHook = function(c, l) {
-    typeof l == "function" && ge(E, c) && Zn(E[c], l);
+    typeof l == "function" && ge(S, c) && Zn(S[c], l);
   }, e.removeHook = function(c, l) {
-    if (ge(E, c)) {
+    if (ge(S, c)) {
       if (l !== void 0) {
-        const h = fc(E[c], l);
-        return h === -1 ? void 0 : bc(E[c], h, 1)[0];
+        const h = fc(S[c], l);
+        return h === -1 ? void 0 : bc(S[c], h, 1)[0];
       }
-      return Ki(E[c]);
+      return Ki(S[c]);
     }
   }, e.removeHooks = function(c) {
-    ge(E, c) && (E[c] = []);
+    ge(S, c) && (S[c] = []);
   }, e.removeAllHooks = function() {
-    E = aa();
+    S = aa();
   }, e;
 }
 var Bc = tl();
@@ -1413,13 +1413,13 @@ customElements.get("nys-accordion") || customElements.define("nys-accordion", Nn
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Button Component v1.20.0
+   * Button Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -2784,7 +2784,7 @@ Dt([
 ], kt.prototype, "suffixIcon", 1);
 let vd = kt;
 customElements.get("nys-badge") || customElements.define("nys-badge", vd);
-const _d = '@charset "UTF-8";:host{--_nys-card-width: 100%;--_nys-card-height: var( --nys-card-height, fit-content );--_nys-card-border-radius: var(--nys-radius-xl, 12px);--_nys-card-border-radius--media: 0;--_nys-card-padding--t: var(--nys-space-200, 16px);--_nys-card-padding--x: var(--nys-space-300, 24px);--_nys-card-padding--b: var(--nys-space-250, 20px);--_nys-card-background-color: var(--nys-color-surface, #ffffff);--_nys-card-gap: var(--nys-space-150, 12px);--_nys-card-padding--media-inset: var(--nys-space-300, 24px);--_nys-card-size--media-accent: var(--nys-space-800, 64px);--_nys-card-offset--media-accent: var(--nys-space-300, 24px);--_nys-card-border-radius--media-accent: var(--nys-radius-xxl, 16px);--_nys-card-background-color--media-accent: var(--nys-color-accent, #face00);--_nys-card-cursor: pointer;--_nys-card-border-color--hover: var(--nys-color-neutral-700, #4a4d4f);--_nys-card-border-color--active: var(--nys-color-neutral-900, #1b1b1b);--_nys-card-outline-color: var(--nys-color-focus, #004dd1);--_nys-card-outline-width: var(--nys-border-width-md, 2px);--_nys-card-outline-offset: var(--nys-space-2px, 2px);--_nys-card-color: var(--nys-color-text-weak, #4a4d4f);--_nys-card-font-family: var(--nys-font-family-ui, "Proxima Nova");--_nys-card-font-size: var(--nys-font-size-ui-md, 16px);--_nys-card-font-style: normal;--_nys-card-font-weight: 400;--_nys-card-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-card-letter-spacing: var(--nys-font-letterspacing-ui-md, .044px);display:block;width:var(--_nys-card-width);max-width:100%}:host([hidden]){display:none}:host([inset]){--_nys-card-border-radius--media: var(--nys-radius-md, 4px)}:host([inset]) .nys-card__media-container{padding:var(--_nys-card-padding--media-inset) var(--_nys-card-padding--media-inset) 0}:host([inset]) .nys-card--media-accent{right:calc(var(--_nys-card-offset--media-accent) + var(--_nys-card-padding--media-inset))}:host([elevated]) .nys-card{box-shadow:var(--nys-shadow-raised)}.nys-card{color:var(--_nys-card-color);font-family:var(--_nys-card-font-family);font-size:var(--_nys-card-font-size);font-style:var(--_nys-card-font-style);font-weight:var(--_nys-card-font-weight);line-height:var(--_nys-card-line-height);letter-spacing:var(--_nys-card-letter-spacing);width:100%;height:var(--_nys-card-height);display:flex;flex-direction:column;align-items:start;justify-content:center;border-radius:var(--_nys-card-border-radius);border:var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-200, #bec0c1);background-color:var(--_nys-card-background-color);overflow:hidden}.nys-card__media-container{position:relative;box-sizing:border-box;width:100%;height:fit-content}.nys-card__media-container ::slotted([slot=media]){display:block;max-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--_nys-card-border-radius--media)}.nys-card__media-container .nys-card--media-accent{position:absolute;right:var(--_nys-card-offset--media-accent);bottom:var(--_nys-card-offset--media-accent);width:var(--_nys-card-size--media-accent);height:var(--_nys-card-size--media-accent);overflow:hidden;background-color:var(--_nys-card-background-color--media-accent);border-radius:var(--_nys-card-border-radius--media-accent);display:flex;justify-content:center;flex-direction:column;align-items:center;color:var(--nys-color-text);font-family:var(--nys-font-family-ui, "Proxima Nova");font-style:normal;font-weight:700}.nys-card__media-container .nys-card--media-accent[hidden]{display:none}.nys-card__media-container .nys-card--media-accent-month{padding:0;margin:0;font-size:var(--nys-font-size-ui-md, 16px);line-height:var(--nys-font-size-ui-md, 16px);letter-spacing:var(--nys-font-letterspacing-ui-md, .044px)}.nys-card__media-container .nys-card--media-accent-day{padding:0;margin:0;font-size:var(--nys-font-size-ui-xl, 20px);line-height:var(--nys-font-size-ui-xl, 20px);letter-spacing:var(--nys-font-letterspacing-ui-xl, .017px)}.nys-card__main-content{margin:var(--_nys-card-padding--t) var(--_nys-card-padding--x) var(--_nys-card-padding--b);display:flex;flex-direction:column;gap:var(--_nys-card-gap);flex:1 1 auto;width:-webkit-fill-available;width:-moz-available;width:fill-available}.nys-card__preheading{padding:0;margin:0;color:var(--nys-color-text-weak, #4a4d4f);font-family:var(--nys-font-family-ui, "Proxima Nova");font-size:var(--nys-font-size-ui-md, 16px);font-style:normal;font-weight:700;line-height:var(--nys-font-lineheight-ui-md, 24px);letter-spacing:var(--nys-font-letterspacing-ui-md, .044px)}.nys-card__heading{padding:0;margin:0;color:var(--nys-color-text);font-family:var(--nys-font-family-heading, "Proxima Nova");font-size:var(--nys-font-size-h2, 28px);font-style:normal;font-weight:700;line-height:var(--nys-font-lineheight-h2, 36px);letter-spacing:var(--nys-font-letterspacing-h2, .013px)}.nys-card__subheading{padding:0;margin:0;overflow:hidden;color:var(--nys-color-text-weak, #4a4d4f);text-overflow:ellipsis;font-family:var(--nys-font-family-ui, "Proxima Nova");font-size:var(--nys-font-size-ui-lg, 18px);font-style:normal;font-weight:600;line-height:var(--nys-font-lineheight-ui-lg, 28px);letter-spacing:var(--nys-font-letterspacing-ui-lg, .028px)}.nys-card__description{padding:0;margin:0;color:var(--nys-color-text-weak, #4a4d4f);font-family:var(--nys-font-family-ui, "Proxima Nova");font-size:var(--nys-font-size-ui-md, 16px);font-style:normal;font-weight:400;line-height:var(--nys-font-lineheight-ui-md, 24px);letter-spacing:var(--nys-font-letterspacing-ui-md, .044px)}.nys-card__footer{display:contents}.nys-card--clickable{appearance:none;padding:0;text-align:left;text-decoration:none;cursor:var(--_nys-card-cursor)}.nys-card--clickable:hover{border-color:var(--_nys-card-border-color--hover)}.nys-card--clickable:active{border-color:var(--_nys-card-border-color--active)}.nys-card--clickable:focus-visible{outline:solid var(--_nys-card-outline-width) var(--_nys-card-outline-color);outline-offset:var(--_nys-card-outline-offset)}::slotted([slot=preheading]){display:flex;flex-direction:row}::slotted([slot=footer]){width:-webkit-fill-available;width:-moz-available;width:fill-available;display:flex;flex-direction:row;margin:0 var(--_nys-card-padding--x) var(--nys-space-300)}';
+const _d = '@charset "UTF-8";:host{--_nys-card-width: 100%;--_nys-card-height: var( --nys-card-height, fit-content );--_nys-card-border-radius: var(--nys-radius-xl, 12px);--_nys-card-border-radius--media: 0;--_nys-card-border-color: var(--nys-color-neutral-200, #bec0c1);--_nys-card-padding--t: var(--nys-space-200, 16px);--_nys-card-padding--x: var(--nys-space-300, 24px);--_nys-card-padding--b: var(--nys-space-250, 20px);--_nys-card-padding-bottom--preheading: var(--nys-space-150, 12px);--_nys-card-background-color: var(--nys-color-surface, #ffffff);--_nys-card-gap: var(--nys-space-150, 12px);--_nys-card-padding--media-inset: var(--nys-space-300, 24px);--_nys-card-size--media-accent: var(--nys-space-800, 64px);--_nys-card-offset--media-accent: var(--nys-space-300, 24px);--_nys-card-border-radius--media-accent: var(--nys-radius-xxl, 16px);--_nys-card-background-color--media-accent: var(--nys-color-accent, #face00);--_nys-card-cursor: pointer;--_nys-card-border-color--hover: var(--nys-color-neutral-700, #4a4d4f);--_nys-card-border-color--active: var(--nys-color-neutral-900, #1b1b1b);--_nys-card-outline-color: var(--nys-color-focus, #004dd1);--_nys-card-outline-width: var(--nys-border-width-md, 2px);--_nys-card-outline-offset: var(--nys-space-2px, 2px);--_nys-card-color: var(--nys-color-text-weak, #4a4d4f);--_nys-card-font-family: var(--nys-font-family-ui, "Proxima Nova");--_nys-card-font-size: var(--nys-font-size-ui-md, 16px);--_nys-card-font-style: normal;--_nys-card-font-weight: 400;--_nys-card-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-card-letter-spacing: var(--nys-font-letterspacing-ui-md, .044px);display:block;width:var(--_nys-card-width);max-width:100%}:host([hidden]){display:none}:host([inset]){--_nys-card-border-radius--media: var(--nys-radius-md, 4px)}:host([inset]) .nys-card__media-container{padding:var(--_nys-card-padding--media-inset) var(--_nys-card-padding--media-inset) 0}:host([inset]) .nys-card--media-accent{right:calc(var(--_nys-card-offset--media-accent) + var(--_nys-card-padding--media-inset))}:host([elevated]) .nys-card{box-shadow:var(--nys-shadow-raised)}.nys-card{color:var(--_nys-card-color);font-family:var(--_nys-card-font-family);font-size:var(--_nys-card-font-size);font-style:var(--_nys-card-font-style);font-weight:var(--_nys-card-font-weight);line-height:var(--_nys-card-line-height);letter-spacing:var(--_nys-card-letter-spacing);width:100%;height:var(--_nys-card-height);display:flex;flex-direction:column;align-items:start;justify-content:center;border-radius:var(--_nys-card-border-radius);border:var(--nys-border-width-sm, 1px) solid var(--_nys-card-border-color);background-color:var(--_nys-card-background-color);overflow:hidden}.nys-card__media-container{position:relative;box-sizing:border-box;width:100%;height:fit-content}.nys-card__media-container ::slotted([slot=media]){display:block;max-width:100%;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--_nys-card-border-radius--media)}.nys-card__media-container .nys-card--media-accent{position:absolute;right:var(--_nys-card-offset--media-accent);bottom:var(--_nys-card-offset--media-accent);width:var(--_nys-card-size--media-accent);height:var(--_nys-card-size--media-accent);overflow:hidden;background-color:var(--_nys-card-background-color--media-accent);border-radius:var(--_nys-card-border-radius--media-accent);display:flex;justify-content:center;flex-direction:column;align-items:center;color:var(--nys-color-text);font-family:var(--nys-font-family-ui, "Proxima Nova");font-style:normal;font-weight:700}.nys-card__media-container .nys-card--media-accent[hidden]{display:none}.nys-card__media-container .nys-card--media-accent-month{padding:0;margin:0;font-size:var(--nys-font-size-ui-md, 16px);line-height:var(--nys-font-size-ui-md, 16px);letter-spacing:var(--nys-font-letterspacing-ui-md, .044px)}.nys-card__media-container .nys-card--media-accent-day{padding:0;margin:0;font-size:var(--nys-font-size-ui-xl, 20px);line-height:var(--nys-font-size-ui-xl, 20px);letter-spacing:var(--nys-font-letterspacing-ui-xl, .017px)}.nys-card__main-content{margin:var(--_nys-card-padding--t) var(--_nys-card-padding--x) var(--_nys-card-padding--b);display:flex;flex-direction:column;gap:var(--_nys-card-gap);flex:1 1 auto;width:-webkit-fill-available;width:-moz-available;width:fill-available}.nys-card__preheading{padding:0;margin:0;color:var(--nys-color-text-weak, #4a4d4f);font-family:var(--nys-font-family-ui, "Proxima Nova");font-size:var(--nys-font-size-ui-md, 16px);font-style:normal;font-weight:700;line-height:var(--nys-font-lineheight-ui-md, 24px);letter-spacing:var(--nys-font-letterspacing-ui-md, .044px)}.nys-card__preheading-slot{display:flex;flex-direction:row;padding-bottom:var(--_nys-card-padding-bottom--preheading)}.nys-card__preheading-slot[hidden]{display:none}.nys-card__heading{padding:0;margin:0;color:var(--nys-color-text);font-family:var(--nys-font-family-heading, "Proxima Nova");font-size:var(--nys-font-size-h2, 28px);font-style:normal;font-weight:700;line-height:var(--nys-font-lineheight-h2, 36px);letter-spacing:var(--nys-font-letterspacing-h2, .013px)}.nys-card__subheading{padding:0;margin:0;overflow:hidden;color:var(--nys-color-text-weak, #4a4d4f);text-overflow:ellipsis;font-family:var(--nys-font-family-ui, "Proxima Nova");font-size:var(--nys-font-size-ui-lg, 18px);font-style:normal;font-weight:600;line-height:var(--nys-font-lineheight-ui-lg, 28px);letter-spacing:var(--nys-font-letterspacing-ui-lg, .028px)}.nys-card__description{padding:0;margin:0;color:var(--nys-color-text-weak, #4a4d4f);font-family:var(--nys-font-family-ui, "Proxima Nova");font-size:var(--nys-font-size-ui-md, 16px);font-style:normal;font-weight:400;line-height:var(--nys-font-lineheight-ui-md, 24px);letter-spacing:var(--nys-font-letterspacing-ui-md, .044px)}.nys-card__footer{display:contents}.nys-card--clickable{appearance:none;padding:0;text-align:left;text-decoration:none;cursor:var(--_nys-card-cursor)}.nys-card--clickable:hover{border-color:var(--_nys-card-border-color--hover)}.nys-card--clickable:active{border-color:var(--_nys-card-border-color--active)}.nys-card--clickable:focus-visible{outline:solid var(--_nys-card-outline-width) var(--_nys-card-outline-color);outline-offset:var(--_nys-card-outline-offset)}::slotted([slot=preheading]){display:flex;flex-direction:row}::slotted([slot=footer]){width:-webkit-fill-available;width:-moz-available;width:fill-available;display:flex;flex-direction:row;margin:0 var(--_nys-card-padding--x) var(--nys-space-300)}';
 var gd = Object.defineProperty, je = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
@@ -2860,7 +2860,7 @@ const gi = class gi extends M {
     );
   }
   render() {
-    const e = !!(this._accentMonth || this._accentDay), t = !!this.preheading || this._hasPreheadingSlot, n = u`
+    const e = !!(this._accentMonth || this._accentDay), t = !!this.preheading && !this._hasPreheadingSlot, n = u`
       <div class="nys-card__media-container" ?hidden=${!this._hasMedia}>
         <slot
           name="media"
@@ -2880,13 +2880,13 @@ const gi = class gi extends M {
       </div>
       <div class="nys-card__main-content">
         <div>
-          <p class="nys-card__preheading" ?hidden=${!t}>
-            <slot
-              name="preheading"
-              @slotchange=${this.handlePreheadingSlotChange}
-              >${this.preheading}</slot
-            >
-          </p>
+          ${t ? u`<p class="nys-card__preheading">${this.preheading}</p>` : ""}
+          <slot
+            name="preheading"
+            class="nys-card__preheading-slot"
+            ?hidden=${!this._hasPreheadingSlot}
+            @slotchange=${this.handlePreheadingSlotChange}
+          ></slot>
           ${this.renderHeading()}
           ${this.subheading ? u`<p class="nys-card__subheading">${this.subheading}</p>` : ""}
         </div>
@@ -2967,13 +2967,13 @@ customElements.get("nys-card") || customElements.define("nys-card", xe);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Tooltip Component v1.20.0
+   * Tooltip Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -2996,8 +2996,8 @@ const wd = (r) => {
   }
   return e;
 }, kd = /* @__PURE__ */ wd(N), Cd = `:host{--_nys-tooltip-color: var(--nys-color-text-reverse, #ffffff);--_nys-tooltip-background-color: var(--nys-color-ink, #1b1b1b);--_nys-tooltip-border-radius: var(--nys-radius-md, 4px);--_nys-tooltip-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-tooltip-font-size: var(--nys-font-size-ui-sm, 14px);--_nys-tooltip-letter-spacing: var(--nys-font-letterspacing-ui-sm, .044px);--_nys-tooltip-line-height: var(--nys-font-lineheight-ui-sm, 24px)}.nys-tooltip__content{position:fixed;top:0;left:0;max-width:400px;width:max-content;max-height:120px;padding:var(--nys-space-50, 4px) var(--nys-space-100, 8px);background-color:var(--_nys-tooltip-background-color);border-radius:var(--_nys-tooltip-border-radius);cursor:auto;z-index:1}.nys-tooltip__inner{color:var(--_nys-tooltip-color);font-family:var(--_nys-tooltip-font-family);font-size:var(--_nys-tooltip-font-size);font-weight:400;line-height:var(--_nys-tooltip-line-height);letter-spacing:var(--_nys-tooltip-letter-spacing);white-space:normal;overflow-wrap:anywhere;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:4;line-clamp:4;-webkit-box-orient:vertical}.nys-tooltip__arrow{position:absolute;width:14px;height:6px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="6" viewBox="0 0 15 6" fill="none"><path d="M8.15079 5.44218C7.7763 5.76317 7.2237 5.76317 6.84921 5.44218L0.5 0H14.5L8.15079 5.44218Z" fill="%231B1B1B"/></svg>') no-repeat center}.nys-tooltip__content[active]{display:block}.fade-out{opacity:0;transition:opacity .2s ease-out}@media(prefers-reduced-motion:reduce){.fade-out{transition:none}}:host([position=top]) .nys-tooltip__arrow{top:100%;left:var(--arrow-offset-x, 50%);transform:translate(-50%)}:host([position=bottom]) .nys-tooltip__arrow{bottom:100%;left:var(--arrow-offset-x, 50%);transform:translate(-50%) rotate(180deg)}:host([position=left]) .nys-tooltip__arrow{left:100%;top:50%;transform:translateY(-50%) rotate(-90deg);margin-left:-4px}:host([position=right]) .nys-tooltip__arrow{right:100%;top:50%;transform:translateY(-50%) rotate(90deg);margin-right:-4px}:host([inverted]) .nys-tooltip__content{--_nys-tooltip-color: var(--nys-color-text, #1b1b1b);--_nys-tooltip-background-color: var(--nys-color-ink-reverse, #ffffff)}:host([inverted]) .nys-tooltip__arrow{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="6" viewBox="0 0 15 6" fill="none"><path d="M8.15079 5.44218C7.7763 5.76317 7.2237 5.76317 6.84921 5.44218L0.5 0H14.5L8.15079 5.44218Z" fill="white"/></svg>') no-repeat center}@media(max-width:400px){.nys-tooltip__content{max-width:calc(100vw - 2rem)}}`;
-var $d = Object.defineProperty, Ed = Object.getOwnPropertyDescriptor, co = (r, e, t, n) => {
-  for (var o = n > 1 ? void 0 : n ? Ed(e, t) : e, s = r.length - 1, i; s >= 0; s--)
+var $d = Object.defineProperty, Sd = Object.getOwnPropertyDescriptor, co = (r, e, t, n) => {
+  for (var o = n > 1 ? void 0 : n ? Sd(e, t) : e, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = (n ? i(e, t, o) : i(o)) || o);
   return n && o && $d(e, t, o), o;
 };
@@ -3298,12 +3298,12 @@ customElements.get("nys-tooltip") || customElements.define("nys-tooltip", Wn);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Label Component v1.20.0
+   * Label Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
-const Sd = ':host{--_nys-label-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-label-font-weight: var(--nys-font-weight-semibold, 600);--_nys-label-font-size: var(--nys-font-size-ui-md, 16px);--_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, .044px);--_nys-label-color: var(--nys-color-text, #1b1b1b);--_nys-label-cursor: normal;--_nys-description-font-weight: var(--nys-font-weight-regular, 400);--_nys-description-font-style: normal;--_nys-description-font-color: var(--nys-color-text-weak, #4a4d4f);--_nys-required-font-color: var(--nys-color-danger, #b52c2c);--_nys-optional-font-weight: var(--nys-font-weight-regular, 400);--_nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);--_nys-label-gap: var(--nys-space-4px, 4px)}p{margin:0}.nys-label{display:flex;flex-direction:column;align-items:flex-start;font-family:var(--_nys-label-font-family);font-size:var(--_nys-label-font-size);line-height:var(--_nys-label-line-height);letter-spacing:var(--_nys-label-letter-spacing)}.nys-label *{cursor:var(--_nys-label-cursor)}.nys-label__label{display:flex;gap:var(--_nys-label-gap);text-align:left;font-weight:var(--_nys-label-font-weight);color:var(--_nys-label-color)}.nys-label__description{text-align:left;font-weight:var(--_nys-description-font-weight);font-style:var(--_nys-description-font-style);color:var(--_nys-description-font-color)}.nys-label__required{display:contents;font-weight:var(--_nys-label-font-weight);color:var(--_nys-required-font-color)}.nys-label__optional{display:contents;font-weight:var(--_nys-optional-font-weight);color:var(--_nys-optional-font-color)}.nys-label__tooltip-wrapper{display:flex;gap:2px;align-items:center}.nys-label.invert .nys-label__label,.nys-label.invert .nys-label__description,.nys-label.invert .nys-label__optional{color:var(--nys-color-text-reverse, #ffffff)}.nys-label.invert .nys-label__tooltip-icon{color:var(--nys-color-ink-reverse, #ffffff)}';
+const Ed = ':host{--_nys-label-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-label-font-weight: var(--nys-font-weight-semibold, 600);--_nys-label-font-size: var(--nys-font-size-ui-md, 16px);--_nys-label-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-label-letter-spacing: var(--nys-font-letterspacing-ui-md, .044px);--_nys-label-color: var(--nys-color-text, #1b1b1b);--_nys-label-cursor: normal;--_nys-description-font-weight: var(--nys-font-weight-regular, 400);--_nys-description-font-style: normal;--_nys-description-font-color: var(--nys-color-text-weak, #4a4d4f);--_nys-required-font-color: var(--nys-color-danger, #b52c2c);--_nys-optional-font-weight: var(--nys-font-weight-regular, 400);--_nys-optional-font-color: var(--nys-color-text-weak, #4a4d4f);--_nys-label-gap: var(--nys-space-4px, 4px)}p{margin:0}.nys-label{display:flex;flex-direction:column;align-items:flex-start;font-family:var(--_nys-label-font-family);font-size:var(--_nys-label-font-size);line-height:var(--_nys-label-line-height);letter-spacing:var(--_nys-label-letter-spacing)}.nys-label *{cursor:var(--_nys-label-cursor)}.nys-label__label{display:flex;gap:var(--_nys-label-gap);text-align:left;font-weight:var(--_nys-label-font-weight);color:var(--_nys-label-color)}.nys-label__description{text-align:left;font-weight:var(--_nys-description-font-weight);font-style:var(--_nys-description-font-style);color:var(--_nys-description-font-color)}.nys-label__required{display:contents;font-weight:var(--_nys-label-font-weight);color:var(--_nys-required-font-color)}.nys-label__optional{display:contents;font-weight:var(--_nys-optional-font-weight);color:var(--_nys-optional-font-color)}.nys-label__tooltip-wrapper{display:flex;gap:2px;align-items:center}.nys-label.invert .nys-label__label,.nys-label.invert .nys-label__description,.nys-label.invert .nys-label__optional{color:var(--nys-color-text-reverse, #ffffff)}.nys-label.invert .nys-label__tooltip-icon{color:var(--nys-color-ink-reverse, #ffffff)}';
 var Ad = Object.defineProperty, ho = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
@@ -3372,7 +3372,7 @@ const sl = class extends N {
     `;
   }
 };
-sl.styles = k(Sd);
+sl.styles = k(Ed);
 let Yn = sl;
 ho([
   a({ type: String, reflect: !0 })
@@ -3398,7 +3398,7 @@ customElements.get("nys-label") || customElements.define("nys-label", Yn);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Error message Component v1.20.0
+   * Error message Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -3737,13 +3737,13 @@ customElements.get("nys-checkboxgroup") || customElements.define("nys-checkboxgr
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Textinput Component v1.20.0
+   * Textinput Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -5467,7 +5467,7 @@ const T = (r, e, ...t) => {
   const n = r.prototype.connectedCallback, o = r.prototype.disconnectedCallback;
   return Object.assign(r.prototype, {
     __registerHost() {
-      Sh(this, t);
+      Eh(this, t);
     },
     connectedCallback() {
       mh(this), n && n.call(this);
@@ -5484,7 +5484,7 @@ const T = (r, e, ...t) => {
   }), r.is = t.$tagName$, vh(r, t);
 }, ml = (r, e, t, n) => {
   t && t.map(([o, s, i]) => {
-    const d = $h(r, o), y = Ch(e, i), f = Eh(o);
+    const d = $h(r, o), y = Ch(e, i), f = Sh(o);
     Pe.ael(d, s, y, f), (e.$rmListeners$ = e.$rmListeners$ || []).push(() => Pe.rel(d, s, y, f));
   });
 }, Ch = (r, e) => (t) => {
@@ -5493,10 +5493,10 @@ const T = (r, e, ...t) => {
   } catch (n) {
     ur(n);
   }
-}, $h = (r, e) => e & 4 ? mt : e & 8 ? ts : e & 16 ? mt.body : r, Eh = (r) => Th ? {
+}, $h = (r, e) => e & 4 ? mt : e & 8 ? ts : e & 16 ? mt.body : r, Sh = (r) => Th ? {
   passive: (r & 1) !== 0,
   capture: (r & 2) !== 0
-} : (r & 2) !== 0, xl = /* @__PURE__ */ new WeakMap(), es = (r) => xl.get(r), Sh = (r, e) => {
+} : (r & 2) !== 0, xl = /* @__PURE__ */ new WeakMap(), es = (r) => xl.get(r), Eh = (r, e) => {
   const t = {
     $flags$: 0,
     $hostElement$: r,
@@ -5623,7 +5623,7 @@ function Nh(r, e) {
 function Cl(r) {
   return r.getFullYear();
 }
-function Ea(r, e) {
+function Sa(r, e) {
   if (!r || !e || !e.from || !e.to)
     return !1;
   const t = e.from < e.to ? e.from : e.to, n = e.from < e.to ? e.to : e.from;
@@ -5723,7 +5723,7 @@ const Bh = ".visually-hidden.sc-wc-datepicker{position:absolute;overflow:hidden;
             n = t.getMonth() !== r.getMonth() + 1;
             break;
           default:
-            n = !Ea(t, {
+            n = !Sa(t, {
               from: Tr(r, this.maxSearchDays),
               to: Lr(r, this.maxSearchDays)
             });
@@ -5907,7 +5907,7 @@ const Bh = ".visually-hidden.sc-wc-datepicker{position:absolute;overflow:hidden;
       const t = `row-${e[0].getMonth()}-${e[0].getDate()}`;
       return T("tr", { class: this.getClassName("calendar-row"), key: t }, e.map((n) => {
         var o, s, i, d, y;
-        const f = Ht(n, this.currentDate), g = n.getMonth() !== this.currentDate.getMonth(), m = Array.isArray(this.value) ? Ht(n, this.value[0]) || Ht(n, this.value[1]) : Ht(n, this.value), w = this.isRangeValue ? Ea(n, {
+        const f = Ht(n, this.currentDate), g = n.getMonth() !== this.currentDate.getMonth(), m = Array.isArray(this.value) ? Ht(n, this.value[0]) || Ht(n, this.value[1]) : Ht(n, this.value), w = this.isRangeValue ? Sa(n, {
           from: (o = this.value) === null || o === void 0 ? void 0 : o[0],
           to: ((s = this.value) === null || s === void 0 ? void 0 : s[1]) || this.hoveredDate || this.currentDate
         }) : !1, V = !((i = this.value) === null || i === void 0) && i[0] ? [
@@ -6544,7 +6544,7 @@ $l([
   a({ type: Boolean, reflect: !0 })
 ], sr.prototype, "subtle");
 customElements.get("nys-divider") || customElements.define("nys-divider", sr);
-const El = ':host{--_nys-dropdownmenu-width: 180px;--_nys-dropdownmenu-height: 100%;--_nys-dropdownmenu-radius: var(--nys-radius-md, 4px);--_nys-dropdownmenu-border-width: var(--nys-border-width-sm, 1px);--_nys-dropdownmenu-border-color: var(--nys-color-neutral-100, #d0d0ce);--_nys-dropdownmenu-background-color: var(--nys-color-ink-reverse, #ffffff);--_nys-dropdownmenu-boxshadow-color-100: var( --nys-color-black-transparent-100, rgba(27, 27, 27, .1) );--_nys-dropdownmenu-boxshadow-color-50: var( --nys-color-black-transparent-50, rgba(27, 27, 27, .01) );--_nys-dropdownmenu-gap: var(--nys-space-2px, 2px);--_nys-dropdownmenu-padding: var(--nys-space-100, 8px);--_nys-dropdownmenu-font-size: var(--nys-font-size-ui-md, 16px);--_nys-dropdownmenu-font-weight: var(font-weight: 400);--_nys-dropdownmenu-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-dropdownmenu-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-dropdownmenuitem-color: var(--nys-color-text, #1b1b1b);--_nys-dropdownmenuitem-gap: var(--nys-space-100, 8px);--_nys-dropdownmenuitem-padding: var(--nys-space-200, 16px) var(--nys-space-100, 8px);--_nys-dropdownmenuitem-border-radius: var(--nys-radius-md, 4px);--_nys-dropdownmenuitem-background-color: var(--nys-color-white, #ffffff);--_nys-dropdownmenuitem-background-color--hover: var( --nys-color-neutral-10, #f6f6f6 );--_nys-dropdownmenuitem-background-color--active: var( --nys-color-neutral-50, #ededed );--_nys-dropdownmenuitem-color--disabled: var( --nys-color-text-disabled, #bec0c1 );--_nys-dropdownmenuitem-outline-width: var(--nys-border-width-md, 2px);--_nys-dropdownmenuitem-outline-color: var(--nys-color-focus, #004dd1)}.nys-dropdownmenu{position:fixed;top:0;left:0;z-index:1776}.nys-dropdownmenu.active ul{display:flex}.nys-dropdownmenu ul{display:none;align-items:flex-start;flex-direction:column;gap:var(--_nys-dropdownmenu-gap);width:var(--_nys-dropdownmenu-width);height:var(--_nys-dropdownmenu-height);border-radius:var(--_nys-dropdownmenu-radius);border:var(--_nys-dropdownmenu-border-width) solid var(--_nys-dropdownmenu-border-color);background-color:var(--_nys-dropdownmenu-background-color);box-shadow:0 4px 6px -1px var(--_nys-dropdownmenu-boxshadow-color-100),0 4px 6px -1px var(--_nys-dropdownmenu-boxshadow-color-50);padding:var(--_nys-dropdownmenu-padding);font-family:var(--_nys-dropdownmenu-font-family);font-size:var(--_nys-dropdownmenu-font-size);font-weight:var(--_nys-dropdownmenu-font-weight);line-height:var(--_nys-dropdownmenu-line-height);overflow:hidden;margin:0}.nys-dropdownmenuitem{list-style:none;width:var(--_nys-dropdownmenu-width);padding:0;margin:0}.nys-dropdownmenuitem a,.nys-dropdownmenuitem button{display:flex;gap:var(--_nys-dropdownmenuitem-gap);padding:var(--_nys-dropdownmenuitem-padding);border-radius:var(--_nys-dropdownmenuitem-border-radius);background-color:var(--_nys-dropdownmenuitem-background-color);width:100%;box-sizing:border-box;text-decoration:none;text-wrap:wrap;color:var(--_nys-dropdownmenuitem-color);transition:.05s ease-in-out all;border:none;font-family:var(--_nys-dropdownmenu-font-family);font-size:var(--_nys-dropdownmenu-font-size);font-weight:var(--_nys-dropdownmenu-font-weight);line-height:var(--_nys-dropdownmenu-line-height);cursor:pointer}.nys-dropdownmenuitem a nys-icon,.nys-dropdownmenuitem button nys-icon{margin-top:2.5px}.nys-dropdownmenuitem a:hover:not(.disabled):not([aria-disabled=true]),.nys-dropdownmenuitem button:hover:not(.disabled):not([aria-disabled=true]){background-color:var(--_nys-dropdownmenuitem-background-color--hover)}.nys-dropdownmenuitem a:active:not(.disabled):not([aria-disabled=true]),.nys-dropdownmenuitem button:active:not(.disabled):not([aria-disabled=true]){background-color:var(--_nys-dropdownmenuitem-background-color--active)}.nys-dropdownmenuitem a:focus-visible:not(.disabled):not([aria-disabled=true]):not([focus-ring-false]),.nys-dropdownmenuitem button:focus-visible:not(.disabled):not([aria-disabled=true]):not([focus-ring-false]){position:relative;outline:var(--_nys-dropdownmenuitem-outline-width) solid var(--_nys-dropdownmenuitem-outline-color)}.nys-dropdownmenuitem a.disabled,.nys-dropdownmenuitem a[aria-disabled=true],.nys-dropdownmenuitem button.disabled,.nys-dropdownmenuitem button[aria-disabled=true]{color:var(--_nys-dropdownmenuitem-color--disabled);pointer-events:none;cursor:default}';
+const Sl = ':host{--_nys-dropdownmenu-width: 180px;--_nys-dropdownmenu-height: 100%;--_nys-dropdownmenu-radius: var(--nys-radius-md, 4px);--_nys-dropdownmenu-border-width: var(--nys-border-width-sm, 1px);--_nys-dropdownmenu-border-color: var(--nys-color-neutral-100, #d0d0ce);--_nys-dropdownmenu-background-color: var(--nys-color-ink-reverse, #ffffff);--_nys-dropdownmenu-boxshadow-color-100: var( --nys-color-black-transparent-100, rgba(27, 27, 27, .1) );--_nys-dropdownmenu-boxshadow-color-50: var( --nys-color-black-transparent-50, rgba(27, 27, 27, .01) );--_nys-dropdownmenu-gap: var(--nys-space-2px, 2px);--_nys-dropdownmenu-padding: var(--nys-space-100, 8px);--_nys-dropdownmenu-font-size: var(--nys-font-size-ui-md, 16px);--_nys-dropdownmenu-font-weight: var(font-weight: 400);--_nys-dropdownmenu-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-dropdownmenu-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-dropdownmenuitem-color: var(--nys-color-text, #1b1b1b);--_nys-dropdownmenuitem-gap: var(--nys-space-100, 8px);--_nys-dropdownmenuitem-padding: var(--nys-space-200, 16px) var(--nys-space-100, 8px);--_nys-dropdownmenuitem-border-radius: var(--nys-radius-md, 4px);--_nys-dropdownmenuitem-background-color: var(--nys-color-white, #ffffff);--_nys-dropdownmenuitem-background-color--hover: var( --nys-color-neutral-10, #f6f6f6 );--_nys-dropdownmenuitem-background-color--active: var( --nys-color-neutral-50, #ededed );--_nys-dropdownmenuitem-color--disabled: var( --nys-color-text-disabled, #bec0c1 );--_nys-dropdownmenuitem-outline-width: var(--nys-border-width-md, 2px);--_nys-dropdownmenuitem-outline-color: var(--nys-color-focus, #004dd1)}.nys-dropdownmenu{position:fixed;top:0;left:0;z-index:1776}.nys-dropdownmenu.active ul{display:flex}.nys-dropdownmenu ul{display:none;align-items:flex-start;flex-direction:column;gap:var(--_nys-dropdownmenu-gap);width:var(--_nys-dropdownmenu-width);height:var(--_nys-dropdownmenu-height);border-radius:var(--_nys-dropdownmenu-radius);border:var(--_nys-dropdownmenu-border-width) solid var(--_nys-dropdownmenu-border-color);background-color:var(--_nys-dropdownmenu-background-color);box-shadow:0 4px 6px -1px var(--_nys-dropdownmenu-boxshadow-color-100),0 4px 6px -1px var(--_nys-dropdownmenu-boxshadow-color-50);padding:var(--_nys-dropdownmenu-padding);font-family:var(--_nys-dropdownmenu-font-family);font-size:var(--_nys-dropdownmenu-font-size);font-weight:var(--_nys-dropdownmenu-font-weight);line-height:var(--_nys-dropdownmenu-line-height);overflow:hidden;margin:0}.nys-dropdownmenuitem{list-style:none;width:var(--_nys-dropdownmenu-width);padding:0;margin:0}.nys-dropdownmenuitem a,.nys-dropdownmenuitem button{display:flex;gap:var(--_nys-dropdownmenuitem-gap);padding:var(--_nys-dropdownmenuitem-padding);border-radius:var(--_nys-dropdownmenuitem-border-radius);background-color:var(--_nys-dropdownmenuitem-background-color);width:100%;box-sizing:border-box;text-decoration:none;text-wrap:wrap;color:var(--_nys-dropdownmenuitem-color);transition:.05s ease-in-out all;border:none;font-family:var(--_nys-dropdownmenu-font-family);font-size:var(--_nys-dropdownmenu-font-size);font-weight:var(--_nys-dropdownmenu-font-weight);line-height:var(--_nys-dropdownmenu-line-height);cursor:pointer}.nys-dropdownmenuitem a nys-icon,.nys-dropdownmenuitem button nys-icon{margin-top:2.5px}.nys-dropdownmenuitem a:hover:not(.disabled):not([aria-disabled=true]),.nys-dropdownmenuitem button:hover:not(.disabled):not([aria-disabled=true]){background-color:var(--_nys-dropdownmenuitem-background-color--hover)}.nys-dropdownmenuitem a:active:not(.disabled):not([aria-disabled=true]),.nys-dropdownmenuitem button:active:not(.disabled):not([aria-disabled=true]){background-color:var(--_nys-dropdownmenuitem-background-color--active)}.nys-dropdownmenuitem a:focus-visible:not(.disabled):not([aria-disabled=true]):not([focus-ring-false]),.nys-dropdownmenuitem button:focus-visible:not(.disabled):not([aria-disabled=true]):not([focus-ring-false]){position:relative;outline:var(--_nys-dropdownmenuitem-outline-width) solid var(--_nys-dropdownmenuitem-outline-color)}.nys-dropdownmenuitem a.disabled,.nys-dropdownmenuitem a[aria-disabled=true],.nys-dropdownmenuitem button.disabled,.nys-dropdownmenuitem button[aria-disabled=true]{color:var(--_nys-dropdownmenuitem-color--disabled);pointer-events:none;cursor:default}';
 var Yh = Object.defineProperty, uo = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
@@ -6611,7 +6611,7 @@ const Vr = class Vr extends M {
     </li>`;
   }
 };
-Vr.styles = k(El), Vr.shadowRootOptions = {
+Vr.styles = k(Sl), Vr.shadowRootOptions = {
   ...N.shadowRootOptions,
   delegatesFocus: !0
 };
@@ -6863,7 +6863,7 @@ const xi = class xi extends M {
     </div>`;
   }
 };
-xi.styles = k(El);
+xi.styles = k(Sl);
 let Fn = xi;
 ns([
   a({ type: String, reflect: !0 })
@@ -7539,7 +7539,7 @@ var iu = Object.defineProperty, hn = (r, e, t, n) => {
     (i = r[s]) && (o = i(e, t, o) || o);
   return o && iu(e, t, o), o;
 };
-const Sl = "[aria-current]:not([aria-current='false'])", Sa = (r) => r.matches(Sl), au = [
+const El = "[aria-current]:not([aria-current='false'])", Ea = (r) => r.matches(El), au = [
   "a[href]",
   "area[href]",
   "button:not([disabled])",
@@ -7588,7 +7588,7 @@ const Sl = "[aria-current]:not([aria-current='false'])", Sa = (r) => r.matches(S
     const t = Array.from(e.querySelectorAll("a"));
     if (this._authorSetsCurrent) {
       t.forEach((s) => {
-        s.closest("li")?.classList.toggle("active", Sa(s));
+        s.closest("li")?.classList.toggle("active", Ea(s));
       });
       return;
     }
@@ -7615,7 +7615,7 @@ const Sl = "[aria-current]:not([aria-current='false'])", Sa = (r) => r.matches(S
     if (!e) return;
     const t = e.assignedNodes({ flatten: !0 }).filter((o) => o.nodeType === Node.ELEMENT_NODE);
     this._authorSetsCurrent = t.some(
-      (o) => Sa(o) || !!o.querySelector(Sl)
+      (o) => Ea(o) || !!o.querySelector(El)
     );
     const n = [
       this.shadowRoot?.querySelector(".nys-globalheader__content"),
@@ -7861,13 +7861,13 @@ customElements.get("nys-globalheader") || customElements.define("nys-globalheade
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Divider Component v1.20.0
+   * Divider Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -8100,7 +8100,7 @@ customElements.get("nys-globalfooter") || customElements.define("nys-globalfoote
 const ir = globalThis.__nysIconRegistry ??= /* @__PURE__ */ new Map(), io = globalThis.__nysIconWatchers ??= /* @__PURE__ */ new Map();
 let Vs = null, Aa = null;
 async function ku() {
-  return Vs || (Aa ??= import("./nys-icon.library-eNVZmfkf.js").then(
+  return Vs || (Aa ??= import("./nys-icon.library-Cfdq5Zdc.js").then(
     (r) => Vs = r.default
   ), Aa);
 }
@@ -8138,10 +8138,10 @@ function Da(r, e) {
   for (var t = 0, n = Array(e); t < e; t++) n[t] = r[t];
   return n;
 }
-function Eu(r) {
+function Su(r) {
   if (Array.isArray(r)) return r;
 }
-function Su(r, e) {
+function Eu(r, e) {
   var t = r == null ? null : typeof Symbol < "u" && r[Symbol.iterator] || r["@@iterator"];
   if (t != null) {
     var n, o, s, i, d = [], y = !0, f = !1;
@@ -8164,7 +8164,7 @@ function Au() {
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
 }
 function Lu(r, e) {
-  return Eu(r) || Su(r, e) || Tu(r, e) || Au();
+  return Su(r) || Eu(r, e) || Tu(r, e) || Au();
 }
 function Tu(r, e) {
   if (r) {
@@ -8254,7 +8254,7 @@ function qu(r) {
     case "object": {
       if (r === null)
         return Xo(r);
-      const e = r, t = St(e, "toString");
+      const e = r, t = Et(e, "toString");
       if (typeof t == "function") {
         const n = t(e);
         return typeof n == "string" ? n : Xo(n);
@@ -8265,7 +8265,7 @@ function qu(r) {
       return Xo(r);
   }
 }
-function St(r, e) {
+function Et(r, e) {
   for (; r !== null; ) {
     const n = Iu(r, e);
     if (n) {
@@ -8356,7 +8356,7 @@ function zl() {
   r.DocumentFragment;
   const s = r.HTMLTemplateElement, i = r.Node, d = r.Element, y = r.NodeFilter, f = r.NamedNodeMap;
   f === void 0 && (r.NamedNodeMap || r.MozNamedAttrMap), r.HTMLFormElement;
-  const g = r.DOMParser, m = r.trustedTypes, w = d.prototype, V = St(w, "cloneNode"), re = St(w, "remove"), Ge = St(w, "nextSibling"), oe = St(w, "childNodes"), q = St(w, "parentNode"), ht = St(w, "shadowRoot"), be = St(w, "attributes"), D = i && i.prototype ? St(i.prototype, "nodeType") : null, H = i && i.prototype ? St(i.prototype, "nodeName") : null;
+  const g = r.DOMParser, m = r.trustedTypes, w = d.prototype, V = Et(w, "cloneNode"), re = Et(w, "remove"), Ge = Et(w, "nextSibling"), oe = Et(w, "childNodes"), q = Et(w, "parentNode"), ht = Et(w, "shadowRoot"), be = Et(w, "attributes"), D = i && i.prototype ? Et(i.prototype, "nodeType") : null, H = i && i.prototype ? Et(i.prototype, "nodeName") : null;
   if (typeof s == "function") {
     const c = t.createElement("template");
     c.content && c.content.ownerDocument && (t = c.content.ownerDocument);
@@ -8382,10 +8382,10 @@ function zl() {
   }, ls = function() {
     return go || (pn = oy(m, o), go = !0), pn;
   }, It = t, fn = It.implementation, xo = It.createNodeIterator, cs = It.createDocumentFragment, ds = It.getElementsByTagName, hs = n.importNode;
-  let E = ja();
+  let S = ja();
   e.isSupported = typeof Tl == "function" && typeof q == "function" && fn && fn.createHTMLDocument !== void 0;
   const us = ju, ys = Wu, ps = Yu, fs = Gu, bs = Ku, vs = Zu, wo = Xu, _s = Ju;
-  let ko = Ha, S = null;
+  let ko = Ha, E = null;
   const Co = R({}, [...Na, ...js, ...Ws, ...Ys, ...Ba]);
   let A = null;
   const $o = R({}, [...Fa, ...Gs, ...qa, ...xr]);
@@ -8408,7 +8408,7 @@ function zl() {
       enumerable: !0,
       value: !1
     }
-  })), bt = null, Eo = null;
+  })), bt = null, So = null;
   const $e = Object.seal(ro(null, {
     tagCheck: {
       writable: !0,
@@ -8423,7 +8423,7 @@ function zl() {
       value: null
     }
   }));
-  let So = !0, bn = !0, Ao = !1, Lo = !0, Ee = !1, Se = !0, Fe = !1, vn = !1, _n = null, gn = null, mn = !1, Je = !1, Ot = !1, Rt = !1, To = !0, Do = !1;
+  let Eo = !0, bn = !0, Ao = !1, Lo = !0, Se = !1, Ee = !0, Fe = !1, vn = !1, _n = null, gn = null, mn = !1, Je = !1, Ot = !1, Rt = !1, To = !0, Do = !1;
   const zo = "user-content-";
   let xn = !0, wn = !1, et = {}, se = null;
   const kn = R({}, [
@@ -8467,9 +8467,9 @@ function zl() {
   const Oo = R({}, ["audio", "video", "img", "source", "image", "track"]);
   let Cn = null;
   const Ro = R({}, ["alt", "class", "for", "id", "label", "name", "pattern", "placeholder", "role", "summary", "title", "value", "style", "xmlns"]), Mt = "http://www.w3.org/1998/Math/MathML", Pt = "http://www.w3.org/2000/svg", ie = "http://www.w3.org/1999/xhtml";
-  let tt = ie, $n = !1, En = null;
+  let tt = ie, $n = !1, Sn = null;
   const gs = R({}, [Mt, Pt, ie], Us), Mo = Le(["mi", "mo", "mn", "ms", "mtext"]);
-  let Sn = R({}, Mo);
+  let En = R({}, Mo);
   const Po = Le(["annotation-xml"]);
   let An = R({}, Po);
   const ms = R({}, ["title", "style", "font", "a", "script"]);
@@ -8483,11 +8483,11 @@ function zl() {
     if (nt && nt === l)
       return;
     (!l || typeof l != "object") && (l = {}), l = Ue(l), vt = // eslint-disable-next-line unicorn/prefer-includes
-    xs.indexOf(l.PARSER_MEDIA_TYPE) === -1 ? ws : l.PARSER_MEDIA_TYPE, $ = vt === "application/xhtml+xml" ? Us : er, S = en(l, "ALLOWED_TAGS", Co, {
+    xs.indexOf(l.PARSER_MEDIA_TYPE) === -1 ? ws : l.PARSER_MEDIA_TYPE, $ = vt === "application/xhtml+xml" ? Us : er, E = en(l, "ALLOWED_TAGS", Co, {
       transform: $
     }), A = en(l, "ALLOWED_ATTR", $o, {
       transform: $
-    }), En = en(l, "ALLOWED_NAMESPACES", gs, {
+    }), Sn = en(l, "ALLOWED_NAMESPACES", gs, {
       transform: Us
     }), Cn = en(l, "ADD_URI_SAFE_ATTR", Ro, {
       transform: $,
@@ -8499,11 +8499,11 @@ function zl() {
       transform: $
     }), bt = en(l, "FORBID_TAGS", Ue({}), {
       transform: $
-    }), Eo = en(l, "FORBID_ATTR", Ue({}), {
+    }), So = en(l, "FORBID_ATTR", Ue({}), {
       transform: $
-    }), et = me(l, "USE_PROFILES") ? l.USE_PROFILES && typeof l.USE_PROFILES == "object" ? Ue(l.USE_PROFILES) : l.USE_PROFILES : !1, So = l.ALLOW_ARIA_ATTR !== !1, bn = l.ALLOW_DATA_ATTR !== !1, Ao = l.ALLOW_UNKNOWN_PROTOCOLS || !1, Lo = l.ALLOW_SELF_CLOSE_IN_ATTR !== !1, Ee = l.SAFE_FOR_TEMPLATES || !1, Se = l.SAFE_FOR_XML !== !1, Fe = l.WHOLE_DOCUMENT || !1, Je = l.RETURN_DOM || !1, Ot = l.RETURN_DOM_FRAGMENT || !1, Rt = l.RETURN_TRUSTED_TYPE || !1, mn = l.FORCE_BODY || !1, To = l.SANITIZE_DOM !== !1, Do = l.SANITIZE_NAMED_PROPS || !1, xn = l.KEEP_CONTENT !== !1, wn = l.IN_PLACE || !1, ko = Hu(l.ALLOWED_URI_REGEXP) ? l.ALLOWED_URI_REGEXP : Ha, tt = typeof l.NAMESPACE == "string" ? l.NAMESPACE : ie, Sn = me(l, "MATHML_TEXT_INTEGRATION_POINTS") && l.MATHML_TEXT_INTEGRATION_POINTS && typeof l.MATHML_TEXT_INTEGRATION_POINTS == "object" ? Ue(l.MATHML_TEXT_INTEGRATION_POINTS) : R({}, Mo), An = me(l, "HTML_INTEGRATION_POINTS") && l.HTML_INTEGRATION_POINTS && typeof l.HTML_INTEGRATION_POINTS == "object" ? Ue(l.HTML_INTEGRATION_POINTS) : R({}, Po);
+    }), et = me(l, "USE_PROFILES") ? l.USE_PROFILES && typeof l.USE_PROFILES == "object" ? Ue(l.USE_PROFILES) : l.USE_PROFILES : !1, Eo = l.ALLOW_ARIA_ATTR !== !1, bn = l.ALLOW_DATA_ATTR !== !1, Ao = l.ALLOW_UNKNOWN_PROTOCOLS || !1, Lo = l.ALLOW_SELF_CLOSE_IN_ATTR !== !1, Se = l.SAFE_FOR_TEMPLATES || !1, Ee = l.SAFE_FOR_XML !== !1, Fe = l.WHOLE_DOCUMENT || !1, Je = l.RETURN_DOM || !1, Ot = l.RETURN_DOM_FRAGMENT || !1, Rt = l.RETURN_TRUSTED_TYPE || !1, mn = l.FORCE_BODY || !1, To = l.SANITIZE_DOM !== !1, Do = l.SANITIZE_NAMED_PROPS || !1, xn = l.KEEP_CONTENT !== !1, wn = l.IN_PLACE || !1, ko = Hu(l.ALLOWED_URI_REGEXP) ? l.ALLOWED_URI_REGEXP : Ha, tt = typeof l.NAMESPACE == "string" ? l.NAMESPACE : ie, En = me(l, "MATHML_TEXT_INTEGRATION_POINTS") && l.MATHML_TEXT_INTEGRATION_POINTS && typeof l.MATHML_TEXT_INTEGRATION_POINTS == "object" ? Ue(l.MATHML_TEXT_INTEGRATION_POINTS) : R({}, Mo), An = me(l, "HTML_INTEGRATION_POINTS") && l.HTML_INTEGRATION_POINTS && typeof l.HTML_INTEGRATION_POINTS == "object" ? Ue(l.HTML_INTEGRATION_POINTS) : R({}, Po);
     const h = me(l, "CUSTOM_ELEMENT_HANDLING") && l.CUSTOM_ELEMENT_HANDLING && typeof l.CUSTOM_ELEMENT_HANDLING == "object" ? Ue(l.CUSTOM_ELEMENT_HANDLING) : ro(null);
-    if (L = ro(null), me(h, "tagNameCheck") && No(h.tagNameCheck) && (L.tagNameCheck = h.tagNameCheck), me(h, "attributeNameCheck") && No(h.attributeNameCheck) && (L.attributeNameCheck = h.attributeNameCheck), me(h, "allowCustomizedBuiltInElements") && typeof h.allowCustomizedBuiltInElements == "boolean" && (L.allowCustomizedBuiltInElements = h.allowCustomizedBuiltInElements), De(L), Ee && (bn = !1), Ot && (Je = !0), et && (S = R({}, Ba), A = ro(null), et.html === !0 && (R(S, Na), R(A, Fa)), et.svg === !0 && (R(S, js), R(A, Gs), R(A, xr)), et.svgFilters === !0 && (R(S, Ws), R(A, Gs), R(A, xr)), et.mathMl === !0 && (R(S, Ys), R(A, qa), R(A, xr))), $e.tagCheck = null, $e.attributeCheck = null, me(l, "ADD_TAGS") && (typeof l.ADD_TAGS == "function" ? $e.tagCheck = l.ADD_TAGS : nn(l.ADD_TAGS) && (S === Co && (S = Ue(S)), R(S, l.ADD_TAGS, $))), me(l, "ADD_ATTR") && (typeof l.ADD_ATTR == "function" ? $e.attributeCheck = l.ADD_ATTR : nn(l.ADD_ATTR) && (A === $o && (A = Ue(A)), R(A, l.ADD_ATTR, $))), me(l, "ADD_URI_SAFE_ATTR") && nn(l.ADD_URI_SAFE_ATTR) && R(Cn, l.ADD_URI_SAFE_ATTR, $), me(l, "FORBID_CONTENTS") && nn(l.FORBID_CONTENTS) && (se === kn && (se = Ue(se)), R(se, l.FORBID_CONTENTS, $)), me(l, "ADD_FORBID_CONTENTS") && nn(l.ADD_FORBID_CONTENTS) && (se === kn && (se = Ue(se)), R(se, l.ADD_FORBID_CONTENTS, $)), xn && (S["#text"] = !0), Fe && R(S, ["html", "head", "body"]), S.table && (R(S, ["tbody"]), delete bt.tbody), l.TRUSTED_TYPES_POLICY) {
+    if (L = ro(null), me(h, "tagNameCheck") && No(h.tagNameCheck) && (L.tagNameCheck = h.tagNameCheck), me(h, "attributeNameCheck") && No(h.attributeNameCheck) && (L.attributeNameCheck = h.attributeNameCheck), me(h, "allowCustomizedBuiltInElements") && typeof h.allowCustomizedBuiltInElements == "boolean" && (L.allowCustomizedBuiltInElements = h.allowCustomizedBuiltInElements), De(L), Se && (bn = !1), Ot && (Je = !0), et && (E = R({}, Ba), A = ro(null), et.html === !0 && (R(E, Na), R(A, Fa)), et.svg === !0 && (R(E, js), R(A, Gs), R(A, xr)), et.svgFilters === !0 && (R(E, Ws), R(A, Gs), R(A, xr)), et.mathMl === !0 && (R(E, Ys), R(A, qa), R(A, xr))), $e.tagCheck = null, $e.attributeCheck = null, me(l, "ADD_TAGS") && (typeof l.ADD_TAGS == "function" ? $e.tagCheck = l.ADD_TAGS : nn(l.ADD_TAGS) && (E === Co && (E = Ue(E)), R(E, l.ADD_TAGS, $))), me(l, "ADD_ATTR") && (typeof l.ADD_ATTR == "function" ? $e.attributeCheck = l.ADD_ATTR : nn(l.ADD_ATTR) && (A === $o && (A = Ue(A)), R(A, l.ADD_ATTR, $))), me(l, "ADD_URI_SAFE_ATTR") && nn(l.ADD_URI_SAFE_ATTR) && R(Cn, l.ADD_URI_SAFE_ATTR, $), me(l, "FORBID_CONTENTS") && nn(l.FORBID_CONTENTS) && (se === kn && (se = Ue(se)), R(se, l.FORBID_CONTENTS, $)), me(l, "ADD_FORBID_CONTENTS") && nn(l.ADD_FORBID_CONTENTS) && (se === kn && (se = Ue(se)), R(se, l.ADD_FORBID_CONTENTS, $)), xn && (E["#text"] = !0), Fe && R(E, ["html", "head", "body"]), E.table && (R(E, ["tbody"]), delete bt.tbody), l.TRUSTED_TYPES_POLICY) {
       if (typeof l.TRUSTED_TYPES_POLICY.createHTML != "function")
         throw Rn('TRUSTED_TYPES_POLICY configuration option must provide a "createHTML" hook.');
       if (typeof l.TRUSTED_TYPES_POLICY.createScriptURL != "function")
@@ -8518,19 +8518,19 @@ function zl() {
     } else l.TRUSTED_TYPES_POLICY === null ? (z = void 0, Be = "") : (z === void 0 && (z = ls()), z && typeof Be == "string" && (Be = Qe("")));
     Le && Le(l), nt = l;
   }, Bo = R({}, [...js, ...Ws, ...Vu]), Fo = R({}, [...Ys, ...Uu]), Cs = function(l, h, p) {
-    return h.namespaceURI === ie ? l === "svg" : h.namespaceURI === Mt ? l === "svg" && (p === "annotation-xml" || Sn[p]) : !!Bo[l];
+    return h.namespaceURI === ie ? l === "svg" : h.namespaceURI === Mt ? l === "svg" && (p === "annotation-xml" || En[p]) : !!Bo[l];
   }, $s = function(l, h, p) {
     return h.namespaceURI === ie ? l === "math" : h.namespaceURI === Pt ? l === "math" && An[p] : !!Fo[l];
-  }, Es = function(l, h, p) {
-    return h.namespaceURI === Pt && !An[p] || h.namespaceURI === Mt && !Sn[p] ? !1 : !Fo[l] && (ms[l] || !Bo[l]);
-  }, Ss = function(l) {
+  }, Ss = function(l, h, p) {
+    return h.namespaceURI === Pt && !An[p] || h.namespaceURI === Mt && !En[p] ? !1 : !Fo[l] && (ms[l] || !Bo[l]);
+  }, Es = function(l) {
     let h = q(l);
     (!h || !h.tagName) && (h = {
       namespaceURI: tt,
       tagName: "template"
     });
     const p = er(l.tagName), v = er(h.tagName);
-    return En[l.namespaceURI] ? l.namespaceURI === Pt ? Cs(p, h, v) : l.namespaceURI === Mt ? $s(p, h, v) : l.namespaceURI === ie ? Es(p, h, v) : !!(vt === "application/xhtml+xml" && En[l.namespaceURI]) : !1;
+    return Sn[l.namespaceURI] ? l.namespaceURI === Pt ? Cs(p, h, v) : l.namespaceURI === Mt ? $s(p, h, v) : l.namespaceURI === ie ? Ss(p, h, v) : !!(vt === "application/xhtml+xml" && Sn[l.namespaceURI]) : !1;
   }, Oe = function(l) {
     Qn(e.removed, {
       element: l
@@ -8610,7 +8610,7 @@ function zl() {
           h.push(_[x]);
     }
   }, Ls = function(l) {
-    if (!Se)
+    if (!Ee)
       return;
     const h = [l];
     for (; h.length > 0; ) {
@@ -8734,7 +8734,7 @@ function zl() {
     });
   }
   const Ts = function(l, h) {
-    return !!(Se && l.hasChildNodes() && !_t(l.firstElementChild) && _e(Va, l.textContent) && _e(Va, l.innerHTML) || Se && l.namespaceURI === ie && h === "style" && _t(l.firstElementChild) || l.nodeType === st.processingInstruction || Se && l.nodeType === st.comment && _e(Ua, l.data));
+    return !!(Ee && l.hasChildNodes() && !_t(l.firstElementChild) && _e(Va, l.textContent) && _e(Va, l.innerHTML) || Ee && l.namespaceURI === ie && h === "style" && _t(l.firstElementChild) || l.nodeType === st.processingInstruction || Ee && l.nodeType === st.comment && _e(Ua, l.data));
   }, Ds = function(l, h) {
     if (!bt[h] && jo(h) && (L.tagNameCheck instanceof RegExp && _e(L.tagNameCheck, h) || L.tagNameCheck instanceof Function && L.tagNameCheck(h)))
       return !1;
@@ -8750,37 +8750,37 @@ function zl() {
     }
     return Oe(l), !0;
   }, Vo = function(l, h) {
-    if (ae(E.beforeSanitizeElements, l, null), l !== h && q(l) === null)
+    if (ae(S.beforeSanitizeElements, l, null), l !== h && q(l) === null)
       return !0;
     if (Ft(l))
       return Oe(l), !0;
     const p = $(H ? H(l) : l.nodeName);
-    if (ae(E.uponSanitizeElement, l, {
+    if (ae(S.uponSanitizeElement, l, {
       tagName: p,
-      allowedTags: S
+      allowedTags: E
     }), l !== h && q(l) === null)
       return !0;
     if (Ts(l, p))
       return Oe(l), !0;
-    if (bt[p] || !($e.tagCheck instanceof Function && $e.tagCheck(p)) && !S[p]) {
+    if (bt[p] || !($e.tagCheck instanceof Function && $e.tagCheck(p)) && !E[p]) {
       const _ = Ds(l, p);
-      return _ === !1 && ae(E.afterSanitizeElements, l, null), _;
+      return _ === !1 && ae(S.afterSanitizeElements, l, null), _;
     }
-    if ((D ? D(l) : l.nodeType) === st.element && !Ss(l) || (p === "noscript" || p === "noembed" || p === "noframes") && _e(ey, l.innerHTML))
+    if ((D ? D(l) : l.nodeType) === st.element && !Es(l) || (p === "noscript" || p === "noembed" || p === "noframes") && _e(ey, l.innerHTML))
       return Oe(l), !0;
-    if (Ee && l.nodeType === st.text) {
+    if (Se && l.nodeType === st.text) {
       const _ = Bt(l.textContent);
       l.textContent !== _ && (Qn(e.removed, {
         element: l.cloneNode()
       }), l.textContent = _);
     }
-    return ae(E.afterSanitizeElements, l, null), !1;
+    return ae(S.afterSanitizeElements, l, null), !1;
   }, Uo = function(l, h, p) {
-    if (Eo[h] || Se && h === "patchsrc" || Se && h === "for" && l !== "label" && l !== "output" || To && (h === "id" || h === "name") && (p in t || p in ks))
+    if (So[h] || Ee && h === "patchsrc" || Ee && h === "for" && l !== "label" && l !== "output" || To && (h === "id" || h === "name") && (p in t || p in ks))
       return !1;
     const v = A[h] || $e.attributeCheck instanceof Function && $e.attributeCheck(h, l);
     if (!(bn && _e(fs, h))) {
-      if (!(So && _e(bs, h))) {
+      if (!(Eo && _e(bs, h))) {
         if (v) {
           if (!Cn[h]) {
             if (!_e(ko, Zo(p, wo, ""))) {
@@ -8821,7 +8821,7 @@ function zl() {
       qe(h, l);
     }
   }, Wo = function(l) {
-    ae(E.beforeSanitizeAttributes, l, null);
+    ae(S.beforeSanitizeAttributes, l, null);
     const h = l.attributes;
     if (!h || Ft(l))
       return;
@@ -8837,7 +8837,7 @@ function zl() {
     for (; v--; ) {
       const x = h[v], P = x.name, de = x.namespaceURI, G = x.value, U = $(P), I = G;
       let He = P === "value" ? I : Mu(I);
-      if (p.attrName = U, p.attrValue = He, p.keepAttr = !0, p.forceKeepAttr = void 0, ae(E.uponSanitizeAttribute, l, p), He = p.attrValue, Do && (U === "id" || U === "name") && Ra(He, zo) !== 0 && (qe(P, l), He = zo + He), Se && _e(/((--!?|])>)|<\/(style|script|title|xmp|textarea|noscript|iframe|noembed|noframes)/i, He)) {
+      if (p.attrName = U, p.attrValue = He, p.keepAttr = !0, p.forceKeepAttr = void 0, ae(S.uponSanitizeAttribute, l, p), He = p.attrValue, Do && (U === "id" || U === "name") && Ra(He, zo) !== 0 && (qe(P, l), He = zo + He), Ee && _e(/((--!?|])>)|<\/(style|script|title|xmp|textarea|noscript|iframe|noembed|noframes)/i, He)) {
         qe(P, l);
         continue;
       }
@@ -8854,23 +8854,23 @@ function zl() {
           qe(P, l);
           continue;
         }
-        if (Ee && (He = Bt(He)), !Uo(_, U, He)) {
+        if (Se && (He = Bt(He)), !Uo(_, U, He)) {
           qe(P, l);
           continue;
         }
         He = Is(_, U, de, He), He !== I && Os(l, P, de, He);
       }
     }
-    ae(E.afterSanitizeAttributes, l, null);
+    ae(S.afterSanitizeAttributes, l, null);
   }, qt = function(l) {
     let h = null;
     const p = Ho(l);
-    for (ae(E.beforeSanitizeShadowDOM, l, null); h = p.nextNode(); )
-      if (ae(E.uponSanitizeShadowNode, h, null), Vo(h, l), Wo(h), ot(h.content) && qt(h.content), (D ? D(h) : h.nodeType) === st.element) {
+    for (ae(S.beforeSanitizeShadowDOM, l, null); h = p.nextNode(); )
+      if (ae(S.uponSanitizeShadowNode, h, null), Vo(h, l), Wo(h), ot(h.content) && qt(h.content), (D ? D(h) : h.nodeType) === st.element) {
         const _ = ht(h);
         ot(_) && (zn(_), qt(_));
       }
-    ae(E.afterSanitizeShadowDOM, l, null);
+    ae(S.afterSanitizeShadowDOM, l, null);
   }, zn = function(l) {
     const h = [{
       node: l,
@@ -8917,14 +8917,14 @@ function zl() {
       throw Rn("dirty is not a string, aborting");
     if (!e.isSupported)
       return c;
-    vn ? (S = _n, A = gn) : Ln(l), (E.uponSanitizeElement.length > 0 || E.uponSanitizeAttribute.length > 0) && (S = Ue(S)), E.uponSanitizeAttribute.length > 0 && (A = Ue(A)), e.removed = [];
+    vn ? (E = _n, A = gn) : Ln(l), (S.uponSanitizeElement.length > 0 || S.uponSanitizeAttribute.length > 0) && (E = Ue(E)), S.uponSanitizeAttribute.length > 0 && (A = Ue(A)), e.removed = [];
     const x = wn && typeof c != "string" && _t(c);
     if (x) {
       Ls(c);
       const U = H ? H(c) : c.nodeName;
       if (typeof U == "string") {
         const I = $(U);
-        if (!S[I] || bt[I])
+        if (!E[I] || bt[I])
           throw Nt(c), Rn("root node is forbidden and cannot be sanitized in-place");
       }
       if (Ft(c))
@@ -8937,7 +8937,7 @@ function zl() {
     } else if (_t(c))
       h = qo("<!---->"), p = h.ownerDocument.importNode(c, !0), p.nodeType === st.element && p.nodeName === "BODY" || p.nodeName === "HTML" ? h = p : h.appendChild(p), zn(p);
     else {
-      if (!Je && !Ee && !Fe && // eslint-disable-next-line unicorn/prefer-includes
+      if (!Je && !Se && !Fe && // eslint-disable-next-line unicorn/prefer-includes
       c.indexOf("<") === -1)
         return z && Rt ? Qe(c) : c;
       if (h = qo(c), !h)
@@ -8956,9 +8956,9 @@ function zl() {
     if (x)
       return Xn(e.removed, (U) => {
         U.element && Tn(U.element);
-      }), Ee && Dn(c), c;
+      }), Se && Dn(c), c;
     if (Je) {
-      if (Ee && Dn(h), Ot)
+      if (Se && Dn(h), Ot)
         for (_ = cs.call(h.ownerDocument); h.firstChild; )
           _.appendChild(h.firstChild);
       else
@@ -8966,11 +8966,11 @@ function zl() {
       return (A.shadowroot || A.shadowrootmode) && (_ = hs.call(n, _, !0)), _;
     }
     let G = Fe ? h.outerHTML : h.innerHTML;
-    return Fe && S["!doctype"] && h.ownerDocument && h.ownerDocument.doctype && h.ownerDocument.doctype.name && _e(Qu, h.ownerDocument.doctype.name) && (G = "<!DOCTYPE " + h.ownerDocument.doctype.name + `>
-` + G), Ee && (G = Bt(G)), z && Rt ? Qe(G) : G;
+    return Fe && E["!doctype"] && h.ownerDocument && h.ownerDocument.doctype && h.ownerDocument.doctype.name && _e(Qu, h.ownerDocument.doctype.name) && (G = "<!DOCTYPE " + h.ownerDocument.doctype.name + `>
+` + G), Se && (G = Bt(G)), z && Rt ? Qe(G) : G;
   }, e.setConfig = function() {
     let c = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    Ln(c), vn = !0, _n = S, gn = A;
+    Ln(c), vn = !0, _n = E, gn = A;
   }, e.clearConfig = function() {
     nt = null, vn = !1, _n = null, gn = null, z = pn, Be = "";
   }, e.isValidAttribute = function(c, l, h) {
@@ -8978,19 +8978,19 @@ function zl() {
     const p = $(c), v = $(l);
     return Uo(p, v, h);
   }, e.addHook = function(c, l) {
-    typeof l == "function" && me(E, c) && Qn(E[c], l);
+    typeof l == "function" && me(S, c) && Qn(S[c], l);
   }, e.removeHook = function(c, l) {
-    if (me(E, c)) {
+    if (me(S, c)) {
       if (l !== void 0) {
-        const h = Ou(E[c], l);
-        return h === -1 ? void 0 : Ru(E[c], h, 1)[0];
+        const h = Ou(S[c], l);
+        return h === -1 ? void 0 : Ru(S[c], h, 1)[0];
       }
-      return Ia(E[c]);
+      return Ia(S[c]);
     }
   }, e.removeHooks = function(c) {
-    me(E, c) && (E[c] = []);
+    me(S, c) && (S[c] = []);
   }, e.removeAllHooks = function() {
-    E = ja();
+    S = ja();
   }, e;
 }
 var ry = zl();
@@ -9246,7 +9246,7 @@ var by = Object.defineProperty, po = (r, e, t, n) => {
   return o && by(e, t, o), o;
 };
 let vy = 0;
-const Ei = class Ei extends N {
+const Si = class Si extends N {
   constructor() {
     super(...arguments), this.id = "", this.label = "", this.description = "", this.flag = "", this.inverted = !1, this.tooltip = "", this._labelInternals = typeof this.attachInternals == "function" ? this.attachInternals() : null;
   }
@@ -9308,8 +9308,8 @@ const Ei = class Ei extends N {
     `;
   }
 };
-Ei.styles = k(fy);
-let Wt = Ei;
+Si.styles = k(fy);
+let Wt = Si;
 po([
   a({ type: String, reflect: !0 })
 ], Wt.prototype, "id");
@@ -9335,7 +9335,7 @@ var gy = Object.defineProperty, Xt = (r, e, t, n) => {
     (i = r[s]) && (o = i(e, t, o) || o);
   return o && gy(e, t, o), o;
 };
-const Si = class Si extends M {
+const Ei = class Ei extends M {
   /**
    * Lifecycle Methods
    * --------------------------------------------------------------------------
@@ -9509,8 +9509,8 @@ const Si = class Si extends M {
         </div>` : "";
   }
 };
-Si.styles = k(_y);
-let ut = Si;
+Ei.styles = k(_y);
+let ut = Ei;
 Xt([
   a({ type: String, reflect: !0 })
 ], ut.prototype, "id");
@@ -9803,7 +9803,7 @@ var $y = Object.defineProperty, pr = (r, e, t, n) => {
   return o && $y(e, t, o), o;
 };
 let kr = null;
-function Ey() {
+function Sy() {
   kr || typeof document > "u" || (kr = new CSSStyleSheet(), kr.replaceSync(Cy), document.adoptedStyleSheets = [...document.adoptedStyleSheets, kr]);
 }
 class fo extends M {
@@ -9817,7 +9817,7 @@ class fo extends M {
     return this;
   }
   connectedCallback() {
-    super.connectedCallback(), Ey(), this.hasAttribute("role") || this.setAttribute("role", "list"), this._childObserver.observe(this, { childList: !0 }), this._syncSteps();
+    super.connectedCallback(), Sy(), this.hasAttribute("role") || this.setAttribute("role", "list"), this._childObserver.observe(this, { childList: !0 }), this._syncSteps();
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this._childObserver.disconnect();
@@ -9859,7 +9859,7 @@ pr([
   a({ type: Number, reflect: !0 })
 ], fo.prototype, "initialStep");
 customElements.get("nys-processlist") || customElements.define("nys-processlist", fo);
-const Sy = `nys-radiobutton{--_nys-radiobutton-size: var(--nys-size-400, 32px);--_nys-radiobutton-border-radius: var(--nys-radius-md, 4px);--_nys-radiobutton-border-width: var(--nys-border-width-md, 2px);--_nys-radiobutton-outline-color: var(--nys-color-focus, #004dd1);--_nys-radiobutton-outline-width: var(--nys-border-width-md, 2px);--_nys-radiobutton-outline-offset: var(--nys-space-2px, 2px);--_nys-radiobutton-gap: var(--nys-space-150, 12px);--_nys-radiogroup-gap: var(--nys-space-200, 16px);--_nys-radiobutton-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-radiobutton-font-size: var(--nys-font-size-ui-md, 16px);--_nys-radiobutton-font-weight--label: var(--nys-font-weight-regular, 400);--_nys-radiobutton-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-radiobutton-color: var( --nys-color-text, var(--nys-color-neutral-900, #1b1b1b) );--_nys-radiobutton-background-color: var(--nys-color-ink-reverse, #ffffff);--_nys-radiobutton-border-color: var(--nys-color-neutral-600, #62666a);--_nys-radiobutton-background-color--hover: var( --nys-color-neutral-50, #ededed );--_nys-radiobutton-border-color--hover: var(--nys-color-ink, #1b1b1b);--_nys-radiobutton-background-color--active: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-border-color--active: var(--nys-color-ink, #1b1b1b);--_nys-radiobutton-background-color--checked: var(--nys-color-theme, #154973);--_nys-radiobutton-background-color--disabled: var( --nys-color-ink-reverse, #f0f0f0 );--_nys-radiobutton-color--disabled: var(--nys-color-text-disabled, #bec0c1);--_nys-radiobutton-border-color--disabled: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-background-color--checked--disabled: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-border-color--checked--disabled: var( --nys-color-neutral-100, #d0d0ce )}nys-radiobutton[size=sm]{--_nys-radiobutton-size: var(--nys-size-300, 24px);--_nys-radiobutton-border-radius: var(--nys-radius-sm, 2px);--_nys-radiogroup-gap: var(--nys-space-100, 8px);--_nys-radiobutton-gap: var(--nys-space-100, 8px)}nys-radiobutton[size=md]{--_nys-radiobutton-size: var(--nys-size-400, 32px);--_nys-radiobutton-border-radius: var(--nys-radius-md, 4px);--_nys-radiogroup-gap: var(--nys-space-200, 16px);--_nys-radiobutton-gap: var(--nys-space-150, 12px)}nys-radiobutton[tile]{--_nys-radiobutton-font-weight--label: var(--nys-font-weight-semibold, 600);--_nys-radiobutton-border-width--tile: var(--nys-border-width-sm, 1px);--_nys-radiobutton-border-radius--tile: var(--nys-radius-md, 4px);--_nys-radiobutton-border-color--tile: var(--nys-color-neutral-100, #d0d0ce);--_nys-radiobutton-background-color--tile: var( --nys-color-ink-reverse, #ffffff );--_nys-radiobutton-padding--x--tile: var(--nys-space-250, 20px);--_nys-radiobutton-padding--y--tile: var(--nys-space-200, 16px);--_nys-radiobutton-border-color--tile--hover: var( --nys-color-neutral-700, #4a4d4f );--_nys-radiobutton-background-color--tile--hover: var( --nys-color-ink-reverse, #ffffff );--_nys-radiobutton-border-color--tile--active: var( --nys-color-neutral-900, #1b1b1b );--_nys-radiobutton-background-color--tile--active: var( --nys-color-ink-reverse, #ffffff );--_nys-radiobutton-border-color--tile--checked: var( --nys-color-theme-mid, #457aa5 );--_nys-radiobutton-background-color--tile--checked: var( --nys-color-theme-faint, #f7fafd );--_nys-radiobutton-border-color--tile--disabled: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-background-color--tile--disabled: var( --nys-color-ink-reverse, #ffffff )}nys-radiobutton[tile][size=sm]{--_nys-radiobutton-padding--x--tile: var(--nys-space-200, 16px);--_nys-radiobutton-padding--y--tile: var(--nys-space-150, 12px)}.nys-radiogroup{display:flex;flex-direction:column;gap:var(--nys-space-200, 16px);font-family:var(--_nys-radiobutton-font-family);font-size:var(--_nys-radiobutton-font-size);line-height:var(--_nys-radiobutton-line-height)}.nys-radiogroup legend{margin-bottom:var(--nys-space-200, 16px)}.nys-radiogroup__content{gap:var(--_nys-radiogroup-gap);display:flex;flex-direction:column}.nys-radiobutton{display:flex;flex-direction:column;font-family:var(--_nys-radiobutton-font-family);font-size:var(--_nys-radiobutton-font-size);line-height:var(--_nys-radiobutton-line-height);border-radius:var(--_nys-radiobutton-border-radius--tile);border:var(--_nys-radiobutton-border-width--tile) solid var(--_nys-radiobutton-border-color--tile);background-color:var(--_nys-radiobutton-background-color--tile);padding:var(--_nys-radiobutton-padding--y--tile) var(--_nys-radiobutton-padding--x--tile)}.nys-radiobutton__radio{appearance:none;width:var(--_nys-radiobutton-size);height:var(--_nys-radiobutton-size);min-width:var(--_nys-radiobutton-size);min-height:var(--_nys-radiobutton-size);max-width:var(--_nys-radiobutton-size);max-height:var(--_nys-radiobutton-size);border:solid var(--_nys-radiobutton-border-width) var(--_nys-radiobutton-border-color);border-radius:100%;background-size:contain;outline-offset:var(--_nys-radiobutton-outline-offset);outline:none;margin:0 0 auto;box-sizing:border-box}.nys-radiobutton:hover,.nys-radiobutton:hover *{cursor:pointer}.nys-radiobutton__radio:not(:disabled):checked{background-image:url('data:image/svg+xml;utf8,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="11" stroke="white" stroke-width="6"/></svg>');background-color:var(--_nys-radiobutton-background-color--checked)}nys-radiobutton[tile] .nys-radiobutton:has(.nys-radiobutton__radio:not(:disabled):checked){border-color:var(--_nys-radiobutton-border-color--tile--checked);background-color:var(--_nys-radiobutton-background-color--tile--checked)}nys-radiobutton[tile] .nys-radiobutton:has(.nys-radiobutton__radio:not(:disabled):checked:hover){cursor:default}.nys-radiobutton__radio:disabled:checked{background-image:url('data:image/svg+xml;utf8,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="11" stroke="white" stroke-width="6"/></svg>');border-color:var(--_nys-radiobutton-border-color--checked--disabled);background-color:var(--_nys-radiobutton-background-color--checked--disabled)}nys-radiobutton[tile] .nys-radiobutton:has(.nys-radiobutton__radio:disabled){border-color:var(--_nys-radiobutton-border-color--tile--disabled);background-color:var(--_nys-radiobutton-background-color--tile--disabled)}.nys-radiobutton__radio:disabled{background-color:var(--_nys-radiobutton-background-color--disabled);border-color:var(--_nys-radiobutton-border-color--disabled);cursor:not-allowed}.nys-radiobutton__radio:hover:not(:disabled):not(:checked),.nys-radiobutton:hover .nys-radiobutton__radio:not(:disabled):not(:checked){border-color:var(--_nys-radiobutton-border-color--hover);background-color:var(--_nys-radiobutton-background-color--hover)}nys-radiobutton[tile] .nys-radiobutton:hover:has(.nys-radiobutton__radio:not(:disabled):not(:checked)){border-color:var(--_nys-radiobutton-border-color--tile--hover);background-color:var(--_nys-radiobutton-background-color--tile--hover);outline:solid var(--_nys-radiobutton-border-width--tile) var(--_nys-radiobutton-border-color--tile--hover)}.nys-radiobutton__radio:active:not(:disabled):not(:checked),.nys-radiobutton:active .nys-radiobutton__radio:not(:disabled):not(:checked){border-color:var(--_nys-radiobutton-border-color--active);background-color:var(--_nys-radiobutton-background-color--active)}nys-radiobutton[tile] .nys-radiobutton:active:has(.nys-radiobutton__radio:not(:disabled):not(:checked)){border-color:var(--_nys-radiobutton-border-color--tile--active);background-color:var(--_nys-radiobutton-background-color--tile--active);outline:solid var(--_nys-radiobutton-border-width--tile) var(--_nys-radiobutton-border-color--tile--active)}nys-radiobutton:focus-visible{outline:none}nys-radiobutton:focus-visible .nys-radiobutton__radio{outline:solid var(--_nys-radiobutton-outline-width) var(--_nys-radiobutton-outline-color)}.nys-radiobutton__radio:focus-visible,.nys-radiobutton__radio--force-outline{outline:solid var(--_nys-radiobutton-outline-width) var(--_nys-radiobutton-outline-color);outline-offset:var(--_nys-radiobutton-outline-offset)}.nys-radiobutton__main-container{display:flex;align-items:center}.nys-radiobutton__other-container{display:flex;padding-inline-start:calc(var(--_nys-radiobutton-size) + var(--_nys-radiobutton-gap))}.nys-radiobutton__main-container>nys-label{--_nys-label-font-weight: var(--_nys-radiobutton-font-weight--label);display:flex;padding-inline-start:var(--_nys-radiobutton-gap)}nys-radiobutton[tile] .nys-radiobutton__main-container>nys-label{--_nys-description-font-style: normal}.nys-radiobutton:has(.nys-radiobutton__radio:disabled) .nys-radiobutton__main-container>nys-label,.nys-radiobutton:has(.nys-radiobutton__radio:disabled) .nys-radiobutton__main-container>nys-label *{cursor:not-allowed;--_nys-label-cursor: not-allowed;--_nys-label-color: var(--_nys-radiobutton-color--disabled);--_nys-description-color: var(--_nys-radiobutton-color--disabled);color:var(--_nys-radiobutton-color--disabled)}`;
+const Ey = `nys-radiobutton{--_nys-radiobutton-size: var(--nys-size-400, 32px);--_nys-radiobutton-border-radius: var(--nys-radius-md, 4px);--_nys-radiobutton-border-width: var(--nys-border-width-md, 2px);--_nys-radiobutton-outline-color: var(--nys-color-focus, #004dd1);--_nys-radiobutton-outline-width: var(--nys-border-width-md, 2px);--_nys-radiobutton-outline-offset: var(--nys-space-2px, 2px);--_nys-radiobutton-gap: var(--nys-space-150, 12px);--_nys-radiogroup-gap: var(--nys-space-200, 16px);--_nys-radiobutton-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-radiobutton-font-size: var(--nys-font-size-ui-md, 16px);--_nys-radiobutton-font-weight--label: var(--nys-font-weight-regular, 400);--_nys-radiobutton-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-radiobutton-color: var( --nys-color-text, var(--nys-color-neutral-900, #1b1b1b) );--_nys-radiobutton-background-color: var(--nys-color-ink-reverse, #ffffff);--_nys-radiobutton-border-color: var(--nys-color-neutral-600, #62666a);--_nys-radiobutton-background-color--hover: var( --nys-color-neutral-50, #ededed );--_nys-radiobutton-border-color--hover: var(--nys-color-ink, #1b1b1b);--_nys-radiobutton-background-color--active: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-border-color--active: var(--nys-color-ink, #1b1b1b);--_nys-radiobutton-background-color--checked: var(--nys-color-theme, #154973);--_nys-radiobutton-background-color--disabled: var( --nys-color-ink-reverse, #f0f0f0 );--_nys-radiobutton-color--disabled: var(--nys-color-text-disabled, #bec0c1);--_nys-radiobutton-border-color--disabled: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-background-color--checked--disabled: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-border-color--checked--disabled: var( --nys-color-neutral-100, #d0d0ce )}nys-radiobutton[size=sm]{--_nys-radiobutton-size: var(--nys-size-300, 24px);--_nys-radiobutton-border-radius: var(--nys-radius-sm, 2px);--_nys-radiogroup-gap: var(--nys-space-100, 8px);--_nys-radiobutton-gap: var(--nys-space-100, 8px)}nys-radiobutton[size=md]{--_nys-radiobutton-size: var(--nys-size-400, 32px);--_nys-radiobutton-border-radius: var(--nys-radius-md, 4px);--_nys-radiogroup-gap: var(--nys-space-200, 16px);--_nys-radiobutton-gap: var(--nys-space-150, 12px)}nys-radiobutton[tile]{--_nys-radiobutton-font-weight--label: var(--nys-font-weight-semibold, 600);--_nys-radiobutton-border-width--tile: var(--nys-border-width-sm, 1px);--_nys-radiobutton-border-radius--tile: var(--nys-radius-md, 4px);--_nys-radiobutton-border-color--tile: var(--nys-color-neutral-100, #d0d0ce);--_nys-radiobutton-background-color--tile: var( --nys-color-ink-reverse, #ffffff );--_nys-radiobutton-padding--x--tile: var(--nys-space-250, 20px);--_nys-radiobutton-padding--y--tile: var(--nys-space-200, 16px);--_nys-radiobutton-border-color--tile--hover: var( --nys-color-neutral-700, #4a4d4f );--_nys-radiobutton-background-color--tile--hover: var( --nys-color-ink-reverse, #ffffff );--_nys-radiobutton-border-color--tile--active: var( --nys-color-neutral-900, #1b1b1b );--_nys-radiobutton-background-color--tile--active: var( --nys-color-ink-reverse, #ffffff );--_nys-radiobutton-border-color--tile--checked: var( --nys-color-theme-mid, #457aa5 );--_nys-radiobutton-background-color--tile--checked: var( --nys-color-theme-faint, #f7fafd );--_nys-radiobutton-border-color--tile--disabled: var( --nys-color-neutral-100, #d0d0ce );--_nys-radiobutton-background-color--tile--disabled: var( --nys-color-ink-reverse, #ffffff )}nys-radiobutton[tile][size=sm]{--_nys-radiobutton-padding--x--tile: var(--nys-space-200, 16px);--_nys-radiobutton-padding--y--tile: var(--nys-space-150, 12px)}.nys-radiogroup{display:flex;flex-direction:column;gap:var(--nys-space-200, 16px);font-family:var(--_nys-radiobutton-font-family);font-size:var(--_nys-radiobutton-font-size);line-height:var(--_nys-radiobutton-line-height)}.nys-radiogroup legend{margin-bottom:var(--nys-space-200, 16px)}.nys-radiogroup__content{gap:var(--_nys-radiogroup-gap);display:flex;flex-direction:column}.nys-radiobutton{display:flex;flex-direction:column;font-family:var(--_nys-radiobutton-font-family);font-size:var(--_nys-radiobutton-font-size);line-height:var(--_nys-radiobutton-line-height);border-radius:var(--_nys-radiobutton-border-radius--tile);border:var(--_nys-radiobutton-border-width--tile) solid var(--_nys-radiobutton-border-color--tile);background-color:var(--_nys-radiobutton-background-color--tile);padding:var(--_nys-radiobutton-padding--y--tile) var(--_nys-radiobutton-padding--x--tile)}.nys-radiobutton__radio{appearance:none;width:var(--_nys-radiobutton-size);height:var(--_nys-radiobutton-size);min-width:var(--_nys-radiobutton-size);min-height:var(--_nys-radiobutton-size);max-width:var(--_nys-radiobutton-size);max-height:var(--_nys-radiobutton-size);border:solid var(--_nys-radiobutton-border-width) var(--_nys-radiobutton-border-color);border-radius:100%;background-size:contain;outline-offset:var(--_nys-radiobutton-outline-offset);outline:none;margin:0 0 auto;box-sizing:border-box}.nys-radiobutton:hover,.nys-radiobutton:hover *{cursor:pointer}.nys-radiobutton__radio:not(:disabled):checked{background-image:url('data:image/svg+xml;utf8,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="11" stroke="white" stroke-width="6"/></svg>');background-color:var(--_nys-radiobutton-background-color--checked)}nys-radiobutton[tile] .nys-radiobutton:has(.nys-radiobutton__radio:not(:disabled):checked){border-color:var(--_nys-radiobutton-border-color--tile--checked);background-color:var(--_nys-radiobutton-background-color--tile--checked)}nys-radiobutton[tile] .nys-radiobutton:has(.nys-radiobutton__radio:not(:disabled):checked:hover){cursor:default}.nys-radiobutton__radio:disabled:checked{background-image:url('data:image/svg+xml;utf8,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="11" stroke="white" stroke-width="6"/></svg>');border-color:var(--_nys-radiobutton-border-color--checked--disabled);background-color:var(--_nys-radiobutton-background-color--checked--disabled)}nys-radiobutton[tile] .nys-radiobutton:has(.nys-radiobutton__radio:disabled){border-color:var(--_nys-radiobutton-border-color--tile--disabled);background-color:var(--_nys-radiobutton-background-color--tile--disabled)}.nys-radiobutton__radio:disabled{background-color:var(--_nys-radiobutton-background-color--disabled);border-color:var(--_nys-radiobutton-border-color--disabled);cursor:not-allowed}.nys-radiobutton__radio:hover:not(:disabled):not(:checked),.nys-radiobutton:hover .nys-radiobutton__radio:not(:disabled):not(:checked){border-color:var(--_nys-radiobutton-border-color--hover);background-color:var(--_nys-radiobutton-background-color--hover)}nys-radiobutton[tile] .nys-radiobutton:hover:has(.nys-radiobutton__radio:not(:disabled):not(:checked)){border-color:var(--_nys-radiobutton-border-color--tile--hover);background-color:var(--_nys-radiobutton-background-color--tile--hover);outline:solid var(--_nys-radiobutton-border-width--tile) var(--_nys-radiobutton-border-color--tile--hover)}.nys-radiobutton__radio:active:not(:disabled):not(:checked),.nys-radiobutton:active .nys-radiobutton__radio:not(:disabled):not(:checked){border-color:var(--_nys-radiobutton-border-color--active);background-color:var(--_nys-radiobutton-background-color--active)}nys-radiobutton[tile] .nys-radiobutton:active:has(.nys-radiobutton__radio:not(:disabled):not(:checked)){border-color:var(--_nys-radiobutton-border-color--tile--active);background-color:var(--_nys-radiobutton-background-color--tile--active);outline:solid var(--_nys-radiobutton-border-width--tile) var(--_nys-radiobutton-border-color--tile--active)}nys-radiobutton:focus-visible{outline:none}nys-radiobutton:focus-visible .nys-radiobutton__radio{outline:solid var(--_nys-radiobutton-outline-width) var(--_nys-radiobutton-outline-color)}.nys-radiobutton__radio:focus-visible,.nys-radiobutton__radio--force-outline{outline:solid var(--_nys-radiobutton-outline-width) var(--_nys-radiobutton-outline-color);outline-offset:var(--_nys-radiobutton-outline-offset)}.nys-radiobutton__main-container{display:flex;align-items:center}.nys-radiobutton__other-container{display:flex;padding-inline-start:calc(var(--_nys-radiobutton-size) + var(--_nys-radiobutton-gap))}.nys-radiobutton__main-container>nys-label{--_nys-label-font-weight: var(--_nys-radiobutton-font-weight--label);display:flex;padding-inline-start:var(--_nys-radiobutton-gap)}nys-radiobutton[tile] .nys-radiobutton__main-container>nys-label{--_nys-description-font-style: normal}.nys-radiobutton:has(.nys-radiobutton__radio:disabled) .nys-radiobutton__main-container>nys-label,.nys-radiobutton:has(.nys-radiobutton__radio:disabled) .nys-radiobutton__main-container>nys-label *{cursor:not-allowed;--_nys-label-cursor: not-allowed;--_nys-label-color: var(--_nys-radiobutton-color--disabled);--_nys-description-color: var(--_nys-radiobutton-color--disabled);color:var(--_nys-radiobutton-color--disabled)}`;
 var Ay = Object.defineProperty, Ne = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
@@ -9867,7 +9867,7 @@ var Ay = Object.defineProperty, Ne = (r, e, t, n) => {
 };
 let Cr = null;
 function Ly() {
-  Cr || typeof document > "u" || (Cr = new CSSStyleSheet(), Cr.replaceSync(Sy), document.adoptedStyleSheets = [...document.adoptedStyleSheets, Cr]);
+  Cr || typeof document > "u" || (Cr = new CSSStyleSheet(), Cr.replaceSync(Ey), document.adoptedStyleSheets = [...document.adoptedStyleSheets, Cr]);
 }
 class ze extends pt {
   constructor() {
@@ -11492,15 +11492,15 @@ Uy([
   a({ type: String, reflect: !0 })
 ], Pr.prototype, "id");
 customElements.get("nys-tabpanel") || customElements.define("nys-tabpanel", Pr);
-const Wy = ':host{--_nys-table-width: 100%;--_nys-table-radius: var(--nys-radius-xl, 12px);--_nys-table-padding: var(--nys-space-100, 8px);--_nys-table-border-color: transparent;--_nys-table-border-width: 0;--_nys-table-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif ) );--_nys-table-font-size: var(--nys-font-size-ui-md, 16px);--_nys-table-font-weight: var(--nys-font-weight-regular, 400);--_nys-table-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-table-padding--caption: var(--nys-space-250, 20px) var(--nys-space-150, 12px);--_nys-table-font-size--caption: var(--nys-font-size-ui-lg, 18px);--_nys-table-font-weight--caption: var(--nys-font-weight-bold, 700);--_nys-table-padding--cell--x: var(--nys-space-150, 12px);--_nys-table-padding--cell--y: var( --nys-table-padding--cell--y, var(--nys-space-200, 16px) );--_nys-table-background-color: var(--nys-color-ink-reverse, #ffffff);--_nys-table-background-color--striped: var(--nys-color-neutral-10, #f6f6f6);--_nys-table-color--code: var(--nys-color-red-600, #b52c2c);--_nys-table-background-color--code: var(--nys-color-neutral-10, #f6f6f6)}:host([bordered]){--_nys-table-border-color: var(--nys-color-neutral-100, #d0d0ce);--_nys-table-border-width: var(--nys-space-1px, 1px)}:host([download]){display:flex;flex-direction:column;gap:var(--nys-space-150, 12px)}.nys-table{width:var(--_nys-table-width)}', Yy = 'nys-table table{width:var(--_nys-table-width);border-collapse:collapse;background-color:var(--_nys-table-background-color);font:var(--_nys-table-font-weight) var(--_nys-table-font-size)/var(--_nys-table-line-height) var(--_nys-table-font-family)}nys-table caption{padding:var(--_nys-table-padding--caption);font-size:var(--_nys-table-font-size--caption);font-weight:var(--_nys-table-font-weight--caption);text-align:start}nys-table caption div{display:flex;justify-content:space-between;align-items:center}nys-table td{padding:var(--_nys-table-padding--cell--y) var(--_nys-table-padding--cell--x);border:var(--_nys-table-border-width) solid var(--_nys-table-border-color)}nys-table td code{color:var(--_nys-table-color--code);background-color:var(--_nys-table-background-color--code);padding:var(--nys-space-1px) var(--nys-space-2px);border-radius:var(--nys-radius-md)}nys-table th{border:var(--_nys-table-border-width) solid var(--_nys-table-border-color);overflow:hidden;text-overflow:ellipsis;padding:var(--_nys-table-padding--cell--y) var(--_nys-table-padding--cell--x);text-align:left}nys-table th:has(nys-button){padding:0}nys-table th p{margin:0}nys-table th nys-button{margin:0;width:-moz-available;width:-webkit-fill-available;width:fill-available;justify-content:space-between;--_nys-button-border-width: 0;--_nys-button-border-radius: 0;--_nys-button-padding--x: var(--_nys-table-padding--cell--x);--_nys-button-justify-content: space-between;--_nys-button-outline-offset: -2px}nys-table th.nys-table__sortedcolumn{background-color:var(--nys-color-theme-weak, #cddde9)}nys-table td.nys-table__sortedcolumn{position:relative;z-index:0}nys-table td.nys-table__sortedcolumn:after{content:"";position:absolute;inset:0;background-color:var(--nys-color-theme, #154973);opacity:.1;pointer-events:none;z-index:-1}nys-table[striped] tbody tr:nth-child(odd){background-color:var(--_nys-table-background-color--striped)}nys-table[sortable] th{cursor:pointer}nys-table .sr-only{border:0!important;clip-path:inset(50%)!important;height:1px!important;overflow:hidden!important;margin:-1px!important;padding:0!important;position:absolute!important;width:1px!important;white-space:nowrap!important}';
+const Wy = ':host{--_nys-table-width: 100%;--_nys-table-radius: var(--nys-radius-xl, 12px);--_nys-table-padding: var(--nys-space-100, 8px);--_nys-table-border-color: transparent;--_nys-table-border-width: 0;--_nys-table-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif ) );--_nys-table-font-size: var(--nys-font-size-ui-md, 16px);--_nys-table-font-weight: var(--nys-font-weight-regular, 400);--_nys-table-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-table-font-weight--th: 700;--_nys-table-padding--caption: var(--nys-space-250, 20px) var(--nys-space-150, 12px);--_nys-table-font-size--caption: var(--nys-font-size-ui-lg, 18px);--_nys-table-font-weight--caption: var(--nys-font-weight-bold, 700);--_nys-table-padding--cell--x: var(--nys-space-150, 12px);--_nys-table-padding--cell--y: var( --nys-table-padding--cell--y, var(--nys-space-200, 16px) );--_nys-table-background-color: var(--nys-color-ink-reverse, #ffffff);--_nys-table-background-color--striped: var(--nys-color-neutral-10, #f6f6f6);--_nys-table-color--code: var(--nys-color-red-600, #b52c2c);--_nys-table-background-color--code: var(--nys-color-neutral-10, #f6f6f6)}:host([bordered]){--_nys-table-border-color: var(--nys-color-neutral-100, #d0d0ce);--_nys-table-border-width: var(--nys-space-1px, 1px)}:host([download]){display:flex;flex-direction:column;gap:var(--nys-space-150, 12px)}.nys-table{width:var(--_nys-table-width)}', Yy = 'nys-table table{width:var(--_nys-table-width);border-collapse:collapse;background-color:var(--_nys-table-background-color);font:var(--_nys-table-font-weight) var(--_nys-table-font-size)/var(--_nys-table-line-height) var(--_nys-table-font-family)}nys-table caption{padding:var(--_nys-table-padding--caption);font-size:var(--_nys-table-font-size--caption);font-weight:var(--_nys-table-font-weight--caption);text-align:start}nys-table caption div{display:flex;justify-content:space-between;align-items:center}nys-table td{padding:var(--_nys-table-padding--cell--y) var(--_nys-table-padding--cell--x);border:var(--_nys-table-border-width) solid var(--_nys-table-border-color)}nys-table td code{color:var(--_nys-table-color--code);background-color:var(--_nys-table-background-color--code);padding:var(--nys-space-1px) var(--nys-space-2px);border-radius:var(--nys-radius-md)}nys-table th{border:var(--_nys-table-border-width) solid var(--_nys-table-border-color);overflow:hidden;text-overflow:ellipsis;padding:var(--_nys-table-padding--cell--y) var(--_nys-table-padding--cell--x);text-align:left;font-weight:var(--_nys-table-font-weight--th)}nys-table th:has(nys-button){padding:0}nys-table th nys-button{margin:0;width:-moz-available;width:-webkit-fill-available;width:fill-available;justify-content:space-between;--_nys-button-border-width: 0;--_nys-button-border-radius: 0;--_nys-button-padding--x: var(--_nys-table-padding--cell--x);--_nys-button-justify-content: space-between;--_nys-button-outline-offset: -2px}nys-table th.nys-table__sortedcolumn{background-color:var(--nys-color-theme-weak, #cddde9)}nys-table td.nys-table__sortedcolumn{position:relative;z-index:0}nys-table td.nys-table__sortedcolumn:after{content:"";position:absolute;inset:0;background-color:var(--nys-color-theme, #154973);opacity:.1;pointer-events:none;z-index:-1}nys-table[striped] tbody tr:nth-child(odd){background-color:var(--_nys-table-background-color--striped)}nys-table[sortable] th{cursor:pointer}nys-table .sr-only{border:0!important;clip-path:inset(50%)!important;height:1px!important;overflow:hidden!important;margin:-1px!important;padding:0!important;position:absolute!important;width:1px!important;white-space:nowrap!important}';
 var Gy = Object.defineProperty, Qt = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
   return o && Gy(e, t, o), o;
 };
-let Er = null;
+let Sr = null;
 function Ky() {
-  Er || typeof document > "u" || (Er = new CSSStyleSheet(), Er.replaceSync(Yy), document.adoptedStyleSheets = [...document.adoptedStyleSheets, Er]);
+  Sr || typeof document > "u" || (Sr = new CSSStyleSheet(), Sr.replaceSync(Yy), document.adoptedStyleSheets = [...document.adoptedStyleSheets, Sr]);
 }
 const Mi = class Mi extends M {
   /**************** Lifecycle Methods ****************/
@@ -11578,14 +11578,7 @@ const Mi = class Mi extends M {
       s.forEach((f) => d.appendChild(f));
     else {
       const f = s[y];
-      f.querySelectorAll("th").forEach((g) => {
-        Array.from(g.childNodes).forEach((m) => {
-          if (m.nodeType === Node.TEXT_NODE && m.textContent?.trim()) {
-            const w = document.createElement("p");
-            w.textContent = m.textContent, g.replaceChild(w, m);
-          }
-        });
-      }), i.appendChild(f), s.forEach((g, m) => {
+      i.appendChild(f), s.forEach((g, m) => {
         m !== y && d.appendChild(g);
       });
     }
@@ -12811,13 +12804,13 @@ customElements.get("nys-tooltip") || customElements.define("nys-tooltip", Yt);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Alert Component v1.20.0
+   * Alert Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -13740,10 +13733,10 @@ Cp([
 ], Nr.prototype, "landmarkLabel");
 customElements.get("nys-unavfooter") || customElements.define("nys-unavfooter", Nr);
 const ql = ':host{--_nys-verticalnav-color: var(--nys-color-text-weak, #4a4d4f);--_nys-verticalnav-background-color: var(--nys-color-surface, #ffffff);--_nys-verticalnav-border-color: var(--nys-color-neutral-50, #bec0c1);--_nys-verticalnav-font-size: var(--nys-font-size-ui-md, 16px);--_nys-verticalnav-font-size--header: var(--nys-font-size-ui-lg, 18px);--_nys-verticalnav-font-weight--header: var(--nys-font-weight-semibold, 600);--_nys-verticalnav-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-verticalnav-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-verticalnav-trigger--hover: var(--nys-color-neutral-10, #f6f6f6);--_nys-verticalnav-trigger--active: var(--nys-color-neutral-50, #ededed);--_nys-verticalnav-trigger--disabled: var(--nys-color-text-disabled, #bec0c1);--_nys-verticalnav-trigger--focus: var(--nys-color-focus, #004dd1);--_nys-verticalnav-trigger--current: var(--nys-color-theme-faint, #f7fafd);--_nys-verticalnav-trigger--current--hover: var( --nys-color-theme-weaker, #eff6fb );--_nys-verticalnav-trigger--current--active: var( --nys-color-theme-weak, #cddde9 )}nys-accordion{--nys-accordionitem-padding: var(--nys-space-100, 8px) var(--nys-space-150, 12px);--nys-accordion-content-max-width: 100%}.nys-verticalnav{display:flex;flex-direction:column;background-color:var(--_nys-verticalnav-background-color);font-family:var(--_nys-verticalnav-font-family);font-size:var(--_nys-verticalnav-font-size);font-weight:var(--_nys-verticalnav-font-weight);line-height:var(--_nys-verticalnav-line-height);padding:0;width:auto;height:100%;box-sizing:border-box}@media(min-width:1024px){.nys-verticalnav{max-width:249px;min-width:204px;width:100%;border-right:1px solid var(--_nys-verticalnav-border-color);gap:10px}}.nys-verticalnav .nys-verticalnav__heading{color:var(--_nys-verticalnav-color);border-top:none;font-size:var(--_nys-verticalnav-font-size--header);font-weight:var(--_nys-verticalnav-font-weight--header);text-transform:none;margin:0;margin-left:var(--nys-space-150, 12px)}.nys-verticalnavgroup__trigger{display:flex;align-items:center;justify-content:space-between;width:100%;padding:var(--nys-space-100, 8px) var(--nys-space-200, 16px) var(--nys-space-100, 8px) var(--nys-space-150, 12px);background-color:transparent;border:none;cursor:pointer;color:var(--_nys-verticalnav-color);font-family:var(--_nys-verticalnav-font-family);font-size:var(--_nys-verticalnav-font-size);font-weight:var(--_nys-verticalnav-font-weight--header);line-height:var(--_nys-verticalnav-line-height)}.nys-verticalnavgroup__trigger:not(:disabled):hover{background-color:var(--_nys-verticalnav-trigger--hover)}.nys-verticalnavgroup__trigger:not(:disabled):active{background-color:var(--_nys-verticalnav-trigger--active)}.nys-verticalnavgroup__trigger:focus-visible{outline:var(--nys-border-width-md, 2px) solid var(--_nys-verticalnav-trigger--focus);outline-offset:-2px}.nys-verticalnavgroup__trigger:disabled{color:var(--_nys-verticalnav-trigger--disabled)}.nys-verticalnavgroup__chevron{transition:transform .3s cubic-bezier(.4,0,.2,1) 0ms}@media(prefers-reduced-motion:reduce){.nys-verticalnavgroup__chevron{transition:none}}.nys-verticalnavgroup__items{display:none;--_nys-verticalnav-link-indent: var(--nys-space-300, 24px)}:host([disabled]) .nys-verticalnavgroup__trigger:disabled{color:var(--_nys-verticalnav-trigger--disabled);cursor:not-allowed}:host([expanded]) .nys-verticalnavgroup__chevron{transform:rotate(180deg)}:host([expanded]) .nys-verticalnavgroup__items{display:block}:host([active]:not([expanded])) .nys-verticalnavgroup__trigger{background-color:var(--_nys-verticalnav-trigger--current)}:host([active]:not([expanded])) .nys-verticalnavgroup__trigger:hover{background-color:var(--_nys-verticalnav-trigger--current--hover)}:host([active]:not([expanded])) .nys-verticalnavgroup__trigger:active{background-color:var(--_nys-verticalnav-trigger--current--active)}', $p = 'nys-verticalnav{--_nys-verticalnav-font-size: var(--nys-font-size-ui-md, 16px);--_nys-verticalnav-font-size--header: var(--nys-font-size-ui-lg, 18px);--_nys-verticalnav-font-size--subheader: var(--nys-font-size-ui-sm, 14px);--_nys-verticalnav-font-weight: var(--nys-font-weight-semibold, 600);--_nys-verticalnav-font-weight--group-links: var( --nys-font-weight-regular, 400 );--_nys-verticalnav-font-weight--subheader: var(--nys-font-weight-bold, 700);--_nys-verticalnav-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-verticalnav-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) )}nys-verticalnav ul{list-style-type:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--nys-space-100, 8px)}@media(min-width:1024px){nys-verticalnav ul{gap:0}}nys-verticalnav ul ul{display:flex;flex-direction:column}nys-verticalnav ul li{display:flex;flex-direction:column;margin:0}nys-verticalnav ul a{color:var(--nys-color-text-weak, #4a4d4f);display:flex;padding:var(--nys-space-100, 8px) var(--nys-space-100, 8px) var(--nys-space-100, 8px) var(--nys-space-150, 12px);text-decoration:none;font-family:var(--_nys-verticalnav-font-family);font-size:var(--_nys-verticalnav-font-size);font-weight:var(--_nys-verticalnav-font-weight);line-height:var(--_nys-verticalnav-line-height)}nys-verticalnav ul a:not([aria-disabled=true]):hover{color:var(--nys-color-text, #1b1b1b);background-color:var(--nys-color-neutral-10, #f6f6f6);text-decoration:none}nys-verticalnav ul a:not([aria-disabled=true]):active{background-color:var(--nys-color-neutral-50, #ededed)}nys-verticalnav ul a:focus-visible{outline:var(--nys-border-width-md, 2px) solid var(--nys-color-focus, #004dd1);outline-offset:-2px}nys-verticalnav ul a:focus{color:var(--nys-color-text, #1b1b1b);text-decoration:none}nys-verticalnav ul a[aria-disabled=true]{color:var(--nys-color-text-disabled, #bec0c1);cursor:not-allowed;text-decoration:none}nys-verticalnav ul a[aria-current=page]{color:var(--nys-color-text, #1b1b1b);background-color:var(--nys-color-theme-faint, #f7fafd);border-left:var(--nys-border-width-md, 2px) solid var(--nys-color-theme, #154973)}nys-verticalnav ul a[aria-current=page]:not(:disabled):hover{background-color:var(--nys-color-theme-weaker, #eff6fb)}nys-verticalnav ul a[aria-current=page]:not(:disabled):active{background-color:var(--nys-color-theme-weak, #cddde9)}nys-verticalnav ul li :is(h1,h2,h3,h4,h5,h6){font-family:var(--_nys-verticalnav-font-family);font-size:var(--_nys-verticalnav-font-size--subheader);font-weight:var(--_nys-verticalnav-font-weight--subheader);line-height:var(--_nys-verticalnav-line-height);padding:var(--nys-space-250, 20px) var(--nys-space-100, 8px) var(--nys-space-100, 8px) var(--nys-space-150, 12px);margin:0;text-transform:uppercase;color:var(--nys-color-text, #1b1b1b)}nys-verticalnavgroup ul{gap:0}nys-verticalnavgroup ul li{margin-bottom:0}nys-verticalnavgroup ul li a{color:var(--nys-color-text, #1b1b1b);padding:var(--nys-space-100, 8px) var(--nys-space-100, 8px) var(--nys-space-100, 8px) var(--nys-space-300, 24px);font-family:var(--_nys-verticalnav-font-family);font-size:var(--_nys-verticalnav-font-size);font-weight:var(--_nys-verticalnav-font-weight--group-links);line-height:var(--_nys-verticalnav-line-height)}@media(max-width:1023px){nys-verticalnav ul>li:not(:last-child){border-bottom:var(--nys-size-1px, 1px) solid var(--nys-color-neutral-100, #e4e5e6)}nys-verticalnav ul>li:not(:last-child) a{margin-bottom:var(--nys-space-100, 8px)}nys-verticalnav nys-verticalnavgroup ul>li:not(:last-child){border-bottom:none}}';
-var Ep = Object.defineProperty, vr = (r, e, t, n) => {
+var Sp = Object.defineProperty, vr = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
-  return o && Ep(e, t, o), o;
+  return o && Sp(e, t, o), o;
 };
 const Fi = class Fi extends M {
   constructor() {
@@ -13814,20 +13807,20 @@ customElements.get("nys-verticalnavgroup") || customElements.define("nys-vertica
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Accordion Component v1.20.0
+   * Accordion Component v1.20.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.20.0
+  * New York State Design System v1.20.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
 */
-let Sp = 0;
+let Ep = 0;
 function Ap(r) {
-  return `${r}-${Date.now()}-${Sp++}`;
+  return `${r}-${Date.now()}-${Ep++}`;
 }
 const Lp = (r) => {
   class e extends r {
@@ -14080,9 +14073,9 @@ var Op = Object.defineProperty, _o = (r, e, t, n) => {
     (i = r[s]) && (o = i(e, t, o) || o);
   return o && Op(e, t, o), o;
 };
-let Sr = null;
+let Er = null;
 function Rp() {
-  Sr || typeof document > "u" || (Sr = new CSSStyleSheet(), Sr.replaceSync($p), document.adoptedStyleSheets = [...document.adoptedStyleSheets, Sr]);
+  Er || typeof document > "u" || (Er = new CSSStyleSheet(), Er.replaceSync($p), document.adoptedStyleSheets = [...document.adoptedStyleSheets, Er]);
 }
 const qi = class qi extends M {
   constructor() {
@@ -14276,7 +14269,7 @@ _o([
   C()
 ], Gt.prototype, "_isMobile");
 customElements.get("nys-verticalnav") || customElements.define("nys-verticalnav", Gt);
-const Mp = '@charset "UTF-8";:host{--_nys-video-width: fit-content;--_nys-video-height: var(--nys-size-600, 48px);--_nys-video-radius: var(--nys-radius-lg, 8px);--_nys-video-padding: var(--nys-space-100, 8px);--_nys-video-gap: var(--nys-space-100, 8px);--_nys-video-font-size: var(--nys-font-size-ui-md, 16px);--_nys-video-font-weight: var(--nys-font-weight-semibold, 600);--_nys-video-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-video-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-video-background-color--play-button: var( --nys-color-black-transparent-600, rgba(27, 27, 27, .6) );--_nys-video-outline-color--play-button: var(--nys-color-focus, #004dd1);--_nys-video-outline-width--play-button: 3.5px;--_nys-video-svg-color--play-button: var( --nys-color-white-transparent-400, rgba(255, 255, 255, .4) );--_nys-video-color--title-text: var(--nys-color-text-reverse, #ffffff);--_nys-video-background-color--title-text: var( --nys-color-ink, var(--nys-color-neutral-900, #1b1b1b) );--_nys-video-padding--title-text: var(--nys-space-250, 20px)}.nys-video--full{width:100%}.nys-video--md{width:100%;max-width:675px}.nys-video--sm{width:100%;min-width:320px;max-width:439px}:host([size=full]) .nys-video .nys-video__title-text{position:absolute;bottom:0;--_nys-video-background-color--title-text: var( --nys-color-black-transparent-900, rgba(27, 27, 27, .9) )}@media(min-width:480px){.nys-video:not(.nys-video--sm):not(.nys-video--md) .nys-video__title-text{position:absolute;bottom:0;--_nys-video-background-color--title-text: var( --nys-color-black-transparent-900, rgba(27, 27, 27, .9) )}}.nys-video{border-radius:var(--_nys-video-radius);display:flex;flex-direction:column;position:relative;overflow:hidden}.nys-video .nys-video__ratio-box{aspect-ratio:16/9;position:relative}.nys-video .nys-video__ratio-box iframe,.nys-video .nys-video__ratio-box .nys-video__thumbnail{position:absolute;top:0;left:0;width:100%;height:100%;display:block;border:none}.nys-video .nys-video__ratio-box .nys-video__thumbnail{padding:0;background-color:transparent}.nys-video .nys-video__ratio-box .nys-video__thumbnail img{width:100%;height:100%;object-fit:cover}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon{position:absolute;inset:0;width:100%;height:100%;padding:0;border:none;background-color:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon .nys-video__play-badge{width:96px;height:96px;background-color:var(--_nys-video-background-color--play-button);border-radius:50%;display:flex;align-items:center;justify-content:center}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon svg{display:flex;margin-left:10px}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:focus-visible{outline:var(--_nys-video-outline-width--play-button) solid var(--_nys-video-outline-color--play-button);outline-offset:calc(-1 * var(--_nys-video-outline-width--play-button))}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:hover{--_nys-video-background-color--play-button: var( --nys-color-black-transparent-700, rgba(27, 27, 27, .7) )}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:active{--_nys-video-background-color--play-button: var( --nys-color-black-transparent-800, rgba(27, 27, 27, .8) )}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:disabled{cursor:not-allowed}.nys-video--disabled .nys-video__ratio-box{cursor:not-allowed}.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon,.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:hover,.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:active{--_nys-video-background-color--play-button: var( --nys-color-black-transparent-200, rgba(27, 27, 27, .2) )}.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon svg{fill:var(--_nys-video-svg-color--play-button)}.nys-video .nys-video__title-text{width:100%;padding:var(--_nys-video-padding--title-text);background-color:var(--_nys-video-background-color--title-text);box-sizing:border-box;color:var(--_nys-video-color--title-text);display:flex;justify-content:start;font-family:var(--_nys-video-font-family);font-size:var(--_nys-video-font-size);font-weight:var(--_nys-video-font-weight);line-height:var(--_nys-video-line-height)}.nys-video .nys-video__title-text p{margin:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;border:0}';
+const Mp = '@charset "UTF-8";:host{--_nys-video-width: fit-content;--_nys-video-height: var(--nys-size-600, 48px);--_nys-video-radius: var(--nys-radius-lg, 8px);--_nys-video-padding: var(--nys-space-100, 8px);--_nys-video-gap: var(--nys-space-100, 8px);--_nys-video-font-size: var(--nys-font-size-ui-md, 16px);--_nys-video-font-weight: var(--nys-font-weight-semibold, 600);--_nys-video-line-height: var(--nys-font-lineheight-ui-md, 24px);--_nys-video-font-family: var( --nys-font-family-ui, var( --nys-font-family-sans, "Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif ) );--_nys-video-background-color--play-button: var( --nys-color-black-transparent-600, rgba(27, 27, 27, .6) );--_nys-video-outline-color--play-button: var(--nys-color-focus, #004dd1);--_nys-video-outline-width--play-button: 3.5px;--_nys-video-svg-color--play-button: var( --nys-color-white-transparent-400, rgba(255, 255, 255, .4) );--_nys-video-color--title-text: var(--nys-color-text-reverse, #ffffff);--_nys-video-background-color--title-text: var( --nys-color-ink, var(--nys-color-neutral-900, #1b1b1b) );--_nys-video-padding--title-text: var(--nys-space-250, 20px);display:block;width:100%;max-width:675px}:host([size=full]){max-width:none}:host([size=sm]){min-width:320px;max-width:439px}:host([size=full]) .nys-video .nys-video__title-text{position:absolute;bottom:0;--_nys-video-background-color--title-text: var( --nys-color-black-transparent-900, rgba(27, 27, 27, .9) )}@media(min-width:480px){.nys-video:not(.nys-video--sm):not(.nys-video--md) .nys-video__title-text{position:absolute;bottom:0;--_nys-video-background-color--title-text: var( --nys-color-black-transparent-900, rgba(27, 27, 27, .9) )}}.nys-video{border-radius:var(--_nys-video-radius);display:flex;flex-direction:column;position:relative;overflow:hidden}.nys-video .nys-video__ratio-box{aspect-ratio:16/9;position:relative}.nys-video .nys-video__ratio-box iframe,.nys-video .nys-video__ratio-box .nys-video__thumbnail{position:absolute;top:0;left:0;width:100%;height:100%;display:block;border:none}.nys-video .nys-video__ratio-box .nys-video__thumbnail{padding:0;background-color:transparent}.nys-video .nys-video__ratio-box .nys-video__thumbnail img{width:100%;height:100%;object-fit:cover}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon{position:absolute;inset:0;width:100%;height:100%;padding:0;border:none;background-color:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon .nys-video__play-badge{width:96px;height:96px;background-color:var(--_nys-video-background-color--play-button);border-radius:50%;display:flex;align-items:center;justify-content:center}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon svg{display:flex;margin-left:10px}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:focus-visible{outline:var(--_nys-video-outline-width--play-button) solid var(--_nys-video-outline-color--play-button);outline-offset:calc(-1 * var(--_nys-video-outline-width--play-button))}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:hover{--_nys-video-background-color--play-button: var( --nys-color-black-transparent-700, rgba(27, 27, 27, .7) )}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:active{--_nys-video-background-color--play-button: var( --nys-color-black-transparent-800, rgba(27, 27, 27, .8) )}.nys-video .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:disabled{cursor:not-allowed}.nys-video--disabled .nys-video__ratio-box{cursor:not-allowed}.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon,.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:hover,.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon:active{--_nys-video-background-color--play-button: var( --nys-color-black-transparent-200, rgba(27, 27, 27, .2) )}.nys-video--disabled .nys-video__ratio-box .nys-video__thumbnail .nys-video__play-icon svg{fill:var(--_nys-video-svg-color--play-button)}.nys-video .nys-video__title-text{width:100%;padding:var(--_nys-video-padding--title-text);background-color:var(--_nys-video-background-color--title-text);box-sizing:border-box;color:var(--_nys-video-color--title-text);display:flex;justify-content:start;font-family:var(--_nys-video-font-family);font-size:var(--_nys-video-font-size);font-weight:var(--_nys-video-font-weight);line-height:var(--_nys-video-line-height)}.nys-video .nys-video__title-text p{margin:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;border:0}';
 var Pp = Object.defineProperty, $t = (r, e, t, n) => {
   for (var o = void 0, s = r.length - 1, i; s >= 0; s--)
     (i = r[s]) && (o = i(e, t, o) || o);
