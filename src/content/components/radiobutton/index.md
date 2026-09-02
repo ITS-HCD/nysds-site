@@ -28,6 +28,7 @@ The `<nys-radiobutton>` provides users with the ability to choose from a group o
   {% set code = preview %}
   {% set backgroundSolid = true %}
   {% set showTip = true %}
+  {% set formsMode = "template" %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 

@@ -52,6 +52,7 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
   {% endset %}
   {% set code = preview %}
   {% set showTip = true %}
+  {% set formsMode = "template" %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 

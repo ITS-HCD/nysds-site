@@ -62,6 +62,7 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 </nys-modal>
 {% endset %}
 {% set showTip = true %}
+{% set formsMode = "template" %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 

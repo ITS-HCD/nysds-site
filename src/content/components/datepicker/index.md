@@ -29,6 +29,7 @@ The `<nys-datepicker>` component allows users to select a date from a visual cal
 {% endset %}
 {% set backgroundSolid = true %}
 {% set code = preview %}
+{% set formsMode = "template" %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 

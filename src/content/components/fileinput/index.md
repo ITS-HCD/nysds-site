@@ -31,6 +31,7 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
 {% set backgroundSolid = true %}
 {% set code = preview %}
 {% set showTip = true %}
+{% set formsMode = "template" %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 

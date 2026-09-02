@@ -23,6 +23,7 @@ The `<nys-pagination>` provides users with the ability to to navigate through a 
  {% endset %}
   {% set code = preview %}
   {% set showTip = true %}
+  {% set formsMode = "template" %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 

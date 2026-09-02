@@ -97,6 +97,7 @@ The `<nys-combobox>`  is a reusable web component for use in New York State digi
   {% endset %}
   {% set backgroundSolid = true %}
   {% set showTip = true %}
+  {% set formsMode = "template" %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 

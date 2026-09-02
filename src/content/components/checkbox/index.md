@@ -32,6 +32,7 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
   {% set code = preview %}
   {% set backgroundSolid = true %}
   {% set showTip = true %}
+  {% set formsMode = "template" %}
   {% include "partials/code-preview.njk" %}
 {% endblock %}
 
