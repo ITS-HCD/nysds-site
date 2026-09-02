@@ -38,11 +38,27 @@ const showSourceCode = (clickedDropdown) => {
 const copyCode = async (clickedCopyButton) => {
   const container = clickedCopyButton.closest(".code-preview-container");
   if (!container) return;
-  const codeBlock = container.querySelector(".code-preview__code-block");
+
+  // Copy only the active framework's code block
+  const activeCodeBlock = container.querySelector(".code-preview__code-block[data-framework]:not([hidden])");
+  const codeBlock = activeCodeBlock || container.querySelector(".code-preview__code-block");
   if (!codeBlock) return;
 
+  // Extract just the code, excluding the imports line
+  const codeText = (() => {
+    const imports = codeBlock.querySelector(".code-preview__imports");
+    const unsupported = codeBlock.querySelector(".code-preview__unsupported-message");
+    if (unsupported) return unsupported.innerText.trim();
+    if (imports) {
+      const fullText = codeBlock.innerText.trim();
+      const importLine = imports.innerText.trim();
+      return fullText.replace(importLine, "").trim();
+    }
+    return codeBlock.innerText.trim();
+  })();
+
   try {
-    await navigator.clipboard.writeText(codeBlock.innerText.trim());
+    await navigator.clipboard.writeText(codeText);
 
     const tooltip = container.querySelector(".copy-tooltip");
     if (!tooltip) return;
@@ -287,3 +303,89 @@ const copyHeadingUrl = async (clickedHeadingLink) => {
     console.error("Failed to copy:", err);
   }
 };
+
+// Framework tab management
+document.addEventListener("DOMContentLoaded", () => {
+  const STORAGE_KEY = "nysds-docs-framework";
+
+  // Get the saved framework preference from localStorage
+  let savedFramework = null;
+  try {
+    savedFramework = localStorage.getItem(STORAGE_KEY);
+  } catch (e) {
+    // localStorage might be unavailable in some contexts
+  }
+
+  // Initialize all tab groups
+  document.querySelectorAll(".code-preview__tabs").forEach((tablist) => {
+    const container = tablist.closest(".code-preview-container");
+    if (!container) return;
+
+    const tabs = Array.from(tablist.querySelectorAll("[role='tab']"));
+    if (tabs.length === 0) return;
+
+    // Determine which framework to show
+    let activeFramework = savedFramework || "html";
+    const availableFrameworks = tabs.map((t) => t.dataset.framework);
+    if (!availableFrameworks.includes(activeFramework)) {
+      activeFramework = availableFrameworks[0];
+    }
+
+    // Set up the tab group
+    function setActiveTab(framework) {
+      // Update tabs
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.framework === framework;
+        tab.setAttribute("aria-selected", String(isActive));
+        tab.setAttribute("tabindex", isActive ? "0" : "-1");
+      });
+
+      // Update panels
+      container.querySelectorAll("[role='tabpanel']").forEach((panel) => {
+        panel.hidden = panel.dataset.framework !== framework;
+      });
+
+      // Save preference
+      try {
+        localStorage.setItem(STORAGE_KEY, framework);
+      } catch (e) {
+        // localStorage might be unavailable
+      }
+    }
+
+    // Initialize with the active framework
+    setActiveTab(activeFramework);
+
+    // Tab click handler
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        setActiveTab(tab.dataset.framework);
+      });
+
+      // Keyboard navigation
+      tab.addEventListener("keydown", (e) => {
+        const currentIndex = tabs.indexOf(tab);
+        let nextTab = null;
+
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          e.preventDefault();
+          nextTab = tabs[(currentIndex + 1) % tabs.length];
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          e.preventDefault();
+          nextTab = tabs[(currentIndex - 1 + tabs.length) % tabs.length];
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          nextTab = tabs[0];
+        } else if (e.key === "End") {
+          e.preventDefault();
+          nextTab = tabs[tabs.length - 1];
+        }
+
+        if (nextTab) {
+          nextTab.focus();
+          setActiveTab(nextTab.dataset.framework);
+        }
+      });
+    });
+  });
+});

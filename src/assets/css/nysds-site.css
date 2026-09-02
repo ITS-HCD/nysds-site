@@ -1371,6 +1371,78 @@ li > .section-nav__list {
     opacity: 1;
   }
 
+/* Framework tabs for code preview */
+.code-preview__tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--nys-color-neutral-50, #EDEDED);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.code-preview__tab {
+  flex: 1;
+  padding: var(--nys-space-150, 12px) var(--nys-space-200, 16px);
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: var(--nys-color-transparent, rgba(255, 255, 255, 0.00));
+  color: var(--nys-color-text-weak, #4A4D4F);
+  cursor: pointer;
+  font-family: var(--nys-type-family-ui, "Proxima Nova");
+  font-size: var(--nys-type-size-ui-sm, 14px);
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+}
+
+.code-preview__tab:hover {
+  background: var(--nys-color-black-transparent-50, rgba(0, 0, 0, 0.02));
+  color: var(--nys-color-text, #1B1B1B);
+}
+
+.code-preview__tab:focus-visible {
+  outline: 2px solid var(--nys-color-focus, #004dd1);
+  outline-offset: -2px;
+}
+
+.code-preview__tab[aria-selected="true"] {
+  color: var(--nys-color-text, #1B1B1B);
+  border-bottom-color: var(--nys-color-primary, #003da5);
+}
+
+.code-preview__code-block[role="tabpanel"] {
+  display: none;
+}
+
+.code-preview__code-block[role="tabpanel"]:not([hidden]) {
+  display: block;
+}
+
+/* Imports display */
+.code-preview__imports {
+  color: var(--nys-color-text-weak, #4A4D4F);
+  font-family: "Monaspace Neon", monospace;
+  font-size: 12px;
+  padding: 8px 0;
+  margin: 0 0 8px 0;
+  border-bottom: 1px solid var(--nys-color-neutral-100, #D6D6D6);
+  line-height: 1.5;
+}
+
+/* Unsupported message */
+.code-preview__unsupported-message {
+  padding: var(--nys-space-200, 16px);
+  background: var(--nys-color-black-transparent-50, rgba(0, 0, 0, 0.01));
+  border-radius: var(--nys-radius-md, 4px);
+  color: var(--nys-color-text-weak, #4A4D4F);
+  font-size: 14px;
+}
+
+.code-preview__unsupported-message a {
+  color: var(--nys-color-primary, #003da5);
+  text-decoration: underline;
+}
+
 /* Additional Tweaks */
 
 code {

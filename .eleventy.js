@@ -5,7 +5,11 @@ const eleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const eleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const timeToRead = require('eleventy-plugin-time-to-read');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { execSync } = require('child_process')
+const { execSync } = require('child_process');
+
+// framework support
+const { loadManifest, transformExample } = require("@nysds/codegen");
+let manifest;
 
 // filters
 const limit = require("./src/_11ty/filters/limit.js");
@@ -58,6 +62,10 @@ module.exports = async function (eleventyConfig) {
 		}
 	});
 
+	// Load the manifest for framework transformations
+	const manifestPath = require.resolve("@nysds/components/custom-elements.json");
+	manifest = loadManifest(manifestPath);
+
     // filters
     eleventyConfig.addFilter("dateISO", dateISO);
     eleventyConfig.addFilter("dateFull", dateFull);
@@ -79,6 +87,34 @@ module.exports = async function (eleventyConfig) {
     eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
     eleventyConfig.addFilter("offset", (arr, start) => arr.slice(start));
 
+    // Framework transformation filters
+    eleventyConfig.addFilter("toReact", (html, opts = {}) => {
+        try {
+            return transformExample({
+                html,
+                framework: "react",
+                manifest,
+                ...opts
+            });
+        } catch (err) {
+            console.error("[toReact] Transformation failed:", err);
+            throw err;
+        }
+    });
+
+    eleventyConfig.addFilter("toAngular", (html, opts = {}) => {
+        try {
+            return transformExample({
+                html,
+                framework: "angular",
+                manifest,
+                ...opts
+            });
+        } catch (err) {
+            console.error("[toAngular] Transformation failed:", err);
+            throw err;
+        }
+    });
 
     // collections
     eleventyConfig.addCollection("updates", updates);

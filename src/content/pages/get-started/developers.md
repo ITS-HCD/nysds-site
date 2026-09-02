@@ -102,6 +102,20 @@ Note: These fonts are licensed for New York State applications only and are not 
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
+## Framework Guides
+
+### React
+
+`@nysds/react` provides typed React components for every NYSDS web component. Props, events, and types are automatically kept in sync with the design system without hand maintenance. Works with React 18 and 19, including Next.js App Router and Pages Router.
+
+[Learn how to install @nysds/react, handle controlled forms, use React Hook Form, and integrate with Next.js](/get-started/react/).
+
+### Angular
+
+`@nysds/angular` provides typed Angular components and directives for every NYSDS web component. Supports standalone components, NgModule apps, template-driven forms, Reactive Forms, and Signal Forms. Full integration with Angular 20+ forms and validation.
+
+[Learn how to install @nysds/angular, set up forms, manage validation, and use with SSR and zoneless change detection](/get-started/angular/).
+
 ### Apply Agency Theming
 
 The NYS Design System includes prebuilt theme stylesheets for agency branding (e.g. colors, buttons, etc). 

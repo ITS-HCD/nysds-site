@@ -1,7 +1,7 @@
 <div class="code-preview-container">
 {% if preview %}
   <div class="code-preview__preview {% if inverted %}inverted{% endif %} {% if backgroundSolid %}solid{% endif %}" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">{{ preview | safe }}</div>
+    <div class="code-preview__preview-root-inner">{{ preview | safe }}</div>
   </div>
 {% endif %}
   <div class="code-preview__source">
@@ -15,20 +15,80 @@
         <div class="copy-tooltip">Copy Code</div>
       </div>
     </div>
+
+    {% set frameworkList = frameworks or ["html", "react", "angular"] %}
+
     <div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
-      <div class="code-preview__code-block">
-        {% set lang = codeLanguage or "html" %}{% highlight lang %}
-        {{ code | safe }}
-        {% endhighlight %}
-      </div>
+      {% if frameworkList.length > 1 %}
+        <div class="code-preview__tabs" role="tablist">
+          {% for framework in frameworkList %}
+            <button
+              class="code-preview__tab"
+              role="tab"
+              data-framework="{{ framework }}"
+              aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+              tabindex="{% if loop.first %}0{% else %}-1{% endif %}">
+              {% if framework === "html" %}HTML{% elif framework === "react" %}React{% elif framework === "angular" %}Angular{% endif %}
+            </button>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% for framework in frameworkList %}
+        {% if framework === "html" %}
+          <div class="code-preview__code-block" role="tabpanel" data-framework="html">
+            {% set lang = codeLanguage or "html" %}{% highlight lang %}
+            {{ code | safe }}
+            {% endhighlight %}
+          </div>
+        {% elif framework === "react" %}
+          {% set reactResult = reactCode or (code | toReact({ formsMode: formsMode or "none" })) %}
+          <div class="code-preview__code-block" role="tabpanel" data-framework="react" data-pagefind-ignore="all">
+            {% if reactResult.unsupported %}
+              <div class="code-preview__unsupported-message">
+                This example uses script or markup that has no direct React equivalent. See the <a href="/get-started/react/">framework guide</a>.
+              </div>
+            {% else %}
+              {% if reactResult.imports.length > 0 %}
+                <div class="code-preview__imports">
+                  import { {{ reactResult.imports | join(", ") }} } from "@nysds/react";
+                </div>
+              {% endif %}
+              {% highlight "jsx" %}
+              {{ reactResult.code | safe }}
+              {% endhighlight %}
+            {% endif %}
+          </div>
+        {% elif framework === "angular" %}
+          {% set angularResult = angularCode or (code | toAngular({ formsMode: formsMode or "none" })) %}
+          <div class="code-preview__code-block" role="tabpanel" data-framework="angular" data-pagefind-ignore="all">
+            {% if angularResult.unsupported %}
+              <div class="code-preview__unsupported-message">
+                This example uses script or markup that has no direct Angular equivalent. See the <a href="/get-started/angular/">framework guide</a>.
+              </div>
+            {% else %}
+              {% if angularResult.imports.length > 0 %}
+                <div class="code-preview__imports">
+                  imports: [{{ angularResult.imports | join(", ") }}]
+                </div>
+              {% endif %}
+              {% highlight "html" %}
+              {{ angularResult.code | safe }}
+              {% endhighlight %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
-{% if showTip %}
-  <div class="code-preview__code-tip">
-    <p>Can't use NYS design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
-  </div>
-{% endif %}
+
+    {% if showTip %}
+      <div class="code-preview__code-tip">
+        <p>Can't use NYS design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+      </div>
+    {% endif %}
   </div>
 </div>
+
 {% if script %}
   {{ script | safe }}
 {% endif %}
