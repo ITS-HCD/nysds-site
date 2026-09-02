@@ -39,8 +39,8 @@ The following interactive workspace simulates a global header banner alert syste
     >
       Due to extreme weather, State Route 87 is closed in both directions between Exit 15 and Exit 18. Emergency crews are on site. Avoid the area.
       
-      <!-- Close action trigger in slot -->
-      <div slot="actions" style="padding-top: var(--nys-space-50);">
+      <!-- Close action trigger inside default slot -->
+      <div style="margin-top: var(--nys-space-150);">
         <nys-button 
           id="btn-dismiss-banner" 
           label="Dismiss Alert" 
@@ -173,7 +173,7 @@ The following interactive workspace simulates a global header banner alert syste
 
       alertBanner.setAttribute("type", data.type);
       alertBanner.setAttribute("title", data.title);
-      alertBanner.innerHTML = `${data.body} <div slot="actions" style="padding-top: var(--nys-space-50);"><nys-button id="btn-dismiss-banner" label="Dismiss Alert" variant="secondary" size="sm" aria-label="Dismiss ${key} alert banner"></nys-button></div>`;
+      alertBanner.innerHTML = `${data.body} <div style="margin-top: var(--nys-space-150);"><nys-button id="btn-dismiss-banner" label="Dismiss Alert" variant="secondary" size="sm" aria-label="Dismiss ${key} alert banner"></nys-button></div>`;
       
       alertBanner.style.display = "block";
       alertBanner.style.opacity = "1";
@@ -209,8 +209,8 @@ The following interactive workspace simulates a global header banner alert syste
   <nys-alert id="demo-header-alert" type="danger" title="CRITICAL EMERGENCY: State Route 87 Road Closure">
     Due to extreme weather, State Route 87 is closed in both directions.
     
-    <!-- Close action trigger in actions slot -->
-    <div slot="actions">
+    <!-- Close action trigger inside default slot -->
+    <div style="margin-top: var(--nys-space-150);">
       <nys-button id="btn-dismiss-banner" label="Dismiss Alert" variant="secondary" size="sm" aria-label="Dismiss weather emergency alert banner"></nys-button>
     </div>
   </nys-alert>
