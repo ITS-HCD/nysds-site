@@ -11,14 +11,20 @@ heading_links: false
 {% block content %}
 <!-- Home Hero -->
 <div class="hero">
-  <div class="hero__inner">
+  <div class="nys-grid-container-widescreen nys-padding-y-400">
+    <div class="nys-grid-row">
+    <div class="nys-grid-col-6" style="align-content: center;">
     <div class="hero__content">
       <h1 style="margin-top: 0; margin-bottom: 0;"><img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System" width="404" height="46"></h1>
       <p>A shared library of accessible, mobile-friendly components, design tokens, and guidelines for teams building digital services across New York State.</p>
       <nys-button label="Get started today" size="lg" href="/get-started/"></nys-button>
     </div>
+    </div>
+    <div class="nys-grid-col-6">
     <div class="hero__media">
       <img src="{{ '/assets/img/homepage-grid-3.svg' | url }}" alt="" width="636" height="319">
+    </div>
+    </div>
     </div>
   </div>
 </div>
