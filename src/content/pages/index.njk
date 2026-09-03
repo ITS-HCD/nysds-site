@@ -13,7 +13,7 @@ heading_links: false
 <div class="hero">
   <div class="hero__inner">
     <div class="hero__content">
-      <img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System" width="404" height="46">
+      <h1 style="margin-top: 0; margin-bottom: 0;"><img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System" width="404" height="46"></h1>
       <p>A shared library of accessible, mobile-friendly components, design tokens, and guidelines for teams building digital services across New York State.</p>
       <nys-button label="Get started today" size="lg" href="/get-started/"></nys-button>
     </div>
@@ -66,8 +66,10 @@ heading_links: false
 
 {# Foundational Principles and Visual Identity #}
 <div class="nys-grid-container-widescreen nys-margin-t-800">
-  <h2>Foundational principles and visual identity</h2>
   <div class="nys-grid-row nys-grid-gap-300">
+    <div class="nys-grid-col-12">
+      <h2>Foundational principles and visual identity</h2>
+    </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
       <a class="card nys-flex-fill" href="/foundations/tokens" aria-label="Design Tokens">
         <div class="card__inner">
@@ -140,9 +142,9 @@ heading_links: false
 
 {# Latest Updates #}
 <div class="nys-grid-container-widescreen nys-top-800">
-  <h2>Latest Updates</h2>
   <div class="nys-grid-row nys-flex-row">
     <div class="nys-grid-col-12">
+      <h2>Latest Updates</h2>
       {% set found_release = false %}
       {% set found_article = false %}
       {%- for post in collections.updates -%}
