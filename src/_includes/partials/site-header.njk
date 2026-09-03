@@ -13,15 +13,17 @@
 {% if section %}
 <div class="section-header" data-pagefind-ignore="all">
     <div class="section-header__inner nys-grid-container-widescreen">
-        <div class="section-header__title">
-            {{ section }}
-        </div>
-        <div class="section-header__media">
-            {% if image_header %}
-                <img src="{{ image_header | url }}" alt="{{ title }}">
-            {% else %}
-                <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
-            {% endif %}
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                {{ section }}
+            </div>
+            <div class="section-header__media">
+                {% if image_header %}
+                    <img src="{{ image_header | url }}" alt="{{ title }}">
+                {% else %}
+                    <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
