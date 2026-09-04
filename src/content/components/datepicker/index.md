@@ -386,7 +386,7 @@ datepicker.addEventListener("nys-blur", () => {
 {% block dependencies %}
 
 {% set dependencies = [
-  "<wc-datepicker>","<nys-icon>","<nys-button>"
+  "<nys-button>", "<nys-errormessage>", "<nys-icon>", "<nys-label>"
 ] %}
 
 {% include "partials/dependencies.njk" %}

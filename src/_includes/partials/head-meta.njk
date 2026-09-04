@@ -1,7 +1,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{% if section != 'home' %}{% if title %}{{ title | safe }}{% endif %}{% endif %}</title>
+{#- The home page carries the site name as its own title, so appending it there
+    doubles it. Everywhere else the suffix is what identifies the site in tab
+    strips and search results. A page with no title still gets one (WCAG 2.4.2). -#}
+<title>{% if title %}{{ title | safe }}{% if page.url != "/" %} - {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
 {% if description %}
 <meta name="description" content="{{ description }}">{% endif %}
 <link rel="canonical" href="{{ site.url }}{{page.url}}">
