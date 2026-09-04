@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NYS Design System Release 1.21.0 “Colden”</title>
+
+<meta name="description" content="BREAKING CHANGES! Grid system is now aligned properly and able to be re-sized via a CSS property. New badge intents have been added. We updated the MCP server to actually use our CSS classes properly.
+">
+<link rel="canonical" href="https://designsystem.ny.gov/about/updates/1.21.0-release/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="NYS Design System Release 1.21.0 “Colden”">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/about/updates/1.21.0-release/">
+<meta property="og:description" content="BREAKING CHANGES! Grid system is now aligned properly and able to be re-sized via a CSS property. New badge intents have been added. We updated the MCP server to actually use our CSS classes properly.
+">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/i/2026/release-1.21.0.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-09-04T16:42:02.488Z -->
+  </head>
+  
+  <body class="single-page page-release-1.21.0 section-updates">
+  <nys-skipnav></nys-skipnav>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Updates
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="https://designsystem.ny.gov/assets/img/sections/section-updates.svg" alt="Updates section header">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+
+
+
+
+<div class="nys-grid-container-widescreen">
+  <div class="nys-grid-row nys-grid-gap">
+    <div class="nys-desktop:nys-grid-col-10">  
+    
+      <section class="page-content">
+
+        <header class="page-header"><h1 class="page-title" id="nys-design-system-release-1-21-0-colden">
+            <span class="release-mark" aria-hidden="true"></span>NYS Design System Release 1.21.0 “Colden”
+          </h1><p class="page-subtitle">BREAKING CHANGES! Grid system is now aligned properly and able to be re-sized via a CSS property. New badge intents have been added. We updated the MCP server to actually use our CSS classes properly.
+</p><div class="page-meta">
+            
+            <div class="page-author">
+              <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+              <span class="page-author__name">Eric Steinborn</span>
+            </div>
+            <time class="page-meta__date" datetime="2026-09-03T00:00:00.000Z">September 3, 2026</time>
+            <div class="page-meta__readtime">2 min read time</div>
+            
+          </div>
+          <div class="nys-grid-col">        
+        <ul class="nys-margin-t-200 taglist" data-pagefind-ignore="all">
+          
+            
+              <li><nys-badge label="BREAKING CHANGES" intent="error" prefixIcon=""></nys-badge></li>
+            
+          
+            
+              <li><nys-badge label="release"></nys-badge></li>
+            
+          
+            
+              <li><nys-badge label="COLDEN"></nys-badge></li>
+            
+          
+            
+              <li><nys-badge label="grid"></nys-badge></li>
+            
+          
+            
+              <li><nys-badge label="badge"></nys-badge></li>
+            
+          
+            
+              <li><nys-badge label="MCP server"></nys-badge></li>
+            
+          
+        </ul>
+        </div>
+        </header>
+
+        <nys-alert heading="Breaking Changes in 1.21.0" type="danger">
+  <p>Read these 1.21.0 release notes carefully and use the <a href="#breaking-changes">1.21.0 breaking changes</a> to see how to migrate</p>
+</nys-alert>
+<h2 id="colden">“Colden” 🏔️</h2>
+<p>The winning vote during Office Hours was for naming this release “Colden” after the 11<sup>th</sup> highest peak in New York: Mount Colden. The Mountain has an elevation of 4,714 ft (1,437 m). That is as tall as 28 Niagara Falls (51 m Horseshoe drop)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Mount_Colden">Learn more about Mount Colden <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2 id="grid-system-overhaul">Grid System Overhaul</h2>
+<p>The grid system now properly aligns the inner content of <code>&lt;nys-unavheader&gt;</code>, <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-breadcrumbs&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, and <code>&lt;nys-unavfooter&gt;</code> with the grid containers and rows. If you're on an older implementation, here's what to update:</p>
+<ul>
+<li>Every child of a <code>nys-grid-container</code> (or <code>nys-grid-container-[suffix]</code>) needs the class <code>nys-grid-row</code>.</li>
+<li>Double-check any extra padding or margin you'd added to work around the old grid. Some of it will need to be removed or adjusted now that the containers align correctly.</li>
+</ul>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Main content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Sidebar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="/foundations/utilities/grid/">Read more on the Grid System usage</a></p>
+<ul>
+<li>New style override variable, <code>nys-max-width--content</code>, lets you control the overall inner max-width of headers, footers, breadcrumbs, and the grid system.</li>
+</ul>
+<p><a href="/foundations/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> rates the alignment a grid-A!
+  </div>
+</div>
+<h2 id="nys-badge-updates"><code>&lt;nys-badge&gt;</code> updates!</h2>
+<p>The <code>&lt;nys-badge&gt;</code> component has been updated to better match our design standards, with a few breaking changes to the intent names. The legacy <code>&quot;error&quot;</code> intent is deprecated in favor of <code>&quot;danger&quot;</code>, and <code>&quot;neutral&quot;</code> is now <code>&quot;base&quot;</code> (the new default). There are also three new props: <code>strong</code>, <code>prefixIcon</code>, <code>suffixIcon</code>, and <code>srText</code>.</p>
+<p>The default intent is base.</p>
+<ol>
+<li>Deprecated: <code>intent=&quot;neutral&quot;</code> is now <code>intent=&quot;base&quot;</code></li>
+<li>Depreciated: <code>intent=&quot;error&quot;</code> is now <code>intent=&quot;danger&quot;</code></li>
+<li>New <code>intent=&quot;base&quot;</code></li>
+<li>New <code>intent=&quot;emergency&quot;</code></li>
+</ol>
+<ul>
+<li>Deprecated: <code>variant=&quot;strong&quot;</code> is now the boolean <code>strong</code> attribute (e.g. <code>&lt;nys-badge strong&gt;</code>).</li>
+</ul>
+<p><a href="/components/badge">Read the &lt;nys-badge&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap-100">
+  <nys-badge label="Neutral" prefixIcon=""></nys-badge>
+  <nys-badge label="Info" intent="info" prefixIcon=""></nys-badge>
+  <nys-badge label="Warning" intent="warning" prefixIcon=""></nys-badge>
+  <nys-badge label="Success" intent="success" prefixIcon=""></nys-badge>
+  <nys-badge label="Emergency" intent="emergency" prefixIcon=""></nys-badge>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Neutral<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Info<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Warning<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>warning<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Success<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Emergency<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> wearing these badges with pride!
+  </div>
+</div>
+<h2 id="bug-fixes">Bug fixes</h2>
+<ul>
+<li>MCP Utility classes were inventing their own classes that didnt exist. This was fixed</li>
+<li>Fix duplicate value on radio buttons on form submission</li>
+</ul>
+<h2 id="breaking-changes">🚨 Breaking changes</h2>
+<ul>
+<li>The <code>nys-grid</code> system was revamped to better align content and provide an overridable max-width value <code>--nys-max-width--content</code>. <a href="#grid-system-overhaul">Read the full release notes for grid migration instructions</a>. You can report any issues in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+<li>A couple of <code>nys-badge</code> intents have changed. <a href="#nys-badge-updates">Read the full release notes for badge migration instructions</a></li>
+</ul>
+<h2 id="known-issues">⚠️ Known issues</h2>
+<ul>
+<li><code>nys-table</code> sorting currently only works on strings, it will not yet properly sort by numbers. <a href="https://github.com/ITS-HCD/nysds/issues/1873">See #1873: BUG: nys-table header not sorting properly</a></li>
+<li><code>nys-globalfooter</code> does not allow you to dynamically insert menu items currently. <a href="https://teams.microsoft.com/l/message/19:0228156e2bb5419c8152047f596a7bfb@thread.tacv2/1787156283129?tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7&amp;groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&amp;parentMessageId=1787156283129&amp;teamName=NYS%20Design%20System&amp;channelName=Troubleshooting&amp;createdTime=1787156283129">See: Teams bug report</a></li>
+<li><code>nys-combobox</code> doesn't focus on component for invalid submission <a href="https://github.com/ITS-HCD/nysds/issues/1596">See: #1596</a></li>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4 id="for-full-component-updates-bug-fixes-and-the-detailed-changelog">For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.21.0">See the full developer release notes for v.1.21.0 →</a></p>
+
+
+    
+        <div class="nys-grid-row nys-margin-t-400">
+          <div class="nys-grid-col">
+            <div></div>
+            <div>Previous : <a href="/about/updates/1.20.0-release/" title="Read: NYS Design System Release 1.20.0 “Giant”"><b>NYS Design System Release 1.20.0 “Giant”</b></a></div>
+          </div>
+        </div>
+
+        
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/updates/2026-09-03-release-1.21.0.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: September 3, 2026</p>
+  </div>
+
+
+      </section>
+    </div>
+    <aside class="nys-desktop:nys-grid-col-2">
+      <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all">
+  <p><strong>On this page</strong></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+    </aside>
+  </div>
+</div>
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

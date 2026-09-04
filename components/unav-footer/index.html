@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-03T13:11:41.916Z -->
+    <!-- Latest Build: 2026-09-04T16:42:02.488Z -->
   </head>
   
   <body class="single-page page-unavfooter section-components">
@@ -69,13 +69,15 @@
 
 <div class="section-header" data-pagefind-ignore="all">
     <div class="section-header__inner nys-grid-container-widescreen">
-        <div class="section-header__title">
-            Components
-        </div>
-        <div class="section-header__media">
-            
-                <img src="/assets/img/components/unav-footer-header.svg" alt="UNav Footer">
-            
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Components
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="/assets/img/components/unav-footer-header.svg" alt="UNav Footer">
+                
+            </div>
         </div>
     </div>
 </div>
@@ -87,7 +89,7 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-auto">
+  <aside class="nys-desktop:nys-grid-col-2">
     <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
   <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
     <span class="accordion__label">Components</span>
@@ -672,7 +674,59 @@ There are no configurable options for this component. It is intended to be used 
 </section><br>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
-<p>The <code>nys-unavfooter</code> does not have any css variables because this component must remain consistent across applications and sites.</p>
+<div class="css-var-table">
+<p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token selector">nys-component</span> <span class="token punctuation">{</span>
+  <span class="token property">--nys-component-background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-accent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--nys-component-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<nys-table striped="">
+      <table>
+        <thead>
+          <tr>
+            <th>CSS Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<p><tr>
+<td><code>--nys-max-width--content</code></td>
+<td>Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. <code>:root</code>) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below.</td>
+</tr></p>
+<p><tr>
+<td><code>--_nys-unavfooter-max-width--content</code></td>
+<td>The maximum width for this inner container size. Falls back to the size's default (e.g. 1280px) if not set.</td>
+</tr></p>
+<p><tr>
+<td colspan="2" class="css-var-table__tip">
+Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
+new one with a
+<a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
+Proposal</a>.
+</td>
+</tr></p>
+<p></p></tbody>
+</table>
+</nys-table><p></p>
+</div>
 </section><br>
 <section>
     <h2 id="events">Events</h2>
@@ -696,7 +750,7 @@ There are no configurable options for this component. It is intended to be used 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/unavfooter/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 3, 2026</p>
+    <p>Last updated: September 4, 2026</p>
   </div>
 
   </div>

@@ -47,7 +47,7 @@
 
     
 
-    <!-- Latest Build: 2026-09-03T13:11:41.916Z -->
+    <!-- Latest Build: 2026-09-04T16:42:02.488Z -->
   </head>
   
   <body class="home no-heading-links">
@@ -75,14 +75,20 @@
       
 <!-- Home Hero -->
 <div class="hero">
-  <div class="hero__inner">
+  <div class="nys-grid-container-widescreen nys-padding-y-400">
+    <div class="nys-grid-row">
+    <div class="nys-grid-col-6" style="align-content: center;">
     <div class="hero__content">
-      <img src="/assets/img/nysds_logo_long.svg" alt="New York State Design System" width="404" height="46">
+      <h1 style="margin-top: 0; margin-bottom: 0;" id=""><img src="/assets/img/nysds_logo_long.svg" alt="New York State Design System" width="404" height="46"></h1>
       <p>A shared library of accessible, mobile-friendly components, design tokens, and guidelines for teams building digital services across New York State.</p>
       <nys-button label="Get started today" size="lg" href="/get-started/"></nys-button>
     </div>
+    </div>
+    <div class="nys-grid-col-6">
     <div class="hero__media">
       <img src="/assets/img/homepage-grid-3.svg" alt="" width="636" height="319">
+    </div>
+    </div>
     </div>
   </div>
 </div>
@@ -129,52 +135,30 @@
 </div>
 
 
-<div class="nys-grid-container-widescreen nys-margin-t-800">
-  <h2 id="foundational-principles-and-visual-identity">Foundational principles and visual identity</h2>
+<div class="nys-grid-container-widescreen nys-margin-t-800" style="--nys-card-height: 100%">
   <div class="nys-grid-row nys-grid-gap-300">
-    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/foundations/tokens" aria-label="Design Tokens">
-        <div class="card__inner">
-          <div class="card__media">
-              <img src="/assets/img/design-token-card.svg" alt="">
-          </div>
-          <div class="card__title">Design Tokens</div>
-          <div class="card__desc">Centralized design decisions — colors, spacing, typography, and more — that keep every application consistent and easy to update.</div>
-        </div>
-      </a>
+    <div class="nys-grid-col-12">
+      <h2 id="foundational-principles-and-visual-identity">Foundational principles and visual identity</h2>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/foundations/accessibility/" aria-label="Accessibility">
-        <div class="card__inner">
-          <div class="card__media">
-              <img src="/assets/img/accessibility-card.svg" alt="">
-          </div>
-          <div class="card__title">Accessibility</div>
-          <div class="card__desc">Every component is tested for WCAG compliance, so teams ship accessible experiences from day one — without extra remediation work.</div>
-        </div>
-      </a>
+      <nys-card href="/foundations/tokens" heading="Design Tokens" description="Centralized design decisions — colors, spacing, typography, and more — that keep every application consistent and easy to update." headingLevel="h3">
+        <img slot="media" src="/assets/img/design-token-card.svg" alt="">
+      </nys-card>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/components/" aria-label="Web Components">
-        <div class="card__inner">
-          <div class="card__media">
-              <img src="/assets/img/web-component-card.svg" alt="">
-          </div>
-          <div class="card__title">Web Components</div>
-          <div class="card__desc">Reusable front-end components shared across codebases, with built-in design, state, and behavior.</div>
-        </div>
-      </a>
+      <nys-card href="/foundations/accessibility/" heading="Accessibility" description="Every component is tested for WCAG compliance, so teams ship accessible experiences from day one — without extra remediation work." headingLevel="h3">
+        <img slot="media" src="/assets/img/accessibility-card.svg" alt="">
+      </nys-card>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <a class="card nys-flex-fill" href="/foundations/utilities/typography/" aria-label="Typography">
-        <div class="card__inner">
-          <div class="card__media">
-              <img src="/assets/img/typography-card.svg" alt="">
-          </div>
-          <div class="card__title">Typography</div>
-          <div class="card__desc">NYS brand-approved typefaces and type scales, ready to use in both design tools and production code.</div>
-        </div>
-      </a>
+      <nys-card href="/components/" heading="Web Components" description="Every component is tested for WCAG compliance, so teams ship accessible experiences from day one — without extra remediation work." headingLevel="h3">
+        <img slot="media" src="/assets/img/web-component-card.svg" alt="">
+      </nys-card>
+    </div>
+    <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
+      <nys-card href="/foundations/typography/" heading="Typography" description="NYS brand-approved typefaces and type scales, ready to use in both design tools and production code." headingLevel="h3">
+        <img slot="media" src="/assets/img/typography-card.svg" alt="">
+      </nys-card>
     </div>
   </div>
 </div>
@@ -204,36 +188,28 @@
 
 
 <div class="nys-grid-container-widescreen nys-top-800">
-  <h2 id="latest-updates">Latest Updates</h2>
-  <div class="nys-grid-row nys-flex-row">
-    <div class="nys-grid-col-12">
+  <div class="nys-grid-row nys-flex-row nys-grid-gap-300">
+    <div class="nys-grid-col-12 nys-grid-offset-2">
+      <h2 id="latest-updates">Latest Updates</h2>
+    </div>
       
       
         
           
             
-            <a class="card card--horizontal" href="/about/updates/1.20.0-release/" aria-label="NYS Design System Release 1.20.0 “Giant”">
-              <div class="card__inner">
-                <div class="card__media card__media--thin">
-                  <img src="/assets/i/2026/release-1.20.0-thumbnail.png" alt="" role="presentation">
-                </div>
-                <div class="card__content">
-                  <div class="card__title">
-                    NYS Design System Release 1.20.0 “Giant”
-                  </div>
-                  <div class="card_date">
-                    <p>August 6, 2026</p>
-                  </div>
-                  <div class="card__desc" style="max-width: 80ch;">
-                    <p>This release is GIANT! Say hello to the latest members of the NYS Design System family: &lt;nys-card&gt;, &lt;nys-iconlist&gt;, &lt;nys-processlist&gt;, and &lt;nys-verticalnav&gt;! While we could have stopped there, we didnt. We shipped a new accessibility layer to our web components while fixed many bugs and accessibility violations.
-</p>
-                  </div>
-                  <div class="card__category">
-                    <p><nys-badge label="Latest release"></nys-badge></p>
-                  </div>
-                </div>
-              </div>
-            </a>
+            <div class="nys-grid-col-12 nys-desktop:nys-grid-col-4 nys-desktop:nys-grid-offset-2">
+              <nys-card href="/about/updates/1.21.0-release/" heading="NYS Design System Release 1.21.0 “Colden”" description="BREAKING CHANGES! Grid system is now aligned properly and able to be re-sized via a CSS property. New badge intents have been added. We updated the MCP server to actually use our CSS classes properly.
+" headingLevel="h3">
+                <img slot="media" src="/assets/i/2026/release-1.21.0.png" alt="">
+                
+                <nys-badge slot="preheading" label="Latest release"></nys-badge>
+              </nys-card>
+            </div>
+          
+        
+        
+        
+        
           
         
         
@@ -243,27 +219,18 @@
         
           
             
-            <a class="card card--horizontal" href="/about/updates/a11y/" aria-label="Our 2026 Global Accessibility Awareness Day (GAAD) Campaign">
-              <div class="card__inner">
-                <div class="card__media card__media--thin">
-                  <img src="/assets/i/2026/gaad-campaign-article/gaad-thumbnail-alt.png" alt="" role="presentation">
-                </div>
-                <div class="card__content">
-                  <div class="card__title">
-                    Our 2026 Global Accessibility Awareness Day (GAAD) Campaign
-                  </div>
-                  <div class="card_date">
-                    <p>August 5, 2026</p>
-                  </div>
-                  <div class="card__desc" style="max-width: 80ch;">
-                    <p>A collaboration between the NYS Digital Accessibility and NYS Design System Teams</p>
-                  </div>
-                  <div class="card__category">
-                    <p><nys-badge label="Latest article"></nys-badge></p>
-                  </div>
-                </div>
-              </div>
-            </a>
+            <style>
+              .nys-card {
+                height: 100%;
+              }
+              </style>
+            <div class="nys-grid-col-12 nys-desktop:nys-grid-col-4">
+              <nys-card href="/about/updates/a11y/" heading="Our 2026 Global Accessibility Awareness Day (GAAD) Campaign" description="A collaboration between the NYS Digital Accessibility and NYS Design System Teams" headingLevel="h3" style="height: 100%;">
+                <img slot="media" src="/assets/i/2026/gaad-campaign-article/gaad-thumbnail.png" alt="">
+                
+                <nys-badge slot="preheading" label="Latest article"></nys-badge>
+              </nys-card>
+            </div>
           
         
         
@@ -507,7 +474,7 @@
         
         </div>
   </div>
-</div>
+
 
 
 <div class="color-theme--weaker nys-top-800 nys-padding-y-800">
@@ -535,63 +502,32 @@
 
 
 <div class="nys-grid-container-widescreen nys-top-800">
-  <div class="nys-grid-row nys-grid-gap-300">
+  <div class="nys-grid-row nys-grid-gap-300" style="--nys-card-height: 100%">
     <div class="nys-tablet:nys-grid-col-6">
-      <div class="card card--horizontal card--horizontal--padded">
-        <div class="card__inner">
-          <div class="card__content">
-            <div class="card__title">
-              NYS Design System Community Figma file
-            </div>
-            <div class="card__badge">
-              <nys-badge label="For our community"></nys-badge>
-            </div>
-            <div class="card__desc">
-              <p>Available to anyone with a Figma account, our Community file provides instant access to our shared components, tokens, and text styles. Simply duplicate the file to your workspace to customize the library to your needs.</p>
-              <p><a href="https://www.figma.com/community/file/1574803287825265318/new-york-state-design-system" target="_blank">Open the Figma community file</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <nys-card heading="Community Figma" headingLevel="h3">
+        <p>Available to anyone with a Figma account, our Community file provides instant access to our shared components, tokens, and text styles. Simply duplicate the file to your workspace to customize the library to your needs.</p>
+        <nys-button slot="footer" fullWidth="" label="Use the Figma community file" variant="outline" href="https://www.figma.com/community/file/1574803287825265318/new-york-state-design-system"></nys-button>
+        <nys-badge slot="preheading" label="For our community"></nys-badge>
+    </nys-card>
     </div>
     <div class="nys-tablet:nys-grid-col-6">
-      <div class="card card--horizontal">
-        <div class="card__inner">
-          <div class="card__content">
-            <div class="card__title">
-              NYS Design System Figma file
-            </div>
-            <div class="card__badge">
-              <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
-            </div>
-            <div class="card__desc">
-              <p>The official Figma library for NYS staff. Includes WCAG-compliant components, foundational design tokens, and agency themes that adapt to your brand.</p>
-              <p><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?m=auto&node-id=51-1514&t=bipoQLI10KcdaAlv-1" target="_blank">Open the NYS Figma file</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <nys-card heading="NYS Staff Figma" headingLevel="h3">
+        <p>The official Figma library for NYS staff. Includes WCAG-compliant components, foundational design tokens, and agency themes that adapt to your brand.</p>
+        <nys-button slot="footer" fullWidth="" label="Use the NYS Figma file" variant="outline" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?m=auto&node-id=51-1514&t=bipoQLI10KcdaAlv-1"></nys-button>
+        <nys-badge prefixIcon="lock_filled" slot="preheading" label="For NYS staff"></nys-badge>
+      </nys-card>
+    </div>               
   </div>
 </div>
 
 
 <div class="nys-grid-container-widescreen nys-top-800">
   <div class="nys-grid-row nys-grid-gap-300">
-    <div class="nys-grid-col-12">
-      <div class="card card--horizontal">
-        <div class="card__inner">
-          <div class="card__content">
-            <div class="card__title">
-              Help shape the future of the NYS Design System
-            </div>
-            <div class="card__desc nys-grid-col-12 nys-desktop:nys-grid-col-9">
-              <p>The design system improves when teams across New York State share what works and what does not. Report bugs, propose new components, join office hours, or help refine existing patterns.</p>
-              <p><nys-button size="lg" label="Contribute" href="/about/contribute/"></nys-button></p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="nys-grid-col-6 nys-grid-offset-3">
+      <nys-card heading="Help shape the future of the NYS Design System" headingLevel="h3">
+        <p>The design system improves when teams across New York State share what works and what does not. Report bugs, propose new components, join office hours, or help refine existing patterns.</p>
+        <nys-button slot="footer" fullWidth="" label="Contribute" href="/about/contribute/"></nys-button>
+      </nys-card>
     </div>
   </div>
 </div>

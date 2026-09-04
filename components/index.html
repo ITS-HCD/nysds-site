@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-03T13:11:41.916Z -->
+    <!-- Latest Build: 2026-09-04T16:42:02.488Z -->
   </head>
   
   <body class="single-page page-components section-components">
@@ -69,13 +69,15 @@
 
 <div class="section-header" data-pagefind-ignore="all">
     <div class="section-header__inner nys-grid-container-widescreen">
-        <div class="section-header__title">
-            Components
-        </div>
-        <div class="section-header__media">
-            
-                <img src="https://designsystem.ny.gov/assets/img/sections/section-components.svg" alt="Components section header">
-            
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Components
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="https://designsystem.ny.gov/assets/img/sections/section-components.svg" alt="Components section header">
+                
+            </div>
         </div>
     </div>
 </div>
@@ -568,8 +570,7 @@
 </nav>
   </aside>
   <div class="nys-desktop:nys-grid-col-10">  
-    <div class="nys-grid-container-widescreen">
-  <header class="page-header">
+      <header class="page-header">
     <h1 class="page-title" id="web-components">Web Components</h1>
     <div class="page-subtitle nys-grid-row nys-grid-gap">
       <p class="nys-tablet:nys-grid-col-8">The NYS Design System includes a library of web components that serve as building blocks to help developers create consistent digital products. Each component page includes examples, guidance, accessibility considerations, and options.</p>
@@ -577,355 +578,460 @@
   </header>
 <section class="nys-grid-row nys-grid-gap-300">
   <!-- DO NOT EDIT the lines that generate the cards in this section. 11ty likes to take template code like this and treat the code-only lines (like the if statements) as empty lines and inserts empty P tags in place, causing all sorts of layout issues. So as much as it pains us to concatenate the beginning or end of an if statement inline with the code, placing it on it's own line (so it looks nicer) just can't happen using .md files Thar be dragons -->
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/accordion/" aria-label="Accordion Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/accordion/" heading="Accordion" description="Vertically stacked list of headers that reveal or hide associated content.">
+              <img src="/assets/img/components/accordion.svg" slot="media" alt="An illustration of an accordion">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/accordion/" aria-label="Accordion Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/accordion.svg" alt="An illustration of an accordion"></div>
           <div class="card__title">Accordion</div>
           <div class="card__desc">Vertically stacked list of headers that reveal or hide associated content.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/alert/" aria-label="Alert Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/alert/" heading="Alert" description="An alert displays a prominent message, with optional links, at the top of the screen.">
+              <img src="/assets/img/components/alert.svg" slot="media" alt="An illustration of an alert message.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/alert/" aria-label="Alert Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/alert.svg" alt="An illustration of an alert message."></div>
           <div class="card__title">Alert</div>
           <div class="card__desc">An alert displays a prominent message, with optional links, at the top of the screen.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/avatar/" aria-label="Avatar Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/avatar/" heading="Avatar" description="Avatars visually represent a user or entity as initials, a photo, or an icon.">
+              <img src="/assets/img/components/avatar.svg" slot="media" alt="An illustration of an avatar icon.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/avatar/" aria-label="Avatar Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/avatar.svg" alt="An illustration of an avatar icon."></div>
           <div class="card__title">Avatar</div>
           <div class="card__desc">Avatars visually represent a user or entity as initials, a photo, or an icon.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/backtotop/" aria-label="Back To Top Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/backtotop/" heading="Back To Top" description="Provides a button that lets users quickly scroll back to the top of the page.">
+              <img src="/assets/img/components/backtotop.svg" slot="media" alt="a circular button with the text back to top written on it.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/backtotop/" aria-label="Back To Top Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/backtotop.svg" alt="a circular button with the text back to top written on it."></div>
           <div class="card__title">Back To Top</div>
           <div class="card__desc">Provides a button that lets users quickly scroll back to the top of the page.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/badge/" aria-label="Badge Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/badge/" heading="Badge" description="Provides a visual indicator of categories.">
+              <img src="/assets/img/components/badge.svg" slot="media" alt="An illustration of a badge.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/badge/" aria-label="Badge Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/badge.svg" alt="An illustration of a badge."></div>
           <div class="card__title">Badge</div>
           <div class="card__desc">Provides a visual indicator of categories.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/breadcrumbs/" aria-label="Breadcrumbs Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/breadcrumbs/" heading="Breadcrumbs" description="Help users understand their location within a site’s hierarchy and navigate between different levels of content.">
+              <img src="/assets/img/components/breadcrumbs.svg" slot="media" alt="An illustration of a breadcrumbs.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/breadcrumbs/" aria-label="Breadcrumbs Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/breadcrumbs.svg" alt="An illustration of a breadcrumbs."></div>
           <div class="card__title">Breadcrumbs</div>
           <div class="card__desc">Help users understand their location within a site’s hierarchy and navigate between different levels of content.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/button/" aria-label="Button Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/button/" heading="Button" description="Used primarily for actions that have an immediate result like &quot;Save&quot;, &quot;Close&quot;, or &quot;Add&quot;.">
+              <img src="/assets/img/components/button.svg" slot="media" alt="An illustration of a button.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/button/" aria-label="Button Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/button.svg" alt="An illustration of a button."></div>
           <div class="card__title">Button</div>
           <div class="card__desc">Used primarily for actions that have an immediate result like &quot;Save&quot;, &quot;Close&quot;, or &quot;Add&quot;.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/card/" aria-label="Card Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/card/" heading="Card" description="A self-contained container that groups related content and actions about a single subject.">
+              <img src="/assets/img/components/card.svg" slot="media" alt="An illustration of a card.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/card/" aria-label="Card Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/card.svg" alt="An illustration of a card."></div>
           <div class="card__title">Card</div>
           <div class="card__desc">A self-contained container that groups related content and actions about a single subject.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/checkbox/" aria-label="Checkbox Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/checkbox/" heading="Checkbox" description="A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.">
+              <img src="/assets/img/components/checkbox.svg" slot="media" alt="An illustration of a checkbox.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/checkbox/" aria-label="Checkbox Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/checkbox.svg" alt="An illustration of a checkbox."></div>
           <div class="card__title">Checkbox</div>
           <div class="card__desc">A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/combobox/" aria-label="Combobox Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/combobox/" heading="Combobox" description="Allows users to either select a predefined option or type to filter a list.">
+              <img src="/assets/img/components/combobox.svg" slot="media" alt="An illustration of a combobox.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/combobox/" aria-label="Combobox Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/combobox.svg" alt="An illustration of a combobox."></div>
           <div class="card__title">Combobox</div>
           <div class="card__desc">Allows users to either select a predefined option or type to filter a list.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/datepicker/" aria-label="Datepicker Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/datepicker/" heading="Datepicker" description="Allows users to select a date from a visual calendar or type a date into the input field.">
+              <img src="/assets/img/components/datepicker.svg" slot="media" alt="An illustration of a date picker.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/datepicker/" aria-label="Datepicker Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/datepicker.svg" alt="An illustration of a date picker."></div>
           <div class="card__title">Datepicker</div>
           <div class="card__desc">Allows users to select a date from a visual calendar or type a date into the input field.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/divider/" aria-label="Divider Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/divider/" heading="Divider" description="Separates content and visually divides sections within layouts.">
+              <img src="/assets/img/components/divider.svg" slot="media" alt="An illustration of a divider.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/divider/" aria-label="Divider Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/divider.svg" alt="An illustration of a divider."></div>
           <div class="card__title">Divider</div>
           <div class="card__desc">Separates content and visually divides sections within layouts.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/dropdownmenu/" aria-label="Dropdown Menu Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/dropdownmenu/" heading="Dropdown Menu" description="A list of actions or options that appear when a user interacts with a trigger, and disappears after a selection or clicking away.">
+              <img src="/assets/img/components/dropdownmenu.svg" slot="media" alt="An illustration of a dropdownmenu.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/dropdownmenu/" aria-label="Dropdown Menu Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/dropdownmenu.svg" alt="An illustration of a dropdownmenu."></div>
           <div class="card__title">Dropdown Menu</div>
           <div class="card__desc">A list of actions or options that appear when a user interacts with a trigger, and disappears after a selection or clicking away.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/fileinput/" aria-label="File Input Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/fileinput/" heading="File Input" description="Used for selecting and uploading one or more files from the user’s device.">
+              <img src="/assets/img/components/fileinput.svg" slot="media" alt="An illustration of a file input.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/fileinput/" aria-label="File Input Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/fileinput.svg" alt="An illustration of a file input."></div>
           <div class="card__title">File Input</div>
           <div class="card__desc">Used for selecting and uploading one or more files from the user’s device.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/globalfooter/" aria-label="Global Footer Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/globalfooter/" heading="Global Footer" description="Provide users with essential information, secondary navigation, legal links, and contact details across all pages.">
+              <img src="/assets/img/components/global-footer.svg" slot="media" alt="An illustration of a global footer.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/globalfooter/" aria-label="Global Footer Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/global-footer.svg" alt="An illustration of a global footer."></div>
           <div class="card__title">Global Footer</div>
           <div class="card__desc">Provide users with essential information, secondary navigation, legal links, and contact details across all pages.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/globalheader/" aria-label="Global Header Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/globalheader/" heading="Global Header" description="Provide users with consistent access to key features, branding, and primary navigation across all pages.">
+              <img src="/assets/img/components/global-header.svg" slot="media" alt="An illustration of a global header.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/globalheader/" aria-label="Global Header Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/global-header.svg" alt="An illustration of a global header."></div>
           <div class="card__title">Global Header</div>
           <div class="card__desc">Provide users with consistent access to key features, branding, and primary navigation across all pages.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/icon/" aria-label="Icon Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/icon/" heading="Icon" description="Visual symbols are used to concisely convey information and increase visual appearance.">
+              <img src="/assets/img/components/icon.svg" slot="media" alt="An illustration of an icon.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/icon/" aria-label="Icon Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/icon.svg" alt="An illustration of an icon."></div>
           <div class="card__title">Icon</div>
           <div class="card__desc">Visual symbols are used to concisely convey information and increase visual appearance.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/iconlist/" aria-label="Icon List Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/iconlist/" heading="Icon List" description="Displays a collection of items paired with visual icons to create structured, scannable lists.">
+              <img src="/assets/img/components/icon-list.svg" slot="media" alt="An illustration of an icon list.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/iconlist/" aria-label="Icon List Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/icon-list.svg" alt="An illustration of an icon list."></div>
           <div class="card__title">Icon List</div>
           <div class="card__desc">Displays a collection of items paired with visual icons to create structured, scannable lists.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/modal/" aria-label="Modal Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/modal/" heading="Modal" description="Displays content in a dialog that appears over the page and requires user interaction before returning to the main content.">
+              <img src="/assets/img/components/modal.svg" slot="media" alt="An illustration of a modal.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/modal/" aria-label="Modal Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/modal.svg" alt="An illustration of a modal."></div>
           <div class="card__title">Modal</div>
           <div class="card__desc">Displays content in a dialog that appears over the page and requires user interaction before returning to the main content.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/pagination/" aria-label="Pagination Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/pagination/" heading="Pagination" description="Enables users to navigate through large sets of content or data divided into smaller, more manageable pages.">
+              <img src="/assets/img/components/pagination.svg" slot="media" alt="An illustration of a pagination.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/pagination/" aria-label="Pagination Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/pagination.svg" alt="An illustration of a pagination."></div>
           <div class="card__title">Pagination</div>
           <div class="card__desc">Enables users to navigate through large sets of content or data divided into smaller, more manageable pages.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/processlist/" aria-label="Process List Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/processlist/" heading="Process List" description="Displays a sequence of numbered steps to communicate a multi-step process.">
+              <img src="/assets/img/components/process-list.svg" slot="media" alt="An illustration of a process list.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/processlist/" aria-label="Process List Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/process-list.svg" alt="An illustration of a process list."></div>
           <div class="card__title">Process List</div>
           <div class="card__desc">Displays a sequence of numbered steps to communicate a multi-step process.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/radiobutton/" aria-label="Radio Button Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/radiobutton/" heading="Radio Button" description="Form input for selecting one option from a group.">
+              <img src="/assets/img/components/radiobutton.svg" slot="media" alt="An illustration of a radiobutton.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/radiobutton/" aria-label="Radio Button Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/radiobutton.svg" alt="An illustration of a radiobutton."></div>
           <div class="card__title">Radio Button</div>
           <div class="card__desc">Form input for selecting one option from a group.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/select/" aria-label="Select Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/select/" heading="Select" description="Dropdown menu for selecting a single option.">
+              <img src="/assets/img/components/select.svg" slot="media" alt="An illustration of a select dropdown.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/select/" aria-label="Select Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/select.svg" alt="An illustration of a select dropdown."></div>
           <div class="card__title">Select</div>
           <div class="card__desc">Dropdown menu for selecting a single option.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/skipnav/" aria-label="Skip Navigation Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/skipnav/" heading="Skip Navigation" description="An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.">
+              <img src="/assets/img/components/skipnav.svg" slot="media" alt="An illustration of a skip navigation button.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/skipnav/" aria-label="Skip Navigation Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/skipnav.svg" alt="An illustration of a skip navigation button."></div>
           <div class="card__title">Skip Navigation</div>
           <div class="card__desc">An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/stepper/" aria-label="Stepper Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/stepper/" heading="Stepper" description="Displays to users how many steps are in a process and indicates their progress.">
+              <img src="/assets/img/components/stepper.svg" slot="media" alt="An illustration of a stepper dropdown.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/stepper/" aria-label="Stepper Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/stepper.svg" alt="An illustration of a stepper dropdown."></div>
           <div class="card__title">Stepper</div>
           <div class="card__desc">Displays to users how many steps are in a process and indicates their progress.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/tab/" aria-label="Tab Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/tab/" heading="Tab" description="A clickable interface to toggle between different sets of information without leaving the page.">
+              <img src="/assets/img/components/tab.svg" slot="media" alt="An illustration of a tab.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/tab/" aria-label="Tab Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/tab.svg" alt="An illustration of a tab."></div>
           <div class="card__title">Tab</div>
           <div class="card__desc">A clickable interface to toggle between different sets of information without leaving the page.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/table/" aria-label="Table Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/table/" heading="Table" description="A structured layout that displays data in rows and columns to help users scan, compare, and understand information efficiently.">
+              <img src="/assets/img/components/table.svg" slot="media" alt="An illustration of a table.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/table/" aria-label="Table Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/table.svg" alt="An illustration of a table."></div>
           <div class="card__title">Table</div>
           <div class="card__desc">A structured layout that displays data in rows and columns to help users scan, compare, and understand information efficiently.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/textarea/" aria-label="Text Area Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/textarea/" heading="Text Area" description="Field for entering multiple lines of text.">
+              <img src="/assets/img/components/textarea.svg" slot="media" alt="An illustration of a textarea field.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/textarea/" aria-label="Text Area Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/textarea.svg" alt="An illustration of a textarea field."></div>
           <div class="card__title">Text Area</div>
           <div class="card__desc">Field for entering multiple lines of text.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/textinput/" aria-label="Text Input Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/textinput/" heading="Text Input" description="Field for entering short text strings, like email, number, password, and more.">
+              <img src="/assets/img/components/textinput.svg" slot="media" alt="An illustration of a text input field.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/textinput/" aria-label="Text Input Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/textinput.svg" alt="An illustration of a text input field."></div>
           <div class="card__title">Text Input</div>
           <div class="card__desc">Field for entering short text strings, like email, number, password, and more.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/toggle/" aria-label="Toggle Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/toggle/" heading="Toggle" description="Switch component for enabling or disabling a setting.">
+              <img src="/assets/img/components/toggle.svg" slot="media" alt="An illustration of a toggle switch.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/toggle/" aria-label="Toggle Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/toggle.svg" alt="An illustration of a toggle switch."></div>
           <div class="card__title">Toggle</div>
           <div class="card__desc">Switch component for enabling or disabling a setting.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/tooltip/" aria-label="Tooltip Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/tooltip/" heading="Tooltip" description="Displays a brief message when hover/focus, offering additional information or context.">
+              <img src="/assets/img/components/tooltip.svg" slot="media" alt="An illustration of a tooltip.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/tooltip/" aria-label="Tooltip Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/tooltip.svg" alt="An illustration of a tooltip."></div>
           <div class="card__title">Tooltip</div>
           <div class="card__desc">Displays a brief message when hover/focus, offering additional information or context.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/unav-footer/" aria-label="UNav Footer Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/unav-footer/" heading="UNav Footer" description="Required statewide footer displaying the NY.gov logo and links to Agencies, Counties, Events, Programs, and Services.">
+              <img src="/assets/img/components/unav-footer.svg" slot="media" alt="An illustration of a unav footer.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/unav-footer/" aria-label="UNav Footer Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/unav-footer.svg" alt="An illustration of a unav footer."></div>
           <div class="card__title">UNav Footer</div>
           <div class="card__desc">Required statewide footer displaying the NY.gov logo and links to Agencies, Counties, Events, Programs, and Services.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/unav-header/" aria-label="UNav Header Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/unav-header/" heading="UNav Header" description="A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.">
+              <img src="/assets/img/components/unav-header.svg" slot="media" alt="An illustration of a unav header.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/unav-header/" aria-label="UNav Header Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/unav-header.svg" alt="An illustration of a unav header."></div>
           <div class="card__title">UNav Header</div>
           <div class="card__desc">A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/verticalnav/" aria-label="Vertical Navigation Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/verticalnav/" heading="Vertical Navigation" description="Responsive side navigation that collapses into an accordion on smaller screens.">
+              <img src="/assets/img/components/vertical-nav.svg" slot="media" alt="An illustration of a vertical navigation menu.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/verticalnav/" aria-label="Vertical Navigation Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/vertical-nav.svg" alt="An illustration of a vertical navigation menu."></div>
           <div class="card__title">Vertical Navigation</div>
           <div class="card__desc">Responsive side navigation that collapses into an accordion on smaller screens.</div>
       </div>
-    </a>
+    </a> -->
   </div>
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="/components/video/" aria-label="Video Player Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card href="/components/video/" heading="Video Player" description="Video player for embedding YouTube videos with thumbnail preview and on-demand playback.">
+              <img src="/assets/img/components/videoplayer.svg" slot="media" alt="An illustration of a video player.">      
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="/components/video/" aria-label="Video Player Component">
       <div class="card__inner">
         <div class="card__media">
           <img src="/assets/img/components/videoplayer.svg" alt="An illustration of a video player."></div>
           <div class="card__title">Video Player</div>
           <div class="card__desc">Video player for embedding YouTube videos with thumbnail preview and on-demand playback.</div>
       </div>
-    </a>
+    </a> -->
   </div>
   </section>
 <!-- Section for linking people to GitHub discussion to suggest new components -->
@@ -944,9 +1050,8 @@
 </section>
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/components/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 3, 2026</p>
+    <p>Last updated: September 4, 2026</p>
   </div>
-</div>
 
   </div>
 </div>

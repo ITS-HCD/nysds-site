@@ -7,6 +7,253 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.21.0 “Colden”</title>
+      <link>https://designsystem.ny.gov/about/updates/1.21.0-release/</link>
+      <description><![CDATA[<nys-alert heading="Breaking Changes in 1.21.0" type="danger">
+  <p>Read these 1.21.0 release notes carefully and use the <a href="https://designsystem.ny.gov/about/updates/1.21.0-release/#breaking-changes">1.21.0 breaking changes</a> to see how to migrate</p>
+</nys-alert>
+<h2>“Colden” 🏔️</h2>
+<p>The winning vote during Office Hours was for naming this release “Colden” after the 11<sup>th</sup> highest peak in New York: Mount Colden. The Mountain has an elevation of 4,714 ft (1,437 m). That is as tall as 28 Niagara Falls (51 m Horseshoe drop)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Mount_Colden">Learn more about Mount Colden <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Grid System Overhaul</h2>
+<p>The grid system now properly aligns the inner content of <code>&lt;nys-unavheader&gt;</code>, <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-breadcrumbs&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, and <code>&lt;nys-unavfooter&gt;</code> with the grid containers and rows. If you're on an older implementation, here's what to update:</p>
+<ul>
+<li>Every child of a <code>nys-grid-container</code> (or <code>nys-grid-container-[suffix]</code>) needs the class <code>nys-grid-row</code>.</li>
+<li>Double-check any extra padding or margin you'd added to work around the old grid. Some of it will need to be removed or adjusted now that the containers align correctly.</li>
+</ul>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Main content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Sidebar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/">Read more on the Grid System usage</a></p>
+<ul>
+<li>New style override variable, <code>nys-max-width--content</code>, lets you control the overall inner max-width of headers, footers, breadcrumbs, and the grid system.</li>
+</ul>
+<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> rates the alignment a grid-A!
+  </div>
+</div>
+<h2><code>&lt;nys-badge&gt;</code> updates!</h2>
+<p>The <code>&lt;nys-badge&gt;</code> component has been updated to better match our design standards, with a few breaking changes to the intent names. The legacy <code>&quot;error&quot;</code> intent is deprecated in favor of <code>&quot;danger&quot;</code>, and <code>&quot;neutral&quot;</code> is now <code>&quot;base&quot;</code> (the new default). There are also three new props: <code>strong</code>, <code>prefixIcon</code>, <code>suffixIcon</code>, and <code>srText</code>.</p>
+<p>The default intent is base.</p>
+<ol>
+<li>Deprecated: <code>intent=&quot;neutral&quot;</code> is now <code>intent=&quot;base&quot;</code></li>
+<li>Depreciated: <code>intent=&quot;error&quot;</code> is now <code>intent=&quot;danger&quot;</code></li>
+<li>New <code>intent=&quot;base&quot;</code></li>
+<li>New <code>intent=&quot;emergency&quot;</code></li>
+</ol>
+<ul>
+<li>Deprecated: <code>variant=&quot;strong&quot;</code> is now the boolean <code>strong</code> attribute (e.g. <code>&lt;nys-badge strong&gt;</code>).</li>
+</ul>
+<p><a href="https://designsystem.ny.gov/components/badge">Read the &lt;nys-badge&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap-100">
+  <nys-badge label="Neutral" prefixIcon=""></nys-badge>
+  <nys-badge label="Info" intent="info" prefixIcon=""></nys-badge>
+  <nys-badge label="Warning" intent="warning" prefixIcon=""></nys-badge>
+  <nys-badge label="Success" intent="success" prefixIcon=""></nys-badge>
+  <nys-badge label="Emergency" intent="emergency" prefixIcon=""></nys-badge>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Neutral<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Info<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Warning<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>warning<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Success<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Emergency<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> wearing these badges with pride!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>MCP Utility classes were inventing their own classes that didnt exist. This was fixed</li>
+<li>Fix duplicate value on radio buttons on form submission</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>The <code>nys-grid</code> system was revamped to better align content and provide an overridable max-width value <code>--nys-max-width--content</code>. <a href="https://designsystem.ny.gov/about/updates/1.21.0-release/#grid-system-overhaul">Read the full release notes for grid migration instructions</a>. You can report any issues in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+<li>A couple of <code>nys-badge</code> intents have changed. <a href="https://designsystem.ny.gov/about/updates/1.21.0-release/#nys-badge-updates">Read the full release notes for badge migration instructions</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><code>nys-table</code> sorting currently only works on strings, it will not yet properly sort by numbers. <a href="https://github.com/ITS-HCD/nysds/issues/1873">See #1873: BUG: nys-table header not sorting properly</a></li>
+<li><code>nys-globalfooter</code> does not allow you to dynamically insert menu items currently. <a href="https://teams.microsoft.com/l/message/19:0228156e2bb5419c8152047f596a7bfb@thread.tacv2/1787156283129?tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7&amp;groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&amp;parentMessageId=1787156283129&amp;teamName=NYS%20Design%20System&amp;channelName=Troubleshooting&amp;createdTime=1787156283129">See: Teams bug report</a></li>
+<li><code>nys-combobox</code> doesn't focus on component for invalid submission <a href="https://github.com/ITS-HCD/nysds/issues/1596">See: #1596</a></li>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.21.0">See the full developer release notes for v.1.21.0 →</a></p>
+]]></description>
+      <content><![CDATA[<nys-alert heading="Breaking Changes in 1.21.0" type="danger">
+  <p>Read these 1.21.0 release notes carefully and use the <a href="https://designsystem.ny.gov/about/updates/1.21.0-release/#breaking-changes">1.21.0 breaking changes</a> to see how to migrate</p>
+</nys-alert>
+<h2>“Colden” 🏔️</h2>
+<p>The winning vote during Office Hours was for naming this release “Colden” after the 11<sup>th</sup> highest peak in New York: Mount Colden. The Mountain has an elevation of 4,714 ft (1,437 m). That is as tall as 28 Niagara Falls (51 m Horseshoe drop)!</p>
+<p><a href="https://en.wikipedia.org/wiki/Mount_Colden">Learn more about Mount Colden <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Grid System Overhaul</h2>
+<p>The grid system now properly aligns the inner content of <code>&lt;nys-unavheader&gt;</code>, <code>&lt;nys-globalheader&gt;</code>, <code>&lt;nys-breadcrumbs&gt;</code>, <code>&lt;nys-globalfooter&gt;</code>, and <code>&lt;nys-unavfooter&gt;</code> with the grid containers and rows. If you're on an older implementation, here's what to update:</p>
+<ul>
+<li>Every child of a <code>nys-grid-container</code> (or <code>nys-grid-container-[suffix]</code>) needs the class <code>nys-grid-row</code>.</li>
+<li>Double-check any extra padding or margin you'd added to work around the old grid. Some of it will need to be removed or adjusted now that the containers align correctly.</li>
+</ul>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Main content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nys-grid-col-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Sidebar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/">Read more on the Grid System usage</a></p>
+<ul>
+<li>New style override variable, <code>nys-max-width--content</code>, lets you control the overall inner max-width of headers, footers, breadcrumbs, and the grid system.</li>
+</ul>
+<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> rates the alignment a grid-A!
+  </div>
+</div>
+<h2><code>&lt;nys-badge&gt;</code> updates!</h2>
+<p>The <code>&lt;nys-badge&gt;</code> component has been updated to better match our design standards, with a few breaking changes to the intent names. The legacy <code>&quot;error&quot;</code> intent is deprecated in favor of <code>&quot;danger&quot;</code>, and <code>&quot;neutral&quot;</code> is now <code>&quot;base&quot;</code> (the new default). There are also three new props: <code>strong</code>, <code>prefixIcon</code>, <code>suffixIcon</code>, and <code>srText</code>.</p>
+<p>The default intent is base.</p>
+<ol>
+<li>Deprecated: <code>intent=&quot;neutral&quot;</code> is now <code>intent=&quot;base&quot;</code></li>
+<li>Depreciated: <code>intent=&quot;error&quot;</code> is now <code>intent=&quot;danger&quot;</code></li>
+<li>New <code>intent=&quot;base&quot;</code></li>
+<li>New <code>intent=&quot;emergency&quot;</code></li>
+</ol>
+<ul>
+<li>Deprecated: <code>variant=&quot;strong&quot;</code> is now the boolean <code>strong</code> attribute (e.g. <code>&lt;nys-badge strong&gt;</code>).</li>
+</ul>
+<p><a href="https://designsystem.ny.gov/components/badge">Read the &lt;nys-badge&gt; documentation</a></p>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<div class="nys-grid-row nys-grid-gap-100">
+  <nys-badge label="Neutral" prefixIcon=""></nys-badge>
+  <nys-badge label="Info" intent="info" prefixIcon=""></nys-badge>
+  <nys-badge label="Warning" intent="warning" prefixIcon=""></nys-badge>
+  <nys-badge label="Success" intent="success" prefixIcon=""></nys-badge>
+  <nys-badge label="Emergency" intent="emergency" prefixIcon=""></nys-badge>
+</div>
+</div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Code Snippet</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Neutral<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Info<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Warning<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>warning<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Success<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-badge</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Emergency<span class="token punctuation">"</span></span> <span class="token attr-name">intent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>emergency<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-badge</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> wearing these badges with pride!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>MCP Utility classes were inventing their own classes that didnt exist. This was fixed</li>
+<li>Fix duplicate value on radio buttons on form submission</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>The <code>nys-grid</code> system was revamped to better align content and provide an overridable max-width value <code>--nys-max-width--content</code>. <a href="https://designsystem.ny.gov/about/updates/1.21.0-release/#grid-system-overhaul">Read the full release notes for grid migration instructions</a>. You can report any issues in <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a>.</li>
+<li>A couple of <code>nys-badge</code> intents have changed. <a href="https://designsystem.ny.gov/about/updates/1.21.0-release/#nys-badge-updates">Read the full release notes for badge migration instructions</a></li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><code>nys-table</code> sorting currently only works on strings, it will not yet properly sort by numbers. <a href="https://github.com/ITS-HCD/nysds/issues/1873">See #1873: BUG: nys-table header not sorting properly</a></li>
+<li><code>nys-globalfooter</code> does not allow you to dynamically insert menu items currently. <a href="https://teams.microsoft.com/l/message/19:0228156e2bb5419c8152047f596a7bfb@thread.tacv2/1787156283129?tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7&amp;groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&amp;parentMessageId=1787156283129&amp;teamName=NYS%20Design%20System&amp;channelName=Troubleshooting&amp;createdTime=1787156283129">See: Teams bug report</a></li>
+<li><code>nys-combobox</code> doesn't focus on component for invalid submission <a href="https://github.com/ITS-HCD/nysds/issues/1596">See: #1596</a></li>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.21.0">See the full developer release notes for v.1.21.0 →</a></p>
+]]></content>
+      <pubDate>Thu, 03 Sep 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.21.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.20.0 “Giant”</title>
       <link>https://designsystem.ny.gov/about/updates/1.20.0-release/</link>
       <description><![CDATA[<h2>“Giant” 🏔️</h2>
