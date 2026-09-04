@@ -17,6 +17,8 @@ const byCategory = require("./src/_11ty/filters/byCategory.js");
 const dateFeed = require("./src/_11ty/filters/date.js").dateFeed;
 const dateFull = require("./src/_11ty/filters/date.js").dateFull;
 const dateFullWeekday = require("./src/_11ty/filters/date.js").dateFullWeekday;
+const dateWeekday = require("./src/_11ty/filters/date.js").dateWeekday;
+const dateWeekdayDay = require("./src/_11ty/filters/date.js").dateWeekdayDay;
 const dateISO = require("./src/_11ty/filters/date.js").dateISO;
 const dateYear = require("./src/_11ty/filters/date.js").dateYear;
 const editOnGitHubUrl = require("./src/_11ty/filters/editOnGitHubUrl.js");
@@ -101,6 +103,8 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("dateFullWeekday", dateFullWeekday);
   eleventyConfig.addFilter("dateISO", dateISO);
   eleventyConfig.addFilter("dateYear", dateYear);
+  eleventyConfig.addFilter("dateWeekday", dateWeekday);
+  eleventyConfig.addFilter("dateWeekdayDay", dateWeekdayDay);
   eleventyConfig.addFilter("editOnGitHubUrl", editOnGitHubUrl);
   eleventyConfig.addFilter("excludeDrafts", excludeDrafts);
   eleventyConfig.addFilter("excludeFuture", excludeFuture);
