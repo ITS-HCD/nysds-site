@@ -23,32 +23,87 @@ By using standard NYSDS patterns, state agencies ensure:
 Explore our patterns to see how they are structured, styled, and built:
 
 <div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/patterns/multi-step-form/">
-      <div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;">
-        <div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Multi-Step Form (Stepper)</div>
-        <div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">
-          Guide users through complex processes—such as license renewals, benefit applications, and multi-page questionnaires—using stepper controls with dynamic validation and full accessibility focus management.
-        </div>
-      </div>
-    </a>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Multi-Step Form (Stepper)"
+      description="Guide users through complex processes—such as license renewals, benefit applications, and multi-page questionnaires—using stepper controls with dynamic validation and full accessibility focus management."
+      href="/patterns/multi-step-form/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/patterns/search-and-filter/">
-      <div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;">
-        <div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Search & Filter Directory</div>
-        <div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">
-          Help users locate and browse lists of facilities, documents, services, or offices with responsive inputs, region filters, real-time result count alerts, and fully accessible pagination.
-        </div>
-      </div>
-    </a>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Search & Filter Directory"
+      description="Help users locate and browse lists of facilities, documents, services, or offices with responsive inputs, region filters, real-time result count alerts, and fully accessible pagination."
+      href="/patterns/search-and-filter/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
   </div>
 </div>
 
-<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-300);"><div class="nys-grid-col-12 nys-tablet:nys-grid-col-6"><a class="card card__no-border card__flat nys-flex-fill" href="/patterns/file-upload/"><div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;"><div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">File Upload & Verification</div><div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">Design clear, accessible file upload queues with reactive progress bars, file-type constraints, real-time status badges, and live screen-reader upload alerts.</div></div></a></div><div class="nys-grid-col-12 nys-tablet:nys-grid-col-6"><a class="card card__no-border card__flat nys-flex-fill" href="/patterns/address-validation/"><div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;"><div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Address Lookup & Validation</div><div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">Lay out standard address forms and present interactive USPS standardized suggested matches alongside user entries with accessible focus management.</div></div></a></div></div>
+<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-300);">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="File Upload & Verification"
+      description="Design clear, accessible file upload queues with reactive progress bars, file-type constraints, real-time status badges, and live screen-reader upload alerts."
+      href="/patterns/file-upload/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Address Lookup & Validation"
+      description="Lay out standard address forms and present interactive USPS standardized suggested matches alongside user entries with accessible focus management."
+      href="/patterns/address-validation/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
+  </div>
+</div>
 
-<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-300);"><div class="nys-grid-col-12 nys-tablet:nys-grid-col-6"><a class="card card__no-border card__flat nys-flex-fill" href="/patterns/emergency-alerts/"><div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;"><div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Emergency Alert System</div><div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">Deploy dismissible persistent header banners with weather, outage, or critical notices, featuring session storage states and robust aria-live vocalizations.</div></div></a></div><div class="nys-grid-col-12 nys-tablet:nys-grid-col-6"><a class="card card__no-border card__flat nys-flex-fill" href="/patterns/feedback-rating/"><div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;"><div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Customer Feedback & Rating</div><div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">Build page-level feedback and CSAT rating widgets, utilizing progressive disclosures, character limits, and accessible screen-reader count status regions.</div></div></a></div></div>
+<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-300);">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Emergency Alert System"
+      description="Deploy dismissible persistent header banners with weather, outage, or critical notices, featuring session storage states and robust aria-live vocalizations."
+      href="/patterns/emergency-alerts/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Customer Feedback & Rating"
+      description="Build page-level feedback and CSAT rating widgets, utilizing progressive disclosures, character limits, and accessible screen-reader count status regions."
+      href="/patterns/feedback-rating/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
+  </div>
+</div>
 
-<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-300);"><div class="nys-grid-col-12 nys-tablet:nys-grid-col-6"><a class="card card__no-border card__flat nys-flex-fill" href="/patterns/service-dashboard/"><div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;"><div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Service Dashboard / Task Tracker</div><div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">Present transactional application statuses, progress lists, and document upload action alerts in a responsive portal panel.</div></div></a></div><div class="nys-grid-col-12 nys-tablet:nys-grid-col-6"><a class="card card__no-border card__flat nys-flex-fill" href="/patterns/booking-calendar/"><div class="card__inner" style="border: 1px solid var(--nys-color-base); padding: var(--nys-space-300); border-radius: 4px; display: block; height: 100%;"><div class="card__title" style="font-size: 1.25rem; font-weight: bold; margin-bottom: var(--nys-space-100); color: var(--nys-color-text);">Booking & Scheduling Calendar</div><div class="card__desc" style="color: var(--nys-color-text); line-height: 1.5;">Coordinate office locators, date selectors, and keyboard-operable time slots to build accessible appointment schedulers.</div></div></a></div></div>
+<div class="nys-grid-row nys-grid-gap-300" style="margin-top: var(--nys-space-300);">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Service Dashboard / Task Tracker"
+      description="Present transactional application statuses, progress lists, and document upload action alerts in a responsive portal panel."
+      href="/patterns/service-dashboard/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
+  </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      class="nys-flex-fill"
+      heading="Booking & Scheduling Calendar"
+      description="Coordinate office locators, date selectors, and keyboard-operable time slots to build accessible appointment schedulers."
+      href="/patterns/booking-calendar/"
+      style="--nys-card-height: 100%;"
+    ></nys-card>
+  </div>
+</div>
 
 {% endblock %}
