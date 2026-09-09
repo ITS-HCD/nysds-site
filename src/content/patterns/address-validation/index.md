@@ -29,9 +29,9 @@ The following interactive form simulates an address validation workflow. Enter a
     width: 100%;
   }
 </style>
-<div class="address-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="address-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
-  <form id="address-form" novalidate style="display: flex; flex-direction: column; gap: var(--nys-space-300);">
+  <form id="address-form" novalidate class="nys-display-flex nys-flex-column nys-flex-gap-300">
     <!-- Street Address Column Wrapper -->
     <div class="nys-grid-row nys-grid-gap-200"><div class="nys-grid-col-12"><nys-textinput id="addr-street" label="Street Address" placeholder="e.g. 52 Washington Ave" required errorMessage="Street address is required."></nys-textinput></div></div>
 
@@ -39,22 +39,22 @@ The following interactive form simulates an address validation workflow. Enter a
     <div class="nys-grid-row nys-grid-gap-200"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6"><nys-textinput id="addr-city" label="City" placeholder="e.g. Albany" required errorMessage="City is required."></nys-textinput></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-3"><nys-select id="addr-state" label="State" required errorMessage="State required."><option value="NY" selected>NY</option><option value="NJ">NJ</option><option value="PA">PA</option><option value="CT">CT</option></nys-select></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-3"><nys-textinput id="addr-zip" label="ZIP Code" placeholder="e.g. 12210" required errorMessage="ZIP is required."></nys-textinput></div></div>
 
     <!-- Form Action Button Wrapper -->
-    <div style="display: flex; gap: var(--nys-space-200); margin-top: var(--nys-space-100); border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
+    <div class="nys-display-flex nys-flex-gap-200 nys-margin-t-100" style="border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
       <nys-button id="btn-verify-address" label="Verify Address" variant="primary"></nys-button>
     </div>
   </form>
 
   <!-- Dynamic Verification/Standardization prompt (using layout cards) -->
-  <div id="validation-panel" style="display: none; margin-top: var(--nys-space-400); border-top: 2px dashed var(--nys-color-base); padding-top: var(--nys-space-300);">
+  <div id="validation-panel" class="nys-margin-t-400" style="display: none; border-top: 2px dashed var(--nys-color-base); padding-top: var(--nys-space-300);">
     <h3 id="suggestion-heading" tabindex="-1" style="font-size: 1.2rem; font-weight: bold; margin: 0 0 var(--nys-space-200) 0; color: var(--nys-color-text); outline: none;">
       Verify and Standardize Your Address
     </h3>
-    <p style="font-size: 0.95rem; color: var(--nys-color-text-weak); margin-bottom: var(--nys-space-300);">
+    <p class="nys-margin-b-300" style="font-size: 0.95rem; color: var(--nys-color-text-weak);">
       We found a matching standardized address. Using the standardized USPS option ensures prompt delivery and accurate service routing.
     </p>
 
     <!-- Side-by-Side card choice container (Compact spacing block) -->
-    <div class="nys-grid-row nys-grid-gap-300"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex"><button type="button" id="choice-suggested" style="width: 100%; border: 2px solid var(--nys-color-theme); background-color: var(--nys-color-theme-faint); border-radius: 6px; padding: var(--nys-space-300); text-align: left; cursor: pointer; transition: all 0.2s;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--nys-space-100);"><strong style="color: var(--nys-color-theme); font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase;">USPS Recommended</strong><nys-badge label="Suggested" intent="success" size="sm"></nys-badge></div><div id="suggested-text" style="font-size: 1.05rem; font-weight: bold; color: var(--nys-color-text); line-height: 1.5; font-family: var(--nys-font-family-body);">—</div></button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex"><button type="button" id="choice-entered" style="width: 100%; border: 1px solid var(--nys-color-base); background-color: var(--nys-color-surface-raised); border-radius: 6px; padding: var(--nys-space-300); text-align: left; cursor: pointer; transition: all 0.2s;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--nys-space-100);"><strong style="color: var(--nys-color-text-weak); font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase;">As Entered</strong><nys-badge label="Original" intent="neutral" size="sm"></nys-badge></div><div id="entered-text" style="font-size: 1.05rem; color: var(--nys-color-text-weak); line-height: 1.5; font-family: var(--nys-font-family-body);">—</div></button></div></div>
+    <div class="nys-grid-row nys-grid-gap-300"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex"><button type="button" id="choice-suggested" class="nys-padding-300" style="width: 100%; border: 2px solid var(--nys-color-theme); background-color: var(--nys-color-theme-faint); border-radius: 6px; text-align: left; cursor: pointer; transition: all 0.2s;"><div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center nys-margin-b-100"><strong style="color: var(--nys-color-theme); font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase;">USPS Recommended</strong><nys-badge label="Suggested" intent="success" size="sm"></nys-badge></div><div id="suggested-text" style="font-size: 1.05rem; font-weight: bold; color: var(--nys-color-text); line-height: 1.5; font-family: var(--nys-font-family-body);">—</div></button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6 nys-display-flex"><button type="button" id="choice-entered" class="nys-padding-300" style="width: 100%; border: 1px solid var(--nys-color-base); background-color: var(--nys-color-surface-raised); border-radius: 6px; text-align: left; cursor: pointer; transition: all 0.2s;"><div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center nys-margin-b-100"><strong style="color: var(--nys-color-text-weak); font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase;">As Entered</strong><nys-badge label="Original" intent="neutral" size="sm"></nys-badge></div><div id="entered-text" style="font-size: 1.05rem; color: var(--nys-color-text-weak); line-height: 1.5; font-family: var(--nys-font-family-body);">—</div></button></div></div>
   </div>
 
   <!-- Screen-Reader only dynamic status announcer (WCAG AA Compliance) -->

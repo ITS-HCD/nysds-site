@@ -19,10 +19,10 @@ This pattern demonstrates how to compose `<nys-table>`, badges (`<nys-badge>`), 
 The following interactive portal simulates a citizen's active **NYS benefits dashboard**. Use the filter buttons to query applications, or click **"Complete Action"** inside the alerts and task cards to clear outstanding requirements:
 
 {% set preview %}
-<div class="dashboard-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="dashboard-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
   <!-- Portal Header Greeting -->
-  <div style="border-bottom: 2px solid var(--nys-color-base); padding-bottom: var(--nys-space-200); margin-bottom: var(--nys-space-300); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--nys-space-150);">
+  <div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center nys-flex-gap-150 nys-margin-b-300" style="border-bottom: 2px solid var(--nys-color-base); padding-bottom: var(--nys-space-200); flex-wrap: wrap;">
     <div>
       <h3 style="margin: 0; font-size: 1.4rem; font-weight: bold; color: var(--nys-color-text);">
         Welcome back, Jane
@@ -35,19 +35,19 @@ The following interactive portal simulates a citizen's active **NYS benefits das
   </div>
 
   <!-- Dynamic Global Action Alert Banner -->
-  <nys-alert id="dash-action-alert" type="warning" title="ACTION REQUIRED: Missing Document" style="margin-bottom: var(--nys-space-300); display: block;">We require your W-2 Tax Form to complete your Tuition Assistance Program review. Upload this document today to prevent application delays.<div slot="actions" style="margin-top: var(--nys-space-100);"><nys-button id="btn-goto-task" label="Go To Task Checklist" variant="primary" size="sm"></nys-button></div></nys-alert>
+  <nys-alert id="dash-action-alert" type="warning" title="ACTION REQUIRED: Missing Document" class="nys-margin-b-300 nys-display-block">We require your W-2 Tax Form to complete your Tuition Assistance Program review. Upload this document today to prevent application delays.<div slot="actions" class="nys-margin-t-100"><nys-button id="btn-goto-task" label="Go To Task Checklist" variant="primary" size="sm"></nys-button></div></nys-alert>
 
   <div class="nys-grid-row nys-grid-gap-300">
     
     <!-- Left Column: Active Applications Table (8 Columns) -->
     <div class="nys-grid-col-12 nys-desktop:nys-grid-col-8">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--nys-space-200); flex-wrap: wrap; gap: var(--nys-space-150);">
+      <div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center nys-flex-gap-150 nys-margin-b-200" style="flex-wrap: wrap;">
         <h4 id="table-heading" tabindex="-1" style="margin: 0; font-size: 1.15rem; font-weight: bold; color: var(--nys-color-text); outline: none;">
           Your Active Applications
         </h4>
         
         <!-- Filter Tabs (Segmented Button list) -->
-        <div style="display: flex; gap: var(--nys-space-50); background-color: var(--nys-color-base-weak); padding: 2px; border-radius: 4px;">
+        <div class="nys-display-flex" style="gap: var(--nys-space-50); background-color: var(--nys-color-base-weak); padding: 2px; border-radius: 4px;">
           <nys-button id="btn-filter-all" label="All" variant="primary" size="sm"></nys-button>
           <nys-button id="btn-filter-pending" label="Pending" variant="secondary" size="sm"></nys-button>
           <nys-button id="btn-filter-approved" label="Approved" variant="secondary" size="sm"></nys-button>
@@ -55,7 +55,7 @@ The following interactive portal simulates a citizen's active **NYS benefits das
       </div>
 
       <!-- Semantic Status Application Table -->
-      <nys-table striped id="dash-app-table" style="margin-bottom: var(--nys-space-300);">
+      <nys-table striped id="dash-app-table" class="nys-margin-b-300">
         <table>
           <thead>
             <tr>
@@ -77,11 +77,11 @@ The following interactive portal simulates a citizen's active **NYS benefits das
         Your Tasks Checklist
       </h4>
 
-      <div id="checklist-container" style="display: flex; flex-direction: column; gap: var(--nys-space-200);">
+      <div id="checklist-container" class="nys-display-flex nys-flex-column nys-flex-gap-200">
         <!-- Interactive Task Card 1 -->
         <div id="task-card-w2" class="card card__no-border card__flat" style="border: 1px solid var(--nys-color-danger); border-radius: 4px; background-color: var(--nys-color-surface-raised); padding: var(--nys-space-200) var(--nys-space-300);">
-          <div style="display: flex; flex-direction: column; gap: var(--nys-space-100);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="nys-display-flex nys-flex-column nys-flex-gap-100">
+            <div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center">
               <span style="font-weight: bold; font-size: 0.9rem; color: var(--nys-color-text);">Upload 2025 W-2 Form</span>
               <nys-badge label="Required" intent="danger" size="sm"></nys-badge>
             </div>
@@ -92,8 +92,8 @@ The following interactive portal simulates a citizen's active **NYS benefits das
 
         <!-- Interactive Task Card 2 -->
         <div id="task-card-survey" class="card card__no-border card__flat" style="border: 1px solid var(--nys-color-base); border-radius: 4px; background-color: var(--nys-color-surface-raised); padding: var(--nys-space-200) var(--nys-space-300);">
-          <div style="display: flex; flex-direction: column; gap: var(--nys-space-100);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="nys-display-flex nys-flex-column nys-flex-gap-100">
+            <div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center">
               <span style="font-weight: bold; font-size: 0.9rem; color: var(--nys-color-text);">Provide Phone Feedback</span>
               <nys-badge label="Optional" intent="neutral" size="sm"></nys-badge>
             </div>
@@ -103,8 +103,8 @@ The following interactive portal simulates a citizen's active **NYS benefits das
         </div>
 
         <!-- Tasks Completed Empty State -->
-        <div id="tasks-complete-empty" style="display: none; text-align: center; border: 2px dashed var(--nys-color-base); border-radius: 6px; padding: var(--nys-space-400); color: var(--nys-color-text-weak);">
-          <nys-icon name="check" size="lg" style="color: var(--nys-color-success); margin-bottom: var(--nys-space-100);"></nys-icon>
+        <div id="tasks-complete-empty" class="nys-padding-400" style="display: none; text-align: center; border: 2px dashed var(--nys-color-base); border-radius: 6px; color: var(--nys-color-text-weak);">
+          <nys-icon name="check" size="lg" class="nys-margin-b-100" style="color: var(--nys-color-success);"></nys-icon>
           <p style="margin: 0; font-size: 0.95rem; font-weight: bold; color: var(--nys-color-text);">All tasks complete!</p>
           <p style="margin: 0; font-size: 0.85rem; margin-top: 4px;">There are no outstanding actions at this time.</p>
         </div>

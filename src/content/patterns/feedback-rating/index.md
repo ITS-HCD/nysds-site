@@ -27,21 +27,21 @@ The following interactive widget simulates a standard page feedback flow. Click 
     margin-bottom: var(--nys-space-100);
   }
 </style>
-<div class="feedback-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="feedback-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
   <!-- Step 1: Helpfulness Prompt -->
-  <div id="feed-initial-prompt" style="text-align: center; display: block;">
+  <div id="feed-initial-prompt" class="nys-display-block" style="text-align: center;">
     <h3 style="margin: 0 0 var(--nys-space-200) 0; font-size: 1.2rem; font-weight: bold; color: var(--nys-color-text);">
       Was this page helpful?
     </h3>
-    <div style="display: flex; justify-content: center; gap: var(--nys-space-200);">
+    <div class="nys-display-flex nys-flex-justify-center nys-flex-gap-200">
       <nys-button id="btn-feed-yes" label="Yes" variant="secondary" size="md" style="min-width: 100px;"></nys-button>
       <nys-button id="btn-feed-no" label="No" variant="secondary" size="md" style="min-width: 100px;"></nys-button>
     </div>
   </div>
 
   <!-- Step 2: Progressive Detailed Form Container (Hidden initially) -->
-  <form id="feed-detailed-form" novalidate style="display: none; flex-direction: column; gap: var(--nys-space-300);">
+  <form id="feed-detailed-form" novalidate class="nys-flex-column nys-flex-gap-300" style="display: none;">
     <h3 id="form-heading" tabindex="-1" style="font-size: 1.25rem; font-weight: bold; margin: 0; color: var(--nys-color-text); outline: none;">
       Tell us more about your experience
     </h3>
@@ -49,10 +49,10 @@ The following interactive widget simulates a standard page feedback flow. Click 
 
     <!-- 1-5 Radio CSAT Scale (Compact spacing block) -->
     <div style="border-top: 1px solid var(--nys-color-base); border-bottom: 1px solid var(--nys-color-base); padding: var(--nys-space-200) 0;">
-      <span style="font-weight: bold; font-size: 0.95rem; display: block; margin-bottom: var(--nys-space-150); color: var(--nys-color-text);">
+      <span class="nys-display-block nys-margin-b-150" style="font-weight: bold; font-size: 0.95rem; color: var(--nys-color-text);">
         How would you rate your overall experience? (1 = Poor, 5 = Excellent)
       </span>
-      <div style="display: flex; gap: var(--nys-space-300); flex-wrap: wrap;">
+      <div class="nys-display-flex nys-flex-gap-300" style="flex-wrap: wrap;">
         <nys-radiobutton name="csat-rating" value="1" label="1"></nys-radiobutton>
         <nys-radiobutton name="csat-rating" value="2" label="2"></nys-radiobutton>
         <nys-radiobutton name="csat-rating" value="3" label="3" checked></nys-radiobutton>
@@ -70,7 +70,7 @@ The following interactive widget simulates a standard page feedback flow. Click 
       ></nys-textarea>
       
       <!-- Visual Counter aligned to the right (Polite announcement trigger) -->
-      <div style="display: flex; justify-content: flex-end; padding-right: 4px;">
+      <div class="nys-display-flex nys-flex-justify-end" style="padding-right: 4px;">
         <span 
           id="feed-counter" 
           style="font-size: 0.85rem; font-weight: bold; color: var(--nys-color-text-weak);"
@@ -82,7 +82,7 @@ The following interactive widget simulates a standard page feedback flow. Click 
     </div>
 
     <!-- Form Submit / Cancel Actions -->
-    <div style="display: flex; gap: var(--nys-space-200); border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300); margin-top: var(--nys-space-100);">
+    <div class="nys-display-flex nys-flex-gap-200 nys-margin-t-100" style="border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
       <nys-button id="btn-feed-submit" label="Submit Feedback" variant="primary"></nys-button>
       <nys-button id="btn-feed-cancel" label="Cancel" variant="secondary"></nys-button>
     </div>
@@ -90,7 +90,7 @@ The following interactive widget simulates a standard page feedback flow. Click 
 
   <!-- Step 3: Success Notification Card (Hidden initially) -->
   <div id="feed-success-panel" style="display: none; text-align: center; padding: var(--nys-space-300) 0;">
-    <nys-icon name="check" size="lg" style="color: var(--nys-color-success); margin-bottom: var(--nys-space-150);"></nys-icon>
+    <nys-icon name="check" size="lg" class="nys-margin-b-150" style="color: var(--nys-color-success);"></nys-icon>
     <h3 id="success-heading" tabindex="-1" style="font-size: 1.3rem; font-weight: bold; margin: 0 0 var(--nys-space-100) 0; color: var(--nys-color-text); outline: none;">
       Thank you for your feedback!
     </h3>

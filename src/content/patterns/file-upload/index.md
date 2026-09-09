@@ -19,10 +19,10 @@ This pattern demonstrates how to compose the `<nys-fileinput>` component, status
 The following simulator demonstrates an **Identity Verification** upload workflow. Select files using the input (try uploading standard documents, files exceeding 5MB, or invalid file types) to see how the dynamic queue handles progress and validation:
 
 {% set preview %}
-<div class="upload-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="upload-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
   <!-- Upload Header and Input -->
-  <div style="margin-bottom: var(--nys-space-400);">
+  <div class="nys-margin-b-400">
     <h3 style="margin: 0 0 var(--nys-space-100) 0; font-size: 1.3rem; font-weight: bold; color: var(--nys-color-text);">
       Submit Required Documents
     </h3>
@@ -39,18 +39,18 @@ The following simulator demonstrates an **Identity Verification** upload workflo
 
   <!-- Dynamic Upload Queue Section -->
   <div>
-    <h4 id="queue-heading" style="margin: 0 0 var(--nys-space-200) 0; font-size: 1.1rem; font-weight: bold; color: var(--nys-color-text); display: flex; justify-content: space-between; align-items: center;">
+    <h4 id="queue-heading" class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center" style="margin: 0 0 var(--nys-space-200) 0; font-size: 1.1rem; font-weight: bold; color: var(--nys-color-text);">
       <span>Uploaded Documents Queue</span>
       <span id="queue-count" style="font-size: 0.9rem; font-weight: normal; color: var(--nys-color-text-weak);">(0 files)</span>
     </h4>
 
     <!-- Empty State -->
-    <div id="queue-empty-state" style="text-align: center; border: 2px dashed var(--nys-color-base); border-radius: 6px; padding: var(--nys-space-400); color: var(--nys-color-text-weak);">
+    <div id="queue-empty-state" class="nys-padding-400" style="text-align: center; border: 2px dashed var(--nys-color-base); border-radius: 6px; color: var(--nys-color-text-weak);">
       <p style="margin: 0; font-size: 0.95rem;">No files uploaded yet. Select files above to begin verification.</p>
     </div>
 
     <!-- Active Upload List Container -->
-    <div id="queue-list" style="display: flex; flex-direction: column; gap: var(--nys-space-200); max-height: 350px; overflow-y: auto;">
+    <div id="queue-list" class="nys-display-flex nys-flex-column nys-flex-gap-200" style="max-height: 350px; overflow-y: auto;">
       <!-- Upload cards injected dynamically -->
     </div>
   </div>
@@ -247,7 +247,7 @@ The following simulator demonstrates an **Identity Verification** upload workflo
 {% set accordionLabel = "Upload Queue Markup and Simulation Script" %}
 {% set code %}
 <!-- HTML Component Form Structure -->
-<div style="margin-bottom: var(--nys-space-400);">
+<div class="nys-margin-b-400">
   <h3 style="margin-bottom: 8px;">Submit Required Documents</h3>
   <p>Accepted formats: PDF, JPEG, PNG. Maximum size: 5MB.</p>
 
@@ -265,7 +265,7 @@ The following simulator demonstrates an **Identity Verification** upload workflo
     <p>No files uploaded yet.</p>
   </div>
 
-  <div id="queue-list" style="display: flex; flex-direction: column; gap: var(--nys-space-200);">
+  <div id="queue-list" class="nys-display-flex nys-flex-column nys-flex-gap-200">
     <!-- Injected dynamically in Javascript -->
   </div>
 </div>

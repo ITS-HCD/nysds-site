@@ -19,7 +19,7 @@ This pattern demonstrates how to compose NYSDS form components with the `<nys-st
 The following interactive demo showcases a three-step application process with inline validation and accessibility focus management:
 
 {% set preview %}
-<div class="stepper-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="stepper-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   <div class="nys-grid-row nys-grid-gap-300 nys-desktop:nys-flex-no-wrap">
     <!-- Stepper Navigation (Left Sidebar on Desktop) -->
     <nys-stepper label="Application Steps" id="demo-stepper" class="nys-grid-col-12 nys-desktop:nys-grid-col-4">
@@ -30,15 +30,15 @@ The following interactive demo showcases a three-step application process with i
 
     <!-- Active Form Panel (Right Column on Desktop) -->
     <div class="nys-grid-col-12 nys-desktop:nys-grid-col-8">
-      <form id="multi-step-form" novalidate style="display: flex; flex-direction: column; gap: var(--nys-space-300);">
+      <form id="multi-step-form" novalidate class="nys-display-flex nys-flex-column nys-flex-gap-300">
         <!-- Step 1 Panel: Personal Details -->
         <div id="panel-step-1" class="step-panel" role="tabpanel" aria-labelledby="step-nav-1" tabindex="-1">
-          <h3 class="panel-heading" id="heading-step-1" tabindex="-1" style="font-size: 1.5rem; margin-top: 0; margin-bottom: var(--nys-space-200); color: var(--nys-color-text); outline: none;">
+          <h3 class="panel-heading nys-margin-b-200" id="heading-step-1" tabindex="-1" style="font-size: 1.5rem; margin-top: 0; color: var(--nys-color-text); outline: none;">
             Step 1: Personal Details
           </h3>
-          <p style="color: var(--nys-color-text-weak); margin-bottom: var(--nys-space-300);">Please enter your name and email address to begin the application.</p>
+          <p class="nys-margin-b-300" style="color: var(--nys-color-text-weak);">Please enter your name and email address to begin the application.</p>
           
-          <div style="display: flex; flex-direction: column; gap: var(--nys-space-300);">
+          <div class="nys-display-flex nys-flex-column nys-flex-gap-300">
             <nys-textinput 
               label="Full Name" 
               placeholder="Jane Doe" 
@@ -60,12 +60,12 @@ The following interactive demo showcases a three-step application process with i
 
         <!-- Step 2 Panel: Organization Details -->
         <div id="panel-step-2" class="step-panel" role="tabpanel" aria-labelledby="step-nav-2" tabindex="-1" style="display: none;">
-          <h3 class="panel-heading" id="heading-step-2" tabindex="-1" style="font-size: 1.5rem; margin-top: 0; margin-bottom: var(--nys-space-200); color: var(--nys-color-text); outline: none;">
+          <h3 class="panel-heading nys-margin-b-200" id="heading-step-2" tabindex="-1" style="font-size: 1.5rem; margin-top: 0; color: var(--nys-color-text); outline: none;">
             Step 2: Organization Details
           </h3>
-          <p style="color: var(--nys-color-text-weak); margin-bottom: var(--nys-space-300);">Tell us about your organization or agency affiliation.</p>
+          <p class="nys-margin-b-300" style="color: var(--nys-color-text-weak);">Tell us about your organization or agency affiliation.</p>
           
-          <div style="display: flex; flex-direction: column; gap: var(--nys-space-300);">
+          <div class="nys-display-flex nys-flex-column nys-flex-gap-300">
             <nys-textinput 
               label="Organization Name" 
               placeholder="NYS Department of State" 
@@ -91,12 +91,12 @@ The following interactive demo showcases a three-step application process with i
 
         <!-- Step 3 Panel: Review & Submit -->
         <div id="panel-step-3" class="step-panel" role="tabpanel" aria-labelledby="step-nav-3" tabindex="-1" style="display: none;">
-          <h3 class="panel-heading" id="heading-step-3" tabindex="-1" style="font-size: 1.5rem; margin-top: 0; margin-bottom: var(--nys-space-200); color: var(--nys-color-text); outline: none;">
+          <h3 class="panel-heading nys-margin-b-200" id="heading-step-3" tabindex="-1" style="font-size: 1.5rem; margin-top: 0; color: var(--nys-color-text); outline: none;">
             Step 3: Review & Submit
           </h3>
-          <p style="color: var(--nys-color-text-weak); margin-bottom: var(--nys-space-300);">Confirm your details and accept the terms to complete your application.</p>
+          <p class="nys-margin-b-300" style="color: var(--nys-color-text-weak);">Confirm your details and accept the terms to complete your application.</p>
           
-          <div style="background-color: var(--nys-color-theme-faint); border-left: 4px solid var(--nys-color-theme); padding: var(--nys-space-300); border-radius: 4px; margin-bottom: var(--nys-space-300); display: flex; flex-direction: column; gap: var(--nys-space-150);">
+          <div class="nys-display-flex nys-flex-column nys-flex-gap-150 nys-padding-300 nys-margin-b-300" style="background-color: var(--nys-color-theme-faint); border-left: 4px solid var(--nys-color-theme); border-radius: 4px;">
             <h4 style="margin: 0; font-size: 1.1rem; color: var(--nys-color-text);">Summary of Details</h4>
             <div style="font-size: 0.95rem; color: var(--nys-color-text); display: grid; grid-template-columns: 140px 1fr; gap: var(--nys-space-100);">
               <strong>Full Name:</strong> <span id="summary-name">—</span>
@@ -115,7 +115,7 @@ The following interactive demo showcases a three-step application process with i
         </div>
 
         <!-- Navigation Buttons -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300); margin-top: var(--nys-space-200);">
+        <div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center nys-margin-t-200" style="border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
           <nys-button label="Previous" variant="secondary" id="btn-prev" style="visibility: hidden;"></nys-button>
           <nys-button label="Next" variant="primary" id="btn-next"></nys-button>
           <nys-button label="Submit Application" variant="primary" id="btn-submit" style="display: none;"></nys-button>

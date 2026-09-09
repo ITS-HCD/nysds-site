@@ -28,10 +28,10 @@ The following interactive workspace simulates a global header banner alert syste
     transition: all 0.3s ease;
   }
 </style>
-<div class="alert-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="alert-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
   <!-- Simulated Top-of-Viewport Global Alert Banner -->
-  <div id="alert-banner-viewport" style="min-height: 90px; margin-bottom: var(--nys-space-300); border-bottom: 1px dashed var(--nys-color-base); padding-bottom: var(--nys-space-200);">
+  <div id="alert-banner-viewport" class="nys-margin-b-300" style="min-height: 90px; border-bottom: 1px dashed var(--nys-color-base); padding-bottom: var(--nys-space-200);">
     <nys-alert 
       id="demo-header-alert" 
       type="danger" 
@@ -51,8 +51,8 @@ The following interactive workspace simulates a global header banner alert syste
       </div>
     </nys-alert>
 
-    <div id="alert-dismissed-msg" style="display: none; text-align: center; color: var(--nys-color-text-weak); font-size: 0.95rem; padding: var(--nys-space-300);">
-      <nys-icon name="check" size="md" style="color: var(--nys-color-success); margin-bottom: var(--nys-space-50);"></nys-icon>
+    <div id="alert-dismissed-msg" class="nys-padding-300" style="display: none; text-align: center; color: var(--nys-color-text-weak); font-size: 0.95rem;">
+      <nys-icon name="check" size="md" class="nys-margin-b-50" style="color: var(--nys-color-success);"></nys-icon>
       <p style="margin: 0; font-weight: bold;">Global Alert Banner Dismissed</p>
       <p style="margin: 0; font-size: 0.85rem; margin-top: 4px;">State is saved in sessionStorage. (Alert won't repeat on page reload).</p>
     </div>
@@ -63,13 +63,13 @@ The following interactive workspace simulates a global header banner alert syste
     <h3 id="dashboard-heading" style="margin: 0 0 var(--nys-space-200) 0; font-size: 1.15rem; font-weight: bold; color: var(--nys-color-text); outline: none;" tabindex="-1">
       Emergency Alert Simulator Dashboard
     </h3>
-    <p style="font-size: 0.9rem; color: var(--nys-color-text-weak); margin-bottom: var(--nys-space-300);">
+    <p class="nys-margin-b-300" style="font-size: 0.9rem; color: var(--nys-color-text-weak);">
       Select a scenario button below to trigger and test different alert severities, or restore the banner:
     </p>
 
-    <div class="nys-grid-row nys-grid-gap-200" style="margin-bottom: var(--nys-space-200);"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-critical" label="Trigger Critical (Red)" variant="primary" style="width: 100%;"></nys-button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-warning" label="Trigger Warning (Yellow)" variant="secondary" style="width: 100%;"></nys-button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-info" label="Trigger Info (Blue)" variant="secondary" style="width: 100%;"></nys-button></div></div>
+    <div class="nys-grid-row nys-grid-gap-200 nys-margin-b-200"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-critical" label="Trigger Critical (Red)" variant="primary" style="width: 100%;"></nys-button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-warning" label="Trigger Warning (Yellow)" variant="secondary" style="width: 100%;"></nys-button></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-4"><nys-button id="btn-trigger-info" label="Trigger Info (Blue)" variant="secondary" style="width: 100%;"></nys-button></div></div>
 
-    <div style="text-align: center; border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300); margin-top: var(--nys-space-200);">
+    <div class="nys-margin-t-200" style="text-align: center; border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
       <nys-button id="btn-restore-banner" label="Reset and Restore Banner" variant="secondary" size="sm" style="display: none;"></nys-button>
     </div>
   </div>

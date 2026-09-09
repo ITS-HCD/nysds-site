@@ -26,22 +26,22 @@ The following locator directory simulates a searchable archive of **New York Sta
     width: 100%;
   }
 </style>
-<div class="directory-demo-container" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); padding: var(--nys-space-400); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+<div class="directory-demo-container nys-padding-400" style="border: 1px solid var(--nys-color-base); border-radius: 8px; background-color: var(--nys-color-surface); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
   
   <!-- Form Search Controls Grid -->
-  <form id="directory-search-form" novalidate style="display: flex; flex-direction: column; gap: var(--nys-space-300); margin-bottom: var(--nys-space-400);">
+  <form id="directory-search-form" novalidate class="nys-display-flex nys-flex-column nys-flex-gap-300 nys-margin-b-400">
     <div class="nys-grid-row nys-grid-gap-200"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-7"><nys-textinput id="dir-input-search" label="Search Parks" placeholder="e.g. Letchworth, Niagara..."></nys-textinput></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-5"><nys-select id="dir-select-region" label="Region"><option value="all">All Regions</option><option value="Western NY">Western NY</option><option value="Finger Lakes">Finger Lakes</option><option value="Capital Region">Capital Region</option><option value="Long Island">Long Island</option></nys-select></div></div>
 
   <!-- Amenities Checkboxes -->
-    <div style="background-color: var(--nys-color-base-weak); padding: var(--nys-space-200); border-radius: 4px; display: flex; flex-wrap: wrap; gap: var(--nys-space-300);">
-      <span style="font-weight: bold; font-size: 0.95rem; margin-right: var(--nys-space-100); display: flex; align-items: center; color: var(--nys-color-text);">Amenities:</span>
+    <div class="nys-padding-200 nys-display-flex nys-flex-gap-300" style="background-color: var(--nys-color-base-weak); border-radius: 4px; flex-wrap: wrap;">
+      <span class="nys-display-flex nys-flex-align-center" style="font-weight: bold; font-size: 0.95rem; margin-right: var(--nys-space-100); color: var(--nys-color-text);">Amenities:</span>
       <nys-checkbox id="dir-chk-camping" label="Camping Available"></nys-checkbox>
       <nys-checkbox id="dir-chk-swimming" label="Swimming / Beach"></nys-checkbox>
     </div>
   </form>
 
   <!-- Live Dynamic Results Header and Counter -->
-  <div style="border-bottom: 2px solid var(--nys-color-base); padding-bottom: var(--nys-space-150); margin-bottom: var(--nys-space-300); display: flex; justify-content: space-between; align-items: center;">
+  <div class="nys-display-flex nys-flex-justify-space-between nys-flex-align-center nys-margin-b-300" style="border-bottom: 2px solid var(--nys-color-base); padding-bottom: var(--nys-space-150);">
     <h3 id="results-heading" style="margin: 0; font-size: 1.25rem; font-weight: bold; color: var(--nys-color-text); outline: none;" tabindex="-1">
       State Park Directory
     </h3>
@@ -56,12 +56,12 @@ The following locator directory simulates a searchable archive of **New York Sta
   </div>
 
   <!-- Dynamic Results Target Container -->
-  <div id="dir-results-list" class="nys-grid-row nys-grid-gap-300" style="min-height: 280px; margin-bottom: var(--nys-space-400);">
+  <div id="dir-results-list" class="nys-grid-row nys-grid-gap-300 nys-margin-b-400" style="min-height: 280px;">
     <!-- Injected dynamically -->
   </div>
 
   <!-- Accessible Pagination Navigation Pager -->
-  <div style="display: flex; justify-content: center; border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
+  <div class="nys-display-flex nys-flex-justify-center" style="border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
     <nys-pagination id="dir-pagination" currentPage="1" totalPages="1"></nys-pagination>
   </div>
 
