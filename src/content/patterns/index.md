@@ -35,7 +35,7 @@ Explore our patterns to see how they are structured, styled, and built:
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
       class="nys-flex-fill"
-      heading="Search & Filter Directory"
+      heading="Search and Filter Directory"
       description="Help users locate and browse lists of facilities, documents, services, or offices with responsive inputs, region filters, real-time result count alerts, and fully accessible pagination."
       href="/patterns/search-and-filter/"
       style="--nys-card-height: 100%;"
@@ -47,7 +47,7 @@ Explore our patterns to see how they are structured, styled, and built:
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
       class="nys-flex-fill"
-      heading="File Upload & Verification"
+      heading="File Upload and Verification"
       description="Design clear, accessible file upload queues with reactive progress bars, file-type constraints, real-time status badges, and live screen-reader upload alerts."
       href="/patterns/file-upload/"
       style="--nys-card-height: 100%;"
@@ -56,7 +56,7 @@ Explore our patterns to see how they are structured, styled, and built:
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
       class="nys-flex-fill"
-      heading="Address Lookup & Validation"
+      heading="Address Lookup and Validation"
       description="Lay out standard address forms and present interactive USPS standardized suggested matches alongside user entries with accessible focus management."
       href="/patterns/address-validation/"
       style="--nys-card-height: 100%;"
@@ -77,7 +77,7 @@ Explore our patterns to see how they are structured, styled, and built:
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
       class="nys-flex-fill"
-      heading="Customer Feedback & Rating"
+      heading="Customer Feedback and Rating"
       description="Build page-level feedback and CSAT rating widgets, utilizing progressive disclosures, character limits, and accessible screen-reader count status regions."
       href="/patterns/feedback-rating/"
       style="--nys-card-height: 100%;"
@@ -98,7 +98,7 @@ Explore our patterns to see how they are structured, styled, and built:
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
       class="nys-flex-fill"
-      heading="Booking & Scheduling Calendar"
+      heading="Booking and Scheduling Calendar"
       description="Coordinate office locators, date selectors, and keyboard-operable time slots to build accessible appointment schedulers."
       href="/patterns/booking-calendar/"
       style="--nys-card-height: 100%;"
