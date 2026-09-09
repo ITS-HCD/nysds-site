@@ -145,7 +145,7 @@ The following interactive tool simulates a **DMV Office Appointment Scheduler**.
     };
 
     selectOffice.addEventListener("nys-change", checkInputs);
-    datePicker.addEventListener("nys-change", checkInputs);
+    datePicker.addEventListener("nys-input", checkInputs);
 
     // Build the 1-click slot button grid
     const renderSlotsGrid = () => {
@@ -304,7 +304,7 @@ The following interactive tool simulates a **DMV Office Appointment Scheduler**.
   }
 
   selectOffice.addEventListener("nys-change", onInputChanges);
-  datePicker.addEventListener("nys-change", onInputChanges);
+  datePicker.addEventListener("nys-input", onInputChanges);
 </script>
 {% endset %}
 {% set backgroundSolid = true %}
