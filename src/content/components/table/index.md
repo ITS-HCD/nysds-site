@@ -406,7 +406,7 @@ table.addEventListener('nys-column-sort', (event) => {
 {% block dependencies %}
 
 {% set dependencies = [
-   "<nys-icon>,<nys-button>"
+   "<nys-icon>", "<nys-button>"
   ] %}
 
 {% include "partials/dependencies.njk" %}

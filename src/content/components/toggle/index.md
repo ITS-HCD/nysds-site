@@ -255,8 +255,8 @@ toggle.addEventListener('nys-change', (event) => {
 {% block dependencies %}
 
 {% set dependencies = [
-   "<nys-icon>"
-  ] %}
+  "<nys-icon>", "<nys-label>"
+] %}
 
 {% include "partials/dependencies.njk" %}
 

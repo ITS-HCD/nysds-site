@@ -424,8 +424,8 @@ textinput.addEventListener('nys-input', (event) => {
 {% block dependencies %}
 
 {% set dependencies = [
-   "<nys-icon>"
-  ] %}
+  "<nys-button>", "<nys-errormessage>", "<nys-icon>", "<nys-label>"
+] %}
 
 {% include "partials/dependencies.njk" %}
 

@@ -338,8 +338,8 @@ textarea.addEventListener('nys-input', (event) => {
 {% block dependencies %}
 
 {% set dependencies = [
-   "<nys-icon>"
-  ] %}
+  "<nys-errormessage>", "<nys-label>"
+] %}
 
 {% include "partials/dependencies.njk" %}
 

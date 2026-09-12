@@ -96,6 +96,11 @@
     {%- block events %}{% endblock -%}
 </section>
 
+{#- The Dependencies section renders only when a page fills this block; the
+    heading lives in partials/dependencies.njk so pages that declare no
+    dependencies do not emit a bare, empty <h2>. -#}
+{%- block dependencies %}{% endblock -%}
+
 <section class="nys-section">
     <h2>Suggest a New Component</h2>
     <div class="nys-grid-row nys-grid-gap">
