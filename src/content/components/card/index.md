@@ -105,6 +105,41 @@ Use `description` for the card's body text. It takes plain text only. When the b
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Sizes
+
+Use `size="sm"` or `size="lg"` to make the card smaller or larger than the default. The size affects the preheading, heading, subheading, and description text sizes, as well as the spacing between elements. The default size is `size="md"`.
+
+{% set preview %}
+
+<div class="nys-grid-row nys-grid-gap">
+  <nys-card
+    class="nys-tablet:nys-grid-col-4"
+    size="sm"
+    preheading="Preheading content"
+    heading="This is a small card"
+    subheading="Subheading content"
+    description="A short description of the card's subject."
+  ></nys-card>
+  <nys-card
+    class="nys-tablet:nys-grid-col-4"
+    preheading="Preheading content"
+    heading="This is the default medium card"
+    subheading="Subheading content"
+    description="A short description of the card's subject."
+  ></nys-card>
+  <nys-card
+    class="nys-tablet:nys-grid-col-4"
+    size="lg"
+    preheading="Preheading content"
+    heading="This is a large card"
+    subheading="Subheading content"
+    description="A short description of the card's subject."
+  ></nys-card>
+</div>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Media Slot
 
 Use the `media` slot to add an image to the top of the card. Pass a standard `<img>` element, so you control the source, loading behavior, and alternative text.
