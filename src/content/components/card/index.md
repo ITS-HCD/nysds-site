@@ -556,7 +556,43 @@ Keep the following in mind when using card media:
 {% block cssvariables %}
 
 {% set variables = [
-  { name: "--nys-card-height", description: "Height of the card. Defaults to fit-content. Set to 100% to stretch the card to its container's height, so a row of cards renders at an equal height. The extra height is absorbed by the main content area, which keeps the footer slot pinned to the bottom of the card. The container must give the card a height to fill, for example a grid column with nys-display-flex."}
+{
+name: "--nys-card-height",
+description: "Height of the card. Defaults to fit-content. Set to 100% to stretch the card to its container's height, so a row of cards renders at an equal height. The extra height is absorbed by the main content area, which keeps the footer slot pinned to the bottom of the card. The container must give the card a height to fill, for example a grid column with nys-display-flex."
+},
+{
+name: "--nys-card-font-size--preheading",
+description: "Font size of the preheading text."
+},
+{
+name: "--nys-card-line-height--preheading",
+description: "Line height of the preheading text."
+},
+{
+name: "--nys-card-font-size--heading",
+description: "Font size of the heading text."
+},
+{
+name: "--nys-card-line-height--heading",
+description: "Line height of the heading text."
+},
+{
+name: "--nys-card-font-size--subheading",
+description: "Font size of the subheading text."
+},
+{
+name: "--nys-card-line-height--subheading",
+description: "Line height of the subheading text."
+},
+{
+name: "--nys-card-font-size--description",
+description: "Font size of the description text."
+},
+{
+name: "--nys-card-line-height--description",
+description: "Line height of the description text."
+}
+
 ]%}
 {% include "partials/css-vars.njk" %}
 
