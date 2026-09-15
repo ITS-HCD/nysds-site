@@ -482,6 +482,12 @@ Keep the following in mind when using card media:
       <td>Appears below the subheading. Plain text only. Use the default slot for rich content.</td>
     </tr>
     <tr>
+      <td><code>size</code></td>
+      <td><code>"sm"</code>, <code>"md"</code>, or <code>"lg"</code></td>
+      <td><code>"md"</code></td>
+      <td>Controls the size of the card's text and spacing.</td>
+    </tr>
+    <tr>
       <td><code>inset</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
