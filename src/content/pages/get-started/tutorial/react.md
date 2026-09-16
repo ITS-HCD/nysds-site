@@ -206,7 +206,7 @@ const handleReset = () => {
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
 
-<nys-alert type="info" heading="See it in practice" text="The Basic Form page in this demo shows all of these patterns together — submission, validation, conditional fields, and form reset." primaryLabel="View Basic Form on External React Demo" primaryAction="https://its-hcd.github.io/nysds-react-demo/basic-form"></nys-alert>
+<nys-alert type="info" heading="See it in practice" text="The Basic Form page in this demo shows all of these patterns together — submission, validation, conditional fields, and form reset." primaryLabel="View Basic Form on External React" primaryAction="https://its-hcd.github.io/nysds-react-demo/basic-form"></nys-alert>
 
 ## What's next
 

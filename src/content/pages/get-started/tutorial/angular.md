@@ -8,9 +8,41 @@ parent: Developers
 navOrder: 2
 ---
 
-### Angular
+# Angular Tutorial
 
-Modern Angular apps are fully supported through our dedicated `@nysds/angular` package, which provides Angular-wrapped versions of NYSDS components. Because they are true Angular components, no `CUSTOM_ELEMENTS_SCHEMA` is required.
+A step-by-step guide to using NYS Design System components in an Angular application.
+
+## Installation
+
+Install the two NYSDS packages: `@nysds/angular` for the Angular-wrapped components and `@nysds/styles` for the design tokens and global CSS.
+
+**Note:** Both packages are versioned together. Always install matching versions to avoid token/component mismatches.
+
+{% set code %}npm install @nysds/angular @nysds/styles{% endset %}
+{% set accordionLabel = "Installation" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "ts" %}
+{% include "partials/code-preview.njk" %}
+
+<nys-alert type="success" heading="That's all!" text="No CUSTOM_ELEMENTS_SCHEMA needed. NYSDS Angular components are true Angular components, not raw custom elements, so they work with Angular's template type-checking out of the box."></nys-alert>
+
+## Project Setup
+
+After installing, load the NYSDS stylesheet by importing it at the top of your global stylesheet (`src/styles.css` or `src/styles.scss`). Angular's build tools resolve the package import automatically, so you don't need to reference a path inside `node_modules`.
+
+{% set code %}/* src/styles.css */
+@import "@nysds/styles/full";
+
+/* Optional: swap in an agency theme (default is NYS blue) */
+/* @import "@nysds/styles/theme-admin"; */{% endset %}
+{% set accordionLabel = "Global CSS Import" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+### Usage
+
+NYSDS Angular components are true Angular components, so they work with Angular's template type-checking and don't require `CUSTOM_ELEMENTS_SCHEMA`.
 
 #### 1. Standalone Components (Modern Angular)
 
@@ -77,3 +109,10 @@ Our Angular components support `ControlValueAccessor` natively, so they work wit
 {% set codeExpanded = false %}
 {% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
+
+## What's next
+
+You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the live examples in the Component Playground.
+
+- [Component Playground](/showcase/)
+- [Component Reference](/components/)
