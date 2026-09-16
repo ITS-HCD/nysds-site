@@ -34,9 +34,7 @@ After installing, load the NYSDS stylesheet in your `index.html`. Unlike the van
   rel="stylesheet"
   href="node_modules/@nysds/styles/dist/nysds-full.min.css"
 />
-
-<!-- Optional: swap in an agency theme (default is NYS blue) -->
-<!-- <link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-theme-admin.min.css" /> -->{% endset %}
+{% endset %}
 {% set accordionLabel = "index.html" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
