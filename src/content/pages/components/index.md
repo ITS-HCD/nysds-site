@@ -8,7 +8,6 @@ navOrder: -1
 ---
 
 {% block content %}
-<div class="nys-grid-container-widescreen">
   <header class="page-header">
     <h1 class="page-title">Web Components</h1>
     <div class="page-subtitle nys-grid-row nys-grid-gap">
@@ -21,8 +20,15 @@ navOrder: -1
   {%- for post in collections.components -%}
   {# Prevent child pages from rendering a card: child pages have a `parent` variable; component pages do NOT #}
   {% if post.data.parent is not defined %}
-  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="{{ post.url | url }}" aria-label="{{ post.data.title }} Component">
+  <div class="nys-mobile-lg:nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-desktop:nys-grid-col-4 nys-display-flex" style="--nys-card-height: 100%">
+    <nys-card
+      href="{{ post.url | url }}"
+      heading="{{ post.data.title }}"
+      description="{{ post.data.description }}"
+      >
+      {% if post.data.image %}        <img src="{{ post.data.image | url }}" slot="media" alt="{{ post.data.image_alt }}">      {% else %}        <img src="../assets/img/components/placeholder.svg" slot="media" alt="Placeholder">      {% endif %}
+    </nys-card>
+    <!-- <a class="card nys-flex-fill" href="{{ post.url | url }}" aria-label="{{ post.data.title }} Component">
       <div class="card__inner">
         <div class="card__media">{% if post.data.image %}
           <img src="{{ post.data.image | url }}" alt="{{ post.data.image_alt }}"></div>{% else %}
@@ -30,7 +36,7 @@ navOrder: -1
           <div class="card__title">{{ post.data.title }}</div>
           <div class="card__desc">{{ post.data.description }}</div>
       </div>
-    </a>
+    </a> -->
   </div>
   {% endif %}
   {%- endfor -%}
@@ -52,7 +58,6 @@ navOrder: -1
 </section>
     {% include "partials/edit-link.njk" %}
 
-</div>
 {% endblock %}
 
 {% block styles %}
