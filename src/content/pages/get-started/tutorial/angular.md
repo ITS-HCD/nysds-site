@@ -33,8 +33,6 @@ After installing, load the NYSDS stylesheet by importing it at the top of your g
 {% set code %}/* src/styles.css */
 @import "@nysds/styles/full";
 
-/* Optional: swap in an agency theme (default is NYS blue) */
-/* @import "@nysds/styles/theme-admin"; */{% endset %}
 {% set accordionLabel = "Global CSS Import" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
