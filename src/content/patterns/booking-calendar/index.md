@@ -16,7 +16,7 @@ This pattern demonstrates how to compose `<nys-select>`, `<nys-datepicker>`, but
 
 ## Interactive Demo
 
-The following interactive tool simulates a **DMV Office Appointment Scheduler**. Select an office location, pick a date, choose from available hourly slots, and click **"Confirm Appointment"**:
+The following interactive tool simulates an **Office Appointment Scheduler**. Select an office location, pick a date, choose from available hourly slots, and click **"Confirm Appointment"**:
 
 {% set preview %}
 <style>
@@ -37,7 +37,7 @@ The following interactive tool simulates a **DMV Office Appointment Scheduler**.
   
   <form id="scheduler-form" novalidate class="nys-display-flex nys-flex-column nys-flex-gap-300">
     <!-- Row 1: Location and Date (Compact grid to prevent paragraph injection) -->
-    <div class="nys-grid-row nys-grid-gap-200"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6"><nys-select id="sched-office" label="Select DMV Office Location" required errorMessage="Please select an woffice."><option value="" disabled selected>Choose an office location...</option><option value="Albany">Albany (Central Ave)</option><option value="Syracuse">Saratoga Springs (Lake Ave)</option><option value="NYC">New York City (Harlem Registry)</option></nys-select></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6"><nys-datepicker id="sched-date" label="Select Appointment Date" placeholder="MM/DD/YYYY" required errorMessage="Appointment date is required."></nys-datepicker></div></div>
+    <div class="nys-grid-row nys-grid-gap-200"><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6"><nys-select id="sched-office" label="Select Office Location" required errorMessage="Please select an woffice."><option value="" disabled selected>Choose an office location...</option><option value="Albany">Albany (Central Ave)</option><option value="Syracuse">Saratoga Springs (Lake Ave)</option><option value="NYC">New York City (Harlem Registry)</option></nys-select></div><div class="nys-grid-col-12 nys-desktop:nys-grid-col-6"><nys-datepicker id="sched-date" label="Select Appointment Date" placeholder="MM/DD/YYYY" required errorMessage="Appointment date is required."></nys-datepicker></div></div>
 
     <!-- Row 2: Available Hourly Slot Grid (Hidden until Date and Location are filled) -->
     <div id="slots-panel" style="display: none; border-top: 1px solid var(--nys-color-base); padding-top: var(--nys-space-300);">
