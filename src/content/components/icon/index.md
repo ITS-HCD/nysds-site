@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 {% set accordionLabel = "Override default library in plain JS" %}
 {% include "partials/code-preview.njk" %}
 
-#### Overriding the `"default"` library in React-like Frameworks
+#### Overriding the `"default"` library in JS Frameworks (React, Angular, etc.)
 {% set preview = "" %}
 {% set code %}
 import { registerIconLibrary } from '@nysds/components';
@@ -76,7 +76,7 @@ registerIconLibrary('material', {
 {% endset %}
 {% set language = "javascript" %}
 {% set showTip = false %}
-{% set accordionLabel = "Register additional libraries in React-like frameworks" %}
+{% set accordionLabel = "Register additional libraries in JS frameworks" %}
 {% include "partials/code-preview.njk" %}
 
 #### Using the `library` prop
