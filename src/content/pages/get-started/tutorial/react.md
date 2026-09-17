@@ -206,14 +206,6 @@ const handleReset = () => {
 
 <nys-alert type="info" heading="See it in practice" text="The Basic Form page in this demo shows all of these patterns together — submission, validation, conditional fields, and form reset." primaryLabel="View Basic Form on External React" primaryAction="https://its-hcd.github.io/nysds-react-demo/basic-form"></nys-alert>
 
-## Icon Library Setup
-
-`<nys-icon>` loads icons through a registered `library`. The default works out of the box for most apps. If you want to self-host icon assets (offline builds, stricter CSP), register a custom resolver.
-
-<nys-alert type="info" text="registerIconLibrary comes from @nysds/components, not @nysds/react — that's expected here since it's a config function, not a component."></nys-alert>
-
-See [Managing your icon library](/components/icon/#managing-your-icon-library) for setup and usage.
-
 ## What's next
 
 You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the live examples in the Component Playground.

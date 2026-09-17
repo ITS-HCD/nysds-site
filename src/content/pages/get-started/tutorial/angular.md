@@ -108,33 +108,6 @@ Our Angular components support `ControlValueAccessor` natively, so they work wit
 {% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
 
-## Icon Library Setup (Optional)
-
-`<nys-icon>` loads icons through a registered `library`. The default works out of the box for most apps. If you want to self-host icon assets locally (offline builds, stricter CSP), you'll need three things: install the components package, copy the icon assets into your build, and register a resolver pointing at them.
-
-Install `@nysds/components` — `@nysds/angular` doesn't pull this in for you:
-
-{% set code %}npm install @nysds/components{% endset %}
-{% set accordionLabel = "Install @nysds/components" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "ts" %}
-{% include "partials/code-preview.njk" %}
-
-Add the icons to your `assets` array in `angular.json`:
-
-{% set code %}"assets": [
-  ...
-  {
-    "glob": "**/*",
-    "input": "node_modules/@nysds/components/dist/icons",
-    "output": "/icons/"
-  }
-]{% endset %}
-{% set accordionLabel = "Copy Icon Assets in angular.json" %}
-{% set codeExpanded = false %}
-{% set codeLanguage = "json" %}
-{% include "partials/code-preview.njk" %}
-
 Then register a resolver pointing at `/icons/` — see [Managing your icon library](/components/icon/#managing-your-icon-library) for setup and usage.
 ## What's next
 
