@@ -1,72 +1,64 @@
 /**
- * NYSA11y Breadcrumb
+ * NYSA11y Breadcrumb (custom)
  * Path: /assets/nysa11y/breadcrumb-custom.js
- * Depends on /assets/nysa11y/breadcrub-custom.css
+ * Depends on /assets/nysa11y/breadcrumb-custom.css
  */
-class Breadcrumb {
-  // Private fields for internal state and DOM elements
-  #container;
-  #navElement;
-  #revealer;
-  #intermediateItems;
-  #observer;
-  #isButtonClicked = false;
+const nysa11y = window.nysa11y || {};
 
-  /**
-   * Initializes the Breadcrumb instance.
-   * @param {Object} options Configuration options.
-   * @param {HTMLElement} options.container The root <nav> element of the breadcrumb component.
-   */
+class Breadcrumb {
+  #selectorRoot = 'nav[data-component="breadcrumb"]';
+  #selectorRevealer = '[data-part="revealer"]';
+  #selectorIntermediate = ".intermediate";
+  #selectorButton = "button";
+  #selectorLink = "a";
+
   constructor(options = {}) {
-    this.#container = options.container || document;
-    this.#init();
+    this.container = options.container || document;
+    this.init();
   }
 
-  /**
-   * Sets up the component's elements, event listeners, and initial state.
-   */
-  #init() {
-    this.#navElement = this.#container.querySelector('nav[data-component="breadcrumb"]') || this.#container;
-    this.#revealer = this.#navElement.querySelector('[data-part="revealer"]');
-    this.#intermediateItems = this.#navElement.querySelectorAll(".intermediate");
+  init() {
+    const roots = this.container.querySelectorAll(this.#selectorRoot);
+    if (!roots.length) return;
 
-    if (!this.#revealer) {
-      console.error(
-        `Breadcrumb component (ID: ${this.#navElement.id || "unknown"}) is missing 'data-part="revealer"' element.`,
-      );
+    roots.forEach((rootEl) => {
+      this.#setupBreadcrumb(rootEl);
+    });
+  }
+
+  #setupBreadcrumb = (rootEl) => {
+    const revealer = rootEl.querySelector(this.#selectorRevealer);
+    if (!revealer) {
+      console.error(`Breadcrumb component (ID: ${rootEl.id || "unknown"}) is missing 'data-part="revealer"' element.`);
       return;
     }
 
-    // Bind the event listener to the revealer button
-    const revealerButton = this.#revealer.querySelector("button");
-    if (revealerButton) {
-      revealerButton.addEventListener("click", () => {
-        this.#isButtonClicked = true;
-        // Mutate DOM
-        this.maximize();
-      });
+    const button = revealer.querySelector(this.#selectorButton);
+    if (button) {
+      button.removeEventListener("click", this.#handleRevealerClick);
+      button.addEventListener("click", this.#handleRevealerClick);
     }
 
-    // Use a MutationObserver to watch for changes to the 'data-state' attribute
-    this.#observer = new MutationObserver((mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (mutation.type === "attributes" && mutation.attributeName === "data-state") {
-          this.render();
-        }
-      }
+    // Disconnect any existing observer on this element
+    if (rootEl.__nysa11yBreadcrumbObserver) {
+      rootEl.__nysa11yBreadcrumbObserver.disconnect();
+    }
 
-      if (this.#isButtonClicked) {
-        // Reset flag immediately
-        this.#isButtonClicked = false;
-        // Perform action only if button triggered.
-        // Why? Because rerender has to complete before we move focus.
-        // Why are we managing focus? Because the focused element, the button,
-        // is about to be `display:none`, and we MUST NOT lose focus back to <body>.
+    // Create a new MutationObserver and stash it on the element expando
+    const observer = new MutationObserver((mutationsList) => {
+      mutationsList.forEach((mutation) => {
+        if (mutation.type === "attributes" && mutation.attributeName === "data-state") {
+          this.#render(rootEl);
+        }
+      });
+
+      if (rootEl.__nysa11yIsButtonClicked) {
+        rootEl.__nysa11yIsButtonClicked = false;
+
         requestAnimationFrame(() => {
-          // When changing to 'max', focus on the zeroth intermediate item
-          if (this.#intermediateItems.length > 0) {
-            // Find a focusable element within the first intermediate item (e.g., a link)
-            const focusableElement = this.#intermediateItems[0].querySelector("a");
+          const intermediateItems = rootEl.querySelectorAll(this.#selectorIntermediate);
+          if (intermediateItems.length > 0) {
+            const focusableElement = intermediateItems[0].querySelector(this.#selectorLink);
             if (focusableElement) {
               focusableElement.focus();
             }
@@ -75,59 +67,55 @@ class Breadcrumb {
       }
     });
 
-    this.#observer.observe(this.#navElement, { attributes: true });
+    observer.observe(rootEl, { attributes: true });
+    rootEl.__nysa11yBreadcrumbObserver = observer;
 
-    // Initial render and make the nav visible
-    this.render();
-    this.#navElement.style.display = "block";
-  }
+    // Initial render and display
+    this.#render(rootEl);
+    rootEl.style.display = "block";
+  };
 
-  /**
-   * Sets 'data-state' to 'max'.
-   */
-  maximize() {
-    this.#navElement.setAttribute("data-state", "max");
-  }
+  #handleRevealerClick = (event) => {
+    const button = event.currentTarget;
+    const rootEl = button.closest(this.#selectorRoot);
+    if (!rootEl) return;
 
-  /**
-   * Sets 'data-state' to 'min'.
-   */
-  minimize() {
-    this.#navElement.setAttribute("data-state", "min");
-  }
+    rootEl.__nysa11yIsButtonClicked = true;
+    this.maximize(rootEl);
+  };
 
-  /**
-   * Renders the component based on the current 'data-state'.
-   */
-  render() {
-    const state = this.#navElement.getAttribute("data-state");
+  #render = (rootEl) => {
+    const state = rootEl.getAttribute("data-state");
+    const intermediateItems = rootEl.querySelectorAll(this.#selectorIntermediate);
+    const revealer = rootEl.querySelector(this.#selectorRevealer);
+    if (!revealer) return;
 
     if (state === "min") {
-      this.#intermediateItems.forEach((item) => {
+      intermediateItems.forEach((item) => {
         item.style.display = "none";
       });
-      this.#revealer.style.display = "flex";
+      revealer.style.display = "flex";
     } else if (state === "max") {
-      this.#intermediateItems.forEach((item) => {
+      intermediateItems.forEach((item) => {
         item.style.display = "flex";
       });
-      this.#revealer.style.display = "none";
+      revealer.style.display = "none";
     } else {
       console.warn(`Invalid 'data-state' value: ${state}`);
     }
+  };
+
+  maximize(rootEl) {
+    rootEl.setAttribute("data-state", "max");
   }
 
-  /**
-   * Static method to initialize all matching nav elements on the page.
-   */
-  static initializeAll() {
-    document.querySelectorAll('nav[data-component="breadcrumb"]').forEach((navElement) => {
-      new Breadcrumb({ container: navElement });
-    });
+  minimize(rootEl) {
+    rootEl.setAttribute("data-state", "min");
   }
 }
 
-// Initialize all breadcrumbs when the DOM is ready
+nysa11y.Breadcrumb = Breadcrumb;
+
 document.addEventListener("DOMContentLoaded", () => {
-  Breadcrumb.initializeAll();
+  new nysa11y.Breadcrumb();
 });
