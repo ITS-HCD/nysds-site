@@ -3,10 +3,12 @@ permalink: /components/table/
 title: Table
 description: A structured layout that displays data in rows and columns to help users scan, compare, and understand information efficiently.
 image: /assets/img/components/table.svg
-image_alt: An illustration of a table.
+image_alt: An illustration of a table
 image_header: /assets/img/components/table-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=13839-40623&t=EXsXvlMbCdRw10ir-4
+
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -393,8 +395,8 @@ You can listen to these events using JavaScript:
 const table = document.querySelector('nys-table');
 // Listen for the 'nys-column-sort' event
 table.addEventListener('nys-column-sort', (event) => {
-  const { columnIndex, columnLabel, sortDirection } = event.detail;
-  console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
+const { columnIndex, columnLabel, sortDirection } = event.detail;
+console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
