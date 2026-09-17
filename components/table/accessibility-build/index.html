@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Build Accessibly</title>
+
+<meta name="description" content="How to code an accessible table.">
+<link rel="canonical" href="https://designsystem.ny.gov/components/table/accessibility-build/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Build Accessibly">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/components/table/accessibility-build/">
+<meta property="og:description" content="How to code an accessible table.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/table-native.css" rel="stylesheet">
+    
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-09-17T18:51:15.286Z -->
+  </head>
+  
+  <body class="single-page page-a11y-build section-components">
+  <nys-skipnav></nys-skipnav>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Components
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="/assets/img/components/table-header.svg" alt="Build Accessibly">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
+    <span class="accordion__label">Components</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-components" aria-labelledby="accordion-trigger-components" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/accordion/">
+        Accordion
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/accordion/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/accordion/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/alert/">
+        Alert
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/avatar/">
+        Avatar
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/backtotop/">
+        Back To Top
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/badge/">
+        Badge
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/breadcrumbs/">
+        Breadcrumbs
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/button/">
+        Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/card/">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/checkbox/">
+        Checkbox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/combobox/">
+        Combobox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/datepicker/">
+        Datepicker
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/divider/">
+        Divider
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/dropdownmenu/">
+        Dropdown Menu
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/fileinput/">
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/globalfooter/">
+        Global Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/globalheader/">
+        Global Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/icon/">
+        Icon
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/modal/">
+        Modal
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/modal/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/modal/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/pagination/">
+        Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/radiobutton/">
+        Radio Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/select/">
+        Select
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/skipnav/">
+        Skip Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/stepper/">
+        Stepper
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/tab/">
+        Tab
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+      
+    
+      
+        
+      
+    
+    <li class="section-nav__item section-nav__item--active-section" aria-expanded="true">
+      <a class="section-nav__link" href="/components/table/">
+        Table
+      </a>
+
+      
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/table/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item section-nav__item--active">
+              <a class="section-nav__link" href="/components/table/accessibility-build/" aria-current="page">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/textarea/">
+        Text Area
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/textinput/">
+        Text Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/toggle/">
+        Toggle
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/tooltip/">
+        Tooltip
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/unav-footer/">
+        UNav Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/unav-header/">
+        UNav Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/video/">
+        Video Player
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-fill">  
+    <article data-template="a11yBuild" data-pattern="table">
+    <section id="overview">
+        <h1 id="build-an-accessible-table">Build an Accessible Table</h1>
+        <p>
+            Are you in the right place?
+            If you are constrained to a third-party component library, see the
+            <a href="../accessibility-tests/">Table Accessibility Checklist</a> and ensure that it passes.
+            Otherwise, follow the guidance here to choose the best option for your project.
+        </p>
+    </section>
+    
+    <section class="recommended-solution">
+        <div class="card">
+            <mark>
+                <span class="sr-only">ideal solution</span>
+                <nys-badge label="Recommended" intent="success" prefixIcon=""></nys-badge>
+            </mark>
+            <h2 id="use-the-nysds-table-web-component">Use the NYSDS Table Web Component</h2>
+            <p>
+                The NYSDS Table is a web component you can drop into your project and use right away.
+                For most teams, this is the simplest way to achieve an accessible component.
+                This means teams don’t need to manually implement accessibility or test for it.
+            </p>
+            <mark class="subhead stronger">What's already handled for you:</mark>
+            <ul class="built-in color-theme--faint">
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Keyboard Navigation</mark>
+                        <p class="nys-font-body-sm">Tab, Enter, Space, and Arrows work as intended</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Screen reader support</mark>
+                        <p class="nys-font-body-sm">Tested with NVDA, JAWS, and VoiceOver</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Focus management</mark>
+                        <p class="nys-font-body-sm">Focus stays where users expect it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Voice control</mark>
+                        <p class="nys-font-body-sm">Supports Windows and macOS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Zoom magnification</mark>
+                        <p class="nys-font-body-sm">Works correctly at 200% browser zoom</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">WCAG 2.2 AA conformant</mark>
+                        <p class="nys-font-body-sm">Meets New York State standards</p>
+                    </div>
+                </li>
+            </ul>
+            <nys-button href="../" label="View NYSDS Table Component" fullWidth=""></nys-button>
+        </div>
+    </section>
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="alternative-solutions">
+        <h2 id="alternatives">Alternatives</h2>
+        <p>
+            <mark class="subhead strong">For projects not ready to adopt the Design System</mark>
+            Whether you seek to remediate an existing component or build one from scratch,
+            these reference implementations will ensure an accessible outcome.
+            For more details, <a href="#about-this-pattern">read about this pattern</a>.
+        </p>
+<div class="solution">
+    <div class="card">
+        <h3 id="style-and-enhance-the-native-html-table-element">Style and enhance the native HTML <code class="element">table</code> element</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            wants to avoid error-prone re-creation of semantics,
+            and would like to leverage a powerful native API,
+            then the <code class="element">table</code> element
+            is a great option for careful progressive enhancement
+            and first-class accessibility.
+        </p>
+            <ins>
+        Rely on the required <a href="../accessibility-tests/">checklists</a>
+        to ensure accessibility is maintained during integration.
+    </ins>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<table data-component="table" class="nysa11y table" data-html="native">
+    <caption data-part="tableCaption">
+        <span class="table__caption">HTML named entities</span>
+        <span class="sr-only">&nbsp;Column headers with buttons are sortable.</span>
+    </caption>
+    <thead data-part="tableHead">
+        <tr>
+            <!-- All headers have appropriate scope (col|row) -->
+            <!-- Initial sort setting is dependent on attribute presence and value -->
+            <th scope="col" aria-sort="ascending">
+                <button type="button" class="column__sorter">
+                    <div>Symbol name</div>
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th scope="col">
+                <button type="button" class="column__sorter">
+                    <div>HTML entity code</div>
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th scope="col" data-align="end">
+                <button type="button" class="column__sorter">
+                    <div>Browser support</div>
+                    <span aria-hidden="true"></span>
+                </button>
+            </th>
+            <th scope="col" data-align="center">Example</th>
+        </tr>
+    </thead>
+    <tbody data-part="tableBody">
+        <tr>
+            <td>Copyright sign</td>
+            <td><code>&amp;copy;</code></td>
+            <td>34%</td>
+            <td class="demo-entity-example">&copy;</td>
+        </tr>
+        <tr>
+            <td>Registered trade mark sign</td>
+            <td><code>&amp;reg;</code></td>
+            <td>6%</td>
+            <td class="demo-entity-example">&reg;</td>
+        </tr>
+        <tr>
+            <td>Trade mark sign</td>
+            <td><code>&amp;trade;</code></td>
+            <td>100%</td>
+            <td class="demo-entity-example">&trade;</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>HTML</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y table<span class="token punctuation">"</span></span> <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span> <span class="token attr-name">data-part</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tableCaption<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table__caption<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>HTML named entities<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sr-only<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span>Column headers with buttons are sortable.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span> <span class="token attr-name">data-part</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tableHead<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token comment">&lt;!-- All headers have appropriate scope (col|row) --></span>
+            <span class="token comment">&lt;!-- Initial sort setting is dependent on attribute presence and value --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col<span class="token punctuation">"</span></span> <span class="token attr-name">aria-sort</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ascending<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>column__sorter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Symbol name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>column__sorter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>HTML entity code<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col<span class="token punctuation">"</span></span> <span class="token attr-name">data-align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>end<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>column__sorter<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Browser support<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col<span class="token punctuation">"</span></span> <span class="token attr-name">data-align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Example<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span> <span class="token attr-name">data-part</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tableBody<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Copyright sign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&amp;">&amp;amp;</span>copy;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>34%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo-entity-example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&copy;">&amp;copy;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Registered trade mark sign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&amp;">&amp;amp;</span>reg;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>6%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo-entity-example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&reg;">&amp;reg;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Trade mark sign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&amp;">&amp;amp;</span>trade;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>100%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo-entity-example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity named-entity" title="&trade;">&amp;trade;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>CSS</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token comment">/**
+ * NYSA11y Table (native)
+ * Path: /assets/nysa11y/table-native.css
+ * Depends on /assets/nysa11y/table-native.js
+ */</span>
+<span class="token atrule"><span class="token rule">@layer</span> nysa11y</span> <span class="token punctuation">{</span>
+    <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span> <span class="token comment">/* 1.0rem */</span>
+        <span class="token selector">table.nysa11y.table[data-component="table"][data-html="native"]</span> <span class="token punctuation">{</span>
+            <span class="token selector">*,
+            *:before,
+            *:after</span> <span class="token punctuation">{</span>
+                <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink-reverse<span class="token punctuation">,</span> #ffffff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
+                --nys-font-family-sans<span class="token punctuation">,</span>
+                <span class="token string">"Proxima Nova"</span><span class="token punctuation">,</span>
+                -apple-system<span class="token punctuation">,</span>
+                <span class="token string">"BlinkMacSystemFont"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI"</span><span class="token punctuation">,</span>
+                <span class="token string">"Roboto"</span><span class="token punctuation">,</span>
+                <span class="token string">"Helvetica"</span><span class="token punctuation">,</span>
+                <span class="token string">"Arial"</span><span class="token punctuation">,</span>
+                sans-serif<span class="token punctuation">,</span>
+                <span class="token string">"Apple Color Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Symbol"</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token selector">&amp; [data-part="tableCaption"]</span> <span class="token punctuation">{</span>
+                <span class="token property">padding-inline</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+                <span class="token property">padding-block</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+                <span class="token property">font-size</span><span class="token punctuation">:</span> 1.125rem<span class="token punctuation">;</span>
+                <span class="token property">font-weight</span><span class="token punctuation">:</span> 600<span class="token punctuation">;</span>
+                <span class="token property">text-align</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
+                <span class="token selector">&amp;.caption-bottom,
+                .caption-bottom &amp;</span> <span class="token punctuation">{</span>
+                    <span class="token property">caption-side</span><span class="token punctuation">:</span> bottom<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp; [data-part="tableHead"]</span> <span class="token punctuation">{</span>
+                <span class="token comment">/* non-button text */</span>
+                <span class="token selector">&amp; th</span> <span class="token punctuation">{</span>
+                    <span class="token property">font-weight</span><span class="token punctuation">:</span> 700<span class="token punctuation">;</span>
+                    <span class="token property">font-size</span><span class="token punctuation">:</span> 0.91rem<span class="token punctuation">;</span>
+                    <span class="token property">text-align</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
+                    <span class="token property">padding-inline</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+                    <span class="token selector">&amp;:not([aria-sort]) button span::after</span> <span class="token punctuation">{</span>
+                        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"\2195"</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;[aria-sort="descending"] button span::after</span> <span class="token punctuation">{</span>
+                        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"\2193"</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;[aria-sort="ascending"] button span::after</span> <span class="token punctuation">{</span>
+                        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"\2191"</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;:has(button)</span> <span class="token punctuation">{</span>
+                        <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token comment">/* button text */</span>
+                    <span class="token selector">&amp; button.column__sorter</span> <span class="token punctuation">{</span>
+                        <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+                        <span class="token property">background</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+                        <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+                        <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+                        <span class="token property">font-size</span><span class="token punctuation">:</span> 0.85rem<span class="token punctuation">;</span>
+                        <span class="token property">font-weight</span><span class="token punctuation">:</span> 600<span class="token punctuation">;</span>
+                        <span class="token property">gap</span><span class="token punctuation">:</span> 0.75rem<span class="token punctuation">;</span>
+                        <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+                        <span class="token property">line-height</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+                        <span class="token property">min-height</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span>
+                        <span class="token property">padding-block</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+                        <span class="token property">padding-inline</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+                        <span class="token property">text-align</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
+                        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+                        <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+                            <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-black-transparent-100<span class="token punctuation">,</span> #0000001a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
+                            <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        <span class="token selector">&amp; span[aria-hidden]</span> <span class="token punctuation">{</span>
+                            <span class="token property">flex-shrink</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+                            <span class="token property">font-size</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
+                            <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;[aria-sort] button.column__sorter</span> <span class="token punctuation">{</span>
+                        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-blue-100<span class="token punctuation">,</span> #cce0f6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+                            <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-blue-200<span class="token punctuation">,</span> #a3c2ee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp; [data-part="tableBody"]</span> <span class="token punctuation">{</span>
+                <span class="token selector">td</span> <span class="token punctuation">{</span>
+                    <span class="token property">padding-block</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+                    <span class="token property">padding-inline</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+                    <span class="token property">vertical-align</span><span class="token punctuation">:</span> top<span class="token punctuation">;</span>
+                    <span class="token selector">&amp;.align-end</span> <span class="token punctuation">{</span>
+                        <span class="token property">text-align</span><span class="token punctuation">:</span> end<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;.align-center</span> <span class="token punctuation">{</span>
+                        <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;[data-state="sorted"]</span> <span class="token punctuation">{</span>
+                        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-blue-10<span class="token punctuation">,</span> #f2f7fc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token selector">th[scope="row"]</span> <span class="token punctuation">{</span>
+                    <span class="token property">text-align</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>JavaScript</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">/**
+ * NYSA11y Table (native)
+ * Path: /assets/nysa11y/table-native.js
+ * Depends on /assets/nysa11y/table-native.css
+ */</span>
+<span class="token keyword">const</span> nysa11y <span class="token operator">=</span> window<span class="token punctuation">.</span>nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Table</span> <span class="token punctuation">{</span>
+  #selectorRoot <span class="token operator">=</span> <span class="token string">'[data-component="table"].nysa11y'</span><span class="token punctuation">;</span>
+  #selectorHeader <span class="token operator">=</span> <span class="token string">'[data-part="tableHead"] th'</span><span class="token punctuation">;</span>
+  #selectorTbody <span class="token operator">=</span> <span class="token string">'[data-part="tableBody"]'</span><span class="token punctuation">;</span>
+  #selectorButton <span class="token operator">=</span> <span class="token string">"button.column__sorter"</span><span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>container <span class="token operator">=</span> options<span class="token punctuation">.</span>container <span class="token operator">||</span> document<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> roots <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>roots<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    roots<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">rootEl</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#setupTable</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function-variable function">#setupTable</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">rootEl</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> headers <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorHeader<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ch<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> buttonNode <span class="token operator">=</span> ch<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>buttonNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        buttonNode<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-column-index"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        buttonNode<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        buttonNode<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Sync ARIA from DOM state at setup</span>
+    <span class="token keyword">let</span> sortedIndex <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ch<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> buttonNode <span class="token operator">=</span> ch<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>buttonNode <span class="token operator">&amp;&amp;</span> ch<span class="token punctuation">.</span><span class="token function">hasAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> value <span class="token operator">=</span> ch<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">!==</span> <span class="token string">"ascending"</span> <span class="token operator">&amp;&amp;</span> value <span class="token operator">!==</span> <span class="token string">"descending"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          ch<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          sortedIndex <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>sortedIndex <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#updateSortedAttributes</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">,</span> sortedIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// Set initial alignments based on thead th data-align attributes</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#updateColumnAlignments</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Watch for dynamic data-align changes/removals</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>rootEl<span class="token punctuation">.</span>__nysa11yTableAlignObserver<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      rootEl<span class="token punctuation">.</span>__nysa11yTableAlignObserver<span class="token punctuation">.</span><span class="token function">disconnect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> alignObserver <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MutationObserver</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">mutationsList</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      mutationsList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">mutation</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>mutation<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">"attributes"</span> <span class="token operator">&amp;&amp;</span> mutation<span class="token punctuation">.</span>attributeName <span class="token operator">===</span> <span class="token string">"data-align"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#updateColumnAlignments</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    alignObserver<span class="token punctuation">.</span><span class="token function">observe</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">attributes</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">subtree</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">attributeFilter</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"data-align"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rootEl<span class="token punctuation">.</span>__nysa11yTableAlignObserver <span class="token operator">=</span> alignObserver<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> buttonElement <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> rootEl <span class="token operator">=</span> buttonElement<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>rootEl<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> columnIndex <span class="token operator">=</span> buttonElement<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"data-column-index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#setColumnHeaderSort</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">,</span> columnIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#isTextNumeric</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> cleaned <span class="token operator">=</span> text
+      <span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^[\$\u20AC\u00A3\u00A5]</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// remove leading currency symbols</span>
+      <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">,</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// remove commas</span>
+      <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">%$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token comment">// remove trailing percent sign</span>
+      <span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^[-+]?\d*\.?\d+$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>cleaned<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#updateSortedAttributes</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">rootEl<span class="token punctuation">,</span> columnIndex</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> parsedIndex <span class="token operator">=</span> <span class="token keyword">typeof</span> columnIndex <span class="token operator">===</span> <span class="token string">"string"</span> <span class="token operator">?</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>columnIndex<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">:</span> columnIndex<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> tbodyNode <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorTbody<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>tbodyNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> rows <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>tbodyNode<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      rows<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">rowNode</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> rowCells <span class="token operator">=</span> rowNode<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"th, td"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        rowCells<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cell<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> parsedIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cell<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"data-state"</span><span class="token punctuation">,</span> <span class="token string">"sorted"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            cell<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">"data-state"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#updateColumnAlignments</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">rootEl</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> headers <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorHeader<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> tbodyNode <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorTbody<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>tbodyNode<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> rows <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>tbodyNode<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ch<span class="token punctuation">,</span> columnIndex</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> align <span class="token operator">=</span> ch<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"data-align"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      rows<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">rowNode</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> rowCells <span class="token operator">=</span> rowNode<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"th, td"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> cell <span class="token operator">=</span> rowCells<span class="token punctuation">[</span>columnIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cell<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// Remove existing alignment classes</span>
+          cell<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"align-center"</span><span class="token punctuation">,</span> <span class="token string">"align-end"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment">// Add new alignment class based on data-align</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>align <span class="token operator">===</span> <span class="token string">"center"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cell<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"align-center"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>align <span class="token operator">===</span> <span class="token string">"end"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cell<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"align-end"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#setColumnHeaderSort</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">rootEl<span class="token punctuation">,</span> columnIndex</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> parsedIndex <span class="token operator">=</span> <span class="token keyword">typeof</span> columnIndex <span class="token operator">===</span> <span class="token string">"string"</span> <span class="token operator">?</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>columnIndex<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">:</span> columnIndex<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> headers <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorHeader<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> tbodyNode <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorTbody<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ch<span class="token punctuation">,</span> i</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> buttonNode <span class="token operator">=</span> ch<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> parsedIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> value <span class="token operator">=</span> ch<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Auto-detect numeric column if class "num" is not present</span>
+        <span class="token keyword">let</span> isNumber <span class="token operator">=</span> ch<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"num"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isNumber <span class="token operator">&amp;&amp;</span> tbodyNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> rows <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>tbodyNode<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> cellValues <span class="token operator">=</span> rows
+            <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">rowNode</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+              <span class="token keyword">const</span> rowCells <span class="token operator">=</span> rowNode<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"th, td"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">const</span> dataCell <span class="token operator">=</span> rowCells<span class="token punctuation">[</span>parsedIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> dataCell <span class="token operator">?</span> dataCell<span class="token punctuation">.</span>textContent<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=></span> text <span class="token operator">!==</span> <span class="token string">""</span> <span class="token operator">&amp;&amp;</span> text <span class="token operator">!==</span> <span class="token string">"N/A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>cellValues<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            isNumber <span class="token operator">=</span> cellValues<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#isTextNumeric<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> direction <span class="token operator">=</span> value <span class="token operator">===</span> <span class="token string">"descending"</span> <span class="token operator">?</span> <span class="token string">"ascending"</span> <span class="token operator">:</span> <span class="token string">"descending"</span><span class="token punctuation">;</span>
+        ch<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">,</span> direction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#sortColumn</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">,</span> parsedIndex<span class="token punctuation">,</span> direction<span class="token punctuation">,</span> isNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#updateSortedAttributes</span><span class="token punctuation">(</span>rootEl<span class="token punctuation">,</span> parsedIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>ch<span class="token punctuation">.</span><span class="token function">hasAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> buttonNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          ch<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-sort"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#sortColumn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">rootEl<span class="token punctuation">,</span> columnIndex<span class="token punctuation">,</span> sortValue<span class="token punctuation">,</span> isNumber</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> tbodyNode <span class="token operator">=</span> rootEl<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorTbody<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>tbodyNode<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> rows <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>tbodyNode<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> dataCells <span class="token operator">=</span> rows<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">rowNode<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> rowCells <span class="token operator">=</span> rowNode<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"th, td"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> dataCell <span class="token operator">=</span> rowCells<span class="token punctuation">[</span>columnIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> text <span class="token operator">=</span> dataCell <span class="token operator">?</span> dataCell<span class="token punctuation">.</span>textContent<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> value <span class="token operator">=</span> isNumber <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">#parseNumber</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span> <span class="token operator">:</span> text<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        index<span class="token punctuation">,</span>
+        value<span class="token punctuation">,</span>
+        rowNode<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dataCells<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>value <span class="token operator">===</span> b<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>sortValue <span class="token operator">===</span> <span class="token string">"ascending"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> a<span class="token punctuation">.</span>value <span class="token operator">-</span> b<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">.</span>value <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>value <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> b<span class="token punctuation">.</span>value <span class="token operator">-</span> a<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">.</span>value <span class="token operator">></span> b<span class="token punctuation">.</span>value <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Clear and append sorted rows</span>
+    tbodyNode<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    dataCells<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">cell</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      tbodyNode<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>cell<span class="token punctuation">.</span>rowNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#parseNumber</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// Remove all characters except digits, minus signs, and decimal dots.</span>
+    <span class="token keyword">const</span> cleaned <span class="token operator">=</span> text<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[^\d.-]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> parsed <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span>cleaned<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Number<span class="token punctuation">.</span><span class="token function">isNaN</span><span class="token punctuation">(</span>parsed<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> parsed<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+nysa11y<span class="token punctuation">.</span>Table <span class="token operator">=</span> Table<span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">new</span> <span class="token class-name">nysa11y<span class="token punctuation">.</span>Table</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+</div>
+
+</section>
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="about-this-pattern">
+        <h2 id="about-this-pattern">About this pattern</h2>
+<section>
+    <h3 class="subhead strong" id="what-is-a-table">What is a table?</h3>
+    <p>
+        The noun "table" and the adjective "tabular" identify the presentation of two-dimensional information.
+        The most common form is an ordered set of cells, corresponding to individual data, grouped into a grid structure that can be simple or complex.
+        The horizontal dimension of cells is called a "row" and the vertical is called a "column."
+        When a table represents a matrix, a "cell" is understood as the literal intersection of each row and column in its grid.
+    </p>
+    <p>
+        Unlike a list, a table can incorporate headers for any or all rows and columns, and even spans of both.
+        Row- and column-headers are integral to the information they describe.
+        In code, headers are semantically distinct from other cells, and this relationship can be made even more explicit with optional attributes in cases of complex table structure.
+    </p>
+    <blockquote>
+        <p>
+            The point of a table is that it is rigid.
+            Information is easily interpreted by making visual associations between row and column headers.
+        </p>
+        <cite>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#how_does_a_table_work" target="_blank">Mozilla Developer Network</a>
+        </cite>
+    </blockquote>
+</section>
+<section>
+    <h3 class="subhead strong" id="html-table-history-in-a-nutshell">HTML <code class="element">table</code> history in a nutshell</h3>
+    Semantic definition of parts was arguably the foremost design goal in the lineage of markup languages that led to HTML.
+    In IBM's <a href="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language" target="_blank">GML</a> (1969), there was already provision for tabular data rendering.
+    This was inherited by <a href="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language" target="_blank">SGML</a>,
+    which can be considered the <a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/MarkUp.html" target="_blank">mother and superset of HTML</a> and XML, among others.
+    <q>SGML was originally designed to enable the sharing of
+    <a href="https://en.wikipedia.org/wiki/Machine-readable_data" target="_blank">machine-readable</a>
+    large-project documents in government, law, and industry.</q><sup><a href="https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language#History" target="_blank">1</a></sup>
+    With such a requirement, strict formal definitions were essential.
+    At the behest of the United States Department of Defense, SGML includes the <a href="https://en.wikipedia.org/wiki/CALS_Table_Model" target="_blank">CALS Table Model</a>,
+    developed by Harvey W. Bingham.<sup><a href="https://www.wiumlie.no/2006/phd/archive/users.rcn.com/hwbingham/tables/calstbhs.htm" target="_blank">2</a></sup>
+    Since nearly all the original group of SGML and <a href="https://www.w3.org/People/Raggett/the-early-days-of-the-Web.html" target="_blank">HTML language developers</a>
+    were research scientists or doing applied science in industry, academia, or government, data interchange standardization remained a core concern.
+    So it was only natural that <a href="https://www.rfc-editor.org/info/rfc1942/" target="_blank">RFC 1942: HTML Tables</a> (1996),
+    in which <a href="https://en.wikipedia.org/wiki/Dave_Raggett" target="_blank">Dave Raggett</a> added <code class="element">table</code> to what became
+    <a href="https://www.w3.org/TR/2018/SPSD-html32-20180315/" target="_blank">HTML 3.2</a>, derived in a simplified form from the CALS model.
+    By the time of HTML 4.01 (1999) the HTML <code class="element">table</code> elements grew to include <code class="element">caption</code>, <code class="element">colgroup</code>, <code class="element">col</code>,
+    <code class="element">thead</code>, <code class="element">tr</code>, <code class="element">th</code>, <code class="element">tbody</code>, and <code class="element">tfoot</code>, and the attribute <code>scope</code> (among others).
+</section>
+<section>
+    <h3 class="subhead strong" id="early-warning-signs">Early warning signs</h3>
+    Unfortunately for actual enforcement of semantics in authoring, implementation of the native HTML table element by browser vendors has from the start been very permissive, and remains so today.
+    The negative implications of this were evident early on.
+    1999, the year of HTML 4.01, was also notable for the debut of the
+    <a href="https://www.w3.org/TR/WAI-WEBCONTENT/" target="_blank">Web Content Accessibility Guidelines 1.0</a>, in which confusion between
+    <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#content-structure" target="_blank">structure and presentation</a> was identified as contributing to the
+    <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#gl-structure-presentation">misuse of markup</a> tags that hinders accessibility.
+    The <a code="" class="element">table</a> tags had a <a href="https://www.w3.org/TR/WAI-WEBCONTENT/#gl-table-markup" target="_blank">dedicated section</a>
+    devoted to correct semantic structure that is almost entirely still valid to this day.
+</section>
+<section>
+    <h3 class="subhead strong" id="semantic-structure">Semantic structure</h3>
+    Since 1999 the number and quality of screen readers and other assistive technologies has increased, but what has not changed is their profound reliance on HTML semantics.
+    This is the core semantic structure of a table:
+    <ul>
+        <li>
+            table
+            <ul>
+                <li>caption</li>
+                <li>
+                    thead
+                    <ul>
+                        <li>
+                            tr
+                            <ul>
+                                <li>th scope</li>
+                                <li>td</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    tbody
+                    <ul>
+                        <li>
+                            tr
+                            <ul>
+                                <li>th scope</li>
+                                <li>td</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    tfoot
+                    <ul>
+                        <li>
+                            tr
+                            <ul>
+                                <li>th scope</li>
+                                <li>td</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <dl aria-labelledby="semantic-structure">
+        <dt><code>table</code> and <code>caption</code></dt>
+        <dd>
+            Permitted child elements of <code class="element">table</code> are only
+            <code class="element">caption</code>,
+            <code class="element">colgroup</code>,
+            <code class="element">thead</code>,
+            <code class="element">tbody</code>,
+            <code class="element">tr</code>, and
+            <code class="element">tfoot</code>,
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table#technical_summary" target="_blank">in specific order and number</a>.
+        </dd>
+        <dd>The <code class="element">caption</code> child element may contain nearly all types of content, not only text.</dd>
+        <dd>
+            If a <code>table</code> has an <code>aria-label</code> string or is associated to a heading with <code>aria-labelledby</code>,
+            its <a href="https://developer.mozilla.org/en-US/docs/Glossary/Accessible_name" target="_blank">accessible name</a> will be calculated from one of them.
+            If the same table also has a <code>caption</code>, the accessibility tree interprets the caption to be the table's
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Accessible_description" target="_blank">accessible description</a>.
+            Depending on navigation method, a screen reader may announce both the ARIA text and the caption text.
+            However if a table has <em>only</em> a caption and no<code>aria-label</code> or <code>aria-labelledby</code>, the caption becomes the table's accessible name.
+            This remains true when the caption is visually hidden but still accessible in the DOM.
+            A valid caption is nearly always announced by screen readers.
+        </dd>
+        <dt><code>thead</code></dt>
+        <dd>The <code class="element">thead</code> child element may contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the head of a table with information about the table's columns.</dd>
+        <dt><code>tbody</code></dt>
+        <dd>The <code class="element">tbody</code> child element may contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the body of a table's (main) data.</dd>
+        <dt><code>tfoot</code></dt>
+        <dd>The <code class="element">tfoot</code> child element many contain only <code class="element">tr</code> table row elements. Its semantic purpose is to identify the foot of a table with information about the table's columns.</dd>
+        <dt><code>tr</code></dt>
+        <dd>The <code class="element">tr</code> descendant element may contain only <code class="element">th</code> and <code class="element">td</code> table cell elements. Its semantic purpose is to identify a row of cells in a table.</dd>
+        <dt><code>th</code> and <code>scope=[col|row]</code></dt>
+        <dd>The <code class="element">th</code> descendant element defines a cell as the header of a group of table cells.</dd>
+        <dd>Setting the <code>scope</code> attribute on headers&mdash;<code class="element">th scope="col"</code>&mdash;is a best practice with simple tables and a necessity with complex tables, since it explicitly reinforces structural relationships between a header and relevant data cells. The two most common scope attributes are <code>row</code>, which associates the header with all cells an author wishes to be represented as in its row, and <code>col</code>, which does the same for column.</dd>
+        <dt><code>td</code></dt>
+        <dd>The <code class="element">td</code> descendant element defines a cell of a table, the generic container for most tabular data.</dd>
+    </dl>
+</section>
+
+<section>
+    <h3 class="subhead strong" id="form-equals-function">Form equals function</h3>
+    <p>
+        As a consequence of the ancestral (SGML) concern with data exchange, these markup elements are mirrored in the JavaScript
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement" target="_blank">HTMLTableElement DOM API</a> built into every browser engine.
+        This means a table with correct HTML tag semantics is one that can be effectively programmed.
+        And it is this same valid construction that when parsed by assistive technologies allows them to improve a wide range of user experiences.
+    </p>
+    <p>
+        The table is such an important HTML element that it gets special treatment by many screen readers.
+        NVDA, JAWS, and VoiceOver all provide dedicated key shortcuts for page navigation to tables.
+        Once a table boundary is reached, they identify it as a table, and attempt to announce its name, description, and number of columns and rows.
+        These attempts will succeed if the table is coded correctly.
+        When screen reader users descend into the table, their screen readers seamlessly switch into a special cell-navigation mode.
+        When these users move between columns or rows with headings while browsing data cells, the new heading is announced.
+        Depending on the screen reader used, there are usually more table-specific capabilities, but these are the baseline.
+    </p>
+</section>
+<section>
+    <h3 class="subhead strong" id="what-would-happen-if-the-table-below-was-loaded-into-browser-dom">What would happen if the table below was loaded into browser DOM?</h3>
+    <ul>
+        <li>JavaScript could reference it by ID <code>CALS</code>, and then freely manipulate any of its constituent parts since they are present and validly map to the HTMLTableElement DOM API</li>
+        <li>A screen reader could navigate to this table and instantly be oriented that its subject is <em>"What came first"</em></li>
+        <li>(And much more)
+    </li></ul>
+
+
+
+
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Semantic table</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>CALS<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span><span class="token punctuation">></span></span>What came first?<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+    		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>HEADER 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+    		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>HEADER 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+    		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>BODY CELL 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>BODY CELL 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+    		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>FOOTER CELL 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>FOOTER CELL 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tfoot</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+    <p>How might we expect user experience to change when tables are sortable?</p>
+</section>
+
+<section>
+    <h3 class="subhead strong" id="sortable-tables">Sortable tables</h3>
+    <p>
+        A sortable table is one that can be dynamically rearranged by the user to display its entries in different order. Most often, the data in a single column is toggled to be ascending or descending by alphanumeric order, and all rows reshuffle according. Sorting is a powerful capability intended to help users understand relationships, find patterns in large lists, and make easier comparisons between many similar items.
+    </p>
+    <p>
+        Not all tables benefit from being sortable, and some may suffer from it or be technically incompatible with sorting. If the original order of display is itself the main meaning of a table, sorting may dilute that meaning. If a table has cells that span multiple rows or columns, sorting may be impossible, or technically convoluted, or actively confuse the data presentation even if technically achieved.
+    </p>
+    <p>
+        Sorting is not a native feature of the HTML <code class="element">table</code>, meaning its interaction design and appropriate semantics must be carefully considered, implemented, and tested. The goal is to arrive at the simplest composition that provides an optimal baseline user experience for as many user personas as possible.
+    </p>
+</section>
+<section>
+    <h3 class="subhead strong" id="basic-column-sorting">Basic column sorting</h3>
+    <p>
+        Sorting requires activation of an element to toggle data state; in our case some content of a column header will be activated to sort by that column.
+        Should we program event handlers directly on <code class="element">th</code> elements? No!&mdash;a native HTML <code class="element">button</code> is a far better choice:
+        it responds to every form of activation; it fires events; it supports states; it can contain a variety of content; and it is amenable to CSS styling.
+        Our button will fill the entire available space of each <code class="element">th</code> of each sortable column.
+    </p>
+    <p>
+        For visual users, symbolic reinforcement to make current state explicit is important.
+        Widely understood glyphs representing <em>unsorted</em>, <em>sorted ascending</em>, and <em>sorted descending</em> are needed.
+        These symbols will be rendered inside each button, adjacent to text.
+        Since these symbols are for visual users only, they will be removed from the accessibility tree with <code>aria-hidden</code> or an empty <code>alt</code> attribute,
+        depending on the source of the glyph.
+        Also visual, our buttons must adhere to all rules for interactive components:
+        they must clearly show focus; they must have sufficient color contrast with their surroundings;
+        they must have sufficient color contrast with interior text and between interaction states.
+        We must use CSS to enhance this where the native browsers styles for button fall short, and in particular the sorted state must be unambiguously evident.
+    </p>
+    <p>
+        Despite all this focus on header buttons, there is one essential job for the <code class="element">th</code>.
+        The key state semantic to convey for assistive technology is set not on the button but on its containing <code class="element">th</code>.
+        This makes sense if you consider the button to be just a visual-interactive label of the semantic column header,
+        which can only be the actual <code class="element">th</code>.
+        This is done by dynamic injection of <code>aria-sort="[ascending|descending]"</code> as an attribute of the <code class="element">th</code>.
+        Columns that are not sorted should have this attribute entirely removed.
+    </p>
+    <p>
+        The baseline desktop screen reader experience thus created is <em>at the very least</em> the sorted column will announce itself as "sorted, ascending" during navigation through table headers.
+        Even better, NVDA and JAWS reliably announce this as the sort interaction takes place.
+        macOS VoiceOver emits a beep, upon which a user can invoke the screen reader to read back the column and quickly confirm its sort state.
+        iOS VoiceOver also emits a beep, but has poor support for dynamically updated <code>aria-sort</code> values.
+        Not only will it not announce upon update, re-swiping the header may report the old value.
+        Android TalkBack ignores the <code>aria-sort</code> attribute completely.
+        Thus users of both iOS VoiceOver and Android TalkBack must swipe down to confirm the following row content has changed.
+        This lack of affordance is a <a href="https://a11ysupport.io/tests/tech__aria__aria-sort" target="_blank">known issue</a>.
+        For this reason, the implementation of sort state affordance for all screen readers is open to future revision.
+    </p>
+</section>
+<section>
+    <h3 class="subhead strong" id="sort-hints-for-screen-readers">Sort hints for screen readers</h3>
+    <p>
+        If a table is initialized already sorted, for example, by the first column, and a desktop screen reader user navigates by button into the header row,
+        they may quickly infer the purpose of the header buttons from an announcement like: "button, HEADER 1, sorted ascending."
+        This is easily learned and remembered for future use.
+        However it would be ideal to offer more cues to first-time, infrequent, and mobile users.
+        From the benefit of his immense experience,
+        Adrian Roselli advises us <a href="https://adrianroselli.com/2021/04/sortable-table-columns.html#Caption" target="_blank">there is no one ideal method for this</a>.
+        Our aural UX design decision adopts Roselli's most straightforward option:
+        add a visually-hidden usage hint to the end of the caption text.
+        Though there is a risk that fast-moving or impatient users may move past this hint before hearing it,
+        the advantage is that it will be announced whenever the table is entered,
+        regardless of the navigation means (<kbd>Arrow</kbd>, <kbd>Tab</kbd>, <kbd>T</kbd>, swipe) or the direction of movement (descending or ascending into the table in the DOM).
+        This leaves us with a table that has "HTML named entities" as its visual caption, and "HTML named entities, column headers with buttons are sortable," as its aural caption.
+    </p>
+</section>
+</section>
+
+    <section class="contact-points">
+    <a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3AsOgJ0qBW2ZBGB9h8LxC37mmdQJKwOfLdAmwsOEDD5cY1%40thread.tacv2/conversations?groupId=e9810b17-e32f-499d-a5b0-192e4adcdce3&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" aria-label="NYS Digital Accessibility MS Teams channel">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/teams-channel.svg" aria-hidden="true">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    NYS Digital Accessibility MS Teams channel
+                </div>
+                <div class="card__desc">
+                    Have a quick question or need immediate guidance? Jump into our Microsoft Teams channel to chat with the team in real-time.
+                    <p></p>
+                    <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues" aria-label="Report a bug on GitHub">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/report-bug.svg" aria-hidden="true">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    Report a bug on GitHub
+                </div>
+                <div class="card__desc">
+                    Spotted an issue or a visual glitch? Open a GitHub ticket with a clear description and reproduction steps so we can squash it.
+                    <p></p>
+                    <nys-badge label="Requires a GitHub account"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+</article>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/table/a11y-build.njk">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: September 17, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all">
+  <p><strong>On this page</strong></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+  
+    <script src="https://designsystem.ny.gov/assets/nysa11y/table-native.js"></script>
+  
+
+
+  
+  </body>
+</html>

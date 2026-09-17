@@ -52,7 +52,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-17T18:47:24.038Z -->
+    <!-- Latest Build: 2026-09-17T18:51:15.286Z -->
   </head>
   
   <body class="single-page page-a11y-build section-components">
@@ -495,12 +495,32 @@
   
     
     
-    <li class="section-nav__item">
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
       <a class="section-nav__link" href="/components/table/">
         Table
       </a>
 
       
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/table/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/table/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -2166,10 +2186,7 @@
                 <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
                 <span class="token selector">&amp; [data-part="scrollButtons"]</span> <span class="token punctuation">{</span>
                     <span class="token selector">&amp; button[data-scroll]</span> <span class="token punctuation">{</span>
-                        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                            --nys-color-theme-weaker<span class="token punctuation">,</span>
-                            #eff6fb
-                        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme-weaker<span class="token punctuation">,</span> #eff6fb<span class="token punctuation">)</span><span class="token punctuation">;</span>
                         <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme-weak<span class="token punctuation">,</span> #cddde9<span class="token punctuation">)</span><span class="token punctuation">;</span>
                         <span class="token property">background-position</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
                         <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
@@ -2185,11 +2202,8 @@
                         <span class="token property">border-end-end-radius</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
                         <span class="token property">margin-inline-end</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
                         <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
-                            <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
-                                <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                            <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>
-                                <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> * -1
-                            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> * -1<span class="token punctuation">)</span><span class="token punctuation">;</span>
                         <span class="token punctuation">}</span>
                         <span class="token selector">&amp;[data-scroll="to-start"]</span> <span class="token punctuation">{</span>
                             <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='%23154973' points='14.724 12.486, 7.375 19.835, 7.013 20.710, 7.400 21.585, 8.275 21.960, 9.150 21.585, 16.849 13.911, 17.298 13.236, 17.448 12.486, 17.298 11.737, 16.849 11.062, 9.150 3.363, 8.262 3.000, 7.375 3.388, 7.000 4.263, 7.375 5.138, 14.724 12.486'/%3E%3C/svg%3E%0A"</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
@@ -2207,15 +2221,11 @@
                             <span class="token punctuation">}</span>
                         <span class="token punctuation">}</span>
                         <span class="token selector">&amp;[aria-disabled="true"]</span> <span class="token punctuation">{</span>
-                            <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                --nys-color-neutral-10<span class="token punctuation">,</span>
-                                #f6f6f6
-                            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-10<span class="token punctuation">,</span> #f6f6f6<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">border-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
                             <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
                             <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
-                                <span class="token property">outline</span><span class="token punctuation">:</span> dashed <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
-                                    <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-100<span class="token punctuation">,</span> #d0d0ce<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token property">outline</span><span class="token punctuation">:</span> dashed <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-100<span class="token punctuation">,</span> #d0d0ce<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token punctuation">}</span>
                         <span class="token punctuation">}</span>
                     <span class="token punctuation">}</span>
@@ -2263,10 +2273,7 @@
                             <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-surface<span class="token punctuation">,</span> #ffffff<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-50<span class="token punctuation">,</span> #ededed<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">border-start-end-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-radius-md<span class="token punctuation">,</span> 4px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                            <span class="token property">border-start-start-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                --nys-radius-md<span class="token punctuation">,</span>
-                                4px
-                            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token property">border-start-start-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-radius-md<span class="token punctuation">,</span> 4px<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">border-style</span><span class="token punctuation">:</span> none none solid<span class="token punctuation">;</span>
                             <span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-divider-thickness<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-ink<span class="token punctuation">,</span> #1b1b1b<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2290,45 +2297,26 @@
                             <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-weight-semibold<span class="token punctuation">,</span> 600<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-size-200<span class="token punctuation">,</span> 16px<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">margin-inline-end</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
-                            <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-200<span class="token punctuation">,</span> 16px<span class="token punctuation">)</span>
-                                <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-150<span class="token punctuation">,</span> 12px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-200<span class="token punctuation">,</span> 16px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-150<span class="token punctuation">,</span> 12px<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token property">place-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
                             <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
                             <span class="token selector">&amp;:last-of-type</span> <span class="token punctuation">{</span>
                                 <span class="token property">margin-inline-end</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
                             <span class="token punctuation">}</span>
                             <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
-                                <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
-                                    <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                                <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>
-                                    <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> * -1
-                                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> * -1<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token punctuation">}</span>
                             <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
-                                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                    --nys-color-theme-weaker<span class="token punctuation">,</span>
-                                    #eff6fb
-                                <span class="token punctuation">)</span><span class="token punctuation">;</span>
-                                <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                    --nys-color-theme-weak<span class="token punctuation">,</span>
-                                    #cddde9
-                                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme-weaker<span class="token punctuation">,</span> #eff6fb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme-weak<span class="token punctuation">,</span> #cddde9<span class="token punctuation">)</span><span class="token punctuation">;</span>
                             <span class="token punctuation">}</span>
                             <span class="token selector">&amp;[aria-selected="true"]</span> <span class="token punctuation">{</span>
-                                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                    --nys-color-neutral-10<span class="token punctuation">,</span>
-                                    #f6f6f6
-                                <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-10<span class="token punctuation">,</span> #f6f6f6<span class="token punctuation">)</span><span class="token punctuation">;</span>
                                 <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme<span class="token punctuation">,</span> #154973<span class="token punctuation">)</span><span class="token punctuation">;</span>
                                 <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
-                                    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                        --nys-color-theme-weaker<span class="token punctuation">,</span>
-                                        #eff6fb
-                                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-                                    <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
-                                        --nys-color-theme-strong<span class="token punctuation">,</span>
-                                        #0e324f
-                                    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme-weaker<span class="token punctuation">,</span> #eff6fb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-theme-strong<span class="token punctuation">,</span> #0e324f<span class="token punctuation">)</span><span class="token punctuation">;</span>
                                 <span class="token punctuation">}</span>
                             <span class="token punctuation">}</span>
                         <span class="token punctuation">}</span>
@@ -2342,8 +2330,7 @@
                 <span class="token property">overscroll-behavior</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
                 <span class="token property">padding</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
                 <span class="token selector">&amp;:focus-visible</span> <span class="token punctuation">{</span>
-                    <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
-                        <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token punctuation">}</span>
                 <span class="token selector">&amp; [role="tabpanel"]</span> <span class="token punctuation">{</span>
                     <span class="token comment">/* customize per content */</span>
@@ -2352,26 +2339,6 @@
             <span class="token selector">&amp; [data-part="tabfooter"]</span> <span class="token punctuation">{</span>
                 <span class="token comment">/* customize per content */</span>
             <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment">/* Non-Tablist classes
-           Placed here, these take effect both inside and outside the Tablist */</span>
-        <span class="token selector">a:link:focus-visible</span> <span class="token punctuation">{</span>
-            <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span>
-                <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-2px<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token selector">.sr-only</span> <span class="token punctuation">{</span>
-            <span class="token property">border</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">clip</span><span class="token punctuation">:</span> <span class="token function">rect</span><span class="token punctuation">(</span>1px<span class="token punctuation">,</span> 1px<span class="token punctuation">,</span> 1px<span class="token punctuation">,</span> 1px<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">-webkit-clip-path</span><span class="token punctuation">:</span> <span class="token function">inset</span><span class="token punctuation">(</span>50%<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">clip-path</span><span class="token punctuation">:</span> <span class="token function">inset</span><span class="token punctuation">(</span>50%<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">height</span><span class="token punctuation">:</span> 1px <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">overflow</span><span class="token punctuation">:</span> hidden <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">margin</span><span class="token punctuation">:</span> -1px <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">padding</span><span class="token punctuation">:</span> 0 <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">position</span><span class="token punctuation">:</span> absolute <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">width</span><span class="token punctuation">:</span> 1px <span class="token important">!important</span><span class="token punctuation">;</span>
-            <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap <span class="token important">!important</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
@@ -2695,7 +2662,7 @@ document<span class="token punctuation">.</span><span class="token function">add
     <a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3AsOgJ0qBW2ZBGB9h8LxC37mmdQJKwOfLdAmwsOEDD5cY1%40thread.tacv2/conversations?groupId=e9810b17-e32f-499d-a5b0-192e4adcdce3&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" aria-label="NYS Digital Accessibility MS Teams channel">
         <div class="card__inner">
             <div class="card__media card__media--thin">
-                <img src="/assets/img/teams-channel.svg">
+                <img src="/assets/img/teams-channel.svg" aria-hidden="true">
             </div>
             <div class="card__content">
                 <div class="card__title">
@@ -2712,7 +2679,7 @@ document<span class="token punctuation">.</span><span class="token function">add
     <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues" aria-label="Report a bug on GitHub">
         <div class="card__inner">
             <div class="card__media card__media--thin">
-                <img src="/assets/img/report-bug.svg">
+                <img src="/assets/img/report-bug.svg" aria-hidden="true">
             </div>
             <div class="card__content">
                 <div class="card__title">

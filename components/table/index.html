@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-17T18:47:24.038Z -->
+    <!-- Latest Build: 2026-09-17T18:51:15.286Z -->
   </head>
   
   <body class="single-page page-table section-components">
@@ -487,12 +487,32 @@
   
     
     
-    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active" aria-expanded="true">
       <a class="section-nav__link" href="/components/table/" aria-current="page">
         Table
       </a>
 
       
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/table/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/table/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -703,23 +723,34 @@
 </section><br>
 <section>
     <h2 id="accessibility">Accessibility</h2>
+    <nys-table bordered="">
+        <table aria-labelledby="table-test-status">
+            <caption>
+                Table test status
+            </caption>
+            <tr>
+                <th>Total tests</th>
+                <th>Passes</th>
+                <th>Fails</th>
+                <th>To do</th>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>20</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </nys-table>
+<p></p><p>
+For comprehensive insight and guidance, please see
+<a href="./accessibility-tests/">Accessibility Checklists</a> and
+<a href="./accessibility-build/">Build Accessibly</a>.
+</p><p></p>
 <p>The <code>nys-table</code> component includes the following accessibility-focused features:</p>
 <ul>
-<li>
-<p>Proper use of <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements to ensure semantic structure.</p>
-</li>
-<li>
-<p>Support for keyboard navigation, allowing users to navigate through table rows and cells using the keyboard.</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
-          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
-          Additional accessibility test and build content is coming soon,
-          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-      </span>
-  </p>
-</li>
+<li>Proper use of <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements to ensure semantic structure.</li>
+<li>Support for keyboard navigation, allowing users to navigate through table rows and cells using the keyboard.</li>
 </ul>
 </section><br>
 <section>
@@ -1368,8 +1399,8 @@ Proposal</a>.
 <span class="token keyword">const</span> table <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'nys-table'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-column-sort' event</span>
 table<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'nys-column-sort'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> columnIndex<span class="token punctuation">,</span> columnLabel<span class="token punctuation">,</span> sortDirection <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Column </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnIndex<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> ("</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">") sorted: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sortDirection<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> columnIndex<span class="token punctuation">,</span> columnLabel<span class="token punctuation">,</span> sortDirection <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Column </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnIndex<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> ("</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>columnLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">") sorted: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>sortDirection<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>

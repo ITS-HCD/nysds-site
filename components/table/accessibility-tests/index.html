@@ -34,6 +34,10 @@
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
 
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/checkbox-native.css" rel="stylesheet">
+    
+
 
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
@@ -46,7 +50,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-17T18:47:24.038Z -->
+    <!-- Latest Build: 2026-09-17T18:51:15.286Z -->
   </head>
   
   <body class="single-page page-a11y-tests section-components">
@@ -487,12 +491,34 @@
   
     
     
-    <li class="section-nav__item">
+      
+        
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section" aria-expanded="true">
       <a class="section-nav__link" href="/components/table/">
         Table
       </a>
 
       
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item section-nav__item--active">
+              <a class="section-nav__link" href="/components/table/accessibility-tests/" aria-current="page">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/table/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -614,8 +640,8 @@
                     <th>To do</th>
                 </tr>
                 <tr>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>20</td>
+                    <td>20</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
@@ -678,16 +704,18 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 1 passes" aria-describedby="keyboard-desc-1">
-            <span id="keyboard-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I <kbd>k1</kbd></span>
+            <span id="keyboard-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I use the <kbd>tab</kbd> key to move focus into a sortable table from <em>before</em> the table</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome k1</li>
+                    <li>THEN I see focus is strongly visually indicated on the first sortable column header</li>
+                    
+                    <li>THEN I see a bi-directional graphic visually indicates that the column is sortable</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">keyboard test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -695,18 +723,83 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 2 passes" aria-describedby="keyboard-desc-2">
-            <span id="keyboard-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I <kbd>k2</kbd>, <kbd>k3</kbd></span>
+            <span id="keyboard-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on a sortable column header and I activate <kbd>spacebar</kbd> or <kbd>tab</kbd></span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome k1</li>
+                    <li>THEN I see selection is strongly visually indicated on the header</li>
                     
-                    <li>THEN outcome k2</li>
+                    <li>THEN I see the directional graphic points in the direction of sorting</li>
+                    
+                    <li>THEN I see the table rows are re-ordered correctly</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">keyboard test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 3 passes" aria-describedby="keyboard-desc-3">
+            <span id="keyboard-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on a sortable column header and I activate <kbd>tab</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see focus is strongly visually indicated on the next sortable column header</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 4 passes" aria-describedby="keyboard-desc-4">
+            <span id="keyboard-desc-4" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on the last sortable column header and I activate <kbd>tab</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li><mark>If any table cells contain focusable elements</mark></li>
+                    
+                    <li>THEN I see focus moves to the first focusable element in table content</li>
+                    
+                    <li><mark>If no table cells contain focusable elements</mark></li>
+                    
+                    <li>THEN I see focus moves to the first focusable element after the table in page content</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 4</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 5 passes" aria-describedby="keyboard-desc-5">
+            <span id="keyboard-desc-5" class="nysa11y checkbox__label" aria-level="4">WHEN I use the <kbd>tab</kbd> key to move focus into a sortable table from <em>after</em> the table</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li><mark>If any table cells contain focusable elements</mark></li>
+                    
+                    <li>THEN I see focus moves to the last focusable element in table content</li>
+                    
+                    <li><mark>If no table cells contain focusable elements</mark></li>
+                    
+                    <li>THEN I see focus moves to the last sortable column header</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 5</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -724,16 +817,18 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 1 passes" aria-describedby="mouse-desc-1">
-            <span id="mouse-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I m4</span>
+            <span id="mouse-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I use a mouse and hover over a sortable table column header</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome m4</li>
+                    <li>THEN I see a hover effect is strongly visually indicated on the column header</li>
+                    
+                    <li>THEN I see my cursor changes to a pointer</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mouse test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -741,18 +836,37 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 2 passes" aria-describedby="mouse-desc-2">
-            <span id="mouse-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I m5, m6</span>
+            <span id="mouse-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I click a sortable column header</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome m5</li>
+                    <li>THEN I see selection is strongly visually indicated on the header</li>
                     
-                    <li>THEN outcome m6</li>
+                    <li>THEN I see the directional graphic points in the direction of sorting</li>
+                    
+                    <li>THEN I see the table rows are re-ordered correctly</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mouse test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 3 passes" aria-describedby="mouse-desc-3">
+            <span id="mouse-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN I give focus to a sortable table header without activating it (mouse down, slide off, mouse up)</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the focus is strongly visually indicated on that header but the sortable state is <strong>not</strong> changed</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -778,16 +892,28 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 1 passes" aria-describedby="screenreader-desc-1">
-            <span id="screenreader-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I sr7</span>
+            <span id="screenreader-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I use a desktop screen reader and I enter the table from a position on the page before it, navigating by button, by form element, or by <kbd>tab</kbd></span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome sr7</li>
+                    <li>THEN I hear a title or description of purpose</li>
+                    
+                    <li>THEN I hear a usage hint that column headers with buttons are sortable</li>
+                    
+                    <li>THEN I hear I am within a table with explicit numbers of rows and columns</li>
+                    
+                    <li>THEN I hear my current row-column position</li>
+                    
+                    <li>THEN I hear a column header name and that it is a button</li>
+                    
+                    <li><mark>And if the table was already sorted by this column</mark></li>
+                    
+                    <li>THEN I hear the column is sorted and whether the direction is ascending or descending</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">screen reader test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -795,18 +921,163 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 2 passes" aria-describedby="screenreader-desc-2">
-            <span id="screenreader-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I sr8, sr9</span>
+            <span id="screenreader-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I enter the table from a position on the page before it, navigating by <kbd>arrow</kbd></span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome sr8</li>
+                    <li>THEN I hear a title or description of purpose</li>
                     
-                    <li>THEN outcome sr9</li>
+                    <li>THEN I hear a usage hint that column headers with buttons are sortable</li>
+                    
+                    <li>THEN I hear I am within a table with explicit numbers of rows and columns</li>
+                    
+                    <li><mark>And if I proceed by <kbd>arrow</kbd></mark></li>
+                    
+                    <li>THEN I hear a new row-column position</li>
+                    
+                    <li>THEN I hear a new column header name and that it is a button</li>
+                    
+                    <li><mark>And if the table was already sorted by this column</mark></li>
+                    
+                    <li>THEN I hear the column is sorted and whether the direction is ascending or descending</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">screen reader test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 3 passes" aria-describedby="screenreader-desc-3">
+            <span id="screenreader-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN my cursor or focus is on a column header and I activate either <kbd>enter</kbd>, or <kbd>spacebar</kbd>, or my screen reader's dedicated key shortcut for button activation</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li><mark>And if I am using Windows NVDA or JAWS</mark></li>
+                    
+                    <li>THEN I hear the column is sorted and whether the new direction is ascending or descending</li>
+                    
+                    <li><mark>And if I am using macOS VoiceOver and activate the key chord <kbd>ctrl</kbd> <kbd>alt</kbd> + <kbd>C</kbd></mark></li>
+                    
+                    <li>THEN I hear the column is sorted and whether the new direction is ascending or descending</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 4 passes" aria-describedby="screenreader-desc-4">
+            <span id="screenreader-desc-4" class="nysa11y checkbox__label" aria-level="4">WHEN my cursor or focus is on a column header and I navigate to an adjacent header with <kbd>arrow</kbd> or <kbd>tab</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear a new column position</li>
+                    
+                    <li>THEN I hear a new column header name and that it is a button</li>
+                    
+                    <li><mark>And if the table was already sorted by this column</mark></li>
+                    
+                    <li>THEN I hear the column is sorted and whether the direction is ascending or descending</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 4</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 5 passes" aria-describedby="screenreader-desc-5">
+            <span id="screenreader-desc-5" class="nysa11y checkbox__label" aria-level="4">WHEN my cursor or focus is within a table and I use the dedicated keyboard interface that my screen reader provides for navigating HTML tables</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li><mark>And if I navigate between columns</mark></li>
+                    
+                    <li>THEN I hear the new column name</li>
+                    
+                    <li>THEN I hear the new column number</li>
+                    
+                    <li>THEN I hear the new cell text content</li>
+                    
+                    <li><mark>And if I navigate between rows</mark></li>
+                    
+                    <li>THEN I hear the new row number</li>
+                    
+                    <li>THEN I hear the new cell text content</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 5</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 6 passes" aria-describedby="screenreader-desc-6">
+            <span id="screenreader-desc-6" class="nysa11y checkbox__label" aria-level="4">WHEN I enter the table from a position on the page after it, navigating backwards by button, by form element, or by <kbd>tab</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear the table has a title or description of purpose</li>
+                    
+                    <li>THEN I hear a usage hint that column headers with buttons are sortable</li>
+                    
+                    <li>THEN I hear I am within a table with explicit numbers of rows and columns</li>
+                    
+                    <li>THEN I hear my current row-column position</li>
+                    
+                    <li><mark>If there is a focusable element within the table body</mark></li>
+                    
+                    <li>THEN I hear the name of the focused element</li>
+                    
+                    <li><mark>And if there is no focusable element within the table body</mark></li>
+                    
+                    <li>THEN I hear the name of the last column header and that it is a button</li>
+                    
+                    <li><mark>And if the table was already sorted by this column</mark></li>
+                    
+                    <li>THEN I hear the column is sorted and whether the direction is ascending or descending</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 6</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 7 passes" aria-describedby="screenreader-desc-7">
+            <span id="screenreader-desc-7" class="nysa11y checkbox__label" aria-level="4">WHEN I enter the table from a position on the page after it, navigating backward by <kbd>arrow</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear I am within a table with explicit numbers of rows and columns</li>
+                    
+                    <li>THEN I hear my current row and column position</li>
+                    
+                    <li>THEN I hear a column header name</li>
+                    
+                    <li>THEN I hear the cell text content</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 7</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -828,16 +1099,22 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 1 passes" aria-describedby="screenreader-mobile-desc-1">
-            <span id="screenreader-mobile-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I srm10</span>
+            <span id="screenreader-mobile-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I swipe left to enter a table with a caption that includes a visually hidden usage hint</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome srm10</li>
+                    <li>THEN I hear the table has a title or description of purpose</li>
+                    
+                    <li>THEN I hear the usage hint</li>
+                    
+                    <li>THEN I hear I am within a table</li>
+                    
+                    <li>THEN I hear the number of rows and columns</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mobile screen reader test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -845,18 +1122,28 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 2 passes" aria-describedby="screenreader-mobile-desc-2">
-            <span id="screenreader-mobile-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I srm11, srm12</span>
+            <span id="screenreader-mobile-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I am on a table caption and I swipe right to focus on the first table column header</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome srm11</li>
+                    <li>THEN I hear the cell name or text content</li>
                     
-                    <li>THEN outcome srm12</li>
+                    <li>THEN I hear I am on a column header</li>
+                    
+                    <li>THEN I hear which row and column I am on</li>
+                    
+                    <li><mark>And if the column header content is a button</mark></li>
+                    
+                    <li>THEN I hear that I am on a button</li>
+                    
+                    <li><mark>And if the table was already sorted by this column</mark></li>
+                    
+                    <li>THEN I hear the column has a sort state of either ascending or descending</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mobile screen reader test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -877,35 +1164,22 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 1 passes" aria-describedby="voice-desc-1">
-            <span id="voice-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I v13</span>
+            <span id="voice-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I use a voice control system and I command, "Click <em>table column header label</em>"</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome v13</li>
+                    <li><mark>And if that <em>label</em> is recognized as unique, or identified via a multiple match workflow</mark></li>
+                    
+                    <li>THEN I see selection is strongly visually indicated on the header</li>
+                    
+                    <li>THEN I see the directional graphic points in the direction of sorting</li>
+                    
+                    <li>THEN I see the table rows are re-ordered correctly</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">voice test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
-                    </nys-badge>
-                </mark>
-            </div>
-        </label>
-        
-        <label>
-            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 2 passes" aria-describedby="voice-desc-2">
-            <span id="voice-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I v14, v15</span>
-            <div class="nysa11y checkbox__more">
-                <ul>
-                    
-                    <li>THEN outcome v14</li>
-                    
-                    <li>THEN outcome v15</li>
-                    
-                </ul>
-                <mark class="subhead">
-                    <span class="sr-only">voice test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -946,16 +1220,20 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when zoom test 1 passes" aria-describedby="zoom-desc-1">
-            <span id="zoom-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I z16</span>
+            <span id="zoom-desc-1" class="nysa11y checkbox__label" aria-level="4">GIVEN the browser is configured to test Text Resize; WHEN a table is in view</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome z16</li>
+                    <li>THEN I see all text adapts to the font size</li>
+                    
+                    <li>THEN I see all text is visible without clipping or truncation</li>
+                    
+                    <li>THEN I see no text overlaps other text, or overlaps any other user interface element</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">zoom test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -963,18 +1241,24 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when zoom test 2 passes" aria-describedby="zoom-desc-2">
-            <span id="zoom-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I z17, z18</span>
+            <span id="zoom-desc-2" class="nysa11y checkbox__label" aria-level="4">GIVEN the browser is configured to test Reflow; WHEN a table is in view</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome z17</li>
+                    <li>THEN I see there is no loss of information, meaning, or functionality</li>
                     
-                    <li>THEN outcome z18</li>
+                    <li>THEN I see when scrolling is required, it is primarily in one dimension (preferably vertical)</li>
+                    
+                    <li>THEN I see when scrolling is required in two dimensions, the table contains only <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html#content-that-meets-exceptions-for-reflow" target="_blank">content that meets exceptions for reflow</a></li>
+                    
+                    <li><mark>And understanding that while most data tables have an exception for reflow, this does <strong>not</strong> extend to non-excepted content adjacent to the table</mark></li>
+                    
+                    <li>THEN I see when scrolling of the table is required in either one or two dimensions, content above and below the table reflows independently</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">zoom test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -996,56 +1280,66 @@
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 1 is ensured" aria-describedby="blindness-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-1">Blind 1...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-1">Table cells are read one at a time and provide context for each cell</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.0 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships" target="_blank">
+                    1.3.1 A
                 </a>
             </div>
         </label>
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 2 is ensured" aria-describedby="blindness-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-2">Blind 2...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-2">Table cells are read in logical order</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.1 AA
-                </a>
-            </div>
-        </label>
-        
-        
-        <h3 id="cognition">cognition</h3>
-        
-        <label>
-                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when cognition requirement 1 is ensured" aria-describedby="cognition-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="cognition-desc-1">Cognition...</span>
-            <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.2 AA
-                </a>
-            </div>
-        </label>
-        
-        
-        <h3 id="color">color</h3>
-        
-        <label>
-                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color requirement 1 is ensured" aria-describedby="color-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="color-desc-1">Color 1...</span>
-            <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.3 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#meaningful-sequence" target="_blank">
+                    1.3.2 A
                 </a>
             </div>
         </label>
         
         <label>
-                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color requirement 2 is ensured" aria-describedby="color-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="color-desc-2">Color 2...</span>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 3 is ensured" aria-describedby="blindness-desc-3">
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-3">The table has a header, and it is associated with the correct table cells</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.4 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#headings-and-labels" target="_blank">
+                    2.4.6 AA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 4 is ensured" aria-describedby="blindness-desc-4">
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-4">Table elements have the appropriate name, role, and state</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#name-role-value" target="_blank">
+                    4.1.2 A
+                </a>
+            </div>
+        </label>
+        
+        
+        <h3 id="cognitive">cognitive</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when cognitive requirement 1 is ensured" aria-describedby="cognitive-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="cognitive-desc-1">Users&#39; adjustments to text spacing do not result in loss of content or functionality</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#text-spacing" target="_blank">
+                    1.4.12 AA
+                </a>
+            </div>
+        </label>
+        
+        
+        <h3 id="color-perception">color perception</h3>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color perception requirement 1 is ensured" aria-describedby="color perception-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="color perception-desc-1">Color is not the only method used to convey meaning in a table</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#use-of-color" target="_blank">
+                    1.4.1 A
                 </a>
             </div>
         </label>
@@ -1055,20 +1349,30 @@
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 1 is ensured" aria-describedby="low vision-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-1">LowVis 1...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-1">Table content meets color contrast requirements</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.5 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum" target="_blank">
+                    1.4.3 AA
                 </a>
             </div>
         </label>
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 2 is ensured" aria-describedby="low vision-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-2">LowVis 2...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-2">Table content is visible and functional when screen is magnified</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.6 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#reflow" target="_blank">
+                    1.4.10 AA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 3 is ensured" aria-describedby="low vision-desc-3">
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-3">Focus indicator is clear on interactive items in tables</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#focus-visible" target="_blank">
+                    2.4.7 AA
                 </a>
             </div>
         </label>
@@ -1078,20 +1382,20 @@
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 1 is ensured" aria-describedby="motor-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-1">Motor 1...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-1">Table elements can be navigated by keyboard without special cues</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.8 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#keyboard" target="_blank">
+                    2.1.1 A
                 </a>
             </div>
         </label>
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 2 is ensured" aria-describedby="motor-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-2">Motor 2...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-2">Table cells do not trap focus</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.9 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap" target="_blank">
+                    2.1.2 A
                 </a>
             </div>
         </label>
@@ -1104,7 +1408,7 @@
     <a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3AsOgJ0qBW2ZBGB9h8LxC37mmdQJKwOfLdAmwsOEDD5cY1%40thread.tacv2/conversations?groupId=e9810b17-e32f-499d-a5b0-192e4adcdce3&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" aria-label="NYS Digital Accessibility MS Teams channel">
         <div class="card__inner">
             <div class="card__media card__media--thin">
-                <img src="/assets/img/teams-channel.svg">
+                <img src="/assets/img/teams-channel.svg" aria-hidden="true">
             </div>
             <div class="card__content">
                 <div class="card__title">
@@ -1121,7 +1425,7 @@
     <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues" aria-label="Report a bug on GitHub">
         <div class="card__inner">
             <div class="card__media card__media--thin">
-                <img src="/assets/img/report-bug.svg">
+                <img src="/assets/img/report-bug.svg" aria-hidden="true">
             </div>
             <div class="card__content">
                 <div class="card__title">
