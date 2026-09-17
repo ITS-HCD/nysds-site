@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-11T15:34:54.516Z -->
+    <!-- Latest Build: 2026-09-17T18:47:24.038Z -->
   </head>
   
   <body class="single-page page-modal section-components">
@@ -359,12 +359,32 @@
   
     
     
-    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section section-nav__item--active" aria-expanded="true">
       <a class="section-nav__link" href="/components/modal/" aria-current="page">
         Modal
       </a>
 
       
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/modal/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/modal/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -643,32 +663,37 @@
 </section><br>
 <section>
     <h2 id="accessibility">Accessibility</h2>
+    <nys-table bordered="">
+        <table aria-labelledby="modal-test-status">
+            <caption>
+                Modal test status
+            </caption>
+            <tr>
+                <th>Total tests</th>
+                <th>Passes</th>
+                <th>Fails</th>
+                <th>To do</th>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>28</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </nys-table>
+<p></p><p>
+For comprehensive insight and guidance, please see
+<a href="./accessibility-tests/">Accessibility Checklists</a> and
+<a href="./accessibility-build/">Build Accessibly</a>.
+</p><p></p>
 <p>The <code>&lt;nys-modal&gt;</code> component includes the following accessibility-focused features:</p>
 <ul>
-<li>
-<p>Trap focus inside the modal so keyboard users can’t tab to background content.</p>
-</li>
-<li>
-<p>Return focus to the triggering element when the modal closes.</p>
-</li>
-<li>
-<p>Support keyboard interaction: allow &quot;esc&quot; key to close the modal.</p>
-</li>
-<li>
-<p>Announce the modal to screen readers using role=&quot;dialog&quot;.</p>
-</li>
-<li>
-<p>Prevent background scroll so users don’t lose context.</p>
-  <p class="p-adorned is nys-margin-t-150">
-      <mark>
-          <nys-badge label="Note" variant="strong" prefixIcon=""></nys-badge>
-      </mark>
-      <span class="nys-font-h6">
-          Additional accessibility test and build content is coming soon,
-          in a <a href="/components/accordion/accessibility-tests/">new format</a>.
-      </span>
-  </p>
-</li>
+<li>Trap focus inside the modal so keyboard users can’t tab to background content.</li>
+<li>Return focus to the triggering element when the modal closes.</li>
+<li>Support keyboard interaction: allow &quot;esc&quot; key to close the modal.</li>
+<li>Announce the modal to screen readers using role=&quot;dialog&quot;.</li>
+<li>Prevent background scroll so users don’t lose context.</li>
 </ul>
 </section><br>
 <section>
@@ -944,13 +969,13 @@ Proposal</a>.
 <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"nys-modal"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-open' event</span>
 modal<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-open"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Modal (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) is opened</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Modal (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) is opened</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Listen for the 'nys-close' event</span>
 modal<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"nys-close"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> reason <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Modal (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) is closed.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> reason <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Modal (</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">) is closed.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
       </div>
     </div>
@@ -975,7 +1000,7 @@ modal<span class="token punctuation">.</span><span class="token function">addEve
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/modal/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 11, 2026</p>
+    <p>Last updated: September 17, 2026</p>
   </div>
 
   </div>

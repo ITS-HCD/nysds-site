@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Build Accessibly</title>
+
+<meta name="description" content="How to code an accessible modal dialog.">
+<link rel="canonical" href="https://designsystem.ny.gov/components/modal/accessibility-build/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Build Accessibly">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/components/modal/accessibility-build/">
+<meta property="og:description" content="How to code an accessible modal dialog.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/button-native.css" rel="stylesheet">
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/dialog-native.css" rel="stylesheet">
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/divider-native.css" rel="stylesheet">
+    
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-09-17T18:47:24.038Z -->
+  </head>
+  
+  <body class="single-page page-a11y-build section-components">
+  <nys-skipnav></nys-skipnav>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class="site-header__item"><a href="/get-started" class="site-header__link" title="Get Started">Get Started</a></li>
+    <li class="site-header__item"><a href="/foundations" class="site-header__link" title="Foundations">Foundations</a></li>
+    <li class="site-header__item"><a href="/tokens" class="site-header__link" title="Token Reference">Tokens</a></li>
+    <li class="site-header__item site-header__item--active"><a href="/components" class="site-header__link" title="Components">Components</a></li>
+    <li class="site-header__item"><a href="/learn" class="site-header__link" title="NYS Design System Video Series">Learn</a></li>
+    <li class="site-header__item"><a href="/about" class="site-header__link" title="About the NYS Design System">About</a></li>
+    <li class="site-header__item"><a href="/about/updates" class="site-header__link" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Components
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="/assets/img/components/modal-header.svg" alt="Build Accessibly">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-2">
+    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
+  <button id="accordion-trigger-components" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-components">
+    <span class="accordion__label">Components</span>
+    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
+  </button>
+
+  <ul class="section-nav__list accordion__panel" id="accordion-panel-components" aria-labelledby="accordion-trigger-components" hidden="">
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/">
+        Web Components
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/accordion/">
+        Accordion
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/accordion/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/accordion/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/alert/">
+        Alert
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/avatar/">
+        Avatar
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/backtotop/">
+        Back To Top
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/badge/">
+        Badge
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/breadcrumbs/">
+        Breadcrumbs
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/breadcrumbs/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/button/">
+        Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/card/">
+        Card
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/checkbox/">
+        Checkbox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/combobox/">
+        Combobox
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/datepicker/">
+        Datepicker
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/divider/">
+        Divider
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/dropdownmenu/">
+        Dropdown Menu
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/fileinput/">
+        File Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/globalfooter/">
+        Global Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/globalheader/">
+        Global Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/icon/">
+        Icon
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/iconlist/">
+        Icon List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+        
+      
+    
+    <li class="section-nav__item section-nav__item--active-section" aria-expanded="true">
+      <a class="section-nav__link" href="/components/modal/">
+        Modal
+      </a>
+
+      
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/modal/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item section-nav__item--active">
+              <a class="section-nav__link" href="/components/modal/accessibility-build/" aria-current="page">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/pagination/">
+        Pagination
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/processlist/">
+        Process List
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/radiobutton/">
+        Radio Button
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/select/">
+        Select
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/skipnav/">
+        Skip Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/stepper/">
+        Stepper
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+      
+    
+      
+    
+    <li class="section-nav__item" aria-expanded="false">
+      <a class="section-nav__link" href="/components/tab/">
+        Tab
+      </a>
+
+      
+      
+        <ul class="section-nav__list" hidden="">
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-tests/">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/tab/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/table/">
+        Table
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/textarea/">
+        Text Area
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/textinput/">
+        Text Input
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/toggle/">
+        Toggle
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/tooltip/">
+        Tooltip
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/unav-footer/">
+        UNav Footer
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/unav-header/">
+        UNav Header
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/verticalnav/">
+        Vertical Navigation
+      </a>
+
+      
+      
+    </li>
+  
+    
+    
+    <li class="section-nav__item">
+      <a class="section-nav__link" href="/components/video/">
+        Video Player
+      </a>
+
+      
+      
+    </li>
+  
+
+
+  </ul>
+</nav>
+  </aside>
+  <div class="nys-desktop:nys-grid-col-fill">  
+    <article data-template="a11yBuild" data-pattern="modal">
+    <section id="overview">
+        <h1 id="build-an-accessible-modal-dialog">Build an Accessible Modal Dialog</h1>
+        <p>
+            Are you in the right place?
+            If you are constrained to a third-party component library, see the
+            <a href="../accessibility-tests/">Modal Accessibility Checklist</a> and ensure that it passes.
+            Otherwise, follow the guidance here to choose the best option for your project.
+        </p>
+    </section>
+    
+    <section class="recommended-solution">
+        <div class="card">
+            <mark>
+                <span class="sr-only">ideal solution</span>
+                <nys-badge label="Recommended" intent="success" prefixIcon=""></nys-badge>
+            </mark>
+            <h2 id="use-the-nysds-modal-web-component">Use the NYSDS Modal Web Component</h2>
+            <p>
+                The NYSDS Modal is a web component you can drop into your project and use right away.
+                For most teams, this is the simplest way to achieve an accessible component.
+                This means teams don’t need to manually implement accessibility or test for it.
+            </p>
+            <mark class="subhead stronger">What's already handled for you:</mark>
+            <ul class="built-in color-theme--faint">
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Keyboard Navigation</mark>
+                        <p class="nys-font-body-sm">Tab, Enter, Space, and Arrows work as intended</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Screen reader support</mark>
+                        <p class="nys-font-body-sm">Tested with NVDA, JAWS, and VoiceOver</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Focus management</mark>
+                        <p class="nys-font-body-sm">Focus stays where users expect it</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Voice control</mark>
+                        <p class="nys-font-body-sm">Supports Windows and macOS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">Zoom magnification</mark>
+                        <p class="nys-font-body-sm">Works correctly at 200% browser zoom</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="built-in__start">
+                        <nys-icon color="var(--nys-color-theme)" name="check_circle" size="24"></nys-icon>
+                    </div>
+                    <div class="built-in__end">
+                        <mark class="subhead strong">WCAG 2.2 AA conformant</mark>
+                        <p class="nys-font-body-sm">Meets New York State standards</p>
+                    </div>
+                </li>
+            </ul>
+            <nys-button href="../" label="View NYSDS Modal Component" fullWidth=""></nys-button>
+        </div>
+    </section>
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="alternative-solutions">
+        <h2 id="alternatives">Alternatives</h2>
+        <p>
+            <mark class="subhead strong">For projects not ready to adopt the Design System</mark>
+            Whether you seek to remediate an existing component or build one from scratch,
+            these reference implementations will ensure an accessible outcome.
+            For more details, <a href="#about-this-pattern">read about this pattern</a>.
+        </p>
+<div class="solution">
+    <div class="card">
+        <h3 id="configure-the-native-html-dialog-element">Configure the native HTML <code class="element">dialog</code> element</h3>
+        <p>
+            <mark class="subhead strong">When to use</mark>
+            If your team has source-level control over UI code,
+            wants to avoid error-prone recreation of semantics, z-index, backdrop, and focus management,
+            and has no hard requirements in excess of what native HTML provides,
+            then the <code class="element">dialog</code> element invoked as a modal is the number one recommendation.
+        </p>
+            <ins>
+        Rely on the required <a href="../accessibility-tests/">checklists</a>
+        to ensure accessibility is maintained during integration.
+    </ins>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner">
+<!-- This trigger button is configured (in the JavaScript file)
+     to activate a dialog that has the ID passed to `data-nysa11y-dialog` -->
+<button type="button" class="nysa11y button" data-component="button" data-html="native" data-nysa11y-dialog="#myModal">Show me places to go</button>
+
+<!-- This is the native HTML5 `dialog`.
+     It opens with modal behavior due to being invoked
+     with the native method `.showModal()` -->
+<dialog aria-labelledby="VNYS" class="nysa11y dialog" data-component="dialog" data-html="native" id="myModal">
+    <header>
+        <div class="heading">
+            <!-- This heading is the accessible name,
+                 first focused element, and visual and aural title
+                 of the dialog. Tested across operating systems,
+                 browsers, devices, and screen readers for
+                 maximum dependability. -->
+            <h1 autofocus="" tabindex="-1" id="VNYS">Visit New York State</h1>
+        </div>
+        <!-- In JavaScript, activation of `data-part="exit"`
+             is wired to the native `.close()` method -->
+        <button data-part="exit" data-component="button" data-html="native" class="nysa11y button ghost" type="button">Close</button>
+        <mark class="subhead">Expand your horizons by exploring ours!</mark>
+    </header>
+    <main aria-label="dialog content">
+        <p>
+            This is the main content region.
+            When the dialog opens do you perceive
+            <strong>focus</strong> strongly evident on the heading?
+        </p>
+        <div>
+            <nys-select label="Keyboard interaction test" width="md">
+                <span slot="description">
+                    Activate the <code class="element">nys-select</code> component to open it,
+                    but before making a selection dismiss it with the <kbd>Escape</kbd> key.
+                    Ensure this action affects only the <code class="element">nys-select</code>,
+                    and the dialog remains open.
+                    Once the <code class="element">nys-select</code> closes,
+                    activate <kbd>Escape</kbd> again.
+                    The dialog should then close.
+                </span>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>4,567,890</option>
+            </nys-select>
+        </div>
+        <hr class="nysa11y divider" data-component="divider" data-html="native">
+        <h2 aria-label="I love New York" id="i-new-york">I❤️New York</h2>
+        <p>
+            New York State is <a href="https://www.iloveny.com/things-to-do/history/" target="_blank">historic</a>.
+            It's untamed. It's iconic. But more importantly, it's anything you want it to be.
+            From the lights of <a href="https://www.iloveny.com/places-to-go/new-york-city/city-guide-new-york-city/" target="_blank">Times Square</a>
+            to the mists of <a href="https://www.iloveny.com/places-to-go/niagara/spotlight-buffalo-niagara-falls/" target="_blank">Niagara Falls</a>,
+            <a href="https://www.iloveny.com/places-to-go/adirondacks/city-guide-lake-placid/" target="_blank">Lake Placid's</a> Olympic legacy to
+            <a href="https://www.iloveny.com/places-to-go/central/spotlight-cooperstown/" target="_blank">Cooperstown's</a> baseball roots,
+            <a href="https://www.iloveny.com/places-to-go/capital-saratoga/albany-city-guide/" target="_blank">Albany's</a> 400-year history to
+            <a href="https://www.iloveny.com/places-to-go/chautauqua-allegheny/jamestown-spotlight/" target="_blank">Jamestown's</a> comedy treasures, the castles of the
+            <a href="https://www.iloveny.com/places-to-go/1000-islands/" target="_blank">Thousand Islands</a> to
+            <a href="https://www.iloveny.com/places-to-go/long-island/spotlight-long-island/" target="_blank">Long Island's</a>
+            <a href="https://www.iloveny.com/listing/gold-coast-mansions-of-long-island/14992/" target="_blank">Gold Coast mansions</a>, the
+            <a href="https://www.iloveny.com/places-to-go/hudson-valley/" target="_blank">Hudson Valley</a>'s inspiring landscapes to the
+            <a href="https://www.iloveny.com/places-to-go/catskills/" target="_blank">Catskills'</a> sweeping mountain views and stunning
+            <a href="https://www.iloveny.com/places-to-go/finger-lakes/" target="_blank">Finger Lakes</a> wine country—there's something for everyone.
+        </p>
+    </main>
+    <footer aria-label="dialog actions">
+        <button data-component="button" data-html="native" class="nysa11y button ghost" type="button" onClick="alert('Perhaps the Adirondacks will interest you?');">
+            <span class="button__accname">Not now</span>
+        </button>
+        <!-- In JavaScript, activation of `exitDialog()`
+             is wired to the native `.close()` method -->
+        <button data-component="button" data-html="native" class="nysa11y button" type="button" onClick="exitDialog();">
+            <span class="button__accname">Plan my trip</span>
+        </button>
+    </footer>
+</dialog>
+    </div>
+  </div>
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>HTML</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- This trigger button is configured (in the JavaScript file)
+     to activate a dialog that has the ID passed to `data-nysa11y-dialog` --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y button<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-nysa11y-dialog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#myModal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Show me places to go<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- This is the native HTML5 `dialog`.
+     It opens with modal behavior due to being invoked
+     with the native method `.showModal()` --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>VNYS<span class="token punctuation">"</span></span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y dialog<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span>
+        <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>myModal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>heading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token comment">&lt;!-- This heading is the accessible name,
+                 first focused element, and visual and aural title
+                 of the dialog. Tested across operating systems,
+                 browsers, devices, and screen readers for
+                 maximum dependability. --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">autofocus</span> <span class="token attr-name">tabindex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>VNYS<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Visit New York State<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- In JavaScript, activation of `data-part="exit"`
+             is wired to the native `.close()` method --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-part</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>exit<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span>
+                <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y button ghost<span class="token punctuation">"</span></span>
+                <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Close<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mark</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>subhead<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Expand your horizons by exploring ours!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mark</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dialog content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+            This is the main content region.
+            When the dialog opens do you perceive
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>focus<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span> strongly evident on the heading?
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Keyboard interaction test<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>md<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    Activate the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>nys-select<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span> component to open it,
+                    but before making a selection dismiss it with the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Escape<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span> key.
+                    Ensure this action affects only the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>nys-select<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>,
+                    and the dialog remains open.
+                    Once the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>element<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>nys-select<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span> closes,
+                    activate <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>kbd</span><span class="token punctuation">></span></span>Escape<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>kbd</span><span class="token punctuation">></span></span> again.
+                    The dialog should then close.
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>One<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>Two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>Three<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">></span></span>4,567,890<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-select</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y divider<span class="token punctuation">"</span></span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>divider<span class="token punctuation">"</span></span> <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>I love New York<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>I❤️New York<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+            New York State is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/things-to-do/history/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>historic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>.
+            It's untamed. It's iconic. But more importantly, it's anything you want it to be.
+            From the lights of <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/new-york-city/city-guide-new-york-city/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Times Square<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+            to the mists of <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/niagara/spotlight-buffalo-niagara-falls/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Niagara Falls<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>,
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/adirondacks/city-guide-lake-placid/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lake Placid's<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> Olympic legacy to
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/central/spotlight-cooperstown/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Cooperstown's<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> baseball roots,
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/capital-saratoga/albany-city-guide/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Albany's<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 400-year history to
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/chautauqua-allegheny/jamestown-spotlight/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Jamestown's<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> comedy treasures, the castles of the
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/1000-islands/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Thousand Islands<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> to
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/long-island/spotlight-long-island/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Long Island's<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/listing/gold-coast-mansions-of-long-island/14992/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Gold Coast mansions<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>, the
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/hudson-valley/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hudson Valley<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>'s inspiring landscapes to the
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/catskills/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Catskills'<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> sweeping mountain views and stunning
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.iloveny.com/places-to-go/finger-lakes/<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Finger Lakes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> wine country—there's something for everyone.
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dialog actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span>
+                <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y button ghost<span class="token punctuation">"</span></span>
+                <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+                <span class="token special-attr"><span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Perhaps the Adirondacks will interest you?'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button__accname<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Not now<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!-- In JavaScript, activation of `exitDialog()`
+             is wired to the native `.close()` method --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span>
+                <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y button<span class="token punctuation">"</span></span>
+                <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+                <span class="token special-attr"><span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">exitDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button__accname<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Plan my trip<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>CSS</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-css"><code class="language-css"><span class="token comment">/**
+ * NYSA11y Dialog (native modal)
+ * Path: /assets/nysa11y/dialog-native.css
+ * Depends on /assets/nysa11y/dialog-native.js
+ */</span>
+<span class="token atrule"><span class="token rule">@layer</span> nysa11y</span> <span class="token punctuation">{</span>
+    <span class="token selector">html:has(dialog.nysa11y[open])</span> <span class="token punctuation">{</span>
+        <span class="token comment">/* prevent `body` scrolling */</span>
+        <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+        <span class="token property">scrollbar-gutter</span><span class="token punctuation">:</span> stable<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span> <span class="token comment">/* Set the 1.0rem baseline */</span>
+        <span class="token selector">dialog.nysa11y.dialog[data-component="dialog"][data-html="native"]</span> <span class="token punctuation">{</span>
+            <span class="token property">--nysa11y-dialog-min-usable-height</span><span class="token punctuation">:</span> 4.5rem<span class="token punctuation">;</span>
+            <span class="token selector">*,
+            *:before,
+            *:after</span> <span class="token punctuation">{</span>
+                <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>
+                --nys-font-family-sans<span class="token punctuation">,</span>
+                <span class="token string">"Proxima Nova"</span><span class="token punctuation">,</span>
+                -apple-system<span class="token punctuation">,</span>
+                <span class="token string">"BlinkMacSystemFont"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI"</span><span class="token punctuation">,</span>
+                <span class="token string">"Roboto"</span><span class="token punctuation">,</span>
+                <span class="token string">"Helvetica"</span><span class="token punctuation">,</span>
+                <span class="token string">"Arial"</span><span class="token punctuation">,</span>
+                sans-serif<span class="token punctuation">,</span>
+                <span class="token string">"Apple Color Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Emoji"</span><span class="token punctuation">,</span>
+                <span class="token string">"Segoe UI Symbol"</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-radius-lg<span class="token punctuation">,</span> 0.5rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span>
+                <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-neutral-200<span class="token punctuation">,</span> #bec0c1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                1px solid<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-text<span class="token punctuation">,</span> #1b1b1b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+            <span class="token property">min-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-dialog-min-usable-height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
+            <span class="token property">overscroll-behavior</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
+            <span class="token property">padding</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-dialog-width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token selector">&amp;[open]</span> <span class="token punctuation">{</span>
+                <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+                <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+                <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-300<span class="token punctuation">,</span> 1.5rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp;::backdrop</span> <span class="token punctuation">{</span>
+                <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-black-transparent-700<span class="token punctuation">,</span> <span class="token function">rgba</span><span class="token punctuation">(</span>27<span class="token punctuation">,</span> 27<span class="token punctuation">,</span> 27<span class="token punctuation">,</span> 0.7<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
+                <span class="token property">overscroll-behavior</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp;:has(main:not(:empty))</span> <span class="token punctuation">{</span>
+                <span class="token property">min-height</span><span class="token punctuation">:</span> 18rem<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp; header</span> <span class="token punctuation">{</span>
+                <span class="token property">align-items</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
+                <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+                <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-100<span class="token punctuation">,</span> 0.5rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">grid-template-areas</span><span class="token punctuation">:</span>
+                    <span class="token string">"title close"</span>
+                    <span class="token string">"subtitle subtitle"</span><span class="token punctuation">;</span>
+                <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr auto<span class="token punctuation">;</span>
+                <span class="token property">grid-template-rows</span><span class="token punctuation">:</span> auto auto<span class="token punctuation">;</span>
+                <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+                <span class="token property">line-height</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+                <span class="token selector">&amp; .heading</span> <span class="token punctuation">{</span>
+                    <span class="token property">grid-area</span><span class="token punctuation">:</span> title<span class="token punctuation">;</span>
+                    <span class="token selector">&amp; h1</span> <span class="token punctuation">{</span>
+                        <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-radius-lg<span class="token punctuation">,</span> 0.5rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
+                        <span class="token property">font-size</span><span class="token punctuation">:</span> 1.5rem <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token comment">/* defensive */</span>
+                        <span class="token property">font-weight</span><span class="token punctuation">:</span> 700 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token comment">/* defensive */</span>
+                        <span class="token property">line-height</span><span class="token punctuation">:</span> inherit <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token comment">/* defensive */</span>
+                        <span class="token property">margin-block</span><span class="token punctuation">:</span> 0.5rem 0 <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token comment">/* defensive */</span>
+                        <span class="token selector">&amp;:focus</span> <span class="token punctuation">{</span>
+                            <span class="token property">outline</span><span class="token punctuation">:</span> solid <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 2px<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-focus<span class="token punctuation">,</span> #004dd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token property">outline-offset</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-border-width-md<span class="token punctuation">,</span> 6px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">/* Modification of the `ghost` button style
+                   to better fit this usage */</span>
+                <span class="token selector">&amp; [data-part="exit"]</span> <span class="token punctuation">{</span>
+                    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid transparent<span class="token punctuation">;</span>
+                    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+                    <span class="token property">font-size</span><span class="token punctuation">:</span> 0.75rem<span class="token punctuation">;</span>
+                    <span class="token property">gap</span><span class="token punctuation">:</span> 0.25rem<span class="token punctuation">;</span>
+                    <span class="token property">grid-area</span><span class="token punctuation">:</span> close<span class="token punctuation">;</span>
+                    <span class="token property">min-height</span><span class="token punctuation">:</span> 2.5rem<span class="token punctuation">;</span>
+                    <span class="token property">padding-block</span><span class="token punctuation">:</span> 0.65rem<span class="token punctuation">;</span>
+                    <span class="token property">padding-inline</span><span class="token punctuation">:</span> 0.75rem<span class="token punctuation">;</span>
+                    <span class="token selector">&amp;::after</span> <span class="token punctuation">{</span>
+                        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"\2715"</span> / <span class="token string">""</span><span class="token punctuation">;</span>
+                        <span class="token property">font-size</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+                        <span class="token property">line-height</span><span class="token punctuation">:</span> 0.75<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+                        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-black-transparent-100<span class="token punctuation">,</span> #0000001a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token selector">&amp;:active</span> <span class="token punctuation">{</span>
+                        <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-black-transparent-200<span class="token punctuation">,</span> #00000033<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">/* `mark` communicates that text is "highlighted,"
+                    to set it off from body text */</span>
+                <span class="token selector">&amp; mark</span> <span class="token punctuation">{</span>
+                    <span class="token property">background-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+                    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-size-lg<span class="token punctuation">,</span> 1.125rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-weight-semibold<span class="token punctuation">,</span> 600<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token property">grid-area</span><span class="token punctuation">:</span> subtitle<span class="token punctuation">;</span>
+                    <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-body-lg<span class="token punctuation">,</span> 1.75rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp; main</span> <span class="token punctuation">{</span>
+                <span class="token property">flex-grow</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+                <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+                <span class="token selector">&amp;:not(:empty)</span> <span class="token punctuation">{</span>
+                    <span class="token property">min-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-dialog-min-usable-height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">/* better accommodate focus ring of side-aligned focusable elements */</span>
+                <span class="token property">padding</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token selector">&amp; footer</span> <span class="token punctuation">{</span>
+                <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+                <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+                <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-250<span class="token punctuation">,</span> 1.25rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token property">justify-content</span><span class="token punctuation">:</span> end<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 479px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+            <span class="token selector">dialog.nysa11y.dialog[data-component="dialog"][data-html="native"]</span> <span class="token punctuation">{</span>
+                <span class="token property">--nysa11y-dialog-width</span><span class="token punctuation">:</span> 90vw<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 480px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+            <span class="token selector">dialog.nysa11y.dialog[data-component="dialog"][data-html="native"]</span> <span class="token punctuation">{</span>
+                <span class="token property">--nysa11y-dialog-width</span><span class="token punctuation">:</span> 85vw<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+            <span class="token selector">dialog.nysa11y.dialog[data-component="dialog"][data-html="native"]</span> <span class="token punctuation">{</span>
+                <span class="token property">--nysa11y-dialog-width</span><span class="token punctuation">:</span> 80vw<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1024px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+            <span class="token selector">dialog.nysa11y.dialog[data-component="dialog"][data-html="native"]</span> <span class="token punctuation">{</span>
+                <span class="token property">--nysa11y-dialog-width</span><span class="token punctuation">:</span> 75vw<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1280px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token selector">body:has(.nysa11y)</span> <span class="token punctuation">{</span>
+            <span class="token selector">dialog.nysa11y.dialog[data-component="dialog"][data-html="native"]</span> <span class="token punctuation">{</span>
+                <span class="token property">--nysa11y-dialog-width</span><span class="token punctuation">:</span> 70vw<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+
+    
+    
+    
+    
+    
+    
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>JavaScript</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">/**
+ * NYSA11y Dialog (native invocation)
+ * Path: /assets/nysa11y/dialog-native.js
+ * Depends on /assets/nysa11y/dialog-native.css
+ */</span>
+<span class="token keyword">const</span> nysa11y <span class="token operator">=</span> window<span class="token punctuation">.</span>nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Dialog</span> <span class="token punctuation">{</span>
+  #selectorRoot <span class="token operator">=</span> <span class="token string">'[data-component="dialog"].nysa11y'</span><span class="token punctuation">;</span>
+  #selectorTrigger <span class="token operator">=</span> <span class="token string">"[data-nysa11y-dialog]"</span><span class="token punctuation">;</span>
+  #selectorExit <span class="token operator">=</span> <span class="token string">'[data-part="exit"]'</span><span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>container <span class="token operator">=</span> options<span class="token punctuation">.</span>container <span class="token operator">||</span> document<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> triggers <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorTrigger<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> dialogs <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>triggers<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>dialogs<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    triggers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">trigger</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      trigger<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleTriggerClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      trigger<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleTriggerClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dialogs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dialogEl</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> exits <span class="token operator">=</span> dialogEl<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorExit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      exits<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">exitBtn</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        exitBtn<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleExitClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        exitBtn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleExitClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">enter</span><span class="token punctuation">(</span><span class="token parameter">dialogEl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl <span class="token operator">||</span> <span class="token keyword">typeof</span> dialogEl<span class="token punctuation">.</span>showModal <span class="token operator">!==</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dialogEl<span class="token punctuation">.</span>open<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token comment">/* invoke the native method to open `dialog` with modality */</span>
+    dialogEl<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">exit</span><span class="token punctuation">(</span><span class="token parameter">dialogEl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl <span class="token operator">||</span> <span class="token keyword">typeof</span> dialogEl<span class="token punctuation">.</span>close <span class="token operator">!==</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl<span class="token punctuation">.</span>open<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token comment">/* invoke the native method to close `dialog` */</span>
+    dialogEl<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function-variable function">#handleTriggerClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> trigger <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> selector <span class="token operator">=</span> trigger<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"data-nysa11y-dialog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>selector<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> dialogEl <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Error: The "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>selector<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" dialog is not found.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">enter</span><span class="token punctuation">(</span>dialogEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">#handleExitClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> exitBtn <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> dialogEl <span class="token operator">=</span> exitBtn<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span>dialogEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+nysa11y<span class="token punctuation">.</span>Dialog <span class="token operator">=</span> Dialog<span class="token punctuation">;</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">exitDialog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> openDialog <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"dialog[open]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>openDialog <span class="token operator">&amp;&amp;</span> nysa11y<span class="token punctuation">.</span>dialogInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nysa11y<span class="token punctuation">.</span>dialogInstance<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span>openDialog<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  nysa11y<span class="token punctuation">.</span>dialogInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">nysa11y<span class="token punctuation">.</span>Dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+    
+</div>
+
+</section>
+
+    <hr class="nysa11y divider" data-component="divider" data-html="native">
+
+    <section class="about-this-pattern">
+        <h2 id="about-this-pattern">About this pattern</h2>
+<p>
+    The dialog experience is a dramatic re-framing of users' context and focus, second only to a full page navigation.
+    In fact, native operating system dialogs and early World Wide Web browser dialogs were actual new system or application windows displayed above the window of origination.
+</p>
+<p>
+    Subsequent to the late 1990s,
+    most web browser dialogs were faked to visually appear like independent windows without actually being so.
+    The ensuing years of inconsistency and poor accessibility led many user interface experts to
+    <a href="https://www.nngroup.com/articles/modal-nonmodal-dialog/#toc-disadvantages-of-modal-dialogs-1" target="_blank">recommend caution</a>
+    in the use of so-called dialogs.
+    Even today, designers may reasonably consider
+    <a href="https://modalzmodalzmodalz.com" target="_blank">different forms</a>
+    of disclosure and navigation as alternative paradigms.
+</p>
+<p>
+    Decades of creative experimentation led to the addition of a
+    <a href="https://html.spec.whatwg.org/dev/interactive-elements.html#the-dialog-element" target="_blank"><code class="element">dialog</code></a>
+    element to the official HTML5 specification.
+    This native element, which reached <a href="https://caniuse.com/?search=dialog" target="_blank">baseline browser support</a>
+    in 2022, allows authors leeway to craft a range of user experiences.
+    The HTML5 <code class="element">dialog</code> is the basis of the implementation shown here, and is the number one recommendation for any custom dialog development today.
+    Though it is easier than ever to produce an accessible dialog, knowledge and care are still required to ensure this outcome.
+    Let's deepen our understanding.
+</p>
+<h3 id="high-level-presentation">High level presentation</h3>
+<p>
+    A dialog is a real or apparent window that presents separately from the primary user interface surface.
+</p>
+<ul>
+  <li>Visually, dialogs appear in the foreground "above" the main screen</li>
+  <li>Aurally, dialogs are perceived as discrete, self-contained areas</li>
+  <li>A dialog may be automatically opened and closed by an operating system or application, or manually activated by the user; manual control is preferred</li>
+  <li>In the majority of cases, a user will interact with dialog content in order to effect an outcome that closes the dialog and moves the user to the primary surface</li>
+  <li>There is no set size for dialogs</li>
+  <li>It is possible, though not recommended, for dialogs to completely fill a visual viewport by default; designers should account for cases in which this is actually the best user experience, for example in screen magnification and mobile portrait orientation scenarios</li>
+  <li>More commonly, dialogs are presented visually as relatively small boxes centrally located on screen</li>
+</ul>
+<h3 id="what-is-a-modal">What is a "modal"?</h3>
+<p>A "modal" is an intensification of the dialog pattern.</p>
+<ul>
+  <li>Typically the primary content "below" a modal dialog is visually dimmed to varying extents; with modals, non-dialog content should be literally inert, unreachable, and non-interactive</li>
+  <li>Interaction with other application or operating system interfaces is substantially blocked, with focus held within the dialog, until required actions are complete</li>
+  <li>
+      The <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement#instance_methods" target="_blank">HTMLDialogElement Web API</a>
+      allows authors to determine modality merely by the choice of native instance method to open a dialog:
+      <ul>
+          <li><code>.show()</code> opens a <strong>non-modal</strong> dialog</li>
+          <li><code>.showModal()</code> opens a <strong>modal</strong> dialog</li>
+      </ul>
+  </li>
+</ul>
+<h3 id="responsiveness">Responsiveness</h3>
+<p>
+    Like any content, a dialog should gracefully adapt to orientation change, mobile viewports, text size increase, and screen magnification.
+Design, test, and build for scenarios in which a dialog may fill an entire screen, may require scrollbars, and may accommodate a 200% font size increase.
+</p>
+<h3 id="focus-movement">Focus movement</h3>
+<p>
+    Whether it is visible or not, some page element always has programmatic focus, even if it happens to be the <code class="element">body</code>, which typically has focus on page load.
+    Mouse users take note: generally any element clicked by a mouse gains focus at that moment.
+</p>
+<p>
+    A proper modal dialog <strong>must</strong> pull focus into itself upon opening.
+    It is essential that this happen, and likewise that while the dialog remains open focus be almost entirely trapped within.
+    As described in the corresponding <a href="../accessibility-tests/">Modal Accessibility Checklist</a>, in the majority of cases <code>tabindex</code> will remain inside the dialog, wrapping between the top and bottom of the dialog's user interface.
+</p>
+<p>
+    Let's consider a scenario in which a user activates a button in main content to open a modal dialog.
+    The button interaction (whether by mouse, keyboard, voice command, or double-tap) sets focus on the button for a short period of time (miliseconds), until the dialog user interface is ready to gain focus.
+    This button is the last element in main content to have focus and is the interaction trigger that spawns the dialog.
+    Consequently when the dialog is closed, focus <strong>must</strong> return whence it came back to this trigger button, provided the main user interface has not changed so dramatically that the button is no longer present.
+    Failure to return focus from a dialog to its trigger is a severe and unfortunately common issue.
+</p>
+<p>
+    Usefully, authors may choose exactly <a href="https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html" target="_blank">where focus lands</a> in a new dialog.
+    While the various considerations are beyond the scope of this guide
+    (see also the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboardinteraction" target="_blank">Keyboard Interaction &rarr; Note</a> aside),
+    one of the most effective techniques is to use the placement of focus to ensure the dialog's accessible name is immediately discovered.
+</p>
+<h3 id="an-accessible-name">An accessible name</h3>
+<p>
+    A dialog <strong>must</strong> identify itself clearly to all users upon opening.
+    The best accessibility is one that works for everyone, preferably relying on the in-built capabilities of the web platform.
+    A single label, title, or heading can serve all users equitably with minimal effort.
+    In our example, a single <code class="element">H1</code> element is the visual, aural, and semantic label for the dialog by virtue of element choice, DOM placement, and attribute settings.
+    Across devices it consistently demands first focus, without the need for explicit JavaScript <code>.focus()</code>.
+    In a browser's accessibility tree, the text content of this <code class="element">H1</code> is literally the
+    <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/" target="_blank">accessible name</a> of the dialog.
+</p>
+
+
+
+
+
+<div class="code-preview-container">
+
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Dialog heading</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-dialog-heading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>my-dialog-heading<span class="token punctuation">"</span></span> <span class="token attr-name">tabindex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">autofocus</span><span class="token punctuation">></span></span>My Dialog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<h3 id="traverse-and-close">Traverse and close</h3>
+<p>
+    Once inside a modal dialog, all content structure and interaction rules apply the same as on the primary surface; they are just contained within a (usually) smaller space.
+    The key difference is in the conventions to uphold for dialog dismissal:
+</p>
+<ul>
+  <li>
+      Activation of the <kbd>Escape</kbd> key <strong>must</strong> close the dialog, <em>except</em> while the user interacts with a child element that has its own response to <kbd>Escape</kbd>,
+      for example, a native HTML <code class="element">select</code>.
+      However, not every user has access to an <kbd>Escape</kbd> key.
+  </li>
+  <li>
+      The BBC Accessibility program founders
+      <a href="https://a11yquest.com/pro/guides/patterns/modal-dialog/#accessible-controls" target="_blank">advise</a>:<br>
+      <q><em>All modal dialogs <strong>must</strong> have a visible, accessible control within the dialog content, allowing the user to close the dialog;
+          for example, a button labeled <em>Close</em> or a submit button for a dialog with a form.
+          Do not assume that the user can press an <kbd>Escape</kbd> key or click outside the content area, for example.</em></q>
+  </li>
+</ul>
+<h3 id="best-quality-references">Best quality references</h3>
+<p>
+    This document describes and presents nearly the simplest possible modal dialog.
+    More is possible and may be reasonably demanded by your particular set of users.
+    When building upon our solid foundation, these resources are the best available:
+</p>
+<ul>
+    <li>
+        <a href="https://a11yquest.com/pro/guides/patterns/modal-dialog/" target="_blank">Modal Dialog</a>
+        from A11y Quest (ex-BBC)
+    </li>
+    <li>
+        <a href="https://www.atomica11y.com/accessible-web/dialog-modal/" target="_blank">Dialog Modal HTML</a>
+        and
+        <a href="https://www.atomica11y.com/accessible-design/dialog-modal/" target="_blank">Dialog Modal Design</a>
+        from Atomic Accessibility
+    </li>
+    <li>
+        <a href="https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html" target="_blank">Where to Put Focus When Opening a Modal Dialog</a>
+        from <a href="https://adrianroselli.com/bio" target="_blank">Adrian Roselli</a>
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" target="_blank">MDN HTML <code>dialog</code> element</a>
+        from the Mozilla Developer Network
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement" target="_blank">MDN Web APIs &rarr; HTMLDialogElement</a>
+        from the Mozilla Developer Network
+    </li>
+    <li>
+        <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank">Dialog (Modal) Pattern</a>
+        from the W3C ARIA Authoring Practices Guide
+    </li>
+    <li>
+        <a href="https://html.spec.whatwg.org/dev/interactive-elements.html#the-dialog-element" target="_blank">The dialog element</a>
+        from HTML: The Living Standard
+    </li>
+</ul>
+
+</section>
+
+    <section class="contact-points">
+    <a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3AsOgJ0qBW2ZBGB9h8LxC37mmdQJKwOfLdAmwsOEDD5cY1%40thread.tacv2/conversations?groupId=e9810b17-e32f-499d-a5b0-192e4adcdce3&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" aria-label="NYS Digital Accessibility MS Teams channel">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/teams-channel.svg">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    NYS Digital Accessibility MS Teams channel
+                </div>
+                <div class="card__desc">
+                    Have a quick question or need immediate guidance? Jump into our Microsoft Teams channel to chat with the team in real-time.
+                    <p></p>
+                    <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues" aria-label="Report a bug on GitHub">
+        <div class="card__inner">
+            <div class="card__media card__media--thin">
+                <img src="/assets/img/report-bug.svg">
+            </div>
+            <div class="card__content">
+                <div class="card__title">
+                    Report a bug on GitHub
+                </div>
+                <div class="card__desc">
+                    Spotted an issue or a visual glitch? Open a GitHub ticket with a clear description and reproduction steps so we can squash it.
+                    <p></p>
+                    <nys-badge label="Requires a GitHub account"></nys-badge>
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+</article>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/modal/a11y-build.njk">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: September 17, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all">
+  <p><strong>On this page</strong></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">Figma Library <nys-icon name="open_in_new"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+  
+    <script src="https://designsystem.ny.gov/assets/nysa11y/dialog-native.js"></script>
+  
+
+
+  
+  </body>
+</html>

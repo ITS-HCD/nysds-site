@@ -34,6 +34,10 @@
 <link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
 
 
+    
+    <link href="https://designsystem.ny.gov/assets/nysa11y/checkbox-native.css" rel="stylesheet">
+    
+
 
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
@@ -46,7 +50,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-11T15:34:54.516Z -->
+    <!-- Latest Build: 2026-09-17T18:47:24.038Z -->
   </head>
   
   <body class="single-page page-a11y-tests section-components">
@@ -359,12 +363,34 @@
   
     
     
-    <li class="section-nav__item">
+      
+        
+      
+    
+      
+    
+    <li class="section-nav__item section-nav__item--active-section" aria-expanded="true">
       <a class="section-nav__link" href="/components/modal/">
         Modal
       </a>
 
       
+      
+        <ul class="section-nav__list">
+          
+            <li class="section-nav__item section-nav__item--active">
+              <a class="section-nav__link" href="/components/modal/accessibility-tests/" aria-current="page">
+                Accessibility Checklist
+              </a>
+            </li>
+          
+            <li class="section-nav__item">
+              <a class="section-nav__link" href="/components/modal/accessibility-build/">
+                Build Accessibly
+              </a>
+            </li>
+          
+        </ul>
       
     </li>
   
@@ -594,8 +620,8 @@
                     <th>To do</th>
                 </tr>
                 <tr>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>28</td>
+                    <td>28</td>
                     <td>0</td>
                     <td>0</td>
                 </tr>
@@ -658,16 +684,24 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 1 passes" aria-describedby="keyboard-desc-1">
-            <span id="keyboard-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I <kbd>k1</kbd></span>
+            <span id="keyboard-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I use the <kbd>tab</kbd> key to move focus to a button programmed to launch a dialog, and use <kbd>spacebar</kbd> or <kbd>enter</kbd> key to activate the button</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome k1</li>
+                    <li>THEN I see a dialog opens</li>
+                    
+                    <li>THEN I see focus moves to a <em>landing point</em> either on the boundary of the dialog, or its heading, or a close-X button, or else the first focusable element in dialog content</li>
+                    
+                    <li>THEN I see the page content behind the dialog appears dimmed</li>
+                    
+                    <li>THEN I see the dialog has a heading to indicate its purpose</li>
+                    
+                    <li>THEN I see there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">keyboard test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -675,18 +709,104 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 2 passes" aria-describedby="keyboard-desc-2">
-            <span id="keyboard-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I <kbd>k2</kbd>, <kbd>k3</kbd></span>
+            <span id="keyboard-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on the dialog landing point and I repeatedly activate <kbd>tab</kbd></span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome k1</li>
+                    <li>THEN I see focus descends along the logical tabindex of interactive elements within the dialog</li>
                     
-                    <li>THEN outcome k2</li>
+                    <li><mark>And if I <kbd>tab</kbd> past the last interactive element within the dialog</mark></li>
+                    
+                    <li>THEN I see focus <em>either</em> returns to the first interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the first interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">keyboard test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 3 passes" aria-describedby="keyboard-desc-3">
+            <span id="keyboard-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on the dialog landing point and I repeatedly activate <kbd>shift</kbd> + <kbd>tab</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see focus ascends along the logical tabindex of interactive elements within the dialog</li>
+                    
+                    <li><mark>And if I <kbd>shift</kbd> + <kbd>tab</kbd> past the first interactive element within the dialog</mark></li>
+                    
+                    <li>THEN I see focus <em>either</em> returns to the last interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the last interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 4 passes" aria-describedby="keyboard-desc-4">
+            <span id="keyboard-desc-4" class="nysa11y checkbox__label" aria-level="4">GIVEN the dialog contains an HTML <code class="element">select</code> or any UI element that responds to the <kbd>escape</kbd> key; WHEN I <kbd>tab</kbd> to the element, open it with <kbd>spacebar</kbd> or <kbd>enter</kbd>, and activate <kbd>escape</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the UI component closes</li>
+                    
+                    <li>THEN I see focus remains on the UI component</li>
+                    
+                    <li>THEN I see the dialog remains and does <strong>not</strong> close</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 4</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 5 passes" aria-describedby="keyboard-desc-5">
+            <span id="keyboard-desc-5" class="nysa11y checkbox__label" aria-level="4">WHEN focus is within the dialog but <strong>not</strong> within an interactive element that responds to <kbd>escape</kbd>, and I activate <kbd>escape</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the dialog closes</li>
+                    
+                    <li>THEN I see the main content is no longer dimmed</li>
+                    
+                    <li>THEN I see focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 5</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when keyboard test 6 passes" aria-describedby="keyboard-desc-6">
+            <span id="keyboard-desc-6" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on a dialog dismiss button and I activate it with <kbd>enter</kbd> or <kbd>spacebar</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the dialog closes</li>
+                    
+                    <li>THEN I see the main content is no longer dimmed</li>
+                    
+                    <li>THEN I see focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">keyboard test 6</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -704,16 +824,24 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 1 passes" aria-describedby="mouse-desc-1">
-            <span id="mouse-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I m4</span>
+            <span id="mouse-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I click a button programmed to launch a dialog</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome m4</li>
+                    <li>THEN I see a dialog opens</li>
+                    
+                    <li>THEN I see focus moves to a <em>landing point</em> either on the boundary of the dialog, or its heading, or a close-X button, or else the first focusable element in dialog content</li>
+                    
+                    <li>THEN I see the page content behind the dialog appears dimmed</li>
+                    
+                    <li>THEN I see the dialog has a heading to indicate its purpose</li>
+                    
+                    <li>THEN I see there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mouse test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -721,18 +849,56 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 2 passes" aria-describedby="mouse-desc-2">
-            <span id="mouse-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I m5, m6</span>
+            <span id="mouse-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN a dialog is open and I try to click elements behind the dialog in main page content</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome m5</li>
-                    
-                    <li>THEN outcome m6</li>
+                    <li>THEN I see there is no action taken, nothing happens</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mouse test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 3 passes" aria-describedby="mouse-desc-3">
+            <span id="mouse-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN a dialog is open and contains one or more dismiss buttons, and I click any of them</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the dialog closes</li>
+                    
+                    <li>THEN I see the main content is no longer dimmed</li>
+                    
+                    <li>THEN I see focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mouse test 4 passes" aria-describedby="mouse-desc-4">
+            <span id="mouse-desc-4" class="nysa11y checkbox__label" aria-level="4">WHEN I use a mouse and I give focus to a dismiss button without activating it (mouse down, slide off, mouse up)</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see focus remains on the button</li>
+                    
+                    <li>THEN I see the dialog remains and does <strong>not</strong> close</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mouse test 4</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -758,16 +924,18 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 1 passes" aria-describedby="screenreader-desc-1">
-            <span id="screenreader-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I sr7</span>
+            <span id="screenreader-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I move focus to a button programmed to launch a dialog, and use <kbd>spacebar</kbd> or <kbd>enter</kbd> key to activate the button</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome sr7</li>
+                    <li>THEN I hear a dialog announces itself as a dialog</li>
+                    
+                    <li>THEN I hear the dialog announces its title or description</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">screen reader test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -775,18 +943,132 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 2 passes" aria-describedby="screenreader-desc-2">
-            <span id="screenreader-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I sr8, sr9</span>
+            <span id="screenreader-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I navigate forward through dialog content by <kbd>tab</kbd></span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome sr8</li>
+                    <li>THEN I hear focus descends along the logical tabindex of interactive elements within the dialog</li>
                     
-                    <li>THEN outcome sr9</li>
+                    <li><mark>And if while within the dialog I <kbd>tab</kbd> past the last interactive element</mark></li>
+                    
+                    <li>THEN I hear focus <em>either</em> returns to the first interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the first interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">screen reader test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 3 passes" aria-describedby="screenreader-desc-3">
+            <span id="screenreader-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN I navigate backward through dialog content by <kbd>shift</kbd> + <kbd>tab</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear focus ascends along the logical tabindex of interactive elements within the dialog</li>
+                    
+                    <li><mark>And if while within the dialog I <kbd>shift</kbd> + <kbd>tab</kbd> past the first interactive element</mark></li>
+                    
+                    <li>THEN I hear focus <em>either</em> returns to the last interactive element in the dialog <em>or</em> passes through the browser toolbar chrome before returning to the last interactive element in the dialog. Either way, focus does <strong>not</strong> re-enter main page content</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 4 passes" aria-describedby="screenreader-desc-4">
+            <span id="screenreader-desc-4" class="nysa11y checkbox__label" aria-level="4">WHEN I navigate both forward and back through dialog content by <kbd>arrow</kbd>, link, form element, region, or any other idiomatic non-<kbd>tab</kbd> means</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear my screen reader cursor is stopped at both ends of the dialog content, is fully contained within the dialog, and does <strong>not</strong> re-enter main page content</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 4</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 5 passes" aria-describedby="screenreader-desc-5">
+            <span id="screenreader-desc-5" class="nysa11y checkbox__label" aria-level="4">WHEN I navigate through the entire dialog content</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 5</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 6 passes" aria-describedby="screenreader-desc-6">
+            <span id="screenreader-desc-6" class="nysa11y checkbox__label" aria-level="4">GIVEN the dialog contains an HTML <code class="element">select</code> or any UI element that responds to the <kbd>escape</kbd> key; WHEN I navigate to the element, interactively enter it, and activate <kbd>escape</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear the UI component closes</li>
+                    
+                    <li>THEN I hear focus remains on the UI component</li>
+                    
+                    <li>THEN I do <strong>not</strong> hear the dialog closes</li>
+                    
+                    <li>THEN minimal actions confirm that the dialog remains and did <strong>not</strong> close</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 6</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 7 passes" aria-describedby="screenreader-desc-7">
+            <span id="screenreader-desc-7" class="nysa11y checkbox__label" aria-level="4">WHEN focus is within the dialog but <strong>not</strong> within an interactive element that responds to <kbd>escape</kbd>, and I activate <kbd>escape</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 7</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when screen reader test 8 passes" aria-describedby="screenreader-desc-8">
+            <span id="screenreader-desc-8" class="nysa11y checkbox__label" aria-level="4">WHEN focus is on a dialog dismiss button and I activate it with <kbd>enter</kbd> or <kbd>spacebar</kbd></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">screen reader test 8</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -808,16 +1090,18 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 1 passes" aria-describedby="screenreader-mobile-desc-1">
-            <span id="screenreader-mobile-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I srm10</span>
+            <span id="screenreader-mobile-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I swipe up or down to focus on a button programmed to launch a dialog and doubletap with the button in focus</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome srm10</li>
+                    <li>THEN I hear a dialog announces itself as a dialog</li>
+                    
+                    <li>THEN I hear the dialog announces its title or description</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mobile screen reader test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -825,18 +1109,35 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 2 passes" aria-describedby="screenreader-mobile-desc-2">
-            <span id="screenreader-mobile-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I srm11, srm12</span>
+            <span id="screenreader-mobile-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I explore the entire dialog content</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome srm11</li>
+                    <li>THEN I hear focus remains within the dialog and does <strong>not</strong> re-enter main page content</li>
                     
-                    <li>THEN outcome srm12</li>
+                    <li>THEN I hear there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">mobile screen reader test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when mobile screen reader test 3 passes" aria-describedby="screenreader-mobile-desc-3">
+            <span id="screenreader-mobile-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN I have a dismiss button in focus and doubletap</span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I hear focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">mobile screen reader test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -857,16 +1158,24 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 1 passes" aria-describedby="voice-desc-1">
-            <span id="voice-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I v13</span>
+            <span id="voice-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN there is a button programmed to launch a dialog, and I activate the button by the command <q>Click <em>launch button label</em></q></span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome v13</li>
+                    <li>THEN I see a dialog opens</li>
+                    
+                    <li>THEN I see focus moves to a <em>landing point</em> either on the boundary of the dialog, or its heading, or a close-X button, or else the first focusable element in dialog content</li>
+                    
+                    <li>THEN I see the page content behind the dialog appears dimmed</li>
+                    
+                    <li>THEN I see the dialog has a heading to indicate its purpose</li>
+                    
+                    <li>THEN I see there is at least one dialog <em>dismiss button</em> with a conventional label (such as <q>X</q>, <q>OK</q>, <q>Close</q>, <q>Cancel</q>, <q>Done</q>, or the like), or else sufficient instructions for workflow completion are provided</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">voice test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -874,18 +1183,79 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 2 passes" aria-describedby="voice-desc-2">
-            <span id="voice-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I v14, v15</span>
+            <span id="voice-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN a dialog is open and I command to click a button behind the dialog in main page content</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome v14</li>
-                    
-                    <li>THEN outcome v15</li>
+                    <li>THEN I see there is no action taken, nothing happens</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">voice test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 3 passes" aria-describedby="voice-desc-3">
+            <span id="voice-desc-3" class="nysa11y checkbox__label" aria-level="4">WHEN a dialog is open and contains a button with the label in the appearance of <q>X</q> and I command <q>Click close</q> or <q>Click dismiss</q> or <q>Click X</q></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see at least one of these commands causes the dialog to close</li>
+                    
+                    <li>THEN I see the main content is no longer dimmed</li>
+                    
+                    <li>THEN I see focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">voice test 3</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 4 passes" aria-describedby="voice-desc-4">
+            <span id="voice-desc-4" class="nysa11y checkbox__label" aria-level="4">WHEN a dialog is open and I command <q>Press escape</q></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the dialog closes</li>
+                    
+                    <li>THEN I see the main content is no longer dimmed</li>
+                    
+                    <li>THEN I see focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">voice test 4</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
+                    </nys-badge>
+                </mark>
+            </div>
+        </label>
+        
+        <label>
+            <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when voice test 5 passes" aria-describedby="voice-desc-5">
+            <span id="voice-desc-5" class="nysa11y checkbox__label" aria-level="4">WHEN a dialog is open and contains one or more dismiss buttons, each with a <em>text label</em>, and I command <q>Click <em>text label</em></q></span>
+            <div class="nysa11y checkbox__more">
+                <ul>
+                    
+                    <li>THEN I see the dialog closes</li>
+                    
+                    <li>THEN I see the main content is no longer dimmed</li>
+                    
+                    <li>THEN I see focus returns to the launch button</li>
+                    
+                </ul>
+                <mark class="subhead">
+                    <span class="sr-only">voice test 5</span>
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -896,25 +1266,50 @@
     
     <section class="test-zoom checkbox__tile">
         <h3 id="zoom">Zoom</h3>
-        <p>
-            All tests in this section require the browser to be zoomed to 200%.
-            On Windows press <kbd>Ctrl</kbd> + <kbd>plus</kbd> and
-            on macOS press <kbd>Cmd</kbd> + <kbd>plus</kbd>.
-        </p>
-
+        <h4 class="nys-font-h6" id="test-text-resize-by-modifying-browser-settings">
+            Test <a target="_blank" href="https://www.w3.org/WAI/WCAG22/quickref/#resize-text">Text Resize</a>
+            by modifying browser settings.
+        </h4>
+        <ul>
+            <li>
+                In Chrome-based browsers, go to Settings &rarr; Appearance &rarr; Font size. Select "very large."
+            </li>
+            <li>
+                In FireFox, go to Settings &rarr; Accessibility &rarr; Default zoom. Select "200%" and mark the checkbox "Zoom text only."
+            </li>
+        </ul>
+        <h4 class="nys-font-h6" id="test-reflow-with-browser-devtools">
+            Test <a target="_blank" href="https://www.w3.org/WAI/WCAG22/quickref/#reflow">Reflow</a>
+            with browser devtools.
+        </h4>
+        <ul>
+            <li>
+                In <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/" target="_blank">Firefox</a>, open the toolbar menu button &rarr; More tools &rarr; Web Developer tools <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> &rarr; Responsive Design Mode <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>.
+            </li>
+            <li>
+                In <a href="https://developer.chrome.com/docs/devtools/device-mode#open_the_device_toolbar" target="_blank">Chrome-based browsers</a>, open the toolbar menu button &rarr; More tools &rarr; Developer tools <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> &rarr; Toggle Device Toolbar <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>.
+            </li>
+            <li>
+                Finally, set dimensions to "responsive," "320 width by 256 height," and "landscape" orientation.
+            </li>
+        </ul>
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when zoom test 1 passes" aria-describedby="zoom-desc-1">
-            <span id="zoom-desc-1" class="nysa11y checkbox__label" aria-level="4">WHEN I z16</span>
+            <span id="zoom-desc-1" class="nysa11y checkbox__label" aria-level="4">GIVEN the browser is configured to test Text Resize; WHEN a dialog is open</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome z16</li>
+                    <li>THEN I see all text adapts to the font size</li>
+                    
+                    <li>THEN I see all text is visible without clipping or truncation</li>
+                    
+                    <li>THEN I see no text overlaps other text, or overlaps any other user interface element</li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">zoom test 1</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -922,18 +1317,20 @@
         
         <label>
             <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when zoom test 2 passes" aria-describedby="zoom-desc-2">
-            <span id="zoom-desc-2" class="nysa11y checkbox__label" aria-level="4">WHEN I z17, z18</span>
+            <span id="zoom-desc-2" class="nysa11y checkbox__label" aria-level="4">GIVEN the browser is configured to test Reflow; WHEN a dialog is open</span>
             <div class="nysa11y checkbox__more">
                 <ul>
                     
-                    <li>THEN outcome z17</li>
+                    <li>THEN I see there is no loss of information, meaning, or functionality</li>
                     
-                    <li>THEN outcome z18</li>
+                    <li>THEN I see when scrolling is required, it is only in one dimension (preferably vertical)</li>
+                    
+                    <li>THEN I see when scrolling is required in two dimensions, it is limited to <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html#content-that-meets-exceptions-for-reflow" target="_blank">content that meets exceptions for reflow</a></li>
                     
                 </ul>
                 <mark class="subhead">
                     <span class="sr-only">zoom test 2</span>
-                    <nys-badge label="passes, fails, to do" intent="success, error, warning" prefixIcon="">
+                    <nys-badge label="passes" intent="success" prefixIcon="">
                     </nys-badge>
                 </mark>
             </div>
@@ -955,56 +1352,33 @@
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 1 is ensured" aria-describedby="blindness-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-1">Blind 1...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-1">Name and role is documented</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.0 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#name-role-value" target="_blank">
+                    4.1.2 A
                 </a>
             </div>
         </label>
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when blindness requirement 2 is ensured" aria-describedby="blindness-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-2">Blind 2...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="blindness-desc-2">Meets criteria across platforms, devices and viewports</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.1 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#principle4" target="_blank">
+                    Principle 4 - Robust
                 </a>
             </div>
         </label>
         
         
-        <h3 id="cognition">cognition</h3>
+        <h3 id="cognitive">cognitive</h3>
         
         <label>
-                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when cognition requirement 1 is ensured" aria-describedby="cognition-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="cognition-desc-1">Cognition...</span>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when cognitive requirement 1 is ensured" aria-describedby="cognitive-desc-1">
+            <span aria-level="4" class="nysa11y checkbox__label" id="cognitive-desc-1">Users&#39; adjustments to text spacing do not result in loss of content or functionality</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.2 AA
-                </a>
-            </div>
-        </label>
-        
-        
-        <h3 id="color">color</h3>
-        
-        <label>
-                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color requirement 1 is ensured" aria-describedby="color-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="color-desc-1">Color 1...</span>
-            <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.3 AA
-                </a>
-            </div>
-        </label>
-        
-        <label>
-                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when color requirement 2 is ensured" aria-describedby="color-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="color-desc-2">Color 2...</span>
-            <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.4 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#text-spacing" target="_blank">
+                    1.4.12 AA
                 </a>
             </div>
         </label>
@@ -1014,20 +1388,20 @@
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 1 is ensured" aria-describedby="low vision-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-1">LowVis 1...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-1">Text can resize up to 200% with no loss of information</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.5 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#resize-text" target="_blank">
+                    1.4.4 AA
                 </a>
             </div>
         </label>
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when low vision requirement 2 is ensured" aria-describedby="low vision-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-2">LowVis 2...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="low vision-desc-2">Text has a 4.5:1 minimum contrast ratio</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.6 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum" target="_blank">
+                    1.4.3 AA
                 </a>
             </div>
         </label>
@@ -1037,20 +1411,30 @@
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 1 is ensured" aria-describedby="motor-desc-1">
-            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-1">Motor 1...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-1">Keyboard actions are documented</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.8 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#keyboard" target="_blank">
+                    2.1.1 A
                 </a>
             </div>
         </label>
         
         <label>
                 <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 2 is ensured" aria-describedby="motor-desc-2">
-            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-2">Motor 2...</span>
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-2">The focus indication has a 3:1 minimum contrast ratio against default and adjacent elements</span>
             <div class="nysa11y checkbox__more">
-                <a href="https://www.w3./WAI/WCAG22/quickref/#" target="_blank">
-                    0.0.9 AA
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance" target="_blank">
+                    2.4.13 AAA
+                </a>
+            </div>
+        </label>
+        
+        <label>
+                <input type="checkbox" class="nysa11y checkbox" data-component="checkbox" data-html="native" aria-label="Mark when motor requirement 3 is ensured" aria-describedby="motor-desc-3">
+            <span aria-level="4" class="nysa11y checkbox__label" id="motor-desc-3">The focus indication has a minimum area equal to the width of the element and 2px in height</span>
+            <div class="nysa11y checkbox__more">
+                <a href="https://www.w3.org/WAI/WCAG22/quickref/#focus-appearance" target="_blank">
+                    2.4.13 AAA
                 </a>
             </div>
         </label>
@@ -1101,7 +1485,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/modal/a11y-tests.njk">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 11, 2026</p>
+    <p>Last updated: September 17, 2026</p>
   </div>
 
   </div>
