@@ -60,6 +60,14 @@ How the design system is built — the token layers, styling framework, theming 
       description="Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.">
     </nys-card>
   </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+    <nys-card
+      href="/foundations/breakpoints/"
+      headingLevel="h3"
+      heading="Breakpoints"
+      description="The five viewport ranges and grid gutters that keep layouts consistent from mobile to desktop large.">
+    </nys-card>
+  </div>
 </div>
 
 ## Implementation Guides
