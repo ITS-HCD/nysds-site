@@ -35,16 +35,15 @@
             </div>
             <time class="page-meta__date" datetime="{{ page.date | dateISO }}">{{ page.date | dateFull }}</time>
             <div class="page-meta__readtime">{{ content | timeToRead ('200 words a minute') }} read time</div>
+            
+          </div>
+          <div class="nys-grid-col">
+            {%- include "partials/taglist.njk" -%}
           </div>
         </header>
 
         {{ content | safe }}
 
-        <div class="nys-grid-row nys-margin-t-200">
-          <div class="nys-grid-col">
-            {%- include "partials/taglist.njk" -%}
-          </div>
-        </div>
     
         <div class="nys-grid-row nys-margin-t-400">
           <div class="nys-grid-col">

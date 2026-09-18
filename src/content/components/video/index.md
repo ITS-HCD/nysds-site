@@ -7,7 +7,6 @@ image_alt: An illustration of a video player.
 image_header: /assets/img/components/videoplayer-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=20897-9539
-
 ---
 
 {% extends "layouts/component.njk" %}
@@ -21,42 +20,33 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 {% endblock %}
 
 {% block example %}
-  {% set preview %}<nys-video
+{% set preview %}
+<nys-video
   videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
   titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-></nys-video>{% endset %}
-  {% set code = preview %}
-  {% set showTip = true %}
-  {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-
-{% block usage %}
-
-### When to use this component
-- Use video player when motion or audio communicates something better than text or images alone.
-
-### When to consider something else
-- Don't use video if the same message can be delivered clearly with text or a static image.
-- Avoid using video as the only source of key information — always provide a text alternative.
-
-
+></nys-video>
+{% endset %}
+{% set code = preview %}
+{% set showTip = true %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block usagedo %}
 
-  - Keep `titleText` to 50–60 characters.
-  - Use a clear, high-quality thumbnail so users recognize it as a video.
-  - Maintain the default `lazy` loading for better page performance.
-  - Let users choose to start the video; avoid `autoplay` unless necessary.
-  - Reserve space for the 16:9 ratio box to prevent layout shift.
+- Use when motion or audio communicates something better than text or images alone.
+- Keep `titleText` to 50–60 characters.
+- Use a clear, high-quality thumbnail so users recognize it as a video.
+- Maintain the default `lazy` loading for better page performance.
+- Reserve space for the 16:9 ratio box to prevent layout shift.
+- Let users choose to start the video; avoid `autoplay` unless necessary.
 
 {% endblock %}
 
 {% block usagedont %}
 
-- Don't set `autoplay` without understanding that the video will be **muted** (`nys-video` enforces this automatically to protect users from unexpected noise).
-- Don't rely on video alone to convey critical information.
+- Use video if the same message can be delivered clearly with text or a static image.
+- Rely on video alone to convey critical information. Always provide a text alternative.
+- Set `autoplay` without understanding that the video will be muted. `nys-video` enforces this automatically to protect users from unexpected noise.
 
 {% endblock %}
 
@@ -64,9 +54,9 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 
 The `<nys-video>` component includes the following accessibility-focused features:
 
-  - The play button is keyboard focusable and labeled with the video title via `aria-label="Play [titleText]"`.
-  - A visually hidden `aria-live` region announces "Video is playing" or "Advertisement is playing" to screen reader users.
-  - `titleText` is used as both the visible caption and the iframe's `title` and `aria-label` — always provide it.
+- The play button is keyboard focusable and labeled with the video title via `aria-label="Play [titleText]"`.
+- A visually hidden `aria-live` region announces "Video is playing" or "Advertisement is playing" to screen reader users.
+- `titleText` is used as both the visible caption and the iframe's `title` and `aria-label` — always provide it.
 
 {% endblock %}
 
@@ -76,12 +66,13 @@ The `<nys-video>` component includes the following accessibility-focused feature
 
 Provide your own thumbnail via the `thumbnail` property. If not set, the component fetches YouTube's auto-generated thumbnail at: `https://img.youtube.com/vi/{video-id}/maxresdefault.jpg`
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design
-"
-thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-></nys-video>{% endset %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+></nys-video>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -94,11 +85,13 @@ thumbnail="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?q=80&w=2
 
 The iframe loads immediately and plays muted. Sound is always off when `autoplay` is set — this is intentional and cannot be overridden.
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-autoplay
-></nys-video>{% endset %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  autoplay
+></nys-video>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -106,11 +99,13 @@ autoplay
 
 Prevents playback. The thumbnail and play button are visible but non-interactive.
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-disabled
-></nys-video>{% endset %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  disabled
+></nys-video>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -118,11 +113,13 @@ disabled
 
 Use `starttime` (in seconds) to begin playback at a specific point.
 
-{% set preview %}<nys-video
-videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
-titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
-starttime="43"
-></nys-video>{% endset %}
+{% set preview %}
+<nys-video
+  videourl="https://www.youtube.com/watch?v=TBfFzt0150Q"
+  titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"
+  starttime="43"
+></nys-video>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
@@ -143,7 +140,7 @@ Use explicit sizes to lock a specific layout. If `size` is not set, the componen
 <nys-video size="sm" videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Small (width: 320-439px)"></nys-video>
 {% endset %}
 {% include "partials/code-preview.njk" %}
-  
+
 {% endblock %}
 
 {% block properties %}

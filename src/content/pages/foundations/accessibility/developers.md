@@ -109,7 +109,7 @@ When content changes without a full page reload:
 
 <div class="nys-grid-row">
   <div class="nys-grid-col-12">
-    <a class="card card--horizontal" href="https://on.ny.gov/a11yteam" target="_blank" rel="noopener">
+    <a class="card card--horizontal" href="https://on.ny.gov/a11yteam" target="_blank" rel="noopener" aria-label="Join ITS Accessibility Community">
       <div class="card__inner">
         <div class="card__media card__media--thin">
           <img src="/assets/img/teams-channel.svg" alt="" role="presentation" />
@@ -126,7 +126,7 @@ When content changes without a full page reload:
 
 <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/Get-started.aspx?csf=1&web=1&share=IQB9OPiWlWK1QKiLwKnt_SlnAVxD3SO_eebbKlc69RlRYqc&e=vC8jYt">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/Get-started.aspx?csf=1&web=1&share=IQB9OPiWlWK1QKiLwKnt_SlnAVxD3SO_eebbKlc69RlRYqc&e=vC8jYt" aria-label="Get started, by role">
       <div class="card__inner">
         <div class="card__category nys-margin-b-200"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Get started, by role</div>
@@ -135,7 +135,7 @@ When content changes without a full page reload:
     </a>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/t/its.365.DigitalAccessibility/IQBIx-MmHr1GQ4uxf38xsCJ6AeLh-P7wopABIBERADnNM6o?e=hmbMw1">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/t/its.365.DigitalAccessibility/IQBIx-MmHr1GQ4uxf38xsCJ6AeLh-P7wopABIBERADnNM6o?e=hmbMw1" aria-label="Tools and Guides">
       <div class="card__inner">
         <div class="card__category nys-margin-b-200"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Tools & Guides</div>
@@ -144,7 +144,7 @@ When content changes without a full page reload:
     </a>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4 nys-display-flex">
-    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/POUR%20-%202%20-%20Perceivable.aspx?csf=1&web=1&share=IQAB9ZZ94vMPRoUR8ylezZ-mAYgCg3vubPaZJHvFk_f2KfM&e=c0pJHD">
+    <a class="card nys-flex-fill" href="https://nysemail.sharepoint.com/:u:/r/teams/its.365.DigitalAccessibility/SitePages/POUR%20-%202%20-%20Perceivable.aspx?csf=1&web=1&share=IQAB9ZZ94vMPRoUR8ylezZ-mAYgCg3vubPaZJHvFk_f2KfM&e=c0pJHD" aria-label="Understand WCAG">
       <div class="card__inner">
         <div class="card__category nys-margin-b-200"><nys-badge label="For NYS Staff" intent="neutral" size="sm" prefixIcon="lock_filled"></nys-badge></div>
         <div class="card__title">Understand WCAG</div>

@@ -17,6 +17,8 @@ const byCategory = require("./src/_11ty/filters/byCategory.js");
 const dateFeed = require("./src/_11ty/filters/date.js").dateFeed;
 const dateFull = require("./src/_11ty/filters/date.js").dateFull;
 const dateFullWeekday = require("./src/_11ty/filters/date.js").dateFullWeekday;
+const dateWeekday = require("./src/_11ty/filters/date.js").dateWeekday;
+const dateWeekdayDay = require("./src/_11ty/filters/date.js").dateWeekdayDay;
 const dateISO = require("./src/_11ty/filters/date.js").dateISO;
 const dateYear = require("./src/_11ty/filters/date.js").dateYear;
 const editOnGitHubUrl = require("./src/_11ty/filters/editOnGitHubUrl.js");
@@ -69,6 +71,24 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addCollection("updates", updates);
   eleventyConfig.addCollection("videos", videos);
 
+  // Redirects: any page can declare `redirect_from` (string or array of old
+  // URLs) in its front matter. This collection flattens those into {from, to}
+  // pairs, which src/redirects.njk paginates into static redirect stubs — the
+  // GitHub Pages-friendly way to keep old URLs working after a page moves.
+  eleventyConfig.addCollection("redirects", (collectionApi) => {
+    const redirects = [];
+    for (const page of collectionApi.getAll()) {
+      const from = page.data.redirect_from;
+      if (!from) continue;
+      const froms = Array.isArray(from) ? from : [from];
+      for (const url of froms) {
+        // Normalize: strip trailing slash so the permalink can append one.
+        redirects.push({ from: url.replace(/\/+$/, ""), to: page.url });
+      }
+    }
+    return redirects;
+  });
+
   // CSS
   eleventyConfig.addWatchTarget("./src/css/");
 
@@ -83,6 +103,8 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("dateFullWeekday", dateFullWeekday);
   eleventyConfig.addFilter("dateISO", dateISO);
   eleventyConfig.addFilter("dateYear", dateYear);
+  eleventyConfig.addFilter("dateWeekday", dateWeekday);
+  eleventyConfig.addFilter("dateWeekdayDay", dateWeekdayDay);
   eleventyConfig.addFilter("editOnGitHubUrl", editOnGitHubUrl);
   eleventyConfig.addFilter("excludeDrafts", excludeDrafts);
   eleventyConfig.addFilter("excludeFuture", excludeFuture);
@@ -95,6 +117,11 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("onlySeries", onlySeries);
   eleventyConfig.addFilter("shuffle", shuffle);
   eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
+  eleventyConfig.addFilter("trimCode", (str) =>
+    String(str ?? "")
+      .replace(/^[ \t]*\n/gm, "")
+      .trim(),
+  );
 
   // Pagefind
   eleventyConfig.on("eleventy.after", () => {
@@ -105,8 +132,8 @@ module.exports = async function (eleventyConfig) {
 
   // Image compression on watch
   // Runs before every build (including watch rebuilds)
-  eleventyConfig.on('eleventy.beforeWatch', async () => {
-    await import('./scripts/compress-images.js');
+  eleventyConfig.on("eleventy.before", async () => {
+    await import("./scripts/compress-images.js");
   });
 
   // Passthrough copy
@@ -141,6 +168,16 @@ module.exports = async function (eleventyConfig) {
                     frameborder="0"
                     allowfullscreen>
             </iframe>`;
+  });
+
+  eleventyConfig.addCollection("videoPageCollection", function (collectionApi) {
+    // 1. Grab all files in your specific directory
+    return collectionApi.getFilteredByGlob("./src/content/videos/*.md").sort((a, b) => {
+      // 2. Sort by the 'series_order' front matter key (default to 0 if missing)
+      const orderA = a.data.series_order || 0;
+      const orderB = b.data.series_order || 0;
+      return orderA - orderB;
+    });
   });
 
   // ------------+

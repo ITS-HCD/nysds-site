@@ -40,7 +40,7 @@ navOrder: 1
 
         {%- if list.length -%}
           {%- for post in list -%}
-            <a class="card card--horizontal" href="{{ post.url | url }}" title="Watch Video: {{ post.data.title | escape }}">
+            <a class="card card--horizontal" href="{{ post.url | url }}" aria-label="Watch Video: {{ post.data.title | escape }}">
               <div class="card__inner">
                 {% if post.data.video_url %}
                 <div class="card__media">

@@ -8,7 +8,7 @@ const sharp = require('sharp');
 const { optimize } = require('svgo');
 
 const IMAGE_DIRS = ['src/assets/img', 'src/assets/i'];
-const CACHE_PATH = '.cache/compress-images.json';
+const CACHE_PATH = 'src/assets/compressed-images.json';
 const PNG_JPEG_EXTS = new Set(['.png', '.jpg', '.jpeg']);
 const SVG_EXT = '.svg';
 

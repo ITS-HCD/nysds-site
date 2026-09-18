@@ -23,7 +23,7 @@ The team also uses Figma variables to power agency theming. When you switch an a
 
 Designing and prototyping with the NYS Design System is powered by prebuilt Figma libraries that mirror the coded components. This connectedness makes it easier for designers and developers to collaborate and ensures that what is designed matches what is built.
 
-<a class="card card--horizontal" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System">
+<a class="card card--horizontal" href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" aria-label="NYS Design System for NYS Employees">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/design-token-card.svg" />
@@ -41,7 +41,7 @@ Designing and prototyping with the NYS Design System is powered by prebuilt Figm
     </div>
 </a>
 
-<a class="card card--horizontal" href="https://www.figma.com/community/file/1574803287825265318">
+<a class="card card--horizontal" href="https://www.figma.com/community/file/1574803287825265318" aria-label="NYS Design System for the Community">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/brand-card.svg" />
@@ -97,7 +97,7 @@ Open the local styles panel or use the selection colors section to see what desi
 
 Open the project template to see how components come together in realistic page layouts. These examples show common patterns like form pages, content pages, and navigation structures. Use them as starting points for your own work.
 
-<a class="card card--horizontal" href="https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7">
+<a class="card card--horizontal" href="https://www.figma.com/design/DS5Nm2AdMDzpelPfEJ2hnn/%F0%9F%94%B2-Project-Template?m=auto&t=NclNpstvX9JkuC7w-7" aria-label="NYS Design System Project Template">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/4-up-card.svg" />

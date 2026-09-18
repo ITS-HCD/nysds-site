@@ -23,7 +23,7 @@ When you submit a component request, we ask questions like:
 
 New proposals are announced in the design system teams channel. Once a proposal is accepted, the design system team will go through a UX design review and accessibility review, development, and finally testing. When that's done, it will be released to the reference site and our Figma libraries.
 
-<a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/discussions">
+<a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/discussions" aria-label="Propose a component">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/propose-a-component.svg" />
@@ -44,7 +44,7 @@ New proposals are announced in the design system teams channel. Once a proposal 
 ## Found a Bug?
 If you find something that's not working, our design system team uses GitHub issues to track bugs, accessibility problems, or technical errors. We welcome feedback from all, but we do prioritize the needs of New York State government applications and sites.
 
-<a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues">
+<a class="card card--horizontal" href="https://github.com/ITS-HCD/nysds/issues" aria-label="Report a bug on GitHub">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/report-bug.svg" />
@@ -67,7 +67,7 @@ You can join us on Microsoft Teams. If you work for New York State, you can join
 
 Every two weeks, our team hosts a design system office hours event on our team's channel. It's an informal online chat with our designers and engineers to troubleshoot together, ask about best practices, or see what's coming next.
 
-<a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3Al5Zo00jgzpzTb5ACeXQQVatofIuRI-C0ThuQXbndb9U1%40thread.tacv2/conversations?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7">
+<a class="card card--horizontal" href="https://teams.microsoft.com/l/team/19%3Al5Zo00jgzpzTb5ACeXQQVatofIuRI-C0ThuQXbndb9U1%40thread.tacv2/conversations?groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7" aria-label="NYS Design System Teams channel">
     <div class="card__inner">
         <div class="card__media card__media--thin">
             <img src="/assets/img/teams-channel.svg" />

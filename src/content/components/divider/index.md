@@ -6,8 +6,8 @@ image: /assets/img/components/divider.svg
 image_alt: An illustration of a divider.
 image_header: /assets/img/components/divider-header.svg
 stable: true
-figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9008-683&t=Vm0dNpR7sqktYZPv-4
-
+figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu?node-id=8420-575
+navOrder: 10
 ---
 
 {% extends "layouts/component.njk" %}
@@ -24,8 +24,9 @@ The `<nys-divider>` component visually separates content or sections within an i
 <nys-divider></nys-divider>
 <div>Sample content below</div>
 {% endset %}
-{%set showTip = true %}
 {% set code = preview %}
+{% set backgroundSolid = true %}
+{% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
@@ -38,7 +39,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 ### When to consider something else
 
-  - When content is formatted side by side.
+  - When content is formatted side bys side.
   - When content is already organized in groups.
 
 {% endblock %}
@@ -53,7 +54,7 @@ The `<nys-divider>` component visually separates content or sections within an i
 {% block usagedont %}
 
   - Overuse dividers and clutter the interface, reducing scannability.
-  - Use the divider to separate content appearing side by side. 
+  - Use the divider to separate content appearing side bys side. 
   - Use the `inverted` option on light backgrounds.
 
 {% endblock %}
@@ -68,7 +69,18 @@ The `<nys-divider>` component includes the following accessibility-focused featu
 
 {% block options %}
 
-### Inverted
+### Subtle
+Add the `subtle` property to make the `<nys-divider>` less visually prominent.
+{% set preview %}
+<div>Sample content above</div>
+<nys-divider subtle></nys-divider>
+<div>Sample content below</div>
+{% endset %}
+{% set code = preview %}
+{% set backgroundSolid = true %}
+{% include "partials/code-preview.njk" %}
+
+### Inverse
 On dark background, add the `inverted` property to ensure the `<nys-divider>` is visible.
 {% set preview %}
 <div>Sample content above</div>
@@ -77,7 +89,7 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 {% endset %}
 {% set inverted = true %}
 {% set code = preview %}
-{% set showTip = true %}
+{% set backgroundSolid = true %}
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
@@ -90,12 +102,14 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
     <tr>
       <th>Property</th>
       <th>Type</th>
-      <th>Default</th>
     </tr>
     <tr>
       <td><code>inverted</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
+      <td>Boolean</td>
+    </tr>
+    <tr>
+      <td><code>subtle</code></td>
+      <td>Boolean</td>
     </tr>
   </table>
 </nys-table>
