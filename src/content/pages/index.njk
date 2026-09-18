@@ -124,7 +124,7 @@ heading_links: false
 
 {# Latest Updates #}
 <div class="nys-grid-container-widescreen nys-top-800">
-  <div class="nys-grid-row nys-flex-row nys-grid-gap-300" >
+  <div class="nys-grid-row nys-flex-row nys-grid-gap-300" style="*{--nys-card-height: 100%;}">
     <div class="nys-grid-col-12 nys-grid-offset-2">
       <h2>Latest Updates</h2>
     </div>
@@ -137,7 +137,11 @@ heading_links: false
             {% set found_release = true %}
             <div class="nys-grid-col-12 nys-desktop:nys-grid-col-4 nys-desktop:nys-grid-offset-2">
               <nys-card href="{{ post.url | url }}" heading="{{ post.data.title }}" description="{{ post.data.description }}" headingLevel="h3" >
-                <img slot="media" src="{{ post.data.ogimage }}" alt="">
+                {% if post.data.ogimage %}
+                  <img slot="media" src="{{ post.data.ogimage }}" alt="">
+                {% else %}
+                  <img slot="media" src="/assets/img/nysds_og_image.png" alt="">
+                {% endif %}
                 {# <div slot="media-accent">
                   <span>{{ post.data.date | dateWeekday }}</span>
                   <span>{{ post.data.date | dateWeekdayDay }}</span>
