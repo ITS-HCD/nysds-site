@@ -105,6 +105,41 @@ Use `description` for the card's body text. It takes plain text only. When the b
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Sizes
+
+Use `size="sm"` or `size="lg"` to make the card smaller or larger than the default. The size affects the preheading, heading, subheading, and description text sizes, as well as the spacing between elements. The default size is `size="md"`.
+
+{% set preview %}
+
+<div class="nys-grid-row nys-grid-gap">
+  <nys-card
+    class="nys-tablet:nys-grid-col-4"
+    size="sm"
+    preheading="Preheading content"
+    heading="This is a small card"
+    subheading="Subheading content"
+    description="A short description of the card's subject."
+  ></nys-card>
+  <nys-card
+    class="nys-tablet:nys-grid-col-4"
+    preheading="Preheading content"
+    heading="This is the default medium card"
+    subheading="Subheading content"
+    description="A short description of the card's subject."
+  ></nys-card>
+  <nys-card
+    class="nys-tablet:nys-grid-col-4"
+    size="lg"
+    preheading="Preheading content"
+    heading="This is a large card"
+    subheading="Subheading content"
+    description="A short description of the card's subject."
+  ></nys-card>
+</div>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Media Slot
 
 Use the `media` slot to add an image to the top of the card. Pass a standard `<img>` element, so you control the source, loading behavior, and alternative text.
@@ -447,6 +482,12 @@ Keep the following in mind when using card media:
       <td>Appears below the subheading. Plain text only. Use the default slot for rich content.</td>
     </tr>
     <tr>
+      <td><code>size</code></td>
+      <td><code>"sm"</code>, <code>"md"</code>, or <code>"lg"</code></td>
+      <td><code>"md"</code></td>
+      <td>Controls the size of the card's text and spacing.</td>
+    </tr>
+    <tr>
       <td><code>inset</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
@@ -515,7 +556,43 @@ Keep the following in mind when using card media:
 {% block cssvariables %}
 
 {% set variables = [
-  { name: "--nys-card-height", description: "Height of the card. Defaults to fit-content. Set to 100% to stretch the card to its container's height, so a row of cards renders at an equal height. The extra height is absorbed by the main content area, which keeps the footer slot pinned to the bottom of the card. The container must give the card a height to fill, for example a grid column with nys-display-flex."}
+{
+name: "--nys-card-height",
+description: "Height of the card. Defaults to fit-content. Set to 100% to stretch the card to its container's height, so a row of cards renders at an equal height. The extra height is absorbed by the main content area, which keeps the footer slot pinned to the bottom of the card. The container must give the card a height to fill, for example a grid column with nys-display-flex."
+},
+{
+name: "--nys-card-font-size--preheading",
+description: "Font size of the preheading text."
+},
+{
+name: "--nys-card-line-height--preheading",
+description: "Line height of the preheading text."
+},
+{
+name: "--nys-card-font-size--heading",
+description: "Font size of the heading text."
+},
+{
+name: "--nys-card-line-height--heading",
+description: "Line height of the heading text."
+},
+{
+name: "--nys-card-font-size--subheading",
+description: "Font size of the subheading text."
+},
+{
+name: "--nys-card-line-height--subheading",
+description: "Line height of the subheading text."
+},
+{
+name: "--nys-card-font-size--description",
+description: "Font size of the description text."
+},
+{
+name: "--nys-card-line-height--description",
+description: "Line height of the description text."
+}
+
 ]%}
 {% include "partials/css-vars.njk" %}
 
