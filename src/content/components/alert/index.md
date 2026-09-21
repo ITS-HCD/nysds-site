@@ -304,17 +304,35 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 {% block events %}
 
-The `<nys-alert>` component emits **one** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-close`** – Fired when the button is clicked.
+
+The `<nys-alert>` component emits **one** custom Javascript event:
 
 ### Event details
 
-The `nys-close` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-close</code></td>
+      <td>Fired when the alert is closed.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the alert.</li>
+          <li><code>type</code> (string): The alert's type (e.g., "success", "error", "info").</li>
+          <li><code>label</code> (string): The alert's heading text.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the alert.
-- type (string): The alert’s type (e.g., "success", "error", "info").
-- label (string): The alert’s heading text.
+<br/>
 
 You can listen to these events using JavaScript:
 

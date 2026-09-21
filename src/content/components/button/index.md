@@ -376,11 +376,38 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% block events %}
 
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
 The `<nys-button>` component emits **three** custom Javascript events:
 
-1.  **`nys-click`** – Fired when the button is clicked.
-2.  **`nys-focus`** – Fired when the button gains focus.
-3.  **`nys-blur`** – Fired when the button loses focus.
+### Event details
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-click</code></td>
+      <td>Fired when the button is clicked.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td>Fired when the button gains focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the button loses focus.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
+
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}
