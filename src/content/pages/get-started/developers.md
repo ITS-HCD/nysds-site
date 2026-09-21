@@ -60,75 +60,28 @@ NYSDS components are standard web components. They work in any framework. Below 
 
 
 ### React
-<nys-alert type="warning" heading="Undergoing Revisions" text="This section is undergoing massive documentation revisions and changes. Please reach out to the NYSDS team for the latest updates on React change or see the React Demo tutorial page" primaryLabel="React Demo Tutorial" primaryAction="https://its-hcd.github.io/nysds-react-demo/tutorial"></nys-alert>
+<nys-alert type="success" heading="Updated React support as of v1.21.1"></nys-alert>
 
-While our default web component works React. We recommend using our React wrapper components.
-Import directly from `@nysds/components/react`. This path gives you React-wrapped versions of each web component - event bindings included.
+Full React support is available through our dedicated `@nysds/react` package, which provides React-wrapped versions of each web component. Event bindings, forms integration, and slots all included.
 
-{% set code %}
-import { NysButton } from "@nysds/components/react";
-<NysButton label="Submit" variant="primary" />
-{% endset %}
-{% set accordionLabel = "React Example" %}
+{% set code %}npm install @nysds/react @nysds/styles{% endset %}
+{% set accordionLabel = "CLI Command" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
 
-#### Handling React Events
-React's synthetic event system does not automatically listen to custom events from web components. Instead, NYSDS React wrappers map these to callback props like `onNysChange` and `onNysInput`, but the underlying type is still a DOM Event.
-
-{% set code %}
-// ❌ This won't work! NysTextinput doesn't fire a native change event
-<NysTextinput onChange={(e) => setValue(e.target.value)} />
-// ✅ Use the NYSDS custom event binding
-<NysTextinput
-  name="email"
-  onNysInput={(e) => {
-    const value = (e as CustomEvent).detail.value;
-    setValue(value);
-  }}
-/>}{% endset %}
-{% set accordionLabel = "React Example" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-
-You may also fund using `ref` callbacks or `addEventListener` helpful for NYSDS events.
-
-{% set code %}import { NysSelect } from "@nysds/components/react";
-function LicenseRenewalForm() {
-  const handleChange = (e) => {
-    console.log('Selected:', e.detail.value);
-  };
-  return (
-    <NysSelect
-      label="License type"
-      ref={(el) => el?.addEventListener('nys-change', handleChange)}
-    >
-      <option value="driver">Driver License</option>
-      <option value="commercial">Commercial Driver License</option>
-    </NysSelect>
-  );
-}{% endset %}
-{% set accordionLabel = "React Example" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
+For a full walkthrough covering project setup, custom events, slots, and forms, see the [React Tutorial](/get-started/developers/react/).
 
 ### Angular
+<nys-alert type="success" heading="Updated Angular support as of v1.21.1"></nys-alert>
 
-<nys-alert heading="Angular support is currently in ALPHA"></nys-alert>
-
-Add `CUSTOM_ELEMENTS_SCHEMA` to your module:
-
-{% set code %}// app.module.ts
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import '@nysds/components';
-@NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
-export class AppModule {}{% endset %}
-{% set accordionLabel = "Angular Setup" %}
+Full Angular support is available through `@nysds/angular`, with Angular components for standalone and NgModule-based apps. No `CUSTOM_ELEMENTS_SCHEMA` required.
+ 
+{% set code %}npm install @nysds/angular{% endset %}
+{% set accordionLabel = "CLI Command" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
+
+For a full walkthrough covering standalone components, NgModule setup, and forms integration, see the [Angular Tutorial](/get-started/developers/angular/).
 
 ### Vue
 
