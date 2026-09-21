@@ -66,6 +66,7 @@ How the design system is built — the token layers, styling framework, theming 
       headingLevel="h3"
       heading="Breakpoints"
       description="The five viewport ranges and grid gutters that keep layouts consistent from mobile to desktop large.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
 </div>
