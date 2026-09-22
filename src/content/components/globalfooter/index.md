@@ -173,7 +173,16 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
+{% block cssvariables %}
+  {%
+    set variables = [
+        { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." },
+        { name: "--_nys-globalfooter-max-width--content", description: "The maximum width for this inner container size. Falls back to the size's default (e.g. 1280px) if not set."}
+    ]
+  %}
+{% include "partials/css-vars.njk" %}
+
+{% endblock %}
 
 {% block events %}
 

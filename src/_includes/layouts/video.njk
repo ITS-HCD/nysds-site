@@ -2,8 +2,8 @@
 
 {% block content %}
 
-{% set previousVideo = collections.videos | getPreviousCollectionItem(page) %}
-{% set nextVideo = collections.videos | getNextCollectionItem(page) %}
+{% set previousVideo = collections.videoPageCollection | getPreviousCollectionItem(page) %}
+{% set nextVideo = collections.videoPageCollection | getNextCollectionItem(page) %}
 
 <div class="nys-grid-container-widescreen">
   <div class="nys-grid-row nys-grid-gap">
@@ -29,14 +29,14 @@
 
       <section class="page-meta nys-grid-row nys-grid-gap-600">
         {% if previousVideo %}
-          <a href="{{ previousVideo.url }}" title="Read: {{ previousVideo.data.title | safe }}" class="nys-tablet:nys-grid-col">
-            Previous Video: <b>{{ previousVideo.data.title }}</b>
-          </a>
+        <a href="{{ previousVideo.url }}" class="nys-tablet:nys-grid-col">
+            Previous Video: <strong>{{ previousVideo.data.title }}</strong>
+        </a>
         {% endif %}
         {% if nextVideo %}
-          <a href="{{ nextVideo.url }}" title="Read: {{ nextVideo.data.title | safe }}" class="nys-tablet:nys-grid-col">
-            Next Video: <b>{{ nextVideo.data.title }}</b>
-          </a>
+        <a href="{{ nextVideo.url }}" class="nys-tablet:nys-grid-col">
+            Next Video: <strong>{{ nextVideo.data.title }}</strong>
+        </a>
         {% endif %}
       </section>
       {% include "partials/edit-link.njk" %}

@@ -13,9 +13,13 @@ blockquote {
   font: var(--nys-font-size-md) / var(--nys-font-lineheight-md)
     var(--nys-font-family-body);
   margin-bottom: var(--nys-space-150);
+  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md)
+    var(--nys-font-family-body);
+  margin-bottom: var(--nys-space-150);
 }
 
 small {
+  margin-bottom: var(--nys-space-100);
   margin-bottom: var(--nys-space-100);
 }
 
@@ -246,9 +250,9 @@ main[role="main"] {
 .section-header__inner {
   padding-top: var(--nys-space-200);
   padding-bottom: var(--nys-space-200);
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  /* display: flex; */
+  /* align-items: flex-end; */
+  /* justify-content: space-between; */
   gap: var(--nys-space-200);
 }
 
@@ -256,6 +260,8 @@ main[role="main"] {
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 5px;
+  flex-grow: 1;
+  align-self: end;
 }
 
 .section-header__media {
@@ -272,8 +278,8 @@ main[role="main"] {
 
 @media (min-width: 768px) {
   .section-header__inner {
-    flex-direction: row;
-    align-items: flex-end;
+    /* flex-direction: row; */
+    /* align-items: flex-end; */
   }
 
   .section-header__media {
@@ -317,10 +323,36 @@ main[role="main"] {
 
 /* Page Content */
 
-.page-content img {
-  max-width: 100%;
+/* A row of images sized by height instead of width, with the caption below.
+   The images share one flex line: when the row runs out of width they each
+   shrink by the same proportion, so their common height is kept. Only the
+   caption wraps, onto its own line, via flex-basis: 100%. */
+.page-content figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--nys-space-100, 8px);
+  width: 100%;
+  margin-bottom: var(--nys-space-400, 32px);
+}
+
+.page-content figure img,
+.page-content figure figcaption {
+  margin: 0;
+}
+
+.page-content figure img {
   height: auto;
-  margin: var(--nys-space-200) 0;
+  width: auto;
+  max-height: 300px;
+  /* Without this, images refuse to shrink past their intrinsic width. */
+  min-width: 0;
+}
+
+.page-content figure figcaption {
+  flex-basis: 100%;
+  max-width: 780px;
+  margin: 0 var(--nys-space-250);
 }
 
 /* Page Header */
@@ -341,6 +373,11 @@ main[role="main"] {
 
 .page-header h1.page-title {
   margin-top: 0;
+}
+
+.page-content p.article-quote {
+  font-size: var(--nys-font-size-body-lg);
+  font-weight: var(--nys-font-weight-semibold);
 }
 
 /* Featured Image */
@@ -1623,33 +1660,6 @@ pre[class*="language-"]:after {
   margin: 0;
 }
 
-/*** Table ***/
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--nys-font-size-md);
-}
-
-th,
-td {
-  padding: var(--nys-space-150);
-  text-align: left;
-}
-
-th {
-  background-color: var(--nys-color-neutral-100);
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-tr:nth-child(even) {
-  background-color: var(--nys-color-neutral-50);
-}
-
-tr:hover {
-  background-color: var(--nys-color-neutral-100);
-}
-
 /* CSS Variables Table */
 .css-var-table__tip {
   text-align: center;
@@ -1771,6 +1781,46 @@ kbd {
  */
 
 body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
+  a:link:focus-visible {
+    outline: solid var(--nys-border-width-md, 2px)
+      var(--nys-color-focus, #004dd1);
+    outline-offset: var(--nys-space-2px, 2px);
+  }
+
+  blockquote {
+    border-inline-start: 3px solid var(--nys-color-theme-mid, #457aa5);
+    margin-block: 1rem;
+    padding-block: 1rem;
+    padding-inline: 5%;
+    & *:not(h1, h2, h3, h4, h5, h6) {
+      font-size: 1.125rem;
+    }
+    & cite::before {
+      content: "\2014" / "";
+    }
+    &.doc {
+      background-color: var(--nys-color-base-weak, #ededed);
+      border: 1px dashed var(--nys-color-base, #62666a);
+      padding-block: 1.75rem;
+      > :first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+      }
+    }
+  }
+  figure {
+    figcaption {
+      font-style: italic;
+    }
+  }
   h2,
   h3,
   h4,
@@ -1786,12 +1836,12 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
       font-weight: 600;
       margin-block-end: 0.25rem;
       &:not(:first-child) {
-        margin-block-start: 0.25rem;
+        margin-block-start: 1rem;
       }
     }
     dd {
       display: list-item;
-      margin-inline-start: 1.25rem;
+      margin-inline-start: 2rem;
     }
   }
   nys-badge {
@@ -1808,16 +1858,26 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
   section.contact-points {
     margin-block-start: 4rem;
   }
-  mark.subhead {
-    background-color: transparent;
-    display: block;
-    font-size: 1.1rem;
-  }
-  .strong {
-    font-weight: 600;
-  }
-  .stronger {
-    font-weight: 700;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  mark {
+    &.subhead {
+      background-color: transparent;
+      display: block;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      margin-block-end: 0;
+      &.strong {
+        font-weight: 600;
+      }
+      &.stronger {
+        font-weight: 700;
+      }
+    }
   }
 
   article[data-template="a11yTests"] {
@@ -2006,8 +2066,16 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
         }
       }
     }
+    &[data-pattern="table"] {
+      table.nysa11y.table {
+        td.demo-entity-example {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
+
 @media (width < 640px) {
   body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
     article[data-template="a11yBuild"] {

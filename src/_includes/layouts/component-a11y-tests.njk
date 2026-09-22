@@ -300,12 +300,33 @@
     {% if zoom %}
     <section class="test-zoom checkbox__tile">
         <h3>Zoom</h3>
-        <p>
-            All tests in this section require the browser to be zoomed to 200%.
-            On Windows press <kbd>Ctrl</kbd> + <kbd>plus</kbd> and
-            on macOS press <kbd>Cmd</kbd> + <kbd>plus</kbd>.
-        </p>
-
+        <h4 class="nys-font-h6">
+            Test <a target="_blank" href="https://www.w3.org/WAI/WCAG22/quickref/#resize-text">Text Resize</a>
+            by modifying browser settings.
+        </h4>
+        <ul>
+            <li>
+                In Chrome-based browsers, go to Settings &rarr; Appearance &rarr; Font size. Select "very large."
+            </li>
+            <li>
+                In FireFox, go to Settings &rarr; Accessibility &rarr; Default zoom. Select "200%" and mark the checkbox "Zoom text only."
+            </li>
+        </ul>
+        <h4 class="nys-font-h6">
+            Test <a target="_blank" href="https://www.w3.org/WAI/WCAG22/quickref/#reflow">Reflow</a>
+            with browser devtools.
+        </h4>
+        <ul>
+            <li>
+                In <a href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/" target="_blank">Firefox</a>, open the toolbar menu button &rarr; More tools &rarr; Web Developer tools <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> &rarr; Responsive Design Mode <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>.
+            </li>
+            <li>
+                In <a href="https://developer.chrome.com/docs/devtools/device-mode#open_the_device_toolbar" target="_blank">Chrome-based browsers</a>, open the toolbar menu button &rarr; More tools &rarr; Developer tools <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> &rarr; Toggle Device Toolbar <em>or</em> <kbd>Ctrl <span aria-hidden="true">/</span><span class="sr-only">on windows or on mac</span> Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>.
+            </li>
+            <li>
+                Finally, set dimensions to "responsive," "320 width by 256 height," and "landscape" orientation.
+            </li>
+        </ul>
         {% for interaction in zoom.interactions %}
         <label>
             <input  type="checkbox"
