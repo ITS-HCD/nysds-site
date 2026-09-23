@@ -284,16 +284,6 @@ Set the `inverted` when the button is on a dark background.
           <td><code>""</code></td>
       </tr>
       <tr>
-          <td><code>ariaLabel</code></td>
-          <td>String</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>ariaDescription</code></td>
-          <td>String</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
           <td><code>disabled</code></td>
           <td>boolean</td>
           <td><code>false</code></td>
