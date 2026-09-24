@@ -75,6 +75,21 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Single Item List
+
+When only one `<li>` is provided, the component renders it as a back-to-parent link instead of a trail.
+
+{% set preview %}
+<nys-breadcrumbs>
+  <ol>
+    <li><a href="/services">Services</a></li>
+  </ol>
+</nys-breadcrumbs>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+
 ### Collapsed
 
 Add the `collapsed` prop to render the breadcrumb trail in its collapsed state. Users can expand the full trail by selecting the ellipsis.
