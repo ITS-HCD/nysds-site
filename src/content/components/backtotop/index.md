@@ -158,11 +158,38 @@ By default, `<nys-backtotop>` will be set on the bottom-right corner. If the bot
 
 {% block events %}
 
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
+
 The `<nys-backtotop>` component emits **three** custom Javascript events:
 
-1.  **`click`** – Emitted when the backtotop is clicked.
-2.  **`focus`** - Emitted when the backtotop receives focus.
-3.  **`blur`** - Emitted when the backtotop loses focus.
+### Event details
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>click</code></td>
+      <td>Emitted when the backtotop is clicked.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>focus</code></td>
+      <td>Emitted when the backtotop receives focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>blur</code></td>
+      <td>Emitted when the backtotop loses focus.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
+<br/>
 
 ### Event details
 

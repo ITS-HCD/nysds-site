@@ -58,54 +58,60 @@ The design system gives you standard components and patterns. The XD team helps 
 
 Once your team has defined the strategy, scope, and structure of your service, the design system provides the building blocks for the interface layer:
 
-<div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+<div class="nys-grid-row nys-grid-gap-300" style="--nys-card-height: 100%">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
-      headingLevel="h3"
+      href="/foundations/components/"
       heading="How Components Work"
       description="Custom HTML elements with built-in accessibility, encapsulated styles, and consistent behavior."
-      href="/foundations/components/"
-    ></nys-card>
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
-      headingLevel="h3"
-      heading="Design Tokens"
-      description="The design decision layer: colors, spacing, typography, and sizing defined as reusable values."
       href="/foundations/tokens/"
-    ></nys-card>
+      heading="Design Tokens"
+      description="The design decision layer — colors, spacing, typography, and sizing defined as reusable values."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
-      headingLevel="h3"
+      href="/foundations/styles/"
       heading="Styles Framework"
       description="CSS endpoints for tokens, typography, utilities, and a baseline reset."
-      href="/foundations/styles/"
-    ></nys-card>
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
-      headingLevel="h3"
+      href="/foundations/typography/"
       heading="Typography"
       description="Core typefaces, token-based sizing, and utility classes for consistent type."
-      href="/foundations/typography/"
-    ></nys-card>
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
-      headingLevel="h3"
-      heading="Agency Themes"
-      description="Color palettes for each agency group. Apply once and every component updates."
       href="/foundations/themes/"
-    ></nys-card>
+      heading="Agency Themes"
+      description="Color palettes for each agency group — apply once and every component updates."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
     <nys-card
-      headingLevel="h3"
+      href="/foundations/forms/"
       heading="Form Patterns"
       description="Validation, submission, error handling, and accessibility patterns for form-heavy applications."
-      href="/foundations/forms/"
-    ></nys-card>
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
 </div>
 

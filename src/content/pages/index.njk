@@ -17,7 +17,7 @@ heading_links: false
     <div class="hero__content">
       <h1 style="margin-top: 0; margin-bottom: 0;"><img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System" width="404" height="46"></h1>
       <p>A shared library of accessible, mobile-friendly components, design tokens, and guidelines for teams building digital services across New York State.</p>
-      <nys-button label="Get started today" size="lg" href="/get-started/"></nys-button>
+      <nys-button label="Get started today!" size="lg" href="/get-started/"></nys-button>
     </div>
     </div>
     <div class="nys-grid-col-6">
@@ -79,21 +79,25 @@ heading_links: false
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
       <nys-card href="/foundations/tokens" heading="Design Tokens" description="Centralized design decisions — colors, spacing, typography, and more — that keep every application consistent and easy to update." headingLevel="h3">
         <img slot="media" src="/assets/img/design-token-card.svg" alt="">
+        <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
       </nys-card>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
       <nys-card href="/foundations/accessibility/" heading="Accessibility" description="Every component is tested for WCAG compliance, so teams ship accessible experiences from day one — without extra remediation work." headingLevel="h3">
         <img slot="media" src="/assets/img/accessibility-card.svg" alt="">
+        <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
       </nys-card>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
-      <nys-card href="/components/" heading="Web Components" description="Every component is tested for WCAG compliance, so teams ship accessible experiences from day one — without extra remediation work." headingLevel="h3">
+      <nys-card href="/components/" heading="Web Components" description="Reusable front-end components shared across codebases, with built-in design, state, and behavior." headingLevel="h3">
         <img slot="media" src="/assets/img/web-component-card.svg" alt="">
+        <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
       </nys-card>
     </div>
     <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-3 nys-display-flex">
       <nys-card href="/foundations/typography/" heading="Typography" description="NYS brand-approved typefaces and type scales, ready to use in both design tools and production code." headingLevel="h3">
         <img slot="media" src="/assets/img/typography-card.svg" alt="">
+        <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
       </nys-card>
     </div>
   </div>
@@ -124,7 +128,7 @@ heading_links: false
 
 {# Latest Updates #}
 <div class="nys-grid-container-widescreen nys-top-800">
-  <div class="nys-grid-row nys-flex-row nys-grid-gap-300" >
+  <div class="nys-grid-row nys-flex-row nys-grid-gap-300" style="*{--nys-card-height: 100%;}">
     <div class="nys-grid-col-12 nys-grid-offset-2">
       <h2>Latest Updates</h2>
     </div>
@@ -137,12 +141,17 @@ heading_links: false
             {% set found_release = true %}
             <div class="nys-grid-col-12 nys-desktop:nys-grid-col-4 nys-desktop:nys-grid-offset-2">
               <nys-card href="{{ post.url | url }}" heading="{{ post.data.title }}" description="{{ post.data.description }}" headingLevel="h3" >
-                <img slot="media" src="{{ post.data.ogimage }}" alt="">
+                {% if post.data.ogimage %}
+                  <img slot="media" src="{{ post.data.ogimage }}" alt="">
+                {% else %}
+                  <img slot="media" src="/assets/img/nysds_og_image.png" alt="">
+                {% endif %}
                 {# <div slot="media-accent">
                   <span>{{ post.data.date | dateWeekday }}</span>
                   <span>{{ post.data.date | dateWeekdayDay }}</span>
                 </div> #}
                 <nys-badge slot="preheading" label="Latest release"></nys-badge>
+                <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
               </nys-card>
             </div>
           {% endif %}
@@ -164,6 +173,7 @@ heading_links: false
                   <span>{{ post.data.date | dateWeekdayDay }}</span>
                 </div> #}
                 <nys-badge slot="preheading" label="Latest article"></nys-badge>
+                <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
               </nys-card>
             </div>
           {% endif %}
