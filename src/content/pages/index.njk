@@ -12,15 +12,15 @@ heading_links: false
 <!-- Home Hero -->
 <div class="hero">
   <div class="nys-grid-container-widescreen nys-padding-y-400">
-    <div class="nys-grid-row">
-    <div class="nys-grid-col-6" style="align-content: center;">
+    <div class="nys-grid-row nys-grid-gap-200">
+    <div class="nys-tablet:nys-grid-col-6" style="align-content: center;">
     <div class="hero__content">
       <h1 style="margin-top: 0; margin-bottom: 0;"><img src="{{ '/assets/img/nysds_logo_long.svg' | url }}" alt="New York State Design System" width="404" height="46"></h1>
       <p>A shared library of accessible, mobile-friendly components, design tokens, and guidelines for teams building digital services across New York State.</p>
       <nys-button label="Get started today!" size="lg" href="/get-started/"></nys-button>
     </div>
     </div>
-    <div class="nys-grid-col-6">
+    <div class="nys-tablet:nys-grid-col-6 nys-order-first nys-tablet:nys-order-last">
     <div class="hero__media">
       <img src="{{ '/assets/img/homepage-grid-3.svg' | url }}" alt="" width="636" height="319">
     </div>
@@ -230,7 +230,7 @@ heading_links: false
 {# Support #}
 <div class="nys-grid-container-widescreen nys-top-800">
   <div class="nys-grid-row nys-grid-gap-300">
-    <div class="nys-grid-col-6 nys-grid-offset-3">
+    <div class="nys-tablet:nys-grid-col-6 nys-tablet:nys-grid-offset-3">
       <nys-card heading="Help shape the future of the NYS Design System" headingLevel="h3">
         <p>The design system improves when teams across New York State share what works and what does not. Report bugs, propose new components, join office hours, or help refine existing patterns.</p>
         <nys-button slot="footer" fullWidth label="Contribute" href="/about/contribute/"></nys-button>

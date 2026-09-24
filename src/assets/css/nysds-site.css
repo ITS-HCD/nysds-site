@@ -1130,6 +1130,8 @@ li > .section-nav__list {
 .hero__media img {
   width: auto;
   max-width: 100%;
+  height: auto;
+  margin-bottom: var(--nys-space-200);
 }
 
 @media (min-width: 768px) {
@@ -1151,6 +1153,7 @@ li > .section-nav__list {
   .hero__media img {
     width: auto;
     max-width: 100%;
+    margin-bottom: 0;
   }
 }
 
