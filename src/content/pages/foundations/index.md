@@ -26,6 +26,7 @@ How the design system is built — the token layers, styling framework, theming 
       headingLevel="h3"
       heading="Accessibility"
       description="How the design system supports WCAG 2.2 AA compliance, with guidance for developers, content creators, and leadership.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -34,6 +35,7 @@ How the design system is built — the token layers, styling framework, theming 
       headingLevel="h3"
       heading="Styles framework"
       description="The @nysds/styles CSS package — design tokens as custom properties, a CSS reset, typography classes, and layout utilities.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -42,6 +44,7 @@ How the design system is built — the token layers, styling framework, theming 
       headingLevel="h3"
       heading="Agency Themes"
       description="Apply agency-specific color palettes with a single attribute — build once, switch themes, and every component updates automatically.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -50,6 +53,7 @@ How the design system is built — the token layers, styling framework, theming 
       headingLevel="h3"
       heading="Design Tokens"
       description="The shared language of colors, spacing, and typography values — how primitive, semantic, and theme tokens connect design decisions to code.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -58,6 +62,7 @@ How the design system is built — the token layers, styling framework, theming 
       headingLevel="h3"
       heading="How Components Work"
       description="Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
 </div>
@@ -73,6 +78,7 @@ Practical references for building interfaces with the design system — typograp
       headingLevel="h3"
       heading="Design"
       description="Where the design system fits in the broader UX process — from strategy and scope to the interface layer.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -81,6 +87,7 @@ Practical references for building interfaces with the design system — typograp
       headingLevel="h3"
       heading="Typography"
       description="Core typefaces, typography tokens, font installation, and utility classes for consistent, accessible type across your application.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -89,6 +96,7 @@ Practical references for building interfaces with the design system — typograp
       headingLevel="h3"
       heading="Form Patterns"
       description="Form association, validation strategies, event handling, and submission patterns that work across all NYSDS form components.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -97,6 +105,7 @@ Practical references for building interfaces with the design system — typograp
       headingLevel="h3"
       heading="Utilities"
       description="Layout grid, flexbox, spacing, display, and responsive utility classes for rapid, consistent page layout.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
 </div>
@@ -112,6 +121,7 @@ Need to look up a specific token value or component API? These are also always a
       headingLevel="h3"
       heading="Token Browser"
       description="Browse all design tokens — colors, spacing, typography, and theme values — with an interactive theme switcher.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
@@ -120,6 +130,7 @@ Need to look up a specific token value or component API? These are also always a
       headingLevel="h3"
       heading="Component Catalog"
       description="All 27 NYSDS components — properties, events, accessibility details, and copy-paste examples.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
   </div>
 </div>
