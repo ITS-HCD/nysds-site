@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T17:46:00.028Z -->
+    <!-- Latest Build: 2026-09-24T17:46:26.919Z -->
   </head>
   
   <body class="single-page page-stepper section-components">
@@ -1192,10 +1192,26 @@ Proposal</a>.
 </section><br>
 <section>
     <h2 id="events">Events</h2>
-<p>The <code>&lt;nys-stepper&gt;</code> component emits the following events:</p>
-<ol>
-<li><strong><code>nys-step-click</code></strong> - Emitted when a <code>nys-step</code> is clicked</li>
-</ol>
+<p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
+<p>The <code>&lt;nys-stepper&gt;</code> component emits <strong>one</strong> custom Javascript event:</p>
+<h3 id="event-details">Event details</h3>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-step-click</code></td>
+      <td>Emitted when a <code>nys-step</code> is clicked.</td>
+      <td>
+        <code>href</code> (string): The clicked step's <code>href</code>.
+      </td>
+    </tr>
+  </table>
+</nys-table>
+<br>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">

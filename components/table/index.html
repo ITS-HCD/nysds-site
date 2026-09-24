@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T17:46:00.028Z -->
+    <!-- Latest Build: 2026-09-24T17:46:26.919Z -->
   </head>
   
   <body class="single-page page-table section-components">
@@ -1368,18 +1368,35 @@ Proposal</a>.
 </section><br>
 <section>
     <h2 id="events">Events</h2>
+<p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
 <p>The <code>&lt;nys-table&gt;</code> component emits <strong>two</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-click</code></strong> – Fired when the download button or a sortable column header is clicked.</li>
-<li><strong><code>nys-column-sort</code></strong> – Fired when a sortable column header is clicked. Can be prevented by calling <code>event.preventDefault()</code> to override the default sort behavior.</li>
-</ol>
 <h3 id="event-details">Event details</h3>
-<p>The <code>nys-column-sort</code> event includes a detail object with the following properties:</p>
-<ul>
-<li>columnIndex (number): The zero-based index of the clicked column.</li>
-<li>columnLabel (string): The text label of the clicked column header.</li>
-<li>sortDirection (string): The resulting sort direction — <code>&quot;asc&quot;</code>, <code>&quot;desc&quot;</code>, or <code>&quot;none&quot;</code>.</li>
-</ul>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-click</code></td>
+      <td>Fired when the download button or a sortable column header is clicked.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-column-sort</code></td>
+      <td>Fired when a sortable column header is clicked. Can be prevented by calling <code>event.preventDefault()</code> to override the default sort behavior.</td>
+      <td>
+        <ul>
+          <li><code>columnIndex</code> (number): The zero-based index of the clicked column.</li>
+          <li><code>columnLabel</code> (string): The text label of the clicked column header.</li>
+          <li><code>sortDirection</code> (string): The resulting sort direction — <code>"asc"</code>, <code>"desc"</code>, or <code>"none"</code>.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
+<br>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">

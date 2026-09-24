@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T17:46:00.028Z -->
+    <!-- Latest Build: 2026-09-24T17:46:26.919Z -->
   </head>
   
   <body class="single-page page-backtotop section-components">
@@ -820,13 +820,35 @@ Proposal</a>.
 </section><br>
 <section>
     <h2 id="events">Events</h2>
+<p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
 <p>The <code>&lt;nys-backtotop&gt;</code> component emits <strong>three</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>click</code></strong> – Emitted when the backtotop is clicked.</li>
-<li><strong><code>focus</code></strong> - Emitted when the backtotop receives focus.</li>
-<li><strong><code>blur</code></strong> - Emitted when the backtotop loses focus.</li>
-</ol>
 <h3 id="event-details">Event details</h3>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>click</code></td>
+      <td>Emitted when the backtotop is clicked.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>focus</code></td>
+      <td>Emitted when the backtotop receives focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>blur</code></td>
+      <td>Emitted when the backtotop loses focus.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
+<br>
+<h3 id="event-details-2">Event details</h3>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">

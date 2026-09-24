@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T17:46:00.028Z -->
+    <!-- Latest Build: 2026-09-24T17:46:26.919Z -->
   </head>
   
   <body class="single-page page-modal section-components">
@@ -960,16 +960,33 @@ Proposal</a>.
 </section><br>
 <section>
     <h2 id="events">Events</h2>
+<p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
 <p>The <code>&lt;nys-modal&gt;</code> component emits <strong>two</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-open</code></strong> – Fired when the modal is opened.</li>
-<li><strong><code>nys-close</code></strong> – Fired when the modal is closed.</li>
-</ol>
 <h3 id="event-details">Event details</h3>
-<p>The <code>nys-open</code> and <code>nys-close</code> events include a detail object with the following properties:</p>
-<ul>
-<li>id (string): The id of the file input.</li>
-</ul>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-open</code></td>
+      <td>Fired when the modal is opened.</td>
+      <td>
+        <code>id</code> (string): The id of the modal.
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-close</code></td>
+      <td>Fired when the modal is closed.</td>
+      <td>
+        <code>id</code> (string): The id of the modal.
+      </td>
+    </tr>
+  </table>
+</nys-table>
+<br>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">

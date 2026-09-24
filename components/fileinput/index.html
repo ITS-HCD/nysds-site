@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T17:46:00.028Z -->
+    <!-- Latest Build: 2026-09-24T17:46:26.919Z -->
   </head>
   
   <body class="single-page page-fileinput section-components">
@@ -1008,25 +1008,37 @@ Proposal</a>.
 </section><br>
 <section>
     <h2 id="events">Events</h2>
-<p>The <code>&lt;nys-fileinput&gt;</code> component emits <strong>one</strong> custom Javascript events:</p>
-<ol>
-<li><strong><code>nys-change</code></strong> – Fired when the file list is updated, either by selecting new files or removing existing ones.</li>
-</ol>
+<p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
+<p>The <code>&lt;nys-fileinput&gt;</code> component emits <strong>one</strong> custom Javascript event:</p>
 <h3 id="event-details">Event details</h3>
-<p>The <code>nys-change</code> event includes a detail object with the following properties:</p>
-<ul>
-<li><strong>id</strong> (string): The id of the file input.</li>
-<li><strong>files</strong> (Array of file entries): The full current selection.</li>
-<li><strong>changedFiles</strong> (Array of file entries): The entries added or removed by this action.</li>
-<li>Each entry in <code>files</code> and <code>changedFiles</code> has the same shape:
-<ul>
-<li>file (File): The raw File object.</li>
-<li>progress (number): Upload or processing progress (0–100).</li>
-<li>status (&quot;pending&quot; | &quot;processing&quot; | &quot;done&quot; | &quot;error&quot;): Current state of the file.</li>
-<li>errorMsg (string): Optional error message if status is &quot;error&quot;.</li>
-</ul>
-</li>
-</ul>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-change</code></td>
+      <td>Fired when the file list is updated, either by selecting new files or removing existing ones.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the file input.</li>
+          <li><code>files</code> (array): The full current selection.</li>
+          <li><code>changedFiles</code> (array): The entries added or removed by this action.</li>
+        </ul><br>
+        <p>Each entry (in both <code>files</code> and <code>changedFiles</code>) has:</p>
+        <ul>
+          <li><code>file</code> (File)</li>
+          <li><code>progress</code> (number, 0–100)</li>
+          <li><code>status</code> (<code>"pending"</code> | <code>"processing"</code> | <code>"done"</code> | <code>"error"</code>)</li>
+          <li><code>errorMsg</code> (string, optional)</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
+<br>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">

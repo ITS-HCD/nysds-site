@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T17:46:00.028Z -->
+    <!-- Latest Build: 2026-09-24T17:46:26.919Z -->
   </head>
   
   <body class="single-page page-datepicker section-components">
@@ -1170,18 +1170,34 @@ Proposal</a>.
 </section><br>
 <section>
     <h2 id="events">Events</h2>
+<p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
 <p>The <code>&lt;nys-datepicker&gt;</code> component emits <strong>two</strong> custom JavaScript events:</p>
-<ol>
-<li><strong><code>nys-input</code></strong> -- Fired when the user selects or types a valid date.</li>
-<li><strong><code>nys-blur</code></strong> -- Fired when the input or calendar loses focus. Triggers validation.</li>
-</ol>
 <h3 id="event-details">Event details</h3>
-<p>The <code>nys-input</code> event includes a <code>detail</code> object with the following properties:</p>
-<ul>
-<li><strong>id</strong> (string): The <code>id</code> of the datepicker component.</li>
-<li><strong>value</strong> (Date): The selected date as a <code>Date</code> object.</li>
-</ul>
-<p>The <code>nys-blur</code> event is a plain <code>Event</code> with no additional detail.</p>
+<nys-table striped="">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-input</code></td>
+      <td>Fired when the user selects or types a valid date.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the datepicker component.</li>
+          <li><code>value</code> (Date): The selected date as a <code>Date</code> object.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the input or calendar loses focus. Triggers validation.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
+<br>
 <p>You can listen to these events using JavaScript:</p>
 <div class="code-preview-container">
   <div class="code-preview__source">
