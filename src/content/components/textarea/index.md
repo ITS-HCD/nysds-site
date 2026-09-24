@@ -305,19 +305,53 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% block events %}
 
-The `<nys-textarea>` component emits **four** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-input`** – Fired when the textarea state changes.
-2.  **`nys-focus`** – Fired when the textarea gains focus.
-3.  **`nys-blur`** – Fired when the textarea loses focus.
-4.  **`nys-select`** – Fired when the user selects text within the textarea.
+The `<nys-textarea>` component emits **four** custom Javascript events:
 
 ### Event details
 
-The `nys-input` and `nys-select` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-input</code></td>
+      <td>Fired when the textarea state changes.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the textarea.</li>
+          <li><code>value</code> (string): The currently selected text.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td>Fired when the textarea gains focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the textarea loses focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-select</code></td>
+      <td>Fired when the user selects text within the textarea.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the textarea.</li>
+          <li><code>value</code> (string): The currently selected text.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the textarea.
-- value (string): The currently selected text.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

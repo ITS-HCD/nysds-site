@@ -361,9 +361,30 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 {% block events %}
 
-The `<nys-stepper>` component emits the following events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1. **`nys-step-click`** - Emitted when a `nys-step` is clicked
+The `<nys-stepper>` component emits **one** custom Javascript event:
+
+### Event details
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-step-click</code></td>
+      <td>Emitted when a <code>nys-step</code> is clicked.</td>
+      <td>
+        <code>href</code> (string): The clicked step's <code>href</code>.
+      </td>
+    </tr>
+  </table>
+</nys-table>
+
+<br/>
 
 You can listen to these events using JavaScript:
 
