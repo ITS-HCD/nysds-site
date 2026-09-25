@@ -154,16 +154,33 @@ On screens below 768px, the component automatically switches to a condensed layo
 
 {% block events %}
 
-The `<nys-pagination>` component emits <strong>one</strong> custom Javascript event:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-change`** – Fired when the `currentPage` value is changed.
+The `<nys-pagination>` component emits **one** custom Javascript event:
 
 ### Event details
 
-The `nys-change` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-change</code></td>
+      <td>Fired when the <code>currentPage</code> value is changed.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the pagination component.</li>
+          <li><code>page</code> (integer): The new value of <code>currentPage</code>.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the pagination component.
-- page (integer): The new value of `currentPage`
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

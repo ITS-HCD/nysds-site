@@ -304,17 +304,34 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
 
 {% block events %}
 
-The `<nys-dropdownmenuitem>` component emits **one** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-click`** – Emitted when a dropdown menu item is clicked.
+The `<nys-dropdownmenuitem>` component emits **one** custom Javascript event:
 
 ### Event details
 
-The `nys-click` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-click</code></td>
+      <td>Emitted when a dropdown menu item is clicked.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the clicked item.</li>
+          <li><code>label</code> (string): The label of the clicked item.</li>
+          <li><code>href</code> (string): The href of the clicked item. Only present if <code>href</code> was provided.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- `id` (string): The id of the clicked item.
-- `label` (string): The label of the clicked item.
-- `href` (string): The href of the clicked item. **Only present if `href` was provided.**
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}
