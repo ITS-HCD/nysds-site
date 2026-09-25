@@ -231,8 +231,8 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
 {% block properties %}
 
 `<nys-dropdownmenu>`
-<nys-table striped>
 
+<nys-table striped>
   <table>
     <tr>
       <th>Property</th>
@@ -260,6 +260,7 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
 </br>
 
 `<nys-dropdownmenuitem>`
+
 <nys-table striped>
 
   <table>
