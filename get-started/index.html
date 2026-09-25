@@ -46,7 +46,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-09-24T19:28:43.573Z -->
+    <!-- Latest Build: 2026-09-25T16:54:49.622Z -->
   </head>
   
   <body class="single-page page-get-started section-get-started">
@@ -89,73 +89,78 @@
       
 <div class="nys-grid-container-widescreen">
 <div class="nys-grid-row nys-grid-gap">
-  <aside class="nys-desktop:nys-grid-col-2">
-    <nav class="section-nav accordion" aria-label="Section Navigation" data-pagefind-ignore="all">
-  <button id="accordion-trigger-get-started" class="section-nav__toggle accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-panel-get-started">
-    <span class="accordion__label">Get Started</span>
-    <nys-icon name="chevron_down" size="xl" aria-hidden="true"></nys-icon>
-  </button>
-
-  <ul class="section-nav__list accordion__panel" id="accordion-panel-get-started" aria-labelledby="accordion-trigger-get-started" hidden="">
-
-
-
-  
-  
-
-  
-  
-
-  
-  
+  <aside class="nys-desktop:nys-grid-col-auto">
     
-    
-    <li class="section-nav__item section-nav__item--active-section section-nav__item--active">
-      <a class="section-nav__link" href="/get-started/" aria-current="page">
-        Get Started
-      </a>
+
+  
+  
+
+  
+  
 
       
       
-    </li>
-  
-    
-    
-    <li class="section-nav__item">
-      <a class="section-nav__link" href="/get-started/designers/">
-        Designers
-      </a>
 
-      
-      
-    </li>
-  
-    
-    
-    <li class="section-nav__item">
-      <a class="section-nav__link" href="/get-started/developers/">
-        Developers
-      </a>
 
-      
-      
-    </li>
-  
-    
-    
-    <li class="section-nav__item">
-      <a class="section-nav__link" href="/get-started/leadership/">
-        Leadership
-      </a>
+ 
+ 
 
-      
-      
-    </li>
+  
   
 
+  <div class="verticalnav-container">
+    <nys-verticalnav header="Get Started" hideHeader="" data-pagefind-ignore="all">
+      <ul>
+        
+        
+          
+          
 
-  </ul>
-</nav>
+        
+          <li>
+            <a href="/get-started/" aria-current="page">
+              Get Started
+            </a>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/designers/">
+              Designers
+            </a>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/developers/">
+              Developers
+            </a>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/leadership/">
+              Leadership
+            </a>
+          </li>
+        
+      
+      </ul>
+    </nys-verticalnav>
+  </div>
+
   </aside>
   <div class="nys-desktop:nys-grid-col-fill">  
     <h1 id="get-started-with-the-nys-design-system">Get Started with the NYS Design System</h1>
@@ -169,36 +174,35 @@
 <p>Each component is production-ready, thoroughly tested, and built for government use cases: DMV forms, benefits applications, permit systems, and agency dashboards.</p>
 <p><strong><a href="/components/">Browse All Components →</a></strong></p>
 </div>
-<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
-<h3 id="styles-use-design-tokens-and-css-framework">Styles: Use Design Tokens and CSS Framework</h3>
-<p>Don't want to adopt components yet? Use our design tokens and CSS framework to maintain visual consistency across your site. Apply tokens for color, typography, spacing, and borders to custom HTML—no component wrapper needed.</p>
-<p><strong><a href="/foundations/styles/">Explore Tokens &amp; Styles</a></strong></p>
 </div>
-<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
-<h3 id="guidance-build-accessibly">Guidance: Build Accessibly</h3>
-<p>Learn how to design and build clear, usable digital experiences for all New Yorkers. We cover WCAG compliance, plain language, keyboard navigation, screen reader testing, and accessibility patterns for forms, tables, and complex workflows.</p>
-<p><strong><a href="/foundations/accessibility/">Read Accessibility Best Practices</a></strong></p>
-</div>
+<div class="nys-grid-row nys-grid-gap-200 nys-margin-b-200" style="--nys-card-height: 100%;">
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Styles: Use Design Tokens and CSS Framework" description="Don't want to adopt components yet? Use our design tokens and CSS framework to maintain visual consistency across your site. Apply tokens for color, typography, spacing, and borders to custom HTML—no component wrapper needed." headingLevel="h3">
+    <nys-button fullWidth="" slot="footer" href="/foundations/styles/" variant="outline">Explore Tokens & Styles</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Guidance: Build Accessibly" description="Learn how to design and build clear, usable digital experiences for all New Yorkers. We cover WCAG compliance, plain language, keyboard navigation, screen reader testing, and accessibility patterns for forms, tables, and complex workflows." headingLevel="h3">
+    <nys-button fullWidth="" slot="footer" href="/foundations/accessibility/" variant="outline">Read Accessibility Best Practices</nys-button>
+    </nys-card>
 </div>
 <p><strong>You can adopt all three approaches or start with what fits your situation.</strong> Many teams begin with styles and tokens in an existing application, then add web components incrementally as their team builds confidence and finds the right moments to refactor.</p>
 <h2 id="choose-your-path">Choose Your Path</h2>
-<div class="nys-grid-row nys-grid-gap-300">
-<nys-button label="For Designers" href="/get-started/designers/" variant="outline" fullWidth="" class="nys-tablet:nys-grid-col-4" style="margin-bottom: 16px;"></nys-button>
-<nys-button label="For Developers" href="/get-started/developers/" variant="outline" fullWidth="" class="nys-tablet:nys-grid-col-4" style="margin-bottom: 16px;"></nys-button>
-<nys-button label="For Agency Leaders" href="/get-started/leadership/" variant="outline" fullWidth="" class="nys-tablet:nys-grid-col-4" style="margin-bottom: 16px;"></nys-button>
+<div class="nys-grid-row nys-grid-gap-200" style="--nys-card-height: 100%;">
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Designer?" description="Set up design libraries, use component variants, prototype with system components." headingLevel="h3">
+    <nys-button fullWidth="" slot="footer" href="/get-started/designers/" variant="outline">Start Designing</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Developer?" description="Install via npm, integrate with your framework, start using components and tokens." headingLevel="h3">
+    <nys-button fullWidth="" slot="footer" href="/get-started/developers/" variant="outline">Start Developing</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Agency Leader?" description="Understand the value proposition, adoption strategy, and support available." headingLevel="h3">
+    <nys-button fullWidth="" slot="footer" href="/get-started/leadership/" variant="outline">Start Leading</nys-button>
+    </nys-card>
 </div>
-<ul>
-<li><strong>Designers:</strong> Set up design libraries, use component variants, prototype with system components.</li>
-<li><strong>Developers:</strong> Install via npm, integrate with your framework, start using components and tokens.</li>
-<li><strong>Agency Leaders:</strong> Understand the value proposition, adoption strategy, and support available.</li>
-</ul>
 <h2 id="learn-the-system">Learn the System</h2>
 <p>The NYS Design System team created a <a href="/learn/">video tour</a> to walk you through how the system works and how to use it in your team's workflow.</p>
 
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: September 24, 2026</p>
+    <p>Last updated: September 25, 2026</p>
   </div>
 
   </div>
