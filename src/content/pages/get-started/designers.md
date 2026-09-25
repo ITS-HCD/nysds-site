@@ -93,27 +93,25 @@ The NYS Design System is designed to speed up and standardize UI design. Here’
 
 ## Your First 15 Minutes
 
-Once you have activated the NYS Design System library, here is a quick workflow to get familiar with what is available.
+Once you have activated the NYS Design System library, here is a quick workflow to get familiar with what is available. After this quick tour, you will have a solid sense of what the library offers. From here, you can start applying components to your actual project work.
 
-### 1. Browse the component library
-
-Open the Assets panel in Figma and expand the NYS Design System section. Scroll through to see the full list of components: buttons, alerts, form inputs, navigation elements, and more. Each component name matches a corresponding web component, so what you see here is what developers will implement.
-
-### 2. Insert a few components
-
-Create a new page in your file and drag in a handful of components. Try a button, an alert, and a text input. You will see that each one drops in with realistic default content and proper styling already applied.
-
-### 3. Explore variants and properties
-
-Select any component instance and look at the right-side panel. You can switch between variants (such as button types or alert styles), toggle properties on or off, and change text content. Experiment with the options to see how each component adapts.
-
-### 4. Check color and typography styles
-
-Open the local styles panel or use the selection colors section to see what design tokens are available. The library includes a full set of color and typography styles that stay consistent across every component. These map directly to the design tokens that developers use in code.
-
-### 5. Look at example layouts
-
-Open the project template to see how components come together in realistic page layouts. These examples show common patterns like form pages, content pages, and navigation structures. Use them as starting points for your own work.
+<nys-processlist>
+  <nys-processlistitem label="Browse the component library">
+    <div slot="description">Open the Assets panel in Figma and expand the NYS Design System section. Scroll through to see the full list of components: buttons, alerts, form inputs, navigation elements, and more. Each component name matches a corresponding web component, so what you see here is what developers will implement.</div>
+  </nys-processlistitem>
+  <nys-processlistitem label="Insert a few components">
+    <div slot="description">Create a new page in your file and drag in a handful of components. Try a button, an alert, and a text input. You will see that each one drops in with realistic default content and proper styling already applied.</div>
+  </nys-processlistitem>
+  <nys-processlistitem label="Explore variants and properties">
+    <div slot="description">Select any component instance and look at the right-side panel. You can switch between variants (such as button types or alert styles), toggle properties on or off, and change text content. Experiment with the options to see how each component adapts.</div>
+  </nys-processlistitem>
+  <nys-processlistitem label="Check color and typography styles">
+    <div slot="description">Open the local styles panel or use the selection colors section to see what design tokens are available. The library includes a full set of color and typography styles that stay consistent across every component. These map directly to the design tokens that developers use in code.</div>
+  </nys-processlistitem>
+  <nys-processlistitem label="Look at example layouts">
+    <div slot="description">Open the project template to see how components come together in realistic page layouts. These examples show common patterns like form pages, content pages, and navigation structures. Use them as starting points for your own work.</div>
+  </nys-processlistitem>
+</nys-processlist>
 
 <div class="nys-grid-row nys-grid-gap-200">
     <div class="nys-tablet:nys-grid-col-6 nys-tablet:nys-grid-offset-3">
@@ -124,26 +122,6 @@ Open the project template to see how components come together in realistic page 
         </nys-card>
     </div>
 </div>
-
-<!-- <a class="card card--horizontal" href="" aria-label="NYS Design System Project Template">
-    <div class="card__inner">
-        <div class="card__media card__media--thin">
-            <img src="/assets/img/4-up-card.svg" />
-        </div>
-        <div class="card__content">
-            <div class="card__title">
-                NYS Design System Project Template
-            </div>
-            <div class="card__desc">
-                Start with the correct agency theming and design variables already applied. Includes example layouts for common page types.
-                <p></p>
-                <nys-badge label="For NYS staff" prefixIcon="lock_filled"></nys-badge>
-            </div>
-        </div>
-    </div>
-</a> -->
-
-After this quick tour, you will have a solid sense of what the library offers. From here, you can start applying components to your actual project work.
 
 ## Next Steps: Learn More About the Design System
 
