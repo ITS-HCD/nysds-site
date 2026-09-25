@@ -348,19 +348,38 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% block events %}
 
-The `<nys-datepicker>` component emits **two** custom JavaScript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-input`** -- Fired when the user selects or types a valid date.
-2.  **`nys-blur`** -- Fired when the input or calendar loses focus. Triggers validation.
+The `<nys-datepicker>` component emits **two** custom JavaScript events:
 
 ### Event details
 
-The `nys-input` event includes a `detail` object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-input</code></td>
+      <td>Fired when the user selects or types a valid date.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the datepicker component.</li>
+          <li><code>value</code> (Date): The selected date as a <code>Date</code> object.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the input or calendar loses focus. Triggers validation.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
 
-- **id** (string): The `id` of the datepicker component.
-- **value** (Date): The selected date as a `Date` object.
-
-The `nys-blur` event is a plain `Event` with no additional detail.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

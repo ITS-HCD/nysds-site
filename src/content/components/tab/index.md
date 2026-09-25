@@ -207,22 +207,47 @@ The `nys-tab` component includes the following accessibility-focused features:
 
 {% block events %}
 
-The `<nys-tab>` component emits **three** custom JavaScript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1. **`nys-tab-select`** – Fired when a tab is activated via click or Enter / Space.
-2. **`nys-tab-focus`** – Fired when a tab receives focus.
-3. **`nys-tab-blur`** – Fired when a tab loses focus.
+The `<nys-tab>` component emits **three** custom JavaScript events:
 
 ### Event details
 
-The `nys-tab-select` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-tab-select</code></td>
+      <td>Fired when a tab is activated via click or Enter / Space.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the activated tab.</li>
+          <li><code>label</code> (string): The label of the activated tab.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-tab-focus</code></td>
+      <td>Fired when a tab receives focus.</td>
+      <td>
+        <code>id</code> (string): The id of the tab.
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-tab-blur</code></td>
+      <td>Fired when a tab loses focus.</td>
+      <td>
+        <code>id</code> (string): The id of the tab.
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the activated tab.
-- label (string): The label of the activated tab.
-
-The `nys-tab-focus` and `nys-tab-blur` events include:
-
-- id (string): The id of the tab.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

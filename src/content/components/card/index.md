@@ -600,11 +600,37 @@ description: "Line height of the description text."
 
 {% block events %}
 
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
 An interactive card, one with `href` or a click handler, emits **three** custom Javascript events:
 
-1.  **`nys-click`** – Fired when the card is activated with the mouse or the keyboard.
-2.  **`nys-focus`** – Fired when the card gains focus.
-3.  **`nys-blur`** – Fired when the card loses focus.
+### Event details
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-click</code></td>
+      <td>Fired when the card is activated with the mouse or the keyboard.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td>Fired when the card gains focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the card loses focus.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}
