@@ -847,19 +847,53 @@ The form attribute associates the `nys-combobox` component with a specific `<for
 
 {% block events %}
 
-The `<nys-combobox>` component emits **four** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1. **`nys-change`** – Fired when the selected value changes.
-2. **`nys-input`** – Fired on every keystroke as the user types in the input.
-3. **`nys-focus`** – Fired when the combobox gains focus.
-4. **`nys-blur`** – Fired when the combobox loses focus.
+The `<nys-combobox>` component emits **four** custom Javascript events:
 
 ### Event details
 
-The `nys-change` and `nys-input` events include a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-change</code></td>
+      <td>Fired when the selected value changes.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the combobox.</li>
+          <li><code>value</code> (string): The current value of the combobox.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-input</code></td>
+      <td>Fired on every keystroke as the user types in the input.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the combobox.</li>
+          <li><code>value</code> (string): The current value of the combobox.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td>Fired when the combobox gains focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the combobox loses focus.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the combobox.
-- value (string): The current value of the combobox.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

@@ -3,10 +3,12 @@ permalink: /components/modal/
 title: Modal
 description: Displays content in a dialog that appears over the page and requires user interaction before returning to the main content.
 image: /assets/img/components/modal.svg
-image_alt: An illustration of a modal.
+image_alt: An illustration of a modal dialog.
 image_header: /assets/img/components/modal-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=9962-6713&t=Fz3PChrCAbfpr60Y-4
+
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -278,16 +280,37 @@ A forced action modal requires users to make a choice before continuing. Set the
 
 {% block events %}
 
-The `<nys-modal>` component emits **two** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-open`** – Fired when the modal is opened.
-2.  **`nys-close`** – Fired when the modal is closed.
+The `<nys-modal>` component emits **two** custom Javascript events:
 
 ### Event details
 
-The `nys-open` and `nys-close` events include a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-open</code></td>
+      <td>Fired when the modal is opened.</td>
+      <td>
+        <code>id</code> (string): The id of the modal.
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-close</code></td>
+      <td>Fired when the modal is closed.</td>
+      <td>
+        <code>id</code> (string): The id of the modal.
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the file input.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}
@@ -295,13 +318,13 @@ You can listen to these events using JavaScript:
 const modal = document.querySelector("nys-modal");
 // Listen for the 'nys-open' event
 modal.addEventListener("nys-open", (event) => {
-  const { id } = event.detail;
-  console.log(`Modal (${id}) is opened`);
+const { id } = event.detail;
+console.log(`Modal (${id}) is opened`);
 });
 // Listen for the 'nys-close' event
 modal.addEventListener("nys-close", (event) => {
-  const { id, reason } = event.detail;
-  console.log(`Modal (${id}) is closed.`);
+const { id, reason } = event.detail;
+console.log(`Modal (${id}) is closed.`);
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}

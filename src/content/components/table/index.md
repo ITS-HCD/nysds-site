@@ -3,10 +3,12 @@ permalink: /components/table/
 title: Table
 description: A structured layout that displays data in rows and columns to help users scan, compare, and understand information efficiently.
 image: /assets/img/components/table.svg
-image_alt: An illustration of a table.
+image_alt: An illustration of a table
 image_header: /assets/img/components/table-header.svg
 stable: true
 figma_link: https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System?node-id=13839-40623&t=EXsXvlMbCdRw10ir-4
+
+hasA11yPages: true
 ---
 
 {% extends "layouts/component.njk" %}
@@ -374,18 +376,39 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% block events %}
 
-The `<nys-table>` component emits **two** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1. **`nys-click`** – Fired when the download button or a sortable column header is clicked.
-2. **`nys-column-sort`** – Fired when a sortable column header is clicked. Can be prevented by calling `event.preventDefault()` to override the default sort behavior.
+The `<nys-table>` component emits **two** custom Javascript events:
 
 ### Event details
 
-The `nys-column-sort` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-click</code></td>
+      <td>Fired when the download button or a sortable column header is clicked.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-column-sort</code></td>
+      <td>Fired when a sortable column header is clicked. Can be prevented by calling <code>event.preventDefault()</code> to override the default sort behavior.</td>
+      <td>
+        <ul>
+          <li><code>columnIndex</code> (number): The zero-based index of the clicked column.</li>
+          <li><code>columnLabel</code> (string): The text label of the clicked column header.</li>
+          <li><code>sortDirection</code> (string): The resulting sort direction — <code>"asc"</code>, <code>"desc"</code>, or <code>"none"</code>.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- columnIndex (number): The zero-based index of the clicked column.
-- columnLabel (string): The text label of the clicked column header.
-- sortDirection (string): The resulting sort direction — `"asc"`, `"desc"`, or `"none"`.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}
@@ -393,8 +416,8 @@ You can listen to these events using JavaScript:
 const table = document.querySelector('nys-table');
 // Listen for the 'nys-column-sort' event
 table.addEventListener('nys-column-sort', (event) => {
-  const { columnIndex, columnLabel, sortDirection } = event.detail;
-  console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
+const { columnIndex, columnLabel, sortDirection } = event.detail;
+console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`);
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}

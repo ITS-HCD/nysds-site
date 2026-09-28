@@ -25,18 +25,10 @@ navOrder: -1
       href="{{ post.url | url }}"
       heading="{{ post.data.title }}"
       description="{{ post.data.description }}"
+      size="lg"
       >
       {% if post.data.image %}        <img src="{{ post.data.image | url }}" slot="media" alt="{{ post.data.image_alt }}">      {% else %}        <img src="../assets/img/components/placeholder.svg" slot="media" alt="Placeholder">      {% endif %}
     </nys-card>
-    <!-- <a class="card nys-flex-fill" href="{{ post.url | url }}" aria-label="{{ post.data.title }} Component">
-      <div class="card__inner">
-        <div class="card__media">{% if post.data.image %}
-          <img src="{{ post.data.image | url }}" alt="{{ post.data.image_alt }}"></div>{% else %}
-          <img src="../assets/img/components/placeholder.svg" alt="Placeholder"></div>{% endif %}
-          <div class="card__title">{{ post.data.title }}</div>
-          <div class="card__desc">{{ post.data.description }}</div>
-      </div>
-    </a> -->
   </div>
   {% endif %}
   {%- endfor -%}

@@ -29,60 +29,33 @@ Each component is production-ready, thoroughly tested, and built for government 
 **[Browse All Components →](/components/)**
 
 </div>
-
-<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
-
-### Styles: Use Design Tokens and CSS Framework
-
-Don't want to adopt components yet? Use our design tokens and CSS framework to maintain visual consistency across your site. Apply tokens for color, typography, spacing, and borders to custom HTML—no component wrapper needed.
-
-**[Explore Tokens & Styles](/foundations/styles/)**
-
 </div>
 
-<div class="nys-tablet:nys-grid-col-6" style="border: 1px solid var(--nys-color-neutral-200); padding: var(--nys-space-300);">
-
-### Guidance: Build Accessibly
-
-Learn how to design and build clear, usable digital experiences for all New Yorkers. We cover WCAG compliance, plain language, keyboard navigation, screen reader testing, and accessibility patterns for forms, tables, and complex workflows.
-
-**[Read Accessibility Best Practices](/foundations/accessibility/)**
-
-</div>
-
+<div class="nys-grid-row nys-grid-gap-200 nys-margin-b-200" style="--nys-card-height: 100%;">
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Styles: Use Design Tokens and CSS Framework" description="Don't want to adopt components yet? Use our design tokens and CSS framework to maintain visual consistency across your site. Apply tokens for color, typography, spacing, and borders to custom HTML—no component wrapper needed." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/foundations/styles/" variant="outline">Explore Tokens & Styles</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Guidance: Build Accessibly" description="Learn how to design and build clear, usable digital experiences for all New Yorkers. We cover WCAG compliance, plain language, keyboard navigation, screen reader testing, and accessibility patterns for forms, tables, and complex workflows." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/foundations/accessibility/" variant="outline">Read Accessibility Best Practices</nys-button>
+    </nys-card>
 </div>
 
 **You can adopt all three approaches or start with what fits your situation.** Many teams begin with styles and tokens in an existing application, then add web components incrementally as their team builds confidence and finds the right moments to refactor.
 
 ## Choose Your Path
 
-<div class="nys-grid-row nys-grid-gap-300">
-<nys-button
-    label="For Designers"
-    href="/get-started/designers/"
-    variant="outline"
-    fullWidth
-    class="nys-tablet:nys-grid-col-4"
-    style="margin-bottom: 16px;"></nys-button>
-<nys-button
-    label="For Developers"
-    href="/get-started/developers/"
-    variant="outline"
-    fullWidth
-    class="nys-tablet:nys-grid-col-4"
-    style="margin-bottom: 16px;"></nys-button>
-<nys-button
-    label="For Agency Leaders"
-    href="/get-started/leadership/"
-    variant="outline"
-    fullWidth
-    class="nys-tablet:nys-grid-col-4"
-    style="margin-bottom: 16px;"></nys-button>
+<div class="nys-grid-row nys-grid-gap-200" style="--nys-card-height: 100%;">
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Designer?" description="Set up design libraries, use component variants, prototype with system components." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/get-started/designers/" variant="outline">Start Designing</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Developer?" description="Install via npm, integrate with your framework, start using components and tokens." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/get-started/developers/" variant="outline">Start Developing</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Agency Leader?" description="Understand the value proposition, adoption strategy, and support available." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/get-started/leadership/" variant="outline">Start Leading</nys-button>
+    </nys-card>
 </div>
 
-- **Designers:** Set up design libraries, use component variants, prototype with system components.
-- **Developers:** Install via npm, integrate with your framework, start using components and tokens.
-- **Agency Leaders:** Understand the value proposition, adoption strategy, and support available.
 
 ## Learn the System
 

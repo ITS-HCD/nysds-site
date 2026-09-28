@@ -196,12 +196,54 @@ When New York State publishes an urgent message, such as a severe weather event 
 
 {% block events %}
 
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
 This component emits **two** custom Javascript events:
 
-1. **`nys-language-select`** - Emitted when a user selects a language from the translate dropdown. The event detail contains the selected language object.
+### Event details
 
-2. **`nys-search-submit`** - Emitted when a user submits a search query. The event detail contains the search query string.
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-language-select</code></td>
+      <td>Emitted when a user selects a language from the translate dropdown.</td>
+      <td>
+        <code>language</code> (object): The selected language object.
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-search-submit</code></td>
+      <td>Emitted when a user submits a search query.</td>
+      <td>
+        <code>query</code> (string): The search query string.
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
+<br/>
+You can listen to these events using JavaScript:
+{% set code %}
+// Select the unavheader component
+const unavheader = document.querySelector("nys-unavheader");
+// Listen for the 'nys-language-select' event
+unavheader.addEventListener("nys-language-select", (event) => {
+  console.log("Language selected:", event.detail.language);
+});
+// Listen for the 'nys-search-submit' event
+unavheader.addEventListener("nys-search-submit", (event) => {
+  console.log("Search submitted:", event.detail.query);
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}
