@@ -11,16 +11,18 @@ heading_links: false
 
 {% block content %}
 <div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap-200">
+  <div class="nys-grid-col-12">
+    <header class="page-header">
+      <h1 class="page-title">What’s New</h1>
 
-  <header class="page-header">
-    <h1 class="page-title">What’s New</h1>
+      {%- if description -%}
+        <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
+      {%- endif -%}
 
-    {%- if description -%}
-      <p class="page-subtitle">Check out the latest updates to the New York State Design System.</p>
-    {%- endif -%}
-
-  </header>
-
+    </header>
+    </div>
+</div>
 <style>
 .post-list__item {
   display: flex;
