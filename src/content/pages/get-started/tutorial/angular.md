@@ -30,7 +30,7 @@ Install the two NYSDS packages: `@nysds/angular` for the Angular-wrapped compone
 
 After installing, load the NYSDS stylesheet by importing it at the top of your global stylesheet (`src/styles.css` or `src/styles.scss`). Angular's build tools resolve the package import automatically, so you don't need to reference a path inside `node_modules`.
 
-{% set code %}/* src/styles.css */
+{% set code %}
 @import "@nysds/styles/full";
 {% endset %}
 {% set accordionLabel = "Global CSS Import" %}

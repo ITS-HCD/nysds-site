@@ -39,7 +39,7 @@ For styling, import the NYSDS CSS in `index.html`. Reference it directly from th
 Or import it in your entry file:
 
 {% set code %}// main.tsx
-import "@nysds/styles";
+import "@nysds/styles/full";
 {% endset %}
 {% set accordionLabel = "index.html" %}
 {% set codeExpanded = true %}

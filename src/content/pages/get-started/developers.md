@@ -64,7 +64,7 @@ NYSDS components are standard web components. They work in any framework. Below 
 
 Full React support is available through our dedicated `@nysds/react` package, which provides React-wrapped versions of each web component. Event bindings, forms integration, and slots all included.
 
-{% set code %}npm install @nysds/react @nysds/styles{% endset %}
+{% set code %}npm install @nysds/react{% endset %}
 {% set accordionLabel = "CLI Command" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
@@ -85,26 +85,16 @@ For a full walkthrough covering standalone components, NgModule setup, and forms
 
 ### Vue
 
-<nys-alert type="success" heading="Updated Vue support as of v1.22.0"></nys-alert>
+<nys-alert type="success" heading="Updated Vue 3 support as of v1.22.0 (Early Adoption Phase)"></nys-alert>
 
-We package the Vue JSX files in the @nysds/components/react package. Configure Vite to recognize `nys-` tags as custom elements:
+Full Vue 3 support is available through `@nysds/vue`.
 
-{% set code %}// vite.config.js
-import vue from '@vitejs/plugin-vue';
-export default {
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => tag.startsWith('nys-')
-        }
-      }
-    })
-  ]
-}{% endset %}
+{% set code %}npm install @nysds/vue{% endset %}
 {% set accordionLabel = "Vue Config" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
+
+For a full walkthrough covering project setup, custom events, slots, and forms, see the [Vue Tutorial](/get-started/developers/vue/).
 
 ### .NET / Blazor
 
