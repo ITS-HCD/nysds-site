@@ -60,7 +60,7 @@ NYSDS components are standard web components. They work in any framework. Below 
 
 
 ### React
-<nys-alert type="success" heading="Updated React support as of v1.21.1"></nys-alert>
+<nys-alert type="success" heading="Updated React support as of v1.22.0"></nys-alert>
 
 Full React support is available through our dedicated `@nysds/react` package, which provides React-wrapped versions of each web component. Event bindings, forms integration, and slots all included.
 
@@ -72,7 +72,7 @@ Full React support is available through our dedicated `@nysds/react` package, wh
 For a full walkthrough covering project setup, custom events, slots, and forms, see the [React Tutorial](/get-started/developers/react/).
 
 ### Angular
-<nys-alert type="success" heading="Updated Angular support as of v1.21.1"></nys-alert>
+<nys-alert type="success" heading="Updated Angular support as of v1.22.0"></nys-alert>
 
 Full Angular support is available through `@nysds/angular`, with Angular components for standalone and NgModule-based apps. No `CUSTOM_ELEMENTS_SCHEMA` required.
  
@@ -85,7 +85,7 @@ For a full walkthrough covering standalone components, NgModule setup, and forms
 
 ### Vue
 
-<nys-alert heading="Vue support is currently in ALPHA"></nys-alert>
+<nys-alert type="success" heading="Updated Vue support as of v1.22.0"></nys-alert>
 
 We package the Vue JSX files in the @nysds/components/react package. Configure Vite to recognize `nys-` tags as custom elements:
 

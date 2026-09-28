@@ -27,21 +27,29 @@ Install the two NYSDS packages: `@nysds/react` for the React-wrapped web compone
 
 ## Project Setup
 
-After installing, load the NYSDS stylesheet in your `index.html`. Unlike the vanilla HTML setup on the reference site, you do **not** need the `<script src="nysds.js">` tag. When using React with a modern build tool, component JavaScript is bundled automatically when you import it.
+For styling, import the NYSDS CSS in `index.html`. Reference it directly from the installed package (e.g., the `node_modules` folder):
 
-{% set code %}<!-- index.html -->
-<link
-  rel="stylesheet"
-  href="node_modules/@nysds/styles/dist/nysds-full.min.css"
-/>
+{% set code %}// index.html
+<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />
 {% endset %}
 {% set accordionLabel = "index.html" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
+Or import it in your entry file:
+
+{% set code %}// main.tsx
+import "@nysds/styles";
+{% endset %}
+{% set accordionLabel = "index.html" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+Either way, do this once. Without it, components render unstyled. The stylesheet provides the design tokens and global styles; each component's own styles live in its shadow DOM and need no extra setup.
+
 ## Your First Component
 
-Import directly from `@nysds/react`. This package gives you React-wrapped versions of each web component - event bindings included. Do not import from the package root; that exposes the raw Lit custom elements without React wrappers.
+Import directly from `@nysds/react`. This package gives you React-wrapped versions of each web component; event bindings included. If you'd rather not pull in the whole library, import from a subpath instead, e.g. `@nysds/react/textinput`.
 
 {% set code %}import { NysButton } from "@nysds/react";
 
@@ -155,7 +163,7 @@ Web components use [HTML slots](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 ## Forms & FormData
 
-NYSDS form components implement the browser's [ElementInternals API](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals), which means they participate in native HTML form submission just like `<input>` and `<select>`. You don't need React state for every field. The `FormData` collects all values on submit.
+NYSDS form components are form-associated custom elements built on the browser's [ElementInternals API](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals), which means they participate in native HTML form submission just like `<input>` and `<select>`. You don't need React state for every field. The `FormData` collects all values on submit.
 
 {% set preview = "" %}
 {% set code %}import { FormEvent } from "react";
