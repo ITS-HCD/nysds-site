@@ -17,7 +17,7 @@ The NYS Design System uses five breakpoints to keep layouts consistent across de
 ## The Breakpoint Scale
 Gutters increase from 20px on mobile to 64px on desktop large.
 
-<img src="/assets/img/breakpoints.png" style="width: 100%">
+<img src="/assets/img/nys-breakpoints.png" style="width: 100%">
 
 <!-- <div class="nys-grid-row nys-grid-gap-300">
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4">
