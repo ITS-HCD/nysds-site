@@ -392,18 +392,43 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% block events %}
 
-The `<nys-textinput>` component emits **three** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-input`** – Fired when the textinput state changes.
-2.  **`nys-focus`** – Fired when the textinput gains focus.
-3.  **`nys-blur`** – Fired when the textinput loses focus.
+The `<nys-textinput>` component emits **three** custom Javascript events:
 
 ### Event details
 
-The `nys-input` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-input</code></td>
+      <td>Fired when the textinput state changes.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the textinput.</li>
+          <li><code>value</code> (string): The current value of the textinput.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td>Fired when the textinput gains focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td>Fired when the textinput loses focus.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the textinput.
-- value (string): The currently selected text.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

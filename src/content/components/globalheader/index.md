@@ -188,7 +188,7 @@ The NYS Brand Logo can be toggled on via the `nysLogo` property for back-office 
 {% block cssvariables %}
   {%
     set variables = [
-      { name: "--nys-globalheader-max-width--content", description: "The maximum width of the inner main content area. Use this only to align header, footer, or breadcrumb components with the main page content when needed."}
+    { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." }
     ]
   %}
 {% include "partials/css-vars.njk" %}

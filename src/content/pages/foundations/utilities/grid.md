@@ -544,5 +544,36 @@ Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in
 <link rel="stylesheet" href="{{ site.url | url}}/assets/css/utilities.css">
 {% endblock %}
 
+## Style Override
+Style overrides are CSS custom properties exposed for customizing a component's appearance beyond the defaults. Set them on the component selector or the `:root` (recommened for grid system) to override the default styles.
+
+`--nys-max-width--content` sets the max width of the inner content within `.nys-grid-container` (or `.nys-grid-container-[suffix]`) `> .nys-grid-row` and every header, footer, and breadcrumb component at once. Set it on `:root` so it cascades everywhere. Setting it on a single component only affects that instance.
+
+
+<nys-table striped>
+  <table id="grid-style-overrides" name="grid-style-overrides">
+    <caption>Grid Style Overrides</caption>
+    <tr>
+      <th>CSS Variable</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>--nys-max-width--content</code></td>
+      <td>Overrides the max width of the inner content area on the grid container's rows and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. <code>:root</code>) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below.</td>
+    </tr>
+  </table>
+</nys-table>
+
+{% set code %}
+:root {
+  --nys-max-width--content: 1024px;
+}
+{% endset %}
+{% set accordionLabel = "Recommended usage" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+
 {% block scripts %}
 {% endblock %}

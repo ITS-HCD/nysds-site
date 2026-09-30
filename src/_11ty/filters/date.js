@@ -67,4 +67,32 @@ const dateFeed = function (date) {
     return dt.toHTTP();
 }
 
-module.exports = { dateISO, dateFull, dateFullWeekday, dateFeed, dateYear };
+/**
+ * Format date to short weekday
+ *
+ * @param {Date} date - JS date
+ * @param {String} locale - locale code
+ * @return {String} formatted date (e.g. "Tue")
+ */
+
+const dateWeekday = function (date, locale = "en") {
+    const jsDate = new Date(date);
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
+    return dt.setLocale(locale).toFormat('ccc');
+};
+
+/**
+ * Format date to short weekday
+ *
+ * @param {Date} date - JS date
+ * @param {String} locale - locale code
+ * @return {String} formatted date (e.g. "Tue")
+ */
+
+const dateWeekdayDay = function (date, locale = "en") {
+    const jsDate = new Date(date);
+    const dt = DateTime.fromJSDate(jsDate, { zone: 'utc' });
+    return dt.setLocale(locale).toFormat('d');
+};
+
+module.exports = { dateISO, dateFull, dateFullWeekday, dateFeed, dateYear, dateWeekday, dateWeekdayDay };

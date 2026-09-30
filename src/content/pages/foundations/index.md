@@ -19,109 +19,98 @@ Whether you are building a new application with NYSDS components or integrating 
 
 How the design system is built — the token layers, styling framework, theming system, component architecture, and accessibility standards that power everything.
 
-<div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/accessibility/" aria-label="Accessibility">
-      <div class="card__inner">
-        <div class="card__title">Accessibility</div>
-        <div class="card__desc">How the design system supports WCAG 2.2 AA compliance, with guidance for developers, content creators, and leadership.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/styles/" aria-label="Styles Framework">
-      <div class="card__inner">
-        <div class="card__title">Styles Framework</div>
-        <div class="card__desc">The <code>@nysds/styles</code> CSS package — design tokens as custom properties, a CSS reset, typography classes, and layout utilities.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/themes/" aria-label="Agency Themes">
-      <div class="card__inner">
-        <div class="card__title">Agency Themes</div>
-        <div class="card__desc">Apply agency-specific color palettes with a single attribute — build once, switch themes, and every component updates automatically.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/tokens/" aria-label="Design Tokens">
-      <div class="card__inner">
-        <div class="card__title">Design Tokens</div>
-        <div class="card__desc">The shared language of colors, spacing, and typography values — how primitive, semantic, and theme tokens connect design decisions to code.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/components/" aria-label="How Components Work">
-      <div class="card__inner">
-        <div class="card__title">How Components Work</div>
-        <div class="card__desc">Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.</div>
-      </div>
-    </a>
-  </div>
+<div class="nys-grid-row nys-grid-gap-200" style="--nys-card-height: 100%;">
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/accessibility/"
+      headingLevel="h3"
+      heading="Accessibility"
+      description="How the design system supports WCAG 2.2 AA compliance, with guidance for developers, content creators, and leadership.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/styles/"
+      headingLevel="h3"
+      heading="Styles framework"
+      description="The @nysds/styles CSS package — design tokens as custom properties, a CSS reset, typography classes, and layout utilities.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/themes/"
+      headingLevel="h3"
+      heading="Agency Themes"
+      description="Apply agency-specific color palettes with a single attribute — build once, switch themes, and every component updates automatically.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/tokens/"
+      headingLevel="h3"
+      heading="Design Tokens"
+      description="The shared language of colors, spacing, and typography values — how primitive, semantic, and theme tokens connect design decisions to code.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/components/"
+      headingLevel="h3"
+      heading="How Components Work"
+      description="Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
 </div>
 
 ## Implementation Guides
 
 Practical references for building interfaces with the design system — typography, form patterns, layout utilities, and the broader design process.
 
-<div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/design/" aria-label="Design">
-      <div class="card__inner">
-        <div class="card__title">Design</div>
-        <div class="card__desc">Where the design system fits in the broader UX process — from strategy and scope to the interface layer.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/typography/" aria-label="Typography">
-      <div class="card__inner">
-        <div class="card__title">Typography</div>
-        <div class="card__desc">Core typefaces, typography tokens, font installation, and utility classes for consistent, accessible type across your application.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/forms/" aria-label="Form Patterns">
-      <div class="card__inner">
-        <div class="card__title">Form Patterns</div>
-        <div class="card__desc">Form association, validation strategies, event handling, and submission patterns that work across all NYSDS form components.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/foundations/utilities/" aria-label="Utilities">
-      <div class="card__inner">
-        <div class="card__title">Utilities</div>
-        <div class="card__desc">Layout grid, flexbox, spacing, display, and responsive utility classes for rapid, consistent page layout.</div>
-      </div>
-    </a>
-  </div>
+<div class="nys-grid-row nys-grid-gap-300" style="--nys-card-height: 100%;">
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/design/"
+      headingLevel="h3"
+      heading="Design"
+      description="Where the design system fits in the broader UX process — from strategy and scope to the interface layer.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/typography/"
+      headingLevel="h3"
+      heading="Typography"
+      description="Core typefaces, typography tokens, font installation, and utility classes for consistent, accessible type across your application.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/forms/"
+      headingLevel="h3"
+      heading="Form Patterns"
+      description="Form association, validation strategies, event handling, and submission patterns that work across all NYSDS form components.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/utilities/"
+      headingLevel="h3"
+      heading="Utilities"
+      description="Layout grid, flexbox, spacing, display, and responsive utility classes for rapid, consistent page layout.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
 </div>
 
 ## Reference
 
 Need to look up a specific token value or component API? These are also always available in the main navigation.
 
-<div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/tokens/" aria-label="Token Browser">
-      <div class="card__inner">
-        <div class="card__title">Token Browser</div>
-        <div class="card__desc">Browse all design tokens — colors, spacing, typography, and theme values — with an interactive theme switcher.</div>
-      </div>
-    </a>
-  </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <a class="card card__no-border card__flat nys-flex-fill" href="/components/" aria-label="Component Catalog">
-      <div class="card__inner">
-        <div class="card__title">Component Catalog</div>
-        <div class="card__desc">All 27 NYSDS components — properties, events, accessibility details, and copy-paste examples.</div>
-      </div>
-    </a>
-  </div>
+<div class="nys-grid-row nys-grid-gap-300" style="--nys-card-height: 100%;">
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/tokens/"
+      headingLevel="h3"
+      heading="Token Browser"
+      description="Browse all design tokens — colors, spacing, typography, and theme values — with an interactive theme switcher.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/components/"
+      headingLevel="h3"
+      heading="Component Catalog"
+      description="All 27 NYSDS components — properties, events, accessibility details, and copy-paste examples.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
 </div>
 
 {% endblock %}

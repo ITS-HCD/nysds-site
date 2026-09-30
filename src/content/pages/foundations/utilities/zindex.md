@@ -145,8 +145,8 @@ All z-index utilities support responsive prefixes. See [Responsive Utilities](/f
     border: 1px solid var(--nys-color-theme-weak);
     border-radius: var(--nys-border-radius-md);
     background-color: var(--nys-color-theme-weaker);
-    margin-top: -6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-top: -10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
   }
   .docs-z-value {
     font-family: var(--nys-font-family-monospace);

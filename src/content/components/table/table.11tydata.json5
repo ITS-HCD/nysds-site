@@ -1,151 +1,349 @@
-/**
- * --------------------------------------------------------------------+
- * JSON5 supports comments and much more <https://json5.org/>          +
- * Values for `interactions.status` must be one of these combinations: +
- * ["passes", "success"] or ["fails", "error"] or ["to do", "warning"] +
- * Comment top-level members to prevent their corresponding njk blocks +
- * from rendering. Members that may be commented are exactly these:    +
- * tests, keyboard, mouse, screenReader, screenReaderMobile, voice,    +
- * zoom, disabilities.                                                 +
- * --------------------------------------------------------------------+
- */
 {
   "pattern": "Table",
   "tests": {
-    "total": 0,
-    "pass": 0,
+    "total": 20,
+    "pass": 20,
     "fail": 0,
     "toDo": 0
   },
-
+  "caveats": {
+    "intro": "Our tests are determined by certain interaction design choices above and beyond the native HTML <code class='element'>table</code> element and by strong preferences in configuration. Specifically, the NYDS <code>Table</code> and A11y reference implementations target include these aspects.",
+    "points": [
+      "Caption text is presented to all users to title or briefly describe table data",
+      "When column sorting is in effect, the <code class='element'>caption</code> contains visually-hidden hint text to advise screen reader users of usage",
+      "Column headers may be activated to sort row data",
+      "Row headers are <strong>not</strong> present"
+    ],
+    "outro": "In the design system these features are dependent on configuration and may not always be present. However, all tests here assume they are in effect."
+  },
   "keyboard": {
     "interactions": [
       {
-        "scenario": "WHEN I <kbd>k1<\/kbd>",
-        "requirements": ["THEN outcome k1"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I use the <kbd>tab</kbd> key to move focus into a sortable table from <em>before</em> the table",
+        "requirements": [
+          "THEN I see focus is strongly visually indicated on the first sortable column header",
+          "THEN I see a bi-directional graphic visually indicates that the column is sortable"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I <kbd>k2<\/kbd>, <kbd>k3<\/kbd>",
-        "requirements": ["THEN outcome k1", "THEN outcome k2"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN focus is on a sortable column header and I activate <kbd>spacebar</kbd> or <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I see selection is strongly visually indicated on the header",
+          "THEN I see the directional graphic points in the direction of sorting",
+          "THEN I see the table rows are re-ordered correctly"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is on a sortable column header and I activate <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I see focus is strongly visually indicated on the next sortable column header"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN focus is on the last sortable column header and I activate <kbd>tab</kbd>",
+        "requirements": [
+          "<mark>If any table cells contain focusable elements</mark>",
+          "THEN I see focus moves to the first focusable element in table content",
+          "<mark>If no table cells contain focusable elements</mark>",
+          "THEN I see focus moves to the first focusable element after the table in page content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I use the <kbd>tab</kbd> key to move focus into a sortable table from <em>after</em> the table",
+        "requirements": [
+          "<mark>If any table cells contain focusable elements</mark>",
+          "THEN I see focus moves to the last focusable element in table content",
+          "<mark>If no table cells contain focusable elements</mark>",
+          "THEN I see focus moves to the last sortable column header"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "mouse": {
     "interactions": [
       {
-        "scenario": "WHEN I m4",
-        "requirements": ["THEN outcome m4"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I use a mouse and hover over a sortable table column header",
+        "requirements": [
+          "THEN I see a hover effect is strongly visually indicated on the column header",
+          "THEN I see my cursor changes to a pointer"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I m5, m6",
-        "requirements": ["THEN outcome m5", "THEN outcome m6"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I click a sortable column header",
+        "requirements": [
+          "THEN I see selection is strongly visually indicated on the header",
+          "THEN I see the directional graphic points in the direction of sorting",
+          "THEN I see the table rows are re-ordered correctly"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I give focus to a sortable table header without activating it (mouse down, slide off, mouse up)",
+        "requirements": [
+          "THEN I see the focus is strongly visually indicated on that header but the sortable state is <strong>not</strong> changed"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "screenReader": {
     "interactions": [
       {
-        "scenario": "WHEN I sr7",
-        "requirements": ["THEN outcome sr7"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I use a desktop screen reader and I enter the table from a position on the page before it, navigating by button, by form element, or by <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I hear a title or description of purpose",
+          "THEN I hear a usage hint that column headers with buttons are sortable",
+          "THEN I hear I am within a table with explicit numbers of rows and columns",
+          "THEN I hear my current row-column position",
+          "THEN I hear a column header name and that it is a button",
+          "<mark>And if the table was already sorted by this column</mark>",
+          "THEN I hear the column is sorted and whether the direction is ascending or descending"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I sr8, sr9",
-        "requirements": ["THEN outcome sr8", "THEN outcome sr9"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I enter the table from a position on the page before it, navigating by <kbd>arrow</kbd>",
+        "requirements": [
+          "THEN I hear a title or description of purpose",
+          "THEN I hear a usage hint that column headers with buttons are sortable",
+          "THEN I hear I am within a table with explicit numbers of rows and columns",
+          "<mark>And if I proceed by <kbd>arrow</kbd></mark>",
+          "THEN I hear a new row-column position",
+          "THEN I hear a new column header name and that it is a button",
+          "<mark>And if the table was already sorted by this column</mark>",
+          "THEN I hear the column is sorted and whether the direction is ascending or descending"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN my cursor or focus is on a column header and I activate either <kbd>enter</kbd>, or <kbd>spacebar</kbd>, or my screen reader's dedicated key shortcut for button activation",
+        "requirements": [
+          "<mark>And if I am using Windows NVDA or JAWS</mark>",
+          "THEN I hear the column is sorted and whether the new direction is ascending or descending",
+          "<mark>And if I am using macOS VoiceOver and activate the key chord <kbd>ctrl</kbd> <kbd>alt</kbd> + <kbd>C</kbd></mark>",
+          "THEN I hear the column is sorted and whether the new direction is ascending or descending"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN my cursor or focus is on a column header and I navigate to an adjacent header with <kbd>arrow</kbd> or <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I hear a new column position",
+          "THEN I hear a new column header name and that it is a button",
+          "<mark>And if the table was already sorted by this column</mark>",
+          "THEN I hear the column is sorted and whether the direction is ascending or descending"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN my cursor or focus is within a table and I use the dedicated keyboard interface that my screen reader provides for navigating HTML tables",
+        "requirements": [
+          "<mark>And if I navigate between columns</mark>",
+          "THEN I hear the new column name",
+          "THEN I hear the new column number",
+          "THEN I hear the new cell text content",
+          "<mark>And if I navigate between rows</mark>",
+          "THEN I hear the new row number",
+          "THEN I hear the new cell text content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I enter the table from a position on the page after it, navigating backwards by button, by form element, or by <kbd>tab</kbd>",
+        "requirements": [
+          "THEN I hear the table has a title or description of purpose",
+          "THEN I hear a usage hint that column headers with buttons are sortable",
+          "THEN I hear I am within a table with explicit numbers of rows and columns",
+          "THEN I hear my current row-column position",
+          "<mark>If there is a focusable element within the table body</mark>",
+          "THEN I hear the name of the focused element",
+          "<mark>And if there is no focusable element within the table body</mark>",
+          "THEN I hear the name of the last column header and that it is a button",
+          "<mark>And if the table was already sorted by this column</mark>",
+          "THEN I hear the column is sorted and whether the direction is ascending or descending"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
+      },
+      {
+        "scenario": "WHEN I enter the table from a position on the page after it, navigating backward by <kbd>arrow</kbd>",
+        "requirements": [
+          "THEN I hear I am within a table with explicit numbers of rows and columns",
+          "THEN I hear my current row and column position",
+          "THEN I hear a column header name",
+          "THEN I hear the cell text content"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "screenReaderMobile": {
     "interactions": [
       {
-        "scenario": "WHEN I srm10",
-        "requirements": ["THEN outcome srm10"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I swipe left to enter a table with a caption that includes a visually hidden usage hint",
+        "requirements": [
+          "THEN I hear the table has a title or description of purpose",
+          "THEN I hear the usage hint",
+          "THEN I hear I am within a table",
+          "THEN I hear the number of rows and columns"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       },
       {
-        "scenario": "WHEN I srm11, srm12",
-        "requirements": ["THEN outcome srm11", "THEN outcome srm12"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I am on a table caption and I swipe right to focus on the first table column header",
+        "requirements": [
+          "THEN I hear the cell name or text content",
+          "THEN I hear I am on a column header",
+          "THEN I hear which row and column I am on",
+          "<mark>And if the column header content is a button</mark>",
+          "THEN I hear that I am on a button",
+          "<mark>And if the table was already sorted by this column</mark>",
+          "THEN I hear the column has a sort state of either ascending or descending"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "voice": {
     "interactions": [
       {
-        "scenario": "WHEN I v13",
-        "requirements": ["THEN outcome v13"],
-        "status": ["passes, fails, to do", "success, error, warning"]
-      },
-      {
-        "scenario": "WHEN I v14, v15",
-        "requirements": ["THEN outcome v14", "THEN outcome v15"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "WHEN I use a voice control system and I command, \"Click <em>table column header label</em>\"",
+        "requirements": [
+          "<mark>And if that <em>label</em> is recognized as unique, or identified via a multiple match workflow</mark>",
+          "THEN I see selection is strongly visually indicated on the header",
+          "THEN I see the directional graphic points in the direction of sorting",
+          "THEN I see the table rows are re-ordered correctly"
+        ],
+        "status": [
+          "passes",
+          "success"
+        ]
       }
     ]
   },
-
   "zoom": {
     "interactions": [
       {
-        "scenario": "WHEN I z16",
-        "requirements": ["THEN outcome z16"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "GIVEN the browser is configured to test Text Resize; WHEN a table is in view",
+        "requirements": [
+          "THEN I see all text adapts to the font size",
+          "THEN I see all text is visible without clipping or truncation",
+          "THEN I see no text overlaps other text, or overlaps any other user interface element"
+        ],
+        "status": ["passes", "success"]
       },
       {
-        "scenario": "WHEN I z17, z18",
-        "requirements": ["THEN outcome z17", "THEN outcome z18"],
-        "status": ["passes, fails, to do", "success, error, warning"]
+        "scenario": "GIVEN the browser is configured to test Reflow; WHEN a table is in view",
+        "requirements": [
+          "THEN I see there is no loss of information, meaning, or functionality",
+          "THEN I see when scrolling is required, it is primarily in one dimension (preferably vertical)",
+          "THEN I see when scrolling is required in two dimensions, the table contains only <a href='https://www.w3.org/WAI/WCAG22/Understanding/reflow.html#content-that-meets-exceptions-for-reflow' target='_blank'>content that meets exceptions for reflow</a>",
+          "<mark>And understanding that while most data tables have an exception for reflow, this does <strong>not</strong> extend to non-excepted content adjacent to the table</mark>",
+          "THEN I see when scrolling of the table is required in either one or two dimensions, content above and below the table reflows independently"
+        ],
+        "status": ["passes", "success"]
       }
     ]
   },
-
   "disabilities": [
     {
       "type": "blindness",
       "criteria": [
         {
-          "description": "Blind 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.0 AA"
+          "description": "Table cells are read one at a time and provide context for each cell",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#info-and-relationships",
+          "sc": "1.3.1 A"
         },
         {
-          "description": "Blind 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.1 AA"
+          "description": "Table cells are read in logical order",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#meaningful-sequence",
+          "sc": "1.3.2 A"
+        },
+        {
+          "description": "The table has a header, and it is associated with the correct table cells",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#headings-and-labels",
+          "sc": "2.4.6 AA"
+        },
+        {
+          "description": "Table elements have the appropriate name, role, and state",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#name-role-value",
+          "sc": "4.1.2 A"
         }
       ]
     },
     {
-      "type": "cognition",
+      "type": "cognitive",
       "criteria": [
         {
-          "description": "Cognition...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.2 AA"
+          "description": "Users' adjustments to text spacing do not result in loss of content or functionality",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#text-spacing",
+          "sc": "1.4.12 AA"
         }
       ]
     },
     {
-      "type": "color",
+      "type": "color perception",
       "criteria": [
         {
-          "description": "Color 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.3 AA"
-        },
-        {
-          "description": "Color 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.4 AA"
+          "description": "Color is not the only method used to convey meaning in a table",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#use-of-color",
+          "sc": "1.4.1 A"
         }
       ]
     },
@@ -153,14 +351,19 @@
       "type": "low vision",
       "criteria": [
         {
-          "description": "LowVis 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.5 AA"
+          "description": "Table content meets color contrast requirements",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#contrast-minimum",
+          "sc": "1.4.3 AA"
         },
         {
-          "description": "LowVis 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.6 AA"
+          "description": "Table content is visible and functional when screen is magnified",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#reflow",
+          "sc": "1.4.10 AA"
+        },
+        {
+          "description": "Focus indicator is clear on interactive items in tables",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#focus-visible",
+          "sc": "2.4.7 AA"
         }
       ]
     },
@@ -168,14 +371,14 @@
       "type": "motor",
       "criteria": [
         {
-          "description": "Motor 1...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.8 AA"
+          "description": "Table elements can be navigated by keyboard without special cues",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#keyboard",
+          "sc": "2.1.1 A"
         },
         {
-          "description": "Motor 2...",
-          "uri": "https:\/\/www.w3.\/WAI\/WCAG22\/quickref\/#",
-          "sc": "0.0.9 AA"
+          "description": "Table cells do not trap focus",
+          "uri": "https://www.w3.org/WAI/WCAG22/quickref/#no-keyboard-trap",
+          "sc": "2.1.2 A"
         }
       ]
     }

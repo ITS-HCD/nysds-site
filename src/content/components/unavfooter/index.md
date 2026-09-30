@@ -65,7 +65,10 @@ There are no properties for this component.
 
 {% block cssvariables %}
 
-The `nys-unavfooter` does not have any css variables because this component must remain consistent across applications and sites.
+{% set variables = [
+  { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." }
+]%}
+{% include "partials/css-vars.njk" %}
 
 {% endblock %}
 

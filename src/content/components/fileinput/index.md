@@ -259,22 +259,41 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% block events %}
 
-The `<nys-fileinput>` component emits **one** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-change`** – Fired when the file list is updated, either by selecting new files or removing existing ones.
+The `<nys-fileinput>` component emits **one** custom Javascript event:
 
 ### Event details
 
-The `nys-change` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-change</code></td>
+      <td>Fired when the file list is updated, either by selecting new files or removing existing ones.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the file input.</li>
+          <li><code>files</code> (array): The full current selection.</li>
+          <li><code>changedFiles</code> (array): The entries added or removed by this action.</li>
+        </ul></br>
+        <p>Each entry (in both <code>files</code> and <code>changedFiles</code>) has:</p>
+        <ul>
+          <li><code>file</code> (File)</li>
+          <li><code>progress</code> (number, 0–100)</li>
+          <li><code>status</code> (<code>"pending"</code> | <code>"processing"</code> | <code>"done"</code> | <code>"error"</code>)</li>
+          <li><code>errorMsg</code> (string, optional)</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- **id** (string): The id of the file input.
-- **files** (Array of file entries): The full current selection.
-- **changedFiles** (Array of file entries): The entries added or removed by this action.
-- Each entry in `files` and `changedFiles` has the same shape:
-  - file (File): The raw File object.
-  - progress (number): Upload or processing progress (0–100).
-  - status ("pending" | "processing" | "done" | "error"): Current state of the file.
-  - errorMsg (string): Optional error message if status is "error".
+<br/>
 
 You can listen to these events using JavaScript:
 

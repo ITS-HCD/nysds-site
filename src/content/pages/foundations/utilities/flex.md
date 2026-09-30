@@ -985,41 +985,6 @@ All flexbox utilities support [responsive prefixes](/foundations/utilities/respo
 
 </section>
 
-<section id="order">
-
-## Order
-
-Order utilities change the visual order of flex items without changing the DOM order. Use `.nys-order-first` to move an item to the beginning, `.nys-order-last` to the end, or `.nys-order-0` through `.nys-order-11` for specific positions.
-
-<nys-table striped><table>
-<thead>
-<tr>
-<th>Class</th>
-<th>CSS value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>.nys-order-first</code></td>
-<td><code>order: -1</code></td>
-</tr>
-<tr>
-<td><code>.nys-order-last</code></td>
-<td><code>order: 999</code></td>
-</tr>
-<tr>
-<td><code>.nys-order-initial</code></td>
-<td><code>order: 0</code></td>
-</tr>
-<tr>
-<td><code>.nys-order-0</code> – <code>.nys-order-11</code></td>
-<td><code>order: 0</code> – <code>order: 11</code></td>
-</tr>
-</tbody>
-</table></nys-table>
-
-All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-first`).
-
 ## Flex-gap
 
 {% set preview %}
@@ -1174,7 +1139,42 @@ All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-fir
 {% endset %}
 {% include "partials/code-preview.njk" %}
 
+<section id="order">
+
 ## Order
+
+Order utilities change the visual order of flex items without changing the DOM order. Use `.nys-order-first` to move an item to the beginning, `.nys-order-last` to the end, or `.nys-order-0` through `.nys-order-11` for specific positions.
+
+<nys-table striped>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>CSS value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nys-order-first</code></td>
+<td><code>order: -1</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-last</code></td>
+<td><code>order: 999</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-initial</code></td>
+<td><code>order: 0</code></td>
+</tr>
+<tr>
+<td><code>.nys-order-0</code> – <code>.nys-order-11</code></td>
+<td><code>order: 0</code> – <code>order: 11</code></td>
+</tr>
+</tbody>
+</table>
+</nys-table>
+
+All order utilities support responsive prefixes (e.g., `nys-tablet:nys-order-first`).
 
 {% set preview %}
 

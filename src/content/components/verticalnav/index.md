@@ -451,16 +451,33 @@ Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalna
 
 {% block events %}
 
-The `<nys-verticalnav>` component emits **one** custom Javascript event:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-verticalnav-toggle`** – Fired when the mobile accordion is expanded or collapsed. This only applies on smaller screens, where the nav collapses into an accordion (see [Page layout](#page-layout)). On desktop the nav is always visible and this event does not fire.
+The `<nys-verticalnav>` component emits **one** custom Javascript event:
 
 ### Event details
 
-The `nys-verticalnav-toggle` event includes a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-verticalnav-toggle</code></td>
+      <td>Fired when the mobile accordion is expanded or collapsed. Only applies on smaller screens, where the nav collapses into an accordion (see <a href="#page-layout">Page layout</a>). On desktop the nav is always visible and this event does not fire.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the vertical nav.</li>
+          <li><code>expanded</code> (boolean): Whether the nav is now expanded.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the vertical nav.
-- expanded (boolean): Whether the nav is now expanded.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}
