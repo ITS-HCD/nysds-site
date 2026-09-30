@@ -245,4 +245,15 @@ unavheader.addEventListener("nys-search-submit", (event) => {
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-alert>", "<nys-button>", "<nys-icon>", "<nys-textinput>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
+{% endblock %}
+
 {% block updates %}{% endblock %}

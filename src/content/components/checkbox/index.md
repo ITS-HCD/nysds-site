@@ -403,7 +403,7 @@ checkbox.addEventListener('nys-change', (event) => {
 {% block dependencies %}
 
 {% set dependencies = [
-  "<nys-icon>"
+  "<nys-errormessage>", "<nys-icon>", "<nys-label>", "<nys-textinput>"
 ] %}
 
 {% include "partials/dependencies.njk" %}
