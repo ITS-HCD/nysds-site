@@ -12,6 +12,8 @@ navOrder: 1
 
 A step-by-step guide to using NYS Design System components in a React + TypeScript application.
 
+**Requirements:** React and React DOM `18` or `19`
+
 ## Installation
 
 Install the two NYSDS packages: `@nysds/react` for the React-wrapped web components and `@nysds/styles` for the design tokens and global CSS.
@@ -56,9 +58,14 @@ Import directly from `@nysds/react`. This package gives you React-wrapped versio
 <NysButton label="Submit" variant="primary" />{% endset %}
 {% set accordionLabel = "NysButton" %}
 {% set codeExpanded = false %}
+{% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
 
 <nys-alert type="warning" text="Avoid importing from @nysds/components directly (without /react). That path exposes the raw Lit elements and skips the React event adapter layer."></nys-alert>
+
+## Props
+ 
+Props are typed from the underlying web component and set as DOM properties, not attributes. Use the camelCase property names (`showError`, `errorMessage`), not the kebab-case attribute names.
 
 ## Custom Events
 
@@ -96,8 +103,7 @@ onNysInput={(e) => {
 {% set preview %}<nys-textinput
 label="Type something"
 name="demo"
-
-> </nys-textinput>
+></nys-textinput>
 
 <p>Current value: <strong id="current-value">...</strong></p>
 
@@ -161,19 +167,40 @@ Web components use [HTML slots](https://developer.mozilla.org/en-US/docs/Web/HTM
 
 <nys-alert type="info" text="Check the NYSDS component docs to see which slots each component exposes. Not all components have named slots! Some only accept a default slot."></nys-alert>
 
-## Forms & FormData
+## Forms
 
-NYSDS form components are form-associated custom elements built on the browser's [ElementInternals API](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals), which means they participate in native HTML form submission just like `<input>` and `<select>`. You don't need React state for every field. The `FormData` collects all values on submit.
+NYSDS form components are form-associated custom elements built on the browser's [ElementInternals API](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals), which means they participate in native HTML form submission just like `<input>` and `<select>`.
+
+#### Controlled inputs
+ 
+Bind `value` and update state from `onNysInput`:
+ 
+{% set preview = "" %}
+{% set code %}const [name, setName] = useState("");
+ 
+<NysTextinput
+  label="Name"
+  value={name}
+  onNysInput={(e) => setName(e.detail.value)}
+/>{% endset %}
+{% set accordionLabel = "Controlled Input" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+
+#### Submitting with FormData
+
+You don't need React state for every field. The `FormData` collects all values on submit.
 
 {% set preview = "" %}
-{% set code %}import { FormEvent } from "react";
+{% set code %}import { SyntheticEvent } from "react";
 import { NysButton, NysSelect, NysTextinput } from "@nysds/react";
 
 const MyForm = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target as HTMLFormElement);
+    const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     // data = { name: "Jane Smith", topic: "general" }
 
@@ -213,6 +240,14 @@ const handleReset = () => {
 {% include "partials/code-preview.njk" %}
 
 <nys-alert type="info" heading="See it in practice" text="The Basic Form page in this demo shows all of these patterns together — submission, validation, conditional fields, and form reset." primaryLabel="View Basic Form on External React" primaryAction="https://its-hcd.github.io/nysds-react-demo/basic-form"></nys-alert>
+
+## Server-Side Rendering and Next.js
+ 
+Every wrapper carries a `"use client"` directive, so the Next.js App Router works with a normal import. You only need `"use client"` in your own files if they hold state.
+ 
+- **App Router:** import wrappers from any client component. A server component can't render a wrapper directly; pass it through a client boundary.
+- **Pages Router:** import and use anywhere.
+- Components render client side. There is no declarative shadow DOM server rendering in this release.
 
 ## What's next
 
