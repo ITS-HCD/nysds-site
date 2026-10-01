@@ -68,7 +68,7 @@ Gutters increase from 20px on mobile to 64px on desktop large.
   </div>
   <div class="nys-grid-col-12 nys-tablet:nys-grid-col-4">
     <nys-card
-      heading="Desktop Large"
+      heading="Widescreen"
       description="Above 1280px. Gutters = 64px."
     >
           <img
@@ -110,7 +110,7 @@ Gutters increase from 20px on mobile to 64px on desktop large.
       <td>32px</td>
     </tr>
     <tr>
-      <td>Desktop Large</td>
+      <td>Widescreen</td>
       <td>1280-2500px</td>
       <td>64px</td>
     </tr>
