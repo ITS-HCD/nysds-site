@@ -12,6 +12,9 @@ navOrder: 2
 
 A step-by-step guide to using NYS Design System components in an Angular application.
 
+
+**Requirements:** Angular `>=20.0.0` (core, common, forms)
+
 ## Installation
 
 Install the two NYSDS packages: `@nysds/angular` for the Angular-wrapped components and `@nysds/styles` for the design tokens and global CSS.
@@ -27,8 +30,11 @@ Install the two NYSDS packages: `@nysds/angular` for the Angular-wrapped compone
 <nys-alert type="success" heading="That's all!" text="No CUSTOM_ELEMENTS_SCHEMA needed. NYSDS Angular components are true Angular components, not raw custom elements, so they work with Angular's template type-checking out of the box."></nys-alert>
 
 ## Project Setup
+After installing, load the NYSDS styles using one of the options below.
 
-After installing, load the NYSDS stylesheet by importing it at the top of your global stylesheet (`src/styles.css` or `src/styles.scss`). Angular's build tools resolve the package import automatically, so you don't need to reference a path inside `node_modules`.
+#### Option 1: Global stylesheet import
+
+Import the NYSDS stylesheet at the top of your global stylesheet (`src/styles.css` or `src/styles.scss`). Angular's build tools resolve the package import automatically, so you don't need to reference a path inside `node_modules`.
 
 {% set code %}
 @import "@nysds/styles/full";
@@ -36,6 +42,40 @@ After installing, load the NYSDS stylesheet by importing it at the top of your g
 {% set accordionLabel = "Global CSS Import" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "css" %}
+{% include "partials/code-preview.njk" %}
+
+#### Option 2: angular.json
+
+Add the NYSDS stylesheet to the `styles` array in your `angular.json`:
+ 
+{% set code %}{
+  "projects": {
+    "your-app": {
+      "architect": {
+        "build": {
+          "options": {
+            "styles": [
+              "node_modules/@nysds/styles/dist/nysds-full.min.css"
+            ]
+          }
+        }
+      }
+    }
+  }
+}{% endset %}
+{% set accordionLabel = "angular.json Styles" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "json" %}
+{% include "partials/code-preview.njk" %}
+
+#### Option 3: Import in your main component
+
+Or import the stylesheet in your main component:
+ 
+{% set code %}import "@nysds/styles/full.css";{% endset %}
+{% set accordionLabel = "Component Style Import" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "ts" %}
 {% include "partials/code-preview.njk" %}
 
 ### Usage
@@ -86,29 +126,131 @@ export class AppModule {}{% endset %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
 
-#### 3. Forms Integration (Two-Way Binding)
 
-Our Angular components support `ControlValueAccessor` natively, so they work with both Angular Template-driven forms (`[(ngModel)]`) and Reactive forms (`formControlName`), including built-in form validation:
+## Forms
+ 
+Our Angular components support `ControlValueAccessor` natively, so they work with both Template-driven forms and Reactive forms, including built-in form validation.
 
-{% set code %}<!-- Template-driven forms -->
-<nys-textinput
+#### Template-driven forms
+ 
+Use `[(ngModel)]` for two-way binding:
+ 
+{% set code %}<nys-textinput
   label="First name"
   name="firstName"
   [(ngModel)]="firstName"
-></nys-textinput>
-
-<!-- Reactive forms -->
-<nys-textinput
+></nys-textinput>{% endset %}
+{% set accordionLabel = "Template-driven Forms" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+ 
+#### Reactive forms
+ 
+Use `formControlName`:
+ 
+{% set code %}<nys-textinput
   label="First name"
   name="firstName"
   formControlName="firstName"
 ></nys-textinput>{% endset %}
-{% set accordionLabel = "Angular Forms Example" %}
+{% set accordionLabel = "Reactive Forms" %}
 {% set codeExpanded = false %}
 {% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
 
-Then register a resolver pointing at `/icons/` — see [Managing your icon library](/components/icon/#managing-your-icon-library) for setup and usage.
+#### Group controls
+ 
+`nys-checkboxgroup` and `nys-radiogroup` bind at the group level, not on each individual checkbox or radio:
+ 
+{% set code %}<nys-checkboxgroup formControlName="languages">
+  <nys-checkbox value="en">English</nys-checkbox>
+  <nys-checkbox value="es">Spanish</nys-checkbox>
+</nys-checkboxgroup>{% endset %}
+{% set accordionLabel = "Group Controls" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+
+#### Validation
+ 
+By default, the component owns validation. Its `required` and `pattern` attributes drive validation, which is shown on blur.
+ 
+To let Angular own validation instead, add the `nysControlErrors` directive. It subscribes to `control.errors` and sets the component's `showError` and `errorMessage`:
+ 
+{% set code %}<nys-textinput
+  formControlName="email"
+  nysControlErrors
+></nys-textinput>{% endset %}
+{% set accordionLabel = "nysControlErrors Directive" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+ 
+Override the default error messages with the `NYS_ERROR_MESSAGES` provider:
+ 
+{% set code %}providers: [
+  {
+    provide: NYS_ERROR_MESSAGES,
+    useValue: {
+      required: () => "Please fill in this field",
+      email: () => "Enter a valid email",
+    },
+  },
+]{% endset %}
+{% set accordionLabel = "Custom Error Messages" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "ts" %}
+{% include "partials/code-preview.njk" %}
+
+## Inputs, Outputs, and Events
+ 
+All properties are typed inputs and events are typed outputs:
+ 
+{% set code %}<nys-textinput
+  [label]="'Email'"
+  [required]="true"
+  (nysChange)="onEmailChange($event)"
+></nys-textinput>{% endset %}
+{% set accordionLabel = "Inputs and Outputs" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+ 
+Event detail is typed
+ 
+{% set code %}onEmailChange(event: NysTextinputChangeEvent) {
+  console.log(event.detail.value); // autocompletes
+}{% endset %}
+{% set accordionLabel = "Typed Event Detail" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "ts" %}
+{% include "partials/code-preview.njk" %}
+
+## Subpath Imports
+ 
+To import individual components, use the per-component subpaths:
+ 
+{% set code %}import { NysTextinputComponent } from "@nysds/angular/textinput";
+import { NysCheckboxComponent } from "@nysds/angular/checkbox";{% endset %}
+{% set accordionLabel = "Subpath Imports" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "ts" %}
+{% include "partials/code-preview.njk" %}
+ 
+## Server-Side Rendering
+ 
+The components render client-side. If your app uses SSR, wrap containers in `ngSkipHydration`:
+ 
+{% set code %}<div ngSkipHydration>
+  <nys-textinput></nys-textinput>
+</div>{% endset %}
+{% set accordionLabel = "ngSkipHydration" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+Or use `provideClientHydration` if registering components client-only.
+
 ## What's next
 
 You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the live examples in the Component Playground.
