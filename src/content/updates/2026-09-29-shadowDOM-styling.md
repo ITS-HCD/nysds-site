@@ -4,8 +4,8 @@ title: "Here Be Dragons: Slots, Styles, and Shadow DOM"
 author: Robert Chen
 subtitle: Lessons from adapting web components, styling slotted content, and the double-edged sword that is shadow DOM
 description: Lessons from adapting web components, styling slotted content, and the double-edged sword that is shadow DOM
-image: /assets/i/2026/shadow-dom-article/header.jpg
-image_alt: TODO - describe header image
+image: /assets/i/2026/shadow-dom-article/header.png
+image_alt: Bugs around nature
 updatethumbnail: /assets/i/2026/shadow-dom-article/thumbnail.png
 ogimage: /assets/i/2026/shadow-dom-article/thumbnail.jpg
 thumbnailimage: /assets/i/2026/shadow-dom-article/thumbnail-alt.png
