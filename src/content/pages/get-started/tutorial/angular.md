@@ -30,23 +30,7 @@ Install the two NYSDS packages: `@nysds/angular` for the Angular-wrapped compone
 <nys-alert type="success" heading="That's all!" text="No CUSTOM_ELEMENTS_SCHEMA needed. NYSDS Angular components are true Angular components, not raw custom elements, so they work with Angular's template type-checking out of the box."></nys-alert>
 
 ## Project Setup
-After installing, load the NYSDS styles using one of the options below.
-
-#### Option 1: Global stylesheet import
-
-Import the NYSDS stylesheet at the top of your global stylesheet (`src/styles.css` or `src/styles.scss`). Angular's build tools resolve the package import automatically, so you don't need to reference a path inside `node_modules`.
-
-{% set code %}
-@import "@nysds/styles/full";
-{% endset %}
-{% set accordionLabel = "Global CSS Import" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "css" %}
-{% include "partials/code-preview.njk" %}
-
-#### Option 2: angular.json
-
-Add the NYSDS stylesheet to the `styles` array in your `angular.json`:
+After installing, load the NYSDS styles to the `styles` array in your `angular.json`:
  
 {% set code %}{
   "projects": {
@@ -66,16 +50,6 @@ Add the NYSDS stylesheet to the `styles` array in your `angular.json`:
 {% set accordionLabel = "angular.json Styles" %}
 {% set codeExpanded = false %}
 {% set codeLanguage = "json" %}
-{% include "partials/code-preview.njk" %}
-
-#### Option 3: Import in your main component
-
-Or import the stylesheet in your main component:
- 
-{% set code %}import "@nysds/styles/full.css";{% endset %}
-{% set accordionLabel = "Component Style Import" %}
-{% set codeExpanded = false %}
-{% set codeLanguage = "ts" %}
 {% include "partials/code-preview.njk" %}
 
 ### Usage
@@ -253,7 +227,7 @@ Or use `provideClientHydration` if registering components client-only.
 
 ## What's next
 
-You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the live examples in the Component Playground.
+You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the NYSDS Angular Demo repo.
 
-- [Component Playground](/showcase/)
 - [Component Reference](/components/)
+- [Angular Demo Repo](https://github.com/ITS-HCD/nysds-angular-demo)

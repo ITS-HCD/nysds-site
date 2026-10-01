@@ -29,39 +29,28 @@ Install the two NYSDS packages: `@nysds/react` for the React-wrapped web compone
 
 ## Project Setup
 
-For styling, import the NYSDS CSS in `index.html`. Reference it directly from the installed package (e.g., the `node_modules` folder):
-
-{% set code %}// index.html
-<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />
-{% endset %}
-{% set accordionLabel = "index.html" %}
-{% set codeExpanded = true %}
-{% include "partials/code-preview.njk" %}
-
-Or import it in your entry file:
+For styling, import the NYSDS CSS in your entry file:
 
 {% set code %}// main.tsx
 import "@nysds/styles/full";
 {% endset %}
-{% set accordionLabel = "index.html" %}
+{% set accordionLabel = "main.tsx" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
-Either way, do this once. Without it, components render unstyled. The stylesheet provides the design tokens and global styles; each component's own styles live in its shadow DOM and need no extra setup.
+The stylesheet provides the design tokens and global styles; each component's own styles live in its shadow DOM and need no extra setup.
 
 ## Your First Component
 
 Import directly from `@nysds/react`. This package gives you React-wrapped versions of each web component; event bindings included. If you'd rather not pull in the whole library, import from a subpath instead, e.g. `@nysds/react/textinput`.
 
-{% set code %}import { NysButton } from "@nysds/react";
+{% set code %}import { NysButton } from "@nysds/react/button";
 
 <NysButton label="Submit" variant="primary" />{% endset %}
 {% set accordionLabel = "NysButton" %}
 {% set codeExpanded = false %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-
-<nys-alert type="warning" text="Avoid importing from @nysds/components directly (without /react). That path exposes the raw Lit elements and skips the React event adapter layer."></nys-alert>
 
 ## Props
  
@@ -127,45 +116,6 @@ name="demo"
 {% set accordionLabel = "Live demo" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
-
-## Using Slots
-
-Web components use [HTML slots](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot) to let you inject content into specific places inside the component's shadow DOM. In JSX, you use them via the `slot` attribute on child elements.
-
-{% set preview = "" %}
-{% set code %}// Default slot — children go into the component's main content area
-<NysButton>
-  <img src="icon.svg" alt="" />
-  Submit Form
-</NysButton>
-
-// Named slot — target a specific injection point by name
-<NysToggle label="Notifications">
-  <p slot="description">
-    Receive email updates about your applications.
-  </p>
-</NysToggle>{% endset %}
-{% set accordionLabel = "Slot Usage" %}
-{% set codeExpanded = false %}
-{% set codeLanguage = "html" %}
-{% include "partials/code-preview.njk" %}
-
-{% set preview %}<nys-toggle label="Enable notifications">
-  <p slot="description">
-    Receive email updates about your applications.
-  </p>
-</nys-toggle>{% endset %}
-{% set code %}<NysToggle label="Enable notifications">
-  <p slot="description">
-    Receive email updates about your applications.
-  </p>
-</NysToggle>{% endset %}
-{% set accordionLabel = "Named slot in action" %}
-{% set codeExpanded = false %}
-{% set codeLanguage = "html" %}
-{% include "partials/code-preview.njk" %}
-
-<nys-alert type="info" text="Check the NYSDS component docs to see which slots each component exposes. Not all components have named slots! Some only accept a default slot."></nys-alert>
 
 ## Forms
 
@@ -251,7 +201,7 @@ Every wrapper carries a `"use client"` directive, so the Next.js App Router work
 
 ## What's next
 
-You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the live examples in the Component Playground.
+You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the NYSDS React Demo repo.
 
-- [Component Playground](/showcase/)
 - [Component Reference](/components/)
+- [React Demo Repo](https://github.com/ITS-HCD/nysds-react-demo)

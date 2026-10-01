@@ -62,8 +62,6 @@ const start = () => console.log("started");
 {% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
 
-Run `npm run dev`. You should see a styled alert and button.
-
 ## Props, Events, and Slots
 
 **Props** are set as DOM properties. Use either camelCase or kebab-case in templates: `appName` and `app-name` are the same prop. Bind numbers and booleans with `:` so they keep their type, not a string:
@@ -237,7 +235,6 @@ function reset() {
 
 ## What's next
 
-Explore the full component library on the official NYSDS reference site, or browse the live examples in the Component Playground.
+Explore the full component library on the official NYSDS reference site.
 
-- [Component Playground](/showcase/)
 - [Component Reference](/components/)
