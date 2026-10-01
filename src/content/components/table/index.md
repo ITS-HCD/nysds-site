@@ -429,7 +429,7 @@ console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`)
 {% block dependencies %}
 
 {% set dependencies = [
-   "<nys-icon>,<nys-button>"
+   "<nys-icon>", "<nys-button>"
   ] %}
 
 {% include "partials/dependencies.njk" %}
