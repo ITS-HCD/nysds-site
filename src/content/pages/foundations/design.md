@@ -10,7 +10,7 @@ navOrder: 2
 
 # Design
 
-Good design does not start with what you see. It starts with understanding who you are building for, what they need, and how your service fits into their life. The NYS Design System helps teams build accessible, consistent digital products — but using components alone does not guarantee good design.
+Good design does not start with what you see. It starts with understanding who you are building for, what they need, and how your service fits into their life. The NYS Design System helps teams build accessible, consistent digital products, but using components alone does not guarantee good design.
 
 <section id="elements-of-ux">
 
@@ -36,9 +36,9 @@ Strong digital experiences are built in layers, from abstract strategy to concre
   </div>
 </div>
 
-The NYS Design System primarily operates at the **Surface** and **Skeleton** layers — providing the visual building blocks and interaction patterns that make up the interface. But a great interface built on a weak foundation of strategy, scope, and structure will still fail users.
+The NYS Design System operates mainly at the **Surface** and **Skeleton** layers, providing the visual building blocks and interaction patterns that make up the interface. A great interface built on a weak foundation of strategy, scope, and structure will still fail users.
 
-Strong UX comes from a thoughtful process that includes research, personas, user flows, prototyping, and testing. The design system accelerates the final steps, but it cannot replace the earlier ones.
+Strong UX comes from a process that includes research, personas, user flows, prototyping, and testing. The design system speeds up the final steps but does not replace the earlier ones.
 
 </section>
 
@@ -46,9 +46,9 @@ Strong UX comes from a thoughtful process that includes research, personas, user
 
 ## Design Support
 
-The ITS Experience Design (XD) team helps agencies with research, design strategy, and UX architecture. If your team is starting a new project or redesigning an existing service, connect with XD early in the process — before you start building.
+The ITS Experience Design (XD) team helps agencies with research, design strategy, and UX architecture. If your team is starting a new project or redesigning an existing service, connect with XD early, before you start building.
 
-The design system gives you standard components and patterns. The XD team helps you figure out which ones to use, and how to arrange them into an experience that works for your users.
+The design system gives you standard components and patterns. The XD team helps you figure out which ones to use and how to arrange them into an experience that works for your users.
 
 </section>
 
