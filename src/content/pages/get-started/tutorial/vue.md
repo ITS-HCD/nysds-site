@@ -13,13 +13,21 @@ navOrder: 3
 A step-by-step guide to using NYS Design System components in a Vue 3 application.
 
 ## Installation
+To start from scratch, create a new Vue Vite app:
 
-Install the two NYSDS packages: `@nysds/vue` for the Vue-wrapped components and `@nysds/styles` for the design tokens and global CSS. `@nysds/vue` requires Vue 3.4 or later.
+{% set code %}npm create vue@latest{% endset %}
+{% set accordionLabel = "Setup a new Vue project" %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+Install the two NYSDS packages in your app folder:
+- @nysds/vue for the Vue components and
+- @nysds/styles for the design tokens and global CSS.
 
 **Note:** Both packages are versioned together. Always install matching versions to avoid token/component mismatches.
 
 {% set code %}npm install @nysds/vue @nysds/styles{% endset %}
-{% set accordionLabel = "Installation" %}
+{% set accordionLabel = "Install NYSDS" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
@@ -29,10 +37,8 @@ Install the two NYSDS packages: `@nysds/vue` for the Vue-wrapped components and 
 
 After installing, import the NYSDS stylesheet once, at the top of your entry file (`src/main.ts`):
 
-{% set code %}// src/main.ts
-import "@nysds/styles/full";
-{% endset %}
-{% set accordionLabel = "Entry point" %}
+{% set code %}import "@nysds/styles/full";{% endset %}
+{% set accordionLabel = "main.ts" %}
 {% set codeExpanded = true %}
 {% set codeLanguage = "ts" %}
 {% include "partials/code-preview.njk" %}
@@ -44,8 +50,6 @@ Without it, components render unstyled. `@nysds/styles` ships the design tokens 
 **Optional agency theme:** set `<html data-theme="health">` (or `admin`, `business`, `environment`, `local`, `safety`, `transportation`). Fonts aren't bundled, so load them the way your agency normally does.
 
 ## Your First Component
-
-Import from `@nysds/vue`. Importing a wrapper registers its custom element for you, so there's no `app.use()` call needed.
 
 {% set code %}<script setup lang="ts">
 import { NysAlert, NysButton } from "@nysds/vue";
