@@ -106,7 +106,8 @@ export class App {
 <nys-alert
   text="IMPORTANT: The Angular team recommends using standalone components instead of NgModule for all new code. Use this guide to understand existing code built with @NgModule."
   primaryAction="https://angular.dev/guide/components"
-  primaryLabel="Read up on standalone components in Angular"></nys-alert>
+  primaryLabel="Read up on standalone components in Angular"
+  type="danger"></nys-alert>
 
 If you're using an NgModule-based architecture, or want to import all components at once, import `NysAngularModule` into your app or feature module:
 
