@@ -16,12 +16,23 @@ A step-by-step guide to using NYS Design System components in a React + TypeScri
 
 ## Installation
 
-Install the two NYSDS packages: `@nysds/react` for the React-wrapped web components and `@nysds/styles` for the design tokens and global CSS.
+To start from scratch, install the Vite React app:
+
+{% set code %}npm create vite@latest my-app -- --template react-ts{% endset %}
+{% set accordionLabel = "Setup a new React " %}
+{% set codeExpanded = true %}
+{% include "partials/code-preview.njk" %}
+
+## Install NYSDS
+
+Install the two NYSDS packages:
+- `@nysds/react` for the React-wrapped web components
+- `@nysds/styles` for the design tokens and global CSS.
 
 **Note:** Both packages are versioned together. Always install matching versions to avoid token/component mismatches.
 
 {% set code %}npm install @nysds/react @nysds/styles{% endset %}
-{% set accordionLabel = "Installation" %}
+{% set accordionLabel = "Install NYSDS" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
 
@@ -31,9 +42,7 @@ Install the two NYSDS packages: `@nysds/react` for the React-wrapped web compone
 
 For styling, import the NYSDS CSS in your entry file:
 
-{% set code %}// main.tsx
-import "@nysds/styles/full";
-{% endset %}
+{% set code %}import "@nysds/styles/full";{% endset %}
 {% set accordionLabel = "main.tsx" %}
 {% set codeExpanded = true %}
 {% include "partials/code-preview.njk" %}
@@ -42,12 +51,12 @@ The stylesheet provides the design tokens and global styles; each component's ow
 
 ## Your First Component
 
-Import directly from `@nysds/react`. This package gives you React-wrapped versions of each web component; event bindings included. If you'd rather not pull in the whole library, import from a subpath instead, e.g. `@nysds/react/textinput`.
+Open your App.tsx file and import directly from `@nysds/react`. This package gives you React-wrapped versions of each web component; event bindings included. If you'd rather not pull in the whole library, import from a subpath instead, e.g. `@nysds/react/button`.
 
 {% set code %}import { NysButton } from "@nysds/react/button";
 
 <NysButton label="Submit" variant="primary" />{% endset %}
-{% set accordionLabel = "NysButton" %}
+{% set accordionLabel = "App.tsx" %}
 {% set codeExpanded = false %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
