@@ -103,9 +103,7 @@ export class App {
 
 #### 2. Module-based Apps (NgModule)
 
-<nys-alert type="danger"><p>IMPORTANT: The Angular team recommends using standalone components instead of NgModule for all new code. Use this guide to understand existing code built with @NgModule.</p>
-<a href="https://angular.dev/guide/components">Read up on standalone components in Angular</a>
-</nys-alert>
+<nys-alert type="danger"><p>IMPORTANT: The Angular team recommends using standalone components instead of NgModule for all new code. Use this guide to understand existing code built with @NgModule.</p><a href="https://angular.dev/guide/components">Read up on standalone components in Angular</a></nys-alert>
 
 If you're using an NgModule-based architecture, or want to import all components at once, import `NysAngularModule` into your app or feature module:
 
