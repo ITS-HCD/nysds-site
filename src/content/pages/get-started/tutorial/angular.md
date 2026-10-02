@@ -17,7 +17,18 @@ A step-by-step guide to using NYS Design System components in an Angular applica
 
 ## Installation
 
-Install the two NYSDS packages: `@nysds/angular` for the Angular-wrapped components and `@nysds/styles` for the design tokens and global CSS.
+To start from scratch, install the Angular cli, and set up a new starter package:
+
+{% set code %}npm install -g @angular/cli
+ng new my-angular-app{% endset %}
+{% set accordionLabel = "Setup a new Angular project" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "ts" %}
+{% include "partials/code-preview.njk" %}
+
+Install the two NYSDS packages in your app folder: 
+- `@nysds/angular` for the Angular-wrapped components and
+- `@nysds/styles` for the design tokens and global CSS.
 
 **Note:** Both packages are versioned together. Always install matching versions to avoid token/component mismatches.
 
@@ -34,7 +45,7 @@ After installing, load the NYSDS styles to the `styles` array in your `angular.j
  
 {% set code %}{
   "projects": {
-    "your-app": {
+    "my-angular-app": {
       "architect": {
         "build": {
           "options": {
@@ -54,38 +65,45 @@ After installing, load the NYSDS styles to the `styles` array in your `angular.j
 
 ### Usage
 
-NYSDS Angular components are true Angular components, so they work with Angular's template type-checking and don't require `CUSTOM_ELEMENTS_SCHEMA`.
-
 #### 1. Standalone Components (Modern Angular)
 
-In modern Angular (v14+), import individual NYSDS components directly into your standalone component's `imports` array:
+In modern Angular (v14+), import individual NYSDS components directly into your standalone component's `imports` array and use them in your templates:
 
-{% set code %}import { Component } from '@angular/core';
+{% set code %}import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
 import { NysButtonComponent } from '@nysds/angular';
 
 @Component({
-  selector: 'app-my-component',
-  standalone: true,
-  imports: [NysButtonComponent],
-  template: `
-    <nys-button
-      label="Submit"
-      variant="primary"
-      (nysClick)="handleSubmit()"
-    ></nys-button>
-  `
+  imports: [RouterOutlet, NysButtonComponent],
+  selector: 'app-root',
+  styleUrl: './app.css',
+  templateUrl: './app.html',
 })
-export class MyComponent {
+export class App {
+  protected readonly title = signal('my-angular-app');
   handleSubmit() {
     console.log('Button clicked!');
   }
 }{% endset %}
-{% set accordionLabel = "Angular Standalone Example" %}
+{% set accordionLabel = "Angular app.ts" %}
 {% set codeExpanded = false %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
 
+{% set code %}<nys-button
+  label="Submit"
+  variant="filled"
+  (nysClick)="handleSubmit()"
+></nys-button>{% endset %}
+{% set accordionLabel = "Angular app.html" %}
+{% set codeExpanded = false %}
+{% set codeLanguage = "html" %}
+{% include "partials/code-preview.njk" %}
+
 #### 2. Module-based Apps (NgModule)
+
+<nys-alert details="IMPORTANT: The Angular team recommends using standalone components instead of NgModule for all new code. Use this guide to understand existing code built with @NgModule." type="danger"></nys-alert>
 
 If you're using an NgModule-based architecture, or want to import all components at once, import `NysAngularModule` into your app or feature module:
 
@@ -99,7 +117,6 @@ export class AppModule {}{% endset %}
 {% set accordionLabel = "Angular Module Setup" %}
 {% set codeExpanded = false %}
 {% include "partials/code-preview.njk" %}
-
 
 ## Forms
  
