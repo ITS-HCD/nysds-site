@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Angular Tutorial - New York State Design System</title>
+
+<meta name="description" content="A step-by-step guide to using NYS Design System components in an Angular application.">
+<link rel="canonical" href="https://designsystem.ny.gov/get-started/developers/angular/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="Angular Tutorial">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/get-started/developers/angular/">
+<meta property="og:description" content="A step-by-step guide to using NYS Design System components in an Angular application.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-10-05T17:33:02.475Z -->
+  </head>
+  
+  <body class="single-page page-angular section-get-started">
+  <nys-skipnav></nys-skipnav>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class=""><a href="/get-started" title="Get Started">Get Started</a></li>
+    <li class=""><a href="/foundations" title="Foundations">Foundations</a></li>
+    <li class=""><a href="/tokens" title="Token Reference">Tokens</a></li>
+    <li class=""><a href="/components" title="Components">Components</a></li>
+    <li class=""><a href="/learn" title="NYS Design System Video Series">Learn</a></li>
+    <li class=""><a href="/about" title="About the NYS Design System">About</a></li>
+    <li class=""><a href="/about/updates" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Get Started
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="https://designsystem.ny.gov/assets/img/sections/section-get-started.svg" alt="Get Started section header">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-auto">
+    
+
+  
+  
+
+  
+  
+
+      
+      
+
+
+ 
+ 
+
+  
+  
+
+  <div class="verticalnav-container">
+    <nys-verticalnav header="Get Started" hideHeader="" data-pagefind-ignore="all">
+      <ul>
+        
+        
+          
+          
+
+        
+          <li>
+            <a href="/get-started/">
+              Get Started
+            </a>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/designers/">
+              Designers
+            </a>
+          </li>
+        
+      
+          
+          
+            
+          
+            
+              
+            
+          
+            
+          
+
+        
+          <li>
+            <nys-verticalnavgroup label="Developers" expanded="">
+              <ul>
+                <li>
+                  <a href="/get-started/developers/">
+                    Developers
+                  </a>
+                </li>
+                
+                  <li>
+                    <a href="/get-started/developers/react/">
+                      React
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/get-started/developers/angular/" aria-current="page">
+                      Angular
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/get-started/developers/vue/">
+                      Vue
+                    </a>
+                  </li>
+                
+              </ul>
+            </nys-verticalnavgroup>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/leadership/">
+              Leadership
+            </a>
+          </li>
+        
+      
+      </ul>
+    </nys-verticalnav>
+  </div>
+
+  </aside>
+  <div class="nys-desktop:nys-grid-col-fill">  
+    <h1 id="angular-tutorial">Angular Tutorial</h1>
+<p>A step-by-step guide to using NYS Design System components in an Angular application.</p>
+<p><strong>Requirements:</strong> Angular <code>&gt;=20.0.0</code> (core, common, forms)</p>
+<h2 id="installation">Installation</h2>
+<p>To start from scratch, install the Angular cli, and set up a new starter package:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Setup a new Angular project</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts">npm install <span class="token operator">-</span>g <span class="token decorator"><span class="token at operator">@</span><span class="token function">angular</span></span><span class="token operator">/</span>cli
+ng <span class="token keyword">new</span> <span class="token class-name">my</span><span class="token operator">-</span>angular<span class="token operator">-</span>app</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Install the two NYSDS packages in your app folder:</p>
+<ul>
+<li><code>@nysds/angular</code> for the Angular-wrapped components and</li>
+<li><code>@nysds/styles</code> for the design tokens and global CSS.</li>
+</ul>
+<p><strong>Note:</strong> Both packages are versioned together. Always install matching versions to avoid token/component mismatches.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Installation</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts">npm install <span class="token decorator"><span class="token at operator">@</span><span class="token function">nysds</span></span><span class="token operator">/</span>angular <span class="token decorator"><span class="token at operator">@</span><span class="token function">nysds</span></span><span class="token operator">/</span>styles</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><nys-alert type="success" heading="That's all!" text="No CUSTOM_ELEMENTS_SCHEMA needed. NYSDS Angular components are true Angular components, not raw custom elements, so they work with Angular's template type-checking out of the box."></nys-alert></p>
+<h2 id="project-setup">Project Setup</h2>
+<p>After installing, load the NYSDS styles to the <code>styles</code> array in your <code>angular.json</code>:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>angular.json Styles</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"projects"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"my-angular-app"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"architect"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token string">"node_modules/@nysds/styles/dist/nysds-full.min.css"</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="usage">Usage</h3>
+<h4 id="1-standalone-components-modern-angular">1. Standalone Components (Modern Angular)</h4>
+<p>In modern Angular (v14+), import individual NYSDS components directly into your standalone component's <code>imports</code> array and use them in your templates:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Angular app.ts</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> signal <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RouterOutlet <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/router'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NysButtonComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@nysds/angular'</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">imports</span><span class="token operator">:</span> <span class="token punctuation">[</span>RouterOutlet<span class="token punctuation">,</span> NysButtonComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-root'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">styleUrl</span><span class="token operator">:</span> <span class="token string">'./app.css'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templateUrl</span><span class="token operator">:</span> <span class="token string">'./app.html'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token punctuation">{</span>
+  <span class="token keyword">protected</span> readonly title <span class="token operator">=</span> <span class="token function">signal</span><span class="token punctuation">(</span><span class="token string">'my-angular-app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Button clicked!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Angular app.html</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Submit<span class="token punctuation">"</span></span>
+  <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>filled<span class="token punctuation">"</span></span>
+  <span class="token attr-name">(nysClick)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>handleSubmit()<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="2-module-based-apps-ngmodule">2. Module-based Apps (NgModule)</h4>
+<p><nys-alert text="IMPORTANT: The Angular team recommends using standalone components instead of NgModule for all new code. Use this guide to understand existing code built with @NgModule." primaryAction="https://angular.dev/guide/components" primaryLabel="Read up on standalone components in Angular" type="danger"></nys-alert></p>
+<p>If you're using an NgModule-based architecture, or want to import all components at once, import <code>NysAngularModule</code> into your app or feature module:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Angular Module Setup</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">import { NgModule } from '@angular/core';
+import { NysAngularModule } from '@nysds/angular';
+@NgModule({
+  imports: [NysAngularModule]
+})
+export class AppModule {}</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="forms">Forms</h2>
+<p>Our Angular components support <code>ControlValueAccessor</code> natively, so they work with both Template-driven forms and Reactive forms, including built-in form validation.</p>
+<h4 id="template-driven-forms">Template-driven forms</h4>
+<p>Use <code>[(ngModel)]</code> for two-way binding:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Template-driven Forms</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>First name<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>firstName<span class="token punctuation">"</span></span>
+  <span class="token attr-name">[(ngModel)]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>firstName<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="reactive-forms">Reactive forms</h4>
+<p>Use <code>formControlName</code>:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Reactive Forms</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>First name<span class="token punctuation">"</span></span>
+  <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>firstName<span class="token punctuation">"</span></span>
+  <span class="token attr-name">formControlName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>firstName<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="group-controls">Group controls</h4>
+<p><code>nys-checkboxgroup</code> and <code>nys-radiogroup</code> bind at the group level, not on each individual checkbox or radio:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Group Controls</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkboxgroup</span> <span class="token attr-name">formControlName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>languages<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>English<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-checkbox</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Spanish<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkbox</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-checkboxgroup</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="validation">Validation</h4>
+<p>By default, the component owns validation. Its <code>required</code> and <code>pattern</code> attributes drive validation, which is shown on blur.</p>
+<p>To let Angular own validation instead, add the <code>nysControlErrors</code> directive. It subscribes to <code>control.errors</code> and sets the component's <code>showError</code> and <code>errorMessage</code>:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>nysControlErrors Directive</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span>
+  <span class="token attr-name">formControlName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span>
+  <span class="token attr-name">nysControlErrors</span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Override the default error messages with the <code>NYS_ERROR_MESSAGES</code> provider:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Custom Error Messages</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts">providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    provide<span class="token operator">:</span> <span class="token constant">NYS_ERROR_MESSAGES</span><span class="token punctuation">,</span>
+    useValue<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">required</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"Please fill in this field"</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">email</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token string">"Enter a valid email"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="inputs-outputs-and-events">Inputs, Outputs, and Events</h2>
+<p>All properties are typed inputs and events are typed outputs:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Inputs and Outputs</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span>
+  <span class="token attr-name">[label]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span>Email'<span class="token punctuation">"</span></span>
+  <span class="token attr-name">[required]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+  <span class="token attr-name">(nysChange)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>onEmailChange($event)<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Event detail is typed</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Typed Event Detail</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts"><span class="token function">onEmailChange</span><span class="token punctuation">(</span>event<span class="token operator">:</span> NysTextinputChangeEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// autocompletes</span>
+<span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="subpath-imports">Subpath Imports</h2>
+<p>To import individual components, use the per-component subpaths:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Subpath Imports</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> NysTextinputComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/angular/textinput"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NysCheckboxComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/angular/checkbox"</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="server-side-rendering">Server-Side Rendering</h2>
+<p>The components render client-side. If your app uses SSR, wrap containers in <code>ngSkipHydration</code>:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>ngSkipHydration</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ngSkipHydration</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-textinput</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-textinput</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Or use <code>provideClientHydration</code> if registering components client-only.</p>
+<h2 id="whats-next">What's next</h2>
+<p>You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the NYSDS Angular Demo repo.</p>
+<ul>
+<li><a href="/components/">Component Reference</a></li>
+<li><a href="https://github.com/ITS-HCD/nysds-angular-demo">Angular Demo Repo</a></li>
+</ul>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/tutorial/angular.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: October 5, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all">
+  <p><strong>On this page</strong></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/community/file/1574803287825265318/new-york-state-design-system" title="Access the NYS Design System Figma library.">Community Figma <nys-icon name="language" style="color: var(--nys-color-theme);" size="2xl"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="lock_filled" style="color: var(--nys-color-theme);" size="2xl"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">ITS Figma <nys-icon name="lock_filled" style="color: var(--nys-color-theme);" size="2xl"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

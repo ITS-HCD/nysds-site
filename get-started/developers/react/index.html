@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>React Tutorial - New York State Design System</title>
+
+<meta name="description" content="A step-by-step guide to using NYS Design System components in a React + TypeScript application.">
+<link rel="canonical" href="https://designsystem.ny.gov/get-started/developers/react/">
+<link rel="icon" type="image/svg+xml" href="https://designsystem.ny.gov/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://designsystem.ny.gov/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="NYSDS">
+
+<meta property="og:title" content="React Tutorial">
+<meta property="og:site_name" content="New York State Design System">
+<meta property="og:url" content="https://designsystem.ny.gov/get-started/developers/react/">
+<meta property="og:description" content="A step-by-step guide to using NYS Design System components in a React + TypeScript application.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="https://designsystem.ny.gov/assets/img/nysds_og_image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:logo" content="https://designsystem.ny.gov/assets/img/nysds-logo-mark.png">
+<meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+
+<link href="https://designsystem.ny.gov/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
+<link rel="preload" href="https://designsystem.ny.gov/assets/fonts/proximanova-regular.woff" as="font" type="font/woff" crossorigin="">
+<link href="https://designsystem.ny.gov/assets/fonts/nysds-fonts.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/pagefind/pagefind-ui.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/prism-theme.css" rel="stylesheet">
+<link href="https://designsystem.ny.gov/assets/css/nysds-site.css" rel="stylesheet">
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4JYBJ7BZY');
+</script>
+
+    
+    <!-- Latest Build: 2026-10-05T17:33:02.475Z -->
+  </head>
+  
+  <body class="single-page page-react section-get-started">
+  <nys-skipnav></nys-skipnav>
+  
+<nys-unavheader searchUrl="/search/?q=" hideTranslate=""></nys-unavheader>
+
+  <nys-globalheader appName="NYS Design System" homepageLink="/">
+  <ul data-pagefind-ignore="all">
+    <li class=""><a href="/get-started" title="Get Started">Get Started</a></li>
+    <li class=""><a href="/foundations" title="Foundations">Foundations</a></li>
+    <li class=""><a href="/tokens" title="Token Reference">Tokens</a></li>
+    <li class=""><a href="/components" title="Components">Components</a></li>
+    <li class=""><a href="/learn" title="NYS Design System Video Series">Learn</a></li>
+    <li class=""><a href="/about" title="About the NYS Design System">About</a></li>
+    <li class=""><a href="/about/updates" title="Whatʼs New">Whatʼs New</a></li>
+  </ul>
+</nys-globalheader>
+
+
+<div class="section-header" data-pagefind-ignore="all">
+    <div class="section-header__inner nys-grid-container-widescreen">
+        <div class="nys-grid-row">
+            <div class="section-header__title">
+                Get Started
+            </div>
+            <div class="section-header__media">
+                
+                    <img src="https://designsystem.ny.gov/assets/img/sections/section-get-started.svg" alt="Get Started section header">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <main role="main" id="main-content" data-pagefind-body="">
+  
+      
+<div class="nys-grid-container-widescreen">
+<div class="nys-grid-row nys-grid-gap">
+  <aside class="nys-desktop:nys-grid-col-auto">
+    
+
+  
+  
+
+  
+  
+
+      
+      
+
+
+ 
+ 
+
+  
+  
+
+  <div class="verticalnav-container">
+    <nys-verticalnav header="Get Started" hideHeader="" data-pagefind-ignore="all">
+      <ul>
+        
+        
+          
+          
+
+        
+          <li>
+            <a href="/get-started/">
+              Get Started
+            </a>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/designers/">
+              Designers
+            </a>
+          </li>
+        
+      
+          
+          
+            
+              
+            
+          
+            
+          
+            
+          
+
+        
+          <li>
+            <nys-verticalnavgroup label="Developers" expanded="">
+              <ul>
+                <li>
+                  <a href="/get-started/developers/">
+                    Developers
+                  </a>
+                </li>
+                
+                  <li>
+                    <a href="/get-started/developers/react/" aria-current="page">
+                      React
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/get-started/developers/angular/">
+                      Angular
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="/get-started/developers/vue/">
+                      Vue
+                    </a>
+                  </li>
+                
+              </ul>
+            </nys-verticalnavgroup>
+          </li>
+        
+      
+          
+          
+
+        
+          <li>
+            <a href="/get-started/leadership/">
+              Leadership
+            </a>
+          </li>
+        
+      
+      </ul>
+    </nys-verticalnav>
+  </div>
+
+  </aside>
+  <div class="nys-desktop:nys-grid-col-fill">  
+    <h1 id="react-tutorial">React Tutorial</h1>
+<p>A step-by-step guide to using NYS Design System components in a React + TypeScript application.</p>
+<p><strong>Requirements:</strong> React and React DOM <code>18</code> or <code>19</code></p>
+<h2 id="installation">Installation</h2>
+<p>To start from scratch, install the Vite React app:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Setup a new React </p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">npm create vite@latest my-app -- --template react-ts</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="install-nysds">Install NYSDS</h2>
+<p>Install the two NYSDS packages:</p>
+<ul>
+<li><code>@nysds/react</code> for the React-wrapped web components</li>
+<li><code>@nysds/styles</code> for the design tokens and global CSS.</li>
+</ul>
+<p><strong>Note:</strong> Both packages are versioned together. Always install matching versions to avoid token/component mismatches.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>Install NYSDS</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">npm install @nysds/react @nysds/styles</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><nys-alert type="success" heading="That's all!" text="No registration step needed. Components self-register the moment they're imported. No need to defineCustomElements() or setup call required."></nys-alert></p>
+<h2 id="project-setup">Project Setup</h2>
+<p>For styling, import the NYSDS CSS in your entry file:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_down" size="xl"></nys-icon>
+        <p>main.tsx</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container expanded">
+      <div class="code-preview__code-block">
+        <pre class="language-html"><code class="language-html">import "@nysds/styles/full";</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p>The stylesheet provides the design tokens and global styles; each component's own styles live in its shadow DOM and need no extra setup.</p>
+<h2 id="your-first-component">Your First Component</h2>
+<p>Open your App.tsx file and import directly from <code>@nysds/react</code>. This package gives you React-wrapped versions of each web component; event bindings included. If you'd rather not pull in the whole library, import from a subpath instead, e.g. <code>@nysds/react/button</code>.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>App.tsx</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> NysButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/react/button"</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>NysButton label<span class="token operator">=</span><span class="token string">"Submit"</span> variant<span class="token operator">=</span><span class="token string">"primary"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="props">Props</h2>
+<p>Props are typed from the underlying web component and set as DOM properties, not attributes. Use the camelCase property names (<code>showError</code>, <code>errorMessage</code>), not the kebab-case attribute names.</p>
+<h2 id="custom-events">Custom Events</h2>
+<p>This is the most common source of confusion for React developers new to NYSDS. Web components fire <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">DOM CustomEvents</a>, not the synthetic events React uses for native inputs. The NYSDS React wrappers map these to callback props like <code>onNysChange</code> and <code>onNysInput</code>, but the underlying type is still a DOM <code>Event</code>, not a React synthetic event.</p>
+<p><strong>Note:</strong> Full event payloads are documented on each component's page at the NYSDS reference site.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Custom Event Binding</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">// ❌ This won't work! NysTextinput doesn't fire a native change event</span>
+<span class="token operator">&lt;</span>NysTextinput onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setValue</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+<span class="token comment">// ✅ Use the NYSDS custom event binding</span>
+<span class="token operator">&lt;</span>NysTextinput
+  name<span class="token operator">=</span><span class="token string">"email"</span>
+  onNysInput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token punctuation">(</span>e <span class="token keyword">as</span> CustomEvent<span class="token punctuation">)</span><span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token function">setValue</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Type Guard</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token comment">// Type guard: only accesses detail if it really is a CustomEvent</span>
+onNysInput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">CustomEvent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setValue</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-preview-container">
+  <div class="code-preview__preview  " data-pagefind-ignore="all">
+<div class="code-preview__preview-root-inner"><nys-textinput label="Type something" name="demo"></nys-textinput>
+<p>Current value: <strong id="current-value">...</strong></p>
+<script>
+  const input = document.querySelector('nys-textinput');
+  const currentValue = document.querySelector('#current-value');
+
+  input.addEventListener('nys-input', (e) => {
+    currentValue.textContent = e.detail.value || '...';
+  });
+</script></div>
+  </div>
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Live demo</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>NysTextinput
+  label<span class="token operator">=</span><span class="token string">"Type something"</span>
+  name<span class="token operator">=</span><span class="token string">"demo"</span>
+  onNysInput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e <span class="token keyword">as</span> CustomEvent<span class="token punctuation">)</span><span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>p<span class="token operator">></span>Current value<span class="token operator">:</span> <span class="token operator">&lt;</span>strong<span class="token operator">></span><span class="token punctuation">{</span>value <span class="token operator">||</span> <span class="token string">"..."</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>strong<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="forms">Forms</h2>
+<p>NYSDS form components are form-associated custom elements built on the browser's <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals">ElementInternals API</a>, which means they participate in native HTML form submission just like <code>&lt;input&gt;</code> and <code>&lt;select&gt;</code>.</p>
+<h4 id="controlled-inputs">Controlled inputs</h4>
+<p>Bind <code>value</code> and update state from <code>onNysInput</code>:</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Controlled Input</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> setName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>NysTextinput
+  label<span class="token operator">=</span><span class="token string">"Name"</span>
+  value<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span>
+  onNysInput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setName</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="submitting-with-formdata">Submitting with FormData</h4>
+<p>You don't need React state for every field. The <code>FormData</code> collects all values on submit.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Form Example</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> SyntheticEvent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NysButton<span class="token punctuation">,</span> NysSelect<span class="token punctuation">,</span> NysTextinput <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/react"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">MyForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> SyntheticEvent<span class="token operator">&lt;</span>HTMLFormElement<span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>currentTarget<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span>formData<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// data = { name: "Jane Smith", topic: "general" }</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>form onSubmit<span class="token operator">=</span><span class="token punctuation">{</span>handleSubmit<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>NysTextinput name<span class="token operator">=</span><span class="token string">"name"</span> label<span class="token operator">=</span><span class="token string">"Name"</span> required <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>NysSelect name<span class="token operator">=</span><span class="token string">"topic"</span> label<span class="token operator">=</span><span class="token string">"Topic"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">"general"</span> label<span class="token operator">=</span><span class="token string">"General Inquiry"</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">"feedback"</span> label<span class="token operator">=</span><span class="token string">"Feedback"</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>NysSelect<span class="token operator">></span>
+      <span class="token operator">&lt;</span>NysButton type<span class="token operator">=</span><span class="token string">"submit"</span> label<span class="token operator">=</span><span class="token string">"Submit"</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><strong>Resetting forms:</strong> Calling <code>form.reset()</code> resets native HTML inputs but not NYSDS web components. They maintain their own internal state. You need to clear them explicitly.</p>
+<div class="code-preview-container">
+  <div class="code-preview__source">
+    <div class="code-preview__buttons">
+      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
+        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
+        <p>Resetting Forms</p>
+      </button>
+      <div class="copy-button-wrapper" data-pagefind-ignore="all">
+        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
+        <div class="copy-tooltip">Copy Code</div>
+      </div>
+    </div>
+    <div class="code-preview__code-container ">
+      <div class="code-preview__code-block">
+        <pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> formRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLFormElement<span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleReset</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  formRef<span class="token punctuation">.</span>current<span class="token operator">?.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// clears native inputs</span>
+  <span class="token comment">// Explicitly clear NYSDS components</span>
+  formRef<span class="token punctuation">.</span>current
+    <span class="token operator">?.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"nys-textinput, nys-select, nys-textarea"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token punctuation">(</span>el <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<p><nys-alert type="info" heading="See it in practice" text="The Basic Form page in this demo shows all of these patterns together — submission, validation, conditional fields, and form reset." primaryLabel="View Basic Form on External React" primaryAction="https://its-hcd.github.io/nysds-react-demo/basic-form"></nys-alert></p>
+<h2 id="server-side-rendering-and-next-js">Server-Side Rendering and Next.js</h2>
+<p>Every wrapper carries a <code>&quot;use client&quot;</code> directive, so the Next.js App Router works with a normal import. You only need <code>&quot;use client&quot;</code> in your own files if they hold state.</p>
+<ul>
+<li><strong>App Router:</strong> import wrappers from any client component. A server component can't render a wrapper directly; pass it through a client boundary.</li>
+<li><strong>Pages Router:</strong> import and use anywhere.</li>
+<li>Components render client side. There is no declarative shadow DOM server rendering in this release.</li>
+</ul>
+<h2 id="whats-next">What's next</h2>
+<p>You've covered the core patterns. From here, explore the full component library on the official NYSDS reference site, or browse the NYSDS React Demo repo.</p>
+<ul>
+<li><a href="/components/">Component Reference</a></li>
+<li><a href="https://github.com/ITS-HCD/nysds-react-demo">React Demo Repo</a></li>
+</ul>
+
+    
+  <div class="edit-page-link" data-pagefind-ignore="all">
+    <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/tutorial/react.md">Edit this page on GitHub</a> (Permissions required)</p>
+    <p>Last updated: October 5, 2026</p>
+  </div>
+
+  </div>
+  <aside class="nys-desktop:nys-grid-col-2">
+    <div id="onpage-nav" class="onpage-nav" data-pagefind-ignore="all">
+  <p><strong>On this page</strong></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const NAV_CONTAINER_ID = "onpage-nav"; // ID of the div for the nav placeholder
+  const HEADINGS_SELECTOR = "h2"; // Which heading levels should we included in the nav?
+  const OFFSET = 50; // How many pixels scrolling until we activate consider a section "active"
+
+  /*** Populate On-page Nav ***/
+  const onPageNav = document.getElementById(NAV_CONTAINER_ID);
+  if (!onPageNav) return;
+
+  const navContainer = document.createElement("nav");
+  navContainer.classList.add("onpage-nav__nav");
+
+  const navList = document.createElement("ul");
+  navList.classList.add("onpage-nav__list");
+  navContainer.appendChild(navList);
+
+  const sections = [];
+
+  document.querySelectorAll(HEADINGS_SELECTOR).forEach((heading) => {
+    // Exclude all headings inside of code preview containers
+    if (heading.closest(".code-preview-container")) return;
+    
+    const id = heading.id || heading.textContent.toLowerCase().replace(/\s+/g, "-");
+    heading.id = id;
+
+    const navItem = document.createElement("li");
+    navItem.classList.add("onpage-nav__item");
+
+    const navLink = document.createElement("a");
+    navLink.href = `#${id}`;
+    navLink.textContent = heading.textContent;
+    navLink.classList.add("onpage-nav__link");
+
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+    sections.push({ id, navItem });
+  });
+
+  onPageNav.appendChild(navContainer);
+
+  /*** Update active state on scroll ***/
+  function updateActiveNav() {
+    let activeId = sections[0]?.id;
+
+    sections.forEach(({ id }) => {
+      if (window.scrollY + OFFSET >= document.getElementById(id).offsetTop) {
+        activeId = id;
+      }
+    });
+
+    sections.forEach(({ id, navItem }) => {
+      const isActive = id === activeId;
+      navItem.classList.toggle("onpage-nav__item--active", isActive);
+      navItem.querySelector("a").setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
+
+  updateActiveNav();
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+});
+</script>
+  </aside>
+</div>
+</div>
+
+
+  </main>
+  <nys-backtotop id="backtotop-demo"></nys-backtotop>
+  
+  <nys-globalfooter agencyName="NYS Design System">
+  <ul data-pagefind-ignore="all">
+    <li><span>Learn More</span>
+      <ul>
+        <li><a href="/get-started/" title="Get started using the NYS Design System.">Get Started</a></li>
+        <li><a href="/foundations/" title="Learn about the foundations of the design system.">Foundations</a></li>
+        <li><a href="/components/" title="Explore the web components.">Components</a></li>
+        <li><a href="/foundations/accessibility/" title="Learn about accessibility on this site.">Accessibility</a></li>
+      </ul>
+    </li>
+    <li><span>Resources</span>
+      <ul>
+        <li><a href="https://github.com/ITS-HCD/nysds" title="Visit the NYS Design System GitHub repository.">GitHub <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.npmjs.com/org/nysds" title="Explore NYS Design System NPM packages.">NPM Packages <nys-icon name="open_in_new"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/community/file/1574803287825265318/new-york-state-design-system" title="Access the NYS Design System Figma library.">Community Figma <nys-icon name="language" style="color: var(--nys-color-theme);" size="2xl"></nys-icon></a></li>
+        <li><a href="https://github.com/ITS-HCD/nysds-fonts" title="Visit the NYS Design System Fonts GitHub repository.">Fonts GitHub <nys-icon name="lock_filled" style="color: var(--nys-color-theme);" size="2xl"></nys-icon></a></li>
+        <li><a href="https://www.figma.com/design/U2QpuSUXRTxbgG64Fzi9bu/%F0%9F%92%A0-NYS-Design-System" title="Access the NYS Design System Figma library.">ITS Figma <nys-icon name="lock_filled" style="color: var(--nys-color-theme);" size="2xl"></nys-icon></a></li>
+      </ul>
+    </li>
+  </ul>
+</nys-globalfooter>
+
+  <nys-unavfooter></nys-unavfooter>
+
+  <script src="https://designsystem.ny.gov/assets/js/vendor/nysds.js"></script>
+<script src="https://designsystem.ny.gov/assets/js/nysds-site.js"></script>
+
+
+
+  
+  </body>
+</html>

@@ -7,6 +7,111 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.22.0 “Sawteeth”</title>
+      <link>https://designsystem.ny.gov/about/updates/1.22.0-release/</link>
+      <description><![CDATA[<h2>“Sawteeth” 🏔️</h2>
+<p>The winning vote during Office Hours was for naming this release “Sawteeth” after the 35<sup>th</sup> highest peak in New York: Sawteeth Mountain. The Mountain has an elevation of 4,100 ft (1,200 m). That is as tall as 707 NYC Yellow Cabs stacked roof to roof! 🚕</p>
+<p><a href="https://en.wikipedia.org/wiki/Sawteeth_(New_York)">Learn more about Sawteeth Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Official Angular support</h2>
+<p>We've added official Angular support to the NYS Design System. Installation is as easy as an npm install and referencing the components in your source code. We've provided documentation for both quick start and detailed implementation patterns. Send us any comments in the Angular channel on Teams!</p>
+<p><a href="https://designsystem.ny.gov/get-started/developers/angular/">Read the NYS Design System Angular support docs</a></p>
+<h2>Official React support</h2>
+<p>We've added official React support to the NYS Design System. Installation is as easy as an npm install and referencing the components in your source code. We've provided documentation for both quick start and detailed implementation patterns. Send us any comments in the React channel on Teams!</p>
+<p><a href="https://designsystem.ny.gov/get-started/developers/react/">Read the NYS Design System React support docs</a></p>
+<h2>Official Vue support</h2>
+<p>We've added official Vue support to the NYS Design System. Installation is as easy as an npm install and referencing the components in your source code. We've provided documentation for both quick start and detailed implementation patterns. Send us any comments in the Vue channel on Teams!</p>
+<p><a href="https://designsystem.ny.gov/get-started/developers/vue/">Read the NYS Design System Vue support docs</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/jesse-gardner.jpg"></nys-avatar>
+    <a href="https://github.com/plasticmind">Jesse Gardner</a> supported this effort!
+  </div>
+</div>
+<h2>MCP server documentation updated</h2>
+<p>We added more details to the MCP server for each framework we support. Each framework features an in-depth installation and usage guide. Now your LLM will install and use the design system the way it's meant to.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> verified all documentation!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>MCP framework guides now reflect the correct method for installation and usage</li>
+<li>Vulnerabilities fixed</li>
+<li>CSS Private var cleanup</li>
+<li>Slight styling fixes for <code>&lt;nys-verticalnav&gt;</code></li>
+<li>Fix <code>&lt;nys-processlist&gt;</code> showing full height in Safari</li>
+<li>Fix <code>&lt;nys-breadcrumb&gt;</code> to persist user provided classes</li>
+<li>Fix <code>&lt;nys-datepicker&gt;</code> focus trap and close calendar with a keystroke</li>
+<li>Fix <code>&lt;nys-table sortable&gt;</code> sorting numbers with commas</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><code>nys-globalfooter</code> does not allow you to dynamically insert menu items currently. <a href="https://teams.microsoft.com/l/message/19:0228156e2bb5419c8152047f596a7bfb@thread.tacv2/1787156283129?tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7&amp;groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&amp;parentMessageId=1787156283129&amp;teamName=NYS%20Design%20System&amp;channelName=Troubleshooting&amp;createdTime=1787156283129">See: Teams bug report</a></li>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.22.0">See the full developer release notes for v.1.22.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>“Sawteeth” 🏔️</h2>
+<p>The winning vote during Office Hours was for naming this release “Sawteeth” after the 35<sup>th</sup> highest peak in New York: Sawteeth Mountain. The Mountain has an elevation of 4,100 ft (1,200 m). That is as tall as 707 NYC Yellow Cabs stacked roof to roof! 🚕</p>
+<p><a href="https://en.wikipedia.org/wiki/Sawteeth_(New_York)">Learn more about Sawteeth Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Official Angular support</h2>
+<p>We've added official Angular support to the NYS Design System. Installation is as easy as an npm install and referencing the components in your source code. We've provided documentation for both quick start and detailed implementation patterns. Send us any comments in the Angular channel on Teams!</p>
+<p><a href="https://designsystem.ny.gov/get-started/developers/angular/">Read the NYS Design System Angular support docs</a></p>
+<h2>Official React support</h2>
+<p>We've added official React support to the NYS Design System. Installation is as easy as an npm install and referencing the components in your source code. We've provided documentation for both quick start and detailed implementation patterns. Send us any comments in the React channel on Teams!</p>
+<p><a href="https://designsystem.ny.gov/get-started/developers/react/">Read the NYS Design System React support docs</a></p>
+<h2>Official Vue support</h2>
+<p>We've added official Vue support to the NYS Design System. Installation is as easy as an npm install and referencing the components in your source code. We've provided documentation for both quick start and detailed implementation patterns. Send us any comments in the Vue channel on Teams!</p>
+<p><a href="https://designsystem.ny.gov/get-started/developers/vue/">Read the NYS Design System Vue support docs</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/jesse-gardner.jpg"></nys-avatar>
+    <a href="https://github.com/plasticmind">Jesse Gardner</a> supported this effort!
+  </div>
+</div>
+<h2>MCP server documentation updated</h2>
+<p>We added more details to the MCP server for each framework we support. Each framework features an in-depth installation and usage guide. Now your LLM will install and use the design system the way it's meant to.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
+    <a href="https://github.com/novacat35">Robert Chen</a> verified all documentation!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>MCP framework guides now reflect the correct method for installation and usage</li>
+<li>Vulnerabilities fixed</li>
+<li>CSS Private var cleanup</li>
+<li>Slight styling fixes for <code>&lt;nys-verticalnav&gt;</code></li>
+<li>Fix <code>&lt;nys-processlist&gt;</code> showing full height in Safari</li>
+<li>Fix <code>&lt;nys-breadcrumb&gt;</code> to persist user provided classes</li>
+<li>Fix <code>&lt;nys-datepicker&gt;</code> focus trap and close calendar with a keystroke</li>
+<li>Fix <code>&lt;nys-table sortable&gt;</code> sorting numbers with commas</li>
+</ul>
+<h2>🚨 Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>⚠️ Known issues</h2>
+<ul>
+<li><code>nys-globalfooter</code> does not allow you to dynamically insert menu items currently. <a href="https://teams.microsoft.com/l/message/19:0228156e2bb5419c8152047f596a7bfb@thread.tacv2/1787156283129?tenantId=f46cb8ea-7900-4d10-8ceb-80e8c1c81ee7&amp;groupId=40dc9e8f-13b9-4301-8cb7-db5c2b21c9fa&amp;parentMessageId=1787156283129&amp;teamName=NYS%20Design%20System&amp;channelName=Troubleshooting&amp;createdTime=1787156283129">See: Teams bug report</a></li>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.22.0">See the full developer release notes for v.1.22.0 →</a></p>
+]]></content>
+      <pubDate>Fri, 02 Oct 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.22.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.21.1</title>
       <link>https://designsystem.ny.gov/about/updates/1.21.1-release/</link>
       <description><![CDATA[<h2><code>&lt;nys-card&gt;</code> <code>size</code> property now available</h2>
