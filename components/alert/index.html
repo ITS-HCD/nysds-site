@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -640,7 +640,7 @@
     </div>
 </section>
 <section>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert heading="Default status" text="This is an example of an neutral base alert."></nys-alert>
@@ -666,7 +666,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -718,7 +718,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     <h2 id="options">Options</h2>
 <h3 id="theme">Theme</h3>
 <p>Set the <code>type</code> property to customize the alert style. Valid options are <code>base</code> (default), <code>info</code>, <code>success</code>, <code>warning</code>, <code>danger</code>, and <code>emergency</code>.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert type="base" heading="Default status"></nys-alert><br>
@@ -773,7 +773,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <h3 id="custom-text-description">Custom text description</h3>
 <p>Add descriptive content to your alert using the <code>text</code> prop or the our slot feature.</p>
 <p>Use the <code>text</code> prop for simple texts, or leverage the slot by simply putting HTML elements within our component for advanced HTML customizations, such as links or styled texts.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert type="info" heading="Text passed in through the prop" text="Here is more information that will be very helpful for readers."></nys-alert>
@@ -801,7 +801,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     </div>
   </div>
 </div>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert type="success" heading="Custom Descriptions">
@@ -834,7 +834,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <h3 id="dismissible">Dismissible</h3>
 <p>Use the <code>dismissible</code> property to make the alert dismissible.</p>
 <p>The <code>nys-close</code> custom event is dispatched when the alert is dismissed. Developers can implement their own event listeners to handle custom actions, such as saving the alert's state locally. This allows for features like remembering dismissed alerts across page reloads.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert heading="This is a dismissible alert" dismissible=""></nys-alert></div>
@@ -859,7 +859,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="duration">Duration</h3>
 <p>Set the <code>duration</code> property to automatically hide the alert after a specified time (in milliseconds). This is ideal for non-critical alerts that do not require user acknowledgment.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-button onClick="showAlert()" label="Open Alert"></nys-button>
@@ -891,7 +891,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="icon-customization">Icon Customization</h3>
 <p>Override the default theme icon by setting the <code>icon</code> property to any name from the icon library.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert type="emergency" heading="Winter storm warning: Dec 10th, 2024." text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." icon="ac_unit"></nys-alert>
@@ -922,7 +922,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="action-links">Action Links</h3>
 <p>Display <code>primaryAction</code> and <code>secondaryAction</code> as links using the <code>primaryLabel</code> and <code>secondaryLabel</code> for the link text. You must provide both an action label and a URL for each action to ensure proper functionality.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert type="emergency" heading="Winter storm warning: Dec 10th, 2024." text="A major snowfall is expected across the state of New York for the weekend of Dec 7th. Stay home if possible and use extreme caution when driving." primaryAction="https://www.ny.gov/" secondaryAction="https://www.ny.gov/" primaryLabel="Weather Report" secondaryLabel="Plowing Schedule"></nys-alert>
@@ -1063,7 +1063,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
 <p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -1158,7 +1158,7 @@ Proposal</a>.
 </nys-table>
 <br>
 <p>You can listen to these events using JavaScript:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

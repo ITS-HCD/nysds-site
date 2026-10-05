@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-components section-foundations">
@@ -426,7 +426,7 @@
 <h3 id="how-to-customize-component-styles">How to customize component styles</h3>
 <p>NYSDS components expose <strong>CSS custom properties</strong> (also called CSS variables) that pierce the shadow DOM boundary. These are the designated styling API for each component.</p>
 <p>For example, to change the background color of a button on your agency's landing page:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -460,7 +460,7 @@
 <p>Slots let you pass your own content into a component's internal template. This is how web components handle the equivalent of &quot;children&quot; in React or &quot;transclusion&quot; in Angular.</p>
 <h3 id="default-slots">Default slots</h3>
 <p>Some components accept content in a <strong>default slot</strong> — you just place it between the opening and closing tags. For example, <code>&lt;nys-alert&gt;</code> lets you provide custom body content this way:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -485,7 +485,7 @@
 </div>
 <h3 id="named-slots">Named slots</h3>
 <p>When a component has multiple insertion points, it uses <strong>named slots</strong>. You target a named slot with the <code>slot</code> attribute on your content:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -515,7 +515,7 @@
 <p>This registration is automatic. You do not need to call <code>customElements.define()</code> yourself.</p>
 <h3 id="waiting-for-a-component-to-be-ready">Waiting for a component to be ready</h3>
 <p>If you need to interact with a component programmatically — for example, to set a property or read a value — wait until its definition has loaded:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -540,7 +540,7 @@ customElements<span class="token punctuation">.</span><span class="token functio
 </div>
 <h3 id="waiting-for-a-render-to-complete">Waiting for a render to complete</h3>
 <p>NYSDS components (built with Lit) expose an <code>updateComplete</code> promise that resolves after the component has re-rendered in response to a property change. Use this when you need to read the DOM after changing a property:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -572,7 +572,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <section id="working-with-events">
 <h2 id="working-with-events">Working With Events</h2>
 <p>NYSDS components communicate through standard DOM events. Most components emit custom events prefixed with <code>nys-</code> that you can listen for with <code>addEventListener()</code>:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

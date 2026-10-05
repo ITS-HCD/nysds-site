@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-checkbox section-components">
@@ -640,7 +640,7 @@
     </div>
 </section>
 <section>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Last year's winner is not eligible to win again.">
@@ -686,7 +686,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -722,7 +722,7 @@
     <h2 id="options">Options</h2>
 <h3 id="checkbox-group">Checkbox group</h3>
 <p>The <code>&lt;nys-checkboxgroup&gt;</code> component can be used to group multiple checkboxes, allowing them to function as a single form control. This is useful when you want to allow users to select multiple options from a list.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Do you attest to the following:" description="By checking below you agree to our terms">
@@ -753,7 +753,7 @@
   </div>
 </div>
 <h3 id="disabled">Disabled</h3>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-checkbox disabled="" checked="" label="I agree to the terms and conditions" description="This option is currently unavailable." name="earlyVoting" value="early-voting"></nys-checkbox>
@@ -790,7 +790,7 @@
 <li><code>sm</code> : Set to 24px in width and height</li>
 <li><code>md</code> : The <code>default</code> size. Set to 32px in width and height.</li>
 </ul>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" size="sm">
@@ -833,7 +833,7 @@
 <li>The <code>tile</code> prop can be applied to the <code>&lt;nys-checkboxgroup&gt;</code> or the <code>&lt;nys-checkbox&gt;</code> component. If applied to the <code>&lt;nys-checkboxgroup&gt;</code>, all checkboxes will be displayed as tiles. If applied to the <code>&lt;nys-checkbox&gt;</code>, only that checkbox will be displayed as a tile.</li>
 <li>Do not use the <code>tile</code> prop on a checkbox if it is inside a <code>&lt;nys-checkboxgroup&gt;</code>. All checkboxes in a group should be the same size and style.</li>
 </ul>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" tile="">
@@ -872,7 +872,7 @@
 </div>
 <h3 id="required">Required</h3>
 <p>Set <code>required</code> to make a checkbox or group of checkboxes mandatory. It can be applied to either <code>&lt;nys-checkboxgroup&gt;</code> (no need to add it to individual children) or directly to an individual <code>&lt;nys-checkbox&gt;</code>.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-checkbox label="Subscribe to NYS Government Updates" description="Get notified via email about important updates and services." id="subscribe-checkbox-disabled-checked" name="subscribe" value="email-updates" required=""></nys-checkbox>
@@ -905,7 +905,7 @@
 </div>
 <h3 id="optional">Optional</h3>
 <p>Adding the <code>optional</code> prop will add an optional flag to the input.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" optional="">
@@ -940,7 +940,7 @@
 <p>Use the <code>other</code> option to allow a custom response when none of the listed choices apply. When selected, a text input appears and the <code>&lt;nys-checkbox&gt;</code> value becomes whatever the user enters.
 If no <code>label</code> is provided, it defaults to &quot;Other.&quot; You can provide a custom label such as &quot;Something else&quot; or &quot;Other (please specify).&quot;
 <strong>Note:</strong> Place this option as the last <code>&lt;nys-checkbox&gt;</code> within <code>&lt;nys-checkboxgroup&gt;</code>.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below">
@@ -976,7 +976,7 @@ If no <code>label</code> is provided, it defaults to &quot;Other.&quot; You can 
 <h3 id="error">Error</h3>
 <p>Set an error message and choose to activate it. Setting <code>errorMessage</code> does not display the message without boolean prop <code>showError</code>.
 Errors can be assigned to both <code>&lt;nys-checkboxgroup&gt;</code> and individual <code>&lt;nys-checkbox&gt;</code> components.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" showError="" errorMessage="You must select at least one option to continue.">
@@ -1009,7 +1009,7 @@ Errors can be assigned to both <code>&lt;nys-checkboxgroup&gt;</code> and indivi
 </div>
 <h3 id="slotted-description">Slotted Description</h3>
 <p>When the description requires more complexity than a simple string, use the description slot to hold the text. This allows the developer to include HTML in the description, such as anchors or bold text.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-checkbox label="Subscribe to NYS Government Updates" id="subscribe-updates" name="subscribe" value="email-updates">
@@ -1039,7 +1039,7 @@ Errors can be assigned to both <code>&lt;nys-checkboxgroup&gt;</code> and indivi
 <h3 id="inverted">Inverted</h3>
 <p>Set the <code>inverted</code> when the component is on a dark background.
 You can set <code>inverted</code> on <code>nys-checkboxgroup</code> to apply it to all checkboxes, or on a single <code>nys-checkbox</code> if only one needs it.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview inverted solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
   <nys-checkboxgroup label="Select your favorite New York landmarks" description="Choose from the options below" inverted="">
@@ -1266,7 +1266,7 @@ Proposal</a>.
 </nys-table>
 <br>
 <p>You can listen to these events using JavaScript:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

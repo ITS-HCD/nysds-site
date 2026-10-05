@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-typography section-foundations">
@@ -512,7 +512,7 @@
 <li>Extract the fonts into your project's assets directory.</li>
 <li>Reference the provided stylesheet in your HTML <code>&lt;head&gt;</code>:</li>
 </ol>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -540,7 +540,7 @@
 <h2 id="font-preloading">Font Preloading</h2>
 <p>When a browser loads a page, it may briefly display text in a fallback font before the web font finishes loading. This is called a Flash of Unstyled Text (FOUT). Preloading critical fonts tells the browser to start downloading them earlier, reducing or eliminating the flash.</p>
 <p>Add <code>&lt;link rel=&quot;preload&quot;&gt;</code> tags for the font weights your application uses most. For most NYS applications, this is Proxima Nova Regular:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -570,7 +570,7 @@
 <p>If you need to customize beyond the defaults or can't use the full stylesheet, you can use typography tokens and utility classes directly:</p>
 <h3 id="tokens-via-css-custom-properties">Tokens via CSS Custom Properties</h3>
 <p>Apply semantic tokens directly in your CSS using <code>var()</code>:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -603,7 +603,7 @@
 <p>Each property must be set individually — CSS does not support setting multiple properties at once with <code>var()</code>. This is fine when building reusable components, but can be verbose for one-off styling. That is where utility classes help.</p>
 <h3 id="utility-classes">Utility Classes</h3>
 <p>The NYS Design System provides <code>.nys-font-*</code> utility classes that bundle the correct font family, size, line height, and letter spacing for common text roles. Apply them directly in your HTML:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

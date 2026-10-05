@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-themes section-foundations">
@@ -575,7 +575,7 @@
 <section id="applying-a-theme">
 <h2 id="applying-a-theme">Applying a Theme</h2>
 <p>To apply an agency theme, add the <code>data-theme</code> attribute to the <code>&lt;body&gt;</code> element of your page. Every NYSDS component on the page will update automatically.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -613,7 +613,7 @@
 <p>In this example, the buttons, global header, and global footer will all render using the Environment theme's green palette instead of the default State Blue.</p>
 <h3 id="theming-a-section-of-a-page">Theming a section of a page</h3>
 <p>You can scope a theme to a specific section rather than the entire page. Place <code>data-theme</code> on any ancestor element to theme its descendants:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -664,7 +664,7 @@
 <h2 id="using-theme-tokens-in-custom-styles">Using Theme Tokens in Custom Styles</h2>
 <p>If you are building custom components or page layouts alongside NYSDS components, use theme tokens so your styles respond to agency themes automatically.</p>
 <p>Use <code>--nys-color-theme</code> and related theme tokens in your CSS. The correct primary color is applied automatically when you set a theme. You never need to look up or specify individual color values.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -710,7 +710,7 @@
 <section id="how-theme-files-work">
 <h2 id="how-theme-files-work">How Theme Files Work</h2>
 <p>When you install <code>@nysds/components</code> or include the NYSDS token stylesheet, all theme overrides are included in the main <code>tokens.css</code> file. Each theme is defined as a CSS rule block that targets its <code>[data-theme]</code> selector:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -746,7 +746,7 @@
 <p>If your agency is not covered by one of the existing theme groups, you can create a custom theme by overriding the theme tokens in your own stylesheet.</p>
 <h3 id="step-1-define-your-theme-tokens">Step 1: Define your theme tokens</h3>
 <p>Create a CSS rule that targets your custom theme selector and overrides all seven theme token values:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -785,7 +785,7 @@
 <p>Use <a href="https://webaim.org/resources/contrastchecker/">WebAIM's contrast checker</a> to verify.</p>
 <h3 id="step-3-load-your-theme-stylesheet-after-the-nysds-tokens">Step 3: Load your theme stylesheet after the NYSDS tokens</h3>
 <p>Your custom theme CSS must load <strong>after</strong> the NYSDS token stylesheet so your overrides take precedence:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

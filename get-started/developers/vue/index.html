@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-vue section-get-started">
@@ -198,7 +198,7 @@
 <p>A step-by-step guide to using NYS Design System components in a Vue 3 application.</p>
 <h2 id="installation">Installation</h2>
 <p>To start from scratch, create a new Vue Vite app:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -223,7 +223,7 @@
 <li>@nysds/styles for the design tokens and global CSS.</li>
 </ul>
 <p><strong>Note:</strong> Both packages are versioned together. Always install matching versions to avoid token/component mismatches.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -245,7 +245,7 @@
 <p><nys-alert type="success" heading="That's all!" text="No app.use() call or global registration needed. Importing a wrapper component registers its custom element as a side effect."></nys-alert></p>
 <h2 id="project-setup">Project Setup</h2>
 <p>After installing, import the NYSDS stylesheet once, at the top of your entry file (<code>src/main.ts</code>):</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -268,7 +268,7 @@
 <p><nys-alert type="warning" heading="TypeScript build error?" text="Vue's default TypeScript config rejects side-effect imports it can't resolve, and stylesheets aren't modules. If npm run build fails with TS2882: Cannot find module or type declarations for side-effect import of '@nysds/styles/full', declare the stylesheet once in env.d.ts."></nys-alert></p>
 <p><strong>Optional agency theme:</strong> set <code>&lt;html data-theme=&quot;health&quot;&gt;</code> (or <code>admin</code>, <code>business</code>, <code>environment</code>, <code>local</code>, <code>safety</code>, <code>transportation</code>). Fonts aren't bundled, so load them the way your agency normally does.</p>
 <h2 id="your-first-component">Your First Component</h2>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -296,7 +296,7 @@
 </div>
 <h2 id="props-events-and-slots">Props, Events, and Slots</h2>
 <p><strong>Props</strong> are set as DOM properties. Use either camelCase or kebab-case in templates: <code>appName</code> and <code>app-name</code> are the same prop. Bind numbers and booleans with <code>:</code> so they keep their type, not a string:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -318,7 +318,7 @@
 </div>
 <p><nys-alert type="warning" text="total-pages=&quot;5&quot; passes the string &quot;5&quot;, not a number. Components expecting a number type won't parse it, so always bind numeric and boolean props with a colon."></nys-alert></p>
 <p><strong>Events</strong> keep their full NYSDS names. Listen with <code>@nys-change</code>, <code>@nys-input</code>, and so on. The handler receives the typed event, so <code>e.detail</code> autocompletes:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -342,7 +342,7 @@
 </div>
 <p>Use the <code>nys-*</code> events instead of native <code>@input</code> or <code>@change</code>. They cover cases native events don't, like a combobox selection or a date picked from the calendar.</p>
 <p><strong>Slots</strong> work with <code>&lt;template #name&gt;</code>. The default slot renders as direct children:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -393,7 +393,7 @@
     </tbody>
   </table>
 </nys-table>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -448,7 +448,7 @@
 </div>
 <p>Bind checkbox and radio groups on <code>NysCheckboxgroup</code> and <code>NysRadiogroup</code>, not on each child. The model updates on the component's <code>nys-input</code> and <code>nys-change</code> events. Add <code>.lazy</code> (<code>v-model.lazy</code>) to update on <code>nys-change</code> alone, as with a native input.</p>
 <p><strong>File input has no <code>v-model</code>.</strong> Listen for the change event and read the files from its detail:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -472,7 +472,7 @@
 </div>
 <h3 id="submit-and-validate">Submit and Validate</h3>
 <p>NYSDS form components are form-associated custom elements. They submit with a plain <code>&lt;form&gt;</code> like native inputs, and <code>required</code>, <code>pattern</code>, and the rest drive the component's own validation and error display.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -496,7 +496,7 @@
 </div>
 <p>A <code>NysButton</code> with <code>type=&quot;submit&quot;</code> submits through <code>form.requestSubmit()</code>, so an invalid field blocks <code>@submit</code> and the component shows its own error.</p>
 <p>To drive errors from your own validation library instead, set the component's error props directly:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -521,7 +521,7 @@
   </div>
 </div>
 <p><strong>Resetting forms:</strong> setting the model back to its initial values resets every bound control. The file input has no bound value, so also call <code>reset()</code> on the form itself:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

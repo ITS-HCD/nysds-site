@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-unavheader section-components">
@@ -644,7 +644,7 @@
 <p>The <code>&lt;nys-unavheader&gt;</code> should only be used on official NYS websites or applications that are <strong>hosted on a ny.gov domain</strong> and <strong>secured with HTTPS encryption</strong>. Intranets and back office applications are not currently required to use the <code>&lt;nys-unavheader&gt;</code>.</p>
 <p>Please refer to the <a target="_blank" href="https://its.ny.gov/system/files/documents/2025/02/nys-s16-001-nys-universal-web-navigation.pdf">New York State Universal Web Navigation Policy (NYS-S16-001)</a> for more details.</p>
 </nys-alert>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-unavheader></nys-unavheader>
@@ -667,7 +667,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -699,7 +699,7 @@
 <section>
     <h2 id="options">Options</h2>
 <h3 id="search-off">Search Off</h3>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-unavheader hideSearch=""></nys-unavheader>
@@ -726,7 +726,7 @@
 <h3 id="custom-search-endpoint">Custom Search Endpoint</h3>
 <p>The default search URL for the <code>&lt;nys-unavheader&gt;</code> is <code>https://search.its.ny.gov/search/search.html?q=</code>. The <code>searchUrl</code> property allows you to override the search endpoint with a custom url.</p>
 <p><nys-alert type="warning" heading="Make sure the query is included in the string, otherwise it will not correctly append the search result."></nys-alert></p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-unavheader searchUrl="https://designsystem.ny.gov/search/?q=" hideTranslate=""></nys-unavheader>
@@ -751,7 +751,7 @@
   </div>
 </div>
 <h3 id="translate-off">Translate Off</h3>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-unavheader hideTranslate=""></nys-unavheader>
@@ -778,7 +778,7 @@
 <h3 id="custom-language-endpoints">Custom Language Endpoints</h3>
 <p>By default, the translate feature utilizes Smartling, which reroutes the page to the same URL with the language code prepended (e.g. <code>https://www.ny.gov/</code> becomes <code>https://es.ny.gov/</code>). If your site does not use Smartling, you can override the default translate behavior to function with your translation service.</p>
 <p>You also can override the default list of languages offered if your translation service does not support all of the default languages.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-unavheader id="my-header"></nys-unavheader>
@@ -819,7 +819,7 @@
   </div>
 </div>
 <p>You also can override the default translate behavior to work with JavaScript rather than rerouting the URL. This allows you to implement a custom translation solution that does not require page reroutes.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-unavheader id="my-header2" hideSearch=""></nys-unavheader>
@@ -859,7 +859,7 @@
 </div>
 <h3 id="statewide-alerts">Statewide Alerts</h3>
 <p>When New York State publishes an urgent message, such as a severe weather event or a public health emergency, the header renders it as a full-width banner directly below the header content. This is <strong>not configurable</strong>: on page load, the header reads the statewide alert feed at <code>https://alerts-cta.static-assets.ny.gov/alerts.json</code> and renders whatever is currently published. There is no property, slot, or script to add, and sites never author the content, so the same message reads identically everywhere it appears. If nothing is published or the feed cannot be reached, the header renders normally.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -945,7 +945,7 @@
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
 <p></p><p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p><p></p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -1023,7 +1023,7 @@ Proposal</a>.
 </nys-table>
 <br>
 You can listen to these events using JavaScript:
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

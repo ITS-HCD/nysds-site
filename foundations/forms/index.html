@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-forms section-foundations">
@@ -401,7 +401,7 @@
 <p>You do not need to interact with <code>ElementInternals</code> directly. The components handle this internally. What matters to you is that NYSDS components behave like native form controls.</p>
 <h3 id="the-name-attribute">The <code>name</code> attribute</h3>
 <p>For a component's value to appear in form data, it must have a <code>name</code> attribute. This is the key under which the value is submitted.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-textinput name="applicant_name" label="Full Name" required=""></nys-textinput>
@@ -430,7 +430,7 @@
 <h3 id="the-form-attribute">The <code>form</code> attribute</h3>
 <p>Every NYSDS form component supports a <code>form</code> property that associates the component with a <code>&lt;form&gt;</code> element elsewhere in the DOM. This mirrors the behavior of the native HTML <code>form</code> attribute on <code>&lt;input&gt;</code>.</p>
 <p>Use this when a form component needs to live outside the <code>&lt;form&gt;</code> tag but still submit with that form:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -466,7 +466,7 @@
 <p>Structure forms using the NYSDS grid system. Place each form field on its own line for single-column forms, or use the grid for multi-column layouts on wider screens.</p>
 <h3 id="single-column-form-recommended-for-most-cases">Single-column form (recommended for most cases)</h3>
 <p>Single-column layouts are easier to scan, reduce cognitive load, and perform better on mobile devices. Use them for most government forms.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <form id="voter-registration">
@@ -514,7 +514,7 @@
 </div>
 <h3 id="multi-column-form">Multi-column form</h3>
 <p>When placing fields side by side makes semantic sense (like first name and last name), use the <a href="/foundations/utilities/grid/">grid utilities</a>:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <form id="dmv-contact">
@@ -633,7 +633,7 @@
 </ol>
 <h3 id="custom-error-messages">Custom error messages</h3>
 <p>Set the <code>errorMessage</code> property to override the default validation message:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-textinput name="employee_id" label="Employee ID" required="" pattern="N[0-9]{8}" errorMessage="Enter a valid Employee ID (e.g., N00123456)"></nys-textinput>
@@ -666,7 +666,7 @@
 <p>If <code>errorMessage</code> is set, it takes precedence over the browser's built-in validation messages for all validation failures on that component.</p>
 <h3 id="manual-error-display">Manual error display</h3>
 <p>You can also control errors programmatically by setting both <code>errorMessage</code> and <code>showError</code>:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-textinput name="email" label="Email Address" errorMessage="This email is already registered" showError="" required=""></nys-textinput>
@@ -691,7 +691,7 @@
   </div>
 </div>
 <p>Or in JavaScript:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -717,7 +717,7 @@ emailInput<span class="token punctuation">.</span>showError <span class="token o
 </div>
 <h3 id="checking-validity-in-javascript">Checking validity in JavaScript</h3>
 <p>Each NYSDS form component exposes a <code>checkValidity()</code> method that returns <code>true</code> if the component's current value satisfies its constraints:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -785,7 +785,7 @@ emailInput<span class="token punctuation">.</span>showError <span class="token o
 <span class="token comment">// nys-select: { id, value }</span></code></pre>
 <h3 id="listening-for-events">Listening for events</h3>
 <p>Events bubble up through the DOM and cross shadow DOM boundaries (via <code>composed: true</code>). You can listen on individual components or on a parent element:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -822,7 +822,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 <h2 id="form-submission">Form Submission</h2>
 <h3 id="submitting-with-nys-button">Submitting with <code>&lt;nys-button&gt;</code></h3>
 <p>Use <code>&lt;nys-button type=&quot;submit&quot;&gt;</code> inside or associated with a <code>&lt;form&gt;</code>. When clicked, the button calls <code>form.requestSubmit()</code>, which triggers constraint validation on all form-associated elements before dispatching the <code>submit</code> event.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <form id="license-renewal">
@@ -867,7 +867,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 </div>
 <h3 id="handling-the-submit-event">Handling the submit event</h3>
 <p>Listen for the standard <code>submit</code> event on the <code>&lt;form&gt;</code>. If all fields pass validation, the event fires. If any field is invalid, submission is blocked and the first invalid field receives focus.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -904,7 +904,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 <li>Removes error messages and hides error state</li>
 <li>Resets internal validation state</li>
 </ul>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <form id="contact-form">
@@ -952,7 +952,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 </div>
 <h3 id="reading-form-values-without-submission">Reading form values without submission</h3>
 <p>Access current values at any time through the <code>FormData</code> API:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -984,7 +984,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 <h2 id="error-summary-patterns">Error Summary Patterns</h2>
 <p>For long forms, consider displaying a summary of all errors at the top of the form after a failed submission attempt. This helps users understand what needs to be fixed, especially when errors are spread across many fields.</p>
 <p>NYSDS does not currently provide a dedicated error summary component, but you can build one using <code>&lt;nys-alert&gt;</code> and the form's validation API. Here is an example of an error summary at the top of a form:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-alert type="error" heading="3 field(s) need your attention">
@@ -1021,7 +1021,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
   </div>
 </div>
 <p>Here is the JavaScript to generate and display error summaries:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -1059,7 +1059,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
   </div>
 </div>
 <p>Here is the HTML for a form with an error summary and the event handler:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -1088,7 +1088,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
     </div>
   </div>
 </div>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -1140,7 +1140,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 <section id="complete-example">
 <h2 id="complete-example">Complete Example</h2>
 <p>The following example shows a realistic multi-field form using several NYSDS form components with validation and submission handling.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
@@ -1205,7 +1205,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
   </div>
 </div>
 <p>Here is the JavaScript to handle validation and submission:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">

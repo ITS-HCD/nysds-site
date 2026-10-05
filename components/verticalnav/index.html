@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T18:51:45.215Z -->
+    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
   </head>
   
   <body class="single-page page-verticalnav section-components">
@@ -639,7 +639,7 @@
     </div>
 </section>
 <section>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-verticalnav heading="Freshwater Fishing" headingLevel="h2">
@@ -688,7 +688,7 @@
       </div>
     </div>
   <div class="code-preview__code-tip">
-    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="https://designsystem.ny.gov/foundations/tokens/">CSS Variables</a></span> instead.</p>
+    <p>Can't use NYS Design System web components in your project? Try using the <span><a href="/foundations/tokens/">CSS Variables</a></span> instead.</p>
   </div>
   </div>
 </div>
@@ -717,7 +717,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     <h2 id="options">Options</h2>
 <h3 id="header-slot">Header slot</h3>
 <p>Replace the default heading with custom markup using the <code>header</code> slot.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <style>
@@ -795,7 +795,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="footer-slot">Footer slot</h3>
 <p>Add extra content below the links, like a divider and contact info.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <style>
@@ -875,7 +875,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="collapsible-groups">Collapsible groups</h3>
 <p>Use <code>&lt;nys-verticalnavgroup&gt;</code> for a set of links that expand and collapse. Add <code>expanded</code> to open it by default, or <code>disabled</code> to prevent interaction.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-verticalnav heading="NYS Design System" headingLevel="h2">
@@ -927,7 +927,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="active-link">Active link</h3>
 <p>Set <code>aria-current=&quot;page&quot;</code> on a link to mark it active. If it's inside a <code>nys-verticalnavgroup</code>, the group auto-expands.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-verticalnav heading="NYS Design System" headingLevel="h2">
@@ -977,7 +977,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </div>
 <h3 id="disabled-state">Disabled state</h3>
 <p>Add <code>disabled</code> to <code>nys-verticalnavgroup</code> to prevent the whole group from being toggled. For individual links outside a group, add <code>aria-disabled=&quot;true&quot;</code> directly to the <code>&lt;a&gt;</code>. Links have no native <code>disabled</code> attribute, so this is the only way to mark one as unavailable.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-verticalnav heading="NYS Design System" headingLevel="h2">
@@ -1046,7 +1046,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <h3 id="hidden-heading">Hidden heading</h3>
 <p>A <code>heading</code> is required for the vertical navigation. If a visible heading is not needed on desktop, use <code>hideHeading</code> to visually hide it.</p>
 <p><strong>Note:</strong> The <code>heading</code> text is still used as the accessible label for the accordion on smaller screens and mobile devices (resize the screen to see this in action).</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-verticalnav heading="Section nav" hideHeading="">
@@ -1082,7 +1082,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <p>Use <code>&lt;nys-verticalnav&gt;</code> alongside a global header and footer to build a full page layout. On screens below 1024px, the nav collapses into an accordion automatically.</p>
 <p>This example uses the <a href="/foundations/utilities/grid/">NYSDS grid</a> to lay out the nav and main content side by side, switching to a stacked layout at the <code>nys-desktop</code> breakpoint (1024px). This approach matches the width at which <code>&lt;nys-verticalnav&gt;</code> itself collapses into an accordion.</p>
 <p><strong>Note:</strong> The example below is for guidance only. Adjust the styles to fit your application's layout needs. <code>&lt;nys-verticalnav&gt;</code> doesn't add its own outer spacing, so wrap it (like <code>.page-layout__nav</code> below) and add padding yourself to match your site's layout.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <style>
@@ -1227,7 +1227,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 <h3 id="mobile-controls">Mobile controls</h3>
 <p>Call <code>open()</code>, <code>close()</code>, or <code>toggle()</code> on the mobile version of <code>nys-verticalnav</code> to control the mobile accordion programmatically.</p>
 <p><strong>Note:</strong> useful for a hamburger button or other trigger placed outside the nav itself. These methods only have a visible effect below the 1024px breakpoint, where the nav renders as an accordion; at desktop widths the nav is always visible.</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
 <div class="code-preview__preview-root-inner">
 <nys-verticalnav id="my-nav">
@@ -1429,7 +1429,7 @@ Proposal</a>.
 </nys-table>
 <br>
 <p>You can listen to these events using JavaScript:</p>
-<div class="code-preview-container">
+<div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__source">
     <div class="code-preview__buttons">
       <button class="code-preview__dropdown" onClick="showSourceCode(this)">
