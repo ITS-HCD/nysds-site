@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/float/
+permalink: /utilities/float/
+redirect_from: /foundations/utilities/float/
 title: Float
 description: Utility classes for floating elements left, right, or clearing floats in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -13,7 +13,7 @@ layout: layouts/3-col.njk
 
 # Float
 
-Float utilities position an element to the left or right of its container, allowing inline content to wrap around it. For most layout needs, use [Grid](/foundations/utilities/grid/) or [Flexbox](/foundations/utilities/flex/) instead — floats are best suited for wrapping text around images or similar content-flow patterns.
+Float utilities position an element to the left or right of its container, allowing inline content to wrap around it. For most layout needs, use [Grid](/utilities/grid/) or [Flexbox](/utilities/flex/) instead — floats are best suited for wrapping text around images or similar content-flow patterns.
 
 </section>
 
@@ -115,7 +115,7 @@ Use `.nys-clearfix` on a container to clear floated children and prevent layout 
 
 ## Responsive variants
 
-All float utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+All float utilities support responsive prefixes. See [Responsive Utilities](/utilities/responsive/) for breakpoint details.
 
 ```html
 <!-- Float left on tablet and wider, no float on mobile -->

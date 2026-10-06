@@ -63,7 +63,7 @@ Gutters increase from 20px on mobile to 64px on desktop large.
 
 ## Breakpoints & The Grid
 
-Our [grid system](/foundations/utilities/grid/) is built on the same breakpoints. Columns and gutters resize automatically as the viewport crosses each breakpoint, so teams don't need custom media queries for common layouts.
+Our [grid system](/utilities/grid/) is built on the same breakpoints. Columns and gutters resize automatically as the viewport crosses each breakpoint, so teams don't need custom media queries for common layouts.
 
 
 <div class="nys-grid-row nys-grid-gap-300">

@@ -7,7 +7,25 @@ section: Get Started
 
 # Get Started as a Developer
 
-The NYSDS gives you a library of web components and a set of design tokens and styles. Install via npm, load the files in your HTML, and start building.
+Choose your framework:
+
+<div class="nys-grid-row nys-grid-gap-400" style="--nys-card-height: 100%">
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="No framework" description="CSS/JS and HTML custom elements" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="#quick-start" variant="outline">Framework-less quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Angular" description="Pre-built NYSDS Angular components" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="/get-started/developers/angular/" variant="outline">Angular quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="React" description="Pre-built NYSDS React components" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="/get-started/developers/react/" variant="outline">React quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Vue" description="Pre-built NYSDS Vue components" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="/get-started/developers/vue/" variant="outline">Vue quick start</nys-button>
+    </nys-card>
+
+
+
+</div>
 
 ## Quick Start
 
@@ -48,66 +66,11 @@ Then use NYSDS components directly in your HTML:
 
 **Styles Framework** — The `@nysds/styles` package provides typography classes, a CSS reset, layout utilities, and agency themes. See the [styles framework guide](/foundations/styles/).
 
-**Layout & Utilities** — A grid system and utility classes for spacing, flex layouts, and responsive design. See the [layout utilities reference](/foundations/utilities/).
+**Layout & Utilities** — A grid system and utility classes for spacing, flex layouts, and responsive design. See the [layout utilities reference](/utilities/).
 
 **Typography** — Font styling and typography tokens. Fonts must be downloaded separately due to licensing. See [fonts and typography](/foundations/typography/).
 
 **Accessibility** — All components are WCAG 2.2 compliant with keyboard navigation and screen reader support. See [accessibility](/foundations/accessibility/).
-
-## Framework Guides
-
-NYSDS components are standard web components. They work in any framework. Below are sample setup steps for common frameworks used across New York State agencies. If you notice a bug in these configurations, [drop a bug report issue in GitHub](https://github.com/ITS-HCD/nysds/issues/new/choose).
-
-
-### React
-<nys-alert type="success" heading="Updated React support as of v1.22.0"></nys-alert>
-
-Full React support is available through our dedicated `@nysds/react` package, which provides React-wrapped versions of each web component. Event bindings, forms integration, and slots all included.
-
-{% set code %}npm install @nysds/react{% endset %}
-{% set accordionLabel = "CLI Command" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-For a full walkthrough covering project setup, custom events, slots, and forms, see the [React Tutorial](/get-started/developers/react/).
-
-### Angular
-<nys-alert type="success" heading="Updated Angular support as of v1.22.0"></nys-alert>
-
-Full Angular support is available through `@nysds/angular`, with Angular components for standalone and NgModule-based apps. No `CUSTOM_ELEMENTS_SCHEMA` required.
- 
-{% set code %}npm install @nysds/angular{% endset %}
-{% set accordionLabel = "CLI Command" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-For a full walkthrough covering standalone components, NgModule setup, and forms integration, see the [Angular Tutorial](/get-started/developers/angular/).
-
-### Vue
-
-<nys-alert type="success" heading="Updated Vue 3 support as of v1.22.0 (Early Adoption Phase)"></nys-alert>
-
-Full Vue 3 support is available through `@nysds/vue`.
-
-{% set code %}npm install @nysds/vue{% endset %}
-{% set accordionLabel = "Vue Config" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-For a full walkthrough covering project setup, custom events, slots, and forms, see the [Vue Tutorial](/get-started/developers/vue/).
-
-### .NET / Blazor
-
-Load NYSDS in your layout via local path:
-
-{% set code %}<!-- In _Layout.cshtml or _Host.cshtml -->
-<!-- Load the NYS Design System JavaScript library -->
-<script type="module" src="node_modules/@nysds/components/dist/nysds.js"></script>
-<!-- Load the full NYS Design System CSS -->
-<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />{% endset %}
-{% set accordionLabel = ".NET Layout" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
 
 ## VSCode Autocomplete
 

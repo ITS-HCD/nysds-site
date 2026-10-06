@@ -5,7 +5,6 @@ navTitle: "React"
 description: "A step-by-step guide to using NYS Design System components in a React + TypeScript application."
 section: "Get Started"
 parent: Developers
-navOrder: 1
 ---
 
 # React Tutorial

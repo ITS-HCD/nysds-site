@@ -239,7 +239,7 @@ The NYS Design System provides `.nys-font-*` utility classes that bundle the cor
 {% set codeLanguage = "html" %}
 {% include "partials/code-preview.njk" %}
 
-For the complete list of typography utility classes with live previews, see [Typography Utilities](/foundations/utilities/typography/).
+For the complete list of typography utility classes with live previews, see [Typography Utilities](/utilities/typography/).
 
 </section>
 <section id="best-practices">
@@ -280,7 +280,7 @@ For the complete list of typography utility classes with live previews, see [Typ
   </div>
 </div>
 
-*   [Typography Utility Classes](/foundations/utilities/typography/) — full reference with live previews
+*   [Typography Utility Classes](/utilities/typography/) — full reference with live previews
 *   [Design Tokens](/foundations/tokens/) — how primitive and semantic token layers work
 *   [Typography Tokens](/tokens/typography/) — browse font size and font family tokens
 *   [Using Web Fonts](https://fonts.google.com/knowledge/using_type/using_web_fonts) — Google's guide to web font performance

@@ -5,7 +5,6 @@ navTitle: "Vue"
 description: "A step-by-step guide to using NYS Design System components in a Vue 3 application."
 section: "Get Started"
 parent: Developers
-navOrder: 3
 ---
 
 # Vue Tutorial

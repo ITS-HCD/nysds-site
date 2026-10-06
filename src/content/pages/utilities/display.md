@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/display/
+permalink: /utilities/display/
+redirect_from: /foundations/utilities/display/
 title: Display
 description: Utility classes for controlling element display behavior in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -172,7 +172,7 @@ Use table display utilities to create table-like layouts without using `<table>`
 
 ## Responsive variants
 
-All display utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+All display utilities support responsive prefixes. See [Responsive Utilities](/utilities/responsive/) for breakpoint details.
 
 ```html
 <div class="nys-display-none nys-tablet:nys-display-block">

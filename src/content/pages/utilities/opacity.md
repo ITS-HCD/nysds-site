@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/opacity/
+permalink: /utilities/opacity/
+redirect_from: /foundations/utilities/opacity/
 title: Opacity
 description: Utility classes for controlling element transparency in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -168,7 +168,7 @@ Opacity is useful for indicating disabled states or creating visual layering eff
 
 ## Responsive variants
 
-All opacity utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+All opacity utilities support responsive prefixes. See [Responsive Utilities](/utilities/responsive/) for breakpoint details.
 
 ```html
 <div class="nys-opacity-50 nys-desktop:nys-opacity-100">
