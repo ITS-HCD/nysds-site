@@ -62,6 +62,7 @@
     {%- block options %}{% endblock -%}
 </section><br>
 
+{%- set usageTag = tag or ("nys-" + page.url.split("/")[2]) %}
 <section>
     <h2>Usage</h2>
     {%- block usage %}{% endblock -%}
@@ -69,13 +70,19 @@
         <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
             <div class="card card--do nys-flex-fill">
                 <h3 class="card__title"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
-                {%- block usagedo %}{% endblock -%}
+
+{% for item in componentUsage[usageTag].dos -%}
+- {{ item | safe }}
+{% endfor %}
             </div>
         </div>
         <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
             <div class="card card--dont nys-flex-fill">
                 <h3 class="card__title"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-                {%- block usagedont %}{% endblock -%}
+                
+{% for item in componentUsage[usageTag].donts -%}
+- {{ item | safe }}
+{% endfor %}
             </div>
         </div>
     </div>
