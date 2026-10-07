@@ -5,7 +5,6 @@ navTitle: "Angular"
 description: "A step-by-step guide to using NYS Design System components in an Angular application."
 section: "Get Started"
 parent: Developers
-navOrder: 2
 ---
 
 # Angular Tutorial

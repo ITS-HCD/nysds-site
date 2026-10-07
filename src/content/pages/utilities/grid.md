@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/grid/
+permalink: /utilities/grid/
+redirect_from: /foundations/utilities/grid/
 title: Grid
 description: A responsive 12-column flexbox grid system for structuring page layouts in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 

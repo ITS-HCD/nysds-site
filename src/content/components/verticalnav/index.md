@@ -246,7 +246,7 @@ A `heading` is required for the vertical navigation. If a visible heading is not
 
 Use `<nys-verticalnav>` alongside a global header and footer to build a full page layout. On screens below 1024px, the nav collapses into an accordion automatically.
 
-This example uses the [NYSDS grid](/foundations/utilities/grid/) to lay out the nav and main content side by side, switching to a stacked layout at the `nys-desktop` breakpoint (1024px). This approach matches the width at which `<nys-verticalnav>` itself collapses into an accordion.
+This example uses the [NYSDS grid](/utilities/grid/) to lay out the nav and main content side by side, switching to a stacked layout at the `nys-desktop` breakpoint (1024px). This approach matches the width at which `<nys-verticalnav>` itself collapses into an accordion.
 
 **Note:** The example below is for guidance only. Adjust the styles to fit your application's layout needs. `<nys-verticalnav>` doesn't add its own outer spacing, so wrap it (like `.page-layout__nav` below) and add padding yourself to match your site's layout.
 
