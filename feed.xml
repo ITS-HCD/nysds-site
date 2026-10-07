@@ -539,11 +539,11 @@
     </div>
   </div>
 </div>
-<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/">Read more on the Grid System usage</a></p>
+<p><a href="https://designsystem.ny.gov/utilities/grid/">Read more on the Grid System usage</a></p>
 <ul>
 <li>New style override variable, <code>nys-max-width--content</code>, lets you control the overall inner max-width of headers, footers, breadcrumbs, and the grid system.</li>
 </ul>
-<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
+<p><a href="https://designsystem.ny.gov/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
 <div class="page-meta author-card">
   <div class="page-author">
     <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
@@ -660,11 +660,11 @@
     </div>
   </div>
 </div>
-<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/">Read more on the Grid System usage</a></p>
+<p><a href="https://designsystem.ny.gov/utilities/grid/">Read more on the Grid System usage</a></p>
 <ul>
 <li>New style override variable, <code>nys-max-width--content</code>, lets you control the overall inner max-width of headers, footers, breadcrumbs, and the grid system.</li>
 </ul>
-<p><a href="https://designsystem.ny.gov/foundations/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
+<p><a href="https://designsystem.ny.gov/utilities/grid/#style-override">Read more on the <code>--nys-max-width--content</code> style override</a></p>
 <div class="page-meta author-card">
   <div class="page-author">
     <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
@@ -1383,7 +1383,7 @@
 <p>Those changes are <strong>no longer required</strong> to get the default library to work.</p>
 </nys-alert>
 <h2>Responsive margin and padding classes now available</h2>
-<p>Check out the updated documentation for <a href="https://designsystem.ny.gov/foundations/utilities/responsive/">Responsive utility classes</a> featuring Margin and Padding variants!</p>
+<p>Check out the updated documentation for <a href="https://designsystem.ny.gov/utilities/responsive/">Responsive utility classes</a> featuring Margin and Padding variants!</p>
 <div class="page-meta author-card">
   <div class="page-author">
     <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
@@ -1474,7 +1474,7 @@
 <p>Those changes are <strong>no longer required</strong> to get the default library to work.</p>
 </nys-alert>
 <h2>Responsive margin and padding classes now available</h2>
-<p>Check out the updated documentation for <a href="https://designsystem.ny.gov/foundations/utilities/responsive/">Responsive utility classes</a> featuring Margin and Padding variants!</p>
+<p>Check out the updated documentation for <a href="https://designsystem.ny.gov/utilities/responsive/">Responsive utility classes</a> featuring Margin and Padding variants!</p>
 <div class="page-meta author-card">
   <div class="page-author">
     <nys-avatar image="/assets/img/authors/robert-chen.jpg"></nys-avatar>
@@ -1638,7 +1638,7 @@
 <h2>🚨 Breaking changes</h2>
 <ul>
 <li><code>&lt;nys-icon&gt;</code> in 1.19.0 libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fixed in 1.19.1</a></li>
-<li><code>nys-grid-gap</code> in 1.19.0 added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+<li><code>nys-grid-gap</code> in 1.19.0 added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
 <li><code>&lt;nys-datepicker&gt;</code> default <code>width</code> changed from <code>md</code> to <code>full</code>. <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/components/datepicker/#width">See note about width</a></li>
 </ul>
 <h2>⚠️ Known issues</h2>
@@ -1720,7 +1720,7 @@
 <h2>🚨 Breaking changes</h2>
 <ul>
 <li><code>&lt;nys-icon&gt;</code> in 1.19.0 libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fixed in 1.19.1</a></li>
-<li><code>nys-grid-gap</code> in 1.19.0 added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+<li><code>nys-grid-gap</code> in 1.19.0 added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
 <li><code>&lt;nys-datepicker&gt;</code> default <code>width</code> changed from <code>md</code> to <code>full</code>. <a href="https://designsystem.ny.gov/about/updates/1.19.2-release/components/datepicker/#width">See note about width</a></li>
 </ul>
 <h2>⚠️ Known issues</h2>
@@ -1890,7 +1890,7 @@
 </div>
 </div>
 <h2>Grid-gap vertical spacing</h2>
-<p>We enhanced the functionality of the <code>grid-gap</code> classes to add vertical spacing in addition to the pre-existing horizontal spacing. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Add vertical space to your grid layouts today!</a></p>
+<p>We enhanced the functionality of the <code>grid-gap</code> classes to add vertical spacing in addition to the pre-existing horizontal spacing. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">Add vertical space to your grid layouts today!</a></p>
 <h2>New <code>&lt;nys-divider&gt;</code> subtle variant</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component got a new <code>subtle</code> attribute that provides a more understated visual separation between content. The subtle divider is ideal for use in situations where a less prominent division is desired.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
@@ -1932,7 +1932,7 @@ Content below the divider.
 <h2>🚨 Breaking changes</h2>
 <ul>
 <li><code>&lt;nys-icon&gt;</code> libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fix</a></li>
-<li><code>nys-grid-gap</code> added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+<li><code>nys-grid-gap</code> added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
 </ul>
 <h2>⚠️ Known issues</h2>
 <ul>
@@ -2116,7 +2116,7 @@ Content below the divider.
 </div>
 </div>
 <h2>Grid-gap vertical spacing</h2>
-<p>We enhanced the functionality of the <code>grid-gap</code> classes to add vertical spacing in addition to the pre-existing horizontal spacing. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Add vertical space to your grid layouts today!</a></p>
+<p>We enhanced the functionality of the <code>grid-gap</code> classes to add vertical spacing in addition to the pre-existing horizontal spacing. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">Add vertical space to your grid layouts today!</a></p>
 <h2>New <code>&lt;nys-divider&gt;</code> subtle variant</h2>
 <p>The <code>&lt;nys-divider&gt;</code> component got a new <code>subtle</code> attribute that provides a more understated visual separation between content. The subtle divider is ideal for use in situations where a less prominent division is desired.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
@@ -2158,7 +2158,7 @@ Content below the divider.
 <h2>🚨 Breaking changes</h2>
 <ul>
 <li><code>&lt;nys-icon&gt;</code> libraries break on &quot;chunked&quot; frameworks (like React, Angular). <a href="https://designsystem.ny.gov/components/icon/#override-the-default-library">Library break fix</a></li>
-<li><code>nys-grid-gap</code> added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
+<li><code>nys-grid-gap</code> added vertical spacing to <code>grid-gap</code> gutters. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">Read about the grid-gap classes</a></li>
 </ul>
 <h2>⚠️ Known issues</h2>
 <ul>
@@ -2486,7 +2486,7 @@ Content below the divider.
     </tbody>
   </table>
 </nys-table>
-<p>Additional options were added but are not breaking changes. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
+<p>Additional options were added but are not breaking changes. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> bridged the gap</p>
 <h2>⚠️ Known issues</h2>
 <ul>
@@ -2647,7 +2647,7 @@ Content below the divider.
     </tbody>
   </table>
 </nys-table>
-<p>Additional options were added but are not breaking changes. <a href="https://designsystem.ny.gov/foundations/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
+<p>Additional options were added but are not breaking changes. <a href="https://designsystem.ny.gov/utilities/grid/#gutters">See the full grid gap class documentation here</a></p>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> bridged the gap</p>
 <h2>⚠️ Known issues</h2>
 <ul>
@@ -3254,7 +3254,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://github.com/novacat35">Robert Chen</a> pressed play on this one.</p>
 <h2><code>.nys-flex-gap</code> classes now available</h2>
 <p>We've added flex gap configuration classes to the NYS DS styles package. You can use them in your HTML to set gap widths that fit your application needs.</p>
-<p><a href="https://designsystem.ny.gov/foundations/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
+<p><a href="https://designsystem.ny.gov/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> Flexed her muscles on this one.</p>
 <h2>Figma updates</h2>
 <p>Today we’re launching the official version of the video component in our design library.</p>
@@ -3327,7 +3327,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://github.com/novacat35">Robert Chen</a> pressed play on this one.</p>
 <h2><code>.nys-flex-gap</code> classes now available</h2>
 <p>We've added flex gap configuration classes to the NYS DS styles package. You can use them in your HTML to set gap widths that fit your application needs.</p>
-<p><a href="https://designsystem.ny.gov/foundations/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
+<p><a href="https://designsystem.ny.gov/utilities/flex/#flex-gap">Read the full flex-gap documentation</a>.</p>
 <p><a href="https://github.com/emilygorelik">Emily Gorelik</a> Flexed her muscles on this one.</p>
 <h2>Figma updates</h2>
 <p>Today we’re launching the official version of the video component in our design library.</p>
@@ -5745,7 +5745,7 @@ var interval = setInterval(function() {
     </div>
   </div>
 </div>
-<p>You can read the full documentation for the new responsive utility classes on our <a href="https://designsystem.ny.gov/foundations/utilities/responsive">responsive utility documentation page</a>.</p>
+<p>You can read the full documentation for the new responsive utility classes on our <a href="https://designsystem.ny.gov/utilities/responsive">responsive utility documentation page</a>.</p>
 <p><a href="https://github.com/esteinborn">Eric Steinborn</a> was responsible for these.</p>
 <h2>Figma updates</h2>
 <ul>
@@ -5892,7 +5892,7 @@ var interval = setInterval(function() {
     </div>
   </div>
 </div>
-<p>You can read the full documentation for the new responsive utility classes on our <a href="https://designsystem.ny.gov/foundations/utilities/responsive">responsive utility documentation page</a>.</p>
+<p>You can read the full documentation for the new responsive utility classes on our <a href="https://designsystem.ny.gov/utilities/responsive">responsive utility documentation page</a>.</p>
 <p><a href="https://github.com/esteinborn">Eric Steinborn</a> was responsible for these.</p>
 <h2>Figma updates</h2>
 <ul>
@@ -8341,7 +8341,7 @@ By starting in FigJam you force yourself not to think about component properties
 <ul>
 <li>A centralized CSS file for core design tokens</li>
 <li>Agency-specific themes (like Health and Environment)</li>
-<li><a href="https://designsystem.ny.gov/foundations/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
+<li><a href="https://designsystem.ny.gov/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
 <li>Full integration with code components, so tokens flow straight into the Shadow DOM</li>
 </ul>
 <p>This was a huge step in making NYS digital products look and feel consistent everywhere.<br />
@@ -8357,7 +8357,7 @@ By starting in FigJam you force yourself not to think about component properties
 <ul>
 <li>A centralized CSS file for core design tokens</li>
 <li>Agency-specific themes (like Health and Environment)</li>
-<li><a href="https://designsystem.ny.gov/foundations/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
+<li><a href="https://designsystem.ny.gov/utilities">Utility classes</a> for layout grid, flexbox, display, margin/padding, typography, and more</li>
 <li>Full integration with code components, so tokens flow straight into the Shadow DOM</li>
 </ul>
 <p>This was a huge step in making NYS digital products look and feel consistent everywhere.<br />

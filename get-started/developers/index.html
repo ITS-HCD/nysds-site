@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-05T20:26:50.139Z -->
+    <!-- Latest Build: 2026-10-07T12:47:18.641Z -->
   </head>
   
   <body class="single-page page-developers section-get-started">
@@ -57,6 +57,7 @@
     <li class=""><a href="/get-started" title="Get Started">Get Started</a></li>
     <li class=""><a href="/foundations" title="Foundations">Foundations</a></li>
     <li class=""><a href="/tokens" title="Token Reference">Tokens</a></li>
+    <li class=""><a href="/utilities" title="Utilities">Utilities</a></li>
     <li class=""><a href="/components" title="Components">Components</a></li>
     <li class=""><a href="/learn" title="NYS Design System Video Series">Learn</a></li>
     <li class=""><a href="/about" title="About the NYS Design System">About</a></li>
@@ -153,14 +154,14 @@
                 </li>
                 
                   <li>
-                    <a href="/get-started/developers/react/">
-                      React
+                    <a href="/get-started/developers/angular/">
+                      Angular
                     </a>
                   </li>
                 
                   <li>
-                    <a href="/get-started/developers/angular/">
-                      Angular
+                    <a href="/get-started/developers/react/">
+                      React
                     </a>
                   </li>
                 
@@ -193,7 +194,21 @@
   </aside>
   <div class="nys-desktop:nys-grid-col-fill">  
     <h1 id="get-started-as-a-developer">Get Started as a Developer</h1>
-<p>The NYSDS gives you a library of web components and a set of design tokens and styles. Install via npm, load the files in your HTML, and start building.</p>
+<p>Choose your framework:</p>
+<div class="nys-grid-row nys-grid-gap-400" style="--nys-card-height: 100%">
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="No framework" description="CSS/JS and HTML custom elements" headingLevel="h3">
+      <nys-button fullWidth="" slot="footer" href="#quick-start" variant="outline">Framework-less quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Angular" description="Pre-built NYSDS Angular components" headingLevel="h3">
+      <nys-button fullWidth="" slot="footer" href="/get-started/developers/angular/" variant="outline">Angular quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="React" description="Pre-built NYSDS React components" headingLevel="h3">
+      <nys-button fullWidth="" slot="footer" href="/get-started/developers/react/" variant="outline">React quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Vue" description="Pre-built NYSDS Vue components" headingLevel="h3">
+      <nys-button fullWidth="" slot="footer" href="/get-started/developers/vue/" variant="outline">Vue quick start</nys-button>
+    </nys-card>
+</div>
 <h2 id="quick-start">Quick Start</h2>
 <p>Install the core libraries:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
@@ -266,105 +281,9 @@
 <p><strong>Components</strong> — A library of accessible, reusable web components for forms, navigation, alerts, modals, and more. See the <a href="/components/">component reference</a> and read about <a href="/foundations/components/">web component fundamentals</a>.</p>
 <p><strong>Design Tokens</strong> — CSS custom properties for colors, spacing, typography, shadows, and more. Use them to style custom layouts and align with NYSDS. See the <a href="/foundations/tokens/">tokens reference</a>.</p>
 <p><strong>Styles Framework</strong> — The <code>@nysds/styles</code> package provides typography classes, a CSS reset, layout utilities, and agency themes. See the <a href="/foundations/styles/">styles framework guide</a>.</p>
-<p><strong>Layout &amp; Utilities</strong> — A grid system and utility classes for spacing, flex layouts, and responsive design. See the <a href="/foundations/utilities/">layout utilities reference</a>.</p>
+<p><strong>Layout &amp; Utilities</strong> — A grid system and utility classes for spacing, flex layouts, and responsive design. See the <a href="/utilities/">layout utilities reference</a>.</p>
 <p><strong>Typography</strong> — Font styling and typography tokens. Fonts must be downloaded separately due to licensing. See <a href="/foundations/typography/">fonts and typography</a>.</p>
 <p><strong>Accessibility</strong> — All components are WCAG 2.2 compliant with keyboard navigation and screen reader support. See <a href="/foundations/accessibility/">accessibility</a>.</p>
-<h2 id="framework-guides">Framework Guides</h2>
-<p>NYSDS components are standard web components. They work in any framework. Below are sample setup steps for common frameworks used across New York State agencies. If you notice a bug in these configurations, <a href="https://github.com/ITS-HCD/nysds/issues/new/choose">drop a bug report issue in GitHub</a>.</p>
-<h3 id="react">React</h3>
-<p><nys-alert type="success" heading="Updated React support as of v1.22.0"></nys-alert></p>
-<p>Full React support is available through our dedicated <code>@nysds/react</code> package, which provides React-wrapped versions of each web component. Event bindings, forms integration, and slots all included.</p>
-<div class="code-preview-container" data-pagefind-ignore="all">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>CLI Command</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html">npm install @nysds/react</code></pre>
-      </div>
-    </div>
-  </div>
-</div>
-<p>For a full walkthrough covering project setup, custom events, slots, and forms, see the <a href="/get-started/developers/react/">React Tutorial</a>.</p>
-<h3 id="angular">Angular</h3>
-<p><nys-alert type="success" heading="Updated Angular support as of v1.22.0"></nys-alert></p>
-<p>Full Angular support is available through <code>@nysds/angular</code>, with Angular components for standalone and NgModule-based apps. No <code>CUSTOM_ELEMENTS_SCHEMA</code> required.</p>
-<div class="code-preview-container" data-pagefind-ignore="all">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>CLI Command</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html">npm install @nysds/angular</code></pre>
-      </div>
-    </div>
-  </div>
-</div>
-<p>For a full walkthrough covering standalone components, NgModule setup, and forms integration, see the <a href="/get-started/developers/angular/">Angular Tutorial</a>.</p>
-<h3 id="vue">Vue</h3>
-<p><nys-alert type="success" heading="Updated Vue 3 support as of v1.22.0 (Early Adoption Phase)"></nys-alert></p>
-<p>Full Vue 3 support is available through <code>@nysds/vue</code>.</p>
-<div class="code-preview-container" data-pagefind-ignore="all">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>Vue Config</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html">npm install @nysds/vue</code></pre>
-      </div>
-    </div>
-  </div>
-</div>
-<p>For a full walkthrough covering project setup, custom events, slots, and forms, see the <a href="/get-started/developers/vue/">Vue Tutorial</a>.</p>
-<h3 id="net-blazor">.NET / Blazor</h3>
-<p>Load NYSDS in your layout via local path:</p>
-<div class="code-preview-container" data-pagefind-ignore="all">
-  <div class="code-preview__source">
-    <div class="code-preview__buttons">
-      <button class="code-preview__dropdown" onClick="showSourceCode(this)">
-        <nys-icon class="code-preview__dropdown-icon" name="chevron_right" size="xl"></nys-icon>
-        <p>.NET Layout</p>
-      </button>
-      <div class="copy-button-wrapper" data-pagefind-ignore="all">
-        <nys-button class="copy-btn" prefixIcon="content_copy" label="Copy" variant="ghost" size="xl" onClick="copyCode(this)"></nys-button>
-        <div class="copy-tooltip">Copy Code</div>
-      </div>
-    </div>
-    <div class="code-preview__code-container ">
-      <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- In _Layout.cshtml or _Host.cshtml --></span>
-<span class="token comment">&lt;!-- Load the NYS Design System JavaScript library --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>node_modules/@nysds/components/dist/nysds.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token comment">&lt;!-- Load the full NYS Design System CSS --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>node_modules/@nysds/styles/dist/nysds-full.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
-      </div>
-    </div>
-  </div>
-</div>
 <h2 id="vscode-autocomplete">VSCode Autocomplete</h2>
 <p>Copy <code>.vscode/</code> from <code>node_modules/@nysds/components/dist/.vscode/</code> to your project root. Then add to <code>.vscode/settings.json</code>:</p>
 <pre class="language-json"><code class="language-json"><span class="token property">"html.customData"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">".vscode/vscode.html-custom-data.json"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -382,7 +301,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/developers.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 5, 2026</p>
+    <p>Last updated: October 7, 2026</p>
   </div>
 
   </div>
@@ -461,7 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </main>
   <nys-backtotop id="backtotop-demo"></nys-backtotop>
   
-  <nys-globalfooter agencyName="NYS Design System">
+  <nys-globalfooter agencyName="NYS Design System" agencySubheading="NYS Office of Information Technology Services">
   <ul data-pagefind-ignore="all">
     <li><span>Learn More</span>
       <ul>
