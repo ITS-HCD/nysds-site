@@ -29,29 +29,6 @@ The `<nys-globalheader>` component renders an agency-branded header with applica
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use on every agency site and application. The Global Header is a required page element.
-- Place below `<nys-unavheader>` when using the Universal Navigation Header.
-- Use `agencyName` alone for public-facing agency websites not tied to a specific application; omit it for statewide portals that aren't agency-specific.
-- Use `appName` for named applications (e.g., "Employee Time Tracker" or "License Renewal Portal").
-- Combine `appName` and `agencyName` when an application belongs to a specific agency.
-- Set `homepageLink` to make the header title clickable. On public-facing sites, this is the primary path back to the homepage.
-- Use the `user-actions` slot for authenticated applications that need log-out buttons or user profile controls.
-- Keep navigation link lists to 6 items or fewer. On mobile, these collapse into a full-width menu.
-- Add the `nysLogo` property to display the NYS brand mark for internal applications that don't require public-facing agency branding.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't use `appName` for an agency name. Use the `agencyName` prop instead.
-- Don't add navigation links to application headers where users should remain focused on a task (e.g., a multi-step form).
-- Don't place secondary or utility navigation in the Global Header. Use `<nys-globalfooter>` for secondary links.
-- Don't use the `nysLogo` property on public-facing sites, instead use the `<nys-unavheader>` for statewide branding.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-globalheader>` component includes the following accessibility-focused features:

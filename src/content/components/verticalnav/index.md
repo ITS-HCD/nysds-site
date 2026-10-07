@@ -40,27 +40,6 @@ The `<nys-verticalnav>` component renders a side navigation menu on desktop and 
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for navigation where every item links to a different page.
-- Use for section-level navigation within a site.
-- Support up to two levels of navigation: top-level links and one level of nested links.
-- Set `aria-current="page"` on the active link so the component can apply active styles and expand the current group.
-- Avoid excessive use of icons, colors, or badges in navigation items.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't use for in-page navigation, such as scrolling to sections on the same page.
-- Don't use for linear task flows, such as multi-step forms or wizards.
-- Don't use for filtering, tab switching, or other in-page interactions.
-- Don't nest more than one level of sub-items.
-- Don't overload with excessive use of icons, colors, or badges in navigation items.
-
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-verticalnav>` component includes the following accessibility-focused features:

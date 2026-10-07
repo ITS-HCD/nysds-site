@@ -45,21 +45,6 @@ The `<nys-checkbox>` component is a form input for users to select options (zero
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for binary decisions (agree/disagree), confirmation, or multi-select lists.
-- Use for selecting multiple options from a list of up to 10 choices.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when users need to select only one option. Use a <`nys-radiobutton>` for 1–6 choices or a `<nys-select>` for 7 or more.
-- Use a checkbox when changing its state immediately affects the system. Use a toggle instead (e.g., enabling Dark Mode).
-- Use when you have more than 10 options to choose from.
-- Change the state of one checkbox based on another being clicked.
-
-{% endblock %}
 {% block accessibility %}
 
 The `<nys-checkbox>` component includes the following accessibility-focused features:

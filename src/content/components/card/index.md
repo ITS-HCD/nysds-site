@@ -389,32 +389,6 @@ By default a card is only as tall as its content, so cards in the same row can e
 
 {% endblock %}
 
-{% block usagedo %}
-
-- Use a card to group content and actions about a single subject, such as one program, event, or news item.
-- Set `headingLevel` so the card heading fits the surrounding page hierarchy.
-- Keep headings short and specific, so a card is understandable on its own.
-- Put actions in the `footer` slot as real buttons or links.
-- Use `href` or `onClick` when the whole card leads to one destination or performs one action, and add an icon to the `footer` slot so the interaction is visible.
-- Keep cards in the same group consistent in structure, so they are easy to scan and compare.
-- Repeat any information shown in the media or the `media-accent` slot in the card's text.
-- Place each card in a grid column to control its width, and set `--nys-card-height: 100%` when a row of cards should share one height.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use a card as a substitute for a page section heading or for content that belongs in the page flow.
-- Put buttons, links, or other interactive elements in the slots of a card that has `href` or a click handler. That card is already a single control.
-- Set both `href` and a click handler on the same card.
-- Put more than one primary action in a card.
-- Rely on the media image or the `media-accent` slot to convey information that appears nowhere else.
-- Mix `elevated` and non-elevated cards within the same group.
-- Skip heading levels to get a particular text size. Use `headingLevel` for structure, not for styling.
-- Use cards for long-form content that a user needs to read in order.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-card>` component includes the following accessibility-focused features:

@@ -150,26 +150,6 @@ Set the `inverted` when the tooltip is on a dark background.
 {% endset %}
 {% set inverted = true %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block usagedo %}
-
-- Use to provide supplemental hints on form fields (e.g., explaining what "FEIN" means) or on icon buttons that need additional context.
-- Use on NYSDS form components (`<nys-textinput>`, `<nys-select>`, `<nys-checkbox>`, etc.) where the tooltip automatically renders as a hint icon next to the label.
-- Keep tooltip content brief and helpful.
-- Position tooltips so they don't block related content.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for information critical to task completion. Use inline description text instead, as tooltips are easy to miss.
-- Use when content is long or includes links, actions, or structured content.
-- Use interactive elements such as links or buttons inside a tooltip.
-- Rely on tooltips when you have room to provide inline explanation.
-- Use when mobile users are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.
-
 {% endblock %}
 
 {% block accessibility %}

@@ -44,21 +44,6 @@ The `<nys-divider>` component visually separates content or sections within an i
 
 {% endblock %}
 
-{% block usagedo %}
-
-  - Ensure consistent padding/margin above and below dividers to avoid crowding.
-  - Use the `inverted` option on dark backgrounds.
-
-{% endblock %}
-
-{% block usagedont %}
-
-  - Overuse dividers and clutter the interface, reducing scannability.
-  - Use the divider to separate content appearing side bys side. 
-  - Use the `inverted` option on light backgrounds.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-divider>` component includes the following accessibility-focused features:

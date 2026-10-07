@@ -66,23 +66,6 @@ The `nys-accordionitem` component includes the following accessibility-focused f
 
 {% endblock %}
 
-{% block usagedo %}
-
-- Use accordions for FAQs on state services like DMV procedures or benefits
-  information.
-- Break up long program descriptions or supplemental details (such as optional steps, extra instructions, or secondary eligibility notes) into manageable sections without overwhelming the reader.
-- Label headings clearly so users understand the content before expanding.
-- Consider accordions in mobile layouts to keep pages compact while still allowing access to full details.
-  {% endblock %}
-
-{% block usagedont %}
-
-- Hide time-sensitive deadlines, required steps, or critical eligibility criteria in a collapsed section. Keep essential information visible by default.
-- Use vague or unclear headings that make it hard to know what is inside.
-- Overuse accordions for content that is short enough to display fully on the page.
-- Use an accordion when users need to compare details from multiple sections at once. Consider a table or side-by-side layout instead.
-  {% endblock %}
-
 {% block options %}
 
 ### Individual accordion
