@@ -165,15 +165,6 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% endblock %}
 
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-avatar-size", description: "Width and height of the component"}
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

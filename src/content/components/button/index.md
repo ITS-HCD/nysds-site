@@ -326,23 +326,6 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% endblock %}
 
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-button-color", description: "Text color of label"},
-  { name: "--nys-button-color--hover", description: "Text color of label when hovered"},
-  { name: "--nys-button-color--active", description: "Text color of label when active"},
-  { name: "--nys-button-background-color", description: "Background color of component" },
-  { name: "--nys-button-background-color--hover", description: "Background color of component when hovered"},
-  { name: "--nys-button-background-color--active", description: "Background color of component when active"},
-  { name: "--nys-button-border-color", description: "Border color of component" },
-  { name: "--nys-button-border-color--hover", description: "Border color of component when hovered"},
-  { name: "--nys-button-border-color--active", description: "Border color of component when active"}
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

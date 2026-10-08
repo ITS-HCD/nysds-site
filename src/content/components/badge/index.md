@@ -235,8 +235,6 @@ Badge conveys intent through color and icon alone, which isn't accessible to scr
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

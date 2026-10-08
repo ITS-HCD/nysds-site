@@ -242,8 +242,6 @@ The `<nys-processlist>` component includes the following accessibility-focused f
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

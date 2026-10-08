@@ -151,8 +151,6 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

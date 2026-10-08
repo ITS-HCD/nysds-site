@@ -119,8 +119,6 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

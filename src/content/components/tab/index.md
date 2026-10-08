@@ -142,14 +142,6 @@ The `nys-tab` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block cssvariables %}
-{% set variables = [
-    { name: "--nys-tabpanel-max-height", description: "Maximum height of the tab panel content area." }
-  ]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block properties %}
 <nys-table striped>
 

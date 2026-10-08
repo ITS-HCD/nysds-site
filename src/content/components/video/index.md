@@ -186,12 +186,6 @@ Use explicit sizes to lock a specific layout. If `size` is not set, the componen
 </nys-table>
 {% endblock %}
 
-{% block cssvariables %}
-
-The `nys-video` does not have any css variables because this component must remain consistent across applications and sites.
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

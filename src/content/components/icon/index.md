@@ -482,14 +482,6 @@ Here are the icons available in the "default" icon set.
 
 {% endblock %}
 
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-icon-size", description: "Width and height of the component"}
-]%}
-{% include "partials/css-vars.njk" %}
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

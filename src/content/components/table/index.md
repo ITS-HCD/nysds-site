@@ -353,12 +353,6 @@ The `nys-table` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block cssvariables %}
-{% set variables = [
-  { name: "--nys-table-padding--cell--y", description: "Vertical padding for table cells"}
-]%}
-{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

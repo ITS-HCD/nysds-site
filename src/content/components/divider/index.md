@@ -101,8 +101,6 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 The `<nys-divider>` is a visual component that does not emit any events.

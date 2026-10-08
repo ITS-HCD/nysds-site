@@ -203,8 +203,6 @@ The `<nys-tooltip>` component includes the following accessibility-focused featu
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

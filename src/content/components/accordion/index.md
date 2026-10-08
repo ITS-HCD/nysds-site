@@ -198,18 +198,6 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </nys-table>
 {% endblock %}
 
-{% block cssvariables %}
-{%
-    set variables = [
-      { name: "--nys-accordion-color--header", description: "The text color of the accordion header"},
-      { name: "--nys-accordion-background-color--header", description: "Background color of the accordion header"},
-      { name: "--nys-accordion-background-color--header--hover", description: "Background hover color of the accordion header"},
-      { name: "--nys-accordion-content-max-width", description: "Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability."}
-    ]
-  %}
-{% include "partials/css-vars.njk" %}
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.<span></nys-alert>

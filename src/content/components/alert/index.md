@@ -259,20 +259,6 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 
 {% endblock %}
 
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-alert-color", description: "Text color of heading and description"},
-  { name: "--nys-alert-color--link", description: "Text color of action links" },
-  { name: "--nys-alert-color--link--hover", description: "Text color of action links when hovered" },
-  { name: "--nys-alert-color--link--active", description: "Text color of action links when active" },
-  { name: "--nys-alert-border-color", description: "Color of border accent color" },
-  { name: "--nys-alert-background-color", description: "Background color of component" }
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
