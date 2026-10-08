@@ -4,7 +4,7 @@
 
 {%- set compProps = componentUsage[usageTag].properties if componentUsage[usageTag] else [] -%}
 {%- if compProps and compProps | length > 0 -%}
-  <nys-table striped>
+  <nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
     <table>
       <caption><code>&lt;{{ usageTag }}&gt;</code></caption>
       <thead>
@@ -33,7 +33,7 @@
   {%- for subTag in currentSubcomponents -%}
     {%- set subProps = componentUsage[subTag].properties if componentUsage[subTag] else [] -%}
     {%- if subProps and subProps | length > 0 -%}
-      <nys-table striped>
+      <nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
         <table>
           <caption><code>&lt;{{ subTag }}&gt;</code></caption>
           <thead>
