@@ -75,6 +75,21 @@ Wrap an ordered list (`<ol>`) with links (`<a>`) inside `<nys-breadcrumbs>`. The
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Single Item List
+
+When only one `<li>` is provided, the component renders it as a back-to-parent link instead of a trail.
+
+{% set preview %}
+<nys-breadcrumbs>
+  <ol>
+    <li><a href="/services">Services</a></li>
+  </ol>
+</nys-breadcrumbs>
+{% endset %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
+
 ### Collapsed
 
 Add the `collapsed` prop to render the breadcrumb trail in its collapsed state. Users can expand the full trail by selecting the ellipsis.
@@ -228,8 +243,7 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
 {% block cssvariables %}
   {%
     set variables = [
-      { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." },
-      { name: "--_nys-breadcrumbs-max-width--content", description: "The maximum width for this inner container size. Falls back to the size's default (e.g. 1280px) if not set."}
+      { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." }
     ]
   %}
 {% include "partials/css-vars.njk" %}
@@ -238,9 +252,27 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
 
 {% block events %}
 
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
 The `<nys-breadcrumbs>` component emits **one** custom Javascript event:
 
-1.  **`nys-expand`** – Fired when the button is clicked.
+### Event details
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-expand</code></td>
+      <td>Fired when the collapsed breadcrumb trail is expanded.</td>
+      <td>—</td>
+    </tr>
+  </table>
+</nys-table>
+<br/>
 
 You can listen to these events using JavaScript:
 
@@ -256,6 +288,17 @@ breadcrumbs.addEventListener("nys-expand", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
+{% endblock %}
+
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
+
 {% endblock %}
 
 {% block updates %}{% endblock %}

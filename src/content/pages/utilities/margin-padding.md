@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/margin-padding/
+permalink: /utilities/margin-padding/
+redirect_from: /foundations/utilities/margin-padding/
 title: Margin and Padding
 description: Utility classes for adding consistent spacing inside and outside elements in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -279,7 +279,7 @@ Combine margin and padding utilities with layout utilities to space content in a
 
 ## Responsive variants
 
-Margin and padding utilities do **not** currently support responsive prefixes. Apply them uniformly or use [Grid](/foundations/utilities/grid/) and [Flexbox](/foundations/utilities/flex/) utilities for responsive spacing.
+Margin and padding utilities do **not** currently support responsive prefixes. Apply them uniformly or use [Grid](/utilities/grid/) and [Flexbox](/utilities/flex/) utilities for responsive spacing.
 
 </section>
 

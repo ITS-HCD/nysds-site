@@ -10,7 +10,7 @@ navOrder: 2
 
 # Design
 
-Good design does not start with what you see. It starts with understanding who you are building for, what they need, and how your service fits into their life. The NYS Design System helps teams build accessible, consistent digital products — but using components alone does not guarantee good design.
+Good design does not start with what you see. It starts with understanding who you are building for, what they need, and how your service fits into their life. The NYS Design System helps teams build accessible, consistent digital products, but using components alone does not guarantee good design.
 
 <section id="elements-of-ux">
 
@@ -36,9 +36,9 @@ Strong digital experiences are built in layers, from abstract strategy to concre
   </div>
 </div>
 
-The NYS Design System primarily operates at the **Surface** and **Skeleton** layers — providing the visual building blocks and interaction patterns that make up the interface. But a great interface built on a weak foundation of strategy, scope, and structure will still fail users.
+The NYS Design System mainly operates at the **Surface** and **Skeleton** layers, providing the visual building blocks and interaction patterns that make up the interface. A great interface built on a weak foundation of strategy, scope, and structure will still fail users.
 
-Strong UX comes from a thoughtful process that includes research, personas, user flows, prototyping, and testing. The design system accelerates the final steps, but it cannot replace the earlier ones.
+Strong UX comes from a thoughtful process that includes research, personas, user flows, prototyping, and testing. The design system speeds up the final steps, but does not replace the earlier ones.
 
 </section>
 
@@ -46,9 +46,9 @@ Strong UX comes from a thoughtful process that includes research, personas, user
 
 ## Design Support
 
-The ITS Experience Design (XD) team helps agencies with research, design strategy, and UX architecture. If your team is starting a new project or redesigning an existing service, connect with XD early in the process — before you start building.
+The ITS Experience Design (XD) team helps agencies with research, design strategy, and UX architecture. If your team is starting a new project or redesigning an existing service, connect with XD early, before you start building.
 
-The design system gives you standard components and patterns. The XD team helps you figure out which ones to use, and how to arrange them into an experience that works for your users.
+The design system gives you standard components and patterns. The XD team helps you figure out which ones to use and how to arrange them into an experience that works for your users.
 
 </section>
 
@@ -58,54 +58,60 @@ The design system gives you standard components and patterns. The XD team helps 
 
 Once your team has defined the strategy, scope, and structure of your service, the design system provides the building blocks for the interface layer:
 
-<div class="nys-grid-row nys-grid-gap-300">
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <div class="card card__no-border card__flat nys-flex-fill">
-      <div class="card__inner">
-        <div class="card__title"><a href="/foundations/components/">How Components Work</a></div>
-        <div class="card__desc">Custom HTML elements with built-in accessibility, encapsulated styles, and consistent behavior.</div>
-      </div>
-    </div>
+<div class="nys-grid-row nys-grid-gap-300" style="--nys-card-height: 100%">
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      href="/foundations/components/"
+      heading="How Components Work"
+      description="Custom HTML elements with built-in accessibility, encapsulated styles, and consistent behavior."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <div class="card card__no-border card__flat nys-flex-fill">
-      <div class="card__inner">
-        <div class="card__title"><a href="/foundations/tokens/">Design Tokens</a></div>
-        <div class="card__desc">The design decision layer — colors, spacing, typography, and sizing defined as reusable values.</div>
-      </div>
-    </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      href="/foundations/tokens/"
+      heading="Design Tokens"
+      description="The design decision layer — colors, spacing, typography, and sizing defined as reusable values."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <div class="card card__no-border card__flat nys-flex-fill">
-      <div class="card__inner">
-        <div class="card__title"><a href="/foundations/styles/">Styles Framework</a></div>
-        <div class="card__desc">CSS endpoints for tokens, typography, utilities, and a baseline reset.</div>
-      </div>
-    </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      href="/foundations/styles/"
+      heading="Styles Framework"
+      description="CSS endpoints for tokens, typography, utilities, and a baseline reset."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <div class="card card__no-border card__flat nys-flex-fill">
-      <div class="card__inner">
-        <div class="card__title"><a href="/foundations/typography/">Typography</a></div>
-        <div class="card__desc">Core typefaces, token-based sizing, and utility classes for consistent type.</div>
-      </div>
-    </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      href="/foundations/typography/"
+      heading="Typography"
+      description="Core typefaces, token-based sizing, and utility classes for consistent type."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <div class="card card__no-border card__flat nys-flex-fill">
-      <div class="card__inner">
-        <div class="card__title"><a href="/foundations/themes/">Agency Themes</a></div>
-        <div class="card__desc">Color palettes for each agency group — apply once and every component updates.</div>
-      </div>
-    </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      href="/foundations/themes/"
+      heading="Agency Themes"
+      description="Color palettes for each agency group — apply once and every component updates."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
-  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6">
-    <div class="card card__no-border card__flat nys-flex-fill">
-      <div class="card__inner">
-        <div class="card__title"><a href="/foundations/forms/">Form Patterns</a></div>
-        <div class="card__desc">Validation, submission, error handling, and accessibility patterns for form-heavy applications.</div>
-      </div>
-    </div>
+  <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-display-flex">
+    <nys-card
+      href="/foundations/forms/"
+      heading="Form Patterns"
+      description="Validation, submission, error handling, and accessibility patterns for form-heavy applications."
+    >
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
   </div>
 </div>
 

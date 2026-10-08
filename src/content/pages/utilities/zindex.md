@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/zindex/
+permalink: /utilities/zindex/
+redirect_from: /foundations/utilities/z-index/
 title: Z-Index
 description: Utility classes for controlling the stacking order of overlapping elements in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -13,7 +13,7 @@ layout: layouts/3-col.njk
 
 # Z-Index
 
-Z-index utilities control the stacking order of positioned elements. Higher values appear in front of lower values. Elements must have a `position` value other than `static` for z-index to take effect — use the [Position utilities](/foundations/utilities/position/) to set positioning.
+Z-index utilities control the stacking order of positioned elements. Higher values appear in front of lower values. Elements must have a `position` value other than `static` for z-index to take effect — use the [Position utilities](/utilities/position/) to set positioning.
 
 </section>
 
@@ -118,7 +118,7 @@ Z-index utilities control the stacking order of positioned elements. Higher valu
 
 ## Responsive variants
 
-All z-index utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+All z-index utilities support responsive prefixes. See [Responsive Utilities](/utilities/responsive/) for breakpoint details.
 
 ```html
 <div class="nys-z-0 nys-desktop:nys-z-500 nys-position-relative">
@@ -145,8 +145,8 @@ All z-index utilities support responsive prefixes. See [Responsive Utilities](/f
     border: 1px solid var(--nys-color-theme-weak);
     border-radius: var(--nys-border-radius-md);
     background-color: var(--nys-color-theme-weaker);
-    margin-top: -6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    margin-top: -10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
   }
   .docs-z-value {
     font-family: var(--nys-font-family-monospace);

@@ -208,7 +208,7 @@ The full stylesheet includes a set of CSS utility classes for layout and common 
 - **Overflow** — Overflow handling for both axes
 - **Responsive** — Breakpoint-prefixed variants for most utilities (e.g., `nys-tablet:nys-grid-col-6`)
 
-For the complete reference of available utility classes and usage examples, see [Utilities](/foundations/utilities/).
+For the complete reference of available utility classes and usage examples, see [Utilities](/utilities/).
 
 </section>
 
@@ -260,7 +260,7 @@ For the complete reference of available utility classes and usage examples, see 
 - [Get Started as a Developer](/get-started/developers/) — Installation, setup, and framework guides
 - [Design Tokens](/foundations/tokens/) — How the token architecture works
 - Token Reference — Browse [color](/tokens/), [typography](/tokens/typography/), and [spacing & layout](/tokens/other/) tokens
-- [Utilities](/foundations/utilities/) — Complete utility class reference
+- [Utilities](/utilities/) — Complete utility class reference
 - [Typography](/foundations/typography/) — Fonts, font licensing, and typography tokens
 - [Agency Themes](/foundations/themes/) — How to apply agency-specific theming
 

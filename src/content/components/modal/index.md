@@ -280,16 +280,37 @@ A forced action modal requires users to make a choice before continuing. Set the
 
 {% block events %}
 
-The `<nys-modal>` component emits **two** custom Javascript events:
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-1.  **`nys-open`** – Fired when the modal is opened.
-2.  **`nys-close`** – Fired when the modal is closed.
+The `<nys-modal>` component emits **two** custom Javascript events:
 
 ### Event details
 
-The `nys-open` and `nys-close` events include a detail object with the following properties:
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-open</code></td>
+      <td>Fired when the modal is opened.</td>
+      <td>
+        <code>id</code> (string): The id of the modal.
+      </td>
+    </tr>
+    <tr>
+      <td><code>nys-close</code></td>
+      <td>Fired when the modal is closed.</td>
+      <td>
+        <code>id</code> (string): The id of the modal.
+      </td>
+    </tr>
+  </table>
+</nys-table>
 
-- id (string): The id of the file input.
+<br/>
 
 You can listen to these events using JavaScript:
 {% set code %}

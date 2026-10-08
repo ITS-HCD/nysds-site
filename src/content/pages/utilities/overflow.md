@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/overflow/
+permalink: /utilities/overflow/
+redirect_from: /foundations/utilities/overflow/
 title: Overflow
 description: Utility classes for managing content overflow and scrolling behavior in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -198,7 +198,7 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 
 ## Responsive variants
 
-All overflow utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+All overflow utilities support responsive prefixes. See [Responsive Utilities](/utilities/responsive/) for breakpoint details.
 
 ```html
 <!-- Scroll on mobile, visible on desktop -->

@@ -83,6 +83,24 @@ Set `divider` on `<nys-iconlist>` to draw a rule between items. No divider is dr
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Inverted
+
+Set `inverted` on `<nys-iconlist>` to invert the text and icon colors for use on dark backgrounds.
+
+{% set preview %}
+<nys-iconlist id="event-details3" divider inverted>
+  <nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
+  <nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
+  <nys-iconlistitem icon="location_on">
+    Central Park West
+    <span slot="secondary">New York, NY</span>
+  </nys-iconlistitem>
+</nys-iconlist>
+{% endset %}
+{% set code = preview %}
+{% set inverted = true %}
+{% include "partials/code-preview.njk" %}
+
 {% endblock %}
 
 {% block usagedo %}
@@ -137,6 +155,12 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
       <td><code>&lt;nys-iconlist&gt;</code></td>
     </tr>
     <tr>
+      <td><code>inverted</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td><code>&lt;nys-iconlist&gt;</code></td>
+    </tr>
+    <tr>
       <td><code>icon</code></td>
       <td>String</td>
       <td><code>""</code></td>
@@ -152,6 +176,17 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
 {% block events %}
 
 This component does not emit any custom events.
+
+{% endblock %}
+
+
+{% block dependencies %}
+
+{% set dependencies = [
+  "<nys-icon>"
+] %}
+
+{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 
