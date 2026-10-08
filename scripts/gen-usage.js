@@ -42,6 +42,9 @@ function buildUsage(manifest) {
         missing.push(decl.tagName);
       }
 
+      //collect dependencies from the component's own metadata, if available the same way usssage dos/donts are collected
+      const dependencies = decl.dependencies ?? [];
+
       const properties = (decl.attributes ?? []).map((attr) => ({
         ...attr,
         type:
@@ -67,6 +70,7 @@ function buildUsage(manifest) {
         cssProperties: decl.cssProperties ?? [],
         slots: decl.slots ?? [],
         events,
+        dependencies,
       };
     }
   }
