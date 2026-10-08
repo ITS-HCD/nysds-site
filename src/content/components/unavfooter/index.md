@@ -1,5 +1,7 @@
 ---
-permalink: /components/unav-footer/
+permalink: /components/unavfooter/
+redirect_from: /components/unav-footer/
+tag: nys-unavfooter
 title: UNav Footer
 description: Required statewide footer displaying the NY.gov logo and links to Agencies, Counties, Events, Programs, and Services.
 image: /assets/img/components/unav-footer.svg

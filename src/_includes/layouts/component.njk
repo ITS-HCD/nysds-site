@@ -62,7 +62,11 @@
     {%- block options %}{% endblock -%}
 </section><br>
 
-{%- set usageTag = tag or ("nys-" + page.url.split("/")[2]) %}
+{%- set usageSlug = page.url.split("/")[2] %}
+{%- set usageTag = tag or ("nys-" + usageSlug) %}
+{%- if not componentUsage[usageTag] and componentUsage["nys-" + usageSlug | replace("-", "")] %}
+  {%- set usageTag = "nys-" + usageSlug | replace("-", "") %}
+{%- endif %}
 <section>
     <h2>Usage</h2>
     {%- block usage %}{% endblock -%}

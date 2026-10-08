@@ -1,5 +1,6 @@
 ---
 permalink: /components/tab/
+tag: nys-tabgroup
 title: Tab
 description: A clickable interface to toggle between different sets of information without leaving the page.
 image: /assets/img/components/tab.svg

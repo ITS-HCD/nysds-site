@@ -1,5 +1,7 @@
 ---
-permalink: /components/unav-header/
+permalink: /components/unavheader/
+redirect_from: /components/unav-header/
+tag: nys-unavheader
 title: UNav Header
 description: A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 image: /assets/img/components/unav-header.svg

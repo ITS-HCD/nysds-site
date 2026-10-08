@@ -1,9 +1,10 @@
-// src/_data/componentUsage.js
-// Eleventy global data: componentUsage["nys-accordion"] => { dos: [...], donts: [...] }
-// Source: declarations[].usagedos / usagedonts in @nysds/components/custom-elements.json
+// scripts/gen-usage.js
+// Generates src/_data/componentUsage.json from @nysds/components custom-elements.json
 const fs = require("node:fs");
+const path = require("node:path");
 
 const MANIFEST = require.resolve("@nysds/components/custom-elements.json");
+const OUTPUT = path.join(__dirname, "..", "src", "_data", "componentUsage.json");
 
 function buildUsage(manifest) {
   const usage = {};
@@ -39,7 +40,12 @@ function buildUsage(manifest) {
   return usage;
 }
 
-module.exports = function () {
-  return buildUsage(JSON.parse(fs.readFileSync(MANIFEST, "utf8")));
-};
-module.exports.buildUsage = buildUsage;
+const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"));
+const usage = buildUsage(manifest);
+
+fs.writeFileSync(OUTPUT, JSON.stringify(usage, null, 2) + "\n", "utf8");
+console.log(
+  `[gen-usage] Generated ${Object.keys(usage).length} components in src/_data/componentUsage.json`,
+);
+
+module.exports = { buildUsage };
